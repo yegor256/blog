@@ -10,9 +10,7 @@ cd ${CLONE}
 git checkout gh-pages
 git pull
 rm -rf *
-cp -R $SRC/_site/* .
-rm README.md
-rm deploy.sh
+cp -R ${SRC}/_site/* .
 
 git add .
 git commit -am "new site version"
