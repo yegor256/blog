@@ -10,6 +10,17 @@
     <description>RSS feed for yegor256.com</description>
     <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
     <item>
+      <title>Phantomjs as an HTML Validator</title>
+      <link>http://www.yegor256.com//2014/04/06/phandom/</link>
+      <description>&lt;p&gt;I&amp;#39;ve created &lt;a href=&quot;http://www.phandom.org&quot;&gt;phandom.org&lt;/a&gt; a few months ago,
+but yesterday made a few changes to it. So it&amp;#39;s a good moment to
+explain how I&amp;#39;m using it in unit tests.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://www.yegor256.com//2014/04/06/phandom/</guid>
+      <dc:date>2014-04-06T00:00:00+02:00</dc:date>
+    </item>
+    <item>
       <title>Movies for Thanasis</title>
       <link>http://www.yegor256.com//2014/04/06/movies-for-thanasis/</link>
       <description>&lt;p&gt;Here is a list of movies I&amp;#39;ve recommended to a friend, some time ago.
