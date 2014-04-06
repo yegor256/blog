@@ -1,6 +1,9 @@
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
 $header-font: 'Cambria', sans-serif;
 $code-font: 'Source Code Pro', monospace;
+$gray: #777;
+$mid-gray: #ccc;
+$light-gray: #eee;
 
 @font-face {
   font-family: 'Cambria-BoldItalic';
@@ -89,16 +92,24 @@ a, a:visited {
 .top {
   margin-bottom: 4em;
 }
-.meta {
+.date {
   font-size: 0.85em;
-  color: #777;
+  color: $gray;
+  margin-right: 1em;
+}
+a.share, a.share:visited {
+  margin-left: .2em;
+  color: $gray;
+}
+a.share:hover {
+  color: #000;
 }
 code,
 pre {
   @include code-font();
 }
 code {
-  background-color: #eee;
+  background-color: $light-gray;
   padding: 0 .3em;
 }
 h1 {
@@ -115,8 +126,8 @@ table.highlighttable {
   }
 }
 .linenodiv {
-  color: #ccc;
-  border-right: 3px solid #ccc;
+  color: $mid-gray;
+  border-right: 3px solid $mid-gray;
   padding-right: .5em;
   margin-right: .2em;
 }
