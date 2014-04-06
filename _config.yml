@@ -1,7 +1,7 @@
 name: yegor256.com
 markdown: redcarpet
 pygments: true
-permalink: pretty
+permalink: :year/:month/:day/:title.html
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com/
