@@ -3,6 +3,10 @@ markdown: redcarpet
 pygments: true
 permalink: pretty
 
+# https://github.com/agelber/jekyll-rss
+url: http://www.yegor256.com/
+rss_name: rss.xml
+
 # see https://github.com/noct/jekyll-sass
 gems: ['jekyll-sass']
 sass:
