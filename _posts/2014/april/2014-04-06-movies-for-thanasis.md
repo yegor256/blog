@@ -32,7 +32,6 @@ Level A
  * [Jamon Jamon (1992)](http://www.imdb.com/title/tt0104545/)
  * [Natural Born Killers (1994)](http://www.imdb.com/title/tt0110632/)
  * [Thursday (1998)](http://www.imdb.com/title/tt0124901/)
- * [Brutti, sporchi e cattivi (1976)](http://www.imdb.com/title/tt0074252/)
  * [Bullet (1996)](http://www.imdb.com/title/tt0115781/)
 
 Level B
@@ -50,6 +49,7 @@ Level B
  * [99 francs (2007)](http://www.imdb.com/title/tt0875113/)
  * [Combien tu m'aimes? (2005)](http://www.imdb.com/title/tt0420555/)
  * [Ying xiong (2002)](http://www.imdb.com/title/tt0299977/)
+ * [Brutti, sporchi e cattivi (1976)](http://www.imdb.com/title/tt0074252/)
 
 Level C
 
@@ -57,3 +57,4 @@ Level C
  * [Happiness (1998)](http://www.imdb.com/title/tt0147612/)
  * [Before the Devil Knows You Are Dead (2007)](http://www.imdb.com/title/tt0292963/)
  * [No Country for Old Men (2007)](http://www.imdb.com/title/tt0477348/)
+ * [A Serious Man (2009)](http://www.imdb.com/title/tt1019452/)
