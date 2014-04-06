@@ -11,6 +11,8 @@ git checkout gh-pages
 git pull
 rm -rf *
 cp -R $SRC/_site/* .
+rm README.md
+rm deploy.sh
 
 git add .
 git commit -am "new site version"
