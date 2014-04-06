@@ -5,12 +5,10 @@ rm -rf _site
 jekyll build
 
 CLONE=$(mktemp -d -t blog)
-cp -R ${SRC}/ ${CLONE}
+git clone git@github.com:yegor256/blog.git ${CLONE}
 cd ${CLONE}
 git checkout gh-pages
-git pull
 rm -rf *
-rm -rf .sass-cache
 cp -R ${SRC}/_site/* .
 rm README.md
 rm deploy.sh
