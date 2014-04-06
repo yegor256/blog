@@ -5,6 +5,7 @@ rm -rf _site
 jekyll build
 
 CLONE=$(mktemp -d -t blog)
+shopt -s dotglob
 cp -R ${SRC}/* ${CLONE}
 cd ${CLONE}
 git checkout gh-pages
