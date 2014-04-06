@@ -10,3 +10,6 @@ ideas. As [about me](/about-me.html) says, I'm passionate about software
 quality, and will write solely about it.
 
 Let's see how will this work :)
+
+ps. BTW, I've bought [Cambria font](http://www.myfonts.com/fonts/ascender/cambria/)
+for this blog, for &euro;98. Seems to be a nice investment into this new venture.
