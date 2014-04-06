@@ -1,0 +1,123 @@
+$main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
+$header-font: 'Cambria', sans-serif;
+$code-font: 'Source Code Pro', monospace;
+
+@font-face {
+  font-family: 'Cambria-BoldItalic';
+  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_0_0.woff')
+    format('woff'),
+  url('http://img.yegor256.com/fonts/2A901D_0_0.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Cambria-Bold';
+  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_1_0.woff')
+    format('woff'),
+  url('http://img.yegor256.com/fonts/2A901D_1_0.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Cambria';
+  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot?#iefix')
+    format('embedded-opentype'),
+  url('http://img.yegor256.com/fonts/2A901D_2_0.woff')
+    format('woff'),
+  url('http://img.yegor256.com/fonts/2A901D_2_0.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Cambria-Italic';
+  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot?#iefix')
+    format('embedded-opentype'),
+  url('http://img.yegor256.com/fonts/2A901D_3_0.woff')
+    format('woff'),
+  url('http://img.yegor256.com/fonts/2A901D_3_0.ttf')
+    format('truetype');
+}
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
+
+@mixin main-font() {
+  font-family: $main-font;
+  font-weight: 400;
+}
+@mixin header-font() {
+  font-family: $header-font;
+  font-weight: 600;
+}
+@mixin code-font() {
+  font-family: $code-font;
+  font-weight: 400;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  @include main-font();
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+a, a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+.wrapper {
+  @include main-font();
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width:2000px) {
+    width: 700px;
+  }
+  @media screen and (max-width:100px) {
+    width: 100%;
+  }
+}
+.content {
+  line-height: 1.4em;
+  padding: 2em;
+}
+.meta {
+  font-size: 0.85em;
+  color: #777;
+}
+code,
+pre {
+  @include code-font();
+}
+code {
+  background-color: #eee;
+  padding: 0 .3em;
+}
+h1 {
+  @include header-font();
+  font-size: 2em;
+  a {
+    text-decoration: none;
+  }
+}
+table.highlighttable {
+  td.linenos {
+    width: 2em;
+    text-align: right;
+  }
+}
+.linenodiv {
+  color: #ccc;
+  border-right: 3px solid #ccc;
+  padding-right: .5em;
+  margin-right: .2em;
+}
+.linenodiv pre code {
+  background-color: inherit;
+  padding: 0;
+}

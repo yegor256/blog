@@ -1,0 +1,12 @@
+name: yegor256.com
+markdown: redcarpet
+pygments: true
+permalink: pretty
+
+# see https://github.com/noct/jekyll-sass
+gems: ['jekyll-sass']
+sass:
+  style: expanded
+  deploy_style: compressed
+  compile_in_place: false
+
