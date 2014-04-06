@@ -10,6 +10,7 @@ cd ${CLONE}
 git checkout gh-pages
 git pull
 rm -rf *
+rm -rf .sass-cache
 cp -R ${SRC}/_site/* .
 rm README.md
 rm deploy.sh
