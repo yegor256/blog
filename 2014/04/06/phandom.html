@@ -32,7 +32,7 @@
   <p class="meta">6 April 2014</p>
   <article><p>I&#39;ve created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
 but yesterday made a few changes to it. So it&#39;s a good moment to
-explain how I&#39;m using it in unit tests.</p>
+explain how I&#39;m using it in some of my unit tests.</p>
 
 <p>First, a few words about <a href="http://phantomjs.org/">phantomjs</a>. It is a
 JavaScript interface to WebKit, while WebKit is a web browser, but without
@@ -58,7 +58,7 @@ code in <code>example.js</code>:</p>
 </pre></div>
 </td></tr></table>
 
-<p>We run it from command line:</p>
+<p>We run it from the command line:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">$ </span>phantomjs example.js
 </pre></div>
@@ -66,9 +66,9 @@ code in <code>example.js</code>:</p>
 
 <p>Phantomjs creates <code>page</code> object
 (provided by <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a>
-module inside phantomjs), and asks it to <code>open()</code> a web page. The objects
+module inside phantomjs), and asks it to <code>open()</code> a web page. The object
 contacts WebKit and transforms this call into DOM instructions. The page will
-be loaded, and phantom engine will be terminated on line 6.</p>
+be loaded, and phantomjs engine will be terminated on line 6.</p>
 
 <p>WebKit renders a web page together with everything inside it, including CSS,
 JavaScript, ActionScript, etc. It is doing it exactly as any web browser would
@@ -78,7 +78,7 @@ do.</p>
 of <a href="http://www.phandom.org">Phandom</a> (which stands for &quot;PhantomJS DOM&quot;) inside
 Java unit tests:</p>
 
-<p>Let&#39;s give phantomjs an HTML page and ask him to render it. When ready, we&#39;ll
+<p>Let&#39;s give <code>phantomjs</code> an HTML page and ask him to render it. When ready, we&#39;ll
 ask to show us how this HTML looks in WebKit&#39;s eyes. If we see our desired
 elements there &mdash; our page is good enough. For example:</p>
 
@@ -132,7 +132,27 @@ and WebKit can render it without problems, the test will pass.</p>
 <p>I&#39;m using this mechanism in a few projects, and highly recommend it.</p>
 
 <p>Of course, don&#39;t forget, that you should have phantomjs installed on your
-build machine.</p>
+build machine. In order to avoid accidental unit test failures when
+phantomjs is not available, I&#39;ve made a supplementary method:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+2
+3
+4
+5
+6
+7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">DocumentTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">rendersValidHtml</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Assume</span><span class="o">.</span><span class="na">assumeTrue</span><span class="o">(</span><span class="n">Phandom</span><span class="o">.</span><span class="na">installed</span><span class="o">());</span>
+    <span class="c1">// the rest of the unit test method body...</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Enjoy and feel free to report problems through
+<a href="https://github.com/yegor256/phandom/issues">Github issues</a> :)</p>
 </article>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
