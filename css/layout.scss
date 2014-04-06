@@ -57,6 +57,8 @@ $code-font: 'Source Code Pro', monospace;
   font-weight: 400;
 }
 
+@import "highlight";
+
 body {
   background-color: #fff;
   color: #000;
