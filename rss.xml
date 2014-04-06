@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>yegor256.com</title>
+    <link>http://www.yegor256.com/</link>
+    <description>RSS feed for yegor256.com</description>
+    <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
+    <item>
+      <title>Movies for Thanasis</title>
+      <link>http://www.yegor256.com//2014/04/06/movies-for-thanasis/</link>
+      <description>&lt;p&gt;Here is a list of movies I&amp;#39;ve recommended to a friend, some time ago.
+He was interested to give up &amp;quot;Hollywood&amp;quot;.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://www.yegor256.com//2014/04/06/movies-for-thanasis/</guid>
+      <dc:date>2014-04-06T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>First Post</title>
+      <link>http://www.yegor256.com//2014/04/06/introduction/</link>
+      <description>&lt;p&gt;This is a first post on this blog. So, it&amp;#39;s about nothing. Just
+an introduction. The blog will mostly be about software development
+ideas. As &lt;a href=&quot;/about-me.html&quot;&gt;about me&lt;/a&gt; says, I&amp;#39;m passionate about software
+quality, and will write solely about it.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://www.yegor256.com//2014/04/06/introduction/</guid>
+      <dc:date>2014-04-06T00:00:00+02:00</dc:date>
+    </item>
+    <dc:date>2014-04-06T00:00:00+02:00</dc:date>
+  </channel>
+</rss>
