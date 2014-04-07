@@ -4,9 +4,9 @@ title: "First Post"
 date: 2014-04-06
 ---
 
-This is the first post on this new blog. Therefore, it's not about anything in particular - just
+This is the first post on my new blog. Therefore, it's not about anything in particular - just
 an introduction and my way of saying hello. This blog will be primarily about software development
-ideas. As [about me](/about-me.html) says, I'm passionate about software
+ideas. As my [About Me](/about-me.html) page says, I'm passionate about software
 quality, and will write solely about my ideas and views on it.
 
 Anyway, welcome to my new blog. Together, let's see how this works out! :)
