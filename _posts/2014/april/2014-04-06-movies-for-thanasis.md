@@ -4,11 +4,10 @@ title: "Movies for Thanasis"
 date: 2014-04-06
 ---
 
-Here is a list of movies I've recommended to a friend, some time ago.
-He was interested to give up "Hollywood".
+Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  "Hollywood."
 
-Level C is supposed to be impossible to understand unless you've seen
-(and understood) A and B. So, start with A and post your comments :)
+Level C titles are supposed to be impossible to understand unless you've seen
+(and understood) their prequels -- listed in sections A and B. So, start browsing the lists in sections A and post your comments if you have any. :)
 
 Level A
 
