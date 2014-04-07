@@ -26,15 +26,15 @@
   <section class="front">
     <p><span class="date">6 April 2014</span></p>
     <header><h1><a href="/2014/04/06/phandom.html">Phantomjs as an HTML Validator</a></h1></header>
-    <article><p>I&#39;ve created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
-but yesterday made a few changes to it. So it&#39;s a good moment to
-explain how I&#39;m using it in some of my unit tests.</p>
+    <article><p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
+but yesterday finally found the time to make some needed changes to it. So, now is a good time to
+explain how I&#39;m using Phandom in some of my unit tests.</p>
 
-<p>First, a few words about <a href="http://phantomjs.org/">phantomjs</a>. It is a
-JavaScript interface to WebKit, while WebKit is a web browser, but without
-a user interface. WebKit is a C++ library that enables manipulations with
+<p>Before I get started, though, I should say a few words about <a href="http://phantomjs.org/">phantomjs</a>, which is a
+JavaScript interface for WebKit. WebKit, on the other hand, is a web browser without
+a user interface. WebKit is a C++ library that enables manipulation of
 HTML content, through DOM calls. For example, this is a simple JavaScript
-code in <code>example.js</code>:</p>
+located code in <code>example.js</code>:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="javascript">1
 2
@@ -54,29 +54,27 @@ code in <code>example.js</code>:</p>
 </pre></div>
 </td></tr></table>
 
-<p>We run it from the command line:</p>
+<p>We run phantomjs from the command line with the following code:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">$ </span>phantomjs example.js
 </pre></div>
 </td></tr></table>
 
-<p>Phantomjs creates <code>page</code> object
+<p>Phantomjs creates a <code>page</code> object
 (provided by <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a>
-module inside phantomjs), and asks it to <code>open()</code> a web page. The object
-contacts WebKit and transforms this call into DOM instructions. The page will
-be loaded, and phantomjs engine will be terminated on line 6.</p>
+module inside phantomjs), and then asks it to <code>open()</code> a Web page. The object
+communicates with WebKit and converts this call into DOM instructions. After which, the page loads. The phantomjs engine then terminates on line 6.</p>
 
-<p>WebKit renders a web page together with everything inside it, including CSS,
-JavaScript, ActionScript, etc. It is doing it exactly as any web browser would
-do.</p>
+<p>WebKit renders a web page with all neccessary components such as CSS,
+JavaScript, ActionScript, etc, just as any standard Web browser would. </p>
 
-<p>So far so good, this is a traditional way of using phantomjs. Now, the idea
-of <a href="http://www.phandom.org">Phandom</a> (which stands for &quot;PhantomJS DOM&quot;) inside
+<p>So far so good, and this is the traditional way of using phantomjs. Now, on to giving you an idea
+of how <a href="http://www.phandom.org">Phandom</a> (which stands for &quot;PhantomJS DOM&quot;) works inside
 Java unit tests:</p>
 
-<p>Let&#39;s give <code>phantomjs</code> an HTML page and ask him to render it. When ready, we&#39;ll
-ask to show us how this HTML looks in WebKit&#39;s eyes. If we see our desired
-elements there &mdash; our page is good enough. For example:</p>
+<p>To test this, let&#39;s give <code>phantomjs</code> an HTML page and ask him to render it. When the page is ready, we&#39;ll
+ask phantomjs to show us how this HTML looks in WebKit. If we see the elements we need and desire,
+&mdash; we&#39;re good to go. Let&#39;s use the following example:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java"> 1
  2
@@ -114,22 +112,20 @@ elements there &mdash; our page is good enough. For example:</p>
 </pre></div>
 </td></tr></table>
 
-<p>Here is what&#39;s happening. We&#39;re getting an HTML <code>html</code> as a <code>String</code>
-from <code>doc</code> object, and then passing it to
+<p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code>
+from <code>doc</code> object, and then pass it to
 <a href="http://www.phandom.org/apidocs-0.2.1/org/phandom/Phandom.html"><code>Phandom</code></a>
 as an argument. Then,
-on line 13, we&#39;re calling <code>Phandom.dom()</code> method in order to get an instance
-of class <code>org.w3c.Document</code>.</p>
+on line 13, we call the <code>Phandom.dom()</code> method to get an instance
+of the class <code>org.w3c.Document</code>.</p>
 
-<p>If our HTML contains any broken JavaScript code, method <code>dom()</code> will
-throw a runtime exception and unit test will fail. If HTML is clean
-and WebKit can render it without problems, the test will pass.</p>
+<p>If our HTML contains any broken JavaScript code, method <code>dom()</code> produces a runtime exception and the unit test faila. If HTML is clean and WebKit is able to render it without problems, the test passes.</p>
 
-<p>I&#39;m using this mechanism in a few projects, and highly recommend it.</p>
+<p>I&#39;m using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p>
 
-<p>Of course, don&#39;t forget, that you should have phantomjs installed on your
-build machine. In order to avoid accidental unit test failures when
-phantomjs is not available, I&#39;ve made a supplementary method:</p>
+<p>Of course, you shouldn&#39;t forget that you must have phantomjs installed on your
+build machine. In order to avoid unit test failures when
+phantomjs is not available or present, I&#39;ve created the following supplementary method:</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
@@ -147,7 +143,7 @@ phantomjs is not available, I&#39;ve made a supplementary method:</p>
 </pre></div>
 </td></tr></table>
 
-<p>Enjoy and feel free to report problems through
+<p>Enjoy and feel free to report any bugs or problems you encounter to:
 <a href="https://github.com/yegor256/phandom/issues">Github issues</a> :)</p>
 </article>
     <a href="/2014/04/06/phandom.html#disqus_thread">comments</a>
@@ -156,11 +152,10 @@ phantomjs is not available, I&#39;ve made a supplementary method:</p>
   <section class="front">
     <p><span class="date">6 April 2014</span></p>
     <header><h1><a href="/2014/04/06/movies-for-thanasis.html">Movies for Thanasis</a></h1></header>
-    <article><p>Here is a list of movies I&#39;ve recommended to a friend, some time ago.
-He was interested to give up &quot;Hollywood&quot;.</p>
+    <article><p>Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  &quot;Hollywood.&quot;</p>
 
-<p>Level C is supposed to be impossible to understand unless you&#39;ve seen
-(and understood) A and B. So, start with A and post your comments :)</p>
+<p>Level C titles are supposed to be impossible to understand unless you&#39;ve seen
+(and understood) their prequels -- listed in sections A and B. So, start browsing the lists in sections A and post your comments if you have any. :)</p>
 
 <p>Level A</p>
 
@@ -223,15 +218,15 @@ He was interested to give up &quot;Hollywood&quot;.</p>
   <section class="front">
     <p><span class="date">6 April 2014</span></p>
     <header><h1><a href="/2014/04/06/introduction.html">First Post</a></h1></header>
-    <article><p>This is a first post on this blog. So, it&#39;s about nothing. Just
-an introduction. The blog will mostly be about software development
-ideas. As <a href="/about-me.html">about me</a> says, I&#39;m passionate about software
-quality, and will write solely about it.</p>
+    <article><p>This is the first post on my new blog. Therefore, it&#39;s not about anything in particular - just
+an introduction and my way of saying hello. This blog will be primarily about software development
+ideas. As my <a href="/about-me.html">About Me</a> page says, I&#39;m passionate about software
+quality, and will write solely about my ideas and views on it.</p>
 
-<p>Let&#39;s see how will this work :)</p>
+<p>Anyway, welcome to my new blog. Together, let&#39;s see how this works out! :)</p>
 
-<p>ps. BTW, I&#39;ve bought <a href="http://www.myfonts.com/fonts/ascender/cambria/">Cambria font</a>
-for this blog, for &euro;98. Seems to be a nice investment into this new venture.</p>
+<p>ps. BTW, I purchased the <a href="http://www.myfonts.com/fonts/ascender/cambria/">Cambria font</a>
+just for this new blog. It cost, &euro;98. Nevertheless, I think its a good investment for this new venture.</p>
 </article>
     <a href="/2014/04/06/introduction.html#disqus_thread">comments</a>
   </section>

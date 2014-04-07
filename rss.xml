@@ -12,9 +12,9 @@
     <item>
       <title>Phantomjs as an HTML Validator</title>
       <link>http://www.yegor256.com//2014/04/06/phandom.html</link>
-      <description>&lt;p&gt;I&amp;#39;ve created &lt;a href=&quot;http://www.phandom.org&quot;&gt;phandom.org&lt;/a&gt; a few months ago,
-but yesterday made a few changes to it. So it&amp;#39;s a good moment to
-explain how I&amp;#39;m using it in some of my unit tests.&lt;/p&gt;
+      <description>&lt;p&gt;I created &lt;a href=&quot;http://www.phandom.org&quot;&gt;phandom.org&lt;/a&gt; a few months ago,
+but yesterday finally found the time to make some needed changes to it. So, now is a good time to
+explain how I&amp;#39;m using Phandom in some of my unit tests.&lt;/p&gt;
 </description>
       <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
       <guid>http://www.yegor256.com//2014/04/06/phandom.html</guid>
@@ -23,8 +23,7 @@ explain how I&amp;#39;m using it in some of my unit tests.&lt;/p&gt;
     <item>
       <title>Movies for Thanasis</title>
       <link>http://www.yegor256.com//2014/04/06/movies-for-thanasis.html</link>
-      <description>&lt;p&gt;Here is a list of movies I&amp;#39;ve recommended to a friend, some time ago.
-He was interested to give up &amp;quot;Hollywood&amp;quot;.&lt;/p&gt;
+      <description>&lt;p&gt;Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  &amp;quot;Hollywood.&amp;quot;&lt;/p&gt;
 </description>
       <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
       <guid>http://www.yegor256.com//2014/04/06/movies-for-thanasis.html</guid>
@@ -33,10 +32,10 @@ He was interested to give up &amp;quot;Hollywood&amp;quot;.&lt;/p&gt;
     <item>
       <title>First Post</title>
       <link>http://www.yegor256.com//2014/04/06/introduction.html</link>
-      <description>&lt;p&gt;This is a first post on this blog. So, it&amp;#39;s about nothing. Just
-an introduction. The blog will mostly be about software development
-ideas. As &lt;a href=&quot;/about-me.html&quot;&gt;about me&lt;/a&gt; says, I&amp;#39;m passionate about software
-quality, and will write solely about it.&lt;/p&gt;
+      <description>&lt;p&gt;This is the first post on my new blog. Therefore, it&amp;#39;s not about anything in particular - just
+an introduction and my way of saying hello. This blog will be primarily about software development
+ideas. As my &lt;a href=&quot;/about-me.html&quot;&gt;About Me&lt;/a&gt; page says, I&amp;#39;m passionate about software
+quality, and will write solely about my ideas and views on it.&lt;/p&gt;
 </description>
       <pubDate>Sun, 06 Apr 2014 00:00:00 +0200</pubDate>
       <guid>http://www.yegor256.com//2014/04/06/introduction.html</guid>
