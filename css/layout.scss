@@ -120,6 +120,7 @@ code {
 h1 {
   @include header-font();
   font-size: 2em;
+  line-height: 1em;
   a {
     text-decoration: none;
   }
@@ -142,4 +143,10 @@ table.highlighttable {
 }
 .front {
   margin-bottom: 4em;
+}
+.pagination {
+  text-align: center;
+  .mute {
+    color: $mid-gray;
+  }
 }

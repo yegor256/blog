@@ -4,6 +4,8 @@ pygments: true
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 permalink: :year/:month/:day/:title.html
+paginate: 2
+paginate_path: "p/:num"
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com/
