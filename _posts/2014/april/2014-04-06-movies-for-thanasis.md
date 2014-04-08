@@ -2,6 +2,7 @@
 layout: post
 title: "Movies for Thanasis"
 date: 2014-04-06
+tags: movies
 ---
 
 Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  "Hollywood."

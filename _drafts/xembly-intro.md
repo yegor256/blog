@@ -2,6 +2,7 @@
 layout: post
 title: "Xembly, an Assembly for XML"
 date: 2014-04-07
+tags: xembly xml xsl xsd
 ---
 
 I'm using XML in almost every project. And, despite all this JSON/YAML
