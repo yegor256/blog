@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="quality vs quantity" />
+    <link rel="icon" type="image/gif" href="http://img.yegor256.com/icon-64x64.png">
+    <link rel="shortcut icon" href="http://img.yegor256.com/icon-64x64.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.yegor256.com/rss"/>
+    <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <meta name="keywords" content="software development, quality of software, programming, remote programming, distributed programming, static analysis, quality control" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <title>Xembly, an Assembly for XML</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="top">
+          <a class="item" href="/">home</a>
+          <a class="item" href="/about-me.html">about me</a>
+          <a class="item" href="http://feeds.feedburner.com/yegor256"><i class="fa fa-rss"></i></a>
+          <a class="item" href="http://feedburner.google.com/fb/a/mailverify?uri=yegor256&amp;loc=en_US">subscribe</a>
+        </div>
+        <header>
+  <h1>Xembly, an Assembly for XML</h1>
+</header>
+<section>
+  <p>
+    <span class="date">9 April 2014</span>
+    <a class="share" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+      href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com/2014/04/09/xembly-intro.html"><i class="fa fa-facebook-square"></i></a>
+    <a class="share" target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+      href="https://twitter.com/share?url=http://www.yegor256.com/2014/04/09/xembly-intro.html&amp;text=Xembly, an Assembly for XML"><i class="fa fa-twitter-square"></i></button></a>
+    <a class="share" target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+      href="https://plus.google.com/share?url=http://www.yegor256.com/2014/04/09/xembly-intro.html"><i class="fa fa-google-plus-square"></i></a>
+  </p>
+  <article><p>I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.</p>
+
+<p>For example, you can expose your data in XML and render it for the end-user using <a href="http://www.w3.org/Style/XSL/">XSL stylesheet</a>.
+Another example would be when you validate the same data,
+before rendering, to ensure that the structure is correct. You can do this with the <a href="http://www.w3.org/TR/xmlschema11-1/">XSD</a> schema.
+Alternatively, you can pick specific data elements from the entire document by using
+<a href="http://www.w3.org/TR/xpath/">XPath</a> queries.</p>
+
+<p>Essentially, these three technologies, XSL, XSD schema and XPath, are what makes XML so powerful:</p>
+
+<p>However, there can be times when XML falls short. For instance, imagine you have
+an existing document that needs to be modified just slightly. For example, let&#39;s use the following:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;accounts&gt;</span>
+  [...]
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">&#39;34&#39;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Jeffrey<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>305<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">&#39;35&#39;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Walter<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>50090<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
+  [...]
+<span class="nt">&lt;/accounts&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>The above code represents a list of accounts. Each account has its own <code>id</code> and several
+child elements. In our example, we need to find the account belonging to <code>Jeffrey</code>
+and increase its balance by <code>500</code>. How would we do this?</p>
+
+<p>Well, there are a few possible solutions:</p>
+
+<ul>
+<li>SAX-parse the document, change the balance and save the stream;</li>
+<li>DOM-parse it, find the element with XPath, change the value and then print it;</li>
+<li>apply a parametrized XSL stylesheet;</li>
+<li>apply XQuery small script to make changes</li>
+</ul>
+
+<p>All of these methods have their own drawbacks. However, all of them have one particular problem in common &mdash; they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.</p>
+
+<p>Simply put, XML lacks a tool for primitive data manipulations within
+a document. Perhaps, it is this shortcoming that makes XML unpopular with some.</p>
+
+<p>Anyway, here is a tool I created a few month ago: <a href="http://www.xembly.org">Xembly</a>.
+It is an imperative language with a few simple directives and resembles <a href="http://en.wikipedia.org/wiki/Assembly_language">Assembly</a>
+in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.</p>
+
+<p>Let&#39;s create a simple example. Say, for instance, we want to add a new account number <code>36</code>
+to our list document. The code would look like:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
+2
+3
+4
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">&#39;/</span><span class="no">accounts</span><span class="err">&#39;;</span>
+<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">account</span><span class="err">&#39;;</span>
+<span class="nf">ATTR</span> <span class="err">&#39;</span><span class="no">id</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="mi">36</span><span class="err">&#39;;</span>
+<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">name</span><span class="err">&#39;;</span>
+<span class="nf">SET</span> <span class="err">&#39;</span><span class="no">Donny</span><span class="err">&#39;;</span>
+<span class="nf">UP</span><span class="err">;</span>
+<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">balance</span><span class="err">&#39;;</span>
+<span class="nf">SET</span> <span class="err">&#39;</span><span class="mi">3400</span><span class="err">&#39;;</span>
+</pre></div>
+</td></tr></table>
+
+<p>The above should be intuitively clear, but I&#39;ll explain just in case. First, the <code>XPATH</code> directive points us
+to the element found by the &quot;/accounts&quot; XPath query. This will be our root element. We assume here that
+it exists in the document. Therefore, if it is absent, our Xembly script will
+fail with a runtime exception.</p>
+
+<p>Next, the <code>ADD</code> directive on line 2 creates a new XML element without any children
+or attributes. Then, the <code>ATTR</code> directive sets an attribute for this element. The code then adds
+the new child element <code>name</code> and sets its text value to <code>&quot;Donny&quot;</code> using the <code>SET</code> directive. Finally, we move our pointer back to <code>account</code> element using <code>UP</code>, add the <code>balance</code> child element and set its value to <code>&quot;3400&quot;</code>.</p>
+
+<p>Our balance changing task can be expressed in Xembly with the following code:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">&#39;/</span><span class="no">accounts</span><span class="err">/</span><span class="no">account</span><span class="err">[</span><span class="no">name</span><span class="err">=&quot;</span><span class="no">Jeffrey</span><span class="err">&quot;]/</span><span class="no">balance</span><span class="err">&#39;;</span>
+<span class="nf">XSET</span> <span class="err">&#39;</span><span class="p">.</span> <span class="err">+</span> <span class="mi">500</span><span class="err">&#39;;</span>
+</pre></div>
+</td></tr></table>
+
+<p>The <code>XSET</code> directive sets the element text value, similar to <code>SET</code>, but
+calculates it beforehand using the provided XPath expression <code>. + 500</code>.</p>
+
+<p>Xembly performs all manipulations through DOM. Consequently, Xembly can be
+implemented inside any language that has a built-in DOM implementation.</p>
+
+<p>In the meantime, there is only one implementation of Xembly language
+&mdash; in Java. Here is how it works:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+2
+3
+4
+5
+6
+7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Directive</span><span class="o">&gt;</span> <span class="n">directives</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Directives</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">&quot;/accounts&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;account&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="s">&quot;36&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;Donny&quot;</span><span class="o">).</span><span class="na">up</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;balance&quot;</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;3400&quot;</span><span class="o">);</span>
+<span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span><span class="n">directives</span><span class="o">).</span><span class="na">apply</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>In this snippet, I&#39;m using a supplementary script builder, <code>Directives</code>, which
+enables generation of directives in a fluent way. Then, I use <code>Xembler</code> class,
+which is similar to &quot;assembler&quot;, to apply all specified directives
+to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.</p>
+
+<p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+2
+3
+4
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;html&quot;</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;head&quot;</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+  <span class="o">).</span><span class="na">xml</span><span class="o">()</span>
+<span class="o">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The above snippet produces the following output:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml">1
+2
+3
+4
+5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>For me, this appears to be more simple and compact.</p>
+
+<p>As usual, your bug reports and suggestions are always welcomed. Please send to
+<a href="https://github.com/yegor256/xembly/issues">Github issues</a> :)</p>
+</article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'yegor256';
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1963507-32']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript">
+      var disqus_shortname = 'yegor256';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+  </body>
+</html>

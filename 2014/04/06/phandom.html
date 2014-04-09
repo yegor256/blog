@@ -75,7 +75,7 @@ module inside phantomjs), and then asks it to <code>open()</code> a Web page. Th
 communicates with WebKit and converts this call into DOM instructions. After which, the page loads. The phantomjs engine then terminates on line 6.</p>
 
 <p>WebKit renders a web page with all neccessary components such as CSS,
-JavaScript, ActionScript, etc, just as any standard Web browser would. </p>
+JavaScript, ActionScript, etc, just as any standard Web browser would.</p>
 
 <p>So far so good, and this is the traditional way of using phantomjs. Now, on to giving you an idea
 of how <a href="http://www.phandom.org">Phandom</a> (which stands for &quot;PhantomJS DOM&quot;) works inside
@@ -126,7 +126,7 @@ from <code>doc</code> object, and then pass it to
 <a href="http://www.phandom.org/apidocs-0.2.1/org/phandom/Phandom.html"><code>Phandom</code></a>
 as an argument. Then,
 on line 13, we call the <code>Phandom.dom()</code> method to get an instance
-of the class <code>org.w3c.Document</code>.</p>
+of the class <code>org.w3c.dom.Document</code>.</p>
 
 <p>If our HTML contains any broken JavaScript code, method <code>dom()</code> produces a runtime exception and the unit test faila. If HTML is clean and WebKit is able to render it without problems, the test passes.</p>
 
