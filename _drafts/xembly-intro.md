@@ -7,16 +7,16 @@ tags: xembly xml xsl xsd
 
 I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.
 
-For example, you expose your data in XML and render it to the end-user by using [XSL stylesheet](http://www.w3.org/Style/XSL/).
+For example, you can expose your data in XML and render it for the end-user using [XSL stylesheet](http://www.w3.org/Style/XSL/).
 Another example would be when you validate the same data,
-before rendering, to ensure that the structure is correct. You can do this using the [XSD](http://www.w3.org/TR/xmlschema11-1/) schema.
-Alternatively, you can pick specific data elements from the entire document with
+before rendering, to ensure that the structure is correct. You can do this with the [XSD](http://www.w3.org/TR/xmlschema11-1/) schema.
+Alternatively, you can pick specific data elements from the entire document by using
 [XPath](http://www.w3.org/TR/xpath/) queries.
 
 Essentially, these three technologies, XSL, XSD schema and XPath, are what makes XML so powerful:
 
 However, there can be times when XML falls short. For instance, imagine you have
-an existing document that needs to be modified slightly. For example, let's use the following:
+an existing document that needs to be modified just slightly. For example, let's use the following:
 
 {% highlight xml linenos=table %}
 <accounts>
@@ -44,10 +44,10 @@ Well, there are a few possible solutions:
  * apply a parametrized XSL stylesheet;
  * apply XQuery small script to make changes
 
-All of these methods have their own drawbacks. However, all of have one particular problem in common &mdash; they are very verbose. With each of the above methods, you need at least a page of code to perform this simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.
+All of these methods have their own drawbacks. However, all of them have one particular problem in common &mdash; they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.
 
 Simply put, XML lacks a tool for primitive data manipulations within
-a document. Perhaps this shortcoming is what makes XML unpopular with some coders.
+a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
 
 Anyway, here is a tool I created a few month ago: [Xembly](http://www.xembly.org).
 It is an imperative language with a few simple directives and resembles [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
@@ -72,7 +72,7 @@ to the element found by the "/accounts" XPath query. This will be our root eleme
 it exists in the document. Therefore, if it is absent, our Xembly script will
 fail with a runtime exception.
 
-Next, the `ADD` directive on line 2 creates a new XML element, without any children
+Next, the `ADD` directive on line 2 creates a new XML element without any children
 or attributes. Then, the `ATTR` directive sets an attribute for this element. The code then adds 
 the new child element `name` and sets its text value to `"Donny"` using the `SET` directive. Finally, we move our pointer back to `account` element using `UP`, add the `balance` child element and set its value to `"3400"`.
 
@@ -86,7 +86,7 @@ XSET '. + 500';
 The `XSET` directive sets the element text value, similar to `SET`, but
 calculates it beforehand using the provided XPath expression `. + 500`.
 
-Xembly performs all manipulations through DOM. COnsequently, Xembly can be
+Xembly performs all manipulations through DOM. Consequently, Xembly can be
 implemented inside any language that has a built-in DOM implementation.
 
 In the meantime, there is only one implementation of Xembly language
@@ -104,7 +104,7 @@ new Xembler(directives).apply(document);
 
 In this snippet, I'm using a supplementary script builder, `Directives`, which
 enables generation of directives in a fluent way. Then, I use `Xembler` class,
-which is similar to "assembler" and applies all specified directives
+which is similar to "assembler", to apply all specified directives
 to the `document` object of class `org.w3c.dom.Document`.
 
 Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:
