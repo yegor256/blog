@@ -22,7 +22,7 @@ I designed this new client with the following requirements in mind:
 
 ## Simplicity
 
-For me, this was the most important requirement. The client must be simple and easy to use. In most cases, I need only to make an HTTP request and parse JSON response to return a value. For example, this is how I use the new client to return a current EUR rate:
+For me, this was the most important requirement. The client must be simple and easy to use. In most cases, I need only to make an HTTP request and parse the JSON response to return a value. For example, this is how I use the new client to return a current EUR rate:
 
 {% highlight java linenos=table %}
 String rate = new JdkRequest("http://www.getexchangerates.com/api/latest.json")
