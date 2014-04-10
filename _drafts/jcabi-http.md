@@ -37,7 +37,7 @@ I assume that the above is easy to understand and maintain.
 
 ## Fluent Interface
 
-The new client has to be fluent, which means that the entire server interactions fit into one Java statement. Why is this important? I think that [fluent interface](http://martinfowler.com/bliki/FluentInterface.html) is the most compact and expressive way to perform multiple imperative calls. To my knowledge, none of the existing libraries enable this type of fluency.
+The new client has to be fluent, which means that the entire server interaction fits into one Java statement. Why is this important? I think that [fluent interface](http://martinfowler.com/bliki/FluentInterface.html) is the most compact and expressive way to perform multiple imperative calls. To my knowledge, none of the existing libraries enable this type of fluency.
 
 ## Testable and Extendable
 
