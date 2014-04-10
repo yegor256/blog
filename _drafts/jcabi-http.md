@@ -57,7 +57,7 @@ and
 [`ApacheRequest`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html),
 which make actual HTTP calls to the server using two completely different technologies: (JDK `HttpURLConnection` and Apache Http Client, respectively). In the future, it will be possible to introduce new implementations without breaking existing code.
 
-Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently but the end results are the same:
+Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:
 
 {% highlight java linenos=table %}
 String uri = "http://www.google.com";
@@ -68,9 +68,9 @@ page = new ApacheRequest(uri).fetch();
 
 ## XML and JSON Out-of-the-Box
 
-There are two common standards that I wanted the library to support right out of the box. In most cases, the response retrieved from a server is in either XML or JSON format. It has always been a hassle, and extra work, for me to parse the output to take care formatting issues.
+There are two common standards that I wanted the library to support right out of the box. In most cases, the response retrieved from a server is in either XML or JSON format. It has always been a hassle, and extra work, for me to parse the output to take care of formatting issues.
 
-[jcabi-http](http://http.jcabi.com/) client supports them both out of the box, and it's possible to add more formats in the future as needed. For example, you can fetch XML and retrieve a string value from of its element:
+[jcabi-http](http://http.jcabi.com/) client supports them both out of the box, and it's possible to add more formats in the future as needed. For example, you can fetch XML and retrieve a string value from its element:
 
 {% highlight java linenos=table %}
 String name = new JdkRequest("http://my-api.example.com")
