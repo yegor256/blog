@@ -8,7 +8,16 @@
     <title>yegor256.com</title>
     <link>http://www.yegor256.com/</link>
     <description>RSS feed for yegor256.com</description>
-    <pubDate>Wed, 09 Apr 2014 00:00:00 +0200</pubDate>
+    <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+    <item>
+      <title>Fluent Java Http Client</title>
+      <link>http://www.yegor256.com//2014/04/11/jcabi-http-intro.html</link>
+      <description>&lt;p&gt;In the world of Java, there are plenty of HTTP clients from which to choose. Nevertheless, I decided to create a new one because none of the other clients satisfied fully all of my requirements. Maybe, I&amp;#39;m too demanding. Still, this is how my &lt;a href=&quot;http://http.jcabi.com/&quot;&gt;jcabi-http&lt;/a&gt; client interacts when you make an HTTP request and expect a successful HTML page in return:&lt;/p&gt;
+</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://www.yegor256.com//2014/04/11/jcabi-http-intro.html</guid>
+      <dc:date>2014-04-11T00:00:00+02:00</dc:date>
+    </item>
     <item>
       <title>Xembly, an Assembly for XML</title>
       <link>http://www.yegor256.com//2014/04/09/xembly-intro.html</link>
@@ -50,6 +59,6 @@ quality, and will write solely about my ideas and views on it.&lt;/p&gt;
       <guid>http://www.yegor256.com//2014/04/06/introduction.html</guid>
       <dc:date>2014-04-06T00:00:00+02:00</dc:date>
     </item>
-    <dc:date>2014-04-09T00:00:00+02:00</dc:date>
+    <dc:date>2014-04-11T00:00:00+02:00</dc:date>
   </channel>
 </rss>
