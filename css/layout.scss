@@ -103,12 +103,15 @@ a, a:visited {
   color: $gray;
   margin-right: 1em;
 }
-a.share, a.share:visited {
-  margin-left: .2em;
-  color: $gray;
-}
-a.share:hover {
-  color: #000;
+.share {
+  font-size: 1.5em;
+  a, a:visited {
+    margin-right: .1em;
+    color: $gray;
+  }
+  a:hover {
+    color: #000;
+  }
 }
 code,
 pre {
