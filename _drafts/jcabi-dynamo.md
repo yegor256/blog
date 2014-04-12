@@ -39,7 +39,7 @@ and a number of optional attributes. For example, here is a table `depts`:
 For Java Amazon provides an SDK, which mirrors all RESTful calls to
 Java methods. It works fine, but it is designed in a pure procedural
 COBOL style. Say, we want to add a new item to the table above. RESTful
-call looks like:
+call `putItem` looks like:
 
 {% highlight text linenos=table %}
 putItem:
@@ -105,12 +105,13 @@ In this script we don't know anything about DynamoDB or
 how to deal with its RESTful API. We interact solely with an
 instance of `Item` class.
 
-By the way, all public entities in [jcabi-dynamo](http://dynamo.jcabi.com) are
+By the way, all public entities in
+[jcabi-dynamo](http://dynamo.jcabi.com) are
 Java interfaces. Thanks to that, the library is perfectly testable
 and mockable.
 
 Let's consider a more complex example, which would take a page of
-code if we would use a pure AWS SDK. Say, we want to remove all
+code if we would use a bare AWS SDK. Say, we want to remove all
 workers from our table who work as architects:
 
 {% highlight java linenos=table %}
@@ -120,4 +121,19 @@ Iterator<Item> workers = region.table("depts").frame()
 while (workers.hasNext()) {
   workers.remove();
 }
+{% endhighlight %}
+
+[jcabi-dynamo](http://dynamo.jcabi.com) saved a lot
+of code lines in a few of my projects. You can see it in action
+at [rultor-users](https://github.com/rultor/rultor).
+
+The library is shipped as a JAR dependency in
+[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo):
+
+{% highlight xml %}
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-dynamo</artifactId>
+  <version><!-- check http://dynamo.jcabi.com --></version>
+</dependency>
 {% endhighlight %}
