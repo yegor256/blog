@@ -3,6 +3,14 @@ layout: post
 title: "Xembly, an Assembly for XML"
 date: 2014-04-09
 tags: xembly xml xsl xsd
+keywords:
+  - xml
+  - xsl
+  - xembly
+  - assembly for xml
+  - xml modification
+  - xml manipulation
+  - xpath
 ---
 
 I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.
@@ -134,4 +142,3 @@ For me, this appears to be more simple and compact.
 
 As usual, your bug reports and suggestions are always welcomed. Please send to
 [Github issues](https://github.com/yegor256/xembly/issues) :)
-

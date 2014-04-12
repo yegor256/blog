@@ -2,6 +2,12 @@
 layout: post
 title: "First Post"
 date: 2014-04-06
+keywords:
+  - yegor bugayenko
+  - bugayenko
+  - software blog
+  - programmer blog
+  - java
 ---
 
 This is the first post on my new blog. Therefore, it's not about anything in particular - just
