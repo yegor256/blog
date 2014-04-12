@@ -7,7 +7,9 @@
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <meta charset="utf-8"/>
-    {% if page.excerpt %}
+    {% if page.description %}
+      <meta name="description" content="{{ page.description | escape }}" />
+    {% elsif page.excerpt %}
       <meta name="description" content="{{ page.excerpt | strip_html | escape }}" />
     {% else %}
       <meta name="description" content="Blog about quality and quantity in software development, by Yegor Bugayenko" />

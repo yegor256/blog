@@ -3,6 +3,7 @@ layout: post
 title: "Object-Oriented DynamoDB API"
 date: 2014-04-12
 tags: cloud
+description: I created jcabi-dynamo a few months ago to make AWS SDK more object oriented
 keywords:
   - amazon web services
   - dynamodb
