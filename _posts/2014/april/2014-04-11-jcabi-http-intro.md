@@ -3,6 +3,7 @@ layout: post
 title: "Fluent Java Http Client"
 date: 2014-04-11
 tags: jcabi http java
+description: I created a simple fluent Java HTTP client to make things easier with HTTP interactions
 keywords:
   - java
   - java http client

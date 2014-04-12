@@ -3,6 +3,7 @@ layout: post
 title: "Movies for Thanasis"
 date: 2014-04-06
 tags: movies
+description: Most recommended movies to watch
 keywords:
   - best movies
   - the best movie to watch
