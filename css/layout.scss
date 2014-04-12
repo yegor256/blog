@@ -3,6 +3,7 @@ $code-font: 'Source Code Pro', monospace;
 $gray: #777;
 $mid-gray: #ccc;
 $light-gray: #eee;
+$black: #111;
 $width: 700px;
 
 @font-face {
@@ -53,7 +54,7 @@ body {
   font-family: $main-font;
   font-weight: 400;
   background-color: #fff;
-  color: #000;
+  color: $black;
   font-size: 19px;
   margin: 0;
   padding: 0;
@@ -61,10 +62,10 @@ body {
   overflow-x: hidden;
   @media all and (max-width: $width) {
     font-size: 16px;
- }
+  }
 }
 a, a:visited {
-  color: #000;
+  color: $black;
   text-decoration: underline;
 }
 .wrapper {
@@ -81,8 +82,41 @@ a, a:visited {
 }
 .top {
   margin-bottom: 4em;
+  position: relative;
   .item {
     margin-right: .2em;
+  }
+  .gcse {
+    @media all and (min-width: $width + 1) {
+      position: absolute;
+      right: 0;
+      top: -4px;
+      width: 300px;
+      display: inline-block;
+    }
+    @media all and (max-width: $width) {
+      width: 100%;
+    }
+    line-height: normal;
+    .gsc-control-cse {
+      padding: 0;
+      .gsc-search-box {
+        margin: 0;
+      }
+      .gsc-input-box {
+        border: 1px solid $mid-gray;
+      }
+      input.gsc-search-button {
+        border: none;
+        margin: 0;
+        border: 1px solid $mid-gray;
+        background-color: $mid-gray;
+      }
+      input.gsc-search-button:hover {
+        border: 1px solid $black;
+        background-color: $black;
+      }
+    }
   }
 }
 #disqus_thread {
@@ -100,7 +134,7 @@ a, a:visited {
     color: $gray;
   }
   a:hover {
-    color: #000;
+    color: $black;
   }
 }
 code,

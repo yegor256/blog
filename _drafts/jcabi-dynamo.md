@@ -12,16 +12,20 @@ keywords:
   - object oriented dynamodb java
 ---
 
-I'm a big fan of cloud computing in general and of Amazon Web Services
+I'm a big fan of cloud computing in general and of
+[Amazon Web Services](http://aws.amazon.com/)
 in particular. I honestly believe that in a few years all our
 computing and storage resources will be hosted by big providers. We
 won't have to worry any more about downtime, backups, and system
-administrators. DynamoDB is one of the steps towards this future.
+administrators.
+[DynamoDB](http://aws.amazon.com/dynamodb/)
+is one of the steps towards this future.
 
 <blockquote class="twitter-tweet" lang="en"><p>This looks cool - jcabi-dynamo - a <a href="https://twitter.com/search?q=%23Java&amp;src=hash">#Java</a> Object layer atop the <a href="https://twitter.com/search?q=%23DynamoDB&amp;src=hash">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/search?q=%23aws&amp;src=hash">#aws</a></p>&mdash; Jeff Barr (@jeffbarr) <a href="https://twitter.com/jeffbarr/statuses/380813867971915777">September 19, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-DynamoDB is a NoSQL database accessible through RESTful JSON API. Its
+DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL)
+database accessible through RESTful JSON API. Its
 design is very simple. There are tables, which basically are
 collections of data structs, called "items", according to AWS terminology.
 Every item has a mandatory "hash", an optional "range",
@@ -37,7 +41,8 @@ and a number of optional attributes. For example, here is a table `depts`:
 +------+--------+---------------------------+
 {% endhighlight %}
 
-For Java Amazon provides an SDK, which mirrors all RESTful calls to
+For Java Amazon provides an [SDK](https://aws.amazon.com/documentation/sdkforjava/),
+which mirrors all RESTful calls to
 Java methods. It works fine, but it is designed in a pure procedural
 COBOL style. Say, we want to add a new item to the table above. RESTful
 call `putItem` looks like:
