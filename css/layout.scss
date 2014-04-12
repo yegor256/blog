@@ -143,7 +143,13 @@ table.highlighttable {
   padding-right: .5em;
   margin-right: .2em;
 }
-.linenodiv pre code {
+.highlight pre code {
+  display: block;
+  line-height: 1.4em;
+  margin-left: 2em;
+}
+.linenodiv pre code,
+.highlight pre code {
   background-color: inherit;
   padding: 0;
 }
