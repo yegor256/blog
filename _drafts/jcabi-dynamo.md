@@ -126,7 +126,7 @@ while (workers.hasNext()) {
 
 [jcabi-dynamo](http://dynamo.jcabi.com) saved a lot
 of code lines in a few of my projects. You can see it in action
-at [rultor-users](https://github.com/rultor/rultor).
+at [rultor-users](https://github.com/rultor/rultor/tree/rultor-0.2/rultor-users/src/main/java/com/rultor/users).
 
 The library is shipped as a JAR dependency in
 [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo):
