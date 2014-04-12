@@ -172,6 +172,8 @@ table.highlighttable {
   display: block;
   line-height: 1.4em;
   margin-left: 2em;
+  padding-left: .5em !important;
+  border-left: 3px solid $mid-gray;
 }
 .linenodiv pre code,
 .highlight pre code {
