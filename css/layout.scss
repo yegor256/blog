@@ -1,9 +1,9 @@
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
-$header-font: 'Cambria', sans-serif;
 $code-font: 'Source Code Pro', monospace;
 $gray: #777;
 $mid-gray: #ccc;
 $light-gray: #eee;
+$width: 700px;
 
 @font-face {
   font-family: 'Cambria-BoldItalic';
@@ -47,41 +47,31 @@ $light-gray: #eee;
 }
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
 
-@mixin main-font() {
-  font-family: $main-font;
-  font-weight: 400;
-}
-@mixin header-font() {
-  font-family: $header-font;
-  font-weight: 600;
-}
-@mixin code-font() {
-  font-family: $code-font;
-  font-weight: 400;
-}
-
 @import "highlight";
 
 body {
+  font-family: $main-font;
+  font-weight: 400;
   background-color: #fff;
   color: #000;
-  @include main-font();
   font-size: 19px;
   margin: 0;
   padding: 0;
   position: relative;
   overflow-x: hidden;
+  @media all and (max-width: $width) {
+    font-size: 16px;
+ }
 }
 a, a:visited {
   color: #000;
   text-decoration: underline;
 }
 .wrapper {
-  @include main-font();
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  @media screen and (max-width:700px) {
+  width: $width;
+  @media all and (max-width: $width) {
     width: 100%;
   }
 }
@@ -115,7 +105,8 @@ a, a:visited {
 }
 code,
 pre {
-  @include code-font();
+  font-family: $code-font;
+  font-weight: 400;
 }
 code {
   background-color: $light-gray;
@@ -124,7 +115,7 @@ code {
   padding: 0 .3em;
 }
 h1 {
-  @include header-font();
+  font-weight: 600;
   font-size: 2em;
   line-height: 1em;
   a {
