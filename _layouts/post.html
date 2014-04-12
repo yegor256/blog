@@ -13,7 +13,7 @@ layout: default
     <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
       href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"><i class="fa fa-facebook-square"></i></a>
     <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
-      href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title }}"><i class="fa fa-twitter-square"></i></button></a>
+      href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"><i class="fa fa-twitter-square"></i></button></a>
     <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
       href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"><i class="fa fa-google-plus-square"></i></a>
   </nav>
