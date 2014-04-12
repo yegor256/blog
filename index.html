@@ -1,158 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="description" content="quality vs quantity" />
-    <link rel="icon" type="image/gif" href="http://img.yegor256.com/icon-64x64.png">
-    <link rel="shortcut icon" href="http://img.yegor256.com/icon-64x64.png" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.yegor256.com/rss"/>
-    <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <meta name="keywords" content="software development, quality of software, programming, remote programming, distributed programming, static analysis, quality control" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" href="/css/layout.css"/>
-    <title>yegor256</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <div class="top">
-          <a class="item" href="/">home</a>
-          <a class="item" href="/about-me.html">about me</a>
-          <a class="item" href="http://feeds.feedburner.com/yegor256"><i class="fa fa-rss"></i></a>
-          <a class="item" href="http://feedburner.google.com/fb/a/mailverify?uri=yegor256&amp;loc=en_US">subscribe</a>
-        </div>
-        
-  <section class="front">
-    <p><span class="date">11 April 2014</span></p>
-    <header><h1><a href="/2014/04/11/jcabi-http-intro.html">Fluent Java Http Client</a></h1></header>
-    <article><p>In the world of Java, there are plenty of HTTP clients from which to choose. Nevertheless, I decided to create a new one because none of the other clients satisfied fully all of my requirements. Maybe, I&#39;m too demanding. Still, this is how my <a href="http://http.jcabi.com/">jcabi-http</a> client interacts when you make an HTTP request and expect a successful HTML page in return:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<!DOCTYPE html><html><head><link rel="icon" type="image/gif" href="http://img.yegor256.com/icon-64x64.png"><link rel="shortcut icon" href="http://img.yegor256.com/icon-64x64.png"/><link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.yegor256.com/rss"/><link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author"/><link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"><meta name="description" content="Blog about quality and quantity in software development, by Yegor Bugayenko"/><meta name="keywords" content=""/><meta name="viewport" content="width=device-width"/><link rel="stylesheet" href="/css/layout.css"/><title>yegor256</title></head><body><div class="wrapper"><div class="content"><div class="top"> <a class="item" href="/">home</a> <a class="item" href="/about-me.html">about me</a> <a class="item" href="http://feeds.feedburner.com/yegor256"><i class="fa fa-rss"></i></a> <a class="item" href="http://feedburner.google.com/fb/a/mailverify?uri=yegor256&amp;loc=en_US">subscribe</a></div> <section class="front"><p><span class="date">11 April 2014</span></p> <header><h1><a href="/2014/04/11/jcabi-http-intro.html">Fluent Java Http Client</a></h1></header> <article><p>In the world of Java, there are plenty of HTTP clients from which to choose. Nevertheless, I decided to create a new one because none of the other clients satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is how my <a href="http://http.jcabi.com/">jcabi-http</a> client interacts when you make an HTTP request and expect a successful HTML page in return:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
 5
 6
 7
-8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">&quot;https://www.google.com&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">uri</span><span class="o">().</span><span class="na">path</span><span class="o">(</span><span class="s">&quot;/users&quot;</span><span class="o">).</span><span class="na">queryParam</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="mi">333</span><span class="o">).</span><span class="na">back</span><span class="o">()</span>
+8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">uri</span><span class="o">().</span><span class="na">path</span><span class="o">(</span><span class="s">"/users"</span><span class="o">).</span><span class="na">queryParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="mi">333</span><span class="o">).</span><span class="na">back</span><span class="o">()</span>
   <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">GET</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">&quot;Accept&quot;</span><span class="o">,</span> <span class="s">&quot;text/html&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"text/html"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
   <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="n">HttpResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
   <span class="o">.</span><span class="na">assertStatus</span><span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">.</span><span class="na">HTTP_OK</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">body</span><span class="o">();</span>
-</pre></div>
-</td></tr></table>
-
-<p>I designed this new client with the following requirements in mind:</p>
-
-<h2 id="toc_0">Simplicity</h2>
-
-<p>For me, this was the most important requirement. The client must be simple and easy to use. In most cases, I need only to make an HTTP request and parse the JSON response to return a value. For example, this is how I use the new client to return a current EUR rate:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+  <span class="o">.</span><span class="na">body</span><span class="o">();</span></pre></div></td></tr></table><p>I designed this new client with the following requirements in mind:</p><h2 id="toc_0">Simplicity</h2><p>For me, this was the most important requirement. The client must be simple and easy to use. In most cases, I need only to make an HTTP request and parse the JSON response to return a value. For example, this is how I use the new client to return a current EUR rate:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
 5
-6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">rate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">&quot;http://www.getexchangerates.com/api/latest.json&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">&quot;Accept&quot;</span><span class="o">,</span> <span class="s">&quot;application/json&quot;</span><span class="o">)</span>
+6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">rate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">"http://www.getexchangerates.com/api/latest.json"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
   <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="n">JsonResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
   <span class="o">.</span><span class="na">json</span><span class="o">().</span><span class="na">readArray</span><span class="o">().</span><span class="na">getJsonObject</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;EUR&quot;</span><span class="o">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>I assume that the above is easy to understand and maintain.</p>
-
-<h2 id="toc_1">Fluent Interface</h2>
-
-<p>The new client has to be fluent, which means that the entire server interaction fits into one Java statement. Why is this important? I think that <a href="http://martinfowler.com/bliki/FluentInterface.html">fluent interface</a> is the most compact and expressive way to perform multiple imperative calls. To my knowledge, none of the existing libraries enable this type of fluency.</p>
-
-<h2 id="toc_2">Testable and Extendable</h2>
-
-<p>I&#39;m a big fan of interfaces, mostly because they make your designs both cleaner and highly extendable at the same time. In <a href="http://http.jcabi.com/">jcabi-http</a>, there are five interfaces extended by 20 classes.</p>
-
-<p><a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Request.html"><code>Request</code></a>
-is an interface, as well as
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Response.html"><code>Response</code></a>,
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestURI.html"><code>RequestURI</code></a>,
-and
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestBody.html"><code>RequestBody</code></a>
-exposed by it.</p>
-
-<p>Use of interfaces makes the library highly extendable. For example, we have
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html"><code>JdkRequest</code></a>
-and
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html"><code>ApacheRequest</code></a>,
-which make actual HTTP calls to the server using two completely different technologies: (JDK <code>HttpURLConnection</code> and Apache Http Client, respectively). In the future, it will be possible to introduce new implementations without breaking existing code.</p>
-
-<p>Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+  <span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"EUR"</span><span class="o">);</span></pre></div></td></tr></table><p>I assume that the above is easy to understand and maintain.</p><h2 id="toc_1">Fluent Interface</h2><p>The new client has to be fluent, which means that the entire server interaction fits into one Java statement. Why is this important? I think that <a href="http://martinfowler.com/bliki/FluentInterface.html">fluent interface</a> is the most compact and expressive way to perform multiple imperative calls. To my knowledge, none of the existing libraries enable this type of fluency.</p><h2 id="toc_2">Testable and Extendable</h2><p>I'm a big fan of interfaces, mostly because they make your designs both cleaner and highly extendable at the same time. In <a href="http://http.jcabi.com/">jcabi-http</a>, there are five interfaces extended by 20 classes.</p><p><a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Request.html"><code>Request</code></a> is an interface, as well as <a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Response.html"><code>Response</code></a>, <a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestURI.html"><code>RequestURI</code></a>, and <a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestBody.html"><code>RequestBody</code></a> exposed by it.</p><p>Use of interfaces makes the library highly extendable. For example, we have <a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html"><code>JdkRequest</code></a> and <a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html"><code>ApacheRequest</code></a>, which make actual HTTP calls to the server using two completely different technologies: (JDK <code>HttpURLConnection</code> and Apache Http Client, respectively). In the future, it will be possible to introduce new implementations without breaking existing code.</p><p>Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
-4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">&quot;http://www.google.com&quot;</span><span class="o">;</span>
+4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"http://www.google.com"</span><span class="o">;</span>
 <span class="n">Response</span> <span class="n">page</span><span class="o">;</span>
 <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
-<span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApacheRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
-</pre></div>
-</td></tr></table>
-
-<h2 id="toc_3">XML and JSON Out-of-the-Box</h2>
-
-<p>There are two common standards that I wanted the library to support right out of the box. In most cases, the response retrieved from a server is in either XML or JSON format. It has always been a hassle, and extra work, for me to parse the output to take care of formatting issues.</p>
-
-<p><a href="http://http.jcabi.com/">jcabi-http</a> client supports them both out of the box, and it&#39;s possible to add more formats in the future as needed. For example, you can fetch XML and retrieve a string value from its element:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApacheRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span></pre></div></td></tr></table><h2 id="toc_3">XML and JSON Out-of-the-Box</h2><p>There are two common standards that I wanted the library to support right out of the box. In most cases, the response retrieved from a server is in either XML or JSON format. It has always been a hassle, and extra work, for me to parse the output to take care of formatting issues.</p><p><a href="http://http.jcabi.com/">jcabi-http</a> client supports them both out of the box, and it's possible to add more formats in the future as needed. For example, you can fetch XML and retrieve a string value from its element:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">&quot;http://my-api.example.com&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">&quot;Accept&quot;</span><span class="o">,</span> <span class="s">&quot;text/xml&quot;</span><span class="o">)</span>
+5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JdkRequest</span><span class="o">(</span><span class="s">"http://my-api.example.com"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"text/xml"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
   <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="n">XmlResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">xml</span><span class="o">().</span><span class="na">xpath</span><span class="o">(</span><span class="s">&quot;/root/name/text()&quot;</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>Basically, the response produced by <code>fetch()</code> is decorated by <code>XmlResponse</code>. This then exposes the <code>xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code>XML</code></a> interface.</p>
-
-<p>The same can be done with JSON through the Java JSON API
-(<a href="https://jcp.org/en/jsr/detail?id=353">JSR-353</a>).</p>
-
-<p>None of the libraries that I&#39;m aware of or worked with offer this feature.</p>
-
-<h2 id="toc_4">Immutable</h2>
-
-<p>The last requirement, but certainly not the least important, is that I need all interfaces of the
-library to be annotated with <a href="http://http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>.
-This is important because I need to be able to encapsulate an instance of <code>Request</code> in other immutable classes.</p>
-</article>
-    <a href="/2014/04/11/jcabi-http-intro.html#disqus_thread">comments</a>
-  </section>
-
-  <section class="front">
-    <p><span class="date">9 April 2014</span></p>
-    <header><h1><a href="/2014/04/09/xembly-intro.html">Xembly, an Assembly for XML</a></h1></header>
-    <article><p>I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.</p>
-
-<p>For example, you can expose your data in XML and render it for the end-user using <a href="http://www.w3.org/Style/XSL/">XSL stylesheet</a>.
-Another example would be when you validate the same data,
-before rendering, to ensure that the structure is correct. You can do this with the <a href="http://www.w3.org/TR/xmlschema11-1/">XSD</a> schema.
-Alternatively, you can pick specific data elements from the entire document by using
-<a href="http://www.w3.org/TR/xpath/">XPath</a> queries.</p>
-
-<p>Essentially, these three technologies, XSL, XSD schema and XPath, are what makes XML so powerful:</p>
-
-<p>However, there can be times when XML falls short. For instance, imagine you have
-an existing document that needs to be modified just slightly. For example, let&#39;s use the following:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml"> 1
+  <span class="o">.</span><span class="na">xml</span><span class="o">().</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/name/text()"</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span></pre></div></td></tr></table><p>Basically, the response produced by <code>fetch()</code> is decorated by <code>XmlResponse</code>. This then exposes the <code>xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code>XML</code></a> interface.</p><p>The same can be done with JSON through the Java JSON API (<a href="https://jcp.org/en/jsr/detail?id=353">JSR-353</a>).</p><p>None of the libraries that I'm aware of or worked with offer this feature.</p><h2 id="toc_4">Immutable</h2><p>The last requirement, but certainly not the least important, is that I need all interfaces of the library to be annotated with <a href="http://http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>. This is important because I need to be able to encapsulate an instance of <code>Request</code> in other immutable classes.</p> </article> <a href="/2014/04/11/jcabi-http-intro.html#disqus_thread">comments</a> </section><section class="front"><p><span class="date">9 April 2014</span></p> <header><h1><a href="/2014/04/09/xembly-intro.html">Xembly, an Assembly for XML</a></h1></header> <article><p>I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.</p><p>For example, you can expose your data in XML and render it for the end-user using <a href="http://www.w3.org/Style/XSL/">XSL stylesheet</a>. Another example would be when you validate the same data, before rendering, to ensure that the structure is correct. You can do this with the <a href="http://www.w3.org/TR/xmlschema11-1/">XSD</a> schema. Alternatively, you can pick specific data elements from the entire document by using <a href="http://www.w3.org/TR/xpath/">XPath</a> queries.</p><p>Essentially, these three technologies, XSL, XSD schema and XPath, are what makes XML so powerful:</p><p>However, there can be times when XML falls short. For instance, imagine you have an existing document that needs to be modified just slightly. For example, let's use the following:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml"> 1
  2
  3
  4
@@ -165,112 +49,44 @@ an existing document that needs to be modified just slightly. For example, let&#
 11
 12</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;accounts&gt;</span>
   [...]
-  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">&#39;34&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'34'</span><span class="nt">&gt;</span>
     <span class="nt">&lt;name&gt;</span>Jeffrey<span class="nt">&lt;/name&gt;</span>
     <span class="nt">&lt;balance&gt;</span>305<span class="nt">&lt;/balance&gt;</span>
   <span class="nt">&lt;/acc&gt;</span>
-  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">&#39;35&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'35'</span><span class="nt">&gt;</span>
     <span class="nt">&lt;name&gt;</span>Walter<span class="nt">&lt;/name&gt;</span>
     <span class="nt">&lt;balance&gt;</span>50090<span class="nt">&lt;/balance&gt;</span>
   <span class="nt">&lt;/acc&gt;</span>
   [...]
-<span class="nt">&lt;/accounts&gt;</span>
-</pre></div>
-</td></tr></table>
-
-<p>The above code represents a list of accounts. Each account has its own <code>id</code> and several
-child elements. In our example, we need to find the account belonging to <code>Jeffrey</code>
-and increase its balance by <code>500</code>. How would we do this?</p>
-
-<p>Well, there are a few possible solutions:</p>
-
-<ul>
-<li>SAX-parse the document, change the balance and save the stream;</li>
-<li>DOM-parse it, find the element with XPath, change the value and then print it;</li>
-<li>apply a parametrized XSL stylesheet;</li>
-<li>apply XQuery small script to make changes</li>
-</ul>
-
-<p>All of these methods have their own drawbacks. However, all of them have one particular problem in common &mdash; they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.</p>
-
-<p>Simply put, XML lacks a tool for primitive data manipulations within
-a document. Perhaps, it is this shortcoming that makes XML unpopular with some.</p>
-
-<p>Anyway, here is a tool I created a few month ago: <a href="http://www.xembly.org">Xembly</a>.
-It is an imperative language with a few simple directives and resembles <a href="http://en.wikipedia.org/wiki/Assembly_language">Assembly</a>
-in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.</p>
-
-<p>Let&#39;s create a simple example. Say, for instance, we want to add a new account number <code>36</code>
-to our list document. The code would look like:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
+<span class="nt">&lt;/accounts&gt;</span></pre></div></td></tr></table><p>The above code represents a list of accounts. Each account has its own <code>id</code> and several child elements. In our example, we need to find the account belonging to <code>Jeffrey</code> and increase its balance by <code>500</code>. How would we do this?</p><p>Well, there are a few possible solutions:</p><ul><li>SAX-parse the document, change the balance and save the stream;</li><li>DOM-parse it, find the element with XPath, change the value and then print it;</li><li>apply a parametrized XSL stylesheet;</li><li>apply XQuery small script to make changes</li></ul><p>All of these methods have their own drawbacks. However, all of them have one particular problem in common — they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore, if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.</p><p>Simply put, XML lacks a tool for primitive data manipulations within a document. Perhaps, it is this shortcoming that makes XML unpopular with some.</p><p>Anyway, here is a tool I created a few month ago: <a href="http://www.xembly.org">Xembly</a>. It is an imperative language with a few simple directives and resembles <a href="http://en.wikipedia.org/wiki/Assembly_language">Assembly</a> in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.</p><p>Let's create a simple example. Say, for instance, we want to add a new account number <code>36</code> to our list document. The code would look like:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
 2
 3
 4
 5
 6
 7
-8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">&#39;/</span><span class="no">accounts</span><span class="err">&#39;;</span>
-<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">account</span><span class="err">&#39;;</span>
-<span class="nf">ATTR</span> <span class="err">&#39;</span><span class="no">id</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="mi">36</span><span class="err">&#39;;</span>
-<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">name</span><span class="err">&#39;;</span>
-<span class="nf">SET</span> <span class="err">&#39;</span><span class="no">Donny</span><span class="err">&#39;;</span>
+8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">'/</span><span class="no">accounts</span><span class="err">';</span>
+<span class="nf">ADD</span> <span class="err">'</span><span class="no">account</span><span class="err">';</span>
+<span class="nf">ATTR</span> <span class="err">'</span><span class="no">id</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="mi">36</span><span class="err">';</span>
+<span class="nf">ADD</span> <span class="err">'</span><span class="no">name</span><span class="err">';</span>
+<span class="nf">SET</span> <span class="err">'</span><span class="no">Donny</span><span class="err">';</span>
 <span class="nf">UP</span><span class="err">;</span>
-<span class="nf">ADD</span> <span class="err">&#39;</span><span class="no">balance</span><span class="err">&#39;;</span>
-<span class="nf">SET</span> <span class="err">&#39;</span><span class="mi">3400</span><span class="err">&#39;;</span>
-</pre></div>
-</td></tr></table>
-
-<p>The above should be intuitively clear, but I&#39;ll explain just in case. First, the <code>XPATH</code> directive points us
-to the element found by the &quot;/accounts&quot; XPath query. This will be our root element. We assume here that
-it exists in the document. Therefore, if it is absent, our Xembly script will
-fail with a runtime exception.</p>
-
-<p>Next, the <code>ADD</code> directive on line 2 creates a new XML element without any children
-or attributes. Then, the <code>ATTR</code> directive sets an attribute for this element. The code then adds
-the new child element <code>name</code> and sets its text value to <code>&quot;Donny&quot;</code> using the <code>SET</code> directive. Finally, we move our pointer back to <code>account</code> element using <code>UP</code>, add the <code>balance</code> child element and set its value to <code>&quot;3400&quot;</code>.</p>
-
-<p>Our balance changing task can be expressed in Xembly with the following code:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
-2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">&#39;/</span><span class="no">accounts</span><span class="err">/</span><span class="no">account</span><span class="err">[</span><span class="no">name</span><span class="err">=&quot;</span><span class="no">Jeffrey</span><span class="err">&quot;]/</span><span class="no">balance</span><span class="err">&#39;;</span>
-<span class="nf">XSET</span> <span class="err">&#39;</span><span class="p">.</span> <span class="err">+</span> <span class="mi">500</span><span class="err">&#39;;</span>
-</pre></div>
-</td></tr></table>
-
-<p>The <code>XSET</code> directive sets the element text value, similar to <code>SET</code>, but
-calculates it beforehand using the provided XPath expression <code>. + 500</code>.</p>
-
-<p>Xembly performs all manipulations through DOM. Consequently, Xembly can be
-implemented inside any language that has a built-in DOM implementation.</p>
-
-<p>In the meantime, there is only one implementation of Xembly language
-&mdash; in Java. Here is how it works:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<span class="nf">ADD</span> <span class="err">'</span><span class="no">balance</span><span class="err">';</span>
+<span class="nf">SET</span> <span class="err">'</span><span class="mi">3400</span><span class="err">';</span></pre></div></td></tr></table><p>The above should be intuitively clear, but I'll explain just in case. First, the <code>XPATH</code> directive points us to the element found by the "/accounts" XPath query. This will be our root element. We assume here that it exists in the document. Therefore, if it is absent, our Xembly script will fail with a runtime exception.</p><p>Next, the <code>ADD</code> directive on line 2 creates a new XML element without any children or attributes. Then, the <code>ATTR</code> directive sets an attribute for this element. The code then adds the new child element <code>name</code> and sets its text value to <code>"Donny"</code> using the <code>SET</code> directive. Finally, we move our pointer back to <code>account</code> element using <code>UP</code>, add the <code>balance</code> child element and set its value to <code>"3400"</code>.</p><p>Our balance changing task can be expressed in Xembly with the following code:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="asm">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nf">XPATH</span> <span class="err">'/</span><span class="no">accounts</span><span class="err">/</span><span class="no">account</span><span class="err">[</span><span class="no">name</span><span class="err">="</span><span class="no">Jeffrey</span><span class="err">"]/</span><span class="no">balance</span><span class="err">';</span>
+<span class="nf">XSET</span> <span class="err">'</span><span class="p">.</span> <span class="err">+</span> <span class="mi">500</span><span class="err">';</span></pre></div></td></tr></table><p>The <code>XSET</code> directive sets the element text value, similar to <code>SET</code>, but calculates it beforehand using the provided XPath expression <code>. + 500</code>.</p><p>Xembly performs all manipulations through DOM. Consequently, Xembly can be implemented inside any language that has a built-in DOM implementation.</p><p>In the meantime, there is only one implementation of Xembly language — in Java. Here is how it works:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
 5
 6
 7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Directive</span><span class="o">&gt;</span> <span class="n">directives</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Directives</span><span class="o">()</span>
-  <span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">&quot;/accounts&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;account&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="s">&quot;36&quot;</span><span class="o">)</span>
-  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;Donny&quot;</span><span class="o">).</span><span class="na">up</span><span class="o">()</span>
-  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;balance&quot;</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;3400&quot;</span><span class="o">);</span>
-<span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span><span class="n">directives</span><span class="o">).</span><span class="na">apply</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>In this snippet, I&#39;m using a supplementary script builder, <code>Directives</code>, which
-enables generation of directives in a fluent way. Then, I use <code>Xembler</code> class,
-which is similar to &quot;assembler&quot;, to apply all specified directives
-to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.</p>
-
-<p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+  <span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/accounts"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"account"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"36"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"Donny"</span><span class="o">).</span><span class="na">up</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"balance"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"3400"</span><span class="o">);</span>
+<span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span><span class="n">directives</span><span class="o">).</span><span class="na">apply</span><span class="o">(</span><span class="n">document</span><span class="o">);</span></pre></div></td></tr></table><p>In this snippet, I'm using a supplementary script builder, <code>Directives</code>, which enables generation of directives in a fluent way. Then, I use <code>Xembler</code> class, which is similar to "assembler", to apply all specified directives to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.</p><p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
@@ -279,18 +95,12 @@ to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.<
 7
 8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span>
-    <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;html&quot;</span><span class="o">)</span>
-      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;head&quot;</span><span class="o">)</span>
-      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">)</span>
-      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+    <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">"html"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"head"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"title"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">)</span>
   <span class="o">).</span><span class="na">xml</span><span class="o">()</span>
-<span class="o">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>The above snippet produces the following output:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml">1
+<span class="o">);</span></pre></div></td></tr></table><p>The above snippet produces the following output:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml">1
 2
 3
 4
@@ -298,72 +108,21 @@ to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.<
   <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-</td></tr></table>
-
-<p>For me, this appears to be more simple and compact.</p>
-
-<p>As usual, your bug reports and suggestions are always welcomed. Please send to
-<a href="https://github.com/yegor256/xembly/issues">Github issues</a> :)</p>
-</article>
-    <a href="/2014/04/09/xembly-intro.html#disqus_thread">comments</a>
-  </section>
-
-  <section class="front">
-    <p><span class="date">6 April 2014</span></p>
-    <header><h1><a href="/2014/04/06/phandom.html">Phantomjs as an HTML Validator</a></h1></header>
-    <article><p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
-but yesterday finally found the time to make some needed changes to it. So, now is a good time to
-explain how I&#39;m using Phandom in some of my unit tests.</p>
-
-<p>Before I get started, though, I should say a few words about <a href="http://phantomjs.org/">phantomjs</a>, which is a
-JavaScript interface for WebKit. WebKit, on the other hand, is a web browser without
-a user interface. WebKit is a C++ library that enables manipulation of
-HTML content, through DOM calls. For example, this is a simple JavaScript
-located code in <code>example.js</code>:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="javascript">1
+<span class="nt">&lt;/html&gt;</span></pre></div></td></tr></table><p>For me, this appears to be more simple and compact.</p><p>As usual, your bug reports and suggestions are always welcomed. Please send to <a href="https://github.com/yegor256/xembly/issues">Github issues</a> :)</p> </article> <a href="/2014/04/09/xembly-intro.html#disqus_thread">comments</a> </section><section class="front"><p><span class="date">6 April 2014</span></p> <header><h1><a href="/2014/04/06/phandom.html">Phantomjs as an HTML Validator</a></h1></header> <article><p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago, but yesterday finally found the time to make some needed changes to it. So, now is a good time to explain how I'm using Phandom in some of my unit tests.</p><p>Before I get started, though, I should say a few words about <a href="http://phantomjs.org/">phantomjs</a>, which is a JavaScript interface for WebKit. WebKit, on the other hand, is a web browser without a user interface. WebKit is a C++ library that enables manipulation of HTML content, through DOM calls. For example, this is a simple JavaScript located code in <code>example.js</code>:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="javascript">1
 2
 3
 4
 5
 6
 7
-8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpage&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+8</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpage'</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
 <span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
-  <span class="s1">&#39;http://google.com&#39;</span><span class="p">,</span>
+  <span class="s1">'http://google.com'</span><span class="p">,</span>
   <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;loaded!&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'loaded!'</span><span class="p">);</span>
     <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
   <span class="p">}</span>
-<span class="p">);</span>
-</pre></div>
-</td></tr></table>
-
-<p>We run phantomjs from the command line with the following code:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">$ </span>phantomjs example.js
-</pre></div>
-</td></tr></table>
-
-<p>Phantomjs creates a <code>page</code> object
-(provided by <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a>
-module inside phantomjs), and then asks it to <code>open()</code> a Web page. The object
-communicates with WebKit and converts this call into DOM instructions. After which, the page loads. The phantomjs engine then terminates on line 6.</p>
-
-<p>WebKit renders a web page with all neccessary components such as CSS,
-JavaScript, ActionScript, etc, just as any standard Web browser would.</p>
-
-<p>So far so good, and this is the traditional way of using phantomjs. Now, on to giving you an idea
-of how <a href="http://www.phandom.org">Phandom</a> (which stands for &quot;PhantomJS DOM&quot;) works inside
-Java unit tests:</p>
-
-<p>To test this, let&#39;s give <code>phantomjs</code> an HTML page and ask him to render it. When the page is ready, we&#39;ll
-ask phantomjs to show us how this HTML looks in WebKit. If we see the elements we need and desire,
-&mdash; we&#39;re good to go. Let&#39;s use the following example:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java"> 1
+<span class="p">);</span></pre></div></td></tr></table><p>We run phantomjs from the command line with the following code:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">$ </span>phantomjs example.js</pre></div></td></tr></table><p>Phantomjs creates a <code>page</code> object (provided by <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a> module inside phantomjs), and then asks it to <code>open()</code> a Web page. The object communicates with WebKit and converts this call into DOM instructions. After which, the page loads. The phantomjs engine then terminates on line 6.</p><p>WebKit renders a web page with all neccessary components such as CSS, JavaScript, ActionScript, etc, just as any standard Web browser would.</p><p>So far so good, and this is the traditional way of using phantomjs. Now, on to giving you an idea of how <a href="http://www.phandom.org">Phandom</a> (which stands for "PhantomJS DOM") works inside Java unit tests:</p><p>To test this, let's give <code>phantomjs</code> an HTML page and ask him to render it. When the page is ready, we'll ask phantomjs to show us how this HTML looks in WebKit. If we see the elements we need and desire, — we're good to go. Let's use the following example:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java"> 1
  2
  3
  4
@@ -386,35 +145,16 @@ ask phantomjs to show us how this HTML looks in WebKit. If we see the elements w
   <span class="nd">@Test</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">rendersValidHtml</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">final</span> <span class="n">Document</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Document</span><span class="o">();</span>
-    <span class="c1">// This is the method we&#39;re testing. It is supposed</span>
+    <span class="c1">// This is the method we're testing. It is supposed</span>
     <span class="c1">// to return a valid HTML without broken JavaScript</span>
     <span class="c1">// and with all required HTML elements.</span>
     <span class="kd">final</span> <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
     <span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
       <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">xhtml</span><span class="o">(</span><span class="k">new</span> <span class="n">Phandom</span><span class="o">(</span><span class="n">html</span><span class="o">).</span><span class="na">dom</span><span class="o">()),</span>
-      <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">&quot;//p[.=&#39;Hello, world!&#39;]&quot;</span><span class="o">)</span>
+      <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">"//p[.='Hello, world!']"</span><span class="o">)</span>
     <span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code>
-from <code>doc</code> object, and then pass it to
-<a href="http://www.phandom.org/apidocs-0.2.1/org/phandom/Phandom.html"><code>Phandom</code></a>
-as an argument. Then,
-on line 13, we call the <code>Phandom.dom()</code> method to get an instance
-of the class <code>org.w3c.dom.Document</code>.</p>
-
-<p>If our HTML contains any broken JavaScript code, method <code>dom()</code> produces a runtime exception and the unit test faila. If HTML is clean and WebKit is able to render it without problems, the test passes.</p>
-
-<p>I&#39;m using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p>
-
-<p>Of course, you shouldn&#39;t forget that you must have phantomjs installed on your
-build machine. In order to avoid unit test failures when
-phantomjs is not available or present, I&#39;ve created the following supplementary method:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<span class="o">}</span></pre></div></td></tr></table><p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code> from <code>doc</code> object, and then pass it to <a href="http://www.phandom.org/apidocs-0.2.1/org/phandom/Phandom.html"><code>Phandom</code></a> as an argument. Then, on line 13, we call the <code>Phandom.dom()</code> method to get an instance of the class <code>org.w3c.dom.Document</code>.</p><p>If our HTML contains any broken JavaScript code, method <code>dom()</code> produces a runtime exception and the unit test faila. If HTML is clean and WebKit is able to render it without problems, the test passes.</p><p>I'm using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p><p>Of course, you shouldn't forget that you must have phantomjs installed on your build machine. In order to avoid unit test failures when phantomjs is not available or present, I've created the following supplementary method:</p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
 2
 3
 4
@@ -426,133 +166,4 @@ phantomjs is not available or present, I&#39;ve created the following supplement
     <span class="n">Assume</span><span class="o">.</span><span class="na">assumeTrue</span><span class="o">(</span><span class="n">Phandom</span><span class="o">.</span><span class="na">installed</span><span class="o">());</span>
     <span class="c1">// the rest of the unit test method body...</span>
   <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Enjoy and feel free to report any bugs or problems you encounter to:
-<a href="https://github.com/yegor256/phandom/issues">Github issues</a> :)</p>
-</article>
-    <a href="/2014/04/06/phandom.html#disqus_thread">comments</a>
-  </section>
-
-  <section class="front">
-    <p><span class="date">6 April 2014</span></p>
-    <header><h1><a href="/2014/04/06/movies-for-thanasis.html">Movies for Thanasis</a></h1></header>
-    <article><p>Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  &quot;Hollywood.&quot;</p>
-
-<p>Level C titles are supposed to be impossible to understand unless you&#39;ve seen
-(and understood) their prequels -- listed in sections A and B. So, start browsing the lists in sections A and post your comments if you have any. :)</p>
-
-<p>Level A</p>
-
-<ul>
-<li><a href="http://www.imdb.com/title/tt0108399/">True Romance (1993)</a></li>
-<li><a href="http://www.imdb.com/title/tt0110912/">Pulp Fiction (1994)</a></li>
-<li><a href="http://www.imdb.com/title/tt0266697/">Kill Bill (2003)</a></li>
-<li><a href="http://www.imdb.com/title/tt0118996/">Doberman (1997)</a></li>
-<li><a href="http://www.imdb.com/title/tt0144201/">La fille sur le pont (1999)</a></li>
-<li><a href="http://www.imdb.com/title/tt0290673/">Irreversible (2002)</a></li>
-<li><a href="http://www.imdb.com/title/tt0120669/">Fear and Loathing in Las Vegas (1998)</a></li>
-<li><a href="http://www.imdb.com/title/tt0119879/">Perdita Durango (1997)</a></li>
-<li><a href="http://www.imdb.com/title/tt0107165/">Golden Balls (1993)</a></li>
-<li><a href="http://www.imdb.com/title/tt0120753/">The Million Dollar Hotel (2000)</a></li>
-<li><a href="http://www.imdb.com/title/tt0245574/">Y Tu Mamá También (2001)</a></li>
-<li><a href="http://www.imdb.com/title/tt0105236/">Reservoir Dogs (1992)</a></li>
-<li><a href="http://www.imdb.com/title/tt0117951/">Trainspotting (1996)</a></li>
-<li><a href="http://www.imdb.com/title/tt0137523/">Fight Club (1999)</a></li>
-<li><a href="http://www.imdb.com/title/tt0106307/">Arizona Dream (1992)</a></li>
-<li><a href="http://www.imdb.com/title/tt0118843/">Black Cat, White Cat (1998)</a></li>
-<li><a href="http://www.imdb.com/title/tt0118789/">Buffalo &#39;66 (1998)</a></li>
-<li><a href="http://www.imdb.com/title/tt0104545/">Jamon Jamon (1992)</a></li>
-<li><a href="http://www.imdb.com/title/tt0110632/">Natural Born Killers (1994)</a></li>
-<li><a href="http://www.imdb.com/title/tt0124901/">Thursday (1998)</a></li>
-<li><a href="http://www.imdb.com/title/tt0115781/">Bullet (1996)</a></li>
-</ul>
-
-<p>Level B</p>
-
-<ul>
-<li><a href="http://www.imdb.com/title/tt0101700/">Delicatessen (1991)</a></li>
-<li><a href="http://www.imdb.com/title/tt0115658/">Bernie (1996)</a></li>
-<li><a href="http://www.imdb.com/title/tt0119257/">Hardmen (1996)</a></li>
-<li><a href="http://www.imdb.com/title/tt0365686/">Revolver (2005)</a></li>
-<li><a href="http://www.imdb.com/title/tt0354899/">Science of Sleep (2006)</a></li>
-<li><a href="http://www.imdb.com/title/tt0460740/">Cashback (2006)</a></li>
-<li><a href="http://www.imdb.com/title/tt0395125/">El Crimen Perfecto (2004)</a></li>
-<li><a href="http://www.imdb.com/title/tt0112922/">El día de la bestia (1995)</a></li>
-<li><a href="http://www.imdb.com/title/tt0255067/">La comunidad (2000)</a></li>
-<li><a href="http://www.imdb.com/title/tt0304262/">The Happiness of the Katakuris (2001)</a></li>
-<li><a href="http://www.imdb.com/title/tt0875113/">99 francs (2007)</a></li>
-<li><a href="http://www.imdb.com/title/tt0420555/">Combien tu m&#39;aimes? (2005)</a></li>
-<li><a href="http://www.imdb.com/title/tt0299977/">Ying xiong (2002)</a></li>
-<li><a href="http://www.imdb.com/title/tt0074252/">Brutti, sporchi e cattivi (1976)</a></li>
-</ul>
-
-<p>Level C</p>
-
-<ul>
-<li><a href="http://www.imdb.com/title/tt0486674/">What Just Happened (2008)</a></li>
-<li><a href="http://www.imdb.com/title/tt0147612/">Happiness (1998)</a></li>
-<li><a href="http://www.imdb.com/title/tt0292963/">Before the Devil Knows You Are Dead (2007)</a></li>
-<li><a href="http://www.imdb.com/title/tt0477348/">No Country for Old Men (2007)</a></li>
-<li><a href="http://www.imdb.com/title/tt1019452/">A Serious Man (2009)</a></li>
-</ul>
-</article>
-    <a href="/2014/04/06/movies-for-thanasis.html#disqus_thread">comments</a>
-  </section>
-
-  <section class="front">
-    <p><span class="date">6 April 2014</span></p>
-    <header><h1><a href="/2014/04/06/introduction.html">First Post</a></h1></header>
-    <article><p>This is the first post on my new blog. Therefore, it&#39;s not about anything in particular - just
-an introduction and my way of saying hello. This blog will be primarily about software development
-ideas. As my <a href="/about-me.html">About Me</a> page says, I&#39;m passionate about software
-quality, and will write solely about my ideas and views on it.</p>
-
-<p>Anyway, welcome to my new blog. Together, let&#39;s see how this works out! :)</p>
-
-<p>ps. BTW, I purchased the <a href="http://www.myfonts.com/fonts/ascender/cambria/">Cambria font</a>
-just for this new blog. It cost, &euro;98. Nevertheless, I think its a good investment for this new venture.</p>
-</article>
-    <a href="/2014/04/06/introduction.html#disqus_thread">comments</a>
-  </section>
-
-
-<div class="pagination">
-  <div style="float: left;">
-    
-      <span class="mute">prev</span>
-    
-  </div>
-  page 1 of 1
-  <div style="float: right;">
-    
-      <span class="mute">next</span>
-    
-  </div>
-</div>
-
-      </div>
-    </div>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1963507-32']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <script type="text/javascript">
-      var disqus_shortname = 'yegor256';
-      (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
-  </body>
-</html>
+<span class="o">}</span></pre></div></td></tr></table><p>Enjoy and feel free to report any bugs or problems you encounter to: <a href="https://github.com/yegor256/phandom/issues">Github issues</a> :)</p> </article> <a href="/2014/04/06/phandom.html#disqus_thread">comments</a> </section><section class="front"><p><span class="date">6 April 2014</span></p> <header><h1><a href="/2014/04/06/movies-for-thanasis.html">Movies for Thanasis</a></h1></header> <article><p>Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in "Hollywood."</p><p>Level C titles are supposed to be impossible to understand unless you've seen (and understood) their prequels -- listed in sections A and B. So, start browsing the lists in sections A and post your comments if you have any. :)</p><p>Level A</p><ul><li><a href="http://www.imdb.com/title/tt0108399/">True Romance (1993)</a></li><li><a href="http://www.imdb.com/title/tt0110912/">Pulp Fiction (1994)</a></li><li><a href="http://www.imdb.com/title/tt0266697/">Kill Bill (2003)</a></li><li><a href="http://www.imdb.com/title/tt0118996/">Doberman (1997)</a></li><li><a href="http://www.imdb.com/title/tt0144201/">La fille sur le pont (1999)</a></li><li><a href="http://www.imdb.com/title/tt0290673/">Irreversible (2002)</a></li><li><a href="http://www.imdb.com/title/tt0120669/">Fear and Loathing in Las Vegas (1998)</a></li><li><a href="http://www.imdb.com/title/tt0119879/">Perdita Durango (1997)</a></li><li><a href="http://www.imdb.com/title/tt0107165/">Golden Balls (1993)</a></li><li><a href="http://www.imdb.com/title/tt0120753/">The Million Dollar Hotel (2000)</a></li><li><a href="http://www.imdb.com/title/tt0245574/">Y Tu Mamá También (2001)</a></li><li><a href="http://www.imdb.com/title/tt0105236/">Reservoir Dogs (1992)</a></li><li><a href="http://www.imdb.com/title/tt0117951/">Trainspotting (1996)</a></li><li><a href="http://www.imdb.com/title/tt0137523/">Fight Club (1999)</a></li><li><a href="http://www.imdb.com/title/tt0106307/">Arizona Dream (1992)</a></li><li><a href="http://www.imdb.com/title/tt0118843/">Black Cat, White Cat (1998)</a></li><li><a href="http://www.imdb.com/title/tt0118789/">Buffalo '66 (1998)</a></li><li><a href="http://www.imdb.com/title/tt0104545/">Jamon Jamon (1992)</a></li><li><a href="http://www.imdb.com/title/tt0110632/">Natural Born Killers (1994)</a></li><li><a href="http://www.imdb.com/title/tt0124901/">Thursday (1998)</a></li><li><a href="http://www.imdb.com/title/tt0115781/">Bullet (1996)</a></li></ul><p>Level B</p><ul><li><a href="http://www.imdb.com/title/tt0101700/">Delicatessen (1991)</a></li><li><a href="http://www.imdb.com/title/tt0115658/">Bernie (1996)</a></li><li><a href="http://www.imdb.com/title/tt0119257/">Hardmen (1996)</a></li><li><a href="http://www.imdb.com/title/tt0365686/">Revolver (2005)</a></li><li><a href="http://www.imdb.com/title/tt0354899/">Science of Sleep (2006)</a></li><li><a href="http://www.imdb.com/title/tt0460740/">Cashback (2006)</a></li><li><a href="http://www.imdb.com/title/tt0395125/">El Crimen Perfecto (2004)</a></li><li><a href="http://www.imdb.com/title/tt0112922/">El día de la bestia (1995)</a></li><li><a href="http://www.imdb.com/title/tt0255067/">La comunidad (2000)</a></li><li><a href="http://www.imdb.com/title/tt0304262/">The Happiness of the Katakuris (2001)</a></li><li><a href="http://www.imdb.com/title/tt0875113/">99 francs (2007)</a></li><li><a href="http://www.imdb.com/title/tt0420555/">Combien tu m'aimes? (2005)</a></li><li><a href="http://www.imdb.com/title/tt0299977/">Ying xiong (2002)</a></li><li><a href="http://www.imdb.com/title/tt0074252/">Brutti, sporchi e cattivi (1976)</a></li></ul><p>Level C</p><ul><li><a href="http://www.imdb.com/title/tt0486674/">What Just Happened (2008)</a></li><li><a href="http://www.imdb.com/title/tt0147612/">Happiness (1998)</a></li><li><a href="http://www.imdb.com/title/tt0292963/">Before the Devil Knows You Are Dead (2007)</a></li><li><a href="http://www.imdb.com/title/tt0477348/">No Country for Old Men (2007)</a></li><li><a href="http://www.imdb.com/title/tt1019452/">A Serious Man (2009)</a></li></ul> </article> <a href="/2014/04/06/movies-for-thanasis.html#disqus_thread">comments</a> </section><section class="front"><p><span class="date">6 April 2014</span></p> <header><h1><a href="/2014/04/06/introduction.html">First Post</a></h1></header> <article><p>This is the first post on my new blog. Therefore, it's not about anything in particular - just an introduction and my way of saying hello. This blog will be primarily about software development ideas. As my <a href="/about-me.html">About Me</a> page says, I'm passionate about software quality, and will write solely about my ideas and views on it.</p><p>Anyway, welcome to my new blog. Together, let's see how this works out! :)</p><p>ps. BTW, I purchased the <a href="http://www.myfonts.com/fonts/ascender/cambria/">Cambria font</a> just for this new blog. It cost, €98. Nevertheless, I think its a good investment for this new venture.</p> </article> <a href="/2014/04/06/introduction.html#disqus_thread">comments</a> </section><div class="pagination"><div style="float:left"> <span class="mute">prev</span></div> page 1 of 1<div style="float:right"> <span class="mute">next</span></div></div></div></div> <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-1963507-32"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script>var disqus_shortname="yegor256";!function(){var e=document.createElement("script");e.async=!0,e.type="text/javascript",e.src="//"+disqus_shortname+".disqus.com/count.js",(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(e)}()</script></body></html>
