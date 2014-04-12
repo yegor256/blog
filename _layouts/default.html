@@ -6,7 +6,11 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.yegor256.com/rss"/>
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <meta name="description" content="{{ page.excerpt | strip_html }}" />
+    {% if page.excerpt %}
+      <meta name="description" content="{{ page.excerpt | strip_html }}" />
+    {% else %}
+      <meta name="description" content="Blog about quality and quantity in software development, by Yegor Bugayenko" />
+    {% endif %}
     <meta name="keywords" content="{{ page.keywords | join:', ' }}" />
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="/css/layout.css"/>
