@@ -16,7 +16,7 @@
     {% endif %}
     <meta name="keywords" content="{{ page.keywords | join:', ' | escape }}" />
     <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <title>{{ page.title }}</title>
   </head>
   <body>
