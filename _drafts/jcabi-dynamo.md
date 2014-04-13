@@ -25,7 +25,9 @@ is one of the steps towards this future.
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL)
-database accessible through RESTful JSON API. Its
+database accessible through
+[RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer)
+JSON API. Its
 design is very simple. There are tables, which basically are
 collections of data structs, called "items", according to AWS terminology.
 Every item has a mandatory "hash", an optional "range",
@@ -43,9 +45,11 @@ and a number of optional attributes. For example, here is a table `depts`:
 
 For Java Amazon provides an [SDK](https://aws.amazon.com/documentation/sdkforjava/),
 which mirrors all RESTful calls to
-Java methods. It works fine, but it is designed in a pure procedural
-COBOL style. Say, we want to add a new item to the table above. RESTful
-call `putItem` looks like:
+Java methods. It works fine, but it is designed in a pure
+[procedural](http://en.wikipedia.org/wiki/Procedural_programming)
+style. Say, we want to add a new item to the table above.
+RESTful call [`putItem`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html)
+looks like (in essence):
 
 {% highlight text linenos=table %}
 putItem:
@@ -78,9 +82,12 @@ try {
 
 This script works fine, but there is one major drawback &mdash; it is not
 object oriented. It is a perfect example of an imperative
-procedural programming. Let me show what I've done with
+[procedural programming](http://en.wikipedia.org/wiki/Procedural_programming).
+
+Let me show what I've done with
 [jcabi-dynamo](http://dynamo.jcabi.com), to let you compare. Here
-is my code, which is doing exactly the same, but in an object-oriented way:
+is my code, which is doing exactly the same, but in an
+[object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) way:
 
 {% highlight java linenos=table %}
 Region region = // instantiate it with credentials
@@ -94,9 +101,13 @@ Item item = table.put(
 {% endhighlight %}
 
 It is not just a shorter code. It employs encapsulation and separates
-responsibilities of classes. `Table` class (actually it is an
+responsibilities of classes.
+[`Table`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html)
+class (actually it is an
 interface internally implemented by a class) encapsulates information
-about the table, while `Item` encapsulates item details. We
+about the table, while
+[`Item`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html)
+encapsulates item details. We
 can pass an `item` as an argument to another method and all DynamoDB
 related implementation details will be hidden from it. For example,
 somewhere later in the code:
@@ -109,7 +120,7 @@ void sayHello(Item item) {
 
 In this script we don't know anything about DynamoDB or
 how to deal with its RESTful API. We interact solely with an
-instance of `Item` class.
+instance of [`Item`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html) class.
 
 By the way, all public entities in
 [jcabi-dynamo](http://dynamo.jcabi.com) are
