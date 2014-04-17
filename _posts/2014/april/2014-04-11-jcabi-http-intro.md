@@ -13,7 +13,14 @@ keywords:
   - alternative to HttpURLConnection
 ---
 
-In the world of Java, there are plenty of HTTP clients from which to choose. Nevertheless, I decided to create a new one because none of the other clients satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is how my [jcabi-http](http://http.jcabi.com/) client interacts when you make an HTTP request and expect a successful HTML page in return:
+<img src="http://img.jcabi.com/logo-square.png"
+  style="width: 64px; height:64px; float: right; margin-left: 2em;"/>
+
+In the world of Java, there are plenty of HTTP clients from which to choose.
+Nevertheless, I decided to create a new one because none of the other clients
+satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is
+how my [jcabi-http](http://http.jcabi.com/) client interacts when you make an
+HTTP request and expect a successful HTML page in return:
 
 {% highlight java linenos=table %}
 String html = new JdkRequest("https://www.google.com")
