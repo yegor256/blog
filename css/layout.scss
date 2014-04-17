@@ -1,4 +1,6 @@
-$main-font: 'Cambria', 'Times New Roman', serif;
+$main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
+$main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
+$main-font-italic: 'Cambria-BoldItalic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
 $gray: #777;
 $mid-gray: #ccc;
@@ -9,42 +11,42 @@ $font-size: 19px;
 
 @font-face {
   font-family: 'Cambria-BoldItalic';
-  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot');
-  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot?#iefix')
+  src: url('http://img.yegor256.com/fonts/2AACA7_0_0.eot');
+  src: url('http://img.yegor256.com/fonts/2AACA7_0_0.eot?#iefix')
     format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/2A901D_0_0.woff')
+    url('http://img.yegor256.com/fonts/2AACA7_0_0.woff')
     format('woff'),
-  url('http://img.yegor256.com/fonts/2A901D_0_0.ttf')
+  url('http://img.yegor256.com/fonts/2AACA7_0_0.ttf')
     format('truetype');
 }
 @font-face {
   font-family: 'Cambria-Bold';
-  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot');
-  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot?#iefix')
+  src: url('http://img.yegor256.com/fonts/2AACA7_1_0.eot');
+  src: url('http://img.yegor256.com/fonts/2AACA7_1_0.eot?#iefix')
     format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/2A901D_1_0.woff')
+    url('http://img.yegor256.com/fonts/2AACA7_1_0.woff')
     format('woff'),
-  url('http://img.yegor256.com/fonts/2A901D_1_0.ttf')
+  url('http://img.yegor256.com/fonts/2AACA7_1_0.ttf')
     format('truetype');
 }
 @font-face {
   font-family: 'Cambria';
-  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot');
-  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot?#iefix')
+  src: url('http://img.yegor256.com/fonts/2AACA7_2_0.eot');
+  src: url('http://img.yegor256.com/fonts/2AACA7_2_0.eot?#iefix')
     format('embedded-opentype'),
-  url('http://img.yegor256.com/fonts/2A901D_2_0.woff')
+  url('http://img.yegor256.com/fonts/2AACA7_2_0.woff')
     format('woff'),
-  url('http://img.yegor256.com/fonts/2A901D_2_0.ttf')
+  url('http://img.yegor256.com/fonts/2AACA7_2_0.ttf')
     format('truetype');
 }
 @font-face {
   font-family: 'Cambria-Italic';
-  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot');
-  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot?#iefix')
+  src: url('http://img.yegor256.com/fonts/2AACA7_3_0.eot');
+  src: url('http://img.yegor256.com/fonts/2AACA7_3_0.eot?#iefix')
     format('embedded-opentype'),
-  url('http://img.yegor256.com/fonts/2A901D_3_0.woff')
+  url('http://img.yegor256.com/fonts/2AACA7_3_0.woff')
     format('woff'),
-  url('http://img.yegor256.com/fonts/2A901D_3_0.ttf')
+  url('http://img.yegor256.com/fonts/2AACA7_3_0.ttf')
     format('truetype');
 }
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
@@ -64,6 +66,14 @@ body {
   @media all and (max-width: $width) {
     font-size: 0.85 * $font-size;
   }
+}
+strong {
+  font-family: $main-font-bold;
+  font-weight: 400;
+}
+strong {
+  font-family: $main-font-italic;
+  font-weight: 400;
 }
 a, a:visited {
   color: $black;

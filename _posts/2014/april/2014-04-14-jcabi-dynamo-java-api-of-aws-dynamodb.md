@@ -12,7 +12,7 @@ keywords:
   - object oriented dynamodb java
 ---
 
-I'm a big fan of cloud computing in general and of [Amazon Web
+I'm a *big fan* of cloud computing in general and of [Amazon Web
 Services](http://aws.amazon.com/) in particular. I honestly believe that in a
 few years big providers will host all, or almost all, computing and storage
 resources. When this is the case, we won't have to worry too much anymore about
