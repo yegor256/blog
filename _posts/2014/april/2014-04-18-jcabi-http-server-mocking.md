@@ -91,7 +91,7 @@ It is recommended that you allow the container to find the first unoccupied TCP
 port and bind itself to it. Nevertheless, if you need to specify your own port,
 you can do it with a one-argument method
 [`start(int)`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkContainer.html#start%28int%29)
-in `MkContainer`:
+in `MkContainer`.
 
 I use `try/finally` to stop the container safely. In unit tests, this is not
 critical, as you can simplify your code and never stop the container. Besides,
