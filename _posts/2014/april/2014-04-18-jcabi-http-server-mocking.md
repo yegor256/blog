@@ -21,7 +21,6 @@ Recently, I explained a
 [fluent Java HTTP client]({% post_url 2014/april/2014-04-11-jcabi-http-intro %})
 created (mostly) to make HTTP
 interactions more object-oriented than with other available clients,including:
-
 [Apache Client](http://hc.apache.org/httpclient-3.x/),
 [Jersey Client](https://jersey.java.net/documentation/latest/client.html)
 and plain old
