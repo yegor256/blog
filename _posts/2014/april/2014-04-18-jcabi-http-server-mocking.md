@@ -73,9 +73,7 @@ The container finds the first available and unoccupied port.
 In the example above, I added just one answer. This means that the container
 will reply only to the first HTTP request with that answer and that all
 consecutive requests will cause HTTP responses with status "internal server
-errors."
-
-[500](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+error [500](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)."
 
 In lines 5 through 8, I make an HTTP request to the already started server.
 Also, I make an assertion that the body of the HTTP response contains the text
@@ -92,9 +90,9 @@ new JdkRequest(container.home())
 As you can see, I use `container.home()` in order to get the URL of the server.
 It is recommended that you allow the container to find the first unoccupied TCP
 port and bind itself to it. Nevertheless, if you need to specify your own port,
-you can do it with a one-argument in `MkContainer`:
-
+you can do it with a one-argument method
 [`start(int)`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkContainer.html#start%28int%29)
+in `MkContainer`:
 
 I use `try/finally` to stop the container safely. In unit tests, this is not
 critical, as you can simplify your code and never stop the container. Besides,
@@ -103,8 +101,8 @@ clarity, I would recommend you stop the container in the `finally` block.
 
 On line 12, I ask the stopped container to give me the first request it
 received. This mechanism is similar conceptually to the "verify" technology of
-mocking frameworks. For example, take the following.
-[Mockito](http://docs.mockito.googlecode.com/hg/org/mockito/Mockito.html#4):
+mocking frameworks. For example,
+[Mockito](http://docs.mockito.googlecode.com/hg/org/mockito/Mockito.html#4).
 
 {% highlight java %}
 MkQuery query = container.take();
