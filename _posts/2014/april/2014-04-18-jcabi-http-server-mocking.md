@@ -152,5 +152,4 @@ is based on it.
 
 If you have any questions or suggestions, please submit them through [Github
 issues](http://github.com/jcabi/jcabi-http/issues).
-
 As always, bugs are welcome :)
