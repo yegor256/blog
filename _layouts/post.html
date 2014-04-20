@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-</header>
-<section>
+<section itemscope="true" itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="name">{{ page.title }}</h1>
+  </header>
   <p>
-    <time datetime="{{ page.date | date_to_xmlschema }}">
+    <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
       {{ page.date | date: "%-d %B %Y" }}
     </time>
   </p>
@@ -22,7 +22,7 @@ layout: default
       href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"><i class="fa fa-linkedin-square"></i></a>
   </nav>
   <main>
-    <article role="article" itemtype="http://schema.org/BlogPosting">
+    <article role="article" itemprop="articleBody">
       {{ content }}
     </article>
   </main>
