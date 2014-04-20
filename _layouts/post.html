@@ -7,7 +7,9 @@ layout: default
 </header>
 <section>
   <p>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    <time itemprop="dateCreated" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%-d %B %Y" }}
+    </time>
   </p>
   <nav class="share">
     <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
@@ -19,7 +21,11 @@ layout: default
     <a class="share" target="_blank" onclick="return !window.open(this.href, 'LinkenIn', 'width=640,height=300')"
       href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"><i class="fa fa-linkedin-square"></i></a>
   </nav>
-  <main><article>{{ content }}</article></main>
+  <main>
+    <article role="article" itemtype="http://schema.org/BlogPosting">
+      {{ content }}
+    </article>
+  </main>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_shortname = 'yegor256';
