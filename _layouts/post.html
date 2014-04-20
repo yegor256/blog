@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
+  <header role="heading">
     <h1 itemprop="name">{{ page.title }}</h1>
   </header>
   <p>
@@ -11,7 +11,7 @@ layout: default
       {{ page.date | date: "%-d %B %Y" }}
     </time>
   </p>
-  <nav class="share">
+  <nav class="share" role="navigation">
     <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
       title="Share on Facebook">
       <i class="fa fa-facebook-square"></i>
@@ -29,12 +29,12 @@ layout: default
       <i class="fa fa-linkedin-square"></i>
     </a>
   </nav>
-  <main>
+  <main role="main">
     <article role="article" itemprop="articleBody">
       {{ content }}
     </article>
   </main>
-  <div>
+  <div role="complementary">
     <div id="disqus_thread"></div>
     <noscript>
       Please enable JavaScript to view the
