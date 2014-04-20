@@ -2,6 +2,8 @@
 layout: post
 title: "First Post"
 date: 2014-04-06
+description:
+  First post in my awesome blog :)
 keywords:
   - yegor bugayenko
   - bugayenko
