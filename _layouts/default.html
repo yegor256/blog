@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="content">
+      <section class="content">
         <nav class="top">
           <a class="item" href="/">home</a>
           <a class="item" href="/about-me.html">about me</a>
@@ -29,7 +29,7 @@
                 gcse.type = 'text/javascript';
                 gcse.async = true;
                 gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                    '//www.google.com/cse/cse.js?cx=' + cx;
+                  '//www.google.com/cse/cse.js?cx=' + cx;
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(gcse, s);
               })();
@@ -38,7 +38,7 @@
           </div>
         </nav>
         {{ content }}
-      </div>
+      </section>
     </div>
     <script type="text/javascript">
       var _gaq = _gaq || [];
