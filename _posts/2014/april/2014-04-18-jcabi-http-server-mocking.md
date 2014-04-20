@@ -14,8 +14,7 @@ keywords:
   - mock java http server
 ---
 
-<img src="http://img.jcabi.com/logo-square.png"
-  style="width: 64px; height:64px; float: right; margin-left: 2em;"/>
+{% badge http://img.jcabi.com/logo-square.png 64 %}
 
 Recently, I explained a
 [fluent Java HTTP client]({% post_url 2014/april/2014-04-11-jcabi-http-intro %})

@@ -14,6 +14,8 @@ keywords:
   - xpath
 ---
 
+{% badge http://img.xembly.org/logo.png 64 %}
+
 I use XML in almost every one of my projects. And, despite all the fuss about
 JSON/YAML, I honestly believe that XML is one of the greatest languages ever
 invented. Also, I believe that the beauty of XML reveals itself when used in

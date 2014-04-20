@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basic HTTP Authentication for S3 Buckets"
+title: "Basic HTTP Auth for S3 Buckets"
 date: 2014-04-19
 tags: cloud
 description:
@@ -15,18 +15,19 @@ keywords:
   - java api github
 ---
 
-<img src="http://img.s3auth.com/logo.png"
-  style="width: 200px; float: right; margin-left: 2em;"/>
+{% badge http://img.s3auth.com/logo.png 200 %}
 
-[Amazon S3](http://aws.amazon.com/s3)
+[Amazon S3](http://aws.amazon.com/s3/)
 is a simple and very useful storage of binary
 objects (aka "files"). You create a "bucket"
 there with a unique name, and upload your objects.
 AWS guarantees that they will be available for
-download through their RESTful API.
+download through their
+[RESTful API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
 
-A few years ago AWS introduced a feature for S3 called static
-website hosting. You simply turn this feature on and all
+A few years ago AWS introduced a feature for S3 called
+[static website hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
+You simply turn this feature on and all
 your objects in a bucket become available through public HTTP.
 Awesome feature for hosting of static content, like images,
 JavaScript files, video, and audio content. Then you need
@@ -47,19 +48,29 @@ access to them using their web browsers.
 
 ## HTTP Basic Authentication
 
-HTTP protocol offers a nice feature of user authentication that doesn't
-require any extra site pages. When HTTP request arrives to the
+HTTP protocol offers a nice
+["basic access authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
+feature that doesn't require any extra site pages.
+When HTTP request arrives to the
 server it doesn't deliver the content but replies with
 a response with status 401. This literally means "I don't know who you
 are, please authenticate yourself."
 
 The browser shows its native login screen and asks for the user name
-and password. Whatever you enter is concatenated, Base64 encoded, and
-added to the next request in `Authentication` HTTP header.
+and password. Whatever you enter is concatenated,
+[Base64](http://en.wikipedia.org/wiki/Base64) encoded, and
+added to the next request in `Authorization` HTTP header.
+
+{% figure http://img.yegor256.com/2014/04/s3auth-authentication-dialog.jpg 600 %}
 
 Now the browser is trying to make another attempt to fetch the same
-web page. But at this time HTTP request contains a header
-`Authorization: Basic am9lOnNlY3JldA==`. This is just an example.
+web page. But at this time HTTP request contains a header:
+
+{% highlight text %}
+Authorization: Basic am9lOnNlY3JldA==
+{% endhighlight %}
+
+This is just an example.
 Base64 encoded part of this example means `joe:secret`, where `joe` is
 the user name and `secret` is the password entered by the user.
 
@@ -80,8 +91,10 @@ arrive to my server, it connects to Amazon S3, retrieves my objects,
 and delivers them back in HTTP responses.
 
 The server implements authentication and authorization using a
-special file `.passwd` in the root of my bucket. The format of the
-file is identical to the one used by Apache HTTP Server &mdash; one user per
+special file `.htpasswd` in the root of my bucket. The format of the
+file is identical to the one used by
+[Apache HTTP Server](http://httpd.apache.org/docs/2.2/programs/htpasswd.html)
+&mdash; one user per
 line. Every line has a name of the user and a hash version of his password.
 
 ## Implementation
@@ -98,8 +111,9 @@ or Github. Well, I can find their names using these numbers, but this
 information is public anyway.
 
 The server is implemented in Java6. For its hosting I'm using
-a single Amazon EC2 [m1.small](...) Ubuntu server. Recently, it appears to
-be working pretty stable, according to Pingdom:
+a single Amazon EC2 [m1.small](http://aws.amazon.com/ec2/instance-types/)
+Ubuntu server. Recently, it appears to
+be working pretty stable.
 
 
 ## Extra Features
@@ -109,12 +123,16 @@ server can render lists of pages, just like Apache HTTP Server. If you have
 a collection of objects in your bucket, but `index.html` is absent,
 Amazon S3 will give you a "page not found" result. My server will
 show you a list of objects in the bucket and make it possible to
-one folder up or down.
+go one folder up or down.
+
+When your bucket has versioning feature turned on you are able to
+list all versions of any object in the browser. Just add `?all-versions` to
+the end of the URL and you get the list. Then, click any version
+and [s3auth.com](http://www.s3auth.com)
+retrieves that specific version and renders it.
 
 ## Traction
 
 I created this service mostly for myself, but apparently I'm not alone
 with this problem. At the moment [s3auth.com](http://www.s3auth.com)
-hosts over 300 domains and sends through over 1Mb of data per second.
-
-BTW, it all started from this StackOverflow question :)
+hosts over 300 domains and sends through over 10Mb of data per hour.

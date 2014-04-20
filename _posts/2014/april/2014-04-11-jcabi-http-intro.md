@@ -13,8 +13,7 @@ keywords:
   - alternative to HttpURLConnection
 ---
 
-<img src="http://img.jcabi.com/logo-square.png"
-  style="width: 64px; height:64px; float: right; margin-left: 2em;"/>
+{% badge http://img.jcabi.com/logo-square.png 64 %}
 
 In the world of Java, there are plenty of HTTP clients from which to choose.
 Nevertheless, I decided to create a new one because none of the other clients

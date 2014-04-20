@@ -12,8 +12,7 @@ keywords:
   - object oriented dynamodb java
 ---
 
-<img src="http://img.jcabi.com/logo-square.png"
-  style="width: 64px; height:64px; float: right; margin-left: 2em;"/>
+{% badge http://img.jcabi.com/logo-square.png 64 %}
 
 I'm a big fan of cloud computing in general and of [Amazon Web
 Services](http://aws.amazon.com/) in particular. I honestly believe that in a
