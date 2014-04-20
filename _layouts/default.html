@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:gcse="uri:google-did-not-provide-a-real-ns">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="description" content="{{ page.description | escape }}" />
@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="content">
+      <div class="content">
         <nav class="top">
           <a class="item" href="/">home</a>
           <a class="item" href="/about-me.html">about me</a>
@@ -35,11 +35,11 @@
                 s.parentNode.insertBefore(gcse, s);
               })();
             </script>
-            <gcse:search></gcse:search>
+            <div class="gcse-search"></div>
           </div>
         </nav>
         {{ content }}
-      </section>
+      </div>
     </div>
     <script type="text/javascript">
       var _gaq = _gaq || [];
