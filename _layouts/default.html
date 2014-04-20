@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="{{ page.description | escape }}" />
+    <meta name="keywords" content="{{ page.keywords | join:', ' | escape }}" />
+    <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/gif" href="http://img.yegor256.com/icon-64x64.png">
     <link rel="shortcut icon" href="http://img.yegor256.com/icon-64x64.png" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-    <meta name="description" content="{{ page.description | escape }}" />
-    <meta name="keywords" content="{{ page.keywords | join:', ' | escape }}" />
-    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
+    <link rel="canonical" href="http://www.yegor256.com{{ page.url }}" />
     <title>{{ page.title }}</title>
   </head>
   <body>
