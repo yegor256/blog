@@ -14,20 +14,28 @@ keywords:
   - xpath
 ---
 
-I use XML in almost every one of my projects. And, despite all the fuss about JSON/YAML, I honestly believe that XML is one of the greatest languages ever invented. Also, I believe that the beauty of XML reveals itself when used in combination with related technologies.
+I use XML in almost every one of my projects. And, despite all the fuss about
+JSON/YAML, I honestly believe that XML is one of the greatest languages ever
+invented. Also, I believe that the beauty of XML reveals itself when used in
+combination with related technologies.
 
-For example, you can expose your data in XML and render it for the end-user using [XSL stylesheet](http://www.w3.org/Style/XSL/).
-Another example would be when you validate the same data,
-before rendering, to ensure that the structure is correct. You can do this with the [XSD](http://www.w3.org/TR/xmlschema11-1/) schema.
-Alternatively, you can pick specific data elements from the entire document by using
+For example, you can expose your data in XML and render it for the end-user
+using [XSL stylesheet](http://www.w3.org/Style/XSL/).
+
+Another example would be when you validate the same data, before rendering, to
+ensure that the structure is correct. You can do this with the
+[XSD](http://www.w3.org/TR/xmlschema11-1/) schema. Alternatively, you can pick
+specific data elements from the entire document by using
 [XPath](http://www.w3.org/TR/xpath/) queries.
 
-Essentially, these three technologies, XSL, XSD schema and XPath, are what makes XML so powerful:
+Essentially, these three technologies, XSL, XSD schema and XPath, are what makes
+XML so powerful:
 
 However, there can be times when XML falls short. For instance, imagine you have
-an existing document that needs to be modified just slightly. For example, let's use the following:
+an existing document that needs to be modified just slightly. For example, let's
+use the following:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <accounts>
   [...]
   <acc id='34'>
@@ -87,7 +95,7 @@ the new child element `name` and sets its text value to `"Donny"` using the `SET
 
 Our balance changing task can be expressed in Xembly with the following code:
 
-{% highlight asm linenos=table %}
+{% highlight asm %}
 XPATH '/accounts/account[name="Jeffrey"]/balance';
 XSET '. + 500';
 {% endhighlight %}
@@ -118,7 +126,7 @@ to the `document` object of class `org.w3c.dom.Document`.
 
 Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 System.out.println(
   new Xembler(
     new Directives().add("html")
@@ -131,7 +139,7 @@ System.out.println(
 
 The above snippet produces the following output:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <html>
   <head>
     <title>Hello, world!</title>

@@ -53,7 +53,7 @@ Let's say we want to add a new item to the table above. RESTful call
 [`putItem`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html)
 looks like (in essence):
 
-{% highlight text linenos=table %}
+{% highlight text %}
 putItem:
   tableName: depts
   item:
@@ -114,7 +114,7 @@ We can pass an `item` as an argument to another method and all DynamoDB related
 implementation details will be hidden from it. For example, somewhere later in
 the code:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 void sayHello(Item item) {
   System.out.println("Hello, " + item.get("worker"));
 }
@@ -131,7 +131,7 @@ Let's consider a more complex example, which would take a page of code if we
 were to use a bare AWS SDK. Let's say that we want to remove all workers from
 our table who work as architects:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 Region region = // instantiate it with credentials
 Iterator<Item> workers = region.table("depts").frame()
   .where("job", Condition.equalTo("architect"));
