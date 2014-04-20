@@ -1,3 +1,19 @@
+$(
+  function() {
+    $('.share a').click(
+      function (event) {
+        event.preventDefault();
+        var $this = $(this);
+        window.open(
+          $this.attr('href'),
+          $this.attr('title'),
+          'width=640,height=300'
+        );
+      }
+    );
+  }
+);
+
 // Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-1963507-32']);

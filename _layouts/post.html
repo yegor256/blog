@@ -12,14 +12,22 @@ layout: default
     </time>
   </p>
   <nav class="share">
-    <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
-      href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"><i class="fa fa-facebook-square"></i></a>
-    <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
-      href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"><i class="fa fa-twitter-square"></i></a>
-    <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
-      href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"><i class="fa fa-google-plus-square"></i></a>
-    <a class="share" target="_blank" onclick="return !window.open(this.href, 'LinkenIn', 'width=640,height=300')"
-      href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"><i class="fa fa-linkedin-square"></i></a>
+    <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
+      title="Share on Facebook">
+      <i class="fa fa-facebook-square"></i>
+    </a>
+    <a href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
+      title="Share on Twitter">
+      <i class="fa fa-twitter-square"></i>
+    </a>
+    <a href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"
+      title="Share on Google+">
+      <i class="fa fa-google-plus-square"></i>
+    </a>
+    <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"
+      title="Share on LinkedIn">
+      <i class="fa fa-linkedin-square"></i>
+    </a>
   </nav>
   <main>
     <article role="article" itemprop="articleBody">

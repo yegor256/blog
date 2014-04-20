@@ -141,6 +141,7 @@ time {
 .share {
   font-size: 1.5 * $font-size;
   a, a:visited {
+    text-decoration: none;
     margin-right: 0.1 * $font-size;
     color: $gray;
   }
