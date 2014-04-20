@@ -115,7 +115,6 @@ a single Amazon EC2 [m1.small](http://aws.amazon.com/ec2/instance-types/)
 Ubuntu server. Recently, it appears to
 be working pretty stable.
 
-
 ## Extra Features
 
 Besides authentication and authorization [s3auth.com](http://www.s3auth.com)
