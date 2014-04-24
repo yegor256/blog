@@ -26,7 +26,7 @@ Put simply, the library is a convenient wrapper for JDK-native DOM manipulations
 import com.jcabi.xml.XML;
 import com.jcabi.xml.XMLDocument;
 XML xml = new XMLDocument(
-  "<root><a>hello</a><b>world!</b></root>"
+"<root><a>hello</a><b>world!</b></root>"
 );
 {% endhighlight %}
 
@@ -40,11 +40,13 @@ System.out.println(xml.xpath("/root/a/text()").get(0));
 // outputs the entire XML document
 System.out.println(xml.toString());
 {% endhighlight %}
+
 Method `xpath()` allows you to find a collection of text nodes or attributes in the document, and then convert them to a collection of strings, using [XPath query](http://en.wikipedia.org/wiki/XPath):
+
 {% highlight java %}
 // outputs "hello" and "world"
 for (String text : xml.xpath("/root/*/text()")) {
-  System.out.println(text);
+System.out.println(text);
 }
 {% endhighlight %}
 
@@ -52,8 +54,8 @@ Method `nodes()` enables the same XPath search operation, but instead returns a 
 
 {% highlight java %}
 // outputs "<a>hello</a>" and "<b>world</b>"
-for (XML node : xml.xpath("/root/*")) {
-  System.out.println(node);
+for (XML node : xml.xpath("/root/*")) 
+System.out.println(node);
 }
 {% endhighlight %}
 
