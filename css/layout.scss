@@ -168,6 +168,9 @@ h1 {
     text-decoration: none;
   }
 }
+h2, h3 {
+  position: relative;
+}
 table.highlighttable {
   td.linenos {
     width: 2 * $font-size;
@@ -207,4 +210,20 @@ figure {
 .badge {
   float: right;
   margin-left: 2em;
+}
+.header-link {
+  position: absolute;
+  left: -1.4em;
+  opacity: 0;
+  font-size: .75em;
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  -moz-transition: opacity 0.2s ease-in-out 0.1s;
+  -ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
 }

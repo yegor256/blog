@@ -11,6 +11,18 @@ $(
         );
       }
     );
+    $("h2, h3").each(
+      function (idx, element) {
+        var $element = $(element),
+          icon = '<i class="fa fa-link"></i>',
+          id = $element.attr('id');
+        if (id) {
+          $element.prepend(
+            $("<a/>").addClass("header-link").attr("href", "#" + id).html(icon)
+          );
+        }
+      }
+    );
   }
 );
 
