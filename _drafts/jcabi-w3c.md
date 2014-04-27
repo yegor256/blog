@@ -13,23 +13,14 @@ keywords:
   - java w3c jigsaw
   - jigsaw css w3c validator
 ---
-
 {% badge http://img.jcabi.com/logo-square.png 64 %}
 
-I've made two Java wrappers of W3C validators
-([HTML](http://validator.w3.org/) and
-[CSS](http://jigsaw.w3.org/css-validator/)) a few years
-ago. They seemed to be working fine and were even listed by
-W3C on [their website](http://validator.w3.org/docs/api.html)
-among other APIs. Until now, these wrappers were
-part of [ReXSL](http://www.rexsl.com) library.
+A few years ago, I created two Java wrappers for W3C validators: ([HTML](http://validator.w3.org/) and
+[CSS](http://jigsaw.w3.org/css-validator/)). Both wrappers seemed to be working fine and were even listed by W3C on [their website](http://validator.w3.org/docs/api.html) in the API section. Until recently, these wrappers have always been part of [ReXSL](http://www.rexsl.com) library.
 
-A few days ago I took them out of ReXSL and published
-as a standalone library &mdash; [jcabi-w3c](http://w3c.jcabi.com). So, it's
-a good moment to write a few words about them.
+A few days ago, though, I took the wrappers out of ReXSL and published them as a standalone library &mdash; [jcabi-w3c](http://w3c.jcabi.com). Consequently, now seems to be a good time to write a few words about them.
 
-Let's see the example. This is how you can
-validate an HTML document against W3C compliancy rules:
+Below is an example that demonstrates how you can validate an HTML document against W3C compliancy rules:
 
 {% highlight java linenos=table %}
 import com.jcabi.w3c.ValidatorBuilder;
@@ -38,9 +29,7 @@ assert ValidatorBuilder.html()
   .valid();
 {% endhighlight %}
 
-This `valid()` method is a black or white indicator that
-return `false` when the document is not valid. More information
-you can get through a list of "defects" returned by W3C server:
+The `valid()` method is a black or white indicator that returns `false` when the document is not valid. Additionally, you can obtain more information through a list of "defects" returned by the W3C server:
 
 {% highlight java linenos=table %}
 Collection<Defect> defects = ValidatorBuilder.html()
@@ -56,7 +45,4 @@ Collection<Defect> defects = ValidatorBuilder.css()
   .errors();
 {% endhighlight %}
 
-I think, it is a good practice to validate all of HTML
-pages produced by your application against W3C, during
-integration testing. It's not a matter of perfectionism,
-but a prevention of bigger problems.
+Personally, I think it is a good practice to validate all of HTML pages produced by your application against W3C during integration testing. It's not a matter of seeking perfection, but rather of preventing bigger problems later. 
