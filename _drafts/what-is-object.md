@@ -51,7 +51,7 @@ They don't exist apart from your software in real life.
 
 This is a class in Java that specifies a proper object:
 
-```java
+{% highlight java linenos=table %}
 public class File {
   private String name;
   public File(String path) {
@@ -59,7 +59,7 @@ public class File {
   }
   // methods
 }
-```
+{% endhighlight %}
 
 An object of class `File` encapsulates knowledge, which
 is the name of the file on disc in `this.name`.
