@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XML/XPath Matchers for Hamcrest"
-date: 2014-04-27
+date: 2014-04-28
 tags: xml matchers junit xpath
 description:
   jcabi-matchers is a new small library that extends
