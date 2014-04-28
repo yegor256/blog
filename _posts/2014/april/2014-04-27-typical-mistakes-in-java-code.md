@@ -39,7 +39,6 @@ and to Java in particular.
 Read this short ["What is an Object?"](https://github.com/yegor256/d29/wiki/What-is-an-Object%3F)
 article. Your class should be an abstraction of a real life entity
 with no "validators", "controllers", "managers", etc.
-
 If your class name ends with an "-er" &mdash;
 it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
 
@@ -50,7 +49,6 @@ The above are perfect examples of terrible designs.
 
 Of course, never add suffixes or prefixes to
 distinguish between [interfaces and classes](http://c2.com/cgi/wiki?DontDistinguishBetweenClassesAndInterfaces).
-
 For example, all of these names are terribly wrong: `IRecord`, `IfaceEmployee`, or `RecordInterface`.
 Usually, interface name is the name of a real-life entity, while class name should explain its implementation details.
 If there is nothing specific to say about an implementation, name it `Default,` `Simple`, or something similar. For example:
@@ -122,7 +120,7 @@ visibility, but not too long if possible. A name should be a noun in singular or
 plural form, or an appropriate abbreviation. For example:
 
 ```java
-final List<String> names;
+List<String> names;
 void sendThroughProxy(File file, Protocol proto);
 private File content;
 public HttpRequest request;
@@ -136,9 +134,9 @@ this case, I recommend to create abbreviations by removing vowels (see how
 Another example:
 
 ```java
-public final class Message {
+public class Message {
   private String recipient;
-  public Message(final String rcpt) {
+  public Message(String rcpt) {
     this.recipient = rcpt;
   }
 }
@@ -169,7 +167,7 @@ arguments. For example:
 
 ```java
 public class Server {
-  private final String address;
+  private String address;
   public Server(String uri) {
     this.address = uri;
   }
@@ -185,7 +183,7 @@ Avoid one-time variables at all costs. By "one-time" I mean variables that are
 used only once. Like in this example:
 
 ```java
-final String name = "data.txt";
+String name = "data.txt";
 return new File(name);
 ```
 

@@ -1,6 +1,6 @@
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
 $main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
-$main-font-italic: 'Cambria-BoldItalic', 'Georgia', 'Times New Roman', serif;
+$main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
 $gray: #777;
 $mid-gray: #ccc;
@@ -71,7 +71,7 @@ strong {
   font-family: $main-font-bold;
   font-weight: 400;
 }
-strong {
+i {
   font-family: $main-font-italic;
   font-weight: 400;
 }
@@ -227,3 +227,13 @@ h5:hover .header-link,
 h6:hover .header-link {
   opacity: 1;
 }
+blockquote {
+  color: $gray;
+  font-family: $main-font-italic;
+  p:before,
+  p:after {
+    display: inline;
+    content: "ˮ";
+  }
+}
+
