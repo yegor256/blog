@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "W3C Java Validators"
-date: 2014-04-27
+date: 2014-04-29
 tags: w3c validator
 description:
   jcabi-w3c
