@@ -60,6 +60,13 @@ sense:
 - Are you NULL?
 {% endhighlight %}
 
+**Slow Failing**. Instead of
+[failing fast](http://martinfowler.com/ieeeSoftware/failFast.pdf)
+your code attempts to die slowly, killing others on its way. Instead
+of letting everybody know that something went wrong and an exception
+handling should start immediately, you're hiding this fact of failure
+from your client (caller of your method). Bad practice.
+
 ## Basic Alternatives
 
 First of all, it's [NullObject](http://en.wikipedia.org/wiki/Null_Object_pattern)
