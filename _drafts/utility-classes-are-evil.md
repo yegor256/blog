@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Utility Classes Are Evil"
+title: "OOP Alternative to Utility Classes"
 date: 2014-05-02
 tags: quality oop design
 description:
-  Since I consider static methods and variables one of the biggest
-  mistakes in OOP languages (maybe next to NULL-s), this article
-  explains how to avoid them
+  Utility classes is a very popular design pattern in Java
+  and other object-oriented languages, however they are considered
+  as a terrible practice and should be avoided
 keywords:
   - static methods
   - static is evil
@@ -37,19 +37,22 @@ because utility classes provide common functionality used everywhere.
 We want to follow
 [DRY principle](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
 and avoid duplication. We place
-common code blocks into utility classes and reuse them when necessary.
-Indeed, a very convenient technique:
+common code blocks into utility classes and reuse them when necessary:
 
 {% highlight java %}
 // This is a terrible design, don't reuse
-public class Calc {
+public class NumberUtils {
   public static int max(int a, int b) {
     return a > b ? a : b;
   }
 }
 {% endhighlight %}
 
-However, in a object-oriented world they are considered as
+Indeed, a very convenient technique?!
+
+## Utility Classes Are Evil
+
+However, in a object-oriented world utility classes are considered as
 a very bad (some may say "terrible") practice.
 There were many discussions of this subject, to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,
@@ -72,52 +75,119 @@ Assuming you agree with the arguments and want to stop using utility
 classes, I'll show by example how these creatures can be replaced
 with proper objects.
 
-## Usage Example
+## Procedural Example
 
-Say, you have a text that contains words separated
-by spaces. You want to remove spaces around the text, split it into words and
-then join them again, separating by comma. This is how this can be done with
-[`StringUtils`](http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html):
+Say, you want to read a text file, split it into lines, trim every line
+and save the result into another file. This is how this can be done with
+[`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html)
+from Apache Commons:
 
-{% highlight java %}
-String result = StringUtils.join(
-  StringUtils.split(
-    StringUtils.trim(text),
-    ' '
-  ),
-  ","
-)
+{% highlight java linenos=table %}
+void transform(File in, File out) {
+  Collection<String> src = FileUtils.readLines(in, "UTF-8");
+  Collection<String> dest = new ArrayList<>(src.size());
+  for (String line : src) {
+    dest.add(line.trim());
+  }
+  FileUtils.writeLines(out, dest, "UTF-8");
+}
 {% endhighlight %}
 
-There are three static calls to methods `join()`, `split()` and `trim()` of
-"class" `StringUtils`.
+The code may look clean, however, this is a procedural
+programming, not object-oriented.
+We are manipulating data (bytes and bits), explicitly
+telling the computer where to get them and where to put, on every single
+line of code. We're defining *a procedure of execution*.
 
-This is how I would design the same functionality, in
-a better object-oriented way:
+## Object-Oriented Alternative
+
+In object-oriented paradigm we should instantiate and compose objects,
+letting them manage data when and how *they* desire. Instead of calling
+supplementary static functions we should create objects that are capable
+of exposing the behaviour we're looking for:
 
 {% highlight java %}
-String result = new Joined(
-  new Split(
-    new Trimmed(text),
-    ' '
-  ),
-  ","
-).toString();
+public class Pair {
+  private final int a;
+  private final int b;
+  public Pair(int x, int y) {
+    this.a = x;
+    this.b = y;
+  }
+  public int max() {
+    return this.a > this.b ? this.a : this.b;
+  }
+}
 {% endhighlight %}
 
-Now we have three classes being instantiated and encapsulating each other.
+This procedural call:
 
-Technically, this works exactly the same. What are the benefits?
-Well, besides the fact that this is an object oriented
-programming instead of procedural one, the following
-benefits are obvious.
+{% highlight java %}
+int max = NumberUtils.max(10, 5);
+{% endhighlight %}
 
-## Inversion of Control
+Will become object-oriented:
 
-In my code, the `text` is not processed until a final call to `Joined.toString()`
-is made. Instead of controlling an execution flow, my script simply lets
-instantiated objects to fetch their data when they need them.
+{% highlight java %}
+int max = new Pair(10, 5).max();
+{% endhighlight %}
 
-This mechanism is called [Inversion of Control](http://martinfowler.com/articles/injection.html).
+Potato, potato? Not really. Read on...
 
+## Objects Instead of Data Structures
 
+This is how I would design
+the same file-transforming
+functionality as above but in a object-oriented way:
+
+{% highlight java linenos=table %}
+void transform(File in, File out) {
+  Collection<String> src = new Trimmed(
+    new FileLines(new UnicodeFile(in))
+  );
+  Collection<String> dest = new FileLines(
+    new UnicodeFile(out)
+  );
+  dest.addAll(src);
+}
+{% endhighlight %}
+
+`FileLines` implements `Collection<String>` and encapsulates all
+file reading and writing operations. An instance of `FileLines` behaves
+exactly as a collection of strings, hiding all I/O operations. When we
+iterate it &mdash; a file is being read. When we `addAll()` to it &mdash;
+a file is being written.
+
+`Trimmed` also implements `Collection<String>` and encapsulates a
+collection of strings
+([Decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
+Every time the next line is retrieved, it gets trimmed.
+
+All classes taking participation in the snippet are
+rather small: `Trimmed`, `FileLines`, and `UnicodeFile`.
+Each of them is responsibile for its own single feature,
+thus perfectly following
+[single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
+On our side, as users of the library, this may be not so important,
+but for their developers it definitely is.
+It is much easier to develop, maintain, and unit test class `FileLines`
+instead of `readLines()` method in a 80+ methods and 3000 lines
+utility class `FileUtils`. Seriously, look at
+[its source code](http://svn.apache.org/viewvc/commons/proper/io/trunk/src/main/java/org/apache/commons/io/FileUtils.java?view=co).
+
+Object-oriented approach enables lazy execution.
+The `in` file is not read until its data is required.
+If we fail to open `out` due to some I/O error,
+the first file won't even be touched.
+The whole show starts only when we call `addAll()`.
+
+All lines in the second snippet, except the last one, are instantiating
+and composing smaller objects into bigger ones. This object composition
+is rather cheap for the CPU since it doesn't cause any data transformations.
+
+Besides that, it is obvious, that the second script runs in O(1) space, while the
+first one is in O(n). This is the consequence of our procedural
+approach to data, in the first script.
+
+In object-oriented world, there is no data, there are only objects
+and their behavior!
