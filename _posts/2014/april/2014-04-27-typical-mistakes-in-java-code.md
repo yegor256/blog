@@ -45,7 +45,8 @@ it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOr
 And, of course, utility classes are anti-patterns, like [`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html),
 [`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html), and
 [`IOUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html) from Apache.
-The above are perfect examples of terrible designs.
+The above are perfect examples of terrible designs. Read this follow up post:
+[OOP Alternative to Utility Classes]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 
 Of course, never add suffixes or prefixes to
 distinguish between [interfaces and classes](http://c2.com/cgi/wiki?DontDistinguishBetweenClassesAndInterfaces).
