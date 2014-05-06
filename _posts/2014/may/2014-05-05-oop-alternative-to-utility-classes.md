@@ -8,15 +8,22 @@ description:
   in Java and other object-oriented languages. However,
   many consider them a terrible practice to be avoided.
 keywords:
-  - static methods
+  - static methods is evil
   - static is evil
   - utility class is evil
+  - utility class is bad
+  - utility classes are evil
+  - utility classes are bad
+  - utility classes is a bad practice
   - utility class
   - utility classes
   - how to avoid utility classes
   - utility class alternative
   - alternative of utility class
+  - alternative to utility class
   - singleton is evil
+  - singleton is bad practice
+  - singleton is bad
   - bad practices utility class
   - helper class is evil
   - helper class is bad
