@@ -103,14 +103,15 @@ supplementary static functions, we should create objects that are capable of
 exposing the behaviour we are seeking:
 
 {% highlight java %}
-public class Pair {
+public class Max implements Number {
   private final int a;
   private final int b;
-  public Pair(int x, int y) {
+  public Max(int x, int y) {
     this.a = x;
     this.b = y;
   }
-  public int max() {
+  @Override
+  public int intValue() {
     return this.a > this.b ? this.a : this.b;
   }
 }
@@ -125,7 +126,7 @@ int max = NumberUtils.max(10, 5);
 Will become object-oriented:
 
 {% highlight java %}
-int max = new Pair(10, 5).max();
+int max = new Max(10, 5).intValue();
 {% endhighlight %}
 
 Potato, potato? Not really; just read on...
