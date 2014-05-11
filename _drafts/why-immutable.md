@@ -1,28 +1,48 @@
 ---
 layout: post
 title: "Why Objects Have to Be Immutable"
-date: 2014-04-29
+date: 2014-05-19
 tags: quality immutability
 description:
-  The article gives arguments about why classes
+  The article gives arguments about why classes/objects
   in object-oriented programming have to be immutable,
   i.e. never change their encapsulated state
 keywords:
   - object design
-  - null pointer
-  - why null is bad
-  - null is bad
-  - best practices null
-  - null worst practices
+  - why immutable
+  - immutability of objects
+  - agruments for immutable objects
+  - why immutable objects are better
+  - immutability in oop
+  - oop immutable objects
+  - immutable classes
+  - immutable class
+  - immutable object
+  - best practices immutable
 ---
 
-Every object should be immutable for the following reasons:
+In object-oriented programming, an object is immutable when it doesn't
+change its state during the whole lifetime. A good example of an immutable
+object is [`String`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+in Java. Once it is created we can't change its state. We
+can ask it to create new objects, but its own state will never change.
 
- - to avoid temporal coupling
- - to avoid multi-threading collisions
- - to avoid side effects
+However, there are not so many immutable classes in JDK. Take, for example,
+class [`Date`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html).
+It can change its state through method `setTime()`, at any moment during its lifetime.
 
-## Temporal Coupling
+I don't know why JDK designers decided to make these two very similar classes
+differently. However, I believe that the design of a mutable `Date` has
+a lot of flaws, while the immutable `String` is more in spirit
+of object-oriented paradigm.
+
+Moverover, I think that *all* classes should immutable in a proper
+object-oriented world. Unfortunately, sometimes it is technically not
+possible due to limitations of, say, JVM.
+
+Let me show the arguments in favor of immutability.
+
+## Avoiding Temporal Coupling
 
 An example of temporal coupling:
 
@@ -39,11 +59,11 @@ Order order = orders.find(345);
 order.discount(0.15).save(); // no more coupling
 {% endhighlight %}
 
-## Multi-Threading
+## Thread Safety
 
 You can avoid millions of problems in multi-threading by using immutable objects.
 
-## Side Effects
+## No Side Effects
 
 This is how they may happen:
 
