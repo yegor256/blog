@@ -54,13 +54,15 @@ $font-size: 19px;
 @import "highlight";
 
 body {
+  height: 100%;
   font-family: $main-font;
   font-weight: 400;
   background-color: #fff;
   color: $black;
   font-size: $font-size;
   margin: 0;
-  padding: 0;
+  padding-top: 2 * $font-size;
+  padding-bottom: 2 * $font-size;
   position: relative;
   overflow-x: hidden;
   @media all and (max-width: $width) {
@@ -85,7 +87,8 @@ a, a:visited {
   margin-right: auto;
   width: $width;
   line-height: 1.4 * $font-size;
-  padding: 2 * $font-size;
+  padding-left: 2 * $font-size;
+  padding-right: 2 * $font-size;
   @media all and (max-width: $width) {
     width: 100%;
   }

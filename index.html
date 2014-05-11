@@ -21,44 +21,49 @@ keywords:
 ---
 
 {% for post in paginator.posts %}
-  <section class="front">
-    <p>
-      <time datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date: "%-d %B %Y" }}
-      </time>
-    </p>
-    <header>
-      <h1>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h1>
-    </header>
-    <article>
-      {{ post.content }}
-    </article>
-    <a href="{{ post.url }}#disqus_thread">comments</a>
-  </section>
+  <div class="wrapper">
+    <section class="front">
+      <p>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%-d %B %Y" }}
+        </time>
+      </p>
+      <header>
+        <h1>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+      </header>
+      <article>
+        {{ post.content }}
+      </article>
+      <a href="{{ post.url }}#disqus_thread">comments</a>
+    </section>
+  </div>
 {% endfor %}
 
-<div class="pagination">
-  <div style="float: left;">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a href="/">home</a>
+<div class="wrapper">
+  <div class="pagination">
+    <div style="float: left;">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a href="/">home</a>
+        {% else %}
+          <a href="/p/{{ paginator.previous_page }}">prev</a>
+        {% endif %}
       {% else %}
-        <a href="/p/{{ paginator.previous_page }}">prev</a>
+        <span class="mute">prev</span>
       {% endif %}
-    {% else %}
-      <span class="mute">prev</span>
-    {% endif %}
-  </div>
-  page {{ paginator.page }} of {{ paginator.total_pages }}
-  <div style="float: right;">
-    {% if paginator.next_page %}
-      <a href="/p/{{ paginator.next_page }}">next</a>
-    {% else %}
-      <span class="mute">next</span>
-    {% endif %}
+    </div>
+    page {{ paginator.page }} of {{ paginator.total_pages }}
+    <div style="float: right;">
+      {% if paginator.next_page %}
+        <a href="/p/{{ paginator.next_page }}">next</a>
+      {% else %}
+        <span class="mute">next</span>
+      {% endif %}
+    </div>
   </div>
 </div>
+
