@@ -50,15 +50,15 @@ and
 [Conditional Updates](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.ConditionalUpdate)
 which are very similar feature, but not exactly.
 
-In case of an atomic counter you should synchronize your operations
-somehow. In case of conditional updates you should retry a few times
-in case of collisions.
+In case of an atomic counter you should create a supplementary table
+and keep the latest value of `id` in it.
+In case of conditional updates you should retry a few times in case of collisions.
 
 {% badge http://img.stateful.co/logo.svg 128 %}
 
 To make life easier in a few of my applications, I created a simple
-web service &mdash; [stateful.co](http://www.stateful.co). It provides
-a simple atomic counter feature through its RESTful API.
+web service &mdash; [stateful.co](http://www.stateful.co) &mdash;.
+It provides a simple atomic counter feature through its RESTful API.
 
 First, you create a counter with a unique name. Then, you set its initial
 value (it is zero by default). That's it. Every time you need to get a new
