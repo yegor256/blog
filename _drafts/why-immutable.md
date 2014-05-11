@@ -36,32 +36,42 @@ differently. However, I believe that the design of a mutable `Date` has
 a lot of flaws, while the immutable `String` is more in spirit
 of object-oriented paradigm.
 
-Moverover, I think that *all* classes should immutable in a proper
-object-oriented world. Unfortunately, sometimes it is technically not
-possible due to limitations of, say, JVM.
+Moverover, I think that *all* classes should be immutable in an ideal
+object-oriented world. Unfortunately, sometimes, it is technically not
+possible due to limitations of, say, JVM. However, we should aim for the
+best :) Maybe in the future there will be an OO language without mutable
+objects at all.
 
-Let me show the arguments in favor of immutability.
+Anyway, let me show the arguments in favor of immutability.
 
 ## Avoiding Temporal Coupling
 
-An example of temporal coupling:
+Here is an example of temporal coupling:
 
 {% highlight java linenos=table %}
-Order order = orders.find(345);
-order.discount(0.15); // this line and the next one are coupled
-order.save();
+Weight weight = new Weight(45);
+// this line and the next one are coupled
+weight.add(5);
+weight.multiply(2);
+System.out.println("Weight is: " + weight); // 100
 {% endhighlight %}
+
+The code works as it is. However, everybody has to remember that
+the third and the forth lines should stay in this specific order. In this
+primitive example this may be not a big problem, but in more complex
+scenarios some additional lines may easily get in between.
 
 This is the right design:
 
-{% highlight java linenos=table %}
-Order order = orders.find(345);
-order.discount(0.15).save(); // no more coupling
+{% highlight java %}
+Weight weight = new Weight(45).add(5).multiply(2);
+System.out.println("Weight is: " + weight); // 100
 {% endhighlight %}
 
 ## Thread Safety
 
-You can avoid millions of problems in multi-threading by using immutable objects.
+You can avoid millions of problems in multi-thread execution
+by using immutable objects.
 
 ## No Side Effects
 
