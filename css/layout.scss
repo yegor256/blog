@@ -113,6 +113,14 @@ a, a:visited {
     }
     display: inline-block;
     line-height: normal;
+    input.gsc-search-button {
+      background-color: #ccc;
+      border-color: #ccc;
+      &:hover {
+        background-color: $black;
+        border-color: $black;
+      }
+    }
   }
 }
 #disqus_thread {
