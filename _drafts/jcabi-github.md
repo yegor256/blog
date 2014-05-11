@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Object-Oriented Github API"
-date: 2014-04-19
+date: 2014-05-14
 tags: github jcabi
 description:
   Since none of the existing Java APIs are truly
-  object-oriented we decided to create a new one
+  object-oriented and elegant enough for our quality standards,
+  we decided to create a new one
   with the best principles of OOP in mind
 keywords:
   - github api
@@ -13,6 +14,9 @@ keywords:
   - github object oriented java api
   - best github java api
   - java api github
+  - java github api
+  - object oriented github java api
+  - java api design
 ---
 
 {% badge http://img.yegor256.com/2014/05/github-logo.png 128 %}
@@ -33,19 +37,37 @@ faced a number of issues:
 
  * They provide no mocking instruments
 
+ * They don't cover the entire API and can't be extended
+
 {% badge http://img.jcabi.com/logo-square.png 64 %}
 
 Having in mind all that drawbacks, I created my own library &mdash;
-[jcabi-github](http://github.jcabi.com). Look at its most important
+[jcabi-github](http://github.jcabi.com). Let's see its most important
 advantages.
 
 ## Object Oriented for Real
 
-True
+Github server is an object, a collection of issues is an object, an individual
+issue is an object, its author is an author, etc. For example, to get the
+name of the author we do:
+
+{% highlight java %}
+Github github = new RtGithub(/* credentials */);
+Repos repos = github.repos();
+Repo repo = repos.get(new Coordinates.Simple("jcabi/jcabi-github"));
+Issues issues = github.issues();
+Issue issue = issues.get(123);
+User author = new Issue.Smart(issue).author();
+System.out.println(author.name());
+{% endhighlight %}
+
+Needless to say, that `Github`, `Repos`, `Repo`,
+`Issues`, `Issue`, and `User` are interfaces. Classes
+that implement them are not visible in the library.
 
 ## Mock Engine
 
-MiGithub class is a mock version of a Github server. It behaves almost
+`MkGithub` class is a mock version of a Github server. It behaves almost
 exactly the same as a real server, and is a perfect instrument for unit
 testing. For example, you're testing a method that is supposed to
 post a new issue to Github and add a message into it. Here is how
@@ -69,7 +91,49 @@ public class FooTest {
 {% endhighlight %}
 
 This is much more convenient and compact than traditional mocking
-via Mockito or something similar.
+via [Mockito](https://code.google.com/p/mockito/) or a similar framework.
+
+## Extendable
+
+It is based on JSR-353 and uses jcabi-http for HTTP request processing.
+This combination makes it highly customizable and extendable, when
+some Github feature is not covered by the library (there are many of them).
+
+For example, you want to get the value of `hireable` attribute of a `User`.
+Class `User.Smart` doesn't have a method for it. Here is how you get it:
+
+{% highlight java %}
+User user = // get it somewhere
+// name() method exists in User.Smart, let's use it
+System.out.println(new User.Smart(user).name());
+// there is no hireable() method there
+System.out.println(user.json().getString("hireable"));
+{% endhighlight %}
+
+We're using method `json()` that return an instance of
+[`JsonObject`](http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html)
+from JSR-353 (part of Java7).
+
+No other library allows such a direct access to JSON objects
+returned by Github server.
+
+Let's see another example. Say, you want to use some feature from
+Github that is not covered by the API. You get a `Request` object from
+`Github` interface and directly access the HTTP entry point of the server:
+
+{% highlight java %}
+Github github = new RtGithub(oauthKey);
+int found = github.entry()
+  .uri().path("/search/repositories").back()
+  .method(Request.GET)
+  .as(JsonResponse.class)
+  .getJsonObject()
+  .getNumber("total_count")
+  .intValue();
+{% endhighlight %}
+
+[jcabi-http](http://http.jcabi.com) HTTP client is used by
+[jcabi-github](http://github.jcabi.com).
 
 ## Immutable
 
@@ -93,6 +157,6 @@ Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-github):
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-github</artifactId>
-  <version><!-- check http://github.jcabi.com --></version>
+  <version>0.8</version>
 </dependency>
 {% endhighlight %}
