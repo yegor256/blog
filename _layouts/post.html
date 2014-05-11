@@ -2,46 +2,49 @@
 layout: default
 ---
 
-<section itemscope itemtype="http://schema.org/BlogPosting">
-  <header role="heading">
-    <h1 itemprop="name">{{ page.title }}</h1>
-  </header>
-  <p>
-    <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
-      {{ page.date | date: "%-d %B %Y" }}
-    </time>
-  </p>
-  <nav class="share" role="navigation">
-    <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
-      title="Share on Facebook">
-      <i class="fa fa-facebook-square"></i>
-    </a>
-    <a href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
-      title="Share on Twitter">
-      <i class="fa fa-twitter-square"></i>
-    </a>
-    <a href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"
-      title="Share on Google+">
-      <i class="fa fa-google-plus-square"></i>
-    </a>
-    <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"
-      title="Share on LinkedIn">
-      <i class="fa fa-linkedin-square"></i>
-    </a>
-  </nav>
-  <main role="main">
-    <article role="article" itemprop="articleBody">
-      {{ content }}
-    </article>
-  </main>
-  <div role="complementary">
-    <div id="disqus_thread"></div>
-    <noscript>
-      Please enable JavaScript to view the
-      <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-    <a href="http://disqus.com" class="dsq-brlink">
-      comments powered by <span class="logo-disqus">Disqus</span>
-    </a>
-  </div>
-</section>
+<div class="wrapper">
+  <section itemscope itemtype="http://schema.org/BlogPosting">
+    <header role="heading">
+      <h1 itemprop="name">{{ page.title }}</h1>
+    </header>
+    <p>
+      <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%-d %B %Y" }}
+      </time>
+    </p>
+    <nav class="share" role="navigation">
+      <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
+        title="Share on Facebook">
+        <i class="fa fa-facebook-square"></i>
+      </a>
+      <a href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
+        title="Share on Twitter">
+        <i class="fa fa-twitter-square"></i>
+      </a>
+      <a href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"
+        title="Share on Google+">
+        <i class="fa fa-google-plus-square"></i>
+      </a>
+      <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"
+        title="Share on LinkedIn">
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+    </nav>
+    <main role="main">
+      <article role="article" itemprop="articleBody">
+        {{ content }}
+      </article>
+    </main>
+  </section>
+</div>
+
+<div class="disqus" role="complementary">
+  <div id="disqus_thread"></div>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  <a href="http://disqus.com" class="dsq-brlink">
+    comments powered by <span class="logo-disqus">Disqus</span>
+  </a>
+</div>
