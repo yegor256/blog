@@ -91,43 +91,28 @@ a, a:visited {
   line-height: 1.4 * $font-size;
   padding: 2 * $font-size;
 }
+.photo {
+  width: 80px;
+  border-radius: 50%;
+}
 .top {
-  margin-bottom: 4 * $font-size;
-  position: relative;
-  .item {
-    margin-right: 0.2 * $font-size;
+  text-align: center;
+  .menu {
+    list-style: none;
+    li {
+      display: inline;
+      margin-right: 0.4 * $font-size;
+    }
   }
   .gcse {
     @media all and (min-width: $width + 1) {
-      position: absolute;
-      right: 0;
-      top: -4px;
-      width: 300px;
-      display: inline-block;
+      width: 75%;
     }
     @media all and (max-width: $width) {
       width: 100%;
     }
+    display: inline-block;
     line-height: normal;
-    .gsc-control-cse {
-      padding: 0;
-      .gsc-search-box {
-        margin: 0;
-      }
-      .gsc-input-box {
-        border: 1px solid $mid-gray;
-      }
-      input.gsc-search-button {
-        border: none;
-        margin: 0;
-        border: 1px solid $mid-gray;
-        background-color: $mid-gray;
-      }
-      input.gsc-search-button:hover {
-        border: 1px solid $black;
-        background-color: $black;
-      }
-    }
   }
 }
 #disqus_thread {
