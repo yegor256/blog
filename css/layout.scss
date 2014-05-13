@@ -98,6 +98,7 @@ a, a:visited {
   border-radius: 50%;
 }
 .top {
+  height: 218px;
   text-align: center;
   .menu {
     list-style: none;
@@ -113,6 +114,7 @@ a, a:visited {
     @media all and (max-width: $width) {
       width: 100%;
     }
+    height: 64px;
     display: inline-block;
     line-height: normal;
     input.gsc-search-button {
