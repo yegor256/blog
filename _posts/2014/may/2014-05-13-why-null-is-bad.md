@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why NULL is Bad?"
-date: 2014-05-12
+date: 2014-05-13
 tags: quality mistakes
 description:
   Why NULL is a terrible practice in object-oriented programming?
