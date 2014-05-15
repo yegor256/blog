@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="//www.yegor256.com{{ page.url }}" />
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }}
       {% if paginator.page %}
         (page {{ paginator.page }})
@@ -37,5 +38,4 @@
     </div>
     {{ content }}
   </body>
-  <script src="/js/all.js?{{ site.data['hash'] }}"></script>
 </html>
