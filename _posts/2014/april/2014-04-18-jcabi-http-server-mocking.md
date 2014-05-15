@@ -124,7 +124,7 @@ with our requirements. Here, we are using [jcabi-http](http://http.jcabi.com)
 mocking.
 
 As with the client, you need the
-[jcabi-http.jar](`http://repo1.maven.org/maven2/com/jcabi/jcabi-http`)
+[`jcabi-http.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-http)
 dependency:
 
 {% highlight xml %}
