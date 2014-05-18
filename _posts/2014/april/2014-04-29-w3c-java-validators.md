@@ -4,7 +4,8 @@ title: "W3C Java Validators"
 date: 2014-04-29
 tags: w3c validator
 description:
-  jcabi-w3c
+  jcabi-w3c is a Java adapter of W3C online validators,
+  for HTML and CSS
 keywords:
   - w3c validator
   - java w3c validator

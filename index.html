@@ -36,9 +36,9 @@ keywords:
         </h1>
       </header>
       <article>
-        {{ post.content }}
+        {{ post.description }}
+        <a href="{{ post.url }}">Read on...</a>
       </article>
-      <a href="{{ post.url }}#disqus_thread">comments</a>
     </section>
   </div>
 {% endfor %}
