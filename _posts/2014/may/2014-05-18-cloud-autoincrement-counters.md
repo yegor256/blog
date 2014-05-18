@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Atomic Counters at Stateful.co"
-date: 2014-05-16
+date: 2014-05-18
 tags: stateful
 description:
   The article explains how stateful.co atomic counters
@@ -13,6 +13,9 @@ keywords:
   - dynamodb auto increment
   - nosql auto increment
   - auto increment online
+  - cloud autoincrement counter
+  - cloud counter
+  - auto-increment cloud
   - atomic counters online
   - online atomic counter
 ---
@@ -57,8 +60,7 @@ In case of conditional updates, you should retry a few times in case of collisio
 {% badge http://img.stateful.co/pomegranate.svg 128 %}
 
 To make life easier in a few of my applications, I created a simple web
-service &mdash; [stateful.co](http://www.stateful.co) &mdash;.
-
+service &mdash; [stateful.co](http://www.stateful.co).
 It provides a simple atomic counter feature through its RESTful API.
 
 First, you create a counter with a unique name. Then,
@@ -81,7 +83,7 @@ Maven dependency to your project:
 <dependency>
   <groupId>co.stateful</groupId>
   <artifactId>java-sdk</artifactId>
-  <version>0.1</version>
+  <version>0.6</version>
 </dependency>
 {% endhighlight %}
 
