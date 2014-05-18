@@ -6,6 +6,7 @@ $gray: #777;
 $mid-gray: #ccc;
 $light-gray: #eee;
 $black: #111;
+
 $width: 700px;
 $font-size: 19px;
 
@@ -65,9 +66,6 @@ body {
   padding-bottom: 2 * $font-size;
   position: relative;
   overflow-x: hidden;
-  @media all and (max-width: $width) {
-    font-size: 0.85 * $font-size;
-  }
 }
 strong {
   font-family: $main-font-bold;
@@ -91,6 +89,8 @@ a, a:visited {
   padding-right: 2 * $font-size;
   @media all and (max-width: $width) {
     width: 100%;
+    padding-left: $font-size;
+    padding-right: $font-size;
   }
 }
 .photo {
@@ -108,15 +108,10 @@ a, a:visited {
     }
   }
   .gcse {
-    @media all and (min-width: $width + 1) {
-      width: 75%;
-    }
     @media all and (max-width: $width) {
-      width: 100%;
-    }
-    @media all and (max-width: 600px) {
       display: none;
     }
+    width: 75%;
     height: 64px;
     display: inline-block;
     line-height: normal;
@@ -197,6 +192,13 @@ table.highlighttable {
   margin-left: 2 * $font-size;
   padding-left: 0.5 * $font-size !important;
   border-left: 3px solid $mid-gray;
+  @media all and (max-width: $width) {
+    color: $gray;
+    line-height: 1.2 * $font-size;
+    margin-left: 0;
+    border-left: 0;
+    padding-left: 0 !important;
+  }
 }
 .linenodiv pre code,
 .highlight pre code {
@@ -216,6 +218,9 @@ figure {
   margin: 0;
 }
 .badge {
+  @media all and (max-width: $width) {
+    display: none;
+  }
   float: right;
   margin-left: 2em;
 }
