@@ -114,6 +114,9 @@ a, a:visited {
     @media all and (max-width: $width) {
       width: 100%;
     }
+    @media all and (max-width: 600px) {
+      display: none;
+    }
     height: 64px;
     display: inline-block;
     line-height: normal;
