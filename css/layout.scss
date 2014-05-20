@@ -2,10 +2,9 @@ $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
 $main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
 $main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
-$gray: #777;
-$mid-gray: #ccc;
-$light-gray: #eee;
 $black: #111;
+$gray: lighten($black, 50);
+$light-gray: lighten($black, 83);
 
 $width: 700px;
 $font-size: 19px;
@@ -54,6 +53,15 @@ $font-size: 19px;
 
 @import "highlight";
 
+.gray {
+    color: $gray;
+}
+.light-gray {
+    color: $light-gray;
+}
+.small {
+  font-size: 0.85 * $font-size;
+}
 body {
   height: 100%;
   font-family: $main-font;
@@ -136,16 +144,16 @@ a, a:visited {
   margin-top: 5 * $font-size;
 }
 time {
-  font-size: 0.85 * $font-size;
-  color: $gray;
+  @extend .small;
+  @extend .gray;
   margin-right: $font-size;
 }
 .share {
   font-size: 1.5 * $font-size;
   a, a:visited {
+    @extend .gray;
     text-decoration: none;
     margin-right: 0.1 * $font-size;
-    color: $gray;
   }
   a:hover {
     color: $black;
@@ -178,22 +186,27 @@ table.highlighttable {
     width: 2 * $font-size;
     min-width: 2 * $font-size;
     text-align: right;
+    @media all and (max-width: $width) {
+      display: none;
+    }
   }
 }
 .linenodiv {
-  color: $mid-gray;
-  border-right: 3px solid $mid-gray;
+  @extend .gray;
+  border-right: 3px solid $light-gray;
   padding-right: 0.5 * $font-size;
   margin-right: 0.2 * $font-size;
+  @media all and (max-width: $width) {
+    display: none;
+  }
 }
 .highlight pre code {
   display: block;
   line-height: 1.4 * $font-size;
   margin-left: 2 * $font-size;
   padding-left: 0.5 * $font-size !important;
-  border-left: 3px solid $mid-gray;
+  border-left: 3px solid $light-gray;
   @media all and (max-width: $width) {
-    color: $gray;
     line-height: 1.2 * $font-size;
     margin-left: 0;
     border-left: 0;
@@ -211,7 +224,7 @@ table.highlighttable {
 .pagination {
   text-align: center;
   .mute {
-    color: $mid-gray;
+    @extend .gray;
   }
 }
 figure {
@@ -241,7 +254,7 @@ h6:hover .header-link {
   opacity: 1;
 }
 blockquote {
-  color: $gray;
+  @extend .gray;
   font-family: $main-font-italic;
   p:before,
   p:after {
@@ -249,9 +262,7 @@ blockquote {
     content: "ˮ";
   }
 }
-
 .fa-twitter-square:hover { color: #00aced; }
 .fa-facebook-square:hover { color: #3b5998; }
 .fa-google-plus-square:hover { color: #dd4b39; }
 .fa-linkedin-square:hover { color: #007bb6; }
-

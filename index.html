@@ -36,8 +36,25 @@ keywords:
         </h1>
       </header>
       <article>
-        {{ post.description }}
-        <a href="{{ post.url }}">Read on...</a>
+        <p>
+          {{ post.description }}
+        </p>
+        <p class="gray small">
+          {{ post.content | count_words }}
+          words,
+          {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+          {% if time == '1' %}
+            a minute
+          {% else %}
+            {% if time == '2' %}
+              two
+            {% else %}
+              {{ time }}
+            {% endif %}
+            minutes
+          {% endif %}
+          to read
+        </p>
       </article>
     </section>
   </div>
