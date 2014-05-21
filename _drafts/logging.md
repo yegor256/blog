@@ -4,9 +4,8 @@ title: "Get Rid of Static Loggers"
 date: 2014-05-21
 tags: logging java
 description:
-  Static logger is a very common practice in Java, which
-  polutes the code and is a noise, which can easily be eliminated,
-  by using jcabi-log
+Using static logger is a very common practice in Java, which pollutes the code and is a noise, which can easily be eliminated by using jcabi-log
+
 keywords:
   - java logging
   - java static logger
@@ -17,9 +16,7 @@ keywords:
   - simple logging java
 ---
 
-This is a very common practice in Java (using
-[`LoggerFactory`](http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html)
-from [slf4j](http://www.slf4j.org/)):
+This is a very common practice in Java (using [`LoggerFactory`](http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html) from [slf4j](http://www.slf4j.org/)):
 
 {% highlight java %}
 import org.slf4j.LoggerFactory;
@@ -37,14 +34,9 @@ public class Foo {
 
 What's wrong with it? Code duplication.
 
-This static `LOGGER` property has to be
-declared in every class, where logging is required. Just a few
-lines of code, but this is pure noise, as I see it.
+This static `LOGGER` property has to be declared in every class where logging is required. Just a few lines of code, but this is pure noise, as I see it.
 
-To make life easier about two years ago I created a library
-[jcabi-log](http://log.jcabi.com), which has a convenient utility class
-[`Logger`](http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html)
-(yes, I know that [utility classes are evil]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})).
+To make life easier, I created a library about two years ago, [jcabi-log](http://log.jcabi.com), which has a convenient utility class [`Logger`](http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html) (yes, I know that [utility classes are evil]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})).
 
 {% highlight java %}
 import com.jcabi.log.Logger;
@@ -56,18 +48,11 @@ public class Foo {
 }
 {% endhighlight %}
 
-Looks much cleaner to me and does exactly the same &mdash; sends
-a single log line to SLF4J logging facility. Besides, it automatically
-checks whether given logging level is enabled (for performance optimization),
-and formats given string using
-[`Formatter`](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html)
-(same as [`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String, java.lang.Object...%29)).
+This looks much cleaner to me and does exactly the same &mdash; sends a single log line to the SLF4J logging facility. Besides, it check automatically whether a given logging level is enabled (for performance optimization) and formats the given string using [`Formatter`](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html) (same as [`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String, java.lang.Object...%29)).
 
-For convenience, there are also a number of
-["decors"](http://log.jcabi.com/decors.html) implemented in the library.
+For convenience, there are also a number of ["decors"](http://log.jcabi.com/decors.html) implemented in the library.
 
-The library ships as a JAR dependency
-in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-log):
+The library ships as a JAR dependency in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-log):
 
 {% highlight xml %}
 <dependency>
