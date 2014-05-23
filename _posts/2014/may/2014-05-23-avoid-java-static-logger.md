@@ -51,7 +51,7 @@ import com.jcabi.log.Logger;
 public class Foo {
   public void save(String file) {
     // save the file
-    Logger.info("file %s saved successfuly", file);
+    Logger.info(this, "file %s saved successfuly", file);
   }
 }
 {% endhighlight %}
