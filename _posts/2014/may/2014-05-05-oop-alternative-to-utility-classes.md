@@ -27,6 +27,8 @@ keywords:
   - bad practices utility class
   - helper class is evil
   - helper class is bad
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/24rbjz/oop_alternative_to_utility_classes/
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods

@@ -16,6 +16,8 @@ keywords:
   - traversing xml using xpath
   - xml traversing using xpath
   - java xml traversing
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/23uslr/java_xml_parsing_made_easy_in_jcabixml/
 ---
 
 Unlike with many other modern languages, parsing XML in Java requires  more than

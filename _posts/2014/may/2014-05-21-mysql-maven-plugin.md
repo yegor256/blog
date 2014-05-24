@@ -16,6 +16,8 @@ keywords:
   - maven mysql java test
   - mariadb maven plugin
   - maven linux mysql
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/265eii/mysql_maven_plugin_for_java_integration_testing/
 ---
 
 I was using MySQL in a few Java web projects and

@@ -11,6 +11,8 @@ keywords:
   - http client for java
   - alternative to apache http client
   - alternative to HttpURLConnection
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/22rfdc/fluent_java_http_client/
 ---
 
 {% badge http://img.jcabi.com/logo-square.png 64 %}
