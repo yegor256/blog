@@ -297,3 +297,7 @@ public class Department {
 
 I hope this analysis was convincing enough that you will
 stop `NULL`-ing your code :)
+
+BTW, this post is being discussed at
+[CodeRanch](http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java) and
+[Reddit](http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/).
