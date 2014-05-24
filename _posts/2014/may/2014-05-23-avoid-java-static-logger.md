@@ -43,6 +43,8 @@ This static `LOGGER` property has to be declared in every class
 where logging is required. Just a few lines of code, but
 this is pure noise, as I see it.
 
+{% badge http://img.jcabi.com/logo-square.png 64 %}
+
 To make life easier, I created a library about two years
 ago, [jcabi-log](http://log.jcabi.com), which has a convenient
 utility class [`Logger`](http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html)
