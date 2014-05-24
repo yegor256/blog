@@ -148,7 +148,12 @@ time {
   @extend .gray;
   margin-right: $font-size;
 }
+.buttons {
+  display: inline-block;
+  width: 50%;
+}
 .share {
+  display: inline-block;
   font-size: 1.5 * $font-size;
   a, a:visited {
     @extend .gray;
@@ -157,6 +162,10 @@ time {
   }
   a:hover {
     color: $black;
+  }
+  img {
+    width: 1.5 * $font-size;
+    height: 1.5 * $font-size;
   }
 }
 code,

@@ -21,6 +21,10 @@ keywords:
   - null is bad
   - best practices null
   - null worst practices
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/
+  hacker-news: https://news.ycombinator.com/item?id=7736925
+  coderanch: http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java
 ---
 
 A simple example of `NULL` usage in Java:
@@ -297,7 +301,3 @@ public class Department {
 
 I hope this analysis was convincing enough that you will
 stop `NULL`-ing your code :)
-
-BTW, this post is being discussed at
-[CodeRanch](http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java) and
-[Reddit](http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/).

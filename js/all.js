@@ -1,6 +1,6 @@
 $(
   function() {
-    $('.share a').click(
+    $('.button').click(
       function (event) {
         event.preventDefault();
         var $this = $(this);
