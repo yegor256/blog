@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'icomoon-yegor256';
+  src: url('//img.yegor256.com/fonts/icomoon-24may2014.eot');
+  src: url('//img.yegor256.com/fonts/icomoon-24may2014.eot?#iefix')
+    format('embedded-opentype'),
+    url('//img.yegor256.com/fonts/icomoon-24may2014.woff')
+    format('woff'),
+  url('//img.yegor256.com/fonts/icomoon-24may2014.ttf')
+    format('truetype');
+}
+
+.ico {
+  display: inline-block;
+  font-family: 'icomoon-yegor256';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-twitter:before { content: "\f081"; }
+.ico-tweet:before { content: "\f099"; }
+.ico-reddit:before { content: "\f1a2"; }
+.ico-facebook:before { content: "\f082"; }
+.ico-google:before { content: "\f0d4"; }
+.ico-hacker-news:before { content: "\f1d4"; }
+.ico-linkedin:before { content: "\f08c"; }
+.ico-email:before { content: "\f0e0"; }
+.ico-rss:before { content: "\f09e"; }
+
+.ico-coderanch:before { content: "\e600"; }

@@ -1,57 +1,18 @@
+@import "fonts";
+@import "highlight";
+@import "icomoon";
+
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
 $main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
 $main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
+
 $black: #111;
 $gray: lighten($black, 50);
 $light-gray: lighten($black, 83);
 
 $width: 700px;
 $font-size: 19px;
-
-@font-face {
-  font-family: 'Cambria-BoldItalic';
-  src: url('http://img.yegor256.com/fonts/2AACA7_0_0.eot');
-  src: url('http://img.yegor256.com/fonts/2AACA7_0_0.eot?#iefix')
-    format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/2AACA7_0_0.woff')
-    format('woff'),
-  url('http://img.yegor256.com/fonts/2AACA7_0_0.ttf')
-    format('truetype');
-}
-@font-face {
-  font-family: 'Cambria-Bold';
-  src: url('http://img.yegor256.com/fonts/2AACA7_1_0.eot');
-  src: url('http://img.yegor256.com/fonts/2AACA7_1_0.eot?#iefix')
-    format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/2AACA7_1_0.woff')
-    format('woff'),
-  url('http://img.yegor256.com/fonts/2AACA7_1_0.ttf')
-    format('truetype');
-}
-@font-face {
-  font-family: 'Cambria';
-  src: url('http://img.yegor256.com/fonts/2AACA7_2_0.eot');
-  src: url('http://img.yegor256.com/fonts/2AACA7_2_0.eot?#iefix')
-    format('embedded-opentype'),
-  url('http://img.yegor256.com/fonts/2AACA7_2_0.woff')
-    format('woff'),
-  url('http://img.yegor256.com/fonts/2AACA7_2_0.ttf')
-    format('truetype');
-}
-@font-face {
-  font-family: 'Cambria-Italic';
-  src: url('http://img.yegor256.com/fonts/2AACA7_3_0.eot');
-  src: url('http://img.yegor256.com/fonts/2AACA7_3_0.eot?#iefix')
-    format('embedded-opentype'),
-  url('http://img.yegor256.com/fonts/2AACA7_3_0.woff')
-    format('woff'),
-  url('http://img.yegor256.com/fonts/2AACA7_3_0.ttf')
-    format('truetype');
-}
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
-
-@import "highlight";
 
 .gray {
     color: $gray;
@@ -158,14 +119,9 @@ time {
   a, a:visited {
     @extend .gray;
     text-decoration: none;
-    margin-right: 0.1 * $font-size;
   }
   a:hover {
     color: $black;
-  }
-  img {
-    width: 1.5 * $font-size;
-    height: 1.5 * $font-size;
   }
 }
 code,
@@ -271,7 +227,10 @@ blockquote {
     content: "ˮ";
   }
 }
-.fa-twitter-square:hover { color: #00aced; }
-.fa-facebook-square:hover { color: #3b5998; }
-.fa-google-plus-square:hover { color: #dd4b39; }
-.fa-linkedin-square:hover { color: #007bb6; }
+.ico-twitter:hover { color: #00aced; }
+.ico-facebook:hover { color: #3b5998; }
+.ico-google:hover { color: #dd4b39; }
+.ico-linkedin:hover { color: #007bb6; }
+.ico-hacker-news:hover { color: #ff6600; }
+.ico-reddit:hover { color: #cee3f8; }
+.ico-coderanch:hover { color: #995c56; }

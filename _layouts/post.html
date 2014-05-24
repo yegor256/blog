@@ -16,19 +16,19 @@ layout: default
       <nav class="share" role="navigation">
         <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
           title="Share on Facebook" class="button">
-          <i class="fa fa-facebook-square"></i>
+          <i class="ico ico-facebook"></i>
         </a>
         <a href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
           title="Share on Twitter" class="button">
-          <i class="fa fa-twitter-square"></i>
+          <i class="ico ico-twitter"></i>
         </a>
         <a href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"
           title="Share on Google+" class="button">
-          <i class="fa fa-google-plus-square"></i>
+          <i class="ico ico-google"></i>
         </a>
         <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"
           title="Share on LinkedIn" class="button">
-          <i class="fa fa-linkedin-square"></i>
+          <i class="ico ico-linkedin"></i>
         </a>
       </nav>
     </div>
@@ -37,15 +37,8 @@ layout: default
         <span class="gray">discuss at</span>
         <nav class="share" role="navigation">
           {% for link in page.discussions %}
-            {% capture icon %}
-              {% if link[0] == 'coderanch' %}
-                <img src="//img.yegor256.com/buttons/coderanch.png" alt="coderanch"/>
-              {% else %}
-                <i class="fa fa-{{ link[0] }}"></i>
-              {% endif %}
-            {% endcapture %}
             <a href="{{ link[1] }}" title="discuss at {{ link[0] }}">
-              {{ icon }}
+              <i class="ico ico-{{ link[0] }}"></i>
             </a>
           {% endfor %}
         </nav>
