@@ -15,7 +15,7 @@ keywords:
   - java util logging
   - java static logger property
   - simple logging java
-discuss:
+discussions:
   reddit: http://www.reddit.com/r/java/comments/26a9gr/get_rid_of_java_static_loggers/
 ---
 
