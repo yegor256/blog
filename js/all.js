@@ -49,7 +49,7 @@ $(
                   + ' please add me to the list of subscribers.\n\n'
                   + $('#reason').val()
                   + '\n\nEmail: ' + $('#email').val()
-                  + '\n\nThanks',
+                  + '\n\nThanks'
                   + '\n\n--\nsent through the form',
                 'subject': 'I would like to receive monthly updates',
                 'auto_html': true,
