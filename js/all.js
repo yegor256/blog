@@ -26,48 +26,61 @@ $(
     $('#subscribe').click(
       function (event) {
         $this = $(this);
-        $this.attr('disabled','disabled');
-        $this.html('Please, wait...');
-        event.preventDefault();
-        $.ajax(
-          {
-            type: 'POST',
-            url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-            data: {
-              'key': 'GMfq6HmqFFR4HGCVfIu6Zw',
-              'message': {
-                'from_email': $('#email').val(),
-                'to': [
-                  {
-                    'email': 'blog@yegor256.com',
-                    'name': 'Yegor Bugayenko',
-                    'type': 'to'
-                  }
-                ],
-                'text': 'Hi,\n\n'
-                  + 'I\'d like to receive monthly updates from yegor256.com,'
-                  + ' please add me to the list of subscribers.\n\n'
-                  + $('#reason').val()
-                  + '\n\nEmail: ' + $('#email').val()
-                  + '\n\nThanks'
-                  + '\n\n--\nsent through the form',
-                'subject': 'I would like to receive monthly updates',
-                'auto_html': true,
-                'important': true
+        $error = $('#error');
+        var email = $('#email').val();
+        var reason = $('#reason').val();
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!email) {
+          $error.text('No email... What do you mean?');
+        } else if (!re.test(email)) {
+          $error.text('Email address doesn\'t look correct');
+        } else if (!reason) {
+          $error.text('I really want to know who you are');
+        } else {
+          $error.text('');
+          $this.attr('disabled', 'disabled');
+          $this.html('Please, wait...');
+          event.preventDefault();
+          $.ajax(
+            {
+              type: 'POST',
+              url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+              data: {
+                'key': 'GMfq6HmqFFR4HGCVfIu6Zw',
+                'message': {
+                  'from_email': email,
+                  'to': [
+                    {
+                      'email': 'blog@yegor256.com',
+                      'name': 'Yegor Bugayenko',
+                      'type': 'to'
+                    }
+                  ],
+                  'text': 'Hi,\n\n'
+                    + 'I\'d like to receive monthly updates from yegor256.com,'
+                    + ' please add me to the list of subscribers.\n\n'
+                    + reason
+                    + '\n\nEmail: ' + email
+                    + '\n\nThanks'
+                    + '\n\n--\nsent through the form',
+                  'subject': 'I would like to receive monthly updates',
+                  'auto_html': true,
+                  'important': true
+                }
+              },
+              success: function () {
+                $('#form').html(
+                  '<p style="color:green;"><b>Many thanks!</b>'
+                  + ' Your request was sent. I\'ll reply by email.</p>'
+                );
+              },
+              error: function () {
+                $this.attr('disabled', '');
+                $this.html('Oops :( Try again...');
               }
-            },
-            success: function () {
-              $('#form').html(
-                '<p style="color:green;"><b>Many thanks!</b>'
-                + ' Your request was sent. I\'ll reply by email.</p>'
-              );
-            },
-            error: function () {
-              $this.attr('disabled', '');
-              $this.html('Oops :( Try again...');
             }
-          }
-        );
+          );
+        }
       }
     );
   }
