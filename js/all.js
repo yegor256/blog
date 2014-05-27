@@ -11,16 +11,63 @@ $(
         );
       }
     );
-    $("h2, h3").each(
+    $('h2').each(
       function (idx, element) {
         var $element = $(element),
           icon = '<i class="fa fa-link"></i>',
           id = $element.attr('id');
         if (id) {
           $element.prepend(
-            $("<a/>").addClass("header-link").attr("href", "#" + id).html(icon)
+            $('<a/>').addClass('header-link').attr('href', '#' + id).html(icon)
           );
         }
+      }
+    );
+    $('#subscribe').click(
+      function (event) {
+        $this = $(this);
+        $this.attr('disabled','disabled');
+        $this.html('Please, wait...');
+        event.preventDefault();
+        $.ajax(
+          {
+            type: 'POST',
+            url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+            data: {
+              'key': 'GMfq6HmqFFR4HGCVfIu6Zw',
+              'message': {
+                'from_email': $('#email').val(),
+                'to': [
+                  {
+                    'email': 'blog@yegor256.com',
+                    'name': 'Yegor Bugayenko',
+                    'type': 'to'
+                  }
+                ],
+                'text': 'Hi,\n\n'
+                  + 'I\'d like to receive monthly updates from yegor256.com,'
+                  + ' please add me to the list of subscribers.\n\n'
+                  + $('#reason').val()
+                  + '\n\nEmail: ' + $('#email').val()
+                  + '\n\nThanks',
+                  + '\n\n--\nsent through the form',
+                'subject': 'I would like to receive monthly updates',
+                'auto_html': true,
+                'important': true
+              }
+            },
+            success: function () {
+              $('#form').html(
+                '<p style="color:green;"><b>Many thanks!</b>'
+                + ' Your request was sent. I\'ll reply by email.</p>'
+              );
+            },
+            error: function () {
+              $this.attr('disabled', '');
+              $this.html('Oops :( Try again...');
+            }
+          }
+        );
       }
     );
   }

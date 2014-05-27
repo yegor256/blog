@@ -135,6 +135,25 @@ code {
   line-height: $font-size;
   padding: 0 0.3 * $font-size;
 }
+label {
+  display: block;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+.field {
+  box-sizing: border-box;
+  font-size: $font-size;
+  font-family: $main-font;
+  padding: .2 * $font-size .5 * $font-size;
+}
+.field-text {
+  border: 1px solid $black;
+  @media all and (max-width: $width) {
+    width: 100%;
+  }
+}
 h1 {
   font-weight: 600;
   font-size: 2 * $font-size;
