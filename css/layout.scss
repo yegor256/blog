@@ -246,10 +246,11 @@ blockquote {
     content: "ˮ";
   }
 }
-.ico-twitter:hover { color: #00aced; }
-.ico-facebook:hover { color: #3b5998; }
-.ico-google:hover { color: #dd4b39; }
-.ico-linkedin:hover { color: #007bb6; }
+.ico-twitter:hover, .ico-tweet:hover { color: #00aced; }
+.ico-facebook:hover, .ico-x-facebook:hover { color: #3b5998; }
+.ico-google:hover, .ico-x-google:hover { color: #dd4b39; }
+.ico-linkedin:hover, .ico-x-linkedin:hover { color: #007bb6; }
 .ico-hacker-news:hover { color: #ff6600; }
+.ico-rss:hover { color: #ff6600; }
 .ico-reddit:hover { color: #cee3f8; }
 .ico-coderanch:hover { color: #995c56; }
