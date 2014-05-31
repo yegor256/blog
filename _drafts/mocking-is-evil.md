@@ -1,25 +1,45 @@
 ---
 layout: post
-title: "Mocking Is Evil"
+title: "Mocking Frameworks Is Evil"
 date: 2014-04-18
 tags: mocking design
 description:
-  Mocking is an evil practice, which you should
-  use as a last resort
+  Mocking frameworks is a bad practice and should be your last resort;
+  use mock classes instead
 keywords:
   - mocking is evil
+  - mocks are evil
+  - mocking frameworks
   - best practices of mocking
   - java mocking
   - java mock framework
   - why mocking is evil
+  - mockito java
+  - java mockito example
 ---
 
-There were many discussions on this subject, however
-I have say my few words. First, let's clarify the definitions.
-I understand "mocking" as a mechanism of breaking dependencies
-between classes for the time of testing. It enables creation
-of fake objects, also known as "mocks", which are used as
-dependencies of the component under test.
+Mocking is a perfect instrument for unit testing. Mocking frameworks
+turn it into an anti-pattern. In the following article I'll explain
+what is the difference and why you should try to stay as far away as possible
+from mocking frameworks.
 
-Let's say, we have a class Picture that can generate
-an GIF
+First, let's clarify the definitions. [Wikipedia](http://en.wikipedia.org/wiki/Mock_object)
+says that **mock object** is &ldquo;a simulated object that mimics the behavior
+of a real object in a controlled way&rdquo;.
+There are also "test doubles" and "fake objects", and "test stubs".
+
+Let's start with a code we want to test:
+
+{% highlight java %}
+public class  {
+  public int power(int x, int p) {
+    return Math.pow(x, p);
+  }
+}
+{% endhighlight %}
+
+## Better Readability of Tests
+
+## Reusability Across Tests and Modules
+
+

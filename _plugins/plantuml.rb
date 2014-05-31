@@ -23,7 +23,7 @@ module Yegor
           site, site.source, 'uml', "#{name}.svg"
         )
       end
-      "<img src='/uml/#{name}.svg' alt='UML' style='width:100%;'/>"
+      "<p><img src='/uml/#{name}.svg' alt='UML' style='width:100%;'/></p>"
     end
   end
 end

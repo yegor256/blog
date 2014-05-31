@@ -66,7 +66,7 @@ a, a:visited {
   width: 80px;
   border-radius: 50%;
 }
-.top {
+.header {
   height: 218px;
   text-align: center;
   .menu {
@@ -92,6 +92,22 @@ a, a:visited {
         border-color: $black;
       }
     }
+  }
+}
+.footer {
+  @media all and (max-width: $width) {
+    display: none;
+  }
+  margin-top: 5 * $font-size;
+  font-size: 0.85 * $font-size;
+  color: $gray;
+  text-align: center;
+  hr {
+    width: 30%;
+    height: 1px;
+    color: $gray;
+    background-color: $gray;
+    border:0;
   }
 }
 .disqus {
