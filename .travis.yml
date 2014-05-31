@@ -1,9 +1,10 @@
 language: ruby
-
 branches:
   only:
     - master
-install: bundle
+install: 
+  - apt-get install plantuml
+  - bundle
 env:
   global:
     - secure: "YRF2hq6GI07WDf8uzPgRZ72MF0/m+KRLXOvLFApzliPGav86wMdMBnUlb2TnbneOIjnZsFnivVTi0nOmhBJu/tOTnLdXUn96smKg60hHuQOqZYohv0Kbzl5SU0uDfN50q2inXxgd7xSH3D0zCMge8TacWzrp233NcjncArsYyoU="
