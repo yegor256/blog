@@ -5,7 +5,7 @@ date: 2014-04-18
 tags: mocking design
 description:
   Mocking frameworks is a bad practice and should be your last resort;
-  use mock classes instead
+  instead, ship mock objects together with your code
 keywords:
   - mocking is evil
   - mocks are evil
@@ -26,12 +26,13 @@ from mocking frameworks.
 First, let's clarify the definitions. [Wikipedia](http://en.wikipedia.org/wiki/Mock_object)
 says that **mock object** is &ldquo;a simulated object that mimics the behavior
 of a real object in a controlled way&rdquo;.
-There are also "test doubles" and "fake objects", and "test stubs".
+There are also "test doubles", "fake objects", "test stubs", and maybe
+some other names.
 
-Let's start with a code we want to test:
+Let's start with a sample code:
 
 {% highlight java %}
-public class  {
+public class Image {
   public int power(int x, int p) {
     return Math.pow(x, p);
   }

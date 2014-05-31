@@ -15,10 +15,13 @@ $width: 700px;
 $font-size: 19px;
 
 .gray {
-    color: $gray;
+  color: $gray;
+  a, a:visited {
+    color: inherit;
+  }
 }
 .light-gray {
-    color: $light-gray;
+  color: $light-gray;
 }
 .small {
   font-size: 0.85 * $font-size;
@@ -95,20 +98,13 @@ a, a:visited {
   }
 }
 .footer {
+  @extend .small;
+  @extend .gray;
   @media all and (max-width: $width) {
     display: none;
   }
   margin-top: 5 * $font-size;
-  font-size: 0.85 * $font-size;
-  color: $gray;
   text-align: center;
-  hr {
-    width: 30%;
-    height: 1px;
-    color: $gray;
-    background-color: $gray;
-    border:0;
-  }
 }
 .disqus {
   @extend .wrapper;
