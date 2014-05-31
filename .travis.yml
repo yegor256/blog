@@ -3,7 +3,7 @@ branches:
   only:
     - master
 install: 
-  - apt-get install plantuml
+  - sudo apt-get install plantuml
   - bundle
 env:
   global:
