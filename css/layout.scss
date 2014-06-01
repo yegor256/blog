@@ -176,6 +176,9 @@ h1 {
 h2, h3 {
   position: relative;
 }
+h2 {
+  margin-top: 2 * $font-size;
+}
 table.highlighttable {
   td.linenos {
     @extend .desktop-only;

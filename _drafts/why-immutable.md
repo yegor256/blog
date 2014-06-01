@@ -37,8 +37,8 @@ differently. However, I believe that the design of a mutable `Date` has
 a lot of flaws, while the immutable `String` is much more in spirit
 of object-oriented paradigm.
 
-Moverover, I think that *all* classes should be immutable in an perfect
-object-oriented world. Unfortunately, sometimes, it is technically not
+Moverover, I think that **all classes should be immutable in a perfect
+object-oriented world**. Unfortunately, sometimes, it is technically not
 possible due to limitations of, say, JVM. However, we should aim for the
 best. Hopefully, in the future, there will be an object-oriented language without mutable
 objects at all.
