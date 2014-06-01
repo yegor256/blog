@@ -80,9 +80,9 @@ the first request should be configured before the second one may
 happen. If we decide to remove the first request from the script, we will
 remove the second and the third line:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 Request request = new Request("http://example.com");
-<strike>request.method("POST");</strike>
+[[[<strike>]]]request.method("POST");[[[</strike>]]]
 String first = request.fetch();
 request.body("text=hello");
 String second = request.fetch();
