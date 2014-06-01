@@ -26,6 +26,11 @@ $font-size: 19px;
 .small {
   font-size: 0.85 * $font-size;
 }
+.desktop-only {
+  @media all and (max-width: $width) {
+    display: none;
+  }
+}
 body {
   height: 100%;
   font-family: $main-font;
@@ -70,7 +75,6 @@ a, a:visited {
   border-radius: 50%;
 }
 .header {
-  height: 218px;
   text-align: center;
   .menu {
     list-style: none;
@@ -81,12 +85,9 @@ a, a:visited {
     }
   }
   .gcse {
-    @media all and (max-width: $width) {
-      display: none;
-    }
+    @extend .desktop-only;
     width: 75%;
     height: 64px;
-    display: inline-block;
     line-height: normal;
     input.gsc-search-button {
       background-color: #ccc;
@@ -101,9 +102,7 @@ a, a:visited {
 .footer {
   @extend .small;
   @extend .gray;
-  @media all and (max-width: $width) {
-    display: none;
-  }
+  @extend .desktop-only;
   margin-top: 5 * $font-size;
   text-align: center;
 }
@@ -179,22 +178,18 @@ h2, h3 {
 }
 table.highlighttable {
   td.linenos {
+    @extend .desktop-only;
     width: 2 * $font-size;
     min-width: 2 * $font-size;
     text-align: right;
-    @media all and (max-width: $width) {
-      display: none;
-    }
   }
 }
 .linenodiv {
   @extend .gray;
+  @extend .desktop-only;
   border-right: 3px solid $light-gray;
   padding-right: 0.5 * $font-size;
   margin-right: 0.2 * $font-size;
-  @media all and (max-width: $width) {
-    display: none;
-  }
 }
 .highlight pre code {
   display: block;
@@ -227,9 +222,7 @@ figure {
   margin: 0;
 }
 .badge {
-  @media all and (max-width: $width) {
-    display: none;
-  }
+  @extend .desktop-only;
   float: right;
   margin-left: 2em;
 }

@@ -125,23 +125,51 @@ I hope this example demonstrates that the code manipulating
 immutable objects is more readable and maintainable, because
 it doesn't have temporal coupling.
 
-## No Side Effects
+## Avoiding Side Effects
 
 Let's try to use our `Request` class in a new method (now it is mutable):
 
 {% highlight java %}
 public String post(Request request) {
   request.method("POST");
-  request.body("text=hello");
   return request.fetch();
 }
 {% endhighlight %}
 
-Let's make two requests:
+Let's try to make two requests &mdash; the first with GET method and the second
+with POST:
 
 {% highlight java %}
 Request request = new Request("http://example.com");
+request.method("GET");
 String first = this.post(request);
 String second = request.fetch();
 {% endhighlight %}
+
+Method `post()` has a "side effect" &mdash; it makes changes to the mutable
+object `request`. These changes are not really expected in this case. We expect
+it to make a POST request and return its body. We don't want to read its
+documentation just to find out that behind the scene it also modifies
+the request we're passing to it as an argument.
+
+Needless to say that such side effects lead to bugs and maintainability
+issues. Would be much better to work with an immutable `Request`:
+
+{% highlight java %}
+public String post(Request request) {
+  return request.method("POST").fetch();
+}
+{% endhighlight %}
+
+In this case we may not have any side effects. Nobody can modify our `request`
+object, no matter where it is used and how deep through the call stack
+it is passed by method calls:
+
+{% highlight java %}
+Request request = new Request("http://example.com").method("GET");
+String first = this.post(request);
+String second = request.fetch();
+{% endhighlight %}
+
+This code is perfectly safe and side effect free.
 

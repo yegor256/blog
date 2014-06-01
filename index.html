@@ -39,7 +39,7 @@ keywords:
         <p>
           {{ post.description }}
         </p>
-        <p class="gray small">
+        <p class="gray small desktop-only">
           {{ post.content | count_words }}
           words,
           {% capture time %}{{ post.content | reading_time }}{% endcapture %}
@@ -72,7 +72,7 @@ keywords:
     <div style="float: left;">
       {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-          <a href="/">home</a>
+          <a href="/"><i class="ico ico-back"></i></a>
         {% else %}
           <a href="/p/{{ paginator.previous_page }}"><i class="ico ico-back"></i></a>
         {% endif %}
