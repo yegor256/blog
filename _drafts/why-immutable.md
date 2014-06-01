@@ -82,8 +82,8 @@ remove the second and the third line:
 
 {% highlight java %}
 Request request = new Request("http://example.com");
-[[[<strike>]]]request.method("POST");[[[</strike>]]]
-String first = request.fetch();
+//request.method("POST");
+//String first = request.fetch();
 request.body("text=hello");
 String second = request.fetch();
 {% endhighlight %}

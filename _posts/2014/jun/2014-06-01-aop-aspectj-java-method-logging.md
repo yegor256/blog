@@ -4,7 +4,7 @@ title: "Java Method Logging with AOP and Annotations"
 date: 2014-06-01
 tags: aop java logging jcabi
 description:
-  For traceability and debugging purporses, it can be very
+  For traceability and debugging purposes, it can be very
   convenient to log execution details of every method.
   This article explains how this can be done with AspectJ
   and Java annotations.
