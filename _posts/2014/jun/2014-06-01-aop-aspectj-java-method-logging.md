@@ -41,8 +41,8 @@ public class Foo {
 This is what I see in log4j output:
 
 {% highlight text %}
-[INFO] 12:34:08 com.example.Foo #power(2, 5): 32 in 12μs
-[INFO] 12:35:23 com.example.Foo #power(3, 3): 27 in 4μs
+[INFO] com.example.Foo #power(2, 10): 1024 in 12μs
+[INFO] com.example.Foo #power(3, 3): 27 in 4μs
 {% endhighlight %}
 
 Nice, isn't it? Now, let's see how it works.
