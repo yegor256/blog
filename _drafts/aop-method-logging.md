@@ -4,10 +4,8 @@ title: "Java Method Logging with AOP and Annotations"
 date: 2014-05-25
 tags: aop java logging jcabi
 description:
-  For traceability and debugging purporses, it may be very
-  convenient to log execution details of every method; the
-  article explains how this can be done with AspectJ
-  and Java annotations
+
+For traceability and debugging purporses, it can be very convenient to log execution details of every method. This article explains how this can be done with AspectJ  and Java annotations.
 keywords:
   - aop java logging
   - log every method java
@@ -22,14 +20,7 @@ keywords:
   - aspectj logging annotations
 ---
 
-Sometimes I want to log (through [slf4j](http://www.slf4j.org)
-and [log4j](http://logging.apache.org/log4j/2.x/))
-every execution of a method, seeing
-what arguments it was receiving, what was it returning and how much
-time every execution was taking. This is how I'm doing it, with help of
-[AspectJ](http://eclipse.org/aspectj/),
-[jcabi-aspects](http://aspects.jcabi.com), and
-Java 6 annotations:
+Sometimes, I want to log (through [slf4j](http://www.slf4j.org) and [log4j](http://logging.apache.org/log4j/2.x/)) every execution of a method, seeing what arguments it receives, what it returns and how much time every execution takes. This is how I'm doing it, with help of [AspectJ](http://eclipse.org/aspectj/), [jcabi-aspects](http://aspects.jcabi.com) and Java 6 annotations:
 
 {% highlight java %}
 public class Foo {
@@ -51,64 +42,27 @@ Nice, isn't it? Now, let's see how it works.
 
 ## Annotation with Runtime Retention
 
-[Annotations](http://en.wikipedia.org/wiki/Java_annotation)
-is a technique introduced in Java 6. It is a meta-programming
-instrument that doesn't change the way code works, but gives marks to its certain
-elements (methods, classes or variables). In other words, annotations are just markers
-attached to our code that can be seen and read.
-
-Some annotations are designed to be seen at compile time only &mdash;
-they don't exist in `.class` files after compilation. Others remain
-visible after compilation and can be accessed in runtime.
+[Annotations](http://en.wikipedia.org/wiki/Java_annotation) is a technique introduced in Java 6. It is a meta-programming instrument that doesn't change the way code works, but gives marks to certain elements (methods, classes or variables). In other words, annotations are just markers attached to the code that can be seen and read. Some annotations are designed to be seen at compile time only &mdash; they don't exist in `.class` files after compilation. Others remain visible after compilation and can be accessed in runtime.
 
 For example,
-[`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html)
-is of the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)),
-while
-[`@Test`](http://junit.sourceforge.net/javadoc/org/junit/Test.html) from JUnit is
-of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
+[`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html) is of the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)), while [`@Test`](http://junit.sourceforge.net/javadoc/org/junit/Test.html) from JUnit is of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
+[`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html) &mdash; the one I'm using in the script above &mdash; is an annotation of the second type, from [jcabi-aspects](http://aspects.jcabi.com).
 
-[`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)
-&mdash; the one I'm using in the script above &mdash;
-is an annotation of the second type,
-from [jcabi-aspects](http://aspects.jcabi.com).
-It stays with the bytecode in `.class` file after compilation.
-
-Again, it is important to understand that even though method `power()` is
-annotated and compiled, it doesn't send anything to slf4j so far.
-It just contains a marker saying "please, log my execution".
+It stays with the bytecode in the `.class` file after compilation. Again, it is important to understand that even though method `power()` is annotated and compiled, it doesn't send anything to slf4j so far. It just contains a marker saying "please, log my execution".
 
 ## Aspect Oriented Programming (AOP)
 
-[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)
-is useful technique that enables adding executable blocks to
-the source code without explicitly changing it. In our example,
-we don't want to log method execution inside the class. Instead,
-we want some other class to intercept every call to method `power()`,
-measure its execution time, and send this information to slf4j.
+[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming) is a useful technique that enables adding executable blocks to the source code without explicitly changing it. In our example, we don't want to log method execution inside the class. Instead, we want some other class to intercept every call to method `power()`, measure its execution time and send this information to slf4j.
 
-We want that interceptor to understand our `@Loggable` annotation
-and log every call to that specific method `power()`. And, of course,
-the same interceptor should be used for other methods, where we'll
-place the same annotation in the future.
+We want that interceptor to understand our `@Loggable` annotation and log every call to that specific method `power()`. And, of course, the same interceptor should be used for other methods where we'll place the same annotation in the future.
+This case perfectly fits the original intent of AOP &mdash; to avoid re-implementation of some common behavior in multiple classes.
 
-This case perfectly fits with the original intent of AOP &mdash;
-to avoid re-implementation of some common behavior in multiple classes.
-Logging is a supplementary feature to our main functionality and
-we don't want to polute our code with multiple logging instructions.
-Instead, we want logging to happen behind the scene.
-
-In terms of AOP, our solution can be explained as creating an **aspect** that
-**cross-cut** the code at certain **join points** and
-applies an **around advice** that implements the desired functionality.
+Logging is a supplementary feature to our main functionality, and we don't want to pollute our code with multiple logging instructions. Instead, we want logging to happen behind the scenes.
+In terms of AOP, our solution can be explained as creating an **aspect** that **cross-cuts** the code at certain **join points** and applies an **around advice** that implements the desired functionality.
 
 ## AspectJ
 
-Let's see what these magic words mean, but first lets see how
-[jcabi-aspects](http://aspects.jcabi.com)
-implements them using [AspectJ](http://eclipse.org/aspectj/)
-(it's a simplified example, full code you can find in
-[`MethodLogger.java`](https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java)):
+Let's see what these magic words mean. But, first, let's see how [jcabi-aspects](http://aspects.jcabi.com) implements them using [AspectJ](http://eclipse.org/aspectj/) (it's a simplified example, full code you can find in [`MethodLogger.java`](https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java)):
 
 {% highlight java %}
 @Aspect
@@ -129,57 +83,24 @@ public class MethodLogger {
 }
 {% endhighlight %}
 
-This is an **aspect** with a single **around advice** `around()` inside.
-The aspect is annotated with `@Aspect` and advice is annotated with `@Around`.
-As discussed above, these annotations are just markers in `.class` files. They
-don't do anything except providing some meta-information to
-those who are interested in runtime.
+This is an **aspect** with a single **around advice** `around()` inside. The aspect is annotated with `@Aspect` and advice is annotated with `@Around`. As discussed above, these annotations are just markers in `.class` files. They don't do anything except provide some meta-information to those who are interested in runtime.
 
-Annotation `@Around` has one parameter, which, in this case, says that
-the advice should be applied to a method if:
+Annotation `@Around` has one parameter, which -- in this case -- says that the advice should be applied to a method if:
 
- 1. its visibility modifier is `*` (`public`, `protected` or `private`),
-
- 2. its name is name `*` (any name),
-
- 3. its arguments are `..` (any arguments), and
-
+ 1. its visibility modifier is `*` (`public`, `protected` or `private`);
+ 2. its name is name `*` (any name);
+ 3. its arguments are `..` (any arguments); and
  4. it is annotated with `@Loggable`
 
-When a call to an annotated method will be intercepted, method `around()`
-will be executed before executing the actual method. When a call to
-method `power()` will be intercepted, method `around()` will receive
-an instance of class `ProceedingJoinPoint` and will have to return
-an object, which will be used as a result of method `power()`.
-
-In order to call the original method `power()`, the advice has to
-call `proceed()` of the **join point** object.
-
-We compile this aspect and make it available in classpath, together
-with our main file `Foo.class`. So far so good, but we need to
-make one last step in order to put our aspect into action &mdash;
-we should **apply** our advice.
+When a call to an annotated method is to be intercepted, method `around()` executes before executing the actual method. When a call to method `power()` is to be intercepted, method `around()`receives an instance of class `ProceedingJoinPoint` and must return an object, which will be used as a result of method `power()`.
+In order to call the original method, `power()`, the advice has to call `proceed()` of the **join point** object.
+We compile this aspect and make it available in classpath together with our main file `Foo.class`. So far so good, but we need to take one last step in order to put our aspect into action &mdash; we should **apply** our advice.
 
 ## Binary Aspect Weaving
 
-Aspect weaving is the name of this advice applying process.
-Aspect weaver modifies original code by
-injecting calls to aspects. AspectJ does exactly that. We give it
-two binary Java classes `Foo.class` and `MethodLogger.class`;
-it gives back three &mdash; modified `Foo.class`,
-`Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
-
-In order to understand which advices should be applied to which
-methods, AspectJ weaver is using annotations from `.class` files. Also, it
-uses [reflection](http://docs.oracle.com/javase/tutorial/reflect/)
-to browse all classes on classpath. It analyzes
-which methods satisfies the conditions from `@Around` annotation.
-Of course, it finds our method `power()`.
-
-So, there are two steps.
-First, we compile our `.java` files using `javac` and get two files. Then,
-AspectJ weaves/modifies them and creates its own extra class. This is approximately how
-our class `Foo` looks like, after weaving:
+Aspect weaving is the name of the advice applying process. Aspect weaver modifies original code by injecting calls to aspects. AspectJ does exactly that. We give it two binary Java classes `Foo.class` and `MethodLogger.class`; it gives back three &mdash; modified `Foo.class`, `Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
+In order to understand which advices should be applied to which methods, AspectJ weaver is using annotations from `.class` files. Also, it uses [reflection](http://docs.oracle.com/javase/tutorial/reflect/) to browse all classes on classpath. It analyzes which methods satisfy the conditions from the `@Around` annotation. Of course, it finds our method `power()`.
+So, there are two steps. First, we compile our `.java` files using `javac` and get two files. Then, AspectJ weaves/modifies them and creates its own extra class. Our `Foo` class looks something like this after weaving:
 
 {% highlight java %}
 public class Foo {
@@ -194,13 +115,8 @@ public class Foo {
 }
 {% endhighlight %}
 
-AspectJ weaver moves our original functionality to a new method `power_aroundBody()`,
-and redirects all `power()` calls to the aspect class `MethodLogger`.
-
-Instead of one method `power()` in class `Foo` we have four classes working
-together. From now on, this is what is happening, behind the scene,
-on every call to `power()`:
-
+AspectJ weaver moves our original functionality to a new method, `power_aroundBody()`, and redirects all `power()` calls to the aspect class `MethodLogger`.
+Instead of one method `power()` in class `Foo` we have four classes working together. From now on, this is what happens behind the scenes on every call to `power()`:
 {% plantuml %}
 hide footbox
 skinparam sequence {
@@ -240,21 +156,12 @@ foo --> client
 deactivate foo
 {% endplantuml %}
 
-Original functionality of method `power()` is the small
-green lifeline on the diagram.
-
-As you see, aspect weaving process connects together classes and aspects,
-transferring calls between them through join points.
-Without weaving, both classes and aspects are just compiled Java binaries
-with attached annotations.
+Original functionality of method `power()` is indicated by the small green lifeline on the diagram.
+As you see, the aspect weaving process connects together classes and aspects, transferring calls between them through join points. Without weaving, both classes and aspects are just compiled Java binaries with attached annotations.
 
 # jcabi-aspects
 
-[jcabi-aspects](http://aspects.jcabi.com) is a JAR library that contains
-`Loggable` annotation and `MethodLogger` aspect (btw, there are [many more](http://aspects.jcabi.com) aspects
-and annotations). You don't need to write your own aspect for method logging.
-Just add a few dependencies to your classpath and configure
-[jcabi-maven-plugin](http://plugin.jcabi.com) for aspect weaving:
+[jcabi-aspects](http://aspects.jcabi.com) is a JAR library that contains `Loggable` annotation and `MethodLogger` aspect (btw, there are [many more](http://aspects.jcabi.com) aspects and annotations). You don't need to write your own aspect for method logging. Just add a few dependencies to your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com) for aspect weaving:
 
 {% highlight xml %}
 <project>
@@ -291,14 +198,8 @@ Just add a few dependencies to your classpath and configure
 </project>
 {% endhighlight %}
 
-Since this weaving procedure takes a lot of
-configuration efforts, I created a convenient Maven plugin with an `ajc` goal,
-which does the entire aspect weaving job. You can use
-AspectJ directly, but I recommend to use [jcabi-maven-plugin](http://plugin.jcabi.com).
+Since this weaving procedure takes a lot of configuration effort, I created a convenient Maven plugin with an `ajc` goal, which does the entire aspect weaving job. You can use AspectJ directly, but I recommend that you use [jcabi-maven-plugin](http://plugin.jcabi.com).
 
-That's it. Now you can use
-[`@com.jcabi.aspects.Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)
-annotation and your methods will be logged through slf4j.
+That's it. Now you can use [`@com.jcabi.aspects.Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html) annotation and your methods will be logged through slf4j.
 
-If something doesn't work as explained, don't hesitate
-to submit a [Github issue](https://github.com/jcabi/jcabi-aspects/issues).
+If something doesn't work as explained, don't hesitate to submit a [Github issue](https://github.com/jcabi/jcabi-aspects/issues).
