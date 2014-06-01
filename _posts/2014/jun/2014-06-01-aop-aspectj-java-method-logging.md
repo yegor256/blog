@@ -224,7 +224,6 @@ point -> closure : run()
 activate closure
 closure -> foo : power_aroundBody()
 activate foo #228b22
-|||
 foo --> closure
 deactivate foo
 closure --> point
