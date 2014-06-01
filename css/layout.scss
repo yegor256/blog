@@ -85,8 +85,8 @@ a, a:visited {
     }
   }
   .gcse {
-    @extend .desktop-only;
     display: inline-block;
+    @extend .desktop-only;
     width: 75%;
     height: 64px;
     line-height: normal;
