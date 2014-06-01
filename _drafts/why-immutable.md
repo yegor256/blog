@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Few Arguments For Immutability in OOP"
+title: "Why Objects Should Be Immutable"
 date: 2014-06-09
 tags: quality immutability
 description:
@@ -75,10 +75,11 @@ request.body("text=hello");
 String second = request.fetch();
 {% endhighlight %}
 
-The code works as it is. However, everybody has to remember that
+This code works. However, everybody has to remember that
 the first request should be configured before the second one may
 happen. If we decide to remove the first request from the script, we will
-remove the second and the third line:
+remove the second and the third line, and won't get any errors
+from the compiler:
 
 {% highlight java %}
 Request request = new Request("http://example.com");
@@ -88,11 +89,18 @@ request.body("text=hello");
 String second = request.fetch();
 {% endhighlight %}
 
-If `Request` class would be immutable, the first snippet won't work. Instead,
-it would have been rewritten like that:
+Now the script is broken, although compiled without errors. This is
+what temporal coupling is about &mdash; there is always some hidden
+information in the code that a programmer has to remember. In this example,
+we have to remember that the configuration done for the first request
+is used for the second one. We have to remember that the second request
+should always stay together and be executed after the first one.
+
+If `Request` class would be immutable, the first snippet won't work in the
+first place, and would have been rewritten like that:
 
 {% highlight java %}
-Request request = new Request("");
+final Request request = new Request("");
 String first = request.method("POST").fetch();
 String second = request.method("POST").body("text=hello").fetch();
 {% endhighlight %}
@@ -100,39 +108,40 @@ String second = request.method("POST").body("text=hello").fetch();
 Now, these two requests are not coupled. We can safely remove the first
 one, and the second one will remain working correctly. You may point out
 that there is a code duplication. Yes, we should get rid of it and re-write
-the code even better:
+the code:
 
 {% highlight java %}
-Request request = new Request("");
-Request post = request.method("POST");
+final Request request = new Request("");
+final Request post = request.method("POST");
 String first = post.fetch();
 String second = post.body("text=hello").fetch();
 {% endhighlight %}
 
-Even after refactoring we don't have temporal coupling. The first request
+See, refactoring didn't break anything and we still
+don't have temporal coupling. The first request
 can be safely removed from the code without affecting the second one.
+
+I hope this example demonstrates that the code manipulating
+immutable objects is more readable and maintainable, because
+it doesn't have temporal coupling.
 
 ## No Side Effects
 
-This is how they may happen:
+Let's try to use our `Request` class in a new method (now it is mutable):
 
-{% highlight java linenos=table %}
-Order order = orders.find(345);
-bank.process(order);
-order.save();
-{% endhighlight %}
-
-While method `process(Order)` is defined in `Bank` class as the following:
-
-{% highlight java linenos=table %}
-public class Bank {
-  public void process(final Order order) {
-    order.discount(0.15);
-    // do some other processing
-  }
+{% highlight java %}
+public String post(Request request) {
+  request.method("POST");
+  request.body("text=hello");
+  return request.fetch();
 }
 {% endhighlight %}
 
-Object `order` will be changed in method `process(Order)`, however these changes
-are side effects for the client that doesn't expect it to be changed during
-processing.
+Let's make two requests:
+
+{% highlight java %}
+Request request = new Request("http://example.com");
+String first = this.post(request);
+String second = request.fetch();
+{% endhighlight %}
+

@@ -74,18 +74,18 @@ keywords:
         {% if paginator.previous_page == 1 %}
           <a href="/">home</a>
         {% else %}
-          <a href="/p/{{ paginator.previous_page }}">prev</a>
+          <a href="/p/{{ paginator.previous_page }}"><i class="ico ico-back"></i></a>
         {% endif %}
       {% else %}
-        <span class="mute">prev</span>
+        <span class="mute"><i class="ico ico-back"></i></span>
       {% endif %}
     </div>
     page {{ paginator.page }} of {{ paginator.total_pages }}
     <div style="float: right;">
       {% if paginator.next_page %}
-        <a href="/p/{{ paginator.next_page }}">next</a>
+        <a href="/p/{{ paginator.next_page }}"><i class="ico ico-forward"></i></a>
       {% else %}
-        <span class="mute">next</span>
+        <span class="mute"><i class="ico ico-forward"></i></span>
       {% endif %}
     </div>
   </div>

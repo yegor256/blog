@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon-yegor256';
-  src: url('//img.yegor256.com/fonts/icomoon-4.eot');
-  src: url('//img.yegor256.com/fonts/icomoon-4.eot?#iefix')
+  src: url('//img.yegor256.com/fonts/icomoon-5.eot');
+  src: url('//img.yegor256.com/fonts/icomoon-5.eot?#iefix')
     format('embedded-opentype'),
-    url('//img.yegor256.com/fonts/icomoon-4.woff')
+    url('//img.yegor256.com/fonts/icomoon-5.woff')
     format('woff'),
-  url('//img.yegor256.com/fonts/icomoon-4.ttf')
+  url('//img.yegor256.com/fonts/icomoon-5.ttf')
     format('truetype');
 }
 
@@ -33,5 +33,8 @@
 .ico-x-google:before { content: "\f0d5"; }
 .ico-x-linkedin:before { content: "\f0e1"; }
 .ico-x-stackoverflow:before { content: "\f16c"; }
+.ico-home:before { content: "\f015"; }
+.ico-back:before { content: "\f04a"; }
+.ico-forward:before { content: "\f04e"; }
 
 .ico-coderanch:before { content: "\e600"; }
