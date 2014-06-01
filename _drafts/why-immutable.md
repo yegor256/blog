@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Why Objects Should Be Immutable"
-date: 2014-05-19
+title: "A Few Arguments For Immutability in OOP"
+date: 2014-06-09
 tags: quality immutability
 description:
   The article gives arguments about why classes/objects
