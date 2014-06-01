@@ -43,7 +43,7 @@ possible due to limitations of, say, JVM. However, we should aim for the
 best. Hopefully, in the future, there will be an object-oriented language without mutable
 objects at all.
 
-Let see what are the arguments in favor of object immutability.
+Let discuss the arguments in favor of object immutability.
 
 ## Thread Safety
 
@@ -173,3 +173,12 @@ String second = request.fetch();
 
 This code is perfectly safe and side effect free.
 
+## Practical Examples
+
+Very often I'm hearing people saying that immutability is a fancy
+feature, while absolutely impractical in real enterprise systems.
+
+As a counter-argument I can only show some examples of
+real-life applications that contain only immutable Java objects.
+
+jcabi-http, jcabi-xml, jcabi-github, jcabi-s3, jcabi-dynamo, jcabi-simpledb
