@@ -19,6 +19,9 @@ keywords:
   - amazon java object-oriented
   - object-oriented java s3
   - s3 adapter java
+  - aws s3 upload java
+  - aws s3 download java
+  -
 ---
 
 {% badge http://img.yegor256.com/2014/05/s3-logo.png 150 %}

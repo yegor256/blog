@@ -20,6 +20,9 @@ keywords:
   - aspectj weaving annotations
   - slf4j logging aspectj
   - aspectj logging annotations
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/270k18/java_method_logging_with_aop_and_annotations/
+  coderanch: http://www.coderanch.com/t/634479/aop/Java-Method-Logging-AOP-Annotations
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)

@@ -43,7 +43,16 @@ possible due to limitations of, say, JVM. However, we should aim for the
 best. Hopefully, in the future, there will be an object-oriented language without mutable
 objects at all.
 
-Let discuss the arguments in favor of object immutability.
+This is an incomplete list of arguments in favor of immutability:
+
+ * immutable objects are simpler to construct, test, and use
+ * truely immutable objects are always thread-safe
+ * they help to avoid temporal coupling
+ * their usage is side-effects free
+ * identity mutability problem is avoided with them
+ * they always have failure atomicity
+
+Let's discuss most important of them.
 
 ## Thread Safety
 
@@ -173,12 +182,45 @@ String second = request.fetch();
 
 This code is perfectly safe and side effect free.
 
-## Practical Examples
+## Avoiding Identity Mutability
 
+In every object-oriented language
+
+## Failure Atomicity
+
+## Arguments Against Immutability
+
+There are a number of arguments against immutability.
+
+1. **Immutability is not for enteprise systems**.
 Very often I'm hearing people saying that immutability is a fancy
 feature, while absolutely impractical in real enterprise systems.
-
 As a counter-argument I can only show some examples of
 real-life applications that contain only immutable Java objects.
+[jcabi-http](http://http.jcabi.com),
+[jcabi-xml](http://xml.jcabi.com),
+[jcabi-github](http://github.jcabi.com),
+[jcabi-s3](http://s3.jcabi.com),
+[jcabi-dynamo](http://dynamo.jcabi.com),
+[jcabi-simpledb](http://simpledb.jcabi.com)
+are all Java libraries that work solely with immutable classes/objects.
+[netbout.com](https://github.com/netbout/netbout) and
+[stateful.co](https://github.com/sttc/stateful) are web applications
+that work solely with immutable objects.
 
-jcabi-http, jcabi-xml, jcabi-github, jcabi-s3, jcabi-dynamo, jcabi-simpledb
+2. **It's cheaper to update an existing object than create a new one**.
+Oracle [thinks](http://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html) that
+&ldquo;The impact of object creation is often
+overestimated, and can be offset by some of the efficiencies
+associated with immutable objects. These include decreased overhead
+due to garbage collection, and the elimination of code needed
+to protect mutable objects from corruption.&rdquo;
+
+## References
+
+More on this subject:
+
+http://www.javapractices.com/topic/TopicAction.do?Id=29
+http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects
+http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects
+http://www.javaranch.com/journal/2003/04/immutable.htm
