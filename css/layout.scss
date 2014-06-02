@@ -28,7 +28,7 @@ $font-size: 19px;
 }
 .desktop-only {
   @media all and (max-width: $width) {
-    display: none;
+    display: none !important;
   }
 }
 body {
@@ -85,8 +85,8 @@ a, a:visited {
     }
   }
   .gcse {
-    display: inline-block;
     @extend .desktop-only;
+    display: inline-block;
     width: 75%;
     height: 64px;
     line-height: normal;
