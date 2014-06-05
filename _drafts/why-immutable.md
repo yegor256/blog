@@ -184,8 +184,58 @@ This code is perfectly safe and side effect free.
 
 ## Avoiding Identity Mutability
 
-Every object-oriented language has a mechanism of deriving
-object identity from .
+Very often we want objects to be identical if their
+internal states are the same.
+[`Date`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html) class is a good example:
+
+{% highlight java %}
+Date first = new Date(1L);
+Date second = new Date(1L);
+assert first.equals(second); // true
+{% endhighlight %}
+
+There are two different objects, however they are equal to
+each other because their encapsulated states are the same. This
+is made possible through their custom overloaded implementation of `equals()`
+and `hashCode()` methods.
+
+The consequence of this convenient approach being used with mutable objects
+is that every time we modify object's state it changes its identity:
+
+{% highlight java %}
+Date first = new Date(1L);
+Date second = new Date(1L);
+first.setTime(2L);
+assert first.equals(second); // false
+{% endhighlight %}
+
+This may look natural, until you start using your
+mutable objects as keys in maps:
+
+{% highlight java %}
+Map<Date, String> map = new HashMap<>();
+Date date = new Date();
+map.put(date, "hello, world!");
+date.setTime(12345L);
+assert map.containsKey(date); // false
+{% endhighlight %}
+
+When modifying the state of `date` object we're not expecting
+it to change its identity. We're not expecting to loose
+an entry in the map just because the state of its key
+is changed. However, this is exactly what is happening in the
+example above.
+
+When we add an object to the map, its `hashCode()` returns one value.
+This value is used by
+[`HashMap`](http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
+to place the entry into
+internal hash table. When we call `containsKey()` hash code of the
+object is different (because it is based on its internal state)
+and `HashMap` can't find it in the internal hash table.
+
+It is a very annoying and difficult to debug side effect
+of mutabile objects. Immutable objects avoids it completely.
 
 ## Failure Atomicity
 
