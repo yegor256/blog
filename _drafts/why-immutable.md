@@ -49,10 +49,10 @@ This is an incomplete list of arguments in favor of immutability:
  * truely immutable objects are always thread-safe
  * they help to avoid temporal coupling
  * their usage is side-effects free
- * identity mutability problem is avoided with them
+ * identity mutability problem is avoided
  * they always have failure atomicity
 
-Let's discuss most important of them.
+Let's discuss most important of them, one by one.
 
 ## Thread Safety
 
@@ -184,9 +184,14 @@ This code is perfectly safe and side effect free.
 
 ## Avoiding Identity Mutability
 
-In every object-oriented language
+Every object-oriented language has a mechanism of deriving
+object identity from .
 
 ## Failure Atomicity
+
+Here is an example:
+
+
 
 ## Arguments Against Immutability
 
