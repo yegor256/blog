@@ -6,7 +6,7 @@ tags: quality immutability
 description:
   The article gives arguments about why classes/objects
   in object-oriented programming have to be immutable,
-  i.e. never change their encapsulated state
+  i.e. never modify their encapsulated state
 keywords:
   - object design
   - object thinking
@@ -301,18 +301,7 @@ Oracle [thinks](http://docs.oracle.com/javase/tutorial/essential/concurrency/imm
 overestimated, and can be offset by some of the efficiencies
 associated with immutable objects. These include decreased overhead
 due to garbage collection, and the elimination of code needed
-to protect mutable objects from corruption.&rdquo;
+to protect mutable objects from corruption.&rdquo; I agree.
 
-## References
-
-More on this subject:
-
-http://www.javapractices.com/topic/TopicAction.do?Id=29
-http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects
-http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects
-http://www.javaranch.com/journal/2003/04/immutable.htm
-http://jtechies.blogspot.com/2012/07/item-64-strive-for-failure-atomicity.html
-http://www.ibm.com/developerworks/java/library/j-ft4/index.html?utm_source=twitterfeed&utm_medium=twitter
-http://www.javalobby.org/articles/immutable/
-http://codebetter.com/patricksmacchia/2008/01/13/immutable-types-understand-them-and-use-them/
-http://doanduyhai.wordpress.com/2012/05/26/object-immutability-in-java/
+If you have some other arguments, please post them below and I'll
+try to comment.
