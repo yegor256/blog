@@ -46,7 +46,7 @@ It may return `NULL` instead of an object &mdash; that's what is wrong.
 There have been a number of opinions about this published already, including
 [Null References, The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
 presentation by Tony Hoare and the entire
-[Object Thinking](http://www.amazon.com/Object-Thinking-DV-Microsoft-Professional-David/dp/0735619654)
+[Object Thinking](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT)
 book by David West.
 
 Here, I'll try to summarize all the arguments and show examples of

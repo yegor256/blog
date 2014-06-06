@@ -67,7 +67,7 @@ own memory space, in stack.
 
 Goetz et al. explained this advantage of immutable objects in more
 details in their very famous book
-[Java Concurrency in Practice](http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
+[Java Concurrency in Practice](http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=OHVW5XBUDRTKVT46)
 (highly recommend to read).
 
 ## Avoiding Temporal Coupling
@@ -239,9 +239,27 @@ of mutabile objects. Immutable objects avoids it completely.
 
 ## Failure Atomicity
 
-Here is an example:
+Here is an simple example:
 
+{% highlight java %}
+public class Stack {
+  private int size;
+  private String[] items;
+  public void push(String item) {
+    size++;
+    if (size > items.length) {
+      throw new RuntimeException("stack overflow");
+    }
+    items[size] = item;
+  }
+}
+{% endhighlight %}
 
+It is obvious that an object of class `Stack` will be
+
+More on this subject you can find in
+[Effective Java, 2nd Edition](http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321356683&linkCode=as2&tag=yegor256com-20&linkId=CSSI3POG6ZJ3BJ6T)
+by Joshua Bloch.
 
 ## Arguments Against Immutability
 
