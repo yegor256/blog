@@ -62,3 +62,28 @@ Personally, I think it is a good practice to validate all
 of HTML pages produced by your application against W3C during
 integration testing. It's not a matter of seeking perfection,
 but rather of preventing bigger problems later.
+
+These dependencies are mandatory when using jcabi-w3c:
+
+{% highlight xml %}
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-w3c</artifactId>
+  <version>1.0</version>
+</dependency>
+<dependency>
+  <groupId>org.glassfish</groupId>
+  <artifactId>javax.json</artifactId>
+  <version>1.0.4</version>
+</dependency>
+<dependency>
+  <groupId>com.sun.jersey</groupId>
+  <artifactId>jersey-client</artifactId>
+  <version>1.18.1</version>
+</dependency>
+<dependency>
+  <groupId>org.hamcrest</groupId>
+  <artifactId>hamcrest-core</artifactId>
+  <version>1.3</version>
+</dependency>
+{% endhighlight %}

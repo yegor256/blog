@@ -9,16 +9,20 @@ description:
   i.e. never change their encapsulated state
 keywords:
   - object design
+  - object thinking
   - why immutable
   - immutability of objects
   - agruments for immutable objects
   - why immutable objects are better
   - immutability in oop
   - oop immutable objects
-  - immutable classes
-  - immutable class
-  - immutable object
+  - immutable classes java
+  - immutable class java
+  - immutable object java
   - best practices immutable
+  - failure atomicity
+  - failure atomicity java
+  - functional thinking in java
 ---
 
 In object-oriented programming, an object is
@@ -48,9 +52,10 @@ This is an incomplete list of arguments in favor of immutability:
  * immutable objects are simpler to construct, test, and use
  * truely immutable objects are always thread-safe
  * they help to avoid temporal coupling
- * their usage is side-effects free
+ * their usage is side-effects free (no defensive copies)
  * identity mutability problem is avoided
  * they always have failure atomicity
+ * they are much easier to cache
 
 Let's discuss most important of them, one by one.
 
@@ -239,7 +244,7 @@ of mutabile objects. Immutable objects avoids it completely.
 
 ## Failure Atomicity
 
-Here is an simple example:
+Here is a simple example:
 
 {% highlight java %}
 public class Stack {
@@ -255,7 +260,16 @@ public class Stack {
 }
 {% endhighlight %}
 
-It is obvious that an object of class `Stack` will be
+It is obvious that an object of class `Stack` will be left
+in a broken state if it throws a runtime exception on overflow.
+Its `size` property will be incremented, while `items` won't get
+a new element.
+
+Immutability completely avoids this problem. An object will never be
+left in a broken state because its state is modified only in its constructor.
+The constructor will either fail, rejecting object instantiation, or
+succeed, making a valid solid object, which never changes its
+encapsulated state.
 
 More on this subject you can find in
 [Effective Java, 2nd Edition](http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321356683&linkCode=as2&tag=yegor256com-20&linkId=CSSI3POG6ZJ3BJ6T)
@@ -297,3 +311,8 @@ http://www.javapractices.com/topic/TopicAction.do?Id=29
 http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects
 http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects
 http://www.javaranch.com/journal/2003/04/immutable.htm
+http://jtechies.blogspot.com/2012/07/item-64-strive-for-failure-atomicity.html
+http://www.ibm.com/developerworks/java/library/j-ft4/index.html?utm_source=twitterfeed&utm_medium=twitter
+http://www.javalobby.org/articles/immutable/
+http://codebetter.com/patricksmacchia/2008/01/13/immutable-types-understand-them-and-use-them/
+http://doanduyhai.wordpress.com/2012/05/26/object-immutability-in-java/
