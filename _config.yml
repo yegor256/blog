@@ -14,7 +14,7 @@ rss_name: rss.xml
 # see https://github.com/noct/jekyll-sass
 gems: ['jekyll-sass']
 sass:
-  style: expanded
+  style: compressed
   deploy_style: compressed
   compile_in_place: false
 
