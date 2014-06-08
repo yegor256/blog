@@ -5,6 +5,7 @@
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
 $main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
 $main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
+$main-font-bolditalic: 'Cambria-BoldItalic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
 
 $black: #111;
@@ -51,6 +52,9 @@ strong {
 i {
   font-family: $main-font-italic;
   font-weight: 400;
+  strong & {
+    font-family: $main-font-bolditalic;
+  }
 }
 a, a:visited {
   color: $black;
@@ -81,7 +85,8 @@ a, a:visited {
     padding-left: 0;
     li {
       display: inline;
-      margin-right: 0.4 * $font-size;
+      margin-left: 0.2 * $font-size;
+      margin-right: 0.2 * $font-size;
     }
   }
   .gcse {
@@ -125,20 +130,19 @@ time {
 .buttons {
   display: inline-block;
   width: 50%;
-}
-.share {
-  display: inline-block;
-  font-size: 1.5 * $font-size;
-  a, a:visited {
-    @extend .gray;
-    text-decoration: none;
+  .share {
+    display: inline-block;
+    font-size: 1.5 * $font-size;
+    a, a:visited {
+      @extend .gray;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $black;
+    }
   }
-  a:hover {
-    color: $black;
-  }
 }
-code,
-pre {
+code, pre {
   font-family: $code-font;
   font-weight: 400;
 }
@@ -239,13 +243,9 @@ figure {
   -webkit-transition: opacity 0.2s ease-in-out 0.1s;
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}
-h2:hover .header-link,
-h3:hover .header-link,
-h4:hover .header-link,
-h5:hover .header-link,
-h6:hover .header-link {
-  opacity: 1;
+  h2:hover &, h3:hover & {
+    opacity: 1;
+  }
 }
 blockquote {
   @extend .gray;
