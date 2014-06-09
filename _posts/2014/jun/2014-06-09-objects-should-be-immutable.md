@@ -23,6 +23,8 @@ keywords:
   - failure atomicity
   - failure atomicity java
   - functional thinking in java
+discussions:
+  reddit: http://www.reddit.com/r/java/comments/27o915/objects_should_be_immutable/
 ---
 
 In object-oriented programming, an object is
