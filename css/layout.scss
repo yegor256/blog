@@ -184,39 +184,46 @@ h2, h3 {
 h2 {
   margin-top: 2 * $font-size;
 }
-table.highlighttable {
-  td.linenos {
+.highlighttable {
+  border-spacing: 0;
+  width: 100%;
+  table-layout:fixed;
+  .linenos {
+    @extend .gray;
     @extend .desktop-only;
     width: 2 * $font-size;
+    padding-right: 2px;
     min-width: 2 * $font-size;
     text-align: right;
   }
+  .highlight {
+    margin-left: 0;
+  }
+  @media all and (max-width: $width) {
+    overflow-x: auto;
+  }
 }
-.linenodiv {
-  @extend .gray;
-  @extend .desktop-only;
-  border-right: 3px solid $light-gray;
-  padding-right: 0.5 * $font-size;
-  margin-right: 0.2 * $font-size;
-}
-.highlight pre code {
-  display: block;
-  line-height: 1.4 * $font-size;
+.highlight {
   margin-left: 2 * $font-size;
   padding-left: 0.5 * $font-size !important;
   border-left: 3px solid $light-gray;
   @media all and (max-width: $width) {
-    line-height: 1.2 * $font-size;
     margin-left: 0;
-    border-left: 0;
     padding-left: 0 !important;
+    border-left: 0;
     overflow-x: auto;
   }
 }
-.linenodiv pre code,
-.highlight pre code {
-  background-color: inherit;
-  padding: 0;
+pre {
+  display: block;
+  line-height: 1.4 * $font-size;
+  code {
+    background-color: inherit;
+    padding: 0;
+  }
+  @media all and (max-width: $width) {
+    line-height: 1.2 * $font-size;
+  }
 }
 .front {
   margin-bottom: 4 * $font-size;
