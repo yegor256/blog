@@ -17,7 +17,7 @@ module Yegor
           month = post.date.month
           html += "<h2>#{month}</h2>"
         end
-        html += "<p>#{post.title}</p>"
+        html += "<p><a href='#{CGI.escape(post.url)}'>#{post.title}</a></p>"
       end
       html += '</body></html>'
       path = File.join(site.dest, 'contents.html')
