@@ -15,6 +15,9 @@ $light-gray: lighten($black, 83);
 $width: 700px;
 $font-size: 19px;
 
+.green {
+  color: green;
+}
 .gray {
   color: $gray;
   a, a:visited {

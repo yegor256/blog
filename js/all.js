@@ -1,3 +1,38 @@
+function valid_email(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+function send_email($button, from, text, subject, success, error) {
+  $.ajax(
+    {
+      type: 'POST',
+      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+      data: {
+        'key': 'GMfq6HmqFFR4HGCVfIu6Zw',
+        'message': {
+          'from_email': from,
+          'to': [
+            {
+              'email': 'blog@yegor256.com',
+              'name': 'Yegor Bugayenko',
+              'type': 'to'
+            }
+          ],
+          'text': 'Hi,\n\n' + text
+            + '\n\nEmail: ' + from
+            + '\n\nThanks'
+            + '\n\n--\nsent through the form',
+          'subject': subject,
+          'auto_html': true,
+          'important': true
+        }
+      },
+      success: success,
+      error: error
+    }
+  );
+}
+
 $(
   function() {
     $('.button').click(
@@ -29,10 +64,9 @@ $(
         $error = $('#error');
         var email = $('#email').val();
         var reason = $('#reason').val();
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!email) {
           $error.text('No email... What do you mean?');
-        } else if (!re.test(email)) {
+        } else if (!valid_email(email)) {
           $error.text('Email address doesn\'t look correct');
         } else if (!reason) {
           $error.text('I really want to know who you are');
@@ -41,43 +75,54 @@ $(
           $this.attr('disabled', 'disabled');
           $this.html('Please, wait...');
           event.preventDefault();
-          $.ajax(
-            {
-              type: 'POST',
-              url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-              data: {
-                'key': 'GMfq6HmqFFR4HGCVfIu6Zw',
-                'message': {
-                  'from_email': email,
-                  'to': [
-                    {
-                      'email': 'blog@yegor256.com',
-                      'name': 'Yegor Bugayenko',
-                      'type': 'to'
-                    }
-                  ],
-                  'text': 'Hi,\n\n'
-                    + 'I\'d like to receive monthly updates from yegor256.com,'
-                    + ' please add me to the list of subscribers.\n\n'
-                    + reason
-                    + '\n\nEmail: ' + email
-                    + '\n\nThanks'
-                    + '\n\n--\nsent through the form',
-                  'subject': 'I would like to receive monthly updates',
-                  'auto_html': true,
-                  'important': true
-                }
-              },
-              success: function () {
-                $('#form').html(
-                  '<p style="color:green;"><b>Many thanks!</b>'
-                  + ' Your request was sent. I\'ll reply by email.</p>'
-                );
-              },
-              error: function () {
-                $this.attr('disabled', '');
-                $this.html('Oops :( Try again...');
-              }
+          send_email(
+            $this, email,
+            'I\'d like to receive monthly updates from yegor256.com,'
+            + ' please add me to the list of subscribers.\n\n'
+            + reason,
+            'I would like to receive monthly updates',
+            function () {
+              $('#form').html(
+                '<p class="green"><b>Many thanks!</b>'
+                + ' Your request was sent. I\'ll reply by email.</p>'
+              );
+            },
+            function () {
+              $this.attr('disabled', '');
+              $this.html('Oops :( Try again...');
+            }
+          );
+        }
+      }
+    );
+    $('#unsubscribe').click(
+      function (event) {
+        $this = $(this);
+        $error = $('#error');
+        var email = $('#email').val();
+        if (!email) {
+          $error.text('No email... Please provide your address');
+        } else if (!valid_email(email)) {
+          $error.text('Email address doesn\'t look correct');
+        } else {
+          $error.text('');
+          $this.attr('disabled', 'disabled');
+          $this.html('Please, wait...');
+          event.preventDefault();
+          send_email(
+            $this, email,
+            'I\'d like to opt-out from your monthly updates from yegor256.com,'
+            + ' please remove me from the list of subscribers.',
+            'I would like to OPT-OUT from your monthly updates',
+            function () {
+              $('#form').html(
+                '<p class="green"><b>Thanks</b>, your request was sent.'
+                + ' You will <strong>not</strong> receive any more emails from me.</p>'
+              );
+            },
+            function () {
+              $this.attr('disabled', '');
+              $this.html('Oops :( Try again...');
             }
           );
         }
