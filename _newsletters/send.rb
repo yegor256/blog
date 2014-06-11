@@ -50,21 +50,21 @@ emails.each do |email|
     'letter' => opts[:letter]
   )
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
-  puts html
-  text = html
   print "  sending to #{email}..."
-  mail = Mail.deliver do
+  mail = Mail.new do
     from 'Yegor Bugayenko <yegor@tpc2.com>'
     to email
     subject opts[:subject]
     message_id "<#{UUIDTools::UUID.random_create}@yegor256.com>"
     text_part do
-      body text.to_s
+      content_type 'text/plain; charset=UTF-8'
+      body markdown
     end
     html_part do
       content_type 'text/html; charset=UTF-8'
-      body html.to_s
+      body html
     end
   end
+  #mail.deliver!
   puts ' done'
 end
