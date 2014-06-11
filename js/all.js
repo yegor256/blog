@@ -84,7 +84,8 @@ $(
             function () {
               $('#form').html(
                 '<p class="green"><b>Many thanks!</b>'
-                + ' Your request was sent. I\'ll reply by email.</p>'
+                + ' Your request was sent. I\'ll reply by email to'
+                + ' <code>' + email + '</code>.</p>'
               );
             },
             function () {
@@ -117,7 +118,8 @@ $(
             function () {
               $('#form').html(
                 '<p class="green"><b>Thanks</b>, your request was sent.'
-                + ' You will <strong>not</strong> receive any more emails from me.</p>'
+                + ' You will <strong>not</strong> receive any more emails from me to this address:'
+                + ' <code>' + email + '</code>.</p>'
               );
             },
             function () {
