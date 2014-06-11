@@ -7,8 +7,12 @@ install:
   - wget http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
   - sudo dpkg -i plantuml_7707-1_all.deb
   - bundle
+  - npm install phantomjs -g
+  - npm install casperjs -g
 env:
   global:
     - secure: "YRF2hq6GI07WDf8uzPgRZ72MF0/m+KRLXOvLFApzliPGav86wMdMBnUlb2TnbneOIjnZsFnivVTi0nOmhBJu/tOTnLdXUn96smKg60hHuQOqZYohv0Kbzl5SU0uDfN50q2inXxgd7xSH3D0zCMge8TacWzrp233NcjncArsYyoU="
-script: jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
+script:
+  - _test/run.sh
+  - jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
 
