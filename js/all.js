@@ -128,6 +128,15 @@ $(
         }
       }
     );
+    $('#email').ready(
+      function() {
+        var query = window.location.search;
+        var matches = query.match(/email=([^&]+)/)
+        if (matches !== null) {
+          $('#email').val(matches[1]);
+        }
+      }
+    );
   }
 );
 
