@@ -54,12 +54,14 @@ String text = String.format("Hello, %s!", name);
 {% endhighlight %}
 
 This code looks much cleaner and shorter. Besides that, it
-is much more powerful, since we can use multiple formatting options.
+is much more powerful, since we can use multiple formatting options. On top
+of that, the string can be much easier localized.
 
-Of course, it is slower than concatenation, because it involves
-parsing of the pattern and formatting of arguments. However, I strongly
-recommend to use it, when performance is not mission critical.
-Lack of code maintainability always causes bigger problems that lack of performance.
+Of course,
+[it is slower than concatenation](http://stackoverflow.com/questions/925423/is-it-better-practice-to-use-string-format-over-string-concatenation-in-java),
+because it involves parsing of the pattern and formatting of the arguments.
+However, I strongly recommend to use it, where performance is not mission critical.
+Lack of code maintainability usually causes bigger problems that lack of performance.
 
 ## StringBuilder
 
