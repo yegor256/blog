@@ -54,7 +54,7 @@ emails.each do |email|
   mail = Mail.new do
     from 'Yegor Bugayenko <yegor@teamed.io>'
     to email
-    subject opts[:subject]
+    subject 'yegor256.com: ' + opts[:subject]
     message_id "<#{UUIDTools::UUID.random_create}@yegor256.com>"
     text_part do
       content_type 'text/plain; charset=UTF-8'
@@ -65,6 +65,8 @@ emails.each do |email|
       body html
     end
   end
-  mail.deliver!
+  if !opts[:dry]
+    mail.deliver!
+  end
   puts ' done'
 end
