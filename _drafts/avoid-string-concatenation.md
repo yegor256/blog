@@ -93,7 +93,7 @@ the pattern even more localizable. Let's say, I want to translate it
 to Greek. This is how will it look:
 
 {% highlight text %}
-Dear %1$s, your order #%2$d has been shipped at %3$tR!
+Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!
 {% endhighlight %}
 
 I'm changing the order of substitutions in the pattern, but not in
