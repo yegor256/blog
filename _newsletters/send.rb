@@ -65,8 +65,6 @@ emails.each do |email|
       body html
     end
   end
-  if !opts[:dry]
-    mail.deliver!
-  end
+  mail.deliver!
   puts ' done'
 end
