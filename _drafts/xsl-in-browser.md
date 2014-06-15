@@ -8,10 +8,15 @@ description:
   and RESTful APIs at the same time; the article explains
   how it works and argues in favor of this approach
 keywords:
-  - java web application
-  - rexsl
+  - web framework
+  - java web framework
+  - rexsl framework
   - xml xsl web page
   - xml xsl html web
+  - xml xslt web framework
+  - xml xslt java web framework
+  - xslt java web framework
+  - xsl web framework java
   - xsl web framework
   - xsl web java
   - xsl web framework java
