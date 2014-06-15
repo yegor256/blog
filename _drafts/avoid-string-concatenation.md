@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "How to Avoid String Concatenation in Java"
+title: "Avoid String Concatenation"
 date: 2014-06-14
 tags: strings java programming
 description:
-  String concatenation in Javan is a bad practice; this article
-  explains how to avoid it and make your code cleaner
+  String concatenation in Java is a bad practice; this article
+  explains why and how to avoid it to make code look cleaner
 keywords:
   - java string concatenation
   - avoid string concatenation
@@ -16,76 +16,107 @@ keywords:
   - alternative of string concatenation
   - string concatenation is evil
   - string concatenation is a bad practice
+  - string.format vs concatenation
+  - formatter vs concatenation
 ---
 
-String concatentation is a bad practice, in Java (and in many other
-languages/platforms):
+This is "string concatentation", and it is a bad practice:
 
 {% highlight java %}
 // bad practice, don't reuse!
 String text = "Hello, " + name + "!";
 {% endhighlight %}
 
-Why? Two reasonse. First of all, because it is slow.
+Why? Some may say that it is slow, mostly because
+parts of the resulting string are being copied multiple times.
 On every `+` operator `String` class allocates a new
-block in memory. In reality, this "nice" piece of code works like this:
+block in memory, and copies everything it has into it, plus
+a suffix being concatenated. This is true, but this is not the point here.
+Actually, I don't think performance in this case is a big issue. Moreover,
+there were
+[multiple experiments](http://stackoverflow.com/questions/925423)
+showing that concatenation is not that slow
+comparing to other string building methods and sometimes is even faster.
 
-{% highlight java %}
-String t1 = "Hello, ";
-String t2 = t1 + name;
-String t3 = "!";
-String text = t2 + t3;
-{% endhighlight %}
+Some say that concatenated strings are not localizable because in different languages
+text blocks in a phrase may be positioned in a different order. The example above
+can't be translated to, say, Russian, where we would want to put a name in front
+of "привет". We will need to localize the entire block of code, instead of
+just translating a phrase.
 
-There are three supplementary memory blocks created. This is time
-consuming and slow.
+However, my point here is different. I strongly recommend to avoid string concatenation
+because it is **less readable** than other methods of composing texts together.
 
-Second, it's not as clean and readable as the alternatives listed below.
-Let's discuss them.
+Let's see what are these alternative methods.
+I'd recommend three of them (in order of preference): `String.format()`,
+Apache `StringUtils` and Guava `Joiner`.
+
+There is also a [`StringBuilder`](http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html),
+but I don't find it more attractive than `StringUtils`. It is a useful
+builder of strings, but not a proper replacer or string concatenation when
+readability is important.
 
 ## String.format()
 
-`String.format()` is a static utility method that mirrors
-`sprintf()` from C. It allows you to build a string using a pattern
+[`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,%20java.lang.Object...%29)
+is my favorite option. It makes text phrases easy to
+understand and to modify. It is a static utility method that mirrors
+[`sprintf()`](http://www.cplusplus.com/reference/cstdio/sprintf/)
+from C. It allows you to build a string using a pattern
 and substitutors:
 
 {% highlight java %}
 String text = String.format("Hello, %s!", name);
 {% endhighlight %}
 
-This code looks much cleaner and shorter. Besides that, it
-is much more powerful, since we can use multiple formatting options. On top
-of that, the string can be much easier localized.
-
-Of course,
-[it is slower than concatenation](http://stackoverflow.com/questions/925423/is-it-better-practice-to-use-string-format-over-string-concatenation-in-java),
-because it involves parsing of the pattern and formatting of the arguments.
-However, I strongly recommend to use it, where performance is not mission critical.
-Lack of code maintainability usually causes bigger problems that lack of performance.
-
-## StringBuilder
-
-`StringBuilder` allocates a memory block for the entire string, and fills
-it on calls to its `append()` methods:
+When the text is longer, the advantages of the formatter become
+much more obvious. Look at this ugly code:
 
 {% highlight java %}
-String text = new StringBuilder(50) // initial length
-  .append("Hello, ").append(name).append('!').toString();
+String msg = "Dear " + customer.name()
+  + ", your order #" + order.number()
+  + " has been shipped at " + shipment.date()
+  + "!";
 {% endhighlight %}
 
-This method consumes more memory than string concatenation, but works faster
-since it performs less copy operations.
-Since it is not as readable as `String.format()`, I'd recommend to
-use it when a string is long (longer than, say, 50 characters).
+This one looks much more beatiful, isn't it:
 
-## Apache Commons StringUtils.join()
+{% highlight java %}
+String msg = String.format(
+  "Dear %1$s, your order #%2$d has been shipped at %3$tR!",
+  customer.name(), order.number(), shipment.date()
+);
+{% endhighlight %}
 
-There is an utility class `StringUtils` in Apache commons-lang3, which
-concatenates multiple strings:
+Pay attention that I'm using argument indexes in order to make
+the pattern even more localizable. Let's say, I want to translate it
+to Greek. This is how will it look:
+
+{% highlight text %}
+Dear %1$s, your order #%2$d has been shipped at %3$tR!
+{% endhighlight %}
+
+I'm changing the order of substitutions in the pattern, but not in
+the actual list of methods arguments.
+
+## Apache StringUtils.join()
+
+When the text is rather long (longer than your screen width),
+I would recommend to use an utility class
+[`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html)
+from Apache [commons-lang3](http://commons.apache.org/proper/commons-lang/):
 
 {% highlight java %}
 import org.apache.commons.lang3.StringUtils;
-String text = StringUtils.join("Hello, ", name, "!");
+String xml = StringUtils.join(
+  "<?xml version='1.0'?>",
+  "<html><body>",
+  "<p>This is a test XHTML document,",
+  " which would look ugly,",
+  " if we would use a single line,"
+  " or string concatenation or String format().</p>"
+  "</body></html>"
+);
 {% endhighlight %}
 
 A necessity to include an additional JAR dependency to your classpath
@@ -99,30 +130,26 @@ may be considered a downside of this method:
 </dependency>
 {% endhighlight %}
 
-This method and the next one are very convenient when you need
-to present a very long string inside Java source code. For example,
-an XML document:
-
-{% highlight java %}
-String xml = StringUtils.join(
-  "<?xml version='1.0'?>",
-  "<html><body>",
-  "<p>This is a test XHTML document,",
-  " which would look ugly,",
-  " if we would use a single line"
-  " or string concatenation.</p>"
-  "</body></html>"
-);
-{% endhighlight %}
-
 ## Guava Joiner
 
-`Joiner` is a convenient concatenator of strings from Google Guava:
+A similar functionality is provided by
+[`Joiner`](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Joiner.html)
+from Google [Guava](https://code.google.com/p/guava-libraries/):
 
 {% highlight java %}
 import com.google.common.base.Joiner;
-String text = Joiner.on('').join("Hello, ", name, "!");
+String text = Joiner.on('').join(
+  "WE HAVE BUNNY.\n",
+  "GATHER ONE MILLION DOLLARS IN UNMARKED ",
+  "NON-CONSECUTIVE TWENTIES.\n",
+  "AWAIT INSTRUCTIONS.\n",
+  "NO FUNNY STUFF"
+);
 {% endhighlight %}
+
+It is a bit less convenient than `StringUtils` since you
+always have to provide a joiner (character or a string to
+placed between text blocks).
 
 Again, a dependency is required in this case:
 
@@ -134,6 +161,11 @@ Again, a dependency is required in this case:
 </dependency>
 {% endhighlight %}
 
-If you know any other methods of avoiding string concatenation, please
-comment below :)
+Yes, in most cases, all of these methods work slower than a plain simple concatenation. However,
+I stronly believe that **computers are cheaper than people**. What I mean
+is that the time spent by programmers for understanding and modifying the
+code that looks ugly is much more expensive than a cost of a one more server
+that will make a beatifully written code work faster.
 
+If you know any other methods of avoiding string concatenation, please
+comment below.
