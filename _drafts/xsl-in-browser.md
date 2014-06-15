@@ -138,7 +138,7 @@ language. I don't find it hard to understand at all. Of course, I'm not
 using all of its features, but for simple page rendering all I need
 to know is a few simple commands and the principle of XML transformation.
 
-## Why Not Templating Engine?
+## Why Not a Templating Engine?
 
 Now, why this approach is better than all that widely used Java templating
 engines, including
