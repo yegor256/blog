@@ -125,7 +125,7 @@ language. I don't find it hard to understand at all. Of course, I'm not
 using all of its features, but for simple page rendering all I need
 to know is a few simple commands and the principle of XML transformation.
 
-Now, why this approach is better than all that widely used templating
+Now, why this approach is better than all that widely used Java templating
 engines, including
 [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages),
 [JSF](http://en.wikipedia.org/wiki/JavaServer_Faces),
@@ -154,6 +154,13 @@ is a pleasure by itself. You're not injecting instructions into
 a HTML document (like in JSP and all others). Instead, you are programming
 a transformation of data into presentation. A different midset and
 much better feeling.
+
+4. XML output is perfectly testable.
+A controller in MVC that generates an XML document with all
+data required for the XSL stylesheet can easily be tested in a
+single unit test, using simple XPath expressions. Testing of a controller
+that injects data into a templating engine is a much
+more complex operation, even impossible sometimes.
 
 Everything would be great, if all browsers would support XML+XSL rendering.
 However, this is far from being true. Only latest versions of modern browsers
