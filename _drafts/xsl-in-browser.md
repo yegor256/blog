@@ -22,16 +22,29 @@ keywords:
   - xsl web framework java
 ---
 
-Separating data and their presentation is a great concept. Delivering
-data and their styling information separately is even better idea. Take
-HTML and CSS for example. HTML is supposed to have pure data and CSS
-is supposed to format them to make readable by a human.
+[Separating data and their presentation](http://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
+is a great concept. Take HTML and CSS for example.
+HTML is supposed to have pure data and CSS
+is supposed to format them in order to make readable by a human.
+Years ago that was, probably, the intention of HTML/CSS, but in reality it
+doesn't work like that. Mostly because CSS is not powerful enough.
 
-XML and [XSLT](http://en.wikipedia.org/wiki/XSLT)
-takes this approach to even further extreme. We can deliver
-an XML page to a user together with attached XSL stylesheet, which will
-transform it to HTML. This HTML will also have CSS stylesheets attached, of
-course.
+We still have to format our data using HTML tags, while CSS can
+slightly help in their positioning and decorating.
+
+On the other hand, XML with [XSLT](http://en.wikipedia.org/wiki/XSLT)
+perfectly implements the idea of separation data and presentation. XML document,
+like HTML, is supposed to contain data only, without any information about
+their positioning or formatting. XSL stylesheet positions and decorates them.
+XSL is a much more powerful language, that's why it's possible to avoid
+any formatting inside XML.
+
+Latest versions of Chrome, Safari, FireFox and IE support this mechanism.
+When a browser gets an XML document from a server, and the document has
+an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
+with it &mdash; the browser transforms XML into HTML on-fly.
+
+## Working Example
 
 Let's review a simple Java web application that works that way. It is using
 [ReXSL framework](http://www.rexsl.com) that makes this mechanism possible. In the next post
@@ -125,6 +138,8 @@ language. I don't find it hard to understand at all. Of course, I'm not
 using all of its features, but for simple page rendering all I need
 to know is a few simple commands and the principle of XML transformation.
 
+## Why Not Templating Engine?
+
 Now, why this approach is better than all that widely used Java templating
 engines, including
 [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages),
@@ -161,6 +176,12 @@ data required for the XSL stylesheet can easily be tested in a
 single unit test, using simple XPath expressions. Testing of a controller
 that injects data into a templating engine is a much
 more complex operation, even impossible sometimes.
+
+I'm also writing in PHP and Ruby. They have exactly same problems,
+even though their templating engines are much more powerful, due to
+interpretation nature of languages.
+
+## Is It Fully Supported?
 
 Everything would be great, if all browsers would support XML+XSL rendering.
 However, this is far from being true. Only latest versions of modern browsers
