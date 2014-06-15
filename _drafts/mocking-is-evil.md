@@ -18,7 +18,8 @@ keywords:
   - java mockito example
 ---
 
-While mock objects is a perfect instrument for unit testing, mocking is a bad practice.
+While mock objects is a perfect instrument for unit testing,
+mocking is a bad practice. Surprised? Read on.
 
 First, let's clarify the definitions. [Wikipedia](http://en.wikipedia.org/wiki/Mock_object)
 says that **mock object** is &ldquo;a simulated object that mimics the behavior
