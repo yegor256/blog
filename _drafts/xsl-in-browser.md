@@ -90,7 +90,7 @@ Open developer tools in Chrome and you will see that right after the
 page is loaded Chrome loads XSL stylesheet and then all other resources,
 including a few CSS stylesheets, jQuery and an SVG logo:
 
-{% figure http://img.yegor256.com/2014/06/xslt-loading-order-by-chrome.png 600 %}
+{% figure http://img.yegor256.com/2014/06/xslt-loading-order-in-chrome.png 600 %}
 
 `index.xsl` includes `layout.xsl`, that's why it is loaded right after.
 
