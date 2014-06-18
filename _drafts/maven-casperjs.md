@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Maven, PhantomJS, CasperJS, Tomcat"
+title: "CasperJS Tests in Maven Build"
 date: 2014-06-18
 tags: maven casperjs phantomjs tests
 description:
   Practical example of running automated integration tests
-  in Maven build, using Tomcat, PhantomJS and CasperJS
+  in Maven build using Tomcat, PhantomJS and CasperJS
 keywords:
   - maven casperjs
   - maven phantomjs
@@ -13,6 +13,10 @@ keywords:
   - maven phantomjs tomcat
   - integration tests with casperjs
   - maven tests with casperjs
+  - phantomjs maven plugin
+  - casperjs maven plugin
+  - use casperjs with maven
+  - test casperjs with maven
 ---
 
 I'm a big fan of automated testing in general and integration
@@ -20,8 +24,14 @@ testing in particular. I strongly believe that efforts spent on
 writing tests are direct investments into quality and stability
 of the product under development.
 
+[CasperJS](http://casperjs.org/) is a testing framework on
+top of [PhantomJS](http://phantomjs.org/),
+which is a headless browser. Using CasperJS
+we can make sure that our application responds correctly to
+requests sent by a regular web browser.
+
 This is an example CasperJS test, which makes an HTTP request
-to the home page of a running WAR application and asserts that
+to a home page of a running WAR application and asserts that
 the response has `200` HTTP status code:
 
 {% highlight javascript %}
@@ -71,6 +81,13 @@ at [Maven Central](http://search.maven.org/)
 
 ## 1. Install PhantomJS
 
+First of all, we have to download PhantomJS executable. It is
+a platform-specific binary. Thanks to [Kyle Lieber](https://github.com/klieber),
+we have an off-the-shelf Maven plugin
+[phantomjs-maven-plugin](https://github.com/klieber/phantomjs-maven-plugin) that understands
+what current platform is and downloads the right binary, placing
+it into `target` directory.
+
 {% highlight xml %}
 <plugin>
   <groupId>com.github.klieber</groupId>
@@ -88,11 +105,14 @@ at [Maven Central](http://search.maven.org/)
 </plugin>
 {% endhighlight %}
 
+An exact name of downloaded binary is stored in `${phantomjs.binary}`
+Maven property.
+
 ## 2. Install CasperJS
 
-Unfortunately, there is no plugin for CasperJS installation (at least
-I haven't found any). That's why, I'm using plain old `git`. You should
-have it installed on your build machine.
+Unfortunately, there is no similar plugin for CasperJS installation (at least
+I haven't found any). That's why, I'm using plain old `git` (you should
+have it installed on your build machine).
 
 {% highlight xml %}
 <plugin>
@@ -155,6 +175,11 @@ property.
 
 ## 4. Start Tomcat
 
+Now it's time to start Tomcat with WAR package inside. I'm using
+[tomcat7-maven-plugin](http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/)
+that starts a real Tomcat7 server and configures it to serve
+at the port reserved above.
+
 {% highlight xml %}
 <plugin>
   <groupId>org.apache.tomcat.maven</groupId>
@@ -174,18 +199,18 @@ property.
         <fork>true</fork>
       </configuration>
     </execution>
-    <execution>
-      <id>stop-tomcat</id>
-      <phase>post-integration-test</phase>
-      <goals>
-        <goal>shutdown</goal>
-      </goals>
-    </execution>
   </executions>
 </plugin>
 {% endhighlight %}
 
+Due to the option `fork` set to `true`, Tomcat7 stays running when
+plugin execution is finished. That's exactly what I need.
+
 ## 5. Run CasperJS
+
+Now it's time to run CasperJS. Even though there are some plugins
+exist for that, I'm using plain old [exec-maven-plugin](http://mojo.codehaus.org/exec-maven-plugin/),
+mostly because it is more configurable.
 
 {% highlight xml %}
 <plugin>
@@ -223,6 +248,8 @@ that makes the whole scenario possible. It configures the location of
 PhantomJS executable, which was downloaded a few steps above.
 
 ## 6. Shutdown Tomcat
+
+At the last step I'm shutting down Tomcat server.
 
 {% highlight xml %}
 <plugin>
