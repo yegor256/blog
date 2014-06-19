@@ -4,8 +4,7 @@ title: "Avoid String Concatenation"
 date: 2014-06-14
 tags: strings java programming
 description:
-  String concatenation in Java is a bad practice; this article
-  explains why and how to avoid it to make code look cleaner
+String concatenation in Java is a bad practice; this article explains why and how to avoid it to create cleaner code
 keywords:
   - java string concatenation
   - avoid string concatenation
@@ -19,7 +18,6 @@ keywords:
   - string.format vs concatenation
   - formatter vs concatenation
 ---
-
 This is "string concatentation", and it is a bad practice:
 
 {% highlight java %}
@@ -27,50 +25,24 @@ This is "string concatentation", and it is a bad practice:
 String text = "Hello, " + name + "!";
 {% endhighlight %}
 
-Why? Some may say that it is slow, mostly because
-parts of the resulting string are being copied multiple times.
-On every `+` operator `String` class allocates a new
-block in memory, and copies everything it has into it, plus
-a suffix being concatenated. This is true, but this is not the point here.
-Actually, I don't think performance in this case is a big issue. Moreover,
-there were
-[multiple experiments](http://stackoverflow.com/questions/925423)
-showing that concatenation is not that slow
-comparing to other string building methods and sometimes is even faster.
+Why? Some may say that it is slow, mostly because parts of the resulting string are copied multiple times. On every `+` operator, `String` class allocates a new block in memory and copies everything it has into it; plus a suffix being concatenated. This is true, but this is not the point here.
+Actually, I don't think performance in this case is a big issue. Moreover, there were [multiple experiments](http://stackoverflow.com/questions/925423) showing that concatenation is not that slow when compared to other string building methods and sometimes is even faster.
+Some say that concatenated strings are not localizable because in different languages text blocks in a phrase may be positioned in a different order. The example above can't be translated to, say, Russian, where we would want to put a name in front of "привет". We will need to localize the entire block of code, instead of just translating a phrase.
+However, my point here is different. I strongly recommend avoiding string concatenation because it is **less readable** than other methods of joining texts together.
 
-Some say that concatenated strings are not localizable because in different languages
-text blocks in a phrase may be positioned in a different order. The example above
-can't be translated to, say, Russian, where we would want to put a name in front
-of "привет". We will need to localize the entire block of code, instead of
-just translating a phrase.
-
-However, my point here is different. I strongly recommend to avoid string concatenation
-because it is **less readable** than other methods of composing texts together.
-
-Let's see what are these alternative methods.
-I'd recommend three of them (in order of preference): `String.format()`,
+Let's see these alternative methods. I'd recommend three of them (in order of preference): 
+`String.format()`,
 Apache `StringUtils` and Guava `Joiner`.
-
-There is also a [`StringBuilder`](http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html),
-but I don't find it more attractive than `StringUtils`. It is a useful
-builder of strings, but not a proper replacer or string concatenation when
-readability is important.
+There is also a [`StringBuilder`](http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html), but I don't find it as attractive as `StringUtils`. It is a useful builder of strings, but not a proper replacer or string concatenation tool when readability is important.
 
 ## String.format()
-
-[`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,%20java.lang.Object...%29)
-is my favorite option. It makes text phrases easy to
-understand and to modify. It is a static utility method that mirrors
-[`sprintf()`](http://www.cplusplus.com/reference/cstdio/sprintf/)
-from C. It allows you to build a string using a pattern
-and substitutors:
+[`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,%20java.lang.Object...%29) is my favorite option. It makes text phrases easy to understand and modify. It is a static utility method that mirrors [`sprintf()`](http://www.cplusplus.com/reference/cstdio/sprintf/) from C. It allows you to build a string using a pattern and substitutors:
 
 {% highlight java %}
 String text = String.format("Hello, %s!", name);
 {% endhighlight %}
 
-When the text is longer, the advantages of the formatter become
-much more obvious. Look at this ugly code:
+When the text is longer, the advantages of the formatter become much more obvious. Look at this ugly code:
 
 {% highlight java %}
 String msg = "Dear " + customer.name()
@@ -79,7 +51,7 @@ String msg = "Dear " + customer.name()
   + "!";
 {% endhighlight %}
 
-This one looks much more beatiful, isn't it:
+This one looks much more beautiful doesn’t it:
 
 {% highlight java %}
 String msg = String.format(
@@ -88,23 +60,16 @@ String msg = String.format(
 );
 {% endhighlight %}
 
-Pay attention that I'm using argument indexes in order to make
-the pattern even more localizable. Let's say, I want to translate it
-to Greek. This is how will it look:
+Please note that I'm using argument indexes in order to make the pattern even more localizable. Let's say, I want to translate it to Greek. This is how will it look:
 
 {% highlight text %}
 Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!
 {% endhighlight %}
 
-I'm changing the order of substitutions in the pattern, but not in
-the actual list of methods arguments.
+I'm changing the order of substitutions in the pattern, but not in the actual list of methods arguments.
 
 ## Apache StringUtils.join()
-
-When the text is rather long (longer than your screen width),
-I would recommend to use an utility class
-[`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html)
-from Apache [commons-lang3](http://commons.apache.org/proper/commons-lang/):
+When the text is rather long (longer than your screen width), I would recommend that you use the utility class [`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html) from Apache [commons-lang3](http://commons.apache.org/proper/commons-lang/):
 
 {% highlight java %}
 import org.apache.commons.lang3.StringUtils;
@@ -119,8 +84,7 @@ String xml = StringUtils.join(
 );
 {% endhighlight %}
 
-A necessity to include an additional JAR dependency to your classpath
-may be considered a downside of this method:
+The need to include an additional JAR dependency to your classpath may be considered a downside with this method:
 
 {% highlight xml %}
 <dependency>
@@ -131,10 +95,7 @@ may be considered a downside of this method:
 {% endhighlight %}
 
 ## Guava Joiner
-
-A similar functionality is provided by
-[`Joiner`](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Joiner.html)
-from Google [Guava](https://code.google.com/p/guava-libraries/):
+Similar functionality is provided by [`Joiner`](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Joiner.html) from Google [Guava](https://code.google.com/p/guava-libraries/):
 
 {% highlight java %}
 import com.google.common.base.Joiner;
@@ -147,10 +108,7 @@ String text = Joiner.on('').join(
 );
 {% endhighlight %}
 
-It is a bit less convenient than `StringUtils` since you
-always have to provide a joiner (character or a string to
-placed between text blocks).
-
+It is a bit less convenient than `StringUtils` since you always have to provide a joiner (character or a string placed between text blocks).
 Again, a dependency is required in this case:
 
 {% highlight xml %}
@@ -161,11 +119,5 @@ Again, a dependency is required in this case:
 </dependency>
 {% endhighlight %}
 
-Yes, in most cases, all of these methods work slower than a plain simple concatenation. However,
-I stronly believe that **computers are cheaper than people**. What I mean
-is that the time spent by programmers for understanding and modifying the
-code that looks ugly is much more expensive than a cost of a one more server
-that will make a beatifully written code work faster.
-
-If you know any other methods of avoiding string concatenation, please
-comment below.
+Yes, in most cases, all of these methods work slower than a plain simple concatenation. However, I strongly believe that **computers are cheaper than people**. What I mean is that the time spent by programmers understanding and modifying ugly code is much more expensive than a cost of an additional server that will make beautifully written code work faster.
+If you know any other methods of avoiding string concatenation, please comment below.
