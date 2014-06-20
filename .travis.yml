@@ -4,7 +4,7 @@ branches:
     - master
 install:
   - sudo apt-get install graphviz
-  - wget http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
+  - wget --retry-connrefused http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
   - sudo dpkg -i plantuml_7707-1_all.deb
   - bundle
   - npm install phantomjs -g
