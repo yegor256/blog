@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "CasperJS Tests in Maven Build"
-date: 2014-06-18
+date: 2014-06-21
 tags: maven casperjs phantomjs tests
 description:
-Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS
+  Practical example of running automated integration tests
+  in Maven build using Tomcat, PhantomJS and CasperJS
 keywords:
   - maven casperjs
   - maven phantomjs
@@ -18,16 +19,26 @@ keywords:
   - test casperjs with maven
 ---
 
-I'm a big fan of automated testing in general and integration testing in particular. I strongly believe that effort spent on writing tests are direct investments into quality and stability of the product under development.
-[CasperJS](http://casperjs.org/) is a testing framework on top of [PhantomJS](http://phantomjs.org/), which is a headless browser. Using CasperJS, we can ensure that our application responds correctly to requests sent by a regular web browser.
-This is a sample CasperJS test, which makes an HTTP request to a home page of a running WAR application and asserts that the response has `200` HTTP status code:
+I'm a big fan of automated testing in general and integration
+testing in particular. I strongly believe that effort spent on
+writing tests are direct investments into quality and stability
+of the product under development.
+
+[CasperJS](http://casperjs.org/) is a testing framework on top of
+[PhantomJS](http://phantomjs.org/), which is a headless browser. Using
+CasperJS, we can ensure that our application responds correctly
+to requests sent by a regular web browser.
+
+This is a sample CasperJS test, which makes an HTTP request to a home page
+of a running WAR application and asserts that the response has
+`200` HTTP status code:
 
 {% highlight javascript %}
 casper.test.begin(
   'home page can be rendered',
   function (test) {
     casper.start(
-      casper.cli.get('home'),
+      casper.cli.get('home'), // URL of home page
       function () {
         test.assertHttpStatus(200);
       }
@@ -41,8 +52,11 @@ casper.test.begin(
 );
 {% endhighlight %}
 
-I keep this test in the `src/test/casperjs/home-page.js` file. Let's see how CasperJS can be executed automatically on every Maven build.
+I keep this test in the `src/test/casperjs/home-page.js` file.
+Let's see how CasperJS can be executed automatically on every Maven build.
+
 Here is the test scenario, implemented with a combination of Maven plugins:
+
  1. Install PhantomJS
 
  2. Install CasperJS
@@ -51,15 +65,24 @@ Here is the test scenario, implemented with a combination of Maven plugins:
 
  4. Start Tomcat on that TCP port (with WAR inside)
 
- 5. Run CasperJS tests and point them to the running Tomcat 
+ 5. Run CasperJS tests and point them to the running Tomcat
 
  6. Shutdown Tomcat
 
-I'm using a combination of plugins. Let's go through the steps one by one. BTW, I'm not showing plugin versions in the examples below, primarily because most of them are in active development. Check their versions at [Maven Central](http://search.maven.org/) (yes, all of them are available there).
+I'm using a combination of plugins. Let's go through the steps one by one.
+
+BTW, I'm not showing plugin versions in the examples below, primarily
+because most of them are in active development. Check their versions
+at [Maven Central](http://search.maven.org/) (yes, all of them are available there).
 
 ## 1. Install PhantomJS
 
-First of all, we have to download the PhantomJS executable. It is a platform-specific binary. Thanks to [Kyle Lieber](https://github.com/klieber), we have an off-the-shelf Maven plugin: [phantomjs-maven-plugin](https://github.com/klieber/phantomjs-maven-plugin) that understands what the current platform is and downloads the appropriate binary automatically, placing it into the `target` directory.
+First of all, we have to download the PhantomJS executable.
+It is a platform-specific binary. Thanks to [Kyle Lieber](https://github.com/klieber),
+we have an off-the-shelf Maven plugin:
+[phantomjs-maven-plugin](https://github.com/klieber/phantomjs-maven-plugin)
+that understands what the current platform is and downloads the appropriate
+binary automatically, placing it into the `target` directory.
 
 {% highlight xml %}
 <plugin>
@@ -78,11 +101,14 @@ First of all, we have to download the PhantomJS executable. It is a platform-spe
 </plugin>
 {% endhighlight %}
 
-The exact name of the downloaded binary is stored in the `${phantomjs.binary}` Maven property.
+The exact name of the downloaded binary is stored in the
+`${phantomjs.binary}` Maven property.
 
 ## 2. Install CasperJS
 
-Unfortunately, there is no similar plugin for the CasperJS installation (at least I haven't found any as of yet). That's why I'm using plain old `git` (you should have it installed on your build machine).
+Unfortunately, there is no similar plugin for the CasperJS installation
+(at least I haven't found any as of yet). That's why I'm using plain
+old `git` (you should have it installed on your build machine).
 
 {% highlight xml %}
 <plugin>
@@ -111,8 +137,13 @@ Unfortunately, there is no similar plugin for the CasperJS installation (at leas
 
 ## 3. Reserve TCP Port
 
-I need to obtain a random TCP port where Tomcat will be started. The port has to be available on the build machine. I want to be able to run multiple Maven builds in parallel, so that's why I get a random port on every build.
-In other examples, you may see people using fixed port numbers, like `5555` or something similar. This is a very bad practice. Always reserve a new random port when you need it.
+I need to obtain a random TCP port where Tomcat will be started.
+The port has to be available on the build machine. I want to be able
+to run multiple Maven builds in parallel, so that's why I get a random port on every build.
+
+In other examples, you may see people using fixed port numbers,
+like `5555` or something similar. This is a very bad practice.
+Always reserve a new random port when you need it.
 
 {% highlight xml %}
 <plugin>
@@ -137,7 +168,10 @@ In other examples, you may see people using fixed port numbers, like `5555` or s
 The plugin reserves a port and sets it value to the `${tomcat.port}` Maven property.
 
 ## 4. Start Tomcat
-Now, it's time to start Tomcat with the WAR package inside. I'm using [tomcat7-maven-plugin](http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/) that starts a real Tomcat7 server and configures it to serve on the port reserved above.
+
+Now, it's time to start Tomcat with the WAR package inside.
+I'm using [tomcat7-maven-plugin](http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/)
+that starts a real Tomcat7 server and configures it to serve on the port reserved above.
 
 {% highlight xml %}
 <plugin>
@@ -162,11 +196,15 @@ Now, it's time to start Tomcat with the WAR package inside. I'm using [tomcat7-m
 </plugin>
 {% endhighlight %}
 
-Due to the option `fork` being set to `true`, Tomcat7 continues to run when the plugin execution finishes. That's exactly what I need.
+Due to the option `fork` being set to `true`, Tomcat7 continues
+to run when the plugin execution finishes. That's exactly what I need.
 
 ## 5. Run CasperJS
 
-Now, it's time to run CasperJS. Even though there are some plugins exist for this, I'm using plain old [exec-maven-plugin](http://mojo.codehaus.org/exec-maven-plugin/), mostly because it is more configurable.
+Now, it's time to run CasperJS. Even though there are some
+plugins exist for this, I'm using plain old
+[exec-maven-plugin](http://mojo.codehaus.org/exec-maven-plugin/),
+mostly because it is more configurable.
 
 {% highlight xml %}
 <plugin>
@@ -199,7 +237,9 @@ Now, it's time to run CasperJS. Even though there are some plugins exist for thi
 </plugin>
 {% endhighlight %}
 
-The environment variable `PHANTOMJS_EXECUTABLE` is the undocumented feature that makes this whole scenario possible. It configures the location of the PhantomJS executable, which was downloaded a few steps above.
+The environment variable `PHANTOMJS_EXECUTABLE` is the undocumented
+feature that makes this whole scenario possible. It configures
+the location of the PhantomJS executable, which was downloaded a few steps above.
 
 ## 6. Shutdown Tomcat
 
@@ -223,6 +263,12 @@ In the last step, I shut down the Tomcat server.
 
 ## Real Example
 
-If you want to see how this all works in action, take a look at [stateful.co](http://www.stateful.co). It is a Java Web application hosted at [CloudBees](http://www.cloudbees.com). Its source code is open and available in [Github](https://github.com/sttc/stateful).
-Its [`pom.xml`](https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml) contains exactly the same configurations explained above, but joined together.
+If you want to see how this all works in action, take
+a look at [stateful.co](http://www.stateful.co). It is a Java
+Web application hosted at [CloudBees](http://www.cloudbees.com).
+Its source code is open and available in [Github](https://github.com/sttc/stateful).
+
+Its [`pom.xml`](https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml)
+contains exactly the same configurations explained above, but joined together.
+
 If you have any questions, please don't hesitate to ask below.
