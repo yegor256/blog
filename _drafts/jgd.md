@@ -51,3 +51,8 @@ run in the root directory of your Jekyll blog.
 What is important is that your Jekyll site files should be located
 in the root directory of the repository. Just like this blog is doing,
 see [its sources in Github](https://github.com/yegor256/blog).
+
+You can easily integrated `jgd` with Travis.
+See [`.travis.yml`](https://github.com/yegor256/blog/blob/master/.travis.yml) of this blog.
+
+Full documentation about the gem is [here](https://github.com/yegor256/jekyll-github-deploy).
