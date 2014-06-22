@@ -15,7 +15,7 @@
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }}
-      {% if paginator.page %}
+      {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
   </head>
