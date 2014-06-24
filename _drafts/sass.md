@@ -4,8 +4,7 @@ title: "SASS in Java Webapp"
 date: 2014-06-25
 tags: java sass webapp
 description:
-  SASS, as a CSS programming language, can be effectively
-  used in a Java web application, read how
+SASS, as a CSS programming language, can be used effectively in a Java web application. Read how below.
 keywords:
   - sass java
   - sass java web app
@@ -14,15 +13,9 @@ keywords:
   - sass java tomcat
 ---
 
-[SASS](http://sass-lang.com/)
-is a powerful and very popular language for writing
-[CSS](http://www.w3.org/Style/CSS/Overview.en.html) stylesheets.
-This is how I'm using SASS in my Maven projects.
-
-First, I change the extensions of `.css` files to `.scss` and move
-them from `src/main/webapp/css` to `src/main/scss`.
-
-Then, I configure [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin):
+[SASS](http://sass-lang.com/) is a powerful and very popular language for writing [CSS](http://www.w3.org/Style/CSS/Overview.en.html) style sheets. This is how I'm using SASS in my Maven projects.
+First, I change the extensions of `.css` files to `.scss` and move them from `src/main/webapp/css` to `src/main/scss`.
+Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin):
 
 {% highlight xml %}
 <plugin>
@@ -45,11 +38,8 @@ Then, I configure [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin
 </plugin>
 {% endhighlight %}
 
-SASS compiler will compile `.scss` files from `src/main/scss` and
-place `.css` files into `target/css`.
-
-Then, I configure [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin),
-in order to compress/minify the stylesheets produced by SASS compiler:
+The SASS compiler will compile `.scss` files from `src/main/scss` and place `.css` files into `target/css`.
+Then, I configure the [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin) to compress/minify the style sheets produced by the SASS compiler:
 
 {% highlight xml %}
 <plugin>
@@ -82,8 +72,7 @@ in order to compress/minify the stylesheets produced by SASS compiler:
 
 Minified `.css` files will be placed into `target/css-min`.
 
-And the final step is to configure [maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)
-to pick up `.css` files and package them into the final WAR archive:
+The final step is to configure the [maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/) to pick up `.css` files and package them into the final WAR archive:
 
 {% highlight xml %}
 <plugin>
