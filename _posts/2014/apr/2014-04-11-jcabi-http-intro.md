@@ -29,7 +29,7 @@ String html = new JdkRequest("https://www.google.com")
   .method(Request.GET)
   .header("Accept", "text/html")
   .fetch()
-  .as(HttpResponse.class)
+  .as(RestResponse.class)
   .assertStatus(HttpURLConnection.HTTP_OK)
   .body();
 {% endhighlight %}
