@@ -12,7 +12,7 @@ url: http://www.yegor256.com/
 rss_name: rss.xml
 
 # see https://github.com/noct/jekyll-sass
-gems: ['jekyll-sass']
+gems: ['jekyll-sass', 'jekyll-plantuml']
 sass:
   style: compressed
   deploy_style: compressed
