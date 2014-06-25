@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XML+XSLT in a Browser"
-date: 2014-06-15
+date: 2014-06-25
 tags: mistakes quality
 description:
   XML+XSLT is a useful combination for web interfaces
