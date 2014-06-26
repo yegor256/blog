@@ -12,6 +12,10 @@ keywords:
   - sass maven java
   - sass maven
   - sass java tomcat
+  - scss in java webapp
+  - scss java web app tomcat
+  - sass tomcat
+  - scss tomcat
 ---
 
 [SASS](http://sass-lang.com/) is a powerful and very popular
