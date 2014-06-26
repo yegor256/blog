@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SASS in Java Webapp"
-date: 2014-06-25
+date: 2014-06-26
 tags: java sass webapp
 description:
 SASS, as a CSS programming language, can be used effectively in a Java web application. Read how below.
@@ -13,8 +13,13 @@ keywords:
   - sass java tomcat
 ---
 
-[SASS](http://sass-lang.com/) is a powerful and very popular language for writing [CSS](http://www.w3.org/Style/CSS/Overview.en.html) style sheets. This is how I'm using SASS in my Maven projects.
-First, I change the extensions of `.css` files to `.scss` and move them from `src/main/webapp/css` to `src/main/scss`.
+[SASS](http://sass-lang.com/) is a powerful and very popular
+language for writing [CSS](http://www.w3.org/Style/CSS/Overview.en.html)
+style sheets. This is how I'm using SASS in my Maven projects.
+
+First, I change the extensions of `.css` files to
+`.scss` and move them from `src/main/webapp/css` to `src/main/scss`.
+
 Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin):
 
 {% highlight xml %}
@@ -38,8 +43,11 @@ Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-pl
 </plugin>
 {% endhighlight %}
 
-The SASS compiler will compile `.scss` files from `src/main/scss` and place `.css` files into `target/css`.
-Then, I configure the [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin) to compress/minify the style sheets produced by the SASS compiler:
+The SASS compiler will compile `.scss` files from
+`src/main/scss` and place `.css` files into `target/css`.
+
+Then, I configure the [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin)
+to compress/minify the style sheets produced by the SASS compiler:
 
 {% highlight xml %}
 <plugin>
@@ -72,7 +80,9 @@ Then, I configure the [minify-maven-plugin](https://github.com/samaxes/minify-ma
 
 Minified `.css` files will be placed into `target/css-min`.
 
-The final step is to configure the [maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/) to pick up `.css` files and package them into the final WAR archive:
+The final step is to configure the
+[maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)
+to pick up `.css` files and package them into the final WAR archive:
 
 {% highlight xml %}
 <plugin>
