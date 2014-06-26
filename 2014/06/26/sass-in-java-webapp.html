@@ -1,0 +1,56 @@
+<p><a href="http://sass-lang.com/">SASS</a> is a powerful and very popular language for writing <a href="http://www.w3.org/Style/CSS/Overview.en.html">CSS</a> style sheets. This is how I'm using SASS in my Maven projects.</p><p>First, I change the extensions of <code>.css</code> files to <code>.scss</code> and move them from <code>src/main/webapp/css</code> to <code>src/main/scss</code>.</p><p>Then, I configure the <a href="https://github.com/Jasig/sass-maven-plugin">sass-maven-plugin</a>:</p><div class="highlight"><pre><code class="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.jasig.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>sass-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.1.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>generate-css<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>update-stylesheets<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;sassSourceDirectory&gt;</span>${basedir}/src/main/scss<span class="nt">&lt;/sassSourceDirectory&gt;</span>
+        <span class="nt">&lt;destination&gt;</span>${project.build.directory}/css<span class="nt">&lt;/destination&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div><p>The SASS compiler will compile <code>.scss</code> files from <code>src/main/scss</code> and place <code>.css</code> files into <code>target/css</code>.</p><p>Then, I configure the <a href="https://github.com/samaxes/minify-maven-plugin">minify-maven-plugin</a> to compress/minify the style sheets produced by the SASS compiler:</p><div class="highlight"><pre><code class="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.samaxes.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>minify-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.7.2<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;charset&gt;</span>UTF-8<span class="nt">&lt;/charset&gt;</span>
+    <span class="nt">&lt;nosuffix&gt;</span>true<span class="nt">&lt;/nosuffix&gt;</span>
+    <span class="nt">&lt;webappTargetDir&gt;</span>${project.build.directory}/css-min<span class="nt">&lt;/webappTargetDir&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>minify-css<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>minify<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;webappSourceDir&gt;</span>${project.build.directory}<span class="nt">&lt;/webappSourceDir&gt;</span>
+        <span class="nt">&lt;cssSourceDir&gt;</span>css<span class="nt">&lt;/cssSourceDir&gt;</span>
+        <span class="nt">&lt;cssSourceIncludes&gt;</span>
+          <span class="nt">&lt;include&gt;</span>*.css<span class="nt">&lt;/include&gt;</span>
+        <span class="nt">&lt;/cssSourceIncludes&gt;</span>
+        <span class="nt">&lt;skipMerge&gt;</span>true<span class="nt">&lt;/skipMerge&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div><p>Minified <code>.css</code> files will be placed into <code>target/css-min</code>.</p><p>The final step is to configure the <a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a> to pick up <code>.css</code> files and package them into the final WAR archive:</p><div class="highlight"><pre><code class="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    [..other configuration options..]
+    <span class="nt">&lt;webResources</span> <span class="na">combine.children=</span><span class="s">"append"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;resource&gt;</span>
+        <span class="nt">&lt;directory&gt;</span>${project.build.directory}/css-min<span class="nt">&lt;/directory&gt;</span>
+      <span class="nt">&lt;/resource&gt;</span>
+    <span class="nt">&lt;/webResources&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div><p>That's it.</p>
