@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<div class="wrapper">
-  <section itemscope itemtype="http://schema.org/BlogPosting">
+<section itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="wrapper">
     <header>
       <h1 itemprop="name">{{ page.title }}</h1>
     </header>
@@ -49,24 +50,25 @@ layout: default
         {{ content }}
       </article>
     </main>
-  </section>
-</div>
+  </div>
 
-<div class="disqus" role="complementary">
-  <div id="disqus_thread"></div>
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  <a href="http://disqus.com" class="dsq-brlink">
-    comments powered by <span class="logo-disqus">Disqus</span>
-  </a>
-</div>
+  <div class="disqus" role="complementary">
+    <div id="disqus_thread"></div>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">
+      comments powered by <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
 
-<div class="wrapper">
-  <footer class="footer">
-    <p>
-      &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014
-    </p>
-  </footer>
-</div>
+  <div class="wrapper">
+    <footer class="footer">
+      <p>
+        &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014
+      </p>
+    </footer>
+  </div>
+
+</section>
