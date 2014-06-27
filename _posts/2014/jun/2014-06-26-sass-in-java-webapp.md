@@ -25,13 +25,13 @@ style sheets. This is how I'm using SASS in my Maven projects.
 First, I change the extensions of `.css` files to
 `.scss` and move them from `src/main/webapp/css` to `src/main/scss`.
 
-Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin):
+Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin)
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <plugin>
   <groupId>org.jasig.maven</groupId>
   <artifactId>sass-maven-plugin</artifactId>
-  <version>1.1.1</version>
   <executions>
     <execution>
       <id>generate-css</id>
@@ -58,7 +58,6 @@ to compress/minify the style sheets produced by the SASS compiler:
 <plugin>
   <groupId>com.samaxes.maven</groupId>
   <artifactId>minify-maven-plugin</artifactId>
-  <version>1.7.2</version>
   <configuration>
     <charset>UTF-8</charset>
     <nosuffix>true</nosuffix>

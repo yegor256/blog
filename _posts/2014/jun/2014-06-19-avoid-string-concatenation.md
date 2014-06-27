@@ -124,13 +124,13 @@ String xml = StringUtils.join(
 {% endhighlight %}
 
 The need to include an additional JAR dependency
-to your classpath may be considered a downside with this method:
+to your classpath may be considered a downside with this method
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
   <groupId>org.apache.commons</groupId>
   <artifactId>commons-lang3</artifactId>
-  <version>3.3.2</version>
 </dependency>
 {% endhighlight %}
 
@@ -160,7 +160,6 @@ Again, a dependency is required in this case:
 <dependency>
   <groupId>com.google.guava</groupId>
   <artifactId>guava</artifactId>
-  <version>17.0</version>
 </dependency>
 {% endhighlight %}
 

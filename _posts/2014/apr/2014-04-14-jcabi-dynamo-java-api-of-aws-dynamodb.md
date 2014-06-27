@@ -144,12 +144,12 @@ of my projects. You can see it in action at
 [rultor-users](https://github.com/rultor/rultor/tree/rultor-0.2/rultor-users/src/main/java/com/rultor/users).
 
 The library ships as a JAR dependency in [Maven
-Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo):
+Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo)
+(get its latest versions from [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-dynamo</artifactId>
-  <version><!-- check http://dynamo.jcabi.com --></version>
 </dependency>
 {% endhighlight %}

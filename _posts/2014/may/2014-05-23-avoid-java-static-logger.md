@@ -71,12 +71,12 @@ For convenience, there are also a number of ["decors"](http://log.jcabi.com/deco
 implemented in the library.
 
 The library ships as a JAR dependency in
-[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-log):
+[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-log)
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-log</artifactId>
-  <version>0.12.2</version>
 </dependency>
 {% endhighlight %}

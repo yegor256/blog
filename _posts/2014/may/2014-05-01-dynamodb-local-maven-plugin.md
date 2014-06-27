@@ -44,13 +44,13 @@ that way. I didn't find any Maven plugins for that purpose,
 so I decided to create my own &mdash;[jcabi-dynamodb-maven-plugin](https://github.com/jcabi/jcabi-dynamodb-maven-plugin).
 
 Full usage details for the plugin are explained
-on [its website](http://dynamodb.jcabi.com). However, here is a simple example:
+on [its website](http://dynamodb.jcabi.com). However, here is a simple example
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <plugin>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-dynamodb-maven-plugin</artifactId>
-  <version>0.6</version>
   <executions>
     <execution>
       <goals>

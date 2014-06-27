@@ -125,13 +125,13 @@ mocking.
 
 As with the client, you need the
 [`jcabi-http.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-http)
-dependency:
+dependency
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-http</artifactId>
-  <version><!-- check http://http.jcabi.com --></version>
 </dependency>
 {% endhighlight %}
 
@@ -144,7 +144,6 @@ is based on it.
 <dependency>
   <groupId>com.sun.grizzly</groupId>
   <artifactId>grizzly-servlet-webserver</artifactId>
-  <version>1.9.59</version>
   <scope>test</scope>
 </dependency>
 {% endhighlight %}

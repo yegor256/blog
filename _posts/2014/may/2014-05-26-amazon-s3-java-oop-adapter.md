@@ -205,13 +205,14 @@ All classes in [jcabi-s3](http://s3.jcabi.com) are
 annotated with [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html)
 and are truly immutable.
 
-The library ships as a JAR dependency in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-s3):
+The library ships as a JAR dependency in
+[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
+(get its latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-s3</artifactId>
-  <version>0.5</version>
 </dependency>
 {% endhighlight %}
 

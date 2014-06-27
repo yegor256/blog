@@ -254,7 +254,9 @@ that contains `Loggable` annotation and `MethodLogger`
 aspect (btw, there are [many more](http://aspects.jcabi.com)
 aspects and annotations). You don't need to write your own
 aspect for method logging. Just add a few dependencies to
-your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com) for aspect weaving:
+your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com)
+for aspect weaving
+(get their latest versions in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <project>
@@ -263,12 +265,10 @@ your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com) for a
       <dependency>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-aspects</artifactId>
-        <version>0.15.1</version>
       </dependency>
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjrt</artifactId>
-        <version>1.8.0</version>
       </dependency>
     </dependency>
   </depenencies>
@@ -277,7 +277,6 @@ your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com) for a
       <plugin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-maven-plugin</artifactId>
-        <version>0.9.2</version>
         <executions>
           <execution>
             <goals>
