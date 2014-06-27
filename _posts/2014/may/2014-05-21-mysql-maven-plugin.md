@@ -45,7 +45,6 @@ This is how you configure it in `pom.xml`
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.8</version>
         <executions>
           <execution>
             <goals>
@@ -61,7 +60,6 @@ This is how you configure it in `pom.xml`
       </plugin>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.8</version>
         <executions>
           <execution>
             <goals>
@@ -86,7 +84,6 @@ This is how you configure it in `pom.xml`
       <plugin>
         <groupId>com.jcabi</groupId>
         <artifactId>jcabi-mysql-maven-plugin</artifactId>
-        <version>0.6.1</version>
         <executions>
           <execution>
             <id>mysql-test</id>
