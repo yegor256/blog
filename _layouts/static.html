@@ -2,15 +2,23 @@
 layout: default
 ---
 
-<div class="wrapper">
-  <section>
-    <header role="heading">
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="wrapper">
+    <header itemprop="name">
       <h1>{{ page.title }}</h1>
     </header>
     <main role="main">
-      <article role="article">
+      <article role="article" itemprop="articleBody">
         {{ content }}
       </article>
     </main>
-  </section>
-</div>
+    <footer class="footer">
+      <p>
+        This blog is built with <a href="http://jekyllrb.com/">Jekyll</a>
+        and hosted on <a href="https://pages.github.com/">Github Pages</a>
+        <br/>
+        <a href="https://github.com/yegor256/blog/commit/{{ site.data['hash'] }}"><i class="ico ico-x-github"></i></a>
+      </p>
+    </footer>
+  </div>
+</section>
