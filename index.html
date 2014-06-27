@@ -35,34 +35,32 @@ keywords:
           </a>
         </h1>
       </header>
-      <article>
-        <p>
-          {{ post.description }}
-        </p>
-        <p class="gray small desktop-only">
-          {{ post.content | count_words }}
-          words,
-          {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-          {% if time == '1' %}
-            a minute
-          {% else %}
-            {% case time %}
-              {% when '2' %}
-                two
-              {% when '3' %}
-                three
-              {% when '4' %}
-                four
-              {% when '5' %}
-                five
-              {% else %}
-                {{ time }}
-            {% endcase %}
-            minutes
-          {% endif %}
-          to read
-        </p>
-      </article>
+      <p>
+        {{ post.description }}
+      </p>
+      <p class="gray small desktop-only">
+        {{ post.content | count_words }}
+        words,
+        {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+        {% if time == '1' %}
+          a minute
+        {% else %}
+          {% case time %}
+            {% when '2' %}
+              two
+            {% when '3' %}
+              three
+            {% when '4' %}
+              four
+            {% when '5' %}
+              five
+            {% else %}
+              {{ time }}
+          {% endcase %}
+          minutes
+        {% endif %}
+        to read
+      </p>
     </section>
   </div>
 {% endfor %}
