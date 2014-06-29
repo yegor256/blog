@@ -30,6 +30,8 @@ working with me. Static analysis (we're using [qulice](http://www.qulice.com)
 can't catch all of the mistakes for obvious reasons, and that's why I decided to
 list them all here.
 
+<!--more-->
+
 Let me know if you want to see something else added here, and I'll be happy to
 oblige.
 

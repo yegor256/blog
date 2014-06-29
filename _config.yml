@@ -6,6 +6,7 @@ redcarpet:
 permalink: :year/:month/:day/:title.html
 paginate: 10
 paginate_path: "p/:num"
+excerpt_separator: <!--more-->
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com/

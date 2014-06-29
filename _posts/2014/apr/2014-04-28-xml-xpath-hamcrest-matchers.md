@@ -22,9 +22,8 @@ in unit testing. It replaces the JUnit procedural assertions of
 that subject in more detail sometime later.
 
 Now, though, I want to demonstrate a new library published today on Github and
-Maven Central:
-
-[jcabi-matchers](http://matchers.jcabi.com). jcabi-matchers is a collection of
+Maven Central: [jcabi-matchers](http://matchers.jcabi.com).
+jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.
 
 Let's say, for instance, a class that is undergoing  testing produces an XML
@@ -50,6 +49,8 @@ public class FooTest {
   }
 }
 {% endhighlight %}
+
+<!--more-->
 
 There are two alternatives to the above that I'm aware of, which are do almost the same thing:
 [xml-matchers](https://code.google.com/p/xml-matchers/) by

@@ -36,6 +36,8 @@ String html = new JdkRequest("https://www.google.com")
 
 I designed this new client with the following requirements in mind:
 
+<!--more-->
+
 ## Simplicity
 
 For me, this was the most important requirement. The client must be simple and

@@ -62,6 +62,8 @@ This is an incomplete list of arguments in favor of immutability:
 
 Let's discuss the most important arguments one by one.
 
+<!--more-->
+
 ## Thread Safety
 
 The first and the most obvious argument is that immutable objects

@@ -40,6 +40,8 @@ XML xml = new XMLDocument(
 );
 {% endhighlight %}
 
+<!--more-->
+
 Now, we have an object of interface
 [`XML`](http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html)
 that can traverse the XML tree and convert it back to text.

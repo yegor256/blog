@@ -48,6 +48,8 @@ Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-pl
 </plugin>
 {% endhighlight %}
 
+<!--more-->
+
 The SASS compiler will compile `.scss` files from
 `src/main/scss` and place `.css` files into `target/css`.
 

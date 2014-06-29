@@ -35,8 +35,11 @@ keywords:
           </a>
         </h1>
       </header>
+      {{ post.excerpt }}
       <p>
-        {{ post.description }}
+        <a href="{{ post.url }}">
+          read on...
+        </a>
       </p>
       <p class="gray small desktop-only">
         {{ post.content | count_words }}

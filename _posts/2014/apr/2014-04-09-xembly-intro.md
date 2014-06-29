@@ -33,7 +33,7 @@ specific data elements from the entire document by using
 [XPath](http://www.w3.org/TR/xpath/) queries.
 
 Essentially, these three technologies, XSL, XSD schema and XPath, are what makes
-XML so powerful:
+XML so powerful.
 
 However, there can be times when XML falls short. For instance, imagine you have
 an existing document that needs to be modified just slightly. For example, let's
@@ -73,6 +73,8 @@ a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
 Anyway, here is a tool I created a few month ago: [Xembly](http://www.xembly.org).
 It is an imperative language with a few simple directives and resembles [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
 in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.
+
+<!--more-->
 
 Let's create a simple example. Say, for instance, we want to add a new account number `36`
 to our list document. The code would look like:

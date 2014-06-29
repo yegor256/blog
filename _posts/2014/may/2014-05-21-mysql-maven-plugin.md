@@ -35,6 +35,8 @@ that does exactly two things: starts a MySQL server on
 `pre-integration-test` phase and shuts it down on
 `post-integration-test`.
 
+<!--more-->
+
 This is how you configure it in `pom.xml`
 (see also its full [usage instructions](http://mysql.jcabi.com/usage.html)):
 
@@ -214,4 +216,3 @@ in a few projects, and it helps me to stay confident that my code works
 with a real MySQL server. I'm also using the Liquibase Maven plugin in
 order to populate an empty server with tables required for the application.
 Nevertheless, that is a story for the next post :)
-

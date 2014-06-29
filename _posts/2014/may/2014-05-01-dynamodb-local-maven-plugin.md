@@ -43,6 +43,8 @@ It would be great if it were possible to use DynamoDB Local
 that way. I didn't find any Maven plugins for that purpose,
 so I decided to create my own &mdash;[jcabi-dynamodb-maven-plugin](https://github.com/jcabi/jcabi-dynamodb-maven-plugin).
 
+<!--more-->
+
 Full usage details for the plugin are explained
 on [its website](http://dynamodb.jcabi.com). However, here is a simple example
 (get its latest versions in [Maven Central](http://search.maven.org/)):
@@ -187,4 +189,3 @@ and then assert that the item is there.
 
 The plugin was tested with three operating systems, and proved
 to work without problems: Mac OS X 10.8.5, Windows 7 SP1 and Ubuntu Linux 12.04 Desktop.
-

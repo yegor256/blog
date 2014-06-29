@@ -40,6 +40,8 @@ Keeping in mind all those drawbacks, I created my
 own library &mdash; [jcabi-github](http://github.jcabi.com).
 Let's look at its most important advantages.
 
+<!--more-->
+
 ## Object Oriented for Real
 
 Github server is an object. A collection of issues is an object,

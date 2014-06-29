@@ -29,6 +29,8 @@ of the product under development.
 CasperJS, we can ensure that our application responds correctly
 to requests sent by a regular web browser.
 
+<!--more-->
+
 This is a sample CasperJS test, which makes an HTTP request to a home page
 of a running WAR application and asserts that the response has
 `200` HTTP status code:

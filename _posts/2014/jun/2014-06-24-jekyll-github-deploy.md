@@ -32,6 +32,8 @@ Ruby gem (stands for "Jekyll Github Deploy"), which does
 the trick. Here is
 [what it does](https://github.com/yegor256/jekyll-github-deploy/blob/master/bash/deploy.sh):
 
+<!--more-->
+
 1. It clones your existing repository from the current
 directory to a temporary one (guessing the URL of the repo from `.git/config` file).
 

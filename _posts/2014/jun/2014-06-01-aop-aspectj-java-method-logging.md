@@ -50,6 +50,8 @@ This is what I see in log4j output:
 
 Nice, isn't it? Now, let's see how it works.
 
+<!--more-->
+
 ## Annotation with Runtime Retention
 
 [Annotations](http://en.wikipedia.org/wiki/Java_annotation) is

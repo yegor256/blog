@@ -34,6 +34,8 @@ public class Resource {
 }
 {% endhighlight %}
 
+<!--more-->
+
 Keep in mind that you should weave your classes after
 compilation, as explained [here](http://aspects.jcabi.com/example-weaving.html).
 

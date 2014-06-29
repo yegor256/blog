@@ -57,6 +57,8 @@ public class NumberUtils {
 
 Indeed, this a very convenient technique!?
 
+<!--more-->
+
 ## Utility Classes Are Evil
 
 However, in an object-oriented world, utility classes are considered a very bad

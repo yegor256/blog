@@ -101,6 +101,8 @@ Item item = table.put(
 );
 {% endhighlight %}
 
+<!--more-->
+
 My code is not only shorter, but it also employs encapsulation and separates
 responsibilities of classes.
 [`Table`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html)

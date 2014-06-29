@@ -30,6 +30,8 @@ However, the client part is not the only benefit of using
 [jcabi-http](http://http.jcabi.com). Jcabi also includes a server component that
 can help you in unit and integration testing of your HTTP clients.
 
+<!--more-->
+
 Let me show you an example first. In the example, I'm using
 [hamcrest](http://hamcrest.org/JavaHamcrest/) for assertions.
 

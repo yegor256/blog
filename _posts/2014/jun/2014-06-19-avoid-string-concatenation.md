@@ -35,6 +35,8 @@ the resulting string are copied multiple times. Indeed, on every `+` operator,
 it has into it; plus a suffix being concatenated. This is true,
 but this is not the point here.
 
+<!--more-->
+
 Actually, I don't think performance in this case is a big issue.
 Moreover, there were [multiple experiments](http://stackoverflow.com/questions/925423)
 showing that concatenation is not that slow when compared to other

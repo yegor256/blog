@@ -40,6 +40,8 @@ assert ValidatorBuilder.html()
   .valid();
 {% endhighlight %}
 
+<!--more-->
+
 The `valid()` method is a black or white indicator that
 returns `false` when the document is not valid. Additionally,
 you can obtain more information through a list of "defects" returned by the W3C server:

@@ -66,6 +66,8 @@ To make life easier in a few of my applications, I created a simple web
 service &mdash; [stateful.co](http://www.stateful.co).
 It provides a simple atomic counter feature through its RESTful API.
 
+<!--more-->
+
 First, you create a counter with a unique name. Then,
 you set its initial value (it is zero by default). And, that's it.
 Every time you need to obtain a new value for `id` column in

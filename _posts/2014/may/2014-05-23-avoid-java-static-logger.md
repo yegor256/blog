@@ -39,6 +39,8 @@ public class Foo {
 
 What's wrong with it? Code duplication.
 
+<!--more-->
+
 This static `LOGGER` property has to be declared in every class
 where logging is required. Just a few lines of code, but
 this is pure noise, as I see it.

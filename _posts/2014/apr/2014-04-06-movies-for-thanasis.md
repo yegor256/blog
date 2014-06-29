@@ -39,6 +39,8 @@ Level A
  * [Thursday (1998)](http://www.imdb.com/title/tt0124901/)
  * [Bullet (1996)](http://www.imdb.com/title/tt0115781/)
 
+<!--more-->
+
 Level B
 
  * [Delicatessen (1991)](http://www.imdb.com/title/tt0101700/)

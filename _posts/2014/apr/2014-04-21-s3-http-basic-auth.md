@@ -49,6 +49,8 @@ front end. With the service, you can either make your objects either absolutely
 public &mdash; so that anyone can see them online &mdash; or assign access
 rights to them &mdash; but only for users connected through RESTful API.
 
+<!--more-->
+
 My use case with the service was a bit more complex, though. I wanted to host my
 static content as S3 objects. However, I wanted to do this while ensuring only a
 few people had access to the content using their Web browsers.

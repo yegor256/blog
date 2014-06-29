@@ -71,6 +71,8 @@ String content = new Ocket.Text(ocket).read();
 
 Why is this approach better? Well, there are a number of obvious advantages.
 
+<!--more-->
+
 ## S3 Object is an Object in Java
 
 S3 object get its representative in Java. It is not

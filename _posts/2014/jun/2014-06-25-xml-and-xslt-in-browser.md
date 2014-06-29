@@ -43,6 +43,8 @@ this mechanism. When a browser retrieves an XML document from a server,
 and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
 with it &mdash; the browser transforms XML into HTML on-fly.
 
+<!--more-->
+
 ## Working Example
 
 Let's review a simple Java web application that works
