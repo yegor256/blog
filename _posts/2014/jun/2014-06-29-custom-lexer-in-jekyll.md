@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Custom Pygments Lexer in Jekyll"
-date: 2014-06-22
+date: 2014-06-29
 tags: jekyll lexer pygments
 description:
   Sometimes, you want to have your own syntax highlighting
@@ -12,17 +12,19 @@ keywords:
   - custom lexer pygments jekyll
 ---
 
-I needed to create a custom syntax highlighting for www.requs.org on which I'm using Jekyll for site rendering.
+I needed to create a custom syntax highlighting
+for [requs.org](http://www.requs.org)
+on which I'm using Jekyll for site rendering.
 
 This is how my code blocks look in markdown pages:
 
-{% highlight liquid %}
-{% highlight requs %}
+{% highlight text %}
+{ % highlight requs %}
 User is a "human being".
-{% endhighlight %}
+{ % endhighlight %}
 {% endhighlight %}
 
-I created a custom Pygments lexer:
+I created a custom [Pygments lexer](http://pygments.org/docs/lexerdevelopment/):
 
 <!--more-->
 
@@ -46,7 +48,8 @@ class RequsLexer(RegexLexer):
     return shebang_matches(text, r'requs')
 {% endhighlight %}
 
-Then, I packaged it for `easy_install` and installed locally:
+Then, I packaged it for [`easy_install`](https://pypi.python.org/pypi/setuptools)
+and installed locally:
 
 {% highlight bash %}
 $ easy_install src/requs_pygment
