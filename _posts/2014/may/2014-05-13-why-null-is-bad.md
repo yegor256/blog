@@ -252,7 +252,8 @@ public Employee getByName(String name) {
 
 ## Mutable and Incomplete Objects
 
-In general, it is highly recommended to design objects
+In general, it is [highly recommended]({% post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
+to design objects
 with immutability in mind. This means that an object gets
 all necessary knowledge during its instantiating and never
 changes its state during the entire lifecycle.
