@@ -40,7 +40,7 @@ end
 if opts[:dry]
   emails = ['test@yegor256.com']
 else
-  emails = File.readlines(opts[:file]).collect(&:strip).uniq
+  emails = File.readlines(opts[:file]).collect(&:strip).collect(&:downcase).reject(&:blank?).uniq
 end
 
 puts "Sending #{emails.length} email(s) to #{opts[:host]}:#{opts[:port]} as #{opts[:user]}"
@@ -68,3 +68,5 @@ emails.each do |email|
   mail.deliver!
   puts ' done'
 end
+
+puts "sent #{emails.size} emails"
