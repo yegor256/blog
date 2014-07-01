@@ -59,6 +59,7 @@ This is an incomplete list of arguments in favor of immutability:
  * identity mutability problem is avoided
  * they always have failure atomicity
  * they are much easier to cache
+ * they prevent NULL references, [which are bad]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
 
 Let's discuss the most important arguments one by one.
 
