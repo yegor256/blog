@@ -15,6 +15,11 @@ keywords:
   - maven tests with casperjs
   - phantomjs maven plugin
   - casperjs maven plugin
+  - casperjs maven
+  - casperjs java
+  - casperjs maven build
+  - casperjs maven tests
+  - casperjs jenkins
   - use casperjs with maven
   - test casperjs with maven
 ---
