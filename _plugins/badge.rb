@@ -8,8 +8,7 @@ module Yegor
     end
     def render(context)
       html = "<figure class='badge'><img src='#{CGI::escapeHTML @src}'" +
-      " style='width:#{@width}px;'" +
-      " alt='badge'/></figure>\n\n"
+      " style='width:#{@width}px;' alt='badge'/></figure>\n\n"
     end
   end
 end
