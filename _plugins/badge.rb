@@ -5,6 +5,7 @@ module Yegor
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].strip
+
     end
     def render(context)
       html = "<figure class='badge'><img src='#{CGI::escapeHTML @src}'" +
