@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="description" content="{{ page.description }}" />
-    <meta name="keywords" content="{{ page.keywords | join:', ' | escape }}" />
+    <meta name="keywords" content="{{ page.keywords | clean_list | join:', ' | escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/png" href="http://img.yegor256.com/icon-128x128.png">
     <link rel="shortcut icon" href="//img.yegor256.com/icon-128x128.png" />

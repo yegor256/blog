@@ -8,6 +8,9 @@ description:
   files can be a complex task, and their attributes may overlap;
   jcabi-manifests  library makes this process easier.
 keywords:
+  - manifest.mf example
+  - manifest.mf maven
+  - manifest.mf classpath
   - java manifest.mf
   - java read manifest.mf
   - manifest files java

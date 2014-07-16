@@ -9,6 +9,8 @@ description:
   for HTML and CSS
 keywords:
   - w3c validator
+  - w3c validator java example
+  - w3c validator java library
   - java w3c validator
   - w3c java validator
   - w3c jigsaw java css validator

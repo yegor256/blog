@@ -7,11 +7,14 @@ description:
   jcabi-matchers is a new small library that extends
   the Hamcrest arsenal with XML/XPath matchers
 keywords:
-  - xml
-  - matchers
+  - xml hamcrest
+  - xpath matchers
   - junit hamcrest xml matchers
   - xml matchers junit
   - xml matchers hamcrest
+  - hamcrest xpath example
+  - hamcrest xpath library
+  - hamcrest xpath example code
 ---
 
 {% badge http://img.jcabi.com/logo-square.png 64 %}

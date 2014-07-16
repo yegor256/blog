@@ -6,6 +6,13 @@ tags: jcabi http java
 description: I created a simple fluent Java HTTP client to make things easier with HTTP interactions
 keywords:
   - java
+  - http java client example
+  - http java client api
+  - http java client post
+  - http java client sample
+  - http java client basic authentication
+  - java http client library
+  - java http client example code
   - java http client
   - java fluent http client
   - http client for java

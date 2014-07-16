@@ -10,6 +10,10 @@ description:
 keywords:
   - amazon s3 java
   - s3 java
+  - s3 java api
+  - s3 java client
+  - s3 java example
+  - s3 java api example
   - s3 java adapter
   - s3 java object-oriented
   - s3 java read write text object

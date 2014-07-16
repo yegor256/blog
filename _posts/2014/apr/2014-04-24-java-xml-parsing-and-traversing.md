@@ -10,6 +10,11 @@ keywords:
   - xml parsing java
   - parse xml java
   - how to parse xml in java
+  - java xml parsing library
+  - java xml parsing example
+  - java xml parsing library example
+  - java xml parsing best practices
+  - java xml parsing example code
   - java parsing of xml
   - DOM parsing java
   - simple parsing of xml in java

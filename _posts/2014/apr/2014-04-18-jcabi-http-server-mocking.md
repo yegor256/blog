@@ -9,7 +9,8 @@ description:
 keywords:
   - java http server
   - java http client
-  - http server mock
+  - java http server mocking
+  - http server mock java
   - java http server mock
   - mock java http server
 ---

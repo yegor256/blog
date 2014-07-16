@@ -5,10 +5,14 @@ date: 2014-04-14
 tags: cloud
 description: I created jcabi-dynamo a few months ago to make AWS SDK more object oriented
 keywords:
-  - amazon web services
   - dynamodb
-  - java api dynamodb
   - dynamodb java
+  - java dynamodb example
+  - java dynamodb query
+  - java dynamodb client
+  - java dynamodb query example
+  - java dynamodb create table
+  - java api dynamodb
   - object oriented dynamodb java
 ---
 

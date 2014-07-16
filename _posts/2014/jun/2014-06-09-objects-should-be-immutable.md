@@ -15,6 +15,11 @@ keywords:
   - agruments for immutable objects
   - why immutable objects are better
   - immutability in oop
+  - immutability in java
+  - immutable java example
+  - immutable java class
+  - immutable java design pattern
+  - how to make object immutable in java
   - oop immutable objects
   - immutable classes java
   - immutable class java
