@@ -18,6 +18,98 @@ keywords:
   - http client for java
   - alternative to apache http client
   - alternative to HttpURLConnection
+  java http client get
+  java http client gzip
+  java http client gui
+  java http client get cookie
+  java http request get client ip
+  google java http client
+  java http client https
+  http post in java http client
+  java http_client_ip
+  java http client implementation
+  java http request client ip
+  http client in java
+  http client in java example
+  http client in java tutorial
+  java org apache http impl client defaulthttpclient
+  simple http client in java
+  sample http client in java
+  writing http client in java
+  java http client json
+  java http client javascript
+  java http client kerberos
+  java http client keep alive
+  java http client library
+  java http client login
+  java http client login form
+  java http client load balancing
+  best java http client library
+  java lightweight http client
+  java http client maven
+  java http client maintain session
+  java http client multipart
+  google-http-java-client maven
+  java org apache http client methods httppost
+  java org.apache.http.client.methods.httppost example
+  java multithreaded http client
+  java http client non blocking
+  java http client ntlm
+  java httpclient ntlm authentication
+  java net httpclient
+  java nio http client example
+  java netty http client
+  java native http client
+  java.net http client example
+  java http client oauth
+  java http client on javascript
+  java org.apache.http.client
+  java org apache http client methods httppost
+  java http client ssl
+  java http client session
+  java http client server example
+  java http client simple
+  java http client sample
+  java http client set header
+  java http client streaming
+  java http client socket example
+  java http client socket
+  java http client tutorial
+  java http client timeout
+  google-http-java-client tutorial
+  java http client upload file
+  java http client username password
+  java http client using proxy
+  java http client user agent
+  java http client example urlconnection
+  java http client post file upload
+  java http client with proxy
+  java http client with authentication
+  java http client with ssl
+  java http client with cookie
+  java http client with javascript
+  http client with java
+  write java http client
+  java http web service client
+  java http client send xml
+  java httpclient post xml
+  java http client post xml example
+  java http 1.1 client
+  java http 1.1 client example
+  java http 1.0 client
+  java httpclient http/1.1 403 forbidden
+  google-http-java-client/1.17.0-rc (gzip)
+  google http java client 1.17.0 rc
+  google-http-java-client 1.11.0-beta
+  java 1.4 http client
+  java 1.6 http client
+  java http client 2013
+  java 6 httpclient
+  java 7 http client
+  java 8 http client
+  java 8 new httpclient
+
+
 discussions:
   reddit: http://www.reddit.com/r/java/comments/22rfdc/fluent_java_http_client/
 ---

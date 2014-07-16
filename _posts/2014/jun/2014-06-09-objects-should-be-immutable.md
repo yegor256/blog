@@ -8,26 +8,73 @@ description:
   classes/objects in object-oriented programming
   have to be immutable,  i.e. never modify their encapsulated state
 keywords:
-  - object design
-  - object thinking
-  - why immutable
-  - immutability of objects
+  - advantage of immutable object in java
   - agruments for immutable objects
-  - why immutable objects are better
-  - immutability in oop
-  - immutability in java
-  - immutable java example
-  - immutable java class
-  - immutable java design pattern
-  - how to make object immutable in java
-  - oop immutable objects
-  - immutable classes java
-  - immutable class java
-  - immutable object java
+  - benefit of immutable object java
   - best practices immutable
+  - clone immutable object java
+  - create immutable object java
+  - define immutable object java
   - failure atomicity
   - failure atomicity java
   - functional thinking in java
+  - how to make an objects immutable in java
+  - how to make object immutable in java
+  - immutability in java
+  - immutability in oop
+  - immutability of objects
+  - immutable class java
+  - immutable classes java
+  - immutable java class
+  - immutable java design pattern
+  - immutable java example
+  - immutable object design pattern java
+  - immutable object exception java
+  - immutable object in java example
+  - immutable object in java with example
+  - immutable object java
+  - immutable object java example
+  - immutable object javascript
+  - immutable object pattern java
+  - immutable objects in java api
+  - immutable objects in java other than string
+  - immutable objects in java string
+  - java boolean object immutable
+  - java change immutable object
+  - java immutable date object
+  - java immutable object advantage
+  - java immutable object array
+  - java immutable object builder
+  - java immutable object cache
+  - java immutable object collections
+  - java immutable object constructor
+  - java immutable object definition
+  - java immutable object factory
+  - java immutable object hashcode
+  - java immutable object list
+  - java immutable object performance
+  - java immutable object publication
+  - java immutable object reflection
+  - java immutable object state
+  - java immutable object thread safe
+  - java immutable object types
+  - java immutable object wrapper
+  - java immutable value object
+  - java mutable immutable object
+  - list of immutable object in java
+  - mutable and immutable object in java
+  - mutable immutable objects java examples
+  - object design
+  - object immutable in java
+  - object immutable java
+  - object thinking
+  - oop immutable objects
+  - return immutable object java
+  - string object immutable java
+  - update immutable object java
+  - why immutable
+  - why immutable objects are better
+
 discussions:
   reddit: http://www.reddit.com/r/java/comments/27o915/objects_should_be_immutable/
 ---
