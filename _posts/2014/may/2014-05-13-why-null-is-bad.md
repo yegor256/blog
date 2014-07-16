@@ -21,6 +21,10 @@ keywords:
   - null is bad
   - best practices null
   - null worst practices
+  - null is evil
+  - nulls are evil
+  - null objects are evil
+  - say no to null
 discussions:
   reddit: http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/
   hacker-news: https://news.ycombinator.com/item?id=7736925
