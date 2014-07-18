@@ -37,7 +37,7 @@ folder, so that they don't bother you any more. Anyway, your team doesn't have
 time or desire to fix all unit tests every time someone breaks them.
 After all, we all know that unit testing is not for a team working with deadlines, right?
 
-Wrong. Continuous integration can work and must work.
+Wrong. Continuous integration can and must work.
 
 <!--more-->
 
@@ -77,7 +77,7 @@ are available as a service in cloud, for example
 ## Why CI Doesn't Work?
 
 CI is great, but the bigger the team (and the code base),
-the more often the builds get broken. And the longer it takes to fix them. I've
+the more often their builds get broken. And the longer it takes to fix them. I've
 seen many examples where a hard working team starts
 to ignore that red flags, raised by Jenkins, after a few weeks
 or trying to keep up.
@@ -86,12 +86,12 @@ The team simply becomes not capable of fixing all errors in time.
 Mostly because the business has other priorities. Product owners
 do not understand the importance of a "clean build" and technical leaders
 can't buy time for fixing unit tests. Moreover, the code that broke them
-is already in `master` and, in most cases, already deployed to production
+was already in `master` and, in most cases, have been already deployed to production
 and delivered to end-users. What's the urgency of fixing some tests
-if business value is already delivered?
+if business value was already delivered?
 
 In the end, most development teams don't take continuos integration alerts
-seriously. Jenkins of Travis are just fancy tools for them. They play no
+seriously. Jenkins or Travis are just fancy tools for them. They play no
 role in the entire development and delivery pipeline. No matter what
 continuous integration server says, we still deliver new features
 to our end-users. We'll fix our build later. And it's only logical.
@@ -107,25 +107,25 @@ Since that time I experimentally used
 that approach in multiple open source and a few commercial projects,
 with PHP, Java, Ruby and JavaScript, with Git and Subversion.
 In all cases, my experience was only positive, and that's why
-[rultor.com](http://www.rultor.com) (later about it).
+[rultor.com](http://www.rultor.com) was born (later about it).
 
 So, the solution is simple &mdash; prohibit anyone to merge anything into `master`,
 and create script which anyone can call. The script will merge, test, and commit.
 The script will not make any exceptions. If any branch is breaking at least
-one unit test, it will be rejected.
+one unit test, the entire branch will be rejected.
 
-In other words, we should raise that red flag before the code gets
+In other words, we should raise that red flag **before** the code gets
 into `master`. We should put the blame for broken tests to the
 shoulders of its author.
 
-I'm developing a feature in my own branch. I finished the development
-and broken a few tests, accidentally. It happens, we all make mistakes.
+Say, I'm developing a feature in my own branch. I finished the development
+and broke a few tests, accidentally. It happens, we all make mistakes.
 I can't merge my changes into `master`. Git simply will reject my
-`push`, because I don't have permissions. All I can do is call a script,
-asking it to merge my branch. The script will try, but before pushing
-into `master` it will execute all tests. And if any of them break, I will
-get a rejection. My changes won't be merged. Now it's my responsibility &mdash;
-to fix them and try to merge again.
+`push`, because I don't have permissions. All I can do is call a magic script,
+asking it to merge my branch. The script will try to merge, but, before pushing
+into `master`, it will run all tests. And if any of them break, my branch
+will be rejected. My changes won't be merged. Now it's my responsibility &mdash;
+to fix them and call the script again.
 
 In the beginning, this approach slows down the development, because
 everybody has to start writing cleaner code. At the end, this method
@@ -142,8 +142,9 @@ in Github pull request, if there are problems.
 Pay attention, pre-flight builds don't merge. They just check whether
 your individual branch is clean. After merge it can easily break `master`.
 
-And, of course, they don't guarantee that one of project collaborators
-commit directly to `master`, breaking it.
+And, of course, this mechanism doesn't guarantee that no collaborators
+can commit directly to `master`, breaking it accidentally. Pre-flight builds
+is a preventive measure, not solving the problem entirely.
 
 ## Rultor.com
 

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Rultor.com, Continuous Delivery In Cloud"
+title: "Rultor.com, Merging Bot"
 date: 2014-07-16
 tags: rultor ci
 description:
-  Rultor.com is an assistant of a code writing team
-  that wants to keep its builds clean and continous
-  delivery pipeline stable
+  Rultor.com is a bot that talks to you in Github
+  issue tracking helping you to merge pull requests
+  passing them through full testing cycle
 keywords:
   - docker continuous integration
   - pre-flight builds
@@ -27,9 +27,9 @@ keywords:
 
 You get a Github pull request. You review it. It looks correct &mdash; it's time
 to merge it into `master`. You post a comment into it, asking
-your [@rultor](https://github.com/rultor) to test and merge. It starts a new Docker container,
+[@rultor](https://github.com/rultor) to test and merge. Rultor starts a new Docker container,
 merges pull request into `master`, runs all tests, and, if everything looks
-clean, merges, pushes, and closes pull request.
+clean, &mdash; merges, pushes, and closes the request.
 
 Then, you ask [@rultor](https://github.com/rultor) to deploy
 current version to production environment. It checks out
@@ -62,7 +62,7 @@ CI tools available on the market:
    conditions. We need our developers to be able to talk to the tool,
    through human-like commands in the tickets they are working with.
 
-A combination of these three features is what differs Rultor from
+A combination of these three features is what differs [Rultor](http://www.rultor.com) from
 all other existing systems.
 
 ## How Rultor Merges
@@ -84,4 +84,5 @@ in one of your Github pull requests, it does exactly this:
 
  7. Reports back to you, in Github pull request
 
-You can see it in action, for example, in these pull requests:
+You can see it in action, for example, in this pull request:
+[jcabi/jcabi-github#878](https://github.com/jcabi/jcabi-github/pull/878).
