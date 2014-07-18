@@ -1,7 +1,11 @@
 module Yegor
   module Filters
     def clean_list(arr)
-      arr.compact.sort.uniq
+        if arr.nil?
+            []
+        else
+            arr.compact.sort.uniq
+        end
     end
   end
 end

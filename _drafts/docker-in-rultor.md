@@ -6,7 +6,7 @@ tags: docker rultor ci
 description:
   Rultor.com runs every build in its own Docker
   container, perfectly isolating configurations
-  and making them cacheable and reproducable
+  and making them cacheable and reproducible
 keywords:
   - continuous integration
   - docker continuous integration
@@ -19,8 +19,8 @@ keywords:
 ---
 
 Docker is a command line tool that can run a shell command in
-virtual Linux with an isolated file system. Every time we
-test our Java projects, we want them to be built in their own
+virtual Linux inside an isolated file system. Every time we
+build our Java projects, we want them to run in their own
 Docker containers, for example:
 
 {% highlight bash %}
@@ -28,21 +28,26 @@ $ sudo docker run -i -t ubuntu mvn clean test
 {% endhighlight %}
 
 This command will start a new Ubuntu system and execute `mvn clean test`
-inside it. Rultor.com, our cloud assistant, does exactly that
+inside it. Rultor.com, our virtual assistant, does exactly that
 with our builds, when we deploy, package, test and merge.
 
 <!--more-->
 
 ## Why Docker?
 
-What benefits does it give? And why Docker, when there are many
-other virtualization technologies, like LXC, for example?
+What benefits does it give us? And why Docker, when there are many
+[other virtualization technologies](https://en.wikipedia.org/wiki/Operating_system-level_virtualization),
+like LXC, for example?
 
-Well, there are a few very important benefits, which are present
-only in Docker:
+Well, there are a few very important benefits.
 
- * Image repository (hub.docker.io)
+ * Image repository (hub.docker.com)
 
  *
 
-##
+Let's discuss them in details.
+
+## Image Repository
+
+Docker images
+
