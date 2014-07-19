@@ -4,8 +4,7 @@ title: "Liquibase with Maven"
 date: 2014-07-10
 tags: liquibase maven java
 description:
-  Liquibase is a convenient tool for database migrations
-  management, here I explain how to use it with Maven projects
+Liquibase is a convenient tool for database migration management. Here, I explain how to use it with Maven projects.
 keywords:
   - mysql maven liquibase
   - postgresql maven
@@ -16,21 +15,12 @@ keywords:
   - maven linux liquibase
 ---
 
-[Liquibase](http://www.liquibase.org)
-is a migration management tool for relational databases. It
-versionalize schema and data changes in a database, similar to what
-Git or SVN does for source code. Thanks to their
-Maven plugin, Liquibase can be used as a part of a build automation scenario.
-
+[Liquibase](http://www.liquibase.org) is a migration management tool for relational databases. It versionalizes schema and data changes in a database; similar to the way Git or SVN works for source code. Thanks to their Maven plugin, Liquibase can be used as a part of a build automation scenario.
 <!--more-->
 
-## Maven Plugin
-
-Let's assume you're using MySQL. For PostgreSQL or any other
-database configuration will be very similar.
-
-Add this plugin to your `pom.xml`
-(get its latest version in [Maven Central](http://search.maven.org/)):
+## Maven Plugin 
+Let's assume you're using MySQL (PostgreSQL or any other database configuration will be very similar.)
+Add this plugin to your `pom.xml` (get its latest version in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <project>
@@ -55,9 +45,7 @@ Add this plugin to your `pom.xml`
 {% endhighlight %}
 
 To check that it works, run `mvn liquibase:help`.
-
-Database credentials I would recomment to keep in `settings.xml`,
-in their respective profiles, for example:
+I would recommend you keep database credentials in `settings.xml` and  in their respective profiles. For example:
 
 {% highlight xml %}
 <settings>
@@ -82,20 +70,11 @@ in their respective profiles, for example:
 </settings>
 {% endhighlight %}
 
-When you run Maven, don't forget to turn on one of the profiles, for example:
-`mvn -Pproduction`.
+When you run Maven, don't forget to turn on one of the profiles. For example: `mvn -Pproduction`.
 
 ## Initial Schema
-
-I assume you already have a database with a schema (tables, triggers, views, etc.)
-and some data. You should "reverse engineer" it and create an initial
-schema file for Liquibase. In other words, we should inform Liquibase where
-we are at the moment, so that it starts to apply changes from this
-point.
-
-Maven plugin doesn't support it, you will have to run Liquibase directly. It's
-not that difficult. First, run `mvn liquibase:help` in order to download
-all artifacts. Then (replace placeholders with your actual credentials):
+I assume you already have a database with a schema (tables, triggers, views, etc.) and some data. You should "reverse engineer" it and create an initial schema file for Liquibase. In other words, we should inform Liquibase where we are at the moment, so that it starts to apply changes from this point.
+Maven plugin doesn't support it, so you will have to run Liquibase directly. But, it's not that difficult. First, run `mvn liquibase:help` in order to download all artifacts. Then, replace placeholders with your actual credentials:
 
 {% highlight bash %}
 $ java -jar ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar \
@@ -105,11 +84,9 @@ $ java -jar ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3
   generateChangeLog > src/main/liquibase/000-initial-schema.xml
 {% endhighlight %}
 
-Liquibase will analyze your current database schema and will copy
-its schema into `src/main/liquibase/000-initial-schema.xml`.
+Liquibase will analyze your current database schema and copy its own schema into `src/main/liquibase/000-initial-schema.xml`.
 
 ## Master Changeset
-
 Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
 
 {% highlight xml %}
@@ -121,15 +98,10 @@ Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
 </databaseChangeLog>
 {% endhighlight %}
 
-It is an entry point for Liquibase. It starts from this file and loads
-all other changesets available in `src/main/liquibase`. They should
-be either `.xml` or `.sql`. I recommend to use XML, mostly because it
-is easier to maintain and they work faster.
+It is an entry point for Liquibase. It starts from this file and loads all other changesets available in `src/main/liquibase`. They should be either `.xml` or `.sql`. I recommend that you use XML mostly because it is easier to maintain and works faster.
 
 ## Incremental Changesets
-
-Let's create a first simple changeset, which adds a new column to an
-existing table:
+Let's create a simple changeset, which adds a new column to an existing table:
 
 {% highlight xml %}
 <databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
@@ -143,19 +115,10 @@ existing table:
 </databaseChangeLog>
 {% endhighlight %}
 
-This file we save into `src/main/liquibase/002-add-user-address.xml`. In big
-projects you can name your files by the names of the tickets they are produced in.
-For example, `045-3432.xml`, which means changeset number 45 coming from
-ticket #3432.
+We save this file we in `src/main/liquibase/002-add-user-address.xml`. In big projects, you can name your files by the names of the tickets they are produced in. For example, `045-3432.xml`, which means changeset number 45 coming from ticket #3432.
 
-What is important is to have this numeric prefix in front of file names, in
-order to sort them correctly. We want changes to be applied in their correct
-chronological order.
+The important thing is to have this numeric prefix in front of file names, in order to sort them correctly. We want changes to be applied in their correct chronological order.
 
-That's it. We're ready to run `mvn liquibase:update -Pproduction` and
-our production database will be updated &mdash; a new column will be
-added to the `user` table.
+That's it. We're ready to run `mvn liquibase:update -Pproduction` and our production database will be updated &mdash; a new column will be added to the `user` table.
 
-See also how [MySQL Maven Plugin]({% post_url 2014/may/2014-05-21-mysql-maven-plugin %})
-can help you to automate integration
-testing of database-connected classes.
+Also, see how [MySQL Maven Plugin]({% post_url 2014/may/2014-05-21-mysql-maven-plugin %}) can help you to automate integration testing of database-connected classes.
