@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Master Branch Must Be Read-Only"
-date: 2014-07-16
+date: 2014-07-21
 tags: ci
 description:
   Continuous integration doesn't work while programmers
