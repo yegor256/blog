@@ -9,6 +9,7 @@ description:
   explains why and proposes a solution.
 keywords:
   - broken builds
+  - continuous integration doesn't work
   - commits to master branch
   - continous delivery
   - continous deployment
