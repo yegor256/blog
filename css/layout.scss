@@ -15,6 +15,12 @@ $light-gray: lighten($black, 83);
 $width: 700px;
 $font-size: 19px;
 
+@mixin unprintable() {
+  @media print {
+    display: none;
+  }
+}
+
 .green {
   color: green;
 }
@@ -82,6 +88,7 @@ a, a:visited {
   border-radius: 50%;
 }
 .header {
+  @include unprintable();
   text-align: center;
   .menu {
     list-style: none;
@@ -116,6 +123,7 @@ a, a:visited {
   text-align: center;
 }
 .disqus {
+  @include unprintable();
   @extend .wrapper;
   width: 80%;
   @media all and (max-width: $width * 1.3) {
@@ -131,6 +139,7 @@ time {
   margin-right: $font-size;
 }
 .buttons {
+  @include unprintable();
   display: inline-block;
   width: 50%;
   .share {
@@ -232,6 +241,7 @@ pre {
   margin-bottom: 4 * $font-size;
 }
 .pagination {
+  @include unprintable();
   text-align: center;
   .mute {
     @extend .gray;
