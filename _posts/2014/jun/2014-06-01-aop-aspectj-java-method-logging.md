@@ -9,7 +9,7 @@ description:
   This article explains how this can be done with AspectJ
   and Java annotations.
 keywords:
-  - @loggable
+  - "@loggable"
   - annotations java
   - aop annotations
   - aop java

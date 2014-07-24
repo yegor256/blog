@@ -1,4 +1,6 @@
 name: yegor256.com
+encoding: utf-8
+timezone: America/San_Francisco
 markdown: redcarpet
 highlighter: pygments
 redcarpet:
