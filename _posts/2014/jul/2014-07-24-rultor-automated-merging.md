@@ -2,7 +2,7 @@
 layout: post
 title: "Rultor.com, Merging Bot"
 date: 2014-07-24
-tags: non
+tags: rultor ci
 description:
   Rultor.com is a bot that talks to you via Github
   issue tracking and helps you merge pull requests by
