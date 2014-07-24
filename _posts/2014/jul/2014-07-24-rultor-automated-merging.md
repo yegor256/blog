@@ -50,7 +50,7 @@ we can't find all of them in any of the CI tools currently available on the
 market:
 
  * **Merging**. We make master branch read-only in our projects,
-   as [this article]({% post_url 2014/jul/2014-07-21-read-only-master %})
+   as [this article]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
    recommends. All changes into master we pass through
    a script that validates them and merges.
 
