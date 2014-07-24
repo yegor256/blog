@@ -1,11 +1,18 @@
 module Yegor
   module Filters
-    def clean_list(arr)
-        if arr.nil?
-            []
-        else
-            arr.compact.sort.uniq
+    def keywords(page)
+        list = page['keywords']
+        if list.nil?
+            list = []
         end
+        list.compact.sort.uniq
+    end
+    def description(page)
+        text = page['description']
+        if text.nil?
+            text = ''
+        end
+        text
     end
   end
 end
