@@ -25,6 +25,8 @@ keywords:
   - http java client post
   - http java client sample
   - http post in java http client
+  - httpclient fluent
+  - httpclient java
   - java
   - java 1.4 http client
   - java 1.6 http client
@@ -88,6 +90,7 @@ keywords:
   - java http request get client ip
   - java http web service client
   - java http_client_ip
+  - java httpclient
   - java httpclient http/1.1 403 forbidden
   - java httpclient ntlm authentication
   - java httpclient post xml
