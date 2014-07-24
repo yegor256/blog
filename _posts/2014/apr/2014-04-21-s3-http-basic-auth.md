@@ -8,16 +8,20 @@ description:
   to buckets with HTTP Basic Authentication, I've created
   a free cloud service for this purpose
 keywords:
-  - s3 bucket basic auth
-  - amazon s3 bucket authentication
-  - private content amazon s3
-  - basic auth s3
   - amazon s3 basic auth
+  - amazon s3 bucket authentication
+  - aws s3 basic auth
+  - basic auth s3
   - http basic auth
   - http basic auth amazon s3
+  - private content amazon s3
+  - s3 auth
   - s3 authentication
   - s3 authorization
   - s3 basic auth
+  - s3 bucket basic auth
+  - s3 http auth
+  - s3auth
 ---
 
 {% badge http://img.s3auth.com/logo.png 200 %}
