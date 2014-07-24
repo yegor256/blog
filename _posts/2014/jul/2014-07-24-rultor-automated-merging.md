@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rultor.com, Merging Bot"
-date: 2014-07-16
+date: 2014-07-24
 tags: rultor ci
 description:
   Rultor.com is a bot that talks to you via Github
