@@ -25,6 +25,8 @@ keywords:
   - jenkins preflight builds
 ---
 
+{% badge http://img.rultor.com/logo.svg 100 %}
+
 You get a Github pull request. You review it. It looks correct &mdash; it's time
 to merge it into `master`. You post a comment in it, asking
 [@rultor](https://github.com/rultor) to test and merge. Rultor starts a new
