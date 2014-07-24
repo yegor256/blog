@@ -10,6 +10,8 @@ keywords:
   - jekyll pygments
   - jekyll lexer pygments
   - custom lexer pygments jekyll
+  - jekyll pygments custom
+  - how to use custom pygments in jekyll
 ---
 
 I needed to create a custom syntax highlighting

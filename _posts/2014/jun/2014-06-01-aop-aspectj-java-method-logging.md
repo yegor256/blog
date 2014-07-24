@@ -9,31 +9,20 @@ description:
   This article explains how this can be done with AspectJ
   and Java annotations.
 keywords:
-  - "@loggable"
-  - annotations java
   - aop annotations
-  - aop java
   - aop java logging
   - aop log
   - aop logging
   - aop logging annotations
   - aop logging java
   - aspect oriented programming java
-  - aspectj annotation
   - aspectj logging
-  - aspectj logging annotations
-  - aspectj logging example
   - aspectj weaving annotations
   - every method logging java
   - java annotation logging example
-  - java annotation method call
-  - java aop
   - java method execution time annotation
-  - jcabi aspects
   - log every method java
-  - method annotation java
   - method logging java
-  - slf4j logging aspectj
 discussions:
   reddit: http://www.reddit.com/r/java/comments/270k18/java_method_logging_with_aop_and_annotations/
   coderanch: http://www.coderanch.com/t/634479/aop/Java-Method-Logging-AOP-Annotations

@@ -8,6 +8,9 @@ description:
 keywords:
   - best movies
   - the best movie to watch
+  - favorite movies
+  - best moview to watch
+  - the best films
 ---
 
 Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  "Hollywood."
