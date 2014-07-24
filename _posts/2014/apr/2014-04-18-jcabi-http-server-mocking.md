@@ -5,7 +5,8 @@ date: 2014-04-18
 tags: jcabi http mocking
 description:
   HTTP server mocking in Java unit and integration
-  testing is easy and flexible with jcabi-http
+  testing is easy and flexible with jcabi-http; the article
+  explains how HTTP server can be mocked in JUnit tests
 keywords:
   - java http server
   - java http client

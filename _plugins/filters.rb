@@ -18,6 +18,12 @@ module Yegor
         if text.nil?
             text = ''
         end
+        if text.length < 100
+            raise "too short description in [#{page['title']}]"
+        end
+        if text.length > 200
+            raise "too long description in [#{page['title']}]"
+        end
         text
     end
   end

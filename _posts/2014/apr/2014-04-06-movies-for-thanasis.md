@@ -4,7 +4,9 @@ title: "Movies for Thanasis"
 date: 2014-04-06
 tags: movies
 description:
-  Most recommended movies to watch, for my friend Thanasis
+  Most recommended movies to watch, for my friend Thanasis; the list
+  is priceless, you must watch all of them before you can call
+  yourself a software developer :)
 keywords:
   - best movies
   - the best movie to watch

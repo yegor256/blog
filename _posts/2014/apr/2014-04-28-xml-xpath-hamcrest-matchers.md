@@ -5,7 +5,8 @@ date: 2014-04-28
 tags: xml matchers junit xpath
 description:
   jcabi-matchers is a new small library that extends
-  the Hamcrest arsenal with XML/XPath matchers
+  the Hamcrest arsenal with XML/XPath matchers; the article explains
+  how to use the in Java projects
 keywords:
   - xml hamcrest
   - xpath matchers
