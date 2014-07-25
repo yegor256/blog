@@ -18,7 +18,7 @@ keywords:
   - continuous integration
   - continuous integration pre-flight builds
   - continuous integration preflight builds
-  - how to fix broken builds
+  - build before merge
   - jenkins broken builds
   - managing broken builds
   - master branch
@@ -64,7 +64,7 @@ It is a well-known practice, when fixing that error becomes
 a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the continuous integration server.
 
-{% badge http://img.yegor256.com/2014/07/continuous-delivery-book.jpg 100 %}
+{% badge http://img.yegor256.com/2014/07/continuous-delivery-book.jpg 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
 
 [Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
@@ -156,7 +156,7 @@ in Github. The only solution is to work through forks and pull requests only.
 Simply remove everybody from the list of "collaborators" and they will
 have to submit changes through pull requests.
 
-{% badge http://img.rultor.com/logo.svg 100 %}
+{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
 
 Then, start using [Rultor.com](http://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is

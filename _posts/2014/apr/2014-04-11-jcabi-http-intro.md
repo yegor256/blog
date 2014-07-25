@@ -21,7 +21,7 @@ discussions:
   reddit: http://www.reddit.com/r/java/comments/22rfdc/fluent_java_http_client/
 ---
 
-{% badge http://img.jcabi.com/logo-square.png 64 %}
+{% badge http://img.jcabi.com/logo-square.png 64 http://http.jcabi.com %}
 
 In the world of Java, there are plenty of HTTP clients from which to choose.
 Nevertheless, I decided to create a new one because none of the other clients

@@ -18,7 +18,7 @@ keywords:
   - jigsaw css w3c validator
 ---
 
-{% badge http://img.jcabi.com/logo-square.png 64 %}
+{% badge http://img.jcabi.com/logo-square.png 64 http://w3c.jcabi.com %}
 
 A few years ago, I created two Java wrappers for W3C validators: ([HTML](http://validator.w3.org/) and
 [CSS](http://jigsaw.w3.org/css-validator/)).

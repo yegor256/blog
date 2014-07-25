@@ -24,7 +24,7 @@ keywords:
   - s3auth
 ---
 
-{% badge http://img.s3auth.com/logo.png 200 %}
+{% badge http://img.s3auth.com/logo.png 200 http://www.s3auth.com %}
 
 [Amazon S3](http://aws.amazon.com/s3/) is a simple and very useful storage of
 binary objects (aka "files"). To use it, you create a "bucket" there with a

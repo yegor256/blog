@@ -16,7 +16,7 @@ keywords:
   - mock java http server
 ---
 
-{% badge http://img.jcabi.com/logo-square.png 64 %}
+{% badge http://img.jcabi.com/logo-square.png 64 http://http.jcabi.com %}
 
 Recently, I explained a
 [fluent Java HTTP client]({% post_url 2014/apr/2014-04-11-jcabi-http-intro %})

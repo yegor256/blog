@@ -21,6 +21,8 @@ keywords:
   - webapp read manifest.mf
 ---
 
+{% badge http://img.jcabi.com/logo-square.png 64 http://manifests.jcabi.com %}
+
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)
 file in the `META-INF` directory. The file contains a list of attributes,

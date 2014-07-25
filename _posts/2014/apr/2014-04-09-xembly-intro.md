@@ -18,7 +18,7 @@ discussions:
   reddit: http://www.reddit.com/r/java/comments/22wsng/xembly_an_assembly_for_xml_java_implementation/
 ---
 
-{% badge http://img.xembly.org/logo-256x256.png 64 %}
+{% badge http://img.xembly.org/logo-256x256.png 64 http://www.xembly.org %}
 
 I use XML in almost every one of my projects. And, despite all the fuss about
 JSON/YAML, I honestly believe that XML is one of the greatest languages ever
