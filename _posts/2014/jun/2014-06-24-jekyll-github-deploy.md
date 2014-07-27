@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploy Jekyll to Github Pages"
-date: 2014-06-22
+date: 2014-06-24
 tags: jekyll github ruby
 description:
   Jekyll site can easily be deployed to Github Pages
