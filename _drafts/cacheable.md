@@ -34,7 +34,7 @@ import com.jcabi.aspects.Cacheable;
 public class Page {
   @Cacheable(lifetime = 5, unit = TimeUnit.MINUTES)
   String load() {
-    return new URL("http://google.com").content();
+    return new URL("http://google.com").getContent().toString();
   }
 }
 {% endhighlight %}
