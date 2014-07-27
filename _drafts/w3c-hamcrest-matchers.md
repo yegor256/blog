@@ -4,7 +4,8 @@ title: "W3C Hamcrest Matchers"
 date: 2014-05-06
 tags: w3c jcabi hamcrest
 description:
-  ...
+  W3C Hamcrest matchers from jcabi-matchers simplify
+  integration of your JUnit tests with W3C online validators
 keywords:
   - github api
   - github java api
