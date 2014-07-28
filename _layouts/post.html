@@ -15,19 +15,19 @@ layout: default
     </p>
     <div class="buttons">
       <nav class="share" role="navigation">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com{{ page.url }}"
+        <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
           title="Share on Facebook" class="button">
           <i class="ico ico-facebook"></i>
         </a>
-        <a href="https://twitter.com/share?url=http://www.yegor256.com{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
+        <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
           title="Share on Twitter" class="button">
           <i class="ico ico-twitter"></i>
         </a>
-        <a href="https://plus.google.com/share?url=http://www.yegor256.com{{ page.url }}"
+        <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
           title="Share on Google+" class="button">
           <i class="ico ico-google"></i>
         </a>
-        <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com{{ page.url }}"
+        <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ page.url }}"
           title="Share on LinkedIn" class="button">
           <i class="ico ico-linkedin"></i>
         </a>
