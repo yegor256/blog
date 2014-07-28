@@ -11,7 +11,7 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
 # https://github.com/agelber/jekyll-rss
-url: http://www.yegor256.com/
+url: http://www.yegor256.com
 rss_name: rss.xml
 
 # see https://github.com/noct/jekyll-sass
