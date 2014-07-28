@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rultor.com, Merging Bot"
+title: "Rultor.com, a Merging Bot"
 date: 2014-07-24
 tags: rultor ci
 description:
