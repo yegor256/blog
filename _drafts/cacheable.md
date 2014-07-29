@@ -4,8 +4,7 @@ title: "Cache Java Method Results"
 date: 2014-07-18
 tags: java jcabi cacheable aop
 description:
-  Caching Java method results is easy with jcabi-aspects,
-  a small library that uses AspectJ and Java annotations
+Caching Java method results is easy with jcabi-aspects,  a small library that uses AspectJ and Java annotations.
 keywords:
   - aop caching
   - java aop cache
@@ -18,17 +17,13 @@ keywords:
   - "@Cacheable"
 ---
 
-Say, you have a method that takes time to execute
-and you want its result to be cached. There are
-[many solutions](http://www.coderanch.com/how-to/java/CachingStrategies), including
+Say, you have a method that takes time to execute and you want its result to be cached. There are [many solutions](http://www.coderanch.com/how-to/java/CachingStrategies), including 
 [Apache Commons JCS](http://commons.apache.org/proper/commons-jcs/),
 [Ehcache](http://www.ehcache.org),
 [JSR 107](https://jcp.org/en/jsr/detail?id=107),
 [Guava Caching](https://code.google.com/p/guava-libraries/wiki/CachesExplained)
 and many others.
-[jcabi-aspects](http://aspects.jcabi.com/annotation-cacheable.html) offers
-a very simple one, based on AOP aspects and Java6 annotations:
-
+[jcabi-aspects](http://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one, based on AOP aspects and Java6 annotations:
 {% highlight java %}
 import com.jcabi.aspects.Cacheable;
 public class Page {
@@ -39,41 +34,24 @@ public class Page {
 }
 {% endhighlight %}
 
-The result of `load()` method will be cached in memory
-for five minutes.
+The result of `load()` method will be cached in memory for five minutes.
 
 <!--more-->
-
 ## How It Works?
-
-This post about
-[AOP, AspectJ and method loging]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
-explains how "aspect weaving" works (highly recommend to read it first).
+This post about [AOP, AspectJ and method loging]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}) explains how "aspect weaving" works (I highly recommend that you read it first).
 Here I'll explain how caching works.
-
-The approach is very straight forward. There is a static hash map with
-keys as "method coordinates" and values as their results.
-Method coordinates consist of the object, an owner of the method, and
-method name with parameter types.
-
-In the example above, right after the method `load()` finishes, the map
-will get a new entry (simplified example, of course):
+The approach is very straight forward. There is a static hash map with keys as "method coordinates" and values as their results. Method coordinates consist of the object, an owner of the method and a method name with parameter types.
+In the example above, right after the method `load()` finishes, the map gets a new entry (simplified example, of course):
 
 {% highlight text %}
 key: [page, "load()"]
 value: "<html>...</html>"
 {% endhighlight %}
 
-Every consecutive call to `load()` will be intercepted by
-the aspect from [jcabi-aspects](http://aspects.jcabi.com) and immediately
-resolved with a value from the cache map. The method will not get
-any control till the end of its lifetime, which is five minutes
-in the example above.
+Every consecutive call to `load()` will be intercepted by the aspect from [jcabi-aspects](http://aspects.jcabi.com) and resolved immediately with a value from the cache map. The method will not get any control until the end of its lifetime, which is five minutes in the example above.
 
 ## What About Cache Flushing?
-
-Sometimes it's necessary to have an ability to flush cache
-before the end of its lifetime. Here is a practical example:
+Sometimes it's necessary to have the ability to flush cache before the end of its lifetime. Here is a practical example:
 
 {% highlight java %}
 import com.jcabi.aspects.Cacheable;
@@ -89,17 +67,8 @@ public class Employees {
 }
 {% endhighlight %}
 
-It's obvious, that the number of employess in the database will be
-different after `add()` method execution and the result of `size()` should
-be invalidated in cache. This invalidation operation is called "flushing"
-and `@Cacheable.FlushBefore` triggers it.
-
-Actually, every call to `add()` invalidates all cached methods in this
-class, not only `size()`.
-
-There is also `@Cacheable.FlushAfter`. The difference is that `FlushBefore`
-guarantees that cache is already invalidated when method `add()` starts.
-`FlushAfter` invalidates cache after method `add()` finishes. This small
-difference makes a big one, sometimes.
-
+It's obvious that the number of employees in the database will be different after `add()` method execution and the result of `size()` should be invalidated in cache. This invalidation operation is called "flushing" and `@Cacheable.FlushBefore` triggers it.
+Actually, every call to `add()` invalidates all cached methods in this class, not only `size()`.
+There is also `@Cacheable.FlushAfter`. The difference is that `FlushBefore` guarantees that cache is already invalidated when the method `add()` starts.
+`FlushAfter` invalidates cache after method `add()` finishes. This small difference makes a big one, sometimes.
 This article explains [how to add jcabi-aspects to your project](http://aspects.jcabi.com/example-weaving.html).
