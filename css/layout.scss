@@ -99,21 +99,6 @@ a, a:visited {
       margin-right: 0.2 * $font-size;
     }
   }
-  .gcse {
-    @extend .desktop-only;
-    display: inline-block;
-    width: 75%;
-    height: 64px;
-    line-height: normal;
-    input.gsc-search-button {
-      background-color: #ccc;
-      border-color: #ccc;
-      &:hover {
-        background-color: $black;
-        border-color: $black;
-      }
-    }
-  }
 }
 .footer {
   @extend .small;

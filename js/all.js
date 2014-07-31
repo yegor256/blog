@@ -35,6 +35,14 @@ function send_email($button, from, text, subject, success, error) {
 
 $(
   function() {
+    $('#search-query').lunrSearch(
+      {
+        indexUrl: '/search.json',
+        results: '#search-results',
+        entries: '.entries',
+        template: '#search-results-template'
+      }
+    );
     $('.button').click(
       function (event) {
         event.preventDefault();

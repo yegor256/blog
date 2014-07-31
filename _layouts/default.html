@@ -12,7 +12,7 @@
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
@@ -40,9 +40,22 @@
             <li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="ico ico-email"></i></a></li>
           </ul>
         </nav>
-        <div class="gcse" role="search">
-          <div class="gcse-search"></div>
+        <div id="search">
+          <input id="search-query" class="field field-text"
+            name="q" placeholder="Search" autocomplete="off"/>
+          <div id="search-results" style="display: none;">
+            <div class="entries"></div>
+          </div>
         </div>
+        {% raw %}
+        <script id="search-results-template" type="text/mustache">
+          {{#entries}}
+            <div>
+              <a href="{{url}}">{{title}}</a>
+            </div>
+          {{/entries}}
+        </script>
+        {% endraw %}
       </header>
     </div>
     {{ content }}
