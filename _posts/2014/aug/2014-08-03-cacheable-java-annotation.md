@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cache Java Method Results"
-date: 2014-07-18
+date: 2014-08-03
 tags: java jcabi cacheable aop
 description:
   Caching Java method results is easy with jcabi-aspects,
