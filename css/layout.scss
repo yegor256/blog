@@ -13,7 +13,7 @@ $gray: lighten($black, 50);
 $light-gray: lighten($black, 83);
 
 $width: 700px;
-$font-size: 19px;
+$em: 19px;
 
 @mixin unprintable() {
   @media print {
@@ -34,7 +34,7 @@ $font-size: 19px;
   color: $light-gray;
 }
 .small {
-  font-size: 0.85 * $font-size;
+  font-size: 0.85 * $em;
 }
 .desktop-only {
   @media all and (max-width: $width) {
@@ -47,10 +47,10 @@ body {
   font-weight: 400;
   background-color: #fff;
   color: $black;
-  font-size: $font-size;
+  font-size: $em;
   margin: 0;
-  padding-top: 2 * $font-size;
-  padding-bottom: 2 * $font-size;
+  padding-top: 2 * $em;
+  padding-bottom: 2 * $em;
   position: relative;
   overflow-x: hidden;
 }
@@ -74,13 +74,13 @@ a, a:visited {
   margin-left: auto;
   margin-right: auto;
   width: $width;
-  line-height: 1.4 * $font-size;
-  padding-left: 2 * $font-size;
-  padding-right: 2 * $font-size;
+  line-height: 1.4 * $em;
+  padding-left: 2 * $em;
+  padding-right: 2 * $em;
   @media all and (max-width: $width) {
     width: 100%;
-    padding-left: $font-size;
-    padding-right: $font-size;
+    padding-left: $em;
+    padding-right: $em;
   }
 }
 .photo {
@@ -95,8 +95,8 @@ a, a:visited {
     padding-left: 0;
     li {
       display: inline;
-      margin-left: 0.2 * $font-size;
-      margin-right: 0.2 * $font-size;
+      margin-left: 0.2 * $em;
+      margin-right: 0.2 * $em;
     }
   }
 }
@@ -104,7 +104,7 @@ a, a:visited {
   @extend .small;
   @extend .gray;
   @extend .desktop-only;
-  margin-top: 5 * $font-size;
+  margin-top: 5 * $em;
   text-align: center;
 }
 .disqus {
@@ -116,12 +116,12 @@ a, a:visited {
   }
 }
 #disqus_thread {
-  margin-top: 5 * $font-size;
+  margin-top: 5 * $em;
 }
 time {
   @extend .small;
   @extend .gray;
-  margin-right: $font-size;
+  margin-right: $em;
 }
 .buttons {
   @include unprintable();
@@ -129,7 +129,7 @@ time {
   width: 50%;
   .share {
     display: inline-block;
-    font-size: 1.5 * $font-size;
+    font-size: 1.5 * $em;
     a, a:visited {
       @extend .gray;
       text-decoration: none;
@@ -145,8 +145,8 @@ code, pre {
 }
 code {
   background-color: $light-gray;
-  line-height: $font-size;
-  padding: 0 0.3 * $font-size;
+  line-height: $em;
+  padding: 0 0.3 * $em;
 }
 label {
   display: block;
@@ -157,9 +157,9 @@ fieldset {
 }
 .field {
   box-sizing: border-box;
-  font-size: $font-size;
+  font-size: $em;
   font-family: $main-font;
-  padding: .2 * $font-size .5 * $font-size;
+  padding: .2 * $em .5 * $em;
 }
 .field-text {
   border: 1px solid $black;
@@ -169,8 +169,8 @@ fieldset {
 }
 h1 {
   font-weight: 600;
-  font-size: 2 * $font-size;
-  line-height: 2 * $font-size;
+  font-size: 2 * $em;
+  line-height: 2 * $em;
   a {
     text-decoration: none;
   }
@@ -179,7 +179,16 @@ h2, h3 {
   position: relative;
 }
 h2 {
-  margin-top: 2 * $font-size;
+  margin-top: 2 * $em;
+  a.link {
+    @extend .gray;
+    margin-left: .3 * $em;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      opacity: 1;
+    }
+  }
 }
 .highlighttable {
   border-spacing: 0;
@@ -188,9 +197,9 @@ h2 {
   .linenos {
     @extend .gray;
     @extend .desktop-only;
-    width: 2 * $font-size;
+    width: 2 * $em;
     padding-right: 2px;
-    min-width: 2 * $font-size;
+    min-width: 2 * $em;
     text-align: right;
   }
   .highlight {
@@ -201,8 +210,8 @@ h2 {
   }
 }
 .highlight {
-  margin-left: 2 * $font-size;
-  padding-left: 0.5 * $font-size !important;
+  margin-left: 2 * $em;
+  padding-left: 0.5 * $em !important;
   border-left: 3px solid $light-gray;
   @media all and (max-width: $width) {
     margin-left: 0;
@@ -213,17 +222,17 @@ h2 {
 }
 pre {
   display: block;
-  line-height: 1.4 * $font-size;
+  line-height: 1.4 * $em;
   code {
     background-color: inherit;
     padding: 0;
   }
   @media all and (max-width: $width) {
-    line-height: 1.2 * $font-size;
+    line-height: 1.2 * $em;
   }
 }
 .front {
-  margin-bottom: 4 * $font-size;
+  margin-bottom: 4 * $em;
 }
 .pagination {
   @include unprintable();
@@ -239,18 +248,6 @@ figure {
   @extend .desktop-only;
   float: right;
   margin-left: 2em;
-}
-.header-link {
-  position: absolute;
-  left: -1.4em;
-  opacity: 0;
-  font-size: .75em;
-  -webkit-transition: opacity 0.2s ease-in-out 0.1s;
-  -moz-transition: opacity 0.2s ease-in-out 0.1s;
-  -ms-transition: opacity 0.2s ease-in-out 0.1s;
-  h2:hover &, h3:hover & {
-    opacity: 1;
-  }
 }
 blockquote {
   @extend .gray;
