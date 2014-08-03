@@ -58,7 +58,7 @@ String content = IOUtils.toString(input, "UTF-8");
 input.close();
 {% endhighlight %}
 
-{% badge http://img.jcabi.com/logo-square.png 64 %}
+{% badge http://img.jcabi.com/logo-square.svg 64 %}
 
 As always, procedural programming has its inevitable
 disadvantages. To overcome them all, I designed

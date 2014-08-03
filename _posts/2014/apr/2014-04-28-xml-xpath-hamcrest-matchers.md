@@ -18,7 +18,7 @@ keywords:
   - hamcrest xpath example code
 ---
 
-{% badge http://img.jcabi.com/logo-square.png 64 http://matchers.jcabi.com %}
+{% badge http://img.jcabi.com/logo-square.svg 64 http://matchers.jcabi.com %}
 
 [Hamcrest](https://github.com/hamcrest/JavaHamcrest) is my favorite instrument
 in unit testing. It replaces the JUnit procedural assertions of

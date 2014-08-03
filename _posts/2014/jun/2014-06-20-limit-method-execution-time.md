@@ -17,7 +17,7 @@ keywords:
   - aspectj weaving annotations
 ---
 
-{% badge http://img.jcabi.com/logo-square.png 64 http://aspects.jcabi.com %}
+{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 Say, you want to allow a Java method to work for
 a maximum of five seconds and want an exception

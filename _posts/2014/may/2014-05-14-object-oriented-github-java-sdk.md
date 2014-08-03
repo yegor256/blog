@@ -34,7 +34,7 @@ but faced a number of issues:
  * They provide no mocking instruments
  * They don't cover the entire API and can't be extended
 
-{% badge http://img.jcabi.com/logo-square.png 64 %}
+{% badge http://img.jcabi.com/logo-square.svg 64 %}
 
 Keeping in mind all those drawbacks, I created my
 own library &mdash; [jcabi-github](http://github.jcabi.com).
