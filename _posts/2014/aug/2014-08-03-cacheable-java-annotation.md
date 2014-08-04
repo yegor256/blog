@@ -19,7 +19,6 @@ keywords:
 discussions:
   reddit: http://redd.it/2cikh0
   hacker-news: https://news.ycombinator.com/item?id=8130679
-  coderanch: http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
