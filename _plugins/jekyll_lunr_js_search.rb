@@ -2,9 +2,7 @@ require 'rubygems'
 require 'json'
 
 module Jekyll
-
   class Indexer < Generator
-
     def initialize(config = {})
       super(config)
 
@@ -39,36 +37,34 @@ module Jekyll
         entry = SearchEntry.create(item, content_renderer)
 
         entry.strip_index_suffix_from_url! if @strip_index_html
-        entry.strip_stopwords!(stopwords, @min_length) if File.exists?(@stopwords_file)
+        entry.strip_stopwords!(stopwords, @min_length) if File.exist?(@stopwords_file)
 
         index << {
-          :title => entry.title,
-          :url => entry.url,
-          :date => entry.date,
-          :categories => entry.categories,
-          :body => entry.body
+          title: entry.title,
+          url: entry.url,
+          date: entry.date,
+          categories: entry.categories,
+          body: entry.body
         }
-
-        puts 'Indexed ' << "#{entry.title} (#{entry.url})"
       end
 
-      json = JSON.generate({:entries => index})
+      json = JSON.generate(entries: index)
 
       # Create destination directory if it doesn't exist yet. Otherwise, we cannot write our file there.
-      Dir::mkdir(site.dest) unless File.directory?(site.dest)
+      Dir.mkdir(site.dest) unless File.directory?(site.dest)
 
       # File I/O: create search.json file and write out pretty-printed JSON
       filename = 'search.json'
 
-      File.open(File.join(site.dest, filename), "w") do |file|
+      File.open(File.join(site.dest, filename), 'w') do |file|
         file.write(json)
       end
 
       # Keep the search.json file from being cleaned by Jekyll
-      site.static_files << Jekyll::SearchIndexFile.new(site, site.dest, "/", filename)
+      site.static_files << Jekyll::SearchIndexFile.new(site, site.dest, '/', filename)
     end
 
-  private
+    private
 
     # load the stopwords file
     def stopwords
@@ -79,12 +75,12 @@ module Jekyll
       items = []
 
       # deep copy pages
-      site.pages.each {|page| items << page.dup }
-      site.posts.each {|post| items << post.dup }
+      site.pages.each { |page| items << page.dup }
+      site.posts.each { |post| items << post.dup }
 
       # only process files that will be converted to .html and only non excluded files
-      items.select! {|i| i.output_ext == '.html' && ! @excludes.any? {|s| (i.url =~ Regexp.new(s)) != nil } }
-      items.reject! {|i| i.data['exclude_from_search'] }
+      items.select! { |i| i.output_ext == '.html' && ! @excludes.any? { |s| (i.url =~ Regexp.new(s)) != nil } }
+      items.reject! { |i| i.data['exclude_from_search'] }
 
       items
     end
@@ -93,7 +89,6 @@ end
 require 'nokogiri'
 
 module Jekyll
-
   class PageRenderer
     def initialize(site)
       @site = site
@@ -103,21 +98,19 @@ module Jekyll
     def render(item)
       item.render({}, @site.site_payload)
       doc = Nokogiri::HTML(item.output)
-      paragraphs = doc.search('//text()').map {|t| t.content }
-      paragraphs = paragraphs.join(" ").gsub("\r", " ").gsub("\n", " ").gsub("\t", " ").gsub(/\s+/, " ")
+      paragraphs = doc.search('//text()').map { |t| t.content }
+      paragraphs = paragraphs.join(' ').gsub("\r", ' ').gsub("\n", ' ').gsub("\t", ' ').gsub(/\s+/, ' ')
     end
   end
-
 end
 require 'nokogiri'
 
 module Jekyll
-
   class SearchEntry
     def self.create(page_or_post, renderer)
       return create_from_post(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Post)
       return create_from_page(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Page)
-      raise 'Not supported'
+      fail 'Not supported'
     end
 
     def self.create_from_page(page, renderer)
@@ -140,7 +133,7 @@ module Jekyll
 
     def self.extract_title_and_url(item)
       data = item.to_liquid
-      [ data['title'], data['url'] ]
+      [data['title'], data['url']]
     end
 
     attr_reader :title, :url, :date, :categories, :body
@@ -155,7 +148,7 @@ module Jekyll
 
     # remove anything that is in the stop words list from the text to be indexed
     def strip_stopwords!(stopwords, min_length)
-      @body = @body.split.delete_if() do |x|
+      @body = @body.split.delete_if do |x|
         t = x.downcase.gsub(/[^a-z]/, '')
         t.length < min_length || stopwords.include?(t)
       end.join(' ')
@@ -163,12 +156,10 @@ module Jekyll
   end
 end
 module Jekyll
-
   class SearchIndexFile < StaticFile
     # Override write as the search.json index file has already been created
-    def write(dest)
+    def write(_dest)
       true
     end
   end
-
 end

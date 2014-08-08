@@ -17,9 +17,9 @@ module Jekyll
       related_scores = Hash.new(0)
       posts.each do |post|
         post.tags.each do |tag|
-          if self.tags.include?(tag) && post != self
+          if tags.include?(tag) && post != self
             cat_freq = tag_freq(posts)[tag]
-            related_scores[post] += (1+highest_freq-cat_freq)
+            related_scores[post] += (1 + highest_freq - cat_freq)
           end
         end
       end
@@ -32,7 +32,7 @@ module Jekyll
       return @tag_freq if @tag_freq
       @tag_freq = Hash.new(0)
       posts.each do |post|
-        post.tags.each {|tag| @tag_freq[tag] += 1}
+        post.tags.each { |tag| @tag_freq[tag] += 1 }
       end
       @tag_freq
     end
@@ -40,7 +40,7 @@ module Jekyll
     # Sort the related posts in order of their score and date
     # and return just the posts
     def sort_related_posts(related_scores)
-      related_scores.sort do |a,b|
+      related_scores.sort do |a, b|
         if a[1] < b[1]
           1
         elsif a[1] > b[1]
@@ -48,7 +48,7 @@ module Jekyll
         else
           b[0].date <=> a[0].date
         end
-      end.collect {|post,freq| post}
+      end.map { |post, _freq| post }
     end
   end
 

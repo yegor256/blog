@@ -19,4 +19,4 @@ module Yegor
   end
 end
 
-Liquid::Template.register_tag("contents", Yegor::ContentsBlock)
+Liquid::Template.register_tag('contents', Yegor::ContentsBlock)

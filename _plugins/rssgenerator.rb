@@ -36,11 +36,11 @@ module Jekyll
       require 'rss'
 
       # Create the rss with the help of the RSS module
-      rss = RSS::Maker.make("2.0") do |maker|
+      rss = RSS::Maker.make('2.0') do |maker|
         maker.channel.title = site.config['name']
         maker.channel.link = site.config['url']
         maker.channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"
-        maker.channel.author = site.config["author"]
+        maker.channel.author = site.config['author']
         maker.channel.updated = site.posts.map { |p| p.date  }.max
         maker.channel.copyright = site.config['copyright']
 
@@ -60,11 +60,11 @@ module Jekyll
       end
 
       # File creation and writing
-      rss_path = ensure_slashes(site.config['rss_path'] || "/")
-      rss_name = site.config['rss_name'] || "rss.xml"
+      rss_path = ensure_slashes(site.config['rss_path'] || '/')
+      rss_name = site.config['rss_name'] || 'rss.xml'
       full_path = File.join(site.dest, rss_path)
       ensure_dir(full_path)
-      File.open("#{full_path}#{rss_name}", "w") { |f| f.write(rss) }
+      File.open("#{full_path}#{rss_name}", 'w') { |f| f.write(rss) }
 
       # Add the feed page to the site pages
       site.pages << Jekyll::RssFeed.new(site, site.dest, rss_path, rss_name)
@@ -87,7 +87,7 @@ module Jekyll
     #
     # Returns the path with a leading slash
     def ensure_leading_slash(path)
-      path[0] == "/" ? path : "/#{path}"
+      path[0] == '/' ? path : "/#{path}"
     end
 
     # Ensures the given path has a trailing slash
@@ -96,7 +96,7 @@ module Jekyll
     #
     # Returns the path with a trailing slash
     def ensure_trailing_slash(path)
-      path[-1] == "/" ? path : "#{path}/"
+      path[-1] == '/' ? path : "#{path}/"
     end
 
     # Ensures the given directory exists

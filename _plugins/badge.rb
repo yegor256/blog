@@ -9,14 +9,15 @@ module Yegor
         @url = opts[2].strip
       end
     end
-    def render(context)
-      img = "<img src='#{CGI::escapeHTML @src}' style='width:#{@width}px;' alt='badge'/>"
+
+    def render(_context)
+      img = "<img src='#{CGI.escapeHTML @src}' style='width:#{@width}px;' alt='badge'/>"
       if @url
-        img = "<a href='#{CGI::escapeHTML @url}'>#{img}</a>"
+        img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
       end
       html = "<figure class='badge'>#{img}</figure>\n\n"
     end
   end
 end
 
-Liquid::Template.register_tag("badge", Yegor::BadgeBlock)
+Liquid::Template.register_tag('badge', Yegor::BadgeBlock)
