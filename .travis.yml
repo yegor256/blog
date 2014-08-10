@@ -14,6 +14,5 @@ env:
     - secure: "YRF2hq6GI07WDf8uzPgRZ72MF0/m+KRLXOvLFApzliPGav86wMdMBnUlb2TnbneOIjnZsFnivVTi0nOmhBJu/tOTnLdXUn96smKg60hHuQOqZYohv0Kbzl5SU0uDfN50q2inXxgd7xSH3D0zCMge8TacWzrp233NcjncArsYyoU="
 script:
   - _test/run.sh
-  - rubocop
   - jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
 

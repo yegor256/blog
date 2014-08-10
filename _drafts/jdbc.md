@@ -15,6 +15,8 @@ keywords:
   - lightweight jdbc wrapper
 ---
 
+{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+
 This is how you fetch a text from an SQL table
 with [jcabi-jdbc](http://jdbc.jcabi.com):
 
@@ -58,7 +60,7 @@ private static DataSource source() {
 {% endhighlight %}
 
 Pay attention to the `@Cacheable` annotation.
-[This post]({% 2014/aug/2014-08-03-cacheable-java-annotation %})
+[This post]({% post_url 2014/aug/2014-08-03-cacheable-java-annotation %})
 explains how it can help you to cache Java method result, for some time.
 Attribute `forever` set to `true` means that we don't want this
 method to be called more than once. Indeed, we want connection pool
