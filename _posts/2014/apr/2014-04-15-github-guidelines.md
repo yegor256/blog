@@ -2,14 +2,7 @@
 layout: post
 title: Github Guidelines
 date: 2014-04-15
-author:
-  name: Yegor Bugayenko
-  avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
-categories: blog
-disqus: true
-tags:
-  - github
-  - tasks
+tags: github
 description: |
   This step-by-step manual helps you to start working
   with a Github-hosted project in the spirit of XDSD.

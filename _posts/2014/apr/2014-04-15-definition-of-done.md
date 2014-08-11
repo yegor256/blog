@@ -2,15 +2,7 @@
 layout: post
 title: "Definition Of Done"
 date: 2014-04-15
-author:
-  name: Yegor Bugayenko
-  avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
-categories: blog
-disqus: true
-tags:
-  - process
-  - definition of done
-  - management
+tags: process xdsd
 description: |
   When tasks can be considered "done" and their
   implementation paid for? This post answers both of these questions.

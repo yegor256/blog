@@ -2,15 +2,7 @@
 layout: post
 title: Why Static Analysis Is So Annoying
 date: 2014-04-20
-author:
-  name: Yegor Bugayenko
-  avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
-categories: blog
-disqus: true
-tags:
-  - static analysis
-  - process
-  - quality
+tags: quality
 description:
   For most of XDSD newcomers static analysis looks
   too strict and annoying, while we think that it
@@ -20,6 +12,7 @@ keywords:
   - pre-flight builds
   - static quality control
   - java static analysis
+  - static analysis ci
 ---
 
 Code formatting is a headache, it takes too much time, any ideas?

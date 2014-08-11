@@ -2,15 +2,7 @@
 layout: post
 title: No Obligations
 date: 2014-04-13
-author:
-  name: Yegor Bugayenko
-  avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
-categories: blog
-disqus: true
-tags:
-  - process
-  - principles
-  - management
+tags: process xdsd
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders

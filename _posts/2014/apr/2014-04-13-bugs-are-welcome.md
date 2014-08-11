@@ -2,19 +2,11 @@
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
-author:
-  name: Yegor Bugayenko
-  avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
-categories: blog
-disqus: true
-tags:
-  - bugs
-  - process
-  - principles
+tags: bugs process xdsd
 description: |
   Unlike a very common understanding of a software bug as something negative,
   XDSD encourages all team members to find and report as many bugs
-  as possible, in order to improve quality of the end product
+  as possible
 keywords:
   - defects planning
   - management of programmers

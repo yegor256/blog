@@ -2,9 +2,7 @@
 layout: post
 title: "How XDSD Is Different"
 date: 2014-04-17
-tags:
-  - process
-  - human factor
+tags: process xdsd
 description: |
   This article lays out the most important and critical
   differences between XDSD and traditional software
@@ -14,6 +12,7 @@ keywords:
   - motivation of programmers
   - project management
   - effective project management
+  - xdsd
 ---
 
 eXtremely Distributed Software Development, or XDSD for short, is a methodology

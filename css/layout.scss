@@ -266,3 +266,22 @@ blockquote {
 .ico-rss:hover { color: #ff6600; }
 .ico-reddit:hover { color: #cee3f8; }
 .ico-coderanch:hover { color: #995c56; }
+figure {
+  position: relative;
+  margin: 0;
+  figcaption {
+    position: absolute;
+    font-size: .8em;
+    line-height: 1em;
+    left: .5em;
+    bottom: 1em;
+    color: lighten($black, 20);
+    background-color: rgba(0, 0, 0, .7);
+  }
+  figcaption:before {
+    content: "©";
+  }
+}
+.graphviz-wrapper {
+  text-align: center;
+}

@@ -14,6 +14,8 @@ keywords:
   - requirements engineering
   - requirements development
   - incremental requirements development
+  - controlled natural language
+  - requirements formal
 ---
 
 Requirements engineering is one of the most important disciplines in software
