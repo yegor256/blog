@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Strict Control of Java Code Quality"
-date: 2014-04-19
+date: 2014-08-13
 tags: java qulice
 description:
   Qulice.com is a Java Maven plugin that aggregates
@@ -145,7 +145,7 @@ because of:
  * **Industry Standards** &mdash;
    The decision to use this design is
    made by Checkstyle, not by a project architect. For me, as a project
-   developer, this means that I'm following industry standards. That makes 
+   developer, this means that I'm following industry standards. That makes
    the project (and its leaders) more respectable.
 
  * **Learning** &mdash;
