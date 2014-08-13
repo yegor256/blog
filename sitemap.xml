@@ -2,206 +2,210 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.yegor256.com/2009/03/04/pdd.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/06/introduction.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/06/movies-for-thanasis.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/06/phandom.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/09/xembly-intro.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/11/cost-of-loc.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/11/jcabi-http-intro.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/13/bugs-are-welcome.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/13/no-obligations-principle.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/15/definition-of-done.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/15/github-guidelines.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/17/how-xdsd-is-different.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/18/jcabi-http-server-mocking.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/20/how-hourly-rate-is-calculated.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/21/s3-http-basic-auth.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/26/incremental-requirements-with-requs.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/04/29/w3c-java-validators.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/01/dynamodb-local-maven-plugin.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/13/why-null-is-bad.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/14/object-oriented-github-java-sdk.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/21/mysql-maven-plugin.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/23/avoid-java-static-logger.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/05/26/amazon-s3-java-oop-adapter.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/19/avoid-string-concatenation.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/20/limit-method-execution-time.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/21/casperjs-with-maven.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/24/jekyll-github-deploy.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/25/xml-and-xslt-in-browser.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/26/sass-in-java-webapp.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/20/liquibase-in-maven.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/21/read-only-master-branch.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/24/rultor-automated-merging.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/29/docker-in-rultor.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/07/31/travis-and-rultor.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/2014/08/03/cacheable-java-annotation.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.yegor256.com/2014/08/13/strict-code-quality-control.html</loc>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/404.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/about-me.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/contents.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.yegor256.com/unsubscribe.html</loc>
-        <lastmod>2014-08-11T20:11:35+00:00</lastmod>
+        <lastmod>2014-08-13T21:36:15+00:00</lastmod>
     </url>
 </urlset>
