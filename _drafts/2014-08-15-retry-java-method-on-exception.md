@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Retry Java Method Call"
-date: 2014-08-12
+title: "How to Retry Java Method Call on Exception"
+date: 2014-08-15
 tags: jcabi java aop
 description: |
   @RetryOnFailure annotation from jcabi-aspects allows
-  you to retry a Java method call a few times before 
-  implementing an exception
+  you to retry a Java method call a few times before
+  throwing an exception
 keywords:
   - java retry method call
   - retry method call in java
