@@ -5,8 +5,8 @@ date: 2014-08-12
 tags: jcabi java aop
 description: |
   @RetryOnFailure annotation from jcabi-aspects allows
-  you to retry a Java method call a few times in case
-  of exception
+  you to retry a Java method call a few times before 
+  implementing an exception
 keywords:
   - java retry method call
   - retry method call in java
@@ -17,11 +17,11 @@ keywords:
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
-Say, you have a method that fails occasionally and
-and you want to retry it a few times before throwing
+If you have a method that fails occasionally and
+you want to retry it a few times before throwing
 an exception. [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html) from
 [jcabi-aspects](http://aspects.jcabi.com) can help.
-For example, you're downloading a web page:
+For example, if you're downloading the following web page:
 
 {% highlight java %}
 @RetryOnFailure(attempts = 3, delay = 10, unit = TimeUnit.SECONDS)
@@ -31,13 +31,13 @@ public String load(URL url) {
 {% endhighlight %}
 
 This method call will throw an exception only after three
-attempts, donw with ten seconds intervals.
+failed executions within a ten second interval.
 
 <!--more-->
 
 [This post]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
 explains how [jcabi-aspects](http://aspects.jcabi.com)
-work with binary weaving. This mechanism integrates AspectJ with
+works with binary weaving. This mechanism integrates AspectJ with
 your code.
 
 When method `load()` from the example above is called, this is what
@@ -55,7 +55,7 @@ while (attempts++ < 3) {
 {% endhighlight %}
 
 This approach may be very useful in the following situations
-(according to my experience):
+(based on my experience):
 
  * Executing JDBC `SELECT` statements
 
