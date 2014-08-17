@@ -2,10 +2,7 @@
 layout: post
 title: How Hourly Rate Is Calculated
 date: 2014-04-20
-tags:
-  - rates
-  - process
-  - management
+tags: xdsd
 description:
   In this article, we discuss a very sensitive and
   important topic &mdash; who should get higher rates
@@ -17,6 +14,7 @@ keywords:
   - price of freelancer
   - how to rate a freelancer
 ---
+
 In XDSD, everyone &mdash; including project managers,  analysts, programmers,
 and product owners &mdash; receives payments based on deliverables with agreed
 upon budgets. In the fhe first section of the article,
@@ -40,6 +38,8 @@ following:
  * Skills and experience listed in your CV;
  * Amount of time already spent on our projects;
  * Age, sex, nationality, religious beliefs, etc.
+
+<!--more-->
 
 The factors listed below, though, are indeed very important to us. They affect
 your "overall score" significantly and play a major part in decisions to

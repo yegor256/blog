@@ -2,7 +2,7 @@
 layout: post
 title: "How XDSD Is Different"
 date: 2014-04-17
-tags: process xdsd
+tags: xdsd
 description: |
   This article lays out the most important and critical
   differences between XDSD and traditional software
@@ -20,6 +20,8 @@ that differs significantly from working in traditional software development
 teams. Most XDSD methods are so different (yet critical) that many newcomers get
 confused. This article should help you bootstrap once you join a project managed
 with by XDSD principles &mdash; either as a developer or a project sponsor.
+
+<!--more-->
 
 ## We Pay Only For Closed Tasks
 

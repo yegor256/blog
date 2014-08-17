@@ -2,7 +2,7 @@
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
-tags: bugs process xdsd
+tags: testing xdsd
 description: |
   Unlike a very common understanding of a software bug as something negative,
   XDSD encourages all team members to find and report as many bugs
@@ -27,6 +27,8 @@ But, let's take a look at bugs from a different angle. In XDSD, we say that
 "bugs are welcome." This means we encourage all interested parties to find bugs
 and report them. We want our team to see bugs as something that we need in our
 projects. Why?
+
+<!--more-->
 
 Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs

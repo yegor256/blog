@@ -2,7 +2,7 @@
 layout: post
 title: No Obligations
 date: 2014-04-13
-tags: process xdsd
+tags: xdsd
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders
@@ -23,6 +23,8 @@ management](http://en.wikipedia.org/wiki/Micromanagement)?
 
 We start with creating plans, drawing Gantt charts, announcing milestones,
 motivating everybody and promising big bonuses on success.
+
+<!--more-->
 
 ## Excuses
 

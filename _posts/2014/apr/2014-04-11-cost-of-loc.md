@@ -2,7 +2,7 @@
 layout: post
 title: "How much do you pay per line of code?"
 date: 2014-04-11
-tags: loc cost experience
+tags: xdsd mgmt
 description: |
   This article compares two projects and calculates
   their average costs per one line of code changed.
@@ -21,6 +21,8 @@ There are [tons of articles](http://blog.codinghorror.com/diseconomies-of-scale-
 written about it, as well as famous books.
 However, I want to compare two projects in which I have participated recently
 and discuss some very interesting numbers.
+
+<!--more-->
 
 ## Project #1: Traditionally Co-located
 

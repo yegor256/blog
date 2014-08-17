@@ -2,7 +2,7 @@
 layout: post
 title: "PDD by Roles"
 date: 2014-04-12
-tags: architecture srs pdd process
+tags: xdsd pdd
 description: |
   The article explains how Puzzle Driven Development
   is seen by people in different project roles,
@@ -32,6 +32,8 @@ Basically, there are six key roles in any software team:
 Everybody, except the project manager, affects the project in two
 ways: they fix it and they break it at the same time. Let me explain
 this with a simple example.
+
+<!--more-->
 
 ## "Fix and Break"
 
