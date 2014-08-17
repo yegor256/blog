@@ -283,7 +283,7 @@ Now it's time to try how it all works. Create a new ticket in
 Github issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
-{% highlight yaml %}
+{% highlight text %}
 @rultor release, tag is `0.1`
 {% endhighlight %}
 
