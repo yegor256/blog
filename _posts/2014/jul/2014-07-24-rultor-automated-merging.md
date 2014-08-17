@@ -2,7 +2,7 @@
 layout: post
 title: "Rultor.com, a Merging Bot"
 date: 2014-07-24
-tags: rultor ci
+tags: rultor devops
 description:
   Rultor.com is a bot that talks to you via Github
   issue tracking and helps you merge pull requests by
@@ -44,12 +44,13 @@ the Github issue.
 ## Why not Jenkins or Travis?
 
 There are many tools on the market, which automate continuous integration and
-continuous delivery. For example, downloadable open-source [Jenkins](http://www
+continuous delivery (let's call them DevOps).
+For example, downloadable open-source [Jenkins](http://www
 .jenkins-ci.org) and hosted [Travis](http://travis-ci.org) both perform these
 tasks. So, why do we need one more?
 
 Well, there are three very important features that we need for our projects, but
-we can't find all of them in any of the CI tools currently available on the
+we can't find all of them in any of the DevOps tools currently available on the
 market:
 
  * **Merging**. We make master branch read-only in our projects,
@@ -58,14 +59,14 @@ market:
    a script that validates them and merges.
 
  * **Docker**. Every build should work in its own
- Docker container, in order to simplify configuration, isolate
- resources and make errors  easily reproduceable.
+   Docker container, in order to simplify configuration, isolate
+   resources and make errors  easily reproduceable.
 
- * **Tell vs. Trigger**. We need to communicate with CI tool
- through commands, right from our issue tracking system (Github
- issues, in most   projects). All existing CI systems trigger
- builds on certain   conditions. We need our developers to be able
- to talk to the tool, through human-like commands in the tickets they are working with.
+ * **Tell vs. Trigger**. We need to communicate with DevOps tool
+   through commands, right from our issue tracking system (Github
+   issues, in most projects). All existing DevOps systems trigger
+   builds on certain conditions. We need our developers to be able
+   to talk to the tool, through human-like commands in the tickets they are working with.
 
 A combination of these three features is what differs
 [Rultor](http://www.rultor.com) from all other existing systems.
@@ -76,7 +77,7 @@ Once Rultor finds a [merge command](http://doc.rultor.com/basics.html)
 in one of your Github pull requests, it does exactly this:
 
  1. Reads the [`.rultor.yml`](http://doc.rultor.com/reference.html)
- YAML config file from the root directory of your repository.
+    YAML config file from the root directory of your repository.
 
  2. Gets automated build execution command from it, for example `bundle test`.
 

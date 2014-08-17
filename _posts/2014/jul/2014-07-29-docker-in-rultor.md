@@ -2,7 +2,7 @@
 layout: post
 title: "Every Build in Its Own Docker Container"
 date: 2014-07-29
-tags: docker rultor ci
+tags: docker rultor devops
 description:
   Rultor.com runs every build in its own Docker container,
   perfectly isolating configurations and making them cacheable and reproducible.
@@ -15,6 +15,7 @@ keywords:
   - docker builds ci
   - unit tests in docker
   - docker container continuous integration
+  - docker devops
 ---
 
 {% badge http://img.rultor.com/docker-logo.png 100 http://www.docker.io %}
