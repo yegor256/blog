@@ -31,7 +31,7 @@ public String load(URL url) {
 {% endhighlight %}
 
 This method call will throw an exception only after three
-failed executions with a ten second interval between them.
+failed executions with a ten seconds interval between them.
 
 <!--more-->
 
