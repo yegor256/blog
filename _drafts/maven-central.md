@@ -60,7 +60,7 @@ article.
 When this step is done, you should have two file:
 `pubring.gpg` and `secring.gpg`.
 
-## Encrypt Security Assets
+## Create settings.xml
 
 Create `settings.xml`, next to two `.gpg` files created in the previous step:
 
@@ -89,7 +89,9 @@ Create `settings.xml`, next to two `.gpg` files created in the previous step:
 In this example, `9A105525` is the ID of your public key, and `my-secret`
 is the pass phrase you have used while generating the keys.
 
-Now, encrypt them with a public key of Rultor (`9AF0FA4C`):
+## Encrypt Security Assets
+
+Now, encrypt these three files with a public key of Rultor (`9AF0FA4C`):
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
@@ -98,7 +100,7 @@ gpg --trust-model always -a -e -r 9AF0FA4C secring.gpg
 gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
 {% endhighlight %}
 
-You will get three files: `pubring.gpg.asc`, `secring.gpg.asc`
+You will get three new files: `pubring.gpg.asc`, `secring.gpg.asc`
 and `settings.xml.asc`. Add them to the root directory of your project,
 commit and push. They contain your secret information,
 but only Rultor server can decrypt them.
@@ -278,6 +280,8 @@ You can compare your file with live Rultor
 [configuration of jcabi-aspects](https://github.com/jcabi/jcabi-aspects/blob/master/.rultor.yml).
 
 ## Run It!
+
+{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to try how it all works. Create a new ticket in
 Github issue tracker, and post something like that into it

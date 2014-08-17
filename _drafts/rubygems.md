@@ -102,6 +102,8 @@ In this example, replace `foo` with the name of your gem.
 
 ## Run It!
 
+{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
+
 Now it's time to try how it all works. Create a new ticket in
 Github issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):

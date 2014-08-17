@@ -2,17 +2,17 @@
 layout: post
 title: Code Reviews
 date: 2014-04-20
-tags:
-  - reviews
-  - process
-  - quality
+tags: xdsd
 description:
-  ...
+  The article explains XDSD requirements to code reviews
+  done by one programmer for the code written by another
+  programmer
 keywords:
   - code review
-  - pre-flight builds
-  - static quality control
-  - java static analysis
+  - quality review
+  - peer review of source code
+  - code review done right
+  - how to do code review
 ---
 
 When a pull request is assigned to you for a code review, the rules are simple:
