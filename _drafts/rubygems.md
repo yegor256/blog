@@ -87,7 +87,8 @@ This version name will be replaced by Rultor during deployment.
 Create `.rultor.yml` file in the root directory of your project:
 
 {% highlight yaml %}
-decrypt: ["repo/rubygems.yml.asc"]
+decrypt:
+  rubygems.yml: "repo/rubygems.yml.asc"
 release:
   script:
     - "rm -rf *.gem"
