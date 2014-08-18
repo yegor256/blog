@@ -265,10 +265,10 @@ Create `.rultor.yml` file in the root directory of your project
 explains this format in details):
 
 {% highlight yaml %}
-assets:
-  settings.xml: "gpg#settings.xml.asc"
-  pubring.gpg: "gpg#pubring.gpg.asc"
-  secring.gpg: "gpg#secring.gpg.asc"
+decrypt:
+  - "settings.xml.asc"
+  - "pubring.gpg.asc"
+  - "secring.gpg.asc"
 release:
   script:
     - "mvn versions:set \"-DnewVersion=${tag}\""
