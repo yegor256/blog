@@ -266,9 +266,9 @@ explains this format in details):
 
 {% highlight yaml %}
 decrypt:
-  - "settings.xml.asc"
-  - "pubring.gpg.asc"
-  - "secring.gpg.asc"
+  - "repo/settings.xml.asc"
+  - "repo/pubring.gpg.asc"
+  - "repo/secring.gpg.asc"
 release:
   script:
     - "mvn versions:set \"-DnewVersion=${tag}\""
