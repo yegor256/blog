@@ -35,7 +35,7 @@ takes just a few seconds of your time.
 
 By the way, I assume that you're hosting your project in Github. If not,
 this entire tutorial won't work. If you are still not in Github, I would
-strongly recommend to move there.
+strongly recommend moving there.
 
 ## Prepare Your POM
 
@@ -49,26 +49,26 @@ artifacts to Maven Central.
 Create an account in [Sonatype JIRA](https://issues.sonatype.org/)
 and raise a ticket, asking to approve your groupId. This
 [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html)
-explains this step in more details.
+explains this step in more detail.
 
 ## Create and Distribute a GPG Key
 
-Create a GPG key and distribute it, as explained in
+Create a GPG key and distribute it, as explained in this
 [Working with PGP Signatures](http://central.sonatype.org/pages/working-with-pgp-signatures.html)
 article.
 
-When this step is done, you should have two file:
+When this step is done, you should have two files:
 `pubring.gpg` and `secring.gpg`.
 
 ## Create settings.xml
 
-Create `settings.xml`, next to two `.gpg` files created in the previous step:
+Create `settings.xml`, next to the two `.gpg` files created in the previous step:
 
 {% highlight xml %}
 <settings>
   <profiles>
     <profile>
-      <id>foo</id> <!-- give it a name of your project -->
+      <id>foo</id> <!-- give it the name of your project -->
       <properties>
         <gpg.homedir>/home/r</gpg.homedir>
         <gpg.keyname>9A105525</gpg.keyname>
@@ -91,7 +91,7 @@ is the pass phrase you have used while generating the keys.
 
 ## Encrypt Security Assets
 
-Now, encrypt these three files with a public key of Rultor (`9AF0FA4C`):
+Now, encrypt these three files with a Rultor public key (`9AF0FA4C`):
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
@@ -102,12 +102,12 @@ gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
 
 You will get three new files: `pubring.gpg.asc`, `secring.gpg.asc`
 and `settings.xml.asc`. Add them to the root directory of your project,
-commit and push. They contain your secret information,
-but only Rultor server can decrypt them.
+commit and push. The files contain your secret information,
+but only the Rultor server can decrypt them.
 
 ## Add Sonatype Repositories
 
-I would recommend you to use [jcabi-parent](http://parent.jcabi.com), as
+I would recommend using [jcabi-parent](http://parent.jcabi.com), as
 a parent pom for your project. This will make many further steps
 unnecessary. If you're using jcabi-parent, skip this step.
 
@@ -132,7 +132,7 @@ to your `pom.xml`:
 
 ## Configure GPG Plugin
 
-Again, I'd recommend to use [http://parent.jcabi.com](jcabi-parent),
+Again, I'd recommend using [http://parent.jcabi.com](jcabi-parent),
 which configures this plugin automatically. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -164,7 +164,7 @@ Otherwise, add this plugin to your `pom.xml`:
 
 ## Configure Versions Plugin
 
-Once again, I recommend to use [http://parent.jcabi.com](jcabi-parent). It
+Once again, I recommend using [http://parent.jcabi.com](jcabi-parent). It
 configures all required plugins out-of-the-box. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -192,7 +192,7 @@ Otherwise, add this plugin to your `pom.xml`:
 ## Configure Sonatype Plugin
 
 Yes, you're right, [http://parent.jcabi.com](jcabi-parent) will help
-you here as well. If you're using it, skip this step.
+you here as well. If you're using it, skip this step too.
 
 Otherwise, add these four plugins to your `pom.xml`:
 
@@ -260,7 +260,7 @@ Otherwise, add these four plugins to your `pom.xml`:
 
 ## Create Rultor Config
 
-Create `.rultor.yml` file in the root directory of your project
+Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
 explains this format in details):
 
@@ -283,7 +283,7 @@ You can compare your file with live Rultor
 
 {% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
 
-Now it's time to try how it all works. Create a new ticket in
+Now it's time to see how it all works. Create a new ticket in the
 Github issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
@@ -295,7 +295,7 @@ You will get a response in a few seconds. The rest will be done by Rultor.
 
 Enjoy :)
 
-BTW, if something doesn't work as I explained, don't hesitate to
+BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to
-[Rultor issue tracker](https://github.com/yegor256/rultor/issues),
+[Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
