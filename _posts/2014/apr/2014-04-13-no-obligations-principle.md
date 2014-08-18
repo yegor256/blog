@@ -2,7 +2,7 @@
 layout: post
 title: No Obligations
 date: 2014-04-13
-tags: process xdsd
+tags: xdsd
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders
@@ -23,6 +23,8 @@ management](http://en.wikipedia.org/wiki/Micromanagement)?
 
 We start with creating plans, drawing Gantt charts, announcing milestones,
 motivating everybody and promising big bonuses on success.
+
+<!--more-->
 
 ## Excuses
 
@@ -69,7 +71,7 @@ responsibility **must be** on the shoulders of the team members. They should be
 responsible for their own tasks and report back to the project manager when they
 are finished with their jobs.
 
-{% picture http://img.xdsd.org/2014/04/big-lebowski-her-life-is-in-your-hands.jpg 0 The Big Lebowski (1998) by Joel Coen %}
+{% picture http://img.yegor256.com/2014/04/big-lebowski-her-life-is-in-your-hands.jpg 0 The Big Lebowski (1998) by Joel Coen %}
 
 Implementation problems should be solved by team members on their own. So, how
 do we accomplish this in XDSD?

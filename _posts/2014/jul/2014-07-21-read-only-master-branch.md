@@ -2,7 +2,7 @@
 layout: post
 title: "Master Branch Must Be Read-Only"
 date: 2014-07-21
-tags: ci
+tags: rultor devops
 description:
   Continuous integration doesn't work while programmers
   are able to commit into the master branch. This article
@@ -13,14 +13,11 @@ keywords:
   - commits to master branch
   - continous delivery
   - continous deployment
-  - continuous delivery pre-flight builds
   - continuous delivery preflight builds
   - continuous integration
-  - continuous integration pre-flight builds
   - continuous integration preflight builds
   - build before merge
-  - jenkins broken builds
-  - managing broken builds
+  - devops automated merge
   - master branch
   - pre-flight builds
   - preflight builds
@@ -69,7 +66,8 @@ should be fixed right after a red flag is raised by the continuous integration s
 [Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 
-There are a few good tools on the market, which automate CI. Some of them are open source, you can download
+There are a few good tools on the market, which automate DevOps procedures.
+Some of them are open source, you can download
 and install them on your own servers. For example:
 [Jenkins](http://www.jenkins-ci.org),
 [Go](http://www.thoughtworks.com/products/go-continuous-delivery), and
@@ -79,7 +77,7 @@ Some of them are available as a service in cloud, such as:
 [Drone](http://www.drone.io),
 [Wercker](http://wercker.com/), and many others.
 
-## Why CI Doesn't Work?
+## Why Continuos Integration Doesn't Work?
 
 CI is great, but the bigger the team (and the code base), the more often builds
 get broken. And, the longer it takes to fix them. I've seen many examples where

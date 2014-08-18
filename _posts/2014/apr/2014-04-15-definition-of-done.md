@@ -2,7 +2,7 @@
 layout: post
 title: "Definition Of Done"
 date: 2014-04-15
-tags: process xdsd
+tags: mgmt xdsd
 description: |
   When tasks can be considered "done" and their
   implementation paid for? This post answers both of these questions.
@@ -27,6 +27,8 @@ the task?"
 In XDSD, the definition of "done" is very simple &mdash; the task is done
 [iff](http://en.wikipedia.org/wiki/If_and_only_if)
 its author accepts the deliverables.
+
+<!--more-->
 
 At XDSD, our first and most important principle states that someone is paid only
 when he provides deliverables. Combining the definition of done and the

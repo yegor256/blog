@@ -2,7 +2,7 @@
 layout: post
 title: "PDD by Roles"
 date: 2014-04-12
-tags: architecture srs pdd process
+tags: xdsd pdd
 description: |
   The article explains how Puzzle Driven Development
   is seen by people in different project roles,
@@ -33,6 +33,8 @@ Everybody, except the project manager, affects the project in two
 ways: they fix it and they break it at the same time. Let me explain
 this with a simple example.
 
+<!--more-->
+
 ## "Fix and Break"
 
 Let's assume, for the sake of simplicity, that a project is a simple
@@ -56,7 +58,7 @@ the time I released it. In a few months, after I learn of and fix hundreds of bu
 
 This is the result of this "fix and break" approach.
 
-{% picture http://img.xdsd.org/2014/04/time-and-mess-diagram.jpg %}
+{% picture http://img.yegor256.com/2014/04/time-and-mess-diagram.jpg %}
 
 The diagram shows the relation between time and mess in the project.
 The bugs my friend is reporting to me are breaking the project, increasing
@@ -65,7 +67,7 @@ the bugs and are fixing the project. Your
 [Github]({% post_url 2014/apr/2014-04-15-github-guidelines %})
 commit dynamics should resemble this graph, for example:
 
-{% picture http://img.xdsd.org/2014/04/jcabi-github-commits-graph.png %}
+{% picture http://img.yegor256.com/2014/04/jcabi-github-commits-graph.png %}
 
 When the project starts, its messiness is rather low, and then it starts to grow. The messiness then
 reaches its peak and starts to go down.
@@ -77,7 +79,7 @@ to fix the project. He has to use the sponsor's time and money in order
 to remove all bugs and inconsistencies and return the project back
 to a "fixed" state.
 
-{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+{% picture http://img.yegor256.com/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
 
 When I say "bugs," I mean more than just software errors but also:
 
@@ -111,7 +113,7 @@ job is to translate owner's English into formal specifications in the SRS,
 understandable both by programmers and myself. It's not my responsibility
 to implement the feature.
 
-{% picture http://img.xdsd.org/2014/04/arizona-dream-two-beers-and-two-shots.jpg 0 Arizona Dream (1992) by Emir Kusturica %}
+{% picture http://img.yegor256.com/2014/04/arizona-dream-two-beers-and-two-shots.jpg 0 Arizona Dream (1992) by Emir Kusturica %}
 
 My task is complete when a new version of the SRS is signed by the
 Change Control Board. I'm an interpreter for the product owners, translating
@@ -148,7 +150,7 @@ Now, I'm the architect, and my task is to implement a requirement, which has bee
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear and classes have been designed and implemented.
 
-{% picture http://img.xdsd.org/2014/04/science-of-sleep-time-machine.jpg 0 The Science of Sleep (2006) by Michel Gondry %}
+{% picture http://img.yegor256.com/2014/04/science-of-sleep-time-machine.jpg 0 The Science of Sleep (2006) by Michel Gondry %}
 
 Being an architect, I'm responsible for assembling all of the components
 together and making sure they fit. In most cases,
@@ -203,7 +205,7 @@ of their respective tasks and the hourly rates they receive. Designers usually d
 and higher level implementations, while programmers implement all
 low-level details.
 
-{% picture http://img.xdsd.org/2014/04/pulp-fiction-vincent-and-jules.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+{% picture http://img.yegor256.com/2014/04/pulp-fiction-vincent-and-jules.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
 
 I'm a programmer and my task is to implement a class or method or to
 fix some functional bug. In most cases, I have only half an hour available.
@@ -233,7 +235,7 @@ I'm a tester and my primary motivation is to find bugs. This may be
 contradictory to what you've heard before; but in XDSD, we plan
 to find a certain amount of bugs at every stage of the project.
 
-{% picture http://img.xdsd.org/2014/04/fear-and-loathing-adrenochrome.jpg 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
+{% picture http://img.yegor256.com/2014/04/fear-and-loathing-adrenochrome.jpg 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
 
 As as a tester, I receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it". The project manager
 needs a certain number of bugs to be found in order to fix the project.

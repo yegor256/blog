@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'json'
+require 'nokogiri'
 
 module Jekyll
   class Indexer < Generator
@@ -42,6 +43,7 @@ module Jekyll
         index << {
           title: entry.title,
           url: entry.url,
+          tags: entry.tags,
           date: entry.date,
           categories: entry.categories,
           body: entry.body
@@ -85,10 +87,7 @@ module Jekyll
       items
     end
   end
-end
-require 'nokogiri'
 
-module Jekyll
   class PageRenderer
     def initialize(site)
       @site = site
@@ -102,10 +101,7 @@ module Jekyll
       paragraphs = paragraphs.join(' ').gsub("\r", ' ').gsub("\n", ' ').gsub("\t", ' ').gsub(/\s+/, ' ')
     end
   end
-end
-require 'nokogiri'
 
-module Jekyll
   class SearchEntry
     def self.create(page_or_post, renderer)
       return create_from_post(page_or_post, renderer) if page_or_post.is_a?(Jekyll::Post)
@@ -118,8 +114,9 @@ module Jekyll
       body = renderer.render(page)
       date = nil
       categories = []
+      tags = []
 
-      SearchEntry.new(title, url, date, categories, body)
+      SearchEntry.new(title, url, date, categories, body, tags)
     end
 
     def self.create_from_post(post, renderer)
@@ -127,8 +124,9 @@ module Jekyll
       body = renderer.render(post)
       date = post.date
       categories = post.categories
+      tags = post.tags
 
-      SearchEntry.new(title, url, date, categories, body)
+      SearchEntry.new(title, url, date, categories, body, tags)
     end
 
     def self.extract_title_and_url(item)
@@ -136,10 +134,10 @@ module Jekyll
       [data['title'], data['url']]
     end
 
-    attr_reader :title, :url, :date, :categories, :body
+    attr_reader :title, :url, :date, :categories, :body, :tags
 
-    def initialize(title, url, date, categories, body)
-      @title, @url, @date, @categories, @body = title, url, date, categories, body
+    def initialize(title, url, date, categories, body, tags)
+      @title, @url, @date, @categories, @body, @tags = title, url, date, categories, body, tags
     end
 
     def strip_index_suffix_from_url!
@@ -154,8 +152,7 @@ module Jekyll
       end.join(' ')
     end
   end
-end
-module Jekyll
+
   class SearchIndexFile < StaticFile
     # Override write as the search.json index file has already been created
     def write(_dest)

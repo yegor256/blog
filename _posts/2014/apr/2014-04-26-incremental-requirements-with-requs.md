@@ -2,10 +2,7 @@
 layout: post
 title: Incremental Requirements With Requs
 date: 2014-04-26
-tags:
-  - requs
-  - requirements
-  - incremental
+tags: requs xdsd
 description:
   Requirements engineering can be done incrementally
   with Requs open source controlled natural language
@@ -41,6 +38,8 @@ UC1 where Employee gets raise: "TBD".
 
 This Software Requirements Specification (SRS) defines two types (`Department`
 and `Employee`) and one method `UC` (aka "use case").
+
+<!--more-->
 
 Requs syntax is explained [here](http://www.requs.org/syntax.html).
 

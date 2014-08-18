@@ -2,7 +2,7 @@
 layout: post
 title: Github Guidelines
 date: 2014-04-15
-tags: github
+tags: github xdsd
 description: |
   This step-by-step manual helps you to start working
   with a Github-hosted project in the spirit of XDSD.
@@ -25,6 +25,8 @@ If you don't agree with the budget allotment, don't hesitate to ask for an
 increase. As soon as you are comfortable with the budget and understand the
 scope of the work, say so in a reply to the ticket and start working. Be aware
 that you won't be paid for time spent above and beyond the allotted time budget.
+
+<!--more-->
 
 ## 1. Fork
 

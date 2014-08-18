@@ -193,7 +193,7 @@ h2 {
 .highlighttable {
   border-spacing: 0;
   width: 100%;
-  table-layout:fixed;
+  table-layout: fixed;
   .linenos {
     @extend .gray;
     @extend .desktop-only;
@@ -222,7 +222,8 @@ h2 {
 }
 pre {
   display: block;
-  line-height: 1.4 * $em;
+  font-size: 0.9 * $em;
+  line-height: 1.2 * $em;
   code {
     background-color: inherit;
     padding: 0;

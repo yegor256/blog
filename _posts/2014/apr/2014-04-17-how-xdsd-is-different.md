@@ -2,7 +2,7 @@
 layout: post
 title: "How XDSD Is Different"
 date: 2014-04-17
-tags: process xdsd
+tags: xdsd
 description: |
   This article lays out the most important and critical
   differences between XDSD and traditional software
@@ -20,6 +20,8 @@ that differs significantly from working in traditional software development
 teams. Most XDSD methods are so different (yet critical) that many newcomers get
 confused. This article should help you bootstrap once you join a project managed
 with by XDSD principles &mdash; either as a developer or a project sponsor.
+
+<!--more-->
 
 ## We Pay Only For Closed Tasks
 
@@ -47,7 +49,7 @@ You can view more details about this principle in the following articles:
 or
 [Definition of Done]({% post_url 2014/apr/2014-04-15-definition-of-done %}).
 
-{% picture http://img.xdsd.org/2014/04/revolver-avi-with-dollar.jpg 0 Revolver (2005) by Guy Ritchie %}
+{% picture http://img.yegor256.com/2014/04/revolver-avi-with-dollar.jpg 0 Revolver (2005) by Guy Ritchie %}
 
 As mentioned above, this is one of the most important differences between XDSD
 and other methods. Many people get confused when they see this principle in
@@ -82,7 +84,7 @@ When the requirements of a task are clear &mdash; and you understand them fully
 &mdash; deliver the result to the author and wait for him to close the task.
 After the author closes the task, the project manager pays you.
 
-{% picture http://img.xdsd.org/2014/04/goodfellas-paulie-talking.jpg 0 Goodfellas (1990) by Martin Scorsese %}
+{% picture http://img.yegor256.com/2014/04/goodfellas-paulie-talking.jpg 0 Goodfellas (1990) by Martin Scorsese %}
 
 We're very strict about this principle &mdash; no informal communications.
 However, it doesn't mean that we are not interested in your opinions and
