@@ -19,7 +19,7 @@ keywords:
 
 When I release a new version of [jgd](https://github.com/yegor256/jekyll-github-deploy),
 a Ruby gem, to Rubygems.org, it takes 30 seconds of my time.
-Here is how I released a bug fix version 1.5.1,
+Here is how I released a bug fix for version 1.5.1,
 in [Github issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
 
 {% figure http://img.yegor256.com/2014/08/github-ticket-6.png 600 %}
@@ -35,7 +35,7 @@ takes just a few seconds of your time.
 
 By the way, I assume that you're hosting your project in Github. If not,
 this entire tutorial won't work. If you are still not in Github, I would
-strongly recommend to move there.
+strongly recommend moving there.
 
 ## Create Rubygems Account
 
@@ -43,7 +43,7 @@ Create an account in [Rubygems.org](http://www.rubygems.org).
 
 ## Create rubygems.yml
 
-Create `rubygems.yml` file:
+Create a `rubygems.yml` file:
 
 {% highlight yaml %}
 ---
@@ -56,7 +56,7 @@ on "Edit Profile".
 
 ## Encrypt rubygems.yml
 
-Now, encrypt `rubygems.yml` with a public key of Rultor (`9AF0FA4C`):
+Now, encrypt `rubygems.yml` with a Rultor public key (`9AF0FA4C`):
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
@@ -64,13 +64,13 @@ gpg --trust-model always -a -e -r 9AF0FA4C rubygems.yml
 {% endhighlight %}
 
 You will get a new file `rubygems.yml.asc`.
-Add it to the root directory of your project,
-commit and push. It contains your secret information,
-but only Rultor server can decrypt it.
+Add this file to the root directory of your project,
+commit and push. The file contains your secret information,
+but only the Rultor server can decrypt it.
 
 ## Prepare Gemspec
 
-In your `gemspec` file make sure you use `1.0.snapshot` as a version number:
+In your `gemspec` file, make sure you use `1.0.snapshot` as a version number:
 
 {% highlight ruby %}
 # coding: utf-8
@@ -84,7 +84,7 @@ This version name will be replaced by Rultor during deployment.
 
 ## Configure Rultor
 
-Create `.rultor.yml` file in the root directory of your project:
+Create a `.rultor.yml` file in the root directory of your project:
 
 {% highlight yaml %}
 decrypt:
@@ -104,8 +104,8 @@ In this example, replace `foo` with the name of your gem.
 
 {% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
 
-Now it's time to try how it all works. Create a new ticket in
-Github issue tracker, and post something like that into it
+Now it's time to see how it all works. Create a new ticket in
+the Github issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}
@@ -116,7 +116,7 @@ You will get a response in a few seconds. The rest will be done by Rultor.
 
 Enjoy :)
 
-BTW, if something doesn't work as I explained, don't hesitate to
+BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to
-[Rultor issue tracker](https://github.com/yegor256/rultor/issues),
+[Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
