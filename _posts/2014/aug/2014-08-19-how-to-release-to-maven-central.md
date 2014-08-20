@@ -5,11 +5,13 @@ date: 2014-08-19
 tags: java rultor devops
 description:
   This tutorial explains how a Java project can be
-  released to Maven Central in just one click and
+  released/deployed to Maven Central in just one click and
   zero maintenance efforts, using Rultor.com, DevOps assistant
 keywords:
   - release to maven central
   - how to release to maven central
+  - deploy to maven central
+  - how to deploy to maven central
   - maven central release
   - fast release to maven central
   - publish from github to maven central
@@ -41,7 +43,7 @@ strongly recommend moving there.
 
 Make sure your `pom.xml` contains all elements required by Sonatype,
 explained in [Central Sync Requirements](https://docs.sonatype.org/display/Repository/Central+Sync+Requirements).
-We will release to Sonatype, and they will syncronize all JAR (and not only)
+We will deploy to Sonatype, and they will syncronize all JAR (and not only)
 artifacts to Maven Central.
 
 ## Register a Project With Sonatype
