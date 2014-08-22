@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Art of Software Testing, Glenford J. Myers, et al"
-date: 2014-04-29
+title: "The Art of Software Testing by Glenford Myers"
+date: 2014-08-22
 tags: book testing
 description:
   The Art of Software Testing by Glenford Myers is a classic
@@ -53,9 +53,9 @@ is a much better source for this subject.
 There are also articles about usability testing, debugging,
 web application testing, and mobile testing. Here we have the same
 issue &mdash; they are not abstract enough and they are much too
-outdated to be relevant to the current issues in software testing. 
-I would recommend readers to briefly skim those subjects for background 
-information, but to not read too much into it. 
+outdated to be relevant to the current issues in software testing.
+I would recommend readers to briefly skim those subjects for background
+information, but to not read too much into it.
 
 ## Psychology of Testing
 
@@ -84,7 +84,7 @@ that errors are not present" (p.5)
 
 However, "these definitions are upside down" (p.6). The psychology of testing
 should be viewed as the opposite. There are two quotes that support this theory and
-I feel that they make the entire book. 
+I feel that they make the entire book.
 
 The first one, on page 6, defines the goal of software testing:
 
@@ -98,8 +98,8 @@ correct results without finding any errors
 
 Dr. Myers comes back to these two thoughts in every chapter. He reiterates
 over and over again that we should change the underlying psychology of how we
-view testing, in order to change our testing results. We should focus on breaking the 
-software instead of confirming that it works. Because testing is a "sadistic process" (p.6) 
+view testing, in order to change our testing results. We should focus on breaking the
+software instead of confirming that it works. Because testing is a "sadistic process" (p.6)
 of breaking things. It is a "destructive process" (p.8).
 
 If you read Chapter2 very carefully and truly understand its
@@ -121,13 +121,10 @@ error just detected is the last remaining error
 
 The problem is obvious. Since any program contains an unlimited
 number of errors, it doesn't matter how long we test, we won't find
-all of them. So when do we stop? What goals do we set for our testers? 
-And even more importantly, when do we pay them and how much 
+all of them. So when do we stop? What goals do we set for our testers?
+And even more importantly, when do we pay them and how much
 (this question is important to me since I only work with contractors
 and am required to define measurable and achievable goals)?
-
-
-
 
 The answer Dr. Myers gives is brilliant (p.136):
 
