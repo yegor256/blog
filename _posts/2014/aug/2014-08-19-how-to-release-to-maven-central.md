@@ -5,11 +5,13 @@ date: 2014-08-19
 tags: java rultor devops
 description:
   This tutorial explains how a Java project can be
-  released to Maven Central in just one click and
+  released/deployed to Maven Central in just one click and
   zero maintenance efforts, using Rultor.com, DevOps assistant
 keywords:
   - release to maven central
   - how to release to maven central
+  - deploy to maven central
+  - how to deploy to maven central
   - maven central release
   - fast release to maven central
   - publish from github to maven central
@@ -41,7 +43,7 @@ strongly recommend moving there.
 
 Make sure your `pom.xml` contains all elements required by Sonatype,
 explained in [Central Sync Requirements](https://docs.sonatype.org/display/Repository/Central+Sync+Requirements).
-We will release to Sonatype, and they will syncronize all JAR (and not only)
+We will deploy to Sonatype, and they will syncronize all JAR (and not only)
 artifacts to Maven Central.
 
 ## Register a Project With Sonatype
@@ -299,3 +301,12 @@ BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to
 [Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
+
+Yeah, forgot to mention, Rultor is also doing two important things. First,
+it creates a Github release with a proper description. Second, it
+posts a tweet about the release, which you can retweet, to make
+an announcement to your followers. Both features are very convenient
+for me. For example:
+
+<blockquote class="twitter-tweet" lang="en"><p>DynamoDB Local Maven Plugin, 0.7.1 released <a href="https://t.co/C3KULouuKS">https://t.co/C3KULouuKS</a></p>&mdash; rultor.com (@rultors) <a href="https://twitter.com/rultors/statuses/501617747269517312">August 19, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,0 +1,132 @@
+---
+layout: post
+title: "Simple Java SSH Client"
+date: 2014-08-28
+tags: java jcabi ssh
+description:
+  jcabi-ssh is a simple Java SSH client that
+  wraps jsch library and makes its usage more
+  object-oriented and convenient
+keywords:
+  - java ssh
+  - ssh library for java
+  - openssh for java
+  - ssh libraries for java
+  - open source ssh for java
+  - ssh tunneling for java
+---
+
+An execution of a shell command via SSH can be done in
+Java, in just a few lines, using [jcabi-ssh](http://ssh.jcabi.com):
+
+{% highlight java %}
+String hello = new Shell.Plain(
+  new SSH(
+    "ssh.example.com", 22,
+    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  )
+).exec("echo 'Hello, world!'");
+{% endhighlight %}
+
+[jcabi-ssh](http://ssh.jcabi.com) is
+a convenient wrapper of [JSch](http://www.jcraft.com/jsch/),
+a well-known pure Java implementation of SSH2.
+
+<!--more-->
+
+Here is a more complex scenario, when I upload a file via SSH
+and then read back its grepped content:
+
+{% highlight xml %}
+Shell shell = new SSH(
+  "ssh.example.com", 22,
+  "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+);
+File file = new File("/tmp/data.txt");
+new Shell.Safe(shell).exec(
+  "cat > d.txt && grep 'some text' d.txt",
+  new FileInputStream(file),
+  Logger.stream(Level.INFO, this),
+  Logger.stream(Level.WARNING, this)
+);
+{% endhighlight %}
+
+Class `SSH`, which implements interface `Shell`, has only one method `exec`.
+This method accepts four arguments:
+
+{% highlight xml %}
+interface Shell {
+  int exec(
+    String cmd, InputStream stdin,
+    OutputStream stdout, OutputStream stderr
+  );
+}
+{% endhighlight %}
+
+I think it's obvious what these arguments are about.
+
+There are a few convenient decorators, that make it easier to operate with
+simple commands.
+
+## Shell.Safe
+
+`Shell.Safe` decorates an instance of `Shell` and throws an exception
+if `exec` exit code is not equal to zero. This may be very useful when
+you want to make sure that your command executed successfully, but don't
+want to duplicate `if/throw` in many places of your code.
+
+{% highlight xml %}
+Shell ssh = new Shell.Safe(
+  new SSH(
+    "ssh.example.com", 22,
+    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  )
+);
+{% endhighlight %}
+
+## Shell.Verbose
+
+`Shell.Verbose` decorates an instance of `Shell` and copies
+`stdout` and `stderr` to slf4j logging facility (using
+[jcabi-log](http://log.jcabi.com)). Of course, you can combine
+decorators, for example:
+
+{% highlight xml %}
+Shell ssh = new Shell.Verbose(
+  new Shell.Safe(
+    new SSH(
+      "ssh.example.com", 22,
+      "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    )
+  )
+);
+{% endhighlight %}
+
+## Shell.Plain
+
+`Shell.Plain` is a wrapper of `Shell` that introduces a new method `exec`
+with only one argument, a command to execute. It also doesn't return an
+exit code, but `stdout` instead. Should be very convenient when you want
+to execute a simple command and just get its output
+(I'm combining it with `Shell.Safe` for safety):
+
+{% highlight xml %}
+String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
+{% endhighlight %}
+
+## Download
+
+You need a single dependency
+[`jcabi-ssh.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
+in your Maven project
+(get its latest versions in [Maven Central](http://search.maven.org/)):
+
+{% highlight xml %}
+<dependency>
+  <groupId>com.jcabi</groupId>
+  <artifactId>jcabi-ssh</artifactId>
+</dependency>
+{% endhighlight %}
+
+The project is in [Github](https://github.com/jcabi/jcabi-ssh),
+if any problems, just submit an issue, I'll try to help.
