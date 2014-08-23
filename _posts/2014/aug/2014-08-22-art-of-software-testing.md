@@ -23,6 +23,8 @@ my favorite books concerning testing and software engineering in
 general. In this article, I will provide an overview of the book, as well as
 highlight the ideas and quotes that I found to be the most interesting.
 
+<!--more-->
+
 There were three editions of the book. The first one was published
 in 1979, when I was just too young to appreciate it. The second one was published in 2004 &mdash;
 I read it first in 2007. The third one was published just two years ago, in 2012. I bought
