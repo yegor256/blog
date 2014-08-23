@@ -34,7 +34,7 @@ takes just a few seconds of your time.
 
 <!--more-->
 
-## Configure CloudBees Maven Plugin
+## Configure the CloudBees Maven Plugin
 
 Add this profile to your `pom.xml`:
 
@@ -91,26 +91,26 @@ Add this profile to your `pom.xml`:
 </project>
 {% endhighlight %}
 
-This plugin is not in Maven Central (unfortunately), that's why
+This plugin is not in Maven Central (unfortunately). That's why
 we have to specify that `<pluginRepository>`.
 
-Pay attention that we're also disabling `maven-deploy-plugin`, since
-it would try to deploy your WAR package to the repository from
+Pay attention to the fact that we're also disabling `maven-deploy-plugin`, since
+it would try to deploy your WAR package to the repository from the
 `<distributionManagement>` section. We want to avoid this.
 
-The profile is getting activated only when property `bees.id`
+The profile gets activated only when the `bees.id` property
 is defined. This won't happen during your normal development and testing,
-but will occur during deployment cycle initiated by Rultor, becase
+but it will occur during the deployment cycle initiated by Rultor, because
 we will define this property in `settings.xml` (discussed below).
 
 ## Secure Access to CloudBees
 
 Create an account in CloudBees and register your web application there.
-It is free, as long as you don't need too much of computing power. I believe
-that web applications should light-weight by definition, so CloudBees free
+CloudBees is free, as long as you don't need too much computing power. I believe
+that web applications should be light-weight by definition, so CloudBees' free
 layer is an ideal choice.
 
-Create `settings.xml` file (but don't commit it to your repo!):
+Create a `settings.xml` file (but don't commit it to your repo!):
 
 {% highlight xml %}
 <settings>
@@ -127,23 +127,23 @@ Create `settings.xml` file (but don't commit it to your repo!):
 </settings>
 {% endhighlight %}
 
-Encrypt this file using GPG, with Rultor key:
+Encrypt this file using GPG, with a Rultor key:
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
 gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
 {% endhighlight %}
 
-You should get `settings.xml.asc` file. Add it to the root directory
+You should get a `settings.xml.asc` file; add it to the root directory
 of your project, commit and push. This file contains your CloudBees
-credentials, but in an encrypted format. Nobody can read it, except
+credentials, but in an encrypted format. Nobody can read it, except the
 Rultor server.
 
 ## Configure Rultor
 
 Create a `.rultor.yml` file in the root directory of your project
-([reference page](http://doc.rultor.com/reference.html)
-explains this format in details):
+(this [reference page](http://doc.rultor.com/reference.html)
+explains this format in detail):
 
 {% highlight yaml %}
 decrypt:
@@ -175,11 +175,11 @@ You will get a response in a few seconds. The rest will be done by Rultor.
 Enjoy :)
 
 BTW, if something doesn't work as I've explained, don't hesitate to
-submit a ticket to
+submit a ticket to the
 [Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
 
-BTW, a similar configuration can be done
+Also, a similar configuration can be performed
 for Heroku (using [jcabi-heroku-maven-plugin](http://heroku.jcabi.com))
 and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](http://beanstalk.jcabi.com)).
-I'll probably dedicate individual posts to them.
+I'll probably dedicate individual posts to them, as well.
