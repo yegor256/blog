@@ -19,10 +19,10 @@ keywords:
 
 When I deploy a new version of [stateful.co](http://www.stateful.co),
 a Java web application, to CloudBees, it takes 30 seconds of my time.
-Maybe even less. Recently, I deployed version . You can see
-how it all happened, in [Github issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
+Maybe even less. Recently, I deployed version 1.6.5. You can see
+how it all happened, in [Github issue #6](https://github.com/sttc/stateful/issues/6):
 
-{% figure http://img.yegor256.com/2014/08/github-ticket-80.png 600 %}
+{% figure http://img.yegor256.com/2014/08/github-sttc-issue-6.png 600 %}
 
 As you see, I gave a command to [Rultor](http://www.rultor.com),
 and it packaged, tested and deployed a new version to CloudBees.
@@ -149,10 +149,10 @@ explains this format in details):
 decrypt:
   settings.xml: "repo/settings.xml.asc"
 release:
-  script:
-    - "mvn versions:set \"-DnewVersion=${tag}\""
-    - "git commit -am \"${tag}\""
-    - "mvn clean deploy --settings /home/r/settings.xml"
+  script: |
+    mvn versions:set "-DnewVersion=${tag}"
+    git commit -am "${tag}"
+    mvn clean deploy --settings /home/r/settings.xml
 {% endhighlight %}
 
 You can compare your file with live Rultor
