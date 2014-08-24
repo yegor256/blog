@@ -10,7 +10,7 @@ keywords:
   - unsubscribe
 ---
 
-<p>I'm sorry to see you leaving :(</p>
+I'm sorry to see you leaving :(
 
 <fieldset id="form">
   <label for="email">Your email</label>
@@ -20,4 +20,4 @@ keywords:
   <span id="error" style="color:red;"></span>
 </fieldset>
 
-<p>You can always <a href="/about-me.html">subscribe</a> again.</p>
+You can always [subscribe](/about-me.html) again.

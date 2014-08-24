@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fluent Java Http Client"
+title: "Fluent Java HTTP Client"
 date: 2014-04-11
 tags: jcabi http java
 description:

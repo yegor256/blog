@@ -18,29 +18,29 @@ keywords:
 exclude_from_search: true
 ---
 
-<p>I'm Yegor Bugayenko, a software architect, passionate
+I'm Yegor Bugayenko, a software architect, passionate
 about software quality. I write mostly in Java, but also in
 Ruby and JavaScript.
-I'm a co-founder and CTO of <a href="http://www.teamed.io/">teamed.io</a>.</p>
+I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/).
 
-<p>I'm a certified Project Management Professional
-(<a href="http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx">PMP&reg;</a>)
+I'm a certified Project Management Professional
+([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx))
 and Oracle Certified Master, Java EE 6 Enterprise Architect
-(<a href="http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect">OCMEA</a>).
+([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
 Besides that, I'm a proud holder of
-<a href="http://www.zend.com/en/yellow-pages/ZEND007965">ZCE</a>,
-<a href="http://www.zend.com/en/yellow-pages/ZEND007965">ZFCE</a>,
-<a href="http://www.omg.org/uml-certification/">OCUP</a>,
-<a href="http://www-03.ibm.com/certify/certs/38008003.shtml">RUP</a>,
-<a href="http://www.prince2.com/">PRINCE2 Foundation</a>,
-<a href="https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf">MCP</a> and
-<a href="http://www.cosmicon.com/certificateHoldersV3.asp">COSMIC</a> certificates.</p>
+[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
+[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965),
+[OCUP](http://www.omg.org/uml-certification/),
+[RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
+[PRINCE2 Foundation](http://www.prince2.com/),
+[MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf) and
+[COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.</p>
 
-<p>Once in a month I'm sending a summary email of my writing activity. If
+Once in a month I'm sending a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous
-subscribers in my list).<p>
+subscribers in my list).
 
 <fieldset id="form">
   <label for="email">Your email</label>
@@ -52,7 +52,7 @@ subscribers in my list).<p>
   <span id="error" style="color:red;"></span>
 </fieldset>
 
-<p>You can always <a href="/unsubscribe.html">unsubscribe</a>.</p>
+You can always [unsubscribe](/unsubscribe.html).
 
 <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
 <script type="text/javascript">
