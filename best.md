@@ -1,6 +1,6 @@
 ---
-layout: default
-title: "Best Articles to Read"
+layout: static
+title: "Best Twelve Articles to Read"
 description:
   I'm writing mostly about Java, OOP, DevOps, and
   open source projects I'm working with in Teamed.io,
@@ -20,11 +20,11 @@ keywords:
   - javascript blog
 ---
 
-These articles are the most interesting. Full content of the blog
+These twelve articles are the most interesting. Full content of the blog
 is [here](/contents.html). Don't forget to subscribe to
 my [monthly updates](/about-me.html).
 
-## Object-Oriented Programming
+Object-Oriented Programming:
 
  * [Why NULL is Bad?]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
 
@@ -32,19 +32,19 @@ my [monthly updates](/about-me.html).
 
  * [OOP Alternative to Utility Classes]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 
-## Java
+Java:
 
  * [Typical Mistakes in Java Code]({% post_url 2014/apr/2014-04-27-typical-mistakes-in-java-code %})
 
-## DevOps
+DevOps:
 
  * [Master Branch Must Be Read-Only]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
 
  * [Rultor + Travis]({% post_url 2014/jul/2014-07-31-travis-and-rultor %})
 
-## Our Open Source Projects
+Our Open Source Projects:
 
- * [Strict Code Quality Control]({% post_url 2014/aug/2014-08-13-strict-code-qualit-control %})
+ * [Strict Code Quality Control]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
    about [qulice.com](http://www.qulice.com)
 
  * [Rultor.com, a Merging Bot]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %})
@@ -55,5 +55,9 @@ my [monthly updates](/about-me.html).
 
  * [Java Method Logging with AOP and Annotations]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
    about [jcabi-aspects](http://aspects.jcabi.com)
-   and its use of Aspect Oriented Programming with AspectJ
 
+Project Management and XDSD:
+
+ * [How XDSD Is Different]({% post_url 2014/apr/2014-04-17-how-xdsd-is-different %})
+
+ * [How much do you pay per line of code?]({% post_url 2014/apr/2014-04-11-cost-of-loc %})
