@@ -4,28 +4,17 @@ require 'erb'
 module Jekyll
 
   class Tagger < Generator
-
     safe true
-
     attr_accessor :site
-
     @types = [:page, :feed]
-
     class << self; attr_accessor :types, :site; end
 
     def generate(site)
       self.class.site = self.site = site
-      generate_tag_pages
+      site.tags.each { |tag, posts| new_tag(tag, posts) }
     end
 
     private
-
-    # Generates a page per tag and adds them to all the pages of +site+.
-    # A <tt>tag_page_layout</tt> have to be defined in your <tt>_config.yml</tt>
-    # to use this.
-    def generate_tag_pages
-      site.tags.each { |tag, posts| new_tag(tag, posts) }
-    end
 
     def new_tag(tag, posts)
       self.class.types.each { |type|
