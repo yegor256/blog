@@ -3,6 +3,7 @@ layout: post
 title: "Java Method Logging with AOP and Annotations"
 date: 2014-06-01
 tags: aop java logging jcabi
+categories: best
 description:
   For traceability and debugging purposes, it can be very
   convenient to log execution details of every method.

@@ -3,6 +3,7 @@ layout: post
 title: "How much do you pay per line of code?"
 date: 2014-04-11
 tags: xdsd mgmt
+categories: best
 description: |
   This article compares two projects and calculates
   their average costs per one line of code changed.

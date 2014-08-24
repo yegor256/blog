@@ -21,6 +21,10 @@ sass:
   deploy_style: compressed
   compile_in_place: false
 
+# see https://github.com/pattex/jekyll-tagging
+tag_page_layout: tag-index
+tag_page_dir: tag
+
 # see https://github.com/kinnetica/jekyll-plugins
 sitemap:
   file: "/sitemap.xml"
