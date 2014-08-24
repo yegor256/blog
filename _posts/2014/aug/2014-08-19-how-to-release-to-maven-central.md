@@ -2,7 +2,7 @@
 layout: post
 title: "How to Release to Maven Central, in One Click"
 date: 2014-08-19
-tags: java rultor devops
+tags: java rultor devops maven
 description:
   This tutorial explains how a Java project can be
   released/deployed to Maven Central in just one click and
