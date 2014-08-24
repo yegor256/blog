@@ -3,9 +3,6 @@
 @import "icomoon";
 
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
-$main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
-$main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
-$main-font-bolditalic: 'Cambria-BoldItalic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
 
 $black: #111;
@@ -53,17 +50,6 @@ body {
   padding-bottom: 2 * $em;
   position: relative;
   overflow-x: hidden;
-}
-strong {
-  font-family: $main-font-bold;
-  font-weight: 400;
-}
-i {
-  font-family: $main-font-italic;
-  font-weight: 400;
-  strong & {
-    font-family: $main-font-bolditalic;
-  }
 }
 a, a:visited {
   color: inherit;
@@ -252,7 +238,7 @@ figure {
 }
 blockquote {
   @extend .gray;
-  font-family: $main-font-italic;
+  font-style: italic;
   p:before,
   p:after {
     display: inline;
