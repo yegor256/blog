@@ -2,7 +2,7 @@
 layout: post
 title: "The Art of Software Testing by Glenford Myers"
 date: 2014-08-22
-tags: book testing
+tags: book-review testing
 description:
   The Art of Software Testing by Glenford Myers is a classic
   work in software engineering; I will review the
