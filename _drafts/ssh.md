@@ -34,7 +34,7 @@ a well-known pure Java implementation of SSH2.
 
 <!--more-->
 
-Here is a more complex scenario, when I upload a file via SSH
+Here is a more complex scenario, where I upload a file via SSH
 and then read back its grepped content:
 
 {% highlight xml %}
@@ -51,7 +51,7 @@ new Shell.Safe(shell).exec(
 );
 {% endhighlight %}
 
-Class `SSH`, which implements interface `Shell`, has only one method `exec`.
+Class `SSH`, which implements interface `Shell`, has only one method, `exec`.
 This method accepts four arguments:
 
 {% highlight xml %}
@@ -65,13 +65,13 @@ interface Shell {
 
 I think it's obvious what these arguments are about.
 
-There are a few convenient decorators, that make it easier to operate with
+There are also a few convenient decorators that make it easier to operate with
 simple commands.
 
 ## Shell.Safe
 
 `Shell.Safe` decorates an instance of `Shell` and throws an exception
-if `exec` exit code is not equal to zero. This may be very useful when
+if the `exec` exit code is not equal to zero. This may be very useful when
 you want to make sure that your command executed successfully, but don't
 want to duplicate `if/throw` in many places of your code.
 
@@ -87,7 +87,7 @@ Shell ssh = new Shell.Safe(
 ## Shell.Verbose
 
 `Shell.Verbose` decorates an instance of `Shell` and copies
-`stdout` and `stderr` to slf4j logging facility (using
+`stdout` and `stderr` to the slf4j logging facility (using
 [jcabi-log](http://log.jcabi.com)). Of course, you can combine
 decorators, for example:
 
@@ -104,9 +104,9 @@ Shell ssh = new Shell.Verbose(
 
 ## Shell.Plain
 
-`Shell.Plain` is a wrapper of `Shell` that introduces a new method `exec`
+`Shell.Plain` is a wrapper of `Shell` that introduces a new `exec` method 
 with only one argument, a command to execute. It also doesn't return an
-exit code, but `stdout` instead. Should be very convenient when you want
+exit code, but `stdout` instead. This should be very convenient when you want
 to execute a simple command and just get its output
 (I'm combining it with `Shell.Safe` for safety):
 
@@ -119,7 +119,7 @@ String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
 You need a single dependency
 [`jcabi-ssh.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
 in your Maven project
-(get its latest versions in [Maven Central](http://search.maven.org/)):
+(get its latest version in [Maven Central](http://search.maven.org/)):
 
 {% highlight xml %}
 <dependency>
@@ -128,5 +128,5 @@ in your Maven project
 </dependency>
 {% endhighlight %}
 
-The project is in [Github](https://github.com/jcabi/jcabi-ssh),
-if any problems, just submit an issue, I'll try to help.
+The project is in [Github](https://github.com/jcabi/jcabi-ssh).
+If you have any problems, just submit an issue. I'll try to help.
