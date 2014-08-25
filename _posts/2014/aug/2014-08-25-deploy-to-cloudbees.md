@@ -139,6 +139,34 @@ of your project, commit and push. This file contains your CloudBees
 credentials, but in an encrypted format. Nobody can read it, except the
 Rultor server.
 
+## Configure Versions Plugin
+
+I recommend using [http://parent.jcabi.com](jcabi-parent). It
+configures the required plugin out-of-the-box.
+If you're using it, skip this step.
+
+Otherwise, add this plugin to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [..]
+  <build>
+    [..]
+    <plugins>
+      [..]
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <generateBackupPoms>false</generateBackupPoms>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
+
 ## Configure Rultor
 
 Create a `.rultor.yml` file in the root directory of your project
