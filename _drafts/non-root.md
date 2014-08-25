@@ -16,7 +16,7 @@ keywords:
 ---
 
 Docker starts a process inside its container as a "root" user. In some
-cases, it is not convenient though. For example, `initdb` from PostgreSQL doesn't like to
+cases, this is not convenient though. For example, `initdb` from PostgreSQL doesn't like to
 be started as root and will fail. In [rultor.com](http://www.rultor.com),
 a DevOps team assistant,
 [we're using Docker]({% post_url 2014/jul/2014-07-29-docker-in-rultor %})
@@ -33,8 +33,8 @@ First, this is how we start a new Docker container:
 $ sudo docker run -i -t --rm -v "$(pwd):/main" yegor256/rultor /main/entry.sh
 {% endhighlight %}
 
-There are two files in current directory: `entry.sh` and `script.sh`.
-`entry.sh` is the one being executed by Docker on start
+There are two files in the current directory: `entry.sh` and `script.sh`.
+`entry.sh` is the file being executed by Docker on start,
 and it contains the following:
 
 {% highlight bash %}
