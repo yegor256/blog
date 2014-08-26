@@ -102,13 +102,13 @@ Rultor executed a simple script, [pre-configured](http://doc.rultor.com/basics.h
 
 {% highlight yaml %}
 release:
-  script:
-    - "./test.sh"
-    - "rm -rf *.gem"
-    - "sed -i \"s/2.0-SNAPSHOT/${tag}/g\" jgd.gemspec"
-    - "gem build jgd.gemspec"
-    - "chmod 0600 ../rubygems.yml"
-    - "gem push *.gem --config-file ../rubygems.yml"
+  script: |
+    ./test.sh
+    rm -rf *.gem
+    sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
+    gem build jgd.gemspec
+    chmod 0600 ../rubygems.yml
+    gem push *.gem --config-file ../rubygems.yml
 {% endhighlight %}
 
 The script is parameterized, as you see. There is one parameter that

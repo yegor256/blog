@@ -272,10 +272,10 @@ decrypt:
   pubring.gpg: "repo/pubring.gpg.asc"
   secring.gpg: "repo/secring.gpg.asc"
 release:
-  script:
-    - "mvn versions:set \"-DnewVersion=${tag}\""
-    - "git commit -am \"${tag}\""
-    - "mvn clean deploy --settings /home/r/settings.xml"
+  script: |
+    mvn versions:set "-DnewVersion=${tag}"
+    git commit -am "${tag}"
+    mvn clean deploy --settings /home/r/settings.xml
 {% endhighlight %}
 
 You can compare your file with live Rultor
