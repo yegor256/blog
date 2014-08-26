@@ -188,7 +188,11 @@ These YAML entries inform Rultor that it has to get `assets/s3auth/settings.xml`
 file from `yegor256/home` private (!) Github repository and put it into
 the working directory of Docker container, right before starting the Maven build.
 
-This `settings.xml` file contains that secret data CloudBees plugin needs in order to deploy the application.
+This `settings.xml` file contains that secret data CloudBees
+plugin needs in order to deploy the application.
+
+[How to Deploy to CloudBees, in One Click]({% post_url 2014/aug/2014-08-25-deploy-to-cloudbees %})
+explains this process even better.
 
 ## You Can Do The Same
 
