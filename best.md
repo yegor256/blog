@@ -28,5 +28,3 @@ And don't forget to subscribe to my [monthly updates](/about-me.html) :)
 {% for post in site.categories['best'] %}
   {{ post | tagged }}
 {% endfor %}
-
-Other tags: {{ site.tags | tag_cloud }}

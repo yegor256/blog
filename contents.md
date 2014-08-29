@@ -23,3 +23,5 @@ This is a full list of articles published in my blog.
 {% for post in site.posts %}
   {{ post | tagged }}
 {% endfor %}
+
+All tags: {{ site.tags | tag_cloud }}
