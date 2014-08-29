@@ -39,6 +39,11 @@ module Jekyll
       rss = RSS::Maker.make('2.0') do |maker|
         maker.channel.title = site.config['name']
         maker.channel.link = site.config['url']
+        maker.channel.language = 'en-us'
+        maker.channel.generator = 'Jekyll'
+        #maker.channel.image.url = 'http://img.yegor256.com/icon-128x128.png'
+        #maker.channel.image.title = 'Yegor Bugayenko About Programming'
+        #maker.channel.image.link = site.config['url'] + '/rss.xml'
         maker.channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"
         maker.channel.author = site.config['author']
         maker.channel.updated = site.posts.map { |p| p.date  }.max
