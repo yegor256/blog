@@ -18,6 +18,7 @@ keywords:
   - software testing
   - ruby blog
   - javascript blog
+exclude_from_search: true
 ---
 
 These twelve articles are the most interesting to read.

@@ -20,4 +20,6 @@ exclude_from_search: true
 
 This is a full list of articles published in my blog.
 
-{% contents %}
+{% for post in site.posts %}
+  {{ post | tagged }}
+{% endfor %}
