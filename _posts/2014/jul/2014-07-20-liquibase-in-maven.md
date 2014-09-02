@@ -116,11 +116,11 @@ $ java -jar ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3
   --driver=com.mysql.jdbc.Driver \
   --url=jdbc:mysql://db.example.com:3306/example \
   --username=example --password=example \
-  generateChangeLog > src/main/liquibase/000-initial-schema.xml
+  generateChangeLog > src/main/liquibase/2014/000-initial-schema.xml
 {% endhighlight %}
 
 Liquibase will analyze your current database schema
-and copy its own schema into `src/main/liquibase/000-initial-schema.xml`.
+and copy its own schema into `src/main/liquibase/2014/000-initial-schema.xml`.
 
 ## Master Changeset
 
@@ -131,12 +131,12 @@ Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
-  <includeAll path="src/main/liquibase" />
+  <includeAll path="src/main/liquibase/2014" />
 </databaseChangeLog>
 {% endhighlight %}
 
 It is an entry point for Liquibase. It starts from this file
-and loads all other changesets available in `src/main/liquibase`.
+and loads all other changesets available in `src/main/liquibase/2014`.
 They should be either `.xml` or `.sql`. I recommend that you use
 XML mostly because it is easier to maintain and works faster.
 
@@ -156,7 +156,7 @@ Let's create a simple changeset, which adds a new column to an existing table:
 </databaseChangeLog>
 {% endhighlight %}
 
-We save this file we in `src/main/liquibase/002-add-user-address.xml`.
+We save this file we in `src/main/liquibase/2014/002-add-user-address.xml`.
 In big projects, you can name your files by the names of the tickets
 they are produced in. For example, `045-3432.xml`, which means changeset
 number 45 coming from ticket #3432.
