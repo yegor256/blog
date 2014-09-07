@@ -101,19 +101,18 @@ also use `OPTIONS` and `HEAD`), but it will work.
 ## What Do We Gain?
 
 OK, here is the question &mdash; why do we need this? What's wrong with
-the way everybody works now? Why can't we make a web site separate from the API?
+the way most people work now? Why can't we make a web site separate from the API?
 What benefits do we get if we combine them?
 
-I'm combining them in all web applications I've been working with since 2011.
-And this is a list of benefits I'm experiencing:
+I'm combining them in all web applications I've been working with, since 2011.
+And the biggest advantage I'm experiencing is avoiding code duplication.
 
- * **No Code Duplication**. It is obvious, that in the server we don't
-   duplicate controllers (in case of MVC). We have one layer of controllers,
-   they control both API and the web site (since they are one thing now).
+It is obvious, that in the server we don't
+duplicate controllers (in case of MVC). We have one layer of controllers,
+they control both API and the web site (since they are one thing now).
 
- * **Design Consistency**.
-
-
+Avoiding code duplication is a very important achievement. Moreover,
+I believe that it is the most important target for any software project.
 
 These small web apps work exactly as explained above:
 [s3auth.com](http://www.s3auth.com),
