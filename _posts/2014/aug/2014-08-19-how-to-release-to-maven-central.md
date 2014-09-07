@@ -1,68 +1,264 @@
 ---
 layout: post
-title: "Deploying to Heroku, in One Click"
-date: 2014-09-08
-tags: rultor devops heroku java
+title: "How to Release to Maven Central, in One Click"
+date: 2014-08-19
+tags: java rultor devops maven
 description:
   This tutorial explains how a Java project can be
-  deployed to Heroku in just one click and
+  released/deployed to Maven Central in just one click and
   zero maintenance efforts, using Rultor.com, DevOps assistant
 keywords:
-  - release to heroku
-  - how to release to heroku
-  - deploy java app to heroku
-  - how to deploy to heroku
-  - heroku java release
-  - fast release to heroku
+  - release to maven central
+  - how to release to maven central
+  - deploy to maven central
+  - how to deploy to maven central
+  - maven central release
+  - fast release to maven central
+  - publish from github to maven central
+  - upload to maven central
+  - publishing to maven central with sonatype
 ---
 
-There were a few articles already about our usage of Rultor
-for automating continuous delivery cycle of Java, Ruby projects,
-including
+When I release a new version of [jcabi-aspects](http://aspects.jcabi.com),
+a Java open source library, to Maven Central, it takes 30 seconds of my time.
+Maybe even less. Recently, I released version 0.17.2. You can see
+how it all happened, in [Github issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
 
-This one describes how Heroku deployment can be automated. When I
-need to deploy a new version of an Aintshy web application,
-all I do is a one message in a Github ticket. I'm just saying
-`@rultor release 0.1.4` and version 0.1.4 gets deployed
-to Heroku. See Github ticket [#5](https://github.com/aintshy/hub/issues/5).
+{% figure http://img.yegor256.com/2014/08/github-ticket-80.png 600 %}
 
-You can do the same, with the help of [Rultor.com](http://www.rultor.com),
-a free hosted DevOps assistant.
+As you see, I gave a command to [Rultor](http://www.rultor.com),
+and it released a new version to Maven central. I didn't do anything else.
+
+Now let's see how you can do the same. How you can configure your project
+so that the release of its new version to Maven Central
+takes just a few seconds of your time.
 
 <!--more-->
 
-## Create Heroku Project
+By the way, I assume that you're hosting your project in Github. If not,
+this entire tutorial won't work. If you are still not in Github, I would
+strongly recommend moving there.
 
-Create a new project at [Heroku.com](http://www.heroku.com).
+## Prepare Your POM
 
-And install their [command line toolbelt](https://toolbelt.heroku.com/).
+Make sure your `pom.xml` contains all elements required by Sonatype,
+explained in [Central Sync Requirements](https://docs.sonatype.org/display/Repository/Central+Sync+Requirements).
+We will deploy to Sonatype, and they will syncronize all JAR (and not only)
+artifacts to Maven Central.
 
-## Authenticate at Heroku
+## Register a Project With Sonatype
 
-You should authenticate your public SSH key at Heroku, using
-their command line toolbelt. The process is explained
-[here](https://devcenter.heroku.com/articles/authentication),
-but there is not much of a process. You just run `heroku login`
-and enter your login credentials. As a result, you will get
-your existing key (located at `~/.ssh/id_rsa.pub`) authenticated by heroku.
+Create an account in [Sonatype JIRA](https://issues.sonatype.org/)
+and raise a ticket, asking to approve your groupId. This
+[OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html)
+explains this step in more detail.
 
-If you didn't have the key before, it will be created automatically.
+## Create and Distribute a GPG Key
 
-## Encrypt SSH Key
+Create a GPG key and distribute it, as explained in this
+[Working with PGP Signatures](http://central.sonatype.org/pages/working-with-pgp-signatures.html)
+article.
 
-Now, encrypt `id_rsa` and `id_rsa.pub` (they are in `~/.ssh` directory)
-with a Rultor public key `9AF0FA4C`:
+When this step is done, you should have two files:
+`pubring.gpg` and `secring.gpg`.
+
+## Create settings.xml
+
+Create `settings.xml`, next to the two `.gpg` files created in the previous step:
+
+{% highlight xml %}
+<settings>
+  <profiles>
+    <profile>
+      <id>foo</id> <!-- give it the name of your project -->
+      <properties>
+        <gpg.homedir>/home/r</gpg.homedir>
+        <gpg.keyname>9A105525</gpg.keyname>
+        <gpg.passphrase>my-secret</gpg.passphrase>
+      </properties>
+    </profile>
+  </profiles>
+  <servers>
+    <server>
+      <id>sonatype</id>
+      <username><!-- Sonatype JIRA user name --></username>
+      <password><!-- Sonatype JIRA pwd --></password>
+    </server>
+  </servers>
+</settings>
+{% endhighlight %}
+
+In this example, `9A105525` is the ID of your public key, and `my-secret`
+is the pass phrase you have used while generating the keys.
+
+## Encrypt Security Assets
+
+Now, encrypt these three files with a Rultor public key (`9AF0FA4C`):
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
-gpg --trust-model always -a -e -r 9AF0FA4C id_rsa
-gpg --trust-model always -a -e -r 9AF0FA4C id_rsa.pub
+gpg --trust-model always -a -e -r 9AF0FA4C pubring.gpg
+gpg --trust-model always -a -e -r 9AF0FA4C secring.gpg
+gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
 {% endhighlight %}
 
-You will get two new files `id_rsa.asc` and `id_rsa.pub.asc`.
-Add them to the root directory of your project,
-commit and push. These files contain your secret information,
+You will get three new files: `pubring.gpg.asc`, `secring.gpg.asc`
+and `settings.xml.asc`. Add them to the root directory of your project,
+commit and push. The files contain your secret information,
 but only the Rultor server can decrypt them.
+
+## Add Sonatype Repositories
+
+I would recommend using [jcabi-parent](http://parent.jcabi.com), as
+a parent pom for your project. This will make many further steps
+unnecessary. If you're using jcabi-parent, skip this step.
+
+However, if you don't use jcabi-parent, you should add these two repositories
+to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [...]
+  <distributionManagement>
+    <repository>
+      <id>oss.sonatype.org</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>oss.sonatype.org</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
+{% endhighlight %}
+
+## Configure GPG Plugin
+
+Again, I'd recommend using [http://parent.jcabi.com](jcabi-parent),
+which configures this plugin automatically. If you're using it, skip this step.
+
+Otherwise, add this plugin to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [..]
+  <build>
+    [..]
+    <plugins>
+      [..]
+      <plugin>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
+
+## Configure Versions Plugin
+
+Once again, I recommend using [http://parent.jcabi.com](jcabi-parent). It
+configures all required plugins out-of-the-box. If you're using it, skip this step.
+
+Otherwise, add this plugin to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [..]
+  <build>
+    [..]
+    <plugins>
+      [..]
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <generateBackupPoms>false</generateBackupPoms>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
+
+## Configure Sonatype Plugin
+
+Yes, you're right, [http://parent.jcabi.com](jcabi-parent) will help
+you here as well. If you're using it, skip this step too.
+
+Otherwise, add these four plugins to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [..]
+  <build>
+    [..]
+    <plugins>
+      [..]
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-javadoc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>oss.sonatype.org</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <description>${project.version}</description>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy-to-sonatype</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+              <goal>release</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
 
 ## Create Rultor Config
 
@@ -72,23 +268,18 @@ explains this format in details):
 
 {% highlight yaml %}
 decrypt:
-  id_rsa: "repo/id_rsa.asc"
-  id_rsa.pub: "repo/id_rsa.pub.asc"
+  settings.xml: "repo/settings.xml.asc"
+  pubring.gpg: "repo/pubring.gpg.asc"
+  secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean install -Pqulice --errors
-    git remote add heroku git@heroku.com:aintshy.git
-    mkdir ~/.ssh
-    mv ../id_rsa ../id_rsa.pub ~/.ssh
-    chmod -R 600 ~/.ssh/*
-    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
-    git push -f heroku $(git symbolic-ref --short HEAD):master
+    mvn clean deploy --settings /home/r/settings.xml
 {% endhighlight %}
 
 You can compare your file with live Rultor
-[configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
+[configuration of jcabi-aspects](https://github.com/jcabi/jcabi-aspects/blob/master/.rultor.yml).
 
 ## Run It!
 
@@ -110,3 +301,12 @@ BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to
 [Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
+
+Yeah, forgot to mention, Rultor is also doing two important things. First,
+it creates a Github release with a proper description. Second, it
+posts a tweet about the release, which you can retweet, to make
+an announcement to your followers. Both features are very convenient
+for me. For example:
+
+<blockquote class="twitter-tweet" lang="en"><p>DynamoDB Local Maven Plugin, 0.7.1 released <a href="https://t.co/C3KULouuKS">https://t.co/C3KULouuKS</a></p>&mdash; rultor.com (@rultors) <a href="https://twitter.com/rultors/statuses/501617747269517312">August 19, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
