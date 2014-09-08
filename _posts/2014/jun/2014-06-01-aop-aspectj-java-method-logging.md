@@ -266,18 +266,16 @@ for aspect weaving
 
 {% highlight xml %}
 <project>
-  <depenencies>
+  <dependencies>
     <dependency>
-      <dependency>
-        <groupId>com.jcabi</groupId>
-        <artifactId>jcabi-aspects</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjrt</artifactId>
-      </dependency>
+      <groupId>com.jcabi</groupId>
+      <artifactId>jcabi-aspects</artifactId>
     </dependency>
-  </depenencies>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
