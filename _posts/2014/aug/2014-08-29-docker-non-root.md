@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Run as a Non-Root Inside Docker Container"
-date: 2014-08-28
+date: 2014-08-29
 tags: docker rultor
 description:
   By default, docker container starts a process inside

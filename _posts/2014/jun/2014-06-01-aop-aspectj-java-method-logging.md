@@ -3,6 +3,7 @@ layout: post
 title: "Java Method Logging with AOP and Annotations"
 date: 2014-06-01
 tags: aop java logging jcabi
+categories: best
 description:
   For traceability and debugging purposes, it can be very
   convenient to log execution details of every method.
@@ -265,18 +266,16 @@ for aspect weaving
 
 {% highlight xml %}
 <project>
-  <depenencies>
+  <dependencies>
     <dependency>
-      <dependency>
-        <groupId>com.jcabi</groupId>
-        <artifactId>jcabi-aspects</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjrt</artifactId>
-      </dependency>
+      <groupId>com.jcabi</groupId>
+      <artifactId>jcabi-aspects</artifactId>
     </dependency>
-  </depenencies>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>

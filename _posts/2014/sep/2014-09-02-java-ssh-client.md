@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simple Java SSH Client"
-date: 2014-08-28
+date: 2014-09-02
 tags: java jcabi ssh
 description:
   jcabi-ssh is a simple Java SSH client that
@@ -9,6 +9,7 @@ description:
   object-oriented and convenient
 keywords:
   - java ssh
+  - java ssh client
   - ssh library for java
   - openssh for java
   - ssh libraries for java
@@ -104,7 +105,7 @@ Shell ssh = new Shell.Verbose(
 
 ## Shell.Plain
 
-`Shell.Plain` is a wrapper of `Shell` that introduces a new `exec` method 
+`Shell.Plain` is a wrapper of `Shell` that introduces a new `exec` method
 with only one argument, a command to execute. It also doesn't return an
 exit code, but `stdout` instead. This should be very convenient when you want
 to execute a simple command and just get its output

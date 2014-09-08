@@ -2,7 +2,8 @@
 layout: post
 title: "Rultor + Travis"
 date: 2014-07-31
-tags: docker rultor ci
+tags: docker rultor ci devops
+categories: best
 description:
   Rultor is a virtual team assistant that,
   in tandem with Travis, optimizes your routine merging,
@@ -101,13 +102,13 @@ Rultor executed a simple script, [pre-configured](http://doc.rultor.com/basics.h
 
 {% highlight yaml %}
 release:
-  script:
-    - "./test.sh"
-    - "rm -rf *.gem"
-    - "sed -i \"s/2.0-SNAPSHOT/${tag}/g\" jgd.gemspec"
-    - "gem build jgd.gemspec"
-    - "chmod 0600 ../rubygems.yml"
-    - "gem push *.gem --config-file ../rubygems.yml"
+  script: |
+    ./test.sh
+    rm -rf *.gem
+    sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
+    gem build jgd.gemspec
+    chmod 0600 ../rubygems.yml
+    gem push *.gem --config-file ../rubygems.yml
 {% endhighlight %}
 
 The script is parameterized, as you see. There is one parameter that
@@ -187,7 +188,11 @@ These YAML entries inform Rultor that it has to get `assets/s3auth/settings.xml`
 file from `yegor256/home` private (!) Github repository and put it into
 the working directory of Docker container, right before starting the Maven build.
 
-This `settings.xml` file contains that secret data CloudBees plugin needs in order to deploy the application.
+This `settings.xml` file contains that secret data CloudBees
+plugin needs in order to deploy the application.
+
+[How to Deploy to CloudBees, in One Click]({% post_url 2014/aug/2014-08-25-deploy-to-cloudbees %})
+explains this process even better.
 
 ## You Can Do The Same
 

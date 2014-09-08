@@ -2,7 +2,8 @@
 layout: post
 title: "Master Branch Must Be Read-Only"
 date: 2014-07-21
-tags: rultor devops
+tags: rultor devops mgmt
+categories: best
 description:
   Continuous integration doesn't work while programmers
   are able to commit into the master branch. This article

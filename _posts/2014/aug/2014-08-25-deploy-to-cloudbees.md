@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Deploy to CloudBees, in One Click"
-date: 2014-08-24
+date: 2014-08-25
 tags: java rultor devops
 description:
   This tutorial explains how a Java web application can be
@@ -138,6 +138,34 @@ You should get a `settings.xml.asc` file; add it to the root directory
 of your project, commit and push. This file contains your CloudBees
 credentials, but in an encrypted format. Nobody can read it, except the
 Rultor server.
+
+## Configure Versions Plugin
+
+I recommend using [http://parent.jcabi.com](jcabi-parent). It
+configures the required plugin out-of-the-box.
+If you're using it, skip this step.
+
+Otherwise, add this plugin to your `pom.xml`:
+
+{% highlight xml %}
+<project>
+  [..]
+  <build>
+    [..]
+    <plugins>
+      [..]
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <generateBackupPoms>false</generateBackupPoms>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+{% endhighlight %}
 
 ## Configure Rultor
 

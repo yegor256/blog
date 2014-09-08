@@ -2,7 +2,7 @@
 layout: post
 title: "PDD by Roles"
 date: 2014-04-12
-tags: xdsd pdd
+tags: xdsd pdd mgmt
 description: |
   The article explains how Puzzle Driven Development
   is seen by people in different project roles,

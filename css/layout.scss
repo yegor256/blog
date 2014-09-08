@@ -3,9 +3,6 @@
 @import "icomoon";
 
 $main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
-$main-font-bold: 'Cambria-Bold', 'Georgia', 'Times New Roman', serif;
-$main-font-italic: 'Cambria-Italic', 'Georgia', 'Times New Roman', serif;
-$main-font-bolditalic: 'Cambria-BoldItalic', 'Georgia', 'Times New Roman', serif;
 $code-font: 'Source Code Pro', monospace;
 
 $black: #111;
@@ -54,19 +51,8 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-strong {
-  font-family: $main-font-bold;
-  font-weight: 400;
-}
-i {
-  font-family: $main-font-italic;
-  font-weight: 400;
-  strong & {
-    font-family: $main-font-bolditalic;
-  }
-}
 a, a:visited {
-  color: $black;
+  color: inherit;
   text-decoration: underline;
 }
 .wrapper {
@@ -252,7 +238,7 @@ figure {
 }
 blockquote {
   @extend .gray;
-  font-family: $main-font-italic;
+  font-style: italic;
   p:before,
   p:after {
     display: inline;
@@ -285,4 +271,19 @@ figure {
 }
 .graphviz-wrapper {
   text-align: center;
+}
+.tag {
+  font-family: $code-font;
+  font-size: .8 * $em;
+  margin-right: .2 * $em;
+  padding: 0 .4 * $em;
+  background-color: $gray;
+  text-decoration: none;
+  color: white;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    background-color: $black;
+  }
 }

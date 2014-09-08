@@ -2,7 +2,8 @@
 layout: post
 title: "Why NULL is Bad?"
 date: 2014-05-13
-tags: quality mistakes
+tags: quality mistakes oop design
+categories: best
 description:
   Why NULL is a terrible practice in object-oriented programming?
   Despite the fact that it is used a lot and everywhere,

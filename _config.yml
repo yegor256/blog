@@ -1,4 +1,7 @@
 name: yegor256.com
+author: "Yegor Bugayenko"
+description: "Yegor Bugayenko About Programming"
+copyright: "Yegor Bugayenko, 2014"
 encoding: utf-8
 timezone: America/San_Francisco
 markdown: redcarpet
@@ -20,6 +23,10 @@ sass:
   style: compressed
   deploy_style: compressed
   compile_in_place: false
+
+# see https://github.com/pattex/jekyll-tagging
+tag_page_layout: tag-index
+tag_page_dir: tag
 
 # see https://github.com/kinnetica/jekyll-plugins
 sitemap:

@@ -1,0 +1,22 @@
+---
+layout: default
+description: |
+  Tagged articles in the blog of Yegor Bugayenko, about
+  software development, object-oriented programming,
+  and project management
+---
+
+<section>
+  <div class="wrapper">
+    <header itemprop="name">
+      <h1>{{ page.title }}</h1>
+    </header>
+    <main role="main">
+      <article role="article" itemprop="articleBody">
+        {% for post in page.posts %}
+          {{ post | tagged }}
+        {% endfor %}
+      </article>
+    </main>
+  </div>
+</section>

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How to Release to Rubygems, in One Click"
-date: 2014-08-19
-tags: rubygems rultor devops
+title: "How to Publish to Rubygems, in One Click"
+date: 2014-08-26
+tags: rubygems rultor devops ruby
 description:
   This tutorial explains how a Ruby gem can be
   released to Rubygems.org in just one click and
@@ -46,7 +46,6 @@ Create an account in [Rubygems.org](http://www.rubygems.org).
 Create a `rubygems.yml` file:
 
 {% highlight yaml %}
-
 :rubygems_api_key: d355d8940bb031bfe9acf03ed3da4c0d
 {% endhighlight %}
 
@@ -56,7 +55,7 @@ on "Edit Profile".
 
 ## Encrypt rubygems.yml
 
-Now, encrypt `rubygems.yml` with a Rultor public key (`9AF0FA4C`):
+Now, encrypt `rubygems.yml` with a Rultor public key `9AF0FA4C`:
 
 {% highlight xml %}
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
@@ -78,7 +77,8 @@ Gem::Specification.new do |s|
   # ...
   s.version = '1.0.snapshot'
   # ...
-end{% endhighlight %}
+end
+{% endhighlight %}
 
 This version name will be replaced by Rultor during deployment.
 
@@ -90,12 +90,12 @@ Create a `.rultor.yml` file in the root directory of your project:
 decrypt:
   rubygems.yml: "repo/rubygems.yml.asc"
 release:
-  script:
-    - "rm -rf *.gem"
-    - "sed -i \"s/1.0.snapshot/${tag}/g\" foo.gemspec"
-    - "gem build foo.gemspec"
-    - "chmod 0600 /home/r/rubygems.yml"
-    - "gem push *.gem --config-file /home/r/rubygems.yml"
+  script: |
+    rm -rf *.gem
+    sed -i "s/1.0.snapshot/${tag}/g" foo.gemspec
+    gem build foo.gemspec
+    chmod 0600 /home/r/rubygems.yml
+    gem push *.gem --config-file /home/r/rubygems.yml
 {% endhighlight %}
 
 In this example, replace `foo` with the name of your gem.
