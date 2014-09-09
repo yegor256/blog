@@ -18,19 +18,19 @@ keywords:
 
 [Definition of Done
 (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
-key definition used in Scrum and the one we also use in XDSD.
+key definition used in Scrum and the one we also use in [XDSD](http://www.xdsd.org).
 
 DoD is an exit criteria of a simple atomic task and answers the question:"am I
 done with this task?" Moreover, DoD answers the question: "will I be paid for
 the task?"
 
-In XDSD, the definition of "done" is very simple &mdash; the task is done
+In [XDSD](http://www.xdsd.org), the definition of "done" is very simple &mdash; the task is done
 [iff](http://en.wikipedia.org/wiki/If_and_only_if)
 its author accepts the deliverables.
 
 <!--more-->
 
-At XDSD, our first and most important principle states that someone is paid only
+At [XDSD](http://www.xdsd.org), our first and most important principle states that someone is paid only
 when he provides deliverables. Combining the definition of done and the
 principle of paying only for deliverables provides us a very important
 conclusion: we do not pay for un-finished tasks.

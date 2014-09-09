@@ -15,7 +15,7 @@ keywords:
   - github team work
 ---
 
-This manual explains the workflow used when working with a XDSD project hosted
+This manual explains the workflow used when working with a [XDSD](http://www.xdsd.org) project hosted
 on [Github.com](http://www.github.com). You start when a Github issue is
 assigned to you. Next, you will receive a message from a project manager
 containing the issue number, title, description and its budget in hours (usually
