@@ -36,6 +36,8 @@ the data?
 
 <!--more-->
 
+{% picture http://img.yegor256.com/2014/09/good_bad_wierd.jpg 0 The Good, the Bad, The Wierd (2008) by  Kim Jee-woon %}
+
 XSLT is the technology that can help us do this.
 In ["XML+XSLT in a Browser"]({% post_url 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 I explained briefly how it works in a browser. In a nutshell, the
