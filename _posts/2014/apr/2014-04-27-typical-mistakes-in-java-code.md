@@ -2,7 +2,7 @@
 layout: post
 title: "Typical Mistakes in Java Code"
 date: 2014-04-27
-tags: mistakes quality java oop
+tags: anti-pattern quality java oop
 categories: best
 description:
   The article lists the most common programming mistakes
