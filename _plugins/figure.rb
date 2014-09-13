@@ -9,7 +9,7 @@ module Yegor
 
     def render(_context)
       html = "<figure><img src='#{CGI.escapeHTML @src}'" \
-      " style='width:#{@width}px;'" \
+      " style='max-width:100%;width:#{@width}px;'" \
       " alt='figure'/></figure>\n\n"
     end
   end
