@@ -271,6 +271,7 @@ figure {
   text-align: center;
 }
 .tag {
+  white-space: nowrap;
   font-family: $code-font;
   font-size: .8 * $em;
   margin-right: .2 * $em;

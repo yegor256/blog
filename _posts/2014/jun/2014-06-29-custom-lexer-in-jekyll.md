@@ -2,7 +2,7 @@
 layout: post
 title: "Custom Pygments Lexer in Jekyll"
 date: 2014-06-29
-tags: jekyll lexer pygments
+tags: jekyll pygments
 description:
   Sometimes, you want to have your own syntax highlighting
   lexer in Jekyll, this article explains how to do it.
