@@ -253,6 +253,9 @@ blockquote {
 figure {
   position: relative;
   margin: 0;
+  img {
+    max-width: 100%;
+  }
   figcaption {
     position: absolute;
     font-size: .8em;
