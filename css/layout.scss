@@ -228,9 +228,6 @@ pre {
     @extend .gray;
   }
 }
-figure {
-  margin: 0;
-}
 .badge {
   @extend .desktop-only;
   float: right;
@@ -256,6 +253,7 @@ blockquote {
 figure {
   position: relative;
   margin: 0;
+  max-width: 100%;
   figcaption {
     position: absolute;
     font-size: .8em;
