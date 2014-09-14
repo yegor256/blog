@@ -2,7 +2,7 @@
 layout: post
 title: "Rultor + Travis"
 date: 2014-07-31
-tags: docker rultor ci devops
+tags: docker rultor devops
 categories: best
 description:
   Rultor is a virtual team assistant that,
