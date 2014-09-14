@@ -34,6 +34,13 @@ takes just a few seconds of your time.
 
 <!--more-->
 
+<p style="border:1px solid gray;padding:1em;">
+Since CloudBees is
+[shutting down its PaaS service](http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company)
+by the end of December, 2014,
+this article will have no sense after that.
+</p>
+
 ## Configure the CloudBees Maven Plugin
 
 Add this profile to your `pom.xml`:
