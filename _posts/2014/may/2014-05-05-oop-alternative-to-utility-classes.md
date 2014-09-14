@@ -2,7 +2,7 @@
 layout: post
 title: "OOP Alternative to Utility Classes"
 date: 2014-05-05
-tags: quality oop design anti-pattern
+tags: oop anti-pattern
 categories: best
 description:
   Utility classes are a very popular design pattern

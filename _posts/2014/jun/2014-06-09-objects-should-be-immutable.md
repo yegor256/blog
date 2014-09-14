@@ -2,7 +2,7 @@
 layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
-tags: quality immutability oop
+tags: oop anti-pattern
 categories: best
 description:
   The article gives arguments about why
