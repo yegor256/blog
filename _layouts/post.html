@@ -32,20 +32,23 @@ layout: default
           title="Share on LinkedIn" class="button">
           <i class="ico ico-linkedin"></i>
         </a>
-      </nav>
-    </div>
-    {% if page.discussions %}
-      <div class="buttons" style="text-align:right;">
-        <span class="gray">discuss at</span>
-        <nav class="share" role="navigation">
+        <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}"
+          title="Share on StumbleUpon" class="button">
+          <i class="ico ico-stumbleupon"></i>
+        </a>
+        <a href="http://digg.com/submit?phase=2&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}"
+          title="Share on Digg" class="button">
+          <i class="ico ico-digg"></i>
+        </a>
+        {% if page.discussions %}
           {% for link in page.discussions %}
             <a href="{{ link[1] }}" title="discuss at {{ link[0] }}">
               <i class="ico ico-{{ link[0] }}"></i>
             </a>
           {% endfor %}
-        </nav>
-      </div>
-    {% endif %}
+        {% endif %}
+      </nav>
+    </div>
     <main role="main">
       <article role="article" itemprop="articleBody">
         {{ content }}

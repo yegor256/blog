@@ -28,7 +28,7 @@ keywords:
   - say no to null
 discussions:
   reddit: http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/
-  hacker-news: https://news.ycombinator.com/item?id=7736925
+  hackernews: https://news.ycombinator.com/item?id=7736925
   coderanch: http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java
 ---
 
