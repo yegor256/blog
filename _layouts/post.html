@@ -40,19 +40,28 @@ layout: default
           title="Share on Digg" class="button">
           <i class="ico ico-digg"></i>
         </a>
-        {% if page.discussions %}
-          {% for link in page.discussions %}
-            <a href="{{ link[1] }}" title="discuss at {{ link[0] }}">
-              <i class="ico ico-{{ link[0] }}"></i>
-            </a>
-          {% endfor %}
-        {% endif %}
+        <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}"
+          title="Share on Reddit" class="button">
+          <i class="ico ico-reddit"></i>
+        </a>
+        <a href="http://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&amp;t={{ page.title }}"
+          title="Share on Hacker News" class="button">
+          <i class="ico ico-hackernews"></i>
+        </a>
       </nav>
     </div>
     <main role="main">
       <article role="article" itemprop="articleBody">
         {{ content }}
       </article>
+      {% if page.discussions %}
+        <p>
+          Discuss it at:
+          {% for link in page.discussions %}
+            <a href="{{ link[1] }}">{{ link[0] }}</a>
+          {% endfor %}
+        </p>
+      {% endif %}
     </main>
     {% if site.related_posts.size > 0 %}
       <h2>Related Posts</h2>
