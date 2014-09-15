@@ -23,31 +23,45 @@ being so popular in software development teams, are **pure evil**.
 
 I'm not saying that they can be done right or wrong. I'm not
 trying to give advices about how to do them properly so that they
-work. I'm saying, they should **not** happen, ever.
+work. I'm saying, they should **not** happen, ever. Because they
+not only "don't work", but they do very bad, even catastrophic,
+things to your management process, being it agile or not.
 
 <!--more-->
 
-## Management of Responsibility
+In a nutshell, daily stand-up meetings encourage
+developers to transfer responsibility from their own shoulders
+to everybody's. And without personal responsibility people degrade,
+no matter what Agile Manifesto says.
 
-Let's discuss a simple project, as an example. Say, you're a manager and
-you have a group of three people and a job to be done. You have to make
-a presentation about global warming. Besides, you have a
-deadline and a budget (a classic definition of a project, which always has
-scope, cost, and time constraints, aka
-[project management triangle](https://en.wikipedia.org/wiki/Project_management_triangle)).
+By the way, a very famous article
+[Management Time: Who's Got the Monkey?](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
+was published in the Harvard Business Review about this very subject. The gist
+of it is that a good manager should always delegate tasks to her people,
+making them fully responsible for the result. And people always tend
+to try to push responsibility back, to the manager's shoulders. The manager
+should prevent this from happening. Daily stand-up meetings work against
+the manager, by helping programmers to avoid being responsible for the
+tasks they are assigned to.
 
-What do you do in order to get it done?
+So, first step. There is a sprint with a list of tasks to be done by
+the team. Some of the tasks belong to Jeff, who is a Java programmer. He
+knows what to do and he knows that the deadline is in five days.
 
-First, you break down your scope into parts, defining activities that
-need to be done. You organize them in a so called
-[work breakdown structure](https://en.wikipedia.org/wiki/Work_breakdown_structure):
+In the morning, everybody, including Jeff, stay in front of each other,
+talking in a round-robin mode. When it's time to talk for Jeff, he says
+something like this:
 
-...
+> I was working with module A yesterday, it seems to be more
+difficult than I expected. Today I'm going to work with it again.
+Hopefully will be able to run it. No specific impediments besides that.
 
-Then, you collect estimates for each task. You simply ask your team
-members, how much time will each task take:
+This is a very typical message, I've heard it thousands times in
+SCRUM/Agile teams. What exactly Jeff is saying? He is saying something like
+this:
 
-Using this information you can calculate your budget and schedule:
+> The problem with this module, I don't want to face it alone.
+I want all of you to know that if I fail, it's not my fault. Don't
+blame me, blame the module.
 
-You're all set. It's time to start managing.
 
