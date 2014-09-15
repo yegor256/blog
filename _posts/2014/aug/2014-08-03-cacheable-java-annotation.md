@@ -2,7 +2,7 @@
 layout: post
 title: "Cache Java Method Results"
 date: 2014-08-03
-tags: java jcabi cacheable aop
+tags: java jcabi aop
 description:
   Caching Java method results is easy with jcabi-aspects,
   a small library that uses AspectJ and Java annotations
@@ -18,7 +18,7 @@ keywords:
   - "@Cacheable"
 discussions:
   reddit: http://redd.it/2cikh0
-  hacker-news: https://news.ycombinator.com/item?id=8130679
+  hackernews: https://news.ycombinator.com/item?id=8130679
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploying to Heroku, in One Click"
-date: 2014-09-08
+date: 2014-09-13
 tags: rultor devops heroku java
 description:
   This tutorial explains how a Java project can be
@@ -18,7 +18,7 @@ keywords:
 
 There were a few articles already about our usage of Rultor
 for automating continuous delivery cycles of Java and Ruby projects,
-including [Rubygems](http://www.yegor256.com/2014/08/26/publish-to-rubygems.html), 
+including [Rubygems](http://www.yegor256.com/2014/08/26/publish-to-rubygems.html),
 [CloudBees](http://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
 and [MavenCentral](http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 

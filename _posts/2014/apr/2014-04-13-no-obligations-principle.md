@@ -74,11 +74,11 @@ are finished with their jobs.
 {% picture http://img.yegor256.com/2014/04/big-lebowski-her-life-is-in-your-hands.jpg 0 The Big Lebowski (1998) by Joel Coen %}
 
 Implementation problems should be solved by team members on their own. So, how
-do we accomplish this in XDSD?
+do we accomplish this in [XDSD](http://www.xdsd.org)?
 
 ## I Owe You Nothing
 
-In XDSD, there is the first fundamental principle that says everybody should be
+In [XDSD](http://www.xdsd.org), there is the first fundamental principle that says everybody should be
 paid for deliverables. Based on this idea, we can go even further and declare a
 "No Obligations" principle.
 
@@ -110,7 +110,7 @@ will be purchased only from members who manage to complete their tasks on time.
 
 ## How Does This Affect Me?
 
-When you're working with XDSD-inspired project, you should always keep the "No
+When you're working with [XDSD](http://www.xdsd.org)-inspired project, you should always keep the "No
 Obligations" principle in mind. You should start a task only if you're sure that
 you can finish it in a few days. You should pursue your tasks and control
 deadlines yourself. The project manager will not ask you for status updates, as

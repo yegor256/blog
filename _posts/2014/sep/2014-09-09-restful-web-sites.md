@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "RESTful API and a Web Site in the Same URL"
-date: 2014-08-22
-tags: restful design
-description:
+date: 2014-09-09
+tags: restful xslt xml
+description: |
   The way RESTful APIs are designed perfectly
   fits into the concept of web browsing, with a few
   minimal alterations
@@ -35,6 +35,8 @@ to the client-side (the browser) and letting the server work solely with
 the data?
 
 <!--more-->
+
+{% picture http://img.yegor256.com/2014/09/good_bad_weird.jpg 0 The Good, the Bad, The Wierd (2008) by Kim Jee-woon %}
 
 XSLT is the technology that can help us do this.
 In ["XML+XSLT in a Browser"]({% post_url 2014/jun/2014-06-25-xml-and-xslt-in-browser %})

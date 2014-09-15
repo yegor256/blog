@@ -2,7 +2,7 @@
 layout: post
 title: "What is an Object?"
 date: 2014-04-29
-tags: mistakes quality
+tags: oop quality
 description:
   What is a properly designed class in an object-oriented world? What
   name should it have and what are the typical mistakes made in

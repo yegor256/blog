@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deployment Script vs. Rultor"
-date: 2014-09-09
+date: 2014-09-11
 tags: rultor devops
 description:
   Many of us have our own custom release/deployment scripts
@@ -22,13 +22,15 @@ very often I hear something like:
 > But I already have a script that deploys everything automatically.
 
 This response is very common, so I decided to summarize my three main arguments for
-automated Rultor deployment/release processes in one article: 1) isolated docker containers, 
+automated Rultor deployment/release processes in one article: 1) isolated docker containers,
 2) visibility of logs and 3) security of credentials.
 
 Read about them and see what Rultor gives you on top of **your existing**
 deployment script(s).
 
 <!--more-->
+
+{% picture http://img.yegor256.com/2014/09/charlie-and-chocolate-factory-father.jpg 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
 
 Before we start with the arguments, let me emphasize that Rultor
 is a useful interface to your custom scripts. When you decide
@@ -52,9 +54,9 @@ container and runs your script there. But what benefit does this give me, you as
 The main benefit is that the container gets destroyed right after your script
 is done. This means that you can do all pre-configuration inside the
 container without any fear of conflict with your main working
-platform. Let me give an example. 
+platform. Let me give an example.
 
-I'm developing on MacBook, where I install and remove packages which I need for development. 
+I'm developing on MacBook, where I install and remove packages which I need for development.
 At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, phing,
 phpunit, phpcs and xdebug. Every MacOS version needs to be configured specifically
 to get these applications up and running, and it's a time-consuming job.
@@ -89,7 +91,7 @@ will only work if PHP 5.3, MySQL, phing, xdebug, phpcs and phpunit are installed
 Again, it's a lot of work to install and configure them every time I upgrade
 my MacOS or change a laptop.
 
-Needless to say, that if/when someone joins the project and 
+Needless to say, that if/when someone joins the project and
 tries to run my scripts, he/she will have to do this pre-installation
 work again.
 

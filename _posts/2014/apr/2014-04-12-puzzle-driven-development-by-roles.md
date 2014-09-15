@@ -232,7 +232,7 @@ fixing and breaking at the same time.
 ## Tester
 
 I'm a tester and my primary motivation is to find bugs. This may be
-contradictory to what you've heard before; but in XDSD, we plan
+contradictory to what you've heard before; but in [XDSD](http://www.xdsd.org), we plan
 to find a certain amount of bugs at every stage of the project.
 
 {% picture http://img.yegor256.com/2014/04/fear-and-loathing-adrenochrome.jpg 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}

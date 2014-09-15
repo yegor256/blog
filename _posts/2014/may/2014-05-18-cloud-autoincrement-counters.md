@@ -2,7 +2,7 @@
 layout: post
 title: "Atomic Counters at Stateful.co"
 date: 2014-05-18
-tags: stateful
+tags: stateful aws dynamodb
 description:
   The article explains how stateful.co atomic counters
   implement auto-increment functionality that
@@ -19,7 +19,7 @@ keywords:
   - atomic counters online
   - online atomic counter
 discussions:
-  hacker-news: https://news.ycombinator.com/item?id=7765899
+  hackernews: https://news.ycombinator.com/item?id=7765899
   reddit: http://www.reddit.com/r/aws/comments/25x69p/atomic_counters_at_statefulco/
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "W3C Java Validators"
 date: 2014-04-29
-tags: w3c validator
+tags: w3c java jcabi
 description:
   The article explains how to use jcabi-w3c,
   which is a Java adapter of W3C online validators,
