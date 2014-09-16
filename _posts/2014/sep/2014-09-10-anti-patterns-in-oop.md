@@ -23,7 +23,7 @@ Here they come:
 
  * [Mutable Objects]({% post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
 
- * Getters and Setters
+ * [Getters and Setters]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
  * Singletons
 
