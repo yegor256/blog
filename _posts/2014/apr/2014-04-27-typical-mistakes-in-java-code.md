@@ -70,7 +70,7 @@ class Validated implements Content {};
 
 Methods can either return something or return `void`. If a method returns
 something, then its name should explain *what it returns*, for example (don't
-use the `get` prefix ever):
+use the `get` prefix [ever]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %})):
 
 ```java
 boolean isValid(String name);
