@@ -1,0 +1,48 @@
+---
+layout: post
+title: "How This Blog Was Promoted"
+date: 2014-04-27
+tags: story
+description:
+  This is a meta story about the blog itself. It explains
+  how this blog was promoted since the beginning
+keywords:
+  - how to promote a blog
+  - promote a blog
+  - tips and tricks promote a blog
+  - blog promotion tricks
+  - how to promote a site
+---
+
+6 Apr 2014.
+It started :)
+
+10 Jul 2014.
+I try to write at least 4 articles per month, but in reality there
+are more. Every article I'm trying to post to relevant posts in StackOverflow.
+This works very well, I'm getting over 40% of traffic from SO.
+
+20 Aug 2014.
+Every blog post goes to the following resources, right
+after its publication:
+
+ * twitter
+ * linkedin
+ * google+
+ * reddit
+ * hacker news
+ * digg
+ * stumble upon
+
+5 Sep 2014.
+The blog was added to JavaCodeGeeks.com, as a guest
+author. I've got some traffic from there, but unfortunately, most
+of the readers comment right there, at JCG.
+
+8 Sep 2014.
+The blog was added to [BOTW.org](http://blogs.botw.org/Computers/Programming/).
+I didn't get any traffic from them yet, even through this submission
+was rather expensive ($270).
+
+10 Sep 2014.
+Submitted the blog to a bunch of directories (over 1000).
