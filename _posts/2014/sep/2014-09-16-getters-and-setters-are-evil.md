@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getters/Setters. Evil. Period."
-date: 2014-09-15
+date: 2014-09-16
 tags: oop anti-pattern
 description:
   Getters and setters is a terrible anti-pattern in
@@ -89,7 +89,7 @@ living creatures, like you and me. They are living organisms,
 with their own behaviour, properties and a life cycle.
 
 Can a living organism have a setter?
-Can you "set" a ball to a dog? Not really. 
+Can you "set" a ball to a dog? Not really.
 But that is exactly what the following piece of software is doing:
 
 {% highlight java %}
@@ -144,6 +144,8 @@ dog can't give `NULL` back. Dogs simply don't know what `NULL` is :)
 Object thinking immediately eliminates
 [NULL references]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
+
+{% picture http://img.yegor256.com/2014/09/fish-called-wanda.jpg 0 A Fish Called Wanda (1988) by Charles Crichton %}
 
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:
