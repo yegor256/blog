@@ -197,4 +197,7 @@ This is exactly how [ReXSL framework](http://www.rexsl.com) works.
 Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer
 and you will see an HTML document, not an XML document as is the case with Chrome.
 
-In the next post, I'll explain [ReXSL framework](http://www.rexsl.com).
+In one of the next posts, I'll explain [ReXSL framework](http://www.rexsl.com).
+
+Read this one, it continues the discussion of this subject:
+[RESTful API and a Web Site in the Same URL]({% post_url 2014/sep/2014-09-09-restful-web-sites %})
