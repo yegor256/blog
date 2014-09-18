@@ -120,6 +120,7 @@ time {
   .share {
     display: inline-block;
     font-size: 1.2 * $em;
+    line-height: 1.2 * $em;
     a, a:visited {
       text-decoration: none;
       margin-right: .2 * $em;
