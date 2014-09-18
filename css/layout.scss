@@ -265,6 +265,9 @@ blockquote {
     display: inline;
     content: "ˮ";
   }
+  @media all and (max-width: $width) {
+    margin-left: 0;
+  }
 }
 figure {
   position: relative;
