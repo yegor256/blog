@@ -126,21 +126,15 @@ time {
       margin-right: .2 * $em;
     }
     a {
-      display: inline-block;
-      border-radius: 50%;
-      background-color: $gray;
-      color: white;
-      width: 1.6 * $em;
-      height: 1.6 * $em;
-      line-height: 1.6 * $em;
-      text-align: center;
-      padding: -1.6 * $em;
-      border: 1px solid $gray;
-      &:hover {
-        background-color: white;
-      }
       i {
+        display: inline-block;
+        background-color: $gray;
+        color: white;
+        padding: .5 * $em;
+        border-radius: 50%;
+        width: 1.25 * $em;
         font-size: $em;
+        text-align: center;
         vertical-align: middle;
       }
     }
