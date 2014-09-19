@@ -116,26 +116,27 @@ time {
 }
 .buttons {
   @include unprintable();
-  display: inline-block;
   .share {
-    display: inline-block;
-    font-size: 1.2 * $em;
-    line-height: 1.2 * $em;
     a, a:visited {
       text-decoration: none;
-      margin-right: .2 * $em;
     }
-    a {
-      i {
-        display: inline-block;
-        background-color: $gray;
-        color: white;
-        padding: .5 * $em;
-        border-radius: 50%;
-        width: 1.25 * $em;
-        font-size: $em;
-        text-align: center;
-        vertical-align: middle;
+    a .ico {
+      background-color: $gray;
+      padding: .5 * $em;
+      border-radius: 50%;
+      width: 1.25 * $em;
+      height: 1.25 * $em;
+      font-size: $em;
+      margin-right: .2 * $em;
+      margin-bottom: .2 * $em;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid $gray;
+      display: inline-block;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: $gray;
       }
     }
   }
