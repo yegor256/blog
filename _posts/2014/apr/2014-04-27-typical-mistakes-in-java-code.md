@@ -22,6 +22,7 @@ keywords:
   - name of class in java
   - java class name
 discussions:
+  javacodegeeks: http://www.javacodegeeks.com/2014/09/typical-mistakes-in-java-code.html
   reddit: http://www.reddit.com/r/java/comments/244nxp/typical_mistakes_in_java_code_my_code_review/
 ---
 
