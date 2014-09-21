@@ -46,7 +46,7 @@ There are a few arguments against "accessors"
 All of them, I think, are not strong enough. Let's briefly go
 through them.
 
-**Ask, Don't Tell**
+**Tell, Don't Ask**
 Allen Holub says, "Don't ask for the information
 you need to do the work; ask the object that has the information
 to do the work for you".
