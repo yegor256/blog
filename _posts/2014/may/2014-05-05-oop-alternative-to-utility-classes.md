@@ -29,6 +29,7 @@ keywords:
   - helper class is evil
   - helper class is bad
 discussions:
+  javacodegeeks: http://www.javacodegeeks.com/2014/09/oop-alternative-to-utility-classes.html
   reddit: http://www.reddit.com/r/java/comments/24rbjz/oop_alternative_to_utility_classes/
 ---
 

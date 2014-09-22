@@ -3,7 +3,6 @@ layout: post
 title: "Typical Mistakes in Java Code"
 date: 2014-04-27
 tags: anti-pattern java oop
-categories: best
 description:
   The article lists the most common programming mistakes
   I catch during code reviews, which can't be caught by static analysis
@@ -23,6 +22,7 @@ keywords:
   - name of class in java
   - java class name
 discussions:
+  javacodegeeks: http://www.javacodegeeks.com/2014/09/typical-mistakes-in-java-code.html
   reddit: http://www.reddit.com/r/java/comments/244nxp/typical_mistakes_in_java_code_my_code_review/
 ---
 
@@ -70,7 +70,7 @@ class Validated implements Content {};
 
 Methods can either return something or return `void`. If a method returns
 something, then its name should explain *what it returns*, for example (don't
-use the `get` prefix ever):
+use the `get` prefix [ever]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %})):
 
 ```java
 boolean isValid(String name);

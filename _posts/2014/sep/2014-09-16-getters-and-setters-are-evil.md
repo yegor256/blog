@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Getters/Setters. Evil. Period."
-date: 2014-09-15
+date: 2014-09-16
 tags: oop anti-pattern
+categories: best
 description:
   Getters and setters is a terrible anti-pattern in
   object-oriented programming and should be avoided.
@@ -13,6 +14,8 @@ keywords:
   - getters and setters are evil
   - why getters and setters are evil
   - getters and setters is an anti-pattern
+discussions:
+  javacodegeeks: http://www.javacodegeeks.com/2014/09/getterssetters-evil-period.html
 ---
 
 There is an old debate, started in 2003 by Allen Holub
@@ -45,7 +48,7 @@ There are a few arguments against "accessors"
 All of them, I think, are not strong enough. Let's briefly go
 through them.
 
-**Ask, Don't Tell**
+**Tell, Don't Ask**
 Allen Holub says, "Don't ask for the information
 you need to do the work; ask the object that has the information
 to do the work for you".
@@ -89,7 +92,7 @@ living creatures, like you and me. They are living organisms,
 with their own behaviour, properties and a life cycle.
 
 Can a living organism have a setter?
-Can you "set" a ball to a dog? Not really. 
+Can you "set" a ball to a dog? Not really.
 But that is exactly what the following piece of software is doing:
 
 {% highlight java %}
@@ -145,6 +148,8 @@ Object thinking immediately eliminates
 [NULL references]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
 
+{% picture http://img.yegor256.com/2014/09/fish-called-wanda.jpg 0 A Fish Called Wanda (1988) by Charles Crichton %}
+
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:
 
@@ -187,3 +192,6 @@ Java APIs that rely on the get/set notation? What about Ruby's built-in feature
 that simplies the creation of accessors? Well, all of that is our misfortune.
 It is much easier to stay in a primitive world of procedural COBOL than to
 truly understand and appreciate the beautiful world of true objects.
+
+PPS. Forgot to say, yes, dependency injection via setters is also
+a terrible anti-pattern. About it, in one of the next posts :)

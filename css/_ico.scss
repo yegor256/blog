@@ -1,14 +1,13 @@
 @font-face {
   font-family: 'ico';
-  src: url('http://img.yegor256.com/fonts/ico.eot?90554081');
-  src: url('http://img.yegor256.com/fonts/ico.eot?90554081#iefix') format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/ico.woff?90554081') format('woff'),
-    url('http://img.yegor256.com/fonts/ico.ttf?90554081') format('truetype'),
-    url('http://img.yegor256.com/fonts/ico.svg?90554081#ico') format('svg');
+  src: url('http://img.yegor256.com/fonts/ico.eot');
+  src: url('http://img.yegor256.com/fonts/ico.eot#iefix') format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/ico.woff') format('woff'),
+    url('http://img.yegor256.com/fonts/ico.ttf') format('truetype'),
+    url('http://img.yegor256.com/fonts/ico.svg#ico') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
 
 [class^="ico-"]:before, [class*=" ico-"]:before {
   font-family: "ico";
