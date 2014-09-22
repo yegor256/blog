@@ -139,4 +139,5 @@ development teams.
 Even more important is that we never make compromises. If your pull request
 violates even one rule of the static analyzer, it won't be accepted. And, it
 doesn't matter how small or innocent that violation may look. This merging
-process is fully automated and can't be bypassed.
+process is [fully automated]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %})
+and can't be bypassed.
