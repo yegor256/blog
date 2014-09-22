@@ -123,7 +123,8 @@ through pull requests (most of our projects are done in
 [Github]({% post_url 2014/apr/2014-04-15-github-guidelines %}).)
 
 We enforce this policy not because we don't trust our developers, but simply
-because we don't trust anyone :)
+because we don't trust anyone :) Read this article:
+[Master Branch Must Be Read-Only]({% post_url 2014/jul/2014-jul-21-read-only-master-branch %}).
 
 ## No Compromises About Code Quality
 
