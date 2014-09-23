@@ -5,7 +5,7 @@ date: 2014-09-25
 tags: testing
 description:
   Mocking frameworks is not a good practice and should be your last resort;
-  instead, create and ship mock classes together with your code
+  instead, create and ship mock classes together with your code.
 keywords:
   - mocking is evil
   - mocks are evil
@@ -18,9 +18,9 @@ keywords:
   - java mockito example
 ---
 
-While mock objects is a perfect instrument for unit testing,
+While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
-an unmaintanable mess. Here are a few examples of unit tests,
+an unmaintainable mess. Here are a few examples of unit tests;
 look at them yourself:
 
 ...
@@ -33,7 +33,7 @@ make sure that all of its methods return valid objects.
 
 ## Object Hierarchy
 
-Take `Region` interface from [jcabi-dynamo](http://dynamo.jcabi.com) as an example
+Take the `Region` interface from [jcabi-dynamo](http://dynamo.jcabi.com) as an example
 (this snippet and all others in this article are simplified, for the
 sake of brevity):
 
@@ -43,7 +43,7 @@ public interface Region {
 }
 {% endhighlight %}
 
-Its `table()` method returns an instance of `Table` interface, which
+Its `table()` method returns an instance of the `Table` interface, which
 has its own methods:
 
 {% highlight java %}
@@ -54,10 +54,10 @@ public interface Table {
 }
 {% endhighlight %}
 
-Interface `Frame`, returned by `frame()` method, also has its
+Interface `Frame`, returned by the `frame()` method, also has its
 own methods. And so on.
 In order to create a properly mocked instance of interface `Region`,
-one should create a dozen of other mock objects.
+one would normally create a dozen other mock objects.
 
 ## Sample Use Case
 
@@ -89,29 +89,29 @@ public class Employee {
 
 You can imagine how difficult it will be to unit test this class,
 using [Mockito](http://www.mockito.org), for example. First, we have
-to mock `Region` interface. Then, mock a `Table` interface and make sure
-it is returned by `table()` method. Then, mock a `Frame` interface, etc.
+to mock the `Region` interface. Then, we have to mock a `Table` interface and make sure
+it is returned by the `table()` method. Then, we have to mock a `Frame` interface, etc.
 
 The unit test will be much longer than the class itself. Besides that,
-it's real purpose, which is to test the retrieval of employee's salary, will not
-be obvious for a reader.
+its real purpose, which is to test the retrieval of an employee's salary, will not
+be obvious to the reader.
 
-Moreover, when we will need to test a similar method of a similar class,
-we should start this mocking from scratch. Again, multiple lines of code,
-which will look very similar to what we have written before.
+Moreover, when we need to test a similar method of a similar class,
+we will need to restart this mocking from scratch. Again, multiple lines of code,
+which will look very similar to what we have already written.
 
 ## Fake Classes
 
 The solution is to create fake classes and ship them
 together with real classes. This is what [jcabi-dynamo](http://dynamo.jcabi.com)
-is doing, look at its [JavaDoc](http://dynamo.jcabi.com/apidocs-0.16.1/index.html).
+is doing. Just look at its [JavaDoc](http://dynamo.jcabi.com/apidocs-0.16.1/index.html).
 There is a package called `com.jcabi.dynamo.mock` that contains
 only fake classes, suitable only for unit testing.
 
 Even though their sole purpose is to optimize unit testing, we ship
 them together with production code, in the same JAR package.
 
-This is how a test will look like, when a fake class `MkRegion` is used:
+This is what a test will look like, when a fake class `MkRegion` is used:
 
 {% highlight java %}
 public class EmployeeTest {
@@ -135,8 +135,8 @@ public class EmployeeTest {
 
 This test looks obvious to me. First, we create a fake DynamoDB region,
 which works on top of `H2Data` storage (in-memory H2 database). The storage
-will be ready for a single table `employees` with a hash key `name` and
-a single attribute `salary`.
+will be ready for a single `employees` table with a hash key `name` and
+a single `salary` attribute.
 
 Then, we put a record into the table, with a hash `Jeff` and a salary
 `50000`.
@@ -144,6 +144,6 @@ Then, we put a record into the table, with a hash `Jeff` and a salary
 Finally, we create an instance of class `Employee` and check how it
 fetches the salary from DynamoDB.
 
-I'm doing the same in almost every open source library I'm working with.
+I'm currently doing the same thing in almost every open source library I'm working with.
 I'm creating a collection of fake classes, that simplify testing
 inside the library and for its users.
