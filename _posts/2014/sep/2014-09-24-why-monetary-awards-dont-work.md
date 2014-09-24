@@ -41,7 +41,7 @@ Why, in a modern office, do we try to hide
 monetary motivation and replace it with
 [everything else](http://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,
-paid vacations, etc. Why don't we just say 
+paid vacations, etc. Why don't we just say
  &mdash; "Jeff completed his task faster than
 everybody else. This is his $500 check. Whoever completes the
 next task gets $300," out loud in the office?... Sounds uncomfortable, doesn't it?
@@ -87,6 +87,8 @@ The ground rules document should be superior to your boss. If the document
 says that your results get an A+ grade, the boss should have no say. If she
 doesn't like you personally, it doesn't matter. You get an A+ grade, and you
 are the best. That's it.
+
+{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.jpg 600 %}
 
 Does your team have such a document? Can you answer all of these questions?
 If not, you're not ready for a rewards program. It will only
