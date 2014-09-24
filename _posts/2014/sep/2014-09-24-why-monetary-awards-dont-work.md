@@ -76,7 +76,9 @@ A Serious Man (2009) by Ethan Coen and Joel Coen;
 Two and a Half Men (TV Series).
 </p>
 
-What do I mean by ground rules? It should be a simple document
+What do I mean by ground rules?
+
+It should be a simple document
 ([PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx)
 calls it a Staffing Management Plan) that helps me, as a team member,
 answer at least these basic questions:
