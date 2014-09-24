@@ -54,15 +54,15 @@ I answered these questions (approximately):
 
  * Is it true that people are not enough result-oriented (27:40)?
 
- * Are there any other challenges besides mindset of programmers (29:12)?
+ * Are there any other challenges (29:12)?
 
  * What do I like personally about it (30:40)?
 
- * How do scale your teams when you need more programmers (32:01)?
+ * How do we scale our teams when we need more programmers (32:01)?
 
  * What an "unlimited pool of talents" means (34:40)?
 
- * What advice do you have for someone who wants to do the same (37:50)?
+ * What advice do I have for those who work remotely (37:50)?
 
  * Where do I work from, personally (39:10)?
 
