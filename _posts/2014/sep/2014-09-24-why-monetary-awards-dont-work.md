@@ -88,7 +88,7 @@ says that your results get an A+ grade, the boss should have no say. If she
 doesn't like you personally, it doesn't matter. You get an A+ grade, and you
 are the best. That's it.
 
-{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.jpg 600 %}
+{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.png 600 %}
 
 Does your team have such a document? Can you answer all of these questions?
 If not, you're not ready for a rewards program. It will only
