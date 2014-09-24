@@ -301,3 +301,9 @@ figure {
     background-color: $black;
   }
 }
+.note {
+  margin-top: 0;
+  font-size: .8 * $em;
+  line-height: $em;
+  color: $gray;
+}

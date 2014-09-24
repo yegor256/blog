@@ -68,7 +68,7 @@ the Good gets demotivated and depressed.
 
 {% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.png 600 %}
 
-<p style="font-size:0.8em">
+<p class="note">
 In a clockwise direction from the top left corner:
 The Good, the Bad and the Ugly (1966) by Sergio Leone;
 Roger Federer;
