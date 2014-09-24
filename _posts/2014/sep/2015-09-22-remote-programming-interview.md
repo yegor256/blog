@@ -1,0 +1,71 @@
+---
+layout: post
+title: "How Do We Manage Remote People in Teamed.io"
+date: 2014-09-22
+tags: mgmt
+description:
+  Here is an interview taken by Lisette Sutherland, where
+  we discussed Teamed.io and our unique approach to
+  remote team management
+keywords:
+  - remote programming
+  - xdsd
+  - hire remote programmer
+  - hire remote developer
+  - outsource programming
+---
+
+Here is an interview taken by Lisette Sutherland a few hours ago,
+which I enjoyed to give :)
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/TWBBZK_XRNU?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<!--more-->
+
+I answered these questions (approximately):
+
+ * How Teamed.io differs from other software companies (0:50)?
+
+ * How do we control programmers remotely (1:59)?
+
+ * Do we compare ourselves with open source (3:52)?
+
+ * How do we build a network of programmers (5:10)?
+
+ * Why people like to work with us (5:40)?
+
+ * What happens when a programmer fails (7:50)?
+
+ * How can it be financially successful (9:40)?
+
+ * How do we organize "team building" (11:50)?
+
+ * What challenges do we have (14:50)?
+
+ * What about micro-management (17:55)?
+
+ * Can this work in a non-IT sector (19:40)?
+
+ * What do you to manage the team (20:48)?
+
+ * Isn't it difficult to manage so many tasks (24:18)?
+
+ * Do we have cultural issues (25:35)?
+
+ * Is it true that people are not enough result-oriented (27:40)?
+
+ * Are there any other challenges besides mindset of programmers (29:12)?
+
+ * What do I like personally about it (30:40)?
+
+ * How do scale your teams when you need more programmers (32:01)?
+
+ * What an "unlimited pool of talents" means (34:40)?
+
+ * What advice do you have for someone who wants to do the same (37:50)?
+
+ * Where do I work from, personally (39:10)?
+
+ * How do we find clients (42:29)?
+
+Enjoy :)

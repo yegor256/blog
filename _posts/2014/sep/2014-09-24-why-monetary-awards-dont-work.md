@@ -83,7 +83,7 @@ It should be a simple document
 calls it a Staffing Management Plan) that helps me, as a team member,
 answer at least these basic questions:
 
- * How are my personal results are measured?
+ * How my personal results are measured?
 
  * Who gives me tasks and who do I report to?
 
