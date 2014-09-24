@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Do We Manage Remote People in Teamed.io"
+title: "Remote Programming in Teamed.io"
 date: 2014-09-22
 tags: mgmt
 description:
