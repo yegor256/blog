@@ -46,7 +46,7 @@ I answered these questions (approximately):
 
  * Can this work in a non-IT sector (19:40)?
 
- * What do you to manage the team (20:48)?
+ * What do you do to manage the team (20:48)?
 
  * Isn't it difficult to manage so many tasks (24:18)?
 
