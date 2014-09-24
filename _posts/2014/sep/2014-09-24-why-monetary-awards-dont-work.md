@@ -66,6 +66,8 @@ they encourage people to play wild-wild west, where the fastest gets the
 cash bag. Obviously, the Bad and the Ugly get to the prize faster, while
 the Good gets demotivated and depressed.
 
+{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.png 600 %}
+
 What do I mean by ground rules? It should be a simple document
 ([PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx)
 calls it a Staffing Management Plan) that helps me, as a team member,
@@ -87,8 +89,6 @@ The ground rules document should be superior to your boss. If the document
 says that your results get an A+ grade, the boss should have no say. If she
 doesn't like you personally, it doesn't matter. You get an A+ grade, and you
 are the best. That's it.
-
-{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.png 600 %}
 
 Does your team have such a document? Can you answer all of these questions?
 If not, you're not ready for a rewards program. It will only
