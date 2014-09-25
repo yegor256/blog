@@ -46,3 +46,14 @@ was rather expensive ($270).
 
 10 Sep 2014.
 Submitted the blog to a bunch of directories (over 1000).
+
+25 Sep 2014.
+Traffic is coming from:
+Google search: 27%
+Direct: 21%
+Stackoverflow: 14%
+Javacodegeeks: 9%
+Reddit: 7%
+Twitter: 3%
+Hackernews: 3%
+

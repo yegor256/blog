@@ -100,8 +100,6 @@ says that your results get an A+ grade, the boss should have no say. If she
 doesn't like you personally, it doesn't matter. You get an A+ grade, and you
 are the best. That's it.
 
-https://plus.google.com/hangouts/_/g4wda77w6dw2oi5rtc6ac2gioqa
-
 Does your team have such a document? Can you answer all of these questions?
 If not, you're not ready for a rewards program. It will only
 make your management situation worse, just like all the
