@@ -66,6 +66,7 @@ subscribers in my list).
   <label for="subscribe"></label>
   <button id="subscribe" class="field">Subscribe</button>
   <span id="error" style="color:red;"></span>
+  <span class="note">540 Happy Subscribers and Counting...</span>
 </fieldset>
 
 You can always [unsubscribe](/unsubscribe.html).
