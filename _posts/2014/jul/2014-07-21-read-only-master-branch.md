@@ -78,7 +78,7 @@ Some of them are available as a service in cloud, such as:
 [Drone](http://www.drone.io),
 [Wercker](http://wercker.com/), and many others.
 
-## Why Continuos Integration Doesn't Work?
+## Why Continuous Integration Doesn't Work?
 
 CI is great, but the bigger the team (and the code base), the more often builds
 get broken. And, the longer it takes to fix them. I've seen many examples where
