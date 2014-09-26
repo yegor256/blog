@@ -35,6 +35,32 @@ function send_email($button, from, text, subject, success, error) {
 
 $(
   function() {
+    $.getJSON(
+      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + encodeURIComponent(document.location.href),,
+      function (data) {
+        if (data.Facebook.total_count !== '0') {
+          $('.count-facebook').html(data.Facebook.total_count).show();
+        }
+        if (data.Twitter !== 0) {
+          $('.count-twitter').html(data.Twitter).show();
+        }
+        if (data.GooglePlusOne !== 0) {
+          $('.count-googleplus').html(data.GooglePlusOne);
+        }
+        if (data.LinkedIn !== 0) {
+          $('.count-linkedin').html(data.LinkedIn).show();
+        }
+        if (data.Reddit !== 0) {
+          $('.count-stumbleupon').html(data.Reddit);
+        }
+        if (data.StumbleUpon !== 0) {
+          $('.count-stumbleupon').html(data.StumbleUpon);
+        }
+        if (data.Diggs !== 0) {
+          $('.count-digg').html(data.Diggs).show();
+        }
+      }
+    );
     $('#search-query').lunrSearch(
       {
         indexUrl: '/search.json',
@@ -51,46 +77,6 @@ $(
           $this.attr('href'),
           $this.attr('title'),
           'width=640,height=300'
-        );
-      }
-    );
-    $('.count-twitter').each(
-      function (idx, element) {
-        $.getJSON(
-          'http://cdn.api.twitter.com/1/urls/count.json?url=' + encodeURIComponent(document.location.href),
-          function (data) {
-            $(element).html(data.count);
-          }
-        );
-      }
-    );
-    $('.count-facebook').each(
-      function (idx, element) {
-        $.getJSON(
-          'https://graph.facebook.com/?id=' + encodeURIComponent(document.location.href),
-          function (data) {
-            $(element).html(data.shares);
-          }
-        );
-      }
-    );
-    $('.count-linkedin').each(
-      function (idx, element) {
-        $.getJSON(
-          'https://www.linkedin.com/countserv/count/share?format=json&url=' + encodeURIComponent(document.location.href),
-          function (data) {
-            $(element).html(data.count);
-          }
-        );
-      }
-    );
-    $('.count-stumbleupon').each(
-      function (idx, element) {
-        $.getJSON(
-          'https://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + encodeURIComponent(document.location.href),
-          function (data) {
-            $(element).html(data.result.views);
-          }
         );
       }
     );

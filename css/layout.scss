@@ -113,6 +113,7 @@ time {
     a {
       position: relative;
       .count {
+        display: none;
         position: absolute;
         top: -.6 * $em;
         right: .3 * $em;
