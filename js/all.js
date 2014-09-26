@@ -54,6 +54,16 @@ $(
         );
       }
     );
+    $('count-twitter').each(
+      function (idx, element) {
+        $.getJSON(
+          'http://cdn.api.twitter.com/1/urls/count.json?url=' + encodeURIComponent(document.location.href),
+          function (data) {
+            element.html(data.count);
+          }
+        );
+      }
+    );
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
