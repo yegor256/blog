@@ -55,7 +55,7 @@ $(
           $('.count-linkedin').html(data.LinkedIn).show();
         }
         if (data.Reddit !== 0) {
-          $('.count-stumbleupon').html(data.Reddit);
+          $('.count-reddit').html(data.Reddit);
         }
         if (data.StumbleUpon !== 0) {
           $('.count-stumbleupon').html(data.StumbleUpon);
