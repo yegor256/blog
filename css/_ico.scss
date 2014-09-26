@@ -1,48 +1,10 @@
-@font-face {
-  font-family: 'ico';
-  src: url('http://img.yegor256.com/fonts/ico.eot');
-  src: url('http://img.yegor256.com/fonts/ico.eot#iefix') format('embedded-opentype'),
-    url('http://img.yegor256.com/fonts/ico.woff') format('woff'),
-    url('http://img.yegor256.com/fonts/ico.ttf') format('truetype'),
-    url('http://img.yegor256.com/fonts/ico.svg#ico') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="ico-"]:before, [class*=" ico-"]:before {
-  font-family: "ico";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  text-decoration: none;
-  font-variant: normal;
-  text-transform: none;
-}
-
-.ico-email:before { content: '\e800'; }
-.ico-rss:before { content: '\e801'; }
-.ico-coderanch:before { content: '\e802'; }
-.ico-stumbleupon:before { content: '\e803'; }
-.ico-stackoverflow:before { content: '\e804'; }
-.ico-skype:before { content: '\e805'; }
-.ico-reddit:before { content: '\e806'; }
-.ico-twitter:before { content: '\e807'; }
-.ico-facebook:before { content: '\e808'; }
-.ico-digg:before { content: '\e809'; }
-.ico-linkedin:before { content: '\e80a'; }
-.ico-google:before { content: '\e80b'; }
-.ico-github:before { content: '\e80c'; }
-.ico-hackernews:before { content: '\e80D'; }
-.ico-forward:before { content: '\e80e'; }
-.ico-back:before { content: '\e80f'; }
-
-.ico-twitter:hover { color: #00aced; }
-.ico-facebook:hover { color: #3b5998; }
-.ico-google:hover { color: #dd4b39; }
-.ico-linkedin:hover { color: #007bb6; }
-.ico-hackernews:hover { color: #ff6600; }
-.ico-rss:hover { color: #ff6600; }
-.ico-reddit:hover { color: #cee3f8; }
-.ico-coderanch:hover { color: #995c56; }
-.ico-digg:hover { color: #356AA0; }
-.ico-stumbleupon:hover { color: #ea4724; }
+.icon-twitter:hover { color: #00aced; }
+.icon-facebook:hover { color: #3b5998; }
+.icon-google:hover { color: #dd4b39; }
+.icon-linkedin:hover { color: #007bb6; }
+.icon-hackernews:hover { color: #ff6600; }
+.icon-rss:hover { color: #ff6600; }
+.icon-reddit:hover { color: #cee3f8; }
+.icon-coderanch:hover { color: #995c56; }
+.icon-digg:hover { color: #356AA0; }
+.icon-stumbleupon:hover { color: #ea4724; }

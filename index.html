@@ -73,20 +73,20 @@ keywords:
     <div style="float: left;">
       {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-          <a href="/"><i class="ico ico-back"></i></a>
+          <a href="/"><i class="icon icon-fast-backward"></i></a>
         {% else %}
-          <a href="/p/{{ paginator.previous_page }}"><i class="ico ico-back"></i></a>
+          <a href="/p/{{ paginator.previous_page }}"><i class="icon icon-fast-backward"></i></a>
         {% endif %}
       {% else %}
-        <span class="mute"><i class="ico ico-back"></i></span>
+        <span class="mute"><i class="icon icon-fast-backward"></i></span>
       {% endif %}
     </div>
     page {{ paginator.page }} of {{ paginator.total_pages }}
     <div style="float: right;">
       {% if paginator.next_page %}
-        <a href="/p/{{ paginator.next_page }}"><i class="ico ico-forward"></i></a>
+        <a href="/p/{{ paginator.next_page }}"><i class="icon icon-fast-forward"></i></a>
       {% else %}
-        <span class="mute"><i class="ico ico-forward"></i></span>
+        <span class="mute"><i class="icon icon-fast-forward"></i></span>
       {% endif %}
     </div>
   </div>
