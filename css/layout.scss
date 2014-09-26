@@ -115,6 +115,10 @@ time {
   @extend .gray;
   margin-right: $em;
 }
+.video {
+  @include unprintable();
+  @extend .desktop-only;
+}
 .buttons {
   @include unprintable();
   .share {
