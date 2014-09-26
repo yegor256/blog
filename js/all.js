@@ -74,6 +74,16 @@ $(
         );
       }
     );
+    $('.count-linkedin').each(
+      function (idx, element) {
+        $.getJSON(
+          'https://www.linkedin.com/countserv/count/share?format=json&url=' + encodeURIComponent(document.location.href),
+          function (data) {
+            element.html(data.count);
+          }
+        );
+      }
+    );
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
