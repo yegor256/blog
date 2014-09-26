@@ -115,7 +115,8 @@ time {
       .count {
         display: none;
         position: absolute;
-        top: -.6 * $em;
+        font-family: $code-font;
+        top: -.7 * $em;
         right: .3 * $em;
         font-size: .6 * $em;
         padding: 0 .2 * $em;
