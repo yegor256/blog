@@ -43,7 +43,7 @@ Create an account in [Rubygems.org](http://www.rubygems.org).
 
 ## Create rubygems.yml
 
-Create a `rubygems.yml` file:
+Create a `rubygems.yml` file (you may already have it as `~/.gem/credentials`):
 
 {% highlight yaml %}
 :rubygems_api_key: d355d8940bb031bfe9acf03ed3da4c0d
