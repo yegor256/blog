@@ -59,7 +59,7 @@ $(
         $.getJSON(
           'http://cdn.api.twitter.com/1/urls/count.json?url=' + encodeURIComponent(document.location.href),
           function (data) {
-            element.html(data.count);
+            $(element).html(data.count);
           }
         );
       }
@@ -67,9 +67,9 @@ $(
     $('.count-facebook').each(
       function (idx, element) {
         $.getJSON(
-          'http://graph.facebook.com/' + encodeURIComponent(document.location.href),
+          'https://graph.facebook.com/?id=' + encodeURIComponent(document.location.href),
           function (data) {
-            element.html(data.shares);
+            $(element).html(data.shares);
           }
         );
       }
@@ -79,7 +79,17 @@ $(
         $.getJSON(
           'https://www.linkedin.com/countserv/count/share?format=json&url=' + encodeURIComponent(document.location.href),
           function (data) {
-            element.html(data.count);
+            $(element).html(data.count);
+          }
+        );
+      }
+    );
+    $('.count-stumbleupon').each(
+      function (idx, element) {
+        $.getJSON(
+          'https://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + encodeURIComponent(document.location.href),
+          function (data) {
+            $(element).html(data.result.views);
           }
         );
       }
