@@ -54,7 +54,7 @@ $(
         );
       }
     );
-    $('count-twitter').each(
+    $('.count-twitter').each(
       function (idx, element) {
         $.getJSON(
           'http://cdn.api.twitter.com/1/urls/count.json?url=' + encodeURIComponent(document.location.href),
