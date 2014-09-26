@@ -1,4 +1,5 @@
 .DS_Store
+.fontcustom-manifest.json
 _site/
 .sass-cache/
 uml/
