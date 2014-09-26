@@ -126,10 +126,12 @@ time {
       text-decoration: none;
     }
     a .icon {
-      padding: .5 * $em;
+      $size: 1.2;
+      padding: .4 * $size * $em;
       border-radius: 50%;
-      height: 1.2 * $em;
-      width: 1.2 * $em;
+      height: $size * $em;
+      width: $size * $em;
+      line-height: $size * $em;
       margin-right: .2 * $em;
       margin-bottom: .2 * $em;
       text-align: center;
