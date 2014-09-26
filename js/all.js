@@ -64,6 +64,16 @@ $(
         );
       }
     );
+    $('.count-facebook').each(
+      function (idx, element) {
+        $.getJSON(
+          'http://graph.facebook.com/' + encodeURIComponent(document.location.href),
+          function (data) {
+            element.html(data.shares);
+          }
+        );
+      }
+    );
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
