@@ -22,7 +22,7 @@ I'm Yegor Bugayenko, a programmer and an architect, passionate
 about software quality. Here are a few facts about myself:
 
  * I write mostly in Java, but also in Ruby and JavaScript.
-   I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/),
+   I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/) ([**hire us!**](mailto:hire@teamed.io)),
    a software development company with an absolutely unique
    methodology called [XDSD](http://www.xdsd.org).
 
