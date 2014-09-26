@@ -36,7 +36,7 @@ function send_email($button, from, text, subject, success, error) {
 $(
   function() {
     $.getJSON(
-      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + encodeURIComponent(document.location.href),,
+      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + encodeURIComponent(document.location.href),
       function (data) {
         if (data.Facebook.total_count !== '0') {
           $('.count-facebook').html(data.Facebook.total_count).show();
