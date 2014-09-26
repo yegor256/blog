@@ -1,23 +1,8 @@
 @import "_temp/_ico.scss";
+@import "defs";
 @import "fonts";
 @import "highlight";
 @import "ico";
-
-$main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
-$code-font: 'Source Code Pro', monospace;
-
-$black: #111;
-$gray: lighten($black, 50);
-$light-gray: lighten($black, 83);
-
-$width: 700px;
-$em: 19px;
-
-@mixin unprintable() {
-  @media print {
-    display: none;
-  }
-}
 
 .green {
   color: green;

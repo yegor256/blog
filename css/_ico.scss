@@ -1,3 +1,10 @@
+@import "defs";
+
+.icon:before {
+  font-size: $em;
+  line-height: 1.2 * $em;
+}
+
 .icon-twitter:hover { color: #00aced; }
 .icon-facebook:hover { color: #3b5998; }
 .icon-googleplus:hover { color: #dd4b39; }
