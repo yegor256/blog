@@ -36,32 +36,35 @@ module Jekyll
       require 'rss'
 
       # Create the rss with the help of the RSS module
-      rss = RSS::Maker.make('2.0') do |maker|
-        maker.channel.title = site.config['name']
-        maker.channel.link = site.config['url']
-        maker.channel.language = 'en-us'
-        maker.channel.generator = 'Jekyll'
-        #maker.channel.image.url = 'http://img.yegor256.com/icon-128x128.png'
-        #maker.channel.image.title = 'Yegor Bugayenko About Programming'
-        #maker.channel.image.link = site.config['url'] + '/rss.xml'
-        maker.channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"
-        maker.channel.author = site.config['author']
-        maker.channel.updated = site.posts.map { |p| p.date  }.max
-        maker.channel.copyright = site.config['copyright']
+      rss = RSS::Rss.new("2.0")
+      channel = RSS::Rss::Channel.new
+      rss.channel = channel
+      channel.title = site.config['name']
+      channel.link = site.config['url']
+      channel.language = 'en-us'
+      channel.generator = 'Jekyll'
+      image = RSS::Rss::Channel::Image.new
+      channel.image = image
+      image.url = 'http://img.yegor256.com/icon-128x128.png'
+      image.title = site.config['name']
+      image.link = site.config['url'] + '/rss.xml'
+      channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"
+      channel.lastBuildDate = site.posts.map { |p| p.date  }.max
+      channel.copyright = site.config['copyright']
 
-        post_limit = (site.config['rss_post_limit'] - 1 rescue site.posts.count)
+      post_limit = (site.config['rss_post_limit'] - 1 rescue site.posts.count)
 
-        site.posts.reverse[0..post_limit].each do |post|
-          post.render(site.layouts, site.site_payload)
-          maker.items.new_item do |item|
-            link = "#{site.config['url']}#{post.url}"
-            item.guid.content = link
-            item.title = post.title
-            item.link = link
-            item.description = post.excerpt
-            item.updated = post.date
-          end
-        end
+      site.posts.reverse[0..post_limit].each do |post|
+        post.render(site.layouts, site.site_payload)
+        item = RSS::Rss::Channel::Item.new
+        item.guid = RSS::Rss::Channel::Item::Guid.new
+        link = "#{site.config['url']}#{post.url}"
+        item.guid.content = link
+        item.title = post.title
+        item.link = link
+        item.description = post.excerpt
+        item.pubDate = post.date
+        channel.items << item
       end
 
       # File creation and writing
@@ -69,7 +72,7 @@ module Jekyll
       rss_name = site.config['rss_name'] || 'rss.xml'
       full_path = File.join(site.dest, rss_path)
       ensure_dir(full_path)
-      File.open("#{full_path}#{rss_name}", 'w') { |f| f.write(rss) }
+      File.open("#{full_path}#{rss_name}", 'w') { |f| f.write(rss.to_s) }
 
       # Add the feed page to the site pages
       site.pages << Jekyll::RssFeed.new(site, site.dest, rss_path, rss_name)
