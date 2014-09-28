@@ -160,3 +160,6 @@ have to submit changes through pull requests.
 Then, start using [Rultor.com](http://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is
 the script we were talking about above. It is available as a free cloud service.
+
+ps. A short version of this article is also published at
+[devops.com](http://devops.com/blogs/continuous-integration-doesnt-work/)
