@@ -9,6 +9,7 @@ description:
 keywords:
   - mocking is evil
   - mocks are evil
+  - mocking is bad
   - mocking frameworks
   - best practices of mocking
   - java mocking
@@ -20,7 +21,8 @@ keywords:
 
 While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
-an unmaintainable mess.
+an unmaintainable mess. Thanks to them we often hear that
+"mocking is bad" and "mocking is evil".
 
 The root cause of this complexity is that our objects
 are too big. They have many methods and these methods
@@ -165,3 +167,7 @@ fetches the salary from DynamoDB.
 I'm currently doing the same thing in almost every open source library I'm working with.
 I'm creating a collection of fake classes, that simplify testing
 inside the library and for its users.
+
+BTW, a great article on the same subject:
+[tl;dw: Stop mocking, start testing](http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html)
+by Ned Batchelder.
