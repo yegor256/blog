@@ -39,7 +39,7 @@ non-empty and non-comment lines of code, using
 
 It was a commercial project, so I can't disclose its name.
 
-{% picture http://img.yegor256.com/2014/04/brazil-crowded-office.jpg 0 Brazil (1985) by Terry Gilliam %}
+{% picture /images/2014/04/brazil-crowded-office.png 0 Brazil (1985) by Terry Gilliam %}
 
 The team was co-located in one office in Europe where everybody was working
 "from nine 'til five". We had meetings, lunches, desk-to-desk chats and lots of
@@ -53,7 +53,7 @@ any chats or any other informal communications. We discussed everything in
 Github issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.
 
-{% picture http://img.yegor256.com/2014/04/shaolin-temple-jet-li.jpg 0 Shaolin Temple (1982) by Chang Hsin Yen %}
+{% picture /images/2014/04/shaolin-temple-jet-li.png 0 Shaolin Temple (1982) by Chang Hsin Yen %}
 
 ## Maturity of Development
 
@@ -125,7 +125,7 @@ much more effective, money-wise, than a co-located team. Again, I can hear you
 saying that "line of code" is not a proper metric. But, come on, $0.13 vs.
 $3.98? Thirty times more expensive?
 
-{% picture http://img.yegor256.com/2014/04/lebowski-they-did-not-receive-the-money.jpg 0 The Big Lebowski (1998) by Joel Coen %}
+{% picture /images/2014/04/lebowski-they-did-not-receive-the-money.png 0 The Big Lebowski (1998) by Joel Coen %}
 
 It's not about metrics any more. It's about preventing wasteful man hours and
 the huge waste of money that comes with them?

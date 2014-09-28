@@ -45,7 +45,7 @@ module Jekyll
       channel.generator = 'Jekyll'
       image = RSS::Rss::Channel::Image.new
       channel.image = image
-      image.url = 'http://img.yegor256.com/icon-128x128.png'
+      image.url = '/images/icon-128x128.png'
       image.title = site.config['name']
       image.link = site.config['url'] + '/rss.xml'
       channel.description = site.config['description'] || "RSS feed for #{site.config['name']}"

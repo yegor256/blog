@@ -9,9 +9,10 @@ module Yegor
         @width = '600'
       end
       @title = opts[2].nil? ? '' : opts[2].strip
-      #if !File.exists?(@src)
-      #  raise "file doesn't exist: @src"
-      #end
+      file = '.' + @src
+      if !File.exists?(file)
+        raise "file doesn't exist: #{file}"
+      end
     end
     def render(context)
       html = "<figure><img src='#{CGI::escapeHTML @src}'" +

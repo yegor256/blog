@@ -23,7 +23,7 @@ discussions:
   reddit: http://www.reddit.com/r/aws/comments/25x69p/atomic_counters_at_statefulco/
 ---
 
-{% badge http://img.yegor256.com/2014/04/dynamodb-logo.jpg 150 %}
+{% badge /images/2014/04/dynamodb-logo.png 150 %}
 
 Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
 highly reliable and rather powerful. I'm using it in many web systems.

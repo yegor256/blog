@@ -70,7 +70,7 @@ they encourage people to play wild-wild west, where the fastest gets the
 cash bag. Obviously, the Bad and the Ugly get to the prize faster, while
 the Good gets demotivated and depressed.
 
-{% figure http://img.yegor256.com/2014/09/rules-with-and-without-rewards.png 600 %}
+{% figure /images/2014/09/rules-with-and-without-rewards.png 600 %}
 
 <p class="note">
 In a clockwise direction from the top left corner:

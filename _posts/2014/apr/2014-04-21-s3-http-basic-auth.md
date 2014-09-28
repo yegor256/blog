@@ -74,7 +74,7 @@ password. After entering the login credentials, they are concatenated,
 [Base64](http://en.wikipedia.org/wiki/Base64) encoded, and added to the next
 request in `Authorization` HTTP header.
 
-{% figure http://img.yegor256.com/2014/04/s3auth-authentication-dialog.jpg 600 %}
+{% figure /images/2014/04/s3auth-authentication-dialog.png 600 %}
 
 Now, the browser tries to make another attempt to fetch the same webpage. But,
 this time, the HTTP request contains a header:

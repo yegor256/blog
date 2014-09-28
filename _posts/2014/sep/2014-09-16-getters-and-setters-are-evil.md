@@ -31,7 +31,7 @@ No. I'm saying that you should **never** have them near your code.
 
 <!--more-->
 
-{% badge http://img.yegor256.com/2014/09/object-thinking-by-david-west.jpg 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT %}
+{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT %}
 
 Arrogant enough to catch your attention? You've been using
 that get/set pattern for 15 years and you're a respected Java architect?
@@ -148,7 +148,7 @@ Object thinking immediately eliminates
 [NULL references]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
 
-{% picture http://img.yegor256.com/2014/09/fish-called-wanda.jpg 0 A Fish Called Wanda (1988) by Charles Crichton %}
+{% picture /images/2014/09/fish-called-wanda.png 0 A Fish Called Wanda (1988) by Charles Crichton %}
 
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:

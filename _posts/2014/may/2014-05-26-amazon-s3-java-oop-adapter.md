@@ -28,7 +28,7 @@ keywords:
   -
 ---
 
-{% badge http://img.yegor256.com/2014/05/s3-logo.png 150 %}
+{% badge /images/2014/05/s3-logo.png 150 %}
 
 I'm a big fan of Amazon Web Services (AWS). I'm using them
 in almost all of my projects. One of their most popular

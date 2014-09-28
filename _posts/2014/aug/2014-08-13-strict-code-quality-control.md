@@ -92,7 +92,7 @@ be patient and try to get used to this new approach to quality.
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.
 
-{% picture http://img.yegor256.com/2014/09/ratatouille.jpg 0 Ratatouille (2007) by Brad Bird and Jan Pinkava %}
+{% picture /images/2014/09/ratatouille.png 0 Ratatouille (2007) by Brad Bird and Jan Pinkava %}
 
 Why is it good? Read on.
 

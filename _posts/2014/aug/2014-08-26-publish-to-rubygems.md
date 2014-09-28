@@ -22,7 +22,7 @@ a Ruby gem, to Rubygems.org, it takes 30 seconds of my time.
 Here is how I released a bug fix for version 1.5.1,
 in [Github issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
 
-{% figure http://img.yegor256.com/2014/08/github-ticket-6.png 600 %}
+{% figure /images/2014/08/github-ticket-6.png 600 %}
 
 As you see, I gave a command to [Rultor](http://www.rultor.com),
 and it released a new version to Rubygems. I didn't do anything else.

@@ -14,5 +14,5 @@ keywords:
   - java api github
 ---
 
-{% badge http://img.yegor256.com/2014/05/github-logo.png 128 %}
+{% badge /images/2014/05/github-logo.png 128 %}
 

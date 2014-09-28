@@ -62,7 +62,7 @@ It is a well-known practice, when fixing that error becomes
 a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the continuous integration server.
 
-{% badge http://img.yegor256.com/2014/07/continuous-delivery-book.jpg 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
+{% badge /images/2014/07/continuous-delivery-book.png 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
 
 [Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
