@@ -1,4 +1,4 @@
-/*globals $:false, window:false, document:false */
+/*globals $:false, window:false, document:false, Ya:false */
 function valid_email(email) {
   'use strict';
   var re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -89,7 +89,9 @@ $(
         var $element = $(element), id = $element.attr('id');
         if (id) {
           $element.append(
-            $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+            $('<a/>').addClass('link')
+              .attr('href', '#' + id)
+              .append('<i class="icon icon-link"></i>')
           );
         }
       }
@@ -201,3 +203,25 @@ var disqus_shortname = 'yegor256';
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
+
+// yandex metrika
+(function (d, w, c) {
+  'use strict';
+  (w[c] = w[c] || []).push(function() {
+    try {
+      w.yaCounter26361360 = new Ya.Metrika({id:26361360,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true});
+    } catch(e) { }
+  });
+  var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = (d.location.protocol === "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+  if (w.opera === "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+  } else { f(); }
+}(document, window, "yandex_metrika_callbacks"));

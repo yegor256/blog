@@ -1,45 +1,55 @@
 ---
 layout: post
-title: "Dependency Injection"
+title: "DI Containers are Code Polluters"
 date: 2014-09-25
 tags: oop anti-pattern
 description:
   While dependency injection is a natural object-oriented
-  mechanism, DI frameworks turned it into an anti-pattern
+  mechanism, DI frameworks turn it into an anti-pattern
 keywords:
   - dependency injection
   - dependency injection is evil
   - downsides of dependency injection
   - dependency injection framework
-  -
+  - drawbacks of dependency injection
+  - setter injection
+  - constructor injection
+  - field injection
 ---
 
-While [dependency injection](http://martinfowler.com/articles/injection.html)
+While [dependency injection](http://martinfowler.com/articles/injection.html) (aka "DI")
 is a natural technique of composing objects in OOP
-(known long before the term was introduced by Martin Fowler),
-[Spring DI](http://www.spring.io),
+(known long before the term was [introduced by Martin Fowler](http://www.martinfowler.com/articles/injection.html)),
+[Spring IoC](http://www.spring.io),
 [Google Guice](https://code.google.com/p/google-guice/),
 [Java EE6 CDI](http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html),
 [Dagger](http://square.github.io/dagger/) and other
-[frameworks](https://en.wikipedia.org/wiki/Dependency_injection)
-based on anything else besides
-["Constructor Injection"](https://en.wikipedia.org/wiki/Dependency_injection#Constructor_injection),
-is a terrible violation of basic principles of object-oriented programming.
-
-These frameworks (not only in Java) encourage us to create
-incomplete mutable objects, stuffed with data during the course
-of application execution. I already mentioned in previous
-articles, that, in a perfect OOP world, objects
-[must be immutable]({% post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
-and [may not contain setters]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
-
-Dependency injection frameworks only makes code dirtier and messy.
+[DI frameworks](https://en.wikipedia.org/wiki/Dependency_injection)
+turn it into an anti-pattern.
 
 <!--more-->
 
+I'm not going to discuss obvious arguments against
+"setter injections"
+(like in [Spring IoC](http://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
+and
+"field injections"
+(like in [PicoContainer](http://picocontainer.codehaus.org/annotated-field-injection.html)).
+These mechanisms simply violate basic principles
+of object-oriented programming and encourage us to create
+incomplete mutable objects, stuffed with data during the course
+of application execution. Remember, ideal objects
+[must be immutable]({ % post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
+and [may not contain setters]({ % post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
+
+Instead, let's talk about "constructor injection"
+(like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))
+and its use with **dependency injection containers**.
+I'll try to show why I consider these containers a redundancy, at least.
+
 ## What is Dependency Injection?
 
-This is what dependency injection (is not really different
+This is what dependency injection is (not really different
 from a plain old object composition):
 
 {% highlight java %}
@@ -56,19 +66,25 @@ public class Budget {
 }
 {% endhighlight %}
 
-Object `data` is a dependency.
+The object `data` is called a "dependency".
 
 A `Budget` doesn't know what kind of database it is working with. All he
 needs from the database is its ability to fetch a cell, using an
-arbitrary SQL query, via method `cell()`. We can instantiate an `Budget` with a PostgreSQL
+arbitrary SQL query, via method `cell()`. We can instantiate a `Budget` with a PostgreSQL
 implementation of the `DB` interface, for example:
 
 {% highlight java %}
-Budget budget = new Budget(
-  new Postgres("jdbc:postgresql:5740/main")
-);
-System.out.println("Total budget: " + budget.total());
+public class App {
+  public static void main(String... args) {
+    Budget budget = new Budget(
+      new Postgres("jdbc:postgresql:5740/main")
+    );
+    System.out.println("Total is: " + budget.total());
+  }
+}
 {% endhighlight %}
+
+In other words, we're "injecting" a dependency into a new object `budget`.
 
 An alternative to this "dependency injection" approach would be
 to let `Budget` to decide what database he wants to work with:
@@ -88,23 +104,29 @@ Not even a technique, but a feature of Java and all other object-oriented
 languages. It is expected than almost any object wants to encapsulate
 some knowledge (aka "state). That's what constructors are for.
 
-## Setter Injector
+## What is a DI Container?
 
-Here comes the dark side:
+So far so good, but here comes the dark side &mdash; a dependency
+injection container. Here is how it works (let's use Google Guice as
+an example):
 
 {% highlight java %}
+import javax.inject.Inject;
 public class Budget {
   private final DB db;
   @Inject
-  public void setDb(DB data) {
+  public Budget(DB data) {
     this.db = data;
   }
-  // class methods
+  // same methods as above
 }
 {% endhighlight %}
 
-And then we're supposed to configure a dependency injection container
-somewhere, when the application starts (I'm using Google Guice):
+Pay attention, the constructor is annotated with
+[`@Inject`](http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html).
+
+Then, we're supposed to configure a container
+somewhere, when the application starts:
 
 {% highlight java %}
 Injector injector = Guice.createInjector(
@@ -119,15 +141,64 @@ Injector injector = Guice.createInjector(
 );
 {% endhighlight %}
 
-And finally, magic happens:
+Some frameworks even allow us to configure the injector in an XML file.
+
+From now on, we are not allowed to instantiate `Budget` through `new` operator,
+like we did before. Instead, we should use the injector just created:
 
 {% highlight java %}
-Budget budget = injector.getInstance(Budget.class);
+public class App {
+  public static void main(String... args) {
+    Injection injector = // as we just did in the previous snippet
+    Budget budget = injector.getInstance(Budget.class);
+    System.out.println("Total is: " + budget.total());
+  }
+}
 {% endhighlight %}
 
-Boom! Right at this point, after `new` operator's execution,
-a dependency injection engine calls our setter `setDB()` and injects
-`postegres` into `jeff`. It happens behind the scene and is
-supposed to simplify our code and let it focus on solving
-business problems.
+The injection automatically finds out that in order to instantiate
+a `Budget` it has to provide an argument for its constructor. It will
+use an instance of class `Postgres`, which we instantiated in the injector.
 
+This is the right and recommended way to use Guice, for example. There are
+a few even darker patterns, which are possible but not recommended. For example,
+you can make your injector a singleton and use it right inside `Budget` class.
+These mechanisms are considered wrong even by DI container makers, so let's ignore
+them and focus on the recommended scenario.
+
+## What Is This For?
+
+Let me re-iterate and summarize scenarios of **incorrect usage** of dependency
+injection containers:
+
+ * Field injection
+
+ * Setter injection
+
+ * Passing injector as a dependency
+
+ * Making injector a global singleton
+
+If we put all of them aside, all we have left is a constructor
+injection explained above. And how does it help us? Why do we need it?
+Why can't we use plain old `new` in the main class of the application?
+
+The container we created simply adds more lines to the code base
+or even more files, if we use XML. And it doesn't add anything, except
+an additional complexity. We should always remember where to look for
+if we have a question: "What database is used as an argument of a Budget?"
+
+## The Right Way
+
+Now, let me show you a real life example of using `new` to construct
+an application. This is how we create a "thinking engine" in
+[rultor.com](http://www.rultor.com) (full class is in
+[`Agents.java`](https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java)):
+
+<script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script>
+
+Impressive? This is a true object composition.
+I believe, this is how a proper object-oriented application
+should be instantiated.
+
+And DI containers, in my opinion, just add unnecessary noise.
