@@ -29,6 +29,8 @@ Here is my response to the un-asked question:
 Even though I have some experience in this area, I won't use it as an argument.
 I'll try to rely only on logic.
 
+<!--more-->
+
 BTW, my experience includes five years of using
 Apache Continuum, Hudson, CruiseControl, and Jenkins in over 50 open
 source and commercial projects. Besides that,
