@@ -2,7 +2,7 @@
 # Just run "bundle"
 #
 source 'https://rubygems.org'
-gem 'jekyll'
+gem 'jekyll', '~> 1.5.0'
 gem 'sass'
 gem 'jekyll-sass'
 gem 'jekyll-plantuml'
@@ -18,5 +18,6 @@ gem 'uuidtools'
 gem 'liquid'
 gem 'redcarpet'
 gem 'nuggets'
-gem 'fontcustom', '1.3.3'
+gem 'fontcustom', '~> 1.3.3'
 gem 'jslint'
+
