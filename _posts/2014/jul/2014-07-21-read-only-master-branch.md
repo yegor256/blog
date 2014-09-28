@@ -111,7 +111,7 @@ Subversion. In all cases, my experience was only positive, and that's why
 [rultor.com](http://www.rultor.com) was born (later about that though).
 
 So, the solution is simple &mdash; prohibit anyone from merging anything
-into `master` and create scripts that anyone can call. The script will
+into `master` and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch is breaking at even one unit test, the entire branch will be rejected.
 
