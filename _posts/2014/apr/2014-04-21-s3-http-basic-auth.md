@@ -34,7 +34,7 @@ Afterwards, AWS guarantees your object will be available for download through
 their [RESTful
 API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
 
-A few years ago, AWS introduced a S3 feature S3 called [static website
+A few years ago, AWS introduced a S3 feature called [static website
 hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 With static website hosting, you simply turn on the feature and all objects in
