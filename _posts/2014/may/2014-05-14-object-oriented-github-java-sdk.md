@@ -18,7 +18,7 @@ keywords:
   - java api design
 ---
 
-{% badge http://img.yegor256.com/2014/05/github-logo.png 128 %}
+{% badge /images/2014/05/github-logo.png 128 %}
 
 [Github](http://www.github.com) is an awesome platform for maintaining Git sources and
 tracking project issues. I moved all my projects (both private and public)

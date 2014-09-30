@@ -1,8 +1,11 @@
+/*globals $:false, window:false, document:false, Ya:false */
 function valid_email(email) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  'use strict';
+  var re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 function send_email($button, from, text, subject, success, error) {
+  'use strict';
   $.ajax(
     {
       type: 'POST',
@@ -35,6 +38,33 @@ function send_email($button, from, text, subject, success, error) {
 
 $(
   function() {
+    'use strict';
+    $.getJSON(
+      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + encodeURIComponent(document.location.href),
+      function (data) {
+        if (data.Facebook.total_count !== 0) {
+          $('.count-facebook').html(data.Facebook.total_count).fadeIn();
+        }
+        if (data.Twitter !== 0) {
+          $('.count-twitter').html(data.Twitter).fadeIn();
+        }
+        if (data.GooglePlusOne !== 0) {
+          $('.count-googleplus').html(data.GooglePlusOne).fadeIn();
+        }
+        if (data.LinkedIn !== 0) {
+          $('.count-linkedin').html(data.LinkedIn).fadeIn();
+        }
+        if (data.Reddit !== 0) {
+          $('.count-reddit').html(data.Reddit).fadeIn();
+        }
+        if (data.StumbleUpon !== 0) {
+          $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
+        }
+        if (data.Diggs !== 0) {
+          $('.count-digg').html(data.Diggs).fadeIn();
+        }
+      }
+    );
     $('#search-query').lunrSearch(
       {
         indexUrl: '/search.json',
@@ -59,17 +89,18 @@ $(
         var $element = $(element), id = $element.attr('id');
         if (id) {
           $element.append(
-            $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+            $('<a/>').addClass('link')
+              .attr('href', '#' + id)
+              .append('<i class="icon icon-link"></i>')
           );
         }
       }
     );
     $('#subscribe').click(
       function (event) {
-        $this = $(this);
-        $error = $('#error');
-        var email = $('#email').val();
-        var reason = $('#reason').val();
+        var $this = $(this), $error = $('#error'),
+          email = $('#email').val(),
+          reason = $('#reason').val();
         if (!email) {
           $error.text('No email... What do you mean?');
         } else if (!valid_email(email)) {
@@ -104,9 +135,7 @@ $(
     );
     $('#unsubscribe').click(
       function (event) {
-        $this = $(this);
-        $error = $('#error');
-        var email = $('#email').val();
+        var $this = $(this), $error = $('#error'), email = $('#email').val();
         if (!email) {
           $error.text('No email... Please provide your address');
         } else if (!valid_email(email)) {
@@ -138,8 +167,7 @@ $(
     );
     $('#email').ready(
       function() {
-        var query = window.location.search;
-        var matches = query.match(/email=([^&]+)/)
+        var query = window.location.search, matches = query.match(/email=([^&]+)/);
         if (matches !== null) {
           $('#email').val(matches[1]);
         }
@@ -153,21 +181,47 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-1963507-32']);
 _gaq.push(['_trackPageview']);
 (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+  'use strict';
+  var ga = document.createElement('script'), s = document.getElementsByTagName('script')[0];
+  ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+  s.parentNode.insertBefore(ga, s);
+}());
 
 // Disqus.com
 var disqus_shortname = 'yegor256';
 (function () {
+  'use strict';
   var s = document.createElement('script'); s.async = true;
   s.type = 'text/javascript';
   s.src = '//' + disqus_shortname + '.disqus.com/count.js';
   (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
 (function() {
+  'use strict';
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+}());
+
+// yandex metrika
+(function (d, w, c) {
+  'use strict';
+  (w[c] = w[c] || []).push(function() {
+    try {
+      w.yaCounter26361360 = new Ya.Metrika({id:26361360,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true});
+    } catch(e) { }
+  });
+  var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = (d.location.protocol === "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+  if (w.opera === "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+  } else { f(); }
+}(document, window, "yandex_metrika_callbacks"));

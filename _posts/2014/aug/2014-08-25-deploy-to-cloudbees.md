@@ -22,7 +22,7 @@ a Java web application, to CloudBees, it takes 30 seconds of my time.
 Maybe even less. Recently, I deployed version 1.6.5. You can see
 how it all happened, in [Github issue #6](https://github.com/sttc/stateful/issues/6):
 
-{% figure http://img.yegor256.com/2014/08/github-sttc-issue-6.png 600 %}
+{% figure /images/2014/08/github-sttc-issue-6.png 600 %}
 
 As you see, I gave a command to [Rultor](http://www.rultor.com),
 and it packaged, tested and deployed a new version to CloudBees.

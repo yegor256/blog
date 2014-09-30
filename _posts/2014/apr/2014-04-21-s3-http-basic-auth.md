@@ -34,7 +34,7 @@ Afterwards, AWS guarantees your object will be available for download through
 their [RESTful
 API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
 
-A few years ago, AWS introduced a S3 feature S3 called [static website
+A few years ago, AWS introduced a S3 feature called [static website
 hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 With static website hosting, you simply turn on the feature and all objects in
@@ -74,7 +74,7 @@ password. After entering the login credentials, they are concatenated,
 [Base64](http://en.wikipedia.org/wiki/Base64) encoded, and added to the next
 request in `Authorization` HTTP header.
 
-{% figure http://img.yegor256.com/2014/04/s3auth-authentication-dialog.jpg 600 %}
+{% figure /images/2014/04/s3auth-authentication-dialog.png 600 %}
 
 Now, the browser tries to make another attempt to fetch the same webpage. But,
 this time, the HTTP request contains a header:

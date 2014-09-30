@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Fake Objects, Make Them Public"
-date: 2014-09-25
-tags: testing
+title: "Built-in Fake Objects"
+date: 2014-09-23
+tags: testing java
 description:
   Mocking frameworks is not a good practice and should be your last resort;
-  instead, create and ship mock classes together with your code.
+  instead, create and ship fake classes together with your code.
 keywords:
   - mocking is evil
   - mocks are evil
+  - mocking is bad
   - mocking frameworks
   - best practices of mocking
   - java mocking
@@ -20,16 +21,20 @@ keywords:
 
 While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
-an unmaintainable mess. Here are a few examples of unit tests;
-look at them yourself:
-
-...
+an unmaintainable mess. Thanks to them we often hear that
+"mocking is bad" and "mocking is evil".
 
 The root cause of this complexity is that our objects
 are too big. They have many methods and these methods
 return other objects, which also have methods. When we pass
 a mock version of such an object as a parameter, we should
 make sure that all of its methods return valid objects.
+
+This leads to inevitable complexity, which turns unit tests
+to [waste](https://news.ycombinator.com/item?id=7353767)
+almost impossible to maintain.
+
+<!--more-->
 
 ## Object Hierarchy
 
@@ -57,7 +62,22 @@ public interface Table {
 Interface `Frame`, returned by the `frame()` method, also has its
 own methods. And so on.
 In order to create a properly mocked instance of interface `Region`,
-one would normally create a dozen other mock objects.
+one would normally create a dozen other mock objects. With [Mockito](http://www.mockito.org)
+it will look like this:
+
+{% highlight java %}
+public void testMe() {
+  // many more lines here...
+  Frame frame = Mockito.mock(Frame.class);
+  Mockito.doReturn(...).when(frame).iterator();
+  Table table = Mockito.mock(Table.class);
+  Mockito.doReturn(frame).when(table).frame();
+  Region region = Mockito.mock(Region.class);
+  Mockito.doReturn(table).when(region).table(Mockito.anyString());
+}
+{% endhighlight %}
+
+And all of this is just a scaffolding before the actual testing.
 
 ## Sample Use Case
 
@@ -88,7 +108,7 @@ public class Employee {
 {% endhighlight %}
 
 You can imagine how difficult it will be to unit test this class,
-using [Mockito](http://www.mockito.org), for example. First, we have
+using Mockito, for example. First, we have
 to mock the `Region` interface. Then, we have to mock a `Table` interface and make sure
 it is returned by the `table()` method. Then, we have to mock a `Frame` interface, etc.
 
@@ -147,3 +167,7 @@ fetches the salary from DynamoDB.
 I'm currently doing the same thing in almost every open source library I'm working with.
 I'm creating a collection of fake classes, that simplify testing
 inside the library and for its users.
+
+BTW, a great article on the same subject:
+[tl;dw: Stop mocking, start testing](http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html)
+by Ned Batchelder.

@@ -15,7 +15,7 @@ keywords:
   - quotes about software testing
 ---
 
-{% badge http://img.yegor256.com/2014/08/art-of-software-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
+{% badge /images/2014/08/art-of-software-testing.png 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
 
 ["The Art of Software Testing"](http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO)
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
@@ -66,7 +66,7 @@ full of priceless quotes that can also be very practical. For example, on page 6
 
 > Testing is a destructive, even sadistic, process, which explains why most people find it difficult
 
-{% badge http://img.yegor256.com/2014/08/glenford-myers.jpg 200 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
+{% badge /images/2014/08/glenford-myers.png 200 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
 
 In Chapter 2, Dr. Myers discusses the psychology of testing and a very common and crucial
 misunderstanding of testing objectives. He claims that it is commonly accepted that

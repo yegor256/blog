@@ -1,22 +1,8 @@
+@import "_temp/_ico.scss";
+@import "defs";
 @import "fonts";
 @import "highlight";
 @import "ico";
-
-$main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
-$code-font: 'Source Code Pro', monospace;
-
-$black: #111;
-$gray: lighten($black, 50);
-$light-gray: lighten($black, 83);
-
-$width: 700px;
-$em: 19px;
-
-@mixin unprintable() {
-  @media print {
-    display: none;
-  }
-}
 
 .green {
   color: green;
@@ -114,28 +100,49 @@ time {
   @extend .gray;
   margin-right: $em;
 }
+.video {
+  @include unprintable();
+  @extend .desktop-only;
+}
 .buttons {
   @include unprintable();
   .share {
     a, a:visited {
       text-decoration: none;
     }
-    a .ico {
-      padding: .5 * $em;
-      border-radius: 50%;
-      width: 1.25 * $em;
-      height: 1.25 * $em;
-      font-size: $em;
-      margin-right: .2 * $em;
-      margin-bottom: .2 * $em;
-      text-align: center;
-      vertical-align: middle;
-      border: 1px solid $gray;
-      display: inline-block;
-      color: $gray;
-      &:hover {
-        background-color: $gray;
-        color: white;
+    a {
+      position: relative;
+      .count {
+        display: none;
+        position: absolute;
+        font-family: $code-font;
+        top: -.7 * $em;
+        right: .3 * $em;
+        font-size: .6 * $em;
+        padding: 0 .2 * $em;
+        line-height: .7 * $em;
+        background-color: white;
+        border: 1px solid $gray;
+        color: $gray;
+      }
+      .icon {
+        $size: 1.2;
+        padding: .4 * $size * $em;
+        border-radius: 50%;
+        height: $size * $em;
+        width: $size * $em;
+        line-height: $size * $em;
+        margin-right: .2 * $em;
+        margin-bottom: .2 * $em;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid $gray;
+        display: inline-block;
+        color: $gray;
+        &:hover {
+          background-color: $gray;
+          color: white;
+        }
       }
     }
   }
@@ -300,4 +307,10 @@ figure {
   &:hover {
     background-color: $black;
   }
+}
+.note {
+  margin-top: 0;
+  font-size: .8 * $em;
+  line-height: $em;
+  color: $gray;
 }

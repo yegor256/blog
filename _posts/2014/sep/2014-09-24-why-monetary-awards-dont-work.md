@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Monetary Awards Can Work"
+title: "Why Monetary Awards Don't Work?"
 date: 2014-09-24
 tags: mgmt
 description:
@@ -18,6 +18,10 @@ keywords:
 Monetary rewards for employees. Do they work? Should we use them?
 Can money motivate creative minds? Will a programmer work
 better if he gets paid only when he reaches his goals and objectives?
+
+<div class="video">
+  <iframe width="640" height="360" src="//www.youtube.com/embed/XJRHkbrZuO8?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 Much research has already been done on this subject,
 and most of it proves that connecting results with money
@@ -41,7 +45,7 @@ Why, in a modern office, do we try to hide
 monetary motivation and replace it with
 [everything else](http://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,
-paid vacations, etc. Why don't we just say 
+paid vacations, etc. Why don't we just say
  &mdash; "Jeff completed his task faster than
 everybody else. This is his $500 check. Whoever completes the
 next task gets $300," out loud in the office?... Sounds uncomfortable, doesn't it?
@@ -66,12 +70,24 @@ they encourage people to play wild-wild west, where the fastest gets the
 cash bag. Obviously, the Bad and the Ugly get to the prize faster, while
 the Good gets demotivated and depressed.
 
-What do I mean by ground rules? It should be a simple document
+{% figure /images/2014/09/rules-with-and-without-rewards.png 600 %}
+
+<p class="note">
+In a clockwise direction from the top left corner:
+The Good, the Bad and the Ugly (1966) by Sergio Leone;
+Roger Federer;
+A Serious Man (2009) by Ethan Coen and Joel Coen;
+Two and a Half Men (TV Series).
+</p>
+
+What do I mean by ground rules?
+
+It should be a simple document
 ([PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx)
 calls it a Staffing Management Plan) that helps me, as a team member,
 answer at least these basic questions:
 
- * How are my personal results are measured?
+ * How my personal results are measured?
 
  * Who gives me tasks and who do I report to?
 

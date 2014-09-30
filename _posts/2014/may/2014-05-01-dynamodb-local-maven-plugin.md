@@ -20,7 +20,7 @@ keywords:
   - integration test dynamodb
 ---
 
-{% badge http://img.yegor256.com/2014/04/dynamodb-logo.jpg 150 http://aws.amazon.com/dynamodb %}
+{% badge /images/2014/04/dynamodb-logo.png 150 http://aws.amazon.com/dynamodb %}
 
 [DynamoDB Local](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html)
 is a locally running copy of Amazon DynamoDB server. Amazon developed

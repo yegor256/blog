@@ -62,7 +62,7 @@ It is a well-known practice, when fixing that error becomes
 a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the continuous integration server.
 
-{% badge http://img.yegor256.com/2014/07/continuous-delivery-book.jpg 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
+{% badge /images/2014/07/continuous-delivery-book.png 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
 
 [Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
@@ -78,7 +78,7 @@ Some of them are available as a service in cloud, such as:
 [Drone](http://www.drone.io),
 [Wercker](http://wercker.com/), and many others.
 
-## Why Continuos Integration Doesn't Work?
+## Why Continuous Integration Doesn't Work?
 
 CI is great, but the bigger the team (and the code base), the more often builds
 get broken. And, the longer it takes to fix them. I've seen many examples where
@@ -102,7 +102,7 @@ fix our build later. And it's only logical.
 
 Four years ago I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
 called "Prevent Conflicts in Distributed Agile PHP Projects". In the article,
-a solution was proposed (full article in [PDF](http://img.rultor.com/guard-article.pdf))
+a solution was proposed (full article in [PDF](http://doc.rultor.com/guard-article.pdf))
 for Subversion and PHP.
 
 Since that time, I used experimentally that approach in multiple open source
@@ -111,7 +111,7 @@ Subversion. In all cases, my experience was only positive, and that's why
 [rultor.com](http://www.rultor.com) was born (later about that though).
 
 So, the solution is simple &mdash; prohibit anyone from merging anything
-into `master` and create scripts that anyone can call. The script will
+into `master` and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch is breaking at even one unit test, the entire branch will be rejected.
 
@@ -160,3 +160,6 @@ have to submit changes through pull requests.
 Then, start using [Rultor.com](http://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is
 the script we were talking about above. It is available as a free cloud service.
+
+ps. A short version of this article is also published at
+[devops.com](http://devops.com/blogs/continuous-integration-doesnt-work/)

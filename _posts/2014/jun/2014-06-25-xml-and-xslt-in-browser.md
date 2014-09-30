@@ -104,7 +104,7 @@ after the page is loaded, the browser loads the XSL stylesheet
 and then all other resources including a few CSS stylesheets,
 jQuery and an SVG logo:
 
-{% figure http://img.yegor256.com/2014/06/xslt-loading-order-in-chrome.png 600 %}
+{% figure /images/2014/06/xslt-loading-order-in-chrome.png 600 %}
 
 `index.xsl` includes `layout.xsl`, that's why it is loaded right after.
 

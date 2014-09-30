@@ -201,3 +201,6 @@ destroyed immediately after Maven execution is finished.
 This is what application-centric is about.
 
 Our overall impression of Docker is highly positive.
+
+ps. A compact version of this article was published at
+[devops.com](http://devops.com/blogs/build-docker-containers/)

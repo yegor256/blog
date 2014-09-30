@@ -30,7 +30,7 @@ deployment script(s).
 
 <!--more-->
 
-{% picture http://img.yegor256.com/2014/09/charlie-and-chocolate-factory-father.jpg 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
+{% picture /images/2014/09/charlie-and-chocolate-factory-father.png 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
 
 Before we start with the arguments, let me emphasize that Rultor
 is a useful interface to your custom scripts. When you decide

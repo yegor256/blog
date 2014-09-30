@@ -42,3 +42,11 @@ completed it. It took 7 months.
 The first implementaiton didn't satisfy the author of the bug
 and the developer had to find out what was wrong and submitted
 a new implementation.
+
+[jcabi-github](https://github.com/jcabi/jcabi-github/issues/838):
+Full cycle, from submitting a problem, fixing it, code review, merge
+by Rultor, closing and paying.
+
+[jcabi-aspects#88](https://github.com/jcabi/jcabi-aspects/pull/88):
+Pull request with a solution that didn't satisfy a code
+reviewer and had to be changed.

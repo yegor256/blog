@@ -22,7 +22,7 @@ I'm Yegor Bugayenko, a programmer and an architect, passionate
 about software quality. Here are a few facts about myself:
 
  * I write mostly in Java, but also in Ruby and JavaScript.
-   I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/),
+   I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/) ([**hire us!**](mailto:hire@teamed.io)),
    a software development company with an absolutely unique
    methodology called [XDSD](http://www.xdsd.org).
 
@@ -66,6 +66,7 @@ subscribers in my list).
   <label for="subscribe"></label>
   <button id="subscribe" class="field">Subscribe</button>
   <span id="error" style="color:red;"></span>
+  <span class="note">540 Happy Subscribers and Counting...</span>
 </fieldset>
 
 You can always [unsubscribe](/unsubscribe.html).
