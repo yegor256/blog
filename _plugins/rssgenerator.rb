@@ -62,7 +62,7 @@ module Jekyll
         item.guid.content = link
         item.title = post.title
         item.link = link
-        item.description = post.excerpt
+        item.description = post.content
         item.pubDate = post.date
         channel.items << item
       end
