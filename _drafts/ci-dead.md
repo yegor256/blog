@@ -6,7 +6,7 @@ tags: mgmt devops
 description:
   Continuous integration is an awesome idea that
   doesn't work and can't work because of its
-  natural conflict with business and technical objectives
+  natural conflict with business and technical objectives.
 keywords:
   - continuous integration
   - how continuous integration works
@@ -20,14 +20,14 @@ keywords:
 A few days ago, my article
 ["Why Continuous Integration Doesn’t Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)
 was published at [DevOps.com](http://www.devops.com). Almost the same
-day I've got a few strongly negative opponets on twitter:
+day I received a few strongly negative critiques on Twitter.
 
 Here is my response to the un-asked question:
 
-> Why the hell continuous integration shouldn't work, being such a brilliant and popular idea?
+> Why the hell shouldn't continuous integration work, being such a brilliant and popular idea?
 
 Even though I have some experience in this area, I won't use it as an argument.
-I'll try to rely only on logic.
+I'll try to rely only on logic instead.
 
 <!--more-->
 
@@ -37,9 +37,9 @@ source and commercial projects. Besides that,
 a few years ago I created a hosted continuous integration service called
 [fazend.com](http://www.fazend.com),
 renamed to [rultor.com](http://www.rultor.com) in 2013.
-Currently, I'm an active user of [Travis](http://www.travis-ci.org).
+Currently, I'm also an active user of [Travis](http://www.travis-ci.org).
 
-## How Continuous Integration Should Work?
+## How Continuous Integration Should Work
 
 The idea is simple and obvious. Every time you make a new commit
 to the `master` branch (or `/trunk` in Subversion), a continuous integration
@@ -47,14 +47,14 @@ server (or service) attempts to build the entire product. "Build" means
 compile, unit test, integration test, quality analysis, etc.
 
 The result is either "success" or "failure". If it is a success, we
-say that "the build is clean". If it is a failure, we say "the build is broken".
+say that "the build is clean". If it is a failure, we say that "the build is broken".
 The build usually gets broken because someone breaks it by
-commiting a new code that turn previously passing unit tests
+commiting new code that turns previously passing unit tests
 into failing ones.
 
-This is the technical side of the problem. It always work. Well,
+This is the technical side of the problem. It always works. Well,
 it may have its problems, like hard-coded dependencies, lack of isolation between
-environments or parallel build collisions, but this article is not about them.
+environments or parallel build collisions, but this article is not about those.
 If the application is well written and its unit tests are stable,
 continuous integration is easy. Technically.
 
@@ -64,7 +64,7 @@ Continuous integration is not only a server that builds, but a
 management/organizational process that should "work". Being a process
 that works means exactly what Jezz Humble said in
 [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE),
-page 55:
+on page 55:
 
 > Crucially, if the build fails, the development team
 stops whatever they are doing and fixes the problem immediately
@@ -81,12 +81,12 @@ the stable state.
 
 Now, my question is &mdash; who, in an actively working team, may need this?
 
-Product owner, who is interested in launching new features to the market
+A product owner, who is interested in launching new features to the market
 as soon as possible? Or maybe a project manager, who is responsible for
-the deadlines? Or maybe programmers, who hate to fix someone's bugs,
-especially under time pressure.
+the deadlines? Or maybe programmers, who hate to fix someone else's bugs,
+especially under pressure.
 
-Who will like this continuous integration and who needs it?
+Who likes this continuous integration and who needs it?
 
 Nobody.
 
@@ -94,34 +94,34 @@ Nobody.
 
 I can tell you. I've seen it multiple times. The scenario is always
 the same. We just start to ignore that continuous integration
-build status. Either the build is clean or it is broken, we continue
+build status. Either the build is clean or it is broken, and we continue
 to do what we were doing before.
 
-We don't stop and fix, as Jezz Humble recommends.
+We don't stop and fix it, as Jezz Humble recommends.
 
 Instead, we ignore the information that's
-coming from the continous integration server.
+coming from the continuous integration server.
 
 Eventually, maybe tomorrow or on Monday, we'll try to find some spare time
 and will try to fix the build. Only because we don't like that red button
-on that dashboard and want to turn it into a green one.
+on the dashboard and want to turn it into a green one.
 
 ## What About Discipline?
 
 Yes, there is another side of this coin. We can try to enforce
-a discipline in the team. We can make it a strict rule, that our
+discipline in the team. We can make it a strict rule, that our
 build is always clean and whoever breaks it gets some sort of
 a punishment.
 
-Try it and you we will get a **fear driven development**. Programmers
-will be afraid of committing anything to the repository, because
-they will know that in case of build failure they will have to
-[appologize](http://programmers.stackexchange.com/questions/79041), at least.
+Try doing this and you will get a **fear driven development**. Programmers
+will be afraid of committing anything to the repository because
+they will know that if they cause a build failure they will have to
+[apologize](http://programmers.stackexchange.com/questions/79041), at least.
 
 A strict discipline (which I'm a big fan of) in this case only
-makes situation worse. The entire development process slows
+makes the situation worse. The entire development process slows
 down and programmers keep their code to themselves for as long as
-possible, to avoid possible broken builds. When it's time to commit,
+possible, to avoid possibly broken builds. When it's time to commit,
 their changes are so massive that merging becomes very difficult and
 sometimes impossible.
 
@@ -130,26 +130,26 @@ but never committed to `master`, because of that fear factor.
 
 ## OK, What Is The Solution?
 
-I wrote about it before, it is called
+I wrote about it before; it is called
 ["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
 
 It is simple &mdash; prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
-If any branch is breaking at even one unit test, the entire branch will be rejected.
+If any branch breaks at even one unit test, the entire branch will be rejected.
 
-In other words, we will raise that red flag **before** the code
+In other words: raise the red flag **before** the code
 gets into `master`.
 
 This solves all problems.
 
 First, the build is always clean. We simply can't break it because
-nobody can't commit unless his code keeps the build clean.
+nobody can commit unless his code keeps the build clean.
 
 Second, there is no fear of breaking anything. Simply because you technically can't
-do it. All you can do is to get a negative response from a merging script. Then
+do it. All you can do is get a negative response from a merging script. Then
 you fix your errors and tell the script to try again. Nobody sees these
-attempts and you don't need to appologize. Fear factor is gone.
+attempts, and you don't need to apologize. Fear factor is gone.
 
 BTW, try to use [rultor.com](http://www.rultor.com) to enforce this
 ["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
