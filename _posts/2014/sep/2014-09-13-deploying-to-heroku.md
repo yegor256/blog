@@ -53,13 +53,15 @@ If you didn't have the key before, it will be created automatically.
 ## Encrypt SSH Key
 
 Now, encrypt `id_rsa` and `id_rsa.pub` (they are in the `~/.ssh` directory)
-with a Rultor public key, `9AF0FA4C`:
+with a [rultor remote](https://github.com/yegor256/rultor-remote):
 
 {% highlight xml %}
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
-gpg --trust-model always -a -e -r 9AF0FA4C id_rsa
-gpg --trust-model always -a -e -r 9AF0FA4C id_rsa.pub
+$ gem install rultor
+$ rultor encrypt -p me/test id_rsa
+$ rultor encrypt -p me/test id_rsa.pub
 {% endhighlight %}
+
+Instead of `me/test` use the name of your Github project.
 
 You will get two new files `id_rsa.asc` and `id_rsa.pub.asc`.
 Add them to the root directory of your project,
