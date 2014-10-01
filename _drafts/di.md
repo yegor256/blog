@@ -5,7 +5,7 @@ date: 2014-09-25
 tags: oop anti-pattern
 description:
   While dependency injection is a natural object-oriented
-  mechanism, DI frameworks turn it into an anti-pattern
+  mechanism, DI frameworks turn it into an anti-pattern.
 keywords:
   - dependency injection
   - dependency injection is evil
@@ -17,7 +17,7 @@ keywords:
   - field injection
 ---
 
-While [dependency injection](http://martinfowler.com/articles/injection.html) (aka "DI")
+While [dependency injection](http://martinfowler.com/articles/injection.html) (aka, "DI")
 is a natural technique of composing objects in OOP
 (known long before the term was [introduced by Martin Fowler](http://www.martinfowler.com/articles/injection.html)),
 [Spring IoC](http://www.spring.io),
@@ -37,8 +37,8 @@ and
 (like in [PicoContainer](http://picocontainer.codehaus.org/annotated-field-injection.html)).
 These mechanisms simply violate basic principles
 of object-oriented programming and encourage us to create
-incomplete mutable objects, stuffed with data during the course
-of application execution. Remember, ideal objects
+incomplete, mutable objects, that get stuffed with data during the course
+of application execution. Remember: ideal objects
 [must be immutable]({ % post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
 and [may not contain setters]({ % post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 
@@ -68,7 +68,7 @@ public class Budget {
 
 The object `data` is called a "dependency".
 
-A `Budget` doesn't know what kind of database it is working with. All he
+A `Budget` doesn't know what kind of database it is working with. All it
 needs from the database is its ability to fetch a cell, using an
 arbitrary SQL query, via method `cell()`. We can instantiate a `Budget` with a PostgreSQL
 implementation of the `DB` interface, for example:
@@ -87,7 +87,7 @@ public class App {
 In other words, we're "injecting" a dependency into a new object `budget`.
 
 An alternative to this "dependency injection" approach would be
-to let `Budget` to decide what database he wants to work with:
+to let `Budget` decide what database it wants to work with:
 
 {% highlight java %}
 public class Budget {
@@ -97,12 +97,12 @@ public class Budget {
 {% endhighlight %}
 
 This is very dirty and leads to 1) code duplication, 2) inability
-to reuse, 3) inability to test, etc. No need to discuss, it is obvious.
+to reuse, and 3) inability to test, etc. No need to discuss why. It's obvious.
 
-Thus, dependency injection via constructor is an amazing technique.
-Not even a technique, but a feature of Java and all other object-oriented
-languages. It is expected than almost any object wants to encapsulate
-some knowledge (aka "state). That's what constructors are for.
+Thus, dependency injection via a constructor is an amazing technique.
+Well, not even a technique, really. More like a feature of Java and all other object-oriented
+languages. It's expected that almost any object will want to encapsulate
+some knowledge (aka, a "state"). That's what constructors are for.
 
 ## What is a DI Container?
 
@@ -122,7 +122,7 @@ public class Budget {
 }
 {% endhighlight %}
 
-Pay attention, the constructor is annotated with
+Pay attention: the constructor is annotated with
 [`@Inject`](http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html).
 
 Then, we're supposed to configure a container
@@ -143,8 +143,8 @@ Injector injector = Guice.createInjector(
 
 Some frameworks even allow us to configure the injector in an XML file.
 
-From now on, we are not allowed to instantiate `Budget` through `new` operator,
-like we did before. Instead, we should use the injector just created:
+From now on, we are not allowed to instantiate `Budget` through the `new` operator,
+like we did before. Instead, we should use the injector we just created:
 
 {% highlight java %}
 public class App {
@@ -160,15 +160,15 @@ The injection automatically finds out that in order to instantiate
 a `Budget` it has to provide an argument for its constructor. It will
 use an instance of class `Postgres`, which we instantiated in the injector.
 
-This is the right and recommended way to use Guice, for example. There are
-a few even darker patterns, which are possible but not recommended. For example,
-you can make your injector a singleton and use it right inside `Budget` class.
-These mechanisms are considered wrong even by DI container makers, so let's ignore
+This is the right and recommended way to use Guice. There are
+a few even darker patterns, though, which are possible but not recommended. For example,
+you can make your injector a singleton and use it right inside the `Budget` class.
+These mechanisms are considered wrong even by DI container makers, however, so let's ignore
 them and focus on the recommended scenario.
 
 ## What Is This For?
 
-Let me re-iterate and summarize scenarios of **incorrect usage** of dependency
+Let me reiterate and summarize the scenarios of **incorrect usage** of dependency
 injection containers:
 
  * Field injection
@@ -179,14 +179,14 @@ injection containers:
 
  * Making injector a global singleton
 
-If we put all of them aside, all we have left is a constructor
-injection explained above. And how does it help us? Why do we need it?
+If we put all of them aside, all we have left is the constructor
+injection explained above. And how does that help us? Why do we need it?
 Why can't we use plain old `new` in the main class of the application?
 
-The container we created simply adds more lines to the code base
+The container we created simply adds more lines to the code base,
 or even more files, if we use XML. And it doesn't add anything, except
-an additional complexity. We should always remember where to look for
-if we have a question: "What database is used as an argument of a Budget?"
+an additional complexity. We should always remember this
+if we have the question: "What database is used as an argument of a Budget?"
 
 ## The Right Way
 
@@ -198,7 +198,7 @@ an application. This is how we create a "thinking engine" in
 <script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script>
 
 Impressive? This is a true object composition.
-I believe, this is how a proper object-oriented application
+I believe this is how a proper object-oriented application
 should be instantiated.
 
-And DI containers, in my opinion, just add unnecessary noise.
+And DI containers? In my opinion, they just add unnecessary noise.
