@@ -55,12 +55,14 @@ on "Edit Profile".
 
 ## Encrypt rubygems.yml
 
-Now, encrypt `rubygems.yml` with a Rultor public key `9AF0FA4C`:
+Now, encrypt `rubygems.yml` with a [rultor remote](https://github.com/yegor256/rultor-remote):
 
 {% highlight xml %}
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
-gpg --trust-model always -a -e -r 9AF0FA4C rubygems.yml
+$ gem install rultor
+$ rultor encrypt -p me/test rubygems.yml
 {% endhighlight %}
+
+Instead of `me/test` use the name of your Github project.
 
 You will get a new file `rubygems.yml.asc`.
 Add this file to the root directory of your project,

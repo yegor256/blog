@@ -134,12 +134,14 @@ Create a `settings.xml` file (but don't commit it to your repo!):
 </settings>
 {% endhighlight %}
 
-Encrypt this file using GPG, with a Rultor key:
+Encrypt this file using [rultor remote](https://github.com/yegor256/rultor-remote):
 
 {% highlight xml %}
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
-gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
+$ gem install rultor
+$ rultor encrypt -p me/test settings.xml
 {% endhighlight %}
+
+Instead of `me/test` use the name of your Github project.
 
 You should get a `settings.xml.asc` file; add it to the root directory
 of your project, commit and push. This file contains your CloudBees

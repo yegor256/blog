@@ -93,14 +93,16 @@ is the pass phrase you have used while generating the keys.
 
 ## Encrypt Security Assets
 
-Now, encrypt these three files with a Rultor public key (`9AF0FA4C`):
+Now, encrypt these three files with a [rultor remote](https://github.com/yegor256/rultor-remote):
 
 {% highlight xml %}
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 9AF0FA4C
-gpg --trust-model always -a -e -r 9AF0FA4C pubring.gpg
-gpg --trust-model always -a -e -r 9AF0FA4C secring.gpg
-gpg --trust-model always -a -e -r 9AF0FA4C settings.xml
+$ gem install rultor
+$ rultor encrypt -p me/test pubring.gpg
+$ rultor encrypt -p me/test secring.gpg
+$ rultor encrypt -p me/test settings.xml
 {% endhighlight %}
+
+Instead of `me/test` you should use the name of your Github project.
 
 You will get three new files: `pubring.gpg.asc`, `secring.gpg.asc`
 and `settings.xml.asc`. Add them to the root directory of your project,
