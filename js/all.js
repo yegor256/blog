@@ -70,6 +70,15 @@ $(
         }
       }
     );
+    $.getJSON(
+      'http://feeds.delicious.com/v2/json/urlinfo/data?url=' + url + '&callback=?',
+      function(data) {
+        var count = data.stories[0].diggs;
+        if (count !== 0) {
+          $('.count-delicious').html(data[0].total_posts).fadeIn();
+        }
+      }
+    );
     /*
     digg API doesn't work at the momemt, they are refactoring it
     $.getJSON(
