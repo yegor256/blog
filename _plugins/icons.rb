@@ -18,7 +18,7 @@ module Jekyll
       scss = '_ico.scss'
       system(
         "fontcustom compile _glyphs --output=_site/#{dir} \
-        --font-name=#{font} --templates=scss --no-hash --force \
+        --font-name=#{font} --templates=scss --force \
         --autowidth --preprocessor-path=/#{dir} \
         && mkdir -p #{temp} && mv _site/#{dir}/_#{font}.scss #{temp}/#{scss}"
       )
