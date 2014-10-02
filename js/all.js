@@ -62,22 +62,16 @@ $(
         }
       }
     );
-    window['reddit'] = function(data) {
-      $('redditJS').remove();
-      var count = data.children.count();
+    window['reddit'] = function(json) {
+      var count = json.data.children.length;
       if (count > 0) {
         $('.count-reddit').html(count).fadeIn();
       }
     }
-    $$('body')[0].append(
-      new Element(
-        'script',
-        {
-          'href': 'http://www.reddit.com/api/info.json?json=reddit&url=' + encodeURIComponent(document.location.href),
-          'id': 'redditJS'
-        }
-      )
-    );
+    var js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.src = 'http://www.reddit.com/api/info.json?jsonp=reddit&url=' + encodeURIComponent(document.location.href);
+    $('head').append(js);
     $('#search-query').lunrSearch(
       {
         indexUrl: '/search.json',
