@@ -39,8 +39,19 @@ function send_email($button, from, text, subject, success, error) {
 $(
   function() {
     'use strict';
+    window.reddit = function(json) {
+      var count = json.data.children.length;
+      if (count > 0) {
+        $('.count-reddit').html(count).fadeIn();
+      }
+    };
+    var url = encodeURIComponent(document.location.href),
+      js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.src = 'http://www.reddit.com/api/info.json?jsonp=reddit&url=' + url;
+    $('head').append(js);
     $.getJSON(
-      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + encodeURIComponent(document.location.href),
+      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
       function (data) {
         if (data.Facebook.total_count !== 0) {
           $('.count-facebook').html(data.Facebook.total_count).fadeIn();
@@ -57,21 +68,26 @@ $(
         if (data.StumbleUpon !== 0) {
           $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
         }
-        if (data.Diggs !== 0) {
-          $('.count-digg').html(data.Diggs).fadeIn();
+      }
+    );
+    /*
+    digg API doesn't work at the momemt, they are refactoring it
+    $.getJSON(
+      'http://services.digg.com/1.0/endpoint?method=story.getAll?type=javascript&callback=?&link=' + url,
+      function(data) {
+        var count = data.stories[0].diggs;
+        if (count !== 0) {
+          $('.count-digg').html(data.stories[0].diggs).fadeIn();
         }
       }
     );
-    window.reddit = function(json) {
-      var count = json.data.children.length;
-      if (count > 0) {
-        $('.count-reddit').html(count).fadeIn();
-      }
-    };
-    var js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.src = 'http://www.reddit.com/api/info.json?jsonp=reddit&url=' + encodeURIComponent(document.location.href);
-    $('head').append(js);
+    */
+  }
+);
+
+$(
+  function() {
+    'use strict';
     $('#search-query').lunrSearch(
       {
         indexUrl: '/search.json',
