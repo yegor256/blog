@@ -39,17 +39,7 @@ function send_email($button, from, text, subject, success, error) {
 $(
   function() {
     'use strict';
-    window.reddit = function(json) {
-      var count = json.data.children.length;
-      if (count > 0) {
-        $('.count-reddit').html(count).fadeIn();
-      }
-    };
-    var url = encodeURIComponent(document.location.href),
-      js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.src = 'http://www.reddit.com/api/info.json?jsonp=reddit&url=' + url;
-    $('head').append(js);
+    var url = encodeURIComponent(document.location.href);
     $.getJSON(
       'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
       function (data) {
@@ -71,9 +61,21 @@ $(
       }
     );
     $.getJSON(
+      'http://www.reddit.com/api/info.json?jsonp=?&url=' + url,
+      function(json) {
+        var count = json.data.children.length;
+        if (count > 0) {
+          $('.count-reddit').html(count).fadeIn();
+        }
+      }
+    );
+    $.getJSON(
       'http://feeds.delicious.com/v2/json/urlinfo/data?url=' + url + '&callback=?',
       function(data) {
-        var count = data.stories[0].diggs;
+        var count = 0;
+        if (data.length > 0) {
+          count = data[0].total_posts;
+        }
         if (count !== 0) {
           $('.count-delicious').html(data[0].total_posts).fadeIn();
         }
