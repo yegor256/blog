@@ -62,12 +62,12 @@ $(
         }
       }
     );
-    window['reddit'] = function(json) {
+    window.reddit = function(json) {
       var count = json.data.children.length;
       if (count > 0) {
         $('.count-reddit').html(count).fadeIn();
       }
-    }
+    };
     var js = document.createElement('script');
     js.type = 'text/javascript';
     js.src = 'http://www.reddit.com/api/info.json?jsonp=reddit&url=' + encodeURIComponent(document.location.href);
