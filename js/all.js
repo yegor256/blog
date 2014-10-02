@@ -54,9 +54,6 @@ $(
         if (data.LinkedIn !== 0) {
           $('.count-linkedin').html(data.LinkedIn).fadeIn();
         }
-        if (data.Reddit !== 0) {
-          $('.count-reddit').html(data.Reddit).fadeIn();
-        }
         if (data.StumbleUpon !== 0) {
           $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
         }
@@ -64,6 +61,22 @@ $(
           $('.count-digg').html(data.Diggs).fadeIn();
         }
       }
+    );
+    window['reddit'] = function(data) {
+      $('redditJS').remove();
+      var count = data.children.count();
+      if (count > 0) {
+        $('.count-reddit').html(count).fadeIn();
+      }
+    }
+    $$('body')[0].append(
+      new Element(
+        'script',
+        {
+          'href': 'http://www.reddit.com/api/info.json?json=reddit&url=' + encodeURIComponent(document.location.href),
+          'id': 'redditJS'
+        }
+      )
     );
     $('#search-query').lunrSearch(
       {

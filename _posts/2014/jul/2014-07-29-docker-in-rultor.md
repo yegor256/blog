@@ -18,7 +18,7 @@ keywords:
   - docker devops
 ---
 
-{% badge http://img.rultor.com/docker-logo.png 100 http://www.docker.io %}
+{% badge http://doc.rultor.com/images/docker-logo.png 100 http://www.docker.io %}
 
 [Docker](http://www.docker.io) is a command line tool that
 can run a shell command in a virtual Linux, inside an isolated file system.
@@ -29,7 +29,7 @@ Docker containers. Take this Maven project for example:
 $ sudo docker run -i -t ubuntu mvn clean test
 {% endhighlight %}
 
-{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
+{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 This command will start a new Ubuntu system and execute
 `mvn clean test` inside it. [Rultor.com](http://www.rultor.com), our

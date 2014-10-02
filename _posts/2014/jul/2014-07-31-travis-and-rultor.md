@@ -19,7 +19,7 @@ keywords:
 
 {% badge /images/2014/07/travis-logo.png 100 http://www.travis-ci.org %}
 
-{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
+{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 [Rultor](http://www.rultor.com) is a coding team assistant.
 [Travis](http://travis-ci.org) is a hosted continuous integration system.

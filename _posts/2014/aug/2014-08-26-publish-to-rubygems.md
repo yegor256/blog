@@ -104,7 +104,7 @@ In this example, replace `foo` with the name of your gem.
 
 ## Run It!
 
-{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
+{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in
 the Github issue tracker, and post something like that into it
