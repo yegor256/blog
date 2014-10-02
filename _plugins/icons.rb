@@ -27,8 +27,8 @@ module Jekyll
       File.write(
         file,
         File.read(file).gsub(
-          /font-url\((.*)\)/,
-          "url(\\1?#{SecureRandom.urlsafe_base64(6)})"
+          /font-url\("([^"]*)"\)/,
+          "url('\\1?#{SecureRandom.urlsafe_base64(6)}')"
         )
       )
       ['ttf', 'svg', 'woff', 'eot'].each { |ext|
