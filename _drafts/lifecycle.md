@@ -20,18 +20,18 @@ Being a hands-on programmer I'm also a co-founder and CTO of
 I'm playing a role of a technical and management leader in all projects
 we're working with.
 
-I wrote this article for those who're interested to hire me or
+I wrote this article for those who're interested to hire me and/or
 my team. The article demonstrates what happens from day one till
 the end of the project.
 
 You will see below that our methods of
-software development seriously differ from what many other
-teams are using. I personally pay a lot of attention to quality
-of code and quality of processes that put people together.
+software development [seriously differ]({% post_url 2014/apr/2014-04-17-how-xdsd-is-different %})
+from what many other teams are using. I personally pay a lot of attention to quality
+of code and quality of processes that put all us together.
 
 <!--more-->
 
-There are four phases in every project we're working with in
+There are four phases in every project I'm working with in
 [Teamed.io](http://www.teamed.io):
 
  * **Thinking**.
@@ -145,12 +145,18 @@ are also defined at this phase.
 
 ## Fixing
 
-We understand any inconsistency as a bug. If something is not clear
+Now it's time to build a distributed team of programmers. First, we
+invite those who worked in other projects before and already
+have proven his/her quality. Very often we invite new people,
+finding them through StackOverflow, Github, oDesk, and other sources.
+An average team size of an average project is 10-20 programmers.
+
+At this phase, we understand any inconsistency as a bug. If something is not clear
 in the documentation, or something can be refactored for better
 readability, or a function can be improved for higher performance &mdash;
 it is a bug for us.
 And [bugs are welcome]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
-We encourage everybody to report as many bugs as possible. This how
+We encourage everybody to report as many bugs as possible. This is how
 we achive high quality.
 
 That is why the phase is called Fixing. We are reporting bugs and fixing

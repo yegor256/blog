@@ -14,7 +14,7 @@ keywords:
   - how to automate deployment process
 ---
 
-{% badge http://img.rultor.com/logo.svg 100 http://www.rultor.com %}
+{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 When I explain how [Rultor](http://www.rultor.com) automates deployment/release processes,
 very often I hear something like:

@@ -1,0 +1,8 @@
+* text eol=lf
+*.png binary
+*.jpg binary
+*.woff binary
+*.ttf binary
+*.eot binary
+favicon.ico binary
+

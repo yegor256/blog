@@ -16,6 +16,8 @@ keywords:
   - price per line of code
 ---
 
+{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+
 Yes, I know, "line of code" (LoC)
 is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects).
 There are [tons of articles](http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/)

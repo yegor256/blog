@@ -1,3 +1,4 @@
+require 'securerandom'
 module Jekyll
   class FontFile < StaticFile
     def write(dest)
@@ -23,7 +24,13 @@ module Jekyll
         && mkdir -p #{temp} && mv _site/#{dir}/_#{font}.scss #{temp}/#{scss}"
       )
       file = "#{temp}/#{scss}";
-      File.write(file, File.read(file).gsub(/font-url\((.*)\)/, 'url(\1)'))
+      File.write(
+        file,
+        File.read(file).gsub(
+          /(?:font-)?url\((?:"|')([^"']+)(?:"|')\)/,
+          "url('\\1?#{SecureRandom.urlsafe_base64(6)}')"
+        )
+      )
       ['ttf', 'svg', 'woff', 'eot'].each { |ext|
         site.static_files << Jekyll::FontFile.new(site, site.dest, '/', "#{dir}/#{font}.#{ext}")
       }

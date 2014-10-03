@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DI Containers are Code Polluters"
-date: 2014-09-25
+date: 2014-10-03
 tags: oop anti-pattern
 description:
   While dependency injection is a natural object-oriented
@@ -195,7 +195,7 @@ an application. This is how we create a "thinking engine" in
 [rultor.com](http://www.rultor.com) (full class is in
 [`Agents.java`](https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java)):
 
-<script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script>
+<div style="width:800px"><script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script></div>
 
 Impressive? This is a true object composition.
 I believe this is how a proper object-oriented application
