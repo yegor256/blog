@@ -27,7 +27,7 @@ module Jekyll
       File.write(
         file,
         File.read(file).gsub(
-          /font-url\("([^"]*)"\)/,
+          /(?:font-)?url\((?:"|')([^"']+)(?:"|')\)/,
           "url('\\1?#{SecureRandom.urlsafe_base64(6)}')"
         )
       )
