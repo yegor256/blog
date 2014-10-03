@@ -8,6 +8,7 @@
     '/css/layout.css',
     '/robots.txt',
     '/js/all.js',
+    '/ico/fontcustom.svg'
 ].forEach(
     function (page) {
         casper.test.begin(
