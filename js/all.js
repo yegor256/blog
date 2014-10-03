@@ -244,6 +244,7 @@ var disqus_shortname = 'yegor256';
   (w[c] = w[c] || []).push(function() {
     try {
       w.yaCounter26361360 = new Ya.Metrika({id:26361360,
+        webvisor:true,
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true});
