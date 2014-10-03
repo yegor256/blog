@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DI Containers are Code Polluters"
-date: 2014-09-25
+date: 2014-10-03
 tags: oop anti-pattern
 description:
   While dependency injection is a natural object-oriented
