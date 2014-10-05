@@ -96,10 +96,10 @@ All of them are hosted and do not require any server installation
 </tbody>
 </table>
 
+<!--more-->
+
 If you know any other good continuous integration services,
 [email me](/about-me.html), I'll review and add them to this list.
-
-<!--more-->
 
 {% badge /images/2014/10/travis.png 64 http://www.travis-ci.org %}
 
