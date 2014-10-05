@@ -12,7 +12,6 @@
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
@@ -23,7 +22,7 @@
       <header class="header">
         <div>
           <a href="/about-me.html">
-            <img src="/images/yegor-bugayenko.jpg" class="photo" alt="photo"/>
+            <img src="/images/yegor-bugayenko.png" class="photo" alt="photo"/>
           </a>
         </div>
         <nav role="navigation">
@@ -66,6 +65,8 @@
       </header>
     </div>
     {{ content }}
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
   </body>
 </html>
