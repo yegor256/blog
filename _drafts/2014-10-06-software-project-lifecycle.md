@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 4-Phase Project Lifecycle
-date: 2014-10-03
+title: XDSD Project Lifecycle
+date: 2014-10-06
 tags: mgmt
 description:
   There are four standard phases in
@@ -167,7 +167,8 @@ we re-deploy the entire product to the production platform.
 Every bug is reported, classified, discussed, and fixed in its
 own Github ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch &mdash; all changes must pass through
-our quality controls and be merged into `master` by [rultor.com](http://www.rultor.com),
+our [quality controls]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
+and be merged into `master` by [rultor.com](http://www.rultor.com),
 our [merging bot]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner

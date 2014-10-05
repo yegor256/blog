@@ -228,17 +228,17 @@ h2 {
     border-left: 0;
     overflow-x: auto;
   }
-  pre {
-    display: block;
-    font-size: 0.9 * $em;
+}
+pre {
+  display: block;
+  font-size: 0.9 * $em;
+  line-height: 1.2 * $em;
+  code {
+    background-color: inherit;
+    padding: 0;
+  }
+  @media all and (max-width: $width) {
     line-height: 1.2 * $em;
-    code {
-      background-color: inherit;
-      padding: 0;
-    }
-    @media all and (max-width: $width) {
-      line-height: 1.2 * $em;
-    }
   }
 }
 .front {
@@ -317,4 +317,9 @@ figure {
 }
 .about-badge {
   height: 24px;
+}
+.gist {
+  pre {
+    font-size: 12px !important;
+  }
 }

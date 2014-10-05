@@ -39,6 +39,8 @@ new Foo( // ends the line
 );
 {% endhighlight %}
 
+<!--more-->
+
 Obviously, the line with a closing bracket should start at the same
 indentation level as the line with it opening pair.
 
