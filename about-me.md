@@ -71,6 +71,33 @@ subscribers in my list).
 
 You can always [unsubscribe](/unsubscribe.html).
 
+Some of my articles are also published at (in alphabetic order):
+
+<a href="http://yegor256.blogspot.com/">
+  <img alt="blogger.com" src="/images/about/blogger.png"
+    title="Yegor Bugayenko at Blogger"
+    class="about-badge"/></a>
+<a href="http://devops.com/author/yegor256/">
+  <img alt="devops.com" src="/images/about/devops.png"
+    title="Yegor Bugayenko at DevOps.com"
+    class="about-badge"/></a>
+<a href="http://java.dzone.com/users/yegor256">
+  <img alt="dzone.com" src="/images/about/dzone.png"
+    title="Yegor Bugayenko at DZone.com"
+    class="about-badge"/></a>
+<a href="http://www.javacodegeeks.com/author/yegor-bugayenko/">
+  <img alt="JavaCodeGeeks.com" src="/images/about/jcg.png"
+    title="Yegor Bugayenko at JavaCodeGeeks"
+    class="about-badge"/></a>
+<a href="http://www.medium.com/@yegor256">
+  <img alt="medium.com" src="/images/about/medium.png"
+    title="Yegor Bugayenko at Medium.com"
+    class="about-badge"/></a>
+<a href="http://yegor256.tumblr.com/">
+  <img alt="tumblr.com" src="/images/about/tumblr.png"
+    title="Yegor Bugayenko at Tumblr"
+    class="about-badge"/></a>
+
 <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
 <script type="text/javascript">
 twttr.conversion.trackPid('l4p91');

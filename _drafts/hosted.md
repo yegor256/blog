@@ -42,6 +42,7 @@ I was mostly interested in prices and their limitations.
 <tr><td>circleci.io</td><td><a href="https://circleci.com/pricing">$19/mo</a></td><td></td></tr>
 <tr><td>magnum-ci.com</td><td>?</td><td></td></tr>
 <tr><td>wercker.com</td><td>free</td><td></td></tr>
+<tr><td>appveyer.com</td><td><a href="http://www.appveyor.com/pricing">$39/mo</a></td><td></td></tr>
 </tbody>
 </table>
 
@@ -79,3 +80,6 @@ Besides that, works just fine.
 [wercker.com](http://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
 for all projects.
+
+[appveyor.com](http://www.appveyor.com) is the only one
+that runs Windows builds.
