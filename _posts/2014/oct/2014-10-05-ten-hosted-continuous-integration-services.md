@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10 Hosted Continuous Integration Services for a Private Repository"
+title: "Best Hosted Continuous Integration Services for a Private Repository"
 date: 2014-10-05
 tags: ci devops
 description:
@@ -69,7 +69,7 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
 <tr><td><a href="http://www.wercker.com">wercker.com</td>
-  <td class="rht">free</td>
+  <td class="rht">free!</td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
@@ -93,6 +93,21 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
+<tr><td><a href="http://ci.solanolabs.com">sonolabs.com</td>
+  <td class="rht"><a href="https://www.solanolabs.com/#pricing">$15/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td></tr>
+<tr><td><a href="http://ww.hosted-ci.com">hosted-ci.com</td>
+  <td class="rht"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td></tr>
+<tr><td><a href="http://www.ship.io">ship.io</td>
+  <td class="rht"><a href="https://ship.io/pricing">free!</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td></tr>
 </tbody>
 </table>
 
@@ -181,3 +196,8 @@ that, their badge is not updated correctly in Gitub README.md.
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
+[**solanolabs.com**](http://www.solanolabs.com) testing now...
+
+[**hosted-ci.com**](http://www.hosted-ci.com) testing now...
+
+[**ship.io**](http://www.ship.io) testing now...
