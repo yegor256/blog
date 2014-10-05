@@ -9,6 +9,7 @@ module Yegor
       if !File.exists?(file)
         raise "file doesn't exist: #{file}"
       end
+      @src = 'http://www.yegor256.com' + @src
     end
 
     def render(context)
