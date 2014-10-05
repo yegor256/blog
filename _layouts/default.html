@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
-    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
@@ -67,5 +66,6 @@
       </header>
     </div>
     {{ content }}
+    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
   </body>
 </html>
