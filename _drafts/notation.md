@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "&lquot;Paired Brackets&rquot; Notation"
+title: "Paired Brackets"
 date: 2014-10-07
 tags: java oop programming
 description:
-  This notation gives a simple and uniform answer
-  to the question of how to format nested function
-  calls in object-oriented languages
+  Paired Brackets notation makes your object-oriented
+  code look beautiful and disciplined, no matter
+  how deep is the nesting level
 keywords:
   - indentation notation
   - indentation in java
@@ -24,7 +24,7 @@ for method/function calls.
 Here is how your code will look, if you follow
 the principle:
 
-{% highlight java %}
+{% highlight java linenos=table %}
 new Foo( // ends the line
   Math.max(10, 40), // open/close at the same line
   String.format(
@@ -39,8 +39,8 @@ new Foo( // ends the line
 );
 {% endhighlight %}
 
-Obviously, the bracket should be closed at the same
-indentation level as its paired bracket.
+Obviously, the line with a closing bracket should start at the same
+indentation level as the line with it opening pair.
 
 This is how your IDE will render your code if you
 follow this notation (IntelliJ IDEA):
