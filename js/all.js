@@ -214,11 +214,10 @@ $(
 $(
   function() {
     'use strict';
-    var _gaq = _gaq || [];
+    var _gaq = [];
     _gaq.push(['_setAccount', 'UA-1963507-32']);
     _gaq.push(['_trackPageview']);
     (function() {
-      'use strict';
       var ga = document.createElement('script'), s = document.getElementsByTagName('script')[0];
       ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
@@ -233,14 +232,12 @@ $(
     'use strict';
     var disqus_shortname = 'yegor256';
     (function () {
-      'use strict';
       var s = document.createElement('script'); s.async = true;
       s.type = 'text/javascript';
       s.src = '//' + disqus_shortname + '.disqus.com/count.js';
       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     (function() {
-      'use strict';
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -253,7 +250,6 @@ $(
   function() {
     'use strict';
     (function (d, w, c) {
-      'use strict';
       (w[c] = w[c] || []).push(function() {
       try {
         w.yaCounter26361360 = new Ya.Metrika({id:26361360,
