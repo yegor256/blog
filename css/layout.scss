@@ -190,6 +190,7 @@ h2 {
   margin-top: 2 * $em;
   a.link {
     @extend .gray;
+    @extend .desktop-only;
     margin-left: .3 * $em;
     text-decoration: none;
     &:hover {
