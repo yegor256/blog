@@ -205,4 +205,4 @@ what's going on. Trying to figure it out...
 Keep in mind that no matter how good and expensive your
 continuous integration service is, your quality won't grow
 unless you make your
-[master branch read-only]({% post_url 2014/jul/2014-jul-21-read-only-master-branch %}).
+[master branch read-only]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).

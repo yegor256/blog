@@ -10,7 +10,7 @@ module Yegor
       end
     end
 
-    def render(_context)
+    def render(context)
       img = "<img src='#{CGI.escapeHTML @src}' style='width:#{@width}px;' alt='badge'/>"
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
