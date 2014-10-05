@@ -22,5 +22,7 @@ env:
   global:
     - secure: "YRF2hq6GI07WDf8uzPgRZ72MF0/m+KRLXOvLFApzliPGav86wMdMBnUlb2TnbneOIjnZsFnivVTi0nOmhBJu/tOTnLdXUn96smKg60hHuQOqZYohv0Kbzl5SU0uDfN50q2inXxgd7xSH3D0zCMge8TacWzrp233NcjncArsYyoU="
 script: |
+  git config --global user.email "travis@teamed.io"
+  git config --global user.name "Travis"
   _test/run.sh && jslint js/all.js && jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
 
