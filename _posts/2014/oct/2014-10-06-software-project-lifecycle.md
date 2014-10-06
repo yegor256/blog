@@ -1,8 +1,8 @@
 ---
 layout: post
-title: XDSD Project Lifecycle
+title: Project Lifecycle in Teamed.io
 date: 2014-10-06
-tags: mgmt xdsd
+tags: mgmt
 description:
   There are four standard phases in
   a software development lifecycle for all projects
