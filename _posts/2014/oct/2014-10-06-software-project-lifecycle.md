@@ -15,6 +15,8 @@ keywords:
   - project phases
 ---
 
+{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
+
 In addition to being a hands-on programmer, I'm also co-founder and CTO of
 [Teamed.io](http://www.teamed.io), a custom software development company.
 I play the role of a technical and management leader in all projects
