@@ -2,7 +2,7 @@
 layout: post
 title: XDSD Project Lifecycle
 date: 2014-10-06
-tags: mgmt
+tags: mgmt xdsd
 description:
   There are four standard phases in
   a software development lifecycle for all projects
