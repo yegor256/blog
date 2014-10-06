@@ -8,6 +8,9 @@ module Yegor
       if opts[2]
         @url = opts[2].strip
       end
+      if @src.index('/') == 0
+        @src = 'http://www.yegor256.com' + @src
+      end
     end
 
     def render(context)
