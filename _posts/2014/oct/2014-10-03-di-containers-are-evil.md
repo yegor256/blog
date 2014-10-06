@@ -195,7 +195,7 @@ an application. This is how we create a "thinking engine" in
 [rultor.com](http://www.rultor.com) (full class is in
 [`Agents.java`](https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java)):
 
-<div style="width:800px"><script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script></div>
+<script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script>
 
 Impressive? This is a true object composition.
 I believe this is how a proper object-oriented application
