@@ -1,4 +1,4 @@
-/*globals $:false, window:false, document:false, Ya:false */
+/*globals $:false, window:false, document:false, Ya:false, URL:false */
 function valid_email(email) {
   'use strict';
   var re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -110,7 +110,7 @@ $(
     $('.main a').each(
       function () {
         var $this = $(this), domain = new URL(this.href).hostname;
-        if (domain && domain != window.location.hostname) {
+        if (domain && domain !== window.location.hostname) {
           $this.append('<i class="icon icon-exit foreign"></i>');
         }
       }
