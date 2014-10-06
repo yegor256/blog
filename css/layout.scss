@@ -41,6 +41,10 @@ a, a:visited {
   color: inherit;
   text-decoration: underline;
 }
+.foreign:before {
+  font-size: .4 * $em;
+  vertical-align: top;
+}
 .wrapper {
   box-sizing: border-box;
   margin-left: auto;

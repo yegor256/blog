@@ -107,6 +107,14 @@ $(
         template: '#search-results-template'
       }
     );
+    $('.main a').each(
+      function () {
+        var $this = $(this), domain = new URL(this.href).hostname;
+        if (domain && domain != window.location.hostname) {
+          $this.append('<i class="icon icon-exit foreign"></i>');
+        }
+      }
+    );
     $('.button').click(
       function (event) {
         event.preventDefault();
