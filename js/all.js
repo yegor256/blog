@@ -218,46 +218,20 @@ $(
   }
 );
 
-// Disqus.com
-$(
-  function() {
-    'use strict';
-    var disqus_shortname = 'yegor256',
-      s = document.createElement('script'),
-      dsq = document.createElement('script');
-    s.async = true;
-    s.type = 'text/javascript';
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  }
-);
-
 // yandex metrika
-$(
+window['yandex_metrika_callbacks'] = [];
+window['yandex_metrika_callbacks'].push(
   function() {
     'use strict';
-    var d = document, w = window, c = "yandex_metrika_callbacks",
-      n = d.getElementsByTagName("script")[0],
-      s = d.createElement("script"),
-      f = function () { n.parentNode.insertBefore(s, n); };
-    (w[c] = w[c] || []).push(function() {
-    try {
-      w.yaCounter26361360 = new Ya.Metrika({id:26361360,
-      webvisor:true,
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true});
-    } catch(e) { }
-    });
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol === "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-    if (w.opera === "[object Opera]") {
-    d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
+    window.yaCounter26361360 = new Ya.Metrika(
+      {
+        id:26361360,
+        webvisor:true,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+      }
+    );
   }
 );
 
