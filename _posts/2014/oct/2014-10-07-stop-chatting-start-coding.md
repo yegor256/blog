@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Stop Chatting, Start Coding"
-date: 2014-10-03
-tags: xdsd xdsd-benefits
+date: 2014-10-07
+tags: xdsd
 description:
   In XDSD everybody is motivated to produce
   tangible and meaningful results. That's why
@@ -22,7 +22,8 @@ The first principle of eXtremely Distributed Software Development
 "everyone gets paid for verified deliverables". This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
-pass a code review and make sure the code is merged into the destination branch.
+pass a code review and make sure the code is
+[merged into the destination branch]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
 Only then, is his result appreciated and paid for.
 
 For most of my clients this already sounds extreme.
@@ -41,7 +42,7 @@ Answering questions in Skype or Hipchat or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.
 
-We don't use any (I mean it!) informal communication channels in
+We don't use **any** (I mean it!) informal communication channels in
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
 
