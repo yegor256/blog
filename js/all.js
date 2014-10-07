@@ -107,7 +107,7 @@ $(
         template: '#search-results-template'
       }
     );
-    $('.main a').each(
+    $('.main p a').each(
       function () {
         var $this = $(this), domain = new URL(this.href).hostname;
         if (domain && domain !== window.location.hostname) {
