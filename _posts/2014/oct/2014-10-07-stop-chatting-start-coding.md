@@ -36,6 +36,8 @@ funds are not wasted on activities that don't produce results.
 
 But that's not all.
 
+<!--more-->
+
 This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question
 about current design, specification, configuration, etc. &mdash;
