@@ -219,8 +219,8 @@ $(
 );
 
 // yandex metrika
-window['yandex_metrika_callbacks'] = [];
-window['yandex_metrika_callbacks'].push(
+window.yandex_metrika_callbacks = [];
+window.yandex_metrika_callbacks.push(
   function() {
     'use strict';
     window.yaCounter26361360 = new Ya.Metrika(
