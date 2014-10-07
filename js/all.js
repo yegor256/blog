@@ -261,17 +261,7 @@ $(
   }
 );
 
-// yandex metrika
-$(
-  function() {
-    'use strict';
-    var _gaq = [],
-      ga = document.createElement('script'),
-      s = document.getElementsByTagName('script')[0];
-    _gaq.push(['_setAccount', 'UA-1963507-32']);
-    _gaq.push(['_trackPageview']);
-    ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    s.parentNode.insertBefore(ga, s);
-  }
-);
+// Google Analytics
+var _gaq = [];
+_gaq.push(['_setAccount', 'UA-1963507-32']);
+_gaq.push(['_trackPageview']);
