@@ -174,8 +174,9 @@ and be merged into `master` by [rultor.com](http://www.rultor.com),
 our [merging bot]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We never use
-any chats, Skype, emails or conferencing software. We communicate
+and between programmers happen only through Github issues. We
+[never use any chats]({% post_url 2014/oct/2014-10-07-stop-chatting-start-coding %}),
+Skype, emails or conferencing software. We communicate
 only through tickets and comments in Github.
 
 ## Using
