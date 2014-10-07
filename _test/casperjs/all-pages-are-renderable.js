@@ -7,7 +7,7 @@
     '/index.html',
     '/css/layout.css',
     '/robots.txt',
-    '/js/all.js',
+    '/js/global.js',
     '/ico/fontcustom.svg'
 ].forEach(
     function (page) {
