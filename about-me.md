@@ -102,3 +102,5 @@ Some of my articles are also published at (in alphabetic order):
 <script type="text/javascript">
 twttr.conversion.trackPid('l4p91');
 </script>
+
+<script src="/js/about-me.js?{{ site.data['hash'] }}"></script>

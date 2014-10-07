@@ -12,6 +12,7 @@
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
@@ -65,9 +66,8 @@
       </header>
     </div>
     {{ content }}
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
-    <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
+    <script src="/js/global.js?{{ site.data['hash'] }}"></script>
+    <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
     <script src="//stats.g.doubleclick.net/dc.js" async="async"></script>
     <script src="//mc.yandex.ru/metrika/watch.js" async="async"></script>
   </body>
