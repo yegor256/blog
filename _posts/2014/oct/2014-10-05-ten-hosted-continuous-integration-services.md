@@ -171,7 +171,8 @@ nothing fancy.
 [**wercker.com**](http://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promissing. It is still
-free for private repositories and is backed up by investments.
+free for private repositories and is backed up by
+[investments](https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/).
 I'm still testing it...
 
 {% badge /images/2014/10/codeship.png 64 http://www.codeship.io %}
