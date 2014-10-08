@@ -194,4 +194,5 @@ It is much easier to stay in a primitive world of procedural COBOL than to
 truly understand and appreciate the beautiful world of true objects.
 
 PPS. Forgot to say, yes, dependency injection via setters is also
-a terrible anti-pattern. About it, in one of the next posts :)
+a terrible anti-pattern. About it, in
+[one of the next posts]({% post_url 2014/oct/2014-10-03-di-containers-are-evil %}) :)
