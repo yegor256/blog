@@ -115,6 +115,8 @@ Here they are, in order of my personal preference:
 
 If you know any other good continuous integration services,
 [email me](/about-me.html), I'll review and add them to this list.
+BTW, here is [a "full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
+of continuous integration software and services.
 
 {% badge /images/2014/10/travis.png 64 http://www.travis-ci.org %}
 
@@ -201,6 +203,20 @@ what's going on. Trying to figure it out...
 [**hosted-ci.com**](http://www.hosted-ci.com) testing now...
 
 [**ship.io**](http://www.ship.io) testing now...
+
+[**zeroci.com**](http://www.zeroci.com) testing now...
+
+[**cloudbees.com**](http://www.cloudbees.com) testing now...
+
+[**dploy.io**](http://dploy.io/) testing now...
+
+BTW, if you don't like the idea of keeping continuous integration
+in cloud, consider these on-premise software packages (in order or preference):
+[Jenkins](http://www.jenkins-ci.com),
+[TeamCity](http://www.jetbrains.com/teamcity/),
+[Go](http://www.thoughtworks.com/products/go-continuous-delivery),
+[Strider](http://stridercd.com/),
+[BuildBot](http://buildbot.net/).
 
 Keep in mind that no matter how good and expensive your
 continuous integration service is, your quality won't grow
