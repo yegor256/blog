@@ -115,7 +115,7 @@ Here they are, in order of my personal preference:
 
 If you know any other good continuous integration services,
 [email me](/about-me.html), I'll review and add them to this list.
-BTW, here is [a "full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
+BTW, here is a ["full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
 of continuous integration software and services.
 
 {% badge /images/2014/10/travis.png 64 http://www.travis-ci.org %}
