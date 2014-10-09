@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2014-10-8: Created.
+2014-10-9: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20110222 at Wed Oct  8 10:54:40 2014
+Created by FontForge 20110222 at Thu Oct  9 05:59:10 2014
  By travis
 Created by travis with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
@@ -19,7 +19,7 @@ Created by travis with FontForge 2.0 (http://fontforge.sf.net)
     panose-1="2 0 6 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="-0.0624278 -160 513 407"
+    bbox="-0.0624278 -160 513 448"
     underline-thickness="25.6"
     underline-position="-51.2"
     unicode-range="U+F100-F115"
@@ -31,8 +31,8 @@ c0 19 6 38 15 54c52 -64 129 -107 216 -111c-2 8 -2 16 -2 24c0 58 47 106 105 106c3
     <glyph glyph-name="uniF10B" unicode="&#xf10b;" 
 d="M0 338c0 16 5 30 17 41s27 16 45 16s33 -5 44 -16s18 -25 18 -41s-6 -29 -18 -40s-26 -17 -44 -17h-1c-18 0 -33 6 -44 17s-17 24 -17 40zM7 -94v330h109v-330h-109zM177 -94v215v99v16h110v-48h-1c4 7 9 14 14 19s10 11 18 17s18 11 30 14s24 6 38 6c38 0 68 -13 91 -38
 s35 -62 35 -111v-189h-109v177c0 23 -5 42 -14 55s-23 19 -42 19c-14 0 -26 -3 -35 -11s-17 -17 -22 -29c-2 -7 -3 -16 -3 -27v-184h-110z" />
-    <glyph glyph-name="uniF109" unicode="&#xf109;" horiz-adv-x="467" 
-d="M0 405h82l100 -153c17 -25 34 -55 52 -87c16 29 35 59 56 90l99 150h78l-203 -293v-216h-68v216z" />
+    <glyph glyph-name="uniF109" unicode="&#xf109;" 
+d="M0 448h512v-512h-512v512zM36 411v-438h439v438h-439zM99 338h36v-128h61v128h37v-292h-37v128h-61v-128h-36v292zM282 338h36c20 -60 42 -120 61 -180c1 60 -1 120 0 180h37v-292h-38c-20 60 -40 119 -60 179v-179h-36v292z" />
     <glyph glyph-name="uniF101" unicode="&#xf101;" 
 d="M484 378c19 -19 28 -42 28 -68v-320c0 -26 -9 -48 -28 -67s-41 -29 -68 -29h-320c-27 0 -49 10 -68 29s-28 41 -28 67v320c0 26 9 49 28 68s41 29 68 29h320c27 0 49 -10 68 -29zM490 -10v160h-234v235h-160c-21 0 -38 -7 -53 -22s-21 -33 -21 -53v-160h234v-234h160
 c21 0 38 7 53 22s21 32 21 52z" />
