@@ -6,12 +6,6 @@ $(
     $.getJSON(
       'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
       function (data) {
-        if (data.Facebook.total_count !== 0) {
-          $('.count-facebook').html(data.Facebook.total_count).fadeIn();
-        }
-        if (data.Twitter !== 0) {
-          $('.count-twitter').html(data.Twitter).fadeIn();
-        }
         if (data.GooglePlusOne !== 0) {
           $('.count-googleplus').html(data.GooglePlusOne).fadeIn();
         }
@@ -20,6 +14,24 @@ $(
         }
         if (data.StumbleUpon !== 0) {
           $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
+        }
+      }
+    );
+    $.getJSON(
+      'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + url,
+      function(json) {
+        var count = json.count;
+        if (count > 0) {
+          $('.count-twitter').html(count).fadeIn();
+        }
+      }
+    );
+    $.getJSON(
+      'https://api.facebook.com/method/links.getStats?format=json&urls=' + url,
+      function(json) {
+        var count = json[0].total_count;
+        if (count > 0) {
+          $('.count-facebook').html(count).fadeIn();
         }
       }
     );
