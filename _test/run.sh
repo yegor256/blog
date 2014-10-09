@@ -18,7 +18,7 @@ while true; do
   echo "waiting for Jekyll to get ready (${COUNT})..."
   sleep 15
   (( COUNT++ ))
-  if [ $COUNT -eq 10 ]; then
+  if [ $COUNT -eq 30 ]; then
     echo "Jekyll takes too long"
     break
   fi
