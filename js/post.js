@@ -9,9 +9,6 @@ $(
         if (data.GooglePlusOne !== 0) {
           $('.count-googleplus').html(data.GooglePlusOne).fadeIn();
         }
-        if (data.LinkedIn !== 0) {
-          $('.count-linkedin').html(data.LinkedIn).fadeIn();
-        }
         if (data.StumbleUpon !== 0) {
           $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
         }
@@ -32,6 +29,15 @@ $(
         var count = json[0].total_count;
         if (count > 0) {
           $('.count-facebook').html(count).fadeIn();
+        }
+      }
+    );
+    $.getJSON(
+      'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
+      function(json) {
+        var count = json.count;
+        if (count > 0) {
+          $('.count-linkedin').html(count).fadeIn();
         }
       }
     );
