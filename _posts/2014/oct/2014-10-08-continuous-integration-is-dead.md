@@ -62,7 +62,7 @@ Let's see the organizational side.
 
 Continuous integration is not only a server that builds, but a
 management/organizational process that should "work". Being a process
-that works means exactly what Jezz Humble said in
+that works means exactly what Jez Humble said in
 [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE),
 on page 55:
 
@@ -97,7 +97,7 @@ the same. We just start to ignore that continuous integration
 build status. Either the build is clean or it is broken, and we continue
 to do what we were doing before.
 
-We don't stop and fix it, as Jezz Humble recommends.
+We don't stop and fix it, as Jez Humble recommends.
 
 Instead, we ignore the information that's
 coming from the continuous integration server.
