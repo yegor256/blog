@@ -14,7 +14,7 @@ module Jekyll
     safe true
     def generate(site)
       font = 'fontcustom'
-      dir = 'ico'
+      dir = 'css'
       temp = '_temp'
       scss = '_ico.scss'
       system(
@@ -26,7 +26,7 @@ module Jekyll
       file = "#{temp}/#{scss}";
       File.write(
         file,
-        File.read(file).gsub(
+        File.read(file).gsub(/font-url\(data:[^\)]+\),/, '').gsub(
           /(?:font-)?url\((?:"|')([^"']+)(?:"|')\)/,
           "url('\\1?#{SecureRandom.urlsafe_base64(6)}')"
         )

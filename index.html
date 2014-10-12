@@ -23,38 +23,38 @@ keywords:
 {% for post in paginator.posts %}
   <div class="wrapper">
     <section class="front">
-      <p class="gray small">
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%-d %B %Y" }}
-        </time>,
-        {{ post.content | count_words }} words,
-        {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-        {% if time == '1' %}
-          a minute
-        {% else %}
-          {% case time %}
-            {% when '2' %}
-              two
-            {% when '3' %}
-              three
-            {% when '4' %}
-              four
-            {% when '5' %}
-              five
-            {% else %}
-              {{ time }}
-          {% endcase %}
-          minutes
-        {% endif %}
-        to read,
-        <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-      </p>
       <header>
         <h1>
           <a href="{{ post.url }}">
             {{ post.title }}
           </a>
         </h1>
+        <p class="gray small">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%-d %B %Y" }}
+          </time>,
+          {{ post.content | count_words }} words,
+          {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+          {% if time == '1' %}
+            a minute
+          {% else %}
+            {% case time %}
+              {% when '2' %}
+                two
+              {% when '3' %}
+                three
+              {% when '4' %}
+                four
+              {% when '5' %}
+                five
+              {% else %}
+                {{ time }}
+            {% endcase %}
+            minutes
+          {% endif %}
+          to read,
+          <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+        </p>
       </header>
       <div class="main">
         {{ post.excerpt }}

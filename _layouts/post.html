@@ -5,64 +5,64 @@ layout: default
 <section itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="wrapper">
-    <p class="gray small">
-      <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%-d %B %Y" }}
-      </time>,
-      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-    </p>
     <header>
       <h1 itemprop="name">{{ page.title }}</h1>
+      <p class="gray small">
+        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%-d %B %Y" }}
+        </time>,
+        <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+      </p>
+      <p>{{ page | tags }}</p>
+      <div class="buttons">
+        <nav class="share" role="navigation">
+          <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+            title="Share on Facebook" class="button">
+            <span class="count count-facebook">0</span>
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
+            title="Share on Twitter" class="button">
+            <span class="count count-twitter">0</span>
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+            title="Share on Google+" class="button">
+            <span class="count count-googleplus">0</span>
+            <i class="icon icon-googleplus"></i>
+          </a>
+          <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ page.url }}"
+            title="Share on LinkedIn" class="button">
+            <span class="count count-linkedin">0</span>
+            <i class="icon icon-linkedin"></i>
+          </a>
+          <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
+            title="Share on StumbleUpon" class="button">
+            <span class="count count-stumbleupon">0</span>
+            <i class="icon icon-stumbleupon"></i>
+          </a>
+          <a href="http://del.icio.us/post?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
+            title="Share on Delicious" class="button">
+            <span class="count count-delicious">0</span>
+            <i class="icon icon-delicious"></i>
+          </a>
+          <a href="http://digg.com/submit?phase=2&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
+            title="Share on Digg" class="button">
+            <span class="count count-digg">0</span>
+            <i class="icon icon-digg"></i>
+          </a>
+          <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}"
+            title="Share on Reddit" class="button">
+            <span class="count count-reddit">0</span>
+            <i class="icon icon-reddit"></i>
+          </a>
+          <a href="http://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;t={{ page.title | cgi_escape }}"
+            title="Share on Hacker News" class="button">
+            <i class="icon icon-hackernews"></i>
+          </a>
+        </nav>
+      </div>
     </header>
-    <p>{{ page | tags }}</p>
-    <div class="buttons">
-      <nav class="share" role="navigation">
-        <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-          title="Share on Facebook" class="button">
-          <span class="count count-facebook">0</span>
-          <i class="icon icon-facebook"></i>
-        </a>
-        <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
-          title="Share on Twitter" class="button">
-          <span class="count count-twitter">0</span>
-          <i class="icon icon-twitter"></i>
-        </a>
-        <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
-          title="Share on Google+" class="button">
-          <span class="count count-googleplus">0</span>
-          <i class="icon icon-googleplus"></i>
-        </a>
-        <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ page.url }}"
-          title="Share on LinkedIn" class="button">
-          <span class="count count-linkedin">0</span>
-          <i class="icon icon-linkedin"></i>
-        </a>
-        <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
-          title="Share on StumbleUpon" class="button">
-          <span class="count count-stumbleupon">0</span>
-          <i class="icon icon-stumbleupon"></i>
-        </a>
-        <a href="http://del.icio.us/post?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
-          title="Share on Delicious" class="button">
-          <span class="count count-delicious">0</span>
-          <i class="icon icon-delicious"></i>
-        </a>
-        <a href="http://digg.com/submit?phase=2&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title | cgi_escape }}"
-          title="Share on Digg" class="button">
-          <span class="count count-digg">0</span>
-          <i class="icon icon-digg"></i>
-        </a>
-        <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}"
-          title="Share on Reddit" class="button">
-          <span class="count count-reddit">0</span>
-          <i class="icon icon-reddit"></i>
-        </a>
-        <a href="http://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;t={{ page.title | cgi_escape }}"
-          title="Share on Hacker News" class="button">
-          <i class="icon icon-hackernews"></i>
-        </a>
-      </nav>
-    </div>
     <main role="main">
       <article class="main" role="article" itemprop="articleBody">
         {{ content }}

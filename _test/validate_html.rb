@@ -10,7 +10,7 @@ results = ''
     results = @validator.validate_file(file)
     break
   rescue Exception => e
-    logger.info "Oh Noes!"
+    puts 'failure, lets try again'
   end
 end
 if results.errors.length > 0

@@ -20,7 +20,7 @@ Can money motivate creative minds? Will a programmer work
 better if he gets paid only when he reaches his goals and objectives?
 
 <div class="video">
-  <iframe width="640" height="360" src="//www.youtube.com/embed/XJRHkbrZuO8?rel=0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="//www.youtube.com/embed/XJRHkbrZuO8?rel=0" allowfullscreen></iframe>
 </div>
 
 Much research has already been done on this subject,

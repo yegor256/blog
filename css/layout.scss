@@ -99,11 +99,6 @@ a, a:visited {
 #disqus_thread {
   margin-top: 5 * $em;
 }
-time {
-  @extend .small;
-  @extend .gray;
-  margin-right: $em;
-}
 .video {
   @include unprintable();
   @extend .desktop-only;

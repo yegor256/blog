@@ -78,7 +78,7 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
 <tr><td><a href="http://www.drone.io">drone.io</a></td>
-  <td class="rht"<a href="https://drone.io/pricing">$25/mo</a></td>
+  <td class="rht"><a href="https://drone.io/pricing">$25/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
