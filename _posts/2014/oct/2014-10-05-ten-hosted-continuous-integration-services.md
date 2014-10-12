@@ -132,7 +132,8 @@ an open source continuous integration server. It looks a bit more
 complicated than others, giving you an ability to define "stages"
 and combine them into pipelines. I'm not sure yet how these mechanisms
 may help in small and medium size projects we're mostly working with,
-but they look "cool".
+but they look "cool". There is also a very unfortunate limitation of
+2Gb RAM per build &mdash; some of my Java projects fail because of that.
 
 {% badge /images/2014/10/semaphoreapp.png 64 http://www.semaphoreapp.com %}
 
@@ -193,13 +194,18 @@ that, their badge is not updated correctly in Gitub README.md.
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
+[**zeroci.com**](http://www.zeroci.com) looks like a one-man project, which
+definitely needs usability testing. It was rather difficult to configure
+a project via its web interface. The good thing is that it's free, but its
+quality is not high enough to recommend it.
+
+[**ship.io**](http://www.ship.io) is building only mobile applications (for iOS and Android).
+Besides that, they don't support Maven for Android apps, only Gradle.
+I'll try to build iOS Swift app with them soon....
+
 [**solanolabs.com**](http://www.solanolabs.com) testing now...
 
 [**hosted-ci.com**](http://www.hosted-ci.com) testing now...
-
-[**ship.io**](http://www.ship.io) testing now...
-
-[**zeroci.com**](http://www.zeroci.com) testing now...
 
 [**cloudbees.com**](http://www.cloudbees.com) testing now...
 
