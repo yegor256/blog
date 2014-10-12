@@ -5,10 +5,11 @@ layout: default
 <section itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="wrapper">
-    <p>
+    <p class="gray small">
       <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%-d %B %Y" }}
-      </time>
+      </time>,
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
     </p>
     <header>
       <h1 itemprop="name">{{ page.title }}</h1>

@@ -23,29 +23,11 @@ keywords:
 {% for post in paginator.posts %}
   <div class="wrapper">
     <section class="front">
-      <p>
+      <p class="gray small">
         <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%-d %B %Y" }}
-        </time>
-      </p>
-      <header>
-        <h1>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h1>
-      </header>
-      <div class="main">
-        {{ post.excerpt }}
-      </div>
-      <p>
-        <a href="{{ post.url }}">
-          continue...
-        </a>
-      </p>
-      <p class="gray small desktop-only">
-        {{ post.content | count_words }}
-        words,
+        </time>,
+        {{ post.content | count_words }} words,
         {% capture time %}{{ post.content | reading_time }}{% endcapture %}
         {% if time == '1' %}
           a minute
@@ -66,6 +48,21 @@ keywords:
         {% endif %}
         to read,
         <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+      </p>
+      <header>
+        <h1>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+      </header>
+      <div class="main">
+        {{ post.excerpt }}
+      </div>
+      <p>
+        <a href="{{ post.url }}">
+          continue...
+        </a>
       </p>
     </section>
   </div>
