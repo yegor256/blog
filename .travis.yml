@@ -23,8 +23,6 @@ script:
   - git config --global user.email "travis@teamed.io"
   - git config --global user.name "travis"
   - _test/run.sh
-  - jslint js/global.js
-  - jslint js/about-me.js
-  - jslint js/post.js
+  - for i in $(ls js/*.js); do jslint $i; done
   - jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
 

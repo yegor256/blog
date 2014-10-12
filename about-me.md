@@ -58,16 +58,15 @@ mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous
 subscribers in my list).
 
-<fieldset id="form">
+<form id="eform"><fieldset id="form">
   <label for="email">Your email</label>
-  <input id="email" class="field field-text" name="email" size="25" maxlength="255"/>
+  <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you? Why interested?</label>
-  <textarea id="reason" cols="50" class="field field-text" rows="4"></textarea>
+  <textarea id="reason" cols="50" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe"></label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span id="error" style="color:red;"></span>
-  <span class="note">540 Happy Subscribers and Counting...</span>
-</fieldset>
+  <span class="note">557 Happy Subscribers and Counting...</span>
+</fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).
 
@@ -103,4 +102,5 @@ Some of my articles are also published at (in alphabetic order):
 twttr.conversion.trackPid('l4p91');
 </script>
 
-<script src="/js/about-me.js?{{ site.data['hash'] }}"></script>
+<script src="/js/send.js?{{ site.data['hash'] }}"></script>
+<script src="/js/subscribe.js?{{ site.data['hash'] }}"></script>
