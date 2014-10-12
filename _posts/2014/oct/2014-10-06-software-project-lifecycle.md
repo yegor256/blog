@@ -142,7 +142,7 @@ basic DevOps processes, including:
 1) automated testing and quality control,
 2) deploying and releasing pipelines,
 3) repository of artifacts,
-4) continuous integration service, etc.
+4) [continuous integration]({% post_url 2014/oct/2014-10-08-continuous-integration-is-dead %}) service, etc.
 
 The result of this phase is a working software package, deployable
 to its destination and available for testers. Technical
