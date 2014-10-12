@@ -102,6 +102,7 @@ a, a:visited {
 .video {
   @include unprintable();
   @extend .desktop-only;
+  border: 0;
 }
 .buttons {
   @include unprintable();
