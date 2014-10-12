@@ -21,6 +21,9 @@ $(
   }
 );
 
+// disqus.com
+var disqus_shortname = 'yegor256';
+
 // yandex metrika
 window.yandex_metrika_callbacks = [];
 window.yandex_metrika_callbacks.push(
