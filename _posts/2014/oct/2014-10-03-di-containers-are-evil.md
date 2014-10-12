@@ -39,8 +39,8 @@ These mechanisms simply violate basic principles
 of object-oriented programming and encourage us to create
 incomplete, mutable objects, that get stuffed with data during the course
 of application execution. Remember: ideal objects
-[must be immutable]({ % post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
-and [may not contain setters]({ % post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
+[must be immutable]({% post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
+and [may not contain setters]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 
 Instead, let's talk about "constructor injection"
 (like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))

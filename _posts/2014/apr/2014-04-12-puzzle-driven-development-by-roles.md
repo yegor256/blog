@@ -37,7 +37,7 @@ this with a simple example.
 
 <!--more-->
 
-## "Fix and Break"
+## Fix and Break
 
 Let's assume, for the sake of simplicity, that a project is a simple
 software tool written by me for a close friend. I created the
@@ -145,7 +145,6 @@ Thus, when I don't have time, I don't wait. I change the SRS
 using TBDs at points where I can't create a proper and formal description of the
 requirements or simply don't know what to write exactly.
 
-
 ## Architect
 
 Now, I'm the architect, and my task is to implement a requirement, which has been formally specified
@@ -228,8 +227,6 @@ it with my new unit test, but breaking it with `@todo` puzzles.
 
 This is how I help to increase the overall quality of the project - by
 fixing and breaking at the same time.
-
-
 
 ## Tester
 

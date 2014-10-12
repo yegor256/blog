@@ -18,8 +18,7 @@ keywords:
 
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
-[Definition of Done
-(DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
+[Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
 key definition used in Scrum and the one we also use in [XDSD](http://www.xdsd.org).
 
 DoD is an exit criteria of a simple atomic task and answers the question:"am I
