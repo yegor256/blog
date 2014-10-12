@@ -25,4 +25,4 @@ while true; do
 done
 
 casperjs test $DIR/casperjs/*
-#find _site -name '*.html' -exec ruby _test/validate_html.rb {} \;
+find _site -name '*.html' -exec ruby _test/validate_html.rb {} \;
