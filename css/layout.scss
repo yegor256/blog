@@ -202,6 +202,7 @@ h2 {
   @extend .gray;
   @extend .small;
   list-style: none;
+  margin-top: 0;
   li {
     display: inline;
     margin-right: .5 * $em;
