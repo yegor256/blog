@@ -20,7 +20,7 @@ module Jekyll
       system(
         "fontcustom compile _glyphs --output=_site/#{dir} \
         --font-name=#{font} --templates=scss --no-hash --force \
-        --autowidth --preprocessor-path=/#{dir} \
+        --autowidth \
         && mkdir -p #{temp} && mv _site/#{dir}/_#{font}.scss #{temp}/#{scss}"
       )
       file = "#{temp}/#{scss}";
