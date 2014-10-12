@@ -86,7 +86,9 @@ will cost much more than a mistake made later.
 
 ## Thinking
 
-Thiking is the first and the most important phase.
+{% badge /images/2014/10/lifecycle-thinking.png 250 %}
+
+Thinking is the first and the most important phase.
 
 First, we give a name to the project and create a [Github](https://github.com) repository. We
 try to keep all our projects (both open source and commercial) in Github.
@@ -123,6 +125,8 @@ the entire Thinking phase.
 
 ## Building
 
+{% badge /images/2014/10/lifecycle-building.png 250 %}
+
 This is a one-man job for an architect. Every project we work with
 has an architect who is personally responsible for the quality and all
 technical decisions made there. I try to play this role
@@ -146,6 +150,8 @@ to its destination and available for testers. Technical
 are also defined at this phase.
 
 ## Fixing
+
+{% badge /images/2014/10/lifecycle-fixing.png 250 %}
 
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked in other projects before and have already
@@ -180,6 +186,8 @@ Skype, emails or conferencing software. We communicate
 only through tickets and comments in Github.
 
 ## Using
+
+{% badge /images/2014/10/lifecycle-using.png 250 %}
 
 This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive bug reports
