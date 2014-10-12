@@ -27,14 +27,6 @@ All of them are free for open source projects.
 All of them are hosted and do not require any server installation
 Here they are, in order of my personal preference:
 
-<style type="text/css">
-.rht {
-  text-align: right;
-}
-.cnt {
-  text-align: center;
-}
-</style>
 <table>
 <thead>
 <tr><td></td><td></td>

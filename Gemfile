@@ -20,4 +20,4 @@ gem 'redcarpet'
 gem 'nuggets'
 gem 'fontcustom'
 gem 'jslint'
-
+gem 'w3c_validators'
