@@ -61,7 +61,8 @@ module Jekyll
 
     def tagged(post)
       "<p><a href='#{post['url']}'>#{post['title']}</a><br/>
-      <time>#{post['date'].strftime('%-d %B %Y')}</time>
+      <time class='gray small' datetime='#{post['date'].xmlschema()}'>
+      #{post['date'].strftime('%-d %B %Y')}</time>
       <span>#{tags(post)}</span></p>"
     end
 
