@@ -198,6 +198,15 @@ h2 {
     }
   }
 }
+.subhead {
+  @extend .gray;
+  @extend .small;
+  list-style: none;
+  li {
+    display: inline;
+    margin-right: .5 * $em;
+  }
+}
 .highlighttable {
   border-spacing: 0;
   width: 100%;
