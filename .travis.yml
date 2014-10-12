@@ -16,7 +16,6 @@ install:
   - make
   - sudo mv sfnt2woff /usr/local/bin/
   - cd ..
-  - gem install fontcustom
 env:
   global:
     - secure: "YRF2hq6GI07WDf8uzPgRZ72MF0/m+KRLXOvLFApzliPGav86wMdMBnUlb2TnbneOIjnZsFnivVTi0nOmhBJu/tOTnLdXUn96smKg60hHuQOqZYohv0Kbzl5SU0uDfN50q2inXxgd7xSH3D0zCMge8TacWzrp233NcjncArsYyoU="
