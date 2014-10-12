@@ -29,10 +29,12 @@ Here they are, in order of my personal preference:
 
 <table>
 <thead>
-<tr><td></td><td></td>
+<tr>
+  <td></td><td></td>
   <td class="cnt">Linux</td>
   <td class="cnt">Windows</td>
-  <td class="cnt">MacOS</td></tr>
+  <td class="cnt">MacOS</td>
+</tr>
 </thead>
 <tbody>
 <tr><td><a href="http://www.travis-ci.org">travis-ci.com</a></td>
@@ -40,62 +42,62 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-yes"></i></td></tr>
-<tr><td><a href="http://www.snap-ci.com">snap-ci.com</td>
+<tr><td><a href="http://www.snap-ci.com">snap-ci.com</a></td>
   <td class="rht"><a href="https://snap-ci.com/plans">$80/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.semaphoreapp.com">semaphoreapp.com</td>
+<tr><td><a href="http://www.semaphoreapp.com">semaphoreapp.com</a></td>
   <td class="rht"><a href="https://semaphoreapp.com/pricing">$29/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.appveyor.com">appveyer.com</td>
+<tr><td><a href="http://www.appveyor.com">appveyer.com</a></td>
   <td class="rht"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.shippable.com">shippable.com</td>
+<tr><td><a href="http://www.shippable.com">shippable.com</a></td>
   <td class="rht"><a href="http://www.shippable.com/pricing.html">$1/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.wercker.com">wercker.com</td>
+<tr><td><a href="http://www.wercker.com">wercker.com</a></td>
   <td class="rht">free!</td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.codeship.io">codeship.io</td>
+<tr><td><a href="http://www.codeship.io">codeship.io</a></td>
   <td class="rht"><a href="https://codeship.io/pricing">$49/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.magnum-ci.com">magnum-ci.com</td>
+<tr><td><a href="http://www.magnum-ci.com">magnum-ci.com</a></td>
   <td class="rht">?</td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.drone.io">drone.io</td>
+<tr><td><a href="http://www.drone.io">drone.io</a></td>
   <td class="rht"<a href="https://drone.io/pricing">$25/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.circleci.io">circleci.io</td>
+<tr><td><a href="http://www.circleci.io">circleci.io</a></td>
   <td class="rht"><a href="https://circleci.com/pricing">$19/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://ci.solanolabs.com">sonolabs.com</td>
+<tr><td><a href="http://ci.solanolabs.com">sonolabs.com</a></td>
   <td class="rht"><a href="https://www.solanolabs.com/#pricing">$15/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://ww.hosted-ci.com">hosted-ci.com</td>
+<tr><td><a href="http://ww.hosted-ci.com">hosted-ci.com</a></td>
   <td class="rht"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-yes"></i></td></tr>
-<tr><td><a href="http://www.ship.io">ship.io</td>
+<tr><td><a href="http://www.ship.io">ship.io</a></td>
   <td class="rht"><a href="https://ship.io/pricing">free!</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
