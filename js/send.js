@@ -1,0 +1,1 @@
+function send_email(e,n,t,a,s){"use strict";$.ajax({type:"POST",url:"https://mandrillapp.com/api/1.0/messages/send.json",data:{key:"GMfq6HmqFFR4HGCVfIu6Zw",message:{from_email:e,to:[{email:"blog@yegor256.com",name:"Yegor Bugayenko",type:"to"}],text:"Hi,\n\n"+n+"\n\nEmail: "+e+"\n\nThanks\n\n--\nsent through the form",subject:t,auto_html:!0,important:!0}},success:a,error:s})}
