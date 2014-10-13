@@ -26,8 +26,6 @@ pass a code review and make sure the code is
 [merged into the destination branch]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
 Only then, is his result appreciated and paid for.
 
-{% picture /images/2014/10/barton-fink.png 0 Barton Fink (1991) by Joel Coen %}
-
 For most of my clients this already sounds extreme.
 They are used to a traditional scheme of paying per hour
 or per month. They immediately realize the benefits of XDSD, though,
@@ -37,6 +35,8 @@ funds are not wasted on activities that don't produce results.
 But that's not all.
 
 <!--more-->
+
+{% picture /images/2014/10/barton-fink.png 0 Barton Fink (1991) by Joel Coen %}
 
 This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question
