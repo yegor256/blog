@@ -128,7 +128,8 @@ the entire Thinking phase.
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
 This is a one-man job for an architect. Every project we work with
-has an architect who is personally responsible for the quality and all
+has an architect who is [personally responsible]({% post_url 2014/oct/2014-10-12-who-is-software-architect %})
+for the quality and all
 technical decisions made there. I try to play this role
 in most projects.
 
