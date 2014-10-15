@@ -61,3 +61,21 @@ of the code help you to navigate, if you follow the notation.
 Those multiple closing brackets may look strange to you
 at the beginning &mdash; give yourself some time and you will
 get used to them :)
+
+## Fluent
+
+This is how I would recommend to format fluent method calls:
+
+{% highlight java %}
+new Foo(
+  new Bar()
+    .with(
+      new ImmutableMap.Builder<Integer, String>()
+        .put(10, "First")
+        .put(20, "Second")
+        .build()
+    )
+    .with("another component")
+);
+{% endhighlight %}
+
