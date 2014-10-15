@@ -20,6 +20,7 @@ env:
   global:
     - secure: "XSO7qwYvHZ4C29uIVodtvbI1L140VE12NPBBkkufCQSYlDupFPbjOx8OsEDCpnfcK0NSqAEeIAVNO0BIcrzE3cBzcLU8LfLCejOvZIou79R8k6ZTOsAG/7XLPOOk1tPCbKC3IVo3ouTXFFCK6Xye9GE2ymffvpGpu/cluahsBck="
 script:
+  - set -e
   - git config --global user.email "travis@teamed.io"
   - git config --global user.name "travis"
   - _test/run.sh
