@@ -34,7 +34,8 @@ module Jekyll
 
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
-      self.data    = data
+      self.data = data
+      self.title = name
       super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name)
       data['tag'] ||= basename
     end
@@ -60,11 +61,11 @@ module Jekyll
     end
 
     def tagged(post)
-      "<a href='#{post['url']}'>#{post['title']}</a><br/>
+      "<p><a href='#{post['url']}'>#{post['title']}</a><br/>
       <time class='gray small' datetime='#{post['date'].xmlschema()}'>
       #{post['date'].strftime('%-d %B %Y')}</time>
       <a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a>
-      <span>#{tags(post)}</span>"
+      <span>#{tags(post)}</span></p>"
     end
 
     def tags(obj)
