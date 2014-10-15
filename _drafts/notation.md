@@ -15,14 +15,16 @@ keywords:
   - indentation in c++
 ---
 
-Here is the rule: **a bracket should either start/end
-a line or be paired on the same line**. The rule
-universally applies to any programming language (incl.
-Java, Ruby, Python, C++, PHP) where brackets are used
+Here is the rule of the notation I'm using in Java code:
+**a bracket should either start/end
+a line or be paired on the same line**.
+
+The notation universally applies to any programming language (incl.
+Java, Ruby, Python, C++, PHP, etc.) where brackets are used
 for method/function calls.
 
 Here is how your code will look, if you follow
-the principle:
+this "Paired Brackets" notation:
 
 {% highlight java linenos=table %}
 new Foo( // ends the line
@@ -42,16 +44,16 @@ new Foo( // ends the line
 <!--more-->
 
 Obviously, the line with a closing bracket should start at the same
-indentation level as the line with it opening pair.
+indentation level as the line with its opening pair.
 
-This is how your IDE will render your code if you
+This is how your IDE will render the code if you
 follow this notation (IntelliJ IDEA):
 
-{% figure /images/2014/10/intellij-idea-indentation.png 500 %}
+{% figure /images/2014/10/intellij-idea-indentation.png 529 %}
 
 Sublime Text will also appreciate it:
 
-{% figure /images/2014/10/sublime-text-indentation.png 500 %}
+{% figure /images/2014/10/sublime-text-indentation.png 584 %}
 
 As you see, those light vertical lines at the left side
 of the code help you to navigate, if you follow the notation.
