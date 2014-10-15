@@ -71,8 +71,9 @@ below:
 
 ## No Informal Communications
 
-Unlike many other projects or teams you may have worked with, XDSD uses no
-informal communication channels. To clarify, we never use emails, we never chat
+Unlike many other projects or teams you may have worked with, XDSD uses
+[no informal communication channels]({% post_url 2014/oct/2014-10-07-stop-chatting-start-coding %}).
+To clarify, we never use emails, we never chat
 on Skype and we don't do any meetings or phone calls. Additionally, XDSD
 maintains no type mailing list. Our only method of communication is a ticket
 tracking system (which in most projects consists of
