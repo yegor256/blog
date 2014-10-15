@@ -52,7 +52,7 @@ module Jekyll
     end
 
     def tag_link(tag)
-      %Q{<a href="#{tag_url(tag)}" class='tag'>#{tag}</a>}
+      %Q{<a href='#{tag_url(tag)}' class='tag'>#{tag}</a>}
     end
 
     def tag_url(tag)
@@ -60,11 +60,11 @@ module Jekyll
     end
 
     def tagged(post)
-      "<p><a href='#{post['url']}'>#{post['title']}</a><br/>
+      "<a href='#{post['url']}'>#{post['title']}</a><br/>
       <time class='gray small' datetime='#{post['date'].xmlschema()}'>
       #{post['date'].strftime('%-d %B %Y')}</time>
       <a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a>
-      <span>#{tags(post)}</span></p>"
+      <span>#{tags(post)}</span>"
     end
 
     def tags(obj)

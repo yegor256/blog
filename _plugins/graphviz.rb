@@ -55,7 +55,6 @@ module Jekyll
     def filter_for_inline_svg(code)
       code = remove_declarations code
       code = remove_xmlns_attrs code
-      code = add_desc_attrs code
       code = insert_desc_elements code
       code = wrap_with_div code
       code
@@ -86,13 +85,6 @@ module Jekyll
     def remove_xmlns_attrs(svg)
       svg.sub(%[xmlns="http://www.w3.org/2000/svg"], '')
         .sub(%[xmlns:xlink="http://www.w3.org/1999/xlink"], '')
-    end
-
-    def add_desc_attrs(svg)
-      svg.sub!("<svg", %[<svg aria-label="#{CGI::escapeHTML @title}"])
-      svg.sub!("<svg", %[<svg role="img"])
-
-      return svg
     end
 
     def insert_desc_elements(svg)

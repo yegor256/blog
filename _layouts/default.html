@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <meta name="description" content="{{ page | description | join:' ' | escape }}" />
-    <meta name="keywords" content="{{ page | keywords | join:', ' | escape }}" />
+    <meta name="description" content="{{ page | description | xml_escape }}" />
+    <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="twitter:account_id" content="4503599630178231" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}">
