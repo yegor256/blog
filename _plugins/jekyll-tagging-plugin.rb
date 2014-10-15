@@ -63,6 +63,7 @@ module Jekyll
       "<p><a href='#{post['url']}'>#{post['title']}</a><br/>
       <time class='gray small' datetime='#{post['date'].xmlschema()}'>
       #{post['date'].strftime('%-d %B %Y')}</time>
+      <a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a>
       <span>#{tags(post)}</span></p>"
     end
 
