@@ -16,6 +16,7 @@ install:
   - make
   - sudo mv sfnt2woff /usr/local/bin/
   - cd ..
+  - rm -rf sfnt2woff
 env:
   global:
     - secure: "XSO7qwYvHZ4C29uIVodtvbI1L140VE12NPBBkkufCQSYlDupFPbjOx8OsEDCpnfcK0NSqAEeIAVNO0BIcrzE3cBzcLU8LfLCejOvZIou79R8k6ZTOsAG/7XLPOOk1tPCbKC3IVo3ouTXFFCK6Xye9GE2ymffvpGpu/cluahsBck="
