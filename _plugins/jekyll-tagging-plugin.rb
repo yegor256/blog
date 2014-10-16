@@ -85,7 +85,7 @@ module Jekyll
           </li>
           <li>#{tags(post)}</li>
         </ul>
-      </div>"
+      </div>".gsub(/\n/, '')
     end
 
     def tags(obj)
