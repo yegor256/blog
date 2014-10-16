@@ -25,6 +25,4 @@ These twelve articles are the most interesting to read.
 Here is the blog [contents](/contents.html).
 And don't forget to subscribe to my [monthly updates](/about-me.html) :)
 
-{% for post in site.categories['best'] %}
-  {{ post | tagged }}
-{% endfor %}
+{{ site.categories['best'] | tagged_list }}

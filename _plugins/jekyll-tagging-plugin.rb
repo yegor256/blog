@@ -67,6 +67,10 @@ module Jekyll
       "/tag/#{tag}.html"
     end
 
+    def tagged_list(posts)
+      posts.map{ |p| tagged(p) }.join()
+    end
+
     def tagged(post)
       "<div class='tagged'>
         <div><a href='#{post['url']}'>#{post['title']}</a></div>
