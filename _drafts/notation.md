@@ -64,7 +64,8 @@ get used to them :)
 
 ## Fluent
 
-This is how I would recommend to format fluent method calls:
+This is how I would recommend to format fluent method calls
+(this is Java in Eclipse):
 
 {% highlight java %}
 new Foo(
@@ -79,3 +80,33 @@ new Foo(
 );
 {% endhighlight %}
 
+## Arrays
+
+Here is how you format an array in "Paired Brackets" notation
+(this is Ruby in [RubyMine](https://www.jetbrains.com/ruby/)):
+
+{% figure /images/2014/10/rubymine-array-indentation.png 568 %}
+
+As you see, the same principle applies to square and curled brackets.
+
+## JSON
+
+The same principle is applicable to JSON formatting. This is
+a small JSON document in [Coda 2](http://panic.com/coda/):
+
+{% figure /images/2014/10/coda-json-indentation.png 406 %}
+
+## JavaScript
+
+JavaScript should also follow the same principle. This is
+how your `.js` code would look in [Atom](https://atom.io/):
+
+{% figure /images/2014/10/atom-javascript-indentation.png 520 %}
+
+## PHP
+
+...
+
+## Python
+
+...

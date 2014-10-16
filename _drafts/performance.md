@@ -26,16 +26,30 @@ This time is over. This mentality is not appreciated any more,
 because the market situation is completely opposite.
 
 Today, computers are cheap and programmers are expensive.
-This is the era of "designers mentality", when readability
+This is the era of "designer mentality", when readability
 of our code is much more important than its performance or
 compactness.
 
 <!--more-->
 
-Let's compare some numbers. This is what we had in 1994,
-which is exactly twenty years from now (btw, I was writing in C
-and Assembly that time).
+## Prices vs Salaries
 
-In 1993, Dell was selling a top-of-the-line 486
-with a 66MHz processor, eight megabytes of RAM and
-a 320-megabyte hard drive for $4,400.
+Look at this graph. It is a comparison of prices of RAM
+(the most important performance limitation factor) and
+salaries of programmers, over the last 20 years:
+
+
+
+## Hacker Mentality
+
+Merits:
+
+...
+
+## Designer Mentality
+
+Merits:
+
+...
+
+## Transition Hints
