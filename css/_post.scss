@@ -1,0 +1,43 @@
+.buttons {
+  @include unprintable();
+  .share {
+    a, a:visited {
+      text-decoration: none;
+    }
+    a {
+      position: relative;
+      .count {
+        display: none;
+        position: absolute;
+        font-family: $code-font;
+        top: -.7 * $em;
+        right: .3 * $em;
+        font-size: .6 * $em;
+        padding: 0 .2 * $em;
+        line-height: .7 * $em;
+        background-color: white;
+        border: 1px solid $gray;
+        color: $gray;
+      }
+      .icon {
+        $size: 1.2;
+        padding: .4 * $size * $em;
+        border-radius: 50%;
+        height: $size * $em;
+        width: $size * $em;
+        line-height: $size * $em;
+        margin-right: .2 * $em;
+        margin-bottom: .2 * $em;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid $gray;
+        display: inline-block;
+        color: $gray;
+        &:hover {
+          background-color: $gray;
+          color: white;
+        }
+      }
+    }
+  }
+}

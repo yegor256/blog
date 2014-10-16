@@ -19,7 +19,7 @@ module Jekyll
     def new_tag(tag, posts)
       self.class.types.each { |type|
         if layout = site.config["tag_#{type}_layout"]
-          data = { 'layout' => layout, 'posts' => posts.sort.reverse! }
+          data = { 'layout' => layout, 'posts' => posts.sort.reverse!, 'tag' => tag }
           name = yield data if block_given?
           site.pages << TagPage.new(
             site, site.source, site.config["tag_#{type}_dir"],
@@ -35,9 +35,16 @@ module Jekyll
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
       self.data = data
-      self.title = name
+      @title = data['tag']
       super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name)
       data['tag'] ||= basename
+    end
+
+    alias orig_to_liquid to_liquid
+    def to_liquid
+      hash = orig_to_liquid
+      hash['title'] = @title
+      hash
     end
 
     def read_yaml(*)
@@ -61,11 +68,20 @@ module Jekyll
     end
 
     def tagged(post)
-      "<p><a href='#{post['url']}'>#{post['title']}</a><br/>
-      <time class='gray small' datetime='#{post['date'].xmlschema()}'>
-      #{post['date'].strftime('%-d %B %Y')}</time>
-      <span class='gray small'><a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a></span>
-      <span>#{tags(post)}</span></p>"
+      "<div class='tagged'>
+        <div><a href='#{post['url']}'>#{post['title']}</a></div>
+        <ul class='subline'>
+          <li>
+            <time datetime='#{post['date'].xmlschema()}'>
+              #{post['date'].strftime('%-d %B %Y')}
+            </time>
+          </li>
+          <li>
+            <a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a>
+          </li>
+          <li>#{tags(post)}</li>
+        </ul>
+      </div>"
     end
 
     def tags(obj)

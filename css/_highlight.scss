@@ -1,3 +1,12 @@
+code, pre {
+  font-family: $code-font;
+  font-weight: 400;
+}
+code {
+  background-color: $light-gray;
+  line-height: $em;
+  padding: 0 0.3 * $em;
+}
 .highlight {
   .kn,
   .kd,
@@ -6,5 +15,47 @@
   }
   .c1 {
     color: #777;
+  }
+}
+.highlighttable {
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  .linenos {
+    @extend .gray;
+    @extend .desktop-only;
+    width: 2 * $em;
+    padding-right: 2px;
+    min-width: 2 * $em;
+    text-align: right;
+  }
+  .highlight {
+    margin-left: 0;
+  }
+  @media all and (max-width: $width) {
+    overflow-x: auto;
+  }
+}
+.highlight {
+  margin-left: 2 * $em;
+  padding-left: 0.5 * $em !important;
+  border-left: 3px solid $light-gray;
+  @media all and (max-width: $width) {
+    margin-left: 0;
+    padding-left: 0 !important;
+    border-left: 0;
+    overflow-x: auto;
+  }
+}
+pre {
+  display: block;
+  font-size: 0.9 * $em;
+  line-height: 1.2 * $em;
+  code {
+    background-color: inherit;
+    padding: 0;
+  }
+  @media all and (max-width: $width) {
+    line-height: 1.2 * $em;
   }
 }

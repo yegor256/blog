@@ -3,6 +3,8 @@
 @import "fonts";
 @import "highlight";
 @import "ico";
+@import "disqus";
+@import "post";
 
 .green {
   color: green;
@@ -88,73 +90,10 @@ a, a:visited {
   margin-top: 5 * $em;
   text-align: center;
 }
-.disqus {
-  @include unprintable();
-  @extend .wrapper;
-  width: 80%;
-  @media all and (max-width: $width * 1.3) {
-    width: 100%;
-  }
-}
-#disqus_thread {
-  margin-top: 5 * $em;
-}
 .video {
   @include unprintable();
   @extend .desktop-only;
   border: 0;
-}
-.buttons {
-  @include unprintable();
-  .share {
-    a, a:visited {
-      text-decoration: none;
-    }
-    a {
-      position: relative;
-      .count {
-        display: none;
-        position: absolute;
-        font-family: $code-font;
-        top: -.7 * $em;
-        right: .3 * $em;
-        font-size: .6 * $em;
-        padding: 0 .2 * $em;
-        line-height: .7 * $em;
-        background-color: white;
-        border: 1px solid $gray;
-        color: $gray;
-      }
-      .icon {
-        $size: 1.2;
-        padding: .4 * $size * $em;
-        border-radius: 50%;
-        height: $size * $em;
-        width: $size * $em;
-        line-height: $size * $em;
-        margin-right: .2 * $em;
-        margin-bottom: .2 * $em;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid $gray;
-        display: inline-block;
-        color: $gray;
-        &:hover {
-          background-color: $gray;
-          color: white;
-        }
-      }
-    }
-  }
-}
-code, pre {
-  font-family: $code-font;
-  font-weight: 400;
-}
-code {
-  background-color: $light-gray;
-  line-height: $em;
-  padding: 0 0.3 * $em;
 }
 label {
   display: block;
@@ -200,7 +139,7 @@ h2 {
     }
   }
 }
-.subhead {
+.subline {
   @extend .gray;
   @extend .small;
   list-style: none;
@@ -209,48 +148,6 @@ h2 {
   li {
     display: inline;
     margin-right: .5 * $em;
-  }
-}
-.highlighttable {
-  border-spacing: 0;
-  width: 100%;
-  table-layout: fixed;
-  .linenos {
-    @extend .gray;
-    @extend .desktop-only;
-    width: 2 * $em;
-    padding-right: 2px;
-    min-width: 2 * $em;
-    text-align: right;
-  }
-  .highlight {
-    margin-left: 0;
-  }
-  @media all and (max-width: $width) {
-    overflow-x: auto;
-  }
-}
-.highlight {
-  margin-left: 2 * $em;
-  padding-left: 0.5 * $em !important;
-  border-left: 3px solid $light-gray;
-  @media all and (max-width: $width) {
-    margin-left: 0;
-    padding-left: 0 !important;
-    border-left: 0;
-    overflow-x: auto;
-  }
-}
-pre {
-  display: block;
-  font-size: 0.9 * $em;
-  line-height: 1.2 * $em;
-  code {
-    background-color: inherit;
-    padding: 0;
-  }
-  @media all and (max-width: $width) {
-    line-height: 1.2 * $em;
   }
 }
 .front {
@@ -306,6 +203,9 @@ figure {
 .graphviz-wrapper {
   text-align: center;
 }
+.tagged {
+  margin: $em 0;
+}
 .tag {
   white-space: nowrap;
   font-family: $code-font;
@@ -314,9 +214,9 @@ figure {
   padding: 0 .5 * $em;
   background-color: $gray;
   text-decoration: none;
-  color: white;
+  color: white !important;
   &:visited {
-    color: white;
+    color: white !important;
   }
   &:hover {
     background-color: $black;
