@@ -34,9 +34,10 @@ compactness.
 
 ## Prices vs Salaries
 
-Look at this graph. It is a comparison of prices of RAM
-(the most important performance limitation factor) and
-salaries of programmers, over the last 20 years:
+Look at this graph. It is a comparison of dynamic of
+1) [RAM prices](http://www.jcmit.com/memoryprice.htm),
+2) storage prices, and
+3) annual salaries of programmers, over the last 20 years:
 
 
 
