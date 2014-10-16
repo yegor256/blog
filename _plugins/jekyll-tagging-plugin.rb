@@ -68,7 +68,7 @@ module Jekyll
     end
 
     def tagged_list(posts)
-      posts.map{ |p| tagged(p) }.join()
+      posts.map{ |p| tagged(p) }.join() unless posts.nil?
     end
 
     def tagged(post)
