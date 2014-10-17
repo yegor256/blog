@@ -43,7 +43,7 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-yes"></i></td></tr>
 <tr><td><a href="http://www.snap-ci.com">snap-ci.com</a></td>
-  <td class="rht"><a href="https://snap-ci.com/plans">$80/mo</a></td>
+  <td class="rht"><a href="https://snap-ci.com/plans">$30/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
