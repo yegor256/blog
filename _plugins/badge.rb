@@ -8,12 +8,13 @@ module Yegor
       if opts[2]
         @url = opts[2].strip
       end
-      if @src.index('/') == 0
-        @src = 'http://www.yegor256.com' + @src
-      end
     end
 
     def render(context)
+      url = context.registers[:site].config['url']
+      if @src.index('/') == 0
+        @src = url + @src
+      end
       img = "<img src='#{CGI.escapeHTML @src}' style='width:#{@width}px;' alt='badge'/>"
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
