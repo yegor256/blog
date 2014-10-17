@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fast or Clean? Hacker or Designer?"
+title: "Are You a Hacker or Designer?"
 date: 2000-01-01
 tags: mgmt programming
 description:
@@ -118,7 +118,7 @@ int fibo(int n) {
 }
 {% endhighlight %}
 
-I think, these 10 qualities attributes a good designer:
+I think, these seven qualities attributes a good designer:
 
  * assumes everybody is a newbie and writes accordingly
  *

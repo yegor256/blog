@@ -11,10 +11,6 @@ module Yegor
     end
 
     def render(context)
-      url = context.registers[:site].config['url']
-      if @src.index('/') == 0
-        @src = url + @src
-      end
       img = "<img src='#{CGI.escapeHTML @src}' style='width:#{@width}px;' alt='badge'/>"
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"

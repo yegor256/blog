@@ -12,8 +12,7 @@ module Yegor
     end
 
     def render(context)
-      url = context.registers[:site].config['url']
-      html = "<figure><img src='#{CGI.escapeHTML(url + @src)}'" \
+      html = "<figure><img src='#{CGI.escapeHTML(@src)}'" \
       " style='width:#{@width}px;'" \
       " alt='figure'/></figure>\n\n"
     end
