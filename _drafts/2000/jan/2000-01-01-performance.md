@@ -33,11 +33,10 @@ of our code is much more important than its performance.
 
 ## Prices vs Salaries
 
+{% badge /images/2014/10/trends.png 400 %}
+
 Look at this graph. It is a comparison of two trends over the
-last twenty years (1994-2014):
-
-{% figure /images/2014/10/trends.png 720 %}
-
+last twenty years (1994-2014).
 The first trend falls down and shows how much cheaper
 [computer memory](http://www.jcmit.com/memoryprice.htm)
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
