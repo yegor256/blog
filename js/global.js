@@ -23,6 +23,7 @@ $(
 
 // disqus.com
 var disqus_shortname = 'yegor256';
+var disqus_url = document.location.href.split('?')[0].split('#')[0];
 
 // yandex metrika
 window.yandex_metrika_callbacks = [];
