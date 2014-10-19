@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Are You a Hacker or Designer?"
+title: "Are You a Hacker or a Designer?"
 date: 2000-01-01
 tags: mgmt programming
 description:
@@ -33,7 +33,7 @@ of our code is much more important than its performance.
 
 ## Prices vs Salaries
 
-{% badge /images/2014/10/trends.png 400 %}
+{% badge /images/2014/10/trends.png 300 %}
 
 Look at this graph. It is a comparison of two trends over the
 last twenty years (1994-2014).
@@ -43,10 +43,11 @@ and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
 
 The second trend demonstrates how much software developers salaries
-escalated over the same period. Actually, they are trippled. There is
-no official report about that, but I'm sure it's not a secret for anyone
+escalated over the same period. Actually, they are trippled. I didn't find
+an official report about that, but I'm sure it's not a secret for anyone
 that salaries of programmers keep growing &mdash; $200,000 per year for
-a senior developer is not a dream any more. I found
+a senior developer is not a dream any more while twenty years
+ago $60K was the best offer. I found
 [this article](http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html)
 very interesting about this very subject.
 
@@ -72,14 +73,15 @@ In 1994 the best engineers had "hacker mentality", while in 2014
 
 ## Hacker Mentality
 
-Someone with a hacker mentality would call this an "elegant code"
-(would you?):
+Someone with a hacker mentality would call this
+[Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)
+Java method an "elegant code" (would you?):
 
-{% highlight c %}
-int fibo(int n) { return n>2?fibo(n-1)+fibo(n-2):1; }
+{% highlight java %}
+public int f(int n) { return n>2?f(n-1)+f(n-2):1; }
 {% endhighlight %}
 
-I would highlight these seven qualities of a good
+I would highlight these qualities of a good
 [hacker](https://en.wikipedia.org/wiki/Hacker_%28computer_security%29):
 
  * uses all known (and unknown) features of a programming language
@@ -88,42 +90,59 @@ I would highlight these seven qualities of a good
  * doesn't write unit tests &mdash; juniors will write them later
  * enjoys fire-fighting &mdash; that's how his talent manifests
  * prefers talks over docs, since they are much more fun
- * posts comments on Hacker News
+ * hates to see his code being modified by someone else
+ * likes to dedicate himself to one project at a time
 
 A hacker is a talented individual. He wants to express his
 talent in the software he writes. He enjoys coding and does
 it mostly for fun. I would say, he is married to his code and can't imagine
-its happy life after an eventual divorce.
+its happy life after an eventual divorce. Code ownership is
+what a hacker is about &mdash; he understand himself as an "owner"
+of the code.
 
 When I ask one of my hacker friends &mdash; "How will someone understand
-what this function does?" I almost always hear the same answer &mdash;
+what this code does?" I almost always hear the same answer &mdash;
 "They will ask me!" (usually said very proudly with a sincere smile).
 
 ## Designer Mentality
 
 Someone with a designer mentality would refactor the code above
-to make it easier to read. He would call this function an "elegant code"
+to make it easier to read. He would call this Java function an "elegant code"
 (how about you?):
 
-{% highlight c %}
-int fibo(int n) {
-  int f;
-  if (n > 2) {
-    f = fibo(n - 1) + fibo(n - 2);
+{% highlight java %}
+public int fibo(final int pos) {
+  final int num;
+  if (pos > 2) {
+    num = fibo(pos - 1) + fibo(pos - 2);
   } else {
-    f = 1;
+    num = 1;
   }
-  return f;
+  return num;
 }
 {% endhighlight %}
 
-I think, these seven qualities attributes a good designer:
+I think these qualities attributes a good designer:
 
+ * tends to use traditional programming techniques
  * assumes everybody is a newbie and writes accordingly
- *
+ * enjoys setting rules and following them
  * prefers docs over talks and automation over docs
- * posts links on Hacker News
+ * spends most of his coding time on unit tests
+ * hates fire-fighting and working over time
+ * loves to see his code being modified and refactored
+ * works with a few projects at the same time
 
+A designer is a talented team player. He contributes to the team
+processes, standards, rules, education, and discipline as much as he
+contributes to the source code. He always makes sure that once
+he leaves the project his code and his ideas stay and work.
+
+The highest satisfaction for a good designer
+is to see his code living its own life &mdash; being modified, improved,
+refactored and eventually retired. A designer feels himself as a parent
+of the code &mdash; once it is old enough to walk and talk, it has
+to live its own life.
 
 ## The Future
 
