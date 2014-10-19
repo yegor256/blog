@@ -124,8 +124,6 @@ I think, these seven qualities attributes a good designer:
  * prefers docs over talks and automation over docs
  * posts links on Hacker News
 
-A good designer understands the most important concern of a modern business owner,
-which is: "I want to be able to change and maintain my software"
 
 ## The Future
 
@@ -145,6 +143,6 @@ a diagnosis. Just like good lawyers or dentists.
 That's why, while developing a new software product, those who pay for it, will
 care mostly about its maintainability. Project sponsors will
 understand that the best solution they can get for their money is
-the one that is readable and fully automated.
+the one that is the most readable, maintainable, and automated.
 
 Not the fastest.
