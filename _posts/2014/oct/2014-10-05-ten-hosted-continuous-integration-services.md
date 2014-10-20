@@ -221,6 +221,6 @@ in cloud, consider these on-premise software packages (in order or preference):
 
 Keep in mind that no matter how good and expensive your
 continuous integration service is, it
-[won't help you]({% post_url 2014/oct/2014-10-08-continuous-integration-is-dead %})
+[won't help you]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 unless you make your
-[master branch read-only]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
+[master branch read-only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).

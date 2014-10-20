@@ -41,7 +41,7 @@ worked on a task previously, only the last one &mdash; the one who managed to pr
 a working deliverable &mdash; receives payment.
 
 To better understand this principle, you should read:
-[No Obligations Principle]({% post_url 2014/apr/2014-04-13-no-obligations-principle %}).
+[No Obligations Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %}).
 
 Your goal as a developer working on a task should be to close it and receive
 payment as soon as possible. To that end, here are few things that can help you

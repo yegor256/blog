@@ -27,7 +27,7 @@ my team. This article will demonstrate what happens from day one until
 the end of the project, when you choose to [work with us](mailto:hire@teamed.io).
 
 You will see below that our methods of
-software development [seriously differ]({% post_url 2014/apr/2014-04-17-how-xdsd-is-different %})
+software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from what many other teams are using. I personally pay a lot of attention to quality
 of code and quality of the internal processes that connect our team.
 
@@ -114,7 +114,7 @@ specification. They start by asking questions, submitting them one by one
 as Github issues. Every question is addressed to the product owner. Using
 his answers, system analysts modify the SRS document.
 This article explains how [Requs](http://www.requs.org) helps us in this process:
-[Incremental Requirements With Requs]({% post_url 2014/apr/2014-04-26-incremental-requirements-with-requs %})
+[Incremental Requirements With Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
 
 At the end of the Thinking phase we estimate the size of the project,
 in lines of code. Using lines of code, we can roughly
@@ -128,7 +128,7 @@ the entire Thinking phase.
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
 This is a one-man job for an architect. Every project we work with
-has an architect who is [personally responsible]({% post_url 2014/oct/2014-10-12-who-is-software-architect %})
+has an architect who is [personally responsible]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 for the quality and all
 technical decisions made there. I try to play this role
 in most projects.
@@ -143,11 +143,11 @@ basic DevOps processes, including:
 1) automated testing and quality control,
 2) deploying and releasing pipelines,
 3) repository of artifacts,
-4) [continuous integration]({% post_url 2014/oct/2014-10-08-continuous-integration-is-dead %}) service, etc.
+4) [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service, etc.
 
 The result of this phase is a working software package, deployable
 to its destination and available for testers. Technical
-[quality requirements]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
+[quality requirements]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 are also defined at this phase.
 
 ## Fixing
@@ -164,7 +164,7 @@ At this phase, we understand any inconsistency as a bug. If something is not cle
 in the documentation, or if something can be refactored for better
 readability, or if a function can be improved for higher performance &mdash;
 it is a bug to us.
-And [bugs are welcome]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
+And [bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
 We encourage everybody to report as many bugs as possible. This is how
 we achieve high quality.
 
@@ -176,13 +176,13 @@ we re-deploy the entire product to the production platform.
 Every bug is reported, classified, discussed, and fixed in its
 own Github ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch &mdash; all changes must pass through
-our [quality controls]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
+our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 and be merged into `master` by [rultor.com](http://www.rultor.com),
-our [merging bot]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %}).
+our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner
 and between programmers happen only through Github issues. We
-[never use any chats]({% post_url 2014/oct/2014-10-07-stop-chatting-start-coding %}),
+[never use any chats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}),
 Skype, emails or conferencing software. We communicate
 only through tickets and comments in Github.
 

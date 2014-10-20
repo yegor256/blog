@@ -19,7 +19,7 @@ keywords:
 
 Every software project we work with is started from a Product Vision document. We
 create this document during our
-[Thinking]({% post_url 2014/oct/2014-10-06-software-project-lifecycle %})
+[Thinking]({% pst 2014/oct/2014-10-06-software-project-lifecycle %})
 phase. Even though the document is as short as two pages of English text,
 its development is the most painful task in the whole project.
 

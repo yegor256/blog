@@ -55,7 +55,7 @@ bare data in XML and formatting it with an XSL stylesheet.
 
 Open [http://www.stateful.co](http://www.stateful.co) &mdash; it is
 a collection of stateful web primitives, explained in the
-[Atomic Counters at Stateful.co]({% post_url 2014/may/2014-05-18-cloud-autoincrement-counters %}) article.
+[Atomic Counters at Stateful.co]({% pst 2014/may/2014-05-18-cloud-autoincrement-counters %}) article.
 
 Open it in Chrome or Safari. When you do, you should
 see a normal web page with a logo, some text, some links, a footer, etc.
@@ -200,4 +200,4 @@ and you will see an HTML document, not an XML document as is the case with Chrom
 In one of the next posts, I'll explain [ReXSL framework](http://www.rexsl.com).
 
 Read this one, it continues the discussion of this subject:
-[RESTful API and a Web Site in the Same URL]({% post_url 2014/sep/2014-09-09-restful-web-sites %})
+[RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %})

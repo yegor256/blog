@@ -60,7 +60,7 @@ private static DataSource source() {
 {% endhighlight %}
 
 Be sure to pay attention to the `@Cacheable` annotation.
-[This post]({% post_url 2014/aug/2014-08-03-cacheable-java-annotation %})
+[This post]({% pst 2014/aug/2014-08-03-cacheable-java-annotation %})
 explains how it can help you to cache Java method results for some time.
 Setting the `forever` attribute to `true` means that we don't want this
 method to be called more than once. Instead, we want the connection pool

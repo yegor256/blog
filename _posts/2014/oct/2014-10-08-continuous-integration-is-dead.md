@@ -131,7 +131,7 @@ but never committed to `master`, because of that fear factor.
 ## OK, What Is The Solution?
 
 I wrote about it before; it is called
-["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
+["read-only master branch"]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
 It is simple &mdash; prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
@@ -152,5 +152,5 @@ you fix your errors and tell the script to try again. Nobody sees these
 attempts, and you don't need to apologize. Fear factor is gone.
 
 BTW, try to use [rultor.com](http://www.rultor.com) to enforce this
-["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+["read-only master branch"]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 principle in your project.

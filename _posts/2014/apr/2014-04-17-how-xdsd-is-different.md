@@ -48,9 +48,9 @@ Furthermore, if you fail to fix the unit test and close the task altogether, you
 will receive no pay at all for the assignment.
 
 You can view more details about this principle in the following articles:
-[No Obligations Principle]({% post_url 2014/apr/2014-04-13-no-obligations-principle %})
+[No Obligations Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %})
 or
-[Definition of Done]({% post_url 2014/apr/2014-04-15-definition-of-done %}).
+[Definition of Done]({% pst 2014/apr/2014-04-15-definition-of-done %}).
 
 {% picture /images/2014/04/revolver-avi-with-dollar.png 0 Revolver (2005) by Guy Ritchie %}
 
@@ -67,17 +67,17 @@ don't deliver should get less.
 Since most of our tasks are half an hour in size, we encourage developers to
 deliver unfinished components. Read more about this concept in the article
 below:
-[Puzzle Driven Development]({% post_url 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}).
+[Puzzle Driven Development]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}).
 
 ## No Informal Communications
 
 Unlike many other projects or teams you may have worked with, XDSD uses
-[no informal communication channels]({% post_url 2014/oct/2014-10-07-stop-chatting-start-coding %}).
+[no informal communication channels]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 To clarify, we never use emails, we never chat
 on Skype and we don't do any meetings or phone calls. Additionally, XDSD
 maintains no type mailing list. Our only method of communication is a ticket
 tracking system (which in most projects consists of
-[Github Issues]({% post_url 2014/apr/2014-04-15-github-guidelines %}).)
+[Github Issues]({% pst 2014/apr/2014-04-15-github-guidelines %}).)
 
 Moreover, we discourage horizontal communications between developers regarding
 the scope of individual tasks. When assigned a task, your single and only point
@@ -105,7 +105,7 @@ convenient for them in their time zones. This includes weekdays and weekends.
 Unlike many other software teams, XDSD welcomes bug reports in all our projects.
 Therefore, we ask for bugs openly and expect team members to report them.
 Review the following article for complete details on XDSD bug reporting:
-[Bugs are welcome]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %})
+[Bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 
 We expect everyone involved with a project to report every bug found.
 Additionally, we encourage team members to make suggestions. In XDSD, we pay
@@ -123,11 +123,11 @@ just a matter of expending the time and effort needed to discover them.
 We never grant team member access to the `master` branch &mdash; no matter how
 long you work on a project. Consequently, you must always submit your changes
 through pull requests (most of our projects are done in
-[Github]({% post_url 2014/apr/2014-04-15-github-guidelines %}).)
+[Github]({% pst 2014/apr/2014-04-15-github-guidelines %}).)
 
 We enforce this policy not because we don't trust our developers, but simply
 because we don't trust anyone :) Read this article:
-[Master Branch Must Be Read-Only]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
+[Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
 ## No Compromises About Code Quality
 
@@ -142,5 +142,5 @@ development teams.
 Even more important is that we never make compromises. If your pull request
 violates even one rule of the static analyzer, it won't be accepted. And, it
 doesn't matter how small or innocent that violation may look. This merging
-process is [fully automated]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %})
+process is [fully automated]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and can't be bypassed.

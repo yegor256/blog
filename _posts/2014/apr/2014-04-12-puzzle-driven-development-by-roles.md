@@ -66,7 +66,7 @@ The diagram shows the relation between time and mess in the project.
 The bugs my friend is reporting to me are breaking the project, increasing
 its instability (or simply its messiness). New versions I release resolve
 the bugs and are fixing the project. Your
-[Github]({% post_url 2014/apr/2014-04-15-github-guidelines %})
+[Github]({% pst 2014/apr/2014-04-15-github-guidelines %})
 commit dynamics should resemble this graph, for example:
 
 {% picture /images/2014/04/jcabi-github-commits-graph.png %}

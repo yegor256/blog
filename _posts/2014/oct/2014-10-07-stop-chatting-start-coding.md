@@ -23,7 +23,7 @@ The first principle of eXtremely Distributed Software Development
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
 pass a code review and make sure the code is
-[merged into the destination branch]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
+[merged into the destination branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 Only then, is his result appreciated and paid for.
 
 For most of my clients this already sounds extreme.

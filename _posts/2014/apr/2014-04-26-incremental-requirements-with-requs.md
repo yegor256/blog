@@ -63,7 +63,7 @@ incompleteness of the SRS. For example:
  * How many employees can a department have? Can it be zero?
  * Can an employee receive a decrease in salary?
 
-All of these [bugs]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %})
+All of these [bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 are addressed to me. I need to fix them by improving the SRS.
 My workflow is the same in every task:
 
@@ -113,7 +113,7 @@ located in the `src/main/requs` directory in a project repository.
 My job, as a system analyst, is to make changes to some of these files and
 submit a pull request for review.
 
-[Github Guidelines]({% post_url 2014/apr/2014-04-15-github-guidelines %}) explains
+[Github Guidelines]({% pst 2014/apr/2014-04-15-github-guidelines %}) explains
 [how to work with Github. However, in short, I need to:
 
  * Clone the repository;

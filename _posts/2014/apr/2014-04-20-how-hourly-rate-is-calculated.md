@@ -20,7 +20,7 @@ keywords:
 In [XDSD](http://www.xdsd.org), everyone &mdash; including project managers,  analysts, programmers,
 and product owners &mdash; receives payments based on deliverables with agreed
 upon budgets. In the fhe first section of the article,
-[How XDSD Is Different]({% post_url 2014/apr/2014-04-17-how-xdsd-is-different %}) I explain
+[How XDSD Is Different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) I explain
 exactly how this concept works. I don't explain in the article, though,
 how we decide which hourly rate is acceptable for each project participant.
 
@@ -76,7 +76,7 @@ strongly against overdue tasks. Once you have started to work on a task, we
 expect you to finish it on time.
 
 Our
-[No Obligation Principle]({% post_url 2014/apr/2014-04-13-no-obligations-principle %})
+[No Obligation Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %})
 gives our project managers freedom
 to take any task away from you if don’t complete it in a
 reasonable amount of time (ten days).
@@ -91,7 +91,7 @@ successfully and on time.
 ## Complexity
 
 Every [XDSD](http://www.xdsd.org) task has a project role assigned to it. The article,
-[Puzzle Driven Development by Roles]({% post_url 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}),
+[Puzzle Driven Development by Roles]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}),
 lists the key roles we use in [XDSD](http://www.xdsd.org) projects.
 Generally speaking, the higher the role, the higher the
 complexity of tasks assigned to it.
@@ -116,14 +116,14 @@ a negative way.
 
 To avoid long conversations in tasks, submit new tickets with questions or bug
 reports. Again, the
-[Puzzle Driven Development by Roles]({% post_url 2014/apr/2014-04-12-puzzle-driven-development-by-roles %})
+[Puzzle Driven Development by Roles]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %})
 article explains the
 whole idea of helping us "to break the project" by submitting new bugs. Follow
 this concept and you'll be fine.
 
 ## Contribution via Bugs
 
-In [XDSD](http://www.xdsd.org) [Bugs Are Welcome]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %}). You
+In [XDSD](http://www.xdsd.org) [Bugs Are Welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}). You
 are supposed to report bugs along the normal development activities. Besides
 receiving extra money for reporting bugs, you can also increase your overall
 rating.

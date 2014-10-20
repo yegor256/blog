@@ -33,7 +33,7 @@ I'll show a few practical scenarios.
 ## Scenario #1: Merge Pull Request
 
 [jcabi-mysql-maven-plugin](https://github.com/jcabi/jcabi-mysql-maven-plugin)
-is a Maven plugin for [MySQL integration testing]({% post_url 2014/may/2014-05-21-mysql-maven-plugin %}).
+is a Maven plugin for [MySQL integration testing]({% pst 2014/may/2014-05-21-mysql-maven-plugin %}).
 [@ChristianRedl](https://github.com/ChristianRedl) submitted pull request
 [#35](https://github.com/jcabi/jcabi-mysql-maven-plugin/pull/35) with a new feature.
 I reviewed the request and asked Rultor to merge it into `master`:
@@ -58,20 +58,20 @@ were corrected by the pull request author and Travis didn't complain
 
 ## Scenario #2: Continuous Integration
 
-Even though the previous step [guarantees]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+Even though the previous step [guarantees]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 that `master` branch is always clean and stable, we're using Travis to
 continuously integrate it. Every commit made to `master` triggers
 a new build in Travis. The result of the build changes the status
 of the project in Travis: either "failing" or "passing".
 
 [jcabi-aspects](http://aspects.jcabi.com) is a collection of
-[AOP AspectJ aspects]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}).
+[AOP AspectJ aspects]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}).
 We configured Travis to build it continuously. This is the badge it produces (the left one):
 
 {% figure /images/2014/07/rultor-aspects.png 600 %}
 
 Again, let me stress that even through
-[read-only master]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+[read-only master]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 is a strong protection against broken builds, it doesn't guarantee that
 at any moment master is stable. For example, sometimes unit tests
 fail sporadically due to changes in calendar, in environment, in dependencies,
@@ -81,13 +81,13 @@ Well, ideally, unit tests should either fail or pass because they
 are environment independent. However, in reality, unit tests are far
 from being ideal.
 
-That's why a combination of [read-only master]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+That's why a combination of [read-only master]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 with Rultor and continuous integration with Travis gives us higher stability.
 
 ## Scenario #3: Release to RubyGems
 
 [jekyll-github-deploy](https://github.com/yegor256/jekyll-github-deploy)
-is a Ruby gem that [automates deployment of Jekyll sites to Github Pages]({% post_url 2014/jun/2014-06-24-jekyll-github-deploy %}).
+is a Ruby gem that [automates deployment of Jekyll sites to Github Pages]({% pst 2014/jun/2014-06-24-jekyll-github-deploy %}).
 [@leucos](https://github.com/leucos) submitted a pull request
 [#4](https://github.com/yegor256/jekyll-github-deploy/pull/4)
 with a new feature. The request was merged successfully into `master` branch.
@@ -148,7 +148,7 @@ Rultor reports to Github. This is exactly what happened in
 ## Scenario #4: Deploy to CloudBees
 
 [s3auth.com](http://www.s3auth.com) is a
-[Basic HTTP authentication gateway for Amazon S3 Buckets]({% post_url 2014/apr/2014-04-21-s3-http-basic-auth %}).
+[Basic HTTP authentication gateway for Amazon S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %}).
 It is a Java web app.
 In its pull request [#195](https://github.com/yegor256/s3auth/pull/195), a resource
 leakage problem was fixed by [@carlosmiranda](https://github.com/carlosmiranda)
@@ -156,7 +156,7 @@ and the pull request was merged by Rultor.
 
 Then, [@davvd](https://github.com/davvd) instructed Rultor to deploy
 `master` branch to production environment. Rultor created
-[a new Docker container]({% post_url 2014/jul/2014-07-29-docker-in-rultor %})
+[a new Docker container]({% pst 2014/jul/2014-07-29-docker-in-rultor %})
 and ran `mvn clean deploy` in it.
 
 Maven deployed the application to [CloudBees](http://www.cloudbees.com):
@@ -191,7 +191,7 @@ the working directory of Docker container, right before starting the Maven build
 This `settings.xml` file contains that secret data CloudBees
 plugin needs in order to deploy the application.
 
-[How to Deploy to CloudBees, in One Click]({% post_url 2014/aug/2014-08-25-deploy-to-cloudbees %})
+[How to Deploy to CloudBees, in One Click]({% pst 2014/aug/2014-08-25-deploy-to-cloudbees %})
 explains this process even better.
 
 ## You Can Do The Same
