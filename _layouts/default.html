@@ -2,18 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <meta name="description" content="{{ page | description | join:' ' | escape }}" />
-    <meta name="keywords" content="{{ page | keywords | join:', ' | escape }}" />
+    <meta name="description" content="{{ page | description | xml_escape }}" />
+    <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="twitter:account_id" content="4503599630178231" />
-    <meta name="blogcatalog" content="37407fab23a5d309f7bb5ef9fd22c6d5" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}">
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <script src="/js/search.min.js?{{ site.data['hash'] }}"></script>
-    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
@@ -24,7 +22,7 @@
       <header class="header">
         <div>
           <a href="/about-me.html">
-            <img src="/images/yegor-bugayenko.jpg" class="photo" alt="photo"/>
+            <img src="/images/yegor-bugayenko.png" class="photo" alt="photo"/>
           </a>
         </div>
         <nav role="navigation">
@@ -67,5 +65,10 @@
       </header>
     </div>
     {{ content }}
+    <script src="/js/global.js?{{ site.data['hash'] }}"></script>
+    <script src="//yegor256.disqus.com/count.js" async="async"></script>
+    <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
+    <script src="//stats.g.doubleclick.net/dc.js" async="async"></script>
+    <!--<script src="//mc.yandex.ru/metrika/watch.js" async="async"></script>-->
   </body>
 </html>

@@ -14,19 +14,19 @@ module Jekyll
     safe true
     def generate(site)
       font = 'fontcustom'
-      dir = 'ico'
+      dir = 'css'
       temp = '_temp'
       scss = '_ico.scss'
       system(
         "fontcustom compile _glyphs --output=_site/#{dir} \
         --font-name=#{font} --templates=scss --no-hash --force \
-        --autowidth --preprocessor-path=/#{dir} \
+        --autowidth \
         && mkdir -p #{temp} && mv _site/#{dir}/_#{font}.scss #{temp}/#{scss}"
       )
       file = "#{temp}/#{scss}";
       File.write(
         file,
-        File.read(file).gsub(
+        File.read(file).gsub(/font-url\(data:[^\)]+\),/, '').gsub(
           /(?:font-)?url\((?:"|')([^"']+)(?:"|')\)/,
           "url('\\1?#{SecureRandom.urlsafe_base64(6)}')"
         )

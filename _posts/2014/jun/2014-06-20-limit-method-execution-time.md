@@ -40,7 +40,7 @@ Keep in mind that you should weave your classes after
 compilation, as explained [here](http://aspects.jcabi.com/example-weaving.html).
 
 Let's discuss how this actually works, but first,
-I recommend you read [this post]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}),
+I recommend you read [this post]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}),
 which explains how AOP aspects work together with Java annotations.
 
 Due to [`@Timeable`](http://aspects.jcabi.com/annotation-timeable.html)

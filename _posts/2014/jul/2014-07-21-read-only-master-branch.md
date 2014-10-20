@@ -96,7 +96,7 @@ In the end, most development teams don't take continuous integration alerts
 seriously. Jenkins or Travis are just fancy tools for them that play no role in
 the entire development and delivery pipeline. No matter what continuous
 integration server says, we still deliver new features to our end-users. We'll
-fix our build later. And it's only logical.
+fix our build later. And [it's only logical]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}).
 
 ## What Is a Solution?
 

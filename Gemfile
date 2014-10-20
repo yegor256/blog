@@ -2,9 +2,9 @@
 # Just run "bundle"
 #
 source 'https://rubygems.org'
-gem 'jekyll', '~> 2.4.0'
-gem 'sass'
-gem 'jekyll-sass'
+gem 'jekyll', '2.4.0'
+gem 'sass', '3.4.5'
+gem 'jekyll-sass', '1.2.2'
 gem 'jekyll-plantuml'
 gem 'jekyll-press'
 gem 'jekyll-paginate'
@@ -18,7 +18,6 @@ gem 'uuidtools'
 gem 'liquid'
 gem 'redcarpet'
 gem 'nuggets'
-# see http://stackoverflow.com/questions/26082556/how-to-force-a-version-in-bundle-gemfile
-gem 'fontcustom', git: 'https://github.com/twalpole/fontcustom.git', branch: 'listen'
+gem 'fontcustom', '1.3.4'
 gem 'jslint'
-
+gem 'w3c_validators'

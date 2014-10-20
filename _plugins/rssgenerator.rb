@@ -54,7 +54,7 @@ module Jekyll
         item.guid.content = link
         item.title = post.title
         item.link = link
-        item.description = post.content
+        item.description = post.content + "<p>Read the full article at: <a href='#{link}'>#{post.title}</a></p>"
         item.pubDate = post.date
         channel.items << item
       end

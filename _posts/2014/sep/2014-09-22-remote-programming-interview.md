@@ -20,9 +20,9 @@ Here is an interview taken by Lisette Sutherland from
 a few hours ago,
 which I enjoyed to give :)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/TWBBZK_XRNU?rel=0" frameborder="0" allowfullscreen></iframe>
-
 <!--more-->
+
+<iframe class="video" width="640" height="360" src="//www.youtube.com/embed/TWBBZK_XRNU?rel=0" allowfullscreen></iframe>
 
 I answered these questions (approximately):
 

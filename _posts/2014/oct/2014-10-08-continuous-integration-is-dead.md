@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Continuous Integration is Dead"
-date: 2014-09-25
+date: 2014-10-08
 tags: mgmt devops
 description:
   Continuous integration is an awesome idea that
@@ -62,7 +62,7 @@ Let's see the organizational side.
 
 Continuous integration is not only a server that builds, but a
 management/organizational process that should "work". Being a process
-that works means exactly what Jezz Humble said in
+that works means exactly what Jez Humble said in
 [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE),
 on page 55:
 
@@ -97,7 +97,7 @@ the same. We just start to ignore that continuous integration
 build status. Either the build is clean or it is broken, and we continue
 to do what we were doing before.
 
-We don't stop and fix it, as Jezz Humble recommends.
+We don't stop and fix it, as Jez Humble recommends.
 
 Instead, we ignore the information that's
 coming from the continuous integration server.
@@ -131,7 +131,7 @@ but never committed to `master`, because of that fear factor.
 ## OK, What Is The Solution?
 
 I wrote about it before; it is called
-["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %}).
+["read-only master branch"]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
 It is simple &mdash; prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
@@ -152,5 +152,5 @@ you fix your errors and tell the script to try again. Nobody sees these
 attempts, and you don't need to apologize. Fear factor is gone.
 
 BTW, try to use [rultor.com](http://www.rultor.com) to enforce this
-["read-only master branch"]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+["read-only master branch"]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 principle in your project.

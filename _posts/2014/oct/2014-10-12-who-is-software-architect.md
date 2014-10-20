@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Does a Software Architect Do?"
-date: 2014-09-24
+date: 2014-10-12
 tags: mgmt
 description:
   The role of a software architect is mission critical
@@ -33,6 +33,8 @@ most authoritative one among them. Right?
 Absolutely wrong!
 
 <!--more-->
+
+<iframe class="video" width="640" height="360" src="//www.youtube.com/embed/9IEN9z36V98" allowfullscreen></iframe>
 
 Obviously, an architect is usually someone who
 has the most knowledge, skills, experience, and authority. Of course,

@@ -50,7 +50,7 @@ this is pure noise, as I see it.
 To make life easier, I created a library about two years
 ago, [jcabi-log](http://log.jcabi.com), which has a convenient
 utility class [`Logger`](http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html)
-(yes, I know that [utility classes are evil]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})).
+(yes, I know that [utility classes are evil]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})).
 
 {% highlight java %}
 import com.jcabi.log.Logger;

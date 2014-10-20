@@ -19,7 +19,7 @@ Docker starts a process inside its container as a "root" user. In some
 cases, this is not convenient though. For example, `initdb` from PostgreSQL doesn't like to
 be started as root and will fail. In [rultor.com](http://www.rultor.com),
 a DevOps team assistant,
-[we're using Docker]({% post_url 2014/jul/2014-07-29-docker-in-rultor %})
+[we're using Docker]({% pst 2014/jul/2014-07-29-docker-in-rultor %})
 as a virtualization technology for every build we run.
 
 Here is how we change the user inside a running container, right

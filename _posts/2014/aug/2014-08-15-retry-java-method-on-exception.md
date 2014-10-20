@@ -35,7 +35,7 @@ failed executions with a ten seconds interval between them.
 
 <!--more-->
 
-[This post]({% post_url 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
+[This post]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
 explains how [jcabi-aspects](http://aspects.jcabi.com)
 works with binary weaving. This mechanism integrates AspectJ with
 your code.

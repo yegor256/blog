@@ -17,13 +17,13 @@ keywords:
 
 Here they come:
 
- * [NULL References]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
+ * [NULL References]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 
- * [Utility Classes]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+ * [Utility Classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 
- * [Mutable Objects]({% post_url 2014/jun/2014-06-09-objects-should-be-immutable %})
+ * [Mutable Objects]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 
- * [Getters and Setters]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+ * [Getters and Setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
  * Singletons
 

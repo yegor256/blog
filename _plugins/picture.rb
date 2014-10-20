@@ -14,10 +14,11 @@ module Yegor
         raise "file doesn't exist: #{file}"
       end
     end
+
     def render(context)
-      html = "<figure><img src='#{CGI::escapeHTML @src}'" +
-      " style='width:#{@width}px;'" +
-      " alt='#{CGI::escapeHTML @title}'/>"
+      html = "<figure><img src='#{CGI::escapeHTML(@src)}'" +
+        " style='width:#{@width}px;'" +
+        " alt='#{CGI::escapeHTML @title}'/>"
       if @title != ''
         html += "<figcaption>#{CGI::escapeHTML @title}</figcaption>"
       end

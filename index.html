@@ -23,50 +23,59 @@ keywords:
 {% for post in paginator.posts %}
   <div class="wrapper">
     <section class="front">
-      <p>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%-d %B %Y" }}
-        </time>
-      </p>
       <header>
         <h1>
           <a href="{{ post.url }}">
             {{ post.title }}
           </a>
         </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%-d %B %Y" }}
+            </time>
+          </li>
+          <li>
+            {{ post.content | count_words }} words
+          </li>
+          <li>
+            {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+            {% if time == '1' %}
+              a minute
+            {% else %}
+              {% case time %}
+                {% when '2' %}
+                  two
+                {% when '3' %}
+                  three
+                {% when '4' %}
+                  four
+                {% when '5' %}
+                  five
+                {% else %}
+                  {{ time }}
+              {% endcase %}
+              minutes
+            {% endif %}
+            to read
+          </li>
+          <li>
+            <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+          </li>
+        </ul>
       </header>
-      {{ post.excerpt }}
+      <div class="main">
+        {{ post.excerpt }}
+      </div>
       <p>
         <a href="{{ post.url }}">
-          read on...
+          continue...
         </a>
-      </p>
-      <p class="gray small desktop-only">
-        {{ post.content | count_words }}
-        words,
-        {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-        {% if time == '1' %}
-          a minute
-        {% else %}
-          {% case time %}
-            {% when '2' %}
-              two
-            {% when '3' %}
-              three
-            {% when '4' %}
-              four
-            {% when '5' %}
-              five
-            {% else %}
-              {{ time }}
-          {% endcase %}
-          minutes
-        {% endif %}
-        to read
       </p>
     </section>
   </div>
 {% endfor %}
+<script src="//yegor256.disqus.com/count.js" async="async"></script>
 
 <div class="wrapper">
   <div class="pagination">

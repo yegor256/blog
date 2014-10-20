@@ -58,20 +58,49 @@ mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous
 subscribers in my list).
 
-<fieldset id="form">
+<form id="eform"><fieldset id="form">
   <label for="email">Your email</label>
-  <input id="email" class="field field-text" name="email" size="25" maxlength="255"/>
+  <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you? Why interested?</label>
-  <textarea id="reason" cols="50" class="field field-text" rows="4"></textarea>
+  <textarea id="reason" cols="50" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe"></label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span id="error" style="color:red;"></span>
-  <span class="note">540 Happy Subscribers and Counting...</span>
-</fieldset>
+  <span class="note">557 Happy Subscribers and Counting...</span>
+</fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).
+
+Some of my articles are also published at (in alphabetic order):
+
+<a href="http://yegor256.blogspot.com/">
+  <img alt="blogger.com" src="/images/about/blogger.png"
+    title="Yegor Bugayenko at Blogger"
+    class="about-badge"/></a>
+<a href="http://devops.com/author/yegor256/">
+  <img alt="devops.com" src="/images/about/devops.png"
+    title="Yegor Bugayenko at DevOps.com"
+    class="about-badge"/></a>
+<a href="http://java.dzone.com/users/yegor256">
+  <img alt="dzone.com" src="/images/about/dzone.png"
+    title="Yegor Bugayenko at DZone.com"
+    class="about-badge"/></a>
+<a href="http://www.javacodegeeks.com/author/yegor-bugayenko/">
+  <img alt="JavaCodeGeeks.com" src="/images/about/jcg.png"
+    title="Yegor Bugayenko at JavaCodeGeeks"
+    class="about-badge"/></a>
+<a href="http://www.medium.com/@yegor256">
+  <img alt="medium.com" src="/images/about/medium.png"
+    title="Yegor Bugayenko at Medium.com"
+    class="about-badge"/></a>
+<a href="http://yegor256.tumblr.com/">
+  <img alt="tumblr.com" src="/images/about/tumblr.png"
+    title="Yegor Bugayenko at Tumblr"
+    class="about-badge"/></a>
 
 <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
 <script type="text/javascript">
 twttr.conversion.trackPid('l4p91');
 </script>
+
+<script src="/js/send.js?{{ site.data['hash'] }}"></script>
+<script src="/js/subscribe.js?{{ site.data['hash'] }}"></script>

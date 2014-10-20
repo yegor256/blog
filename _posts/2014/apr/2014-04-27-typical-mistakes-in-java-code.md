@@ -51,7 +51,7 @@ And, of course, utility classes are anti-patterns, like [`StringUtils`](http://c
 [`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html), and
 [`IOUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html) from Apache.
 The above are perfect examples of terrible designs. Read this follow up post:
-[OOP Alternative to Utility Classes]({% post_url 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+[OOP Alternative to Utility Classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 
 Of course, never add suffixes or prefixes to
 distinguish between [interfaces and classes](http://c2.com/cgi/wiki?DontDistinguishBetweenClassesAndInterfaces).
@@ -70,7 +70,7 @@ class Validated implements Content {};
 
 Methods can either return something or return `void`. If a method returns
 something, then its name should explain *what it returns*, for example (don't
-use the `get` prefix [ever]({% post_url 2014/sep/2014-09-16-getters-and-setters-are-evil %})):
+use the `get` prefix [ever]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})):
 
 ```java
 boolean isValid(String name);

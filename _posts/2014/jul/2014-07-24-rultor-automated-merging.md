@@ -46,8 +46,8 @@ the Github issue.
 
 There are many tools on the market, which automate continuous integration and
 continuous delivery (let's call them DevOps).
-For example, downloadable open-source [Jenkins](http://www
-.jenkins-ci.org) and hosted [Travis](http://travis-ci.org) both perform these
+For example, downloadable open-source
+[Jenkins](http://www.jenkins-ci.org) and hosted [Travis](http://travis-ci.org) both perform these
 tasks. So, why do we need one more?
 
 Well, there are three very important features that we need for our projects, but
@@ -55,7 +55,7 @@ we can't find all of them in any of the DevOps tools currently available on the
 market:
 
  * **Merging**. We make master branch read-only in our projects,
-   as [this article]({% post_url 2014/jul/2014-07-21-read-only-master-branch %})
+   as [this article]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
    recommends. All changes into master we pass through
    a script that validates them and merges.
 

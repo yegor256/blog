@@ -37,7 +37,7 @@ this with a simple example.
 
 <!--more-->
 
-## "Fix and Break"
+## Fix and Break
 
 Let's assume, for the sake of simplicity, that a project is a simple
 software tool written by me for a close friend. I created the
@@ -66,7 +66,7 @@ The diagram shows the relation between time and mess in the project.
 The bugs my friend is reporting to me are breaking the project, increasing
 its instability (or simply its messiness). New versions I release resolve
 the bugs and are fixing the project. Your
-[Github]({% post_url 2014/apr/2014-04-15-github-guidelines %})
+[Github]({% pst 2014/apr/2014-04-15-github-guidelines %})
 commit dynamics should resemble this graph, for example:
 
 {% picture /images/2014/04/jcabi-github-commits-graph.png %}
@@ -144,7 +144,6 @@ plain English, and are understandable by technical people.
 Thus, when I don't have time, I don't wait. I change the SRS
 using TBDs at points where I can't create a proper and formal description of the
 requirements or simply don't know what to write exactly.
-
 
 ## Architect
 
@@ -228,8 +227,6 @@ it with my new unit test, but breaking it with `@todo` puzzles.
 
 This is how I help to increase the overall quality of the project - by
 fixing and breaking at the same time.
-
-
 
 ## Tester
 

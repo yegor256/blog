@@ -50,3 +50,6 @@ by Rultor, closing and paying.
 [jcabi-aspects#88](https://github.com/jcabi/jcabi-aspects/pull/88):
 Pull request with a solution that didn't satisfy a code
 reviewer and had to be changed.
+
+Technical questions asked, paid, answered, and paid again:
+[yegor256/thindeck#347](https://github.com/yegor256/thindeck/issues/347)

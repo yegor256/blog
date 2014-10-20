@@ -145,7 +145,7 @@ Now, we're treating the dog as a real animal, who can take a ball from us
 and can give it back, when we ask. Worth mentioning is that the
 dog can't give `NULL` back. Dogs simply don't know what `NULL` is :)
 Object thinking immediately eliminates
-[NULL references]({% post_url 2014/may/2014-05-13-why-null-is-bad %})
+[NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
 
 {% picture /images/2014/09/fish-called-wanda.png 0 A Fish Called Wanda (1988) by Charles Crichton %}
@@ -194,4 +194,5 @@ It is much easier to stay in a primitive world of procedural COBOL than to
 truly understand and appreciate the beautiful world of true objects.
 
 PPS. Forgot to say, yes, dependency injection via setters is also
-a terrible anti-pattern. About it, in one of the next posts :)
+a terrible anti-pattern. About it, in
+[one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}) :)

@@ -1,0 +1,16 @@
+@import "defs";
+
+.wrapper {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: $width;
+  line-height: 1.4 * $em;
+  padding-left: 2 * $em;
+  padding-right: 2 * $em;
+  @media all and (max-width: $width) {
+    width: 100%;
+    padding-left: $em;
+    padding-right: $em;
+  }
+}

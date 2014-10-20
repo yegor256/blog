@@ -169,5 +169,5 @@ That's it. We're ready to run `mvn liquibase:update -Pproduction` and
 our production database will be updated &mdash; a new column will be
 added to the `user` table.
 
-Also, see how [MySQL Maven Plugin]({% post_url 2014/may/2014-05-21-mysql-maven-plugin %})
+Also, see how [MySQL Maven Plugin]({% pst 2014/may/2014-05-21-mysql-maven-plugin %})
 can help you to automate integration testing of database-connected classes.

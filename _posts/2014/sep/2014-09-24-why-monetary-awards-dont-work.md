@@ -19,10 +19,6 @@ Monetary rewards for employees. Do they work? Should we use them?
 Can money motivate creative minds? Will a programmer work
 better if he gets paid only when he reaches his goals and objectives?
 
-<div class="video">
-  <iframe width="640" height="360" src="//www.youtube.com/embed/XJRHkbrZuO8?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
 Much research has already been done on this subject,
 and most of it proves that connecting results with money
 is a very demotivating approach. For example, Ian Larkin
@@ -35,6 +31,8 @@ for all modern employees (not just programmers).
 My question is &mdash; why is this so?
 
 <!--more-->
+
+<iframe class="video" width="640" height="360" src="//www.youtube.com/embed/XJRHkbrZuO8?rel=0" allowfullscreen></iframe>
 
 Why doesn't money work, even when it was invented to be
 a universal instrument to measure our labor? Why can't an American dollar,

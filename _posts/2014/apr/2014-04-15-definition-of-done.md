@@ -18,8 +18,7 @@ keywords:
 
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
-[Definition of Done
-(DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
+[Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
 key definition used in Scrum and the one we also use in [XDSD](http://www.xdsd.org).
 
 DoD is an exit criteria of a simple atomic task and answers the question:"am I
@@ -42,7 +41,7 @@ worked on a task previously, only the last one &mdash; the one who managed to pr
 a working deliverable &mdash; receives payment.
 
 To better understand this principle, you should read:
-[No Obligations Principle]({% post_url 2014/apr/2014-04-13-no-obligations-principle %}).
+[No Obligations Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %}).
 
 Your goal as a developer working on a task should be to close it and receive
 payment as soon as possible. To that end, here are few things that can help you

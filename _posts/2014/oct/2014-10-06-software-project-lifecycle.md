@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 4-Phase Project Lifecycle
-date: 2014-10-03
+title: Project Lifecycle in Teamed.io
+date: 2014-10-06
 tags: mgmt
 description:
   There are four standard phases in
@@ -20,12 +20,14 @@ In addition to being a hands-on programmer, I'm also co-founder and CTO of
 I play the role of a technical and management leader in all projects
 we work with.
 
+{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
+
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to work with us.
+the end of the project, when you choose to [work with us](mailto:hire@teamed.io).
 
 You will see below that our methods of
-software development [seriously differ]({% post_url 2014/apr/2014-04-17-how-xdsd-is-different %})
+software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from what many other teams are using. I personally pay a lot of attention to quality
 of code and quality of the internal processes that connect our team.
 
@@ -84,7 +86,9 @@ will cost much more than a mistake made later.
 
 ## Thinking
 
-Thiking is the first and the most important phase.
+{% badge /images/2014/10/lifecycle-thinking.png 250 %}
+
+Thinking is the first and the most important phase.
 
 First, we give a name to the project and create a [Github](https://github.com) repository. We
 try to keep all our projects (both open source and commercial) in Github.
@@ -110,7 +114,7 @@ specification. They start by asking questions, submitting them one by one
 as Github issues. Every question is addressed to the product owner. Using
 his answers, system analysts modify the SRS document.
 This article explains how [Requs](http://www.requs.org) helps us in this process:
-[Incremental Requirements With Requs]({% post_url 2014/apr/2014-04-26-incremental-requirements-with-requs %})
+[Incremental Requirements With Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
 
 At the end of the Thinking phase we estimate the size of the project,
 in lines of code. Using lines of code, we can roughly
@@ -121,8 +125,11 @@ the entire Thinking phase.
 
 ## Building
 
+{% badge /images/2014/10/lifecycle-building.png 250 %}
+
 This is a one-man job for an architect. Every project we work with
-has an architect who is personally responsible for the quality and all
+has an architect who is [personally responsible]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
+for the quality and all
 technical decisions made there. I try to play this role
 in most projects.
 
@@ -136,14 +143,16 @@ basic DevOps processes, including:
 1) automated testing and quality control,
 2) deploying and releasing pipelines,
 3) repository of artifacts,
-4) continuous integration service, etc.
+4) [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service, etc.
 
 The result of this phase is a working software package, deployable
 to its destination and available for testers. Technical
-[quality requirements]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
+[quality requirements]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 are also defined at this phase.
 
 ## Fixing
+
+{% badge /images/2014/10/lifecycle-fixing.png 250 %}
 
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked in other projects before and have already
@@ -155,7 +164,7 @@ At this phase, we understand any inconsistency as a bug. If something is not cle
 in the documentation, or if something can be refactored for better
 readability, or if a function can be improved for higher performance &mdash;
 it is a bug to us.
-And [bugs are welcome]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
+And [bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
 We encourage everybody to report as many bugs as possible. This is how
 we achieve high quality.
 
@@ -167,15 +176,19 @@ we re-deploy the entire product to the production platform.
 Every bug is reported, classified, discussed, and fixed in its
 own Github ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch &mdash; all changes must pass through
-our quality controls and be merged into `master` by [rultor.com](http://www.rultor.com),
-our [merging bot]({% post_url 2014/jul/2014-07-24-rultor-automated-merging %}).
+our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
+and be merged into `master` by [rultor.com](http://www.rultor.com),
+our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We never use
-any chats, Skype, emails or conferencing software. We communicate
+and between programmers happen only through Github issues. We
+[never use any chats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}),
+Skype, emails or conferencing software. We communicate
 only through tickets and comments in Github.
 
 ## Using
+
+{% badge /images/2014/10/lifecycle-using.png 250 %}
 
 This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive bug reports
@@ -190,3 +203,6 @@ have very few problems at the Using phase.
 And big feature requests? At this phase, we usually try to convert
 them into new projects and develop them separately, starting again
 from Thinking.
+
+BTW, the illustrations you see above are made by
+[Bárbara Lopes](https://www.behance.net/lopesbarbara)

@@ -5,10 +5,14 @@ module Yegor
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].strip
+      file = '.' + @src
+      if !File.exists?(file)
+        raise "file doesn't exist: #{file}"
+      end
     end
 
-    def render(_context)
-      html = "<figure><img src='#{CGI.escapeHTML @src}'" \
+    def render(context)
+      html = "<figure><img src='#{CGI.escapeHTML(@src)}'" \
       " style='width:#{@width}px;'" \
       " alt='figure'/></figure>\n\n"
     end
