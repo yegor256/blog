@@ -75,7 +75,7 @@ how "good" your product is, there is always an "evil" side. An
 invention of iPhone made millions of people happy, but also caused a lot
 of trouble for Nokia and Blackberry. An eventual invention of a cancer
 vaccine will make millions of people healthier, but also will make thousands
-of oncologists jobless. My point is that any project has positive and negative
+of oncologists jobless. My point is that any project has both positive and negative
 stakeholders.
 
 Each stakeholder must have a list of needs. They have to be simple
@@ -94,9 +94,10 @@ article from SEBOK will be helpful.
 
 ## Actors and Features
 
-In this section we list actors
+In this section we list [actors](https://en.wikipedia.org/wiki/Actor_%28UML%29)
 (entities communicating with the product) and key functionality
-they use. This is the most abstract definition of functional requirements
+they use. This is the most abstract definition of
+[functional requirements](https://en.wikipedia.org/wiki/Functional_requirement)
 of the product. It doesn't need to be detailed. Instead, it has to
 be very high-level and abstract. For example, this is how our
 interaction with a well-known product may be described in two lines:
@@ -203,3 +204,24 @@ Quality Requirements
   Development pipeline must be fully automated.
   Interfaces must include web site and iOS/Android app.
 {% endhighlight %}
+
+## Diplomacy
+
+We follow all these recommendations in our projects,
+in [teamed.io](http://www.teamed.io). You can use
+them in your projects as well, but keep in mind that the process
+of defining a Product Vision could be very painful. You may sometimes
+offend a client by over-simplifying its "great" business idea. Really,
+I'm ready to pay $250,000 for something awesome and you're telling
+me that you've only ten lines for it. Huh?
+
+To work around this situation, split client's documentation in two parts.
+The first part will fit into Product Vision document, the second one
+will be called "supplementary documentation" and will contain all that
+valueable information you've got from the client. You may use
+that documentation later, during the course of product development.
+
+But don't cut corners. Don't allow your client (or anyone else) to force
+you to bloat Product Vision. The document has to very short and explicit.
+
+No lyrics, only statements.
