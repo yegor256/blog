@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Write a Product Vision"
-date: 2000-01-01
+date: 2014-10-20
 tags: mgmt
 description:
   Product Vision is a fundamental document in any software development project
