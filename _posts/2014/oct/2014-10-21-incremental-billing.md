@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Outsourcing, How It Fails"
-date: 2000-01-01
+title: "Incremental Billing"
+date: 2014-10-21
 tags: xdsd mgmt
 description:
   With either a Fixed Price or Time and Material contract,
@@ -21,7 +21,7 @@ basically two types of contracts:
 [fixed price](https://en.wikipedia.org/wiki/Fixed-price_contract) or
 [time-and-material](https://en.wikipedia.org/wiki/Time_and_materials).
 They are fundamentally different but the truth is that in either case &mdash;
-you lose.
+**you lose**.
 
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
@@ -53,7 +53,7 @@ I guess it means that in all failures you &mdash; the client &mdash; will be the
 
 In T&M you will simply pay and pray. If your programmers
 appear to be honest workaholics you may get lucky and get something done.
-As you can see from the numbers above, however, this is rarely the case. Don't fool yourself; 
+As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
 there won't be any workaholics in your project. Even if you adopt micro-management
 and corporal punishment, your overall costs will be much higher than expected
 and the quality will suffer.
@@ -92,14 +92,14 @@ quality, in order to stay profitable.
 
 In either case &mdash; you lose.
 
-## Continuous Billing
+## Incremental Billing
 
 So, what is the solution? Is it possible to have win-win
 contracts with programmers?
 
 {% badge /images/2014/10/xdsd-invoice-example.svg 300 %}
 
-Yes, it is. We call it "Continuous Billing".
+Yes, it is. We call it "Incremental Billing".
 
 Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
 in less than an hour. Each completed task produces a new increment (aka a "release" or "version") of software.
