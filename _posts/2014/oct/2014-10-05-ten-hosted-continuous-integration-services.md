@@ -213,7 +213,7 @@ I'll try to build iOS Swift app with them soon....
 
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
-[Jenkins](http://www.jenkins-ci.com),
+[Jenkins](http://jenkins-ci.org/),
 [TeamCity](http://www.jetbrains.com/teamcity/),
 [Go](http://www.thoughtworks.com/products/go-continuous-delivery),
 [Strider](http://stridercd.com/),

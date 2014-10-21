@@ -34,8 +34,8 @@ discussions:
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods
-and encapsulates no state. `StringUtils`, `IOUtils`, `FileUtils` from [Apache
-Commons](http://commons.apache.org/); `Iterables` and `Iterators` from
+and encapsulates no state. `StringUtils`, `IOUtils`, `FileUtils` from
+[Apache Commons](http://commons.apache.org/); `Iterables` and `Iterators` from
 [Guava](https://code.google.com/p/guava-libraries/), and
 [`Files`](http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html)
 from JDK7 are perfect examples of utility classes.
@@ -43,8 +43,8 @@ from JDK7 are perfect examples of utility classes.
 This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
 because utility classes provide common functionality used everywhere.
 
-Here, we want to follow the [DRY
-principle](http://en.wikipedia.org/wiki/Don't_repeat_yourself) and avoid
+Here, we want to follow the
+[DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:
 

@@ -70,7 +70,7 @@ explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 There are a few good tools on the market, which automate DevOps procedures.
 Some of them are open source, you can download
 and install them on your own servers. For example:
-[Jenkins](http://www.jenkins-ci.org),
+[Jenkins](http://jenkins-ci.org/),
 [Go](http://www.thoughtworks.com/products/go-continuous-delivery), and
 [CruiseControl](http://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
