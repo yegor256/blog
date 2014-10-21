@@ -20,7 +20,7 @@ development. Perhaps, even more important than architecture, design or coding
 itself.
 
 Joy Beatty and Karl Wiegers in
-[Software Requirements](http://www.amazon.com/Software-Requirements-Developer-Best-Practices/dp/0735679665)
+[Software Requirements](http://www.amazon.com/dp/0735679665)
 argue that the cost of mistakes made in a requirements specification
 is significantly higher than a bug in source code. I totally agree.
 

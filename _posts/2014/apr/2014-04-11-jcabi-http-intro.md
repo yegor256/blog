@@ -129,7 +129,7 @@ None of the libraries that I'm aware of or worked with offer this feature.
 ## Immutable
 
 The last requirement, but certainly not the least important, is that I need all interfaces of the
-library to be annotated with [`@Immutable`](http://http://aspects.jcabi.com/annotation-immutable.html).
+library to be annotated with [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html).
 This is important because I need to be able to encapsulate an instance of `Request` in other immutable classes.
 
 ps. A short summary of this article was published at
