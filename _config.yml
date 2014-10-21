@@ -14,13 +14,14 @@ paginate: 10
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
+gems: ['jekyll-sass', 'jekyll-plantuml', 'jekyll-press']
+
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com
 rss_name: rss.xml
 rss_post_limit: 15
 
 # see https://github.com/noct/jekyll-sass
-gems: ['jekyll-sass', 'jekyll-plantuml', 'jekyll-press']
 sass:
   style: compressed
   deploy_style: compressed
