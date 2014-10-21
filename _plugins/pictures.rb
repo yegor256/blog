@@ -1,4 +1,17 @@
 module Yegor
+  class Img
+    def initialize(src, ctx)
+      if src.index('/') == 0
+        @url = ctx.registers[:site].config['url'] + src
+      else
+        @url = src
+      end
+    end
+    def to_s
+      CGI.escapeHTML(@url)
+    end
+  end
+
   class FigureBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
@@ -12,8 +25,7 @@ module Yegor
     end
 
     def render(context)
-      @home = context.registers[:site].config['url']
-      html = "<figure><img src='#{CGI.escapeHTML(@home + @src)}'" \
+      html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" \
         " style='width:#{@width}px;'" \
         " alt='figure'/></figure>\n\n"
     end
@@ -31,8 +43,8 @@ module Yegor
     end
 
     def render(context)
-      @home = context.registers[:site].config['url']
-      img = "<img src='#{CGI.escapeHTML @home + @src}' style='width:#{@width}px;' alt='badge'/>"
+      img = "<img src='#{Yegor::Img.new(@src, context)}'" +
+        " style='width:#{@width}px;' alt='badge'/>"
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
       end
@@ -57,8 +69,7 @@ module Yegor
     end
 
     def render(context)
-      @home = context.registers[:site].config['url']
-      html = "<figure><img src='#{CGI::escapeHTML(@home + @src)}'" +
+      html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" +
         " style='width:#{@width}px;'" +
         " alt='#{CGI::escapeHTML @title}'/>"
       if @title != ''

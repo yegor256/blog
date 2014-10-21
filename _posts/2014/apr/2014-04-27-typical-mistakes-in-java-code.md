@@ -41,8 +41,7 @@ and to Java in particular.
 
 ## Class Names
 
-Read this short ["What is an Object?"](https://github.com/yegor256/d29/wiki/What-is-an-Object%3F)
-article. Your class should be an abstraction of a real life entity
+Your class should be an abstraction of a real life entity
 with no "validators", "controllers", "managers", etc.
 If your class name ends with an "-er" &mdash;
 it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).

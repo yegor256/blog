@@ -24,9 +24,20 @@ keywords:
   - java class name
 ---
 
-What is a "proper" object in object-oriented programming? What is not
-a proper one? What is the difference? It is a very polemic subject, but
-a very important one. Unless we undertand what an object is how can
+Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
+
+> A library is essentially a set of functions that you can call,
+these days usually organized into classes
+
+Functions organized into classes? What kind of programming is that?
+Object-oriented? Martin, classes are not organizers of functions!
+
+Unfortunately, it is a very common misconception of a class and object
+roles in object-oriented programming.
+
+So, what is a "proper" object in object-oriented programming? What is not
+a proper one? What is the difference? Even though it is a very polemic subject, it is
+a very important one. Unless we undertand what an object is, how can
 we write object-oriented software? Well, we can, but will it be
 an object-oriented programming?
 

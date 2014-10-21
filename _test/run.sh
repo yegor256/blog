@@ -25,4 +25,7 @@ while true; do
 done
 
 casperjs test $DIR/casperjs/*
-find _site -name '*.html' -print0 | xargs -n 1 -0 ruby _test/validate_html.rb
+
+find _site -name '*.html' | xargs -n 1 ruby _test/validate_html.rb
+
+#find _site -name '*.html' | xargs -n 1 ruby _test/validate_links.rb
