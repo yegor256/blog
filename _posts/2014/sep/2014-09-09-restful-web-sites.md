@@ -13,6 +13,7 @@ keywords:
   - browsable restful api
   - how to build restful api
   - restful api
+categories: jcg
 ---
 
 Look at Github RESTful API, for example. To get information

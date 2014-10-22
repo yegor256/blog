@@ -15,6 +15,7 @@ keywords:
   - continuous integration problems
   - continuous integration pitfalls
   - alternative to continuous integration
+categories: jcg
 ---
 
 A few days ago, my article

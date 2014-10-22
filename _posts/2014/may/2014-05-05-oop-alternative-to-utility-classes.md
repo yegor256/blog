@@ -3,7 +3,7 @@ layout: post
 title: "OOP Alternative to Utility Classes"
 date: 2014-05-05
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   Utility classes are a very popular design pattern
   in Java and other object-oriented languages. However,

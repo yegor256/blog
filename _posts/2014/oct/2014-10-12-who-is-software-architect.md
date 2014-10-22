@@ -13,6 +13,7 @@ keywords:
   - what software architect is for
   - software architect salary
   - software architect job description
+categories: jcg
 ---
 
 Do you have a software architect in your project? Do you need one?

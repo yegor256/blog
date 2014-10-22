@@ -3,7 +3,7 @@ layout: post
 title: "Why NULL is Bad?"
 date: 2014-05-13
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   Why NULL is a terrible practice in object-oriented programming?
   Despite the fact that it is used a lot and everywhere,

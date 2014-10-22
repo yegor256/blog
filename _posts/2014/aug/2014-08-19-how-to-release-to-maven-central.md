@@ -17,6 +17,7 @@ keywords:
   - publish from github to maven central
   - upload to maven central
   - publishing to maven central with sonatype
+categories: jcg
 ---
 
 When I release a new version of [jcabi-aspects](http://aspects.jcabi.com),

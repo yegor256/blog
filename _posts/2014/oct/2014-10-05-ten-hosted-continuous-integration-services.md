@@ -13,6 +13,7 @@ keywords:
   - cloud continuous integration
   - continuous integration in cloud
   - continuous integration service
+categories: jcg
 ---
 
 Every project I'm working with starts with a setup of continuous

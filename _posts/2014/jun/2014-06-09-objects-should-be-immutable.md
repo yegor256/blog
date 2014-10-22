@@ -3,7 +3,7 @@ layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   The article gives arguments about why
   classes/objects in object-oriented programming

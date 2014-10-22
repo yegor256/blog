@@ -17,6 +17,7 @@ keywords:
   - why mocking is evil
   - mockito java
   - java mockito example
+categories: jcg
 ---
 
 While mock objects are perfect instruments for unit testing,

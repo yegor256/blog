@@ -3,7 +3,7 @@ layout: post
 title: "Getters/Setters. Evil. Period."
 date: 2014-09-16
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   Getters and setters is a terrible anti-pattern in
   object-oriented programming and should be avoided.
