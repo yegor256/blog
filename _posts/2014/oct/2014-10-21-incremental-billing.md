@@ -49,7 +49,7 @@ I guess it means that in all failures you &mdash; the client &mdash; will be the
 
 ## Time and Material
 
-{% badge /images/2014/10/time-and-material-contract.svg 250 %}
+{% figure /images/2014/10/time-and-material-contract.svg 500 %}
 
 In T&M you will simply pay and pray. If your programmers
 appear to be honest workaholics you may get lucky and get something done.
@@ -71,7 +71,7 @@ In the end &mdash; you lose.
 
 ## Fixed Price
 
-{% badge /images/2014/10/fixed-price-contract.svg 250 %}
+{% figure /images/2014/10/fixed-price-contract.svg 500 %}
 
 In Fixed Price you will feel secure at the beginning &mdash; "the statement
 of work specifies everything and the price is fixed, how can I lose?"
@@ -97,7 +97,7 @@ In either case &mdash; you lose.
 So, what is the solution? Is it possible to have win-win
 contracts with programmers?
 
-{% badge /images/2014/10/xdsd-invoice-example.svg 300 %}
+{% figure /images/2014/10/xdsd-invoice-example.svg 500 %}
 
 Yes, it is. We call it "Incremental Billing".
 
