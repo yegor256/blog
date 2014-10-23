@@ -144,10 +144,29 @@ your ten years of experience or you're absolutely useless as an architect.
 
 ## +1 Certificates
 
+Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
+I'm talking about these certifications. In order to get them you should
+pass an exam. Not an easy one and not online. It is a real exam take in
+a certification center, where you're sitting in front of a computer for a few
+hours, without any books or Internet access, answering questions. Rather
+humiliating activity for a respected software developer? Indeed. And there
+is a high probability of failure, which is also rather embarassing.
 
+It is a very good sign, if you managed to go through this. If you've done
+it a few times, even better. However, if you earned no certifications
+in your entire career, it is one of the following.
+
+You're **afraid to lose**. A serious certification may cost a few hundred
+dollars (I paid over $700 for SCEA) and you will not get a refund if you
+fail. If you're afraid to lose, you're afraid to fight. This means,
+you'll chicken out in a real-life situation, where a complex problem
+will need to be solved.
+
+You don't think certifications are important.
 
 ## +1 Writing
 
 books, blogs, articles,
 
 ## +1 References
+
