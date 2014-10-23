@@ -10,12 +10,113 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Tue, 21 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Oct 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Paired Brackets</title>
+      <link>http://www.yegor256.com/2014/10/23/paired-brackets-notation.html</link>
+      <description>&lt;p&gt;Here is a notation rule I&amp;#39;m using in Java code:
+&lt;strong&gt;a bracket should either start/end
+a line or be paired on the same line&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The notation applies universally to any programming language (incl.
+Java, Ruby, Python, C++, PHP, etc.) where brackets are used
+for method/function calls.&lt;/p&gt;
+
+&lt;p&gt;Here is how your code will look, if you follow
+this &amp;quot;Paired Brackets&amp;quot; notation:&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ends the line&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// open/close at the same line&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;hello, %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;Lebowski&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// starts the line&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Obviously, the line with a closing bracket should start at the same
+indentation level as the line with its opening pair.&lt;/p&gt;
+
+&lt;p&gt;This is how your IDE will render the code if you
+follow this notation (IntelliJ IDEA):&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/intellij-idea-indentation.png' style='width:529px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sublime Text will also appreciate it:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/sublime-text-indentation.png' style='width:584px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you see, those light vertical lines at the left side
+of the code help you to navigate, if you follow the notation.&lt;/p&gt;
+
+&lt;p&gt;Those multiple closing brackets may look strange to you
+at the beginning &amp;mdash; but give yourself some time and you will
+get used to them :)&lt;/p&gt;
+
+&lt;h2 id=&quot;fluent&quot;&gt;Fluent&lt;/h2&gt;
+
+&lt;p&gt;This is how I would recommend formatting fluent method calls
+(this is Java in &lt;a href=&quot;https://netbeans.org/&quot;&gt;NetBeans&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/netbeans-fluent-indentation.png' style='width:637px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;arrays&quot;&gt;Arrays&lt;/h2&gt;
+
+&lt;p&gt;Here is how you format an array in &amp;quot;Paired Brackets&amp;quot; notation
+(this is Ruby in &lt;a href=&quot;https://www.jetbrains.com/ruby/&quot;&gt;RubyMine&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/rubymine-array-indentation.png' style='width:568px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you see, the same principle applies to square and curled brackets.&lt;/p&gt;
+
+&lt;h2 id=&quot;json&quot;&gt;JSON&lt;/h2&gt;
+
+&lt;p&gt;The same principle is applicable to JSON formatting. This is
+a small JSON document in &lt;a href=&quot;http://panic.com/coda/&quot;&gt;Coda 2&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/coda-json-indentation.png' style='width:406px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;/h2&gt;
+
+&lt;p&gt;JavaScript should also follow the same principle. This is
+how your &lt;code&gt;.js&lt;/code&gt; code would look in &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/atom-javascript-indentation.png' style='width:520px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
+
+&lt;p&gt;Finally, here is Python in &lt;a href=&quot;https://www.jetbrains.com/pycharm/&quot;&gt;PyCharm&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/pycharm-python-indentation.png' style='width:852px;' alt='figure'/&gt;&lt;/figure&gt;
+</description>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/10/23/paired-brackets-notation.html</guid>
+      <dc:date>2014-10-23T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Incremental Billing</title>
       <link>http://www.yegor256.com/2014/10/21/incremental-billing.html</link>
@@ -113,6 +214,10 @@ a micro-step towards any of these.&lt;/p&gt;
 delivered during the week, the amount of time spent on its development
 and its total cost. Every increment costs you 30-60 minutes of a programmer&amp;#39;s
 time (plus our fees).&lt;/p&gt;
+
+&lt;p&gt;Besides that, by the end of the week, you get an updated version
+of project plan, with a re-estimated budget. Thus, you see what was
+done so far and how much needs to be done, according to our estimate.&lt;/p&gt;
 
 &lt;p&gt;How does this help you not lose/waste money? Here&amp;#39;s how:&lt;/p&gt;
 
@@ -2060,27 +2165,6 @@ is proper security of sensitive data.&lt;/p&gt;
       <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</guid>
       <dc:date>2014-09-11T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Anti-Patterns in OOP</title>
-      <link>http://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html</link>
-      <description>&lt;p&gt;Here they come:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL References&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;Utility Classes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;Mutable Objects&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;Getters and Setters&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Singletons&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Controllers, Managers, Validators&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Public Static Methods&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Avoid them at all cost.&lt;/p&gt;
-</description>
-      <pubDate>Wed, 10 Sep 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html</guid>
-      <dc:date>2014-09-10T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
