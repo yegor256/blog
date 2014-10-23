@@ -111,6 +111,10 @@ delivered during the week, the amount of time spent on its development
 and its total cost. Every increment costs you 30-60 minutes of a programmer's
 time (plus our fees).
 
+Besides that, by the end of the week, you get an updated version
+of project plan, with a re-estimated budget. Thus, you see what was
+done so far and how much needs to be done, according to our estimate.
+
 How does this help you not lose/waste money? Here's how:
 
  * you fully control your budget
