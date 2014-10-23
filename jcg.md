@@ -24,4 +24,6 @@ These articles are re-published by [JavaCodeGeeks.com](http://www.javacodegeeks.
 It's a awesome resource for Java developers, I highly
 recommend to read me there :)
 
+<a href="/rss-jcg.xml" title="RSS feed"><i class="icon icon-rss"></i></a>
+
 {{ site.categories['jcg'] | tagged_list }}

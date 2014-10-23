@@ -18,7 +18,6 @@ gems: ['jekyll-sass', 'jekyll-plantuml', 'jekyll-press']
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com
-rss_name: rss.xml
 rss_post_limit: 15
 
 # see https://github.com/noct/jekyll-sass
@@ -29,7 +28,7 @@ sass:
 
 # see https://github.com/stereobooster/jekyll-press
 jekyll-press:
-  exclude: '/rss.xml'
+  exclude: ['/rss.xml', '/rss-jcg.xml']
 
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
