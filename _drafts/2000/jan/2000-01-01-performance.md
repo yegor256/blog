@@ -6,7 +6,7 @@ tags: mgmt programming
 description:
   Twenty years ago we worried about performance. Now
   it is time to worry about maintainability, even though
-  it often compromises the performance
+  it often compromises performance.
 keywords:
   - performance vs maintainability
   - software performance
@@ -17,16 +17,16 @@ keywords:
 
 Twenty years ago, the best programmer was the one
 capable of fitting an entire application into a 64Kb
-`.COM` file. Those who were able to get the maximum
-from that poor Intel 80386 were icons of programming.
+`.COM` file. Those who were able to get the most out of
+that poor Intel 80386 were the icons of programming.
 
 That's because twenty years ago computers were expensive and programmers
-were cheap. That was the time of "hacker mentality".
-This time is over. This mentality is not appreciated any more,
+were cheap. That was the time of the "hacker mentality".
+That time is over. That mentality is not appreciated any more,
 because the market situation is completely opposite.
 
 Today, computers are cheap and programmers are expensive.
-This is the era of "designer mentality", when readability
+This is the era of the "designer mentality", when the readability
 of our code is much more important than its performance.
 
 <!--more-->
@@ -42,19 +42,19 @@ The first trend falls down and shows how much cheaper
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
 
-The second trend demonstrates how much software developers salaries
-escalated over the same period. Actually, they are trippled. I didn't find
-an official report about that, but I'm sure it's not a secret for anyone
-that salaries of programmers keep growing &mdash; $200,000 per year for
-a senior developer is not a dream any more while twenty years
-ago $60K was the best offer. I found
+The second trend demonstrates how much software developers' salaries
+escalated over the same period. More accurately, they tripled. I didn't find
+an official report about that, but I'm sure it's no secret to anyone
+that the salaries of programmers keep growing &mdash; $200,000 per year for
+a senior developer is not a dream any more... while twenty years
+ago $60K was the best offer around. I found
 [this article](http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html)
 very interesting about this very subject.
 
 Basically, this means that in order to create a PHP website
 in 1994 we had to spend 1000 times more on hardware and three times
-less on programmers than in 2014. And we're talking about the
-same stack of technologies here. The same Linux box with Apache HTTP Server
+less on programmers than we do now, in 2014. And we're talking about the
+same stack of technologies here. The same Linux box with an Apache HTTP Server
 inside.
 
 The difference is that in 1994, if our application had performance problems because of
@@ -64,11 +64,11 @@ in 2014 we pay $10.
 In 1994 it was much more efficient to hire more programmers and ask
 them to [optimize](https://en.wikipedia.org/wiki/Program_optimization)
 the code or even rewrite it, instead of buying new hardware. In 2014 the
-situation is exactly the opposite. It is much cheaper to double the
+situation is exactly the opposite. It is now much cheaper to double the
 size of the server (especially if the server is a virtual cloud one)
 instead of paying salaries for optimizing the software.
 
-In 1994 the best engineers had "hacker mentality", while in 2014
+In 1994 the best engineers had that "hacker mentality", while in 2014 the
 "designer mentality" is much more appreciated.
 
 ## Hacker Mentality
@@ -97,12 +97,12 @@ A hacker is a talented individual. He wants to express his
 talent in the software he writes. He enjoys coding and does
 it mostly for fun. I would say, he is married to his code and can't imagine
 its happy life after an eventual divorce. Code ownership is
-what a hacker is about &mdash; he understand himself as an "owner"
+what a hacker is about &mdash; he understands himself as an "owner"
 of the code.
 
 When I ask one of my hacker friends &mdash; "How will someone understand
 what this code does?" I almost always hear the same answer &mdash;
-"They will ask me!" (usually said very proudly with a sincere smile).
+"They will ask me!" (usually said very proudly, with a sincere smile).
 
 ## Designer Mentality
 
@@ -122,7 +122,7 @@ public int fibo(final int pos) {
 }
 {% endhighlight %}
 
-I think these qualities attributes a good designer:
+I think these qualities can be attributed to a good designer:
 
  * tends to use traditional programming techniques
  * assumes everybody is a newbie and writes accordingly
@@ -140,18 +140,18 @@ he leaves the project his code and his ideas stay and work.
 
 The highest satisfaction for a good designer
 is to see his code living its own life &mdash; being modified, improved,
-refactored and eventually retired. A designer feels himself as a parent
+refactored and eventually retired. A designer sees himself as a parent
 of the code &mdash; once it is old enough to walk and talk, it has
 to live its own life.
 
 ## The Future
 
-If you consider yourself a hacker, I believe it's time to change. Time of
+If you consider yourself a hacker, I believe it's time to change. The time of
 hackers is fading out.
 
-In the near future we will even stop thinking in terms of "hardware" and will
-run our application in elastic computational platforms with unlimited
-amount of memory, CPU power and storage space. We will simply pay
+In the near future we will probably even stop thinking in terms of "hardware" and will
+run our applications in elastic computational platforms with unlimited
+amounts of memory, CPU power and storage space. We will simply pay
 for resource utilization and almost any performance issue will just add a few extra
 dollars to our monthly bills. We won't care about optimization any more.
 
@@ -159,7 +159,7 @@ At the same time, good software engineers will become more and more expensive
 and will charge $500+ per hour just to check out software and give
 a diagnosis. Just like good lawyers or dentists.
 
-That's why, while developing a new software product, those who pay for it, will
+That's why, while developing a new software product, those who pay for it will
 care mostly about its maintainability. Project sponsors will
 understand that the best solution they can get for their money is
 the one that is the most readable, maintainable, and automated.
