@@ -75,9 +75,54 @@ Github account, I get excited and ready to offer a higher rate.
 
 ## -1 Georgraphic Location
 
+It is a common practice to pay higher rates to those who live in more
+expensive countries. When I'm getting resumes from San Francisco programmers,
+their rates are $70+ per hour. Same skills and experience cost
+$15-20 in Karachi. The reason here is the cost of life &mdash;
+it is much higher in the US than in Pakistan.
 
+However, this reason doesn't sound logical to me. If you're driving a more
+expensive car, we have to pay you a higher salary? The same with the
+place to stay. You've chosen the country
+you live in. You're using all the benefits of a well-developed country
+and you're paying for them. It's your choice.
+
+Want to pay $40 for a lunch? Become a better engineer. Until then,
+buy a hot dog for a few bucks. Just saying that "I'm already here and my lunch costs $40"
+is not an argument.
 
 ## +1 StackOverflow.com
+
+We all know what StackOverflow is but very few people (suprisingly few!)
+actively contribute to it. If your profile there is empty (or you don't have
+it at all) I realize that you 1) don't have any questions to ask
+and 2) you have nothing to answer.
+
+If you're not asking anything there, you are not growing. Your education
+process stopped some time ago, probably right after you got an office job.
+Or maybe you're too shy to ask? Or you can't describe your questions
+in an accurate and precise format? Or maybe all your questions already
+have answers? In either case, it's sad.
+
+If you're not answering, you simply have nothing to say. In most cases
+this means that you're not solving complex and unique problems.
+You're simply wiring together well-known components and
+collect your paychecks.
+
+Very often I hear people saying that they solve most of their problems
+by asking their colleagues sitting next to them in the office. They say
+they simply don't need StackOverflow (or similar resources, if they exist)
+because their team is so great that any questions can be answered internally.
+That's good for the team and bad for you. You don't have a skill
+of finding an answer in a public Internet. In our projects we discourage
+any horizontal communications between programmers, and you won't be
+able to get any help from anyone. You will be on your own and you will fail,
+because you used to be patronized by someone senior, in your office.
+
+StackOverflow is not just an indicator of how smart you are and how many
+upvotes your "best programming joke" got. It is a proof that you
+can find answers to your questions by communicating with people you don't know.
+It is a very important skill.
 
 ## +1 Certificates
 
