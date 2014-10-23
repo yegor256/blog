@@ -124,12 +124,30 @@ upvotes your "best programming joke" got. It is a proof that you
 can find answers to your questions by communicating with people you don't know.
 It is a very important skill.
 
+## -1 Years of Experience
+
+"I'm a 7-years Java programmers!" &mdash; so what? This number means only
+one thing to me &mdash; you managed to survive in some office for seven years.
+Or maybe in a few offices. You managed to convience someone that he
+has to pay you for seven years of being in his office. Does it mean
+that you wrote something useful?
+Does it mean that your code was perfect? It doesn't mean anything of that.
+
+Years of experience is a false indicator. It actually plays against yourself,
+in combination of other indicators mentioned above. If your CV says that
+you just started to program two years ago and your Github
+and StackOverflow accounts are empty &mdash; there is still a chance
+you will improve. You're just in the beginning of your career. However,
+if your CV says that you're a "10-years seasoned architect" with zero
+open source contribution &mdash; this means that either you're lying about
+your ten years of experience or you're absolutely useless as an architect.
+
 ## +1 Certificates
+
+
 
 ## +1 Writing
 
 books, blogs, articles,
 
-## -1 Years of Experience
-
-##
+## +1 References
