@@ -5,7 +5,7 @@ date: 2014-10-23
 tags: mgmt
 description:
   How do you know what monthly salary are you worth? What
-  factors should be taken into account?
+  factors should be taken into account? Here is my criteria.
 keywords:
   - monthly salary
   - programmer salary
