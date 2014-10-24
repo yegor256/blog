@@ -185,8 +185,8 @@ working for, but it is definitely against you.
 ## <span style="color:red">-1</span> Skills Variety
 
 The more technologies or programming languages you know the less you cost.
-I'm not saying that it's not possible to be an expert in everything, even
-though it is an obvious truth. I'll give you a more pragmatic reason &mdash;
+I'm not saying that it's not possible to be an expert in many things at the same time
+&mdash; it is obvious. I'll give you a more pragmatic reason &mdash;
 competition. There are thousands of "Java7 programmers" on the market &mdash;
 we can easily choose whoever we need. But there are not so many
 "Hadoop programmers" or "XSLT designers".
@@ -197,6 +197,9 @@ We're usually paying more to narrow-skilled specialists, mostly because
 we have no choice. If a project we're working on needs a Lucene expert,
 we'll find the right person and will try to do our best to get him/her on
 board. Doing our best means increasing the price, in most cases.
+
+Thus, when I'm hearing that you're "experienced in MySQL, PostgreSQL, Oracle and Sqlite"
+I realize that you know very little about databases.
 
 ## <span style="color:green">+1</span> Talks and Publications
 
