@@ -7,9 +7,3 @@ $light-gray: lighten($black, 83);
 
 $width: 700px;
 $em: 19px;
-
-@mixin unprintable() {
-  @media print {
-    display: none;
-  }
-}

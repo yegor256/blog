@@ -23,9 +23,9 @@ I hear very different numbers, from $5 to $500 per hour. I never
 say no, but usually come up with my own estimate. This article
 explains what factors I do and don't take into account. These are
 my personal criteria, don't take them as an industry standard. However,
-I find them logical and I'll try to explain that logic.
+I find them logical and I'll try to explain.
 
-## +1 Open Source Contribution
+## <span style="color:green">+1</span> Open Source Contribution
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -37,7 +37,7 @@ If you have nothing to show here, I see three posible causes.
 You're **too shy to share** your code because **it's crap**. Obviously,
 this is not a good sign. Not because your code could be bad, but because
 you're not brave enough to face this fact and improve. In our teams we
-[pay a lot of attention]({% post_url 2014/aug/2014-08-13-strict-code-quality-control %})
+[pay a lot of attention]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 to the quality of code and most of our
 new team members got surprised by how high is our quality bar. You will also
 be surprised. The question is whether you will be able to adopt and improve
@@ -66,14 +66,14 @@ know what can be done better? You're not able to at least find, report and fix
 a bug in some open source product you're using every day? This means
 that you won't be able to find areas of improvement in our projects as well,
 while we rely on your ability to
-[discover problems creatively]({% post_url 2014/apr/2014-04-13-bugs-are-welcome %}).
+[discover problems creatively]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
 Thus, if your Github account is empty and your CV doesn't position yourself
 as "an active contributor to Linux kernel" (yeah, why not?), I immediately
 lose interest. On the other hand, when I see a 100+ stars project in your
 Github account, I get excited and ready to offer a higher rate.
 
-## -1 Georgraphic Location
+## <span style="color:red">-1</span> Georgraphic Location
 
 It is a common practice to pay higher rates to those who live in more
 expensive countries. When I'm getting resumes from San Francisco programmers,
@@ -83,15 +83,23 @@ it is much higher in the US than in Pakistan.
 
 However, this reason doesn't sound logical to me. If you're driving a more
 expensive car, we have to pay you a higher salary? The same with the
-place to stay. You've chosen the country
+place to stay. You've chosen the country that
 you live in. You're using all the benefits of a well-developed country
-and you're paying for them. It's your choice.
+and you're paying for them. It's your choice. You decided to spend more money
+for the quality of your life &mdash; what it has to do with me?
 
-Want to pay $40 for a lunch? Become a better engineer. Until then,
-buy a hot dog for a few bucks. Just saying that "I'm already here and my lunch costs $40"
+Want to pay $30 for a lunch? Become a better engineer. Until then,
+buy a hot dog for a few bucks. Just saying that
+"I'm already here and my lunch costs $30"
 is not an argument.
 
-## +1 StackOverflow.com
+Thus, the more expensive is the place where you live, the less money will
+stay in your pocket. For us it means that $100 will motivate a programmer
+from Karachi much stronger than the same $100 will motivate the same person,
+if she would live in San Francisco. Thus, we prefer to work with people
+whose expenses are lower. Our money will simply work better.
+
+## <span style="color:green">+1</span> StackOverflow.com
 
 We all know what StackOverflow is but very few people (suprisingly few!)
 actively contribute to it. If your profile there is empty (or you don't have
@@ -124,17 +132,17 @@ upvotes your "best programming joke" got. It is a proof that you
 can find answers to your questions by communicating with people you don't know.
 It is a very important skill.
 
-## -1 Years of Experience
+## <span style="color:red">-1</span> Years of Experience
 
-"I'm a 7-years Java programmers!" &mdash; so what? This number means only
-one thing to me &mdash; you managed to survive in some office for seven years.
+"I'm writing Java for 10 years!" &mdash; so what? This number means only
+one thing to me &mdash; you managed to survive in some office for ten years.
 Or maybe in a few offices. You managed to convience someone that he
-has to pay you for seven years of being in his office. Does it mean
+has to pay you for ten years of being in his office. Does it mean
 that you wrote something useful?
 Does it mean that your code was perfect? It doesn't mean anything of that.
 
-Years of experience is a false indicator. It actually plays against yourself,
-in combination of other indicators mentioned above. If your CV says that
+Years of experience is a false indicator. It actually may play against yourself,
+in combination with other indicators mentioned above. If your CV says that
 you just started to program two years ago and your Github
 and StackOverflow accounts are empty &mdash; there is still a chance
 you will improve. You're just in the beginning of your career. However,
@@ -142,7 +150,10 @@ if your CV says that you're a "10-years seasoned architect" with zero
 open source contribution &mdash; this means that either you're lying about
 your ten years of experience or you're absolutely useless as an architect.
 
-## +1 Certificates
+My point is that "years of experience" argument should be used very carefully.
+Play this card only if you have other merits. Otherwise, keep it to yourself.
+
+## <span style="color:green">+1</span> Certificates
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
@@ -154,19 +165,67 @@ is a high probability of failure, which is also rather embarassing.
 
 It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you earned no certifications
-in your entire career, it is one of the following.
+in your entire career, it is one of the following reasons:
 
 You're **afraid to lose**. A serious certification may cost a few hundred
-dollars (I paid over $700 for SCEA) and you will not get a refund if you
+dollars (I paid over $700 for [SCEA](https://en.wikipedia.org/wiki/Oracle_Certification_Program))
+and you will not get a refund if you
 fail. If you're afraid to lose, you're afraid to fight. This means,
 you'll chicken out in a real-life situation, where a complex problem
 will need to be solved.
 
-You don't think certifications are important.
+You **don't invest** into your profile. This most probably means that you don't
+want to change companies and prefer to find a peaceful office, where you
+can stay forever. I remember I said once to a friend of mine &mdash;
+"you will greately improve your CV if you pass this certification". He
+answered with a smile &mdash; "I hope I won't need a CV any more, I like
+this company". This attitude is very beneficial for the company you're
+working for, but it is definitely against you.
 
-## +1 Writing
+## <span style="color:red">-1</span> Skills Variety
 
-books, blogs, articles,
+The more technologies or programming languages you know the less you cost.
+I'm not saying that it's not possible to be an expert in everything, even
+though it is an obvious truth. I'll give you a more pragmatic reason &mdash;
+competition. There are thousands of "Java7 programmers" on the market &mdash;
+we can easily choose whoever we need. But there are not so many
+"Hadoop programmers" or "XSLT designers".
 
-## +1 References
+If you focus yourself on some specific area and become an expert there,
+your chances to find a job are lower, but the money you will get is bigger.
+We're usually paying more to narrow-skilled specialists, mostly because
+we have no choice. If a project we're working on needs a Lucene expert,
+we'll find the right person and will try to do our best to get him/her on
+board. Doing our best means increasing the price, in most cases.
 
+## <span style="color:green">+1</span> Talks and Publications
+
+I think it is obvious that having a blog (about programming, not about
+your favorite cat) is a positive factor. Even better is to be an
+occasional speaker at conferences or meetups. When it is a blog, I
+pay attention to the amount of comments people leave for your articles.
+If it is a conference, the most important criteria is how difficult it
+was to get to the list of speakers.
+
+Both blog articles and conference presentations make you much more
+valuable as a specialist. Mostly because they demonstrate that some
+people already reviewed your work and your talent. And it was not just
+a single employer, but a group of other programmers and engineers.
+This means that we also can rely on your opinions.
+
+## Rates
+
+**$100+** per hour we gladly pay to an expert who owns a few popular open source
+products; his/her StackOverflow score is above 20K; he has certifications,
+articles, presentations, and maybe even patents.
+
+**$50+** we pay to a professional programmer who has open
+source projects on his own or is an active contributor; his StackOverflow
+score is over 5K; he is writing about software development; he
+possesses a few certifications.
+
+**$30+** we pay to a programmer who regularly contributes to
+open source code; he is present in StackOverflow; he has some
+certifications.
+
+**$15** we pay to everybody else.
