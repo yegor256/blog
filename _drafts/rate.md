@@ -15,26 +15,28 @@ keywords:
 ---
 
 I'm getting a few emails every day from programmers
-interested to work with us remotely. The first question I usually
-ask is "what is your rate?" What surprises me is how
-often people under-estimate and over-estimate themselves.
+interested to work with [Teamed.io](http://www.teamed.io) remotely.
+The first question I usually ask is "what is your rate?"
+(we pay [by the hour]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}))
+What surprises me is how
+often people incorrectly estimate themselves, in both directions.
 
 I hear very different numbers, from $5 to $500 per hour. I never
 say no, but usually come up with my own estimate. This article
 explains what factors I do and don't take into account. These are
-my personal criteria, don't take them as an industry standard. However,
-I find them logical and I'll try to explain.
+my personal criteria, don't take them as an industry standard.
+I find them objective and logical &mdash; let me explain.
 
 ## <span style="color:green">+1</span> Open Source Contribution
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
 Do you have your own open source libraries that are used by
-the community? Do you write code that is publicly available and used?
+some community? Do you write code that is publicly available and used?
 
 If you have nothing to show here, I see three posible causes.
 
-You're **too shy to share** your code because **it's crap**. Obviously,
+First, you're **too shy to share** your code because **it's crap**. Obviously,
 this is not a good sign. Not because your code could be bad, but because
 you're not brave enough to face this fact and improve. In our teams we
 [pay a lot of attention]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
@@ -43,9 +45,10 @@ new team members got surprised by how high is our quality bar. You will also
 be surprised. The question is whether you will be able to adopt and improve
 or you will give up and quit. If you didn't share your code before
 and never dealt with a negative feedback, you won't feel comfortable
-in a project where quality requirements are high.
+in our projects, where quality requirements are very high.
 
-You work from nine till five, for food, **without passion**. Actually,
+Second possible cause is that
+you work from nine till five, for food, **without passion**. Actually,
 nobody manifests it that way. Instead, I often hear something like
 "my company doesn't pay me for open source contribution and
 at home I want to spend time with my family". In a modern software
@@ -53,14 +56,16 @@ development most of the code we're working with is open source &mdash;
 libraries, frameworks, tools, instruments, etc. Almost everything you're using
 in your commercial projects is open source. By paying your salary your
 employer does already invest into open source products,
-because you're an active user of them. The problem is that you are not
-interested to become more active. Lack of passion and self-motivation.
+because you're an active user of them. The problem is that *you* are not
+interested to become more active in that contribution.
+I see it as a lack of passion and self-motivation.
 Will you be an effective developer in our projects? Not at all, because our
-entire management model relies on self-motivation.
+entire management model relies on [self-motivation]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}).
 
-You don't know what to write and where to contribute, which means
+The last possible cause is that
+you don't know what to write and where to contribute, which means
 **lack of creativity**. As I mentioned above, almost everything we're using
-now is open source, and is full of bugs and not-yet-implemented features.
+now is open source, and it is full of bugs and not-yet-implemented features.
 At the same time, you don't see any areas for improvement? You don't
 know what can be done better? You're not able to at least find, report and fix
 a bug in some open source product you're using every day? This means
@@ -90,8 +95,7 @@ for the quality of your life &mdash; what it has to do with me?
 
 Want to pay $30 for a lunch? Become a better engineer. Until then,
 buy a hot dog for a few bucks. Just saying that
-"I'm already here and my lunch costs $30"
-is not an argument.
+"I'm already here and my lunch costs $30" is not an argument.
 
 Thus, the more expensive is the place where you live, the less money will
 stay in your pocket. For us it means that $100 will motivate a programmer
@@ -103,16 +107,16 @@ whose expenses are lower. Our money will simply work better.
 
 We all know what StackOverflow is but very few people (suprisingly few!)
 actively contribute to it. If your profile there is empty (or you don't have
-it at all) I realize that you 1) don't have any questions to ask
+one) I realize that you 1) don't have any questions to ask
 and 2) you have nothing to answer.
 
-If you're not asking anything there, you are not growing. Your education
+First, if you're not asking anything there, you are not growing. Your education
 process stopped some time ago, probably right after you got an office job.
 Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In either case, it's sad.
 
-If you're not answering, you simply have nothing to say. In most cases
+Second, if you're not answering, you simply have nothing to say. In most cases
 this means that you're not solving complex and unique problems.
 You're simply wiring together well-known components and
 collect your paychecks.
@@ -121,15 +125,17 @@ Very often I hear people saying that they solve most of their problems
 by asking their colleagues sitting next to them in the office. They say
 they simply don't need StackOverflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
-That's good for the team and bad for you. You don't have a skill
-of finding an answer in a public Internet. In our projects we discourage
+That's good for the team and bad for you. You don't have a very important skill
+of finding an answer in a public Internet. In our projects we
+[discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any horizontal communications between programmers, and you won't be
 able to get any help from anyone. You will be on your own and you will fail,
 because you used to be patronized by someone senior, in your office.
 
 StackOverflow is not just an indicator of how smart you are and how many
-upvotes your "best programming joke" got. It is a proof that you
-can find answers to your questions by communicating with people you don't know.
+upvotes you for got for the ["best programming joke"](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke).
+It is a proof that you can find answers
+to your questions by communicating with people you don't know.
 It is a very important skill.
 
 ## <span style="color:red">-1</span> Years of Experience
@@ -137,8 +143,8 @@ It is a very important skill.
 "I'm writing Java for 10 years!" &mdash; so what? This number means only
 one thing to me &mdash; you managed to survive in some office for ten years.
 Or maybe in a few offices. You managed to convience someone that he
-has to pay you for ten years of being in his office. Does it mean
-that you wrote something useful?
+has to pay you for ten years of sitting in his building. Does it mean
+that you were writing something useful?
 Does it mean that your code was perfect? It doesn't mean anything of that.
 
 Years of experience is a false indicator. It actually may play against yourself,
@@ -148,7 +154,7 @@ and StackOverflow accounts are empty &mdash; there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-years seasoned architect" with zero
 open source contribution &mdash; this means that either you're lying about
-your ten years of experience or you're absolutely useless as an architect.
+your that ten years or you're absolutely useless as an architect.
 
 My point is that "years of experience" argument should be used very carefully.
 Play this card only if you have other merits. Otherwise, keep it to yourself.
@@ -157,7 +163,7 @@ Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
-pass an exam. Not an easy one and not online. It is a real exam take in
+pass an exam. Not an easy one and not online. It is a real exam taken in
 a certification center, where you're sitting in front of a computer for a few
 hours, without any books or Internet access, answering questions. Rather
 humiliating activity for a respected software developer? Indeed. And there
@@ -167,20 +173,26 @@ It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you earned no certifications
 in your entire career, it is one of the following reasons:
 
-You're **afraid to lose**. A serious certification may cost a few hundred
+First, you're **afraid to lose**. A serious certification may cost a few hundred
 dollars (I paid over $700 for [SCEA](https://en.wikipedia.org/wiki/Oracle_Certification_Program))
 and you will not get a refund if you
 fail. If you're afraid to lose, you're afraid to fight. This means,
 you'll chicken out in a real-life situation, where a complex problem
 will need to be solved.
 
-You **don't invest** into your profile. This most probably means that you don't
+Second, you **don't invest** into your profile. This most probably means that you don't
 want to change companies and prefer to find a peaceful office, where you
 can stay forever. I remember I said once to a friend of mine &mdash;
 "you will greately improve your CV if you pass this certification". He
 answered with a smile &mdash; "I hope I won't need a CV any more, I like
 this company". This attitude is very beneficial for the company you're
 working for, but it is definitely against you.
+
+In my experience, the best team players are those who work for themselves.
+Healthy individualism is a key success factor. If your primary objective
+is to earn for yourself (money, reputation, skills, or knowledge) &mdash;
+you will be very effective in our projects. Certifications in your
+profile is an indicator of that healthy individualism we're looking for.
 
 ## <span style="color:red">-1</span> Skills Variety
 
@@ -216,6 +228,15 @@ people already reviewed your work and your talent. And it was not just
 a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
+Besides that, if you write and present regularly, you have a very important
+skill/talent &mdash; you can present your ideas in a "digestable" way.
+In our project we
+[discourage informal communications]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
+and use ticketing systems instead. In that tickets you will have
+to explain your ideas, questions or concerns so that everybody will
+understand you. Without enough presentation skills you won't survive
+in your projects.
+
 ## Rates
 
 **$100+** per hour we gladly pay to an expert who owns a few popular open source
@@ -232,3 +253,9 @@ open source code; he is present in StackOverflow; he has some
 certifications.
 
 **$15** we pay to everybody else.
+
+Don't get me wrong and don't take these numbers personally. The rate
+you're getting is a measurable metric of your professional level not of you as a person.
+Besides, the level is not static, it is changing every day, and it's entirely in your hands.
+
+I wrote this article mostly in order to motivate you to grow.
