@@ -22,9 +22,6 @@ keywords:
   - oop immutable objects
   - why immutable
   - why immutable objects are better
-discussions:
-  javacodegeeks: http://www.javacodegeeks.com/2014/09/objects-should-be-immutable.html
-  reddit: http://www.reddit.com/r/java/comments/27o915/objects_should_be_immutable/
 ---
 
 In object-oriented programming, an object is

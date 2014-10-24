@@ -18,8 +18,6 @@ keywords:
   - java httpclient
   - sample http client in java
   - simple http client in java
-discussions:
-  reddit: http://www.reddit.com/r/java/comments/22rfdc/fluent_java_http_client/
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}

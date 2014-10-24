@@ -76,14 +76,6 @@ layout: default
       <article class="main" role="article" itemprop="articleBody">
         {{ content }}
       </article>
-      {% if page.discussions %}
-        <p>
-          Discuss it at:
-          {% for link in page.discussions %}
-            <a href="{{ link[1] }}">{{ link[0] }}</a>
-          {% endfor %}
-        </p>
-      {% endif %}
     </main>
     {% if site.related_posts.size > 0 %}
       <div class="unprintable">

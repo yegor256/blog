@@ -14,8 +14,6 @@ keywords:
   - xml modification
   - xml manipulation
   - xpath
-discussions:
-  reddit: http://www.reddit.com/r/java/comments/22wsng/xembly_an_assembly_for_xml_java_implementation/
 ---
 
 {% badge http://img.xembly.org/logo-256x256.png 64 http://www.xembly.org %}

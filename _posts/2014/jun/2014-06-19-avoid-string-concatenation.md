@@ -18,8 +18,6 @@ keywords:
   - string concatenation is a bad practice
   - string.format vs concatenation
   - formatter vs concatenation
-discussions:
-  reddit: http://redd.it/28k51w
 ---
 
 This is "string concatentation", and it is a bad practice:
