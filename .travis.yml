@@ -18,6 +18,7 @@ install:
   - sudo mv sfnt2woff /usr/local/bin/
   - cd ..
   - rm -rf sfnt2woff
+  - npm install cssshrink
 env:
   global:
     - secure: "HVUG1XQk3K1BTTN8H4rbTInBaaZw3s9J1xLeDuQuwd5P4n5x/N22JUFyt5VV7pCCJZQvsodofLLP/8OOA4am/8FAEtON9vHk9gPJDS3oO/LgRzjkbU+S1ks8FNRMlLo6B0DIq9cF3LtX4Ed7VUkAjymntL9CYyJDsud6Upz190g="
