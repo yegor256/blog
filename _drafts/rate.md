@@ -261,7 +261,17 @@ doing it.
 ## Education
 
 BSc, MSc, PhD... do we care? Not really. Education is very similar to
-the "previous employment" mentioned above.
+the "previous employment" mentioned above. It doesn't really matter
+where exactly you've spent that five years after school. What matters
+is what have you done during that time. If you have nothing to say
+about your activity in the university than what will the name of it
+tell me?
+
+Well, of course, if it is Stanford or MIT, this will make a difference. In this
+case I can see that you managed to pass their graduation standards and managed to
+find money to study there. This is a good sign and will definitely increase
+your rate. But if it is some mambo-jambo university from nowhere (like
+the one I graduated from), keep this information to yourself.
 
 ## Rates
 
