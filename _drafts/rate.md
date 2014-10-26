@@ -27,7 +27,7 @@ explains what factors I do and don't take into account. These are
 my personal criteria, don't take them as an industry standard.
 I find them objective and logical &mdash; let me explain.
 
-## <span style="color:green">+1</span> Open Source Contribution
+## Open Source Contribution
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -78,7 +78,7 @@ as "an active contributor to Linux kernel" (yeah, why not?), I immediately
 lose interest. On the other hand, when I see a 100+ stars project in your
 Github account, I get excited and ready to offer a higher rate.
 
-## <span style="color:red">-1</span> Georgraphic Location
+## Georgraphic Location
 
 It is a common practice to pay higher rates to those who live in more
 expensive countries. When I'm getting resumes from San Francisco programmers,
@@ -103,7 +103,7 @@ from Karachi much stronger than the same $100 will motivate the same person,
 if she would live in San Francisco. Thus, we prefer to work with people
 whose expenses are lower. Our money will simply work better.
 
-## <span style="color:green">+1</span> StackOverflow.com
+## StackOverflow.com Reputation
 
 We all know what StackOverflow is but very few people (suprisingly few!)
 actively contribute to it. If your profile there is empty (or you don't have
@@ -138,7 +138,7 @@ It is a proof that you can find answers
 to your questions by communicating with people you don't know.
 It is a very important skill.
 
-## <span style="color:red">-1</span> Years of Experience
+## Years of Experience
 
 "I'm writing Java for 10 years!" &mdash; so what? This number means only
 one thing to me &mdash; you managed to survive in some office for ten years.
@@ -159,7 +159,7 @@ your that ten years or you're absolutely useless as an architect.
 My point is that "years of experience" argument should be used very carefully.
 Play this card only if you have other merits. Otherwise, keep it to yourself.
 
-## <span style="color:green">+1</span> Certificates
+## Certifications
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
@@ -194,7 +194,7 @@ is to earn for yourself (money, reputation, skills, or knowledge) &mdash;
 you will be very effective in our projects. Certifications in your
 profile is an indicator of that healthy individualism we're looking for.
 
-## <span style="color:red">-1</span> Skills Variety
+## Skills Variety
 
 The more technologies or programming languages you know the less you cost.
 I'm not saying that it's not possible to be an expert in many things at the same time
@@ -213,7 +213,7 @@ board. Doing our best means increasing the price, in most cases.
 Thus, when I'm hearing that you're "experienced in MySQL, PostgreSQL, Oracle and Sqlite"
 I realize that you know very little about databases.
 
-## <span style="color:green">+1</span> Talks and Publications
+## Talks and Publications
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
@@ -236,6 +236,32 @@ and use ticketing systems instead. In that tickets you will have
 to explain your ideas, questions or concerns so that everybody will
 understand you. Without enough presentation skills you won't survive
 in your projects.
+
+BTW, some software developers even file patents in their names &mdash; why
+can't you do this?
+
+## Previous Employment
+
+I usually don't pay much attention to this section of your CV. Our management
+model is [so different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
+from anything you can see anywhere else that it doesn't really matter
+how many times you were fired before and how senior
+position you have/had with your full-time employer. Even if your title
+is "CTO of Twitter" &mdash; it doesn't mean anything to me.
+
+My experience tells me that the bigger the company and the higher the position
+in it &mdash; the further away you stay from the source code and from
+real technical decisions. Most of the time these VPs and CTOs are spending for
+management meetings and internal politics.
+
+I'm much more interested in **what** you've done over the last years than
+in **where** you've done it and how did you they call you while you were
+doing it.
+
+## Education
+
+BSc, MSc, PhD... do we care? Not really. Education is very similar to
+the "previous employment" mentioned above.
 
 ## Rates
 
