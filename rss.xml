@@ -10,12 +10,172 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 23 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Are You a Hacker or a Designer?</title>
+      <link>http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html</link>
+      <description>&lt;p&gt;Twenty years ago, the best programmer was the one
+capable of fitting an entire application into a 64Kb
+&lt;code&gt;.COM&lt;/code&gt; file. Those who were able to get the most out of
+that poor Intel 80386 were the icons of programming.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s because twenty years ago computers were expensive and programmers
+were cheap. That was the time of the &amp;quot;hacker mentality&amp;quot;.
+That time is over. That mentality is not appreciated any more,
+because the market situation is completely opposite.&lt;/p&gt;
+
+&lt;p&gt;Today, computers are cheap and programmers are expensive.
+This is the era of the &amp;quot;designer mentality&amp;quot;, when the readability
+of our code is much more important than its performance.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;iframe class=&quot;video&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;//www.youtube.com/embed/qdqcayTLlLk&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;prices-vs-salaries&quot;&gt;Prices vs Salaries&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/trends.png' style='width:300px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Look at this graph. It is a comparison of two trends over the
+last twenty years (1994-2014).
+The first trend falls down and shows how much cheaper
+&lt;a href=&quot;http://www.jcmit.com/memoryprice.htm&quot;&gt;computer memory&lt;/a&gt;
+and &lt;a href=&quot;http://ns1758.ca/winch/winchest.html&quot;&gt;HDD storage&lt;/a&gt;
+have become over the last twenty years.&lt;/p&gt;
+
+&lt;p&gt;The second trend demonstrates how much software developers&amp;#39; salaries
+escalated over the same period. More accurately, they tripled. I didn&amp;#39;t find
+an official report about that, but I&amp;#39;m sure it&amp;#39;s no secret to anyone
+that the salaries of programmers keep growing &amp;mdash; $200,000 per year for
+a senior developer is not a dream any more... while twenty years
+ago $60K was the best offer around. I found
+&lt;a href=&quot;http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html&quot;&gt;this article&lt;/a&gt;
+very interesting about this very subject.&lt;/p&gt;
+
+&lt;p&gt;Basically, this means that in order to create a PHP website
+in 1994 we had to spend 1000 times more on hardware and three times
+less on programmers than we do now, in 2014. And we&amp;#39;re talking about the
+same stack of technologies here. The same Linux box with an Apache HTTP Server
+inside.&lt;/p&gt;
+
+&lt;p&gt;The difference is that in 1994, if our application had performance problems because of
+hardware limitations, we paid $35,000 per each additional gigabyte of RAM, while
+in 2014 we pay $10.&lt;/p&gt;
+
+&lt;p&gt;In 1994 it was much more efficient to hire more programmers and ask
+them to &lt;a href=&quot;https://en.wikipedia.org/wiki/Program_optimization&quot;&gt;optimize&lt;/a&gt;
+the code or even rewrite it, instead of buying new hardware. In 2014 the
+situation is exactly the opposite. It is now much cheaper to double the
+size of the server (especially if the server is a virtual cloud one)
+instead of paying salaries for optimizing the software.&lt;/p&gt;
+
+&lt;p&gt;In 1994 the best engineers had that &amp;quot;hacker mentality&amp;quot;, while in 2014 the
+&amp;quot;designer mentality&amp;quot; is much more appreciated.&lt;/p&gt;
+
+&lt;h2 id=&quot;hacker-mentality&quot;&gt;Hacker Mentality&lt;/h2&gt;
+
+&lt;p&gt;Someone with a hacker mentality would call this
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Fibonacci_number&quot;&gt;Fibonacci&lt;/a&gt;
+Java method an &amp;quot;elegant code&amp;quot; (would you?):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I would highlight these qualities of a good
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Hacker_%28computer_security%29&quot;&gt;hacker&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;uses all known (and unknown) features of a programming language&lt;/li&gt;
+&lt;li&gt;discriminates others as hackers and newbies and writes for hackers&lt;/li&gt;
+&lt;li&gt;gets bored and frustrated by rules and standards&lt;/li&gt;
+&lt;li&gt;doesn&amp;#39;t write unit tests &amp;mdash; juniors will write them later&lt;/li&gt;
+&lt;li&gt;enjoys fire-fighting &amp;mdash; that&amp;#39;s how his talent manifests&lt;/li&gt;
+&lt;li&gt;prefers talks over docs, since they are much more fun&lt;/li&gt;
+&lt;li&gt;hates to see his code being modified by someone else&lt;/li&gt;
+&lt;li&gt;likes to dedicate himself to one project at a time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A hacker is a talented individual. He wants to express his
+talent in the software he writes. He enjoys coding and does
+it mostly for fun. I would say, he is married to his code and can&amp;#39;t imagine
+its happy life after an eventual divorce. Code ownership is
+what a hacker is about &amp;mdash; he understands himself as an &amp;quot;owner&amp;quot;
+of the code.&lt;/p&gt;
+
+&lt;p&gt;When I ask one of my hacker friends &amp;mdash; &amp;quot;How will someone understand
+what this code does?&amp;quot; I almost always hear the same answer &amp;mdash;
+&amp;quot;They will ask me!&amp;quot; (usually said very proudly, with a sincere smile).&lt;/p&gt;
+
+&lt;h2 id=&quot;designer-mentality&quot;&gt;Designer Mentality&lt;/h2&gt;
+
+&lt;p&gt;Someone with a designer mentality would refactor the code above
+to make it easier to read. He would call this Java function an &amp;quot;elegant code&amp;quot;
+(how about you?):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I think these qualities can be attributed to a good designer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tends to use traditional programming techniques&lt;/li&gt;
+&lt;li&gt;assumes everybody is a newbie and writes accordingly&lt;/li&gt;
+&lt;li&gt;enjoys setting rules and following them&lt;/li&gt;
+&lt;li&gt;prefers docs over talks and automation over docs&lt;/li&gt;
+&lt;li&gt;spends most of his coding time on unit tests&lt;/li&gt;
+&lt;li&gt;hates fire-fighting and working over time&lt;/li&gt;
+&lt;li&gt;loves to see his code being modified and refactored&lt;/li&gt;
+&lt;li&gt;works with a few projects at the same time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A designer is a talented team player. He contributes to the team
+processes, standards, rules, education, and discipline as much as he
+contributes to the source code. He always makes sure that once
+he leaves the project his code and his ideas stay and work.&lt;/p&gt;
+
+&lt;p&gt;The highest satisfaction for a good designer
+is to see his code living its own life &amp;mdash; being modified, improved,
+refactored and eventually retired. A designer sees himself as a parent
+of the code &amp;mdash; once it is old enough to walk and talk, it has
+to live its own life.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-future&quot;&gt;The Future&lt;/h2&gt;
+
+&lt;p&gt;If you consider yourself a hacker, I believe it&amp;#39;s time to change. The time of
+hackers is fading out.&lt;/p&gt;
+
+&lt;p&gt;In the near future we will probably even stop thinking in terms of &amp;quot;hardware&amp;quot; and will
+run our applications in elastic computational platforms with unlimited
+amounts of memory, CPU power and storage space. We will simply pay
+for resource utilization and almost any performance issue will just add a few extra
+dollars to our monthly bills. We won&amp;#39;t care about optimization any more.&lt;/p&gt;
+
+&lt;p&gt;At the same time, good software engineers will become more and more expensive
+and will charge $500+ per hour just to check out software and give
+a diagnosis. Just like good lawyers or dentists.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why, while developing a new software product, those who pay for it will
+care mostly about its maintainability. Project sponsors will
+understand that the best solution they can get for their money is
+the one that is the most readable, maintainable, and automated.&lt;/p&gt;
+
+&lt;p&gt;Not the fastest.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 26 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html</guid>
+      <dc:date>2014-10-26T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Paired Brackets</title>
       <link>http://www.yegor256.com/2014/10/23/paired-brackets-notation.html</link>
@@ -1946,225 +2106,6 @@ I will try to help you.&lt;/p&gt;
       <pubDate>Sat, 13 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/13/deploying-to-heroku.html</guid>
       <dc:date>2014-09-13T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Deployment Script vs. Rultor</title>
-      <link>http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;When I explain how &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
-very often I hear something like:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;But I already have a script that deploys everything automatically.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This response is very common, so I decided to summarize my three main arguments for
-automated Rultor deployment/release processes in one article: 1) isolated docker containers,
-2) visibility of logs and 3) security of credentials.&lt;/p&gt;
-
-&lt;p&gt;Read about them and see what Rultor gives you on top of &lt;strong&gt;your existing&lt;/strong&gt;
-deployment script(s).&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/09/charlie-and-chocolate-factory-father.png' style='width:600px;' alt='Charlie and the Chocolate Factory (2005) by Tim Burton'/&gt;&lt;figcaption&gt;Charlie and the Chocolate Factory (2005) by Tim Burton&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Before we start with the arguments, let me emphasize that Rultor
-is a useful interface to your custom scripts. When you decide
-to automate deployment with Rultor, you don&amp;#39;t throw away any of your
-existing scripts. You just teach Rultor how to call them.&lt;/p&gt;
-
-&lt;h2 id=&quot;isolated-docker-containers&quot;&gt;Isolated Docker Containers&lt;/h2&gt;
-
-&lt;p&gt;The first advantage you get once you start calling your deployment
-scripts from Rultor is the &lt;a href=&quot;/2014/07/29/docker-in-rultor.html&quot;&gt;usage of Docker&lt;/a&gt;.
-I&amp;#39;m sure you know what &lt;a href=&quot;http://www.docker.io&quot;&gt;Docker&lt;/a&gt; is, but for those who don&amp;#39;t &amp;mdash; it is a
-manager of virtual Linux &amp;quot;machines&amp;quot;. It&amp;#39;s a command line script
-that you call when you need to run some script in a new virtual machine (aka &amp;quot;container&amp;quot;).
-Docker starts the container almost immediately and runs your script. The beauty
-of Docker is that every container is a perfectly isolated Linux environment, with its
-own file system, memory, processes, etc.&lt;/p&gt;
-
-&lt;p&gt;When you tell Rultor to run your deployment script, it starts a new Docker
-container and runs your script there. But what benefit does this give me, you ask?&lt;/p&gt;
-
-&lt;p&gt;The main benefit is that the container gets destroyed right after your script
-is done. This means that you can do all pre-configuration inside the
-container without any fear of conflict with your main working
-platform. Let me give an example.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m developing on MacBook, where I install and remove packages which I need for development.
-At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, phing,
-phpunit, phpcs and xdebug. Every MacOS version needs to be configured specifically
-to get these applications up and running, and it&amp;#39;s a time-consuming job.&lt;/p&gt;
-
-&lt;p&gt;I can change laptops, and I can change MacOS versions, but the project stays the same. It
-still requires the same set of packages in order to run its deployment script
-successfully. And the project is not in active development any more. I simply
-don&amp;#39;t need these packages for my day-to-day work, since I&amp;#39;m working with Java more now.
-But, when I need to make a minor fix to that PHP project and deploy it,
-I have to install all the required PHP packages and configure them.
-Only after that can I deploy that minor fix.&lt;/p&gt;
-
-&lt;p&gt;It is annoying, to say the least.&lt;/p&gt;
-
-&lt;p&gt;Docker gives me the ability to automate all of this together. My &lt;strong&gt;existing&lt;/strong&gt; deployment
-script will get a preamble, which will install and configure all necessary
-PHP-related packages in a clean Ubuntu container. This preamble will be executed
-on every run of my deployment script, &lt;strong&gt;inside&lt;/strong&gt; a Docker container. For example,
-it may look like this:&lt;/p&gt;
-
-&lt;p&gt;My deployment script looked like this before I started to use Rultor:&lt;/p&gt;
-
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;1
-2
-3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-phing &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
-git ftp push --user &lt;span class=&quot;s2&quot;&gt;&amp;quot;..&amp;quot;&lt;/span&gt; --passwd &lt;span class=&quot;s2&quot;&gt;&amp;quot;..&amp;quot;&lt;/span&gt; --syncroot php/src ftp://ftp.example.com/
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Just two lines. The first one is a full run of unit tests. The second one
-is an FTP deployment to the production server. Very simple. But this script
-will only work if PHP 5.3, MySQL, phing, xdebug, phpcs and phpunit are installed.
-Again, it&amp;#39;s a lot of work to install and configure them every time I upgrade
-my MacOS or change a laptop.&lt;/p&gt;
-
-&lt;p&gt;Needless to say, that if/when someone joins the project and
-tries to run my scripts, he/she will have to do this pre-installation
-work again.&lt;/p&gt;
-
-&lt;p&gt;So, here is a new script, which I&amp;#39;m using now.
-It is being executed inside a new Docker container, every time:&lt;/p&gt;
-
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# First, we install all prerequisites&lt;/span&gt;
-sudo apt-get install -y php5 php5-mysql mysql
-sudo apt-get install php-pear
-sudo pear channel-discover pear.phpunit.de
-sudo pear install phpunit/PHPUnit
-sudo pear install PHP_CodeSniffer
-sudo pecl install xdebug
-sudo pear channel-discover pear.phing.info
-sudo pear install phing/phing
-&lt;span class=&quot;c&quot;&gt;# And now the same script I had before&lt;/span&gt;
-phing &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt;
-git ftp push --user &lt;span class=&quot;s2&quot;&gt;&amp;quot;..&amp;quot;&lt;/span&gt; --passwd &lt;span class=&quot;s2&quot;&gt;&amp;quot;..&amp;quot;&lt;/span&gt; --syncroot php/src ftp://ftp.example.com/
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Obviously, running this script on my MacBook (without virtualization) would
-cause a lot of trouble. Well, I don&amp;#39;t even have &lt;code&gt;apt-get&lt;/code&gt; here :)&lt;/p&gt;
-
-&lt;p&gt;Thus, the first benefit that Rultor gives you is an isolation
-of your deployment script in its own virtual environment. We have this
-mostly thanks to Docker.&lt;/p&gt;
-
-&lt;h2 id=&quot;visibility-of-logs&quot;&gt;Visibility of Logs&lt;/h2&gt;
-
-&lt;p&gt;Traditionally, we keep deployment scripts in some &lt;code&gt;~/deploy&lt;/code&gt; directory
-and run them with a magic set of parameters. In a small project, you
-do this yourself and this directory is on your own laptop. In a bigger
-project, there is a &amp;quot;deployment&amp;quot; server, that has that magic directory
-with a set of scripts that can be executed only by a few trusted
-senior developers. I&amp;#39;ve seen this setup many times.&lt;/p&gt;
-
-&lt;p&gt;The biggest issue here is traceability. It&amp;#39;s almost impossible to find
-out who deployed what and why some particular deployment failed. The senior
-deployment gurus simply SSH to the server and run those magic scripts
-with magic parameters. Logs are usually lost and problem tracking
-is very difficult or impossible.&lt;/p&gt;
-
-&lt;p&gt;Rultor offers something different. With Rultor, there is no SSH access
-to deployment scripts any more. All scripts stay in the &lt;code&gt;.rultor.yml&lt;/code&gt; configuration
-file, and you start them by posting messages in your issue tracking system
-(for example Github, JIRA or Trac). Rultor runs the script and publishes
-its full log right to your ticket. The log stays with your project forever.
-You can always get back to the ticket you were working with and check
-why deployment failed and what instructions were actually executed.&lt;/p&gt;
-
-&lt;p&gt;For example, check out this Github issue, where I was deploying a new
-version of Rultor itself, and failed a few times:
-&lt;a href=&quot;https://github.com/yegor256/rultor/issues/563&quot;&gt;yegor256/rultor#563&lt;/a&gt;. All
-my failed attempts are protocolled. I can always get back to them and
-investigate. For a big project this information is vital.&lt;/p&gt;
-
-&lt;p&gt;Thus, the second benefit of Rultor versus a standalone deployment
-script is visibility of every single operation.&lt;/p&gt;
-
-&lt;h2 id=&quot;security-of-credentials&quot;&gt;Security of Credentials&lt;/h2&gt;
-
-&lt;p&gt;When you have a custom script sitting in your laptop or in that
-secret team deployment server, your production credentials stay
-close to it. There is just no other way. If your software works with
-a database, it has to know login credentials (user name, password, DB name,
-port number, etc.). Well, in the worst case, some people just hard
-code that information right into the source code.
-We aren&amp;#39;t even going to discuss this case, that&amp;#39;s how bad it is.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;#39;s say you separate your DB credentials from the source code. You will
-have something like a &lt;code&gt;db.properties&lt;/code&gt; or &lt;code&gt;db.ini&lt;/code&gt; file, which will be attached
-to the application right before deployment. You can also keep that file
-directly in the production server, which is even better, but not always
-possible, especially with PaaS deployments, for example.&lt;/p&gt;
-
-&lt;p&gt;A similar problem exists with deployments of artifacts to repositories. Say,
-you&amp;#39;re regularly deploying to RubyGems.org. Your &lt;code&gt;~/.gem/credentials&lt;/code&gt; will
-contain your secret API key.&lt;/p&gt;
-
-&lt;p&gt;So, very often, your deployment scripts are accompanied by some files
-with sensitive and secure information. And these files have this information
-in a plain, open format. No encryption, no protection. Just user names, passwords,
-codes and tokens in plain text.&lt;/p&gt;
-
-&lt;p&gt;Why is this bad? Well, for a single developer with a single laptop this doesn&amp;#39;t
-sound like a problem. Although, I don&amp;#39;t like the idea of losing a laptop somewhere
-in an airport with all credentials open and ready to be used. You may
-argue that there are disc protection tools, like FileVault for MacOS or
-BestCrypt for Windows. Yes, maybe.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;#39;s see what happens when we have a team of developers, working together
-and sharing those deployment scripts &lt;strong&gt;and&lt;/strong&gt; files with credentials. Once you
-give access to your deployment scripts to a new member of the team, you have
-to share all that sensitive data. There is just no way around it. In order
-to use the scripts he/she has to be able to open files with credentials.&lt;/p&gt;
-
-&lt;p&gt;This is a problem, if you care about the security of your data.&lt;/p&gt;
-
-&lt;p&gt;Rultor solves this problem by offering an on-the-fly GPG decryption of your
-sensitive data, right before they are used by your deployment scripts. In
-the &lt;code&gt;.rultor.yml&lt;/code&gt; configuration file you just say:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;decrypt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;db.ini&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;repo/db.ini.asc&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;l-Scalar-Plain&quot;&gt;ftp put db.ini production&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, you encrypt your &lt;code&gt;db.ini&lt;/code&gt; using a Rultor GPG key, and fearlessly
-commit &lt;code&gt;db.ini.asc&lt;/code&gt; to the repository. Nobody will be able to open and read
-that file, except the Rultor server itself, right before running the
-deployment script.&lt;/p&gt;
-
-&lt;p&gt;Thus, the third benefit of Rultor versus a standalone deployment script
-is proper security of sensitive data.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</guid>
-      <dc:date>2014-09-11T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
