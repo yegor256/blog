@@ -172,6 +172,7 @@ the one that is the most readable, maintainable, and automated.&lt;/p&gt;
 
 &lt;p&gt;Not the fastest.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Sun, 26 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html</guid>
       <dc:date>2014-10-26T00:00:00+00:00</dc:date>
@@ -273,6 +274,7 @@ how your &lt;code&gt;.js&lt;/code&gt; code would look in &lt;a href=&quot;https:
 
 &lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/10/pycharm-python-indentation.png' style='width:852px;' alt='figure'/&gt;&lt;/figure&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/23/paired-brackets-notation.html</guid>
       <dc:date>2014-10-23T00:00:00+00:00</dc:date>
@@ -396,6 +398,7 @@ improves the way we develop software but also fixes the flaws in
 the way you pay for it. Since it is a win-win model, it is beneficial
 for both programmers and for you &amp;mdash; the paying project sponsor.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/21/incremental-billing.html</guid>
       <dc:date>2014-10-21T00:00:00+00:00</dc:date>
@@ -610,6 +613,7 @@ you to bloat the Product Vision. The document has to be very short and explicit.
 
 &lt;p&gt;No lyrics, only statements.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/20/how-we-write-product-vision.html</guid>
       <dc:date>2014-10-20T00:00:00+00:00</dc:date>
@@ -698,6 +702,7 @@ and that his decisions are final.&lt;/p&gt;
 
 &lt;p&gt;That&amp;#39;s the only way of having a chance of building a perfect product.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/12/who-is-software-architect.html</guid>
       <dc:date>2014-10-12T00:00:00+00:00</dc:date>
@@ -847,6 +852,7 @@ attempts, and you don&amp;#39;t need to apologize. Fear factor is gone.&lt;/p&gt
 &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;&amp;quot;read-only master branch&amp;quot;&lt;/a&gt;
 principle in your project.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</guid>
       <dc:date>2014-10-08T00:00:00+00:00</dc:date>
@@ -915,6 +921,7 @@ through a number of suggestions and instructions. In the end, the
 problem was solved, and he was also paid for the solution. In total, the
 project spent 45 minutes, and the problem was solved.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</guid>
       <dc:date>2014-10-07T00:00:00+00:00</dc:date>
@@ -1113,6 +1120,7 @@ from Thinking.&lt;/p&gt;
 &lt;p&gt;BTW, the illustrations you see above are made by
 &lt;a href=&quot;https://www.behance.net/lopesbarbara&quot;&gt;Bárbara Lopes&lt;/a&gt;&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
       <dc:date>2014-10-06T00:00:00+00:00</dc:date>
@@ -1330,6 +1338,7 @@ continuous integration service is, it
 unless you make your
 &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;master branch read-only&lt;/a&gt;.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
       <dc:date>2014-10-05T00:00:00+00:00</dc:date>
@@ -1510,6 +1519,7 @@ should be instantiated.&lt;/p&gt;
 
 &lt;p&gt;And DI containers? In my opinion, they just add unnecessary noise.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Fri, 03 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/03/di-containers-are-evil.html</guid>
       <dc:date>2014-10-03T00:00:00+00:00</dc:date>
@@ -1628,6 +1638,7 @@ for anything except delivered results. We manage to do this mostly because
 our groud rules are very strict and non-ambiguous. And we never
 break them.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Wed, 24 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/24/why-monetary-awards-dont-work.html</guid>
       <dc:date>2014-09-24T00:00:00+00:00</dc:date>
@@ -1778,6 +1789,7 @@ inside the library and for its users.&lt;/p&gt;
 &lt;a href=&quot;http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html&quot;&gt;tl;dw: Stop mocking, start testing&lt;/a&gt;
 by Ned Batchelder.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</guid>
       <dc:date>2014-09-23T00:00:00+00:00</dc:date>
@@ -1823,6 +1835,7 @@ which I enjoyed to give :)&lt;/p&gt;
 
 &lt;p&gt;Enjoy :)&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/22/remote-programming-interview.html</guid>
       <dc:date>2014-09-22T00:00:00+00:00</dc:date>
@@ -2003,6 +2016,7 @@ truly understand and appreciate the beautiful world of true objects.&lt;/p&gt;
 a terrible anti-pattern. About it, in
 &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;one of the next posts&lt;/a&gt; :)&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</guid>
       <dc:date>2014-09-16T00:00:00+00:00</dc:date>
@@ -2103,6 +2117,7 @@ submit a ticket to the
 &lt;a href=&quot;https://github.com/yegor256/rultor/issues&quot;&gt;Rultor issue tracker&lt;/a&gt;.
 I will try to help you.&lt;/p&gt;
 </description>
+      <author>Yegor Bugayenko</author>
       <pubDate>Sat, 13 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/13/deploying-to-heroku.html</guid>
       <dc:date>2014-09-13T00:00:00+00:00</dc:date>
