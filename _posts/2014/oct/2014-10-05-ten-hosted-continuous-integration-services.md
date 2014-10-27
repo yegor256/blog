@@ -13,6 +13,7 @@ keywords:
   - cloud continuous integration
   - continuous integration in cloud
   - continuous integration service
+categories: jcg
 ---
 
 Every project I'm working with starts with a setup of continuous
@@ -82,7 +83,7 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://www.circleci.io">circleci.io</a></td>
+<tr><td><a href="http://www.circleci.com">circleci.com</a></td>
   <td class="rht"><a href="https://circleci.com/pricing">$19/mo</a></td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
@@ -92,7 +93,7 @@ Here they are, in order of my personal preference:
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td></tr>
-<tr><td><a href="http://ww.hosted-ci.com">hosted-ci.com</a></td>
+<tr><td><a href="http://www.hosted-ci.com">hosted-ci.com</a></td>
   <td class="rht"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
@@ -188,9 +189,9 @@ Besides that, works just fine.
 didn't reply to me when I asked for a Maven version update. Besides
 that, their badge is not updated correctly in Gitub README.md.
 
-{% badge /images/2014/10/circleci.png 64 http://www.circleci.io %}
+{% badge /images/2014/10/circleci.png 64 http://www.circleci.com %}
 
-[**circleci.io**](http://www.circleci.io) I still don't know why my build
+[**circleci.com**](http://www.circleci.com) I still don't know why my build
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
@@ -213,7 +214,7 @@ I'll try to build iOS Swift app with them soon....
 
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
-[Jenkins](http://www.jenkins-ci.com),
+[Jenkins](http://jenkins-ci.org/),
 [TeamCity](http://www.jetbrains.com/teamcity/),
 [Go](http://www.thoughtworks.com/products/go-continuous-delivery),
 [Strider](http://stridercd.com/),

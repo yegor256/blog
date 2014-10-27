@@ -1,5 +1,5 @@
 .buttons {
-  @include unprintable();
+  @extend .unprintable;
   .share {
     a, a:visited {
       text-decoration: none;

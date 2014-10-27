@@ -8,7 +8,7 @@ module Jekyll
       super(config)
 
       lunr_config = {
-        'excludes' => [],
+        'excludes' => ['/tag/.*'],
         'strip_index_html' => false,
         'min_length' => 3,
         'stopwords' => 'stopwords.txt'

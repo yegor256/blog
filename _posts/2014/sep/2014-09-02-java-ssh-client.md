@@ -15,6 +15,7 @@ keywords:
   - ssh libraries for java
   - open source ssh for java
   - ssh tunneling for java
+categories: jcg
 ---
 
 An execution of a shell command via SSH can be done in

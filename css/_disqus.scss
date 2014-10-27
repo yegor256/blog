@@ -2,7 +2,7 @@
 @import "wrapper";
 
 .disqus {
-  @include unprintable();
+  @extend .unprintable;
   @extend .wrapper;
   width: 80% !important;
   @media all and (max-width: $width * 1.3) {

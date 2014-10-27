@@ -17,6 +17,7 @@ keywords:
   - publish from github to maven central
   - upload to maven central
   - publishing to maven central with sonatype
+categories: jcg
 ---
 
 When I release a new version of [jcabi-aspects](http://aspects.jcabi.com),
@@ -42,7 +43,7 @@ strongly recommend moving there.
 ## Prepare Your POM
 
 Make sure your `pom.xml` contains all elements required by Sonatype,
-explained in [Central Sync Requirements](https://docs.sonatype.org/display/Repository/Central+Sync+Requirements).
+explained in [Central Sync Requirements](http://central.sonatype.org/pages/requirements.html).
 We will deploy to Sonatype, and they will syncronize all JAR (and not only)
 artifacts to Maven Central.
 

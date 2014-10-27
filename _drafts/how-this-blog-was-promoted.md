@@ -57,3 +57,14 @@ Reddit: 7%
 Twitter: 3%
 Hackernews: 3%
 
+24 Oct 2014.
+Traffic is coming from:
+Direct: 24%
+Reddit: 23%
+Google search: 12%
+Dzone: 12%
+Hackernews: 4%
+Stackoverflow: 4%
+Twitter: 3%
+Javacodegeeks: 3%
+Feedly: 2%

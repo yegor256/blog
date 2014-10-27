@@ -3,7 +3,7 @@ layout: post
 title: "Java Method Logging with AOP and Annotations"
 date: 2014-06-01
 tags: aop java logging jcabi
-categories: best
+categories: best jcg
 description:
   For traceability and debugging purposes, it can be very
   convenient to log execution details of every method.
@@ -24,9 +24,6 @@ keywords:
   - java method execution time annotation
   - log every method java
   - method logging java
-discussions:
-  reddit: http://www.reddit.com/r/java/comments/270k18/java_method_logging_with_aop_and_annotations/
-  coderanch: http://www.coderanch.com/t/634479/aop/Java-Method-Logging-AOP-Annotations
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)

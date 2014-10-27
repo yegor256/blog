@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are You a Hacker or a Designer?"
-date: 2000-01-01
+date: 2014-10-26
 tags: mgmt programming
 description:
   Twenty years ago we worried about performance. Now
@@ -30,6 +30,8 @@ This is the era of the "designer mentality", when the readability
 of our code is much more important than its performance.
 
 <!--more-->
+
+<iframe class="video" width="640" height="360" src="//www.youtube.com/embed/qdqcayTLlLk" allowfullscreen></iframe>
 
 ## Prices vs Salaries
 

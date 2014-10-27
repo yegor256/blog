@@ -3,7 +3,7 @@ layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   The article gives arguments about why
   classes/objects in object-oriented programming
@@ -22,9 +22,6 @@ keywords:
   - oop immutable objects
   - why immutable
   - why immutable objects are better
-discussions:
-  javacodegeeks: http://www.javacodegeeks.com/2014/09/objects-should-be-immutable.html
-  reddit: http://www.reddit.com/r/java/comments/27o915/objects_should_be_immutable/
 ---
 
 In object-oriented programming, an object is

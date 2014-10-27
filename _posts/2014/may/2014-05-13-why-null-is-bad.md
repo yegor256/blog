@@ -3,7 +3,7 @@ layout: post
 title: "Why NULL is Bad?"
 date: 2014-05-13
 tags: oop anti-pattern
-categories: best
+categories: best jcg
 description:
   Why NULL is a terrible practice in object-oriented programming?
   Despite the fact that it is used a lot and everywhere,
@@ -26,11 +26,6 @@ keywords:
   - nulls are evil
   - null objects are evil
   - say no to null
-discussions:
-  reddit: http://www.reddit.com/r/java/comments/25fko4/why_null_is_bad_especially_in_java/
-  hackernews: https://news.ycombinator.com/item?id=7736925
-  coderanch: http://www.coderanch.com/t/634046/patterns/null-terrible-practice-OOP-Java
-  javacodegeeks: http://www.javacodegeeks.com/2014/09/why-null-is-bad.html
 ---
 
 A simple example of `NULL` usage in Java:

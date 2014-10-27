@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Outsourcing, How It Fails"
-date: 2000-01-01
+title: "Incremental Billing"
+date: 2014-10-21
 tags: xdsd mgmt
 description:
   With either a Fixed Price or Time and Material contract,
@@ -21,7 +21,7 @@ basically two types of contracts:
 [fixed price](https://en.wikipedia.org/wiki/Fixed-price_contract) or
 [time-and-material](https://en.wikipedia.org/wiki/Time_and_materials).
 They are fundamentally different but the truth is that in either case &mdash;
-you lose.
+**you lose**.
 
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
@@ -49,11 +49,11 @@ I guess it means that in all failures you &mdash; the client &mdash; will be the
 
 ## Time and Material
 
-{% badge /images/2014/10/time-and-material-contract.svg 250 %}
+{% figure /images/2014/10/time-and-material-contract.svg 500 %}
 
 In T&M you will simply pay and pray. If your programmers
 appear to be honest workaholics you may get lucky and get something done.
-As you can see from the numbers above, however, this is rarely the case. Don't fool yourself; 
+As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
 there won't be any workaholics in your project. Even if you adopt micro-management
 and corporal punishment, your overall costs will be much higher than expected
 and the quality will suffer.
@@ -71,7 +71,7 @@ In the end &mdash; you lose.
 
 ## Fixed Price
 
-{% badge /images/2014/10/fixed-price-contract.svg 250 %}
+{% figure /images/2014/10/fixed-price-contract.svg 500 %}
 
 In Fixed Price you will feel secure at the beginning &mdash; "the statement
 of work specifies everything and the price is fixed, how can I lose?"
@@ -92,14 +92,14 @@ quality, in order to stay profitable.
 
 In either case &mdash; you lose.
 
-## Continuous Billing
+## Incremental Billing
 
 So, what is the solution? Is it possible to have win-win
 contracts with programmers?
 
-{% badge /images/2014/10/xdsd-invoice-example.svg 300 %}
+{% figure /images/2014/10/xdsd-invoice-example.svg 500 %}
 
-Yes, it is. We call it "Continuous Billing".
+Yes, it is. We call it "Incremental Billing".
 
 Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
 in less than an hour. Each completed task produces a new increment (aka a "release" or "version") of software.
@@ -110,6 +110,10 @@ By the end of a week you get a bill that lists every single increment
 delivered during the week, the amount of time spent on its development
 and its total cost. Every increment costs you 30-60 minutes of a programmer's
 time (plus our fees).
+
+Besides that, by the end of the week, you get an updated version
+of a project plan, with a re-estimated budget. Thus, you see what was
+done so far and how much needs to be done, according to our estimate.
 
 How does this help you not lose/waste money? Here's how:
 

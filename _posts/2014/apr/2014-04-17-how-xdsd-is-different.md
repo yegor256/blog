@@ -132,7 +132,8 @@ because we don't trust anyone :) Read this article:
 ## No Compromises About Code Quality
 
 Before merge any changes to the `master` branch, we check the entire code base
-with unit tests and static analyzers. Unit testing is a very common component in
+with unit tests and [static analyzers]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}).
+Unit testing is a very common component in
 modern software development, and one by which you should not be surprised.
 However, the strictness of static analysis is something that often frustrates
 XDSD newcomers, and we understand that. We pay much more attention to the

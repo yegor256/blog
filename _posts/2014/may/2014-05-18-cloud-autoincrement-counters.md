@@ -18,9 +18,6 @@ keywords:
   - auto-increment cloud
   - atomic counters online
   - online atomic counter
-discussions:
-  hackernews: https://news.ycombinator.com/item?id=7765899
-  reddit: http://www.reddit.com/r/aws/comments/25x69p/atomic_counters_at_statefulco/
 ---
 
 {% badge /images/2014/04/dynamodb-logo.png 150 %}

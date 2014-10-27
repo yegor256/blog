@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paired Brackets"
-date: 2000-01-01
+date: 2014-10-23
 tags: java oop programming
 description:
   Paired Brackets notation makes your object-oriented

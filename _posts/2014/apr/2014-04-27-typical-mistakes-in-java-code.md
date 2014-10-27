@@ -21,9 +21,7 @@ keywords:
   - good class name
   - name of class in java
   - java class name
-discussions:
-  javacodegeeks: http://www.javacodegeeks.com/2014/09/typical-mistakes-in-java-code.html
-  reddit: http://www.reddit.com/r/java/comments/244nxp/typical_mistakes_in_java_code_my_code_review/
+categories: jcg
 ---
 
 This page contains most typical mistakes I see in the Java code of people
@@ -41,8 +39,7 @@ and to Java in particular.
 
 ## Class Names
 
-Read this short ["What is an Object?"](https://github.com/yegor256/d29/wiki/What-is-an-Object%3F)
-article. Your class should be an abstraction of a real life entity
+Your class should be an abstraction of a real life entity
 with no "validators", "controllers", "managers", etc.
 If your class name ends with an "-er" &mdash;
 it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).

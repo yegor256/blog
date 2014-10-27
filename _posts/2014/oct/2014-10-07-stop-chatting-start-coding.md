@@ -13,6 +13,7 @@ keywords:
   - agile conference calls
   - chat with programmers
   - formal project communications
+categories: jcg
 ---
 
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}

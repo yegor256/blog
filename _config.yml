@@ -1,7 +1,8 @@
 name: yegor256.com
+title: "Yegor Bugayenko"
 author: "Yegor Bugayenko"
-description: "Yegor Bugayenko About Programming"
-copyright: "Yegor Bugayenko, 2014"
+description: "Yegor Bugayenko"
+copyright: "(c) Yegor Bugayenko, 2014"
 encoding: utf-8
 timezone: America/San_Francisco
 markdown: redcarpet
@@ -13,17 +14,21 @@ paginate: 10
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
+gems: ['jekyll-sass', 'jekyll-plantuml', 'jekyll-press']
+
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com
-rss_name: rss.xml
 rss_post_limit: 15
 
 # see https://github.com/noct/jekyll-sass
-gems: ['jekyll-sass', 'jekyll-plantuml']
 sass:
   style: compressed
   deploy_style: compressed
   compile_in_place: false
+
+# see https://github.com/stereobooster/jekyll-press
+jekyll-press:
+  exclude: ['/rss.xml', '/rss-jcg.xml']
 
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index

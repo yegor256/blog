@@ -13,6 +13,7 @@ keywords:
   - how to schedule an agile project
   - project milestones
   - project phases
+categories: jcg
 ---
 
 In addition to being a hands-on programmer, I'm also co-founder and CTO of
