@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "How Much Do You Cost?"
-date: 2014-10-23
+date: 2014-10-29
 tags: mgmt
 description:
-  How do you know what monthly salary you are worth? What
+  How do you know what hourly rate you are worth? What
   factors should be taken into account? Here are my criteria.
 keywords:
   - monthly salary
@@ -13,6 +13,8 @@ keywords:
   - hourly rate of programmer
   - software developer hourly rate
 ---
+
+{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Teamed.io](http://www.teamed.io) remotely.
