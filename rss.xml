@@ -34,9 +34,11 @@ explains what factors I do and don&amp;#39;t take into account. These are
 my personal criteria; don&amp;#39;t take them as an industry standard.
 I do find them objective and logical, though &amp;mdash; so let me explain.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;h2 id=&quot;open-source-contribution&quot;&gt;Open Source Contribution&lt;/h2&gt;
 
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-open-source-contribution.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-open-source-contribution.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -149,7 +151,7 @@ It is a very important skill.&lt;/p&gt;
 
 &lt;h2 id=&quot;years-of-experience&quot;&gt;Years of Experience&lt;/h2&gt;
 
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-years-of-experience.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-years-of-experience.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&amp;quot;I&amp;#39;ve written Java for 10 years!&amp;quot; &amp;mdash; so what? This number means only
 one thing to me &amp;mdash; you managed to survive in some office for ten years.
@@ -172,7 +174,7 @@ Play this card only if you have other merits. Otherwise, keep it to yourself.&lt
 
 &lt;h2 id=&quot;certifications&quot;&gt;Certifications&lt;/h2&gt;
 
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-certifications.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-certifications.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;Oracle, Zend, Amazon, IBM, MySQL, etc. &amp;mdash;
 I&amp;#39;m talking about these certifications. In order to get them you should
@@ -228,7 +230,7 @@ I realize that you know very little about databases.&lt;/p&gt;
 
 &lt;h2 id=&quot;talks-and-publications&quot;&gt;Talks and Publications&lt;/h2&gt;
 
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-talks-and-publications.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-talks-and-publications.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
@@ -310,6 +312,9 @@ you&amp;#39;re getting is a measurable metric of your professional level, not of
 Besides, the level is not static, it is changing every day, and it&amp;#39;s entirely in your hands.&lt;/p&gt;
 
 &lt;p&gt;I wrote this article mostly in order to motivate you to grow.&lt;/p&gt;
+
+&lt;p&gt;BTW, illustrations you see above are created by
+&lt;a href=&quot;http://www.andreeamironiuc.com&quot;&gt;Andreea Mironiuc&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
