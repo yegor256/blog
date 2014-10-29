@@ -31,4 +31,6 @@ Here they come:
 
  * Public Static Methods
 
+<!--more-->
+
 Avoid them at all cost.
