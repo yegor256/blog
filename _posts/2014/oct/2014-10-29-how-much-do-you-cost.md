@@ -33,7 +33,7 @@ I do find them objective and logical, though &mdash; so let me explain.
 
 ## Open Source Contribution
 
-{% badge /images/2014/11/rate-open-source-contribution.png 250 %}
+{% badge /images/2014/11/rate-open-source-contribution.png 350 %}
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -146,7 +146,7 @@ It is a very important skill.
 
 ## Years of Experience
 
-{% badge /images/2014/11/rate-years-of-experience.png 250 %}
+{% badge /images/2014/11/rate-years-of-experience.png 350 %}
 
 "I've written Java for 10 years!" &mdash; so what? This number means only
 one thing to me &mdash; you managed to survive in some office for ten years.
@@ -169,7 +169,7 @@ Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 ## Certifications
 
-{% badge /images/2014/11/rate-certifications.png 250 %}
+{% badge /images/2014/11/rate-certifications.png 350 %}
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
@@ -225,7 +225,7 @@ I realize that you know very little about databases.
 
 ## Talks and Publications
 
-{% badge /images/2014/11/rate-talks-and-publications.png 250 %}
+{% badge /images/2014/11/rate-talks-and-publications.png 350 %}
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
@@ -307,3 +307,6 @@ you're getting is a measurable metric of your professional level, not of you as 
 Besides, the level is not static, it is changing every day, and it's entirely in your hands.
 
 I wrote this article mostly in order to motivate you to grow.
+
+BTW, illustrations you see above are created by
+[Andreea Mironiuc](http://www.andreeamironiuc.com)
