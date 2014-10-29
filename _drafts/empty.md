@@ -5,7 +5,8 @@ date: 2014-11-02
 tags: design
 description:
   Empty line inside your method body is an indicator
-  of a lack of cohesion in its design
+  of a lack of cohesion in its design and a good motivator
+  for immediate refactoring
 keywords:
   - empty line in method body
   - empty line is evil
@@ -16,7 +17,7 @@ keywords:
 
 The subject may sound like a joke, but it is not. An empty line,
 used as a separator of instructions in an object method, is a code smell.
-Why? In short, because a method should not be broken into parts. A method
+Why? In short, because a method may not contain "parts". A method
 should always do one thing (see Single Responsibility Principle) and its
 functional decomposition should be done by language constructs
 (for example, new methods), and **never** by empty lines.

@@ -5,7 +5,7 @@ date: 2014-10-26
 tags: stateful
 description:
   Free cloud stateful.co service helps you synchronize
-  parapell processes across multiple servers
+  across multiple servers or paralell processes on the same machine
 keywords:
   - Java synchronization between different JVMs
   - synchronization between different servers

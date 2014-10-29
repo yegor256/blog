@@ -29,6 +29,8 @@ I do find them objective and logical, though &mdash; so let me explain.
 
 ## Open Source Contribution
 
+{% badge /images/2014/11/rate-open-source-contribution.png 250 %}
+
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
 Do you have your own open source libraries that are used by
@@ -140,6 +142,8 @@ It is a very important skill.
 
 ## Years of Experience
 
+{% badge /images/2014/11/rate-years-of-experience.png 250 %}
+
 "I've written Java for 10 years!" &mdash; so what? This number means only
 one thing to me &mdash; you managed to survive in some office for ten years.
 Or maybe in a few offices. You managed to convince someone that he
@@ -160,6 +164,8 @@ My point is that the "years of experience" argument should be used very carefull
 Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 ## Certifications
+
+{% badge /images/2014/11/rate-certifications.png 250 %}
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
@@ -214,6 +220,8 @@ Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and Sqli
 I realize that you know very little about databases.
 
 ## Talks and Publications
+
+{% badge /images/2014/11/rate-talks-and-publications.png 250 %}
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an

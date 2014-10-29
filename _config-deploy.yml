@@ -1,0 +1,4 @@
+gems:
+  - jekyll-sass
+  - jekyll-plantuml
+  - jekyll-press
