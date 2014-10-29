@@ -29,6 +29,8 @@ explains what factors I do and don't take into account. These are
 my personal criteria; don't take them as an industry standard.
 I do find them objective and logical, though &mdash; so let me explain.
 
+<!--more-->
+
 ## Open Source Contribution
 
 {% badge /images/2014/11/rate-open-source-contribution.png 250 %}
