@@ -16,16 +16,16 @@ keywords:
 ---
 
 The subject may sound like a joke, but it is not. An empty line,
-used as a separator of instructions in an object method, is a code smell.
-Why? In short, because a method may not contain "parts". A method
-should always do one thing
-(see [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle))
+used as a separator of instructions in an object method, is a
+[code smell](https://en.wikipedia.org/wiki/Code_smell).
+Why? In short, because a method should **not** contain "parts". A method
+should always [do one thing](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 and its functional decomposition should be done by language constructs
 (for example, new methods), and **never** by empty lines.
 
 <!--more-->
 
-Look at this code (it smells to me):
+Look at this code (it does smell, doesn't it):
 
 {% highlight java %}
 final class TextFile {
@@ -61,10 +61,11 @@ final class TextFile {
 
 This method, first, loads the content of the file. Second, it
 counts how many lines match the regular expression provided. Why does
-method `grep` smells? Because it does two things instead of one.
+method `grep` smells? Because it does two things instead of one &mdash;
+it loads and it greps.
 
 If we make a rule, to avoid empty lines in method bodies, the method
-will have to be refactored in order to preserve the separation
+will have to be refactored in order to preserve the "separation of concerns"
 introduced by that empty line:
 
 {% highlight java %}
@@ -153,8 +154,6 @@ Of course, it's easier to just click `enter` a few times and continue to
 code right in the same method, instead of thinking and refactoring first.
 This laziness will eventually lead to the code that is hardly maintainable
 at all.
-
-... examples ...
 
 To prevent this from happening in your projects, stop using empty
 lines inside methods at all. Ideally, prohibit them in your automated build.
