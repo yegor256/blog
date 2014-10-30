@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "How Much Do You Cost?"
-date: 2014-10-23
+date: 2014-10-29
 tags: mgmt
 description:
-  How do you know what monthly salary you are worth? What
+  How do you know what hourly rate you are worth? What
   factors should be taken into account? Here are my criteria.
 keywords:
   - monthly salary
@@ -13,6 +13,8 @@ keywords:
   - hourly rate of programmer
   - software developer hourly rate
 ---
+
+{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Teamed.io](http://www.teamed.io) remotely.
@@ -27,7 +29,11 @@ explains what factors I do and don't take into account. These are
 my personal criteria; don't take them as an industry standard.
 I do find them objective and logical, though &mdash; so let me explain.
 
+<!--more-->
+
 ## Open Source Contribution
+
+{% badge /images/2014/11/rate-open-source-contribution.png 350 %}
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -140,6 +146,8 @@ It is a very important skill.
 
 ## Years of Experience
 
+{% badge /images/2014/11/rate-years-of-experience.png 350 %}
+
 "I've written Java for 10 years!" &mdash; so what? This number means only
 one thing to me &mdash; you managed to survive in some office for ten years.
 Or maybe in a few offices. You managed to convince someone that he
@@ -160,6 +168,8 @@ My point is that the "years of experience" argument should be used very carefull
 Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 ## Certifications
+
+{% badge /images/2014/11/rate-certifications.png 350 %}
 
 Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
 I'm talking about these certifications. In order to get them you should
@@ -214,6 +224,8 @@ Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and Sqli
 I realize that you know very little about databases.
 
 ## Talks and Publications
+
+{% badge /images/2014/11/rate-talks-and-publications.png 350 %}
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
@@ -295,3 +307,10 @@ you're getting is a measurable metric of your professional level, not of you as 
 Besides, the level is not static, it is changing every day, and it's entirely in your hands.
 
 I wrote this article mostly in order to motivate you to grow.
+
+All these criteria are applicable to new members of our teams. Once you
+start writing some code, we measure your performance and you may get
+completely different numbers, see
+[How Hourly Rate Is Calculated]({% pst 2014/apr/2014-04-20-how-hourly-rate-is-calculated %})
+
+BTW, illustrations you see above are created by Andreea Mironiuc.

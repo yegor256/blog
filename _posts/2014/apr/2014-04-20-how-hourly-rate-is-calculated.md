@@ -26,7 +26,8 @@ how we decide which hourly rate is acceptable for each project participant.
 
 When new people come to us, usually they have some numbers in mind. They know
 how much they expect to make per week, per month or per day. We rarely negotiate
-the payment rates, but rather just accept reasonable offers. Nonetheless, every
+the payment rates, but rather just accept reasonable offers
+(see [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})). Nonetheless, every
 few months, we review payments rates and change them accordingly (increasing or
 decreasing them as appropriate).
 

@@ -14,7 +14,10 @@ paginate: 10
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
-gems: ['jekyll-sass', 'jekyll-plantuml', 'jekyll-press']
+gems:
+  - jekyll-sass
+  - jekyll-plantuml
+  - jekyll-press
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com
@@ -39,6 +42,7 @@ sitemap:
   file: "/sitemap.xml"
   exclude:
     - "/rss.xml"
+    - "/rss-jcg.xml"
   include_posts:
     - "/index.html"
   change_frequency_name: "change_frequence"

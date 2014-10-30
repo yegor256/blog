@@ -3,6 +3,7 @@ layout: post
 title: "Continuous Integration is Dead"
 date: 2014-10-08
 tags: mgmt devops
+categories: jcg best
 description:
   Continuous integration is an awesome idea that
   doesn't work and can't work because of its
@@ -15,7 +16,6 @@ keywords:
   - continuous integration problems
   - continuous integration pitfalls
   - alternative to continuous integration
-categories: jcg
 ---
 
 A few days ago, my article
