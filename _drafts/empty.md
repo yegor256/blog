@@ -18,8 +18,9 @@ keywords:
 The subject may sound like a joke, but it is not. An empty line,
 used as a separator of instructions in an object method, is a code smell.
 Why? In short, because a method may not contain "parts". A method
-should always do one thing (see Single Responsibility Principle) and its
-functional decomposition should be done by language constructs
+should always do one thing
+(see [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle))
+and its functional decomposition should be done by language constructs
 (for example, new methods), and **never** by empty lines.
 
 <!--more-->
@@ -34,6 +35,18 @@ final class TextFile {
   }
   public int grep(Pattern regex) throws IOException {
     Collection<String> lines = new LinkedList<>();
+    FileReader reader = new BufferedReader(new FileReader(this.file));
+    try {
+      while (true) {
+        String line = reader.readLine();
+        if (line == null) {
+          break;
+        }
+        lines.add(line);
+      }
+    } finally {
+      reader.close();
+    }
 
     int total = 0;
     for (String line : lines) {
@@ -74,7 +87,19 @@ final class TextFile {
   }
   private Iterable<String> lines() throws IOException {
     Collection<String> lines = new LinkedList<>();
-    return lines;
+    FileReader reader = new BufferedReader(new FileReader(this.file));
+    try {
+      while (true) {
+        String line = reader.readLine();
+        if (line == null) {
+          break;
+        }
+        lines.add(line);
+      }
+      return lines;
+    } finally {
+      reader.close();
+    }
   }
 }
 {% endhighlight %}
@@ -98,7 +123,7 @@ definitely begging for refactoring:
 }
 {% endhighlight %}
 
-The empty line here is telling us (screaming, actually) that this `container`
+The empty line here is telling us (screaming, actually) that this `.container`
 class is too complex and has to be decomposed into two classes:
 
 {% highlight css %}
@@ -118,8 +143,9 @@ separate blocks of code. Moreover, very often I see empty blocks of
 two or even three lines, which are playing this evil role of a
 separator of concerns.
 
-Needless to say that a properly designed class must have up to five public
-methods and a properly designed method must have up to ten instructions.
+Needless to say that a properly designed class must have just a few public
+methods and a properly designed method must have up to ten instructions
+(accoding to Bob Martin).
 Empty lines inside methods encourage us to break this awesome rule and
 turn them into multi-page poems.
 
