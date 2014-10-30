@@ -45,10 +45,6 @@ email.addTo("dude@jcabi.com");
 email.send();
 {% endhighlight %}
 
-First, we create an instance of class `SimpleEmail`. It extends an abstract
-class `Email`. Let's take a closer look at it. There are 33 private
-properties, 120 methods and 2000 lines of code.
-
 {% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
 Here is how you do the same with [jcabi-email](http://email.jcabi.com):
@@ -65,6 +61,14 @@ postman.send(
     .with(new EnPlain("Dude, how are you?"))
 );
 {% endhighlight %}
+
+Let's discuss why my approach is better.
+
+## Separation of Concerns
+
+First, we create an instance of class `SimpleEmail`. It extends an abstract
+class `Email`. Let's take a closer look at it. There are 33 private
+properties, 120 methods and 2000 lines of code.
 
 ## Enclosure in LaTeX
 
