@@ -103,7 +103,7 @@ fix our build later. And [it's only logical]({% pst 2014/oct/2014-10-08-continuo
 <a href="/pdf/2014/guard-article.pdf"
   style="float:left;font-size:2em;margin-right:.5em;"
   title="Prevent Conflicts in Distributed Agile PHP Projects"><i class="icon icon-pdf"></i></a>
-Four years ago I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
+Four years ago, in 2010, I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
 called "Prevent Conflicts in Distributed Agile PHP Projects". In the article,
 a solution was proposed (full article in [PDF](/pdf/2014/guard-article.pdf))
 for Subversion and PHP.
