@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Empty Line is a Code Smell"
+title: "An Empty Line is a Code Smell"
 date: 2014-11-02
 tags: design
 description:
-  Empty line inside your method body is an indicator
+  An empty line inside your method body is an indicator
   of a lack of cohesion in its design and a good motivator
-  for immediate refactoring
+  for immediate refactoring.
 keywords:
   - empty line in method body
   - empty line is evil
@@ -25,7 +25,7 @@ and its functional decomposition should be done by language constructs
 
 <!--more-->
 
-Look at this code (it does smell, doesn't it):
+Look at this code (it does smell, doesn't it?):
 
 {% highlight java %}
 final class TextFile {
@@ -59,9 +59,9 @@ final class TextFile {
 }
 {% endhighlight %}
 
-This method, first, loads the content of the file. Second, it
-counts how many lines match the regular expression provided. Why does
-method `grep` smells? Because it does two things instead of one &mdash;
+This method first loads the content of the file. Second, it
+counts how many lines match the regular expression provided. So why does
+method `grep` smell? Because it does two things instead of one &mdash;
 it loads and it greps.
 
 If we make a rule, to avoid empty lines in method bodies, the method
@@ -107,9 +107,9 @@ final class TextFile {
 
 I believe it is obvious that this new class has methods that are
 much more cohesive and readable. Now every method is doing exactly
-one thing and it's easy to understand which thing it is.
+one thing, and it's easy to understand which thing it is.
 
-This idea about avoiding empty lines is applicable to other languages,
+This idea about avoiding empty lines is also applicable to other languages,
 not just Java/C++/Ruby, etc. For example, this CSS code is
 definitely begging for refactoring:
 
@@ -124,7 +124,7 @@ definitely begging for refactoring:
 }
 {% endhighlight %}
 
-The empty line here is telling us (screaming, actually) that this `.container`
+The empty line here is telling us (screaming at us, actually) that this `.container`
 class is too complex and has to be decomposed into two classes:
 
 {% highlight css %}
@@ -139,24 +139,23 @@ class is too complex and has to be decomposed into two classes:
 }
 {% endhighlight %}
 
-Unfortunately, it is a very common habit, to use empty lines to
-separate blocks of code. Moreover, very often I see empty blocks of
-two or even three lines, which are playing this evil role of a
-separator of concerns.
+Unfortunately, using empty lines to separate blocks of code is a very common habit. 
+Moreover, very often I see empty blocks of two or even three lines, which are all
+playing this evil role of a separator of concerns.
 
-Needless to say that a properly designed class must have just a few public
+Needless to say, a properly designed class must have just a few public
 methods and a properly designed method must have up to ten instructions
-(accoding to Bob Martin).
+(according to Bob Martin).
 Empty lines inside methods encourage us to break this awesome rule and
 turn them into multi-page poems.
 
 Of course, it's easier to just click `enter` a few times and continue to
 code right in the same method, instead of thinking and refactoring first.
-This laziness will eventually lead to the code that is hardly maintainable
+This laziness will eventually lead to code that is hardly maintainable
 at all.
 
 To prevent this from happening in your projects, stop using empty
-lines inside methods at all. Ideally, prohibit them in your automated build.
+lines inside methods, completely. Ideally, prohibit them in your automated build.
 In [qulice.com]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
 a static analysis tool we're using in all Java projects,
 we created a custom Checkstyle check that prohibits empty lines in every
