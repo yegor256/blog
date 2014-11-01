@@ -30,3 +30,5 @@ is a summary of what went wrong and why.
 <!--more-->
 
 ## How They Work
+
+Our model of work is strongly against any middle layers between us and programmers. We work only directly with those who write code. There is simply no need to have anyone between us. If you have a good programmer and can recommend him to us, we'll pay a finder's fee to you ($250), as soon as this programmer completes first 10 tasks with us.
