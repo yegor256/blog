@@ -20,7 +20,7 @@ Usage: send.rb [options]
   opt :letter, 'Newsletter name, e.g. "2014/june"', :type=>String, :required=>true
   opt :subject, 'Email subject', :type=>String, :required=>true
   opt :file, 'List of emails, absolute file path', :type=>String, :default=>'/code/home/subscribers.txt'
-  opt :dry, 'Dry run (always email to test@yegor256.com)', :default=>true
+  opt :dry, 'Dry run (always email to test@yegor256.com)'
 end
 
 fs = Liquid::LocalFileSystem.new('./_newsletters')
