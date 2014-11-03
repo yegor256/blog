@@ -10,12 +10,158 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Wed, 29 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Nov 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>An Empty Line is a Code Smell</title>
+      <link>http://www.yegor256.com/2014/11/03/empty-line-code-smell.html</link>
+      <description>&lt;p&gt;The subject may sound like a joke, but it is not. An empty line,
+used as a separator of instructions in an object method, is a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Code_smell&quot;&gt;code smell&lt;/a&gt;.
+Why? In short, because a method should &lt;strong&gt;not&lt;/strong&gt; contain &amp;quot;parts&amp;quot;. A method
+should always &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;do one thing&lt;/a&gt;
+and its functional decomposition should be done by language constructs
+(for example, new methods), and &lt;strong&gt;never&lt;/strong&gt; by empty lines.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Look at this Java class (it does smell, doesn&amp;#39;t it?):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TextFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pattern&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;FileReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FileReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This method first loads the content of the file. Second, it
+counts how many lines match the regular expression provided. So why does
+method &lt;code&gt;grep&lt;/code&gt; smell? Because it does two things instead of one &amp;mdash;
+it loads and it greps.&lt;/p&gt;
+
+&lt;p&gt;If we make a rule, to avoid empty lines in method bodies, the method
+will have to be refactored in order to preserve the &amp;quot;separation of concerns&amp;quot;
+introduced by that empty line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextFile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;TextFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pattern&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pattern&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;FileReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FileReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I believe it is obvious that this new class has methods that are
+much more cohesive and readable. Now every method is doing exactly
+one thing, and it&amp;#39;s easy to understand which thing it is.&lt;/p&gt;
+
+&lt;p&gt;This idea about avoiding empty lines is also applicable to other languages,
+not just Java/C++/Ruby, etc. For example, this CSS code is
+definitely begging for refactoring:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The empty line here is telling us (screaming at us, actually) that this &lt;code&gt;.container&lt;/code&gt;
+class is too complex and has to be decomposed into two classes:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.wide&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.important&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, using empty lines to separate blocks of code is a very common habit.
+Moreover, very often I see empty blocks of two or even three lines, which are all
+playing this evil role of a separator of concerns.&lt;/p&gt;
+
+&lt;p&gt;Needless to say, a properly designed class must have just a few public
+methods and a properly designed method must have up to ten instructions
+(according to Bob Martin).
+Empty lines inside methods encourage us to break this awesome rule and
+turn them into multi-page poems.&lt;/p&gt;
+
+&lt;p&gt;Of course, it&amp;#39;s easier to just click &lt;code&gt;enter&lt;/code&gt; a few times and continue to
+code right in the same method, instead of thinking and refactoring first.
+This laziness will eventually lead to code that is hardly maintainable
+at all.&lt;/p&gt;
+
+&lt;p&gt;To prevent this from happening in your projects, stop using empty
+lines inside methods, completely. Ideally, prohibit them in your automated build.
+In &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;qulice.com&lt;/a&gt;,
+a static analysis tool we&amp;#39;re using in all Java projects,
+we created a custom Checkstyle check that prohibits empty lines in every
+method.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 03 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/11/03/empty-line-code-smell.html</guid>
+      <dc:date>2014-11-03T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How Much Do You Cost?</title>
       <link>http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html</link>
@@ -29,7 +175,7 @@ What surprises me is how
 often people incorrectly estimate themselves, in both directions.&lt;/p&gt;
 
 &lt;p&gt;I hear very different numbers, from $5 to $500 per hour. I never
-say no, but usually come up with my own estimate. This article
+say no, but usually come up with my own hourly rate estimate. This article
 explains what factors I do and don&amp;#39;t take into account. These are
 my personal criteria; don&amp;#39;t take them as an industry standard.
 I do find them objective and logical, though &amp;mdash; so let me explain.&lt;/p&gt;
@@ -287,7 +433,7 @@ tell me?&lt;/p&gt;
 &lt;p&gt;Well, of course, if it is Stanford or MIT, this will make a difference. In this
 case I can see that you managed to pass their graduation standards and managed to
 find money to study there. This is a good sign and will definitely increase
-your rate. But if it is some mambo-jambo university from nowhere (like
+your hourly rate. But if it is some mambo-jambo university from nowhere (like
 the one I graduated from), keep this information to yourself.&lt;/p&gt;
 
 &lt;h2 id=&quot;rates&quot;&gt;Rates&lt;/h2&gt;
@@ -313,8 +459,12 @@ Besides, the level is not static, it is changing every day, and it&amp;#39;s ent
 
 &lt;p&gt;I wrote this article mostly in order to motivate you to grow.&lt;/p&gt;
 
-&lt;p&gt;BTW, illustrations you see above are created by
-&lt;a href=&quot;http://www.andreeamironiuc.com&quot;&gt;Andreea Mironiuc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;All these criteria are applicable to new members of our teams. Once you
+start writing some code, we measure your performance and you may get
+completely different numbers, see
+&lt;a href=&quot;/2014/04/20/how-hourly-rate-is-calculated.html&quot;&gt;How Hourly Rate Is Calculated&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BTW, illustrations you see above are created by Andreea Mironiuc.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
@@ -1816,7 +1966,7 @@ an application. This is how we create a &amp;quot;thinking engine&amp;quot; in
 &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; (full class is in
 &lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java&quot;&gt;&lt;code&gt;Agents.java&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&quot;https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Impressive? This is a true object composition.
 I believe this is how a proper object-oriented application
@@ -2144,187 +2294,6 @@ which I enjoyed to give :)&lt;/p&gt;
       <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/22/remote-programming-interview.html</guid>
       <dc:date>2014-09-22T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Getters/Setters. Evil. Period.</title>
-      <link>http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</link>
-      <description>&lt;p&gt;There is an old debate, started in 2003 by Allen Holub
-in this &lt;a href=&quot;http://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html&quot;&gt;Why getter and setter methods are evil&lt;/a&gt;
-famous article, about whether getters/setters is an anti-pattern
-and should be avoided or if it is something we inevitably need in object-oriented
-programming. I&amp;#39;ll try to add my two cents to this discussion.&lt;/p&gt;
-
-&lt;p&gt;The gist of the following text is this: getters and setters is
-a terrible practice and those who use it can&amp;#39;t be excused.
-Again, to avoid any misunderstanding, I&amp;#39;m not saying that get/set should be avoided when possible.
-No. I&amp;#39;m saying that you should &lt;strong&gt;never&lt;/strong&gt; have them near your code.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=NQQHJZPHOKM6BTCT'&gt;&lt;img src='http://www.yegor256.com/images/2014/09/object-thinking-by-david-west.png' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Arrogant enough to catch your attention? You&amp;#39;ve been using
-that get/set pattern for 15 years and you&amp;#39;re a respected Java architect?
-And you don&amp;#39;t want to hear that nonsense from a stranger? Well, I understand
-your feelings. I felt almost the same when I stumbled upon
-&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=NQQHJZPHOKM6BTCT&quot;&gt;Object Thinking&lt;/a&gt;
-by David West, the best book about object-oriented programming I&amp;#39;ve read so far.
-So please. Calm down and try to understand while I try to explain.&lt;/p&gt;
-
-&lt;h2 id=&quot;existing-arguments&quot;&gt;Existing Arguments&lt;/h2&gt;
-
-&lt;p&gt;There are a few arguments against &amp;quot;accessors&amp;quot;
-(another name for getters and setters), in an object-oriented world.
-All of them, I think, are not strong enough. Let&amp;#39;s briefly go
-through them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tell, Don&amp;#39;t Ask&lt;/strong&gt;
-Allen Holub says, &amp;quot;Don&amp;#39;t ask for the information
-you need to do the work; ask the object that has the information
-to do the work for you&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Violated Encapsulation Principle&lt;/strong&gt;
-An object can be teared apart by other objects, since they
-are able to inject any new data into it, through setters. The object simply
-can&amp;#39;t encapsulate its own state safely enough, since anyone
-can alter it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Exposed Implementation Details&lt;/strong&gt;
-If we can get an object out
-of another object, we are relying too much on the first object&amp;#39;s implementation
-details. If tomorrow it will change, say, the type of that result,
-we have to change our code as well.&lt;/p&gt;
-
-&lt;p&gt;All these justifications are reasonable, but they are missing the main point.&lt;/p&gt;
-
-&lt;h2 id=&quot;fundamental-misbelief&quot;&gt;Fundamental Misbelief&lt;/h2&gt;
-
-&lt;p&gt;Most programmers believe that an object is a data structure with methods.
-I&amp;#39;m quoting &lt;a href=&quot;http://java.dzone.com/articles/getters-and-setters-are-not&quot;&gt;Getters and Setters Are Not Evil&lt;/a&gt;,
-an article by Bozhidar Bozhanov:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;But the majority of objects for which people generate getters
-and setters are simple data holders.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This misconception is the consequence of a huge misunderstanding!
-Objects are not &amp;quot;simple data holders&amp;quot;. Objects are &lt;strong&gt;not&lt;/strong&gt; data structures
-with attached methods. This &amp;quot;data holder&amp;quot; concept came to object-oriented programming
-from procedural languages, especially C and COBOL.
-I&amp;#39;ll say it again: an object is &lt;strong&gt;not&lt;/strong&gt; a set of data elements
-and functions that manipulate them. An object is &lt;strong&gt;not&lt;/strong&gt; a data entity.&lt;/p&gt;
-
-&lt;p&gt;What is it then?&lt;/p&gt;
-
-&lt;h2 id=&quot;a-ball-and-a-dog&quot;&gt;A Ball and A Dog&lt;/h2&gt;
-
-&lt;p&gt;In true object-oriented programming, objects are
-living creatures, like you and me. They are living organisms,
-with their own behaviour, properties and a life cycle.&lt;/p&gt;
-
-&lt;p&gt;Can a living organism have a setter?
-Can you &amp;quot;set&amp;quot; a ball to a dog? Not really.
-But that is exactly what the following piece of software is doing:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Ball&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;How does that sound?&lt;/p&gt;
-
-&lt;p&gt;Can you get a ball from a dog? Well, you probably can,
-if she ate it and you&amp;#39;re doing surgery. In that case, yes, we can &amp;quot;get&amp;quot; a ball from a dog. This is what
-I&amp;#39;m talking about:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ball&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ball&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or an even more ridiculous example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setWeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;23kg&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Can you imagine this transaction in the real world? :)&lt;/p&gt;
-
-&lt;p&gt;Does it look similar to what you&amp;#39;re writing every day? If yes,
-then you&amp;#39;re a procedural programmer. Admit it. And this is what
-David West has to say about it, on page 30 of his book:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Step one in the transformation of a successful procedural developer
-into a successful object developer is a lobotomy.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Do you need a lobotomy? Well, I definitely needed one and received it, while
-reading West&amp;#39;s &lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=NQQHJZPHOKM6BTCT&quot;&gt;Object Thinking&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;object-thinking&quot;&gt;Object Thinking&lt;/h2&gt;
-
-&lt;p&gt;Start thinking like an object and you will immediately rename those methods.
-This is what you will probably get:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Ball&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ball&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ball&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;give&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, we&amp;#39;re treating the dog as a real animal, who can take a ball from us
-and can give it back, when we ask. Worth mentioning is that the
-dog can&amp;#39;t give &lt;code&gt;NULL&lt;/code&gt; back. Dogs simply don&amp;#39;t know what &lt;code&gt;NULL&lt;/code&gt; is :)
-Object thinking immediately eliminates
-&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL references&lt;/a&gt;
-from your code.&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/09/fish-called-wanda.png' style='width:600px;' alt='A Fish Called Wanda (1988) by Charles Crichton'/&gt;&lt;figcaption&gt;A Fish Called Wanda (1988) by Charles Crichton&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Besides that, object thinking will lead to object immutability, like in
-the &amp;quot;weight of the dog&amp;quot; example. You would re-write that like this instead:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;23kg&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The dog is an immutable living organism, which doesn&amp;#39;t allow anyone from
-the outside to change her weight, or size, or name, etc. She can tell, on
-request, her weight or name. There is nothing wrong with public
-methods that demonstrate requests for certain &amp;quot;insides&amp;quot; of an object. But these
-methods are not &amp;quot;getters&amp;quot; and they should never have the &amp;quot;get&amp;quot; prefix. We&amp;#39;re
-not &amp;quot;getting&amp;quot; anything from the dog. We&amp;#39;re not getting her name. We&amp;#39;re asking
-her to tell us her name. See the difference?&lt;/p&gt;
-
-&lt;p&gt;We&amp;#39;re not talking semantics here, either. We are differentiating the procedural
-programming mindset from an object-oriented one. In procedural programming,
-we&amp;#39;re working with data, manipulating them, getting, setting,
-and deleting when necessary. We&amp;#39;re in charge, and the data is just a passive component.
-The dog is nothing to us &amp;mdash; it&amp;#39;s just a &amp;quot;data holder&amp;quot;.
-It doesn&amp;#39;t have its own life. We are free
-to get whatever is necessary from it and set any data into it.
-This is how C, COBOL, Pascal and many other procedural languages work(ed).&lt;/p&gt;
-
-&lt;p&gt;On the contrary, in a true object-oriented world, we treat objects like
-living organisms, with their own date of birth and a moment of death &amp;mdash;
-with their own identity and habits, if you wish. We can ask a dog to
-give us some piece of data (for example, her weight), and she may
-return us that information. But we always remember that the dog is
-an active component. She decides what will happen after our request.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s why, &lt;strong&gt;it is conceptually incorrect to have any methods starting
-with &lt;code&gt;set&lt;/code&gt; or &lt;code&gt;get&lt;/code&gt; in an object&lt;/strong&gt;. And it&amp;#39;s not about breaking encapsulation, like
-many people argue. It is whether you&amp;#39;re thinking like an object
-or you&amp;#39;re still writing COBOL in Java syntax.&lt;/p&gt;
-
-&lt;p&gt;PS. Yes, you may ask, &amp;mdash; what about JavaBeans, JPA, JAXB, and many other
-Java APIs that rely on the get/set notation? What about Ruby&amp;#39;s built-in feature
-that simplies the creation of accessors? Well, all of that is our misfortune.
-It is much easier to stay in a primitive world of procedural COBOL than to
-truly understand and appreciate the beautiful world of true objects.&lt;/p&gt;
-
-&lt;p&gt;PPS. Forgot to say, yes, dependency injection via setters is also
-a terrible anti-pattern. About it, in
-&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;one of the next posts&lt;/a&gt; :)&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</guid>
-      <dc:date>2014-09-16T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
