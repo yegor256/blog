@@ -11,6 +11,11 @@ module Yegor
       if list.length > 1 && list.length < 5
         fail "too few keywords in [#{page['title']}]: #{list.length}"
       end
+      # list.each { |word|
+      #   if page['content'].index(word).nil? && page['description'].index(word).nil?
+      #     fail "keyword '#{word}' is not found in #{page['title']}"
+      #   end
+      # }
       list.compact.sort.uniq
     end
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "4 Virtues of a Good Object"
-date: 2000-01-01
+title: "Four Virtues of a Good Object"
+date: 2014-11-05
 tags: oop quality
 description:
   What is a properly designed object in an object-oriented world? What
@@ -30,35 +30,36 @@ Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
 these days usually organized into classes
 
 Functions organized into classes? What kind of programming is that?
-Object-oriented? Martin, classes are not organizers of functions!
+Object-oriented? Martin, classes are **not** organizers of functions!
+Unfortunately, it is a very common misconception of a role of a class and an object
+in OOP.
 
-Unfortunately, it is a very common misconception of a class and object
-roles in object-oriented programming.
-
-So, what is a "proper" object in object-oriented programming? What is not
-a proper one? What is the difference? Even though it is a very polemic subject, it is
+So, what is a "proper" object? What is not a proper one?
+What is the difference? Even though it is a very polemic subject, it is
 a very important one. Unless we undertand what an object is, how can
-we write object-oriented software? Well, we can, but will it be
-an object-oriented programming?
+we write object-oriented software? Well, we can, but how good will it be?
 
-Unfortunately, this is not an exact science. There are many opinions
-about what a good object is, in OOP. Here is my four qualities
-of a good object.
+Unfortunately, this is not an exact science. There are many opinions.
+Here is my four qualities of a good object.
 
 <!--more-->
 
-## It Exists In Real Life
+## She Exists In Real Life
+
+Yes, an object is a living organism. Moreover, an object
+should be [antropomorphized](https://en.wikipedia.org/wiki/Anthropomorphism), i.e.
+treated like a human being. That's why "she".
 
 An employee, a department, an HTTP request, a table in MySQL,
 a line in a file, or a file itself are proper objects. Because they exist in
-real-life even when our software doesn't work.
+real-life even when our software is turned off.
 
 A controller, a parser, a service locator,
 a singleton, or a factory are **not** good objects
 (yes, most of GoF patterns are anti-patterns!).
 They don't exist apart from your software, in real life.
 
-## It Is Unique
+## She Is Unique
 
 A good object should always encapsulate something, in order
 to be unique. If there is nothing to encapsulate, an object may
@@ -76,12 +77,10 @@ class Status {
 }
 {% endhighlight %}
 
-Every instance of
-
 Obviously, utility classes, which have only static methods,
 can't instantiate good objects.
 
-## It Is Immutable
+## She Is Immutable
 
 A good object should never change its encapsulated state/knowledge
 (see also [Objects Should Be Immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})).
@@ -107,9 +106,14 @@ Even though method `read()` may return different values, the
 object is immutable. It points to a certain web page and will
 never point anywhere else (will never change its encapsulated state).
 Of course, a good object doesn't have
-[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
+[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}), which
+may change its state.
 
-## It Is Alive
+## She Is Alive
 
 An object must expose some functionality, through non-static methods.
 Objects without methods are not good objects.
+
+## Interfaces
+
+## Either final or abstract

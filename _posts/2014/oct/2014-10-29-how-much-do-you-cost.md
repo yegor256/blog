@@ -7,8 +7,8 @@ description:
   How do you know what hourly rate you are worth? What
   factors should be taken into account? Here are my criteria.
 keywords:
-  - monthly salary
-  - programmer salary
+  - hourly rate
+  - hourly rate estimate
   - programmer hourly rate
   - hourly rate of programmer
   - software developer hourly rate
@@ -24,7 +24,7 @@ What surprises me is how
 often people incorrectly estimate themselves, in both directions.
 
 I hear very different numbers, from $5 to $500 per hour. I never
-say no, but usually come up with my own estimate. This article
+say no, but usually come up with my own hourly rate estimate. This article
 explains what factors I do and don't take into account. These are
 my personal criteria; don't take them as an industry standard.
 I do find them objective and logical, though &mdash; so let me explain.
@@ -282,7 +282,7 @@ tell me?
 Well, of course, if it is Stanford or MIT, this will make a difference. In this
 case I can see that you managed to pass their graduation standards and managed to
 find money to study there. This is a good sign and will definitely increase
-your rate. But if it is some mambo-jambo university from nowhere (like
+your hourly rate. But if it is some mambo-jambo university from nowhere (like
 the one I graduated from), keep this information to yourself.
 
 ## Rates
