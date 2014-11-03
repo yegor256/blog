@@ -35,8 +35,7 @@ final class TextFile {
   }
   public int grep(Pattern regex) throws IOException {
     Collection<String> lines = new LinkedList<>();
-    FileReader reader = new BufferedReader(new FileReader(this.file));
-    try {
+    try (FileReader reader = new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {
@@ -44,8 +43,6 @@ final class TextFile {
         }
         lines.add(line);
       }
-    } finally {
-      reader.close();
     }
 
     int total = 0;
@@ -88,8 +85,7 @@ final class TextFile {
   }
   private Iterable<String> lines() throws IOException {
     Collection<String> lines = new LinkedList<>();
-    FileReader reader = new BufferedReader(new FileReader(this.file));
-    try {
+    try (FileReader reader = new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {
@@ -98,8 +94,6 @@ final class TextFile {
         lines.add(line);
       }
       return lines;
-    } finally {
-      reader.close();
     }
   }
 }
