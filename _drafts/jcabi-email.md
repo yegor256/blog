@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Immutability in Practice"
+title: "Immutability Is a Motivator"
 date: 2014-11-06
 tags: jcabi java
 description:
-  jcabi-email is a compact object-oriented email sending SDK
-  for Java, which is highly flexible, testable and extendable
+  The article illustrates by example how immutability
+  forces you to design small and cohesive objects, while
+  mutability causes scope creep and tight coupling
 keywords:
   - immutability example java
   - immutable object example
@@ -42,13 +43,11 @@ email.setHostName("smtp.googlemail.com");
 email.setSmtpPort(465);
 email.setAuthenticator(new DefaultAuthenticator("user", "pwd"));
 email.setFrom("yegor@teamed.io", "Yegor Bugayenko");
+email.addTo("dude@jcabi.com");
 email.setSubject("how are you?");
 email.setMsg("Dude, how are you?");
-email.addTo("dude@jcabi.com");
 email.send();
 {% endhighlight %}
-
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
 Here is how you do the same with [jcabi-email](http://email.jcabi.com):
 
@@ -56,11 +55,16 @@ Here is how you do the same with [jcabi-email](http://email.jcabi.com):
 Postman postman = new Postman.Default(
   new SMTP("smtp.googlemail.com", 465, "user", "pwd")
 );
-Envelope envelope = new Envelope.MIME()
-  .with(new StSender("Yegor Bugayenko <yegor@teamed.io>"))
-  .with(new StRecipient("dude@jcabi.com"))
-  .with(new StSubject("how are you?"))
-  .with(new EnPlain("Dude, how are you?"));
+Envelope envelope = new Envelope.MIME(
+  new Array<Stamp>(
+    new StSender("Yegor Bugayenko <yegor@teamed.io>"),
+    new StRecipient("dude@jcabi.com"),
+    new StSubject("how are you?")
+  ),
+  new Array<Enclosure>(
+    new EnPlain("Dude, how are you?")
+  )
+);
 postman.send(envelope);
 {% endhighlight %}
 
@@ -85,12 +89,12 @@ for the message we're going to send. We construct these seven objects,
 encapsulating one into another, and then we ask the postman to `send()`
 the envelope for us.
 
-## What's Wrong With commons-email?
+## What's Wrong With a Mutable Email?
 
 From a user perspective, there is almost nothing wrong. `Email` is a powerful
 class with multiple controls &mdash; just hit the right one and the job
 gets done. However, from a developer perspective it's a nightmare. Mostly
-because the class is very big and difficult to extend.
+because the class is very big and difficult to maintain.
 
 *Because the class is so big*,
 every time you want to extend it by introducing a new method, you're facing a fact that you're
@@ -129,7 +133,7 @@ scenario of sending a full MIME message through SMTP. Obviously, if something
 gets changed in one of the methods, almost every test method will be
 affected. In other words, tests are very fragile, unreliable and over-complicated.
 
-I can go on and on with this "because the class is so big". I think it is
+I can go on and on with this "*because the class is so big*". I think it is
 obvious that a small cohesive class is always better than a big one. It
 is obvious to me, to you, to any object-oriented programmer. Why it's not
 so obvious to the developers of Apache Commons Email? I don't think they are
@@ -166,18 +170,22 @@ to keep it cohesive, small, solid and robust. Because you can't encapsulate
 too much and you can't modify what's encapsulated. Just two or three
 arguments of a constructor and you're done.
 
-## How Did I Design jcabi-email?
+## How Did I Design An Immutable Email?
+
+{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
 When I was designing [jcabi-email](https://github.com/jcabi/jcabi-email)
-I started with a small and simple class: `Postman`. Well, it is an interface,
+I started with a small and simple class:
+[`Postman`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java).
+Well, it is an interface,
 since I never make interface-less classes. So, `Postman` is... a post man.
-He is delivering messages to other people. Let's see create a default
-version of it (I omitted the ctor, for the sake of brevity):
+He is delivering messages to other people. First, I created a default
+version of it (I omit the ctor, for the sake of brevity):
 
 {% highlight java %}
 import javax.mail.Message;
 @Immutable
-class Default implements Postman {
+class Postman.Default implements Postman {
   private final String host;
   private final int port;
   private final String user;
@@ -193,11 +201,17 @@ class Default implements Postman {
 }
 {% endhighlight %}
 
-Good start, it works. What now? Well, the `Message` is difficult to construct.
+Good start, it works. What now? Well, the
+[`Message`](http://docs.oracle.com/javaee/7/api/javax/jms/Message.html)
+is difficult to construct.
 It is a complex class from JDK that requires some manipulations before it
 can become a nice HTML email. So I created an envelope, which will build
-this complex object for me (pay attention, both `Postman` and `Envelope`
-are immutable):
+this complex object for me (pay attention, both
+[`Postman`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java) and
+[`Envelope`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java)
+are immutable and annotated with
+[@Immutable](http://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html) from
+[jcabi-aspects](http://aspects.jcabi.com/annotation-immutable.html)):
 
 {% highlight java %}
 @Immutable
@@ -232,11 +246,12 @@ class MIME implements Envelope {
 
 It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
-and both `To:` and `From:` addresses (pay attention, `MIME` class is immutable):
+and both `To:` and `From:` addresses (pay attention, `MIME` class is
+also immutable):
 
 {% highlight java %}
 @Immutable
-class MIME implements Envelope {
+class Envelope.MIME implements Envelope {
   private final String subject;
   private final String from;
   private final Array<String> to;
@@ -264,10 +279,10 @@ class MIME implements Envelope {
 {% endhighlight %}
 
 Looks correct and it works. But it is still too primitive. How about
-`CC:` and `BCC:`? What about email text? How about enclosures?
+`CC:` and `BCC:`? What about email text? How about PDF enclosures?
 What if I want to specify the encoding of the message? What about `Reply-To`?
 
-Can I add all of this parameters into my constructor? Remember, the
+Can I add all these parameters to the constructor? Remember, the
 class is immutable and I can't introduce `setReplyTo()` method. I have to
 pass `replyTo` argument into its constructor. It's impossible, because
 the constructor will have too many arguments, nobody will be able to use it.
@@ -277,7 +292,9 @@ So, what do I do?
 Well, I started to think how can we break the concept of an "envelope"
 into smaller concepts and this what I invented. Like a real-life envelope
 my `MIME` object will have stamps. Stamps will be responsible
-for configuring an object `Message` (again, they are all immutable):
+for configuring an object `Message` (again,
+[`Stamp`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java) is immutable,
+as well as all its implementors):
 
 {% highlight java %}
 @Immutable
@@ -286,11 +303,12 @@ interface Stamp {
 }
 {% endhighlight %}
 
-Now, I can simplify my `MIME` class to the following:
+Now, I can simplify my
+[`MIME`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java) class to the following:
 
 {% highlight java %}
 @Immutable
-class MIME implements Envelope {
+class Envelope.MIME implements Envelope {
   private final Array<Stamp> stamps;
   public MIME(Iterable<Stamp> smpts) {
     this.stamps = new Array<Stamp>(stmps);
@@ -308,21 +326,21 @@ class MIME implements Envelope {
 }
 {% endhighlight %}
 
-Now I will create stamps for the subject, for `To:`, for `From:`,
+Now, I will create stamps for the subject, for `To:`, for `From:`,
 for `CC:`, for `BCC:`, etc. As many stamps as I like. The class `MIME`
 will stay the same &mdash; small, cohesive, readable, solid, etc.
 
-What is important here is why I make a decision of refactoring while
+What is important here is why I made a decision of refactoring while
 the class was relatively small. Indeed, I started to worry about these
-stamp classes when my `MIME` class was just 50 lines in size.
+stamp classes when my `MIME` class was just 25 lines in size.
 
 That is exactly the point of this article &mdash;
-**immutability forces you to design cohesive and solid objects**.
+**immutability forces you to design small and cohesive objects**.
 
 Without immutability I would go the same direction as commons-email. My
 `MIME` class would grow in size and sooner or later would become
 as big as `Email` from commons-email. The only thing that stopped me
-was the necessary to refactor it, because I wasn't able to pass all
+was the necessity to refactor it, because I wasn't able to pass all
 arguments through a constructor.
 
 Without immutability I wouldn't have that motivator and I would
