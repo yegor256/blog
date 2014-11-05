@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An Empty Line is a Code Smell"
-date: 2014-11-02
+date: 2014-11-03
 tags: design
 description:
   An empty line inside your method body is an indicator
@@ -25,7 +25,7 @@ and its functional decomposition should be done by language constructs
 
 <!--more-->
 
-Look at this code (it does smell, doesn't it?):
+Look at this Java class (it does smell, doesn't it?):
 
 {% highlight java %}
 final class TextFile {
@@ -35,8 +35,7 @@ final class TextFile {
   }
   public int grep(Pattern regex) throws IOException {
     Collection<String> lines = new LinkedList<>();
-    FileReader reader = new BufferedReader(new FileReader(this.file));
-    try {
+    try (BufferedReader reader = new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {
@@ -44,8 +43,6 @@ final class TextFile {
         }
         lines.add(line);
       }
-    } finally {
-      reader.close();
     }
 
     int total = 0;
@@ -88,8 +85,7 @@ final class TextFile {
   }
   private Iterable<String> lines() throws IOException {
     Collection<String> lines = new LinkedList<>();
-    FileReader reader = new BufferedReader(new FileReader(this.file));
-    try {
+    try (BufferedReader reader = new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {
@@ -98,8 +94,6 @@ final class TextFile {
         lines.add(line);
       }
       return lines;
-    } finally {
-      reader.close();
     }
   }
 }
@@ -139,7 +133,7 @@ class is too complex and has to be decomposed into two classes:
 }
 {% endhighlight %}
 
-Unfortunately, using empty lines to separate blocks of code is a very common habit. 
+Unfortunately, using empty lines to separate blocks of code is a very common habit.
 Moreover, very often I see empty blocks of two or even three lines, which are all
 playing this evil role of a separator of concerns.
 
