@@ -310,7 +310,7 @@ Now, I can simplify my
 @Immutable
 class Envelope.MIME implements Envelope {
   private final Array<Stamp> stamps;
-  public MIME(Iterable<Stamp> smpts) {
+  public MIME(Iterable<Stamp> stmps) {
     this.stamps = new Array<Stamp>(stmps);
   }
   @Override
@@ -318,7 +318,7 @@ class Envelope.MIME implements Envelope {
     Message msg = new MimeMessage(
       Session.getDefaultInstance(new Properties())
     );
-    for (Stamp stamp : stamps) {
+    for (Stamp stamp : this.stamps) {
       stamp.attach(msg);
     }
     return msg;
