@@ -19,6 +19,11 @@ install:
   - cd ..
   - rm -rf sfnt2woff
   - npm install --global cssshrink
+before_install:
+  - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
+  - mkdir -p ~/.ssh
+  - mv id_rsa ~/.ssh
+  - chmod -R 600 ~/.ssh
 script:
   - set -e
   - set -x
@@ -30,4 +35,3 @@ script:
   - git config --global user.email "travis@teamed.io"
   - git config --global user.name "travis"
   - jgd
-
