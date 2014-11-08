@@ -19,9 +19,6 @@ install:
   - cd ..
   - rm -rf sfnt2woff
   - npm install --global cssshrink
-env:
-  global:
-    - secure: "HVUG1XQk3K1BTTN8H4rbTInBaaZw3s9J1xLeDuQuwd5P4n5x/N22JUFyt5VV7pCCJZQvsodofLLP/8OOA4am/8FAEtON9vHk9gPJDS3oO/LgRzjkbU+S1ks8FNRMlLo6B0DIq9cF3LtX4Ed7VUkAjymntL9CYyJDsud6Upz190g="
 script:
   - set -e
   - set -x
@@ -32,5 +29,5 @@ script:
   - for i in $(ls js/*.js); do jslint $i; done
   - git config --global user.email "travis@teamed.io"
   - git config --global user.name "travis"
-  - jgd -u https://yegor256:$PASSWORD@github.com/yegor256/blog.git
+  - jgd
 
