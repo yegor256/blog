@@ -167,15 +167,23 @@ h2 {
   margin-left: 2em;
 }
 blockquote {
-  @extend .gray;
+  margin-left: 1.5 * $em;
+  padding-left: 0.5 * $em !important;
+  border-left: 3px solid $light-gray;
+  position: relative;
   font-style: italic;
-  p:before,
-  p:after {
-    display: inline;
+  p:before {
+    @extend .gray;
+    position: absolute;
+    left: -1.5 * $em;
+    top: .5 * $em;
     content: "ˮ";
+    font-size: 2.5 * $em;
   }
   @media all and (max-width: $width) {
     margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 }
 figure {
