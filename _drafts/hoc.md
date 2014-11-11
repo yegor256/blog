@@ -81,26 +81,40 @@ a three-years old project. The code base experienced a few refactorings, as you
 see on the graph. I think it is obvious which metric tells us more about
 the efforts being invested into the product.
 
-## It Is Always Relative
+## It Is Objective
 
 For HoC it doesn't matter how big is the absolutely size of the code base.
 Let's say, you have 300K lines of code and 90% of them were copy-pasted from some
 third-party libraries (it is a very common and terrible practice &mdash;
 to keep third-party code inside your own repository). The amount of lines
-of code will be big, but the actual custom code will be very small. Thus,
+of code will be big, but the actual custom code part will be relatively small. Thus,
 the LoC metric will be misleading &mdash; it will always show 300K with
 small increments or decrements around it. We will have a feeling that the
-team is working with 300K lines.
+team is working with 300K lines code base.
 
 -- graph
 
-On the other hand, HoC will show only the difference between its previous
-measurement and a current value. This difference will be relatively small,
-since the majority of files are not modified.
+On the other hand, HoC will always take into account the part of code that
+is actually being modified. The value of HoC will be objectively
+related to the actual effort of programmers working with the code base.
 
-## It
+## It Exposes Complexity of Lines
 
-- Predictable
-- Aligned with efforts
-- Represents the complexity
--
+LoC is usually critized for its neutrality towards code complexity.
+An auto-generated ORM class or a complex sorting algorithm may have the same
+size in terms of lines of code, but the first takes seconds to write, while
+the second may take weeks or months. That's why lines of code is usually
+considered a false metric.
+
+Hits-of-Code takes complexity into account, because the longer you work
+with that sorting algorithm the more modifications you will make to its
+lines. Well, this statement is true only if you use Git regularly and commit
+your changes frequently &mdash; that is how you tell Git about your work progress.
+
+## Practical Examples
+
+Finally, look at this list of open projects completed by our team over the
+last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
+Here are the most interesting of them:
+
+

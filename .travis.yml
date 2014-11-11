@@ -22,7 +22,7 @@ install:
 before_install:
 - set -e
 - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv
-  -in id_rsa.enc -out /code/teamed.io/id_rsa -d
+  -in id_rsa.enc -out id_rsa -d
 - mv id_rsa ~/.ssh
 - chmod 600 ~/.ssh/id_rsa
 script:
