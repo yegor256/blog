@@ -3,6 +3,9 @@ module Yegor
     def initialize(src, ctx)
       if src.index('/') == 0
         @url = ctx.registers[:site].config['url'] + src
+        if !File.exists?('./_site' + src) && !File.exists?('.' + src)
+          raise "file doesn't exist: #{src}"
+        end
       else
         @url = src
       end
@@ -18,10 +21,6 @@ module Yegor
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].strip
-      file = './_site' + @src
-      if !File.exists?(file)
-        raise "file doesn't exist: #{file}"
-      end
     end
 
     def render(context)
@@ -62,10 +61,6 @@ module Yegor
         @width = '600'
       end
       @title = opts[2].nil? ? '' : opts[2].strip
-      file = './_site' + @src
-      if !File.exists?(file)
-        raise "file doesn't exist: #{file}"
-      end
     end
 
     def render(context)

@@ -1,6 +1,6 @@
 set terminal svg size 700, 260
 set termoption font 'monospace,10'
-set output 'netbout-hoc-vs-loc.svg'
+set output 'hoc-vs-loc.svg'
 set xdata time
 set timefmt "%Y-%m-%dT%H:%M"
 set style data lines
@@ -12,5 +12,5 @@ set autoscale
 
 set ylabel "Lines-of-Code" textcolor rgb '#b82f2f'
 set y2label "Hits-of-Code" textcolor rgb '#81b341'
-plot "netbout-hoc-vs-loc.dat" using 1:($2/1000) title "" linecolor rgb '#b82f2f' linewidth 1, \
-  "netbout-hoc-vs-loc.dat" using 1:($3/1000) title "" axes x1y2 linecolor rgb '#81b341' linewidth 3
+plot "hoc-vs-loc.dat" using 1:($2/1000) title "" linecolor rgb '#b82f2f' linewidth 1, \
+  "hoc-vs-loc.dat" using 1:($3/1000) title "" axes x1y2 linecolor rgb '#81b341' linewidth 3
