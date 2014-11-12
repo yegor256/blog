@@ -73,7 +73,7 @@ matter how big or small is the absolute size of the your product. What matters i
 how much effort you put in it. That's why HoC is very intuitive and may be
 used as a measurement of software development progress.
 
--- graph
+{% figure /gnuplot/2014/11/netbout-hoc-vs-loc.svg 700 %}
 
 Look at this three-years graph, it shows two metrics together. I used the
 same Java code base of [Netbout](https://github.com/netbout/netbout),
