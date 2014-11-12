@@ -1,0 +1,17 @@
+set terminal svg size 700, 400
+set output 'netbout-hoc-vs-loc.svg'
+set xdata time
+set timefmt "%Y-%m-%dT%H:%M"
+set style data lines
+#set ytics format "%d"
+set autoscale
+
+set multiplot layout 2, 1
+set ylabel "Lines-of-Code"
+set xtics format ""
+plot "netbout-hoc-vs-loc.dat" using 1:($2/1000) title ""
+
+set ylabel "Hits-of-Code"
+set xtics format "%b/%y"
+plot "netbout-hoc-vs-loc.dat" using 1:($3/1000) title ""
+unset multiplot
