@@ -73,31 +73,31 @@ matter how big or small is the absolute size of the your product. What matters i
 how much effort you put in it. That's why HoC is very intuitive and may be
 used as a measurement of software development progress.
 
-{% figure /gnuplot/2014/11/netbout-hoc-vs-loc.svg 700 %}
+{% figure /gnuplot/2014/11/hoc-vs-loc.svg 700 %}
 
-Look at this three-years graph, it shows two metrics together. I used the
-same Java code base of [Netbout](https://github.com/netbout/netbout),
-a three-years old project. The code base experienced a few refactorings, as you
-see on the graph. I think it is obvious which metric tells us more about
+Look at this 18-months graph, it shows both metrics together. I used the
+same Java code base of [rultor](https://github.com/yegor256/rultor),
+a [DevOps assistant]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
+The code base experienced a major refactoring a few months ago, as you
+see on the graph. I think it is obvious which metric on this graph tells us more about
 the efforts being invested into the product.
 
 ## It Is Objective
 
-For HoC it doesn't matter how big is the absolutely size of the code base.
-Let's say, you have 700K lines of code and 95% of them were copy-pasted from some
-third-party libraries (it is a very common and terrible practice &mdash;
+For HoC it doesn't matter how big is the absolute size of the code base,
+but only how big is your relative contribution to it.
+
+Let's say, you have 300K lines of code and 95% of them were copy-pasted from some
+third-party libraries (by the way, it is a very common and terrible practice &mdash;
 to keep third-party code inside your own repository). The amount of lines
 of code will be big, but the actual custom code part will be relatively small. Thus,
-the LoC metric will be misleading &mdash; it will always show 700K with
-small increments or decrements around it. We will have a feeling that the
-team is working with 700K lines code base.
-
--- graph
+the LoC metric will be misleading &mdash; it will always show 300K with
+small increments or decrements around it. Everybody will have a feeling that the
+team is working with 300K lines code base.
 
 On the other hand, HoC will always take into account the part of code that
 is actually being modified. The value of HoC will be objectively
-related to the actual effort of programmers working with the code base.
-Look at the graph above.
+correlated with the actual effort of programmers working with the code base.
 
 ## It Exposes Complexity of Lines
 
@@ -108,15 +108,22 @@ the second may take weeks or months. That's why lines of code is usually
 considered a false metric.
 
 Hits-of-Code takes complexity into account, because the longer you work
-with that sorting algorithm the more modifications you will make to its
-lines. Well, this statement is true only if you use Git regularly and commit
+with that sorting algorithm the more modifications you make to its
+lines. Well, this statement is true if you use Git regularly and commit
 your changes frequently &mdash; that is how you tell Git about your work progress.
 
-## Practical Examples
+## Conclusion
 
 Finally, look at [this list of open projects](http://www.teamed.io/portfolio.html)
 completed by our team over the
 last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
-Here are the most interesting of them:
+It is interesting to see how relatively small projects have very big
+(over a million) HoC numbers. This immediately reminds me how much
+time we invested into it and how old are they.
 
-
+My conclusion is that this Hits-of-Code metric can be used as a tool of
+progress tracking in a software development project. Moreover, it
+can be used for estimations of team size, project budget, development
+schedule and so forth. Obviously, LoC can't be the only metric, but in
+combination with others it may greatly help in estimating, planning
+and tracking.
