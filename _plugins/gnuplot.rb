@@ -17,8 +17,9 @@ module Jekyll
         dir=$(pwd)
         cd _gnuplot/2014/11
         gnuplot netbout-hoc-vs-loc.gpi
-        mkdir -p ${dir}/gnuplot/2014/11
-        mv netbout-hoc-vs-loc.svg ${dir}/gnuplot/2014/11/
+        mkdir -p ${dir}/_site/gnuplot/2014/11
+        mv netbout-hoc-vs-loc.svg ${dir}/_site/gnuplot/2014/11/
+        cd ${dir}
       ')
       site.static_files << Jekyll::GnuplotFile.new(site, site.dest, '/', "gnuplot/2014/11/netbout-hoc-vs-loc.svg")
     end

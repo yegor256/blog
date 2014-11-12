@@ -84,19 +84,20 @@ the efforts being invested into the product.
 ## It Is Objective
 
 For HoC it doesn't matter how big is the absolutely size of the code base.
-Let's say, you have 300K lines of code and 90% of them were copy-pasted from some
+Let's say, you have 700K lines of code and 95% of them were copy-pasted from some
 third-party libraries (it is a very common and terrible practice &mdash;
 to keep third-party code inside your own repository). The amount of lines
 of code will be big, but the actual custom code part will be relatively small. Thus,
-the LoC metric will be misleading &mdash; it will always show 300K with
+the LoC metric will be misleading &mdash; it will always show 700K with
 small increments or decrements around it. We will have a feeling that the
-team is working with 300K lines code base.
+team is working with 700K lines code base.
 
 -- graph
 
 On the other hand, HoC will always take into account the part of code that
 is actually being modified. The value of HoC will be objectively
 related to the actual effort of programmers working with the code base.
+Look at the graph above.
 
 ## It Exposes Complexity of Lines
 
