@@ -28,7 +28,6 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 script:
 - set -e
-- set -x
 - _test/test_casperjs.sh
 - jekyll build
 - _test/ping_links.sh
