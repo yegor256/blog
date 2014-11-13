@@ -121,6 +121,10 @@ It is interesting to see how relatively small projects have very big
 (over a million) HoC numbers. This immediately reminds me how much
 time we invested into it and how old are they.
 
+I used HoC metric in this analysis: [How much do you pay per line of code?]({% pst 2014/apr/2014-04-11-cost-of-loc %}).
+That post compares a traditional project that paid $3.98 per HoC and
+an open source one, managed by Teamed.io, that paid &cent;13.
+
 My conclusion is that this Hits-of-Code metric can be used as a tool of
 progress tracking in a software development project. Moreover, it
 can be used for estimations of team size, project budget, development
