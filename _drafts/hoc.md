@@ -4,9 +4,9 @@ title: Hits-of-Code Instead of SLoC
 date: 2014-11-14
 tags: mgmt
 description:
-  Hits of Code (HoC) metric is an alternative measurement
+  The Hits of Code (HoC) metric is an alternative measurement
   indicator that can replace Software Lines Of Code (SLoC) and help
-  in software development progress tracking
+  in software development progress tracking.
 keywords:
   - lines of code
   - lines of code metric
@@ -29,12 +29,12 @@ attributed to [Bill Gates](https://en.wikipedia.org/wiki/Bill_Gates):
 Basically, this means that certain parts of the aircraft will take
 much more effort at the same time being much lighter than others
 (like a central computer, for example). Instead
-of measing the weight of the aircraft we should measure the effort,... somehow.
+of measuring the weight of the aircraft we should measure the effort put into it... somehow.
 So, here is the idea. How about we measure the amount of times programmers
 **touch** the lines. Instead of counting the number of lines we'll count
 how many times they were actually modified &mdash; we can get this information
 from Git (or any other SCM). The more you touch that part
-of the aircraft &mdash; the more efforts you spent on it, don't you?
+of the aircraft &mdash; the more effort you spent on it, right?
 
 <!--more-->
 
@@ -65,17 +65,17 @@ base today, but after refactoring it will become much smaller. The number
 of lines of code is decreased. Does it mean you are less effective?
 Definitely not, but the LoC metric says so, to a non-programmer.
 A project manager, for example, may decide that since the size
-of the code base stays the same over the last month, the team is not working.
+of the code base stayed the same over the last month, the team is not working.
 
 HoC doesn't have this counter-intuitive effect. Instead, HoC grows together with your
 every commit. The more you work on the code base, the bigger the HoC. It doesn't
-matter how big or small is the absolute size of the your product. What matters is
-how much effort you put in it. That's why HoC is very intuitive and may be
+matter how big or small the absolute size of the your product. What matters is
+how much effort you put into it. That's why HoC is very intuitive and may be
 used as a measurement of software development progress.
 
 {% figure /gnuplot/2014/11/hoc-vs-loc.svg 700 %}
 
-Look at this 18-months graph, it shows both metrics together. I used the
+Look at this 18-month graph; it shows both metrics together. I used the
 same Java code base of [rultor](https://github.com/yegor256/rultor),
 a [DevOps assistant]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 The code base experienced a major refactoring a few months ago, as you
@@ -84,8 +84,8 @@ the efforts being invested into the product.
 
 ## It Is Objective
 
-For HoC it doesn't matter how big is the absolute size of the code base,
-but only how big is your relative contribution to it.
+For HoC it doesn't matter how big the absolute size of the code base,
+but only how big your relative contribution to it.
 
 Let's say, you have 300K lines of code and 95% of them were copy-pasted from some
 third-party libraries (by the way, it is a very common and terrible practice &mdash;
@@ -119,9 +119,9 @@ completed by our team over the
 last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
 It is interesting to see how relatively small projects have very big
 (over a million) HoC numbers. This immediately reminds me how much
-time we invested into it and how old are they.
+time we invested into it and how old they are.
 
-I used HoC metric in this analysis: [How much do you pay per line of code?]({% pst 2014/apr/2014-04-11-cost-of-loc %}).
+I used the HoC metric in this analysis: [How much do you pay per line of code?]({% pst 2014/apr/2014-04-11-cost-of-loc %}).
 That post compares a traditional project that paid $3.98 per HoC and
 an open source one, managed by Teamed.io, that paid &cent;13.
 
