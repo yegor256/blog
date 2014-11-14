@@ -10,12 +10,137 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Fri, 07 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Nov 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Hits-of-Code Instead of SLoC</title>
+      <link>http://www.yegor256.com/2014/11/14/hits-of-code.html</link>
+      <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Source_lines_of_code&quot;&gt;Lines-of-Code&lt;/a&gt;
+(aka SLoC) is a metric with a terrible reputation.
+Try &lt;a href=&quot;https://www.google.com/search?q=line+of+code+metric&quot;&gt;to google&lt;/a&gt;
+it yourself and you&amp;#39;ll find tons of articles bad-mouthing about its
+counter-effectiveness and destructiveness for a software development process.
+The main argument is that we can&amp;#39;t measure the progress of programming
+by the number of lines of code written. Probably the most famous quote is
+attributed to &lt;a href=&quot;https://en.wikipedia.org/wiki/Bill_Gates&quot;&gt;Bill Gates&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Measuring programming progress by lines of code is like measuring aircraft building progress by weight&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Basically, this means that certain parts of the aircraft will take
+much more effort at the same time being much lighter than others
+(like a central computer, for example). Instead
+of measuring the weight of the aircraft we should measure the effort put into it... somehow.
+So, here is the idea. How about we measure the amount of times programmers
+&lt;strong&gt;touch&lt;/strong&gt; the lines. Instead of counting the number of lines we&amp;#39;ll count
+how many times they were actually modified &amp;mdash; we can get this information
+from Git (or any other SCM). The more you touch that part
+of the aircraft &amp;mdash; the more effort you spent on it, right?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I called it Hits-of-Code (HoC) and created a small tool to help us
+calculate this number in just one line. It&amp;#39;s a
+&lt;a href=&quot;https://rubygems.org/gems/hoc&quot;&gt;Ruby gem&lt;/a&gt;, install it and run:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install hoc
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;hoc
+54687&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The number 54687 is a total number of Hits-of-Code in your code base. The
+principle behind this number is primitive &amp;mdash; every time a line of code
+is modified, created or deleted in a Git commit, the counter increments.&lt;/p&gt;
+
+&lt;p&gt;The main reason why this metric is better than LoC is that
+it is much better aligned with the actual effort invested into the code
+base. Here is why.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-always-increments&quot;&gt;It Always Increments&lt;/h2&gt;
+
+&lt;p&gt;The HoC metric always goes up. Today it can not be lower than it
+was yesterday &amp;mdash; just like the effort, it always increments.
+Lines-of-Code is not acting like this. You may have a huge code
+base today, but after refactoring it will become much smaller. The number
+of lines of code is decreased. Does it mean you are less effective?
+Definitely not, but the LoC metric says so, to a non-programmer.
+A project manager, for example, may decide that since the size
+of the code base stayed the same over the last month, the team is not working.&lt;/p&gt;
+
+&lt;p&gt;HoC doesn&amp;#39;t have this counter-intuitive effect. Instead, HoC grows together with your
+every commit. The more you work on the code base, the bigger the HoC. It doesn&amp;#39;t
+matter how big or small the absolute size of the your product. What matters is
+how much effort you put into it. That&amp;#39;s why HoC is very intuitive and may be
+used as a measurement of software development progress.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/gnuplot/2014/11/hoc-vs-loc.svg' style='width:700px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Look at this 18-month graph; it shows both metrics together. I used the
+same Java code base of &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;,
+a &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;DevOps assistant&lt;/a&gt;.
+The code base experienced a major refactoring a few months ago, as you
+see on the graph. I think it is obvious which metric on this graph tells us more about
+the efforts being invested into the product.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-objective&quot;&gt;It Is Objective&lt;/h2&gt;
+
+&lt;p&gt;For HoC it doesn&amp;#39;t matter how big the absolute size of the code base,
+but only how big your relative contribution to it.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s say, you have 300K lines of code and 95% of them were copy-pasted from some
+third-party libraries (by the way, it is a very common and terrible practice &amp;mdash;
+to keep third-party code inside your own repository). The amount of lines
+of code will be big, but the actual custom code part will be relatively small. Thus,
+the LoC metric will be misleading &amp;mdash; it will always show 300K with
+small increments or decrements around it. Everybody will have a feeling that the
+team is working with 300K lines code base.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, HoC will always take into account the part of code that
+is actually being modified. The value of HoC will be objectively
+correlated with the actual effort of programmers working with the code base.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-exposes-complexity-of-lines&quot;&gt;It Exposes Complexity of Lines&lt;/h2&gt;
+
+&lt;p&gt;LoC is usually critized for its neutrality towards code complexity.
+An auto-generated ORM class or a complex sorting algorithm may have the same
+size in terms of lines of code, but the first takes seconds to write, while
+the second may take weeks or months. That&amp;#39;s why lines of code is usually
+considered a false metric.&lt;/p&gt;
+
+&lt;p&gt;Hits-of-Code takes complexity into account, because the longer you work
+with that sorting algorithm the more modifications you make to its
+lines. Well, this statement is true if you use Git regularly and commit
+your changes frequently &amp;mdash; that is how you tell Git about your work progress.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Finally, look at &lt;a href=&quot;http://www.teamed.io/portfolio.html&quot;&gt;this list of open projects&lt;/a&gt;
+completed by our team over the
+last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
+It is interesting to see how relatively small projects have very big
+(over a million) HoC numbers. This immediately reminds me how much
+time we invested into it and how old they are.&lt;/p&gt;
+
+&lt;p&gt;I used the HoC metric in this analysis: &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How much do you pay per line of code?&lt;/a&gt;.
+That post compares a traditional project that paid $3.98 per HoC and
+an open source one, managed by Teamed.io, that paid &amp;cent;13.&lt;/p&gt;
+
+&lt;p&gt;My conclusion is that this Hits-of-Code metric can be used as a tool of
+progress tracking in a software development project. Moreover, it
+can be used for estimations of team size, project budget, development
+schedule and so forth. Obviously, LoC can&amp;#39;t be the only metric, but in
+combination with others it may greatly help in estimating, planning
+and tracking.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/11/14/hits-of-code.html</guid>
+      <dc:date>2014-11-14T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How Immutability Helps</title>
       <link>http://www.yegor256.com/2014/11/07/how-immutability-helps.html</link>
@@ -2415,157 +2540,6 @@ break them.&lt;/p&gt;
       <pubDate>Wed, 24 Sep 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/09/24/why-monetary-awards-dont-work.html</guid>
       <dc:date>2014-09-24T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Built-in Fake Objects</title>
-      <link>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</link>
-      <description>&lt;p&gt;While mock objects are perfect instruments for unit testing,
-mocking through mock frameworks may turn your unit tests into
-an unmaintainable mess. Thanks to them we often hear that
-&amp;quot;mocking is bad&amp;quot; and &amp;quot;mocking is evil&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;The root cause of this complexity is that our objects
-are too big. They have many methods and these methods
-return other objects, which also have methods. When we pass
-a mock version of such an object as a parameter, we should
-make sure that all of its methods return valid objects.&lt;/p&gt;
-
-&lt;p&gt;This leads to inevitable complexity, which turns unit tests
-to &lt;a href=&quot;https://news.ycombinator.com/item?id=7353767&quot;&gt;waste&lt;/a&gt;
-almost impossible to maintain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;object-hierarchy&quot;&gt;Object Hierarchy&lt;/h2&gt;
-
-&lt;p&gt;Take the &lt;code&gt;Region&lt;/code&gt; interface from &lt;a href=&quot;http://dynamo.jcabi.com&quot;&gt;jcabi-dynamo&lt;/a&gt; as an example
-(this snippet and all others in this article are simplified, for the
-sake of brevity):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Its &lt;code&gt;table()&lt;/code&gt; method returns an instance of the &lt;code&gt;Table&lt;/code&gt; interface, which
-has its own methods:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Attributes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Interface &lt;code&gt;Frame&lt;/code&gt;, returned by the &lt;code&gt;frame()&lt;/code&gt; method, also has its
-own methods. And so on.
-In order to create a properly mocked instance of interface &lt;code&gt;Region&lt;/code&gt;,
-one would normally create a dozen other mock objects. With &lt;a href=&quot;http://www.mockito.org&quot;&gt;Mockito&lt;/a&gt;
-it will look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testMe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// many more lines here...&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(...).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And all of this is just a scaffolding before the actual testing.&lt;/p&gt;
-
-&lt;h2 id=&quot;sample-use-case&quot;&gt;Sample Use Case&lt;/h2&gt;
-
-&lt;p&gt;Let&amp;#39;s say, you&amp;#39;re developing a project that uses jcabi-dynamo for
-managing data in DynamoDB. Your class may look similar to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dynamo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dynamo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;region&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can imagine how difficult it will be to unit test this class,
-using Mockito, for example. First, we have
-to mock the &lt;code&gt;Region&lt;/code&gt; interface. Then, we have to mock a &lt;code&gt;Table&lt;/code&gt; interface and make sure
-it is returned by the &lt;code&gt;table()&lt;/code&gt; method. Then, we have to mock a &lt;code&gt;Frame&lt;/code&gt; interface, etc.&lt;/p&gt;
-
-&lt;p&gt;The unit test will be much longer than the class itself. Besides that,
-its real purpose, which is to test the retrieval of an employee&amp;#39;s salary, will not
-be obvious to the reader.&lt;/p&gt;
-
-&lt;p&gt;Moreover, when we need to test a similar method of a similar class,
-we will need to restart this mocking from scratch. Again, multiple lines of code,
-which will look very similar to what we have already written.&lt;/p&gt;
-
-&lt;h2 id=&quot;fake-classes&quot;&gt;Fake Classes&lt;/h2&gt;
-
-&lt;p&gt;The solution is to create fake classes and ship them
-together with real classes. This is what &lt;a href=&quot;http://dynamo.jcabi.com&quot;&gt;jcabi-dynamo&lt;/a&gt;
-is doing. Just look at its &lt;a href=&quot;http://dynamo.jcabi.com/apidocs-0.16.1/index.html&quot;&gt;JavaDoc&lt;/a&gt;.
-There is a package called &lt;code&gt;com.jcabi.dynamo.mock&lt;/code&gt; that contains
-only fake classes, suitable only for unit testing.&lt;/p&gt;
-
-&lt;p&gt;Even though their sole purpose is to optimize unit testing, we ship
-them together with production code, in the same JAR package.&lt;/p&gt;
-
-&lt;p&gt;This is what a test will look like, when a fake class &lt;code&gt;MkRegion&lt;/code&gt; is used:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmployeeTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;canFetchSalaryFromDynamoDb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MkRegion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;H2Data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Attributes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AttributeValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;equalTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This test looks obvious to me. First, we create a fake DynamoDB region,
-which works on top of &lt;code&gt;H2Data&lt;/code&gt; storage (in-memory H2 database). The storage
-will be ready for a single &lt;code&gt;employees&lt;/code&gt; table with a hash key &lt;code&gt;name&lt;/code&gt; and
-a single &lt;code&gt;salary&lt;/code&gt; attribute.&lt;/p&gt;
-
-&lt;p&gt;Then, we put a record into the table, with a hash &lt;code&gt;Jeff&lt;/code&gt; and a salary
-&lt;code&gt;50000&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, we create an instance of class &lt;code&gt;Employee&lt;/code&gt; and check how it
-fetches the salary from DynamoDB.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m currently doing the same thing in almost every open source library I&amp;#39;m working with.
-I&amp;#39;m creating a collection of fake classes, that simplify testing
-inside the library and for its users.&lt;/p&gt;
-
-&lt;p&gt;BTW, a great article on the same subject:
-&lt;a href=&quot;http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html&quot;&gt;tl;dw: Stop mocking, start testing&lt;/a&gt;
-by Ned Batchelder.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</guid>
-      <dc:date>2014-09-23T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
