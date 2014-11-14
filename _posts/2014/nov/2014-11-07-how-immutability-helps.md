@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Immutability Is a Motivator"
-date: 2014-11-06
-tags: jcabi java
+title: "How Immutability Helps"
+date: 2014-11-07
+tags: jcabi java oop
+categories: jcg
 description:
   This article illustrates by example how immutability
   forces you to design small and cohesive objects, while
@@ -93,7 +94,7 @@ the envelope for us.
 
 From a user perspective, there is almost nothing wrong. `Email` is a powerful
 class with multiple controls &mdash; just hit the right one and the job
-gets done. However, from a developer perspective email is a nightmare. Mostly
+gets done. However, from a developer perspective `Email` class is a nightmare. Mostly
 because the class is very big and difficult to maintain.
 
 *Because the class is so big*,
@@ -310,7 +311,7 @@ Now, I can simplify my
 @Immutable
 class Envelope.MIME implements Envelope {
   private final Array<Stamp> stamps;
-  public MIME(Iterable<Stamp> smpts) {
+  public MIME(Iterable<Stamp> stmps) {
     this.stamps = new Array<Stamp>(stmps);
   }
   @Override
@@ -318,7 +319,7 @@ class Envelope.MIME implements Envelope {
     Message msg = new MimeMessage(
       Session.getDefaultInstance(new Properties())
     );
-    for (Stamp stamp : stamps) {
+    for (Stamp stamp : this.stamps) {
       stamp.attach(msg);
     }
     return msg;
