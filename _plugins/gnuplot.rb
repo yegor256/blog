@@ -12,16 +12,20 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
-      system('
-        set -e
-        dir=$(pwd)
-        cd _gnuplot/2014/11
-        gnuplot netbout-hoc-vs-loc.gpi
-        mkdir -p ${dir}/_site/gnuplot/2014/11
-        mv netbout-hoc-vs-loc.svg ${dir}/_site/gnuplot/2014/11/
-        cd ${dir}
-      ')
-      site.static_files << Jekyll::GnuplotFile.new(site, site.dest, '/', "gnuplot/2014/11/netbout-hoc-vs-loc.svg")
+      Dir.glob("./_gnuplot/**/*.gpi").each do |f|
+        path = File.dirname(f).gsub(/^.*_gnuplot\//, '')
+        base = File.basename(f).gsub(/\.gpi$/, '')
+        system("
+          set -e
+          dir=$(pwd)
+          cd _gnuplot/#{path}
+          gnuplot #{base}.gpi
+          mkdir -p ${dir}/_site/gnuplot/#{path}
+          mv #{base}.svg ${dir}/_site/gnuplot/#{path}
+          cd ${dir}
+        ")
+        site.static_files << Jekyll::GnuplotFile.new(site, site.dest, '/', "gnuplot/#{path}/#{base}.svg")
+      end
     end
   end
 end

@@ -32,6 +32,8 @@ script:
 - jekyll build
 - _test/ping_links.sh
 - _test/w3c_validate.sh
+- _test/test_excerps.sh
+- _test/test_pages_existence.sh
 - for i in $(ls js/*.js); do jslint $i; done
 - git config --global user.email "travis@teamed.io"
 - git config --global user.name "travis"

@@ -3,9 +3,10 @@ module Yegor
     def initialize(src, ctx)
       if src.index('/') == 0
         @url = ctx.registers[:site].config['url'] + src
-        if !File.exists?('./_site' + src) && !File.exists?('.' + src)
-          raise "file doesn't exist: #{src}"
-        end
+        raise "file doesn't exist: #{src}" unless
+          File.exists?('./_site' + src) ||
+          File.exists?('.' + src) ||
+          src =~ /gnuplot/
       else
         @url = src
       end
