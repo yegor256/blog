@@ -104,6 +104,42 @@ that exists outside of our scope. Always ask yourself, what is
 the real-life entity behind your object. If you can't find an answer,
 start thinking about refactoring.
 
+## It Works By Contracts
+
+A good object always works by contracts. He expects to be hired not
+because of his personal merits, but because he obeys the contracts. On the
+other hand, when we hire an object, we shouldn't expect some specific
+object from a specific class to do the work for us. We should expect *any*
+object to do what our contract says.
+
+For example, I need to show a photo on the screen.
+I want that photo to be read from a file in PNG format. I'm
+contracting an object from class `DataFile` and asking him to give me
+a binary content of that image.
+
+But wait, do I care where exactly the content will come from, the file on disc or
+an HTTP request or maybe a document in Dropbox? Actually, I don't. All I care about
+is that some object gives me a byte array with PNG content. So, my contract
+would look like this:
+
+{% highlight java %}
+interface Image {
+  byte[] png();
+}
+{% endhighlight %}
+
+Now, any object from any class (not just `DataFile`) can work for me.
+All he has to do, in order to be eligible, is to obey the contract
+&mdash; by implementing the interface `Image`.
+
+The rule here is simple &mdash; every public method in a good object should
+implement its counter-part from an interface. If your object has
+public methods that are not inherited from any interface, it is a bad design.
+
+There are two practical reasons for this. First, an object working
+without a contract is impossible to mock for unit testing. Second,
+a contract-less object is impossible to decorate.
+
 ## It Is Unique
 
 A good object should always encapsulate something, in order
@@ -112,8 +148,9 @@ have identical clones, which, I believe, is bad. Here is an example
 of a bad object, which may have clones:
 
 {% highlight java %}
-class Status {
+class HTTPStatus implements Status {
   private URL page = new URL("http://www.google.com");
+  @Override
   public int read() throws IOException {
     return HttpURLConnection.class.cast(
       this.page.openConnection()
@@ -122,12 +159,12 @@ class Status {
 }
 {% endhighlight %}
 
-I can create a few instances of class `Status` and all of them will be
+I can create a few instances of class `HTTPStatus` and all of them will be
 equal to each other:
 
 {% highlight java %}
-first = new Status();
-second = new Status();
+first = new HTTPStatus();
+second = new HTTPStatus();
 assert first.equals(second);
 {% endhighlight %}
 
@@ -152,11 +189,13 @@ Instead, a good immutable object is very dynamic
 but never changes its internal state, for example:
 
 {% highlight java %}
-class Status {
+@Immutable
+class HTTPStatus implements Status {
   private URL page;
   public Status(URL url) {
     this.page = url;
   }
+  @Override
   public int read() throws IOException {
     return HttpURLConnection.class.cast(
       this.page.openConnection()
@@ -180,7 +219,41 @@ may change its state and force him to betray the URL. In other words,
 An object must expose some functionality, through non-static methods.
 Objects without methods are not good objects.
 
-## no public static methods
+## It Doesn't Have Static Methods
+
+A static method implements a behavior of a class, not an object. Let's say,
+we have class `File` and its children have method `size()`:
+
+{% highlight java %}
+class File implements Measurable {
+  @Override
+  public int size() {
+    // calculate the size of the file and return
+  }
+}
+{% endhighlight %}
+
+So far so good, the method `size()` is there because of the contract `Measurable`
+and every object of class `File` will be able to measure their sizes. A terrible
+mistake would be to design this class with a static method instead
+(this design is also known as [a utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})):
+
+{% highlight java %}
+// TERRIBLE DESIGN, DON'T USE!
+class File {
+  public static int size(String file) {
+    // calculate the size of the file and return
+  }
+}
+{% endhighlight %}
+
+This design is completely against object-oriented paradigm. Moreover,
+I consider any public static method an evil. Conceptually, static
+methods turn object-oriented programming into a class-oriented one. What's
+wrong with this, you may ask? The problem is that with class-oriented programming
+decomposition doesn't work any more. We can't break down a complex problem
+into parts, because only a single instance of a class exists in the entire
+program. The power of OOP is that it allows us
 
 ## He Is Named After Who He Is Not What He Does
 
@@ -210,12 +283,11 @@ one, with data. So, how about `FileWithData` or simply `DataFile`?
 The same logic should be applicable to all other names.
 Always think about **what it is**, instead of what it does.
 
-## Interfaces
+## Its Class Is Either Final or Abstract
 
-A good object always work by a contract. He works for someone. He is ready
-to be hired and obey a contract. He wants to be hired
-
-## Either final or abstract
+A good object comes from either final or abstract class. A `final` class is the one that
+can't be extended via inheritance. An `abstract` class is the one that
+can't have children.
 
 ## Hall of Fame
 
