@@ -2,15 +2,21 @@
 $(
   function() {
     'use strict';
+    function number(num) {
+      if (num > 1000) {
+        return Math.round(num / 1000) + 'k';
+      }
+      return num;
+    }
     var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]);
     $.getJSON(
       'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
       function (data) {
         if (data.GooglePlusOne !== 0) {
-          $('.count-googleplus').html(data.GooglePlusOne).fadeIn();
+          $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
         }
         if (data.StumbleUpon !== 0) {
-          $('.count-stumbleupon').html(data.StumbleUpon).fadeIn();
+          $('.count-stumbleupon').html(number(data.StumbleUpon)).fadeIn();
         }
       }
     );
@@ -19,7 +25,7 @@ $(
       function(json) {
         var count = json.count;
         if (count > 0) {
-          $('.count-twitter').html(count).fadeIn();
+          $('.count-twitter').html(number(count)).fadeIn();
         }
       }
     );
@@ -28,7 +34,7 @@ $(
       function(json) {
         var count = json[0].total_count;
         if (count > 0) {
-          $('.count-facebook').html(count).fadeIn();
+          $('.count-facebook').html(number(count)).fadeIn();
         }
       }
     );
@@ -37,7 +43,7 @@ $(
       function(json) {
         var count = json.count;
         if (count > 0) {
-          $('.count-linkedin').html(count).fadeIn();
+          $('.count-linkedin').html(number(count)).fadeIn();
         }
       }
     );
@@ -46,7 +52,7 @@ $(
       function(json) {
         var count = json.data.children.length;
         if (count > 0) {
-          $('.count-reddit').html(count).fadeIn();
+          $('.count-reddit').html(number(count)).fadeIn();
         }
       }
     );
@@ -58,7 +64,7 @@ $(
           count = data[0].total_posts;
         }
         if (count !== 0) {
-          $('.count-delicious').html(data[0].total_posts).fadeIn();
+          $('.count-delicious').html(number(data[0].total_posts)).fadeIn();
         }
       }
     );
