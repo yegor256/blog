@@ -118,7 +118,7 @@ all the data you may need. Why is this bad? Well, why do we need encapsulation
 in the first place? In order to protect one programmer from another, aka
 [defensive programming](https://en.wikipedia.org/wiki/Defensive_programming).
 While I'm busy changing the subject of the MIME message, I want to be
-sure that I'm not interferred with by some other method's activity, that is
+sure that I'm not interfered with by some other method's activity, that is
 changing a sender and touching my subject by mistake. Encapsulation helps
 us narrow down the scope of the problem, while this `Email` class
 is doing exactly the opposite.

@@ -219,7 +219,7 @@ may change its state and force him to betray the URL. In other words,
 An object must expose some functionality, through non-static methods.
 Objects without methods are not good objects.
 
-## It Doesn't Have Static Methods
+## It Doesn't Have Public Static Methods
 
 A static method implements a behavior of a class, not an object. Let's say,
 we have class `File` and its children have method `size()`:
@@ -247,13 +247,39 @@ class File {
 }
 {% endhighlight %}
 
-This design is completely against object-oriented paradigm. Moreover,
-I consider any public static method an evil. Conceptually, static
-methods turn object-oriented programming into a class-oriented one. What's
-wrong with this, you may ask? The problem is that with class-oriented programming
+This design is completely against the object-oriented paradigm. Why?
+Because static methods turn object-oriented programming into a "class-oriented" one. What's
+wrong with this, you may ask? Why can't we have objects and classes
+as first-class citizens in our code? Why can't both of them have methods and properties?
+Class methods are static and object methods are not.
+
+The problem is that with class-oriented programming
 decomposition doesn't work any more. We can't break down a complex problem
 into parts, because only a single instance of a class exists in the entire
-program. The power of OOP is that it allows us
+program. The power of OOP is that it allows us to use objects as an instrument
+for scope decomposition. When I instantiate an object inside a method, it
+is dedicated to my specific task. It is perfectly isolated from
+all other objects around the method. This object is a *local variable*
+in the scope of the method. A class, with its static methods, is always
+a *global variable*, no matter where I use it. Because of that, I can't
+isolate my interaction with this variable from others.
+
+Besides being conceptually against object-oriented principles, public static
+methods have a few practical drawbacks.
+
+First, it's **impossible to mock** them
+(well, you can use [PowerMock](https://code.google.com/p/powermock/),
+but this will be the most terrible decision
+you can make in a Java project... I've made it once, a few years ago).
+
+Second, they are **not thread-safe** by definition, since they always
+work with static variables, which are shared among all threads. You can
+make them thread-safe, but this will always require explicit
+synchronization.
+
+Every time you see a public static method, start rewriting immediately. I don't
+even want to mention how terrible are static (or global) variables. I think
+it is just obvious.
 
 ## He Is Named After Who He Is Not What He Does
 
@@ -288,7 +314,3 @@ Always think about **what it is**, instead of what it does.
 A good object comes from either final or abstract class. A `final` class is the one that
 can't be extended via inheritance. An `abstract` class is the one that
 can't have children.
-
-## Hall of Fame
-
-Android SDK `Activity`
