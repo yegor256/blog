@@ -112,9 +112,10 @@ start thinking about refactoring.
 
 A good object always works by contracts. He expects to be hired not
 because of his personal merits, but because he obeys the contracts. On the
-other hand, when we hire an object, we shouldn't expect some specific
+other hand, when we hire an object, we shouldn't discriminate and expect some specific
 object from a specific class to do the work for us. We should expect *any*
-object to do what our contract says.
+object to do what our contract says. As long as the object does what
+we need, we should not be interested in his class of origin, his sex or religion.
 
 For example, I need to show a photo on the screen.
 I want that photo to be read from a file in PNG format. I'm
@@ -127,14 +128,14 @@ is that some object gives me a byte array with PNG content. So, my contract
 would look like this:
 
 {% highlight java %}
-interface Image {
-  byte[] png();
+interface Binary {
+  byte[] read();
 }
 {% endhighlight %}
 
 Now, any object from any class (not just `DataFile`) can work for me.
 All he has to do, in order to be eligible, is to obey the contract
-&mdash; by implementing the interface `Image`.
+&mdash; by implementing the interface `Binary`.
 
 The rule here is simple &mdash; every public method in a good object should
 implement its counter-part from an interface. If your object has
