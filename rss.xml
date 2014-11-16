@@ -240,7 +240,7 @@ all the data you may need. Why is this bad? Well, why do we need encapsulation
 in the first place? In order to protect one programmer from another, aka
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Defensive_programming&quot;&gt;defensive programming&lt;/a&gt;.
 While I&amp;#39;m busy changing the subject of the MIME message, I want to be
-sure that I&amp;#39;m not interferred with by some other method&amp;#39;s activity, that is
+sure that I&amp;#39;m not interfered with by some other method&amp;#39;s activity, that is
 changing a sender and touching my subject by mistake. Encapsulation helps
 us narrow down the scope of the problem, while this &lt;code&gt;Email&lt;/code&gt; class
 is doing exactly the opposite.&lt;/p&gt;
