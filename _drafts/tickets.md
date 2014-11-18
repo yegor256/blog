@@ -19,7 +19,8 @@ A team working remotely requires much stronger discipline than
 a co-located crew sitting in the same office. First of all, I mean discipline of
 communications. In [teamed.io](http://www.teamed.io) we develop software
 remotely for the last five years. We manage tasks strictly through
-ticketing systems (like Github, JIRA, Trac, Basecamp, etc) and discourage
+ticketing systems (like Github, JIRA, Trac, Basecamp, etc) and
+[discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any informal communications, like Skype, HipChat, emails or phone calls.
 Every ticket for us is an isolated task, with its own lifecycle,
 its own participants, and its own goal. Over these years we've learned
@@ -32,17 +33,17 @@ Each ticket is a link between two people: problem specifier and problem
 solver. If it is a bug, I'm reporting it &mdash; you're solving. If it is
 a question, I'm asking for an explanation &mdash; you're explaining. If it
 is a task, I'm ordering you to do it &mdash; you're doing. In either case,
-there two main characters. No matter how many people are involved in ticket
-resolution, only these two characters have formal roles here.
+there are two main characters. No matter how many people are involved in the ticket
+resolution, only these two characters have formal roles.
 
 The responsibility of the ticket reporter is to **defend the problem**. When I
-report a bug, I have to insist that it exists. This is my job. Others
+report a bug, I have to insist that it exists &mdash; this is my job. Others
 may tell me that I'm wrong and the bug is not there. They will tell
 me that they can't reproduce it. They will say that my description of
 a task is too vague and nobody understands it. There may be many issues
-of that kind. My job is to do the best I can in order to keep the ticket
-alive. Obviously, if the bug is not reproducible, I'll be forced to close
-the ticket. Until the ticket is closed, I'm its protecting angel.
+of that kind. My job is to do the best I can in order to *keep the ticket alive*.
+Obviously, if the bug is not reproducible, I'll be forced to close
+the ticket. However, until the ticket is closed, I'm its guarding angel :)
 
 On the other hand, the responsibility of the ticket solver is to
 **defend the solution**. When a ticket is assigned to me and I have to resolve it,
@@ -50,30 +51,30 @@ my job is to convience the reporter that my solution is good enough. He will
 tell me that my solution is not sufficient, not the most efficient, and
 incomplete. My job is to insist that I'm right and he is wrong. Well, of course,
 in a reasonable way. Of course, in order to create a solution that will be
-accepted as sufficient enough, I have to understand the problem first, to investigate
+accepted as sufficient enough, I have to understand the problem first, investigate
 all possible options and propose the most elegant implementation. But all this
 is secondary. The first thing on what I will be focused is on how to convience
-the reporter. I will always remember that my primary goal is to close the ticket.
+the reporter. I will always remember that my primary goal is to *close the ticket*.
 
 My point here is that no matter how many people are involved in the
 ticket discussion, always remember what is happening there &mdash; one
 person is selling his solution to another person. Everybody else around
-them, in most cases, is just noise.
+them is help or distraction (see below).
 
 ## Close It!
 
 Remember that a ticket is not a chat. You're not there to talk.
-You're there in order to *close* it. When the ticket is assigned to you,
+You're there to *close*. When the ticket is assigned to you,
 focus on closing it, as soon as possible.
 
 Also, keep in mind, that sooner you close the ticket, the better job
 you will do for the project. Long-living tickets is a management nightmare.
 It is difficult to track them and control. It's difficult to understand
-what's going on. Have you seen that year-old tickets in open source projects
+what's going on. Have you seen that two-years-old tickets in open source projects
 that have hundrends of comments and no deliverables? It is a mistake
 of their project managers and ticket participants. Each ticket should be
-short and focused &mdash; 1) the problem, 2) a refinement
-questions, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
+short and focused &mdash; 1) a problem, 2) a refinement
+question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.
 
 As soon as you realize that your ticket is turning into a long discussion,
@@ -110,9 +111,9 @@ project documentation. It can be a TODO marker in the code saying that
 "we are aware of the problem but won't fix it because we're lazy". Anything
 would work, but not nothing.
 
-Look at it from a different perspective. When you started the ticket you had
+Look at it from a different perspective. When you started that ticket you had
 something in mind. Something was not right in the product. That's why you
-reported that bug. If you close the ticket without even touching that place
+reported a bug. If you close the ticket without anyone even touching that place
 of code, someone else will have the same concern in a few days or a few years.
 And then the project will have to pay again for a similar ticket/discussion
 of the same problem. Even if you're convinced that the issue you found in
@@ -154,6 +155,29 @@ how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly or
 doesn't satisfy the requirements, etc.
 
-Every bug report should follow the same simple formula: "this is what we have,
-this is what we should have, fix it".
+Every bug report should follow the same simple formula: "this is what we *have*,
+this is what we *should have* instead, fix it". Every ticket, be it a bug,
+a task, a question, or a suggestion, should be formatted in this way. By
+submitting it you're asking the project to move from point A to point B. Something
+is not right in point A, and it will be much better for all of us to be
+in that point B. So, it's obvious, that you have to explain where these
+A and B are. It is highly desirable if you can explain how to get there &mdash;
+how to reproduce a problem and how to fix it.
 
+Even when you have a question, you should also follow that format. If you
+have a question, it means that project documentation is not sufficient
+enough for you to find an answer there. This is what is broken. You should
+ask for a fix. So, instead of reporting "how should I use class X?", say
+something like "current documentation is not complete, it doesn't explain
+how I should use class X, please fix."
+
+If you can't explain how to get there, say so in the ticket: "I see that
+this class doesn't work as it should, but I don't know how to reproduce
+the problem and how to fix." This will give everybody a clear message
+that you are aware that your bug report is not perfect. The first step
+of its resolver will be to refine the problem and find a way to reproduce it.
+If this way won't be found, obviously, your bug will be forced to closing.
+
+Let me re-iterate, every ticket is dragging the project from point A,
+where something is not right, to point B, where it is fixed. Your job,
+as a ticket reporter is to draw that line &mdash; clearly and explicitly.
