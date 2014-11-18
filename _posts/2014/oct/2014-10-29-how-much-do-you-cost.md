@@ -84,7 +84,7 @@ as "an active contributor to Linux kernel" (yeah, why not?), I immediately
 lose interest. On the other hand, when I see a 100+ stars project in your
 Github account, I get excited and ready to offer a higher rate.
 
-## Georgraphic Location
+## Geographic Location
 
 It is a common practice to pay higher rates to those who live in more
 expensive countries. When I'm getting resumes from San Francisco programmers,
