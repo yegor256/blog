@@ -20,10 +20,9 @@ Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
 > A library is essentially a set of functions that you can call,
 these days usually organized into classes
 
-Functions organized into classes? What kind of programming is that?
-Object-oriented? Martin, classes are **not** organizers of functions!
-Unfortunately, you're not alone, since it is a very common
-misconception of a class and an object in object-oriented programming.
+Functions organized into classes? All due respect, but it is wrong. And it
+is a very common misconception of a class in object-oriented programming. Classes
+are not organizers of functions. And objects are not data structures.
 
 So, what is a "proper" object? Which one is not a proper one?
 What is the difference? Even though it is a very polemic subject, it is very important.
