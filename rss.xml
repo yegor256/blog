@@ -374,7 +374,7 @@ and decorate him with your own implementation (a.k.a.
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;Decorator Pattern&lt;/a&gt;):&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OnlyValidStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;transient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnlyValidStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
@@ -396,7 +396,7 @@ In this design, we treat the original object as a black box and never
 touch his internal logic.&lt;/p&gt;
 
 &lt;p&gt;If you don&amp;#39;t use that &lt;code&gt;final&lt;/code&gt; keyword, anyone (including yourself) will
-be able to extend the class and ... offend him. :( So a class without &lt;code&gt;final&lt;/code&gt;
+be able to extend the class and ... offend him :( So a class without &lt;code&gt;final&lt;/code&gt;
 is a bad design.&lt;/p&gt;
 
 &lt;p&gt;An abstract class is the exact oposite case &amp;mdash; he tells us that
