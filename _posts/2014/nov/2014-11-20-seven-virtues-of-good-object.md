@@ -385,7 +385,7 @@ and decorate him with your own implementation (a.k.a.
 
 {% highlight java %}
 final class OnlyValidStatus implements Status {
-  private final transient Status origin;
+  private final Status origin;
   public OnlyValidStatus(Status status) {
     this.origin = status;
   }
@@ -408,7 +408,7 @@ In this design, we treat the original object as a black box and never
 touch his internal logic.
 
 If you don't use that `final` keyword, anyone (including yourself) will
-be able to extend the class and ... offend him. :( So a class without `final`
+be able to extend the class and ... offend him :( So a class without `final`
 is a bad design.
 
 An abstract class is the exact oposite case &mdash; he tells us that
