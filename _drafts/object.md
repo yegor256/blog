@@ -137,8 +137,8 @@ All he has to do, in order to be eligible, is to obey the contract
 &mdash; by implementing the interface `Binary`.
 
 The rule here is simple: every public method in a good object should
-implement its counterpart from an interface. If your object has
-public methods that are not inherited from any interface, it is badly designed.
+implement his counterpart from an interface. If your object has
+public methods that are not inherited from any interface, he is badly designed.
 
 There are two practical reasons for this. First, an object working
 without a contract is impossible to mock in a unit test. Second,
@@ -182,15 +182,15 @@ inventors enabled static methods.
 
 ## 4. He Is Immutable
 
-A good object should never change its encapsulated state.
+A good object should never change his encapsulated state.
 Remember, an object is a representative of a real-life entity, and this
 entity should stay the same through the entire life of the object. In other
-words, an object should never betray those whom it represents. It should
+words, an object should never betray those whom he represents. He should
 never change owners. :)
 
 Be aware that immutability doesn't mean that all methods always return the same values.
 Instead, a good immutable object is very dynamic.
-However, it never changes its internal state. For example:
+However, he never changes his internal state. For example:
 
 {% highlight java %}
 @Immutable
@@ -209,9 +209,9 @@ final class HTTPStatus implements Status {
 {% endhighlight %}
 
 Even though the method `read()` may return different values, the
-object is immutable. It points to a certain web page and will
-never point anywhere else. It will never change its encapsulated state, and it will
-never betray the URL it represents.
+object is immutable. He points to a certain web page and will
+never point anywhere else. He will never change his encapsulated state, and he will
+never betray the URL he represents.
 
 Why is immutability a virtue? This article explains in detail:
 [Objects Should Be Immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
@@ -237,7 +237,7 @@ explains: [How Immutability Helps]({% pst 2014/nov/2014-11-07-how-immutability-h
 ## 5. His Class Doesn't Have Anything Static
 
 A static method implements a behavior of a class, not an object. Let's say
-we have class `File`, and its children have method `size()`:
+we have class `File`, and his children have method `size()`:
 
 {% highlight java %}
 final class File implements Measurable {
@@ -249,7 +249,7 @@ final class File implements Measurable {
 {% endhighlight %}
 
 So far, so good; the method `size()` is there because of the contract `Measurable`,
-and every object of class `File` will be able to measure its size. A terrible
+and every object of class `File` will be able to measure his size. A terrible
 mistake would be to design this class with a static method instead
 (this design is also known as
 [a utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
@@ -266,7 +266,7 @@ class File {
 
 This design runs completely against the object-oriented paradigm. Why?
 Because static methods turn object-oriented programming into "class-oriented" programming.
-This method `size()` exposes the behavior of the class, not of its objects. What's
+This method, `size()`, exposes the behavior of the class, not of his objects. What's
 wrong with this, you may ask? Why can't we have both objects and classes
 as first-class citizens in our code? Why can't both of them have methods and properties?
 
@@ -274,11 +274,11 @@ The problem is that with class-oriented programming,
 decomposition doesn't work anymore. We can't break down a complex problem
 into parts, because only a single instance of a class exists in the entire
 program. The power of OOP is that it allows us to use objects as an instrument
-for scope decomposition. When I instantiate an object inside a method, it
-is dedicated to my specific task. It is perfectly isolated from
+for scope decomposition. When I instantiate an object inside a method, he
+is dedicated to my specific task. He is perfectly isolated from
 all other objects around the method. This object is a *local variable*
-in the scope of the method. A class, with its static methods, is always
-a *global variable* no matter where I use it. Because of that, I can't
+in the scope of the method. A class, with his static methods, is always
+a *global variable* no matter where I use him. Because of that, I can't
 isolate my interaction with this variable from others.
 
 Besides being conceptually against object-oriented principles, public static
@@ -322,7 +322,7 @@ In general, avoid names that end with "-er" &mdash; most of them are bad.
 "What is the alternative of a `FileReader`?" I hear you asking. What would
 be a better name? Let's see. We already have `File`, which is a representative
 of a real-world file on disk. This representative is not powerful enough for us,
-because it doesn't know how to read the content of the file. We want to create
+because he doesn't know how to read the content of the file. We want to create
 a more powerful one that will have that ability. What would we call him?
 Remember, the name should say what he is, not what he does. What is he? He
 is a file that has data; not just a file, like `File`, but a more sophisticated
@@ -340,14 +340,14 @@ can't have children. Simply put, a class should either say, "You can never break
 me; I'm a black box for you" or "I'm broken already; fix me first and then use".
 
 There is nothing in between. A final class is a black box that you can't modify
-by any means. It works as it works, and you either use it or throw it away. You can't
-create another class that will inherit its properties. This is not allowed
+by any means. He works as he works, and you either use him or throw him away. You can't
+create another class that will inherit his properties. This is not allowed
 because of that `final` modifier. The only way to extend such a final class
-is through decoration of its children. Let's say I have the class `HTTPStatus` (see
-above), and I don't like it. Well, I like it, but it's not powerful enough
-for me. I want it to throw an exception if HTTP status is over 400. I want
-its method `read()` to do more that it does now. A traditional way would be
-to extend the class and overwrite its method:
+is through decoration of his children. Let's say I have the class `HTTPStatus` (see
+above), and I don't like him. Well, I like him, but he's not powerful enough
+for me. I want him to throw an exception if HTTP status is over 400. I want
+his method, `read()`, to do more that it does now. A traditional way would be
+to extend the class and overwrite his method:
 
 {% highlight java %}
 class OnlyValidStatus extends HTTPStatus {
@@ -363,14 +363,14 @@ class OnlyValidStatus extends HTTPStatus {
 {% endhighlight %}
 
 Why is this wrong? It is very wrong because we risk breaking
-the logic of the entire parent class by overriding one of its methods. Remember,
+the logic of the entire parent class by overriding one of his methods. Remember,
 once we override the method `read()` in the child class, all methods from the
-parent class start to use its new version. We're literally injecting
+parent class start to use his new version. We're literally injecting
 a new "piece of implementation" right into the class. Philosophically
 speaking, this is an offense.
 
-On the other hand, to extend a final class, you have to treat it like a black box
-and decorate it with your own implementation (a.k.a.
+On the other hand, to extend a final class, you have to treat him like a black box
+and decorate him with your own implementation (a.k.a.
 [Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)):
 
 {% highlight java %}
@@ -392,13 +392,13 @@ final class OnlyValidStatus implements Status {
 
 Make sure that this class is implementing the same interface
 as the original one: `Status`. The instance of `HTTPStatus` will
-be passed into it through the constructor and encapsulated. Then every
+be passed into him through the constructor and encapsulated. Then every
 call will be intercepted and implemented in a different way, if necessary.
 In this design, we treat the original object as a black box and never
-touch its internal logic.
+touch his internal logic.
 
 If you don't use that `final` keyword, anyone (including yourself) will
-be able to extend the class and ... offend it. :( So a class without `final`
+be able to extend the class and ... offend him. :( So a class without `final`
 is a bad design.
 
 An abstract class is the exact oposite case &mdash; he tells us that
