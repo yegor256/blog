@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Virtues of a Good Object"
-date: 2014-11-19
+date: 2014-11-20
 tags: oop
 description:
   Who is that properly designed object in an object-oriented world? What
@@ -35,6 +35,8 @@ Here is my list of qualities of a good object.
 
 ## Class vs. Object
 
+{% badge /images/2014/11/good-object-1.png 250 %}
+
 Before we start talking about objects, let's define what a *class* is. It
 is a place where objects are being born (a.k.a. *instantiated*). The main responsibility
 of a class is to *construct* new objects on demand and *destruct* them when
@@ -45,7 +47,7 @@ Sometimes I hear classes being called "object templates"
 (for example, [Wikipedia says so](https://en.wikipedia.org/wiki/Class_%28computer_programming%29)).
 This definition is not correct because it places classes into a passive position. This definition
 assumes that someone will get a template and build an object by using it.
-This may be true, technically speaking, but conceptually it's wrong. Nobody else 
+This may be true, technically speaking, but conceptually it's wrong. Nobody else
 should be involved &mdash; there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:
@@ -62,6 +64,8 @@ is a terrible idea, but I'll write more about it in one of the next posts :)
 Now, let's talk about objects and their best and worst sides.
 
 ## 1. He Exists in Real Life
+
+{% badge /images/2014/11/good-object-2.png 250 %}
 
 First of all, an object is a **living organism**. Moreover, an object
 should be [anthropomorphized](https://en.wikipedia.org/wiki/Anthropomorphism), i.e.
@@ -108,6 +112,8 @@ the real-life entity behind my object?" If you can't find an answer,
 start thinking about refactoring.
 
 ## 2. He Works by Contracts
+
+{% badge /images/2014/11/good-object-3.png 250 %}
 
 A good object always works by contracts. He expects to be hired not
 because of his personal merits but because he obeys the contracts. On the
@@ -300,6 +306,8 @@ it is just obvious.
 
 ## 6. His Name Is Not a Job Title
 
+{% badge /images/2014/11/good-object-4.png 250 %}
+
 The name of an object should tell us what this object **is**, not what
 it **does**, just like we name objects in real life: book instead of
 page aggregator, cup instead of water holder, T-shirt instead of body dresser.
@@ -333,6 +341,8 @@ Always think about **what it is** rather than what it does. Give your
 objects real, meaningful names instead of job titles.
 
 ## 7. His Class Is Either Final or Abstract
+
+{% badge /images/2014/11/good-object-5.png 250 %}
 
 A good object comes from either a final or abstract class. A `final` class is one that
 can't be extended via inheritance. An `abstract` class is one that
