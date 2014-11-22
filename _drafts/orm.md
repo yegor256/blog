@@ -164,7 +164,7 @@ like TopLink or OpenJPA) for a database-connected application. It's a standard
 *de-facto* and still I'm saying that it's wrong? Yes.
 
 I'm claiming that the entire idea behind ORM is wrong. It's invention
-was the second big mistake in OOP, after
+was maybe the second big mistake in OOP, after
 [NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
 Actually, I'm not the only one saying something like this and,
@@ -173,11 +173,12 @@ this subject has already been published, by very respected authors, including
 [OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler,
 [Object-Relational Mapping is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
 [The Vietnam of Computer Science](http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx) by Ted Neward,
-and [ORM is an anti-pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss.
+[ORM is an anti-pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
+and many others.
 
 However, my argument is different from what they say. Even though their reasons are
 practical and valid, like "ORM is slow" or "database upgrade is hard",
-they miss the main point. You can see a very good practical answer
+they miss the main key point. You can see a very good practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
@@ -191,9 +192,9 @@ relational database. Look at this picture, it illustrates what ORM is doing:
 ...
 
 I, being a reader of posts, have to deal with two components, 1) the ORM
-and the "obtruncated" object it returns to me. The behavior I'm interacting
-with is supposed to be provided by a single entry point, which is an object
-in OOP. In case of ORM, I'm getting this behavior from two entry points &mdash;
+and 2) the "obtruncated" object returned to me. The behavior I'm interacting
+with is supposed to be provided through a single entry point, which is an object
+in OOP. In case of ORM, I'm getting this behavior via two entry points &mdash;
 the ORM and the "thing", which we can't even call an object.
 
 Because of this terrible and offensive violation of object-oriented
