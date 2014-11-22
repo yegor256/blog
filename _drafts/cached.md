@@ -4,7 +4,9 @@ title: "Caching Object Decorators"
 date: 2014-11-19
 tags: oop
 description:
-  Decorating your objects
+  It is a good practice to avoid duplicate calculations
+  by caching results in memory; here is how we can cache
+  by using object decorators
 keywords:
   - object relational mapping
   - object relational mapping tools

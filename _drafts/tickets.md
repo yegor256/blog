@@ -27,6 +27,8 @@ its own participants, and its own goal. Over these years, we've learned
 a few lessons that I want to share. If you also work remotely with your
 team, you may find them useful.
 
+<!--more-->
+
 ## Keep It One-on-One
 
 Each ticket is a link between two people: problem specifier and problem
@@ -92,7 +94,7 @@ Be explicit in your intention to close the ticket and move on. Try this:
 ## Don't Close It!
 
 Every time you raise a bug and create a new ticket, you consume project
-resources. Every bug report means money spent on the project: 1) money for your time 
+resources. Every bug report means money spent on the project: 1) money for your time
 spent finding the problem and reporting it; 2) for the time of the project manager
 who is working with the ticket and finding who will fix it; 3) for the time
 of the ticket solver, who is trying to understand your report and provide

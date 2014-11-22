@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ORM Is an Anti-Pattern. What Is the Alternative?"
+title: "ORM Is an Offensive Anti-Pattern"
 date: 2014-11-19
 tags: oop
 description:
@@ -16,10 +16,10 @@ keywords:
 ---
 
 TL;DR ORM is an terrible anti-pattern violating all principles of
-object oriented programming and turning your objects into dumb and passive
+object oriented programming, tearing objects apart, and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
-manipulations on them. What is the alternative? **SQL speaking objects**. Read on.
+manipulations on them. What is the alternative? **SQL speaking objects**.
 
 <!--more-->
 
@@ -161,12 +161,69 @@ for over ten years already. Almost every SQL-intensive application in the world
 is using it. Each Java tutorial would mention Hibernate (or maybe
 [some other ORM](https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software),
 like TopLink or OpenJPA) for a database-connected application. It's a standard
-*de-facto* and still I'm saying that it's wrong?
+*de-facto* and still I'm saying that it's wrong? Yes.
 
-Yes, I'm claiming that the entire idea of ORM is wrong. It was invented by
-mistake. Let me explain why.
+I'm claiming that the entire idea behind ORM is wrong. It's invention
+was the second big mistake in OOP, after
+[NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
-First,
+Actually, I'm not the only one saying something like this and,
+definitely, not the first. A lot about
+this subject has already been published, by very respected authors, including
+[OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler,
+[Object-Relational Mapping is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
+[The Vietnam of Computer Science](http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx) by Ted Neward,
+and [ORM is an anti-pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss.
+
+However, my argument is different from what they say. Even though their reasons are
+practical and valid, like "ORM is slow" or "database upgrade is hard",
+they miss the main point. You can see a very good practical answer
+to these practical arguments given by Bozhidar Bozhanov
+in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
+
+The main point is that ORM, instead of encapsulating database interaction
+inside an object, extracts it away, literally tearing a solid and cohesive
+[living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) apart.
+One part of the object keeps the data, while another one, implemented inside
+the ORM engine (session factory), knows how to deal with this data and transfer them to the
+relational database. Look at this picture, it illustrates what ORM is doing:
+
+...
+
+I, being a reader of posts, have to deal with two components, 1) the ORM
+and the "obtruncated" object it returns to me. The behavior I'm interacting
+with is supposed to be provided by a single entry point, which is an object
+in OOP. In case of ORM, I'm getting this behavior from two entry points &mdash;
+the ORM and the "thing", which we can't even call an object.
+
+Because of this terrible and offensive violation of object-oriented
+paradigm, we have a lot of that practical issues already mentioned in that
+respected publications. I can only add a few more.
+
+**SQL is Not Hidden**.
+Users of ORM should speak SQL
+(or its dialect, like [HQL](https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html)).
+See the example above, we're calling `session.createQuery("FROM Post")` in order
+to get all posts. Even though it's not SQL, it is very similar to it. Thus,
+relational model is not encapsulated inside objects. Instead, it is exposed
+to the entire application. Everybody, each object, inevitably has to
+deal with relational model in order to get or save something. Thus,
+ORM doesn't hide and wrap the SQL, but pollutes the entire application with it.
+
+**Difficult to Test**.
+When some object is working a list of posts, it needs to deal with an
+instance of `SessionFactory`. How can we mock this dependency? We have to
+create a mock of it? How complex is this task? Look at the code above and you
+will realize how verbose and cumbersome will be that unit test. Instead,
+we can write integration tests and connect the entire application to a test
+version of PostgreSQL. In that case there is no need to mock `SessionFactory`,
+but such tests will be rather slow and, which is even more important, our
+having-nothing-to-do-with-the-database objects will be tested against
+the database instance. A terrible design.
+
+Again, let me re-iterate. Practical problems of ORM are just consequences. The
+fundamental drawback is that ORM tears objects apart, terribly and offensively
+violating the very idea of [what an object is]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
 ## SQL Speaking Objects
 
@@ -390,3 +447,51 @@ not growing up. Because classes don't grow in size. Instead, we're introducing
 new classes, which stay cohesive and solid. Because they are small.
 
 ## What About Transactions?
+
+Every object should deal with its own transactions and encapsulate
+them the same way `SELECT` or `INSERT` queries. This will lead to
+nested transactions, which is perfectly fine, provided the database
+server supports them. If there is no such support, create a session-wide
+transaction object, which will accept a "callable" class. For example:
+
+{% highlight java %}
+final class Txn {
+  private final DataSource dbase;
+  public <T> T call(Callable<T> callable) {
+    JdbcSession session = new JdbcSession(this.dbase);
+    try {
+      session.sql("START TRANSACTION").exec();
+      T result = callable.call();
+      session.sql("COMMIT").exec();
+      return result;
+    } catch (Exception ex) {
+      session.sql("ROLLBACK").exec();
+      throw ex;
+    }
+  }
+}
+{% endhighlight %}
+
+Then, when you want to wrap a few object manipulations in one
+transaction, do it like this:
+
+{% highlight java %}
+new Txn(dbase).call(
+  new Callable<Integer>() {
+    @Override
+    public Integer call() {
+      Posts posts = new PgPosts(dbase);
+      Post post = posts.add(new Date(), "How to cook an omelette");
+      posts.comments().post("This is my first comment!");
+      return post.id();
+    }
+  }
+);
+{% endhighlight %}
+
+This code will create a new post and post a comment to it. If one
+of the calls fail, the entire transaction will be rolled back.
+
+This approach looks object-oriented to me. I'm calling it "SQL speaking objects",
+because they know how to speak SQL with the database server. It's their
+skill, perfectly encapsulated inside their borders.
