@@ -3,7 +3,7 @@ layout: post
 title: "How much do you pay per line of code?"
 date: 2014-04-11
 tags: xdsd mgmt
-categories: best jcg
+categories: jcg
 description: |
   This article compares two projects and calculates
   their average costs per one line of code changed.
@@ -102,16 +102,17 @@ removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
 <p style="color:green;text-align:center;font-size:2em;">&cent;13 per line</p>
 
 This also means that programmers were writing approximately 270 lines per hour
-or over 2,000 per day. [The Mythical
-Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month) talks about 10
-lines per day, which is 200 times less than we saw in our project.
+or over 2,000 per day.
+[The Mythical Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+talks about 10 lines per day, which is 200 times less than we saw in our project.
 
 $350k vs $7k, $3.98 vs &cent;13? What do you think?
 
 ## How to Validate the Numbers?
 
 If you're curios, I'm using [hoc](https://github.com/teamed/hoc)
-to get the numbers from Git (it is explained in [Hits-of-Code Instead of SLoC]({% pst 2014/nov/2014-11-14-hits-of-code %})).
+to get the numbers from Git (it is explained in
+[Hits-of-Code Instead of SLoC]({% pst 2014/nov/2014-11-14-hits-of-code %})).
 You can validate the numbers for the second project here on Github:
 [jcabi/jcabi-github](https://github.com/jcabi/jcabi-github).
 

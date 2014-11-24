@@ -30,7 +30,12 @@ module Yegor
       if text.length > 200
         fail "too long description in [#{page['title']}]"
       end
-      text.gsub(/\n/, ' ').gsub(/"/, '&quot;').gsub(/'/, '&apos;')
+      text.gsub(/[ \n\r\t]+/, ' ')
+        .gsub(/&/, '&amp;')
+        .gsub(/"/, '&quot;')
+        .gsub(/'/, '&apos;')
+        .gsub(/</, '&lt;')
+        .gsub(/>/, '&gt;')
     end
   end
 end

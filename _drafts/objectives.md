@@ -5,7 +5,7 @@ date: 2014-11-06
 tags: mgmt
 description:
   It is very important to understand who do you work for,
-  your paying customer or his project and what is the difference
+  your paying customer or his project, and what is the difference?
 keywords:
   - project objectives
   - customer satisfaction
