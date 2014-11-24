@@ -15,42 +15,42 @@ keywords:
   - orm is antipattern
 ---
 
-TL;DR ORM is an terrible anti-pattern violating all principles of
-object oriented programming, tearing objects apart, and turning them into dumb and passive
+TL;DR ORM is a terrible anti-pattern that violates all principles of
+object-oriented programming, tearing objects apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
-manipulations on them. What is the alternative? **SQL speaking objects**.
+manipulations on them. What is the alternative? **SQL-speaking objects**.
 
 <!--more-->
 
-## How ORM Works?
+## How ORM Works
 
-[Object Relational Mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)
-(ORM) is a technique (aka design pattern) of
+[Object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)
+(ORM) is a technique (a.k.a. design pattern) of
 accessing a relational database from an object-oriented language
-(for example, Java). There are multiple implementations of ORM
-in almost every language, for example
+(Java, for example). There are multiple implementations of ORM
+in almost every language; for example:
 [Hibernate](http://hibernate.org/orm/) for Java,
-[ActiveRecod](http://guides.rubyonrails.org/active_record_basics.html) for Ruby on Rails
-[Doctrine](http://www.doctrine-project.org/) for PHP
+[ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) for Ruby on Rails,
+[Doctrine](http://www.doctrine-project.org/) for PHP, and
 [SQLAlchemy](http://www.sqlalchemy.org/) for Python.
-In Java the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
+In Java, the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
 
-First, let's see how ORM works, by example. Let's use Java, PostgreSQL and Hibernate.
-Let's say, we have a single table in the database, called `post`:
+First, let's see how ORM works, by example. Let's use Java, PostgreSQL, and Hibernate.
+Let's say we have a single table in the database, called `post`:
 
 {% highlight text %}
 +-----+------------+--------------------------+
 | id  | date       | title                    |
 +-----+------------+--------------------------+
-|   9 | 10/24/2014 | How to cook a sandwitch? |
+|   9 | 10/24/2014 | How to cook a sandwich   |
 |  13 | 11/03/2014 | My favorite movies       |
 |  27 | 11/17/2014 | How much I love my job   |
 +-----+------------+--------------------------+
 {% endhighlight %}
 
 Now we want to CRUD-manipulate this table from our Java app (CRUD
-stands for create, read, update and delete). First, we should create
+stands for create, read, update, and delete). First, we should create
 a `Post` class (I'm sorry it's so long, but that's the best I can do):
 
 {% highlight java %}
@@ -125,15 +125,15 @@ for (Post post : (List<Post>) posts){
 }
 {% endhighlight %}
 
-I think it's clear what's going on here. Hibernate is a big powerful
+I think it's clear what's going on here. Hibernate is a big, powerful
 engine that makes a connection to the database, executes necessary SQL
-`SELECT` request and retrieves the data. Then, it makes instances
-of class `Post` and stuff them with the data.
-When the object comes to us, it is filled with data and we should
+`SELECT` requests, and retrieves the data. Then it makes instances
+of class `Post` and stuffs them with the data.
+When the object comes to us, it is filled with data, and we should
 use getters to take them out, like we're using `getTitle()` above.
 
-Once we want to do a reverse operation and send an object to the
-database, we do all the same but in a reverse order. We make an instance
+When we want to do a reverse operation and send an object to the
+database, we do all of the same but in reverse order. We make an instance
 of class `Post`, stuff it with the data, and ask Hibernate to save it:
 
 {% highlight java %}
@@ -145,9 +145,9 @@ session.save(post);
 
 This is how almost every ORM works. The basic principle is always the same &mdash;
 ORM objects are anemic envelopes with data. We are talking with the ORM
-framework and the framework is talking to the database. Objects only help
-us to send our requests to the ORM framework and understand its response.
-Besides getters and setters that objects have no other methods. They even don't know
+framework, and the framework is talking to the database. Objects only help
+us send our requests to the ORM framework and understand its response.
+Besides getters and setters, objects have no other methods. They don't even know
 which database they came from.
 
 This is how object-relational mapping works.
@@ -156,88 +156,88 @@ What's wrong with it, you may ask? Everything!
 
 ## What's Wrong With ORM?
 
-Seriously, what is wrong? Hibernate is one of the most popular Java library
-for over ten years already. Almost every SQL-intensive application in the world
+Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
+for more than 10 years already. Almost every SQL-intensive application in the world
 is using it. Each Java tutorial would mention Hibernate (or maybe
-[some other ORM](https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software),
+[some other ORM](https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software)
 like TopLink or OpenJPA) for a database-connected application. It's a standard
 *de-facto* and still I'm saying that it's wrong? Yes.
 
-I'm claiming that the entire idea behind ORM is wrong. It's invention
-was maybe the second big mistake in OOP, after
+I'm claiming that the entire idea behind ORM is wrong. Its invention
+was maybe the second big mistake in OOP after
 [NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
-Actually, I'm not the only one saying something like this and,
-definitely, not the first. A lot about
-this subject has already been published, by very respected authors, including
+Actually, I'm not the only one saying something like this, and
+definitely not the first. A lot about
+this subject has already been published by very respected authors, including
 [OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler,
-[Object-Relational Mapping is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
+[Object-Relational Mapping Is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
 [The Vietnam of Computer Science](http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx) by Ted Neward,
-[ORM is an anti-pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
+[ORM Is an Anti-Pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
 and many others.
 
-However, my argument is different from what they say. Even though their reasons are
-practical and valid, like "ORM is slow" or "database upgrade is hard",
-they miss the main key point. You can see a very good practical answer
+However, my argument is different than what they're saying. Even though their reasons are
+practical and valid, like "ORM is slow" or "database upgrades are hard",
+they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
 The main point is that ORM, instead of encapsulating database interaction
 inside an object, extracts it away, literally tearing a solid and cohesive
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) apart.
-One part of the object keeps the data, while another one, implemented inside
-the ORM engine (session factory), knows how to deal with this data and transfer them to the
-relational database. Look at this picture, it illustrates what ORM is doing:
+One part of the object keeps the data while another one, implemented inside
+the ORM engine (session factory), knows how to deal with this data and transfers it to the
+relational database. Look at this picture; it illustrates what ORM is doing:
 
 ...
 
-I, being a reader of posts, have to deal with two components, 1) the ORM
+I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "obtruncated" object returned to me. The behavior I'm interacting
 with is supposed to be provided through a single entry point, which is an object
-in OOP. In case of ORM, I'm getting this behavior via two entry points &mdash;
+in OOP. In the case of ORM, I'm getting this behavior via two entry points &mdash;
 the ORM and the "thing", which we can't even call an object.
 
-Because of this terrible and offensive violation of object-oriented
-paradigm, we have a lot of that practical issues already mentioned in that
+Because of this terrible and offensive violation of the object-oriented
+paradigm, we have a lot of practical issues already mentioned in
 respected publications. I can only add a few more.
 
-**SQL is Not Hidden**.
+**SQL Is Not Hidden**.
 Users of ORM should speak SQL
 (or its dialect, like [HQL](https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html)).
-See the example above, we're calling `session.createQuery("FROM Post")` in order
+See the example above; we're calling `session.createQuery("FROM Post")` in order
 to get all posts. Even though it's not SQL, it is very similar to it. Thus,
-relational model is not encapsulated inside objects. Instead, it is exposed
-to the entire application. Everybody, each object, inevitably has to
-deal with relational model in order to get or save something. Thus,
-ORM doesn't hide and wrap the SQL, but pollutes the entire application with it.
+the relational model is not encapsulated inside objects. Instead, it is exposed
+to the entire application. Everybody, with each object, inevitably has to
+deal with a relational model in order to get or save something. Thus,
+ORM doesn't hide and wrap the SQL but pollutes the entire application with it.
 
 **Difficult to Test**.
 When some object is working a list of posts, it needs to deal with an
 instance of `SessionFactory`. How can we mock this dependency? We have to
-create a mock of it? How complex is this task? Look at the code above and you
-will realize how verbose and cumbersome will be that unit test. Instead,
+create a mock of it? How complex is this task? Look at the code above, and you
+will realize how verbose and cumbersome that unit test will be. Instead,
 we can write integration tests and connect the entire application to a test
-version of PostgreSQL. In that case there is no need to mock `SessionFactory`,
-but such tests will be rather slow and, which is even more important, our
+version of PostgreSQL. In that case, there is no need to mock `SessionFactory`,
+but such tests will be rather slow, and even more important, our
 having-nothing-to-do-with-the-database objects will be tested against
 the database instance. A terrible design.
 
-Again, let me re-iterate. Practical problems of ORM are just consequences. The
+Again, let me reiterate. Practical problems of ORM are just consequences. The
 fundamental drawback is that ORM tears objects apart, terribly and offensively
 violating the very idea of [what an object is]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
-## SQL Speaking Objects
+## SQL-Speaking Objects
 
-What is the alternative? Let me show it, by example. Let's try to design that
-class `Post` my way. We'll have to break it down into two classes: `Posts`
-and `Post`, singular and plural. I already mentioned in one of my previous
+What is the alternative? Let me show it to you by example. Let's try to design that
+class, `Post`, my way. We'll have to break it down into two classes: `Post`
+and `Posts`, singular and plural. I already mentioned in one of my previous
 [articles]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) that
 a good object is always an abstraction of a real-life entity. Here is how
 this principle works in practice. We have two entities: database table
-and table row. That's why we'll make two classes: `Posts` will represent the
-table and `Post` will represent the row.
+and table row. That's why we'll make two classes; `Posts` will represent the
+table, and `Post` will represent the row.
 
-As I also mentioned in that [articles]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
+As I also mentioned in that [article]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 every object should work by contract
 and implement an interface. Let's start our design with two interfaces.
 Of course, our objects will be immutable. Here is how `Posts` would look:
@@ -277,16 +277,16 @@ Posts posts = // we'll discuss this right now
 posts.add(new Date(), "How to cook an omelette");
 {% endhighlight %}
 
-As you see, we have true objects now. They are in charge of all operations
+As you see, we have true objects now. They are in charge of all operations,
 and they perfectly hide their implementation details. There are no transactions,
-sessions or factories. We don't even know whether these objects are actually
-talking to the PostgreSQL or maybe they keep all the data in text files. All
+sessions, or factories. We don't even know whether these objects are actually
+talking to the PostgreSQL or if they keep all the data in text files. All
 we need from `Posts` is an ability to list all posts for us and to create
 a new one. Implementation details are perfectly hidden inside. Now let's
 see how we can implement these two classes.
 
 I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
-but you can use something else or just plain JDBC, if you like. It doesn't
+but you can use something else or just plain JDBC if you like. It doesn't
 really matter. What matters is that your database interactions are hidden
 inside objects. Let's start with `Posts` and implement it in class
 `PgPosts` ("pg" stands for PostgreSQL):
@@ -325,7 +325,7 @@ final class PgPosts implements Posts {
 }
 {% endhighlight %}
 
-Next, let's implement `Post` interface in class `PgPost`:
+Next, let's implement the `Post` interface in class `PgPost`:
 
 {% highlight java %}
 @Immutable
@@ -354,7 +354,7 @@ final class PgPost implements Post {
 }
 {% endhighlight %}
 
-This is how a full database interaction scenario will look like,
+This is how a full database interaction scenario would look like
 using the classes we just created:
 
 {% highlight java %}
@@ -368,20 +368,20 @@ System.out.println("Just added post #" + post.id());
 
 You can see a full practical example [here](https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql).
 It's an open source
-web app that works with PostgreSQL using exactly the approach explained
-above &mdash; SQL speaking objects.
+web app that works with PostgreSQL using the exact approach explained
+above &mdash; SQL-speaking objects.
 
 ## What About Performance?
 
-I can hear you screaming &mdash; what about performance? In that script
-a few lines above we're making many redundant round trips to the database.
+I can hear you screaming, "What about performance?" In that script
+a few lines above, we're making many redundant round trips to the database.
 First, we retrieve post IDs with `SELECT id` and then, in order to get their titles,
-we make extra `SELECT title` call for each post. This is inefficient or, simply
+we make an extra `SELECT title` call for each post. This is inefficient, or simply
 put, too slow.
 
-No worries, it is object-oriented programming, it is flexible! Let's create
-a decorator of `PgPost`, which will accept all data in its constructor
-and cache them internally, forever:
+No worries; this is object-oriented programming, which means it is flexible! Let's create
+a decorator of `PgPost` that will accept all data in its constructor
+and cache it internally, forever:
 
 {% highlight java %}
 @Immutable
@@ -406,12 +406,12 @@ final class ConstPost implements Post {
 }
 {% endhighlight %}
 
-Pay attention, this decorator doesn't know anything about PostgreSQL or
+Pay attention: This decorator doesn't know anything about PostgreSQL or
 JDBC. It just decorates an object of type `Post` and pre-caches the date
 and title. As usual, this decorator is also immutable.
 
-Then, let's create another implementation of `Posts`, which is returning
-that "constant" objects:
+Now let's create another implementation of `Posts` that will return
+the "constant" objects:
 
 {% highlight java %}
 @Immutable
@@ -438,22 +438,22 @@ final class ConstPgPosts implements Posts {
 }
 {% endhighlight %}
 
-Now, all posts returned by `iterate()` of this new class are pre-equipped with date and title
-fetched in one round-trip to the database.
+Now all posts returned by `iterate()` of this new class are pre-equipped with dates and titles
+fetched in one round trip to the database.
 
 Using decorators and multiple implementations of the same interface, you
-can compose any functionality you wish. What is the most important, that
+can compose any functionality you wish. What is the most important is that
 while functionality is being extended, the complexity of the design is
-not growing up. Because classes don't grow in size. Instead, we're introducing
-new classes, which stay cohesive and solid. Because they are small.
+not escalating, because classes don't grow in size. Instead, we're introducing
+new classes that stay cohesive and solid, because they are small.
 
 ## What About Transactions?
 
 Every object should deal with its own transactions and encapsulate
-them the same way `SELECT` or `INSERT` queries. This will lead to
-nested transactions, which is perfectly fine, provided the database
+them the same way as `SELECT` or `INSERT` queries. This will lead to
+nested transactions, which is perfectly fine provided the database
 server supports them. If there is no such support, create a session-wide
-transaction object, which will accept a "callable" class. For example:
+transaction object that will accept a "callable" class. For example:
 
 {% highlight java %}
 final class Txn {
@@ -493,6 +493,6 @@ new Txn(dbase).call(
 This code will create a new post and post a comment to it. If one
 of the calls fail, the entire transaction will be rolled back.
 
-This approach looks object-oriented to me. I'm calling it "SQL speaking objects",
+This approach looks object-oriented to me. I'm calling it "SQL-speaking objects",
 because they know how to speak SQL with the database server. It's their
 skill, perfectly encapsulated inside their borders.
