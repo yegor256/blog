@@ -101,10 +101,10 @@ removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
 
 <p style="color:green;text-align:center;font-size:2em;">&cent;13 per line</p>
 
-This also means that programmers were writing approximately 270 lines per hour
-or over 2,000 per day.
+This also means that programmers were writing approximately 150 lines per hour
+or over a thousand per day.
 [The Mythical Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month)
-talks about 10 lines per day, which is 200 times less than we saw in our project.
+talks about 10 lines per day, which is a hundred times less than we saw in our project.
 
 $350k vs $7k, $3.98 vs &cent;13? What do you think?
 
