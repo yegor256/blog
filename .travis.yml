@@ -3,15 +3,15 @@ branches:
   only:
   - master
 install:
-- sudo apt-get install -y graphviz
-- sudo apt-get install -y gnuplot
+- travis_retry sudo apt-get install -y graphviz
+- travis_retry sudo apt-get install -y gnuplot
 - wget --retry-connrefused http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
 - sudo dpkg -i plantuml_7707-1_all.deb
 - rm -rf plantuml_7707-1_all.deb
-- bundle install
-- npm install phantomjs -g
-- npm install casperjs -g
-- sudo apt-get install -y fontforge
+- travis_retry bundle install
+- travis_retry npm install phantomjs -g
+- travis_retry npm install casperjs -g
+- travis_retry sudo apt-get install -y fontforge
 - wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
 - unzip woff-code-latest.zip -d sfnt2woff
 - cd sfnt2woff
@@ -19,7 +19,7 @@ install:
 - sudo mv sfnt2woff /usr/local/bin/
 - cd ..
 - rm -rf sfnt2woff
-- npm install --global cssshrink
+- travis_retry npm install --global cssshrink
 before_install:
 - set -e
 - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv
