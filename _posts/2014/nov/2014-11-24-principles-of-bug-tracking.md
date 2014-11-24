@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ticket Discipline"
+title: "Five Principles of Bug Tracking"
 date: 2014-11-24
 tags: mgmt
 description:
@@ -29,9 +29,11 @@ team, you may find them useful.
 
 <!--more-->
 
+{% picture /images/2014/11/monty-python-argument-sketch.png 0 Monty Python's Flying Circus, TV Series (1969-1974) %}
+
 ## Keep It One-on-One
 
-Each ticket is a link between two people: problem specifier and problem
+Each ticket (aka "bug") is a link between two people: problem specifier and problem
 solver. If it is a bug, I'm reporting it &mdash; you're solving it. If it is
 a question, I'm asking for an explanation &mdash; you're explaining. If it
 is a task, I'm ordering you to do it &mdash; you're doing it. In any case,
