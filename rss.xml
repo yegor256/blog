@@ -10,12 +10,191 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 20 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Nov 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Five Principles of Bug Tracking</title>
+      <link>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</link>
+      <description>&lt;p&gt;A team working remotely requires much stronger discipline than
+a co-located crew sitting in the same office. First of all, I mean discipline of
+communications. At &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;, we have developed software
+remotely for the last five years. We manage tasks strictly through
+ticketing systems (like Github, JIRA, Trac, Basecamp, etc.) and
+&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;discourage&lt;/a&gt;
+any informal communications, like Skype, HipChat, emails, or phone calls.
+Every ticket for us is an isolated task with its own life cycle,
+its own participants, and its own goal. Over these years, we&amp;#39;ve learned
+a few lessons that I want to share. If you also work remotely with your
+team, you may find them useful.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/11/monty-python-argument-sketch.png' style='width:600px;' alt='Monty Python Flying Circus, TV Series (1969-1974)'/&gt;&lt;figcaption&gt;Monty Python Flying Circus, TV Series (1969-1974)&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;1.-keep-it-one-on-one&quot;&gt;1. Keep It One-on-One&lt;/h2&gt;
+
+&lt;p&gt;Each ticket (aka &amp;quot;bug&amp;quot;) is a link between two people: problem specifier and problem
+solver. If it is a bug, I&amp;#39;m reporting it &amp;mdash; you&amp;#39;re solving it. If it is
+a question, I&amp;#39;m asking for an explanation &amp;mdash; you&amp;#39;re explaining. If it
+is a task, I&amp;#39;m ordering you to do it &amp;mdash; you&amp;#39;re doing it. In any case,
+there are two main characters. No matter how many people are involved in the ticket
+resolution, only these two characters have formal roles.&lt;/p&gt;
+
+&lt;p&gt;The responsibility of the ticket reporter is to &lt;strong&gt;defend the problem&lt;/strong&gt;. When I
+report a bug, I have to insist that it exists &amp;mdash; this is my job. Others
+may tell me that I&amp;#39;m wrong and the bug is not there. They may tell
+me that they can&amp;#39;t reproduce it. They may say that my description of
+a task is too vague and nobody understands it. There may be many issues
+of that kind. My job is to do the best I can in order to &lt;em&gt;keep the ticket alive&lt;/em&gt;.
+Obviously, if the bug is not reproducible, I&amp;#39;ll be forced to close
+the ticket. However, until the ticket is closed, I&amp;#39;m its guardian angel. :)&lt;/p&gt;
+
+&lt;p&gt;On the other hand, the responsibility of the ticket solver is to
+&lt;strong&gt;defend the solution&lt;/strong&gt;. When a ticket is assigned to me and I have to resolve it,
+my job is to convince the reporter that my solution is good enough. He may
+tell me that my solution is not sufficient, not the most efficient, or
+incomplete. My job is to insist that I&amp;#39;m right and he is wrong. Well, of course,
+in a reasonable way. And in order to create a solution that will be
+accepted as sufficient enough, I have to understand the problem first, investigate
+all possible options, and propose the most elegant implementation. But all this
+is secondary. The first thing I will be focused on is how to convince
+the reporter. I will always remember that my primary goal is to &lt;em&gt;close the ticket&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;My point here is that no matter how many people are involved in the
+ticket discussion, always remember what is happening there &amp;mdash; one
+person is selling his solution to another person. Everybody else around
+them is help or distraction (see below).&lt;/p&gt;
+
+&lt;h2 id=&quot;2.-close-it!&quot;&gt;2. Close It!&lt;/h2&gt;
+
+&lt;p&gt;Remember that a ticket is not a chat. You&amp;#39;re not there to talk.
+You&amp;#39;re there to &lt;em&gt;close&lt;/em&gt;. When the ticket is assigned to you,
+focus on closing it as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;Also, keep in mind that the sooner you close the ticket, the better job
+you will do for the project. Long-living tickets are a management nightmare.
+It is difficult to track them and control them. It&amp;#39;s difficult to understand
+what&amp;#39;s going on. Have you seen those two-year-old tickets in open source projects
+that have hundreds of comments and no deliverables? It is a mistake
+by their project managers and ticket participants. Each ticket should be
+short and focused &amp;mdash; 1) a problem, 2) a refinement
+question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
+This is an ideal scenario.&lt;/p&gt;
+
+&lt;p&gt;As soon as you realize that your ticket is turning into a long discussion,
+try to close it even faster. How can I close it if the reporter doesn&amp;#39;t
+like my solution? Find a temporary solution that will satisfy the reporter
+and allow you to close the ticket. Use &amp;quot;TODO&amp;quot; in your code or dirty
+workarounds &amp;mdash; they are all better than a ticket hovering for a long time.&lt;/p&gt;
+
+&lt;p&gt;Once you see that the solution is provided and is sufficient enough
+to close the ticket, ask its reporter to close it. Explicitly ask for that;
+don&amp;#39;t dance arround with &amp;quot;looks like this solution may be accepted, if you don&amp;#39;t mind&amp;quot;.
+Be explicit in your intention to close the ticket and move on. Try this:
+&amp;quot;@jeff, please close the ticket if you don&amp;#39;t have any further questions.&amp;quot;&lt;/p&gt;
+
+&lt;h2 id=&quot;3.-don&amp;#39;t-close-it!&quot;&gt;3. Don&amp;#39;t Close It!&lt;/h2&gt;
+
+&lt;p&gt;Every time you raise a bug and create a new ticket, you consume project
+resources. Every bug report means money spent on the project: 1) money for your time
+spent finding the problem and reporting it; 2) for the time of the project manager
+who is working with the ticket and finding who will fix it; 3) for the time
+of the ticket solver, who is trying to understand your report and provide
+a solution; and also 4) for the time of everybody else who will participate
+in the discussion.&lt;/p&gt;
+
+&lt;p&gt;If you close the ticket without a problem being properly solved,
+you put this money into the trash bin. Once the ticket is started, there
+is no way back. We can&amp;#39;t just say, &amp;quot;Nah, ignore it; it&amp;#39;s not important anymore.&amp;quot;
+Your ticket already consumed project time and budget resources, and in order to turn
+them into something useful, you have to make sure that &lt;em&gt;some&lt;/em&gt;
+solution is delivered.&lt;/p&gt;
+
+&lt;p&gt;It can be a temporary solution. It can be a single line change in the
+project documentation. It can be a TODO marker in the code saying that
+&amp;quot;we are aware of the problem but won&amp;#39;t fix it because we&amp;#39;re lazy&amp;quot;. Anything
+would work, but not nothing.&lt;/p&gt;
+
+&lt;p&gt;Look at it from a different perspective. When you started that ticket, you had
+something in mind. Something was not right with the product. That&amp;#39;s why you
+reported a bug. If you close the ticket without anyone even touching that place
+of code, someone else will have the same concern in a few days or a few years.
+And then the project will have to pay again for a similar ticket or discussion
+of the same problem. Even if you&amp;#39;re convinced that the issue you found in
+the code is not really an issue, ask a ticket resolver to document it right
+in the source code in order to prevent such confusion from happening again in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;4.-avoid-noise-&amp;mdash;-address-your-comments&quot;&gt;4. Avoid Noise &amp;mdash; Address Your Comments&lt;/h2&gt;
+
+&lt;p&gt;Every time you post a message to the ticket, address it to someone. Otherwise,
+if you post just because you want to express your opinion, your
+comments become communication noise. Remember, a ticket is a conversation
+between two people &amp;mdash; one of them reported an issue and the other one is
+trying to fix it. Comments like, &amp;quot;How about we try another approach&amp;quot;
+or &amp;quot;I remember I had a similar issue some time ago&amp;quot; are very annoying
+and distracting. Let&amp;#39;s be honest, nobody really needs or cares about &amp;quot;opinions&amp;quot;.
+All we need in a ticket is a solution(s).&lt;/p&gt;
+
+&lt;p&gt;If you think the ticket should be closed because the introduced solution
+is good enough, address your comment to the ticket reporter. And start
+it with &amp;quot;@jeff, I think the solution you&amp;#39;ve got already is good enough, because ...&amp;quot;
+This way, you will help the assignee to close the ticket and move on.&lt;/p&gt;
+
+&lt;p&gt;If you think the solution is wrong, address your comment to the assignee
+of the ticket, starting with &amp;quot;@jeff, I believe your solution is not good enough
+because ...&amp;quot; This way, you will help the ticket reporter keep the ticket
+open until a proper solution comes up.&lt;/p&gt;
+
+&lt;p&gt;Again, don&amp;#39;t pollute the air with generic opinions. Instead, be very specific
+and take sides &amp;mdash; you either like the solution and want the ticket to
+be closed, or you don&amp;#39;t like it and want the ticket to stay open. Everything
+in between is just making the situation more complex and isn&amp;#39;t helping the
+project at all.&lt;/p&gt;
+
+&lt;h2 id=&quot;5.-report-when-it-is-broken&quot;&gt;5. Report When It Is Broken&lt;/h2&gt;
+
+&lt;p&gt;I think it is obvious, but I will reiterate: Every bug has
+to be reproducible. Every time you report a bug, you should explain
+how exactly the product is broken. Yes, it is your job to prove that the
+software doesn&amp;#39;t work as intended, or is not documented properly, or
+doesn&amp;#39;t satisfy the requirements, etc.&lt;/p&gt;
+
+&lt;p&gt;Every bug report should follow the same simple formula: &amp;quot;This is what we &lt;em&gt;have&lt;/em&gt;,
+this is what we &lt;em&gt;should have&lt;/em&gt; instead, so fix it&amp;quot;. Every ticket, be it a bug,
+a task, a question, or a suggestion, should be formatted in this way. By
+submitting it, you&amp;#39;re asking the project to move from point A to point B. Something
+is not right at point A, and it will be much better for all of us to be
+at that point B. So it&amp;#39;s obvious that you have to explain where these points
+A and B are. It is highly desirable if you can explain how to get there &amp;mdash;
+how to reproduce a problem and how to fix it.&lt;/p&gt;
+
+&lt;p&gt;Even when you have a question, you should also follow that format. If you
+have a question, it means the project documentation is not sufficient
+enough for you to find an answer there. This is what is broken. You should
+ask for a fix. So instead of reporting, &amp;quot;How should I use class X?&amp;quot;, say
+something like, &amp;quot;The current documentation is not complete; it doesn&amp;#39;t explain
+how I should use class X. Please fix.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;If you can&amp;#39;t explain how to get there, say so in the ticket: &amp;quot;I see that
+this class doesn&amp;#39;t work as it should, but I don&amp;#39;t know how to reproduce
+the problem and how to fix it.&amp;quot; This will give everybody a clear message
+that you are aware that your bug report is not perfect. The first step
+for its resolver will be to refine the problem and find a way to reproduce it.
+If such a replica can&amp;#39;t be found, obviously your bug will be forced into closing.&lt;/p&gt;
+
+&lt;p&gt;Let me reiterate again: Every ticket is dragging the project from point A,
+where something is not right, to point B, where it is fixed. Your job,
+as a ticket reporter, is to draw that line &amp;mdash; clearly and explicitly.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</guid>
+      <dc:date>2014-11-24T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Seven Virtues of a Good Object</title>
       <link>http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html</link>
@@ -2656,187 +2835,6 @@ unless you make your
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
       <dc:date>2014-10-05T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>DI Containers are Code Polluters</title>
-      <link>http://www.yegor256.com/2014/10/03/di-containers-are-evil.html</link>
-      <description>&lt;p&gt;While &lt;a href=&quot;http://martinfowler.com/articles/injection.html&quot;&gt;dependency injection&lt;/a&gt; (aka, &amp;quot;DI&amp;quot;)
-is a natural technique of composing objects in OOP
-(known long before the term was &lt;a href=&quot;http://www.martinfowler.com/articles/injection.html&quot;&gt;introduced by Martin Fowler&lt;/a&gt;),
-&lt;a href=&quot;http://www.spring.io&quot;&gt;Spring IoC&lt;/a&gt;,
-&lt;a href=&quot;https://code.google.com/p/google-guice/&quot;&gt;Google Guice&lt;/a&gt;,
-&lt;a href=&quot;http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html&quot;&gt;Java EE6 CDI&lt;/a&gt;,
-&lt;a href=&quot;http://square.github.io/dagger/&quot;&gt;Dagger&lt;/a&gt; and other
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_injection&quot;&gt;DI frameworks&lt;/a&gt;
-turn it into an anti-pattern.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;I&amp;#39;m not going to discuss obvious arguments against
-&amp;quot;setter injections&amp;quot;
-(like in &lt;a href=&quot;http://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html&quot;&gt;Spring IoC&lt;/a&gt;)
-and
-&amp;quot;field injections&amp;quot;
-(like in &lt;a href=&quot;http://picocontainer.codehaus.org/annotated-field-injection.html&quot;&gt;PicoContainer&lt;/a&gt;).
-These mechanisms simply violate basic principles
-of object-oriented programming and encourage us to create
-incomplete, mutable objects, that get stuffed with data during the course
-of application execution. Remember: ideal objects
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;must be immutable&lt;/a&gt;
-and &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;may not contain setters&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Instead, let&amp;#39;s talk about &amp;quot;constructor injection&amp;quot;
-(like in &lt;a href=&quot;https://github.com/google/guice/wiki/Injections#constructor-injection&quot;&gt;Google Guice&lt;/a&gt;)
-and its use with &lt;strong&gt;dependency injection containers&lt;/strong&gt;.
-I&amp;#39;ll try to show why I consider these containers a redundancy, at least.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-dependency-injection?&quot;&gt;What is Dependency Injection?&lt;/h2&gt;
-
-&lt;p&gt;This is what dependency injection is (not really different
-from a plain old object composition):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Budget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT SUM(cost) FROM ledger&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The object &lt;code&gt;data&lt;/code&gt; is called a &amp;quot;dependency&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;A &lt;code&gt;Budget&lt;/code&gt; doesn&amp;#39;t know what kind of database it is working with. All it
-needs from the database is its ability to fetch a cell, using an
-arbitrary SQL query, via method &lt;code&gt;cell()&lt;/code&gt;. We can instantiate a &lt;code&gt;Budget&lt;/code&gt; with a PostgreSQL
-implementation of the &lt;code&gt;DB&lt;/code&gt; interface, for example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Budget&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;budget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Postgres&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jdbc:postgresql:5740/main&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Total is: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In other words, we&amp;#39;re &amp;quot;injecting&amp;quot; a dependency into a new object &lt;code&gt;budget&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;An alternative to this &amp;quot;dependency injection&amp;quot; approach would be
-to let &lt;code&gt;Budget&lt;/code&gt; decide what database it wants to work with:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Budget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Postgres&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jdbc:postgresql:5740/main&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// class methods&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is very dirty and leads to 1) code duplication, 2) inability
-to reuse, and 3) inability to test, etc. No need to discuss why. It&amp;#39;s obvious.&lt;/p&gt;
-
-&lt;p&gt;Thus, dependency injection via a constructor is an amazing technique.
-Well, not even a technique, really. More like a feature of Java and all other object-oriented
-languages. It&amp;#39;s expected that almost any object will want to encapsulate
-some knowledge (aka, a &amp;quot;state&amp;quot;). That&amp;#39;s what constructors are for.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-a-di-container?&quot;&gt;What is a DI Container?&lt;/h2&gt;
-
-&lt;p&gt;So far so good, but here comes the dark side &amp;mdash; a dependency
-injection container. Here is how it works (let&amp;#39;s use Google Guice as
-an example):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.inject.Inject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Budget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// same methods as above&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Pay attention: the constructor is annotated with
-&lt;a href=&quot;http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html&quot;&gt;&lt;code&gt;@Inject&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then, we&amp;#39;re supposed to configure a container
-somewhere, when the application starts:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Injector&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;injector&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Guice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createInjector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AbstractModule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Postgres&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jdbc:postgresql:5740/main&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Some frameworks even allow us to configure the injector in an XML file.&lt;/p&gt;
-
-&lt;p&gt;From now on, we are not allowed to instantiate &lt;code&gt;Budget&lt;/code&gt; through the &lt;code&gt;new&lt;/code&gt; operator,
-like we did before. Instead, we should use the injector we just created:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Injection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;injector&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// as we just did in the previous snippet&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Budget&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;budget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;injector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Total is: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;budget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The injection automatically finds out that in order to instantiate
-a &lt;code&gt;Budget&lt;/code&gt; it has to provide an argument for its constructor. It will
-use an instance of class &lt;code&gt;Postgres&lt;/code&gt;, which we instantiated in the injector.&lt;/p&gt;
-
-&lt;p&gt;This is the right and recommended way to use Guice. There are
-a few even darker patterns, though, which are possible but not recommended. For example,
-you can make your injector a singleton and use it right inside the &lt;code&gt;Budget&lt;/code&gt; class.
-These mechanisms are considered wrong even by DI container makers, however, so let&amp;#39;s ignore
-them and focus on the recommended scenario.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-this-for?&quot;&gt;What Is This For?&lt;/h2&gt;
-
-&lt;p&gt;Let me reiterate and summarize the scenarios of &lt;strong&gt;incorrect usage&lt;/strong&gt; of dependency
-injection containers:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Field injection&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Setter injection&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Passing injector as a dependency&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Making injector a global singleton&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If we put all of them aside, all we have left is the constructor
-injection explained above. And how does that help us? Why do we need it?
-Why can&amp;#39;t we use plain old &lt;code&gt;new&lt;/code&gt; in the main class of the application?&lt;/p&gt;
-
-&lt;p&gt;The container we created simply adds more lines to the code base,
-or even more files, if we use XML. And it doesn&amp;#39;t add anything, except
-an additional complexity. We should always remember this
-if we have the question: &amp;quot;What database is used as an argument of a Budget?&amp;quot;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-right-way&quot;&gt;The Right Way&lt;/h2&gt;
-
-&lt;p&gt;Now, let me show you a real life example of using &lt;code&gt;new&lt;/code&gt; to construct
-an application. This is how we create a &amp;quot;thinking engine&amp;quot; in
-&lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; (full class is in
-&lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java&quot;&gt;&lt;code&gt;Agents.java&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Impressive? This is a true object composition.
-I believe this is how a proper object-oriented application
-should be instantiated.&lt;/p&gt;
-
-&lt;p&gt;And DI containers? In my opinion, they just add unnecessary noise.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Fri, 03 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/03/di-containers-are-evil.html</guid>
-      <dc:date>2014-10-03T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>

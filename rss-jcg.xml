@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 20 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Nov 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -2121,7 +2121,7 @@ for me. For example:&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;DynamoDB Local Maven Plugin, 0.7.1 released &lt;a href=&quot;https://t.co/C3KULouuKS&quot;&gt;https://t.co/C3KULouuKS&lt;/a&gt;&lt;/p&gt;&amp;mdash; rultor.com (@rultors) &lt;a href=&quot;https://twitter.com/rultors/statuses/501617747269517312&quot;&gt;August 19, 2014&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Tue, 19 Aug 2014 00:00:00 +0000</pubDate>
