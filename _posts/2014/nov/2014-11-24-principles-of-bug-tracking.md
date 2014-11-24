@@ -29,7 +29,7 @@ team, you may find them useful.
 
 <!--more-->
 
-{% picture /images/2014/11/monty-python-argument-sketch.png 0 Monty Python's Flying Circus, TV Series (1969-1974) %}
+{% picture /images/2014/11/monty-python-argument-sketch.png 0 Monty Python Flying Circus, TV Series (1969-1974) %}
 
 ## Keep It One-on-One
 
