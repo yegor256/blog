@@ -4,7 +4,7 @@ title: "Definition Of Done"
 date: 2014-04-15
 tags: mgmt xdsd
 description: |
-  When tasks can be considered "done" and their
+  When tasks can be considered DONE and their
   implementation paid for? This post answers both of these questions.
 keywords:
   - definition of done
