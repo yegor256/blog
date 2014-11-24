@@ -31,7 +31,7 @@ team, you may find them useful.
 
 {% picture /images/2014/11/monty-python-argument-sketch.png 0 Monty Python Flying Circus, TV Series (1969-1974) %}
 
-## Keep It One-on-One
+## 1. Keep It One-on-One
 
 Each ticket (aka "bug") is a link between two people: problem specifier and problem
 solver. If it is a bug, I'm reporting it &mdash; you're solving it. If it is
@@ -65,7 +65,7 @@ ticket discussion, always remember what is happening there &mdash; one
 person is selling his solution to another person. Everybody else around
 them is help or distraction (see below).
 
-## Close It!
+## 2. Close It!
 
 Remember that a ticket is not a chat. You're not there to talk.
 You're there to *close*. When the ticket is assigned to you,
@@ -93,7 +93,7 @@ don't dance arround with "looks like this solution may be accepted, if you don't
 Be explicit in your intention to close the ticket and move on. Try this:
 "@jeff, please close the ticket if you don't have any further questions."
 
-## Don't Close It!
+## 3. Don't Close It!
 
 Every time you raise a bug and create a new ticket, you consume project
 resources. Every bug report means money spent on the project: 1) money for your time
@@ -124,7 +124,7 @@ of the same problem. Even if you're convinced that the issue you found in
 the code is not really an issue, ask a ticket resolver to document it right
 in the source code in order to prevent such confusion from happening again in the future.
 
-## Avoid Noise &mdash; Address Your Comments
+## 4. Avoid Noise &mdash; Address Your Comments
 
 Every time you post a message to the ticket, address it to someone. Otherwise,
 if you post just because you want to express your opinion, your
@@ -151,7 +151,7 @@ be closed, or you don't like it and want the ticket to stay open. Everything
 in between is just making the situation more complex and isn't helping the
 project at all.
 
-## Report When It Is Broken
+## 5. Report When It Is Broken
 
 I think it is obvious, but I will reiterate: Every bug has
 to be reproducible. Every time you report a bug, you should explain
