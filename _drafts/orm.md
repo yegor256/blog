@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ORM Is an Offensive Anti-Pattern"
-date: 2014-11-19
+date: 2014-11-30
 tags: oop
 description:
   Object-relational mapping is a design pattern that
@@ -22,6 +22,8 @@ a small web app or an enterprise-size system with thousands of tables and CRUD
 manipulations on them. What is the alternative? **SQL-speaking objects**.
 
 <!--more-->
+
+{% picture /images/2014/11/broken-object.png 0 Vinni-Pukh (1969) by Fyodor Khitruk %}
 
 ## How ORM Works
 
