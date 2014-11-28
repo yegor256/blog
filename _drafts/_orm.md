@@ -182,14 +182,14 @@ they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
+{% badge /images/2014/11/orm-anti-pattern.svg 413 %}
+
 The main point is that ORM, instead of encapsulating database interaction
 inside an object, extracts it away, literally tearing a solid and cohesive
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) apart.
 One part of the object keeps the data while another one, implemented inside
 the ORM engine (session factory), knows how to deal with this data and transfers it to the
-relational database. Look at this picture; it illustrates what ORM is doing:
-
-...
+relational database. Look at this picture; it illustrates what ORM is doing.
 
 I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "obtruncated" object returned to me. The behavior I'm interacting
@@ -227,6 +227,8 @@ fundamental drawback is that ORM tears objects apart, terribly and offensively
 violating the very idea of [what an object is]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
 ## SQL-Speaking Objects
+
+{% badge /images/2014/11/sql-speaking-object.svg 213 %}
 
 What is the alternative? Let me show it to you by example. Let's try to design that
 class, `Post`, my way. We'll have to break it down into two classes: `Post`
