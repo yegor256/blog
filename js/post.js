@@ -104,7 +104,7 @@ $(
           $element.append(
             $('<a/>').addClass('link')
               .attr('href', '#' + id)
-              .append('<i class="icon icon-link"></i>')
+              .append('<i class="icon icon-link notranslate"></i>')
           );
         }
       }

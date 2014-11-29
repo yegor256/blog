@@ -27,7 +27,7 @@ are not organizers of functions. And objects are not data structures.
 
 So what is a "proper" object? Which one is not a proper one?
 What is the difference? Even though it is a very polemic subject, it is very important.
-Unless we undertand what an object is, how can we write object-oriented software?
+Unless we understand what an object is, how can we write object-oriented software?
 Well, thanks to Java, Ruby, and others, we can. But how good will it be?
 Unfortunately, this is not an exact science, and there are many opinions.
 Here is my list of qualities of a good object.
