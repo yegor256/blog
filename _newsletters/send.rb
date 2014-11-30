@@ -40,20 +40,31 @@ end
 if opts[:dry]
   emails = ['test@yegor256.com']
 else
-  emails = File.readlines(opts[:file]).collect(&:strip).collect(&:downcase).reject(&:blank?).uniq
+  emails = File.readlines(opts[:file]).collect(&:strip).reject(&:blank?).uniq
 end
 
 puts "Sending #{emails.length} email(s) to #{opts[:host]}:#{opts[:port]} as #{opts[:user]}"
-emails.each do |email|
+emails.each do |line|
+  if line.index(',').nil?
+    email = line
+    first = nil
+    address = email
+  else
+    name, email = line.split(',')
+    first, last = name.split(' ')
+    address = "#{name} <#{email}>"
+  end
+  email = email.downcase
   markdown = template.render(
     'email' => email,
+    'first' => first,
     'letter' => opts[:letter]
   )
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
-  print "  sending to #{email}..."
+  print "  sending to #{address}..."
   mail = Mail.new do
     from 'Yegor Bugayenko <yegor@teamed.io>'
-    to email
+    to address
     subject 'yegor256.com: ' + opts[:subject]
     message_id "<#{UUIDTools::UUID.random_create}@yegor256.com>"
     text_part do
@@ -65,7 +76,7 @@ emails.each do |email|
       body html
     end
   end
-  mail.deliver!
+  #mail.deliver!
   puts ' done'
 end
 
