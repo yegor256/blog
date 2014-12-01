@@ -10,12 +10,472 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 24 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>ORM Is an Offensive Anti-Pattern</title>
+      <link>http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html</link>
+      <description>&lt;p&gt;TL;DR ORM is a terrible anti-pattern that violates all principles of
+object-oriented programming, tearing objects apart and turning them into dumb and passive
+data bags. There is no excuse for ORM existence in any application, be it
+a small web app or an enterprise-size system with thousands of tables and CRUD
+manipulations on them. What is the alternative? &lt;strong&gt;SQL-speaking objects&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/11/broken-object.png' style='width:600px;' alt='Vinni-Pukh (1969) by Fyodor Khitruk'/&gt;&lt;figcaption&gt;Vinni-Pukh (1969) by Fyodor Khitruk&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;how-orm-works&quot;&gt;How ORM Works&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-relational_mapping&quot;&gt;Object-relational mapping&lt;/a&gt;
+(ORM) is a technique (a.k.a. design pattern) of
+accessing a relational database from an object-oriented language
+(Java, for example). There are multiple implementations of ORM
+in almost every language; for example:
+&lt;a href=&quot;http://hibernate.org/orm/&quot;&gt;Hibernate&lt;/a&gt; for Java,
+&lt;a href=&quot;http://guides.rubyonrails.org/active_record_basics.html&quot;&gt;ActiveRecord&lt;/a&gt; for Ruby on Rails,
+&lt;a href=&quot;http://www.doctrine-project.org/&quot;&gt;Doctrine&lt;/a&gt; for PHP, and
+&lt;a href=&quot;http://www.sqlalchemy.org/&quot;&gt;SQLAlchemy&lt;/a&gt; for Python.
+In Java, the ORM design is even standardized as &lt;a href=&quot;https://en.wikipedia.org/wiki/Java_Persistence_API&quot;&gt;JPA&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, let&amp;#39;s see how ORM works, by example. Let&amp;#39;s use Java, PostgreSQL, and Hibernate.
+Let&amp;#39;s say we have a single table in the database, called &lt;code&gt;post&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+-----+------------+--------------------------+
+| id  | date       | title                    |
++-----+------------+--------------------------+
+|   9 | 10/24/2014 | How to cook a sandwich   |
+|  13 | 11/03/2014 | My favorite movies       |
+|  27 | 11/17/2014 | How much I love my job   |
++-----+------------+--------------------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we want to CRUD-manipulate this table from our Java app (CRUD
+stands for create, read, update, and delete). First, we should create
+a &lt;code&gt;Post&lt;/code&gt; class (I&amp;#39;m sorry it&amp;#39;s so long, but that&amp;#39;s the best I can do):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Id&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@GeneratedValue&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Column&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Temporal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TemporalType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TIMESTAMP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Column&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Column&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Before any operation with Hibernate, we have to create a session factory:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;SessionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AnnotationConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addAnnotatedClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buildSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This factory will give us &amp;quot;sessions&amp;quot; every time we want to manipulate
+with &lt;code&gt;Post&lt;/code&gt; objects. Every manipulation with the session should be wrapped
+in this code block:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Transaction&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;beginTransaction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// your manipulations with the ORM, see below&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HibernateException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rollback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When the session is ready, here is how we get a list of all posts
+from that database table:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createQuery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;FROM Post&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Title: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I think it&amp;#39;s clear what&amp;#39;s going on here. Hibernate is a big, powerful
+engine that makes a connection to the database, executes necessary SQL
+&lt;code&gt;SELECT&lt;/code&gt; requests, and retrieves the data. Then it makes instances
+of class &lt;code&gt;Post&lt;/code&gt; and stuffs them with the data.
+When the object comes to us, it is filled with data, and we should
+use getters to take them out, like we&amp;#39;re using &lt;code&gt;getTitle()&lt;/code&gt; above.&lt;/p&gt;
+
+&lt;p&gt;When we want to do a reverse operation and send an object to the
+database, we do all of the same but in reverse order. We make an instance
+of class &lt;code&gt;Post&lt;/code&gt;, stuff it with the data, and ask Hibernate to save it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook an omelette&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how almost every ORM works. The basic principle is always the same &amp;mdash;
+ORM objects are anemic envelopes with data. We are talking with the ORM
+framework, and the framework is talking to the database. Objects only help
+us send our requests to the ORM framework and understand its response.
+Besides getters and setters, objects have no other methods. They don&amp;#39;t even know
+which database they came from.&lt;/p&gt;
+
+&lt;p&gt;This is how object-relational mapping works.&lt;/p&gt;
+
+&lt;p&gt;What&amp;#39;s wrong with it, you may ask? Everything!&lt;/p&gt;
+
+&lt;h2 id=&quot;what&amp;#39;s-wrong-with-orm?&quot;&gt;What&amp;#39;s Wrong With ORM?&lt;/h2&gt;
+
+&lt;p&gt;Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
+for more than 10 years already. Almost every SQL-intensive application in the world
+is using it. Each Java tutorial would mention Hibernate (or maybe
+&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_object-relational_mapping_software&quot;&gt;some other ORM&lt;/a&gt;
+like TopLink or OpenJPA) for a database-connected application. It&amp;#39;s a standard
+&lt;em&gt;de-facto&lt;/em&gt; and still I&amp;#39;m saying that it&amp;#39;s wrong? Yes.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m claiming that the entire idea behind ORM is wrong. Its invention
+was maybe the second big mistake in OOP after
+&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL reference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Actually, I&amp;#39;m not the only one saying something like this, and
+definitely not the first. A lot about
+this subject has already been published by very respected authors, including
+&lt;a href=&quot;http://martinfowler.com/bliki/OrmHate.html&quot;&gt;OrmHate&lt;/a&gt; by Martin Fowler,
+&lt;a href=&quot;http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/&quot;&gt;Object-Relational Mapping Is the Vietnam of Computer Science&lt;/a&gt; by Jeff Atwood,
+&lt;a href=&quot;http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx&quot;&gt;The Vietnam of Computer Science&lt;/a&gt; by Ted Neward,
+&lt;a href=&quot;http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern&quot;&gt;ORM Is an Anti-Pattern&lt;/a&gt; by Laurie Voss,
+and many others.&lt;/p&gt;
+
+&lt;p&gt;However, my argument is different than what they&amp;#39;re saying. Even though their reasons are
+practical and valid, like &amp;quot;ORM is slow&amp;quot; or &amp;quot;database upgrades are hard&amp;quot;,
+they miss the main point. You can see a very good, practical answer
+to these practical arguments given by Bozhidar Bozhanov
+in his &lt;a href=&quot;http://techblog.bozho.net/orm-haters-dont-get-it/&quot;&gt;ORM Haters Don’t Get It&lt;/a&gt; blog post.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/orm-anti-pattern.svg' style='width:413px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;The main point is that ORM, instead of encapsulating database interaction
+inside an object, extracts it away, literally tearing a solid and cohesive
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;living organism&lt;/a&gt; apart.
+One part of the object keeps the data while another one, implemented inside
+the ORM engine (session factory), knows how to deal with this data and transfers it to the
+relational database. Look at this picture; it illustrates what ORM is doing.&lt;/p&gt;
+
+&lt;p&gt;I, being a reader of posts, have to deal with two components: 1) the ORM
+and 2) the &amp;quot;obtruncated&amp;quot; object returned to me. The behavior I&amp;#39;m interacting
+with is supposed to be provided through a single entry point, which is an object
+in OOP. In the case of ORM, I&amp;#39;m getting this behavior via two entry points &amp;mdash;
+the ORM and the &amp;quot;thing&amp;quot;, which we can&amp;#39;t even call an object.&lt;/p&gt;
+
+&lt;p&gt;Because of this terrible and offensive violation of the object-oriented
+paradigm, we have a lot of practical issues already mentioned in
+respected publications. I can only add a few more.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SQL Is Not Hidden&lt;/strong&gt;.
+Users of ORM should speak SQL
+(or its dialect, like &lt;a href=&quot;https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html&quot;&gt;HQL&lt;/a&gt;).
+See the example above; we&amp;#39;re calling &lt;code&gt;session.createQuery(&amp;quot;FROM Post&amp;quot;)&lt;/code&gt; in order
+to get all posts. Even though it&amp;#39;s not SQL, it is very similar to it. Thus,
+the relational model is not encapsulated inside objects. Instead, it is exposed
+to the entire application. Everybody, with each object, inevitably has to
+deal with a relational model in order to get or save something. Thus,
+ORM doesn&amp;#39;t hide and wrap the SQL but pollutes the entire application with it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Difficult to Test&lt;/strong&gt;.
+When some object is working a list of posts, it needs to deal with an
+instance of &lt;code&gt;SessionFactory&lt;/code&gt;. How can we mock this dependency? We have to
+create a mock of it? How complex is this task? Look at the code above, and you
+will realize how verbose and cumbersome that unit test will be. Instead,
+we can write integration tests and connect the entire application to a test
+version of PostgreSQL. In that case, there is no need to mock &lt;code&gt;SessionFactory&lt;/code&gt;,
+but such tests will be rather slow, and even more important, our
+having-nothing-to-do-with-the-database objects will be tested against
+the database instance. A terrible design.&lt;/p&gt;
+
+&lt;p&gt;Again, let me reiterate. Practical problems of ORM are just consequences. The
+fundamental drawback is that ORM tears objects apart, terribly and offensively
+violating the very idea of &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;what an object is&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sql-speaking-objects&quot;&gt;SQL-Speaking Objects&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/sql-speaking-object.svg' style='width:213px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;What is the alternative? Let me show it to you by example. Let&amp;#39;s try to design that
+class, &lt;code&gt;Post&lt;/code&gt;, my way. We&amp;#39;ll have to break it down into two classes: &lt;code&gt;Post&lt;/code&gt;
+and &lt;code&gt;Posts&lt;/code&gt;, singular and plural. I already mentioned in one of my previous
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;articles&lt;/a&gt; that
+a good object is always an abstraction of a real-life entity. Here is how
+this principle works in practice. We have two entities: database table
+and table row. That&amp;#39;s why we&amp;#39;ll make two classes; &lt;code&gt;Posts&lt;/code&gt; will represent the
+table, and &lt;code&gt;Post&lt;/code&gt; will represent the row.&lt;/p&gt;
+
+&lt;p&gt;As I also mentioned in that &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;article&lt;/a&gt;,
+every object should work by contract
+and implement an interface. Let&amp;#39;s start our design with two interfaces.
+Of course, our objects will be immutable. Here is how &lt;code&gt;Posts&lt;/code&gt; would look:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how a single &lt;code&gt;Post&lt;/code&gt; would look:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is how we will list all posts in the database table:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// we&amp;#39;ll discuss this right now&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Title: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is how we will create a new post:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// we&amp;#39;ll discuss this right now&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook an omelette&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you see, we have true objects now. They are in charge of all operations,
+and they perfectly hide their implementation details. There are no transactions,
+sessions, or factories. We don&amp;#39;t even know whether these objects are actually
+talking to the PostgreSQL or if they keep all the data in text files. All
+we need from &lt;code&gt;Posts&lt;/code&gt; is an ability to list all posts for us and to create
+a new one. Implementation details are perfectly hidden inside. Now let&amp;#39;s
+see how we can implement these two classes.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m going to use &lt;a href=&quot;http://jdbc.jcabi.com&quot;&gt;jcabi-jdbc&lt;/a&gt; as a JDBC wrapper,
+but you can use something else or just plain JDBC if you like. It doesn&amp;#39;t
+really matter. What matters is that your database interactions are hidden
+inside objects. Let&amp;#39;s start with &lt;code&gt;Posts&lt;/code&gt; and implement it in class
+&lt;code&gt;PgPosts&lt;/code&gt; (&amp;quot;pg&amp;quot; stands for PostgreSQL):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PgPosts&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Source&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPosts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT id FROM post&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResultSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;INSERT INTO post (date, title) VALUES (?, ?)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Utc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SingleOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, let&amp;#39;s implement the &lt;code&gt;Post&lt;/code&gt; interface in class &lt;code&gt;PgPost&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PgPost&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Source&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT date FROM post WHERE id = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SingleOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Utc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Utc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT title FROM post WHERE id = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SingleOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how a full database interaction scenario would look like
+using the classes we just created:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPosts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Title: &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook an omelette&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Just added post #&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see a full practical example &lt;a href=&quot;https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql&quot;&gt;here&lt;/a&gt;.
+It&amp;#39;s an open source
+web app that works with PostgreSQL using the exact approach explained
+above &amp;mdash; SQL-speaking objects.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-performance?&quot;&gt;What About Performance?&lt;/h2&gt;
+
+&lt;p&gt;I can hear you screaming, &amp;quot;What about performance?&amp;quot; In that script
+a few lines above, we&amp;#39;re making many redundant round trips to the database.
+First, we retrieve post IDs with &lt;code&gt;SELECT id&lt;/code&gt; and then, in order to get their titles,
+we make an extra &lt;code&gt;SELECT title&lt;/code&gt; call for each post. This is inefficient, or simply
+put, too slow.&lt;/p&gt;
+
+&lt;p&gt;No worries; this is object-oriented programming, which means it is flexible! Let&amp;#39;s create
+a decorator of &lt;code&gt;PgPost&lt;/code&gt; that will accept all data in its constructor
+and cache it internally, forever:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ConstPost&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dte&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pay attention: This decorator doesn&amp;#39;t know anything about PostgreSQL or
+JDBC. It just decorates an object of type &lt;code&gt;Post&lt;/code&gt; and pre-caches the date
+and title. As usual, this decorator is also immutable.&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;#39;s create another implementation of &lt;code&gt;Posts&lt;/code&gt; that will return
+the &amp;quot;constant&amp;quot; objects:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ConstPgPosts&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT * FROM post&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ResultSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ConstPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Utc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTimestamp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;rset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now all posts returned by &lt;code&gt;iterate()&lt;/code&gt; of this new class are pre-equipped with dates and titles
+fetched in one round trip to the database.&lt;/p&gt;
+
+&lt;p&gt;Using decorators and multiple implementations of the same interface, you
+can compose any functionality you wish. What is the most important is that
+while functionality is being extended, the complexity of the design is
+not escalating, because classes don&amp;#39;t grow in size. Instead, we&amp;#39;re introducing
+new classes that stay cohesive and solid, because they are small.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-transactions?&quot;&gt;What About Transactions?&lt;/h2&gt;
+
+&lt;p&gt;Every object should deal with its own transactions and encapsulate
+them the same way as &lt;code&gt;SELECT&lt;/code&gt; or &lt;code&gt;INSERT&lt;/code&gt; queries. This will lead to
+nested transactions, which is perfectly fine provided the database
+server supports them. If there is no such support, create a session-wide
+transaction object that will accept a &amp;quot;callable&amp;quot; class. For example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Txn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;JdbcSession&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;START TRANSACTION&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;COMMIT&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ROLLBACK&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, when you want to wrap a few object manipulations in one
+transaction, do it like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Txn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Posts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PgPosts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook an omelette&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;This is my first comment!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code will create a new post and post a comment to it. If one
+of the calls fail, the entire transaction will be rolled back.&lt;/p&gt;
+
+&lt;p&gt;This approach looks object-oriented to me. I&amp;#39;m calling it &amp;quot;SQL-speaking objects&amp;quot;,
+because they know how to speak SQL with the database server. It&amp;#39;s their
+skill, perfectly encapsulated inside their borders.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html</guid>
+      <dc:date>2014-12-01T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Five Principles of Bug Tracking</title>
       <link>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</link>
@@ -2617,224 +3077,6 @@ from Thinking.&lt;/p&gt;
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
       <dc:date>2014-10-06T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>10 Hosted Continuous Integration Services for a Private Repository</title>
-      <link>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</link>
-      <description>&lt;p&gt;Every project I&amp;#39;m working with starts with a setup of continuous
-integration pipeline. I&amp;#39;m a big fan of cloud services,
-that&amp;#39;s why I was always using travis-ci.org. A few of
-my clients questioned this choice recently, mostly because
-of the price. So I decided to make a brief analysis of the market.&lt;/p&gt;
-
-&lt;p&gt;I configured &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;,
-an open source project, in every CI service I managed to find.
-All of them are free for open source projects.
-All of them are hosted and do not require any server installation
-Here they are, in order of my personal preference:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-  &lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;Linux&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;Windows&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;MacOS&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;travis-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$129/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;snap-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://snap-ci.com/plans&quot;&gt;$30/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;semaphoreapp.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://semaphoreapp.com/pricing&quot;&gt;$29/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyer.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;shippable.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.shippable.com/pricing.html&quot;&gt;$1/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;wercker.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;free!&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;codeship.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://codeship.io/pricing&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;magnum-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;?&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;drone.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://drone.io/pricing&quot;&gt;$25/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;circleci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://circleci.com/pricing&quot;&gt;$19/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://ci.solanolabs.com&quot;&gt;sonolabs.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://www.solanolabs.com/#pricing&quot;&gt;$15/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;hosted-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://hosted-ci.com/#plans&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;ship.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://ship.io/pricing&quot;&gt;free!&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;If you know any other good continuous integration services,
-&lt;a href=&quot;/about-me.html&quot;&gt;email me&lt;/a&gt;, I&amp;#39;ll review and add them to this list.
-BTW, here is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software&quot;&gt;&amp;quot;full&amp;quot; list&lt;/a&gt;
-of continuous integration software and services.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.travis-ci.org'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/travis.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;&lt;strong&gt;travis-ci.org&lt;/strong&gt;&lt;/a&gt; is
-the best platform I&amp;#39;ve seen so far. Mostly because
-it is the most popular. Perfectly integrates with
-Github and has proper documentation. One important
-downside is the price of $129 per month. &amp;quot;With this money
-you can get a dedicated EC2 instance and install Jenkins there&amp;quot; &amp;mdash;
-some of my clients say. I strongly disagree, since Jenkins will
-require a 24x7 administration, which costs way more than $129, but
-it&amp;#39;s always difficult to explain.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.snap-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/snap.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;&lt;strong&gt;snap-ci.com&lt;/strong&gt;&lt;/a&gt; is a product of
-ThoughtWorks, an author of &lt;a href=&quot;http://www.go.cd/&quot;&gt;Go&lt;/a&gt;,
-an open source continuous integration server. It looks a bit more
-complicated than others, giving you an ability to define &amp;quot;stages&amp;quot;
-and combine them into pipelines. I&amp;#39;m not sure yet how these mechanisms
-may help in small and medium size projects we&amp;#39;re mostly working with,
-but they look &amp;quot;cool&amp;quot;. There is also a very unfortunate limitation of
-2Gb RAM per build &amp;mdash; some of my Java projects fail because of that.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.semaphoreapp.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/semaphoreapp.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;&lt;strong&gt;semaphoreapp.com&lt;/strong&gt;&lt;/a&gt; is easy to
-configure and work with. It makes an impression of a light-weight
-system, which I generally appreciate. As a downside, they don&amp;#39;t have
-any Maven pre-installed, but this was solved easily with a short
-custom script that downloads and unpacks Maven. Another downside is
-that they are not configurable through a file (like &lt;code&gt;.travis.yml&lt;/code&gt;) &amp;mdash;
-you should do everything through a UI.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;&lt;strong&gt;appveyor.com&lt;/strong&gt;&lt;/a&gt; is the only one
-that runs Windows builds. Even though I&amp;#39;m working mostly with
-Java and Ruby, which are expected to be platform independent, they
-very often appear to be exactly the opposite. When your build
-succeedes on Linux, there is almost no guarantee it will pass on
-Windows or Mac. I&amp;#39;m planning to use appveyor in every project,
-in combination with some other CI service. I&amp;#39;m still testing it though...&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.shippable.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/shippable.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;&lt;strong&gt;shippable.com&lt;/strong&gt;&lt;/a&gt; was easy to configure
-since it understands &lt;code&gt;.travis.yml&lt;/code&gt; out of the box. Besides that,
-nothing fancy.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.wercker.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/wercker.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;&lt;strong&gt;wercker.com&lt;/strong&gt;&lt;/a&gt; is a European product
-from Amsterdam, which is still in beta and that&amp;#39;s why free
-for all projects. The platform looks very promissing. It is still
-free for private repositories and is backed up by
-&lt;a href=&quot;https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/&quot;&gt;investments&lt;/a&gt;.
-I&amp;#39;m still testing it...&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.codeship.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/codeship.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;&lt;strong&gt;codeship.io&lt;/strong&gt;&lt;/a&gt; works fine, but their web UI
-looks a bit out-dated. Anyway, I&amp;#39;m using them now, will see.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.magnum-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/magnum.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;&lt;strong&gt;magnum-ci.com&lt;/strong&gt;&lt;/a&gt; is a very lightweight
-and young system. It doesn&amp;#39;t connect automatically to Github,
-so you should do some manual operations of adding a web hook.
-Besides that, works just fine.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.drone.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/drone.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;&lt;strong&gt;drone.io&lt;/strong&gt;&lt;/a&gt; works fine, but their support
-didn&amp;#39;t reply to me when I asked for a Maven version update. Besides
-that, their badge is not updated correctly in Gitub README.md.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.circleci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/circleci.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;&lt;strong&gt;circleci.com&lt;/strong&gt;&lt;/a&gt; I still don&amp;#39;t know why my build
-fails there. Really difficult to configure and understand
-what&amp;#39;s going on. Trying to figure it out...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.zeroci.com&quot;&gt;&lt;strong&gt;zeroci.com&lt;/strong&gt;&lt;/a&gt; looks like a one-man project, which
-definitely needs usability testing. It was rather difficult to configure
-a project via its web interface. The good thing is that it&amp;#39;s free, but its
-quality is not high enough to recommend it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;&lt;strong&gt;ship.io&lt;/strong&gt;&lt;/a&gt; is building only mobile applications (for iOS and Android).
-Besides that, they don&amp;#39;t support Maven for Android apps, only Gradle.
-I&amp;#39;ll try to build iOS Swift app with them soon....&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.solanolabs.com&quot;&gt;&lt;strong&gt;solanolabs.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;&lt;strong&gt;hosted-ci.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cloudbees.com&quot;&gt;&lt;strong&gt;cloudbees.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dploy.io/&quot;&gt;&lt;strong&gt;dploy.io&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;BTW, if you don&amp;#39;t like the idea of keeping continuous integration
-in cloud, consider these on-premise software packages (in order or preference):
-&lt;a href=&quot;http://jenkins-ci.org/&quot;&gt;Jenkins&lt;/a&gt;,
-&lt;a href=&quot;http://www.jetbrains.com/teamcity/&quot;&gt;TeamCity&lt;/a&gt;,
-&lt;a href=&quot;http://www.thoughtworks.com/products/go-continuous-delivery&quot;&gt;Go&lt;/a&gt;,
-&lt;a href=&quot;http://stridercd.com/&quot;&gt;Strider&lt;/a&gt;,
-&lt;a href=&quot;http://buildbot.net/&quot;&gt;BuildBot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Keep in mind that no matter how good and expensive your
-continuous integration service is, it
-&lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;won&amp;#39;t help you&lt;/a&gt;
-unless you make your
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;master branch read-only&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
-      <dc:date>2014-10-05T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
