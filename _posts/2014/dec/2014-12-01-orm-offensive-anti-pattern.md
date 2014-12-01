@@ -306,7 +306,7 @@ final class PgPosts implements Posts {
         new ListOutcome<Post>(
           new ListOutcome.Mapping<Post>() {
             @Override
-            public Message map(final ResultSet rset) {
+            public Post map(final ResultSet rset) {
               return new PgPost(rset.getInteger(1));
             }
           }
