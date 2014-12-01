@@ -22,6 +22,12 @@
 .small {
   font-size: 0.85 * $em;
 }
+.main-font {
+  font-family: $main-font;
+  @media all and (max-width: $width) {
+    font-family: 'Times New Roman', sans-serif;
+  }
+}
 .desktop-only {
   @media all and (max-width: $width) {
     display: none !important;
@@ -38,8 +44,8 @@
   }
 }
 body {
+  @extend .main-font;
   height: 100%;
-  font-family: $main-font;
   font-weight: 400;
   background-color: #fff;
   color: $black;
@@ -100,9 +106,9 @@ fieldset {
   padding: 0;
 }
 .field {
+  @extend .main-font;
   box-sizing: border-box;
   font-size: $em;
-  font-family: $main-font;
   padding: .2 * $em .5 * $em;
 }
 .field-text {
