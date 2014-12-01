@@ -59,24 +59,21 @@ a `Post` class (I'm sorry it's so long, but that's the best I can do):
 @Entity
 @Table(name = "post")
 public class Post {
-  @Id
-  @GeneratedValue
   private int id;
   private Date date;
   private String title;
 
-  @Column(name = "id")
+  @Id
+  @GeneratedValue
   public int getId() {
     return this.id;
   }
 
   @Temporal(TemporalType.TIMESTAMP)
-  @Column(name = "date")
   public Date getDate() {
     return this.date;
   }
 
-  @Column(name = "title")
   public Title getTitle() {
     return this.title;
   }
