@@ -7,7 +7,7 @@ function ping_uri {
     -H 'Accept:*/*' \
     -H 'Accept-Encoding:gzip,deflate,sdch' \
     -H 'Cache-Control:max-age=0' \
-    --retry 5 \
+    --retry 8 \
     --write-out '%{url_effective}: %{http_code}\n' $1 || exit 255
 }
 export -f ping_uri
