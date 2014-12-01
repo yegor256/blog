@@ -390,7 +390,7 @@ final class ConstPost implements Post {
   private final Post origin;
   private final Date dte;
   private final String ttl;
-  public PgPost(Post post, Date date, String title) {
+  public ConstPost(Post post, Date date, String title) {
     this.origin = post;
     this.dte = date;
     this.ttl = title;
@@ -425,7 +425,7 @@ final class ConstPgPosts implements Posts {
         new ListOutcome<Post>(
           new ListOutcome.Mapping<Post>() {
             @Override
-            public Message map(final ResultSet rset) {
+            public Post map(final ResultSet rset) {
               return new ConstPost(
                 new PgPost(rset.getInteger(1)),
                 Utc.getTimestamp(rset, 2),
