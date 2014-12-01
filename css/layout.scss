@@ -227,6 +227,9 @@ figure {
   background-color: $gray;
   text-decoration: none;
   color: white !important;
+  @media all and (max-width: $width) {
+    font-family: monospace;
+  }
   &:visited {
     color: white !important;
   }
