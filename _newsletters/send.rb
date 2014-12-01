@@ -38,7 +38,7 @@ Mail.defaults do
 end
 
 if opts[:dry]
-  emails = ['test@yegor256.com']
+  emails = ['Yegor Bugayenko,test@yegor256.com']
 else
   emails = File.readlines(opts[:file]).collect(&:strip).reject(&:blank?).uniq
 end
@@ -76,7 +76,7 @@ emails.each do |line|
       body html
     end
   end
-  #mail.deliver!
+  mail.deliver!
   puts ' done'
 end
 
