@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ORM Is an Offensive Anti-Pattern"
-date: 2014-11-30
+date: 2014-12-01
 tags: oop
 description:
   Object-relational mapping is a design pattern that
