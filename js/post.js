@@ -86,6 +86,7 @@ $(
 $(
   function() {
     'use strict';
+    $('<script>').attr('src', '//yegor256.disqus.com/embed.js').appendTo('head');
     $('.button').click(
       function (event) {
         event.preventDefault();

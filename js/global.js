@@ -2,6 +2,7 @@
 $(
   function() {
     'use strict';
+    $('<script>').attr('src', '//yegor256.disqus.com/count.js').appendTo('head');
     $('#search-query').lunrSearch(
       {
         indexUrl: '/search.json',
