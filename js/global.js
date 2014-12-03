@@ -27,6 +27,17 @@ $(
   }
 );
 
+$(
+  function() {
+    'use strict';
+    $('pre, code').each(
+      function () {
+        $(this).addClass('notranslate');
+      }
+    );
+  }
+);
+
 // disqus.com
 var disqus_shortname = 'yegor256';
 var disqus_url = document.location.href.split('?')[0].split('#')[0];
