@@ -30,7 +30,7 @@ $(
 $(
   function() {
     'use strict';
-    $('pre, code').each(
+    $('pre, code, a').each(
       function () {
         $(this).addClass('notranslate');
       }
