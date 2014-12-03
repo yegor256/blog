@@ -10,6 +10,12 @@ $(
         template: '#search-results-template'
       }
     );
+  }
+);
+
+$(
+  function() {
+    'use strict';
     $('.main p a, .main ul a, .main ol a').each(
       function () {
         var $this = $(this), domain = new URL(this.href).hostname;
@@ -29,7 +35,7 @@ $(
     'use strict';
     $('<script>')
       .attr('src', '//yegor256.disqus.com/count.js')
-      .attr('async', 'async')
+      .attr('async', '')
       .appendTo('head');
   }
 );
@@ -43,7 +49,7 @@ $(
     'use strict';
     $('<script>')
       .attr('src', '//stats.g.doubleclick.net/dc.js')
-      .attr('async', 'async')
+      .attr('async', '')
       .appendTo('head');
   }
 );
