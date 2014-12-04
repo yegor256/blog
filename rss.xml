@@ -10,12 +10,119 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Dec 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Synchronization Between Nodes</title>
+      <link>http://www.yegor256.com/2014/12/04/synchronization-between-nodes.html</link>
+      <description>&lt;p&gt;When two or more software modules are accessing the same
+resource, they have to be synchronized. This means that only
+one module at a time should be working with the resource. Without
+such synchronization, there will be collisions and conflicts. This
+is especially true when we&amp;#39;re talking about &amp;quot;resources&amp;quot; that do
+not support &lt;em&gt;atomic&lt;/em&gt; transactions.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://img.stateful.co/pomegranate.svg' style='width:64px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;To solve this issue and prevent conflicts, we have to introduce
+one more element into the picture. All software modules, before
+accessing the resource, should &lt;em&gt;capture&lt;/em&gt; a lock from a centralized
+server. Once the manipulations with the resource are complete, the module
+should &lt;em&gt;release&lt;/em&gt; the lock. While the lock is being captured by one
+module, no other modules will be able to capture it. The approach
+is very simple and well-known. However, I didn&amp;#39;t find any cloud services
+that would provide such a locking and unlocking service over a RESTful API.
+So I decided to create one &amp;mdash; &lt;a href=&quot;http://www.stateful.co&quot;&gt;stateful.co&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/12/van-damme-split.png' style='width:600px;' alt='No Retreat, No Surrender (1986) by Corey Yuen'/&gt;&lt;figcaption&gt;No Retreat, No Surrender (1986) by Corey Yuen&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is a practical example. I have a Java web app that is hosted
+at Heroku. There are three servers (a.k.a. &amp;quot;dynos&amp;quot;) running the same &lt;code&gt;.war&lt;/code&gt;
+application. Why three? Because the web traffic is rather active, and one
+server is not powerful enough. So I have to have three of them. They all
+run exactly the same applications.&lt;/p&gt;
+
+&lt;p&gt;Each web app works with a table in Amazon DynamoDB. It updates the table,
+puts new items into it, deletes some items sometimes, and selects them. So far,
+so good, but conflicts are inevitable. Here is an example of a typical
+interaction scenario between the web app and DynamoDB (I&amp;#39;m using jcabi-dynamo):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;posts&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recalculate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The logic is obvious here. First, I retrieve an item from the table &lt;code&gt;posts&lt;/code&gt;,
+then read its &lt;code&gt;salary&lt;/code&gt;, and then modify it according to my recalculation
+algorithm. The problem is that another module may start to do the same while
+I&amp;#39;m recalculating. It will read the same initial value from the table
+and will start exactly the same recalculation. Then it will save a new
+value, and I will save one too. We will end up having Jeff&amp;#39;s salary modified
+only once, while users will expect a double modification since two of them
+initiated two transactions with two different web apps.&lt;/p&gt;
+
+&lt;p&gt;The right approach here is to &amp;quot;lock&amp;quot; the DynamoDB table first, even before
+reading the salary. Then do the modifications and eventually unlock it. Here is
+how &lt;a href=&quot;http://www.stateful.co&quot;&gt;stateful.co&lt;/a&gt; helps me. All I need to do is create a new named lock
+in the &lt;a href=&quot;http://www.stateful.co&quot;&gt;stateful.co&lt;/a&gt; web panel,
+get my authentication keys, and modify my Java code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Sttc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sttc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RtSttc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;URN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;urn:github:526301&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// my Github ID&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;9FF3-4320-73FB-EEAC&amp;quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// my secret key!&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Locks&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sttc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;locks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Lock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;posts-table-lock&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;posts&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Atomic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Callable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recalculate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you see, I wrap that critical transaction into &lt;code&gt;Callable&lt;/code&gt;, which will
+be executed in isolation. This approach, obviously, doesn&amp;#39;t
+guarantee atomicity of transaction &amp;mdash; if part of the transaction fails,
+there won&amp;#39;t be any automatic rollbacks and the DynamoDB table will be left
+in a &amp;quot;broken&amp;quot; state.&lt;/p&gt;
+
+&lt;p&gt;Locks from &lt;a href=&quot;http://www.stateful.co&quot;&gt;stateful.co&lt;/a&gt; guarantee isolation in resource usage, and you can
+use any type of resources, including NoSQL tables, files, S3 objects,
+embedded software, etc.&lt;/p&gt;
+
+&lt;p&gt;I should not forget to add this dependency to my &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;co.stateful&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;java-sdk&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course, you can do the same; the service is absolutely free of charge.
+And you can use any other languages, not just Java. BTW, if interested,
+contribute with your own SDK in your preferred language; I&amp;#39;ll add it to
+the &lt;a href=&quot;https://github.com/sttc&quot;&gt;Github collection&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 04 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/12/04/synchronization-between-nodes.html</guid>
+      <dc:date>2014-12-04T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>ORM Is an Offensive Anti-Pattern</title>
       <link>http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html</link>
@@ -2875,205 +2982,6 @@ project spent 45 minutes, and the problem was solved.&lt;/p&gt;
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</guid>
       <dc:date>2014-10-07T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Project Lifecycle in Teamed.io</title>
-      <link>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</link>
-      <description>&lt;p&gt;In addition to being a hands-on programmer, I&amp;#39;m also co-founder and CTO of
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, a custom software development company.
-I play the role of a technical and management leader in all projects
-we work with.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.teamed.io'&gt;&lt;img src='http://img.teamed.io/logo.svg' style='width:160px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I wrote this article for those who&amp;#39;re interested in hiring me and/or
-my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to &lt;a href=&quot;mailto:hire@teamed.io&quot;&gt;work with us&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You will see below that our methods of
-software development &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;seriously differ&lt;/a&gt;
-from what many other teams are using. I personally pay a lot of attention to quality
-of code and quality of the internal processes that connect our team.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;There are four phases in every project I work with in
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Thinking&lt;/strong&gt;.
-Here we&amp;#39;re trying to understand: What is the problem that the product
-is going to solve? We&amp;#39;re also investigating the product&amp;#39;s boundaries &amp;mdash;
-who will work with the software (actors) and how will they work with it (user stories).
-Deliverables: specification.
-Duration: from 2 days up to 3 weeks.
-Participants: product owner, analyst(s), architect, project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Building&lt;/strong&gt;.
-Here the software architect is creating a &lt;a href=&quot;https://en.wikipedia.org/wiki/Proof_of_concept&quot;&gt;proof-of-concept&lt;/a&gt;
-(aka an &lt;a href=&quot;https://en.wikipedia.org/wiki/Minimum_viable_product&quot;&gt;MVP&lt;/a&gt; or prototype or a skeleton).
-It is a one-man job that is done almost without any interaction
-with anyone else. The architect builds the product according to the
-specification in a very limited time frame. The result will have
-multiple bugs and open ends, but it will implement the main user story.
-The architect also configures continuous integration and delivery pipelines.
-Deliverables: working software.
-Duration: 2-5 days.
-Participants: architect.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fixing&lt;/strong&gt;.
-At this phase we are adding all the meat to the skeleton. This phase
-takes most of the time and budget and involves many participants.
-In some projects we invite up to 50 people to work, at the same time.
-Since we treat all inconsistencies as bugs, this phase is mostly about
-finding, reporting and fixing bugs, in order to stabilize the product
-and get it ready for market launch. We increment and
-release the software multiple times a day, preferably to its user
-champions.
-Deliverables: bug fixes via pull requests.
-Duration: from weeks to months.
-Participants: programmer(s), designer(s), tester(s), code reviewer(s), architect, project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Using&lt;/strong&gt;.
-At this final phase we are launching the product to its end-users,
-and collecting their feedback (both positive and negative). Everything
-they are reporting back to us is being registered as a bug. Then,
-we categorize the bugs and fix them. This phase may take years, but
-it never involves active implementation of new features.
-Deliverables: bug fixes via pull requests.
-Duration: months.
-Participants: programmer(s), code reviewer(s), project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
-usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &amp;mdash; Thinking. A mistake made during Thinking
-will cost much more than a mistake made later.&lt;/p&gt;
-
-&lt;h2 id=&quot;thinking&quot;&gt;Thinking&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-thinking.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Thinking is the first and the most important phase.&lt;/p&gt;
-
-&lt;p&gt;First, we give a name to the project and create a &lt;a href=&quot;https://github.com&quot;&gt;Github&lt;/a&gt; repository. We
-try to keep all our projects (both open source and commercial) in Github.
-Mostly because the platform is very popular, very powerful, and really cheap
-(&lt;a href=&quot;https://github.com/pricing&quot;&gt;$7/mo&lt;/a&gt; for a set of 5 private projects).
-We also keep all communication in the Github issue tracker.&lt;/p&gt;
-
-&lt;p&gt;Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
-this is done right inside the source code, but sometimes in the Github wiki. What&amp;#39;s important
-is that the document should be under version control. We will modify it
-during the course of the project, very intensively. The SRS should briefly
-identify main &amp;quot;actors&amp;quot; of the system and define the product scope.&lt;/p&gt;
-
-&lt;p&gt;Even though it is only half a page, the creation of this initial SRS document
-is the most important and the most expensive task in the entire project.
-We pay a lot of attention to this step. Usually this document is written
-by myself in a direct communication with the project sponsor. We can&amp;#39;t afford
-a mistake at this step.&lt;/p&gt;
-
-&lt;p&gt;Then, we invite a few system analysts to the project. These guys
-are responsible for turning our initial SRS into a more complete and detailed
-specification. They start by asking questions, submitting them one by one
-as Github issues. Every question is addressed to the product owner. Using
-his answers, system analysts modify the SRS document.
-This article explains how &lt;a href=&quot;http://www.requs.org&quot;&gt;Requs&lt;/a&gt; helps us in this process:
-&lt;a href=&quot;/2014/04/26/incremental-requirements-with-requs.html&quot;&gt;Incremental Requirements With Requs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;At the end of the Thinking phase we estimate the size of the project,
-in lines of code. Using lines of code, we can roughly
-&lt;a href=&quot;http://www.teamed.io/calculator.html&quot;&gt;estimate a budget&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I stay personally involved in the project during
-the entire Thinking phase.&lt;/p&gt;
-
-&lt;h2 id=&quot;building&quot;&gt;Building&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-building.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is a one-man job for an architect. Every project we work with
-has an architect who is &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;personally responsible&lt;/a&gt;
-for the quality and all
-technical decisions made there. I try to play this role
-in most projects.&lt;/p&gt;
-
-&lt;p&gt;The Building phase is rather straight forward. I have to implement the
-solution according to the SRS, in a few working days. No matter
-how big the idea and how massive the planning development, I
-still have to create (build from scratch!) the product in, say, three days.&lt;/p&gt;
-
-&lt;p&gt;Besides building the software itself, I have to configure all
-basic DevOps processes, including:
-1) automated testing and quality control,
-2) deploying and releasing pipelines,
-3) repository of artifacts,
-4) &lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;continuous integration&lt;/a&gt; service, etc.&lt;/p&gt;
-
-&lt;p&gt;The result of this phase is a working software package, deployable
-to its destination and available for testers. Technical
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality requirements&lt;/a&gt;
-are also defined at this phase.&lt;/p&gt;
-
-&lt;h2 id=&quot;fixing&quot;&gt;Fixing&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-fixing.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now it&amp;#39;s time to build a distributed team of programmers. First, we
-invite those who&amp;#39;ve worked in other projects before and have already
-have proven their quality. Very often we invite new people,
-finding them through StackOverflow, Github, oDesk, and other sources.
-An average team size of an average project is 10-20 programmers.&lt;/p&gt;
-
-&lt;p&gt;At this phase, we understand any inconsistency as a bug. If something is not clear
-in the documentation, or if something can be refactored for better
-readability, or if a function can be improved for higher performance &amp;mdash;
-it is a bug to us.
-And &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;bugs are welcome&lt;/a&gt; in our projects.
-We encourage everybody to report as many bugs as possible. This is how
-we achieve high quality.&lt;/p&gt;
-
-&lt;p&gt;That is why the phase is called Fixing, after all. We are reporting bugs and fixing
-them. Hundreds of bugs. Sometimes thousands. The product
-grows in front of our very eyes, because after every bug fix
-we re-deploy the entire product to the production platform.&lt;/p&gt;
-
-&lt;p&gt;Every bug is reported, classified, discussed, and fixed in its
-own Github ticket and its own Git branch. We never allow anyone
-to just commit to the &lt;code&gt;master&lt;/code&gt; branch &amp;mdash; all changes must pass through
-our &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality controls&lt;/a&gt;
-and be merged into &lt;code&gt;master&lt;/code&gt; by &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt;,
-our &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;merging bot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;never use any chats&lt;/a&gt;,
-Skype, emails or conferencing software. We communicate
-only through tickets and comments in Github.&lt;/p&gt;
-
-&lt;h2 id=&quot;using&quot;&gt;Using&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-using.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the final phase and it can take quite a long time. By now, the product is
-ready and is launched to the market. But we still receive bug reports
-and feature request from the product owner, and we still fix them through
-the same process flow as in the Fixing phase.&lt;/p&gt;
-
-&lt;p&gt;We try to keep this phase as quiet as possible, in terms of
-the amount of bugs reported and fixed. Thanks to our intensive and
-pro-active bug finding and fixing in the previous phase, we usually
-have very few problems at the Using phase.&lt;/p&gt;
-
-&lt;p&gt;And big feature requests? At this phase, we usually try to convert
-them into new projects and develop them separately, starting again
-from Thinking.&lt;/p&gt;
-
-&lt;p&gt;BTW, the illustrations you see above are made by
-&lt;a href=&quot;https://www.behance.net/lopesbarbara&quot;&gt;Bárbara Lopes&lt;/a&gt;&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
-      <dc:date>2014-10-06T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
