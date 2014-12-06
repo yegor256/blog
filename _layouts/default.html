@@ -14,7 +14,7 @@
     <!-- we have to load them both before everything, they are not doing anything, just defining functions -->
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
-    <title>{{ page.title }}
+    <title>{{ page.title }} - {{ site.author }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
