@@ -97,10 +97,14 @@ Some of my articles are also published at (in alphabetic order):
     title="Yegor Bugayenko at Tumblr"
     class="about-badge"/></a>
 
-<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script src="//platform.twitter.com/oct.js" async></script>
 <script type="text/javascript">
-twttr.conversion.trackPid('l4p91');
+$(
+  function() {
+    twttr.conversion.trackPid('l4p91');
+  }
+);
 </script>
 
-<script src="/js/send.js?{{ site.data['hash'] }}"></script>
-<script src="/js/subscribe.js?{{ site.data['hash'] }}"></script>
+<script src="/js/send.js?{{ site.data['hash'] }}" async></script>
+<script src="/js/subscribe.js?{{ site.data['hash'] }}" async></script>

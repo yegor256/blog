@@ -11,9 +11,6 @@
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <!-- we have to load them both before everything, they are not doing anything, just defining functions -->
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
     <title>{{ page.title }} - {{ site.author }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
@@ -68,6 +65,8 @@
       </header>
     </div>
     {{ content }}
-    <script src="/js/global.js?{{ site.data['hash'] }}" async=''></script>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
+    <script src="/js/global.js?{{ site.data['hash'] }}" async></script>
   </body>
 </html>
