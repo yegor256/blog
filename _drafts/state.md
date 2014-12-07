@@ -29,6 +29,8 @@ even when its title is changing frequently. Let me explain how.
 
 <!--more-->
 
+{% picture /images/2014/12/once-upon-a-time-in-the-west.png 0 Once Upon a Time in the West (1968) by Sergio Leone %}
+
 ## Identity, State, and Behavior
 
 Basically, there are three elements in every object &mdash;
@@ -338,7 +340,7 @@ in-memory data mostly because memory is the only resource they have.
 In that case, without `Memory` class, you end up with mutable objects :(
 There is no workaround.
 
-To summarize, don't forget that an object is an animator of data. He is using
+To summarize, don't forget that an object is an **animator** of data. He is using
 his encapsulated knowledge in order to reach the data. No matter where
 the data is stored, in file, in HTTP or in memory &mdash; it is
 conceptually very different from object state, even though they may
