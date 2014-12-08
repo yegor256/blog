@@ -45,7 +45,7 @@ $(
   function() {
     'use strict';
     $('<script>')
-      .attr('src', '//yegor256.disqus.com/count.js')
+      .attr('src', '//a.disquscdn.com/count.js')
       .attr('async', '')
       .appendTo('head');
   }
