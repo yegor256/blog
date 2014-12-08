@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ORM Is an Offensive Anti-Pattern"
-date: 2014-11-19
+date: 2014-12-01
 tags: oop
 description:
   Object-relational mapping is a design pattern that
@@ -22,6 +22,8 @@ a small web app or an enterprise-size system with thousands of tables and CRUD
 manipulations on them. What is the alternative? **SQL-speaking objects**.
 
 <!--more-->
+
+{% picture /images/2014/11/broken-object.png 0 Vinni-Pukh (1969) by Fyodor Khitruk %}
 
 ## How ORM Works
 
@@ -57,24 +59,21 @@ a `Post` class (I'm sorry it's so long, but that's the best I can do):
 @Entity
 @Table(name = "post")
 public class Post {
-  @Id
-  @GeneratedValue
   private int id;
   private Date date;
   private String title;
 
-  @Column(name = "id")
+  @Id
+  @GeneratedValue
   public int getId() {
     return this.id;
   }
 
   @Temporal(TemporalType.TIMESTAMP)
-  @Column(name = "date")
   public Date getDate() {
     return this.date;
   }
 
-  @Column(name = "title")
   public Title getTitle() {
     return this.title;
   }
@@ -182,14 +181,14 @@ they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
+{% badge /images/2014/11/orm-anti-pattern.svg 413 %}
+
 The main point is that ORM, instead of encapsulating database interaction
 inside an object, extracts it away, literally tearing a solid and cohesive
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) apart.
 One part of the object keeps the data while another one, implemented inside
 the ORM engine (session factory), knows how to deal with this data and transfers it to the
-relational database. Look at this picture; it illustrates what ORM is doing:
-
-...
+relational database. Look at this picture; it illustrates what ORM is doing.
 
 I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "obtruncated" object returned to me. The behavior I'm interacting
@@ -227,6 +226,8 @@ fundamental drawback is that ORM tears objects apart, terribly and offensively
 violating the very idea of [what an object is]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
 ## SQL-Speaking Objects
+
+{% badge /images/2014/11/sql-speaking-object.svg 213 %}
 
 What is the alternative? Let me show it to you by example. Let's try to design that
 class, `Post`, my way. We'll have to break it down into two classes: `Post`
@@ -305,7 +306,7 @@ final class PgPosts implements Posts {
         new ListOutcome<Post>(
           new ListOutcome.Mapping<Post>() {
             @Override
-            public Message map(final ResultSet rset) {
+            public Post map(final ResultSet rset) {
               return new PgPost(rset.getInteger(1));
             }
           }
@@ -389,7 +390,7 @@ final class ConstPost implements Post {
   private final Post origin;
   private final Date dte;
   private final String ttl;
-  public PgPost(Post post, Date date, String title) {
+  public ConstPost(Post post, Date date, String title) {
     this.origin = post;
     this.dte = date;
     this.ttl = title;
@@ -424,7 +425,7 @@ final class ConstPgPosts implements Posts {
         new ListOutcome<Post>(
           new ListOutcome.Mapping<Post>() {
             @Override
-            public Message map(final ResultSet rset) {
+            public Post map(final ResultSet rset) {
               return new ConstPost(
                 new PgPost(rset.getInteger(1)),
                 Utc.getTimestamp(rset, 2),

@@ -60,7 +60,7 @@ module Jekyll
     end
 
     def tag_link(tag)
-      %Q{<a href='#{tag_url(tag)}' class='tag'>#{tag}</a>}
+      %Q{<a href='#{tag_url(tag)}' class='tag notranslate'>#{tag}</a>}
     end
 
     def tag_url(tag)
@@ -81,7 +81,7 @@ module Jekyll
             </time>
           </li>
           <li>
-            <a href='http://www.yegor256.com#{post['url']}#disqus_thread'>comments</a>
+            <a href='http://www.yegor256.com#{post['url']}#disqus_thread' class='notranslate'>comments</a>
           </li>
           <li>#{tags(post)}</li>
         </ul>

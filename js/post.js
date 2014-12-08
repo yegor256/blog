@@ -86,6 +86,7 @@ $(
 $(
   function() {
     'use strict';
+    $('<script>').attr('src', '//yegor256.disqus.com/embed.js').appendTo('head');
     $('.button').click(
       function (event) {
         event.preventDefault();
@@ -104,7 +105,7 @@ $(
           $element.append(
             $('<a/>').addClass('link')
               .attr('href', '#' + id)
-              .append('<i class="icon icon-link"></i>')
+              .append('<i class="icon icon-link notranslate"></i>')
           );
         }
       }

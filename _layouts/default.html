@@ -11,8 +11,7 @@
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <title>{{ page.title }}
+    <title>{{ page.title }} - {{ site.author }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
@@ -26,16 +25,16 @@
           </a>
         </div>
         <nav role="navigation">
-          <ul class="menu social">
-            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter"></i></a></li>
-            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss"></i></a></li>
-            <li><a href="https://github.com/yegor256" title="my Github profile"><i class="icon icon-github"></i></a></li>
-            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow"></i></a></li>
-            <li><a href="https://www.facebook.com/yegor.bugayenko" title="follow me in Facebook"><i class="icon icon-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin"></i></a></li>
-            <li><a href="http://www.youtube.com/user/yegor256a" title="my Youtube video channel"><i class="icon icon-youtube"></i></a></li>
-            <li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="icon icon-mail"></i></a></li>
+          <ul class="menu social notranslate">
+            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/yegor256" title="my Github profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/yegor.bugayenko" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="http://www.youtube.com/user/yegor256a" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
           </ul>
           <ul class="menu">
             <li>
@@ -66,10 +65,8 @@
       </header>
     </div>
     {{ content }}
-    <script src="/js/global.js?{{ site.data['hash'] }}"></script>
-    <script src="//yegor256.disqus.com/count.js" async="async"></script>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
-    <script src="//stats.g.doubleclick.net/dc.js" async="async"></script>
-    <!--<script src="//mc.yandex.ru/metrika/watch.js" async="async"></script>-->
+    <script src="/js/global.js?{{ site.data['hash'] }}" async></script>
   </body>
 </html>

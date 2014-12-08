@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Synchronization Between Nodes"
-date: 2014-11-22
+date: 2014-12-04
 tags: stateful
 description:
   Free cloud service stateful.co helps you synchronize
@@ -36,6 +36,8 @@ So I decided to create one &mdash; [stateful.co](http://www.stateful.co).
 
 <!--more-->
 
+{% picture /images/2014/12/van-damme-split.png 0 No Retreat, No Surrender (1986) by Corey Yuen %}
+
 Here is a practical example. I have a Java web app that is hosted
 at Heroku. There are three servers (a.k.a. "dynos") running the same `.war`
 application. Why three? Because the web traffic is rather active, and one
@@ -68,7 +70,8 @@ initiated two transactions with two different web apps.
 The right approach here is to "lock" the DynamoDB table first, even before
 reading the salary. Then do the modifications and eventually unlock it. Here is
 how [stateful.co](http://www.stateful.co) helps me. All I need to do is create a new named lock
-in the [stateful.co](http://www.stateful.co) web panel, get my authentication keys, and modify my Java code:
+in the [stateful.co](http://www.stateful.co) web panel,
+get my authentication keys, and modify my Java code:
 
 {% highlight java %}
 Sttc sttc = new RtSttc(

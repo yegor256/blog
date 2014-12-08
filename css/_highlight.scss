@@ -1,6 +1,9 @@
 code, pre {
   font-family: $code-font;
   font-weight: 400;
+  @media all and (max-width: $width) {
+    font-family: monospace;
+  }
 }
 code {
   background-color: $light-gray;

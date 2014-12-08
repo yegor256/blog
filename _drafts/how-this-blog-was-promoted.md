@@ -68,3 +68,18 @@ Stackoverflow: 4%
 Twitter: 3%
 Javacodegeeks: 3%
 Feedly: 2%
+
+25 Nov 2014.
+It appears that social networks could be very effective, if your content
+is provocative enough. A few of the articles got some boost in twitter this month.
+Here is what the traffic is coming from now:
+Direct 24%
+Twitter: 16%
+Reddit: 16%
+Google search: 10%
+Dzone: 8%
+StumbleUpon: 5%
+Techgig.com: 3%
+Hacker news: 2%
+Stackoverflow: 2%
+Feedly: 2%
