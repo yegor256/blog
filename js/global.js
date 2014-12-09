@@ -27,17 +27,6 @@ $(
   }
 );
 
-$(
-  function() {
-    'use strict';
-    $('pre, code, a').each(
-      function () {
-        $(this).addClass('notranslate');
-      }
-    );
-  }
-);
-
 // disqus.com
 var disqus_shortname = 'yegor256';
 var disqus_url = document.location.href.split('?')[0].split('#')[0];
@@ -46,7 +35,8 @@ $(
     'use strict';
     $('<script>')
       .attr('src', '//a.disquscdn.com/count.js')
-      .attr('async', '')
+      .attr('async', 'async')
+      .attr('defer', 'defer')
       .appendTo('head');
   }
 );
@@ -60,7 +50,8 @@ $(
     'use strict';
     $('<script>')
       .attr('src', '//stats.g.doubleclick.net/dc.js')
-      .attr('async', '')
+      .attr('async', 'async')
+      .attr('defer', 'defer')
       .appendTo('head');
   }
 );

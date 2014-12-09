@@ -88,7 +88,11 @@ $(
 $(
   function() {
     'use strict';
-    $('<script>').attr('src', '//a.disquscdn.com/embed.js').appendTo('head');
+    $('<script>')
+      .attr('src', '//yegor256.disqus.com/embed.js')
+      .attr('defer', 'defer')
+      .attr('async', 'async')
+      .appendTo('head');
     $('.button').click(
       function (event) {
         event.preventDefault();
