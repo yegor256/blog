@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How an Immutable Object Can Have State and Behavior?"
-date: 2014-12-08
+date: 2014-12-09
 tags: oop
 description:
   Object state and behavior are two very different things,
@@ -33,7 +33,7 @@ even when its title is changed frequently. Let me explain how.
 
 ## Identity, State, and Behavior
 
-Basically, there are three elements in every object: 
+Basically, there are three elements in every object:
 identity, state, and behavior. *Identity* is what distinguishes our `document`
 from other objects, *state* is what a document
 knows about itself (a.k.a. "encapsulated knowledge"), and
@@ -232,7 +232,7 @@ and what happens if we need to keep the title of the document in memory?
 Let's look at it from an "object thinking" point of view. We have a `document`
 object, which [is supposed to represent]({%pst%}) a real-life entity in an
 object-oriented world. If such an entity is a file, we can easily
-implement `title()` methods. If such an entity is an Amazon S3 object, 
+implement `title()` methods. If such an entity is an Amazon S3 object,
 we also implement title reading and writing methods easily, keeping the
 object immutable. If such an entity is an HTTP page, we
 have no issues in the implementation of title reading or writing, keeping the object immutable.
@@ -347,5 +347,5 @@ conceptually very different from an object state, even though they may
 look very similar.
 
 A good object is an immutable animator of mutable data. Even though it
-is immutable and data is mutable, it is alive and data is dead 
+is immutable and data is mutable, it is alive and data is dead
 in the scope of the object's living environment.

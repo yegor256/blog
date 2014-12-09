@@ -56,6 +56,7 @@ $(
         }
       }
     );
+    /*
     $.getJSON(
       'http://feeds.delicious.com/v2/json/urlinfo/data?url=' + url + '&callback=?',
       function(data) {
@@ -68,6 +69,7 @@ $(
         }
       }
     );
+    */
     /*
     digg API doesn't work at the momemt, they are refactoring it
     $.getJSON(
@@ -86,7 +88,11 @@ $(
 $(
   function() {
     'use strict';
-    $('<script>').attr('src', '//yegor256.disqus.com/embed.js').appendTo('head');
+    $('<script>')
+      .attr('src', '//yegor256.disqus.com/embed.js')
+      .attr('defer', 'defer')
+      .attr('async', 'async')
+      .appendTo('head');
     $('.button').click(
       function (event) {
         event.preventDefault();
