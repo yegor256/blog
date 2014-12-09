@@ -56,6 +56,7 @@ $(
         }
       }
     );
+    /*
     $.getJSON(
       'http://feeds.delicious.com/v2/json/urlinfo/data?url=' + url + '&callback=?',
       function(data) {
@@ -68,6 +69,7 @@ $(
         }
       }
     );
+    */
     /*
     digg API doesn't work at the momemt, they are refactoring it
     $.getJSON(
