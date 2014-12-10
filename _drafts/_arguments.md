@@ -29,7 +29,9 @@ this case I have to &mdash; it depends.
 
 <!--more-->
 
-As [we discussed before]({% pst %}),
+{% picture /images/2014/12/truman-show-universe.png 0 The Truman Show (1998) by Peter Weir %}
+
+As [we discussed before]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 a good object is a representative of a real-life entity. Such an entity
 exists outside of the object's living environment. The object knows
 how to access it and how to communicate with it.
@@ -40,7 +42,7 @@ of arguments its constructors accept. The first class accepts
 a single URL as an argument of its constructor. This tells us
 that the object of this class, after being constructed, will represent
 a web page. The second class accepts no arguments, which tells us
-that the object of it will represent ... the universe.
+that the object of it will represent ... the Universe.
 
 I think this principle is applicable to all classes in
 object-oriented programming &mdash; in order to understand what
@@ -48,11 +50,13 @@ real-life entity an object represents, look at its constructor. All
 arguments passed into the constructor and encapsulated by the object identify
 a real-life entity accessed and managed by the object.
 
-Of course, I'm talking about *good objects*,
-which are immutable and don't have setters and getters.
+Of course, I'm talking about
+[good objects]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
+which are immutable and
+[don't have setters and getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 
 Pay attention that I'm talking about arguments encapsulated by the object. The
-following class doesn't represent the universe, even though it does have
+following class doesn't represent the Universe, even though it does have
 a no-arguments constructor:
 
 {% highlight java %}
@@ -72,12 +76,12 @@ supplementary. We're interested in the main one, which implements
 the *encapsulation* of arguments.
 
 Now, the question is which is better: to represent a web page
-or the universe? It depends, but I think that in general, the smaller the
+or the Universe? It depends, but I think that in general, the smaller the
 real-life entity we represent, the more solid and cohesive design
 we give to the object.
 
 On the other hand, sometimes we have to have an object that represents
-the universe. For example, we may have this:
+the Universe. For example, we may have this:
 
 {% highlight java %}
 class HTTP {
@@ -91,11 +95,11 @@ class HTTP {
 {% endhighlight %}
 
 This is not an elegant design, but it demonstrates when it may be
-necessary to represent the entire universe. An object of this `HTTP` class can read
-any web page from the entire web (it is almost as big as the universe, isn't it?),
+necessary to represent the entire Universe. An object of this `HTTP` class can read
+any web page from the entire web (it is almost as big as the Universe, isn't it?),
 and it can check whether the entire web is accessible by it. Obviously,
 in this case, we don't need it to encapsulate anything.
 
-I believe that objects representing the universe are not good objects,
-mostly because there is only one universe; why do we need many
+I believe that objects representing the Universe are not good objects,
+mostly because there is only one Universe; why do we need many
 representatives of it? :)
