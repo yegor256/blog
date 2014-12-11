@@ -3,6 +3,7 @@ branches:
   only:
   - master
 install:
+- travis_retry sudo apt-get update -y
 - travis_retry sudo apt-get install -y graphviz
 - travis_retry sudo apt-get install -y gnuplot
 - wget --retry-connrefused http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
