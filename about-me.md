@@ -16,6 +16,9 @@ keywords:
   - static analysis
   - software testing
 exclude_from_search: true
+scripts:
+  - /js/send.js
+  - /js/subscribe.js
 ---
 
 I'm Yegor Bugayenko, a programmer and an architect, passionate
@@ -97,7 +100,7 @@ Some of my articles are also published at (in alphabetic order):
     title="Yegor Bugayenko at Tumblr"
     class="about-badge"/></a>
 
-<script src="//platform.twitter.com/oct.js" async='async' defer='defer'></script>
+<script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
 <script type="text/javascript">
 $(
   function() {
@@ -105,6 +108,3 @@ $(
   }
 );
 </script>
-
-<script src="/js/send.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>
-<script src="/js/subscribe.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>

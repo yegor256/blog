@@ -8,6 +8,9 @@ description:
   email you again once you fill this form and send it to me.
 keywords:
   - unsubscribe
+scripts:
+  - /js/send.js
+  - /js/unsubscribe.js
 ---
 
 I'm sorry to see you leaving :(
@@ -21,6 +24,3 @@ I'm sorry to see you leaving :(
 </fieldset></form>
 
 You can always [subscribe](/about-me.html) again.
-
-<script src="/js/send.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>
-<script src="/js/unsubscribe.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>

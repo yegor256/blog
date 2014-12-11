@@ -312,4 +312,4 @@ an announcement to your followers. Both features are very convenient
 for me. For example:
 
 <blockquote class="twitter-tweet" lang="en"><p>DynamoDB Local Maven Plugin, 0.7.1 released <a href="https://t.co/C3KULouuKS">https://t.co/C3KULouuKS</a></p>&mdash; rultor.com (@rultors) <a href="https://twitter.com/rultors/statuses/501617747269517312">August 19, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
