@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do You Do Independent Technical Reviews In Your Startup?"
+title: "Do You Have Independent Technical Reviews?"
 date: 2014-12-15
 tags: mgmt
 description:
@@ -149,7 +149,7 @@ later, "when we have a million visitors per day". This day will never come
 if you let your team run without control! Start doing independent reviews
 from the moment your Git repository has the first file. Until the repository
 is big enough, you may spend $300 once a month and get an objective
-independent opinion about its quality. Will this ruine your budget?
+independent opinion about its quality. Will this ruin your budget?
 
 **Prohibit Discussions, Ask For Formal Reporting**.
 Don't let your reviewers to talk to the team. If you do, the entire
@@ -192,7 +192,7 @@ where and how it breaks, is very useful. Don't limit the reviewer to the
 source code only &mdash; this is simply not enough! Let him see the big
 picture, you will get a much more detailed and professional report.
 
-**Track Resolution of Incosistencies Found**.
+**Track How Incosistencies Are Resolved**.
 Once you get a report from the reviewer, make sure that the most important
 issues immediately get into your team's backlog. Then, make sure that they are
 addressed and closed. It doesn't mean that you should fix them all and listen
