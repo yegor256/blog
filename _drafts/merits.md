@@ -26,7 +26,7 @@ a disappearing one. Here is a list of habits such a creature has:
 
  * he makes decisions
 
-
+ * he doesn't discuss problems, he solves them
 
  * decomposing of a big problem into smaller ones
 
