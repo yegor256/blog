@@ -37,6 +37,8 @@ startup. Below I summarize my experience in organizing such technical reviews.
 
 <!--more-->
 
+{% picture /images/2014/12/arizona-dream-car-shop.png 0 Arizona Dream (1992) by Emir Kusturica %}
+
 Independent review is when you ask someone outside of your team
 to look at their source code and other technical artifacts
 and give you an objective opinion about them.
