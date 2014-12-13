@@ -77,6 +77,10 @@ a reviewer charges $150 per hour. We hire him and ask to find and report twenty 
 criticial issues he can discover. Our estimate is that he should spend five hours for this
 work. Thus, he will get $750 when we have twenty bugs in our tracking system
 reported by him. If he finds less, he gets proportionally less money.
+This payment schedule will help you to focus your reviewer on the main
+objective of the review process &mdash; finding and reporting issues. There
+are no other goals. The only thing you're interested in is to know what are
+the issues with your current technical solution. That's what you're paying for.
 
 **Hire the Best and Pay Well**.
 My experience tells me that the position of an independent reviewer is a very
@@ -95,27 +99,29 @@ just pay. It's just a few hundred dollars for you, but the effect of their
 contribution will be huge.
 
 **Ask For And Expect Criticism**.
-It is a very common mistake to ask a code reviewer &mdash; "do you like our code?"
+It is a very common mistake to ask a reviewer &mdash; "do you like our code?"
 Don't expect him to tell you how great your code is. This is not what you're
-paying him for! You have a full team of programmers for cheering you up. They can tell
-you a lot about the code they create and how great it is. You don't want
-to hear this again from the code reviewer. Instead, you want to know what
+paying him for! You already have a full team of programmers for cheering you up, they can tell
+you a lot about the code they are creating and how awesome it is. You don't want
+to hear this again from the reviewer. Instead, you want to know what
 is wrong and needs to be fixed. So, your questions should sound like
-"what problems do you think we should fix first?"
+"what problems do you think we should fix first?" Some reviewers will try
+to please you with postitive comments, ignore that flattery and bring them back
+to the main goal &mdash; bugs. The payment schedule explained above should help.
 
 **Regularly Change Reviewers**.
 Try not to use the same reviewer more than once in the same project (I mean the
 same code base). I believe, the reason here is obvious, but let me re-iterate.
-You don't need your code reviewer to be nice to you and tell how
+You don't need your reviewer to be nice to you and tell how
 great is your code. You want him to be objective and focused on problems,
 not on bright sides. If you hire the same person again and again,
 psychologicaly you make him engaged with the source code. You've seen it once,
 now he has to see it again. He already told you about some problem,
-now he has to repeat it again? He won't feel comfortable doing it. Instead,
+now he has to repeat them again. He won't feel comfortable doing it. Instead,
 he will start feeling himself as a member of the team and will feel
-himself responsible for the source code and its mistakes. He, as other
-team members, will start hiding issues instead of revealing them. Thus,
-for every independent code review get a new person.
+himself responsible for the source code and its mistakes. He, as any other
+team member, will start hiding issues instead of revealing them. Thus,
+for every independent technical review get a new person.
 
 **Be Polite and Honest With Your Team**.
 Independent review may be rather offensive to your programmers. They may
@@ -157,7 +163,7 @@ reviewer) to understand how it works. If this is not the case, there is
 something wrong and should be fixed.
 
 **Treat Any Question As a Bug**.
-Don't expect a code review to produce functionality bugs, like
+Don't expect a review to produce functionality bugs, like
 "I click this button and the system crashes". This will happen rarely, if ever.
 Your team is very good at discovering these issues and fixing them. Independent
 review is not about that kind of bugs. The main goal of independent review is to
