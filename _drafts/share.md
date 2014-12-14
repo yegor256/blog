@@ -130,9 +130,35 @@ us do ours. He hired us because we're professional enough to develop the
 software, according to his requirements. If he questions our capabilities,
 he is free to change the contractor. But until then he has
 to trust our decisions. Will this work? I doubt it. It's the same as
-giving him a finger.
+giving him a finger. He will get offended, you won't get anything.
 
-...
+The solution here is to turn client's demands into project requirements.
+Most of them will be lost in process, because they won't be sane enough
+to form a good requirement. Others will be documented, estimated and crossed-out
+by the client himself, becuase he will realize that they are pointless. Only
+a few of them will stay since they will be reasonable enough. And they will
+help the project.
+
+For example, he says that "you should use MySQL because it's great". You tell
+him that the requirements document doesn't limit you to choose whatever
+database you like. Should it? He says, yes, of course! OK, let's try to
+document such a requirement. How will it sound? How about "we should only
+use great databases?" Sounds correct? If so, then PostgreSQL satisfies this
+requirement. Problem solved, let us continue to do our work. He will have
+hard time figuring out how to write a requirement the way it disallows
+PostgreSQL and allows MySQL. It is simply not possible, in most cases.
+
+Sometimes it will make sense, for example "we should use a database server
+that understands our legacy data in MySQL format". This is a perfectly sane
+requirement and the only way to satisfy it is to use MySQL.
+
+Thus, my recommendation is never take client's demands directly to execution,
+but use them first to amend the requirements documentation. Even if you don't
+have such a documentation, create a simple one page document. Agree with the
+client that you work against this document and when anyone wants to change
+something, we first amend the document and then your team makes sure the
+software satisfies it. This kind of discipline will be accepted by any client,
+and will protect you against sudent and distracting corrections.
 
 ## He Questions Our Skills
 
