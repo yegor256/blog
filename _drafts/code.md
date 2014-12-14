@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do You Have Independent Technical Reviews?"
+title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-15
 tags: mgmt
 description:
@@ -186,7 +186,8 @@ Let your reviewer to look at all technical artifacts you have, not just
 source code files (`.java`, `.rb`, `.php`, etc.) Give me access to the
 database schema, continuous integration panel, build environment,
 issue tracking system, plans and schedules, working agendas, uptime reports,
-production logs, customer bug reports, statistics, etc. Everything that
+deployment pipeline, production logs,
+customer bug reports, statistics, etc. Everything that
 can help him to understand how your system works and, more importantly,
 where and how it breaks, is very useful. Don't limit the reviewer to the
 source code only &mdash; this is simply not enough! Let him see the big
