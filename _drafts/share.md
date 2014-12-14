@@ -28,9 +28,11 @@ I understand why they tying to hide as much as possible.
 Giving project sponsor a full access to the development environment
 is not easy at all. Here is a summary
 of problems we've been having and our solutions, hope they help you
-to honestly show your clients project internals and still keep him on board.
+to honestly show your client all project internals and still keep him on board.
 
 <!--more-->
+
+{% picture /images/2014/12/99-francs.png 0 99 francs (2007) by Jan Kounen %}
 
 ## He Is Breaking Our Process
 
@@ -46,36 +48,35 @@ We see it very often. What do we do?
 
 First, we're trying to understand why it's happening. The simpliest answer
 is that the client is a moron. Such cases also exist, but rarely. Much more
-often our clients are not morons. What is it then? Why can't they follow
-the process and abide the rules.
+often our clients are not that bad. What is it then? Why can't they follow
+the process and abide the rules? There are a few possible reasons.
 
 Maybe rules are not explained well?
 This is the most popular root cause &mdash; the rules of work are not clear
 enough for the client. He just doesn't know what he is supposed to do, in order
-to submit a change and get it done. To prevent this, we're trying to educate
+to submit a request and get it implemented. To prevent this, we're trying to educate
 our clients in the beginning of a new project. We even write guidance
 manuals for clients. Most of them are happy to read them and learn our
 ways of work, because they understand that this is the best way to achieve
 success in working with us.
 
-Maybe the management is chaotic and the client is trying to "organize"
-it by giving explicit instructions regarding the most important tasks? We've
+Maybe our management is chaotic and the client is trying to "organize"
+us by giving explicit instructions regarding the most important tasks? We've
 seen it before and we are always trying to learn from this. As soon as
-we see that the client is trying to micro-manage the team, we're asking
+we see that the client is trying to micro-manage us, we're asking
 ourselves &mdash; is our process transparent enough? Do we give enough
 information to the client about milestones, risks, plans, costs, etc.?
 In most cases it's our fault and we're trying to learn and improve.
-It's important to react fast, until the client gets too agressive in his
+It's important to react fast, before the client gets too agressive in his
 orders and instructions. It will be very difficult to return him back to a normal
-process once he feels "blood of micro-management".
+process once he feels the "blood of micro-management".
 
 Maybe the client is not busy enough and have a lot of free time, which he
 is happily investing into giving orders and distracting your team? I've seen
 this many times. A solution? Keep him busy. Turn him into a member of the
 team and assign some tasks to him, related to documentation and research. In
-my experience, most of the clients are happy to do this work and help the
-project. Well, at least he will think that he is helping and will stop
-distracting you.
+my experience, most of the clients would be happy to do this work and help the
+project. Well, at least they think that they are helping :)
 
 ## He Is Asking Too Much
 
