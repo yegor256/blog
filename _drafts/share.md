@@ -1,0 +1,167 @@
+---
+layout: post
+title: "How to Be Open And Keep a Customer"
+date: 2014-12-17
+tags: mgmt
+description:
+  Most software development outsourcing companies don't show source
+  code until the product is ready, keeping their customers in the dark,
+  increasing the risk of project failure; it's a bad practice
+keywords:
+  - source code
+  - software demonstration
+  - software development outsourcing
+  - how to outsource software development
+  - software development outsourcing
+---
+
+Most of our clients get rather suprised when we explain them that
+they will have full access to the source code from the first day
+of the project. We let them see everything that is happening in
+the project, including Git repository, bug reports, discussions
+between programmers, continuous integration failed and successful builds, etc.
+They tell me that usually software development outsourcing teams
+keep this information in-house and deliver only final versions,
+rarely together with the source code.
+
+I can't say that giving project sponsor a full access
+to the development environment is easy. It is not. Here is a summary
+of problems we've been having and our solutions.
+
+<!--more-->
+
+## He Is Breaking Our Process
+
+This is the most popular problem we face with our new clients. Once they
+get access to the development environment, they try to give instructions
+directly to programmers, walking around our existing process. "I'm paying
+these guys, why can't I tell them what to do?" is a typical mindset. Instead
+of submitting his requests through our standard change management workflow,
+such a client goes directly to one of the programmers and tells him what
+should be fixed, how and when. Micro-management in its worst form.
+We see it very often. What do we do?
+
+First, we're trying to understand why it's happening. The simpliest answer
+is that the client is a moron. Such cases also exist, but rarely. Much more
+often our clients are not morons. What is it then? Why can't they follow
+the process and abide the rules.
+
+Maybe rules are not explained well?
+This is the most popular root cause &mdash; the rules of work are not clear
+enough for the client. He just doesn't know what he is supposed to do, in order
+to submit a change and get it done. To prevent this, we're trying to educate
+our clients in the beginning of a new project. We even write guidance
+manuals for clients. Most of them are happy to read them and learn our
+ways of work, because they understand that this is the best way to achieve
+success in working with us.
+
+Maybe the management is chaotic and the client is trying to "organize"
+it by giving explicit instructions regarding the most important tasks? We've
+seen it before and we are always trying to learn from this. As soon as
+we see that the client is trying to micro-manage the team, we're asking
+ourselves &mdash; is our process transparent enough? Do we give enough
+information to the client about milestones, risks, plans, costs, etc.?
+In most cases it's our fault and we're trying to learn and improve.
+It's important to react fast, until the client gets too agressive in his
+orders and instructions. It will be very difficult to return him back to a normal
+process once he feels "blood of micro-management".
+
+Maybe the client is not busy enough and have a lot of free time, which he
+is happily investing into giving orders and distracting your team? I've seen
+this many times. A solution? Keep him busy. Turn him into a member of the
+team and assign some tasks to him, related to documentation and research. In
+my experience, most of the clients are happy to do this work and help the
+project. Well, at least he will think that he is helping and will stop
+distracting you.
+
+## He Is Asking Too Much
+
+A technically-savvy client can turn life of
+[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+into a nightmare by constantly asking him to explain every
+single technical decision made, starting from "Why PostgreSQL instead of MySQL?"
+to "Why this method doesn't throw a checked exception?" Constantly answering
+all such questions may turn a project into a school of programming.
+Even though he is paying for our time doesn't mean we should teach him
+how to develop software, right? On the other hand, he is interested to know
+how _his_ software is developed and how it works. It's a fair request, isn't it?
+
+I believe that there is a _win-win_ solution to this problem. Here is how we
+manage it. First of all, we make all his requests formal. We ask
+a client to create a new ticket for each request, properly explaining
+what is not clear how much details are expected in the explanation.
+
+Second, we look at such requests positively &mdash; they
+are good indicators of certain inconsistencies in the software. If it's
+not clear for the client why PostgreSQL is used and not MySQL, it's a fault
+of [our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+He didn't document his decision and didn't explain
+how it was made, what other options were considered, what selection criteria
+were applied, etc. Thus, a request from a client is [a bug]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
+we get for free. So, we look at it positively.
+
+Finally, we charge our clients for the answers given. Every question, submitted
+as a ticket, goes through a full flow and
+[gets billed]({% pst 2014/oct/2014-10-21-incremental-billing %})
+as any other ticket. This
+approach constraints the client in asking too much. He realizes that we're
+ready to explain anything he wants, but he should pay for this.
+
+## He Is Telling Too Much
+
+This problem is even bigger than the previous one. Some clients
+believe that they are savvy enough to argue with
+[our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+and our programmers about how the software should be developed. They don't just
+ask why PostgreSQL is used, they are telling us that we should use MySQL,
+because "I know that it's a great database, my friend is using it and his
+business is growing!" Sometimes it's getting even worse, when suggestions
+are comming to every class or even a method, like "you should use
+a Singleton pattern here!"
+
+The first choice is to agree and do what he wants. But it's a road to nowhere.
+Once you do it, your project is ruined and you should start thinking
+about a divorce with this client. Your entire team will quickly turn into
+a group of coding monkeys, micro-managed by someone with some cash. It's a very
+wrong direction, don't even think about going there.
+
+The second choice is to tell the client to mind his own business and let
+us do ours. He hired us because we're professional enough to develop the
+software, according to his requirements. If he questions our capabilities,
+he is free to change the contractor. But until then he has
+to trust our decisions. Will this work? I doubt it. It's the same as
+giving him a finger.
+
+...
+
+## He Questions Our Skills
+
+When source code is open to the client and he is technically capable
+of reading it, it is very possible that one day he will tell us that
+our code is crap and we have to learn how to program better. It's not
+happening in our projects for many years already, but it happened before,
+when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
+of our continuous integration pipeline.
+
+Another funny possibility is when the client shows the source code to "a friend"
+and he gives a "professional" opinion, which sounds like "they don't know what they
+are doing." Once such an opinion hits clients ears, the project is under
+a huge risk of closure. It'll be very difficult, almost impossible,
+to convience the client to not listen to the "friend" and continue
+to work with you. That's why most outsourcers prefer to keep the sources
+private till the very end of the project, when the final invoice is paid.
+
+I think that an accidential appearance of a "friend" with a negative opinion
+is un-preventable. If it happens, it happens. You can't avoid it.
+On the other hand, if you think that your code is perfect and your team
+has only tallented programmers writing beautiful software, this is not
+going to protect you. An opinion coming from a "friend" won't be objective,
+it will just be very personal and that's why very credible. He is a friend
+of a client and he doesn't send him bills every week. Why would he lie?
+Of course, he is speaking from the heart! (I'm being sarcastic)
+
+In my opinion, the only way to prevent such situations or minimize its
+consequences is to organize regular and systematic independent technical
+reviews. They will give confindence to the client that the team
+is not lying to him about the quality of the product and key technical
+decisions made inside.
