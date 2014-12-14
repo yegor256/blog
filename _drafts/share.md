@@ -19,14 +19,16 @@ Most of our clients get rather suprised when we explain them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including Git repository, bug reports, discussions
-between programmers, continuous integration failed and successful builds, etc.
+between programmers, continuous integration fails, etc.
 They tell me that usually software development outsourcing teams
-keep this information in-house and deliver only final versions,
+keep this information in-house and deliver only final releases,
 rarely together with the source code.
 
-I can't say that giving project sponsor a full access
-to the development environment is easy. It is not. Here is a summary
-of problems we've been having and our solutions.
+I understand why they tying to hide as much as possible.
+Giving project sponsor a full access to the development environment
+is not easy at all. Here is a summary
+of problems we've been having and our solutions, hope they help you
+to honestly show your clients project internals and still keep him on board.
 
 <!--more-->
 
@@ -34,11 +36,12 @@ of problems we've been having and our solutions.
 
 This is the most popular problem we face with our new clients. Once they
 get access to the development environment, they try to give instructions
-directly to programmers, walking around our existing process. "I'm paying
-these guys, why can't I tell them what to do?" is a typical mindset. Instead
-of submitting his requests through our standard change management workflow,
+directly to programmers, walking around
+[our existing process]({% pst 2014/oct/2014-10-06-software-project-lifecycle %}).
+"I'm paying these guys, why can't I tell them what to do?" is a very typical mindset.
+Instead of submitting requests through our standard change management mechanism,
 such a client goes directly to one of the programmers and tells him what
-should be fixed, how and when. Micro-management in its worst form.
+should be fixed, how and when. Micro-management, in its worst form.
 We see it very often. What do we do?
 
 First, we're trying to understand why it's happening. The simpliest answer
