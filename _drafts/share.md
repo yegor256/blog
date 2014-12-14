@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Be Open And Keep a Customer"
+title: "How to Be Honest And Keep a Customer"
 date: 2014-12-17
 tags: mgmt
 description:
@@ -16,18 +16,18 @@ keywords:
 ---
 
 Most of our clients get rather suprised when we explain them that
-they will have full access to the source code from the first day
+they will have a full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including Git repository, bug reports, discussions
 between programmers, continuous integration fails, etc.
-They tell me that usually software development outsourcing teams
+They often tell me that other software development outsourcing teams
 keep this information in-house and deliver only final releases,
 rarely together with the source code.
 
-I understand why they tying to hide as much as possible.
+I understand why other developers are trying to hide as much as possible.
 Giving project sponsor a full access to the development environment
 is not easy at all. Here is a summary
-of problems we've been having and our solutions, hope they help you
+of problems we've been having and our solutions. Hope they help you
 to honestly show your client all project internals and still keep him on board.
 
 <!--more-->
@@ -47,11 +47,11 @@ should be fixed, how and when. Micro-management, in its worst form.
 We see it very often. What do we do?
 
 First, we're trying to understand why it's happening. The simpliest answer
-is that the client is a moron. Such cases also exist, but rarely. Much more
+is that the client is a moron. Sometimes this is exactly the case, but rarely. Much more
 often our clients are not that bad. What is it then? Why can't they follow
 the process and abide the rules? There are a few possible reasons.
 
-Maybe rules are not explained well?
+Maybe **rules are not explained well**?
 This is the most popular root cause &mdash; the rules of work are not clear
 enough for the client. He just doesn't know what he is supposed to do, in order
 to submit a request and get it implemented. To prevent this, we're trying to educate
@@ -60,7 +60,7 @@ manuals for clients. Most of them are happy to read them and learn our
 ways of work, because they understand that this is the best way to achieve
 success in working with us.
 
-Maybe our management is chaotic and the client is trying to "organize"
+Maybe our **management is chaotic** and the client is trying to "organize"
 us by giving explicit instructions regarding the most important tasks? We've
 seen it before and we are always trying to learn from this. As soon as
 we see that the client is trying to micro-manage us, we're asking
@@ -71,7 +71,7 @@ It's important to react fast, before the client gets too agressive in his
 orders and instructions. It will be very difficult to return him back to a normal
 process once he feels the "blood of micro-management".
 
-Maybe the client is not busy enough and have a lot of free time, which he
+Maybe the client is not busy enough and have **a lot of free time**, which he
 is happily investing into giving orders and distracting your team? I've seen
 this many times. A solution? Keep him busy. Turn him into a member of the
 team and assign some tasks to him, related to documentation and research. In
@@ -93,7 +93,7 @@ how _his_ software is developed and how it works. It's a fair request, isn't it?
 I believe that there is a _win-win_ solution to this problem. Here is how we
 manage it. First of all, we make all his requests formal. We ask
 a client to create a new ticket for each request, properly explaining
-what is not clear how much details are expected in the explanation.
+what is not clear and how much details are expected in the explanation.
 
 Second, we look at such requests positively &mdash; they
 are good indicators of certain inconsistencies in the software. If it's
@@ -108,8 +108,8 @@ Finally, we charge our clients for the answers given. Every question, submitted
 as a ticket, goes through a full flow and
 [gets billed]({% pst 2014/oct/2014-10-21-incremental-billing %})
 as any other ticket. This
-approach constraints the client in asking too much. He realizes that we're
-ready to explain anything he wants, but he should pay for this.
+approach prevents the client from asking too much. He realizes that we're
+ready to explain anything he wants, but he will pay for this.
 
 ## He Is Telling Too Much
 
@@ -139,9 +139,9 @@ giving him a finger. He will get offended, you won't get anything.
 The solution here is to turn client's demands into project requirements.
 Most of them will be lost in process, because they won't be sane enough
 to form a good requirement. Others will be documented, estimated and crossed-out
-by the client himself, becuase he will realize that they are pointless. Only
+by the client himself, becuase he will realize that they are pointless or too expensive. Only
 a few of them will stay since they will be reasonable enough. And they will
-help the project.
+help the project. So, it is also a _win-win_ solution.
 
 For example, he says that "you should use MySQL because it's great". You tell
 him that the requirements document doesn't limit you to choose whatever
@@ -156,7 +156,7 @@ Sometimes it will make sense, for example "we should use a database server
 that understands our legacy data in MySQL format". This is a perfectly sane
 requirement and the only way to satisfy it is to use MySQL.
 
-Thus, my recommendation is never take client's demands directly to execution,
+Thus, my recommendation is to never take client's demands directly to execution,
 but use them first to amend the requirements documentation. Even if you don't
 have such a documentation, create a simple one page document. Agree with the
 client that you work against this document and when anyone wants to change
@@ -173,9 +173,9 @@ happening in our projects for many years already, but it happened before,
 when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 of our continuous integration pipeline.
 
-Another funny possibility is when the client shows the source code to "a friend"
+Another funny possibility is when the client shows the source code to a "friend"
 and he gives a "professional" opinion, which sounds like "they don't know what they
-are doing." Once such an opinion hits clients ears, the project is under
+are doing." Once such an opinion hits client's ears, the project is under
 a huge risk of closure. It'll be very difficult, almost impossible,
 to convience the client to not listen to the "friend" and continue
 to work with you. That's why most outsourcers prefer to keep the sources
@@ -185,13 +185,25 @@ I think that an accidential appearance of a "friend" with a negative opinion
 is un-preventable. If it happens, it happens. You can't avoid it.
 On the other hand, if you think that your code is perfect and your team
 has only tallented programmers writing beautiful software, this is not
-going to protect you. An opinion coming from a "friend" won't be objective,
+going to protect you either. An opinion coming from a "friend" won't be objective,
 it will just be very personal and that's why very credible. He is a friend
 of a client and he doesn't send him bills every week. Why would he lie?
-Of course, he is speaking from the heart! (I'm being sarcastic)
+Of course, he is speaking from the heart! (I'm being sarcastic) So, no matter
+how beautiful is your architecture and your source code, the "friend" will
+always be right.
 
 In my opinion, the only way to prevent such situations or minimize its
 consequences is to organize regular and systematic independent technical
 reviews. They will give confindence to the client that the team
 is not lying to him about the quality of the product and key technical
 decisions made inside.
+
+<hr/>
+
+To conclude, I strongly believe that it is important to be honest
+and open with each client, no matter how difficult it is. Try to
+learn from every conflict with each client and improve your management
+process and your principles of work. Hiding source code is not
+professional and makes you look bad in the eyes of your clients and
+the entire industry.
+
