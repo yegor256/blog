@@ -39,7 +39,7 @@ represents a mutable real-world entity, a file on disc.
 
 <!--more-->
 
-{% picture /images/2014/12/usual-suspects-kaboyashi.png 0 The Usual Suspects (1995) by Bryan Singer %}
+{% picture /images/2014/12/usual-suspects-kobayashi.png 0 The Usual Suspects (1995) by Bryan Singer %}
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=PHMGYYT46MJV2JLO %}
 
