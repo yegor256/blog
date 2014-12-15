@@ -5,7 +5,8 @@ date: 2014-12-15
 tags: oop
 description:
   How much should an object encapsulate and how much should
-  it receive through its methods?
+  it receive through its methods? If you encapsulate too little, your
+  level of abstraction it too high.
 keywords:
   - object design
   - good object design
