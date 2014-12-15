@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Much to Encapsulate?"
+title: "How Much Your Objects Encapsulate?"
 date: 2014-12-15
 tags: oop
 description:
