@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -2146,7 +2146,7 @@ It is possible to modify its state using &lt;code&gt;setTime()&lt;/code&gt;.&lt;
 
 &lt;p&gt;I don&amp;#39;t know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
-of a mutable &lt;code&gt;Date&lt;/code&gt; has a many flaws, while the immutable &lt;code&gt;String&lt;/code&gt;
+of a mutable &lt;code&gt;Date&lt;/code&gt; has many flaws, while the immutable &lt;code&gt;String&lt;/code&gt;
 is much more in the spirit of the object-oriented paradigm.&lt;/p&gt;
 
 &lt;p&gt;Moreover, I think that &lt;strong&gt;all classes should be immutable in

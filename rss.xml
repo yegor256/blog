@@ -10,12 +10,104 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2014 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How Much Your Objects Encapsulate?</title>
+      <link>http://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html</link>
+      <description>&lt;p&gt;Which line do you like more, the first or the second:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.google.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.google.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What is the difference? The first class &lt;code&gt;HTTP&lt;/code&gt; encapsulates a URL,
+while the second one expects it as an argument of method &lt;code&gt;read()&lt;/code&gt;. Technically,
+both objects do exactly the same thing: they read the content of the Google home page.
+Which one is the right design? Usually I hate to say this, but in
+this case I have to &amp;mdash; it depends.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/12/truman-show-universe.png' style='width:600px;' alt='The Truman Show (1998) by Peter Weir'/&gt;&lt;figcaption&gt;The Truman Show (1998) by Peter Weir&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;we discussed before&lt;/a&gt;,
+a good object is a representative of a real-life entity. Such an entity
+exists outside of the object&amp;#39;s living environment. The object knows
+how to access it and how to communicate with it.&lt;/p&gt;
+
+&lt;p&gt;What is that real-life entity in the example above? Each class
+gives its own answer. And the answer is given by the list
+of arguments its constructors accept. The first class accepts
+a single URL as an argument of its constructor. This tells us
+that the object of this class, after being constructed, will represent
+a web page. The second class accepts no arguments, which tells us
+that the object of it will represent ... the Universe.&lt;/p&gt;
+
+&lt;p&gt;I think this principle is applicable to all classes in
+object-oriented programming &amp;mdash; in order to understand what
+real-life entity an object represents, look at its constructor. All
+arguments passed into the constructor and encapsulated by the object identify
+a real-life entity accessed and managed by the object.&lt;/p&gt;
+
+&lt;p&gt;Of course, I&amp;#39;m talking about
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;good objects&lt;/a&gt;,
+which are immutable and
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;don&amp;#39;t have setters and getters&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pay attention that I&amp;#39;m talking about arguments encapsulated by the object. The
+following class doesn&amp;#39;t represent the Universe, even though it does have
+a no-arguments constructor:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;msec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This class has two constructors. One of them is the main one, and one is
+supplementary. We&amp;#39;re interested in the main one, which implements
+the &lt;em&gt;encapsulation&lt;/em&gt; of arguments.&lt;/p&gt;
+
+&lt;p&gt;Now, the question is which is better: to represent a web page
+or the Universe? It depends, but I think that in general, the smaller the
+real-life entity we represent, the more solid and cohesive design
+we give to the object.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, sometimes we have to have an object that represents
+the Universe. For example, we may have this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HTTP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// read via HTTP and return&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;online&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// check whether we&amp;#39;re online&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is not an elegant design, but it demonstrates when it may be
+necessary to represent the entire Universe. An object of this &lt;code&gt;HTTP&lt;/code&gt; class can read
+any web page from the entire web (it is almost as big as the Universe, isn&amp;#39;t it?),
+and it can check whether the entire web is accessible by it. Obviously,
+in this case, we don&amp;#39;t need it to encapsulate anything.&lt;/p&gt;
+
+&lt;p&gt;I believe that objects representing the Universe are not good objects,
+mostly because there is only one Universe; why do we need many
+representatives of it? :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html</guid>
+      <dc:date>2014-12-15T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How an Immutable Object Can Have State and Behavior?</title>
       <link>http://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html</link>
@@ -3087,156 +3179,6 @@ and that his decisions are final.&lt;/p&gt;
       <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/12/who-is-software-architect.html</guid>
       <dc:date>2014-10-12T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Continuous Integration is Dead</title>
-      <link>http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</link>
-      <description>&lt;p&gt;A few days ago, my article
-&lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;&amp;quot;Why Continuous Integration Doesn’t Work&amp;quot;&lt;/a&gt;
-was published at &lt;a href=&quot;http://www.devops.com&quot;&gt;DevOps.com&lt;/a&gt;. Almost the same
-day I received a few strongly negative critiques on Twitter.&lt;/p&gt;
-
-&lt;p&gt;Here is my response to the un-asked question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Why the hell shouldn&amp;#39;t continuous integration work, being such a brilliant and popular idea?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Even though I have some experience in this area, I won&amp;#39;t use it as an argument.
-I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;BTW, my experience includes five years of using
-Apache Continuum, Hudson, CruiseControl, and Jenkins in over 50 open
-source and commercial projects. Besides that,
-a few years ago I created a hosted continuous integration service called
-&lt;a href=&quot;http://www.fazend.com&quot;&gt;fazend.com&lt;/a&gt;,
-renamed to &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; in 2013.
-Currently, I&amp;#39;m also an active user of &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-continuous-integration-should-work&quot;&gt;How Continuous Integration Should Work&lt;/h2&gt;
-
-&lt;p&gt;The idea is simple and obvious. Every time you make a new commit
-to the &lt;code&gt;master&lt;/code&gt; branch (or &lt;code&gt;/trunk&lt;/code&gt; in Subversion), a continuous integration
-server (or service) attempts to build the entire product. &amp;quot;Build&amp;quot; means
-compile, unit test, integration test, quality analysis, etc.&lt;/p&gt;
-
-&lt;p&gt;The result is either &amp;quot;success&amp;quot; or &amp;quot;failure&amp;quot;. If it is a success, we
-say that &amp;quot;the build is clean&amp;quot;. If it is a failure, we say that &amp;quot;the build is broken&amp;quot;.
-The build usually gets broken because someone breaks it by
-commiting new code that turns previously passing unit tests
-into failing ones.&lt;/p&gt;
-
-&lt;p&gt;This is the technical side of the problem. It always works. Well,
-it may have its problems, like hard-coded dependencies, lack of isolation between
-environments or parallel build collisions, but this article is not about those.
-If the application is well written and its unit tests are stable,
-continuous integration is easy. Technically.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s see the organizational side.&lt;/p&gt;
-
-&lt;p&gt;Continuous integration is not only a server that builds, but a
-management/organizational process that should &amp;quot;work&amp;quot;. Being a process
-that works means exactly what Jez Humble said in
-&lt;a href=&quot;http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321601912&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=GKWBKGZUJGJLFMHE&quot;&gt;Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation&lt;/a&gt;,
-on page 55:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Crucially, if the build fails, the development team
-stops whatever they are doing and fixes the problem immediately&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is what doesn&amp;#39;t work and can&amp;#39;t work.&lt;/p&gt;
-
-&lt;h2 id=&quot;who-needs-this?&quot;&gt;Who Needs This?&lt;/h2&gt;
-
-&lt;p&gt;As we see, continuous integration is about setting the entire
-development team on pause and fixing the broken build. Let me
-reiterate. Once the build is broken, everybody should focus
-on fixing it and making a commit that returns the build to
-the stable state.&lt;/p&gt;
-
-&lt;p&gt;Now, my question is &amp;mdash; who, in an actively working team, may need this?&lt;/p&gt;
-
-&lt;p&gt;A product owner, who is interested in launching new features to the market
-as soon as possible? Or maybe a project manager, who is responsible for
-the deadlines? Or maybe programmers, who hate to fix someone else&amp;#39;s bugs,
-especially under pressure.&lt;/p&gt;
-
-&lt;p&gt;Who likes this continuous integration and who needs it?&lt;/p&gt;
-
-&lt;p&gt;Nobody.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-happens-in-reality?&quot;&gt;What Happens In Reality?&lt;/h2&gt;
-
-&lt;p&gt;I can tell you. I&amp;#39;ve seen it multiple times. The scenario is always
-the same. We just start to ignore that continuous integration
-build status. Either the build is clean or it is broken, and we continue
-to do what we were doing before.&lt;/p&gt;
-
-&lt;p&gt;We don&amp;#39;t stop and fix it, as Jez Humble recommends.&lt;/p&gt;
-
-&lt;p&gt;Instead, we ignore the information that&amp;#39;s
-coming from the continuous integration server.&lt;/p&gt;
-
-&lt;p&gt;Eventually, maybe tomorrow or on Monday, we&amp;#39;ll try to find some spare time
-and will try to fix the build. Only because we don&amp;#39;t like that red button
-on the dashboard and want to turn it into a green one.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-about-discipline?&quot;&gt;What About Discipline?&lt;/h2&gt;
-
-&lt;p&gt;Yes, there is another side of this coin. We can try to enforce
-discipline in the team. We can make it a strict rule, that our
-build is always clean and whoever breaks it gets some sort of
-a punishment.&lt;/p&gt;
-
-&lt;p&gt;Try doing this and you will get a &lt;strong&gt;fear driven development&lt;/strong&gt;. Programmers
-will be afraid of committing anything to the repository because
-they will know that if they cause a build failure they will have to
-&lt;a href=&quot;http://programmers.stackexchange.com/questions/79041&quot;&gt;apologize&lt;/a&gt;, at least.&lt;/p&gt;
-
-&lt;p&gt;A strict discipline (which I&amp;#39;m a big fan of) in this case only
-makes the situation worse. The entire development process slows
-down and programmers keep their code to themselves for as long as
-possible, to avoid possibly broken builds. When it&amp;#39;s time to commit,
-their changes are so massive that merging becomes very difficult and
-sometimes impossible.&lt;/p&gt;
-
-&lt;p&gt;As a result you get a lot of throw-away code, written by someone
-but never committed to &lt;code&gt;master&lt;/code&gt;, because of that fear factor.&lt;/p&gt;
-
-&lt;h2 id=&quot;ok,-what-is-the-solution?&quot;&gt;OK, What Is The Solution?&lt;/h2&gt;
-
-&lt;p&gt;I wrote about it before; it is called
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;&amp;quot;read-only master branch&amp;quot;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It is simple &amp;mdash; prohibit anyone from merging anything
-into &lt;code&gt;master&lt;/code&gt; and create a script that anyone can call. The script will
-merge, test, and commit. The script will not make any exceptions.
-If any branch breaks at even one unit test, the entire branch will be rejected.&lt;/p&gt;
-
-&lt;p&gt;In other words: raise the red flag &lt;strong&gt;before&lt;/strong&gt; the code
-gets into &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;This solves all problems.&lt;/p&gt;
-
-&lt;p&gt;First, the build is always clean. We simply can&amp;#39;t break it because
-nobody can commit unless his code keeps the build clean.&lt;/p&gt;
-
-&lt;p&gt;Second, there is no fear of breaking anything. Simply because you technically can&amp;#39;t
-do it. All you can do is get a negative response from a merging script. Then
-you fix your errors and tell the script to try again. Nobody sees these
-attempts, and you don&amp;#39;t need to apologize. Fear factor is gone.&lt;/p&gt;
-
-&lt;p&gt;BTW, try to use &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; to enforce this
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;&amp;quot;read-only master branch&amp;quot;&lt;/a&gt;
-principle in your project.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</guid>
-      <dc:date>2014-10-08T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
