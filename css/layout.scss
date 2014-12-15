@@ -25,7 +25,7 @@
 .main-font {
   font-family: $main-font;
   @media all and (max-width: $width) {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: serif !important;
   }
 }
 .desktop-only {
@@ -167,6 +167,14 @@ h2 {
     text-decoration: none;
   }
 }
+hr {
+  margin-top: 2 * $em;
+  text-align: left;
+  border: 0;
+  height: 0;
+  width: 50%;
+  border-top: 1px solid $light-gray;
+}
 .badge {
   @extend .desktop-only;
   float: right;
@@ -205,11 +213,11 @@ figure {
     line-height: 1em;
     left: .5em;
     bottom: 1em;
-    color: lighten($black, 20);
+    color: lighten($black, 40);
     background-color: rgba(0, 0, 0, .7);
   }
   figcaption:before {
-    content: "©";
+    content: "© ";
   }
 }
 .graphviz-wrapper {

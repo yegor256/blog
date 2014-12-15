@@ -89,7 +89,7 @@ $(
   function() {
     'use strict';
     $('<script>')
-      .attr('src', '//yegor256.disqus.com/embed.js')
+      .attr('src', '//a.disquscdn.com/embed.js')
       .attr('defer', 'defer')
       .attr('async', 'async')
       .appendTo('head');

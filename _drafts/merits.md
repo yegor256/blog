@@ -5,7 +5,7 @@ date: 2014-12-20
 tags: mgmt
 description:
   A good software is a very rare creature that possesses
-  a few very unique and important habits
+  a few very unique and important habits, which are the following...
 keywords:
   - software architect
   - software architect interview questions
@@ -26,7 +26,7 @@ a disappearing one. Here is a list of habits such a creature has:
 
  * he makes decisions
 
-
+ * he doesn't discuss problems, he solves them
 
  * decomposing of a big problem into smaller ones
 

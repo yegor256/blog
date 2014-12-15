@@ -6,9 +6,10 @@
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="twitter:account_id" content="4503599630178231" />
+    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
-    <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <title>{{ page.title }} - {{ site.author }}
@@ -65,8 +66,11 @@
       </header>
     </div>
     {{ content }}
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
     <script src="/js/global.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>
+    {% for script in page.scripts %}
+      <script src="{{ script }}?{{ site.data['hash'] }}" async='async' defer='defer'></script>
+    {% endfor %}
   </body>
 </html>

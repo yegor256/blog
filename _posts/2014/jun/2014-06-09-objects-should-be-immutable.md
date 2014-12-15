@@ -39,7 +39,7 @@ It is possible to modify its state using `setTime()`.
 
 I don't know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
-of a mutable `Date` has a many flaws, while the immutable `String`
+of a mutable `Date` has many flaws, while the immutable `String`
 is much more in the spirit of the object-oriented paradigm.
 
 Moreover, I think that **all classes should be immutable in
