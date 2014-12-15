@@ -5,7 +5,7 @@ date: 2014-12-17
 tags: oop
 description:
   Immutable objects are not the same as passive data structures
-  without setters, despite a very common misbelief
+  without setters, despite a very common misbelief.
 keywords:
   - immutable objects
   - immutable objects advantages
@@ -14,28 +14,28 @@ keywords:
   - immutable objects are thread safe
 ---
 
-After a few recents post about immutability, including
+After a few recent posts about immutability, including
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
-["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
-I was surprised by the amount of comments saying that I badly misunderstand
-the idea. Most of that comments said that an immutable object must always behave
+["How Can an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
+I was surprised by the number of comments saying that I badly misunderstood
+the idea. Most of those comments stated that an immutable object must always behave
 the same way &mdash; that is what immutability is about. What kind of immutability
-is it, when a method returns different results each time we call it?
-This is not how well-known immutable classes behave, for example `String`, `BigInteger`,
-`Locale`, `URI`, `URL`, `Inet4Address`, `UUID`, or wrapper classes for primitives, like `Double`,
+is it, if a method returns different results each time we call it?
+This is not how well-known immutable classes behave. Take, for example, `String`, `BigInteger`,
+`Locale`, `URI`, `URL`, `Inet4Address`, `UUID`, or wrapper classes for primitives, like `Double` and
 `Integer`. Other comments argued against
-[the very definiton]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
-of an immutable object as a representor of a mutable real-world entity. How
+[the very definition]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+of an immutable object as a representative of a mutable real-world entity. How
 could an immutable object represent a mutable entity? Huh?
 
 I'm very surprised. This post is going to clarify the definition of an immutable
-object. First, here is a quick answer. How an immutable object can represent a mutable entity?
-Look at an immutable class
-[`File`](http://docs.oracle.com/javase/7/docs/api/java/io/File.html)
+object. First, here is a quick answer. How can an immutable object represent a mutable entity?
+Look at an immutable class,
+[`File`](http://docs.oracle.com/javase/7/docs/api/java/io/File.html),
 and its methods, for example `length()` and `delete()`. The class is immutable, according
 to Oracle documentation, and its methods may return different values each time
 we call them. An object of class `File`, being perfectly immutable,
-represents a mutable real-world entity, a file on disc.
+represents a mutable real-world entity, a file on disk.
 
 <!--more-->
 
@@ -43,11 +43,11 @@ represents a mutable real-world entity, a file on disc.
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=PHMGYYT46MJV2JLO %}
 
-In [this post]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) I said
+In [this post]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), I said
 that "an object is immutable if its state can't be modified after it is created."
-This definition is not mine, it's taken from
+This definition is not mine; it's taken from
 [Java Concurrency in Practice by Goetz et al.](http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=PHMGYYT46MJV2JLO), Section 3.4
-(by the way, highly recommend to read it). Now look at this class
+(by the way, I highly recommend you read it). Now look at this class
 (I'm using [jcabi-http](http://http.jcabi.com) to read and write over HTTP):
 
 {% highlight java %}
@@ -71,38 +71,38 @@ class Page {
 {% endhighlight %}
 
 What is the "state" in this class? That's right, `this.uri` is the state. It
-uniquely identifies every object of this class and it is not modifiable. Thus,
+uniquely identifies every object of this class, and it is not modifiable. Thus,
 the class makes only immutable objects. And each object represents a
-mutable entity of a real-world, a web page with an URI.
+mutable entity of the real world, a web page with a URI.
 
-There is no contradiction in this situation. The class is perfectly immutable
+There is no contradiction in this situation. The class is perfectly immutable,
 while the web page it represents is mutable.
 
-Why most programmers I talked to believe that
+Why do most programmers I have talked to believe that
 if an underlying entity is mutable, an object is mutable too? I think the
-answer is simple &mdash; because they think that objects are
+answer is simple &mdash; they think that objects are
 data structures with methods. That's why, from this point of view,
 an immutable object is a data structure that never changes.
 
 This is where the fallacy is coming from &mdash; an object is
 **not a data structure**. It is a living organism representing
-a real-world entity inside object's living environment (a computer program).
+a real-world entity inside the object's living environment (a computer program).
 It does encapsulate some data, which helps to locate the entity in the real world. The encapsulated
-data is the **coordinates** of the entity being represented. In case
+data is the **coordinates** of the entity being represented. In the case
 of `String` or `URL`, the coordinates are the same as the
 entity itself, but this is just an isolated incident, not a generic rule.
 
 An immutable object is not a data structure that doesn't change, even
-though `String`, `BigInteger` or `URL` look like ones. An object is immutable
+though `String`, `BigInteger`, and `URL` look like one. An object is immutable
 if and only if it doesn't change the coordinates of the real-world entity
-it represents. In the `Page` class above this means that an object of
+it represents. In the `Page` class above, this means that an object of
 the class, once instantiated, will never change `this.uri`. It will
 always point to the same web page, no matter what.
 
 And the object doesn't guarantee anything about the behavior of that web page. The page
 is a dynamic creature of a real world, living its own life. Our object
 can't promise anything about the page. The only thing it promises is that
-it will always stay loyal to that page &mdash; it will never forget or changes
+it will always stay loyal to that page &mdash; it will never forget or change
 its coordinates.
 
 Conceptually speaking, immutability means loyalty.
