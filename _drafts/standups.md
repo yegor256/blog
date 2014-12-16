@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Daily Stand-up Meetings. Evil."
+title: "Daily Stand-up Meetings Is A Good Tool For a Bad Manager"
 date: 2014-09-18
 tags: mgmt
 description:
   Daily stand-up meetings is a common practice in software
-  development teams (in SCRUM in particularly), which should be avoided
+  development teams (esp. in SCRUM), even though it is a bad
+  practice and should not be used by good project managers.
 keywords:
   - scrum stand-up meetings
   - daily scrum meetings
@@ -19,15 +20,21 @@ A stand-up meeting (or simply "stand-up") is
 a daily team-meeting held to provide a status update
 to the team members (says [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting)).
 In the next few pages I'll try to explain why these meetings,
-being so popular in software development teams, are **pure evil**.
+being so popular in software development teams, are **pure evil**
+and should never be used by good managers.
 
 I'm not saying that they can be done right or wrong. I'm not
 trying to give advices about how to do them properly so that they
-work. I'm saying, they should **not** happen, ever. Because they
-not only "don't work", but they do very bad, even catastrophic,
+work. I'm saying, they should **not happen**, ever. Because they
+not only "don't work", but they do very bad, sometimes catastrophic,
 things to your management process, being it agile or not.
 
 <!--more-->
+
+
+
+
+
 
 In a nutshell, daily stand-up meetings encourage
 developers to transfer responsibility from their own shoulders
