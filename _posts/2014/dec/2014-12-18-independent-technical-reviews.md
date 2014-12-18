@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "You Do Need Independent Technical Reviews!"
-date: 2014-12-15
+date: 2014-12-18
 tags: mgmt
 description:
   Regularly and systematically having your programmers' technical deliverables
