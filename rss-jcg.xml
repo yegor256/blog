@@ -17,6 +17,213 @@
       <link>http://www.yegor256.com</link>
     </image>
     <item>
+      <title>You Do Need Independent Technical Reviews!</title>
+      <link>http://www.yegor256.com/2014/12/18/independent-technical-reviews.html</link>
+      <description>&lt;p&gt;Do you have a team of brilliant and enthusiastic programmers? Of course! You&amp;#39;ve carefully
+chosen them from a hundred candidates! Are they passionate about the product?
+Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink
+anything except coffee! Do they believe in your business success? No doubts about it;
+they live and breathe all those features, releases, continuous delivery, user
+experience, etc. Are you sure they are developing the product correctly?
+Well, yes, you&amp;#39;re pretty sure; why wouldn&amp;#39;t they? ...&lt;/p&gt;
+
+&lt;p&gt;Does this sound familiar? I can&amp;#39;t count how many times I&amp;#39;ve heard
+these stories told by startup founders. Most of them are in love with their teams ...
+until that day when it&amp;#39;s time to hire a new one. There could be many
+possible reasons for such a fiasco, but one of them is a lack of
+regular, systematic, and independent &lt;strong&gt;technical reviews&lt;/strong&gt;.
+Nothing demotivates a development team more than a lack of attention
+to their deliverables. On the other hand, a regular
+reconciliation of their results and your quality expectations is one
+of the key factors that will guarantee technical success for your
+startup. Below I summarize my experience with organizing such technical reviews.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/12/arizona-dream-car-shop.png' style='width:600px;' alt='Arizona Dream (1992) by Emir Kusturica'/&gt;&lt;figcaption&gt;Arizona Dream (1992) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;An independent review is when you ask someone outside of your team
+to look at your source code and other technical resources
+and give you an objective opinion about them.
+Every modern software team should also use internal code reviews, which is
+is something else entirely. An internal review occurs when one programmer
+shows his code to other peers on the team and asks their opinion. This usually
+happens as a daily activity and has nothing to do with independent
+reviews.&lt;/p&gt;
+
+&lt;p&gt;An independent review is performed by a programmer who knows nothing about your team.
+He comes on board, checks out the code from your repository, spends a few hours
+(or days) looking at it and trying to understand what it does. Then, he
+tells you what is wrong and where. He explains how he would do it better,
+where he would change it, and what he would do instead. Then, you pay him
+and he leaves. You may never see him again, but his conclusions and suggestions
+help you &lt;em&gt;check the reality&lt;/em&gt; of your code and evaluate how your team is really doing.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.teamed.io'&gt;&lt;img src='http://img.teamed.io/logo.svg' style='width:160px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;We, at &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;, do independent reviews
+with every project of ours, and this is a list of principles we use:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Independent Reviews Systematic&lt;/strong&gt;.
+This is the first and most important rule &amp;mdash; organize
+such technical reviews regularly. Moreover, inform your team about the schedule,
+and let them be prepared for the reviews. Once a month is a good practice,
+according to my experience. Depending on your source code size, a full
+review should take from &lt;strong&gt;two to eight hours&lt;/strong&gt;. Don&amp;#39;t spend more than eight hours;
+there is no point in going too deep into the code during independent reviews.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pay for Bugs Found&lt;/strong&gt;.
+We &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;always&lt;/a&gt;
+pay for bugs, not for the time spent finding them. We ask our reviewers
+to look at the code and report as many bugs as we think we need. For each
+bug, we pay 15 minutes for their time. In other words, we assume that
+a good reviewer can find and report approximately four problems in one hour. For example,
+a reviewer charges $150 per hour. We hire him and ask him to find and report the 20 most
+criticial issues he can discover. Our estimate is that he should spend five hours on this
+work. Thus, he will get $750 when we have 20 bugs in our tracking system
+reported by him. If he finds fewer, he gets proportionally less money.
+This payment schedule will help you focus your reviewer on the main
+objective of the review process &amp;mdash; finding and reporting issues. There
+are no other goals. The only thing you&amp;#39;re interested in is knowing what
+the issues with your current technical solution are. That&amp;#39;s what you&amp;#39;re paying for.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hire the Best and Pay Well&lt;/strong&gt;.
+My experience tells me that the position of an independent reviewer is a very
+important one. He is not just a programmer but more of
+&lt;a href=&quot;/&quot;&gt;an architect&lt;/a&gt;
+who is capable of looking at the solution from a very high level of abstraction,
+while at the same time paying a lot of attention to details; he should be very
+good at designing similar systems; he should know how to report a bug
+correctly and with enough detail; he should understand your business domain; etc.
+Besides all that, he should be
+well motivated to help you. You&amp;#39;re not hiring him for full-time work but
+rather just for a few-hour gig. My advice is to try to get
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;the best guys&lt;/a&gt;,
+and pay them as much as they ask, usually over $100 per hour. Don&amp;#39;t negotiate,
+just pay. It&amp;#39;s just a few hundred dollars for you, but the effect of their
+contribution will be huge.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ask For and Expect Criticism&lt;/strong&gt;.
+It is a very common mistake to ask a reviewer, &amp;quot;Do you like our code?&amp;quot;
+Don&amp;#39;t expect him to tell you how great your code is. This is not what you&amp;#39;re
+paying him for! You already have a full team of programmers for cheering you up; they can tell
+you a lot about the code they are creating and how awesome it is. You don&amp;#39;t want
+to hear this again from the reviewer. Instead, you want to know what
+is wrong and needs to be fixed. So your questions should sound like,
+&amp;quot;What problems do you think we should fix first?&amp;quot; Some reviewers will try
+to please you with positive comments, but ignore that flattery and bring them back
+to the main goal &amp;mdash; bugs. The payment schedule explained above should help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regularly Change Reviewers&lt;/strong&gt;.
+Try not to use the same reviewer more than once on the same project (I mean the
+same code base). I believe the reason here is obvious, but let me re-iterate:
+You don&amp;#39;t need your reviewer to be nice to you and tell you how
+great your code is. You want him to be objective and focused on problems,
+not on bright sides. If you hire the same person again and again,
+psychologically you make him engaged to the source code. He&amp;#39;s seen it once;
+now he has to see it again. He already told you about some problem, and
+now he has to repeat it again. He won&amp;#39;t feel comfortable doing it. Instead,
+he will start feeling like a member of the team and will feel
+responsible for the source code and its mistakes. He, as any other
+team member, will start hiding issues instead of revealing them. Thus,
+for every independent technical review, get a new person.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Be Polite and Honest With Your Team&lt;/strong&gt;.
+Independent reviews can be rather offensive to your programmers. They may
+think that you don&amp;#39;t trust them. They may feel that you don&amp;#39;t respect them
+as technical specialists. They may even decide that you&amp;#39;re getting ready
+to fire them all and are currently looking for new people. This is a very
+possible and very destructive side effect of an independent review. How do you avoid it?
+I can&amp;#39;t give you universal advice, but the best suggestion I can give is this:
+be honest with them. Tell them that the quality of the product is critical for you
+and your business. Explain to them that the business is paying them for their
+work and that in order to keep paychecks coming, you have to stress quality
+control &amp;mdash; regularly, objectively, independently, and honestly. In the end,
+if you manage to organize reviews as this article explains, the team will
+be very thankful to you. They will gain a lot of new ideas and thoughts from every
+review and will ask you to repeat them regularly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Review From Day One&lt;/strong&gt;.
+Don&amp;#39;t wait until the end of the project! I&amp;#39;ve seen this mistake many times.
+Very often startup founders think that until the product is done and ready
+for the market, they shouldn&amp;#39;t distract their team. They think they should
+let the team work toward project milestones and take care of quality
+later, &amp;quot;when we have a million visitors per day&amp;quot;. This day will never come
+if you let your team run without control! Start conducting independent reviews
+from the moment your Git repository has its first file. Until the repository
+is big enough, you may only spend $300 once a month to receive an objective,
+independent opinion about its quality. Will this ruin your budget?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prohibit Discussions, and Ask for Formal Reporting&lt;/strong&gt;.
+Don&amp;#39;t let your reviewers talk to the team. If you do, the entire
+idea of a review being independent falls apart. If a reviewer is able
+to ask informal questions and discuss your system design with your programmers,
+their answers will satisfy him, and he will move on. But you,
+the owner of the business, will stay exactly where you were before the review.
+The point of the review is not to make the reviewer happy. It is exactly the
+opposite. You want to make him confused! If he is confused, your
+design is wrong and he feels the need to report a bug. The source code
+should speak for itself, and it should be easy enough for a stranger (the
+reviewer) to understand how it works. If this is not the case, there is
+something wrong that should be fixed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Treat Any Question as a Bug&lt;/strong&gt;.
+Don&amp;#39;t expect a review to produce any bugs in functionality, like
+&amp;quot;I click this button and the system crashes&amp;quot;. This will happen rarely, if ever.
+Your team is very good at discovering these issues and fixing them. Independent
+reviews are not about that kind of bugs. The main goal of an independent review is to
+discover bugs in the architecture and design. Your product may work, but its
+architecture may have serious design flaws that won&amp;#39;t allow you, for example,
+to handle exponential growth in web traffic. An independent reviewer will help you
+find those flaws and address them sooner than later. In order to get bugs
+of that kind from the reviewer, you should encourage him to report
+&lt;em&gt;anything&lt;/em&gt; he doesn&amp;#39;t like &amp;mdash; unmotivated use of a technology,
+lack of documentation, unclear purpose of a file, absence of
+a unit test, etc. Remember, the reviewer is not a member of your team and has his
+own ideas about the technologies you&amp;#39;re using and software development in general.
+You&amp;#39;re interested in matching his vision with your team&amp;#39;s. Then, you&amp;#39;re
+interested in fixing all critical mismatches.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Review Everything, Not Just Source Code&lt;/strong&gt;.
+Let your reviewer look at all technical resources you have, not just
+source code files (&lt;code&gt;.java&lt;/code&gt;, &lt;code&gt;.rb&lt;/code&gt;, &lt;code&gt;.php&lt;/code&gt;, etc.) Give him access to the
+database schema, continuous integration panel, build environment,
+issue tracking system, plans and schedules, work agendas, uptime reports,
+deployment pipeline, production logs,
+customer bug reports, statistics, etc. Everything that
+could help him understand how your system works, and more importantly,
+where and how it breaks, is very useful. Don&amp;#39;t limit the reviewer to the
+source code only &amp;mdash; this is simply not enough! Let him see the big
+picture, and you will get a much more detailed and professional report.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Track How Inconsistencies Are Resolved&lt;/strong&gt;.
+Once you get a report from the reviewer, make sure that the most important
+issues immediately get into your team&amp;#39;s backlog. Then, make sure they are
+addressed and closed. That doesn&amp;#39;t mean you should fix them all and listen
+to everything said by the reviewer. Definitely not! Your
+&lt;a href=&quot;/&quot;&gt;architect&lt;/a&gt;
+runs the show, not the reviewer. Your architect should decide what is right
+and what is wrong in the technical implementation of the product. But it&amp;#39;s
+important to make him resolve all concerns raised by the reviewer. Very often
+you will get answers like these from him: &amp;quot;We don&amp;#39;t care about it now&amp;quot;, &amp;quot;we won&amp;#39;t
+fix it until the next release&amp;quot;, or &amp;quot;he is wrong; we&amp;#39;re doing it better&amp;quot;. These
+answers are perfectly valid, but they have to be given
+(reviewers are people and they also make mistakes). The answers will help
+you, the founder, understand what your team is doing and how well they
+understand their business.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;If you can offer more suggestions, based on your experience, please post
+them below in the comments, and I&amp;#39;ll add them to the list. I&amp;#39;m still
+thinking that I may have forgotten something important :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 18 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2014/12/18/independent-technical-reviews.html</guid>
+      <dc:date>2014-12-18T00:00:00+00:00</dc:date>
+    </item>
+    <item>
       <title>How Immutability Helps</title>
       <link>http://www.yegor256.com/2014/11/07/how-immutability-helps.html</link>
       <description>&lt;p&gt;In a few recent posts, including
@@ -2121,7 +2328,7 @@ for me. For example:&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;DynamoDB Local Maven Plugin, 0.7.1 released &lt;a href=&quot;https://t.co/C3KULouuKS&quot;&gt;https://t.co/C3KULouuKS&lt;/a&gt;&lt;/p&gt;&amp;mdash; rultor.com (@rultors) &lt;a href=&quot;https://twitter.com/rultors/statuses/501617747269517312&quot;&gt;August 19, 2014&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;script async src=&quot;http://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script async src=&quot;http://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Tue, 19 Aug 2014 00:00:00 +0000</pubDate>
@@ -2640,276 +2847,6 @@ submit a &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues&quot;&gt
       <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</guid>
       <dc:date>2014-06-01T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Why NULL is Bad?</title>
-      <link>http://www.yegor256.com/2014/05/13/why-null-is-bad.html</link>
-      <description>&lt;p&gt;A simple example of &lt;code&gt;NULL&lt;/code&gt; usage in Java:&lt;/p&gt;
-
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;1
-2
-3
-4
-5
-6
-7&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;What is wrong with this method?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;It may return &lt;code&gt;NULL&lt;/code&gt; instead of an object &amp;mdash; that&amp;#39;s what is wrong.
-&lt;code&gt;NULL&lt;/code&gt; is a terrible practice in an object-oriented paradigm and should be avoided at all costs.
-There have been a number of opinions about this published already, including
-&lt;a href=&quot;http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&quot;&gt;Null References, The Billion Dollar Mistake&lt;/a&gt;
-presentation by Tony Hoare and the entire
-&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=NQQHJZPHOKM6BTCT&quot;&gt;Object Thinking&lt;/a&gt;
-book by David West.&lt;/p&gt;
-
-&lt;p&gt;Here, I&amp;#39;ll try to summarize all the arguments and show examples of
-how &lt;code&gt;NULL&lt;/code&gt; usage can be avoided and replaced with proper object-oriented constructs.&lt;/p&gt;
-
-&lt;p&gt;Basically, there are two possible alternatives to &lt;code&gt;NULL&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The first one is &lt;strong&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Null_Object_pattern&quot;&gt;Null Object&lt;/a&gt;&lt;/strong&gt;
-design pattern (the best way is to make it a constant):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;NOBODY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The second possible alternative is to &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;fail fast&lt;/a&gt;
-by throwing an &lt;strong&gt;Exception&lt;/strong&gt; when you can&amp;#39;t return an object:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EmployeeNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, let&amp;#39;s see the arguments against &lt;code&gt;NULL&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Besides Tony Hoare&amp;#39;s presentation and David West&amp;#39;s book
-mentioned above, I read these publications before writing this post:
-&lt;a href=&quot;http://www.amazon.com/dp/0132350882/&quot;&gt;Clean Code&lt;/a&gt; by Robert Martin,
-&lt;a href=&quot;http://www.amazon.com/dp/0735619670/&quot;&gt;Code Complete&lt;/a&gt; by Steve McConnell,
-&lt;a href=&quot;http://elegantcode.com/2010/05/01/say-no-to-null/&quot;&gt;Say &amp;quot;No&amp;quot; to &amp;quot;Null&amp;quot;&lt;/a&gt; by John Sonmez,
-&lt;a href=&quot;http://stackoverflow.com/questions/1274792/is-returning-null-bad-design&quot;&gt;Is returning null bad design?&lt;/a&gt; discussion at StackOverflow.&lt;/p&gt;
-
-&lt;h2 id=&quot;ad-hoc-error-handling&quot;&gt;Ad-hoc Error Handling&lt;/h2&gt;
-
-&lt;p&gt;Every time you get an object as an input you must
-check whether it is &lt;code&gt;NULL&lt;/code&gt; or a valid object reference.
-If you forget to check, a &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html&quot;&gt;&lt;code&gt;NullPointerException&lt;/code&gt;&lt;/a&gt; (NPE)
-may break execution in runtime. Thus, your logic becomes
-polluted with multiple checks and if/then/else forks:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// this is a terrible design, don&amp;#39;t reuse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;can&amp;#39;t find an employee&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transferTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dept2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how exceptional situations are supposed to be handled in
-&lt;a href=&quot;http://en.wikipedia.org/wiki/C_%28programming_language%29&quot;&gt;C&lt;/a&gt; and
-other imperative procedural languages. OOP introduced
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Exception_handling&quot;&gt;exception handling&lt;/a&gt;
-primarily to get rid of these ad-hoc error handling blocks.
-In OOP, we let exceptions bubble up until they reach an application-wide
-error handler and our code becomes much cleaner and shorter:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;dept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transferTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dept2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Consider &lt;code&gt;NULL&lt;/code&gt; references an inheritance of procedural programming,
-and use 1) Null Objects or 2) Exceptions instead.&lt;/p&gt;
-
-&lt;h2 id=&quot;ambiguous-semantic&quot;&gt;Ambiguous Semantic&lt;/h2&gt;
-
-&lt;p&gt;In order to explicitly convey its meaning, the function
-&lt;code&gt;getByName()&lt;/code&gt; has to be named &lt;code&gt;getByNameOrNullIfNotFound()&lt;/code&gt;.
-The same should happen with every function that returns an
-object or &lt;code&gt;NULL&lt;/code&gt;. Otherwise, ambiguity is inevitable for a code reader.
-Thus, to keep semantic unambiguous, you should give longer names to functions.&lt;/p&gt;
-
-&lt;p&gt;To get rid of this ambiguity, always return a real object,
-a null object or throw an exception.&lt;/p&gt;
-
-&lt;p&gt;Some may argue that we sometimes have to return &lt;code&gt;NULL&lt;/code&gt;,
-for the sake of performance. For example, method &lt;code&gt;get()&lt;/code&gt; of
-interface &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/Map.html&quot;&gt;&lt;code&gt;Map&lt;/code&gt;&lt;/a&gt;
-in Java returns &lt;code&gt;NULL&lt;/code&gt; when there is no such item in the map:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EmployeeNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This code searches the map only once due to the usage of &lt;code&gt;NULL&lt;/code&gt; in &lt;code&gt;Map&lt;/code&gt;.
-If we would refactor &lt;code&gt;Map&lt;/code&gt; so that its method &lt;code&gt;get()&lt;/code&gt; will throw
-an exception if nothing is found, our code will look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// first search&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EmployeeNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// second search&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Obviously, this is method is twice as slow as the first one. What to do?&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;Map&lt;/code&gt; interface (no offense to its authors) has a design flaw.
-Its method &lt;code&gt;get()&lt;/code&gt; should have been returning an &lt;code&gt;Iterator&lt;/code&gt;
-so that our code would look like:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Iterator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasNext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EmployeeNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;BTW, that is exactly how C++ STL
-&lt;a href=&quot;http://en.cppreference.com/w/cpp/container/map/find&quot;&gt;map::find()&lt;/a&gt; method is designed.&lt;/p&gt;
-
-&lt;h2 id=&quot;computer-thinking-vs.-object-thinking&quot;&gt;Computer Thinking vs. Object Thinking&lt;/h2&gt;
-
-&lt;p&gt;Statement &lt;code&gt;if (employee == null)&lt;/code&gt; is understood by someone who
-knows that an object in Java is a pointer to a data structure and
-that &lt;code&gt;NULL&lt;/code&gt; is a pointer to nothing (&lt;code&gt;0x00000000&lt;/code&gt;, in Intel x86 processors).&lt;/p&gt;
-
-&lt;p&gt;However, if you start thinking as an object, this statement
-makes much less sense. This is how our code looks from an object point of view:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;- Hello, is it a software department?
-- Yes.
-- Let me talk to your employee &amp;quot;Jeffrey&amp;quot; please.
-- Hold the line please...
-- Hello.
-- Are you NULL?&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The last question in this conversation sounds weird, doesn’t it?&lt;/p&gt;
-
-&lt;p&gt;Instead, if they hang up the phone after our request to speak
-to Jeffrey, that causes a problem for us (Exception).
-At that point, we try to call again or inform our supervisor
-that we can&amp;#39;t reach Jeffrey and complete a bigger transaction.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, they may let us speak to another person,
-who is not Jeffrey, but who can help with most of our questions
-or refuse to help if we need something &amp;quot;Jeffrey specific&amp;quot; (Null Object).&lt;/p&gt;
-
-&lt;h2 id=&quot;slow-failing&quot;&gt;Slow Failing&lt;/h2&gt;
-
-&lt;p&gt;Instead of &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;failing fast&lt;/a&gt;,
-the code above attempts to die slowly, killing others on its way.
-Instead of letting everyone know that something went wrong and that an
-exception handling should start immediately, it is hiding this failure from its client.&lt;/p&gt;
-
-&lt;p&gt;This argument is close to the &amp;quot;ad-hoc error handling&amp;quot; discussed above.&lt;/p&gt;
-
-&lt;p&gt;It is a good practice to make your code as fragile as possible,
-letting it break when necessary.&lt;/p&gt;
-
-&lt;p&gt;Make your methods extremely demanding as to the data
-they manipulate. Let them complain by throwing exceptions,
-if the provided data provided is not sufficient or simply
-doesn’t fit with the main usage scenario of the method.&lt;/p&gt;
-
-&lt;p&gt;Otherwise, return a Null Object, that exposes some common
-behavior and throws exceptions on all other calls:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;anonymous&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;transferTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AnonymousEmployeeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;I can&amp;#39;t be transferred, I&amp;#39;m anonymous&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;mutable-and-incomplete-objects&quot;&gt;Mutable and Incomplete Objects&lt;/h2&gt;
-
-&lt;p&gt;In general, it is &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;highly recommended&lt;/a&gt;
-to design objects
-with immutability in mind. This means that an object gets
-all necessary knowledge during its instantiating and never
-changes its state during the entire lifecycle.&lt;/p&gt;
-
-&lt;p&gt;Very often, &lt;code&gt;NULL&lt;/code&gt; values are used in &lt;a href=&quot;http://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy loading&lt;/a&gt;,
-to make objects incomplete and mutable. For example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;manager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeffrey&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This technology, although widely used, is an anti-pattern in OOP.
-Mostly because it makes an object responsible for performance problems
-of the computational platform, which is something an &lt;code&gt;Employee&lt;/code&gt; object should not be aware of.&lt;/p&gt;
-
-&lt;p&gt;Instead of managing a state and exposing its business-relevant behavior,
-an object has to take care of the caching of its own results
-&amp;mdash; this is what lazy loading is about.&lt;/p&gt;
-
-&lt;p&gt;Caching is not something an employee does in the office, does he?&lt;/p&gt;
-
-&lt;p&gt;The solution? Don&amp;#39;t use lazy loading in such a primitive way,
-as in the example above. Instead, move this caching problem to
-another layer of your application.&lt;/p&gt;
-
-&lt;p&gt;For example, in Java, you can use aspect-oriented programming aspects.
-For example, &lt;a href=&quot;http://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt; has
-&lt;a href=&quot;http://aspects.jcabi.com/annotation-cacheable.html&quot;&gt;&lt;code&gt;@Cacheable&lt;/code&gt;&lt;/a&gt;
-annotation that caches the value returned by a method:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.aspects.Cacheable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Cacheable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forever&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;manager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jacky Brown&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I hope this analysis was convincing enough that you will
-stop &lt;code&gt;NULL&lt;/code&gt;-ing your code :)&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/05/13/why-null-is-bad.html</guid>
-      <dc:date>2014-05-13T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
