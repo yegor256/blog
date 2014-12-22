@@ -105,4 +105,4 @@ can't promise anything about the page. The only thing it promises is that
 it will always stay loyal to that page &mdash; it will never forget or change
 its coordinates.
 
-Conceptually speaking, immutability means loyalty.
+Conceptually speaking, immutability means loyalty, that's all.
