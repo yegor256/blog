@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Immutable Objects Are Not Dumb"
-date: 2014-12-17
+date: 2014-12-22
 tags: oop
 description:
   Immutable objects are not the same as passive data structures
