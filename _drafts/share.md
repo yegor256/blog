@@ -4,7 +4,7 @@ title: "How to Be Honest and Keep a Customer"
 date: 2014-12-17
 tags: mgmt
 description:
-  Most software development outsourcing companies don't show their source
+  Most software outsourcing companies don't show their source
   code until the product is ready, keeping their customers in the dark and
   increasing the risk of project failure; it's a bad practice.
 keywords:

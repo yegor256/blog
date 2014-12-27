@@ -25,10 +25,10 @@ module Yegor
         text = ''
       end
       if text.length < 100
-        fail "too short description in [#{page['title']}]"
+        fail "too short description in [#{page['title']}] (#{text.length} chars)"
       end
       if text.length > 200
-        fail "too long description in [#{page['title']}]"
+        fail "too long description in [#{page['title']}] (#{text.length} chars)"
       end
       text.gsub(/[ \n\r\t]+/, ' ')
         .gsub(/&/, '&amp;')

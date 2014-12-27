@@ -25,7 +25,7 @@ Here they come:
 
  * [Getters and Setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
- * [Object-Relational Mapping (ORM)]({% 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
+ * [Object-Relational Mapping (ORM)]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 
  * Singletons
 
