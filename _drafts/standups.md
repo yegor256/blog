@@ -34,6 +34,8 @@ key management instrument.
 
 <!--more-->
 
+{% picture /images/2015/01/cool-hand-luke.png 0 Cool Hand Luke (1967) by Stuart Rosenberg %}
+
 To explain what I mean let's look at management from a few different
 angles and compare how good and bad managers would organize their
 work.
