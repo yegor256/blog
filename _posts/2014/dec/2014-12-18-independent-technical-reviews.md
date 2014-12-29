@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "You Do Need Independent Technical Reviews!"
-date: 2014-12-15
+date: 2014-12-18
 tags: mgmt
+categories: jcg
 description:
   Regularly and systematically having your programmers' technical deliverables
   reviewed by an independent engineer will greatly improve your
@@ -18,7 +19,7 @@ keywords:
 
 Do you have a team of brilliant and enthusiastic programmers? Of course! You've carefully
 chosen them from a hundred candidates! Are they passionate about the product?
-Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink 
+Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink
 anything except coffee! Do they believe in your business success? No doubts about it;
 they live and breathe all those features, releases, continuous delivery, user
 experience, etc. Are you sure they are developing the product correctly?
@@ -52,8 +53,8 @@ An independent review is performed by a programmer who knows nothing about your 
 He comes on board, checks out the code from your repository, spends a few hours
 (or days) looking at it and trying to understand what it does. Then, he
 tells you what is wrong and where. He explains how he would do it better,
-where he would change it, and what he would do instead. Then, you pay him 
-and he leaves. You may never see him again, but his conclusions and suggestions 
+where he would change it, and what he would do instead. Then, you pay him
+and he leaves. You may never see him again, but his conclusions and suggestions
 help you _check the reality_ of your code and evaluate how your team is really doing.
 
 {% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
@@ -208,6 +209,8 @@ answers are perfectly valid, but they have to be given
 (reviewers are people and they also make mistakes). The answers will help
 you, the founder, understand what your team is doing and how well they
 understand their business.
+
+<hr/>
 
 If you can offer more suggestions, based on your experience, please post
 them below in the comments, and I'll add them to the list. I'm still

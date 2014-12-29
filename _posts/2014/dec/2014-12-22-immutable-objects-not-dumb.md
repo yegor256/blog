@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Immutable Objects Are Not Dumb"
-date: 2014-12-17
+date: 2014-12-22
 tags: oop
 description:
   Immutable objects are not the same as passive data structures
@@ -16,7 +16,7 @@ keywords:
 
 After a few recent posts about immutability, including
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
-["How Can an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
+["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
 I was surprised by the number of comments saying that I badly misunderstood
 the idea. Most of those comments stated that an immutable object must always behave
 the same way &mdash; that is what immutability is about. What kind of immutability
@@ -105,4 +105,4 @@ can't promise anything about the page. The only thing it promises is that
 it will always stay loyal to that page &mdash; it will never forget or change
 its coordinates.
 
-Conceptually speaking, immutability means loyalty.
+Conceptually speaking, immutability means loyalty, that's all.
