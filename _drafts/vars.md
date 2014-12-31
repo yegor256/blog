@@ -76,7 +76,7 @@ by David West).
 
 If we have five variables, can't we find five nouns to name them?
 
-Adam and Eve didn't have second names. They were unique in Eden, 
+Adam and Eve didn't have second names. They were unique in Eden,
 as were many other characters in the Old Testament. Second and middle
 names were invented later in order to resolve ambiguity. To keep
 your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
