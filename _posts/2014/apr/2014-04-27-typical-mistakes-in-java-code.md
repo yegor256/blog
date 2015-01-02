@@ -132,7 +132,7 @@ public HttpRequest request;
 Sometimes, you may have collisions between constructor parameters and in-class
 properties if the constructor saves incoming data in an instantiated object. In
 this case, I recommend to create abbreviations by removing vowels (see how
-[USPS abbreviates street names](https://www.usps.com/send/official-abbreviations.htm)).
+[USPS abbreviates street names](http://pe.usps.gov/text/pub28/28apc_002.htm)).
 
 Another example:
 
