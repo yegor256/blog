@@ -17,6 +17,7 @@ scripts:
           <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
             {{ page.date | date: "%-d %B %Y" }}
           </time>
+          {{ page | modified }}
         </li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
