@@ -15,6 +15,8 @@ keywords:
   - continuous integration win7
 ---
 
+{% badge /images/2014/10/appveyor.png 64 http://www.appveyor.com %}
+
 The purpose of Continuous Integration is to tell us, the developers,
 when the product we're working on is not "packagable" any more. The
 sooner we get the signal, the better. Why? Because the damage will
@@ -24,12 +26,15 @@ to fix. There are many modern and high-quality
 but only one of them (to my knowledge) supports Windows as a build
 platform &mdash; [appveyor.com](http://www.appveyor.com). My experience
 tells me that it's a good practice to continuously integrate on
-different platforms at the same time. Thus, in [teamed.io](http://www.teamed.io)
-we're using appveyor.com in combination with others.
+different platforms at the same time, especially when developing an
+open source library. That's why, in [teamed.io](http://www.teamed.io)
+we're using AppVeyor in combination with [Travis](http://www.travis-ci.org).
 
 <!--more-->
 
-This is how I managed to configure appveyor.com to build my Java Maven projects:
+This is how I managed to configure AppVeyor to build my Java Maven projects
+(this is `appveyor.yml` configuration file you're supposed to place
+in the root directory of your Github repository):
 
 {% highlight yaml %}
 version: '{build}'
@@ -60,4 +65,5 @@ It was not that easy at all, so I decided to share. You can see
 how this configuration works in these projects:
 [jcabi-aspects](https://github.com/jcabi/jcabi-aspects),
 [jcabi-email](https://github.com/jcabi/jcabi-email),
+[jcabi-dynamo](https://github.com/jcabi/jcabi-dynamo), and
 [rultor](https://github.com/yegor256/rultor).
