@@ -10,10 +10,10 @@ table {
       text-align: center;
     }
     &.vert {
-      height: 4 * $em;
       white-space: nowrap;
+      vertical-align: bottom;
       > div {
-        transform: translate(0px, $em) rotate(270deg);
+        transform: translate(0, -0.5 * $em) rotate(270deg);
         width: 2 * $em;
         text-align: left;
       }
