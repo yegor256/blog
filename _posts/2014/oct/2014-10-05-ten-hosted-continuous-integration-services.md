@@ -29,12 +29,19 @@ All of them are hosted and do not require any server installation
 Here they are, in order of my personal preference:
 
 <table>
+<colgroup>
+<col style="width: 6em;"/>
+<col style="width: 4em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+</colgroup>
 <thead>
 <tr>
   <td></td><td></td>
-  <td class="cnt">Linux</td>
-  <td class="cnt">Windows</td>
-  <td class="cnt">MacOS</td>
+  <td class="vert"><div><span>Linux</span></div></td>
+  <td class="vert"><div><span>Windows</span></div></td>
+  <td class="vert"><div><span>MacOS</span></div></td>
 </tr>
 </thead>
 <tbody>
