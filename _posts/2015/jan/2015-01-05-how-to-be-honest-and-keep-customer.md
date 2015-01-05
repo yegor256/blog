@@ -3,6 +3,7 @@ layout: post
 title: "How to Be Honest and Keep a Customer"
 date: 2015-01-05
 tags: mgmt
+categories: jcg
 description:
   Most software outsourcing companies don't show their source
   code until the product is ready, keeping their customers in the dark and
