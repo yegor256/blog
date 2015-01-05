@@ -1067,15 +1067,28 @@ of the price. So I decided to make a brief analysis of the market.&lt;/p&gt;
 an open source project, in every CI service I managed to find.
 All of them are free for open source projects.
 All of them are hosted and do not require any server installation
-Here they are, in order of my personal preference:&lt;/p&gt;
+Here they are, in order of my personal preference (first four are
+the best and highly recommended):&lt;/p&gt;
 
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 6em;&quot;/&gt;
+&lt;col style=&quot;width: 4em;&quot;/&gt;
+&lt;col style=&quot;width: 2em;&quot;/&gt;
+&lt;col style=&quot;width: 2em;&quot;/&gt;
+&lt;col style=&quot;width: 2em;&quot;/&gt;
+&lt;col style=&quot;width: 2em;&quot;/&gt;
+&lt;col style=&quot;width: 2em;&quot;/&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr&gt;
-  &lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;Linux&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;Windows&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;MacOS&lt;/td&gt;
+&lt;tr style=&quot;height:6em&quot;&gt;
+  &lt;td&gt;&lt;!--name--&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;!--price--&gt;&lt;/td&gt;
+  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Linux&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Windows&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;MacOS&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Pull requests&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Log compress&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -1083,67 +1096,107 @@ Here they are, in order of my personal preference:&lt;/p&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$129/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;snap-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://snap-ci.com/plans&quot;&gt;$30/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;semaphoreapp.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://semaphoreapp.com/pricing&quot;&gt;$29/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyer.com&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyor.com&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;shippable.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.shippable.com/pricing.html&quot;&gt;$1/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;wercker.com&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;free!&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;shippable.com&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.shippable.com/pricing.html&quot;&gt;$1/mo&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-top: 1px solid gray;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;codeship.io&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://codeship.io/pricing&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;magnum-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;?&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;semaphoreapp.com&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://semaphoreapp.com/pricing&quot;&gt;$29/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;drone.io&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://drone.io/pricing&quot;&gt;$25/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;magnum-ci.com&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;rht&quot;&gt;?&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;snap-ci.com&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://snap-ci.com/plans&quot;&gt;$30/mo&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;circleci.com&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://circleci.com/pricing&quot;&gt;$19/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://ci.solanolabs.com&quot;&gt;sonolabs.com&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://www.solanolabs.com/#pricing&quot;&gt;$15/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;hosted-ci.com&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://hosted-ci.com/#plans&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;ship.io&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://ship.io/pricing&quot;&gt;free!&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
+  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -1166,27 +1219,6 @@ some of my clients say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it&amp;#39;s always difficult to explain.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.snap-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/snap.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;&lt;strong&gt;snap-ci.com&lt;/strong&gt;&lt;/a&gt; is a product of
-ThoughtWorks, an author of &lt;a href=&quot;http://www.go.cd/&quot;&gt;Go&lt;/a&gt;,
-an open source continuous integration server. It looks a bit more
-complicated than others, giving you an ability to define &amp;quot;stages&amp;quot;
-and combine them into pipelines. I&amp;#39;m not sure yet how these mechanisms
-may help in small and medium size projects we&amp;#39;re mostly working with,
-but they look &amp;quot;cool&amp;quot;. There is also a very unfortunate limitation of
-2Gb RAM per build &amp;mdash; some of my Java projects fail because of that.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.semaphoreapp.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/semaphoreapp.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;&lt;strong&gt;semaphoreapp.com&lt;/strong&gt;&lt;/a&gt; is easy to
-configure and work with. It makes an impression of a light-weight
-system, which I generally appreciate. As a downside, they don&amp;#39;t have
-any Maven pre-installed, but this was solved easily with a short
-custom script that downloads and unpacks Maven. Another downside is
-that they are not configurable through a file (like &lt;code&gt;.travis.yml&lt;/code&gt;) &amp;mdash;
-you should do everything through a UI.&lt;/p&gt;
-
 &lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;&lt;strong&gt;appveyor.com&lt;/strong&gt;&lt;/a&gt; is the only one
@@ -1197,12 +1229,6 @@ succeedes on Linux, there is almost no guarantee it will pass on
 Windows or Mac. I&amp;#39;m planning to use appveyor in every project,
 in combination with some other CI service. I&amp;#39;m still testing it though...&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.shippable.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/shippable.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;&lt;strong&gt;shippable.com&lt;/strong&gt;&lt;/a&gt; was easy to configure
-since it understands &lt;code&gt;.travis.yml&lt;/code&gt; out of the box. Besides that,
-nothing fancy.&lt;/p&gt;
-
 &lt;figure class='badge'&gt;&lt;a href='http://www.wercker.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/wercker.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;&lt;strong&gt;wercker.com&lt;/strong&gt;&lt;/a&gt; is a European product
@@ -1210,12 +1236,38 @@ from Amsterdam, which is still in beta and that&amp;#39;s why free
 for all projects. The platform looks very promissing. It is still
 free for private repositories and is backed up by
 &lt;a href=&quot;https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/&quot;&gt;investments&lt;/a&gt;.
-I&amp;#39;m still testing it...&lt;/p&gt;
+They also have an interesting concept of build &amp;quot;boxes&amp;quot;, which
+can be pre-configured similar to Docker containers.
+It works rather stable for the last few months, no complains so far.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.shippable.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/shippable.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;&lt;strong&gt;shippable.com&lt;/strong&gt;&lt;/a&gt; was easy to configure
+since it understands &lt;code&gt;.travis.yml&lt;/code&gt; out of the box.
+The user interface is easy to navigate since it doesn&amp;#39;t
+have &amp;quot;settings&amp;quot; page at all (or I didn&amp;#39;t find it). Everything is
+configured via &lt;code&gt;shippable.yml&lt;/code&gt; file in the repository. The service
+looks stable and robust, no complains so far.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.semaphoreapp.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/semaphoreapp.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;&lt;strong&gt;semaphoreapp.com&lt;/strong&gt;&lt;/a&gt; is easy to
+configure and work with. It makes an impression of a light-weight
+system, which I generally appreciate. As a downside, they
+&lt;span class=&quot;strike&quot;&gt;don&amp;#39;t have any Maven pre-installed&lt;/span&gt;
+have an old version of Maven, but this was solved easily with a short
+custom script that downloads and unpacks the latest Maven. Another downside is
+that they are not configurable through a file (like &lt;code&gt;.travis.yml&lt;/code&gt;) &amp;mdash;
+you should do everything through a UI. They also support
+&lt;a href=&quot;https://semaphoreapp.com/docs/caching-between-builds.html&quot;&gt;caching between builds&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure class='badge'&gt;&lt;a href='http://www.codeship.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/codeship.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;&lt;strong&gt;codeship.io&lt;/strong&gt;&lt;/a&gt; works fine, but their web UI
-looks a bit out-dated. Anyway, I&amp;#39;m using them now, will see.&lt;/p&gt;
+looks a bit out-dated. Besides that, they promise to work with pull
+requests, but I didn&amp;#39;t manage to configure them. They simply
+don&amp;#39;t notify our pull requests in Github, even though they build them.
+Maybe I&amp;#39;ll find a way, so far it&amp;#39;s not clear...&lt;/p&gt;
 
 &lt;figure class='badge'&gt;&lt;a href='http://www.magnum-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/magnum.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
@@ -1224,11 +1276,26 @@ and young system. It doesn&amp;#39;t connect automatically to Github,
 so you should do some manual operations of adding a web hook.
 Besides that, works just fine.&lt;/p&gt;
 
+&lt;figure class='badge'&gt;&lt;a href='http://www.snap-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/snap.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;&lt;strong&gt;snap-ci.com&lt;/strong&gt;&lt;/a&gt; is a product of
+ThoughtWorks, an author of &lt;a href=&quot;http://www.go.cd/&quot;&gt;Go&lt;/a&gt;,
+an open source continuous integration server. It looks a bit more
+complicated than others, giving you an ability to define &amp;quot;stages&amp;quot;
+and combine them into pipelines. I&amp;#39;m not sure yet how these mechanisms
+may help in small and medium size projects we&amp;#39;re mostly working with,
+but they look &amp;quot;cool&amp;quot;. There is also a very unfortunate limitation of
+2Gb RAM per build &amp;mdash; some of my Java projects fail because of that.
+Besides that, they don&amp;#39;t give full access to the build server, for example
+we can&amp;#39;t modify anything in &lt;code&gt;/etc&lt;/code&gt; &amp;mdash; it is a show-stopper for us.&lt;/p&gt;
+
 &lt;figure class='badge'&gt;&lt;a href='http://www.drone.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/drone.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;&lt;strong&gt;drone.io&lt;/strong&gt;&lt;/a&gt; works fine, but their support
-didn&amp;#39;t reply to me when I asked for a Maven version update. Besides
-that, their badge is not updated correctly in Gitub README.md.&lt;/p&gt;
+didn&amp;#39;t reply to me when I asked for a Maven version update
+(they have an old version pre-installed). Besides
+that, their badge is not updated correctly in Github README.md &amp;mdash;
+when the build is broken, the bange stays green... very annoying.&lt;/p&gt;
 
 &lt;figure class='badge'&gt;&lt;a href='http://www.circleci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/circleci.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
@@ -1241,13 +1308,20 @@ definitely needs usability testing. It was rather difficult to configure
 a project via its web interface. The good thing is that it&amp;#39;s free, but its
 quality is not high enough to recommend it.&lt;/p&gt;
 
+&lt;figure class='badge'&gt;&lt;a href='http://www.ship.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/ship-io.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;&lt;strong&gt;ship.io&lt;/strong&gt;&lt;/a&gt; is building only mobile applications (for iOS and Android).
 Besides that, they don&amp;#39;t support Maven for Android apps, only Gradle.
 I&amp;#39;ll try to build iOS Swift app with them soon....&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.solanolabs.com&quot;&gt;&lt;strong&gt;solanolabs.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.solanolabs.com&quot;&gt;&lt;strong&gt;solanolabs.com&lt;/strong&gt;&lt;/a&gt; looks rather immature and
+difficult to configure. They don&amp;#39;t even support automatic Github hook
+configuration when new repository is added. However, their sales spams me
+rather aggressively :)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;&lt;strong&gt;hosted-ci.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;&lt;strong&gt;hosted-ci.com&lt;/strong&gt;&lt;/a&gt; is for iOS/OSX only. They don&amp;#39;t
+give anything for free, even for open source projects. I didn&amp;#39;t have a chance
+to test them yet.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cloudbees.com&quot;&gt;&lt;strong&gt;cloudbees.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
 
