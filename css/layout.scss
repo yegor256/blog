@@ -23,6 +23,9 @@
 .small {
   font-size: 0.85 * $em;
 }
+.strike {
+  text-decoration: line-through;
+}
 .main-font {
   font-family: $main-font;
   @media all and (max-width: $width) {

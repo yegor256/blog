@@ -213,7 +213,7 @@ looks stable and robust, no complains so far.
 [**semaphoreapp.com**](http://www.semaphoreapp.com) is easy to
 configure and work with. It makes an impression of a light-weight
 system, which I generally appreciate. As a downside, they
-<strike>don't have any Maven pre-installed</strike>
+<span class="strike">don't have any Maven pre-installed</span>
 have an old version of Maven, but this was solved easily with a short
 custom script that downloads and unpacks the latest Maven. Another downside is
 that they are not configurable through a file (like `.travis.yml`) &mdash;
