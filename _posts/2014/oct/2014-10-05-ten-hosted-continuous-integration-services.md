@@ -36,10 +36,13 @@ the best and highly recommended):
 <col style="width: 2em;"/>
 <col style="width: 2em;"/>
 <col style="width: 2em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
 </colgroup>
 <thead>
 <tr style="height:6em">
-  <td></td><td></td>
+  <td><!--name--></td>
+  <td><!--price--></td>
   <td class="vert"><div><span>Linux</span></div></td>
   <td class="vert"><div><span>Windows</span></div></td>
   <td class="vert"><div><span>MacOS</span></div></td>
