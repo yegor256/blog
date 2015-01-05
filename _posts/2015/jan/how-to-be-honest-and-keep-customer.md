@@ -193,8 +193,9 @@ how beautiful your architecture and your source code is, the "friend" will
 always be right.
 
 In my opinion, the only way to prevent such a situation or minimize its
-consequences is to organize regular and systematic independent technical
-reviews. They will give confindence to the client that the team
+consequences is to organize regular and systematic
+[independent technical reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %}).
+They will give confindence to the client that the team
 is not lying to him about the quality of the product and key technical
 decisions made internally.
 
