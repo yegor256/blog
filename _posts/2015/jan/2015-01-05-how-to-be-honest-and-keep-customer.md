@@ -77,7 +77,7 @@ is happy to spend by giving orders and distracting your team. I've seen
 this many times. A solution? Keep him busy. Turn him into a member of the
 team and assign him some tasks related to documentation and research. In
 my experience, most clients would be happy to do this work and help the
-project. Well, at least they think they are helping :)
+project.
 
 ## He Is Asking Too Much
 
