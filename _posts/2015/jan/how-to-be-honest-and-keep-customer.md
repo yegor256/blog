@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Be Honest and Keep a Customer"
-date: 2014-12-17
+date: 2015-01-05
 tags: mgmt
 description:
   Most software outsourcing companies don't show their source
