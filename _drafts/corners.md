@@ -5,8 +5,8 @@ date: 2015-01-08
 tags: mgmt agile
 description:
   When a task you're working on is too big or you simply
-  don't want to do it, you cut corders; here is how you
-  do it professionally
+  don't want to do it, you cut corders; here is how you can
+  do it professionally.
 keywords:
   - agile task management
   - agile task management open source
