@@ -21,16 +21,15 @@ not in the mood. You don't know how to fix that damn bug. You have no idea
 how that bloody module was designed and you don't know how it works. But
 you have to fix the issue, which was reported by someone who has no clue how
 this software works. You get frustrated, you blame that stupid project manager and
-programmers fired two years ago. You spend hours just to find out
+programmers, fired two years ago. You spend hours just to find out
 how the code work. Then, even more hours trying to fix it. In the end,
 you miss the deadline and **everybody blames you**. Been there, done that?
 
 However, there is also a professional exit from this situation.
 Here are some tips I recommend to my peer programmers working with me
-in [teamed.io](http://www.teamed.io) projects, managed by
-[XDSD methodology]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}).
+in [teamed.io](http://www.teamed.io) projects.
 In a nutshell, I'm going to explain how you can **cut corners** and stay
-professional, 1) saving your nerves, 2) optimizing project's expenses,
+professional, 1) protecting your nerves, 2) optimizing project's expenses,
 and 3) increasing the quality of the source code.
 
 <!--more-->
@@ -46,7 +45,7 @@ how to fix an issue or how to implement a new feature, it's a fault
 of the project, not yours. Even if you can't figure it out because you
 don't know anything about Ruby and they hired you to fix bugs
 in a Ruby on Rails code base &mdash; it's their fault. Why did they hire
-you if you don't know nothing in Ruby.
+you when you don't know nothing about Ruby?
 
 So, be positive, don't blame yourself. If you don't know how this
 damn code works, it's a fault of the code, not yours. A good code is
@@ -59,7 +58,7 @@ How you can do that? Create dependencies &mdash; new bugs, complaining
 about unclear design, lack of unit tests, absence of necessary classes,
 whatever. Be creative and offensive. In a constructive and professional way,
 of course. Don't get personal. No matter who cooked that spaghetti, you have
-nothing against him/her personally. You just want another dish, that's all.
+nothing against him or her personally. You just want another dish, that's all.
 
 Once you have that dependencies reported, explain in the main ticket
 that you can't continue until all of them are resolved. You will
@@ -74,7 +73,7 @@ Remember that your first and the most important responsibility as
 a disciplined engineer is to help the project **reveal** maintainability issues.
 Who and how will fix them is the responsibility of a project manager.
 Your job is to reveal, not to hide. By being a hero trying to fix everything
-in the scope of a single task you're doing a bad favor to the entire project
+in the scope of a single task, you're doing a bad favor to the entire project
 &mdash; you're concealing the problem(s).
 
 ## Demand Better Documentation and Wait
@@ -95,6 +94,7 @@ you don't know how to eat a lobster! You've never ate it before.
 
 The chef did a good job, he cooked it well, but the restaraunt didn't give
 you any instructions how to eat such a sophisticated dish. What do you do?
+
 You ask for a manual. You ask for a documentation. A properly designed
 and written source code must be properly documented. Once you see that
 something is not clear for you, create new dependencies, asking for better
