@@ -10,12 +10,71 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 08 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Continuous Integration on Windows, with Appveyor and Maven</title>
+      <link>http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html</link>
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;The purpose of Continuous Integration is to tell us, the developers,
+when the product we&amp;#39;re working on is not &amp;quot;packagable&amp;quot; any more. The
+sooner we get the signal, the better. Why? Because the damage will
+be younger if we find it sooner. The younger the damage, the easier it is
+to fix. There are many modern and high-quality
+&lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;hosted continuous integration services&lt;/a&gt;,
+but only one of them (to my knowledge) supports Windows as a build
+platform &amp;mdash; &lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyor.com&lt;/a&gt;. My experience
+tells me that it&amp;#39;s a good practice to continuously integrate on
+different platforms at the same time, especially when developing an
+open source library. That&amp;#39;s why, in &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;
+we&amp;#39;re using AppVeyor in combination with &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;This is how I managed to configure AppVeyor to build my Java Maven projects
+(this is &lt;code&gt;appveyor.yml&lt;/code&gt; configuration file you&amp;#39;re supposed to place
+in the root directory of your Github repository):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;{build}&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Windows Server 2012&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;ps&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Add-Type -AssemblyName System.IO.Compression.FileSystem&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;if (!(Test-Path -Path &amp;quot;C:\maven&amp;quot; )) {&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;(new-object System.Net.WebClient).DownloadFile(&lt;/span&gt;
+          &lt;span class=&quot;no&quot;&gt;&amp;#39;http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip&amp;#39;,&lt;/span&gt;
+          &lt;span class=&quot;no&quot;&gt;&amp;#39;C:\maven-bin.zip&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;[System.IO.Compression.ZipFile]::ExtractToDirectory(&amp;quot;C:\maven-bin.zip&amp;quot;, &amp;quot;C:\maven&amp;quot;)&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH:C:\Ruby193\bin;=%&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;build_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;mvn clean package --batch-mode -DskipTest&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;test_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;mvn clean install --batch-mode -Pqulice&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;C:\maven\&lt;/span&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;C:\Users\appveyor\.m2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It was not that easy at all, so I decided to share. You can see
+how this configuration works in these projects:
+&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi-aspects&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/jcabi/jcabi-email&quot;&gt;jcabi-email&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/jcabi/jcabi-dynamo&quot;&gt;jcabi-dynamo&lt;/a&gt;, and
+&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Sat, 10 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html</guid>
+      <dc:date>2015-01-10T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Daily Stand-Up Meetings Are a Good Tool for a Bad Manager</title>
       <link>http://www.yegor256.com/2015/01/08/morning-standup-meetings.html</link>
@@ -3218,167 +3277,6 @@ completely different numbers, see
       <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html</guid>
       <dc:date>2014-10-29T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Are You a Hacker or a Designer?</title>
-      <link>http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html</link>
-      <description>&lt;p&gt;Twenty years ago, the best programmer was the one
-capable of fitting an entire application into a 64Kb
-&lt;code&gt;.COM&lt;/code&gt; file. Those who were able to get the most out of
-that poor Intel 80386 were the icons of programming.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s because twenty years ago computers were expensive and programmers
-were cheap. That was the time of the &amp;quot;hacker mentality&amp;quot;.
-That time is over. That mentality is not appreciated any more,
-because the market situation is completely opposite.&lt;/p&gt;
-
-&lt;p&gt;Today, computers are cheap and programmers are expensive.
-This is the era of the &amp;quot;designer mentality&amp;quot;, when the readability
-of our code is much more important than its performance.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;iframe class=&quot;video&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;http://www.youtube.com/embed/qdqcayTLlLk&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;prices-vs-salaries&quot;&gt;Prices vs Salaries&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/trends.png' style='width:300px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Look at this graph. It is a comparison of two trends over the
-last twenty years (1994-2014).
-The first trend falls down and shows how much cheaper
-&lt;a href=&quot;http://www.jcmit.com/memoryprice.htm&quot;&gt;computer memory&lt;/a&gt;
-and &lt;a href=&quot;http://ns1758.ca/winch/winchest.html&quot;&gt;HDD storage&lt;/a&gt;
-have become over the last twenty years.&lt;/p&gt;
-
-&lt;p&gt;The second trend demonstrates how much software developers&amp;#39; salaries
-escalated over the same period. More accurately, they tripled. I didn&amp;#39;t find
-an official report about that, but I&amp;#39;m sure it&amp;#39;s no secret to anyone
-that the salaries of programmers keep growing &amp;mdash; $200,000 per year for
-a senior developer is not a dream any more... while twenty years
-ago $60K was the best offer around. I found
-&lt;a href=&quot;http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html&quot;&gt;this article&lt;/a&gt;
-very interesting about this very subject.&lt;/p&gt;
-
-&lt;p&gt;Basically, this means that in order to create a PHP website
-in 1994 we had to spend 1000 times more on hardware and three times
-less on programmers than we do now, in 2014. And we&amp;#39;re talking about the
-same stack of technologies here. The same Linux box with an Apache HTTP Server
-inside.&lt;/p&gt;
-
-&lt;p&gt;The difference is that in 1994, if our application had performance problems because of
-hardware limitations, we paid $35,000 per each additional gigabyte of RAM, while
-in 2014 we pay $10.&lt;/p&gt;
-
-&lt;p&gt;In 1994 it was much more efficient to hire more programmers and ask
-them to &lt;a href=&quot;https://en.wikipedia.org/wiki/Program_optimization&quot;&gt;optimize&lt;/a&gt;
-the code or even rewrite it, instead of buying new hardware. In 2014 the
-situation is exactly the opposite. It is now much cheaper to double the
-size of the server (especially if the server is a virtual cloud one)
-instead of paying salaries for optimizing the software.&lt;/p&gt;
-
-&lt;p&gt;In 1994 the best engineers had that &amp;quot;hacker mentality&amp;quot;, while in 2014 the
-&amp;quot;designer mentality&amp;quot; is much more appreciated.&lt;/p&gt;
-
-&lt;h2 id=&quot;hacker-mentality&quot;&gt;Hacker Mentality&lt;/h2&gt;
-
-&lt;p&gt;Someone with a hacker mentality would call this
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Fibonacci_number&quot;&gt;Fibonacci&lt;/a&gt;
-Java method an &amp;quot;elegant code&amp;quot; (would you?):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I would highlight these qualities of a good
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Hacker_%28computer_security%29&quot;&gt;hacker&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;uses all known (and unknown) features of a programming language&lt;/li&gt;
-&lt;li&gt;discriminates others as hackers and newbies and writes for hackers&lt;/li&gt;
-&lt;li&gt;gets bored and frustrated by rules and standards&lt;/li&gt;
-&lt;li&gt;doesn&amp;#39;t write unit tests &amp;mdash; juniors will write them later&lt;/li&gt;
-&lt;li&gt;enjoys fire-fighting &amp;mdash; that&amp;#39;s how his talent manifests&lt;/li&gt;
-&lt;li&gt;prefers talks over docs, since they are much more fun&lt;/li&gt;
-&lt;li&gt;hates to see his code being modified by someone else&lt;/li&gt;
-&lt;li&gt;likes to dedicate himself to one project at a time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A hacker is a talented individual. He wants to express his
-talent in the software he writes. He enjoys coding and does
-it mostly for fun. I would say, he is married to his code and can&amp;#39;t imagine
-its happy life after an eventual divorce. Code ownership is
-what a hacker is about &amp;mdash; he understands himself as an &amp;quot;owner&amp;quot;
-of the code.&lt;/p&gt;
-
-&lt;p&gt;When I ask one of my hacker friends &amp;mdash; &amp;quot;How will someone understand
-what this code does?&amp;quot; I almost always hear the same answer &amp;mdash;
-&amp;quot;They will ask me!&amp;quot; (usually said very proudly, with a sincere smile).&lt;/p&gt;
-
-&lt;h2 id=&quot;designer-mentality&quot;&gt;Designer Mentality&lt;/h2&gt;
-
-&lt;p&gt;Someone with a designer mentality would refactor the code above
-to make it easier to read. He would call this Java function an &amp;quot;elegant code&amp;quot;
-(how about you?):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I think these qualities can be attributed to a good designer:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;tends to use traditional programming techniques&lt;/li&gt;
-&lt;li&gt;assumes everybody is a newbie and writes accordingly&lt;/li&gt;
-&lt;li&gt;enjoys setting rules and following them&lt;/li&gt;
-&lt;li&gt;prefers docs over talks and automation over docs&lt;/li&gt;
-&lt;li&gt;spends most of his coding time on unit tests&lt;/li&gt;
-&lt;li&gt;hates fire-fighting and working over time&lt;/li&gt;
-&lt;li&gt;loves to see his code being modified and refactored&lt;/li&gt;
-&lt;li&gt;works with a few projects at the same time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A designer is a talented team player. He contributes to the team
-processes, standards, rules, education, and discipline as much as he
-contributes to the source code. He always makes sure that once
-he leaves the project his code and his ideas stay and work.&lt;/p&gt;
-
-&lt;p&gt;The highest satisfaction for a good designer
-is to see his code living its own life &amp;mdash; being modified, improved,
-refactored and eventually retired. A designer sees himself as a parent
-of the code &amp;mdash; once it is old enough to walk and talk, it has
-to live its own life.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-future&quot;&gt;The Future&lt;/h2&gt;
-
-&lt;p&gt;If you consider yourself a hacker, I believe it&amp;#39;s time to change. The time of
-hackers is fading out.&lt;/p&gt;
-
-&lt;p&gt;In the near future we will probably even stop thinking in terms of &amp;quot;hardware&amp;quot; and will
-run our applications in elastic computational platforms with unlimited
-amounts of memory, CPU power and storage space. We will simply pay
-for resource utilization and almost any performance issue will just add a few extra
-dollars to our monthly bills. We won&amp;#39;t care about optimization any more.&lt;/p&gt;
-
-&lt;p&gt;At the same time, good software engineers will become more and more expensive
-and will charge $500+ per hour just to check out software and give
-a diagnosis. Just like good lawyers or dentists.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s why, while developing a new software product, those who pay for it will
-care mostly about its maintainability. Project sponsors will
-understand that the best solution they can get for their money is
-the one that is the most readable, maintainable, and automated.&lt;/p&gt;
-
-&lt;p&gt;Not the fastest.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sun, 26 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html</guid>
-      <dc:date>2014-10-26T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
