@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Compound Name Is a Code Smell"
-date: 2015-01-10
+date: 2015-01-12
 tags: oop
 description:
   A variable name that consists of several words is a code
@@ -69,10 +69,8 @@ end
 Now it looks clear and concise.
 
 If you can't perform such a refactoring, it means your scope is too
-big and/or too complex. An ideal method should deal with two to five variables,
-and an ideal class should encapsulate two to five properties (not my numbers;
-I took them from ["Object Thinking"](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT)
-by David West).
+big and/or too complex. An ideal method should deal with up to five variables,
+and an ideal class should encapsulate up to five properties.
 
 If we have five variables, can't we find five nouns to name them?
 
