@@ -10,12 +10,83 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Sat, 10 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jan 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>A Compound Name Is a Code Smell</title>
+      <link>http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</link>
+      <description>&lt;p&gt;Do you name variables like &lt;code&gt;textLength&lt;/code&gt;, &lt;code&gt;table_name&lt;/code&gt;, or &lt;code&gt;current-user-email&lt;/code&gt;?
+All three are compound names that consist of more than one word. Even though
+they look more descriptive than &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;length&lt;/code&gt;, or &lt;code&gt;email&lt;/code&gt;, I would strongly
+recommend avoiding them. I believe a variable name that is more complex than a noun
+is a code smell. Why? Because we usually give a variable a compound name when its scope
+is so big and complex that a simple noun would sound ambiguous.
+And a big, complex scope is an obvious code smell.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The scope of a variable is the place where it is visible, like a method, for example. Look
+at this Ruby class:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CSV&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csvFileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@fileName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csvFileName&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readRecords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csvLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;csvLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The visible scope of variable &lt;code&gt;csvFileName&lt;/code&gt; is method &lt;code&gt;initialize()&lt;/code&gt;, which
+is a constructor of the class &lt;code&gt;CSV&lt;/code&gt;. Why does it need a compound name
+that consists of three words? Isn&amp;#39;t it already clear that a single-argument
+constructor of class &lt;code&gt;CSV&lt;/code&gt; expects the name of a file with
+comma-separated values? I would rename it to &lt;code&gt;file&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, the scope of &lt;code&gt;@fileName&lt;/code&gt; is the entire &lt;code&gt;CSV&lt;/code&gt; class. Renaming a single
+variable in the class to just &lt;code&gt;@file&lt;/code&gt; won&amp;#39;t introduce
+any confusion. It&amp;#39;s still clear what file we&amp;#39;re dealing with.
+The same situation exists with the &lt;code&gt;csvLine&lt;/code&gt; variable. It is clear that we&amp;#39;re
+dealing with CSV lines here. The &lt;code&gt;csv&lt;/code&gt; prefix is just a redundancy.
+Here is how I would refactor the class:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CSV&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;records&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now it looks clear and concise.&lt;/p&gt;
+
+&lt;p&gt;If you can&amp;#39;t perform such a refactoring, it means your scope is too
+big and/or too complex. An ideal method should deal with up to five variables,
+and an ideal class should encapsulate up to five properties.&lt;/p&gt;
+
+&lt;p&gt;If we have five variables, can&amp;#39;t we find five nouns to name them?&lt;/p&gt;
+
+&lt;p&gt;Adam and Eve didn&amp;#39;t have second names. They were unique in Eden,
+as were many other characters in the Old Testament. Second and middle
+names were invented later in order to resolve ambiguity. To keep
+your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
+and methods unique single-word names, just like Adam and Eve were named
+by you know who :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</guid>
+      <dc:date>2015-01-12T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Continuous Integration on Windows, with Appveyor and Maven</title>
       <link>http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html</link>
@@ -2968,315 +3039,6 @@ method.&lt;/p&gt;
       <pubDate>Mon, 03 Nov 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/11/03/empty-line-code-smell.html</guid>
       <dc:date>2014-11-03T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How Much Do You Cost?</title>
-      <link>http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.teamed.io'&gt;&lt;img src='http://img.teamed.io/logo.svg' style='width:160px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m getting a few emails every day from programmers
-interested in working with &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; remotely.
-The first question I usually ask is &amp;quot;what is your rate?&amp;quot;
-(we pay &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;by the hour&lt;/a&gt;)
-What surprises me is how
-often people incorrectly estimate themselves, in both directions.&lt;/p&gt;
-
-&lt;p&gt;I hear very different numbers, from $5 to $500 per hour. I never
-say no, but usually come up with my own hourly rate estimate. This article
-explains what factors I do and don&amp;#39;t take into account. These are
-my personal criteria; don&amp;#39;t take them as an industry standard.
-I do find them objective and logical, though &amp;mdash; so let me explain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;open-source-contribution&quot;&gt;Open Source Contribution&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-open-source-contribution.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the first and the most important characteristic of a
-software developer. Do you contribute to open source projects?
-Do you have your own open source libraries that are used by
-some community? Do you write code that is publicly available and used?&lt;/p&gt;
-
-&lt;p&gt;If you have nothing to show here, I see three posible causes.&lt;/p&gt;
-
-&lt;p&gt;First, you&amp;#39;re &lt;strong&gt;too shy to share&lt;/strong&gt; your code because &lt;strong&gt;it&amp;#39;s crap&lt;/strong&gt;. Obviously,
-this is not a good sign. Not because your code could be bad, but because
-you&amp;#39;re not brave enough to face this fact and improve. In our teams we
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;pay a lot of attention&lt;/a&gt;
-to the quality of code and most of our
-new team members get surprised by just how high our quality bar is. You will also
-be surprised. The question is whether you will be able to adapt and improve
-or if you will give up and quit. If you didn&amp;#39;t share your code before
-and have never dealt with negative feedback, you won&amp;#39;t feel comfortable
-in our projects, where quality requirements are very high.&lt;/p&gt;
-
-&lt;p&gt;The second possible cause is that
-you work from nine till five, for food, &lt;strong&gt;without passion&lt;/strong&gt;. Actually,
-nobody manifests it that way. Instead, I often hear something like
-&amp;quot;my company doesn&amp;#39;t pay me for open source contribution and
-at home I want to spend time with my family&amp;quot;. In modern software
-development, most of the code we&amp;#39;re working with is open source &amp;mdash;
-libraries, frameworks, tools, instruments, etc. Almost everything you&amp;#39;re using
-in your commercial projects is open source. By paying your salary your
-employer does already invest in open source products,
-because you&amp;#39;re an active user of them. The problem is that &lt;em&gt;you&lt;/em&gt; are not
-interested in becoming more active in that contribution.
-I see this as a lack of passion and self-motivation.
-Will you be an effective developer in our projects? Not at all, because our
-entire management model relies on &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;self-motivation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The last possible cause is that
-you don&amp;#39;t know what to write and where to contribute, which means
-&lt;strong&gt;lack of creativity&lt;/strong&gt;. As I mentioned above, almost everything we&amp;#39;re using
-now is open source, and these tools are full of bugs and not-yet-implemented features.
-At the same time, you don&amp;#39;t see any areas for improvement? You don&amp;#39;t
-know what can be done better? You&amp;#39;re not able to at least find, report and fix
-one bug in some open source product you&amp;#39;re using every day? This means
-that you won&amp;#39;t be able to find areas of improvement in our projects either,
-while we rely on your ability to
-&lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;discover problems creatively&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, if your Github account is empty and your CV doesn&amp;#39;t position you
-as &amp;quot;an active contributor to Linux kernel&amp;quot; (yeah, why not?), I immediately
-lose interest. On the other hand, when I see a 100+ stars project in your
-Github account, I get excited and ready to offer a higher rate.&lt;/p&gt;
-
-&lt;h2 id=&quot;geographic-location&quot;&gt;Geographic Location&lt;/h2&gt;
-
-&lt;p&gt;It is a common practice to pay higher rates to those who live in more
-expensive countries. When I&amp;#39;m getting resumes from San Francisco programmers,
-their rates are $70+ per hour. The same skills and experience cost
-$15-20 in Karachi. The reason here is the cost of living &amp;mdash;
-it is much higher in the US than in Pakistan.&lt;/p&gt;
-
-&lt;p&gt;However, this reason doesn&amp;#39;t sound logical to me. If you&amp;#39;re driving a more
-expensive car, we have to pay you a higher salary? The same with the
-place to stay. You&amp;#39;ve chosen the country that
-you live in. You&amp;#39;re using all the benefits of a well-developed country
-and you&amp;#39;re paying for them. It&amp;#39;s your choice. You decided to spend more money
-for the quality of your life &amp;mdash; what does it have to do with me?&lt;/p&gt;
-
-&lt;p&gt;Want to pay $30 for a lunch? Become a better engineer. Until then,
-buy a hot dog for a few bucks. Just saying that
-&amp;quot;I&amp;#39;m already here and my lunch costs $30&amp;quot; is not an argument.&lt;/p&gt;
-
-&lt;p&gt;Thus, the more expensive the place you live, the less money
-stays in your pocket. For us this means that $100 will motivate a programmer
-from Karachi much stronger than the same $100 will motivate the same person,
-if she lives in San Francisco. Thus, we prefer to work with people
-whose expenses are lower. Our money will simply work better.&lt;/p&gt;
-
-&lt;h2 id=&quot;stackoverflow.com-reputation&quot;&gt;StackOverflow.com Reputation&lt;/h2&gt;
-
-&lt;p&gt;We all know what StackOverflow has but very few people (suprisingly few!)
-actively contributing to it. If your profile there is empty (or you don&amp;#39;t have
-one) I realize that you 1) don&amp;#39;t have any questions to ask
-and 2) you have nothing to answer.&lt;/p&gt;
-
-&lt;p&gt;First, if you&amp;#39;re not asking anything there, you are not growing. Your education
-process stopped some time ago, probably right after you got an office job.
-Or maybe you&amp;#39;re too shy to ask? Or you can&amp;#39;t describe your questions
-in an accurate and precise format? Or maybe all your questions already
-have answers? In any case, it&amp;#39;s sad.&lt;/p&gt;
-
-&lt;p&gt;Second, if you&amp;#39;re not answering, you simply have nothing to say. In most cases,
-this means that you&amp;#39;re not solving complex and unique problems.
-You&amp;#39;re simply wiring together well-known components and
-collecting your paychecks.&lt;/p&gt;
-
-&lt;p&gt;Very often I hear people saying that they solve most of their problems
-by asking their colleagues sitting next to them in the office. They say
-they simply don&amp;#39;t need StackOverflow (or similar resources, if they exist)
-because their team is so great that any questions can be answered internally.
-That&amp;#39;s good for the team and bad for you. Why? You don&amp;#39;t have a very important skill &amp;mdash;
-finding an answer in a public Internet. In our projects we
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;discourage&lt;/a&gt;
-any horizontal communications between programmers, and you won&amp;#39;t be
-able to get any help from anyone. You will be on your own and you will fail,
-because you are used to patronizing someone senior, in your office.&lt;/p&gt;
-
-&lt;p&gt;StackOverflow is not just an indicator of how smart you are and how many
-upvotes you got for the &lt;a href=&quot;http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke&quot;&gt;&amp;quot;best programming joke&amp;quot;&lt;/a&gt;.
-It is proof that you can find answers
-to your questions by communicating with people you don&amp;#39;t know.
-It is a very important skill.&lt;/p&gt;
-
-&lt;h2 id=&quot;years-of-experience&quot;&gt;Years of Experience&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-years-of-experience.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;&amp;quot;I&amp;#39;ve written Java for 10 years!&amp;quot; &amp;mdash; so what? This number means only
-one thing to me &amp;mdash; you managed to survive in some office for ten years.
-Or maybe in a few offices. You managed to convince someone that he
-has to pay you for ten years of sitting in his building. Does it mean
-that you were writing something useful?
-Does it mean that your code was perfect? It doesn&amp;#39;t mean any of that.&lt;/p&gt;
-
-&lt;p&gt;Years of experience is a false indicator. It actually may play against you,
-in combination with other indicators mentioned above. If your CV says that
-you just started to program two years ago and your Github
-and StackOverflow accounts are empty &amp;mdash; there is still a chance
-you will improve. You&amp;#39;re just in the beginning of your career. However,
-if your CV says that you&amp;#39;re a &amp;quot;10-year seasoned architect&amp;quot; with zero
-open source contribution &amp;mdash; this means that you&amp;#39;re either lying about
-that ten years or you&amp;#39;re absolutely useless as an architect.&lt;/p&gt;
-
-&lt;p&gt;My point is that the &amp;quot;years of experience&amp;quot; argument should be used very carefully.
-Play this card only if you have other merits. Otherwise, keep it to yourself.&lt;/p&gt;
-
-&lt;h2 id=&quot;certifications&quot;&gt;Certifications&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-certifications.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Oracle, Zend, Amazon, IBM, MySQL, etc. &amp;mdash;
-I&amp;#39;m talking about these certifications. In order to get them you should
-pass an exam. Not an easy one and not online. It is a real exam taken in
-a certification center, where you&amp;#39;re sitting in front of a computer for a few
-hours, without any books or Internet access, answering questions. Rather
-humiliating activity for a respected software developer? Indeed. And there
-is a high probability of failure, which is also rather embarassing.&lt;/p&gt;
-
-&lt;p&gt;It is a very good sign, if you managed to go through this. If you&amp;#39;ve done
-it a few times, even better. However, if you&amp;#39;ve earned no certifications
-in your entire career, it is for one of the following reasons:&lt;/p&gt;
-
-&lt;p&gt;First, you&amp;#39;re &lt;strong&gt;afraid to lose&lt;/strong&gt;. A serious certification may cost a few hundred
-dollars (I paid over $700 for &lt;a href=&quot;https://en.wikipedia.org/wiki/Oracle_Certification_Program&quot;&gt;SCEA&lt;/a&gt;)
-and you will not get a refund if you
-fail. If you&amp;#39;re afraid to lose, you&amp;#39;re afraid to fight. This means
-you&amp;#39;ll chicken out in a real-life situation, where a complex problem
-will need to be solved.&lt;/p&gt;
-
-&lt;p&gt;Second, you &lt;strong&gt;don&amp;#39;t invest&lt;/strong&gt; in your profile. This most probably means that you don&amp;#39;t
-want to change companies and prefer to find a peaceful office, where you
-can stay forever. I remember I once said to a friend of mine &amp;mdash;
-&amp;quot;you will greatly improve your CV if you pass this certification&amp;quot;. He
-answered with a smile &amp;mdash; &amp;quot;I hope I won&amp;#39;t need a CV any more, I like
-this company&amp;quot;. This attitude is very beneficial for the company you&amp;#39;re
-working for, but it definitely works against you.&lt;/p&gt;
-
-&lt;p&gt;In my experience, the best team players are those who work for themselves.
-Healthy individualism is a key success factor. If your primary objective
-is to earn for yourself (money, reputation, skills, or knowledge) &amp;mdash;
-you will be very effective in our projects. Certifications in your
-profile is an indicator of that healthy individualism we&amp;#39;re looking for.&lt;/p&gt;
-
-&lt;h2 id=&quot;skills-variety&quot;&gt;Skills Variety&lt;/h2&gt;
-
-&lt;p&gt;The more technologies or programming languages you know, the less you cost.
-I&amp;#39;m not saying that it&amp;#39;s not possible to be an expert in many things at the same time
-&amp;mdash; that&amp;#39;s entirely possible. But let me give you a pragmatic reason why you shouldn&amp;#39;t &amp;mdash;
-competition. There are thousands of &amp;quot;Java7 programmers&amp;quot; on the market &amp;mdash;
-we can easily choose whoever we need. But there are not so many
-&amp;quot;Hadoop programmers&amp;quot; or &amp;quot;XSLT designers&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;If you focus on some specific area and become an expert there,
-your chances of finding a job are lower, but the payout will be bigger.
-We usually end up paying more to narrow-skilled specialists, mostly because
-we have no choice. If a project we&amp;#39;re working on needs a Lucene expert,
-we&amp;#39;ll find the right person and do our best to get him/her on
-board. Doing our best means increasing the price, in most cases.&lt;/p&gt;
-
-&lt;p&gt;Thus, when I hear that you&amp;#39;re &amp;quot;experienced in MySQL, PostgreSQL, Oracle and Sqlite&amp;quot;
-I realize that you know very little about databases.&lt;/p&gt;
-
-&lt;h2 id=&quot;talks-and-publications&quot;&gt;Talks and Publications&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/rate-talks-and-publications.png' style='width:350px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;I think it is obvious that having a blog (about programming, not about
-your favorite cat) is a positive factor. Even better is to be an
-occasional speaker at conferences or meetups. When it is a blog, I
-pay attention to the amount of comments people leave for your articles.
-If it is a conference, the most important criteria is how difficult it
-was to get to the list of speakers.&lt;/p&gt;
-
-&lt;p&gt;Both blog articles and conference presentations make you much more
-valuable as a specialist. Mostly because these things demonstrate that some
-people already reviewed your work and your talent. And it was not just
-a single employer, but a group of other programmers and engineers.
-This means that we also can rely on your opinions.&lt;/p&gt;
-
-&lt;p&gt;Besides that, if you write and present regularly, you have a very important
-skill/talent &amp;mdash; you can present your ideas in a &amp;quot;digestable&amp;quot; way.
-In our projects we
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;discourage informal communications&lt;/a&gt;
-and use ticketing systems instead. In those tickets you will have
-to explain your ideas, questions or concerns so that everybody can
-understand you. Without enough presentation skills, you won&amp;#39;t survive
-in your projects.&lt;/p&gt;
-
-&lt;p&gt;BTW, some software developers even file patents in their names &amp;mdash; why
-can&amp;#39;t you do this?&lt;/p&gt;
-
-&lt;h2 id=&quot;previous-employment&quot;&gt;Previous Employment&lt;/h2&gt;
-
-&lt;p&gt;I usually don&amp;#39;t pay much attention to this section of your CV. Our management
-model is &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;so different&lt;/a&gt;
-from anything you can see anywhere else that it doesn&amp;#39;t really matter
-how many times you were fired before and how senior of a
-position you have/had with your full-time employer. Even if your title
-is &amp;quot;CTO of Twitter&amp;quot; &amp;mdash; it doesn&amp;#39;t mean anything to me.&lt;/p&gt;
-
-&lt;p&gt;My experience tells me that the bigger the company and the higher the position
-in it &amp;mdash; the further away you stay from the source code and from
-real technical decisions. VPs and CTOs spend most of their time on
-management meetings and internal politics.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m much more interested in &lt;strong&gt;what&lt;/strong&gt; you&amp;#39;ve done over the last few years than
-in &lt;strong&gt;where&lt;/strong&gt; you&amp;#39;ve done it and what they called you while you were
-doing it.&lt;/p&gt;
-
-&lt;h2 id=&quot;education&quot;&gt;Education&lt;/h2&gt;
-
-&lt;p&gt;BSc, MSc, PhD... do we care? Not really. Education is very similar to
-the &amp;quot;previous employment&amp;quot; mentioned above. It doesn&amp;#39;t really matter
-where exactly you&amp;#39;ve spent those five years after school. What matters
-is what have you done during that time. If you have nothing to say
-about your activity in the university than what will the name of it
-tell me?&lt;/p&gt;
-
-&lt;p&gt;Well, of course, if it is Stanford or MIT, this will make a difference. In this
-case I can see that you managed to pass their graduation standards and managed to
-find money to study there. This is a good sign and will definitely increase
-your hourly rate. But if it is some mambo-jambo university from nowhere (like
-the one I graduated from), keep this information to yourself.&lt;/p&gt;
-
-&lt;h2 id=&quot;rates&quot;&gt;Rates&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;$100+&lt;/strong&gt; per hour we gladly pay to an expert who owns a few popular open source
-products; has a StackOverflow score above 20K; has certifications,
-articles, presentations, and maybe even patents.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$50+&lt;/strong&gt; per hour we pay to a professional programmer who has open
-source projects on his own or is an active contributor; has a StackOverflow
-score over 5K; is writing about software development;
-possesses a few certifications.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$30+&lt;/strong&gt; per hour we pay to a programmer who regularly contributes to
-open source code; is present in StackOverflow; has some
-certifications.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$15&lt;/strong&gt; per hour we pay to everybody else.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t get me wrong and don&amp;#39;t take these numbers personally. The rate
-you&amp;#39;re getting is a measurable metric of your professional level, not of you as a person.
-Besides, the level is not static, it is changing every day, and it&amp;#39;s entirely in your hands.&lt;/p&gt;
-
-&lt;p&gt;I wrote this article mostly in order to motivate you to grow.&lt;/p&gt;
-
-&lt;p&gt;All these criteria are applicable to new members of our teams. Once you
-start writing some code, we measure your performance and you may get
-completely different numbers, see
-&lt;a href=&quot;/2014/04/20/how-hourly-rate-is-calculated.html&quot;&gt;How Hourly Rate Is Calculated&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BTW, illustrations you see above are created by Andreea Mironiuc.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html</guid>
-      <dc:date>2014-10-29T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
