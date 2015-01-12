@@ -121,7 +121,9 @@ Avoid composite names of variables, like `timeOfDay`, `firstItem`, or
 `httpRequest`. I mean with both &mdash; class variables and in-method ones. A
 variable name should be long enough to avoid ambiguity in its scope of
 visibility, but not too long if possible. A name should be a noun in singular or
-plural form, or an appropriate abbreviation. For example:
+plural form, or an appropriate abbreviation. More about it in
+this post: [A Compound Name Is a Code Smell]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}).
+For example:
 
 ```java
 List<String> names;
