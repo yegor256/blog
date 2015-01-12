@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "How To Cut Corners And Stay Cool"
+title: "How to Cut Corners and Stay Cool"
 date: 2015-01-08
 tags: mgmt agile
 description:
   When a task you're working on is too big or you simply
-  don't want to do it, you cut corders; here is how you can
+  don't want to do it, you cut corners; here is how you can
   do it professionally.
 keywords:
   - agile task management
@@ -16,64 +16,64 @@ keywords:
   - time management agile
 ---
 
-You have a task, assigned to you, and you don't like it. You are simply
+You have a task assigned to you, and you don't like it. You are simply
 not in the mood. You don't know how to fix that damn bug. You have no idea
-how that bloody module was designed and you don't know how it works. But
+how that bloody module was designed, and you don't know how it works. But
 you have to fix the issue, which was reported by someone who has no clue how
-this software works. You get frustrated, you blame that stupid project manager and
-programmers, fired two years ago. You spend hours just to find out
-how the code work. Then, even more hours trying to fix it. In the end,
+this software works. You get frustrated and blame that stupid project manager and
+programmers who were fired two years ago. You spend hours just to find out
+how the code works. Then even more hours trying to fix it. In the end,
 you miss the deadline and **everybody blames you**. Been there, done that?
 
-However, there is also a professional exit from this situation.
-Here are some tips I recommend to my peer programmers working with me
+There is, however, an alternative approach that provides a professional exit 
+from this situation. Here are some tips I recommend to my peers who code with me
 in [teamed.io](http://www.teamed.io) projects.
-In a nutshell, I'm going to explain how you can **cut corners** and stay
-professional, 1) protecting your nerves, 2) optimizing project's expenses,
+In a nutshell, I'm going to explain how you can **cut corners** and remain
+professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.
 
 <!--more-->
 
 Here is a list of options you have, in order of preference. I would
-recommend to start with the first in the list and go lower when you
-run out of chances.
+recommend you start with the first one on the list and proceed down when you
+have to.
 
 ## Create Dependencies, Blame Them, and Wait
 
-This is the first and the most preferable option. If you can't figure out
+This is the first and most preferable option. If you can't figure out
 how to fix an issue or how to implement a new feature, it's a fault
-of the project, not yours. Even if you can't figure it out because you
+of the project, not you. Even if you can't figure it out because you
 don't know anything about Ruby and they hired you to fix bugs
 in a Ruby on Rails code base &mdash; it's their fault. Why did they hire
-you when you don't know nothing about Ruby?
+you when you know nothing about Ruby?
 
-So, be positive, don't blame yourself. If you don't know how this
-damn code works, it's a fault of the code, not yours. A good code is
-the one that is easy to understand and maintain.
+So be positive; don't blame yourself. If you don't know how this
+damn code works, it's a fault of the code, not you. Good code is
+easy to understand and maintain.
 
-Don't try to eat spaghetti code, complain to the chef and ask
-to cook something better (BTW, I love spaghetti).
+Don't try to eat spaghetti code; complain to the chef and ask
+him or her to cook something better (BTW, I love spaghetti).
 
-How you can do that? Create dependencies &mdash; new bugs, complaining
-about unclear design, lack of unit tests, absence of necessary classes,
-whatever. Be creative and offensive. In a constructive and professional way,
+How can you do that? Create dependencies &mdash; new bugs complaining
+about unclear design, lack of unit tests, absence of necessary classes, or
+whatever. Be creative and offensive &mdash; in a constructive and professional way,
 of course. Don't get personal. No matter who cooked that spaghetti, you have
 nothing against him or her personally. You just want another dish, that's all.
 
-Once you have that dependencies reported, explain in the main ticket
+Once you have those dependencies reported, explain in the main ticket
 that you can't continue until all of them are resolved. You will
-legally stop working and someone else will improve the code you need. Later,
+legally stop working, and someone else will improve the code you need. Later,
 when all dependencies are resolved and the code looks better, try to
 get back to it again. If you still see issues, create new dependencies.
 Keep doing this until the code in front of you is clean and easy to fix.
 
-Don't be a hero &mdash; don't rush fixing the bad code you inherited. Think
+Don't be a hero &mdash; don't rush into fixing the bad code you inherited. Think
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
-Remember that your first and the most important responsibility as
+Remember that your first and most important responsibility as
 a disciplined engineer is to help the project **reveal** maintainability issues.
-Who and how will fix them is the responsibility of a project manager.
-Your job is to reveal, not to hide. By being a hero trying to fix everything
-in the scope of a single task, you're doing a bad favor to the entire project
+Who will fix them and how is the responsibility of a project manager.
+Your job is to reveal, not to hide. By being a hero and trying to fix everything
+in the scope of a single task, you're not doing the project a favor
 &mdash; you're concealing the problem(s).
 
 ## Demand Better Documentation and Wait
@@ -82,39 +82,39 @@ All dependencies are resolved and the code looks clean, but you still
 don't understand how to fix the problem or implement a new feature. It's
 too complex. Or maybe you just don't know how this library works. Or you've
 never done anything like that before. Anyhow, you can't continue because
-you don't understand. And in order to understand you will need a lot of time.
-Much more than you have from your project manager or your Scrum board. What
+you don't understand. And in order to understand, you will need a lot of time &mdash;
+much more than you have from your project manager or your Scrum board. What
 do you do?
 
 Again, think positively and don't blame yourself. If the software is not
 clear enough for a total stranger, it's "their" fault, not yours. They created
-the software the way it's difficult to digest and modify. But the code is
-clean, it's not a spaghetti any more. It's a perfectly cooked lobster, but
-you don't know how to eat a lobster! You've never ate it before.
+the software in a way that's difficult to digest and modify. But the code is
+clean; it's not spaghetti anymore. It's a perfectly cooked lobster, but
+you don't know how to eat lobster! You've never ate it before.
 
-The chef did a good job, he cooked it well, but the restaraunt didn't give
-you any instructions how to eat such a sophisticated dish. What do you do?
+The chef did a good job; he cooked it well, but the restaraunt didn't give
+you any instructions on how to eat such a sophisticated dish. What do you do?
 
-You ask for a manual. You ask for a documentation. A properly designed
+You ask for a manual. You ask for documentation. Properly designed
 and written source code must be properly documented. Once you see that
-something is not clear for you, create new dependencies, asking for better
+something is not clear for you, create new dependencies that ask for better
 documentation of certain aspects of the code.
 
-Again, don't be a hero trying to understand everything yourself. Of course,
+Again, don't be a hero and try to understand everything yourself. Of course
 you're a smart guy, but the project doesn't need a single smart guy. The
-project needs a maintainable code that is easy to modify, even by someone
-who is not as smart as yourself. So, do your project a favor, reveal the
-documentation issue and ask someone to fix it for you. Not just for you,
-for everybody. The entire team will benefit from such a request originated
-from you. Once the documentation is fixed, you will continue with your
-task and everybody will get a source code that is a bit better than it
+project needs maintainable code that is easy to modify, even by someone
+who is not as smart as yourself. So do your project a favor: reveal the
+documentation issue, and ask someone to fix it for you. Not just for you,
+for everybody. The entire team will benefit from such a request. 
+Once the documentation is fixed, you will continue with your
+task, and everybody will get source code that is a bit better than it
 was before. Win-win, isn't it?
 
-## Reproduce The Bug and Call It a Day
+## Reproduce the Bug and Call It a Day
 
-Now, the code is clean, the documentation is good enough,
+Now the code is clean, the documentation is good enough,
 but you're stuck anyway. What to do?
-Well, I'm a big fan of Test Driven Development, so my next suggestion would be
+Well, I'm a big fan of test-driven development, so my next suggestion would be
 to create a test that reproduces the bug. Basically, this is what you should start
 every ticket with, be it a bug or a feature. Catch the bug with a unit test!
 Prove that the bug exists by failing the build with a new test.
@@ -123,113 +123,113 @@ Prove that the bug exists by failing the build with a new test.
 
 This may be rather difficult to achieve, especially when the software you're
 trying to fix or modify was written by <span class="strike">idiots</span>
-someone who had no idea of unit testing. There are plenty techniques
-that may help you find a way to make such a software more testable. I would
-highly recommend to read
+someone who had no idea about unit testing. There are plenty of techniques
+that may help you find a way to make such software more testable. I would
+highly recommend you read
 [Working Effectively with Legacy Code](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=7SI6P3M636MLCO5E)
-by Michael Feathers. There are many different patterns and most of them work.
+by Michael Feathers. There are many different patterns, and most of them work.
 
 Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
 (for example, using `@Ignore` annotation in JUnit 4) and commit your changes.
-Then, add a documentation to the unit test you just created, preferably in
-form of a `@todo`. Explain there that you managed to reproduce the problem,
+Then add documentation to the unit test you just created, preferably in the
+form of a `@todo`. Explain there that you managed to reproduce the problem
 but didn't have enough time to fix it. Or maybe you just don't know how to
 fix it. Be honest and give all possible details.
 
-I believe that catching a bug with a unit test is, in most cases, over 80% of success.
-The rest is way more simple, just fix the code and make the test pass. Leave
+I believe that catching a bug with a unit test is, in most cases, more than 80% of success.
+The rest is way more simple: just fix the code and make the test pass. Leave
 this job to someone else.
 
-## Prove Bug's Absence
+## Prove a Bug's Absence
 
-Very often you simply can't reproduce a bug. Not because the code is not
-testable and can't be used in a unit test, but because you can't reproduce
+Very often you simply can't reproduce a bug. That's not because the code is not
+testable and can't be used in a unit test but because you can't reproduce
 an error situation. You know that the code crashes in production, but you can't
 crash it in a test. The error stack trace reported by the end user or your
 production logging system is not reproducable. It's a very common situation.
 What do you do?
 
-I think that the best option here is to create a test that will prove that
-the code works as intended. The test won't fail and the build will stay clean.
-You will commit it to the repository and... report that the problem is solved.
+I think the best option here is to create a test that will prove that
+the code works as intended. The test won't fail, and the build will remain clean.
+You will commit it to the repository and ... report that the problem is solved.
 You will say that the reported bug doesn't really exist in real life. You
-will state that there is no bug &mdash; "our software works correctly, here
-is a proof, see my new unit test."
+will state that there is no bug &mdash; "our software works correctly; here
+is the proof: see my new unit test."
 
 Will they believe you? I don't think so, but they don't have a choice. They
 can't push you any further. You've already done something &mdash; created
-a new test that proves that everything is fine. The ticket will be closed
+a new test that proves everything is fine. The ticket will be closed
 and the project will move on.
 
-If later the same problem happens in
+If, later on, the same problem occurs in
 production, a new bug will be reported. It will be linked to your ticket. Your
-experience will help someone to investigate the bug further. Maybe that
+experience will help someone investigate the bug further. Maybe that
 guy will also fail to catch the bug with a test and will also create
-a new successful and "useless" test. And this may happen again and again.
-Eventually, this cumulative group experience will help the last guy to
+a new, successful and "useless" test. And this may happen again and again.
+Eventually, this cumulative group experience will help the last guy
 catch the bug and fix it.
 
 Thus, a new passing test is a good response to a bug that you can't catch
 with a unit test.
 
-## Disable The Feature
+## Disable the Feature
 
-Sometimes this technique won't work, mostly because a bug will be
+Sometimes the unit test technique won't work, mostly because a bug will be
 too important to be ignored. They won't agree with you when you show them
-a unit test that proves that the bug doesn't exist. They will tell you
-that "when our users are trying to download a PDF they get a blank page".
-And they will also say that they don't really care about your bloody
+a unit test that proves the bug doesn't exist. They will tell you
+that "when our users are trying to download a PDF, they get a blank page."
+And they will also say they don't really care about your bloody
 unit tests. All they care about is that PDF document that should be
-downloadable. So the trick with a unit test won't work. What to do?
+downloadable. So the trick with a unit test won't work. What do you do?
 
-It depends, on many factors. And most of these factors are not technical.
-They are political, organizational, management, social, you name it. However,
-in most cases I would recommend to disable that toxic feature,
-release a new version, and close a ticket.
+It depends on many factors, and most of these factors are not technical.
+They are political, organizational, managerial, social, you name it. However,
+in most cases, I would recommend you disable that toxic feature,
+release a new version, and close the ticket.
 
 You will take the problem off your shoulders and everybody will be pleased.
-Well, except that poor end-users. But this is not your problem. This is the
-fault of the management, who didn't organize pre-production testing properly.
+Well, except that poor end user. But this is not your problem. This is the
+fault of management, which didn't organize pre-production testing properly.
 Again, don't take this blame on yourself. Your job is to keep the code
 clean and finish your tickets in a reasonable amount of time. Their
-job is to make sure that developers, testers, DevOps, marketing, product
-managers and designer working together deliver the product with an
-acceptable amount of errors.
+job is to make sure that developers, testers, DevOps, marketers, product
+managers, and designers work together to deliver the product with an
+acceptable number of errors.
 
-Production errors are not programmers' mistakes, while delayed
+Production errors are not programmers' mistakes, though delayed
 tickets are. If you keep a ticket in your hands for too long, you become
-an unmanageable unit of work. They simply can't manage you any more. You're doing
-something, trying to fix the bug, saying "I'm trying, I'm trying..."
-How can they manage such a guy? Instead, you should deliver fast, even if
-at the cost of a temporarily disabled feature.
+an unmanageable unit of work. They simply can't manage you anymore. You're doing
+something, trying to fix the bug, saying "I'm trying, I'm trying ..."
+How can they manage such a guy? Instead, you should deliver quickly, even if
+it comes at the cost of a temporarily disabled feature.
 
 ## Say No
 
-OK, let's say nothing of the above works. The code is clean, the documentation
+OK, let's say none of the above works. The code is clean, the documentation
 is acceptable, but you can't catch the bug, and they don't accept a unit
-test from you as a proof of bug's absence. They also don't allow you to
-disable a feature, because it is critical for user experience. What choices
+test from you as proof of the bug's absence. They also don't allow you to
+disable a feature, because it is critical to the user experience. What choices
 do you have? Just one.
 
-Be professional, say "No, I can't do this, find someone else."
+Be professional and say "No, I can't do this; find someone else."
 Being a professional developer doesn't mean being able to fix any problem. Instead,
 it means honesty. If you see that you can't
-fix the problem, say so, as soon as possible. Let them decide what to do.
-If they eventually decide to fire you because of that, you will still stay
+fix the problem, say so as soon as possible. Let them decide what to do.
+If they eventually decide to fire you because of that, you will remain a
 professional. They will remember you as a guy who was honest and took his
 reputation seriously. In the end, you will win.
 
-Don't hold the task in your hands. The same minute you realize that you're
+Don't hold the task in your hands. The minute you realize you're
 not the best guy for it or you simply can't fix it &mdash; notify
 your manager. Make it his problem. Actually, it is his problem in the
 first place. He hired you. He interviewed you. He decided to give you this
 task. He estimated your abilities and your skills.
-So, it's a payback time.
+So it's payback time.
 
-Your "No!" will be a very valuable feedback for him. It will help him
-to make his next important management decisions.
+Your "No!" will be very valuable feedback for him. It will help him
+make his next important management decisions.
 
-On the other hand, if you lie, just to give an impression of a guy who
-can fix anything, and fail in the end, you will damage not only your
-reputation but also project's performance and objectives.
+On the other hand, if you lie just to give the impression you're a guy who
+can fix anything and yet fail in the end, you will damage not only your
+reputation but also the project's performance and objectives.
