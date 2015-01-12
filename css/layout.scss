@@ -6,6 +6,7 @@
 @import "disqus";
 @import "post";
 @import "wrapper";
+@import "tables";
 
 .green {
   color: green;
@@ -21,6 +22,9 @@
 }
 .small {
   font-size: 0.85 * $em;
+}
+.strike {
+  text-decoration: line-through;
 }
 .main-font {
   font-family: $main-font;
@@ -258,10 +262,4 @@ figure {
   pre {
     font-size: 12px !important;
   }
-}
-.rht {
-  text-align: right;
-}
-.cnt {
-  text-align: center;
 }

@@ -43,6 +43,7 @@ Your class should be an abstraction of a real life entity
 with no "validators", "controllers", "managers", etc.
 If your class name ends with an "-er" &mdash;
 it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
+BTW, here are my [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) of a good object.
 
 And, of course, utility classes are anti-patterns, like [`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html),
 [`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html), and
@@ -120,7 +121,9 @@ Avoid composite names of variables, like `timeOfDay`, `firstItem`, or
 `httpRequest`. I mean with both &mdash; class variables and in-method ones. A
 variable name should be long enough to avoid ambiguity in its scope of
 visibility, but not too long if possible. A name should be a noun in singular or
-plural form, or an appropriate abbreviation. For example:
+plural form, or an appropriate abbreviation. More about it in
+this post: [A Compound Name Is a Code Smell]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}).
+For example:
 
 ```java
 List<String> names;
@@ -132,7 +135,7 @@ public HttpRequest request;
 Sometimes, you may have collisions between constructor parameters and in-class
 properties if the constructor saves incoming data in an instantiated object. In
 this case, I recommend to create abbreviations by removing vowels (see how
-[USPS abbreviates street names](https://www.usps.com/send/official-abbreviations.htm)).
+[USPS abbreviates street names](http://pe.usps.gov/text/pub28/28apc_002.htm)).
 
 Another example:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Compound Name Is a Code Smell"
-date: 2015-01-10
+date: 2015-01-12
 tags: oop
 description:
   A variable name that consists of several words is a code
@@ -23,6 +23,8 @@ is so big and complex that a simple noun would sound ambiguous.
 And a big, complex scope is an obvious code smell.
 
 <!--more-->
+
+{% picture /images/2015/01/meaning-of-life-every-sperm.png 0 The Meaning of Life (1983) by Terry Jones and Terry Gilliam %}
 
 The scope of a variable is the place where it is visible, like a method, for example. Look
 at this Ruby class:
@@ -69,14 +71,12 @@ end
 Now it looks clear and concise.
 
 If you can't perform such a refactoring, it means your scope is too
-big and/or too complex. An ideal method should deal with two to five variables,
-and an ideal class should encapsulate two to five properties (not my numbers;
-I took them from ["Object Thinking"](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT)
-by David West).
+big and/or too complex. An ideal method should deal with up to five variables,
+and an ideal class should encapsulate up to five properties.
 
 If we have five variables, can't we find five nouns to name them?
 
-Adam and Eve didn't have second names. They were unique in Eden, 
+Adam and Eve didn't have second names. They were unique in Eden,
 as were many other characters in the Old Testament. Second and middle
 names were invented later in order to resolve ambiguity. To keep
 your methods and classes clean and solid, and to prevent ambiguity, try to give your variables

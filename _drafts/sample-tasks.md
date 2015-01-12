@@ -56,3 +56,6 @@ Technical questions asked, paid, answered, and paid again:
 
 Big amount of work:
 [yegor256/thindeck#362](https://github.com/yegor256/thindeck/issues/362)
+
+Task lost due to lack of attention to closing, by the performer:
+[yegor256/thindeck#415](https://github.com/yegor256/thindeck/issues/415)

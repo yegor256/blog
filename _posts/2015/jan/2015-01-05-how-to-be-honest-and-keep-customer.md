@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "How to Be Honest and Keep a Customer"
-date: 2014-12-17
+date: 2015-01-05
 tags: mgmt
+categories: jcg
 description:
   Most software outsourcing companies don't show their source
   code until the product is ready, keeping their customers in the dark and
@@ -76,7 +77,7 @@ is happy to spend by giving orders and distracting your team. I've seen
 this many times. A solution? Keep him busy. Turn him into a member of the
 team and assign him some tasks related to documentation and research. In
 my experience, most clients would be happy to do this work and help the
-project. Well, at least they think they are helping :)
+project.
 
 ## He Is Asking Too Much
 
@@ -193,8 +194,9 @@ how beautiful your architecture and your source code is, the "friend" will
 always be right.
 
 In my opinion, the only way to prevent such a situation or minimize its
-consequences is to organize regular and systematic independent technical
-reviews. They will give confindence to the client that the team
+consequences is to organize regular and systematic
+[independent technical reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %}).
+They will give confindence to the client that the team
 is not lying to him about the quality of the product and key technical
 decisions made internally.
 
