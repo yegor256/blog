@@ -62,7 +62,7 @@ class Page {
       .fetch().body();
   }
   public void save(String content) {
-    return new JdkRequest(this.uri)
+    new JdkRequest(this.uri)
       .method("PUT")
       .body().set(content).back()
       .fetch();
