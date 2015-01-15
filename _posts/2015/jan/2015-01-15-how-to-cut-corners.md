@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Cut Corners and Stay Cool"
-date: 2015-01-08
+date: 2015-01-15
 tags: mgmt agile
 description:
   When a task you're working on is too big or you simply
