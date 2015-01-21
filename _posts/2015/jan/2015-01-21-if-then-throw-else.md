@@ -19,7 +19,7 @@ keywords:
 This is the code I could never understand:
 
 {% highlight java %}
-if (x < 0)
+if (x < 0) {
   throw new Exception("X can't be negative");
 } else {
   System.out.println("X is positive or zero");
@@ -43,7 +43,7 @@ in a while. No matter which one you choose, you will end up on the same road.
 This is what this code block does:
 
 {% highlight java %}
-if (x < 0)
+if (x < 0) {
   System.out.println("X is negative");
 } else {
   System.out.println("X is positive or zero");
@@ -66,7 +66,7 @@ This is how a proper sign would look:
 This is how a proper code block would look:
 
 {% highlight java %}
-if (x < 0)
+if (x < 0) {
   throw new Exception("X can't be negative");
 }
 System.out.println("X is positive or zero");
