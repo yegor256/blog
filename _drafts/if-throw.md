@@ -36,8 +36,8 @@ does something **else**. Imagine yourself driving a car and seeing this
 sign on the road (americans, don't be surprised,
 there are many of that blue signs in Europe):
 
-It looks logical, isn't it? You can go to the left lane, if you're driving a car. You
-should go to the right lane, if you you're in a truck. Both lanes meet
+It looks logical, isn't it? You can go to the left lane, if you're not driving a truck. You
+should go to the right lane otherwise. Both lanes meet
 in a while. No matter which one you chose, you will end up on the same road.
 This is what this code block does:
 
