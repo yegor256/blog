@@ -4,9 +4,9 @@ title: "If. Then. Throw. Else. WTF?"
 date: 2015-01-21
 tags: java oop
 categories: jcg
-description:
+description: |
   When it comes to an if-then-else statement that
-  throws an exception or exits by "break" or "continue",
+  throws an exception or exits by break or continue,
   there is an obvious optimization that is very often overlooked.
 keywords:
   - if-throw-else
