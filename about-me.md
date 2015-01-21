@@ -53,7 +53,9 @@ about software quality. Here are a few facts about myself:
    [qulice.com](http://www.qulice.com),
    [s3auth.com](http://www.s3auth.com),
    and
-   [stateful.co](http://www.stateful.co)
+   [stateful.co](http://www.stateful.co). All of these projects are open
+   source, you can see the code style we respect. I'm using
+   IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
 
 Once in a month I'm sending a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my

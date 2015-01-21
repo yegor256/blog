@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Cut Corners and Stay Cool"
-date: 2015-01-08
+date: 2015-01-15
 tags: mgmt agile
 description:
   When a task you're working on is too big or you simply
@@ -25,7 +25,7 @@ programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
 you miss the deadline and **everybody blames you**. Been there, done that?
 
-There is, however, an alternative approach that provides a professional exit 
+There is, however, an alternative approach that provides a professional exit
 from this situation. Here are some tips I recommend to my peers who code with me
 in [teamed.io](http://www.teamed.io) projects.
 In a nutshell, I'm going to explain how you can **cut corners** and remain
@@ -50,6 +50,8 @@ you when you know nothing about Ruby?
 So be positive; don't blame yourself. If you don't know how this
 damn code works, it's a fault of the code, not you. Good code is
 easy to understand and maintain.
+
+{% badge /images/2015/01/cut-corners-1.png 250 %}
 
 Don't try to eat spaghetti code; complain to the chef and ask
 him or her to cook something better (BTW, I love spaghetti).
@@ -76,6 +78,12 @@ Your job is to reveal, not to hide. By being a hero and trying to fix everything
 in the scope of a single task, you're not doing the project a favor
 &mdash; you're concealing the problem(s).
 
+Edit: Another good example of a dependency may be a question raised
+at, for example, StackOverflow.com or a user list of a third-party library.
+If you can't find a solution yourself and the problem is outside of the scope
+of your project &mdash; submit a question to SO and put its link to the
+source code (in JavaDoc block, for example).
+
 ## Demand Better Documentation and Wait
 
 All dependencies are resolved and the code looks clean, but you still
@@ -85,6 +93,8 @@ never done anything like that before. Anyhow, you can't continue because
 you don't understand. And in order to understand, you will need a lot of time &mdash;
 much more than you have from your project manager or your Scrum board. What
 do you do?
+
+{% badge /images/2015/01/cut-corners-2.png 250 %}
 
 Again, think positively and don't blame yourself. If the software is not
 clear enough for a total stranger, it's "their" fault, not yours. They created
@@ -105,7 +115,7 @@ you're a smart guy, but the project doesn't need a single smart guy. The
 project needs maintainable code that is easy to modify, even by someone
 who is not as smart as yourself. So do your project a favor: reveal the
 documentation issue, and ask someone to fix it for you. Not just for you,
-for everybody. The entire team will benefit from such a request. 
+for everybody. The entire team will benefit from such a request.
 Once the documentation is fixed, you will continue with your
 task, and everybody will get source code that is a bit better than it
 was before. Win-win, isn't it?
@@ -149,6 +159,8 @@ an error situation. You know that the code crashes in production, but you can't
 crash it in a test. The error stack trace reported by the end user or your
 production logging system is not reproducable. It's a very common situation.
 What do you do?
+
+{% badge /images/2015/01/cut-corners-3.png 250 %}
 
 I think the best option here is to create a test that will prove that
 the code works as intended. The test won't fail, and the build will remain clean.
@@ -211,6 +223,8 @@ is acceptable, but you can't catch the bug, and they don't accept a unit
 test from you as proof of the bug's absence. They also don't allow you to
 disable a feature, because it is critical to the user experience. What choices
 do you have? Just one.
+
+{% badge /images/2015/01/cut-corners-4.png 250 %}
 
 Be professional and say "No, I can't do this; find someone else."
 Being a professional developer doesn't mean being able to fix any problem. Instead,
