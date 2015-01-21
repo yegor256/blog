@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "If. Then. Throw. Else. Wtf?"
+title: "If. Then. Throw. Else. WTF?"
 date: 2015-01-24
 tags: java oop
 description:
-  There is an obvious optimization of If-Then-Else statement
-  that throws an exception or exits by Break or Continue, which
-  is very often overlooked.
+  When it comes to an if-then-else statement that 
+  throws an exception or exits by "break" or "continue",
+  there is an obvious optimization that is very often overlooked.
 keywords:
   - if-throw-else
   - if throw exception
@@ -25,20 +25,20 @@ if (x < 0)
 }
 {% endhighlight %}
 
-I was trying to find a proper metaphor to explain its incorrectness.
+I have been trying to find a proper metaphor to explain its incorrectness.
 Today I finally found it.
 
 <!--more-->
 
-It-then-else is a forking mechanism of a procedural programming. The CPU
-either goes on the left and **then** does something or goes to the right and
+If-then-else is a forking mechanism of procedural programming. The CPU
+either goes to the left and **then** does something or goes to the right and
 does something **else**. Imagine yourself driving a car and seeing this
-sign on the road (americans, don't be surprised,
-there are many of that blue signs in Europe):
+sign on the road (Americans, don't be surprised;
+there are many of these blue signs in Europe):
 
-It looks logical, isn't it? You can go to the left lane, if you're not driving a truck. You
-should go to the right lane otherwise. Both lanes meet
-in a while. No matter which one you chose, you will end up on the same road.
+It looks logical, doesn't it? You can go in the left lane if you're not driving a truck. 
+Otherwise you should go in the right lane. Both lanes meet up
+in a while. No matter which one you choose, you will end up on the same road.
 This is what this code block does:
 
 {% highlight java %}
@@ -49,9 +49,9 @@ if (x < 0)
 }
 {% endhighlight %}
 
-Now, can you imagine this sign?:
+Now, try to imagine this sign:
 
-It looks very strange to me and you will never see this sign anywhere,
+It looks very strange to me, and you will never see this sign anywhere
 simply because a dead end means an *end*, a full stop, a finish.
 What is the point of drawing a lane
 after the dead end sign? There is no point.
@@ -90,8 +90,8 @@ for (int x : numbers) {
 }
 {% endhighlight %}
 
-There is no lane after the dead end! If you draw it, your code looks
-like this very funny snippet I've found a few years ago reviewing
+There is no road after the dead end! If you draw it, your code looks
+like this very funny snippet I found a few years ago reviewing
 sources written by some very well-paid developer in one very serious
 company:
 
