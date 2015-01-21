@@ -32,9 +32,7 @@ Today I finally found it.
 
 If-then-else is a forking mechanism of procedural programming. The CPU
 either goes to the left and **then** does something or goes to the right and
-does something **else**. Imagine yourself driving a car and seeing this
-sign on the road (Americans, don't be surprised;
-there are many of these blue signs in Europe):
+does something **else**. Imagine yourself driving a car and seeing this sign:
 
 {% figure /images/2015/01/if-then-throw-1.png 500 %}
 
