@@ -10,12 +10,128 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Wed, 21 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jan 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Making Your Boss Happy Is a False Objective</title>
+      <link>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
+      <description>&lt;p&gt;We all have bosses. We also have customers who pay us for running
+their software projects. They are my bosses for the time of the contract. I&amp;#39;m also
+acting as a boss for developers who are working for &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;.
+It is obvious that a good employee/contractor is one who makes his
+boss/customer happy. But only a bad employee works toward
+this goal. Trying to make your boss happy is a false target that,
+if pursued, ruins the project. A professional employee works
+for the project, not for the boss.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/the-million-dollar-hotel.png' style='width:600px;' alt='The Million Dollar Hotel (2000) by Wim Wenders'/&gt;&lt;figcaption&gt;The Million Dollar Hotel (2000) by Wim Wenders&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;We all work on &lt;strong&gt;projects&lt;/strong&gt; as developers, designers, programmers, managers,
+testers, you name it. The boss is also a member of the project. More
+formally, he or she is a &lt;strong&gt;stakeholder&lt;/strong&gt;, same as every one of us. Each stakeholder
+has his own &lt;strong&gt;needs&lt;/strong&gt; for the project: 1) Jeff, the developer, wants to learn Scala
+and collect his paychecks every two weeks; 2) Sally, the product owner,
+wants to attend an expo in Paris and also collect her paychecks;
+3) Bob, the CTO, wants to raise round A funding and collect a big paycheck; etc.&lt;/p&gt;
+
+&lt;p&gt;The project has its own &lt;strong&gt;objectives&lt;/strong&gt;, to achieve 1 million downloads
+in less than six months and under $300,000, for example.
+This is what the project works for. This is what all of us are here for.&lt;/p&gt;
+
+&lt;p&gt;Our personal needs may be fully satisfied
+while we&amp;#39;re all working toward this goal, or some of them may
+be sacrificed. I mean all of us, including the boss, whoever he or she is,
+either a CTO, a co-founder, a project manager, or a team lead.&lt;/p&gt;
+
+&lt;p&gt;The project is the source of our checks. Not the CFO.&lt;/p&gt;
+
+&lt;p&gt;The CFO is a stakeholder, like everyone else. The project gives him more
+power than others because it&amp;#39;s necessary for the whole mechanism to
+work properly. Every project member has his or her own &lt;strong&gt;roles and responsibilities&lt;/strong&gt;.
+I write code; the CFO writes checks. I eat at McDonalds; he drives
+a Jaguar. We have different needs, and we both agreed that the project
+would satisfy them. Otherwise we wouldn&amp;#39;t be here, right?&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re all parts of a mechanism called a &amp;quot;project&amp;quot;, which works according
+to the rules and principles of &lt;strong&gt;project management&lt;/strong&gt; whether we are aware of
+them or not. Whether we have a project manager or not. Even if we violate
+all of them and manage ourselves in total chaos, we still have a scope,
+cost, schedule, and all other attributes of project management.&lt;/p&gt;
+
+&lt;p&gt;A professional and savvy boss understands that his role in the mechanism
+is to clearly define project objectives and make sure everybody&amp;#39;s needs are
+aligned with those objectives. In a properly managed and organized project,
+everybody sees and feels how his or her personal needs are satisfied
+when the project achieves its objectives: Jeff learns Scala, Sally
+sees Paris, and Bob buys a new house.&lt;/p&gt;
+
+&lt;p&gt;However, if Jeff wants to learn Scala and we&amp;#39;re
+developing an iOS application, that is a problem for the boss to resolve.
+Either convince Jeff to fall in love with Swift (I doubt that&amp;#39;s possible)
+or replace him with someone who is already in love with it. It&amp;#39;s clear that
+a professional boss will resort to such a tragic act as firing Jeff
+not because of his personal feelings towards Jeff but because
+they are both working toward the project objectives. Jeff and the boss
+will both understand that Jeff&amp;#39;s need to learn Scala is not aligned
+with the objective of the project.&lt;/p&gt;
+
+&lt;p&gt;It is the CTO&amp;#39;s responsibility to do something about Jeff when his personal
+needs become misaligned with the objectives of the project that is paying
+his salary. A professional CEO understands that and
+always acts in the best interest of the project, not of himself or
+anyone else personally.&lt;/p&gt;
+
+&lt;p&gt;I believe a professional team player does two things:
+obeys and resists.&lt;/p&gt;
+
+&lt;p&gt;First, you have to understand that the boss is here in order
+to help you organize your time, your tasks, your communications,
+your plans, etc. He knows more about the project and uses that
+information to help you do your job. Your real boss is the project;
+the boss you interact with is just a hired manager who translates
+project objectives into plans, instructions, schedules, etc.&lt;/p&gt;
+
+&lt;p&gt;This boss is your colleague who does management while you&amp;#39;re
+writing code. You&amp;#39;re both equal. You and he are in the same boat. Your
+functions are different than his; that&amp;#39;s all. You&amp;#39;re not working
+&lt;em&gt;for&lt;/em&gt; him but &lt;em&gt;with&lt;/em&gt; him on a project. A true professional team player
+feels himself equal to all other members of the project, no matter
+how high they are in the hierarchy.&lt;/p&gt;
+
+&lt;p&gt;At the same time, he strictly follows the process and
+obeys all project rules and instructions, not because he is afraid of
+being fired but because he wants the project to succeed.&lt;/p&gt;
+
+&lt;p&gt;Second, being a professional team player requires a constant readiness
+to resist each and every instruction if you feel it contradicts
+the project objectives. A true professional doesn&amp;#39;t work for a boss.
+He doesn&amp;#39;t want to make the boss happy. He actually doesn&amp;#39;t care whether the
+boss is happy or not. He knows that the real boss is the project and tries
+to make the project successful and ... happy.&lt;/p&gt;
+
+&lt;p&gt;A true professional always works for himself. Jeff wants to learn Scala
+and earn a certain amount of cash. He joined the project in order to satisfy these
+needs. If the project fails, Jeff won&amp;#39;t get the money and won&amp;#39;t fully learn Scala.
+So if the boss tells Jeff to do something that may jeopardize the
+project&amp;#39;s success, will Jeff do it? Does he care about disappointing the boss?
+Absolutely not. All he cares about is the project&amp;#39;s success, which translates to his
+personal success.&lt;/p&gt;
+
+&lt;p&gt;Thus, making your boss happy is a goal for the immature, fearsome, lazy, and weak.
+Making your project successful is an objective for professional,
+strong, mature, and brave team players.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</guid>
+      <dc:date>2015-01-26T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>If. Then. Throw. Else. WTF?</title>
       <link>http://www.yegor256.com/2015/01/21/if-then-throw-else.html</link>
@@ -2784,131 +2900,6 @@ nothing in between.&lt;/p&gt;
       <pubDate>Thu, 20 Nov 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html</guid>
       <dc:date>2014-11-20T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Hits-of-Code Instead of SLoC</title>
-      <link>http://www.yegor256.com/2014/11/14/hits-of-code.html</link>
-      <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Source_lines_of_code&quot;&gt;Lines-of-Code&lt;/a&gt;
-(aka SLoC) is a metric with a terrible reputation.
-Try &lt;a href=&quot;https://www.google.com/search?q=line+of+code+metric&quot;&gt;to google&lt;/a&gt;
-it yourself and you&amp;#39;ll find tons of articles bad-mouthing about its
-counter-effectiveness and destructiveness for a software development process.
-The main argument is that we can&amp;#39;t measure the progress of programming
-by the number of lines of code written. Probably the most famous quote is
-attributed to &lt;a href=&quot;https://en.wikipedia.org/wiki/Bill_Gates&quot;&gt;Bill Gates&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Measuring programming progress by lines of code is like measuring aircraft building progress by weight&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Basically, this means that certain parts of the aircraft will take
-much more effort at the same time being much lighter than others
-(like a central computer, for example). Instead
-of measuring the weight of the aircraft we should measure the effort put into it... somehow.
-So, here is the idea. How about we measure the amount of times programmers
-&lt;strong&gt;touch&lt;/strong&gt; the lines. Instead of counting the number of lines we&amp;#39;ll count
-how many times they were actually modified &amp;mdash; we can get this information
-from Git (or any other SCM). The more you touch that part
-of the aircraft &amp;mdash; the more effort you spent on it, right?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;I called it Hits-of-Code (HoC) and created a small tool to help us
-calculate this number in just one line. It&amp;#39;s a
-&lt;a href=&quot;https://rubygems.org/gems/hoc&quot;&gt;Ruby gem&lt;/a&gt;, install it and run:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install hoc
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;hoc
-54687&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The number 54687 is a total number of Hits-of-Code in your code base. The
-principle behind this number is primitive &amp;mdash; every time a line of code
-is modified, created or deleted in a Git commit, the counter increments.&lt;/p&gt;
-
-&lt;p&gt;The main reason why this metric is better than LoC is that
-it is much better aligned with the actual effort invested into the code
-base. Here is why.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-always-increments&quot;&gt;It Always Increments&lt;/h2&gt;
-
-&lt;p&gt;The HoC metric always goes up. Today it can not be lower than it
-was yesterday &amp;mdash; just like the effort, it always increments.
-Lines-of-Code is not acting like this. You may have a huge code
-base today, but after refactoring it will become much smaller. The number
-of lines of code is decreased. Does it mean you are less effective?
-Definitely not, but the LoC metric says so, to a non-programmer.
-A project manager, for example, may decide that since the size
-of the code base stayed the same over the last month, the team is not working.&lt;/p&gt;
-
-&lt;p&gt;HoC doesn&amp;#39;t have this counter-intuitive effect. Instead, HoC grows together with your
-every commit. The more you work on the code base, the bigger the HoC. It doesn&amp;#39;t
-matter how big or small the absolute size of the your product. What matters is
-how much effort you put into it. That&amp;#39;s why HoC is very intuitive and may be
-used as a measurement of software development progress.&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/gnuplot/2014/11/hoc-vs-loc.svg' style='width:700px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Look at this 18-month graph; it shows both metrics together. I used the
-same Java code base of &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;,
-a &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;DevOps assistant&lt;/a&gt;.
-The code base experienced a major refactoring a few months ago, as you
-see on the graph. I think it is obvious which metric on this graph tells us more about
-the efforts being invested into the product.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-is-objective&quot;&gt;It Is Objective&lt;/h2&gt;
-
-&lt;p&gt;For HoC it doesn&amp;#39;t matter how big the absolute size of the code base,
-but only how big your relative contribution to it.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say, you have 300K lines of code and 95% of them were copy-pasted from some
-third-party libraries (by the way, it is a very common and terrible practice &amp;mdash;
-to keep third-party code inside your own repository). The amount of lines
-of code will be big, but the actual custom code part will be relatively small. Thus,
-the LoC metric will be misleading &amp;mdash; it will always show 300K with
-small increments or decrements around it. Everybody will have a feeling that the
-team is working with 300K lines code base.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, HoC will always take into account the part of code that
-is actually being modified. The value of HoC will be objectively
-correlated with the actual effort of programmers working with the code base.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-exposes-complexity-of-lines&quot;&gt;It Exposes Complexity of Lines&lt;/h2&gt;
-
-&lt;p&gt;LoC is usually critized for its neutrality towards code complexity.
-An auto-generated ORM class or a complex sorting algorithm may have the same
-size in terms of lines of code, but the first takes seconds to write, while
-the second may take weeks or months. That&amp;#39;s why lines of code is usually
-considered a false metric.&lt;/p&gt;
-
-&lt;p&gt;Hits-of-Code takes complexity into account, because the longer you work
-with that sorting algorithm the more modifications you make to its
-lines. Well, this statement is true if you use Git regularly and commit
-your changes frequently &amp;mdash; that is how you tell Git about your work progress.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Finally, look at &lt;a href=&quot;http://www.teamed.io/portfolio.html&quot;&gt;this list of open projects&lt;/a&gt;
-completed by our team over the
-last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
-It is interesting to see how relatively small projects have very big
-(over a million) HoC numbers. This immediately reminds me how much
-time we invested into it and how old they are.&lt;/p&gt;
-
-&lt;p&gt;I used the HoC metric in this analysis: &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How much do you pay per line of code?&lt;/a&gt;.
-That post compares a traditional project that paid $3.98 per HoC and
-an open source one, managed by Teamed.io, that paid &amp;cent;13.&lt;/p&gt;
-
-&lt;p&gt;My conclusion is that this Hits-of-Code metric can be used as a tool of
-progress tracking in a software development project. Moreover, it
-can be used for estimations of team size, project budget, development
-schedule and so forth. Obviously, LoC can&amp;#39;t be the only metric, but in
-combination with others it may greatly help in estimating, planning
-and tracking.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/11/14/hits-of-code.html</guid>
-      <dc:date>2014-11-14T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
