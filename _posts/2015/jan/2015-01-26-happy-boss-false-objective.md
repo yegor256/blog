@@ -83,7 +83,7 @@ always acts in the best interest of the project, not of himself or
 anyone else personally.
 
 I believe a professional team player does two things:
-obeys and resists.
+**obeys and resists**.
 
 First, you have to understand that the boss is here in order
 to help you organize your time, your tasks, your communications,
