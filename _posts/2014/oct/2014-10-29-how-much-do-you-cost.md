@@ -14,7 +14,7 @@ keywords:
   - software developer hourly rate
 ---
 
-{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
+{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Teamed.io](http://www.teamed.io) remotely.

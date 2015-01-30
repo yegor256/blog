@@ -57,7 +57,7 @@ where he would change it, and what he would do instead. Then, you pay him
 and he leaves. You may never see him again, but his conclusions and suggestions
 help you _check the reality_ of your code and evaluate how your team is really doing.
 
-{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
+{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
 We, at [teamed.io](http://www.teamed.io), do independent reviews
 with every project of ours, and this is a list of principles we use:

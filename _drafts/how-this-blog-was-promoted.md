@@ -83,3 +83,15 @@ Techgig.com: 3%
 Hacker news: 2%
 Stackoverflow: 2%
 Feedly: 2%
+
+29 Jan 2015:
+Direct 25%
+Reddit 21%
+Google search 19%
+Theserverside.com 7%
+Dzone 7%
+Twitter 2%
+Linkedin 2%
+Stackoverflow 2%
+Hacker news 1%
+
