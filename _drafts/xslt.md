@@ -14,7 +14,7 @@ keywords:
   - java xslt code example
 ---
 
-[XSL tranformation]()
+[XSL tranformations](http://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism of converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -63,7 +63,7 @@ we have to fetch that `xml` column from the necessary DynamoDB record and covert
 it to a plain English text.
 
 Here is how we're doing that with the help of [jcabi-xml](http://xml.jcabi.com) and its
-class [`XSLDocument`](...).
+class [`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
 
 {% highlight java %}
 final String xml = // comes from DynamoDB
@@ -74,7 +74,7 @@ final String text = xsl.applyTo(xml);
 {% endhighlight %}
 
 That's it. Let's see what is there, in that `status.xsl` file
-(it is just a skeleton of it, full version is [here](...)):
+(it is just a skeleton of it, full version is [here](https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl)):
 
 {% highlight xml %}
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
@@ -92,7 +92,7 @@ That's it. Let's see what is there, in that `status.xsl` file
 {% endhighlight %}
 
 It's a good practice to create XSL documents only once per application
-run. We have a static utility method [`XSLDocument.make()`](...) for this:
+run. We have a static utility method [`XSLDocument.make()`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
 
 {% highlight java %}
 final class Foo {
