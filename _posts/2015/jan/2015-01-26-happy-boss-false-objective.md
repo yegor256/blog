@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making Your Boss Happy Is a False Objective
+title: "Making Your Boss Happy Is a False Objective"
 date: 2015-01-26
 tags: mgmt
 description:
