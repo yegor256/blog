@@ -19,6 +19,7 @@ exclude_from_search: true
 scripts:
   - /js/send.js
   - /js/subscribe.js
+  - /js/about.js
 ---
 
 I'm Yegor Bugayenko, a programmer and an architect, passionate
@@ -103,10 +104,3 @@ Some of my articles are also published at (in alphabetic order):
     class="about-badge"/></a>
 
 <script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
-<script type="text/javascript">
-$(
-  function() {
-    twttr.conversion.trackPid('l4p91');
-  }
-);
-</script>
