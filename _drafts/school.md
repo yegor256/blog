@@ -13,7 +13,8 @@ keywords:
   - education at work
 ---
 
-...
+In [teamed.io](http://www.teamed.io) we work in distributed teams and
+keep all communications [in writing]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
 <!--more-->
 
