@@ -1,4 +1,4 @@
-/*globals $:false, window:false, document:false, URL:false */
+/*globals $:false, twttr:false */
 $(
   function() {
     'use strict';
