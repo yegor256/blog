@@ -4,13 +4,15 @@ title: "Four No's of a Serious Code Reviewer"
 date: 2015-01-10
 tags: mgmt agile
 description:
-  ...
+  It's very important to do regular code reviews in every
+  software team, but it's not so easy to do them right; there
+  are a few typical pitfalls.
 keywords:
-  - code reviews
-  - code review technique
-  - code review principles
-  - how to do code review
-  - code review procedure
+  - code review
+  - code review tools
+  - code review checklist
+  - code review process
+  - code review best practices
 ---
 
 [Code reviews](http://en.wikipedia.org/wiki/Code_review)
