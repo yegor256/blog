@@ -10,12 +10,134 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 26 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>XSL Transformation in Java: An Easy Way</title>
+      <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL tranformation&lt;/a&gt;
+(XSLT) is a powerful mechanism for converting one
+XML document into another. However, in Java, XML manipulations
+are rather verbose and complex. Even for a simple XSL transformation,
+you have to write a few dozen lines of code &amp;mdash; and maybe even more
+than that if proper exception handling and logging is needed.
+&lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; is
+a small open source library that makes life much easier by enabling
+XML parsing and XPath traversing with
+&lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;a few simple methods&lt;/a&gt;. Let&amp;#39;s
+see how this library helps in XSL transformations.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First, take a look at a practical example &amp;mdash; &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; &amp;mdash;
+a hosted DevOps assistant that
+&lt;a href=&quot;/&quot;&gt;automates&lt;/a&gt;
+release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &amp;quot;talk&amp;quot;) 
+in a DynamoDB record. There are multiple situations to handle
+in each talk; that&amp;#39;s why using multiple columns of a record is not
+really feasible. Instead, we&amp;#39;re keeping only a few parameters of each talk
+in record columns (like ID and name) and putting all the rest in a single
+XML column.&lt;/p&gt;
+
+&lt;p&gt;This is approximately how our DynamoDB table looks:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+----+---------------+--------------------------------------+
+| id | name          | xml                                  |
++----+---------------+--------------------------------------+
+| 12 | jcabi-xml#54  | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
+|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
+|    |               |   &amp;lt;request id=&amp;quot;e5f4b3&amp;quot;&amp;gt;...&amp;lt;/request&amp;gt; |
+|    |               | &amp;lt;/talk&amp;gt;                              |
++----+---------------+--------------------------------------+
+| 13 | jcabi-email#2 | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
+|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
+|    |               |   &amp;lt;daemon id=&amp;quot;f787fe&amp;quot;&amp;gt;...&amp;lt;/daemon&amp;gt;   |
+|    |               | &amp;lt;/talk&amp;gt;                              |
++----+---------------+--------------------------------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once a user posts &lt;code&gt;@rultor status&lt;/code&gt; into a Github ticket, Rultor
+has to answer with a full status report about the current talk. In order
+to create such a text answer (a regular user would not appreciate an XML response),
+we have to fetch that &lt;code&gt;xml&lt;/code&gt; column from the necessary DynamoDB record and convert
+it to plain English text.&lt;/p&gt;
+
+&lt;p&gt;Here is how we&amp;#39;re doing that with the help of &lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; and its
+class, &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html&quot;&gt;&lt;code&gt;XSLDocument&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// comes from DynamoDB&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;status.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;applyTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That&amp;#39;s it. Now let&amp;#39;s see what&amp;#39;s there in that &lt;code&gt;status.xsl&lt;/code&gt; file
+(this is just a skeleton of it; the full version is &lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:xsl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:output&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/talk&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:text&amp;gt;&lt;/span&gt;Hi, here is your status report:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:text&amp;gt;&lt;/span&gt;
+    ...
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:copy&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:apply-templates&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;select=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:copy&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It is good practice to create XSL documents only once per application
+run. We have a static utility method &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29&quot;&gt;&lt;code&gt;XSLDocument.make()&lt;/code&gt;&lt;/a&gt; for this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STYLESHEET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;STYLESHEET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pay attention to the fact we&amp;#39;re using XSLT 2.0. Built-in Java implementation of XSLT
+doesn&amp;#39;t support version 2.0, and in order to make it work, we&amp;#39;re using
+these two Maven Saxon dependencies:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;classifier&amp;gt;&lt;/span&gt;xpath&lt;span class=&quot;nt&quot;&gt;&amp;lt;/classifier&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All you need to do to start using &lt;code&gt;jcabi-xml&lt;/code&gt; for XSL transformations is
+add this dependency to your &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;jcabi-xml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you have any problems or suggestions, don&amp;#39;t hesitate to submit an issue
+to the Github &lt;a href=&quot;https://github.com/jcabi/jcabi-xml/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
+      <dc:date>2015-02-02T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Making Your Boss Happy Is a False Objective</title>
       <link>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
@@ -2481,425 +2603,6 @@ as a ticket reporter, is to draw that line &amp;mdash; clearly and explicitly.&l
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</guid>
       <dc:date>2014-11-24T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Seven Virtues of a Good Object</title>
-      <link>http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html</link>
-      <description>&lt;p&gt;Martin Fowler &lt;a href=&quot;http://martinfowler.com/bliki/InversionOfControl.html&quot;&gt;says&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A library is essentially a set of functions that you can call,
-these days usually organized into classes.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Functions organized into classes? With all due respect, this is wrong. And it
-is a very common misconception of a class in object-oriented programming. Classes
-are not organizers of functions. And objects are not data structures.&lt;/p&gt;
-
-&lt;p&gt;So what is a &amp;quot;proper&amp;quot; object? Which one is not a proper one?
-What is the difference? Even though it is a very polemic subject, it is very important.
-Unless we understand what an object is, how can we write object-oriented software?
-Well, thanks to Java, Ruby, and others, we can. But how good will it be?
-Unfortunately, this is not an exact science, and there are many opinions.
-Here is my list of qualities of a good object.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;class-vs.-object&quot;&gt;Class vs. Object&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/good-object-1.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Before we start talking about objects, let&amp;#39;s define what a &lt;em&gt;class&lt;/em&gt; is. It
-is a place where objects are being born (a.k.a. &lt;em&gt;instantiated&lt;/em&gt;). The main responsibility
-of a class is to &lt;em&gt;construct&lt;/em&gt; new objects on demand and &lt;em&gt;destruct&lt;/em&gt; them when
-they are not used anymore. A class knows how its children should look
-and how they should behave. In other words, it knows what &lt;em&gt;contracts&lt;/em&gt; they should obey.&lt;/p&gt;
-
-&lt;p&gt;Sometimes I hear classes being called &amp;quot;object templates&amp;quot;
-(for example, &lt;a href=&quot;https://en.wikipedia.org/wiki/Class_%28computer_programming%29&quot;&gt;Wikipedia says so&lt;/a&gt;).
-This definition is not correct because it places classes into a passive position. This definition
-assumes that someone will get a template and build an object by using it.
-This may be true, technically speaking, but conceptually it&amp;#39;s wrong. Nobody else
-should be involved &amp;mdash; there are only a class and its children. An
-object asks a class to create another object, and the class constructs it; that&amp;#39;s it.
-Ruby expresses this concept much better than Java or C++:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;photo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;photo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The object &lt;code&gt;photo&lt;/code&gt; is constructed by the class &lt;code&gt;File&lt;/code&gt; (&lt;code&gt;new&lt;/code&gt; is an entry point to the class).
-Once constructed, the object is acting on its own. It shouldn&amp;#39;t know who constructed it
-and how many more brothers and sisters it has in the class. Yes, I mean
-that &lt;a href=&quot;https://en.wikipedia.org/wiki/Reflection_%28computer_programming%29&quot;&gt;reflection&lt;/a&gt;
-is a terrible idea, but I&amp;#39;ll write more about it in one of the next posts :)
-Now, let&amp;#39;s talk about objects and their best and worst sides.&lt;/p&gt;
-
-&lt;h2 id=&quot;1.-he-exists-in-real-life&quot;&gt;1. He Exists in Real Life&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/good-object-2.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, an object is a &lt;strong&gt;living organism&lt;/strong&gt;. Moreover, an object
-should be &lt;a href=&quot;https://en.wikipedia.org/wiki/Anthropomorphism&quot;&gt;anthropomorphized&lt;/a&gt;, i.e.
-treated like a human being (or a pet, if you like them more). By this
-I basically mean that an object is not a &lt;em&gt;data structure&lt;/em&gt; or a collection
-of functions. Instead, it is an independent entity with its own life cycle,
-its own behavior, and its own habits.&lt;/p&gt;
-
-&lt;p&gt;An employee, a department, an HTTP request, a table in MySQL,
-a line in a file, or a file itself are proper objects &amp;mdash; because they exist in
-real life, even when our software is turned off. To be more precise, an object is a
-&lt;em&gt;representative&lt;/em&gt; of a real-life creature. It is a &lt;em&gt;proxy&lt;/em&gt; of that
-real-life creature in front of all other objects. Without
-such a creature, there is &amp;mdash; obviously &amp;mdash; no object.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;photo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;photo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;png&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;photo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In this example, I&amp;#39;m asking &lt;code&gt;File&lt;/code&gt; to construct a new object &lt;code&gt;photo&lt;/code&gt;, which will
-be a representative of a real file on disk. You may say that a file
-is also something virtual and exists only when the computer is turned on.
-I would agree and refine the definition of &amp;quot;real life&amp;quot; as follows: It is
-everything that exists aside from the scope of the program the object
-lives in. The disk file is outside the scope of our program; that&amp;#39;s why
-it is perfectly correct to create its representative inside the program.&lt;/p&gt;
-
-&lt;p&gt;A controller, a parser, a filter, a validator, a service locator,
-a singleton, or a factory are &lt;strong&gt;not&lt;/strong&gt; good objects
-(yes, most GoF patterns are anti-patterns!).
-They don&amp;#39;t exist apart from your software, in real life. They
-are invented just to tie other objects together. They are artificial
-and fake creatures. They don&amp;#39;t represent anyone. Seriously, an XML parser
-&amp;mdash; who does it represent? Nobody.&lt;/p&gt;
-
-&lt;p&gt;Some of them may become good if they change their names;
-others can never excuse their existence. For example, that XML parser can be
-renamed to &amp;quot;parseable XML&amp;quot; and start to represent an XML document
-that exists outside of our scope.&lt;/p&gt;
-
-&lt;p&gt;Always ask yourself, &amp;quot;What is
-the real-life entity behind my object?&amp;quot; If you can&amp;#39;t find an answer,
-start thinking about refactoring.&lt;/p&gt;
-
-&lt;h2 id=&quot;2.-he-works-by-contracts&quot;&gt;2. He Works by Contracts&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/good-object-3.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;A good object always works by contracts. He expects to be hired not
-because of his personal merits but because he obeys the contracts. On the
-other hand, when we hire an object, we shouldn&amp;#39;t discriminate and expect some specific
-object from a specific class to do the work for us. We should expect &lt;em&gt;any&lt;/em&gt;
-object to do what our contract says. As long as the object does what
-we need, we should not be interested in his class of origin, his sex, or his religion.&lt;/p&gt;
-
-&lt;p&gt;For example, I need to show a photo on the screen.
-I want that photo to be read from a file in PNG format. I&amp;#39;m
-contracting an object from class &lt;code&gt;DataFile&lt;/code&gt; and asking him to give me
-the binary content of that image.&lt;/p&gt;
-
-&lt;p&gt;But wait, do I care where exactly the content will come from &amp;mdash; the file on disk, or
-an HTTP request, or maybe a document in Dropbox? Actually, I don&amp;#39;t. All I care about
-is that some object gives me a byte array with PNG content. So my contract
-would look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Binary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, any object from any class (not just &lt;code&gt;DataFile&lt;/code&gt;) can work for me.
-All he has to do, in order to be eligible, is to obey the contract
-&amp;mdash; by implementing the interface &lt;code&gt;Binary&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The rule here is simple: every public method in a good object should
-implement his counterpart from an interface. If your object has
-public methods that are not inherited from any interface, he is badly designed.&lt;/p&gt;
-
-&lt;p&gt;There are two practical reasons for this. First, an object working
-without a contract is impossible to mock in a unit test. Second,
-a contractless object is impossible to extend via
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decoration&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;3.-he-is-unique&quot;&gt;3. He Is Unique&lt;/h2&gt;
-
-&lt;p&gt;A good object should always encapsulate something in order
-to be unique. If there is nothing to encapsulate, an object may
-have identical clones, which I believe is bad. Here is an example
-of a bad object, which may have clones:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HTTPStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.google.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpURLConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResponseCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I can create a few instances of class &lt;code&gt;HTTPStatus&lt;/code&gt;, and all of them will be
-equal to each other:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HTTPStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HTTPStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Obviously utility classes, which have only static methods,
-can&amp;#39;t instantiate good objects. More generally, utility classes
-don&amp;#39;t have any of the merits mentioned in this article and can&amp;#39;t
-even be called &amp;quot;classes&amp;quot;. They are simply terrible abusers of an object paradigm
-and exist in modern object-oriented languages only because their
-inventors enabled static methods.&lt;/p&gt;
-
-&lt;h2 id=&quot;4.-he-is-immutable&quot;&gt;4. He Is Immutable&lt;/h2&gt;
-
-&lt;p&gt;A good object should never change his encapsulated state.
-Remember, an object is a representative of a real-life entity, and this
-entity should stay the same through the entire life of the object. In other
-words, an object should never betray those whom he represents. He should
-never change owners. :)&lt;/p&gt;
-
-&lt;p&gt;Be aware that immutability doesn&amp;#39;t mean that all methods always return the same values.
-Instead, a good immutable object is very dynamic.
-However, he never changes his internal state. For example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HTTPStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HTTPStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpURLConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResponseCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Even though the method &lt;code&gt;read()&lt;/code&gt; may return different values, the
-object is immutable. He points to a certain web page and will
-never point anywhere else. He will never change his encapsulated state, and he will
-never betray the URL he represents.&lt;/p&gt;
-
-&lt;p&gt;Why is immutability a virtue? This article explains in detail:
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;Objects Should Be Immutable&lt;/a&gt;.
-In a nutshell, immutable objects are better because:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Immutable objects are simpler to construct, test, and use.&lt;/li&gt;
-&lt;li&gt;Truly immutable objects are always thread-safe.&lt;/li&gt;
-&lt;li&gt;They help avoid temporal coupling.&lt;/li&gt;
-&lt;li&gt;Their usage is side-effect free (no defensive copies).&lt;/li&gt;
-&lt;li&gt;They always have failure atomicity.&lt;/li&gt;
-&lt;li&gt;They are much easier to cache.&lt;/li&gt;
-&lt;li&gt;They prevent &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL references&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Of course, a good object doesn&amp;#39;t have
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters&lt;/a&gt;, which
-may change his state and force him to betray the URL. In other words,
-introducing a &lt;code&gt;setURL()&lt;/code&gt; method would be a terrible mistake in class &lt;code&gt;HTTPStatus&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Besides all that, immutable objects will force you to make
-more cohesive, solid, and understandable designs, as this article
-explains: &lt;a href=&quot;/2014/11/07/how-immutability-helps.html&quot;&gt;How Immutability Helps&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;5.-his-class-doesn&amp;#39;t-have-anything-static&quot;&gt;5. His Class Doesn&amp;#39;t Have Anything Static&lt;/h2&gt;
-
-&lt;p&gt;A static method implements a behavior of a class, not an object. Let&amp;#39;s say
-we have class &lt;code&gt;File&lt;/code&gt;, and his children have method &lt;code&gt;size()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Measurable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// calculate the size of the file and return&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;So far, so good; the method &lt;code&gt;size()&lt;/code&gt; is there because of the contract &lt;code&gt;Measurable&lt;/code&gt;,
-and every object of class &lt;code&gt;File&lt;/code&gt; will be able to measure his size. A terrible
-mistake would be to design this class with a static method instead
-(this design is also known as
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;a utility class&lt;/a&gt;
-and is very popular in Java, Ruby, and almost every OOP language):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// TERRIBLE DESIGN, DON&amp;#39;T USE!&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// calculate the size of the file and return&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This design runs completely against the object-oriented paradigm. Why?
-Because static methods turn object-oriented programming into &amp;quot;class-oriented&amp;quot; programming.
-This method, &lt;code&gt;size()&lt;/code&gt;, exposes the behavior of the class, not of his objects. What&amp;#39;s
-wrong with this, you may ask? Why can&amp;#39;t we have both objects and classes
-as first-class citizens in our code? Why can&amp;#39;t both of them have methods and properties?&lt;/p&gt;
-
-&lt;p&gt;The problem is that with class-oriented programming,
-decomposition doesn&amp;#39;t work anymore. We can&amp;#39;t break down a complex problem
-into parts, because only a single instance of a class exists in the entire
-program. The power of OOP is that it allows us to use objects as an instrument
-for scope decomposition. When I instantiate an object inside a method, he
-is dedicated to my specific task. He is perfectly isolated from
-all other objects around the method. This object is a &lt;em&gt;local variable&lt;/em&gt;
-in the scope of the method. A class, with his static methods, is always
-a &lt;em&gt;global variable&lt;/em&gt; no matter where I use him. Because of that, I can&amp;#39;t
-isolate my interaction with this variable from others.&lt;/p&gt;
-
-&lt;p&gt;Besides being conceptually against object-oriented principles, public static
-methods have a few practical drawbacks:&lt;/p&gt;
-
-&lt;p&gt;First, it&amp;#39;s &lt;strong&gt;impossible to mock&lt;/strong&gt; them
-(Well, you can use &lt;a href=&quot;https://code.google.com/p/powermock/&quot;&gt;PowerMock&lt;/a&gt;,
-but this will then be the most terrible decision
-you could make in a Java project ... I made it once, a few years ago).&lt;/p&gt;
-
-&lt;p&gt;Second, they are &lt;strong&gt;not thread-safe&lt;/strong&gt; by definition, because they always
-work with static variables, which are accessible from all threads. You can
-make them thread-safe, but this will always require explicit
-synchronization.&lt;/p&gt;
-
-&lt;p&gt;Every time you see a public static method, start rewriting immediately. I don&amp;#39;t
-even want to mention how terrible static (or global) variables are. I think
-it is just obvious.&lt;/p&gt;
-
-&lt;h2 id=&quot;6.-his-name-is-not-a-job-title&quot;&gt;6. His Name Is Not a Job Title&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/good-object-4.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;The name of an object should tell us what this object &lt;strong&gt;is&lt;/strong&gt;, not what
-it &lt;strong&gt;does&lt;/strong&gt;, just like we name objects in real life: book instead of
-page aggregator, cup instead of water holder, T-shirt instead of body dresser.
-There are exceptions, of course, like printer or computer, but
-they were invented just recently and by those who didn&amp;#39;t read this article. :)&lt;/p&gt;
-
-&lt;p&gt;For example, these names tell us who their owners are:
-an apple, a file, a series of HTTP requests, a socket, an XML document, a list of users, a regular
-expression, an integer, a PostgreSQL table, or Jeffrey Lebowski. A properly named object is always
-possible to draw as a small picture. Even a regular expression can be drawn.&lt;/p&gt;
-
-&lt;p&gt;In the opposite, here is an example of names that tell us what their owners do:
-a file reader, a text parser, a URL validator, an XML printer,
-a service locator, a singleton, a script runner, or a Java programmer. Can you draw
-any of them? No, you can&amp;#39;t. These names are not suitable for good objects.
-They are terrible names that lead to terrible design.&lt;/p&gt;
-
-&lt;p&gt;In general, avoid names that end with &amp;quot;-er&amp;quot; &amp;mdash; most of them are bad.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;What is the alternative of a &lt;code&gt;FileReader&lt;/code&gt;?&amp;quot; I hear you asking. What would
-be a better name? Let&amp;#39;s see. We already have &lt;code&gt;File&lt;/code&gt;, which is a representative
-of a real-world file on disk. This representative is not powerful enough for us,
-because he doesn&amp;#39;t know how to read the content of the file. We want to create
-a more powerful one that will have that ability. What would we call him?
-Remember, the name should say what he is, not what he does. What is he? He
-is a file that has data; not just a file, like &lt;code&gt;File&lt;/code&gt;, but a more sophisticated
-one, with data. So how about &lt;code&gt;FileWithData&lt;/code&gt; or simply &lt;code&gt;DataFile&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;The same logic should be applicable to all other names.
-Always think about &lt;strong&gt;what it is&lt;/strong&gt; rather than what it does. Give your
-objects real, meaningful names instead of job titles.&lt;/p&gt;
-
-&lt;h2 id=&quot;7.-his-class-is-either-final-or-abstract&quot;&gt;7. His Class Is Either Final or Abstract&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/11/good-object-5.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;A good object comes from either a final or abstract class. A &lt;code&gt;final&lt;/code&gt; class is one that
-can&amp;#39;t be extended via inheritance. An &lt;code&gt;abstract&lt;/code&gt; class is one that
-can&amp;#39;t have children. Simply put, a class should either say, &amp;quot;You can never break
-me; I&amp;#39;m a black box for you&amp;quot; or &amp;quot;I&amp;#39;m broken already; fix me first and then use&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;There is nothing in between. A final class is a black box that you can&amp;#39;t modify
-by any means. He works as he works, and you either use him or throw him away. You can&amp;#39;t
-create another class that will inherit his properties. This is not allowed
-because of that &lt;code&gt;final&lt;/code&gt; modifier. The only way to extend such a final class
-is through decoration of his children. Let&amp;#39;s say I have the class &lt;code&gt;HTTPStatus&lt;/code&gt; (see
-above), and I don&amp;#39;t like him. Well, I like him, but he&amp;#39;s not powerful enough
-for me. I want him to throw an exception if HTTP status is over 400. I want
-his method, &lt;code&gt;read()&lt;/code&gt;, to do more that it does now. A traditional way would be
-to extend the class and overwrite his method:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OnlyValidStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HTTPStatus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnlyValidStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;unsuccessful HTTP code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Why is this wrong? It is very wrong because we risk breaking
-the logic of the entire parent class by overriding one of his methods. Remember,
-once we override the method &lt;code&gt;read()&lt;/code&gt; in the child class, all methods from the
-parent class start to use his new version. We&amp;#39;re literally injecting
-a new &amp;quot;piece of implementation&amp;quot; right into the class. Philosophically
-speaking, this is an offense.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, to extend a final class, you have to treat him like a black box
-and decorate him with your own implementation (a.k.a.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;Decorator Pattern&lt;/a&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OnlyValidStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnlyValidStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;unsuccessful HTTP code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Make sure that this class is implementing the same interface
-as the original one: &lt;code&gt;Status&lt;/code&gt;. The instance of &lt;code&gt;HTTPStatus&lt;/code&gt; will
-be passed into him through the constructor and encapsulated. Then every
-call will be intercepted and implemented in a different way, if necessary.
-In this design, we treat the original object as a black box and never
-touch his internal logic.&lt;/p&gt;
-
-&lt;p&gt;If you don&amp;#39;t use that &lt;code&gt;final&lt;/code&gt; keyword, anyone (including yourself) will
-be able to extend the class and ... offend him :( So a class without &lt;code&gt;final&lt;/code&gt;
-is a bad design.&lt;/p&gt;
-
-&lt;p&gt;An abstract class is the exact oposite case &amp;mdash; he tells us that
-he is incomplete and we can&amp;#39;t use him &amp;quot;as is&amp;quot;. We have to inject
-our custom implementation logic into him, but only into the places he allows
-us to touch. These places are explicitly marked as &lt;code&gt;abstract&lt;/code&gt; methods.
-For example, our &lt;code&gt;HTTPStatus&lt;/code&gt; may look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ValidatedHTTPStatus&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RuntimException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;unsuccessful HTTP code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;As you see, the class doesn&amp;#39;t know how exactly to validate the HTTP
-code, and he expects us to inject that logic through inheritance and through
-overloading the method &lt;code&gt;isValid()&lt;/code&gt;. We&amp;#39;re not going to offend him with
-this inheritance, since he defended all other methods with &lt;code&gt;final&lt;/code&gt; (pay
-attention to the modifiers of his methods). Thus, the class is ready
-for our offense and is perfectly guarded against it.&lt;/p&gt;
-
-&lt;p&gt;To summarize, your class should either be &lt;code&gt;final&lt;/code&gt; or &lt;code&gt;abstract&lt;/code&gt; &amp;mdash;
-nothing in between.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 20 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html</guid>
-      <dc:date>2014-11-20T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
