@@ -21,7 +21,7 @@
       <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
       <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL tranformation&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -38,7 +38,7 @@ see how this library helps in XSL transformations.&lt;/p&gt;
 &lt;p&gt;First, take a look at a practical example &amp;mdash; &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; &amp;mdash;
 a hosted DevOps assistant that
 &lt;a href=&quot;/&quot;&gt;automates&lt;/a&gt;
-release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &amp;quot;talk&amp;quot;) 
+release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &amp;quot;talk&amp;quot;)
 in a DynamoDB record. There are multiple situations to handle
 in each talk; that&amp;#39;s why using multiple columns of a record is not
 really feasible. Instead, we&amp;#39;re keeping only a few parameters of each talk
