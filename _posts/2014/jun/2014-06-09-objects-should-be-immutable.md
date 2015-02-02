@@ -72,6 +72,8 @@ If no object methods can modify its state, no matter how many
 of them and how often are being called parallel &mdash; they
 will work in their own memory space in stack.
 
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=PHMGYYT46MJV2JLO %}
+
 Goetz et al. explained the advantages of immutable objects
 in more details in their very famous book
 [Java Concurrency in Practice](http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=OHVW5XBUDRTKVT46)
@@ -273,6 +275,8 @@ left in a broken state because its state is modified only in
 its constructor. The constructor will either fail, rejecting
 object instantiation, or succeed, making a valid solid object,
 which never changes its encapsulated state.
+
+{% badge /images/2014/06/effective-java-second-edition.png 100 http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321356683&linkCode=as2&tag=yegor256com-20&linkId=CSSI3POG6ZJ3BJ6T %}
 
 For more on this subject, read
 [Effective Java, 2nd Edition](http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321356683&linkCode=as2&tag=yegor256com-20&linkId=CSSI3POG6ZJ3BJ6T)

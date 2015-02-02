@@ -362,6 +362,9 @@ to extend the class and overwrite his method:
 
 {% highlight java %}
 class OnlyValidStatus extends HTTPStatus {
+  public OnlyValidStatus(URL url) {
+    super(url);
+  }
   @Override
   public int read() throws IOException {
     int code = super.read();

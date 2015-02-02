@@ -21,7 +21,7 @@ In addition to being a hands-on programmer, I'm also co-founder and CTO of
 I play the role of a technical and management leader in all projects
 we work with.
 
-{% badge http://img.teamed.io/logo.svg 160 http://www.teamed.io %}
+{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until

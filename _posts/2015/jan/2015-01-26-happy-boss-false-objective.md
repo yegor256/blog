@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Making Your Boss Happy Is a False Objective
-date: 2015-01-20
+title: "Making Your Boss Happy Is a False Objective"
+date: 2015-01-26
 tags: mgmt
 description:
   It is very important to understand who you work for,
@@ -24,6 +24,8 @@ if pursued, ruins the project. A professional employee works
 for the project, not for the boss.
 
 <!--more-->
+
+{% picture /images/2015/01/the-million-dollar-hotel.png 0 The Million Dollar Hotel (2000) by Wim Wenders %}
 
 We all work on **projects** as developers, designers, programmers, managers,
 testers, you name it. The boss is also a member of the project. More
@@ -68,7 +70,7 @@ However, if Jeff wants to learn Scala and we're
 developing an iOS application, that is a problem for the boss to resolve.
 Either convince Jeff to fall in love with Swift (I doubt that's possible)
 or replace him with someone who is already in love with it. It's clear that
-a professional boss will resort to such a tragic act as firing Jeff 
+a professional boss will resort to such a tragic act as firing Jeff
 not because of his personal feelings towards Jeff but because
 they are both working toward the project objectives. Jeff and the boss
 will both understand that Jeff's need to learn Scala is not aligned
@@ -81,13 +83,13 @@ always acts in the best interest of the project, not of himself or
 anyone else personally.
 
 I believe a professional team player does two things:
-obeys and resists.
+**obeys and resists**.
 
 First, you have to understand that the boss is here in order
 to help you organize your time, your tasks, your communications,
 your plans, etc. He knows more about the project and uses that
 information to help you do your job. Your real boss is the project;
-the boss you interact with is just a hired manager who translates 
+the boss you interact with is just a hired manager who translates
 project objectives into plans, instructions, schedules, etc.
 
 This boss is your colleague who does management while you're
@@ -101,8 +103,8 @@ At the same time, he strictly follows the process and
 obeys all project rules and instructions, not because he is afraid of
 being fired but because he wants the project to succeed.
 
-Second, being a professional team player requires a constant readiness 
-to resist each and every instruction if you feel it contradicts 
+Second, being a professional team player requires a constant readiness
+to resist each and every instruction if you feel it contradicts
 the project objectives. A true professional doesn't work for a boss.
 He doesn't want to make the boss happy. He actually doesn't care whether the
 boss is happy or not. He knows that the real boss is the project and tries
