@@ -10,12 +10,76 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 02 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Feb 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
+      <link>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;Maven is a build automation tool mostly for Java projects. It&amp;#39;s a great
+tool, but it has one important drawback that has motivated the creation
+of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
+Maven gets all project build parameters from &lt;code&gt;pom.xml&lt;/code&gt;, an XML
+file that can get very long. I&amp;#39;ve seen POM files of 3,000-plus lines.
+Taking into account 1) recent DSL buzz and 2) fear of XML, it&amp;#39;s
+only logical that many people don&amp;#39;t like Maven because of its &lt;code&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
+
+&lt;p&gt;But even if you&amp;#39;re an XML fan who enjoys its strictness and elegance
+(like myself), you won&amp;#39;t like the necessity to repeat yourself in &lt;code&gt;pom.xml&lt;/code&gt;
+for every project. If you&amp;#39;re working on multiple projects, code duplication
+will be enormous. An average Java web app uses a few dozen standard Maven plugins
+and almost the same number of pretty common dependencies, like
+JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
+and configurations, which have to be specified if you want to keep
+the project stable and avoid Maven warnings. Thus, once a new version
+of a plugin is released, you have to go through all &lt;code&gt;pom.xml&lt;/code&gt; files in
+the projects you&amp;#39;re working on and update it there. You obviously understand
+what code duplication means. It&amp;#39;s a disaster. However, there is a solution.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://parent.jcabi.com&quot;&gt;jcabi-parent&lt;/a&gt; is a very simple Maven dependency
+with nothing inside it except a large &lt;code&gt;pom.xml&lt;/code&gt; with multiple pre-configured
+dependencies, profiles, and plugins. All you need to do in order to reuse them
+all in your project is define &lt;code&gt;com.jcabi:parent&lt;/code&gt; as your parent POM:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;modelVersion&amp;gt;&lt;/span&gt;4.0.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/modelVersion&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;parent&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;parent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- check the latest version at http://parent.jcabi.com --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.32.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/parent&amp;gt;&lt;/span&gt;
+  [...]
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That&amp;#39;s all you need. Now you can remove most of your custom configurations
+from &lt;code&gt;pom.xml&lt;/code&gt; and rely on defaults provided by jcabi-parent. Its
+&lt;a href=&quot;https://github.com/jcabi/jcabi-parent/blob/master/pom.xml&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt;
+is rather large and properly configured. Multiple projects depend on it, so you
+can be confident that you&amp;#39;re using the best possible configuration of
+all standard plugins.&lt;/p&gt;
+
+&lt;p&gt;Here are a few examples of &lt;code&gt;pom.xml&lt;/code&gt; from projects that are using
+jcabi-parent (you can see how compact they are):
+&lt;a href=&quot;https://github.com/yegor256/xembly/blob/master/pom.xml&quot;&gt;Xembly&lt;/a&gt;
+&lt;a href=&quot;https://github.com/yegor256/rexsl/blob/master/pom.xml&quot;&gt;ReXSL&lt;/a&gt;
+&lt;a href=&quot;https://github.com/jcabi/jcabi-http/blob/master/pom.xml&quot;&gt;jcabi-http&lt;/a&gt;
+&lt;a href=&quot;https://github.com/teamed/qulice/blob/master/pom.xml&quot;&gt;Qulice&lt;/a&gt;&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
+      <dc:date>2015-02-05T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>XSL Transformation in Java: An Easy Way</title>
       <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
@@ -2424,185 +2488,6 @@ skill, perfectly encapsulated inside their borders.&lt;/p&gt;
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html</guid>
       <dc:date>2014-12-01T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Five Principles of Bug Tracking</title>
-      <link>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</link>
-      <description>&lt;p&gt;A team working remotely requires much stronger discipline than
-a co-located crew sitting in the same office. First of all, I mean discipline of
-communications. At &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;, we have developed software
-remotely for the last five years. We manage tasks strictly through
-ticketing systems (like Github, JIRA, Trac, Basecamp, etc.) and
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;discourage&lt;/a&gt;
-any informal communications, like Skype, HipChat, emails, or phone calls.
-Every ticket for us is an isolated task with its own life cycle,
-its own participants, and its own goal. Over these years, we&amp;#39;ve learned
-a few lessons that I want to share. If you also work remotely with your
-team, you may find them useful.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/11/monty-python-argument-sketch.png' style='width:600px;' alt='Monty Python Flying Circus, TV Series (1969-1974)'/&gt;&lt;figcaption&gt;Monty Python Flying Circus, TV Series (1969-1974)&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;1.-keep-it-one-on-one&quot;&gt;1. Keep It One-on-One&lt;/h2&gt;
-
-&lt;p&gt;Each ticket (aka &amp;quot;bug&amp;quot;) is a link between two people: problem specifier and problem
-solver. If it is a bug, I&amp;#39;m reporting it &amp;mdash; you&amp;#39;re solving it. If it is
-a question, I&amp;#39;m asking for an explanation &amp;mdash; you&amp;#39;re explaining. If it
-is a task, I&amp;#39;m ordering you to do it &amp;mdash; you&amp;#39;re doing it. In any case,
-there are two main characters. No matter how many people are involved in the ticket
-resolution, only these two characters have formal roles.&lt;/p&gt;
-
-&lt;p&gt;The responsibility of the ticket reporter is to &lt;strong&gt;defend the problem&lt;/strong&gt;. When I
-report a bug, I have to insist that it exists &amp;mdash; this is my job. Others
-may tell me that I&amp;#39;m wrong and the bug is not there. They may tell
-me that they can&amp;#39;t reproduce it. They may say that my description of
-a task is too vague and nobody understands it. There may be many issues
-of that kind. My job is to do the best I can in order to &lt;em&gt;keep the ticket alive&lt;/em&gt;.
-Obviously, if the bug is not reproducible, I&amp;#39;ll be forced to close
-the ticket. However, until the ticket is closed, I&amp;#39;m its guardian angel. :)&lt;/p&gt;
-
-&lt;p&gt;On the other hand, the responsibility of the ticket solver is to
-&lt;strong&gt;defend the solution&lt;/strong&gt;. When a ticket is assigned to me and I have to resolve it,
-my job is to convince the reporter that my solution is good enough. He may
-tell me that my solution is not sufficient, not the most efficient, or
-incomplete. My job is to insist that I&amp;#39;m right and he is wrong. Well, of course,
-in a reasonable way. And in order to create a solution that will be
-accepted as sufficient enough, I have to understand the problem first, investigate
-all possible options, and propose the most elegant implementation. But all this
-is secondary. The first thing I will be focused on is how to convince
-the reporter. I will always remember that my primary goal is to &lt;em&gt;close the ticket&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;My point here is that no matter how many people are involved in the
-ticket discussion, always remember what is happening there &amp;mdash; one
-person is selling his solution to another person. Everybody else around
-them is help or distraction (see below).&lt;/p&gt;
-
-&lt;h2 id=&quot;2.-close-it!&quot;&gt;2. Close It!&lt;/h2&gt;
-
-&lt;p&gt;Remember that a ticket is not a chat. You&amp;#39;re not there to talk.
-You&amp;#39;re there to &lt;em&gt;close&lt;/em&gt;. When the ticket is assigned to you,
-focus on closing it as soon as possible.&lt;/p&gt;
-
-&lt;p&gt;Also, keep in mind that the sooner you close the ticket, the better job
-you will do for the project. Long-living tickets are a management nightmare.
-It is difficult to track them and control them. It&amp;#39;s difficult to understand
-what&amp;#39;s going on. Have you seen those two-year-old tickets in open source projects
-that have hundreds of comments and no deliverables? It is a mistake
-by their project managers and ticket participants. Each ticket should be
-short and focused &amp;mdash; 1) a problem, 2) a refinement
-question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
-This is an ideal scenario.&lt;/p&gt;
-
-&lt;p&gt;As soon as you realize that your ticket is turning into a long discussion,
-try to close it even faster. How can I close it if the reporter doesn&amp;#39;t
-like my solution? Find a temporary solution that will satisfy the reporter
-and allow you to close the ticket. Use &amp;quot;TODO&amp;quot; in your code or dirty
-workarounds &amp;mdash; they are all better than a ticket hovering for a long time.&lt;/p&gt;
-
-&lt;p&gt;Once you see that the solution is provided and is sufficient enough
-to close the ticket, ask its reporter to close it. Explicitly ask for that;
-don&amp;#39;t dance arround with &amp;quot;looks like this solution may be accepted, if you don&amp;#39;t mind&amp;quot;.
-Be explicit in your intention to close the ticket and move on. Try this:
-&amp;quot;@jeff, please close the ticket if you don&amp;#39;t have any further questions.&amp;quot;&lt;/p&gt;
-
-&lt;h2 id=&quot;3.-don&amp;#39;t-close-it!&quot;&gt;3. Don&amp;#39;t Close It!&lt;/h2&gt;
-
-&lt;p&gt;Every time you raise a bug and create a new ticket, you consume project
-resources. Every bug report means money spent on the project: 1) money for your time
-spent finding the problem and reporting it; 2) for the time of the project manager
-who is working with the ticket and finding who will fix it; 3) for the time
-of the ticket solver, who is trying to understand your report and provide
-a solution; and also 4) for the time of everybody else who will participate
-in the discussion.&lt;/p&gt;
-
-&lt;p&gt;If you close the ticket without a problem being properly solved,
-you put this money into the trash bin. Once the ticket is started, there
-is no way back. We can&amp;#39;t just say, &amp;quot;Nah, ignore it; it&amp;#39;s not important anymore.&amp;quot;
-Your ticket already consumed project time and budget resources, and in order to turn
-them into something useful, you have to make sure that &lt;em&gt;some&lt;/em&gt;
-solution is delivered.&lt;/p&gt;
-
-&lt;p&gt;It can be a temporary solution. It can be a single line change in the
-project documentation. It can be a TODO marker in the code saying that
-&amp;quot;we are aware of the problem but won&amp;#39;t fix it because we&amp;#39;re lazy&amp;quot;. Anything
-would work, but not nothing.&lt;/p&gt;
-
-&lt;p&gt;Look at it from a different perspective. When you started that ticket, you had
-something in mind. Something was not right with the product. That&amp;#39;s why you
-reported a bug. If you close the ticket without anyone even touching that place
-of code, someone else will have the same concern in a few days or a few years.
-And then the project will have to pay again for a similar ticket or discussion
-of the same problem. Even if you&amp;#39;re convinced that the issue you found in
-the code is not really an issue, ask a ticket resolver to document it right
-in the source code in order to prevent such confusion from happening again in the future.&lt;/p&gt;
-
-&lt;h2 id=&quot;4.-avoid-noise-&amp;mdash;-address-your-comments&quot;&gt;4. Avoid Noise &amp;mdash; Address Your Comments&lt;/h2&gt;
-
-&lt;p&gt;Every time you post a message to the ticket, address it to someone. Otherwise,
-if you post just because you want to express your opinion, your
-comments become communication noise. Remember, a ticket is a conversation
-between two people &amp;mdash; one of them reported an issue and the other one is
-trying to fix it. Comments like, &amp;quot;How about we try another approach&amp;quot;
-or &amp;quot;I remember I had a similar issue some time ago&amp;quot; are very annoying
-and distracting. Let&amp;#39;s be honest, nobody really needs or cares about &amp;quot;opinions&amp;quot;.
-All we need in a ticket is a solution(s).&lt;/p&gt;
-
-&lt;p&gt;If you think the ticket should be closed because the introduced solution
-is good enough, address your comment to the ticket reporter. And start
-it with &amp;quot;@jeff, I think the solution you&amp;#39;ve got already is good enough, because ...&amp;quot;
-This way, you will help the assignee to close the ticket and move on.&lt;/p&gt;
-
-&lt;p&gt;If you think the solution is wrong, address your comment to the assignee
-of the ticket, starting with &amp;quot;@jeff, I believe your solution is not good enough
-because ...&amp;quot; This way, you will help the ticket reporter keep the ticket
-open until a proper solution comes up.&lt;/p&gt;
-
-&lt;p&gt;Again, don&amp;#39;t pollute the air with generic opinions. Instead, be very specific
-and take sides &amp;mdash; you either like the solution and want the ticket to
-be closed, or you don&amp;#39;t like it and want the ticket to stay open. Everything
-in between is just making the situation more complex and isn&amp;#39;t helping the
-project at all.&lt;/p&gt;
-
-&lt;h2 id=&quot;5.-report-when-it-is-broken&quot;&gt;5. Report When It Is Broken&lt;/h2&gt;
-
-&lt;p&gt;I think it is obvious, but I will reiterate: Every bug has
-to be reproducible. Every time you report a bug, you should explain
-how exactly the product is broken. Yes, it is your job to prove that the
-software doesn&amp;#39;t work as intended, or is not documented properly, or
-doesn&amp;#39;t satisfy the requirements, etc.&lt;/p&gt;
-
-&lt;p&gt;Every bug report should follow the same simple formula: &amp;quot;This is what we &lt;em&gt;have&lt;/em&gt;,
-this is what we &lt;em&gt;should have&lt;/em&gt; instead, so fix it&amp;quot;. Every ticket, be it a bug,
-a task, a question, or a suggestion, should be formatted in this way. By
-submitting it, you&amp;#39;re asking the project to move from point A to point B. Something
-is not right at point A, and it will be much better for all of us to be
-at that point B. So it&amp;#39;s obvious that you have to explain where these points
-A and B are. It is highly desirable if you can explain how to get there &amp;mdash;
-how to reproduce a problem and how to fix it.&lt;/p&gt;
-
-&lt;p&gt;Even when you have a question, you should also follow that format. If you
-have a question, it means the project documentation is not sufficient
-enough for you to find an answer there. This is what is broken. You should
-ask for a fix. So instead of reporting, &amp;quot;How should I use class X?&amp;quot;, say
-something like, &amp;quot;The current documentation is not complete; it doesn&amp;#39;t explain
-how I should use class X. Please fix.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;If you can&amp;#39;t explain how to get there, say so in the ticket: &amp;quot;I see that
-this class doesn&amp;#39;t work as it should, but I don&amp;#39;t know how to reproduce
-the problem and how to fix it.&amp;quot; This will give everybody a clear message
-that you are aware that your bug report is not perfect. The first step
-for its resolver will be to refine the problem and find a way to reproduce it.
-If such a replica can&amp;#39;t be found, obviously your bug will be forced into closing.&lt;/p&gt;
-
-&lt;p&gt;Let me reiterate again: Every ticket is dragging the project from point A,
-where something is not right, to point B, where it is fixed. Your job,
-as a ticket reporter, is to draw that line &amp;mdash; clearly and explicitly.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html</guid>
-      <dc:date>2014-11-24T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
