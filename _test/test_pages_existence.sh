@@ -15,7 +15,6 @@ p/2/index.html
 js/post.js
 images/yegor-bugayenko.png
 gnuplot/2014/11/hoc-vs-loc.svg
-css/fontcustom.woff
 css/layout.css
 about-me.html
 sitemap.xml
