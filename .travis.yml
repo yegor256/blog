@@ -6,6 +6,7 @@ install:
 - travis_retry sudo apt-get update -y
 - travis_retry sudo apt-get install -y graphviz
 - travis_retry sudo apt-get install -y gnuplot
+- travis_retry sudo apt-get install -y s3cmd
 - wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
 - sudo dpkg -i plantuml_7707-1_all.deb
 - rm -rf plantuml_7707-1_all.deb
