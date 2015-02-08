@@ -35,9 +35,10 @@ script:
 - mv _temp/icons/_icons.scss css
 - sed -i -e s/font-url\(data:[^\)]+\),//g css/_icons.scss
 - sed -i -e 's/(?:font-)?url\((?:"|'\'')([^"'\'']+)(?:"|'\'')\)/http:\/\/img.teamed.io\/yegor256\/url('\''\1'\'')/g' css/_icons.scss
-- s3cmd --no-progress put _temp/icons/icons.eot --config=s3cfg s3://img.teamed.io/yegor256/icons.eot
-- s3cmd --no-progress put _temp/icons/icons.woff --config=s3cfg s3://img.teamed.io/yegor256/icons.woff
-- s3cmd --no-progress put _temp/icons/icons.ttf --config=s3cfg s3://img.teamed.io/yegor256/icons.ttf
+- s3cmd --acl-public --mime-type=application/vnd.ms-fontobject --no-progress put _temp/icons/icons.eot --config=s3cfg s3://img.teamed.io/yegor256/icons.eot
+- s3cmd --acl-public --mime-type=application/x-font-woff --no-progress put _temp/icons/icons.woff --config=s3cfg s3://img.teamed.io/yegor256/icons.woff
+- s3cmd --acl-public --mime-type=application/x-font-ttf --no-progress put _temp/icons/icons.ttf --config=s3cfg s3://img.teamed.io/yegor256/icons.ttf
+- s3cmd --acl-public --mime-type=image/svg+xml --no-progress put _temp/icons/icons.svg --config=s3cfg s3://img.teamed.io/yegor256/icons.svg
 - _test/test_casperjs.sh
 - jekyll build
 #- _test/ping_links.sh
