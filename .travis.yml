@@ -31,7 +31,7 @@ before_install:
 script:
 - set -e
 - fontcustom compile _glyphs --output=_temp/icons/ --font-name=icons --templates=css --no-hash --force --autowidth
-- mv _temp/icons/_icons.css css/icons.css
+- mv _temp/icons/icons.css css/icons.css
 - sed -i -e s/font-url\(data:.*\),//g css/icons.css
 - sed -i -e 's/.\/icons/\/\/img.teamed.io\/yegor256\/icons/g' css/icons.css
 - s3cmd --acl-public --mime-type=application/vnd.ms-fontobject --no-progress put _temp/icons/icons.eot --config=s3cfg s3://img.teamed.io/yegor256/icons.eot

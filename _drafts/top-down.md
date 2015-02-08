@@ -31,7 +31,7 @@ product in two increments &mdash; alpha and beta versions. I promised him
 to release alpha version on Saturday and beta version on Sunday. He is
 going to pay me $100 after the first release and the rest after the second release.
 
-I'll write it in C.
+I'll write in C and he will pay in cash.
 
 ## Bottom Up, Bad Practice
 
