@@ -5,6 +5,7 @@ description:
   I'm writing mostly about Java, OOP, DevOps, and
   open source projects I'm working with in Teamed.io,
   my software development company
+permalink: best.html
 keywords:
   - java blog
   - java
