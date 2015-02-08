@@ -3,6 +3,7 @@ layout: post
 title: "XSL Transformation in Java: An Easy Way"
 date: 2015-02-02
 tags: xml java jcabi xslt
+categories: jcg
 description:
   XSL transformations can be accomplished in Java through a single method
   call with the help of jcabi-xml.
