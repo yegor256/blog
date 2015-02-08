@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "Write For the User not for Yourself"
+title: "Write For the User, Not for Yourself"
 date: 2015-02-20
 tags: mgmt agile
 description:
-  ...
+  Each change we make to our software has to give some value
+  to our users and customers; our technical objectives should
+  come next.
 keywords:
   - breaking down tasks
   - tasks breaking down
-  - object relational mapping tutorials
-  - orm is an anti-pattern
-  - orm is antipattern
+  - incremental delivery
+  - iterative and incremental
+  - iterative programming
 ---
 
 First, no matter what is the methodology, we all write software for our
