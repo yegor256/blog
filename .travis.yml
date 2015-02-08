@@ -25,10 +25,19 @@ before_install:
 - set -e
 - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv
   -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv
+  -in s3cfg.enc -out s3cfg -d
 - mv id_rsa ~/.ssh
 - chmod 600 ~/.ssh/id_rsa
 script:
 - set -e
+- fontcustom compile _glyphs --output=_temp/icons/ --font-name=icons --templates=scss --no-hash --force --autowidth
+- mv _temp/icons/_icons.scss css
+- sed -i '' s/font-url\(data:[^\)]+\),//g css/_icons.scss
+- sed -i '' s/(?:font-)?url\((?:"|')([^"']+)(?:"|')\)/http://img.teamed.io/yegor256/url('\1')/g css/_icons.scss
+- s3cmd --no-progress put _temp/icons/icons.eot --config=s3cfg s3://img.teamed.io/yegor256/icons.eot
+- s3cmd --no-progress put _temp/icons/icons.woff --config=s3cfg s3://img.teamed.io/yegor256/icons.woff
+- s3cmd --no-progress put _temp/icons/icons.ttf --config=s3cfg s3://img.teamed.io/yegor256/icons.ttf
 - _test/test_casperjs.sh
 - jekyll build
 #- _test/ping_links.sh

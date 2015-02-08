@@ -4,7 +4,9 @@ title: "It's Not a School!"
 date: 2015-01-10
 tags: mgmt agile
 description:
-  ...
+  A project is not a school and it shouldn't pay for our education, however
+  we want and need to learn while working in a project; here is a simple
+  advice on how to align our goals and project objectives.
 keywords:
   - working and learning
   - working and learning at the same time
