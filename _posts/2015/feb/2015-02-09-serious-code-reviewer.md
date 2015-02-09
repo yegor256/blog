@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Four Nos of a Serious Code Reviewer"
+title: "Four NOs of a Serious Code Reviewer"
 date: 2015-02-09
 tags: mgmt agile
 description: |
