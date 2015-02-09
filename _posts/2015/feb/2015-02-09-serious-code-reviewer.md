@@ -3,7 +3,7 @@ layout: post
 title: "Four Nos of a Serious Code Reviewer"
 date: 2015-02-09
 tags: mgmt agile
-description:
+description: |
   It's very important to conduct regular code reviews within every
   software team, but it's not so easy to do them right; here
   are a few typical pitfalls.
