@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Four Nos of a Serious Code Reviewer"
-date: 2015-01-10
+date: 2015-02-09
 tags: mgmt agile
 description:
   It's very important to conduct regular code reviews within every
@@ -31,10 +31,12 @@ boost team motivation.
 However, it's not so simple to do them right. I would even say it's
 very easy and comfortable to do them wrong. Most code reviews
 and reviewers I've seen make similar mistakes. That's why I decided
-to summarize the four basic principles of a good reviewer as I see them. 
+to summarize the four basic principles of a good reviewer as I see them.
 Hopefully you find them helpful.
 
 <!--more-->
+
+{% picture /images/2015/02/kim-jong-un-doing-code-review.png 0 Kim Jong-un with colleagues (2014) %}
 
 ## No Fear
 
@@ -42,7 +44,7 @@ There are a few different fears a serious code reviewer should renounce.
 The first and most popular is the fear of offending an author of the code.
 "_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore my mistakes_" &mdash;
 This is the kind of attitude this fear produces. Needless to say, it's
-counterproductive and degrades code quality and team morale. Here is my advice: 
+counterproductive and degrades code quality and team morale. Here is my advice:
 be direct, honest, and straight-forward. If you don't like the code, you don't like it.
 You shouldn't care how your opinion will be taken by the author of the code.
 
@@ -109,7 +111,7 @@ should a professional code reviewer do in this case?
 
 The worst thing (as in any conflict resolution) is a compromise. This is what
 ruins quality faster than bad code. A compromise
-is a conflict resolution technique for which both parties agree not to get 
+is a conflict resolution technique for which both parties agree not to get
 what they wanted just for the sake of ceasing the conflict. In other words,
 "_Let's make peace just to stop fighting_" It's the worst approach ever.
 
