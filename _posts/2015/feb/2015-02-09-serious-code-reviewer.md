@@ -4,8 +4,8 @@ title: "Four Nos of a Serious Code Reviewer"
 date: 2015-02-09
 tags: mgmt agile
 description: |
-  It's very important to conduct regular code reviews within every
-  software team, but it's not so easy to do them right; here
+  It is very important to conduct regular code reviews within every
+  software team, but it is not so easy to do them right; here
   are a few typical pitfalls.
 keywords:
   - code review
@@ -176,7 +176,7 @@ code is and how stubborn your opponent is, you must remain professional. To be h
 I find this very difficult sometimes. At [teamed.io](http://www.teamed.io),
 we're working in distributed teams and hire a few new people every week. Some
 of them, despite our [screening criteria]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
-appear to be rather <span class="strike">stupid</strike> difficult to deal with.
+appear to be rather <span class="strike">stupid</span> difficult to deal with.
 
 I encountered a funny situation about a year ago when a new guy was supposed to
 create a small (20 to 30 lines of code) new feature in an existing Java library. He sent me a pull
