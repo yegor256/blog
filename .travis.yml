@@ -6,6 +6,7 @@ install:
 - travis_retry sudo apt-get update -y
 - travis_retry sudo apt-get install -y graphviz
 - travis_retry sudo apt-get install -y gnuplot
+- travis_retry sudo apt-get install -y s3cmd
 - wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
 - sudo dpkg -i plantuml_7707-1_all.deb
 - rm -rf plantuml_7707-1_all.deb
@@ -23,12 +24,20 @@ install:
 - travis_retry npm install --global cssshrink
 before_install:
 - set -e
-- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv
-  -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
+- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
 - mv id_rsa ~/.ssh
 - chmod 600 ~/.ssh/id_rsa
 script:
 - set -e
+- fontcustom compile _glyphs --output=_temp/icons/ --font-name=icons --templates=css --no-hash --force --autowidth
+- sed -i -e s/font-url\(data:.*\),//g _temp/icons/icons.css
+- sed -i -e 's/.\/icons/\/\/img.teamed.io\/yegor256\/icons/g' _temp/icons/icons.css
+- s3cmd --acl-public --mime-type=application/vnd.ms-fontobject --no-progress put _temp/icons/icons.eot --config=s3cfg s3://img.teamed.io/yegor256/icons.eot
+- s3cmd --acl-public --mime-type=application/x-font-woff --no-progress put _temp/icons/icons.woff --config=s3cfg s3://img.teamed.io/yegor256/icons.woff
+- s3cmd --acl-public --mime-type=application/x-font-ttf --no-progress put _temp/icons/icons.ttf --config=s3cfg s3://img.teamed.io/yegor256/icons.ttf
+- s3cmd --acl-public --mime-type=image/svg+xml --no-progress put _temp/icons/icons.svg --config=s3cfg s3://img.teamed.io/yegor256/icons.svg
+- s3cmd --acl-public --mime-type=text/css --no-progress put _temp/icons/icons.css --config=s3cfg s3://img.teamed.io/yegor256/icons.css
 - _test/test_casperjs.sh
 - jekyll build
 #- _test/ping_links.sh

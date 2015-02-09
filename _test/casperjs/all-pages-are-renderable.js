@@ -7,8 +7,7 @@
   '/index.html',
   '/css/layout.css',
   '/robots.txt',
-  '/js/global.js',
-  '/css/fontcustom.svg'
+  '/js/global.js'
 ].forEach(
   function (page) {
     casper.test.begin(

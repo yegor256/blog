@@ -36,7 +36,9 @@ sass:
 
 # see https://github.com/stereobooster/jekyll-press
 jekyll-press:
-  exclude: ['/rss.xml', '/rss-jcg.xml']
+  exclude:
+    - /rss.xml
+    - /rss-jcg.xml
 
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index

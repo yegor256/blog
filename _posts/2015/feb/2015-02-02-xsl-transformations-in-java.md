@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "XSL Transformation in Java: An Easy Way"
-date: 2015-02-10
+date: 2015-02-02
 tags: xml java jcabi xslt
+categories: jcg
 description:
   XSL transformations can be accomplished in Java through a single method
   call with the help of jcabi-xml.
@@ -16,7 +17,7 @@ keywords:
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
-[XSL tranformation](http://www.w3.org/TR/xslt20/)
+[XSL transformation](http://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -33,7 +34,7 @@ see how this library helps in XSL transformations.
 First, take a look at a practical example &mdash; [rultor.com](http://www.rultor.com) &mdash;
 a hosted DevOps assistant that
 [automates]({% pst 2014/jul/2014-07-24-rultor-automated-merging.md %})
-release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. "talk") 
+release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. "talk")
 in a DynamoDB record. There are multiple situations to handle
 in each talk; that's why using multiple columns of a record is not
 really feasible. Instead, we're keeping only a few parameters of each talk

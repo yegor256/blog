@@ -3,6 +3,7 @@ layout: post
 title: "Making Your Boss Happy Is a False Objective"
 date: 2015-01-26
 tags: mgmt
+categories: jcg
 description:
   It is very important to understand who you work for,
   the boss/customer who pays you or the project, and the difference between them.
