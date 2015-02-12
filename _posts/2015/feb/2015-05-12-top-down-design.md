@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Write For the User, Not for Yourself"
-date: 2015-02-20
+title: "Code For the User, Not for Yourself"
+date: 2015-02-12
 tags: mgmt agile
 description:
   Each change we make to our software has to give some value
@@ -25,6 +25,8 @@ we decompose a big task into smaller pieces should be user targeted and that's
 why &mdash; always **top down**. Let's see what I mean, in a practical example.
 
 <!--more-->
+
+{% picture /images/2015/02/delicatessen.png 0 Delicatessen (1991) by Jean-Pierre Jeunet %}
 
 Say, I'm contracted by a friend of mine to create a word counting command line
 tool, very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He
