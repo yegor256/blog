@@ -4,9 +4,9 @@ title: "Code For the User, Not for Yourself"
 date: 2015-02-12
 tags: mgmt agile
 description:
-  Each change we make to our software has to give some value
+  Each change we make to our software has to provide some value
   to our users and customers; our technical objectives should
-  come next.
+  take a back seat.
 keywords:
   - breaking down tasks
   - tasks breaking down
@@ -15,29 +15,29 @@ keywords:
   - iterative programming
 ---
 
-First, no matter what is the methodology, we all write software for our
-users (a.k.a. customers, project sponsors, end-users, or clients). Second,
-no matter what is the methodology, we write incrementally, releasing
-features and bug fixes one by one. Maybe I'll say something absolutely obvious here,
+First, no matter what the methodology is, we all write software for our
+users (a.k.a. customers, project sponsors, end users, or clients). Second,
+no matter what the methodology is, we write incrementally, releasing
+features and bug fixes one by one. Maybe I'm saying something absolutely obvious here,
 but it's important to remember that each new version should first of all satisfy
-the needs of the user, not of us, programmers. In other words, the way
-we decompose a big task into smaller pieces should be user targeted and that's
-why &mdash; always **top down**. Let's see what I mean, in a practical example.
+the needs of the user, not of us programmers. In other words, the way
+we decompose a big task into smaller pieces should be user-targeted, and that's
+why you always work **top down**. Let's see what I mean through a practical example.
 
 <!--more-->
 
 {% picture /images/2015/02/delicatessen.png 0 Delicatessen (1991) by Jean-Pierre Jeunet %}
 
-Say, I'm contracted by a friend of mine to create a word counting command line
-tool, very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He
-promised to pay me $200 for this work and I promised him to deliver the
-product in two increments &mdash; alpha and beta version. I promised him
-to release alpha version on Saturday and beta version on Sunday. He is
+Say I'm contracted by a friend of mine to create a word-counting command line
+tool very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He
+promised to pay me $200 for this work, and I promised him I'd deliver the
+product in two increments &mdash; an alpha and beta version. I promised him
+I'd release the alpha version on Saturday and the beta version on Sunday. He is
 going to pay me $100 after the first release and the rest after the second release.
 
-I'll write in C and he will pay in cash.
+I'll write in C, and he will pay in cash.
 
-The tool is very primitive, took me a few minutes to write. Look at it:
+The tool is very primitive, and it only took me a few minutes to write. Take a look at it:
 
 {% highlight c %}
 #include <stdio.h>
@@ -70,7 +70,7 @@ wc: wc.c
   gcc -o wc wc.c
 test: wc
   echo '' | ./wc | grep '0'
-  echo 'hello, world! how are you?' | ./wc | grep '5'
+  echo 'Hello, world! How are you?' | ./wc | grep '5'
 {% endhighlight %}
 
 Now I run `make` from a command line and get this output:
@@ -79,35 +79,35 @@ Now I run `make` from a command line and get this output:
 $ make
 echo '' | ./wc | grep '0'
 0
-echo 'hello, world! how are you?' | ./wc | grep '5'
+echo 'Hello, world! How are you?' | ./wc | grep '5'
 5
 {% endhighlight %}
 
 All clean!
 
 I'm ready to get my $200. Wait, the deal was to deliver two
-versions and get cash in two installments. Let's get a little back and
-think &mdash; how we can break this small tool into two parts.
+versions and get cash in two installments. Let's back up a little and
+think &mdash; how can we break this small tool into two parts?
 
-On the first thought &mdash; let's release the tool itself first and
-build automation and testing next. Is it a good idea? Can we
-deliver any software without covering it first with a test? How can I be
-sure that it works if I don't ship tests together with it? What my friend
-will think about me releasing anything without tests? This will be
+On first thought, let's release the tool itself first and
+build automation and testing next. Is that a good idea? Can we
+deliver any software without running it first with a test? How can I be
+sure that it works if I don't ship tests together with it? What will my friend
+think about me releasing anything without tests? This would be
 a total embarassment.
 
-OK, let's release `Makefile` first and `wc.c` next? But what will my
-friend do with a couple of tests and no product in hands? This first
-release will be absolutely pointless and I won't get my $100.
+Okay, let's release `Makefile` first and `wc.c` next. But what will my
+friend do with a couple of tests and no product in hand? This first
+release will be absolutely pointless, and I won't get my $100.
 
 Now we're getting to the point of this article. What I'm trying to say
-is that every new increment must add some value to the product, as it
-is percived by the customer, not by us programmers. The `Makefile` is
-definitely a valuable artifact, but it gives zero value to my friend.
-He doesn't need it. But I need it.
+is that every new increment must add some value to the product as it
+is perceived by the customer, not by us programmers. The `Makefile` is
+definitely a valuable artifact, but it provides no value to my friend.
+He doesn't need it, but I need it.
 
-Here is what I'm going to do. I'll release a skeleton of the tool, covered
-by the tests, but with an absolutely dummy implementation. Look at it:
+Here is what I'm going to do. I'll release a skeleton of the tool, backed
+by the tests but with an absolutely dummy implementation. Look at it:
 
 {% highlight c %}
 #include <stdio.h>
@@ -117,19 +117,19 @@ int main() {
 }
 {% endhighlight %}
 
-And I will modify the `Makefile` accordingly. I will disable the first test,
+And I will modify the `Makefile` accordingly. I will disable the first test
 to make sure the build passes.
 
-Does my tool work? Yes, it does. Does it count words? Yes, it does, for
-some inputs. Does it have a value to my friend. Obviously! He
-can run it from the command line, he can pass a file as an input. He will
-always get number "5" as a result of counting. That's a bummer, but it's
+Does my tool work? Yes, it does. Does it count words? Yes, it does for
+some inputs. Does it have value to my friend. Obviously! He
+can run it from the command line, and he can pass a file as an input. He will
+always get number "5" as a result of counting, though. That's a bummer, but it's
 an alpha version. He doesn't expect it to work perfectly.
 
-However, it works, it is covered with tests and it is properly packaged.
+However, it works, it is backed by tests, and it is properly packaged.
 
-What I just did is a top-down approach to design. First of all I created
-something that gives value to my customer. I made sure it also satisfies
+What I just did is a top-down approach to design. First of all, I created
+something that provides value to my customer. I made sure it also satisfies
 my technical objectives, like proper unit test coverage and build automation.
-But the most important goal for me was to make sure my friend is getting
-something and... paying me.
+But the most important goal for me was to make sure my friend received
+something ... and paid me.
