@@ -10,12 +10,162 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 12 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>It's Not a School!</title>
+      <link>http://www.yegor256.com/2015/02/16/it-is-not-a-school.html</link>
+      <description>&lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;, we work in distributed teams and
+keep all our communications &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;in tickets&lt;/a&gt;.
+Besides that, we &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;encourage&lt;/a&gt;
+every developer on every project to
+report bugs whenever he or she finds them. We even
+&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;pay&lt;/a&gt; for each bug found.
+Once in a while, I see bugs reported along these lines: &amp;quot;&lt;em&gt;Can someone explain
+to me how to design this module?&lt;/em&gt;&amp;quot; or even &amp;quot;&lt;em&gt;I haven&amp;#39;t used this library before;
+please help me get started&lt;/em&gt;.&amp;quot; My usual answer is, &amp;quot;&lt;em&gt;This is not a school; nobody
+is going to teach you here!&lt;/em&gt;&amp;quot; I realize this sounds
+rather harsh to most developers who are just starting to work with us, so
+here I&amp;#39;ll try to illustrate why such an attitude makes sense and is beneficial to both
+the programmers and the project.&lt;/p&gt;
+
+&lt;p&gt;Disclaimer: I&amp;#39;m talking about software &lt;strong&gt;projects&lt;/strong&gt; here, which PMBOK defines
+as &amp;quot;&lt;em&gt;temporary&lt;/em&gt; endeavors undertaken to create unique
+products, services, or results&amp;quot;. If your team is engaged in continuous
+development or maintenance of software, this concept may not be relevant.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/gi-jane.png' style='width:600px;' alt='G.I. Jane (1997) by Ridley Scott'/&gt;&lt;figcaption&gt;G.I. Jane (1997) by Ridley Scott&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;No matter how unpleasant this could be, let&amp;#39;s face the reality:
+each software project is a business, and we, the developers, are
+its &lt;strong&gt;resources&lt;/strong&gt;. Just like concrete, wood, and glass are the resources required
+to build a house, which is also a business activity. No matter how much we think
+about ourselves as a family having fun together and writing code because
+we enjoy it, each business looks at it completely differently.&lt;/p&gt;
+
+&lt;p&gt;The project needs us to produce classes, lines of code, methods, functions,
+files, and features. Then, the project can convert them into happy customers,
+which will give us something back &amp;mdash; usually cash. Finally, the project will
+share that cash among us, investors, and the government.&lt;/p&gt;
+
+&lt;p&gt;A properly planned and managed project acquires the best resources its
+budget can afford and then relies on their quality. A programmer who doesn&amp;#39;t
+have adequate skills or knowledge is an unreliable resource. Obviously,
+no project would acquire such a resource from the start. However,
+this weakness may be revealed in the middle of the project.&lt;/p&gt;
+
+&lt;p&gt;Say you&amp;#39;re building a house and you contracted a plumber to install a
+drainage system. When it&amp;#39;s time to mount the equipment, he tells you
+that he&amp;#39;s never worked with it and doesn&amp;#39;t know how to install it.
+It was a risk, and it occurred. A good project manager always has a fallback plan
+or even a few of them. Obviously, the best option would be to contract another
+plumber. The worst option would be to train the original one on the spot.&lt;/p&gt;
+
+&lt;p&gt;Wait, why is that so obvious? The plumber is a great guy. Yes, he doesn&amp;#39;t know
+how to work with this equipment, but that doesn&amp;#39;t mean we should
+fire him immediately. Let&amp;#39;s pay for his training, send him to some
+courses, buy him some books, let him experiment with the equipment for some
+time, and then he will be able to install it in our house. Great plan, isn&amp;#39;t it?
+The plumber will be happy.&lt;/p&gt;
+
+&lt;p&gt;But the project won&amp;#39;t.&lt;/p&gt;
+
+&lt;p&gt;The goal of the project is to build a house, not to train a plumber. The
+project doesn&amp;#39;t even have funds to train the bloody plumber! If we train
+and teach all our workers, we won&amp;#39;t ever build a house. We&amp;#39;re not running
+a school here. We&amp;#39;re building a house!&lt;/p&gt;
+
+&lt;p&gt;While working on a software project, a good project manager has a staffing management
+plan that describes how skills will be recruited, tested, applied, and
+discharged when necessary. Such a plan may include training, but it would be
+as small an amount as possible &amp;mdash; mostly because a plumber trained by us costs much
+more than one trained by someone else but does exactly the same, or worse, work.
+Thus, a smart project manager acquires project members who are already
+capable of performing their duties and falls back on trainings only
+in exceptional situations.&lt;/p&gt;
+
+&lt;p&gt;Now, a logical question: What should we, as programmers, do? We want to
+learn, and we don&amp;#39;t want to spend our own money on it. We don&amp;#39;t want to
+sit home for a few years learning all possible technologies before entering
+the job market as experts, ready to be hired. We want to learn on the job.
+We basically want to use project budgets for our own personal educational needs.
+Moreover, a smart programmer exits every project with some new knowledge,
+new skills, and new technologies in his or her portfolio.&lt;/p&gt;
+
+&lt;p&gt;However, if you make your projects spend their money
+on your education, that&amp;#39;s theft. And a good project manager
+should stop you, saying &amp;quot;This is not a school!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;What Is the Solution?&lt;/p&gt;
+
+&lt;p&gt;I believe that in the software business, there is only one workaround &amp;mdash; blame the
+project for your own deficiencies in education, skills, or information.
+I&amp;#39;m being absolutely serious.
+Let&amp;#39;s discuss a few practical situations.&lt;/p&gt;
+
+&lt;p&gt;Say you have a module to work with, and it has to be written in Python. You have
+no experience in Python; you&amp;#39;re a Java developer. Who is at fault here? You
+could think of it as your problem and ask your project manager to teach you, but he should tell
+you he&amp;#39;s not running a school and get rid of you. That&amp;#39;s a bad scenario for both of you. Instead, blame the
+project manager. He hired you. He put you into this situation. He planned
+all project activities, so he probably knows what he is doing. This means
+that the project documentation should be detailed enough for a Java
+developer to create that Python module. However, it is not detailed enough. So report
+this issue and wait for its resolution. Explain in your bug report that you
+honestly started to work with the module and realized that its documentation
+is not complete enough for a Java developer to understand. Ask the project manager
+to fix this. If the project decides to invest its money into the documentation, you
+have the chance to read it and learn. Thus, the project&amp;#39;s money spent on your education will
+also contribute to the project. It&amp;#39;s a win-win.&lt;/p&gt;
+
+&lt;p&gt;Here is another example: Say you have to fix a Java module and you&amp;#39;re a Java
+developer. You understand Java, but you don&amp;#39;t understand how this algorithm works.
+You could blame yourself for not reading
+&lt;a href=&quot;http://www.amazon.com/gp/product/0321751043/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321751043&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=FVM7INLX6KAHZV66&quot;&gt;Knuth&lt;/a&gt;
+in school and ask the project to train you on it. A good and strong project manager should tell you that it&amp;#39;s not a school
+and get rid of you. Again, a bad scenario for both of you. Instead,
+blame the project. The code is not self-descriptive and is difficult to
+understand. The algorithm implementation is not obvious and is poorly documented.
+Ask for better documentation. If the project invests its money into
+the documentation, you will learn the algorithm from it. The source
+code will be improved, and you will have improved your skills. Win-win.&lt;/p&gt;
+
+&lt;p&gt;One more example: Say you are tasked to implement a WebSockets back-end in
+an existing web app. You know how WebSockets work but can&amp;#39;t understand how
+to connect this new back-end to the existing persistence layer. You are rather
+new to the project and don&amp;#39;t understand what would be the right design. You
+could ask for the project to provide training to explain how the code works
+and how it can be extended with features like this one. A project manager
+should tell you that you&amp;#39;re not in school and are supposed to understand the
+software if the project is paying you a software developer salary. And he will
+be right. But it&amp;#39;s a bad scenario for both of you. Instead, blame the project
+for incomplete design documentation. Good software should properly document
+its architecture and design. Ask for the project to provide such documentation.
+If it invests its time and money into better documentation, you
+will learn from it and find all the necessary answers. Another win-win.&lt;/p&gt;
+
+&lt;p&gt;There are a few other examples in my
+&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;How to Cut Corners and Stay Cool&lt;/a&gt; post.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, I would recommend you remember that software projects are,
+first and foremost, business activities where we, the developers, are resources.
+In order to obtain something for ourselves in terms of education and training,
+we should align our goals with project objectives. Instead of asking for
+help and information, we should blame the project for its lack of
+documentation. By fixing this flaw, the project will improve its artifacts
+and, at the same time, provide valuable knowledge to us, its participants.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/16/it-is-not-a-school.html</guid>
+      <dc:date>2015-02-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Code For the User, Not for Yourself</title>
       <link>http://www.yegor256.com/2015/02/12/top-down-design.html</link>
@@ -1906,330 +2056,6 @@ representatives of it? :)&lt;/p&gt;
       <pubDate>Mon, 15 Dec 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html</guid>
       <dc:date>2014-12-15T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How an Immutable Object Can Have State and Behavior?</title>
-      <link>http://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html</link>
-      <description>&lt;p&gt;I often hear this argument against
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable objects&lt;/a&gt;:
-&amp;quot;Yes, they are useful when the state doesn&amp;#39;t change. However, in
-our case, we deal with frequently changing objects. We simply
-can&amp;#39;t afford to create a new &lt;code&gt;document&lt;/code&gt; every time we just
-need to change its &lt;code&gt;title&lt;/code&gt;.&amp;quot; Here is where I disagree: object
-title is &lt;strong&gt;not a state&lt;/strong&gt; of a document, if you need to change it frequently.
-Instead, it is a document&amp;#39;s &lt;strong&gt;behavior&lt;/strong&gt;. A &lt;code&gt;document&lt;/code&gt; can and must be immutable,
-if it is a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;good object&lt;/a&gt;,
-even when its title is changed frequently. Let me explain how.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2014/12/once-upon-a-time-in-the-west.png' style='width:600px;' alt='Once Upon a Time in the West (1968) by Sergio Leone'/&gt;&lt;figcaption&gt;Once Upon a Time in the West (1968) by Sergio Leone&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;identity,-state,-and-behavior&quot;&gt;Identity, State, and Behavior&lt;/h2&gt;
-
-&lt;p&gt;Basically, there are three elements in every object:
-identity, state, and behavior. &lt;em&gt;Identity&lt;/em&gt; is what distinguishes our &lt;code&gt;document&lt;/code&gt;
-from other objects, &lt;em&gt;state&lt;/em&gt; is what a document
-knows about itself (a.k.a. &amp;quot;encapsulated knowledge&amp;quot;), and
-&lt;em&gt;behavior&lt;/em&gt; is what a document can do for us on request.
-For example, this is a mutable document:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;doc #%d about &amp;#39;%s&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Let&amp;#39;s try to use this mutable object:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;How to grill a sandwich&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;How to grill a sandwich&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// FALSE&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s is equal to %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here, we&amp;#39;re creating two objects and then modifying their encapsulated
-states. Obviously, &lt;code&gt;first.equals(second)&lt;/code&gt; will return &lt;code&gt;false&lt;/code&gt; because
-the two objects have different identities, even though they encapsulate the
-same state.&lt;/p&gt;
-
-&lt;p&gt;Method &lt;code&gt;toString()&lt;/code&gt; exposes the document&amp;#39;s behavior &amp;mdash; the document can
-convert itself to a string.&lt;/p&gt;
-
-&lt;p&gt;In order to modify a document&amp;#39;s title, we just call its &lt;code&gt;setTitle()&lt;/code&gt;
-once again:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook pasta&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Simply put, we can reuse the object many times, modifying its
-internal state. It is fast and convenient, isn&amp;#39;t it? Fast, yes.
-Convenient, not really. Read on.&lt;/p&gt;
-
-&lt;h2 id=&quot;immutable-objects-have-no-identity&quot;&gt;Immutable Objects Have No Identity&lt;/h2&gt;
-
-&lt;p&gt;As I&amp;#39;ve &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;mentioned before&lt;/a&gt;,
-immutability is one of the virtues of a good
-object, and a very important one. A good object is immutable, and good
-software contains only immutable objects. The main difference between
-immutable and mutable objects is that
-an immutable one doesn&amp;#39;t have an identity and its state never changes.
-Here is an immutable variant of the same document:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;doc #%d about &amp;#39;%s&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This document is immutable, and its state (&lt;code&gt;id&lt;/code&gt; ad &lt;code&gt;title&lt;/code&gt;) is its identity. Let&amp;#39;s
-see how we can use this immutable class
-(by the way, I&amp;#39;m using &lt;a href=&quot;/&quot;&gt;&lt;code&gt;@Immutable&lt;/code&gt;&lt;/a&gt; annotation
-from &lt;a href=&quot;/&quot;&gt;jcabi-aspects&lt;/a&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to grill a sandwich&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to grill a sandwich&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// TRUE&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s is equal to %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We can&amp;#39;t modify a document any more. When we need to change the title,
-we have to create a new document:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;How to grill a sandwich&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;How to cook pasta&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Every time we want to modify its encapsulated state, we have to modify
-its identity too, because there is no identity. State is the identity.
-Look at the code of the &lt;code&gt;equals()&lt;/code&gt; method above &amp;mdash; it compares documents
-by their IDs and titles. Now ID+title of a document is its identity!&lt;/p&gt;
-
-&lt;h2 id=&quot;what-about-frequent-changes?&quot;&gt;What About Frequent Changes?&lt;/h2&gt;
-
-&lt;p&gt;Now I&amp;#39;m getting to the question we started with: What about performance
-and convenience? We don&amp;#39;t want to change the entire document every time we
-have to modify its title. If the document is big enough, that would be
-a huge obligation. Moreover, if an immutable object encapsulates other immutable
-objects, we have to change the entire hierarchy when modifying even a single
-string in one of them.&lt;/p&gt;
-
-&lt;p&gt;The answer is simple. A document&amp;#39;s title should not be part of its &lt;strong&gt;state&lt;/strong&gt;.
-Instead, the title should be its &lt;strong&gt;behavior&lt;/strong&gt;. For example, consider this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// read title from storage&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// save text to storage&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;doc #%d about &amp;#39;%s&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Conceptually speaking, this document is acting as a proxy of a real-life
-document that has a title stored somewhere &amp;mdash; in a file, for example. This is
-what a good object should do &amp;mdash; be a proxy of a real-life entity.
-The document exposes two features: reading the title and saving the title. Here is
-how its interface would look like:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;title()&lt;/code&gt; reads the title of the document and returns it as a &lt;code&gt;String&lt;/code&gt;,
-and &lt;code&gt;title(String)&lt;/code&gt; saves it back into the document. Imagine a real
-paper document with a title. You ask an object to read that title from
-the paper or to erase an existing one and write new text over it. This
-paper is a &amp;quot;copy&amp;quot; utilized in these methods.&lt;/p&gt;
-
-&lt;p&gt;Now we can make frequent changes to the immutable document, and the
-document stays the same. It doesn&amp;#39;t stop being immutable, since it&amp;#39;s
-state (&lt;code&gt;id&lt;/code&gt;) is not changed. It is the same document, even though we
-change its title, becuase the title is not a state of the document. It
-is something in the real world, outside of the document. The document
-is just a proxy between us and that &amp;quot;something&amp;quot;. Reading and writing
-the title are behaviors of the document, not its state.&lt;/p&gt;
-
-&lt;h2 id=&quot;mutable-memory&quot;&gt;Mutable Memory&lt;/h2&gt;
-
-&lt;p&gt;The only question we still have unanswered is what is that &amp;quot;copy&amp;quot;
-and what happens if we need to keep the title of the document in memory?&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s look at it from an &amp;quot;object thinking&amp;quot; point of view. We have a &lt;code&gt;document&lt;/code&gt;
-object, which &lt;a href=&quot;/&quot;&gt;is supposed to represent&lt;/a&gt; a real-life entity in an
-object-oriented world. If such an entity is a file, we can easily
-implement &lt;code&gt;title()&lt;/code&gt; methods. If such an entity is an Amazon S3 object,
-we also implement title reading and writing methods easily, keeping the
-object immutable. If such an entity is an HTTP page, we
-have no issues in the implementation of title reading or writing, keeping the object immutable.
-We have no issues as long as a real-world document exists and has its
-own identity. Our title reading and writing methods will communicate with that
-real-world document and extract or update its title.&lt;/p&gt;
-
-&lt;p&gt;Problems arise when such an entity doesn&amp;#39;t exist in a real world. In that
-case, we need to create a mutable object property called &lt;code&gt;title&lt;/code&gt;, read it via
-&lt;code&gt;title()&lt;/code&gt;, and modify it via &lt;code&gt;title(String)&lt;/code&gt;. But an object is immutable,
-so we can&amp;#39;t have a mutable property in it &amp;mdash; by definition! What do we do?&lt;/p&gt;
-
-&lt;p&gt;Think.&lt;/p&gt;
-
-&lt;p&gt;How could it be that our object doesn&amp;#39;t represent a real-world entity?
-Remember, the &lt;em&gt;real world&lt;/em&gt; is everything around the living environment of an object.
-Is it possible that an object doesn&amp;#39;t represent anyone and acts
-on its own? No, it&amp;#39;s not possible. Every object is a representantive of
-a real-world entity. So, who does it represent if we want to keep &lt;code&gt;title&lt;/code&gt; inside
-it and we don&amp;#39;t have any file or HTTP page behind the object?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/12/memory-stick.png' style='width:200px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;It represents &lt;em&gt;computer memory&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;The title of immutable document #50, &amp;quot;How to grill a sandwich&amp;quot;,
-is stored in the memory, taking up 23 bytes of space. The document
-should know where those bytes are stored, and it should be able to read them
-and replace them with something else. Those 23 bytes are the real-world
-entity that the object represents. The bytes have nothing to do with
-the state of the object. They are a &lt;em&gt;mutable&lt;/em&gt; real-world entity, similar
-to a file, HTTP page, or an Amazon S3 object.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, Java (and many other modern languages) do not allow direct
-access to computer memory. This is how we would design our class if such
-direct access was possible:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Immutable&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Memory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Memory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That &lt;code&gt;Memory&lt;/code&gt; class would be implemented by JDK natively, and all other
-classes would be immutable. The class &lt;code&gt;Memory&lt;/code&gt; would have direct access
-to the memory heap and would be responsible for
-&lt;a href=&quot;https://en.wikipedia.org/wiki/C_dynamic_memory_allocation&quot;&gt;malloc and free&lt;/a&gt;
-operations on the operating system level.
-Having such a class would allow us to make all Java classes immutable,
-including &lt;code&gt;StringBuffer&lt;/code&gt;, &lt;code&gt;ByteArrayOutputStream&lt;/code&gt;, etc.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;Memory&lt;/code&gt; class would explicitly emphasize the mission of an object
-in a software program, which is to be a &lt;em&gt;data animator&lt;/em&gt;. An object is not
-holding data; it is animating it. The data exists somewhere, and it is
-anemic, static, motionless, stationary, etc. The data is &lt;strong&gt;dead&lt;/strong&gt;
-while the object is &lt;strong&gt;alive&lt;/strong&gt;. The role of an object is to make a piece of data
-alive, to &lt;em&gt;animate&lt;/em&gt; it but not to become a piece of data. An object needs some
-knowledge in order to gain access to that dead piece of data. An object
-may need a database unique key, an HTTP address, a file name, or
-a memory address in order to find the data and animate it. But an
-object should never think of itself as data.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-the-practical-solution?&quot;&gt;What Is the Practical Solution?&lt;/h2&gt;
-
-&lt;p&gt;Unfortunately, we don&amp;#39;t have such a memory-representing class
-in Java, Ruby, JavaScript, Python, PHP, and many other high-level languages.
-It looks like language designers didn&amp;#39;t get the idea of
-alive objects vs. dead data, which is sad. We&amp;#39;re forced to mix
-data with object states using the same language constructs:
-object variables and properties.
-Maybe someday we&amp;#39;ll have that &lt;code&gt;Memory&lt;/code&gt; class in Java and other languages,
-but until then, we have a few options.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Use C++&lt;/strong&gt;.
-In C++ and similar low-level languages, it is possible to access memory
-directly and deal with in-memory data the same way we deal with
-in-file or in-HTTP data. In C++, we can create that &lt;code&gt;Memory&lt;/code&gt; class
-and use it exactly the way we explained above.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Use Arrays&lt;/strong&gt;.
-In Java, an array is a data structure with a unique property &amp;mdash;
-it can be modified while being declared as &lt;code&gt;final&lt;/code&gt;. You can use
-an array of bytes as a mutable data structure inside an immutable object.
-It&amp;#39;s a surrogate solution that conceptually resembles the &lt;code&gt;Memory&lt;/code&gt; class
-but is much more primitive.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Avoid In-Memory Data&lt;/strong&gt;.
-Try to avoid in-memory data as much as possible. In some domains, it is
-easy to do; for example, in web apps, file processing, I/O adapters, etc.
-However, in other domains, it is much easier said than done. For example,
-in games, data manipulation algorithms, and GUI, most of the objects animate
-in-memory data mostly because memory is the only resource they have.
-In that case, without the &lt;code&gt;Memory&lt;/code&gt; class, you end up with mutable objects :(
-There is no workaround.&lt;/p&gt;
-
-&lt;p&gt;To summarize, don&amp;#39;t forget that an object is an &lt;strong&gt;animator&lt;/strong&gt; of data. It is using
-its encapsulated knowledge in order to reach the data. No matter where
-the data is stored &amp;mdash; in a file, in HTTP, or in memory &amp;mdash; it is
-conceptually very different from an object state, even though they may
-look very similar.&lt;/p&gt;
-
-&lt;p&gt;A good object is an immutable animator of mutable data. Even though it
-is immutable and data is mutable, it is alive and data is dead
-in the scope of the object&amp;#39;s living environment.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html</guid>
-      <dc:date>2014-12-09T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
