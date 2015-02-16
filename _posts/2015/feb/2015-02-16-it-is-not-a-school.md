@@ -5,7 +5,7 @@ date: 2015-02-16
 tags: mgmt agile
 description:
   A project is not a school, and it shouldn't pay for our education; however,
-  we want and need to learn while working on a project. Here is some simple
+  we want to learn while working on a project. Here is some simple
   advice on how to align our goals and project objectives.
 keywords:
   - working and learning
