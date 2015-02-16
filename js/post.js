@@ -8,7 +8,7 @@ $(
       }
       return num;
     }
-    if ($('.buttons').css('display') != 'none') {
+    if ($('.buttons').css('display') !== 'none') {
       $('.button').click(
         function (event) {
           event.preventDefault();
