@@ -101,11 +101,13 @@ $(
 $(
   function() {
     'use strict';
-    $('<script>')
-      .attr('src', '//a.disquscdn.com/embed.js')
-      .attr('defer', 'defer')
-      .attr('async', 'async')
-      .appendTo('head');
+    if ($('.buttons').css('display') !== 'none') {
+      $('<script>')
+        .attr('src', '//a.disquscdn.com/embed.js')
+        .attr('defer', 'defer')
+        .attr('async', 'async')
+        .appendTo('head');
+    }
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
