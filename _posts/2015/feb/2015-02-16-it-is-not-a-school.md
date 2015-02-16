@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "It's Not a School!"
-date: 2015-01-10
+date: 2015-02-16
 tags: mgmt agile
 description:
   A project is not a school, and it shouldn't pay for our education; however,
@@ -35,6 +35,8 @@ products, services, or results". If your team is engaged in continuous
 development or maintenance of software, this concept may not be relevant.
 
 <!--more-->
+
+{% picture /images/2015/02/gi-jane.png 0 G.I. Jane (1997) by Ridley Scott %}
 
 No matter how unpleasant this could be, let's face the reality:
 each software project is a business, and we, the developers, are
@@ -86,7 +88,7 @@ in exceptional situations.
 
 Now, a logical question: What should we, as programmers, do? We want to
 learn, and we don't want to spend our own money on it. We don't want to
-sit home for a few years learning all possible technologies before entering 
+sit home for a few years learning all possible technologies before entering
 the job market as experts, ready to be hired. We want to learn on the job.
 We basically want to use project budgets for our own personal educational needs.
 Moreover, a smart programmer exits every project with some new knowledge,
@@ -144,7 +146,7 @@ its architecture and design. Ask for the project to provide such documentation.
 If it invests its time and money into better documentation, you
 will learn from it and find all the necessary answers. Another win-win.
 
-There are a few other examples in my 
+There are a few other examples in my
 [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}) post.
 
 In conclusion, I would recommend you remember that software projects are,
