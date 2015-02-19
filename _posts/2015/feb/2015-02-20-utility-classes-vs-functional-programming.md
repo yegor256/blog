@@ -35,6 +35,8 @@ and where this misconception is coming from.
 
 <!--more-->
 
+{% picture /images/2015/02/color-me-kubrick.png 0 Color Me Kubrick (2005) by Brian W. Cook %}
+
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:
 
@@ -117,7 +119,7 @@ Imagine you're a buyer and want to purchase a gift for your (girl|boy)friend. Th
 option is to visit a shop, pay $50, let them package that perfume for you,
 and then deliver it to the friend (and get a kiss in return). This is an **imperative** style.
 
-The second option is to visit a shop, pay $50, and get a gift card. You then 
+The second option is to visit a shop, pay $50, and get a gift card. You then
 present this card to the friend (and get a kiss in return). When he or she decides to convert it
 to perfume, he or she will visit the shop and get it. This
 is a **declarative** style.

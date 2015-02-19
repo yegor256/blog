@@ -63,8 +63,9 @@ stupid in front of the team. A weak leader does look stupid when he or she
 is trying to hide his or her mistakes.
 
 **Responsibility Is Always Personal**.
-The best demotivating word is "together", used in task descriptions. Each
-task is personal and individual. Everybody is responsible for his or her
+The best demotivating word is "together", used in task descriptions. Don't use it.
+Each task has to be personally and individually assigned, no matter what Agile Manifesto says.
+Everybody is responsible for his or her
 own success or failure. How their results will join together and lead to
 a mutual success or failure &mdash; it's your business. Will you succeed or
 fail, we will see. Once you're saying that we all have to succeed together,
@@ -75,7 +76,30 @@ a group success. You, as a manager, break down an entire project into
 parts and delegate them to your people. If you do this job properly,
 we all will succeed. But don't blame us if that parts will fall apart.
 
-**Keep
+**Don't Mention Steve Jobs**.
+Try to avoid global slogans and world domination speeches in the office,
+in front of the team. They de-motivate. If you we're doing so good, why
+our salaries are not reflecting this success? If your vision is so global,
+why it's not yet implemented in reality? Don't promise to become the next Steve Jobs.
+Instead, become the next good manager of a highly paid team solving
+interesting problems for real people. Your practical achievements, no matter
+how small and down to earth they are, will give you much more respect than
+many-hours speeches about our fantastic future.
+
+**Put Money On The Table**.
+Discuss money openly and freely, right in the office.
+
+**Don't Say a Word About Agile**.
+Even though Agile is a great attitude-changing and mind-shifting concept,
+it is absolutely un-applicable to practice. Mostly because it is too
+abstract. When you're manifesting in the office that we should value
+"working software over comprehensive documentation" &mdash; it sounds like
+you don't know what you're doing. The team doesn't need such abstract
+slogans from you. The needs specific instructions and rules, in order
+to follow them and earn results, money, and satisfaction. Agile is a set
+of abstract principles, which you should understand and digest. But then,
+after you chew them properly and digest, convert them to specific and
+very unambitious rules of work. Don't mention Agile, be agile.
 
 discuss money openly
 
@@ -84,7 +108,5 @@ celebrate personal achievements
 work in the same room
 
 define ground rules for awards and punishment (no compromises)
-
-avoid big slogans and goals
 
 
