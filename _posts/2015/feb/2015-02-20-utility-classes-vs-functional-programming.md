@@ -15,7 +15,7 @@ keywords:
   - utility classes
 ---
 
-I was recently accused of being against
+I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against
 [functional programming](http://en.wikipedia.org/wiki/Functional_programming)
 because [I call utility classes an anti-pattern]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 That's absolutely wrong! Well, I do consider them a terrible anti-pattern,
