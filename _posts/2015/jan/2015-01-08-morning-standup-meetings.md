@@ -14,6 +14,7 @@ keywords:
   - the daily scrum meeting
   - daily meeting
   - morning stand-up meeting
+  - scrum standup
 ---
 
 A stand-up meeting (or simply "stand-up") is
