@@ -28,7 +28,7 @@
 .main-font {
   font-family: $main-font;
   @media all and (max-width: $width) {
-    font-family: serif !important;
+    font-family: 'Georgia', 'Times New Roman', serif !important;
   }
 }
 .desktop-only {
