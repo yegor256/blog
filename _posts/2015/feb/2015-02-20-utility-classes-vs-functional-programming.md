@@ -15,7 +15,7 @@ keywords:
   - utility classes
 ---
 
-I was recently accused of being against
+I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against
 [functional programming](http://en.wikipedia.org/wiki/Functional_programming)
 because [I call utility classes an anti-pattern]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 That's absolutely wrong! Well, I do consider them a terrible anti-pattern,
@@ -27,13 +27,15 @@ a function can be assigned to a variable. Utility class methods
 are not functions in this sense. I'll decode these statements in a minute.
 
 In Java, there are basically two valid alternatives to these ugly utility
-classes agressively promoted by [Guava](https://code.google.com/p/guava-libraries/),
+classes aggressively promoted by [Guava](https://code.google.com/p/guava-libraries/),
 [Apache Commons](http://commons.apache.org/), and others. The first one
-is the use of traditional classes, and the second one is [Java 8 lambba](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
+is the use of traditional classes, and the second one is [Java 8 lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
 Now let's see why utility classes are not even close to functional programming
 and where this misconception is coming from.
 
 <!--more-->
+
+{% picture /images/2015/02/color-me-kubrick.png 0 Color Me Kubrick (2005) by Brian W. Cook %}
 
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:
@@ -117,7 +119,7 @@ Imagine you're a buyer and want to purchase a gift for your (girl|boy)friend. Th
 option is to visit a shop, pay $50, let them package that perfume for you,
 and then deliver it to the friend (and get a kiss in return). This is an **imperative** style.
 
-The second option is to visit a shop, pay $50, and get a gift card. You then 
+The second option is to visit a shop, pay $50, and get a gift card. You then
 present this card to the friend (and get a kiss in return). When he or she decides to convert it
 to perfume, he or she will visit the shop and get it. This
 is a **declarative** style.

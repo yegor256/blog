@@ -10,6 +10,7 @@
   padding-right: 2 * $em;
   @media all and (max-width: $width) {
     width: 100%;
+    line-height: 1.6 * $em;
     padding-left: $em;
     padding-right: $em;
   }
