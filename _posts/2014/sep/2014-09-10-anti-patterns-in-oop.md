@@ -31,7 +31,7 @@ Here they come:
 
  * Controllers, Managers, Validators
 
- * Public Static Methods
+ * [Public Static Methods]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 
 <!--more-->
 
