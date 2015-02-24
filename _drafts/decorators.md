@@ -23,7 +23,7 @@ and yet very powerful mechanism to make your code
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code _composable_. That's why the title of this
-post is composable decorators instead of the decorators we often use: imperative
+post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.
 
 <!--more-->
