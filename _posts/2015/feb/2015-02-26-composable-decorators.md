@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Composable Decorators vs. Imperative Utility Methods"
-date: 2015-02-28
+date: 2015-02-26
 tags: oop
 description:
   A decorator pattern, while being the best instrument to keep objects highly cohesive,
@@ -27,6 +27,8 @@ post is composable decorators. Unfortunately, instead of decorators, we often us
 utility methods, which make our code procedural rather than object-oriented.
 
 <!--more-->
+
+{% picture /images/2015/02/russina-matroshka.jpg 0 Матрёшка %}
 
 First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:
