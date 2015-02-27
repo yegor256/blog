@@ -17,6 +17,393 @@
       <link>http://www.yegor256.com</link>
     </image>
     <item>
+      <title>A Haircut</title>
+      <link>http://www.yegor256.com/2015/02/23/haircut.html</link>
+      <description>&lt;p&gt;I received a haircut today, and the niceness of my hairdresser led him to fill the
+appointment with courteous questions about how I wanted my hair cut, what size of clipper
+he should use, how long the sides should be, and how much should be removed
+from the front. He also offered me many types of shampoo and a cup of tea.
+All this reminded me of the work we do as programmers, and I
+decided to write a short post about it. I&amp;#39;ve already
+&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;mentioned before&lt;/a&gt;
+that trying to make a customer happy is a false objective. This hairdresser
+was a perfect illustrative example of this very mistake. By the way, in the end,
+I wasn&amp;#39;t happy, and he got no tip. How could this happen if he was so
+friendly and nice?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/the-man-who-wasnt-there.jpg' style='width:600px;' alt='The Man Who Wasn&amp;amp;apos;t There (2001) by Coen Brothers'/&gt;&lt;figcaption&gt;The Man Who Wasn't There (2001) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I&amp;#39;m not a hairdresser, and I have very little understanding of how to deal
+with hair. I came to him because I assumed he knew more about this
+business than I did. I chose him through the assistance of Yelp. I wanted &lt;em&gt;him&lt;/em&gt; to tell me
+how long the hair on the sides should be and how much should be removed on the
+top. I expected &lt;em&gt;him&lt;/em&gt; to give me his professional judgement and stand by it.&lt;/p&gt;
+
+&lt;p&gt;Instead of asking me how much I wanted removed on the sides, he should have
+told me there should be less on the sides. This is what
+a true professional would do. A true professional would give me &lt;em&gt;his&lt;/em&gt; vision
+of the haircut that best suits me and would try to convince me that
+it was the best choice.&lt;/p&gt;
+
+&lt;p&gt;A true professional would not ask me but would &lt;em&gt;tell&lt;/em&gt; me instead, because
+he would understand that my goal was not to boss him around and make him do my
+hair the way I wanted it. My goal was to get the best out
+of his professional skill.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the guy was either weak or immature. He didn&amp;#39;t argue with me
+and didn&amp;#39;t try to convince me. He tried to &lt;em&gt;please&lt;/em&gt; me. In the end, he
+lost.&lt;/p&gt;
+
+&lt;p&gt;Exactly the same thing happens when we ask our customers about
+the technologies they want us to use. I hear this question very often:
+&lt;em&gt;What language do you want us to use&lt;/em&gt; (meaning Java or Ruby or something else)?
+Or &lt;em&gt;what database should we use?&lt;/em&gt; Or &lt;em&gt;how do you want us to design this?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t do that. Don&amp;#39;t lose like that hairdresser. Don&amp;#39;t ask your clients
+what they want. Instead, &lt;em&gt;learn&lt;/em&gt; their business requirements and then
+&lt;em&gt;suggest&lt;/em&gt; the solution you think is the best for them. Then, insist and argue
+if they don&amp;#39;t agree. Convince them. Even if they fire you in the end for
+your stubbornness, it&amp;#39;s better than being that hairdresser who is doomed
+to please every single client without getting anywhere further.&lt;/p&gt;
+
+&lt;p&gt;Remember, the client is not the king; his hairs are.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/23/haircut.html</guid>
+      <dc:date>2015-02-23T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Utility Classes Have Nothing to Do With Functional Programming</title>
+      <link>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</link>
+      <description>&lt;p&gt;I was recently &lt;a href=&quot;https://twitter.com/lukaseder/status/564866432790708224&quot;&gt;accused&lt;/a&gt; of being against
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;
+because &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;I call utility classes an anti-pattern&lt;/a&gt;.
+That&amp;#39;s absolutely wrong! Well, I do consider them a terrible anti-pattern,
+but they have nothing to do with functional programming. I believe there are
+two basic reasons why. First, functional programming is declarative, while
+utility class methods are imperative. Second,
+functional programming is based on lambda calculus, where
+a function can be assigned to a variable. Utility class methods
+are not functions in this sense. I&amp;#39;ll decode these statements in a minute.&lt;/p&gt;
+
+&lt;p&gt;In Java, there are basically two valid alternatives to these ugly utility
+classes aggressively promoted by &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;,
+&lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;, and others. The first one
+is the use of traditional classes, and the second one is &lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html&quot;&gt;Java 8 lambda&lt;/a&gt;.
+Now let&amp;#39;s see why utility classes are not even close to functional programming
+and where this misconception is coming from.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/color-me-kubrick.png' style='width:600px;' alt='Color Me Kubrick (2005) by Brian W. Cook'/&gt;&lt;figcaption&gt;Color Me Kubrick (2005) by Brian W. Cook&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is a typical example of a utility class
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html&quot;&gt;&lt;code&gt;Math&lt;/code&gt;&lt;/a&gt; from Java 1.0:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Math&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// a few dozens of other methods of the same style&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is how you would use it when you want to calculate an absolute
+value of a floating point number:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.1415926d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What&amp;#39;s wrong with it? We need a function, and we get it from class &lt;code&gt;Math&lt;/code&gt;.
+The class has many useful functions inside it that can be used for many typical
+mathematical operations, like calculating maximum, minimum, sine, cosine, etc.
+It is a very popular concept; just look at any commercial or open source product.
+These utility classes are used everywhere since Java was invented (this
+&lt;code&gt;Math&lt;/code&gt; class was introduced in Java&amp;#39;s first version). Well, technically
+there is nothing wrong. The code will work. But it is not object-oriented
+programming. Instead, it is imperative and procedural. Do we care? Well,
+it&amp;#39;s up to you to decide. Let&amp;#39;s see what the difference is.&lt;/p&gt;
+
+&lt;p&gt;There are basically two different approaches: declarative and imperative.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Imperative_programming&quot;&gt;Imperative programming&lt;/a&gt;
+is focused on describing &lt;strong&gt;how&lt;/strong&gt; a program operates
+in terms of statements that change a program state. We just saw an example
+of imperative programming above. Here is another (this is pure imperative/procedural
+programming that has nothing to do with OOP):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyMath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Declarative_programming&quot;&gt;Declarative programming&lt;/a&gt;
+focuses on &lt;strong&gt;what&lt;/strong&gt; the program should accomplish without prescribing
+how to do it in terms of sequences of actions to be taken. This is how
+the same code would look in Lisp, a functional programming language:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What&amp;#39;s the catch? Just a difference in syntax? Not really.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_programming_paradigms&quot;&gt;many definitions&lt;/a&gt;
+of the difference between imperative and declarative styles, but I will try to
+give my own. There are basically three roles interacting in the scenario
+with this &lt;code&gt;f&lt;/code&gt; function/method: a &lt;em&gt;buyer&lt;/em&gt;, a &lt;em&gt;packager&lt;/em&gt; of the result,
+and a &lt;em&gt;consumer&lt;/em&gt; of the result. Let&amp;#39;s say I call this function like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;max+abs equals to &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, method &lt;code&gt;calc()&lt;/code&gt; is a buyer, method &lt;code&gt;Math.f()&lt;/code&gt; is a packager of the result,
+and method &lt;code&gt;foo()&lt;/code&gt; is a consumer. No matter which programming style is used,
+there are always these three guys participating in the process:
+the buyer, the packager, and the consumer.&lt;/p&gt;
+
+&lt;p&gt;Imagine you&amp;#39;re a buyer and want to purchase a gift for your (girl|boy)friend. The first
+option is to visit a shop, pay $50, let them package that perfume for you,
+and then deliver it to the friend (and get a kiss in return). This is an &lt;strong&gt;imperative&lt;/strong&gt; style.&lt;/p&gt;
+
+&lt;p&gt;The second option is to visit a shop, pay $50, and get a gift card. You then
+present this card to the friend (and get a kiss in return). When he or she decides to convert it
+to perfume, he or she will visit the shop and get it. This
+is a &lt;strong&gt;declarative&lt;/strong&gt; style.&lt;/p&gt;
+
+&lt;p&gt;See the difference?&lt;/p&gt;
+
+&lt;p&gt;In the first case, which is imperative, you force the packager (a beauty shop)
+to find that perfume in stock, package it, and present it to you as
+a ready-to-be-used product. In the second scenario, which is declarative,
+you&amp;#39;re just getting a promise from the shop that eventually, when it&amp;#39;s
+necessary, the staff will find the perfume in stock, package it, and provide it to
+those who need it. If your friend never visits the shop with that gift card,
+the perfume will remain in stock.&lt;/p&gt;
+
+&lt;p&gt;Moreover, your friend can use that gift card as a product itself, never
+visiting the shop. He or she may instead present it to somebody else as a gift
+or just exchange it for another card or product. The gift card itself
+becomes a product!&lt;/p&gt;
+
+&lt;p&gt;So the difference is what the consumer is getting &amp;mdash; either a
+product ready to be used (imperative) or a voucher for the product, which
+can later be converted into a real product (declarative).&lt;/p&gt;
+
+&lt;p&gt;Utility classes, like &lt;code&gt;Math&lt;/code&gt; from JDK or &lt;code&gt;StringUtils&lt;/code&gt; from Apache Commons,
+return products ready to be used immediately, while functions in Lisp
+and other functional languages return &amp;quot;vouchers&amp;quot;. For example, if you
+call the &lt;code&gt;max&lt;/code&gt; function in Lisp, the actual maximum between two numbers
+will only be calculated when you actually start using it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;X equals to &amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Until this &lt;code&gt;print&lt;/code&gt; actually starts to output characters to the
+screen, the function &lt;code&gt;max&lt;/code&gt; won&amp;#39;t be called. This &lt;code&gt;x&lt;/code&gt; is a &amp;quot;voucher&amp;quot; returned
+to you when you attempted to &amp;quot;buy&amp;quot; a maximum between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note, however, that nesting Java static functions one into another doesn&amp;#39;t
+make them declarative. The code is still imperative, because its execution
+delivers the result here and now:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyMath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&amp;quot;Okay,&amp;quot; you may say, &amp;quot;I got it, but why is declarative style better than imperative?
+What&amp;#39;s the big deal?&amp;quot; I&amp;#39;m getting to it. Let me first show the difference
+between functions in functional programming and static methods in OOP.
+As mentioned above, this is the second big difference between utility
+classes and functional programming.&lt;/p&gt;
+
+&lt;p&gt;In any functional programming language, you can do this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, later, you can call that &lt;code&gt;x&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;passing&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;argument&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Static methods in Java are not &lt;em&gt;functions&lt;/em&gt; in terms of functional programming.
+You can&amp;#39;t do anything like this with a static method. You can pass a static
+method as an argument to another method. Basically, static
+methods are procedures or, simply put, Java statements grouped under a unique
+name. The only way to access them is to call a procedure and pass all
+necessary arguments to it. The procedure will calculate something and return
+a result that is immediately ready for usage.&lt;/p&gt;
+
+&lt;p&gt;And now we&amp;#39;re getting to the final question I can hear you asking:
+&amp;quot;Okay, utility classes are not functional programming, but they look like
+functional programming, they work very fast, and they are very easy to
+use. Why not use them? Why aim for perfection when 20 years of Java history
+proves that utility classes are the main instrument of each Java developer?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Besides OOP fundamentalism, which I&amp;#39;m very often accused of, there are
+a few very practical reasons (BTW, I am an OOP fundamentalist):&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Testability&lt;/strong&gt;.
+Calls to static methods in utility classes are hard-coded dependencies that
+can never be broken for testing purposes. If your class is calling
+&lt;code&gt;FileUtils.readFile()&lt;/code&gt;, I will never be able to test it without using
+a real file on disk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;.
+Utility classes, due to their imperative nature, are much less efficient
+than their &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;declarative alternatives&lt;/a&gt;.
+They simply do all calculations right here and now, taking processor
+resources even when it&amp;#39;s not yet necessary. Instead of returning a promise
+to break down a string into chunks, &lt;code&gt;StringUtils.split()&lt;/code&gt; breaks it down
+right now. And it breaks it down into all possible chunks, even if only
+the first one is required by the &amp;quot;buyer&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Readability&lt;/strong&gt;.
+Utility classes tend to be huge (try to read the source code of &lt;code&gt;StringUtils&lt;/code&gt;
+or &lt;code&gt;FileUtils&lt;/code&gt; from Apache Commons). The entire idea of separation of concerns,
+which makes OOP so beautiful, is absent in utility classes. They just
+put all possible procedures into one huge &lt;code&gt;.java&lt;/code&gt; file, which becomes
+absolutely unmaintainable when it surpasses a dozen static methods.&lt;/p&gt;
+
+&lt;p&gt;To conclude, let me reiterate: Utility classes have nothing to do
+with functional programming. They are simply bags of static methods, which
+are imperative procedures. Try to stay as far as possible away from them and
+use solid, cohesive objects no matter how many of them you have to declare
+and how small they are.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</guid>
+      <dc:date>2015-02-20T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Code For the User, Not for Yourself</title>
+      <link>http://www.yegor256.com/2015/02/12/top-down-design.html</link>
+      <description>&lt;p&gt;First, no matter what the methodology is, we all write software for our
+users (a.k.a. customers, project sponsors, end users, or clients). Second,
+no matter what the methodology is, we write incrementally, releasing
+features and bug fixes one by one. Maybe I&amp;#39;m saying something absolutely obvious here,
+but it&amp;#39;s important to remember that each new version should first of all satisfy
+the needs of the user, not of us programmers. In other words, the way
+we decompose a big task into smaller pieces should be user-targeted, and that&amp;#39;s
+why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see what I mean through a practical example.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/delicatessen.png' style='width:600px;' alt='Delicatessen (1991) by Jean-Pierre Jeunet'/&gt;&lt;figcaption&gt;Delicatessen (1991) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Say I&amp;#39;m contracted by a friend of mine to create a word-counting command line
+tool very similar to &lt;a href=&quot;http://en.wikipedia.org/wiki/Wc_%28Unix%29&quot;&gt;wc&lt;/a&gt;. He
+promised to pay me $200 for this work, and I promised him I&amp;#39;d deliver the
+product in two increments &amp;mdash; an alpha and beta version. I promised him
+I&amp;#39;d release the alpha version on Saturday and the beta version on Sunday. He is
+going to pay me $100 after the first release and the rest after the second release.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll write in C, and he will pay in cash.&lt;/p&gt;
+
+&lt;p&gt;The tool is very primitive, and it only took me a few minutes to write. Take a look at it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;unistd.h&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;STDIN_FILENO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But let&amp;#39;s be professional and not forget about build automation and unit
+testing. Here is a simple &lt;code&gt;Makefile&lt;/code&gt; that does them both:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+  gcc -o wc wc.c
+&lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ./wc &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s1&quot;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello, world! How are you?&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ./wc &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s1&quot;&gt;&amp;#39;5&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I run &lt;code&gt;make&lt;/code&gt; from a command line and get this output:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ make
+echo &amp;#39;&amp;#39; | ./wc | grep &amp;#39;0&amp;#39;
+0
+echo &amp;#39;Hello, world! How are you?&amp;#39; | ./wc | grep &amp;#39;5&amp;#39;
+5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All clean!&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m ready to get my $200. Wait, the deal was to deliver two
+versions and get cash in two installments. Let&amp;#39;s back up a little and
+think &amp;mdash; how can we break this small tool into two parts?&lt;/p&gt;
+
+&lt;p&gt;On first thought, let&amp;#39;s release the tool itself first and
+build automation and testing next. Is that a good idea? Can we
+deliver any software without running it first with a test? How can I be
+sure that it works if I don&amp;#39;t ship tests together with it? What will my friend
+think about me releasing anything without tests? This would be
+a total embarassment.&lt;/p&gt;
+
+&lt;p&gt;Okay, let&amp;#39;s release &lt;code&gt;Makefile&lt;/code&gt; first and &lt;code&gt;wc.c&lt;/code&gt; next. But what will my
+friend do with a couple of tests and no product in hand? This first
+release will be absolutely pointless, and I won&amp;#39;t get my $100.&lt;/p&gt;
+
+&lt;p&gt;Now we&amp;#39;re getting to the point of this article. What I&amp;#39;m trying to say
+is that every new increment must add some value to the product as it
+is perceived by the customer, not by us programmers. The &lt;code&gt;Makefile&lt;/code&gt; is
+definitely a valuable artifact, but it provides no value to my friend.
+He doesn&amp;#39;t need it, but I need it.&lt;/p&gt;
+
+&lt;p&gt;Here is what I&amp;#39;m going to do. I&amp;#39;ll release a skeleton of the tool, backed
+by the tests but with an absolutely dummy implementation. Look at it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And I will modify the &lt;code&gt;Makefile&lt;/code&gt; accordingly. I will disable the first test
+to make sure the build passes.&lt;/p&gt;
+
+&lt;p&gt;Does my tool work? Yes, it does. Does it count words? Yes, it does for
+some inputs. Does it have value to my friend. Obviously! He
+can run it from the command line, and he can pass a file as an input. He will
+always get number &amp;quot;5&amp;quot; as a result of counting, though. That&amp;#39;s a bummer, but it&amp;#39;s
+an alpha version. He doesn&amp;#39;t expect it to work perfectly.&lt;/p&gt;
+
+&lt;p&gt;However, it works, it is backed by tests, and it is properly packaged.&lt;/p&gt;
+
+&lt;p&gt;What I just did is a top-down approach to design. First of all, I created
+something that provides value to my customer. I made sure it also satisfies
+my technical objectives, like proper unit test coverage and build automation.
+But the most important goal for me was to make sure my friend received
+something ... and paid me.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/02/12/top-down-design.html</guid>
+      <dc:date>2015-02-12T00:00:00+00:00</dc:date>
+    </item>
+    <item>
       <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
       <link>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
       <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
@@ -1759,648 +2146,6 @@ project spent 45 minutes, and the problem was solved.&lt;/p&gt;
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</guid>
       <dc:date>2014-10-07T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Project Lifecycle in Teamed.io</title>
-      <link>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</link>
-      <description>&lt;p&gt;In addition to being a hands-on programmer, I&amp;#39;m also co-founder and CTO of
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, a custom software development company.
-I play the role of a technical and management leader in all projects
-we work with.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.teamed.io'&gt;&lt;img src='http://img.teamed.io/logo.svg' style='width:120px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I wrote this article for those who&amp;#39;re interested in hiring me and/or
-my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to &lt;a href=&quot;mailto:hire@teamed.io&quot;&gt;work with us&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You will see below that our methods of
-software development &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;seriously differ&lt;/a&gt;
-from what many other teams are using. I personally pay a lot of attention to quality
-of code and quality of the internal processes that connect our team.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;There are four phases in every project I work with in
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Thinking&lt;/strong&gt;.
-Here we&amp;#39;re trying to understand: What is the problem that the product
-is going to solve? We&amp;#39;re also investigating the product&amp;#39;s boundaries &amp;mdash;
-who will work with the software (actors) and how will they work with it (user stories).
-Deliverables: specification.
-Duration: from 2 days up to 3 weeks.
-Participants: product owner, analyst(s), architect, project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Building&lt;/strong&gt;.
-Here the software architect is creating a &lt;a href=&quot;https://en.wikipedia.org/wiki/Proof_of_concept&quot;&gt;proof-of-concept&lt;/a&gt;
-(aka an &lt;a href=&quot;https://en.wikipedia.org/wiki/Minimum_viable_product&quot;&gt;MVP&lt;/a&gt; or prototype or a skeleton).
-It is a one-man job that is done almost without any interaction
-with anyone else. The architect builds the product according to the
-specification in a very limited time frame. The result will have
-multiple bugs and open ends, but it will implement the main user story.
-The architect also configures continuous integration and delivery pipelines.
-Deliverables: working software.
-Duration: 2-5 days.
-Participants: architect.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fixing&lt;/strong&gt;.
-At this phase we are adding all the meat to the skeleton. This phase
-takes most of the time and budget and involves many participants.
-In some projects we invite up to 50 people to work, at the same time.
-Since we treat all inconsistencies as bugs, this phase is mostly about
-finding, reporting and fixing bugs, in order to stabilize the product
-and get it ready for market launch. We increment and
-release the software multiple times a day, preferably to its user
-champions.
-Deliverables: bug fixes via pull requests.
-Duration: from weeks to months.
-Participants: programmer(s), designer(s), tester(s), code reviewer(s), architect, project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Using&lt;/strong&gt;.
-At this final phase we are launching the product to its end-users,
-and collecting their feedback (both positive and negative). Everything
-they are reporting back to us is being registered as a bug. Then,
-we categorize the bugs and fix them. This phase may take years, but
-it never involves active implementation of new features.
-Deliverables: bug fixes via pull requests.
-Duration: months.
-Participants: programmer(s), code reviewer(s), project manager.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
-usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &amp;mdash; Thinking. A mistake made during Thinking
-will cost much more than a mistake made later.&lt;/p&gt;
-
-&lt;h2 id=&quot;thinking&quot;&gt;Thinking&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-thinking.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Thinking is the first and the most important phase.&lt;/p&gt;
-
-&lt;p&gt;First, we give a name to the project and create a &lt;a href=&quot;https://github.com&quot;&gt;Github&lt;/a&gt; repository. We
-try to keep all our projects (both open source and commercial) in Github.
-Mostly because the platform is very popular, very powerful, and really cheap
-(&lt;a href=&quot;https://github.com/pricing&quot;&gt;$7/mo&lt;/a&gt; for a set of 5 private projects).
-We also keep all communication in the Github issue tracker.&lt;/p&gt;
-
-&lt;p&gt;Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
-this is done right inside the source code, but sometimes in the Github wiki. What&amp;#39;s important
-is that the document should be under version control. We will modify it
-during the course of the project, very intensively. The SRS should briefly
-identify main &amp;quot;actors&amp;quot; of the system and define the product scope.&lt;/p&gt;
-
-&lt;p&gt;Even though it is only half a page, the creation of this initial SRS document
-is the most important and the most expensive task in the entire project.
-We pay a lot of attention to this step. Usually this document is written
-by myself in a direct communication with the project sponsor. We can&amp;#39;t afford
-a mistake at this step.&lt;/p&gt;
-
-&lt;p&gt;Then, we invite a few system analysts to the project. These guys
-are responsible for turning our initial SRS into a more complete and detailed
-specification. They start by asking questions, submitting them one by one
-as Github issues. Every question is addressed to the product owner. Using
-his answers, system analysts modify the SRS document.
-This article explains how &lt;a href=&quot;http://www.requs.org&quot;&gt;Requs&lt;/a&gt; helps us in this process:
-&lt;a href=&quot;/2014/04/26/incremental-requirements-with-requs.html&quot;&gt;Incremental Requirements With Requs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;At the end of the Thinking phase we estimate the size of the project,
-in lines of code. Using lines of code, we can roughly
-&lt;a href=&quot;http://www.teamed.io/calculator.html&quot;&gt;estimate a budget&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I stay personally involved in the project during
-the entire Thinking phase.&lt;/p&gt;
-
-&lt;h2 id=&quot;building&quot;&gt;Building&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-building.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is a one-man job for an architect. Every project we work with
-has an architect who is &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;personally responsible&lt;/a&gt;
-for the quality and all
-technical decisions made there. I try to play this role
-in most projects.&lt;/p&gt;
-
-&lt;p&gt;The Building phase is rather straight forward. I have to implement the
-solution according to the SRS, in a few working days. No matter
-how big the idea and how massive the planning development, I
-still have to create (build from scratch!) the product in, say, three days.&lt;/p&gt;
-
-&lt;p&gt;Besides building the software itself, I have to configure all
-basic DevOps processes, including:
-1) automated testing and quality control,
-2) deploying and releasing pipelines,
-3) repository of artifacts,
-4) &lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;continuous integration&lt;/a&gt; service, etc.&lt;/p&gt;
-
-&lt;p&gt;The result of this phase is a working software package, deployable
-to its destination and available for testers. Technical
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality requirements&lt;/a&gt;
-are also defined at this phase.&lt;/p&gt;
-
-&lt;h2 id=&quot;fixing&quot;&gt;Fixing&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-fixing.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now it&amp;#39;s time to build a distributed team of programmers. First, we
-invite those who&amp;#39;ve worked in other projects before and have already
-have proven their quality. Very often we invite new people,
-finding them through StackOverflow, Github, oDesk, and other sources.
-An average team size of an average project is 10-20 programmers.&lt;/p&gt;
-
-&lt;p&gt;At this phase, we understand any inconsistency as a bug. If something is not clear
-in the documentation, or if something can be refactored for better
-readability, or if a function can be improved for higher performance &amp;mdash;
-it is a bug to us.
-And &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;bugs are welcome&lt;/a&gt; in our projects.
-We encourage everybody to report as many bugs as possible. This is how
-we achieve high quality.&lt;/p&gt;
-
-&lt;p&gt;That is why the phase is called Fixing, after all. We are reporting bugs and fixing
-them. Hundreds of bugs. Sometimes thousands. The product
-grows in front of our very eyes, because after every bug fix
-we re-deploy the entire product to the production platform.&lt;/p&gt;
-
-&lt;p&gt;Every bug is reported, classified, discussed, and fixed in its
-own Github ticket and its own Git branch. We never allow anyone
-to just commit to the &lt;code&gt;master&lt;/code&gt; branch &amp;mdash; all changes must pass through
-our &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality controls&lt;/a&gt;
-and be merged into &lt;code&gt;master&lt;/code&gt; by &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt;,
-our &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;merging bot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;never use any chats&lt;/a&gt;,
-Skype, emails or conferencing software. We communicate
-only through tickets and comments in Github.&lt;/p&gt;
-
-&lt;h2 id=&quot;using&quot;&gt;Using&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/lifecycle-using.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the final phase and it can take quite a long time. By now, the product is
-ready and is launched to the market. But we still receive bug reports
-and feature request from the product owner, and we still fix them through
-the same process flow as in the Fixing phase.&lt;/p&gt;
-
-&lt;p&gt;We try to keep this phase as quiet as possible, in terms of
-the amount of bugs reported and fixed. Thanks to our intensive and
-pro-active bug finding and fixing in the previous phase, we usually
-have very few problems at the Using phase.&lt;/p&gt;
-
-&lt;p&gt;And big feature requests? At this phase, we usually try to convert
-them into new projects and develop them separately, starting again
-from Thinking.&lt;/p&gt;
-
-&lt;p&gt;BTW, the illustrations you see above are made by
-&lt;a href=&quot;https://www.behance.net/lopesbarbara&quot;&gt;Bárbara Lopes&lt;/a&gt;&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
-      <dc:date>2014-10-06T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>10 Hosted Continuous Integration Services for a Private Repository</title>
-      <link>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</link>
-      <description>&lt;p&gt;Every project I&amp;#39;m working with starts with a setup of continuous
-integration pipeline. I&amp;#39;m a big fan of cloud services,
-that&amp;#39;s why I was always using travis-ci.org. A few of
-my clients questioned this choice recently, mostly because
-of the price. So I decided to make a brief analysis of the market.&lt;/p&gt;
-
-&lt;p&gt;I configured &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;,
-an open source project, in every CI service I managed to find.
-All of them are free for open source projects.
-All of them are hosted and do not require any server installation
-Here they are, in order of my personal preference (first four are
-the best and highly recommended):&lt;/p&gt;
-
-&lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style=&quot;width: 6em;&quot;/&gt;
-&lt;col style=&quot;width: 4em;&quot;/&gt;
-&lt;col style=&quot;width: 2em;&quot;/&gt;
-&lt;col style=&quot;width: 2em;&quot;/&gt;
-&lt;col style=&quot;width: 2em;&quot;/&gt;
-&lt;col style=&quot;width: 2em;&quot;/&gt;
-&lt;col style=&quot;width: 2em;&quot;/&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr style=&quot;height:6em&quot;&gt;
-  &lt;td&gt;&lt;!--name--&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;!--price--&gt;&lt;/td&gt;
-  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Linux&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
-  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Windows&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
-  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;MacOS&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
-  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Pull requests&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
-  &lt;td class=&quot;vert&quot;&gt;&lt;div&gt;&lt;span&gt;Log compress&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;travis-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$129/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyor.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;wercker.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;free!&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;shippable.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;http://www.shippable.com/pricing.html&quot;&gt;$1/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;border-top: 1px solid gray;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;codeship.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://codeship.io/pricing&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;semaphoreapp.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://semaphoreapp.com/pricing&quot;&gt;$29/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;drone.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://drone.io/pricing&quot;&gt;$25/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;magnum-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;?&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;snap-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://snap-ci.com/plans&quot;&gt;$30/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;circleci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://circleci.com/pricing&quot;&gt;$19/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://ci.solanolabs.com&quot;&gt;sonolabs.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://www.solanolabs.com/#pricing&quot;&gt;$15/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;hosted-ci.com&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://hosted-ci.com/#plans&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;ship.io&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;rht&quot;&gt;&lt;a href=&quot;https://ship.io/pricing&quot;&gt;free!&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-yes&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;&lt;i class=&quot;icon-no&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-  &lt;td class=&quot;cnt&quot;&gt;?&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;If you know any other good continuous integration services,
-&lt;a href=&quot;/about-me.html&quot;&gt;email me&lt;/a&gt;, I&amp;#39;ll review and add them to this list.
-BTW, here is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software&quot;&gt;&amp;quot;full&amp;quot; list&lt;/a&gt;
-of continuous integration software and services.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.travis-ci.org'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/travis.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;&lt;strong&gt;travis-ci.org&lt;/strong&gt;&lt;/a&gt; is
-the best platform I&amp;#39;ve seen so far. Mostly because
-it is the most popular. Perfectly integrates with
-Github and has proper documentation. One important
-downside is the price of $129 per month. &amp;quot;With this money
-you can get a dedicated EC2 instance and install Jenkins there&amp;quot; &amp;mdash;
-some of my clients say. I strongly disagree, since Jenkins will
-require a 24x7 administration, which costs way more than $129, but
-it&amp;#39;s always difficult to explain.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;&lt;strong&gt;appveyor.com&lt;/strong&gt;&lt;/a&gt; is the only one
-that runs Windows builds. Even though I&amp;#39;m working mostly with
-Java and Ruby, which are expected to be platform independent, they
-very often appear to be exactly the opposite. When your build
-succeedes on Linux, there is almost no guarantee it will pass on
-Windows or Mac. I&amp;#39;m planning to use appveyor in every project,
-in combination with some other CI service. I&amp;#39;m still testing it though...&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.wercker.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/wercker.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;&lt;strong&gt;wercker.com&lt;/strong&gt;&lt;/a&gt; is a European product
-from Amsterdam, which is still in beta and that&amp;#39;s why free
-for all projects. The platform looks very promissing. It is still
-free for private repositories and is backed up by
-&lt;a href=&quot;https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/&quot;&gt;investments&lt;/a&gt;.
-They also have an interesting concept of build &amp;quot;boxes&amp;quot;, which
-can be pre-configured similar to Docker containers.
-It works rather stable for the last few months, no complains so far.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.shippable.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/shippable.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;&lt;strong&gt;shippable.com&lt;/strong&gt;&lt;/a&gt; was easy to configure
-since it understands &lt;code&gt;.travis.yml&lt;/code&gt; out of the box.
-The user interface is easy to navigate since it doesn&amp;#39;t
-have &amp;quot;settings&amp;quot; page at all (or I didn&amp;#39;t find it). Everything is
-configured via &lt;code&gt;shippable.yml&lt;/code&gt; file in the repository. The service
-looks stable and robust, no complains so far.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.semaphoreapp.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/semaphoreapp.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;&lt;strong&gt;semaphoreapp.com&lt;/strong&gt;&lt;/a&gt; is easy to
-configure and work with. It makes an impression of a light-weight
-system, which I generally appreciate. As a downside, they
-&lt;span class=&quot;strike&quot;&gt;don&amp;#39;t have any Maven pre-installed&lt;/span&gt;
-have an old version of Maven, but this was solved easily with a short
-custom script that downloads and unpacks the latest Maven. Another downside is
-that they are not configurable through a file (like &lt;code&gt;.travis.yml&lt;/code&gt;) &amp;mdash;
-you should do everything through a UI. They also support
-&lt;a href=&quot;https://semaphoreapp.com/docs/caching-between-builds.html&quot;&gt;caching between builds&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.codeship.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/codeship.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.codeship.io&quot;&gt;&lt;strong&gt;codeship.io&lt;/strong&gt;&lt;/a&gt; works fine, but their web UI
-looks a bit out-dated. Besides that, they promise to work with pull
-requests, but I didn&amp;#39;t manage to configure them. They simply
-don&amp;#39;t notify our pull requests in Github, even though they build them.
-Maybe I&amp;#39;ll find a way, so far it&amp;#39;s not clear...&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.magnum-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/magnum.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.magnum-ci.com&quot;&gt;&lt;strong&gt;magnum-ci.com&lt;/strong&gt;&lt;/a&gt; is a very lightweight
-and young system. It doesn&amp;#39;t connect automatically to Github,
-so you should do some manual operations of adding a web hook.
-Besides that, works just fine.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.snap-ci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/snap.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;&lt;strong&gt;snap-ci.com&lt;/strong&gt;&lt;/a&gt; is a product of
-ThoughtWorks, an author of &lt;a href=&quot;http://www.go.cd/&quot;&gt;Go&lt;/a&gt;,
-an open source continuous integration server. It looks a bit more
-complicated than others, giving you an ability to define &amp;quot;stages&amp;quot;
-and combine them into pipelines. I&amp;#39;m not sure yet how these mechanisms
-may help in small and medium size projects we&amp;#39;re mostly working with,
-but they look &amp;quot;cool&amp;quot;. There is also a very unfortunate limitation of
-2Gb RAM per build &amp;mdash; some of my Java projects fail because of that.
-Besides that, they don&amp;#39;t give full access to the build server, for example
-we can&amp;#39;t modify anything in &lt;code&gt;/etc&lt;/code&gt; &amp;mdash; it is a show-stopper for us.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.drone.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/drone.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.drone.io&quot;&gt;&lt;strong&gt;drone.io&lt;/strong&gt;&lt;/a&gt; works fine, but their support
-didn&amp;#39;t reply to me when I asked for a Maven version update
-(they have an old version pre-installed). Besides
-that, their badge is not updated correctly in Github README.md &amp;mdash;
-when the build is broken, the bange stays green... very annoying.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.circleci.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/circleci.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;&lt;strong&gt;circleci.com&lt;/strong&gt;&lt;/a&gt; I still don&amp;#39;t know why my build
-fails there. Really difficult to configure and understand
-what&amp;#39;s going on. Trying to figure it out...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.zeroci.com&quot;&gt;&lt;strong&gt;zeroci.com&lt;/strong&gt;&lt;/a&gt; looks like a one-man project, which
-definitely needs usability testing. It was rather difficult to configure
-a project via its web interface. The good thing is that it&amp;#39;s free, but its
-quality is not high enough to recommend it.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.ship.io'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/ship-io.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ship.io&quot;&gt;&lt;strong&gt;ship.io&lt;/strong&gt;&lt;/a&gt; is building only mobile applications (for iOS and Android).
-Besides that, they don&amp;#39;t support Maven for Android apps, only Gradle.
-I&amp;#39;ll try to build iOS Swift app with them soon....&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.solanolabs.com&quot;&gt;&lt;strong&gt;solanolabs.com&lt;/strong&gt;&lt;/a&gt; looks rather immature and
-difficult to configure. They don&amp;#39;t even support automatic Github hook
-configuration when new repository is added. However, their sales spams me
-rather aggressively :)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.hosted-ci.com&quot;&gt;&lt;strong&gt;hosted-ci.com&lt;/strong&gt;&lt;/a&gt; is for iOS/OSX only. They don&amp;#39;t
-give anything for free, even for open source projects. I didn&amp;#39;t have a chance
-to test them yet.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cloudbees.com&quot;&gt;&lt;strong&gt;cloudbees.com&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://dploy.io/&quot;&gt;&lt;strong&gt;dploy.io&lt;/strong&gt;&lt;/a&gt; testing now...&lt;/p&gt;
-
-&lt;p&gt;BTW, if you don&amp;#39;t like the idea of keeping continuous integration
-in cloud, consider these on-premise software packages (in order or preference):
-&lt;a href=&quot;http://jenkins-ci.org/&quot;&gt;Jenkins&lt;/a&gt;,
-&lt;a href=&quot;http://www.jetbrains.com/teamcity/&quot;&gt;TeamCity&lt;/a&gt;,
-&lt;a href=&quot;http://www.thoughtworks.com/products/go-continuous-delivery&quot;&gt;Go&lt;/a&gt;,
-&lt;a href=&quot;http://stridercd.com/&quot;&gt;Strider&lt;/a&gt;,
-&lt;a href=&quot;http://buildbot.net/&quot;&gt;BuildBot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Keep in mind that no matter how good and expensive your
-continuous integration service is, it
-&lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;won&amp;#39;t help you&lt;/a&gt;
-unless you make your
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;master branch read-only&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
-      <dc:date>2014-10-05T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Built-in Fake Objects</title>
-      <link>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</link>
-      <description>&lt;p&gt;While mock objects are perfect instruments for unit testing,
-mocking through mock frameworks may turn your unit tests into
-an unmaintainable mess. Thanks to them we often hear that
-&amp;quot;mocking is bad&amp;quot; and &amp;quot;mocking is evil&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;The root cause of this complexity is that our objects
-are too big. They have many methods and these methods
-return other objects, which also have methods. When we pass
-a mock version of such an object as a parameter, we should
-make sure that all of its methods return valid objects.&lt;/p&gt;
-
-&lt;p&gt;This leads to inevitable complexity, which turns unit tests
-to &lt;a href=&quot;https://news.ycombinator.com/item?id=7353767&quot;&gt;waste&lt;/a&gt;
-almost impossible to maintain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;object-hierarchy&quot;&gt;Object Hierarchy&lt;/h2&gt;
-
-&lt;p&gt;Take the &lt;code&gt;Region&lt;/code&gt; interface from &lt;a href=&quot;http://dynamo.jcabi.com&quot;&gt;jcabi-dynamo&lt;/a&gt; as an example
-(this snippet and all others in this article are simplified, for the
-sake of brevity):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Its &lt;code&gt;table()&lt;/code&gt; method returns an instance of the &lt;code&gt;Table&lt;/code&gt; interface, which
-has its own methods:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Attributes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Interface &lt;code&gt;Frame&lt;/code&gt;, returned by the &lt;code&gt;frame()&lt;/code&gt; method, also has its
-own methods. And so on.
-In order to create a properly mocked instance of interface &lt;code&gt;Region&lt;/code&gt;,
-one would normally create a dozen other mock objects. With &lt;a href=&quot;http://www.mockito.org&quot;&gt;Mockito&lt;/a&gt;
-it will look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testMe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// many more lines here...&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(...).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;anyString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And all of this is just a scaffolding before the actual testing.&lt;/p&gt;
-
-&lt;h2 id=&quot;sample-use-case&quot;&gt;Sample Use Case&lt;/h2&gt;
-
-&lt;p&gt;Let&amp;#39;s say, you&amp;#39;re developing a project that uses jcabi-dynamo for
-managing data in DynamoDB. Your class may look similar to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dynamo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;empl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dynamo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;region&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can imagine how difficult it will be to unit test this class,
-using Mockito, for example. First, we have
-to mock the &lt;code&gt;Region&lt;/code&gt; interface. Then, we have to mock a &lt;code&gt;Table&lt;/code&gt; interface and make sure
-it is returned by the &lt;code&gt;table()&lt;/code&gt; method. Then, we have to mock a &lt;code&gt;Frame&lt;/code&gt; interface, etc.&lt;/p&gt;
-
-&lt;p&gt;The unit test will be much longer than the class itself. Besides that,
-its real purpose, which is to test the retrieval of an employee&amp;#39;s salary, will not
-be obvious to the reader.&lt;/p&gt;
-
-&lt;p&gt;Moreover, when we need to test a similar method of a similar class,
-we will need to restart this mocking from scratch. Again, multiple lines of code,
-which will look very similar to what we have already written.&lt;/p&gt;
-
-&lt;h2 id=&quot;fake-classes&quot;&gt;Fake Classes&lt;/h2&gt;
-
-&lt;p&gt;The solution is to create fake classes and ship them
-together with real classes. This is what &lt;a href=&quot;http://dynamo.jcabi.com&quot;&gt;jcabi-dynamo&lt;/a&gt;
-is doing. Just look at its &lt;a href=&quot;http://dynamo.jcabi.com/apidocs-0.16.1/index.html&quot;&gt;JavaDoc&lt;/a&gt;.
-There is a package called &lt;code&gt;com.jcabi.dynamo.mock&lt;/code&gt; that contains
-only fake classes, suitable only for unit testing.&lt;/p&gt;
-
-&lt;p&gt;Even though their sole purpose is to optimize unit testing, we ship
-them together with production code, in the same JAR package.&lt;/p&gt;
-
-&lt;p&gt;This is what a test will look like, when a fake class &lt;code&gt;MkRegion&lt;/code&gt; is used:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmployeeTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;canFetchSalaryFromDynamoDb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Region&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MkRegion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;H2Data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;employees&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Attributes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;salary&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AttributeValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;equalTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This test looks obvious to me. First, we create a fake DynamoDB region,
-which works on top of &lt;code&gt;H2Data&lt;/code&gt; storage (in-memory H2 database). The storage
-will be ready for a single &lt;code&gt;employees&lt;/code&gt; table with a hash key &lt;code&gt;name&lt;/code&gt; and
-a single &lt;code&gt;salary&lt;/code&gt; attribute.&lt;/p&gt;
-
-&lt;p&gt;Then, we put a record into the table, with a hash &lt;code&gt;Jeff&lt;/code&gt; and a salary
-&lt;code&gt;50000&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Finally, we create an instance of class &lt;code&gt;Employee&lt;/code&gt; and check how it
-fetches the salary from DynamoDB.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m currently doing the same thing in almost every open source library I&amp;#39;m working with.
-I&amp;#39;m creating a collection of fake classes, that simplify testing
-inside the library and for its users.&lt;/p&gt;
-
-&lt;p&gt;BTW, a great article on the same subject:
-&lt;a href=&quot;http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html&quot;&gt;tl;dw: Stop mocking, start testing&lt;/a&gt;
-by Ned Batchelder.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</guid>
-      <dc:date>2014-09-23T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
