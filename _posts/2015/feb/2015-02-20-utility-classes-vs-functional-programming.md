@@ -3,6 +3,7 @@ layout: post
 title: "Utility Classes Have Nothing to Do With Functional Programming"
 date: 2015-02-20
 tags: oop
+categories: jcg
 description:
   Utility classes, even though they look like collections of
   functions, have nothing to do with functional programming, mostly
