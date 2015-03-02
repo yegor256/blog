@@ -72,7 +72,7 @@ module Yegor
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
       html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;' alt='#{alt}'/>"
+        " style='width:#{@width}px;' alt='#{CGI.escapeHTML alt}'/>"
       if @title != ''
         html += "<figcaption>#{CGI::escapeHTML @title}</figcaption>"
       end

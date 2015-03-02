@@ -2,6 +2,7 @@
 layout: post
 title: "Daily Stand-Up Meetings Are a Good Tool for a Bad Manager"
 date: 2015-01-08
+categories: best
 tags: mgmt
 description:
   Daily stand-up meetings are a common practice among software

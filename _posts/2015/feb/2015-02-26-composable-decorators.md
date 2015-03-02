@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Composable Decorators vs. Imperative Utility Methods"
-date: 2015-02-28
+date: 2015-02-26
 tags: oop
 description:
   A decorator pattern, while being the best instrument to keep objects highly cohesive,
@@ -23,10 +23,12 @@ and yet very powerful mechanism to make your code
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code _composable_. That's why the title of this
-post is composable decorators instead of the decorators we often use: imperative
+post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.
 
 <!--more-->
+
+{% picture /images/2015/02/russina-matroshka.jpg 0 Матрёшка %}
 
 First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:
