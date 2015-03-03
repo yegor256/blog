@@ -235,7 +235,7 @@ classes and functional programming.&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;passing&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;argument&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Static methods in Java are not &lt;em&gt;functions&lt;/em&gt; in terms of functional programming.
-You can&amp;#39;t do anything like this with a static method. You can pass a static
+You can&amp;#39;t do anything like this with a static method. You can&amp;#39;t pass a static
 method as an argument to another method. Basically, static
 methods are procedures or, simply put, Java statements grouped under a unique
 name. The only way to access them is to call a procedure and pass all
