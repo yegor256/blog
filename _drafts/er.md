@@ -16,7 +16,7 @@ keywords:
 ---
 
 Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.
-Router. Dispatcher. Observer. Listener. Sorter.
+Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
 This is the class names hall of shame. Have you seen them in your code?
 In open source libraries you're using? In pattern books? They are all wrong.
 What do they have in common? They all end in "-er". And what's wrong with that?
