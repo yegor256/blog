@@ -29,7 +29,7 @@ Here they come:
 
  * Singletons
 
- * Controllers, Managers, Validators
+ * [Controllers, Managers, Validators](% pst 2015/mar/2015-03-09-objects-end-with-er %)
 
  * [Public Static Methods]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 

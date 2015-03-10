@@ -44,6 +44,8 @@ with no "validators", "controllers", "managers", etc.
 If your class name ends with an "-er" &mdash;
 it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
 BTW, here are my [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) of a good object.
+Also, this post explains this idea in more details:
+[Don't Create Objects That End With -ER](% pst 2015/mar/2015-03-09-objects-end-with-er %).
 
 And, of course, utility classes are anti-patterns, like [`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html),
 [`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html), and
