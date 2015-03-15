@@ -66,7 +66,9 @@ $(
         }
       );
       $.getJSON(
-        'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
+        'https://jsonp.nodejitsu.com/?url=' + encodeURIComponent(
+          'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url
+        ),
         function(json) {
           var count = json.result.views;
           if (count > 0) {
