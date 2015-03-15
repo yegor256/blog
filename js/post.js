@@ -4,7 +4,7 @@ $(
     'use strict';
     function number(num) {
       if (num > 1000) {
-        return Math.round(num / 1000) + 'k';
+        return (num / 1000).toFixed(1) + 'k';
       }
       return num;
     }
