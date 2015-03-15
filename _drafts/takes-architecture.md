@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Webapp Architecture Done Right"
+title: "Java Web App Architecture In Takes Framework"
 date: 2015-02-10
 tags: java
 description:
-  ...
+  Takes is a pure object-oriented and immutable
+  Java web framework that turns design and development
+  of web applications into a pleasant and fun process.
 keywords:
   - java web framework
   - java web development framework
