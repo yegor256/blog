@@ -54,7 +54,7 @@ I'm using `com.jcabi:parent` POM as a parent object model, because
 this [helps to reduce verbosity]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %})
 in this XML.
 
-There are just too dependencies: `org.takes:takes` fo the framework itself
+There are just too dependencies: `org.takes:takes` for the framework itself
 and `com.jcabi.incubator:xembly` for Xembly processing (see below).
 
 Now, let's create all other supplementary files. This is the project layout
