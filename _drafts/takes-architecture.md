@@ -13,7 +13,17 @@ keywords:
   - java web app framework
 ---
 
-... tbd
+I was using Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
+JSF with Facelets, and a bit of Spark Framework. All of these solutions,
+in my humble opinion, are very far from being object-oriented and elegant.
+They all are full of static methods, untestable data structures and
+dirty hacks. About a month ago I decided to create my own Java web
+framework. I put a few basic principles in its foundation: 1) no NULLs,
+2) no public static methods, 3) no mutable classes, 4) no class casting, reflection
+and `instanceof` operators. These four basic principles should guarantee
+the cleanness of the code and transparancy of architecture. That's how
+[Takes](http://www.takes.org) framework was born.
+Let's see what was created and how it works.
 
 <!--more-->
 
@@ -22,16 +32,18 @@ keywords:
 This is how I understand a web application architecture and its
 components, in simple terms.
 
-First, we should create a new [network socket](http://en.wikipedia.org/wiki/Network_socket),
+First, to create a web server we should create
+a new [network socket](http://en.wikipedia.org/wiki/Network_socket),
 accepting connections on a certain [TCP port](http://en.wikipedia.org/wiki/Port_%28computer_networking%29).
 Usually it is 80, but I'm going to use 8080, for testing purposes.
 This is done in Java with [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
 
 {% highlight java %}
+import java.net.ServerSocket;
 public class Foo {
   public static void main(final String... args) throws Exception {
     final ServerSocket server = new ServerSocket(8080);
-    TimeUnit.SECONDS.sleep(Long.MAX_VALUE);
+    while (true);
   }
 }
 {% endhighlight %}
@@ -43,7 +55,7 @@ wheel forever. Compile this snippet and try. We just built a simple web
 server, without the use of any frameworks. We're not doing anything with
 that incoming connections yet, but we're not rejecting them either. All of them
 are being lined up inside that `server` object. It does it in a background
-thread, that's why we need to do that `sleep()` afterwords. Without this endless pause,
+thread, that's why we need to do that `while(true)` afterwords. Without this endless pause,
 the app will finish its execution immediately and the server socket will
 shut down.
 
@@ -77,7 +89,7 @@ public class Foo {
 It's an endless cycle that accepts a new connection, understands it,
 creates a response, returns the response and accepts a new connection again.
 HTTP protocol is stateless, which means that the servers should not
-remember what happened in previous connections. All it cares about is
+remember what happened in any previous connection. All it cares about is
 the incoming HTTP request in this particular connection.
 
 HTTP request is coming from the input stream of the socket and looks like
@@ -402,8 +414,9 @@ web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --por
 
 ## TsFork
 
-This `TsFork` class seems to be one of the core elements of the framework. It
-helps to route an incoming HTTP request to the right "take". Its logic is very
+This [`TsFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TsFork.html)
+class seems to be one of the core elements of the framework. It
+helps to route an incoming HTTP request to the right _take_. Its logic is very
 simple and there are just a few lines of code inside it. It encapsulates
 a collection of "forks", which are instances of
 [`Fork<Take>`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html) interface:
@@ -416,8 +429,9 @@ public interface Fork<T> {
 
 Its only `route()` method either returns an empty iterator or an iterator
 with a single `Take`. `TsFork` goes through all forks, calling their
-`route()` methods, until one of them returns a take. Once it happens,
-`TsFork` returns this take to the caller, which is `FtBasic`.
+`route()` methods, until one of them returns a _take_. Once it happens,
+`TsFork` returns this _take_ to the caller, which is
+[`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html).
 
 Let's create a simple fork ourselves now. For example, we want to show
 a status of the application when `/status` URL is requested. Here is
@@ -482,10 +496,217 @@ final class TsApp extends TsWrap {
 {% endhighlight %}
 
 Again, I believe, it's obvious. The instance of `FkRegex` will ask an
-encapsulated instance of `TsFork` to return a "take", and it will try to
+encapsulated instance of `TsFork` to return a _take_, and it will try to
 fetch it from one of that `FkParams` encapsulated. If HTTP query will
 be `/status?f=xml`, an instance of `TkStatusXML` will be returned.
 
+## HTTP Response
+
+Now let's discuss the structure of HTTP response and its object-oriented
+abstraction [`Response`](http://www.takes.org/apidocs-0.9/org/takes/Response.html).
+This is how the interface looks like:
+
+{% highlight java %}
+public interface Response {
+  List<String> head() throws IOException;
+  InputStream body() throws IOException;
+}
+{% endhighlight %}
+
+Looks very similar to the [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html),
+isn't it? Well, it's identical. Mostly because the structure of HTTP request and
+response is almost identical. The only difference is the first line.
+
+There is a collection of useful decorators that help in response building. They
+are [composable]({% pst 2015/feb/2015-02-26-composable-decorators %}),
+which makes them very convenient. For example, if you want to build a response
+that contains an HTML page, you compose them like this:
+
+{% highlight java %}
+final class TkIndex implements Take {
+  @Override
+  public Response act() {
+    return new RsWithStatus(
+      new RsWithType(
+        new RsWithBody("<html>Hello, world!</html>"),
+        "text/html"
+      ),
+      200
+    );
+  }
+}
+{% endhighlight %}
+
+In this example, the decorator `RsWithBody`
+creates a response with a body, but with not headers at all. Then,
+`RsWithType` adds a header `Content-Type: text/html` to it. Then, `RsWithStatus`
+makes sure the first line of the response contains `HTTP/1.1 200 OK`.
+
+You can create your own decorators, which can reuse existing ones. Take a look
+at how it's done in [`RsPage`](https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java)
+from rultor.com.
+
+## How About Templates?
+
+Returning simple "hello, world" pages is not a big problem, as we see. But
+what about more complex output, like HTML pages, XML documents, JSON
+data sets, etc? There are few convenient `Response` decorators that
+enable all of that. Let's start with [Velocity](http://velocity.apache.org),
+a simple templating engine. Well, it's not that simple. It's rather powerful,
+but I would suggest to use it in simple situations only. Here is how it
+works:
+
+{% highlight java %}
+final class TkIndex implements Take {
+  @Override
+  public Response act() {
+    return new RsVelocity("hello, ${name}")
+      .with("name", "Jeffrey");
+  }
+}
+{% endhighlight %}
+
+[`RsVelocity`](http://www.takes.org/apidocs-0.9/org/takes/rs/RsVelocity.html) constructor
+accepts a single argument, which has to be a Velocity template. Then, you call
+`with()` method, injecting data into Velocity context. When it's time
+to render the HTTP response, `RsVelocity` will "evaluate" the template
+against the context configured. Again, I would recommend to use
+this templating approach only for simple outputs.
+
+For more complex HTML documents, I would recommend to use XML/XSLT
+in combination with Xembly. I explained this idea in a few posts before:
+[XML+XSLT in a Browser]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
+and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %}).
+It is simple and powerful &mdash; Java generates XML output and XSLT
+processor transforms it into HTML documents. This is how we separate
+representation from data. XSL stylesheet is a "view" and `TkIndex` is a "controller",
+in terms of [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+
+I'll write a separate article about templating with Xembly and XSL, very soon.
+
+In the nearest future we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
+and [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages) rendering
+in Takes. If interested to help, please fork the framework and submit your pull
+requests.
+
 ## What About Persistence?
 
+Now, the question is what to do with persistent entities, like databases,
+in-memory structures, network connections, etc. My suggestion is to
+initialize them inside the `Entry` class and pass as arguments into
+the `TsApp` constructor. Then, the `TsApp` will pass them into the
+constructors of custom _takes_.
 
+For example, we have a PostgreSQL database,
+which contains some table data that we need to render. Here is how I would
+initialize a connection to it, in `Entry` class (I'm using
+[BoneCP](http://jolbox.com/) connection pool):
+
+{% highlight java %}
+public final class Entry {
+  public static void main(final String... args) throws Exception {
+    new FtCLI(new TsApp(Entry.postgres()), args).start(Exit.NEVER);
+  }
+  private static Source postgres() {
+    final BoneCPDataSource src = new BoneCPDataSource();
+    src.setDriverClass("org.postgresql.Driver");
+    src.setJdbcUrl("jdbc:postgresql://localhost/db");
+    src.setUser("root");
+    src.setPassword("super-secret-password");
+    return src;
+  }
+}
+{% endhighlight %}
+
+Now, the constructor of `TsApp` must accept a single argument of type
+`java.sql.Source`:
+
+{% highlight java %}
+final class TsApp extends TsWrap {
+  TsApp(final Source source) {
+    super(TsApp.make(source));
+  }
+  private static Takes make(final Source source) {
+    return new TsFork(
+      new FkRegex("/", new TkIndex(source))
+    );
+  }
+}
+{% endhighlight %}
+
+Now class `TkIndex` also accepts a single argument of class `Source`. I believe,
+you know what to do with it inside the `TkIndex`, in order to fetch the SQL
+table data and convert them into HTML. The point here is that the dependency
+must be injected into the application (instance of class `TsApp`) at the
+moment of its instantiation. This is a pure and clean dependency injection
+mechanism, which is absolutely container-free. More about it in
+["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
+
+## Unit Testing
+
+Since every class is immutable and all dependencies are injected only
+through constructors, unit testing is extremely easy. Let's say we want
+to test that `TkStatus` that is supposed to return an HTML response
+(I'm using [JUnit 4](http://junit.org/) and [Hamcrest](http://www.hamcrest.org/)):
+
+{% highlight java %}
+import org.junit.Test;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+public final class TkIndexTest {
+  @Test
+  public void returnsHtmlPage() throws Exception {
+    MatcherAssert.assertThat(
+      new RsPrint(
+        new TkStatus().act()
+      ).printBody(),
+      Matchers.equalsTo("<html>hello, world!</html>")
+    );
+  }
+}
+{% endhighlight %}
+
+Also, we can start the entire application or any individual _take_ in a
+test HTTP server and test its behavior via real TCP socket, for example
+(I'm using [jcabi-http](http://http.jcabi.com) to make HTTP request and check the output):
+
+{% highlight java %}
+public final class TkIndexTest {
+  @Test
+  public void returnsHtmlPage() throws Exception {
+    new FtRemote(new TsFixed(new TkIndex())).exec(
+      new FtRemote.Script() {
+        @Override
+        public void exec(final URI home) throws IOException {
+          new JdkRequest(home)
+            .fetch()
+            .as(RestResponse.class)
+            .assertStatus(HttpURLConnection.HTTP_OK)
+            .assertBody(Matchers.containsString("hello, world!"));
+        }
+      }
+    );
+  }
+}
+{% endhighlight %}
+
+[`FtRemote`](http://www.takes.org/apidocs-0.9/org/takes/http/FtRemote.html)
+starts a test web server at a random TCP port and calls
+`exec()` method at the provided instance of `FtRemote.Script`. The first
+argument of this method is an URI of the just started web server home page.
+
+The architecture of Takes framework is very modular and composable. Any
+individual _take_ can be tested as a standalone component, absolutely
+independent from the framework and other _takes_.
+
+## Why the Name?
+
+That's the question I'm hearing rather often. The idea is simple. It is
+originated from movie business. When movie is made, they make _takes_ in order
+to capture the reality and put it on the tape. Each capture is called a _take_.
+
+In other words, a _take_ is like a snapshot of the reality.
+
+The same applies to the framework. Each instance of `Take` represents
+a reality at one particular moment of time. This reality is then sent to the
+user in a form of a `Response`.
