@@ -27,9 +27,6 @@ $(
           if (data.GooglePlusOne !== 0) {
             $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
           }
-          if (data.StumbleUpon !== 0) {
-            $('.count-stumbleupon').html(number(data.StumbleUpon)).fadeIn();
-          }
         }
       );
       $.getJSON(
@@ -65,6 +62,15 @@ $(
           var count = json.data.children.length;
           if (count > 0) {
             $('.count-reddit').html(number(count)).fadeIn();
+          }
+        }
+      );
+      $.getJSON(
+        'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
+        function(json) {
+          var count = json.result.views;
+          if (count > 0) {
+            $('.count-stumbleupon').html(number(count)).fadeIn();
           }
         }
       );
