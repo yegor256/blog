@@ -5,7 +5,7 @@ date: 2015-02-10
 tags: java
 description:
   Takes is a pure object-oriented and immutable
-  Java web framework that turns design and development
+  Java web framework that turns the design and development
   of web applications into a pleasant and fun process.
 keywords:
   - java web framework
@@ -15,30 +15,30 @@ keywords:
   - java web app framework
 ---
 
-I was using Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
+I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
 JSF with Facelets, and a bit of Spark Framework. All of these solutions,
 in my humble opinion, are very far from being object-oriented and elegant.
-They all are full of static methods, untestable data structures and
-dirty hacks. About a month ago I decided to create my own Java web
-framework. I put a few basic principles in its foundation: 1) no NULLs,
-2) no public static methods, 3) no mutable classes, 4) no class casting, reflection
+They all are full of static methods, untestable data structures, and
+dirty hacks. So about a month ago, I decided to create my own Java web
+framework. I put a few basic principles into its foundation: 1) No NULLs,
+2) no public static methods, 3) no mutable classes, and 4) no class casting, reflection,
 and `instanceof` operators. These four basic principles should guarantee
-the cleanness of the code and transparancy of architecture. That's how
+clean code and transparent architecture. That's how the
 [Takes](http://www.takes.org) framework was born.
 Let's see what was created and how it works.
 
 <!--more-->
 
-## Java Web Architecture In a Nutshell
+## Java Web Architecture in a Nutshell
 
 This is how I understand a web application architecture and its
 components, in simple terms.
 
-First, to create a web server we should create
+First, to create a web server, we should create
 a new [network socket](http://en.wikipedia.org/wiki/Network_socket),
-accepting connections on a certain [TCP port](http://en.wikipedia.org/wiki/Port_%28computer_networking%29).
-Usually it is 80, but I'm going to use 8080, for testing purposes.
-This is done in Java with [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
+that accepts connections on a certain [TCP port](http://en.wikipedia.org/wiki/Port_%28computer_networking%29).
+Usually it is 80, but I'm going to use 8080 for testing purposes.
+This is done in Java with the [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
 
 {% highlight java %}
 import java.net.ServerSocket;
@@ -51,26 +51,26 @@ public class Foo {
 {% endhighlight %}
 
 That's enough to start a web server. Now, the socket is ready and listening
-on port 80. When anyone opens `http://localhost:8080` in their browser,
+on port 8080. When someone opens `http://localhost:8080` in their browser,
 the connection will be established and the browser will spin its waiting
 wheel forever. Compile this snippet and try. We just built a simple web
-server, without the use of any frameworks. We're not doing anything with
-that incoming connections yet, but we're not rejecting them either. All of them
-are being lined up inside that `server` object. It does it in a background
-thread, that's why we need to do that `while(true)` afterwords. Without this endless pause,
+server without the use of any frameworks. We're not doing anything with
+incoming connections yet, but we're not rejecting them either. All of them
+are being lined up inside that `server` object. It's being done in a background
+thread; that's why we need to put that `while(true)` in afterward. Without this endless pause,
 the app will finish its execution immediately and the server socket will
 shut down.
 
-The next step is to accept that incoming connections. In Java it's done through
-a blocking call to `accept()` method:
+The next step is to accept the incoming connections. In Java, that's done through
+a blocking call to the `accept()` method:
 
 {% highlight java %}
 final Socket socket = server.accept();
 {% endhighlight %}
 
-The method is blocking its thread and waits until a new connection arrives. As
-soon as it happens, it returns an instance of `Socket`. In order to accept
-the next connection we should call `accept()` again. So, basically, our
+The method is blocking its thread and waiting until a new connection arrives. As
+soon as that happens, it returns an instance of `Socket`. In order to accept
+the next connection, we should call `accept()` again. So basically, our
 web server should work like this:
 
 {% highlight java %}
@@ -89,12 +89,12 @@ public class Foo {
 {% endhighlight %}
 
 It's an endless cycle that accepts a new connection, understands it,
-creates a response, returns the response and accepts a new connection again.
-HTTP protocol is stateless, which means that the servers should not
+creates a response, returns the response, and accepts a new connection again.
+HTTP protocol is stateless, which means the server should not
 remember what happened in any previous connection. All it cares about is
 the incoming HTTP request in this particular connection.
 
-HTTP request is coming from the input stream of the socket and looks like
+The HTTP request is coming from the input stream of the socket and looks like
 a multi-line block of text. This is what you would see if you read
 an input stream of the socket:
 
@@ -124,14 +124,14 @@ Accept-Encoding: gzip, deflate, sdch
 Accept-Language: en-US,en;q=0.8,ru;q=0.6,uk;q=0.4
 {% endhighlight %}
 
-The client (Google Chrome browser, for example) is sending this text into the
-connection established. It connects to the port 8080 at `localhost` and as soon
-as the connection is ready it immediately sends this text into it. And waits
-for response.
+The client (the Google Chrome browser, for example) passes this text into the
+connection established. It connects to port 8080 at `localhost`, and as soon
+as the connection is ready, it immediately sends this text into it, then waits
+for a response.
 
-Our job is to create an HTTP response, using the information we get in the
+Our job is to create an HTTP response using the information we get in the
 request. If our server is very primitive, we can basically ignore all the
-information in the request and just return "hello, world!" to all requests
+information in the request and just return "Hello, world!" to all requests
 (I'm using
 [`IOUtils`](https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html)
 for simplicity):
@@ -155,8 +155,8 @@ public class Foo {
 }
 {% endhighlight %}
 
-That's it. The server is ready. Try to compile it and run. Point your browser
-to http://localhost:8080 and you will see `Hello, world!`:
+That's it. The server is ready. Try to compile and run it. Point your browser
+to http://localhost:8080, and you will see `Hello, world!`:
 
 {% highlight bash %}
 $ javac -cp commons-io.jar Foo.java
@@ -177,15 +177,15 @@ Hello, world!
 {% endhighlight %}
 
 That's all you need to build a web server. Now let's discuss how to make
-it object-oriented and composable. Let's try to see how [Takes](http://www.takes.org)
+it object-oriented and composable. Let's try to see how the [Takes](http://www.takes.org)
 framework was built.
 
 ## Routing/Dispatching
 
 The most important step is to decide who is responsible for building
-an HTTP response. Each HTTP request has 1) a query, 2) a method and 3) a number
-of headers. Using these three parameters we need to instantiate an object
-who will build a response for us. This process, in most web frameworks,
+an HTTP response. Each HTTP request has 1) a query, 2) a method, and 3) a number
+of headers. Using these three parameters, we need to instantiate an object
+that will build a response for us. This process, in most web frameworks,
 is called request dispatching or routing. Here is how we do it in Takes:
 
 {% highlight java %}
@@ -193,10 +193,10 @@ final Take take = takes.route(request);
 final Response response = take.act();
 {% endhighlight %}
 
-There are basically two steps. The first one is getting an instance of
+There are basically two steps. The first one is creating an instance of
 [`Take`](http://www.takes.org/apidocs-0.9/org/takes/Take.html)
-from `takes` and the second one is getting an instance of `Response` from `take`.
-Why it's done this way? Mostly in order to separate responsibilities. An
+from `takes`, and the second one is creating an instance of `Response` from `take`.
+Why is it done this way? Mostly in order to separate responsibilities. An
 instance of [`Takes`](http://www.takes.org/apidocs-0.9/org/takes/Takes.html)
 is responsible for dispatching a request and instantiating
 the right `Take`, and an instance of `Take` is responsible for creating a response.
@@ -217,7 +217,7 @@ public final class TsFoo implements Takes {
 {% endhighlight %}
 
 We're using these `Ts` and `Tk` prefixes for
-`Takes` and `Take` respectively.
+`Takes` and `Take`, respectively.
 The second class you should create is an implementation of `Take`:
 
 {% highlight java %}
@@ -245,18 +245,18 @@ public class Foo {
 {% endhighlight %}
 
 This [`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html)
-class is doing exactly the same sockets manipulations explained
+class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
-connections through an instance of `TsFoo` we are giving to its constructor.
-It does this dispatching in an endless cycle, every second checking whether
+connections through an instance of `TsFoo` that we are giving to its constructor.
+It does this dispatching in an endless cycle, checking every second whether
 it's time to stop with an instance of
 [`Exit`](http://www.takes.org/apidocs-0.9/org/takes/http/Exit.html).
-Obviously, `Exit.NEVER` always responds with "don't stop, please".
+Obviously, `Exit.NEVER` always responds with, "Don't stop, please".
 
 ## HTTP Request
 
-Let's see what's inside the HTTP request arriving to `TsFoo` and what
-we can get out of it. This is how
+Now let's see what's inside the HTTP request arriving at `TsFoo` and what
+we can get out of it. This is how the 
 [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html)
 interface is defined in [Takes](http://www.takes.org):
 
@@ -267,17 +267,17 @@ public interface Request {
 }
 {% endhighlight %}
 
-The request is divided into two parts, the head and the body. The head
-contains all lines that are going before the empty line that starts
+The request is divided into two parts: the head and the body. The head
+contains all lines that go before the empty line that starts
 a body, according to HTTP specification in RFC ???. There are many useful
-decorators of `Request` in the framework. For example, `RqMethod` will
-help you to get the method name from the first line of the header:
+decorators for `Request` in the framework. For example, `RqMethod` will
+help you get the method name from the first line of the header:
 
 {% highlight java %}
 final String method = new RqMethod(request).method();
 {% endhighlight %}
 
-`RqHref` will help to extract the query part and parse it. For example,
+`RqHref` will help extract the query part and parse it. For example,
 this is the request:
 
 {% highlight java %}
@@ -300,17 +300,17 @@ final String body = new RqPrint(request).printBody();
 {% endhighlight %}
 
 The idea here is to keep the `Request` interface simple and provide
-this request parsing functionality is decorators. The approach helps the
-framework to keep classes small and cohesive. Each decorator is very
+this request parsing functionality to its decorators. This approach helps the
+framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in [`org.takes.rq`](http://www.takes.org/apidocs-0.9/org/takes/rq/index.html) package.
+are in the [`org.takes.rq`](http://www.takes.org/apidocs-0.9/org/takes/rq/index.html) package.
 As you already probably understand, the `Rq` prefix stands for `Request`.
 
 ## First Real Web App
 
-Let's create the first real web application which will do something
-useful. I would recommend to start with an `Entry` class, that is
-required by Java to start an app from command line:
+Let's create our first real web application, which will do something
+useful. I would recommend starting with an `Entry` class, which is
+required by Java to start an app from the command line:
 
 {% highlight java %}
 import org.takes.http.Exit;
@@ -323,15 +323,15 @@ public final class Entry {
 {% endhighlight %}
 
 This class contains just a single `main()` static method that will be
-called by JVM when the app starts from command line. As you see, it
+called by JVM when the app starts from the command line. As you see, it
 instantiates [`FtCLI`](http://www.takes.org/apidocs-0.9/org/takes/http/FtCLI.html),
 giving it an instance of class `TsApp` and command
-line arguments. We'll create `TsApp` class in a second. `FtCLI`
-(decrypts to "front-end with command line interface") makes an instance
-of the same `FtBasic`, wrapping it into a few useful decorators and configures
+line arguments. We'll create the `TsApp` class in a second. `FtCLI`
+(translates to "front-end with command line interface") makes an instance
+of the same `FtBasic`, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, `--port=8080` will
 be converted into a `8080` port number and passed as a second argument of
-`FtBasic` constructor.
+the `FtBasic` constructor.
 
 The web application itself is called `TsApp` and extends `TsWrap`:
 
@@ -406,9 +406,9 @@ $ mvn clean package
 $ java -Dfile.encoding=UTF-8 -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
 {% endhighlight %}
 
-The application is ready and you can deploy it to, say, Heroku. Just
-create `Procfile` file in the root of the repository and push the repo
-to Heroku. This is how `Procfile` should look like:
+The application is ready, and you can deploy it to, say, Heroku. Just
+create a `Procfile` file in the root of the repository and push the repo
+to Heroku. This is what `Procfile` should look like:
 
 {% highlight text %}
 web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
@@ -418,9 +418,9 @@ web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --por
 
 This [`TsFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TsFork.html)
 class seems to be one of the core elements of the framework. It
-helps to route an incoming HTTP request to the right _take_. Its logic is very
-simple and there are just a few lines of code inside it. It encapsulates
-a collection of "forks", which are instances of
+helps route an incoming HTTP request to the right _take_. Its logic is very
+simple, and there are just a few lines of code inside it. It encapsulates
+a collection of "forks", which are instances of the
 [`Fork<Take>`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html) interface:
 
 {% highlight java %}
@@ -431,12 +431,12 @@ public interface Fork<T> {
 
 Its only `route()` method either returns an empty iterator or an iterator
 with a single `Take`. `TsFork` goes through all forks, calling their
-`route()` methods, until one of them returns a _take_. Once it happens,
+`route()` methods until one of them returns a _take_. Once that happens,
 `TsFork` returns this _take_ to the caller, which is
 [`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html).
 
 Let's create a simple fork ourselves now. For example, we want to show
-a status of the application when `/status` URL is requested. Here is
+the status of the application when the `/status` URL is requested. Here is
 the code:
 
 {% highlight java %}
@@ -458,12 +458,12 @@ final class TsApp extends TsWrap {
 }
 {% endhighlight %}
 
-I believe, the logic is clear here. We either return an empty iterator
-or an interator with an instance of `TkStatus` inside. If an empty
+I believe the logic here is clear. We either return an empty iterator
+or an iterator with an instance of `TkStatus` inside. If an empty
 iterator is returned, `TsFork` will try to find another fork in the
-collection to actually get an instance of `Take`, to produce a `Response`.
+collection that actually gets an instance of `Take` in order to produce a `Response`.
 By the way, if nothing is found and all forks return empty iterators,
-`TsFork` will throw a "page not found" exception.
+`TsFork` will throw a "Page not found" exception.
 
 This exact logic is implemented by an out-of-the-box fork called `FkRegex`,
 which attempts to match a request URI path with the regular expression
