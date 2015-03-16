@@ -4,7 +4,7 @@ $(
     'use strict';
     function number(num) {
       if (num > 1000) {
-        return Math.round(num / 1000) + 'k';
+        return (num / 1000).toFixed(1) + 'k';
       }
       return num;
     }
@@ -26,9 +26,6 @@ $(
         function (data) {
           if (data.GooglePlusOne !== 0) {
             $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
-          }
-          if (data.StumbleUpon !== 0) {
-            $('.count-stumbleupon').html(number(data.StumbleUpon)).fadeIn();
           }
         }
       );
@@ -65,6 +62,17 @@ $(
           var count = json.data.children.length;
           if (count > 0) {
             $('.count-reddit').html(number(count)).fadeIn();
+          }
+        }
+      );
+      $.getJSON(
+        'https://jsonp.nodejitsu.com/?url=' + encodeURIComponent(
+          'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url
+        ),
+        function(json) {
+          var count = json.result.views;
+          if (count > 0) {
+            $('.count-stumbleupon').html(number(count)).fadeIn();
           }
         }
       );

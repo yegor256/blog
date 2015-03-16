@@ -191,7 +191,7 @@ Then, later, you can call that `x`:
 {% endhighlight %}
 
 Static methods in Java are not _functions_ in terms of functional programming.
-You can't do anything like this with a static method. You can pass a static
+You can't do anything like this with a static method. You can't pass a static
 method as an argument to another method. Basically, static
 methods are procedures or, simply put, Java statements grouped under a unique
 name. The only way to access them is to call a procedure and pass all

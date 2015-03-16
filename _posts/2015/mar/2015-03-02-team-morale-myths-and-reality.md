@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Team Morale: Myths and Reality"
-date: 2015-02-25
+date: 2015-03-02
 tags: mgmt agile
 description:
   Team morale is a key performance driver in any group,
@@ -27,6 +27,8 @@ has a strong leader and a good project manager.
 
 <!--more-->
 
+{% picture /images/2015/03/apocalypto.jpg 0 Apocalypto (2006) by Mel Gibson %}
+
 **Fire Fast**.
 The first and most important quality of a good leader is his or her
 ability to separate bad apples from good ones as soon as possible.
@@ -49,10 +51,10 @@ risks you're trying to prevent. They will appreciate it and respect you.
 A strong, professional manager deals with risks instead of ignoring them.
 
 **Failures Are Yours; Success Is Theirs**.
-Always remember that when someone on your team makes a mistake, 
+Always remember that when someone on your team makes a mistake,
 it is first of all _your_ personal mistake. You hired that person,
-you trained him or her, you delegated the responsibility, and you 
-controlled and monitored the job. Then he made a mistake, and the project 
+you trained him or her, you delegated the responsibility, and you
+controlled and monitored the job. Then he made a mistake, and the project
 lost money, disappointed a customer, or damaged the firm's reputation. Of course you need to
 take necessary disciplinary actions and maybe fire the troublemaker. But first of all,
 you have to admit in front of everyone that it was your personal mistake.
@@ -66,8 +68,8 @@ tries to hide mistakes that have been made.
 **Responsibility Is Always Personal**.
 The most demotivating word used in task descriptions is "together". Don't use it.
 Each task has to be personally and individually assigned (no matter what the Agile Manifesto says).
-Everybody is responsible for his or her own success or failure. How their results 
-join together and lead to a mutual success or failure &mdash; that's _your_ business. 
+Everybody is responsible for his or her own success or failure. How their results
+join together and lead to a mutual success or failure &mdash; that's _your_ business.
 Whether you succeed or fail, we all will see. Once you say we all have to succeed together,
 the team understands that you're trying to shift responsibility from your own
 shoulders to theirs. It's a sign of weakness, and you lose respect. Make
@@ -132,13 +134,13 @@ to develop a product and earn money for its investors. Honesty is the best
 team morale booster.
 
 **Don't Rule; Make Rules and Plans**.
-Nothing demotivates more than an upredictable manager. For the team, you are 
+Nothing demotivates more than an upredictable manager. For the team, you are
 an abstraction of the entire world around the team. They see
 the reality through the prism of your personality. What you tell them about
 the reality is what they perceive. If you are unpredictable, the reality
 is unpredictable and scary for them. To avoid that, stop making decisions that
 are based on your personal and momentary judgement.
-Instead, make decisions that are based on the rules you've defined upfront 
+Instead, make decisions that are based on the rules you've defined upfront
 and plans you've drawn beforehand. First, create a plan for team
 growth and announce it to everybody. The plan should include risks and
 their mitigations. The plan should say who will be fired

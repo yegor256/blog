@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Create Objects That End With -ER"
-date: 2015-02-10
+date: 2015-03-09
 tags: oop
 description:
   Object names that end with -er are indicators of a
@@ -16,14 +16,16 @@ keywords:
 ---
 
 Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.
-Router. Dispatcher. Observer. Listener. Sorter.
-The is the class names hall of shame. Have you seen them in your code?
+Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
+This is the class names **hall of shame**. Have you seen them in your code?
 In open source libraries you're using? In pattern books? They are all wrong.
 What do they have in common? They all end in "-er". And what's wrong with that?
 They are not classes, and the objects they instantiate are not objects.
 Instead, they are collections of procedures pretending to be classes.
 
 <!--more-->
+
+{% picture /images/2015/03/fight-club.jpg 0 Fight Club (1999) by David Fincher %}
 
 [Peter Coad](http://en.wikipedia.org/wiki/Peter_Coad)
 used to say: Challenge any class name that ends in "-er". There

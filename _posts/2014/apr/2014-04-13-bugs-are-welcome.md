@@ -72,7 +72,7 @@ Something can be reported as a bug and subsequently paid for iff:
 
  * it is [reproducible](http://en.wikipedia.org/wiki/Reproducibility)
  * it refers to functionality already implemented
- * is can be fixed in a reasonable amount of time
+ * it can be fixed in a reasonable amount of time
  * it doesn't duplicate a bug already reported
 
 Reproducibility of a bug is very important. Consequently, it is the

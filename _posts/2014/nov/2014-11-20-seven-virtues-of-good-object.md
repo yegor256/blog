@@ -341,6 +341,8 @@ The same logic should be applicable to all other names.
 Always think about **what it is** rather than what it does. Give your
 objects real, meaningful names instead of job titles.
 
+More about this in [Don't Create Objects That End With -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
+
 ## 7. His Class Is Either Final or Abstract
 
 {% badge /images/2014/11/good-object-5.png 250 %}
