@@ -256,7 +256,7 @@ Obviously, `Exit.NEVER` always responds with, "Don't stop, please".
 ## HTTP Request
 
 Now let's see what's inside the HTTP request arriving at `TsFoo` and what
-we can get out of it. This is how the 
+we can get out of it. This is how the
 [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html)
 interface is defined in [Takes](http://www.takes.org):
 
@@ -269,7 +269,8 @@ public interface Request {
 
 The request is divided into two parts: the head and the body. The head
 contains all lines that go before the empty line that starts
-a body, according to HTTP specification in RFC ???. There are many useful
+a body, according to HTTP specification in
+[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html). There are many useful
 decorators for `Request` in the framework. For example, `RqMethod` will
 help you get the method name from the first line of the header:
 
@@ -588,7 +589,7 @@ I'll write a separate article about templating with Xembly and XSL very soon.
 
 In the meantime, we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
 and [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages) rendering
-in Takes. If you're interested in helping, please fork the framework 
+in Takes. If you're interested in helping, please fork the framework
 and submit your pull requests.
 
 ## What About Persistence?
@@ -599,7 +600,7 @@ initialize them inside the `Entry` class and pass them as arguments into
 the `TsApp` constructor. Then, the `TsApp` will pass them into the
 constructors of custom _takes_.
 
-For example, we have a PostgreSQL database that contains 
+For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
 initialize a connection to it in the `Entry` class (I'm using
 a [BoneCP](http://jolbox.com/) connection pool):
