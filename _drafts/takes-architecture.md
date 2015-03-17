@@ -479,7 +479,7 @@ final class TsApp extends TsWrap {
 }
 {% endhighlight %}
 
-We can compose a multi-level structure of `TsFork` classes, for example:
+We can compose a multi-level structure of `TsFork` classes; for example:
 
 {% highlight java %}
 final class TsApp extends TsWrap {
@@ -497,16 +497,16 @@ final class TsApp extends TsWrap {
 }
 {% endhighlight %}
 
-Again, I believe, it's obvious. The instance of `FkRegex` will ask an
+Again, I believe it's obvious. The instance of `FkRegex` will ask an
 encapsulated instance of `TsFork` to return a _take_, and it will try to
-fetch it from one of that `FkParams` encapsulated. If HTTP query will
-be `/status?f=xml`, an instance of `TkStatusXML` will be returned.
+fetch it from one that `FkParams` encapsulated. If the HTTP query is
+`/status?f=xml`, an instance of `TkStatusXML` will be returned.
 
 ## HTTP Response
 
-Now let's discuss the structure of HTTP response and its object-oriented
-abstraction [`Response`](http://www.takes.org/apidocs-0.9/org/takes/Response.html).
-This is how the interface looks like:
+Now let's discuss the structure of the HTTP response and its object-oriented
+abstraction, [`Response`](http://www.takes.org/apidocs-0.9/org/takes/Response.html).
+This is how the interface looks:
 
 {% highlight java %}
 public interface Response {
@@ -516,7 +516,7 @@ public interface Response {
 {% endhighlight %}
 
 Looks very similar to the [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html),
-isn't it? Well, it's identical. Mostly because the structure of HTTP request and
+doesn't it? Well, it's identical, mostly because the structure of the HTTP request and
 response is almost identical. The only difference is the first line.
 
 There is a collection of useful decorators that help in response building. They
@@ -540,19 +540,19 @@ final class TkIndex implements Take {
 {% endhighlight %}
 
 In this example, the decorator `RsWithBody`
-creates a response with a body, but with not headers at all. Then,
-`RsWithType` adds a header `Content-Type: text/html` to it. Then, `RsWithStatus`
+creates a response with a body but with no headers at all. Then,
+`RsWithType` adds the header `Content-Type: text/html` to it. Then, `RsWithStatus`
 makes sure the first line of the response contains `HTTP/1.1 200 OK`.
 
-You can create your own decorators, which can reuse existing ones. Take a look
+You can create your own decorators that can reuse existing ones. Take a look
 at how it's done in [`RsPage`](https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java)
 from rultor.com.
 
 ## How About Templates?
 
-Returning simple "hello, world" pages is not a big problem, as we see. But
-what about more complex output, like HTML pages, XML documents, JSON
-data sets, etc? There are few convenient `Response` decorators that
+Returning simple "Hello, world" pages is not a big problem, as we can see. But
+what about more complex output like HTML pages, XML documents, JSON
+data sets, etc? There are a few convenient `Response` decorators that
 enable all of that. Let's start with [Velocity](http://velocity.apache.org),
 a simple templating engine. Well, it's not that simple. It's rather powerful,
 but I would suggest to use it in simple situations only. Here is how it
@@ -562,47 +562,47 @@ works:
 final class TkIndex implements Take {
   @Override
   public Response act() {
-    return new RsVelocity("hello, ${name}")
+    return new RsVelocity("Hello, ${name}")
       .with("name", "Jeffrey");
   }
 }
 {% endhighlight %}
 
-[`RsVelocity`](http://www.takes.org/apidocs-0.9/org/takes/rs/RsVelocity.html) constructor
-accepts a single argument, which has to be a Velocity template. Then, you call
-`with()` method, injecting data into Velocity context. When it's time
+The [`RsVelocity`](http://www.takes.org/apidocs-0.9/org/takes/rs/RsVelocity.html) constructor
+accepts a single argument that has to be a Velocity template. Then, you call
+the `with()` method, injecting data into the Velocity context. When it's time
 to render the HTTP response, `RsVelocity` will "evaluate" the template
-against the context configured. Again, I would recommend to use
+against the context configured. Again, I would recommend you use
 this templating approach only for simple outputs.
 
-For more complex HTML documents, I would recommend to use XML/XSLT
-in combination with Xembly. I explained this idea in a few posts before:
+For more complex HTML documents, I would recommend you use XML/XSLT
+in combination with Xembly. I explained this idea in a few previous posts:
 [XML+XSLT in a Browser]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %}).
-It is simple and powerful &mdash; Java generates XML output and XSLT
+It is simple and powerful &mdash; Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
-representation from data. XSL stylesheet is a "view" and `TkIndex` is a "controller",
+representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller",
 in terms of [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 
-I'll write a separate article about templating with Xembly and XSL, very soon.
+I'll write a separate article about templating with Xembly and XSL very soon.
 
-In the nearest future we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
+In the meantime, we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
 and [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages) rendering
-in Takes. If interested to help, please fork the framework and submit your pull
-requests.
+in Takes. If you're interested in helping, please fork the framework 
+and submit your pull requests.
 
 ## What About Persistence?
 
-Now, the question is what to do with persistent entities, like databases,
+Now, a question that comes up is what to do with persistent entities, like databases,
 in-memory structures, network connections, etc. My suggestion is to
-initialize them inside the `Entry` class and pass as arguments into
+initialize them inside the `Entry` class and pass them as arguments into
 the `TsApp` constructor. Then, the `TsApp` will pass them into the
 constructors of custom _takes_.
 
-For example, we have a PostgreSQL database,
-which contains some table data that we need to render. Here is how I would
-initialize a connection to it, in `Entry` class (I'm using
-[BoneCP](http://jolbox.com/) connection pool):
+For example, we have a PostgreSQL database that contains 
+some table data that we need to render. Here is how I would
+initialize a connection to it in the `Entry` class (I'm using
+a [BoneCP](http://jolbox.com/) connection pool):
 
 {% highlight java %}
 public final class Entry {
@@ -636,19 +636,19 @@ final class TsApp extends TsWrap {
 }
 {% endhighlight %}
 
-Now class `TkIndex` also accepts a single argument of class `Source`. I believe,
-you know what to do with it inside the `TkIndex`, in order to fetch the SQL
-table data and convert them into HTML. The point here is that the dependency
+Class `TkIndex` also accepts a single argument of class `Source`. I believe
+you know what to do with it inside `TkIndex` in order to fetch the SQL
+table data and convert it into HTML. The point here is that the dependency
 must be injected into the application (instance of class `TsApp`) at the
 moment of its instantiation. This is a pure and clean dependency injection
-mechanism, which is absolutely container-free. More about it in
-["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
+mechanism, which is absolutely container-free. Read more about it in
+["Dependency Injection Containers Are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 
 ## Unit Testing
 
 Since every class is immutable and all dependencies are injected only
 through constructors, unit testing is extremely easy. Let's say we want
-to test that `TkStatus` that is supposed to return an HTML response
+to test `TkStatus`, which is supposed to return an HTML response
 (I'm using [JUnit 4](http://junit.org/) and [Hamcrest](http://www.hamcrest.org/)):
 
 {% highlight java %}
@@ -662,15 +662,15 @@ public final class TkIndexTest {
       new RsPrint(
         new TkStatus().act()
       ).printBody(),
-      Matchers.equalsTo("<html>hello, world!</html>")
+      Matchers.equalsTo("<html>Hello, world!</html>")
     );
   }
 }
 {% endhighlight %}
 
 Also, we can start the entire application or any individual _take_ in a
-test HTTP server and test its behavior via real TCP socket, for example
-(I'm using [jcabi-http](http://http.jcabi.com) to make HTTP request and check the output):
+test HTTP server and test its behavior via a real TCP socket; for example
+(I'm using [jcabi-http](http://http.jcabi.com) to make an HTTP request and check the output):
 
 {% highlight java %}
 public final class TkIndexTest {
@@ -684,7 +684,7 @@ public final class TkIndexTest {
             .fetch()
             .as(RestResponse.class)
             .assertStatus(HttpURLConnection.HTTP_OK)
-            .assertBody(Matchers.containsString("hello, world!"));
+            .assertBody(Matchers.containsString("Hello, world!"));
         }
       }
     );
@@ -693,9 +693,9 @@ public final class TkIndexTest {
 {% endhighlight %}
 
 [`FtRemote`](http://www.takes.org/apidocs-0.9/org/takes/http/FtRemote.html)
-starts a test web server at a random TCP port and calls
+starts a test web server at a random TCP port and calls the
 `exec()` method at the provided instance of `FtRemote.Script`. The first
-argument of this method is an URI of the just started web server home page.
+argument of this method is a URI of the just-started web server homepage.
 
 The architecture of Takes framework is very modular and composable. Any
 individual _take_ can be tested as a standalone component, absolutely
@@ -703,12 +703,12 @@ independent from the framework and other _takes_.
 
 ## Why the Name?
 
-That's the question I'm hearing rather often. The idea is simple. It is
-originated from movie business. When movie is made, they make _takes_ in order
-to capture the reality and put it on the tape. Each capture is called a _take_.
+That's the question I've been hearing rather often. The idea is simple, and it
+originates from the movie business. When a movie is made, the crew shoots many _takes_ in order
+to capture the reality and put it on film. Each capture is called a _take_.
 
 In other words, a _take_ is like a snapshot of the reality.
 
-The same applies to the framework. Each instance of `Take` represents
-a reality at one particular moment of time. This reality is then sent to the
-user in a form of a `Response`.
+The same applies to this framework. Each instance of `Take` represents
+a reality at one particular moment in time. This reality is then sent to the
+user in the form of a `Response`.
