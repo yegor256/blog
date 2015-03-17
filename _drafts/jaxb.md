@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "JAXB is Doing It Wrong, Try Xembly"
+title: "JAXB Is Doing It Wrong; Try Xembly"
 date: 2015-03-20
 tags: oop java xml
 description:
-  JAXB is a 10-years old anti-pattern that encourages Java
-  developers to turn their objects into dumb and passive
+  JAXB is a 10-year-old anti-pattern that encourages Java
+  developers to turn their objects into dumb, passive
   data structures.
 keywords:
   - jaxb anti-pattern
@@ -16,18 +16,18 @@ keywords:
 ---
 
 [JAXB](http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
-is a 10-years old Java technology that allows us to
+is a 10-year-old Java technology that allows us to
 convert a Java object into an XML document (marshalling) and
 back (unmarshalling). This technology is based on
 [setters and getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 and, in my opinion, violates key principles of object-oriented
-programming, turning objects into **passive data structures**. I would
-recommend to use [Xembly](http://www.xembly.org)
-instead, for marshalling Java objects into XML documents.
+programming by turning objects into **passive data structures**. I would
+recommend you use [Xembly](http://www.xembly.org)
+instead for marshalling Java objects into XML documents.
 
 <!--more-->
 
-This is how JAXB marshalling works. Say, you have a `Book` class that need to be
+This is how JAXB marshalling works. Say you have a `Book` class that needs to be
 marshalled into an XML document. You have to create getters and annotate them:
 
 {% highlight java %}
@@ -52,7 +52,7 @@ public class Book {
 }
 {% endhighlight %}
 
-Then, you create a marshaller and ask it to convert an instance of class
+Then you create a marshaller and ask it to convert an instance of class
 `Book` into XML:
 
 {% highlight java %}
@@ -72,16 +72,16 @@ You should be expecting something like this in the output:
 </book>
 {% endhighlight %}
 
-What's wrong about it? Pretty much the same as what is wrong with
-object-relational mapping, explained in
+So what's wrong with it? Pretty much the same thing that's wrong with
+object-relational mapping, which is explained in
 [ORM Is an Offensive Anti-Pattern]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
 JAXB is treating an object as a bag of data, extracting the data
 and converting it into XML the way JAXB wants. The object has no control
-over this process. An object is not
+over this process. Therefore an object is not
 [an object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
-any more but a passive bag of data.
+anymore but rather a passive bag of data.
 
-An ideal approach would be to re-design our class `Book` this way:
+An ideal approach would be to redesign our class `Book` this way:
 
 {% highlight java %}
 public class Book {
@@ -97,13 +97,13 @@ public class Book {
 }
 {% endhighlight %}
 
-However, there are a few problems with this approach. First of all,
-a massive code duplication. Building an XML document is a rather verbose
-process in Java. If every class would have to re-implement it in its
-`toXML()` method, we would have a big problem with duplicated code.
+However, there are a few problems with this approach. First of all, there's
+massive code duplication. Building an XML document is a rather verbose
+process in Java. If every class had to re-implement it in its
+`toXML()` method, we would have a big problem with duplicate code.
 
-The second problem is that we don't know exactly in what type of wrapping
-our XML document should be delivered. It may be a `String` or an `InputStream`
+The second problem is that we don't know exactly what type of wrapping
+our XML document should be delivered in. It may be a `String` or an `InputStream`
 or maybe an instance of `org.w3c.dom.Document`. Making many `toXML()` methods
 in each object would definitely be a disaster.
 
@@ -131,20 +131,20 @@ public class Book {
 }
 {% endhighlight %}
 
-Now, in order to build an XML document we should use this code
-outside of the object:
+Now, in order to build an XML document, we should use this code
+outside the object:
 
 {% highlight java %}
 final Book book = new Book("0132350882", "Clean Code");
 final String xml = new Xembler(book.toXembly()).xml();
 {% endhighlight %}
 
-This `Xembler` class will convert Xembly directives into XML document.
+This `Xembler` class will convert Xembly directives into an XML document.
 
 The beauty of this solution is that the internals of the object are
-not exposed via getters and the object is fully in charge of XML
-marshalling process. More to this, the compexity of these directives
-may be very high. Much higher than rather cumbersome annotations of JAXB.
+not exposed via getters and the object is fully in charge of the XML
+marshalling process. In addition, the compexity of these directives
+may be very high &mdash; much higher than the rather cumbersome annotations of JAXB.
 
-Xembly is an open source project, feel free to submit your questions
+Xembly is an open-source project, so feel free to submit your questions
 or corrections to [Github](https://github.com/yegor256/xembly).
