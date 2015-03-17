@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Class Casting is a Discriminating Anti-Pattern"
+title: "Class Casting Is a Discriminating Anti-Pattern"
 date: 2015-03-20
 tags: oop
 description:
-  Type casting and instanceof operator in particular is a
-  terrible anti-pattern that diminishes the entire idea
+  Type casting and use of the instanceof operator, in particular,
+  are terrible anti-patterns that diminish the entire idea
   of object-oriented programming.
 keywords:
   - class casting
@@ -17,15 +17,15 @@ keywords:
 
 Type casting is a very useful technique when there is no time
 or desire to think and design objects properly. Type casting (or
-class casting) helps us to work with provided objects differently,
+class casting) helps us work with provided objects differently,
 based on the class they belong to or the interface they implement. Class
-casting helps us to **discriminate** that poor objects and **segregate**
-them by their race, gender and religion. Can this be a good practice?
+casting helps us **discriminate** against the poor objects and **segregate**
+them by their race, gender, and religion. Can this be a good practice?
 
 <!--more-->
 
 This is a very typical example of type casting (Google Guava is full
-of that, for example [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111)):
+of it, for example [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111):
 
 {% highlight java %}
 public final class Foo {
@@ -43,30 +43,30 @@ public final class Foo {
 }
 {% endhighlight %}
 
-This method `sizeOf()` is calculating the size of an iterable. However, it
-is smart enough to understand that if `items` is also an instance of `Collection`,
+This `sizeOf()`  method calculates the size of an iterable. However, it
+is smart enough to understand that if `items` are also instances of `Collection`,
 there is no need to actually iterate them. It would be much faster to
-cast it to `Collection` and then call method `size()` on it. Looks logical.
-What's wrong about this approach? I see two practical problems.
+cast them to `Collection` and then call method `size()`. Looks logical,
+but what's wrong with this approach? I see two practical problems.
 
-First, there is a **hidden coupling** between `sizeOf()` and `Collection`. This
+First, there is a **hidden coupling** of `sizeOf()` and `Collection`. This
 coupling is not visible to the clients of `sizeOf()`. They don't know that
 method `sizeOf()` relies on interface `Collection`. If tomorrow we decide
 to change it, `sizeOf()` won't work. And we'll be very surprised, since
 its signature says nothing about this dependency. This won't happen with
-`Collection`, obviously, since it is part of Java SDK, but with custom
-classes this may and will happen.
+`Collection`, obviously, since it is part of the Java SDK, but with custom
+classes, this may and will happen.
 
 The second problem is an inevitably **growing complexity** of method `sizeOf()`. The
 more special types it has to treat differently, the more complex it will become.
 This if/then forking is inevitable, since it has to check all possible
-types and give them special treatments. This complexity is a result
-of a violation of single responsibility principle. The method is not
-only calculating the size of `Iterable`, but is also doing type
-casting and forking, based on casting.
+types and give them special treatment. Such complexity is a result
+of a violation of the single responsibility principle. The method is not
+only calculating the size of `Iterable` but is also performing type
+casting and forking based on that casting.
 
 What is the alternative? There are a few, but the most obvious
-is method overloading (not available is semi-OOP languages, like Ruby or PHP):
+is method overloading (not available in semi-OOP languages like Ruby or PHP):
 
 {% highlight java %}
 public final class Foo {
@@ -83,33 +83,33 @@ public final class Foo {
 }
 {% endhighlight %}
 
-Isn't it more elegant?
+Isn't that more elegant?
 
-Phylosophically speaking, type casting is a discrimination towards the object
-that comes into the method. The object complies to the contract, announced in the
-method signature. It does implement `Iterable` interface, which
-[is a contract]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
-It expects an equal treatment with all other objects that come into
+Philosophically speaking, type casting is discrimination  against the object
+that comes into the method. The object complies with the contract provided by the
+method signature. It implements the `Iterable` interface, which
+[is a contract]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
+and it expects equal treatment with all other objects that come into
 the same method. But the method discriminates objects by their types.
-The method is basically asking the object about its... race. Black
+The method is basically asking the object about its ... race. Black
 objects go right while white objects go left. That's what this `instanceof`
-is doing. This is what discrimination is about.
+is doing, and that's what discrimination is all about.
 
-By using `instanceof` the method is segregating incoming objects by their
-belonging to a certain group. In this case, there are two groups &mdash; collections
-and everybody else. If you are a collection, you get a special treatment.
-Even though you abide the `Iterable` contract, we still treat some objects
-specially. Because they belong to an "elite" group, called `Collection`.
+By using `instanceof`, the method is segregating incoming objects by the
+certain group they belong to. In this case, there are two groups: collections
+and everybody else. If you are a collection, you get special treatment.
+Even though you abide by the `Iterable` contract, we still treat some objects
+specially because they belong to an "elite" group called `Collection`.
 
 You may say that `Collection` is just another contract that an object may
-comply to. That's true, but in this case there should be another door where
-those who work by that contract should enter. You announced that
-`sizeOf()` accepts everybody who works by `Iterable` contract. I am an object
-and I do what the contract says. I come into the method and I expect
-an equal treatment with everybody else who come into the same method.
-But, apparently, inside the method, I realize that some objects have
-some privileges. Isn't it a discrimination?
+comply with. That's true, but in this case, there should be another door through
+which those who work by that contract should enter. You announced that
+`sizeOf()` accepts everybody who works on the `Iterable` contract. I am an object,
+and I do what the contract says. I enter the method and expect
+equal treatment with everybody else who comes into the same method.
+But, apparently, once inside the method, I realize that some objects have
+some special privileges. Isn't that discrimination?
 
-To conclude, I would consider `instanceof` and class casting
-an anti-pattern and a code smell. Once you see a necessity to use them,
+To conclude, I would consider `instanceof` and class casting to be
+anti-patterns and code smells. Once you see a need to use them,
 start thinking about refactoring.
