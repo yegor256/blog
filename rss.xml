@@ -10,12 +10,104 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 09 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Worst Technical Specifications Have No Glossaries</title>
+      <link>http://www.yegor256.com/2015/03/16/technical-glossaries.html</link>
+      <description>&lt;p&gt;I read a few technical specifications every week from our current
+and potential clients, and there&amp;#39;s one thing I can&amp;#39;t take anymore;
+I have to write about it: 99 percent of the documents I&amp;#39;m reading don&amp;#39;t
+have glossaries, and because of that, they are very difficult to read
+and digest. Even when they do have glossaries, their definitions
+of terms are very vague and ambiguous. Why is this happening? Don&amp;#39;t we
+understand the importance of a common vocabulary for any software project?
+I&amp;#39;m not sure what the causes are, but this is what a software
+architect should do when he or she starts a project &amp;mdash; create
+a glossary.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/03/pulp-fiction.jpg' style='width:600px;' alt='Pulp Fiction (1994) by Quentin Tarantino'/&gt;&lt;figcaption&gt;Pulp Fiction (1994) by Quentin Tarantino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I&amp;#39;m trying to write something unique about this subject, but
+everything I can say is so obvious that I doubt anyone
+would be interested in reading it. Anyway, I will try.&lt;/p&gt;
+
+&lt;p&gt;A glossary (a.k.a. vocabulary) is a list of terms used by the project
+that is usually included at the beginning of the technical specification document.
+Ideally, every technical term used in the document should be
+briefly explained in the glossary. The existence of a glossary helps
+everyone who works with the document quickly understand each other
+and avoid misconceptions. On top of this, a detailed and accurate glossary
+saves a reader a lot of time.&lt;/p&gt;
+
+&lt;p&gt;So why are glossaries not written? I see a few possible causes
+(usually, they are combined):&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We&amp;#39;re Smarter Than This&lt;/strong&gt;.
+Some people think glossaries are for newbies. After all, why would I
+explain what a PDU is? Any serious network engineer should
+understand that it stands for &amp;quot;protocol data unit&amp;quot;. If you don&amp;#39;t understand it,
+do your homework and then come back to work with us. Our team only works
+with well-educated engineers. You&amp;#39;re supposed to understand what PDU,
+ADC, TxR, IPv6, DPI, FIFO, and USSR (joking!) stand for. Otherwise,
+you&amp;#39;re not talented enough to be with us. Needless to say, this
+attitude can only come from those who have no idea what they are doing.
+A good engineer always remembers that if the receiver doesn&amp;#39;t understand
+a message, it&amp;#39;s the sender&amp;#39;s fault.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We Don&amp;#39;t Need These Formalities&lt;/strong&gt;.
+Seriously, why would we spend time on writing a glossary if everybody
+understands all our terms without it? We&amp;#39;ve been working as a team for a few
+years, so we all know what DPI and FIFO are, and we know what &amp;quot;record&amp;quot; and
+&amp;quot;timing data&amp;quot; are. Why bother with the glossary, which will provide no
+additional business value for us? I&amp;#39;ve seen many technical meetings of very
+mature and &amp;quot;well-organized&amp;quot; teams burn hours of time on pointless discussions
+simply because of different understandings the same term.
+A glossary is not a formality; it&amp;#39;s a key instrument of a software architect
+and all other team members.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We Prefer Working Software Over Comprehensive Documentation&lt;/strong&gt;.
+This is what the Agile Manifesto says, and it&amp;#39;s true. But the key word here is
+&amp;quot;comprehensive&amp;quot;. We don&amp;#39;t need comprehensive documentation, but we need
+a glossary. It&amp;#39;s a key element in any project, and it simply can&amp;#39;t
+be replaced by working software. No working software can help us
+understand what &amp;quot;header&amp;quot; and &amp;quot;data signal&amp;quot; are unless there
+is a simple and clear statement about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We Don&amp;#39;t Have Time&lt;/strong&gt;.
+We&amp;#39;re developing too fast and brainstorming every day, so the concept
+is frequently changing. We simply don&amp;#39;t have time to document our
+thoughts. We all understand each other, and that is the beauty of being agile.
+No, that is not a beauty. Instead, it is a lack of discipline
+and elementary management skill.
+A lack of a glossary is a personal fault of the software architect, and there
+are no excuses for it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All Our Terms Are Well-Known to Everyone&lt;/strong&gt;.
+Seriously, do we need to document what TCP/IP and FIFO are? That&amp;#39;s
+what they teach us in school. Everyone understands that, don&amp;#39;t they? Yes,
+some of the terms are well-known. But what is the problem of adding them
+to the glossary with a few words and a link to a Wikipedia article? This
+will only take a few minutes of an architect&amp;#39;s time, but it will make life easier
+for everybody in the project, both now and in a few years from now.&lt;/p&gt;
+
+&lt;p&gt;To conclude, there is no excuse for the absence of a glossary in any
+software project. And it is the personal responsibility of a software
+architect to keep this document (or a chapter) up to date.&lt;/p&gt;
+
+&lt;p&gt;Hope I wasn&amp;#39;t too obvious above :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/03/16/technical-glossaries.html</guid>
+      <dc:date>2015-03-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Don't Create Objects That End With -ER</title>
       <link>http://www.yegor256.com/2015/03/09/objects-end-with-er.html</link>
@@ -1839,65 +1931,6 @@ by you know who :)&lt;/p&gt;
       <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</guid>
       <dc:date>2015-01-12T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Continuous Integration on Windows, with Appveyor and Maven</title>
-      <link>http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;The purpose of Continuous Integration is to tell us, the developers,
-when the product we&amp;#39;re working on is not &amp;quot;packagable&amp;quot; any more. The
-sooner we get the signal, the better. Why? Because the damage will
-be younger if we find it sooner. The younger the damage, the easier it is
-to fix. There are many modern and high-quality
-&lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;hosted continuous integration services&lt;/a&gt;,
-but only one of them (to my knowledge) supports Windows as a build
-platform &amp;mdash; &lt;a href=&quot;http://www.appveyor.com&quot;&gt;appveyor.com&lt;/a&gt;. My experience
-tells me that it&amp;#39;s a good practice to continuously integrate on
-different platforms at the same time, especially when developing an
-open source library. That&amp;#39;s why, in &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;
-we&amp;#39;re using AppVeyor in combination with &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;This is how I managed to configure AppVeyor to build my Java Maven projects
-(this is &lt;code&gt;appveyor.yml&lt;/code&gt; configuration file you&amp;#39;re supposed to place
-in the root directory of your Github repository):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;{build}&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Windows Server 2012&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;ps&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;|&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Add-Type -AssemblyName System.IO.Compression.FileSystem&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;if (!(Test-Path -Path &amp;quot;C:\maven&amp;quot; )) {&lt;/span&gt;
-        &lt;span class=&quot;no&quot;&gt;(new-object System.Net.WebClient).DownloadFile(&lt;/span&gt;
-          &lt;span class=&quot;no&quot;&gt;&amp;#39;http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip&amp;#39;,&lt;/span&gt;
-          &lt;span class=&quot;no&quot;&gt;&amp;#39;C:\maven-bin.zip&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;no&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;no&quot;&gt;[System.IO.Compression.ZipFile]::ExtractToDirectory(&amp;quot;C:\maven-bin.zip&amp;quot;, &amp;quot;C:\maven&amp;quot;)&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;build_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;mvn clean package --batch-mode -DskipTest&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;test_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;mvn clean install --batch-mode&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;C:\maven\&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;C:\Users\appveyor\.m2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It was not that easy at all, so I decided to share. You can see
-how this configuration works in these projects:
-&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi-aspects&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/jcabi/jcabi-email&quot;&gt;jcabi-email&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/jcabi/jcabi-dynamo&quot;&gt;jcabi-dynamo&lt;/a&gt;, and
-&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sat, 10 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html</guid>
-      <dc:date>2015-01-10T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
