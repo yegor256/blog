@@ -28,7 +28,7 @@ a glossary.
 
 <!--more-->
 
-{% picture /images/2015/03/technical-glossaries.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+{% picture /images/2015/03/pulp-fiction.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
 
 I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone
