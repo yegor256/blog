@@ -262,7 +262,7 @@ interface is defined in [Takes](http://www.takes.org):
 
 {% highlight java %}
 public interface Request {
-  List<String> head() throws IOException;
+  Iterable<String> head() throws IOException;
   InputStream body() throws IOException;
 }
 {% endhighlight %}
@@ -511,7 +511,7 @@ This is how the interface looks:
 
 {% highlight java %}
 public interface Response {
-  List<String> head() throws IOException;
+  Iterable<String> head() throws IOException;
   InputStream body() throws IOException;
 }
 {% endhighlight %}
