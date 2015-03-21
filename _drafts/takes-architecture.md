@@ -29,6 +29,8 @@ Let's see what was created and how it works.
 
 <!--more-->
 
+{% picture /images/2015/03/godfather-shooting-scene.jpg 0 Making of The Godfather (1972) by Francis Ford Coppola %}
+
 ## Java Web Architecture in a Nutshell
 
 This is how I understand a web application architecture and its
