@@ -29,7 +29,7 @@ and discuss some very interesting numbers.
 
 ## Project #1: Traditionally Co-located
 
-The first project I was apart of was performed  by a traditionally co-located
+The first project I was a part of was performed  by a traditionally co-located
 group of programmers. There were about 20 of them (I'm not counting managers,
 analysts, product owners, SCRUM masters, etc.) The project was a web auctioning
 site with pretty high traffic numbers (over two million page views per day).
@@ -74,7 +74,7 @@ duplication](http://en.wikipedia.org/wiki/Duplicate_code).
 
 ## Show Me the Money
 
-In both projects, my role was called that of lead architect, and I know their
+In both projects, my role was called that of lead architect, and I knew their
 economics and financials. Besides that, I had access to both Git repositories,
 so I can measure how many new lines (or changed lines) were introduced by both
 teams in, say, a three-month period.
@@ -88,7 +88,7 @@ $20-35 per hour, for completed tasks only according to one of the principles of
 [XDSD](http://www.xdsd.org).
 
 The first one, in three months, produced 59k new lines and removed 29k in
-changes in the `master` branch, which in totals 88k lines of code. The project
+changes in the `master` branch, which totals 88k lines of code. The project
 resulted in about 10,000 man hours to produce these lines (20 programmers, three
 months, 170 working hours per month) &mdash; which equates to about $350k. Therefore,
 the project cost a whopping
@@ -97,7 +97,7 @@ the project cost a whopping
 
 The second project, in the same three month period, produced 45k new lines and
 removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
-(approximately 350 working hours in 650 tasks). Thus, the project costs merely:
+(approximately 350 working hours in 650 tasks). Thus, the project cost merely:
 
 <p style="color:green;text-align:center;font-size:2em;">&cent;13 per line</p>
 
@@ -110,7 +110,7 @@ $350k vs $7k, $3.98 vs &cent;13? What do you think?
 
 ## How to Validate the Numbers?
 
-If you're curios, I'm using [hoc](https://github.com/teamed/hoc)
+If you're curious, I'm using [hoc](https://github.com/teamed/hoc)
 to get the numbers from Git (it is explained in
 [Hits-of-Code Instead of SLoC]({% pst 2014/nov/2014-11-14-hits-of-code %})).
 You can validate the numbers for the second project here on Github:
