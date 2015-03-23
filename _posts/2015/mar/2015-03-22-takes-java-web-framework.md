@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java Web App Architecture In Takes Framework"
-date: 2015-02-10
+date: 2015-03-22
 tags: java
 description:
   Takes is a pure object-oriented and immutable
