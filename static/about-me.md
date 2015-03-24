@@ -49,6 +49,7 @@ about software quality. Here are a few facts about myself:
    [Method for Software Cost Estimating Using Scope Champions](https://www.google.com/patents/US20100042968)
 
  * I'm a founder and a lead architect of
+   [takes.org](http://www.takes.org),
    [jcabi.com](http://www.jcabi.com),
    [rultor.com](http://www.rultor.com),
    [qulice.com](http://www.qulice.com),
