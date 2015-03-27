@@ -10,12 +10,144 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Sun, 22 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>JAXB Is Doing It Wrong; Try Xembly</title>
+      <link>http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</link>
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xembly.org'&gt;&lt;img src='http://img.xembly.org/logo-256x256.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
+is a 10-year-old Java technology that allows us to
+convert a Java object into an XML document (marshalling) and
+back (unmarshalling). This technology is based on
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters and getters&lt;/a&gt;
+and, in my opinion, violates key principles of object-oriented
+programming by turning objects into &lt;strong&gt;passive data structures&lt;/strong&gt;. I would
+recommend you use &lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt;
+instead for marshalling Java objects into XML documents.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;This is how JAXB marshalling works. Say you have a &lt;code&gt;Book&lt;/code&gt; class that needs to be
+marshalled into an XML document. You have to create getters and annotate them:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlRootElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@XmlRootElement&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getIsbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then you create a marshaller and ask it to convert an instance of class
+&lt;code&gt;Book&lt;/code&gt; into XML:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0132350882&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Clean Code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAXBContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAXBContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Marshaller&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marshaller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jaxbContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createMarshaller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;marshaller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;marshal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You should be expecting something like this in the output:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;book&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;isbn&amp;gt;&lt;/span&gt;0132350882&lt;span class=&quot;nt&quot;&gt;&amp;lt;/isbn&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Clean Code&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/book&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So what&amp;#39;s wrong with it? Pretty much the same thing that&amp;#39;s wrong with
+object-relational mapping, which is explained in
+&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM Is an Offensive Anti-Pattern&lt;/a&gt;.
+JAXB is treating an object as a bag of data, extracting the data
+and converting it into XML the way JAXB wants. The object has no control
+over this process. Therefore an object is not
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;an object&lt;/a&gt;
+anymore but rather a passive bag of data.&lt;/p&gt;
+
+&lt;p&gt;An ideal approach would be to redesign our class &lt;code&gt;Book&lt;/code&gt; this way:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toXML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// create XML document and return&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, there are a few problems with this approach. First of all, there&amp;#39;s
+massive code duplication. Building an XML document is a rather verbose
+process in Java. If every class had to re-implement it in its
+&lt;code&gt;toXML()&lt;/code&gt; method, we would have a big problem with duplicate code.&lt;/p&gt;
+
+&lt;p&gt;The second problem is that we don&amp;#39;t know exactly what type of wrapping
+our XML document should be delivered in. It may be a &lt;code&gt;String&lt;/code&gt; or an &lt;code&gt;InputStream&lt;/code&gt;
+or maybe an instance of &lt;code&gt;org.w3c.dom.Document&lt;/code&gt;. Making many &lt;code&gt;toXML()&lt;/code&gt; methods
+in each object would definitely be a disaster.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt; provides a solution. As I&amp;#39;ve
+&lt;a href=&quot;/2014/04/09/xembly-intro.html&quot;&gt;mentioned before&lt;/a&gt;, it is
+an imperative language for XML constructions and manipulations. Here is
+how we can implement our &lt;code&gt;Book&lt;/code&gt; object with the help of Xembly:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.xembly.Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toXembly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Directives&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, in order to build an XML document, we should use this code
+outside the object:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0132350882&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Clean Code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Xembler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toXembly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This &lt;code&gt;Xembler&lt;/code&gt; class will convert Xembly directives into an XML document.&lt;/p&gt;
+
+&lt;p&gt;The beauty of this solution is that the internals of the object are
+not exposed via getters and the object is fully in charge of the XML
+marshalling process. In addition, the compexity of these directives
+may be very high &amp;mdash; much higher than the rather cumbersome annotations of JAXB.&lt;/p&gt;
+
+&lt;p&gt;Xembly is an open-source project, so feel free to submit your questions
+or corrections to &lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</guid>
+      <dc:date>2015-03-26T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Java Web App Architecture In Takes Framework</title>
       <link>http://www.yegor256.com/2015/03/22/takes-java-web-framework.html</link>
@@ -2263,246 +2395,6 @@ company:&lt;/p&gt;
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/01/21/if-then-throw-else.html</guid>
       <dc:date>2015-01-21T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How to Cut Corners and Stay Cool</title>
-      <link>http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</link>
-      <description>&lt;p&gt;You have a task assigned to you, and you don&amp;#39;t like it. You are simply
-not in the mood. You don&amp;#39;t know how to fix that damn bug. You have no idea
-how that bloody module was designed, and you don&amp;#39;t know how it works. But
-you have to fix the issue, which was reported by someone who has no clue how
-this software works. You get frustrated and blame that stupid project manager and
-programmers who were fired two years ago. You spend hours just to find out
-how the code works. Then even more hours trying to fix it. In the end,
-you miss the deadline and &lt;strong&gt;everybody blames you&lt;/strong&gt;. Been there, done that?&lt;/p&gt;
-
-&lt;p&gt;There is, however, an alternative approach that provides a professional exit
-from this situation. Here are some tips I recommend to my peers who code with me
-in &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt; projects.
-In a nutshell, I&amp;#39;m going to explain how you can &lt;strong&gt;cut corners&lt;/strong&gt; and remain
-professional, 1) protecting your nerves, 2) optimizing your project&amp;#39;s expenses,
-and 3) increasing the quality of the source code.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Here is a list of options you have, in order of preference. I would
-recommend you start with the first one on the list and proceed down when you
-have to.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-dependencies,-blame-them,-and-wait&quot;&gt;Create Dependencies, Blame Them, and Wait&lt;/h2&gt;
-
-&lt;p&gt;This is the first and most preferable option. If you can&amp;#39;t figure out
-how to fix an issue or how to implement a new feature, it&amp;#39;s a fault
-of the project, not you. Even if you can&amp;#39;t figure it out because you
-don&amp;#39;t know anything about Ruby and they hired you to fix bugs
-in a Ruby on Rails code base &amp;mdash; it&amp;#39;s their fault. Why did they hire
-you when you know nothing about Ruby?&lt;/p&gt;
-
-&lt;p&gt;So be positive; don&amp;#39;t blame yourself. If you don&amp;#39;t know how this
-damn code works, it&amp;#39;s a fault of the code, not you. Good code is
-easy to understand and maintain.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-1.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Don&amp;#39;t try to eat spaghetti code; complain to the chef and ask
-him or her to cook something better (BTW, I love spaghetti).&lt;/p&gt;
-
-&lt;p&gt;How can you do that? Create dependencies &amp;mdash; new bugs complaining
-about unclear design, lack of unit tests, absence of necessary classes, or
-whatever. Be creative and offensive &amp;mdash; in a constructive and professional way,
-of course. Don&amp;#39;t get personal. No matter who cooked that spaghetti, you have
-nothing against him or her personally. You just want another dish, that&amp;#39;s all.&lt;/p&gt;
-
-&lt;p&gt;Once you have those dependencies reported, explain in the main ticket
-that you can&amp;#39;t continue until all of them are resolved. You will
-legally stop working, and someone else will improve the code you need. Later,
-when all dependencies are resolved and the code looks better, try to
-get back to it again. If you still see issues, create new dependencies.
-Keep doing this until the code in front of you is clean and easy to fix.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t be a hero &amp;mdash; don&amp;#39;t rush into fixing the bad code you inherited. Think
-&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;like a developer, not a hacker&lt;/a&gt;.
-Remember that your first and most important responsibility as
-a disciplined engineer is to help the project &lt;strong&gt;reveal&lt;/strong&gt; maintainability issues.
-Who will fix them and how is the responsibility of a project manager.
-Your job is to reveal, not to hide. By being a hero and trying to fix everything
-in the scope of a single task, you&amp;#39;re not doing the project a favor
-&amp;mdash; you&amp;#39;re concealing the problem(s).&lt;/p&gt;
-
-&lt;p&gt;Edit: Another good example of a dependency may be a question raised
-at, for example, StackOverflow.com or a user list of a third-party library.
-If you can&amp;#39;t find a solution yourself and the problem is outside of the scope
-of your project &amp;mdash; submit a question to SO and put its link to the
-source code (in JavaDoc block, for example).&lt;/p&gt;
-
-&lt;h2 id=&quot;demand-better-documentation-and-wait&quot;&gt;Demand Better Documentation and Wait&lt;/h2&gt;
-
-&lt;p&gt;All dependencies are resolved and the code looks clean, but you still
-don&amp;#39;t understand how to fix the problem or implement a new feature. It&amp;#39;s
-too complex. Or maybe you just don&amp;#39;t know how this library works. Or you&amp;#39;ve
-never done anything like that before. Anyhow, you can&amp;#39;t continue because
-you don&amp;#39;t understand. And in order to understand, you will need a lot of time &amp;mdash;
-much more than you have from your project manager or your Scrum board. What
-do you do?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-2.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Again, think positively and don&amp;#39;t blame yourself. If the software is not
-clear enough for a total stranger, it&amp;#39;s &amp;quot;their&amp;quot; fault, not yours. They created
-the software in a way that&amp;#39;s difficult to digest and modify. But the code is
-clean; it&amp;#39;s not spaghetti anymore. It&amp;#39;s a perfectly cooked lobster, but
-you don&amp;#39;t know how to eat lobster! You&amp;#39;ve never ate it before.&lt;/p&gt;
-
-&lt;p&gt;The chef did a good job; he cooked it well, but the restaraunt didn&amp;#39;t give
-you any instructions on how to eat such a sophisticated dish. What do you do?&lt;/p&gt;
-
-&lt;p&gt;You ask for a manual. You ask for documentation. Properly designed
-and written source code must be properly documented. Once you see that
-something is not clear for you, create new dependencies that ask for better
-documentation of certain aspects of the code.&lt;/p&gt;
-
-&lt;p&gt;Again, don&amp;#39;t be a hero and try to understand everything yourself. Of course
-you&amp;#39;re a smart guy, but the project doesn&amp;#39;t need a single smart guy. The
-project needs maintainable code that is easy to modify, even by someone
-who is not as smart as yourself. So do your project a favor: reveal the
-documentation issue, and ask someone to fix it for you. Not just for you,
-for everybody. The entire team will benefit from such a request.
-Once the documentation is fixed, you will continue with your
-task, and everybody will get source code that is a bit better than it
-was before. Win-win, isn&amp;#39;t it?&lt;/p&gt;
-
-&lt;h2 id=&quot;reproduce-the-bug-and-call-it-a-day&quot;&gt;Reproduce the Bug and Call It a Day&lt;/h2&gt;
-
-&lt;p&gt;Now the code is clean, the documentation is good enough,
-but you&amp;#39;re stuck anyway. What to do?
-Well, I&amp;#39;m a big fan of test-driven development, so my next suggestion would be
-to create a test that reproduces the bug. Basically, this is what you should start
-every ticket with, be it a bug or a feature. Catch the bug with a unit test!
-Prove that the bug exists by failing the build with a new test.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=7SI6P3M636MLCO5E'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/working-effectively-with-legacy-code.png' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;This may be rather difficult to achieve, especially when the software you&amp;#39;re
-trying to fix or modify was written by &lt;span class=&quot;strike&quot;&gt;idiots&lt;/span&gt;
-someone who had no idea about unit testing. There are plenty of techniques
-that may help you find a way to make such software more testable. I would
-highly recommend you read
-&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=7SI6P3M636MLCO5E&quot;&gt;Working Effectively with Legacy Code&lt;/a&gt;
-by Michael Feathers. There are many different patterns, and most of them work.&lt;/p&gt;
-
-&lt;p&gt;Once you manage to reproduce the bug and the build fails, stop right there.
-That&amp;#39;s more than enough for a single piece of work. Skip the test
-(for example, using &lt;code&gt;@Ignore&lt;/code&gt; annotation in JUnit 4) and commit your changes.
-Then add documentation to the unit test you just created, preferably in the
-form of a &lt;code&gt;@todo&lt;/code&gt;. Explain there that you managed to reproduce the problem
-but didn&amp;#39;t have enough time to fix it. Or maybe you just don&amp;#39;t know how to
-fix it. Be honest and give all possible details.&lt;/p&gt;
-
-&lt;p&gt;I believe that catching a bug with a unit test is, in most cases, more than 80% of success.
-The rest is way more simple: just fix the code and make the test pass. Leave
-this job to someone else.&lt;/p&gt;
-
-&lt;h2 id=&quot;prove-a-bug&amp;#39;s-absence&quot;&gt;Prove a Bug&amp;#39;s Absence&lt;/h2&gt;
-
-&lt;p&gt;Very often you simply can&amp;#39;t reproduce a bug. That&amp;#39;s not because the code is not
-testable and can&amp;#39;t be used in a unit test but because you can&amp;#39;t reproduce
-an error situation. You know that the code crashes in production, but you can&amp;#39;t
-crash it in a test. The error stack trace reported by the end user or your
-production logging system is not reproducable. It&amp;#39;s a very common situation.
-What do you do?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-3.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;I think the best option here is to create a test that will prove that
-the code works as intended. The test won&amp;#39;t fail, and the build will remain clean.
-You will commit it to the repository and ... report that the problem is solved.
-You will say that the reported bug doesn&amp;#39;t really exist in real life. You
-will state that there is no bug &amp;mdash; &amp;quot;our software works correctly; here
-is the proof: see my new unit test.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Will they believe you? I don&amp;#39;t think so, but they don&amp;#39;t have a choice. They
-can&amp;#39;t push you any further. You&amp;#39;ve already done something &amp;mdash; created
-a new test that proves everything is fine. The ticket will be closed
-and the project will move on.&lt;/p&gt;
-
-&lt;p&gt;If, later on, the same problem occurs in
-production, a new bug will be reported. It will be linked to your ticket. Your
-experience will help someone investigate the bug further. Maybe that
-guy will also fail to catch the bug with a test and will also create
-a new, successful and &amp;quot;useless&amp;quot; test. And this may happen again and again.
-Eventually, this cumulative group experience will help the last guy
-catch the bug and fix it.&lt;/p&gt;
-
-&lt;p&gt;Thus, a new passing test is a good response to a bug that you can&amp;#39;t catch
-with a unit test.&lt;/p&gt;
-
-&lt;h2 id=&quot;disable-the-feature&quot;&gt;Disable the Feature&lt;/h2&gt;
-
-&lt;p&gt;Sometimes the unit test technique won&amp;#39;t work, mostly because a bug will be
-too important to be ignored. They won&amp;#39;t agree with you when you show them
-a unit test that proves the bug doesn&amp;#39;t exist. They will tell you
-that &amp;quot;when our users are trying to download a PDF, they get a blank page.&amp;quot;
-And they will also say they don&amp;#39;t really care about your bloody
-unit tests. All they care about is that PDF document that should be
-downloadable. So the trick with a unit test won&amp;#39;t work. What do you do?&lt;/p&gt;
-
-&lt;p&gt;It depends on many factors, and most of these factors are not technical.
-They are political, organizational, managerial, social, you name it. However,
-in most cases, I would recommend you disable that toxic feature,
-release a new version, and close the ticket.&lt;/p&gt;
-
-&lt;p&gt;You will take the problem off your shoulders and everybody will be pleased.
-Well, except that poor end user. But this is not your problem. This is the
-fault of management, which didn&amp;#39;t organize pre-production testing properly.
-Again, don&amp;#39;t take this blame on yourself. Your job is to keep the code
-clean and finish your tickets in a reasonable amount of time. Their
-job is to make sure that developers, testers, DevOps, marketers, product
-managers, and designers work together to deliver the product with an
-acceptable number of errors.&lt;/p&gt;
-
-&lt;p&gt;Production errors are not programmers&amp;#39; mistakes, though delayed
-tickets are. If you keep a ticket in your hands for too long, you become
-an unmanageable unit of work. They simply can&amp;#39;t manage you anymore. You&amp;#39;re doing
-something, trying to fix the bug, saying &amp;quot;I&amp;#39;m trying, I&amp;#39;m trying ...&amp;quot;
-How can they manage such a guy? Instead, you should deliver quickly, even if
-it comes at the cost of a temporarily disabled feature.&lt;/p&gt;
-
-&lt;h2 id=&quot;say-no&quot;&gt;Say No&lt;/h2&gt;
-
-&lt;p&gt;OK, let&amp;#39;s say none of the above works. The code is clean, the documentation
-is acceptable, but you can&amp;#39;t catch the bug, and they don&amp;#39;t accept a unit
-test from you as proof of the bug&amp;#39;s absence. They also don&amp;#39;t allow you to
-disable a feature, because it is critical to the user experience. What choices
-do you have? Just one.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-4.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Be professional and say &amp;quot;No, I can&amp;#39;t do this; find someone else.&amp;quot;
-Being a professional developer doesn&amp;#39;t mean being able to fix any problem. Instead,
-it means honesty. If you see that you can&amp;#39;t
-fix the problem, say so as soon as possible. Let them decide what to do.
-If they eventually decide to fire you because of that, you will remain a
-professional. They will remember you as a guy who was honest and took his
-reputation seriously. In the end, you will win.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t hold the task in your hands. The minute you realize you&amp;#39;re
-not the best guy for it or you simply can&amp;#39;t fix it &amp;mdash; notify
-your manager. Make it his problem. Actually, it is his problem in the
-first place. He hired you. He interviewed you. He decided to give you this
-task. He estimated your abilities and your skills.
-So it&amp;#39;s payback time.&lt;/p&gt;
-
-&lt;p&gt;Your &amp;quot;No!&amp;quot; will be very valuable feedback for him. It will help him
-make his next important management decisions.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, if you lie just to give the impression you&amp;#39;re a guy who
-can fix anything and yet fail in the end, you will damage not only your
-reputation but also the project&amp;#39;s performance and objectives.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</guid>
-      <dc:date>2015-01-15T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
