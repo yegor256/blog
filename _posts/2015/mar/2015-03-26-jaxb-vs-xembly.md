@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JAXB Is Doing It Wrong; Try Xembly"
-date: 2015-03-20
+date: 2015-03-26
 tags: oop java xml
 description:
   JAXB is a 10-year-old anti-pattern that encourages Java
