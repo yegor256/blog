@@ -19,7 +19,7 @@
     <item>
       <title>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</title>
       <link>http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt; is a great cloud continuous integration service that builds
 Windows projects. &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; is a DevOps assistant, which automates
