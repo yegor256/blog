@@ -3,6 +3,7 @@ layout: post
 title: "JAXB Is Doing It Wrong; Try Xembly"
 date: 2015-03-26
 tags: oop java xml
+categories: jcg
 description:
   JAXB is a 10-year-old anti-pattern that encourages Java
   developers to turn their objects into dumb, passive

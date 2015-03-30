@@ -3,6 +3,7 @@ layout: post
 title: "Java Web App Architecture In Takes Framework"
 date: 2015-03-22
 tags: java
+categories: jcg
 description:
   Takes is a pure object-oriented and immutable
   Java web framework that turns the design and development
