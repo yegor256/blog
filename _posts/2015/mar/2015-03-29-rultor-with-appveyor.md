@@ -5,8 +5,8 @@ date: 2015-03-29
 tags: devops rultor
 description:
   AppVeyor is a continuous integration platform for Windows
-  projects; Rultor is a DevOps assistant; this article explains
-  how they can work together
+  projects; Rultor is a Docker based DevOps assistant for merge, release and deploy operations;
+  they can work together.
 keywords:
   - appveyor
   - appveyor merge pull request
@@ -15,17 +15,23 @@ keywords:
   - windows builds with docker
 ---
 
-AppVeyor is a great cloud continuous integration service that builds
-Windows projects. Rultor is a DevOps assistant, which we use in our
-projects to automate release, merge and deploy operations. These posts
+{% badge /images/2014/10/appveyor.png 64 http://www.appveyor.com %}
+
+[AppVeyor](http://www.appveyor.com) is a great cloud continuous integration service that builds
+Windows projects. [Rultor](http://www.rultor.com) is a DevOps assistant, which automates
+release, merge and deploy operations, using Docker containers. These posts
 explain how Rultor works and what it's for:
 [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
-The problem is that Rultor is running all scripts inside Docker container
+
+{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+
+The problem is that Rultor is running all scripts inside Docker containers
 and Docker can't build Windows projects. The only and the best logical solution
 is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor
-gives a green light, we should continue with our usual in-Docker scripts. Otherwise,
-we fail the entire build.
+gives a green light, we continue with our usual in-Docker script. Otherwise,
+we fail the entire build. Below I explain how this automation was configured
+in [Takes framework](http://www.takes.org).
 
 <!--more-->
 
@@ -50,7 +56,8 @@ $ rultor encrypt -p yegor256/takes curl-appveyor.cfg
 
 The file I creaeted was called
 [`curl-appveyor.cfg.asc`](https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc).
-I committed and pushed.
+I committed and pushed into [yegor256/takes](https://github.com/yegor256/takes)
+Github repository.
 
 {% highlight bash %}
 $ git add curl-appveyor.cfg.asc
@@ -58,7 +65,7 @@ $ git commit -am 'CURL config for Appveyor'
 $ git push origin master
 {% endhighlight %}
 
-Then, I configured pinging of AppVeyor from Docker script.
+Then, I configured AppVeyor "pinging" from Docker script.
 This is what I did in [`.rultor.yml`](https://github.com/yegor256/takes/blob/master/.rultor.yml):
 
 {% highlight yaml %}
@@ -90,3 +97,5 @@ Once the build is started, I'm getting its unique `version` and start
 looping to check its status. I'm waiting for `success` or `failed`. Anything
 else will mean that the build is still in progress and I should keep looping.
 
+You can see how it works in this pull request, for example:
+[yegor256/takes#93](https://github.com/yegor256/takes/pull/93).
