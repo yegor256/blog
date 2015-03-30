@@ -15,7 +15,7 @@ keywords:
   - windows builds with docker
 ---
 
-{% badge /images/2014/10/appveyor.png 64 http://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png 100 http://www.appveyor.com %}
 
 [AppVeyor](http://www.appveyor.com) is a great cloud continuous integration service that builds
 Windows projects. [Rultor](http://www.rultor.com) is a DevOps assistant, which automates
