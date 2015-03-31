@@ -14,7 +14,19 @@ keywords:
   - get donation for open source
 ---
 
-I'm
+I'm a big fan of rules and discipline in software development, see for example
+[Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
+Also, I'm a big fan of object-oriented programming in its pureness, for example
+[Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
+I'm also a co-founder and CTO of Teamed.io, a software development
+company where I put my admiration of discipline and clean design into practice.
+
+I want to encourage you to share my passion. Not just by reading my blog,
+but through making real open source software, in a disciplined way.
+This award is for those who is brave enough to swim against the current and
+value the quality above everything else.
+
+Send me your own project for review and take participation in the contest.
 
 Rules:
 
