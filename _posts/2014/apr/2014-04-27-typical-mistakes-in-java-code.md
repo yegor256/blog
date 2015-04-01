@@ -226,7 +226,8 @@ that the size of the file is zero and move on?
 
 ## Indentation
 
-For indentation, the main rule is that a bracket should either end a line or be
+For indentation, the [main rule]({% pst 2014/oct/2014-10-23-paired-brackets-notation %})
+is that a bracket should either end a line or be
 closed on the same line (reverse rule applies to a closing bracket). For
 example, the following is not correct because the first bracket is not closed on
 the same line and there are symbols after it. The second bracket is also in
