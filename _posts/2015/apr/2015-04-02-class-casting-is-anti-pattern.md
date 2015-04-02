@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Class Casting Is a Discriminating Anti-Pattern"
-date: 2015-03-20
+date: 2015-04-02
 tags: oop
 description:
   Type casting and use of the instanceof operator, in particular,
