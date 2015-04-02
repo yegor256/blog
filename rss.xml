@@ -45,6 +45,7 @@ a text file &lt;code&gt;curl-appveyor.cfg&lt;/code&gt; with this content (it&amp
 just an example):&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;--silent
+--fail
 --header &amp;quot;Authorization: Bearer 1hdmsfbs7xccb9x6g1y4&amp;quot;
 --header &amp;quot;Content-Type: application/json&amp;quot;
 --header &amp;quot;Accept: application/json&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
