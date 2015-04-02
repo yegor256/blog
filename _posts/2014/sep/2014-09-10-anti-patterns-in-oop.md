@@ -33,6 +33,8 @@ Here they come:
 
  * [Public Static Methods]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 
+ * [Class Casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
+
 <!--more-->
 
 Avoid them at all cost.
