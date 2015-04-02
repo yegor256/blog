@@ -42,6 +42,7 @@ just an example):
 
 {% highlight text %}
 --silent
+--fail
 --header "Authorization: Bearer 1hdmsfbs7xccb9x6g1y4"
 --header "Content-Type: application/json"
 --header "Accept: application/json"
