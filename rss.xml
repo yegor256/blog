@@ -10,12 +10,117 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Sun, 29 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Class Casting Is a Discriminating Anti-Pattern</title>
+      <link>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</link>
+      <description>&lt;p&gt;Type casting is a very useful technique when there is no time
+or desire to think and design objects properly. Type casting (or
+class casting) helps us work with provided objects differently,
+based on the class they belong to or the interface they implement. Class
+casting helps us &lt;strong&gt;discriminate&lt;/strong&gt; against the poor objects and &lt;strong&gt;segregate&lt;/strong&gt;
+them by their race, gender, and religion. Can this be a good practice?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/03/gadkiy-utenok.jpg' style='width:600px;' alt='Гадкий утенок (1956) by Владимир Дегтярёв'/&gt;&lt;figcaption&gt;Гадкий утенок (1956) by Владимир Дегтярёв&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is a very typical example of type casting (Google Guava is full
+of it, for example &lt;a href=&quot;https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111&quot;&gt;&lt;code&gt;Iterables.size()&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This &lt;code&gt;sizeOf()&lt;/code&gt;  method calculates the size of an iterable. However, it
+is smart enough to understand that if &lt;code&gt;items&lt;/code&gt; are also instances of &lt;code&gt;Collection&lt;/code&gt;,
+there is no need to actually iterate them. It would be much faster to
+cast them to &lt;code&gt;Collection&lt;/code&gt; and then call method &lt;code&gt;size()&lt;/code&gt;. Looks logical,
+but what&amp;#39;s wrong with this approach? I see two practical problems.&lt;/p&gt;
+
+&lt;p&gt;First, there is a &lt;strong&gt;hidden coupling&lt;/strong&gt; of &lt;code&gt;sizeOf()&lt;/code&gt; and &lt;code&gt;Collection&lt;/code&gt;. This
+coupling is not visible to the clients of &lt;code&gt;sizeOf()&lt;/code&gt;. They don&amp;#39;t know that
+method &lt;code&gt;sizeOf()&lt;/code&gt; relies on interface &lt;code&gt;Collection&lt;/code&gt;. If tomorrow we decide
+to change it, &lt;code&gt;sizeOf()&lt;/code&gt; won&amp;#39;t work. And we&amp;#39;ll be very surprised, since
+its signature says nothing about this dependency. This won&amp;#39;t happen with
+&lt;code&gt;Collection&lt;/code&gt;, obviously, since it is part of the Java SDK, but with custom
+classes, this may and will happen.&lt;/p&gt;
+
+&lt;p&gt;The second problem is an inevitably &lt;strong&gt;growing complexity&lt;/strong&gt; of method &lt;code&gt;sizeOf()&lt;/code&gt;. The
+more special types it has to treat differently, the more complex it will become.
+This if/then forking is inevitable, since it has to check all possible
+types and give them special treatment. Such complexity is a result
+of a violation of the single responsibility principle. The method is not
+only calculating the size of &lt;code&gt;Iterable&lt;/code&gt; but is also performing type
+casting and forking based on that casting.&lt;/p&gt;
+
+&lt;p&gt;What is the alternative? There are a few, but the most obvious
+is method overloading (not available in semi-OOP languages like Ruby or PHP):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Isn&amp;#39;t that more elegant?&lt;/p&gt;
+
+&lt;p&gt;Philosophically speaking, type casting is discrimination  against the object
+that comes into the method. The object complies with the contract provided by the
+method signature. It implements the &lt;code&gt;Iterable&lt;/code&gt; interface, which
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;is a contract&lt;/a&gt;,
+and it expects equal treatment with all other objects that come into
+the same method. But the method discriminates objects by their types.
+The method is basically asking the object about its ... race. Black
+objects go right while white objects go left. That&amp;#39;s what this &lt;code&gt;instanceof&lt;/code&gt;
+is doing, and that&amp;#39;s what discrimination is all about.&lt;/p&gt;
+
+&lt;p&gt;By using &lt;code&gt;instanceof&lt;/code&gt;, the method is segregating incoming objects by the
+certain group they belong to. In this case, there are two groups: collections
+and everybody else. If you are a collection, you get special treatment.
+Even though you abide by the &lt;code&gt;Iterable&lt;/code&gt; contract, we still treat some objects
+specially because they belong to an &amp;quot;elite&amp;quot; group called &lt;code&gt;Collection&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may say that &lt;code&gt;Collection&lt;/code&gt; is just another contract that an object may
+comply with. That&amp;#39;s true, but in this case, there should be another door through
+which those who work by that contract should enter. You announced that
+&lt;code&gt;sizeOf()&lt;/code&gt; accepts everybody who works on the &lt;code&gt;Iterable&lt;/code&gt; contract. I am an object,
+and I do what the contract says. I enter the method and expect
+equal treatment with everybody else who comes into the same method.
+But, apparently, once inside the method, I realize that some objects have
+some special privileges. Isn&amp;#39;t that discrimination?&lt;/p&gt;
+
+&lt;p&gt;To conclude, I would consider &lt;code&gt;instanceof&lt;/code&gt; and class casting to be
+anti-patterns and code smells. Once you see a need to use them,
+start thinking about refactoring.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</guid>
+      <dc:date>2015-04-02T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</title>
       <link>http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html</link>
@@ -2276,122 +2381,6 @@ to the Github &lt;a href=&quot;https://github.com/jcabi/jcabi-xml/issues&quot;&g
       <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
       <dc:date>2015-02-02T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Making Your Boss Happy Is a False Objective</title>
-      <link>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
-      <description>&lt;p&gt;We all have bosses. We also have customers who pay us for running
-their software projects. They are my bosses for the time of the contract. I&amp;#39;m also
-acting as a boss for developers who are working for &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;.
-It is obvious that a good employee/contractor is one who makes his
-boss/customer happy. But only a bad employee works toward
-this goal. Trying to make your boss happy is a false target that,
-if pursued, ruins the project. A professional employee works
-for the project, not for the boss.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/the-million-dollar-hotel.png' style='width:600px;' alt='The Million Dollar Hotel (2000) by Wim Wenders'/&gt;&lt;figcaption&gt;The Million Dollar Hotel (2000) by Wim Wenders&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;We all work on &lt;strong&gt;projects&lt;/strong&gt; as developers, designers, programmers, managers,
-testers, you name it. The boss is also a member of the project. More
-formally, he or she is a &lt;strong&gt;stakeholder&lt;/strong&gt;, same as every one of us. Each stakeholder
-has his own &lt;strong&gt;needs&lt;/strong&gt; for the project: 1) Jeff, the developer, wants to learn Scala
-and collect his paychecks every two weeks; 2) Sally, the product owner,
-wants to attend an expo in Paris and also collect her paychecks;
-3) Bob, the CTO, wants to raise round A funding and collect a big paycheck; etc.&lt;/p&gt;
-
-&lt;p&gt;The project has its own &lt;strong&gt;objectives&lt;/strong&gt;, to achieve 1 million downloads
-in less than six months and under $300,000, for example.
-This is what the project works for. This is what all of us are here for.&lt;/p&gt;
-
-&lt;p&gt;Our personal needs may be fully satisfied
-while we&amp;#39;re all working toward this goal, or some of them may
-be sacrificed. I mean all of us, including the boss, whoever he or she is,
-either a CTO, a co-founder, a project manager, or a team lead.&lt;/p&gt;
-
-&lt;p&gt;The project is the source of our checks. Not the CFO.&lt;/p&gt;
-
-&lt;p&gt;The CFO is a stakeholder, like everyone else. The project gives him more
-power than others because it&amp;#39;s necessary for the whole mechanism to
-work properly. Every project member has his or her own &lt;strong&gt;roles and responsibilities&lt;/strong&gt;.
-I write code; the CFO writes checks. I eat at McDonalds; he drives
-a Jaguar. We have different needs, and we both agreed that the project
-would satisfy them. Otherwise we wouldn&amp;#39;t be here, right?&lt;/p&gt;
-
-&lt;p&gt;We&amp;#39;re all parts of a mechanism called a &amp;quot;project&amp;quot;, which works according
-to the rules and principles of &lt;strong&gt;project management&lt;/strong&gt; whether we are aware of
-them or not. Whether we have a project manager or not. Even if we violate
-all of them and manage ourselves in total chaos, we still have a scope,
-cost, schedule, and all other attributes of project management.&lt;/p&gt;
-
-&lt;p&gt;A professional and savvy boss understands that his role in the mechanism
-is to clearly define project objectives and make sure everybody&amp;#39;s needs are
-aligned with those objectives. In a properly managed and organized project,
-everybody sees and feels how his or her personal needs are satisfied
-when the project achieves its objectives: Jeff learns Scala, Sally
-sees Paris, and Bob buys a new house.&lt;/p&gt;
-
-&lt;p&gt;However, if Jeff wants to learn Scala and we&amp;#39;re
-developing an iOS application, that is a problem for the boss to resolve.
-Either convince Jeff to fall in love with Swift (I doubt that&amp;#39;s possible)
-or replace him with someone who is already in love with it. It&amp;#39;s clear that
-a professional boss will resort to such a tragic act as firing Jeff
-not because of his personal feelings towards Jeff but because
-they are both working toward the project objectives. Jeff and the boss
-will both understand that Jeff&amp;#39;s need to learn Scala is not aligned
-with the objective of the project.&lt;/p&gt;
-
-&lt;p&gt;It is the CTO&amp;#39;s responsibility to do something about Jeff when his personal
-needs become misaligned with the objectives of the project that is paying
-his salary. A professional CEO understands that and
-always acts in the best interest of the project, not of himself or
-anyone else personally.&lt;/p&gt;
-
-&lt;p&gt;I believe a professional team player does two things:
-&lt;strong&gt;obeys and resists&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;First, you have to understand that the boss is here in order
-to help you organize your time, your tasks, your communications,
-your plans, etc. He knows more about the project and uses that
-information to help you do your job. Your real boss is the project;
-the boss you interact with is just a hired manager who translates
-project objectives into plans, instructions, schedules, etc.&lt;/p&gt;
-
-&lt;p&gt;This boss is your colleague who does management while you&amp;#39;re
-writing code. You&amp;#39;re both equal. You and he are in the same boat. Your
-functions are different than his; that&amp;#39;s all. You&amp;#39;re not working
-&lt;em&gt;for&lt;/em&gt; him but &lt;em&gt;with&lt;/em&gt; him on a project. A true professional team player
-feels himself equal to all other members of the project, no matter
-how high they are in the hierarchy.&lt;/p&gt;
-
-&lt;p&gt;At the same time, he strictly follows the process and
-obeys all project rules and instructions, not because he is afraid of
-being fired but because he wants the project to succeed.&lt;/p&gt;
-
-&lt;p&gt;Second, being a professional team player requires a constant readiness
-to resist each and every instruction if you feel it contradicts
-the project objectives. A true professional doesn&amp;#39;t work for a boss.
-He doesn&amp;#39;t want to make the boss happy. He actually doesn&amp;#39;t care whether the
-boss is happy or not. He knows that the real boss is the project and tries
-to make the project successful and ... happy.&lt;/p&gt;
-
-&lt;p&gt;A true professional always works for himself. Jeff wants to learn Scala
-and earn a certain amount of cash. He joined the project in order to satisfy these
-needs. If the project fails, Jeff won&amp;#39;t get the money and won&amp;#39;t fully learn Scala.
-So if the boss tells Jeff to do something that may jeopardize the
-project&amp;#39;s success, will Jeff do it? Does he care about disappointing the boss?
-Absolutely not. All he cares about is the project&amp;#39;s success, which translates to his
-personal success.&lt;/p&gt;
-
-&lt;p&gt;Thus, making your boss happy is a goal for the immature, fearsome, lazy, and weak.
-Making your project successful is an objective for professional,
-strong, mature, and brave team players.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</guid>
-      <dc:date>2015-01-26T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
