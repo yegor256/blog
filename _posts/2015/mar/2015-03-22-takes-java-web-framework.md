@@ -185,51 +185,17 @@ framework was built.
 
 ## Routing/Dispatching
 
-The most important step is to decide who is responsible for building
-an HTTP response. Each HTTP request has 1) a query, 2) a method, and 3) a number
-of headers. Using these three parameters, we need to instantiate an object
-that will build a response for us. This process, in most web frameworks,
-is called request dispatching or routing. Here is how we do it in Takes:
-
-{% highlight java %}
-final Take take = takes.route(request);
-final Response response = take.act();
-{% endhighlight %}
-
-There are basically two steps. The first one is creating an instance of
-[`Take`](http://www.takes.org/apidocs-0.9/org/takes/Take.html)
-from `takes`, and the second one is creating an instance of `Response` from `take`.
-Why is it done this way? Mostly in order to separate responsibilities. An
-instance of [`Takes`](http://www.takes.org/apidocs-0.9/org/takes/Takes.html)
-is responsible for dispatching a request and instantiating
-the right `Take`, and an instance of `Take` is responsible for creating a response.
-
-To create a simple application in Takes, you should create two classes. First,
-an implementation of `Takes`:
+Routing/dispatching is combined with response printing in Takes. All you
+need to do to create a working web application is to create a single
+class that implements
+[`Take`](http://www.takes.org/apidocs-0.9/org/takes/Take.html) interface:
 
 {% highlight java %}
 import org.takes.Request;
 import org.takes.Take;
-import org.takes.Takes;
-public final class TsFoo implements Takes {
-  @Override
-  public Take route(final Request request) {
-    return new TkFoo();
-  }
-}
-{% endhighlight %}
-
-We're using these `Ts` and `Tk` prefixes for
-`Takes` and `Take`, respectively.
-The second class you should create is an implementation of `Take`:
-
-{% highlight java %}
-import org.takes.Take;
-import org.takes.Response;
-import org.takes.rs.RsText;
 public final class TkFoo implements Take {
   @Override
-  public Response act() {
+  public Response route(final Request request) {
     return new RsText("Hello, world!");
   }
 }
@@ -242,7 +208,7 @@ import org.takes.http.Exit;
 import org.takes.http.FtBasic;
 public class Foo {
   public static void main(final String... args) throws Exception {
-    new FtBasic(new TsFoo(), 8080).start(Exit.NEVER);
+    new FtBasic(new TkFoo(), 8080).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
@@ -250,7 +216,7 @@ public class Foo {
 This [`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html)
 class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
-connections through an instance of `TsFoo` that we are giving to its constructor.
+connections through an instance of `TkFoo` that we are giving to its constructor.
 It does this dispatching in an endless cycle, checking every second whether
 it's time to stop with an instance of
 [`Exit`](http://www.takes.org/apidocs-0.9/org/takes/http/Exit.html).
@@ -321,7 +287,7 @@ import org.takes.http.Exit;
 import org.takes.http.FtCLI;
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TsApp(), args).start(Exit.NEVER);
+    new FtCLI(new TkApp(), args).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
@@ -329,38 +295,37 @@ public final class Entry {
 This class contains just a single `main()` static method that will be
 called by JVM when the app starts from the command line. As you see, it
 instantiates [`FtCLI`](http://www.takes.org/apidocs-0.9/org/takes/http/FtCLI.html),
-giving it an instance of class `TsApp` and command
-line arguments. We'll create the `TsApp` class in a second. `FtCLI`
+giving it an instance of class `TkApp` and command
+line arguments. We'll create the `TkApp` class in a second. `FtCLI`
 (translates to "front-end with command line interface") makes an instance
 of the same `FtBasic`, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, `--port=8080` will
 be converted into a `8080` port number and passed as a second argument of
 the `FtBasic` constructor.
 
-The web application itself is called `TsApp` and extends `TsWrap`:
+The web application itself is called `TkApp` and extends `TsWrap`:
 
 {% highlight java %}
 import org.takes.Take;
-import org.takes.Takes;
 import org.takes.facets.fork.FkRegex;
-import org.takes.facets.fork.TsFork;
-import org.takes.ts.TsWrap;
-import org.takes.ts.TsClasspath;
-final class TsApp extends TsWrap {
-  TsApp() {
-    super(TsApp.make());
+import org.takes.facets.fork.TkFork;
+import org.takes.tk.TkWrap;
+import org.takes.tk.TkClasspath;
+final class TkApp extends TkWrap {
+  TkApp() {
+    super(TkApp.make());
   }
-  private static Takes make() {
-    return new TsFork(
+  private static Take make() {
+    return new TkFork(
       new FkRegex("/robots.txt", ""),
-      new FkRegex("/css/.*", new TsClasspath()),
+      new FkRegex("/css/.*", new TkClasspath()),
       new FkRegex("/", new TkIndex())
     );
   }
 }
 {% endhighlight %}
 
-We'll discuss this `TsFork` class in a minute.
+We'll discuss this `TkFork` class in a minute.
 
 If you're using Maven, this is the `pom.xml` you should start with:
 
@@ -418,25 +383,25 @@ to Heroku. This is what `Procfile` should look like:
 web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
 {% endhighlight %}
 
-## TsFork
+## TkFork
 
-This [`TsFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TsFork.html)
+This [`TkFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html)
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right _take_. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
 a collection of "forks", which are instances of the
-[`Fork<Take>`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html) interface:
+[`Fork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html) interface:
 
 {% highlight java %}
-public interface Fork<T> {
-  Iterator<T> route(Request req) throws IOException;
+public interface Fork {
+  Iterator<Response> route(Request req) throws IOException;
 }
 {% endhighlight %}
 
 Its only `route()` method either returns an empty iterator or an iterator
-with a single `Take`. `TsFork` goes through all forks, calling their
-`route()` methods until one of them returns a _take_. Once that happens,
-`TsFork` returns this _take_ to the caller, which is
+with a single `Response`. `TkFork` goes through all forks, calling their
+`route()` methods until one of them returns a response. Once that happens,
+`TkFork` returns this response to the caller, which is
 [`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html).
 
 Let's create a simple fork ourselves now. For example, we want to show
@@ -444,17 +409,17 @@ the status of the application when the `/status` URL is requested. Here is
 the code:
 
 {% highlight java %}
-final class TsApp extends TsWrap {
-  private static Takes make() {
-    return new TsFork(
-      new Fork.AtTake() {
+final class TkApp extends TkWrap {
+  private static Take make() {
+    return new TkFork(
+      new Fork() {
         @Override
-        public Iterator<Take> route(Request req) {
-          final Collection<Take> takes = new ArrayList<>(1);
+        public Iterator<Response> route(Request req) {
+          final Collection<Response> responses = new ArrayList<>(1);
           if (new RqHref(req).href().path().equals("/status")) {
-            takes.add(new TkStatus());
+            responses.add(new TkStatus());
           }
-          return takes.iterator();
+          return responses.iterator();
         }
       }
     );
@@ -464,34 +429,34 @@ final class TsApp extends TsWrap {
 
 I believe the logic here is clear. We either return an empty iterator
 or an iterator with an instance of `TkStatus` inside. If an empty
-iterator is returned, `TsFork` will try to find another fork in the
-collection that actually gets an instance of `Take` in order to produce a `Response`.
+iterator is returned, `TkFork` will try to find another fork in the
+collection that actually gets an instance of `Response`.
 By the way, if nothing is found and all forks return empty iterators,
-`TsFork` will throw a "Page not found" exception.
+`TkFork` will throw a "Page not found" exception.
 
 This exact logic is implemented by an out-of-the-box fork called `FkRegex`,
 which attempts to match a request URI path with the regular expression
 provided:
 
 {% highlight java %}
-final class TsApp extends TsWrap {
-  private static Takes make() {
-    return new TsFork(
+final class TkApp extends TkWrap {
+  private static Take make() {
+    return new TkFork(
       new FkRegex("/status", new TkStatus())
     );
   }
 }
 {% endhighlight %}
 
-We can compose a multi-level structure of `TsFork` classes; for example:
+We can compose a multi-level structure of `TkFork` classes; for example:
 
 {% highlight java %}
-final class TsApp extends TsWrap {
-  private static Takes make() {
-    return new TsFork(
+final class TkApp extends TsWrap {
+  private static Take make() {
+    return new TkFork(
       new FkRegex(
         "/status",
-        new TsFork(
+        new TkFork(
           new FkParams("f", "json", new TkStatusJSON()),
           new FkParams("f", "xml", new TkStatusXML())
         )
@@ -502,7 +467,7 @@ final class TsApp extends TsWrap {
 {% endhighlight %}
 
 Again, I believe it's obvious. The instance of `FkRegex` will ask an
-encapsulated instance of `TsFork` to return a _take_, and it will try to
+encapsulated instance of `TkFork` to return a response, and it will try to
 fetch it from one that `FkParams` encapsulated. If the HTTP query is
 `/status?f=xml`, an instance of `TkStatusXML` will be returned.
 
@@ -600,7 +565,7 @@ and submit your pull requests.
 Now, a question that comes up is what to do with persistent entities, like databases,
 in-memory structures, network connections, etc. My suggestion is to
 initialize them inside the `Entry` class and pass them as arguments into
-the `TsApp` constructor. Then, the `TsApp` will pass them into the
+the `TkApp` constructor. Then, the `TkApp` will pass them into the
 constructors of custom _takes_.
 
 For example, we have a PostgreSQL database that contains
@@ -611,7 +576,7 @@ a [BoneCP](http://jolbox.com/) connection pool):
 {% highlight java %}
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TsApp(Entry.postgres()), args).start(Exit.NEVER);
+    new FtCLI(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
   }
   private static Source postgres() {
     final BoneCPDataSource src = new BoneCPDataSource();
@@ -624,16 +589,16 @@ public final class Entry {
 }
 {% endhighlight %}
 
-Now, the constructor of `TsApp` must accept a single argument of type
+Now, the constructor of `TkApp` must accept a single argument of type
 `java.sql.Source`:
 
 {% highlight java %}
-final class TsApp extends TsWrap {
-  TsApp(final Source source) {
-    super(TsApp.make(source));
+final class TkApp extends TkWrap {
+  TkApp(final Source source) {
+    super(TkApp.make(source));
   }
-  private static Takes make(final Source source) {
-    return new TsFork(
+  private static Take make(final Source source) {
+    return new TkFork(
       new FkRegex("/", new TkIndex(source))
     );
   }
@@ -643,7 +608,7 @@ final class TsApp extends TsWrap {
 Class `TkIndex` also accepts a single argument of class `Source`. I believe
 you know what to do with it inside `TkIndex` in order to fetch the SQL
 table data and convert it into HTML. The point here is that the dependency
-must be injected into the application (instance of class `TsApp`) at the
+must be injected into the application (instance of class `TkApp`) at the
 moment of its instantiation. This is a pure and clean dependency injection
 mechanism, which is absolutely container-free. Read more about it in
 ["Dependency Injection Containers Are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
@@ -664,7 +629,7 @@ public final class TkIndexTest {
   public void returnsHtmlPage() throws Exception {
     MatcherAssert.assertThat(
       new RsPrint(
-        new TkStatus().act()
+        new TkStatus().act(new RqFake())
       ).printBody(),
       Matchers.equalsTo("<html>Hello, world!</html>")
     );
@@ -680,7 +645,7 @@ test HTTP server and test its behavior via a real TCP socket; for example
 public final class TkIndexTest {
   @Test
   public void returnsHtmlPage() throws Exception {
-    new FtRemote(new TsFixed(new TkIndex())).exec(
+    new FtRemote(new TkIndex()).exec(
       new FtRemote.Script() {
         @Override
         public void exec(final URI home) throws IOException {
