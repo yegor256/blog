@@ -4,7 +4,9 @@ title: "How Cookie Based Authentication works in Takes Framework"
 date: 2015-02-10
 tags: java
 description:
-  ...
+  Cookie based authentication is a simple and powerful mechanism
+  to enable web site user login in a RESTful and lightweight way;
+  Takes framework does it with a few composable decorators
 keywords:
   - cookie based authentication
   - cookies for authentication
@@ -187,3 +189,5 @@ final class TkAccount implements Take {
 }
 {% endhighlight %}
 
+`RqAuth` decorator is using the header, added by `PsCookie`, in order
+to authenticate the user and create `Identity` object.
