@@ -38,7 +38,8 @@ source and commercial projects. Besides that,
 a few years ago I created a hosted continuous integration service called
 [fazend.com](http://www.fazend.com),
 renamed to [rultor.com](http://www.rultor.com) in 2013.
-Currently, I'm also an active user of [Travis](http://www.travis-ci.org).
+Currently, I'm also an active user of [Travis](http://www.travis-ci.org)
+and [AppVeyor](http://www.appveyor.com).
 
 ## How Continuous Integration Should Work
 
