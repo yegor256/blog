@@ -5,7 +5,7 @@ date: 2015-04-01
 tags: mgmt oop
 description:
   Award for the best open source project that is the most
-  disciplined and
+  disciplined and properly organized; submit your application now.
 keywords:
   - best open source projects
   - open source donation
@@ -21,10 +21,10 @@ Also, I'm a big fan of object-oriented programming in its pureness, for example
 I'm also a co-founder and CTO of Teamed.io, a software development
 company where I put my admiration of discipline and clean design into practice.
 
-I want to encourage you to share my passion. Not just by reading my blog,
+I want to encourage you to share my passion. Not just by reading this blog,
 but through making real open source software, in a disciplined way.
 This award is for those who is brave enough to swim against the current and
-value the quality above everything else.
+values the quality above everything else.
 
 Send me your own project for review and take participation in the contest.
 
@@ -44,9 +44,10 @@ Rules:
 
  * Results are announced on the 15th of October, at this page and by email.
 
- * The best project gets $5000.
+ * The best project gets **$5,000**.
 
- * The decision is made by myself and is not negotiable.
+ * The decision is made by myself and is not negotiable
+   (although, I may invite other people to help me make the right decision).
 
 Each project must be:
 
@@ -56,9 +57,11 @@ Each project must be:
 
  * At least one year old.
 
+ * Primarily object-oriented.
+
 What gives you higher chances of winning:
 
- * Strict principles of design.
+ * Strict and visible principles of design.
 
  * Continuous delivery.
 
