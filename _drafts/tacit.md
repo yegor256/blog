@@ -1,0 +1,112 @@
+---
+layout: post
+title: "Tacit, a CSS Framework Without Classes"
+date: 2015-04-15
+tags: css html
+description:
+  Tacit is an open source CSS framework without a single
+  class, which makes is very easy to use and learn
+keywords:
+  - css framework
+  - css framework comparison
+  - css framework responsive
+  - css framework for web apps
+  - css framework vs custom
+---
+
+I've been using [Bootstrap](http://getbootstrap.com/)
+for over two years in multiple projects
+and my frustration was growing up. First of all, it's too masive for
+a small web app. Second, it is not fully self-sufficient, no matter
+how much do you follow their principles of design, you end up with your
+own CSS styles anyway. Third, and the most important, it's internal
+design is messy. Having all this in mind I created
+[**tacit**](https://github.com/yegor256/tacit), my own CSS framework,
+which immediately received a posisitive feedback on
+[Hacker News](https://news.ycombinator.com/item?id=9345271).
+
+<!--more-->
+
+_Tacit_, according to Google, means "understood or implied without being stated".
+That's exactly the idea of the [framework](https://github.com/yegor256/tacit).
+It doesn't have a single
+CSS class and can be applied to any HTML5 valid document. For example, you
+have an HTML document:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>subscribe</title>
+  </head>
+  <body>
+    <section>
+      <p>Are you interested to know more?</p>
+      <form>
+        <label>Email:</label>
+        <input name="email"/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </body>
+</html>
+{% endhighlight %}
+
+This is how it looks in Safari:
+
+{% figure /images/2015/04/html-in-safari-without-tacit.jpg 600 %}
+
+Now, I add `tacit.min.css` to it:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>subscribe</title>
+    <link rel="stylesheet" type="text/css"
+      href="http://yegor256.github.io/tacit/tacit.min.css"/>
+  </head>
+  <body>
+    <section>
+      <p>Are you interested to know more?</p>
+      <form>
+        <label>Email:</label>
+        <input name="email" type="text"/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </body>
+</html>
+{% endhighlight %}
+
+This is how it looks in the same Safari:
+
+{% figure /images/2014/05/html-in-safari-with-tacit.jpg 600 %}
+
+I hope you got the idea. The HTML itself wasn't changed at all. All CSS
+styles are applied to standard HTML elements. Unlike many other CSS frameworks,
+in Tacit you don't have to mention CSS classes in the HTML document. The HTML
+stays clean and only exposes the data, in a pure HTML5 way.
+
+The HTML document is still readable and usable, but it doesn't have the
+good-looking-graphics component. Tacit adds that component, in a non-intrusive
+manner.
+
+Of course, in most projects, the default layout features of Tacit won't
+be enough. In most cases Istill have to add my own CSS classes and inline
+styles. But Tacit gives me a good-enough ground base to start from. It solves
+the most problems with responsiveness of forms, good looking form controls,
+tables, fonts and colors.
+
+Tacit lets me focus on functionality from the first day in a project. And
+the functionality immediately looks attractive. I tried many other
+frameworks before, including [Bootstrap](http://getbootstrap.com/),
+[Kube](http://imperavi.com/kube/) and
+[Pure](http://purecss.io/). None of them are designed with this concept in mind.
+They all put CSS in front of HTML. In all of them CSS is the most important
+element of web design, while HTML is something that helps.
+
+Tacit has a different approach. In Tacit HTML is king, while CSS is a supportive
+element that only makes data look better.
+
+Enjoy :)

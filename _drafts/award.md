@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Master of Quality Award"
+title: "Yegor Award"
 date: 2015-04-01
 tags: mgmt oop
 description:
@@ -18,7 +18,7 @@ I'm a big fan of rules and discipline in software development, see for example
 [Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Also, I'm a big fan of object-oriented programming in its pureness, for example
 [Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
-I'm also a co-founder and CTO of Teamed.io, a software development
+I'm also a co-founder and CTO of [Teamed.io](http://www.teamed.io), a software development
 company where I put my admiration of discipline and clean design into practice.
 
 I want to encourage you to share my passion. Not just by reading this blog,
@@ -57,7 +57,7 @@ Each project must be:
 
  * At least one year old.
 
- * Primarily object-oriented.
+ * Object-oriented (that's the only thing I understand).
 
 What gives you higher chances of winning:
 
