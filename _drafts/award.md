@@ -20,7 +20,7 @@ Also, I'm a big fan of object-oriented programming in its purest form; for examp
 I'm also a co-founder and the CTO of [Teamed.io](http://www.teamed.io), a software development
 company through which I put my admiration of discipline and clean design into practice.
 
-I want to encourage you to share my passion - not just by reading this blog
+I want to encourage you to share my passion &mdash; not just by reading this blog
 but through making real open source software in a disciplined way.
 This award is for those who are brave enough to swim against the current and
 value quality above everything else.

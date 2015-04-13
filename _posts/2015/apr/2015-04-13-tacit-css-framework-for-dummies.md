@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tacit, a CSS Framework Without Classes"
-date: 2015-04-15
+date: 2015-04-13
 tags: css html
 description:
   Tacit is an open source CSS framework without a single
@@ -95,7 +95,7 @@ manner.
 Of course, in many projects, the default layout features of Tacit won't
 be enough. In most cases, I still have to add my own CSS classes and inline
 styles. But Tacit gives me an adequate foundation to start from. It solves
-most of the problems associated with responsiveness of forms, appearance of 
+most of the problems associated with responsiveness of forms, appearance of
 form controls, tables, fonts, and colors.
 
 Tacit allows me to focus on functionality from the first day of a project. And
