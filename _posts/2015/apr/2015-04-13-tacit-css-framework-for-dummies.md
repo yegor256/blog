@@ -81,7 +81,7 @@ Now, I add `tacit.min.css` to it:
 
 This is how it looks in the same Safari browser:
 
-{% figure /images/2014/05/html-in-safari-with-tacit.jpg 600 %}
+{% figure /images/2014/04/html-in-safari-with-tacit.jpg 600 %}
 
 I hope you got the idea. The HTML itself wasn't changed at all. All CSS
 styles are applied to standard HTML elements. Unlike many other CSS frameworks,
