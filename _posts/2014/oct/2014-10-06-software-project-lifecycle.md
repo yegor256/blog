@@ -106,14 +106,14 @@ identify main "actors" of the system and define the product scope.
 Even though it is only half a page, the creation of this initial SRS document
 is the most important and the most expensive task in the entire project.
 We pay a lot of attention to this step. Usually this document is written
-by myself in a direct communication with the project sponsor. We can't afford
+by myself in direct communication with the project sponsor. We can't afford
 a mistake at this step.
 
 Then, we invite a few system analysts to the project. These guys
 are responsible for turning our initial SRS into a more complete and detailed
 specification. They start by asking questions, submitting them one by one
 as Github issues. Every question is addressed to the product owner. Using
-his answers, system analysts modify the SRS document.
+his/her answers, system analysts modify the SRS document.
 This article explains how [Requs](http://www.requs.org) helps us in this process:
 [Incremental Requirements With Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
 
@@ -128,10 +128,9 @@ the entire Thinking phase.
 
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
-This is a one-man job for an architect. Every project we work with
+This is a one-man job for an architect. Every project we work on
 has an architect who is [personally responsible]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
-for the quality and all
-technical decisions made there. I try to play this role
+for the quality and technical decisions. I try to play this role
 in most projects.
 
 The Building phase is rather straight forward. I have to implement the
@@ -156,7 +155,7 @@ are also defined at this phase.
 {% badge /images/2014/10/lifecycle-fixing.png 250 %}
 
 Now it's time to build a distributed team of programmers. First, we
-invite those who've worked in other projects before and have already
+invite those who've worked on other projects and have already
 have proven their quality. Very often we invite new people,
 finding them through StackOverflow, Github, oDesk, and other sources.
 An average team size of an average project is 10-20 programmers.
@@ -206,4 +205,4 @@ them into new projects and develop them separately, starting again
 from Thinking.
 
 BTW, the illustrations you see above are made by
-[Bárbara Lopes](https://www.behance.net/lopesbarbara)
+[Bárbara Lopes](https://www.behance.net/lopesbarbara).

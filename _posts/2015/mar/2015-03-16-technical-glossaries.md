@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Worst Technical Specifications Have No Glossaries"
-date: 2015-03-06
+date: 2015-03-16
 tags: mgmt agile
 description:
   A good technical specification is built around a good
@@ -15,7 +15,7 @@ keywords:
   - how to write good specification
 ---
 
-I read a few technical specifications every week from our current 
+I read a few technical specifications every week from our current
 and potential clients, and there's one thing I can't take anymore;
 I have to write about it: 99 percent of the documents I'm reading don't
 have glossaries, and because of that, they are very difficult to read
@@ -28,6 +28,8 @@ a glossary.
 
 <!--more-->
 
+{% picture /images/2015/03/pulp-fiction.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+
 I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone
 would be interested in reading it. Anyway, I will try.
@@ -36,7 +38,7 @@ A glossary (a.k.a. vocabulary) is a list of terms used by the project
 that is usually included at the beginning of the technical specification document.
 Ideally, every technical term used in the document should be
 briefly explained in the glossary. The existence of a glossary helps
-everyone who works with the document quickly understand each other 
+everyone who works with the document quickly understand each other
 and avoid misconceptions. On top of this, a detailed and accurate glossary
 saves a reader a lot of time.
 
@@ -44,10 +46,10 @@ So why are glossaries not written? I see a few possible causes
 (usually, they are combined):
 
 **We're Smarter Than This**.
-Some people think glossaries are for newbies. After all, why would I 
+Some people think glossaries are for newbies. After all, why would I
 explain what a PDU is? Any serious network engineer should
 understand that it stands for "protocol data unit". If you don't understand it,
-do your homework and then come back to work with us. Our team only works 
+do your homework and then come back to work with us. Our team only works
 with well-educated engineers. You're supposed to understand what PDU,
 ADC, TxR, IPv6, DPI, FIFO, and USSR (joking!) stand for. Otherwise,
 you're not talented enough to be with us. Needless to say, this
@@ -58,7 +60,7 @@ a message, it's the sender's fault.
 **We Don't Need These Formalities**.
 Seriously, why would we spend time on writing a glossary if everybody
 understands all our terms without it? We've been working as a team for a few
-years, so we all know what DPI and FIFO are, and we know what "record" and 
+years, so we all know what DPI and FIFO are, and we know what "record" and
 "timing data" are. Why bother with the glossary, which will provide no
 additional business value for us? I've seen many technical meetings of very
 mature and "well-organized" teams burn hours of time on pointless discussions

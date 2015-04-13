@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Class Casting Is a Discriminating Anti-Pattern"
-date: 2015-03-20
+date: 2015-04-02
 tags: oop
 description:
   Type casting and use of the instanceof operator, in particular,
@@ -23,6 +23,8 @@ casting helps us **discriminate** against the poor objects and **segregate**
 them by their race, gender, and religion. Can this be a good practice?
 
 <!--more-->
+
+{% picture /images/2015/03/gadkiy-utenok.jpg 0 Гадкий утенок (1956) by Владимир Дегтярёв %}
 
 This is a very typical example of type casting (Google Guava is full
 of it, for example [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111):

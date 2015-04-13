@@ -3,6 +3,7 @@ layout: post
 title: "Composable Decorators vs. Imperative Utility Methods"
 date: 2015-02-26
 tags: oop
+categories: jcg
 description:
   A decorator pattern, while being the best instrument to keep objects highly cohesive,
   solid, and loosely coupled, is unfortunately not very popular in traditional Java
@@ -25,6 +26,8 @@ be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code _composable_. That's why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.
+
+<iframe class="video" width="640" height="360" src="https://www.youtube.com/embed/D0dqC_3Bch8?rel=0" allowfullscreen></iframe>
 
 <!--more-->
 

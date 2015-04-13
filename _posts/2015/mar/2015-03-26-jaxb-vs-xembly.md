@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "JAXB Is Doing It Wrong; Try Xembly"
-date: 2015-03-20
+date: 2015-03-26
 tags: oop java xml
+categories: jcg
 description:
   JAXB is a 10-year-old anti-pattern that encourages Java
   developers to turn their objects into dumb, passive
@@ -12,8 +13,10 @@ keywords:
   - jaxb is bad
   - jaxb marshalling
   - jaxb marshalling example
-  - jaxb alternative
+  - jaxb alternatives
 ---
+
+{% badge http://img.xembly.org/logo-256x256.png 64 http://www.xembly.org %}
 
 [JAXB](http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
 is a 10-year-old Java technology that allows us to
@@ -139,7 +142,8 @@ final Book book = new Book("0132350882", "Clean Code");
 final String xml = new Xembler(book.toXembly()).xml();
 {% endhighlight %}
 
-This `Xembler` class will convert Xembly directives into an XML document.
+This [`Xembler`](http://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html)
+class will convert Xembly directives into an XML document.
 
 The beauty of this solution is that the internals of the object are
 not exposed via getters and the object is fully in charge of the XML
