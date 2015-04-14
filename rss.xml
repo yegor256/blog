@@ -10,12 +10,113 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 02 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Tacit, a CSS Framework Without Classes</title>
+      <link>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</link>
+      <description>&lt;p&gt;I&amp;#39;ve been using &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;
+for more than two years in multiple projects,
+and my frustration has been building. First of all, it&amp;#39;s too massive for
+a small web app. Second, it is not fully self-sufficient; no matter
+how much you follow its principles of design, you end up with your
+own CSS styles anyway. Third, and most importantly, its internal
+design is messy. Having all this in mind, I created
+&lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;&lt;strong&gt;tacit&lt;/strong&gt;&lt;/a&gt;, my own CSS framework,
+which immediately received positive feedback on
+&lt;a href=&quot;https://news.ycombinator.com/item?id=9345271&quot;&gt;Hacker News&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;Tacit&lt;/em&gt;, according to Google, means &amp;quot;understood or implied without being stated&amp;quot;.
+That&amp;#39;s exactly the idea of the &lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;framework&lt;/a&gt;.
+It doesn&amp;#39;t have a single
+CSS class and can be applied to any valid HTML5 document. For example, you
+have an HTML document:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Are you interested in learning more?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Email:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how it looks in Safari:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/04/html-in-safari-without-tacit.jpg' style='width:600px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, I add &lt;code&gt;tacit.min.css&lt;/code&gt; to it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yegor256.github.io/tacit/tacit.min.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Are you interested in learning more?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Email:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how it looks in the same Safari browser:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/04/html-in-safari-with-tacit.jpg' style='width:600px;' alt='figure'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;I hope you got the idea. The HTML itself wasn&amp;#39;t changed at all. All CSS
+styles are applied to standard HTML elements. Unlike many other CSS frameworks,
+in Tacit you don&amp;#39;t have to mention CSS classes in the HTML document. The HTML
+stays clean and only exposes the data in a pure HTML5 way.&lt;/p&gt;
+
+&lt;p&gt;The HTML document is still readable and usable, but it doesn&amp;#39;t have the
+good-looking-graphics component. Tacit adds that component in a non-intrusive
+manner.&lt;/p&gt;
+
+&lt;p&gt;Of course, in many projects, the default layout features of Tacit won&amp;#39;t
+be enough. In most cases, I still have to add my own CSS classes and inline
+styles. But Tacit gives me an adequate foundation to start from. It solves
+most of the problems associated with responsiveness of forms, appearance of
+form controls, tables, fonts, and colors.&lt;/p&gt;
+
+&lt;p&gt;Tacit allows me to focus on functionality from the first day of a project. And
+the functionality immediately looks attractive. I have tried many other
+frameworks, including &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;,
+&lt;a href=&quot;http://imperavi.com/kube/&quot;&gt;Kube&lt;/a&gt;, and
+&lt;a href=&quot;http://purecss.io/&quot;&gt;Pure&lt;/a&gt;. None of them are designed with this concept in mind.
+They all put CSS in front of HTML. In all of them, CSS is the most important
+element of web design, while HTML is something that assists.&lt;/p&gt;
+
+&lt;p&gt;Tacit takes a different approach. In Tacit, HTML is king while CSS is a supportive
+element that only makes data look better.&lt;/p&gt;
+
+&lt;p&gt;Enjoy :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</guid>
+      <dc:date>2015-04-13T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Class Casting Is a Discriminating Anti-Pattern</title>
       <link>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</link>
@@ -2230,128 +2331,6 @@ jcabi-parent (you can see how compact they are):
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
       <dc:date>2015-02-05T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>XSL Transformation in Java: An Easy Way</title>
-      <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
-(XSLT) is a powerful mechanism for converting one
-XML document into another. However, in Java, XML manipulations
-are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code &amp;mdash; and maybe even more
-than that if proper exception handling and logging is needed.
-&lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; is
-a small open source library that makes life much easier by enabling
-XML parsing and XPath traversing with
-&lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;a few simple methods&lt;/a&gt;. Let&amp;#39;s
-see how this library helps in XSL transformations.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, take a look at a practical example &amp;mdash; &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; &amp;mdash;
-a hosted DevOps assistant that
-&lt;a href=&quot;/&quot;&gt;automates&lt;/a&gt;
-release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &amp;quot;talk&amp;quot;)
-in a DynamoDB record. There are multiple situations to handle
-in each talk; that&amp;#39;s why using multiple columns of a record is not
-really feasible. Instead, we&amp;#39;re keeping only a few parameters of each talk
-in record columns (like ID and name) and putting all the rest in a single
-XML column.&lt;/p&gt;
-
-&lt;p&gt;This is approximately how our DynamoDB table looks:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+----+---------------+--------------------------------------+
-| id | name          | xml                                  |
-+----+---------------+--------------------------------------+
-| 12 | jcabi-xml#54  | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
-|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
-|    |               |   &amp;lt;request id=&amp;quot;e5f4b3&amp;quot;&amp;gt;...&amp;lt;/request&amp;gt; |
-|    |               | &amp;lt;/talk&amp;gt;                              |
-+----+---------------+--------------------------------------+
-| 13 | jcabi-email#2 | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
-|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
-|    |               |   &amp;lt;daemon id=&amp;quot;f787fe&amp;quot;&amp;gt;...&amp;lt;/daemon&amp;gt;   |
-|    |               | &amp;lt;/talk&amp;gt;                              |
-+----+---------------+--------------------------------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once a user posts &lt;code&gt;@rultor status&lt;/code&gt; into a Github ticket, Rultor
-has to answer with a full status report about the current talk. In order
-to create such a text answer (a regular user would not appreciate an XML response),
-we have to fetch that &lt;code&gt;xml&lt;/code&gt; column from the necessary DynamoDB record and convert
-it to plain English text.&lt;/p&gt;
-
-&lt;p&gt;Here is how we&amp;#39;re doing that with the help of &lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; and its
-class, &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html&quot;&gt;&lt;code&gt;XSLDocument&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// comes from DynamoDB&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;status.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;applyTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That&amp;#39;s it. Now let&amp;#39;s see what&amp;#39;s there in that &lt;code&gt;status.xsl&lt;/code&gt; file
-(this is just a skeleton of it; the full version is &lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:xsl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:output&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/talk&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:text&amp;gt;&lt;/span&gt;Hi, here is your status report:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:text&amp;gt;&lt;/span&gt;
-    ...
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:copy&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:apply-templates&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;select=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:copy&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It is good practice to create XSL documents only once per application
-run. We have a static utility method &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29&quot;&gt;&lt;code&gt;XSLDocument.make()&lt;/code&gt;&lt;/a&gt; for this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STYLESHEET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;STYLESHEET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Pay attention to the fact we&amp;#39;re using XSLT 2.0. Built-in Java implementation of XSLT
-doesn&amp;#39;t support version 2.0, and in order to make it work, we&amp;#39;re using
-these two Maven Saxon dependencies:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;classifier&amp;gt;&lt;/span&gt;xpath&lt;span class=&quot;nt&quot;&gt;&amp;lt;/classifier&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;All you need to do to start using &lt;code&gt;jcabi-xml&lt;/code&gt; for XSL transformations is
-add this dependency to your &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;jcabi-xml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you have any problems or suggestions, don&amp;#39;t hesitate to submit an issue
-to the Github &lt;a href=&quot;https://github.com/jcabi/jcabi-xml/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
-      <dc:date>2015-02-02T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
