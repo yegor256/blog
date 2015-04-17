@@ -86,4 +86,4 @@ What doesn't matter:
    your marketing position; quality is all.
 
 By the way, if you want to sponsor this award,
-[email me](mailto:moq@yegor256.com).
+[email me](mailto:me@yegor256.com).
