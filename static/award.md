@@ -33,9 +33,9 @@ Rules:
 
  * One person can submit up to three projects.
 
- * Submissions are accepted until the September 1, 2015.
+ * Submissions are accepted until the **September 1, 2015**.
 
- * Submissions must be sent via email to [moq@yegor256.com](mailto:moq@yegor256.com).
+ * Submissions must be sent via email to [me@yegor256.com](mailto:me@yegor256.com).
    All I need is your Github login and repository name; I will check the commit
    history to make sure you're the main contributor to the project.
 
@@ -43,7 +43,7 @@ Rules:
 
  * All submissions will be published on this page (including rejected ones).
 
- * Results will be announced October 15 on this page and by email.
+ * Results will be announced **October 15** on this page and by email.
 
  * The best project will receive **$4,096**.
 
