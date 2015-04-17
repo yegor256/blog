@@ -87,3 +87,10 @@ What doesn't matter:
 
 By the way, if you want to sponsor this award,
 [email me](mailto:me@yegor256.com).
+
+<hr/>
+
+Projects submitted so far (in order of submission):
+
+ * [mdbs99/AWS](https://github.com/mdbs99/AWS)
+ * [FagnerMartinsBrack/WebStories](https://github.com/FagnerMartinsBrack/WebStories)
