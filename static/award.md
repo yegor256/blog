@@ -1,7 +1,8 @@
 ---
-layout: post
-title: "Yegor Award"
-date: 2015-04-01
+layout: static
+title: "Software Quality Award"
+date: 2015-04-16
+permalink: award.html
 tags: mgmt oop
 description:
   An award recognizing the most disciplined and properly organized
@@ -10,7 +11,8 @@ keywords:
   - best open source projects
   - open source donation
   - get donation for open source
-
+  - open source award
+  - open source project award
 ---
 
 I'm a big fan of rules and discipline in software development; as an example, see
@@ -43,7 +45,7 @@ Rules:
 
  * Results will be announced October 15 on this page and by email.
 
- * The best project will receive **$5,000**.
+ * The best project will receive **$4,096**.
 
  * Final decisions will be made by me and are not negotiable
    (although I may invite other people to help me make the right decision).
