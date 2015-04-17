@@ -1,5 +1,5 @@
 ---
-layout: static
+layout: post
 title: "Software Quality Award"
 date: 2015-04-16
 permalink: award.html
