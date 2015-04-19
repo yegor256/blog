@@ -10,12 +10,94 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Mon, 13 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Software Quality Award</title>
+      <link>http://www.yegor256.com/award.html</link>
+      <description>&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
+Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
+I&amp;#39;m also a co-founder and the CTO of &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, a software development
+company through which I put my admiration of discipline and clean design into practice.&lt;/p&gt;
+
+&lt;p&gt;I want to encourage you to share my passion &amp;mdash; not just by reading this blog
+but through making real open source software in a disciplined way.
+This award is for those who are brave enough to swim against the current and
+value quality above everything else.&lt;/p&gt;
+
+&lt;p&gt;Send me your own project for review and participate in the contest.&lt;/p&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;One person can submit up to three projects.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions are accepted until the &lt;strong&gt;September 1, 2015&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions must be sent via email to &lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;me@yegor256.com&lt;/a&gt;.
+All I need is your Github login and repository name; I will check the commit
+history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Open source.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least 5,000 lines of code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best projects will feature:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Strict and visible principles of design.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Continuous delivery.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Traceability of changes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Self-documented source code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Strict rules of code formatting.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don&amp;#39;t care about
+popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
+your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Projects submitted so far (in order of submission):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mdbs99/AWS&quot;&gt;mdbs99/AWS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/FagnerMartinsBrack/WebStories&quot;&gt;FagnerMartinsBrack/WebStories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/award.html</guid>
+      <dc:date>2015-04-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Tacit, a CSS Framework Without Classes</title>
       <link>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</link>
@@ -2267,70 +2349,6 @@ bad the code in front of you is, be patient and convincing.&lt;/p&gt;
       <pubDate>Mon, 09 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/09/serious-code-reviewer.html</guid>
       <dc:date>2015-02-09T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
-      <link>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Maven is a build automation tool mostly for Java projects. It&amp;#39;s a great
-tool, but it has one important drawback that has motivated the creation
-of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
-Maven gets all project build parameters from &lt;code&gt;pom.xml&lt;/code&gt;, an XML
-file that can get very long. I&amp;#39;ve seen POM files of 3,000-plus lines.
-Taking into account 1) recent DSL buzz and 2) fear of XML, it&amp;#39;s
-only logical that many people don&amp;#39;t like Maven because of its &lt;code&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
-
-&lt;p&gt;But even if you&amp;#39;re an XML fan who enjoys its strictness and elegance
-(like myself), you won&amp;#39;t like the necessity to repeat yourself in &lt;code&gt;pom.xml&lt;/code&gt;
-for every project. If you&amp;#39;re working on multiple projects, code duplication
-will be enormous. An average Java web app uses a few dozen standard Maven plugins
-and almost the same number of pretty common dependencies, like
-JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
-and configurations, which have to be specified if you want to keep
-the project stable and avoid Maven warnings. Thus, once a new version
-of a plugin is released, you have to go through all &lt;code&gt;pom.xml&lt;/code&gt; files in
-the projects you&amp;#39;re working on and update it there. You obviously understand
-what code duplication means. It&amp;#39;s a disaster. However, there is a solution.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://parent.jcabi.com&quot;&gt;jcabi-parent&lt;/a&gt; is a very simple Maven dependency
-with nothing inside it except a large &lt;code&gt;pom.xml&lt;/code&gt; with multiple pre-configured
-dependencies, profiles, and plugins. All you need to do in order to reuse them
-all in your project is define &lt;code&gt;com.jcabi:parent&lt;/code&gt; as your parent POM:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;modelVersion&amp;gt;&lt;/span&gt;4.0.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/modelVersion&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;parent&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;parent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- check the latest version at http://parent.jcabi.com --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.32.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/parent&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That&amp;#39;s all you need. Now you can remove most of your custom configurations
-from &lt;code&gt;pom.xml&lt;/code&gt; and rely on defaults provided by jcabi-parent. Its
-&lt;a href=&quot;https://github.com/jcabi/jcabi-parent/blob/master/pom.xml&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt;
-is rather large and properly configured. Multiple projects depend on it, so you
-can be confident that you&amp;#39;re using the best possible configuration of
-all standard plugins.&lt;/p&gt;
-
-&lt;p&gt;Here are a few examples of &lt;code&gt;pom.xml&lt;/code&gt; from projects that are using
-jcabi-parent (you can see how compact they are):
-&lt;a href=&quot;https://github.com/yegor256/xembly/blob/master/pom.xml&quot;&gt;Xembly&lt;/a&gt;
-&lt;a href=&quot;https://github.com/yegor256/rexsl/blob/master/pom.xml&quot;&gt;ReXSL&lt;/a&gt;
-&lt;a href=&quot;https://github.com/jcabi/jcabi-http/blob/master/pom.xml&quot;&gt;jcabi-http&lt;/a&gt;
-&lt;a href=&quot;https://github.com/teamed/qulice/blob/master/pom.xml&quot;&gt;Qulice&lt;/a&gt;&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
-      <dc:date>2015-02-05T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
