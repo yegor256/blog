@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tacit, a CSS Framework Without Classes"
-date: 2015-04-15
+date: 2015-04-13
 tags: css html
 description:
   Tacit is an open source CSS framework without a single
@@ -81,7 +81,7 @@ Now, I add `tacit.min.css` to it:
 
 This is how it looks in the same Safari browser:
 
-{% figure /images/2014/05/html-in-safari-with-tacit.jpg 600 %}
+{% figure /images/2015/04/html-in-safari-with-tacit.jpg 600 %}
 
 I hope you got the idea. The HTML itself wasn't changed at all. All CSS
 styles are applied to standard HTML elements. Unlike many other CSS frameworks,
@@ -95,7 +95,7 @@ manner.
 Of course, in many projects, the default layout features of Tacit won't
 be enough. In most cases, I still have to add my own CSS classes and inline
 styles. But Tacit gives me an adequate foundation to start from. It solves
-most of the problems associated with responsiveness of forms, appearance of 
+most of the problems associated with responsiveness of forms, appearance of
 form controls, tables, fonts, and colors.
 
 Tacit allows me to focus on functionality from the first day of a project. And

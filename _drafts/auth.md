@@ -127,7 +127,7 @@ have access to it.
 Here is how this cookie based authentication mechanism is designed in
 [Takes](http://www.takes.org) framework. The entire framework consists of
 _takes_, which receive requests and produce responses
-([this article]({% 2015/mar/2015-03-22-takes-java-web-framework %})
+([this article]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
 explains the framework in more details). When the request comes in,
 we should find the authentication cookie in `Cookie` header and translate
 it to the user identity. When the response goes out, we should add
