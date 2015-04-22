@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Favorite Software Books"
-date: 2015-04-25
+date: 2015-04-22
 tags: book-review
 description:
   I highly recommend you read these books to 
