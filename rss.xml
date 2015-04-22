@@ -10,12 +10,171 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 16 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>My Favorite Software Books</title>
+      <link>http://www.yegor256.com/2015/04/22/favorite-software-books.html</link>
+      <description>&lt;p&gt;There are plenty of books about software engineering, but only a few of them rank
+among my favorites. I read all of those that do over and over again, and I might
+just update this post in the future when I stumble upon something else that&amp;#39;s decent.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Note that I tried to put the most important books at the top of the list.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;&lt;strong&gt;Object Thinking&lt;/strong&gt;&lt;/a&gt;
+by David West.
+This is the best book I&amp;#39;ve read about object-oriented
+programming, and it totally changed my understanding of it. I would
+recommend you read it a few times. But before reading, try to forget everything
+you&amp;#39;ve heard about programming in the past. Try to start from scratch. Maybe it will
+work for you too :)&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1932735658&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=C6OZC5OD2W2IPLCM'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-pmp-rita.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1932735658&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=C6OZC5OD2W2IPLCM&quot;&gt;&lt;strong&gt;PMP Exam Prep, Eighth Edition: Rita&amp;#39;s Course in a Book for Passing the PMP Exam&lt;/strong&gt;&lt;/a&gt;
+by Rita Mulcahy.
+This book is my favorite for project management. Even though it&amp;#39;s about the
+PMI approach and PMBOK in particular, it is a must-read for everyone who
+is interested in management. Ignore the PMBOK specifics and focus on
+the philosophy of project management and the role of project manager in it.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ&quot;&gt;&lt;strong&gt;The Art of Software Testing&lt;/strong&gt;&lt;/a&gt;
+by Glenford J. Myers et al.
+You can read my short review of this book &lt;a href=&quot;/&quot;&gt;here&lt;/a&gt;.
+The book perfectly explains the philosophy of testing and destroys
+many typical myths and stereotypes. No matter what your job description is,
+if you&amp;#39;re working in the software industry, you should understand testing
+and its fundamental principles. This is the only book you need in order to 
+get that understanding.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-goos.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ&quot;&gt;&lt;strong&gt;Growing Object-Oriented Software, Guided by Tests&lt;/strong&gt;&lt;/a&gt;
+by Steve Freeman and Nat Pryce.
+All you need to know about your unit testing is in this book. I&amp;#39;m fully aware
+that I didn&amp;#39;t include famous software engineer 
+&lt;a href=&quot;http://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321146530&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=S63Z5BJDORBGMZ2Z&quot;&gt;Kent Beck&amp;#39;s book&lt;/a&gt;
+in this list because I don&amp;#39;t like it at all. You definitely should read
+it, just to know what&amp;#39;s going on, but it won&amp;#39;t help you write good tests.
+Read this one instead, and read it many times.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC&quot;&gt;&lt;strong&gt;Working Effectively With Legacy Code&lt;/strong&gt;&lt;/a&gt;
+by Michael Feathers.
+This is awesome reading about modern software development, its pitfalls, and
+typical failures. Most of the code we&amp;#39;re working on now is legacy (a.k.a. open source).
+I read this book as a novel.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321601912&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MPZUCBXBGNOIHDDI'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-continuous-delivery.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321601912&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MPZUCBXBGNOIHDDI&quot;&gt;&lt;strong&gt;Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation&lt;/strong&gt;&lt;/a&gt;
+by Jez Humble and David Farley.
+This is a perfect book about software delivery, continuous integration,
+testing, packaging, versioning, and many other techniques involved in programming.
+It&amp;#39;s definitely a must-read for anyone who is serious about software engineering.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-xml-nutshell.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7&quot;&gt;&lt;strong&gt;XML in a Nutshell, Third Edition&lt;/strong&gt;&lt;/a&gt;
+by Elliotte Rusty Harold and W. Scott Means.
+XML is my favorite standard. And I hated it before I read this book. I didn&amp;#39;t
+understand all the strange prefixes, namespaces, XPath expressions, and
+schemas. Just this one book changed everything, and ever since reading it, I&amp;#39;ve used XML
+everywhere. It is very well written and easy to read. It&amp;#39;s a must for everybody.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321349601&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=AN4H5FISUMRSU3XD'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-java-concurrency.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321349601&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=AN4H5FISUMRSU3XD&quot;&gt;&lt;strong&gt;Java Concurrency in Practice&lt;/strong&gt;&lt;/a&gt;
+by Brian Goetz et al.
+This is a very practical book about Java multi-threading, and at the same time,
+it provides a lot of theoretical knowledge about concurrency in general. I highly
+recommend you read it at least once.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1491903996&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PUWBN5SFCGEQH3YH'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-c++.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1491903996&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PUWBN5SFCGEQH3YH&quot;&gt;&lt;strong&gt;Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14&lt;/strong&gt;&lt;/a&gt;
+by Scott Meyers.
+No matter what language you&amp;#39;re using, this book is very interesting and
+very useful. It makes many important suggestions about better C++ coding. If
+you understand most of them, your Java/Ruby/Python/Scala coding skills will
+improve significantly.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619670&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=KWY7Y3BVH5URNCK3'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-code-complete.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619670&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=KWY7Y3BVH5URNCK3&quot;&gt;&lt;strong&gt;Code Complete: A Practical Handbook of Software Construction, Second Edition&lt;/strong&gt;&lt;/a&gt;
+by Steve McConnell.
+Consider this the bible of clean coding. Read it a few times and use it as a reference
+manual in debates with your colleagues. It mentions the most terrible anti-patterns
+and worst practices you&amp;#39;ll see in modern programming. To be a good programmer,
+you must know all of them.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPOVQ&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=HDYS46EBUPXYSNDD'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-estimation.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPOVQ&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=HDYS46EBUPXYSNDD&quot;&gt;&lt;strong&gt;Software Estimation: Demystifying the Black Art&lt;/strong&gt;&lt;/a&gt;
+by Steve McConnell.
+This one&amp;#39;s an interesting read about software engineering and its most tricky part &amp;mdash; estimations.
+At the least, read it to be aware of the problem and possible solutions.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201702258&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=VGRW6G3LUVKEB72C'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-use-cases.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201702258&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=VGRW6G3LUVKEB72C&quot;&gt;&lt;strong&gt;Writing Effective Use Cases&lt;/strong&gt;&lt;/a&gt;
+by Alistair Cockburn.
+An old and very good book, you won&amp;#39;t actually use anything from this in your
+real projects, but you will pick up the philosophy of use cases, which will
+redirect your mind in the right direction. Don&amp;#39;t take this book as something
+practical; these use cases are hardly used anywhere today, but the idea of
+scoping functionality this way is absolutely right.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPMOA&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PRSWJK34HNP355LK'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-requirements.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPMOA&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PRSWJK34HNP355LK&quot;&gt;&lt;strong&gt;Software Requirements, Third Edition&lt;/strong&gt;&lt;/a&gt;
+by Karl Wiegers (author) and Joy Beatty.
+A superb book about requirements analysis, the first and most important
+activity in any software project. Even if you&amp;#39;re not an analyst, this book
+is a must-read.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449316387&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=LTNZ7XPLDEG4MEJO'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-git.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449316387&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=LTNZ7XPLDEG4MEJO&quot;&gt;&lt;strong&gt;Version Control With Git: Powerful Tools and Techniques for Collaborative Software Development&lt;/strong&gt;&lt;/a&gt;
+by Jon Loeliger and Matthew McCullough.
+This title serves as a practical guide for Git, a version control system. Read it from
+cover to cover and you will save many hours of your time in the future.
+Git is a de-facto standard in version control, and every programmer must
+know its fundamental principles &amp;mdash; not from a cheat sheet but from an original source.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B004XQX4K0&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=U37POLMQHPZMXXAP'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-javascript.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B004XQX4K0&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=U37POLMQHPZMXXAP&quot;&gt;&lt;strong&gt;JavaScript: The Definitive Guide: Activate Your Web Pages&lt;/strong&gt;&lt;/a&gt;
+by David Flanagan.
+JavaScript is a language of the modern Web, and this book explains it very well.
+No matter what kind of software you develop, you must know JavaScript. Don&amp;#39;t read
+it as a practical guide (even though it&amp;#39;s called a guide) but rather as
+food for thought. JavaScript offers a lot to learn for Java/Ruby/Python developers.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00457X7L8&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PSW6X7D2VCCBS6OL'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-css.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00457X7L8&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PSW6X7D2VCCBS6OL&quot;&gt;&lt;strong&gt;CSS: The Definitive Guide&lt;/strong&gt;&lt;/a&gt;
+by Eric A. Meyer.
+CSS is not just about colors and shadows, and it&amp;#39;s not only for graphic designers.
+CSS is a key language of the modern Web. Every developer must know it, whether
+you&amp;#39;re working with a back-end, front-end, or desktop application in C++.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Wed, 22 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/04/22/favorite-software-books.html</guid>
+      <dc:date>2015-04-22T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
@@ -2173,193 +2332,6 @@ something ... and paid me.&lt;/p&gt;
       <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/12/top-down-design.html</guid>
       <dc:date>2015-02-12T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Four NOs of a Serious Code Reviewer</title>
-      <link>http://www.yegor256.com/2015/02/09/serious-code-reviewer.html</link>
-      <description>&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Code_review&quot;&gt;Code reviews&lt;/a&gt;
-(a.k.a. peer reviews) must be a mandatory practice for every
-serious software development team. I hope there is no debate about this. Some
-do pre-merge code reviews, protecting their master/development branch from
-accidental mistakes. Others do post-merge
-&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;regular reviews&lt;/a&gt;
-to discover bugs and inconsistencies after they are introduced by their
-authors. Some even do both, reviewing before merges and regularly after. Code reviews
-are very similar to a &lt;a href=&quot;http://en.wikipedia.org/wiki/White-box_testing&quot;&gt;white-box testing&lt;/a&gt;
-technique where a tester looks for defects with full access to the sources of the software.
-In either case, a code review is a great instrument to increase quality and
-boost team motivation.&lt;/p&gt;
-
-&lt;p&gt;However, it&amp;#39;s not so simple to do them right. I would even say it&amp;#39;s
-very easy and comfortable to do them wrong. Most code reviews
-and reviewers I&amp;#39;ve seen make similar mistakes. That&amp;#39;s why I decided
-to summarize the four basic principles of a good reviewer as I see them.
-Hopefully you find them helpful.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/kim-jong-un-doing-code-review.png' style='width:600px;' alt='Kim Jong-un with colleagues (2014)'/&gt;&lt;figcaption&gt;Kim Jong-un with colleagues (2014)&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;no-fear&quot;&gt;No Fear&lt;/h2&gt;
-
-&lt;p&gt;There are a few different fears a serious code reviewer should renounce.
-The first and most popular is the fear of offending an author of the code.
-&amp;quot;&lt;em&gt;I&amp;#39;d better close my eyes and pretend I didn&amp;#39;t see her bugs today so tomorrow she will ignore my mistakes&lt;/em&gt;&amp;quot; &amp;mdash;
-This is the kind of attitude this fear produces. Needless to say, it&amp;#39;s
-counterproductive and degrades code quality and team morale. Here is my advice:
-be direct, honest, and straight-forward. If you don&amp;#39;t like the code, you don&amp;#39;t like it.
-You shouldn&amp;#39;t care how your opinion will be taken by the author of the code.&lt;/p&gt;
-
-&lt;p&gt;If you do have such feelings toward your colleagues, there is something
-wrong with the management model. You&amp;#39;re afraid of being rejected by the
-team for &amp;quot;not being a team player&amp;quot;, which is a label attached to you by
-the weakest members of the team, not by the project sponsor. The sponsor
-pays you to produce high-quality software. The sponsor doesn&amp;#39;t care how much your
-intention to increase quality offends others, who care less. The sponsor
-wants his money to produce deliverables that can be sold to customers and
-returned back in profit. The sponsor is not paying you to make friends in
-the office.&lt;/p&gt;
-
-&lt;p&gt;The next type of fear sounds like this: &amp;quot;&lt;em&gt;If I reject this code, I will delay the release&lt;/em&gt;&amp;quot;
-Again, it goes without saying that such an attitude does a significant disservice to the entire project.
-You will accept the code and close your eyes to what you don&amp;#39;t like
-in it. The code will go into the next release, and we&amp;#39;ll ship it sooner.
-You won&amp;#39;t be a bottleneck, and nobody will say that because of that
-dogmatic code reviewer, we delayed the release and lost some cash. You will
-be a good team player, right? Wrong!&lt;/p&gt;
-
-&lt;p&gt;As I&amp;#39;ve &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;mentioned before&lt;/a&gt;, a professional
-team player understands his or her personal role in a project and doesn&amp;#39;t cover
-anyone&amp;#39;s ass. If the rejection of bad code delays the release, that&amp;#39;s
-the fault of its author. Your professional responsibility is to make this fault visible.
-That&amp;#39;s how you help the team learn and improve.&lt;/p&gt;
-
-&lt;p&gt;I think it&amp;#39;s obvious that the education and improvement of a team first requires
-getting rid of bad programmers and promoting good ones. Honest and fearless
-code reviewers help the team learn and improve.&lt;/p&gt;
-
-&lt;p&gt;Yet another fear is expressed like this: &amp;quot;&lt;em&gt;I may be wrong and they will laugh me out&lt;/em&gt;&amp;quot;
-Even worse, they may spot my lack of knowledge. They may
-see that I don&amp;#39;t know what I&amp;#39;m doing. It would be better to stay quiet and pretend
-there are no bugs in the code. At least then I wouldn&amp;#39;t embarass myself
-with stupid comments. You know that it&amp;#39;s much easier to look smart if you keep
-your mouth shut, right? Wrong!&lt;/p&gt;
-
-&lt;p&gt;The project is not paying you to look good. You&amp;#39;re getting your paychecks
-not because the team loves you but because you produce deliverables on
-a daily basis. Your professional responsibility is to do what&amp;#39;s best
-for the project and ignore everyone&amp;#39;s opinions, including the opinion of your
-boss. Similar to &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;&amp;quot;A Happy Boss Is a False Objective&amp;quot;&lt;/a&gt;,
-I would say that the respect of the team is a false goal. Don&amp;#39;t try to earn respect.
-Instead, create clean code and respect will come automatically.&lt;/p&gt;
-
-&lt;p&gt;Let me reiterate: Don&amp;#39;t be afraid to embarass yourself by making incorrect and stupid comments
-about someone&amp;#39;s code. Be loyal to the project, not to the expectations of
-people around you. They expect you to be smart and bright, but the project
-expects you to say what you think about the code. So screw their opinions;
-do the right thing and say what you really think.&lt;/p&gt;
-
-&lt;h2 id=&quot;no-compromise&quot;&gt;No Compromise&lt;/h2&gt;
-
-&lt;p&gt;Okay, you&amp;#39;ve fearlessly said what you thought about the code and simply rejected it.
-The branch you were reviewing is not good, and you explained why. You asked
-its author to refactor here and re-write there. What&amp;#39;s next?&lt;/p&gt;
-
-&lt;p&gt;He or she will try to make a deal with you. It&amp;#39;s natural and it&amp;#39;s
-happening in almost every branch I&amp;#39;m seeing in our teams. The author of the
-code is also a professional developer, and he also has no fear. So he insists
-that his implementation approach is right and your ideas are wrong. What
-should a professional code reviewer do in this case?&lt;/p&gt;
-
-&lt;p&gt;The worst thing (as in any conflict resolution) is a compromise. This is what
-ruins quality faster than bad code. A compromise
-is a conflict resolution technique for which both parties agree not to get
-what they wanted just for the sake of ceasing the conflict. In other words,
-&amp;quot;&lt;em&gt;Let&amp;#39;s make peace just to stop fighting&lt;/em&gt;&amp;quot; It&amp;#39;s the worst approach ever.&lt;/p&gt;
-
-&lt;p&gt;Instead of a lousy compromise, there are three professional exits from a fight
-over a piece of code:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;&lt;em&gt;You&amp;#39;re right; I take my comments back!&lt;/em&gt;&amp;quot; This may happen, and it should
-happen very often. You should be ready to admit your mistakes. You didn&amp;#39;t like
-the code, but its author explained to you its benefits, and you accepted
-the logic &amp;mdash; not because you want to stop fighting with him but because
-you really understood the logic and accepted it. Willingness to say, &amp;quot;I&amp;#39;m wrong&amp;quot;,
-is the first sign of a mature and serious developer.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;&lt;em&gt;I will never accept this, period!&lt;/em&gt;&amp;quot; Some code deserves that, and there
-is nothing wrong with resolving a conflict this way. The opponent may accept
-the situation and re-write everything. And learn something too.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;&lt;em&gt;Let&amp;#39;s do what the architect says!&lt;/em&gt;&amp;quot; In every project, there is
-a &lt;a href=&quot;/&quot;&gt;software architect&lt;/a&gt;
-who makes final decisions. Appeal to his opinion and get his final decision.
-Invite him into the discussion, and ask him to take one side in the conflict. Once
-he tells you that you&amp;#39;re wrong, accept the decision and try to learn from it.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus, either stand strong on your position and fight for it or admit that you&amp;#39;re
-wrong. One way or the other. But don&amp;#39;t make a compromise!&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t get me wrong; it&amp;#39;s not about being stubborn and holding your cards
-no matter how bad they are. Be flexible and learn on the spot. Your position
-may and should change during the negotiation, but don&amp;#39;t accept anything that
-you don&amp;#39;t like. You can exit the conflict either by being fully convinced that the
-opponent is right or when the architect says so. Nothing in between.&lt;/p&gt;
-
-&lt;h2 id=&quot;no-bullshit&quot;&gt;No Bullshit&lt;/h2&gt;
-
-&lt;p&gt;Again, you fearlessly said that a method should be designed differently.
-Your opponent, the author of the code, replies that he doesn&amp;#39;t think so.
-You take a look again and decide to stand behind your position. You still think
-you&amp;#39;re right, and you&amp;#39;re not going to make a compromise. Now what?
-It&amp;#39;s too early to call an architect, so try to convince your opponent.&lt;/p&gt;
-
-&lt;p&gt;In most cases, convincing is teaching. You know something that he doesn&amp;#39;t know.
-That&amp;#39;s why he created that method the way you don&amp;#39;t like. One of you needs
-some additional education. Here is an opportunity for you to be a teacher
-of your colleague. To be an effective teacher, you need to show proof. You
-need to ground your logic and make sure he understands and accepts it.&lt;/p&gt;
-
-&lt;p&gt;Be ready to show links, articles, books, reports, examples, etc. Just
-&amp;quot;&lt;em&gt;I know this because I&amp;#39;ve been writing Java for 15 years&lt;/em&gt;&amp;quot; is not enough. Moreover,
-this type of argument only makes you less convincing.&lt;/p&gt;
-
-&lt;p&gt;If you don&amp;#39;t have enough convincing proof, think again &amp;mdash; maybe you are wrong.&lt;/p&gt;
-
-&lt;p&gt;Also, remember that it&amp;#39;s your job to prove that the code you&amp;#39;re reviewing
-is bad. The author of the code should not prove anything. His code is great
-by default. The job of the reviewer is to show why and how that&amp;#39;s actually not the case.
-In other words, you&amp;#39;re the plaintiff and he is the defender. Not the other way around.&lt;/p&gt;
-
-&lt;h2 id=&quot;no-offense&quot;&gt;No Offense&lt;/h2&gt;
-
-&lt;p&gt;This is the last and most difficult principle to follow. No matter how bad the
-code is and how stubborn your opponent is, you must remain professional. To be honest,
-I find this very difficult sometimes. At &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;,
-we&amp;#39;re working in distributed teams and hire a few new people every week. Some
-of them, despite our &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;screening criteria&lt;/a&gt;,
-appear to be rather &lt;span class=&quot;strike&quot;&gt;stupid&lt;/span&gt; difficult to deal with.&lt;/p&gt;
-
-&lt;p&gt;I encountered a funny situation about a year ago when a new guy was supposed to
-create a small (20 to 30 lines of code) new feature in an existing Java library. He sent me a pull
-request (I was a code reviewer) after he put in a few hundred lines of code.
-That code was absolute garbage and obviously not written by him. I immediately
-understood that he found it somewhere and copied it. But what could I do?
-How could I reject it without saying his attitude was unacceptable
-for a professional developer? I had to spend some time objectively blaming
-his code for its style, its design, etc. I had to make many serious
-comments in order to show him that to fix it all, he should
-delete the garbage and re-write it from scratch. I never saw him again
-after that task.&lt;/p&gt;
-
-&lt;p&gt;My point is that it&amp;#39;s easy to be professional when you&amp;#39;re dealing with
-professionals. Unfortunately, that&amp;#39;s not always the case. But no matter how
-bad the code in front of you is, be patient and convincing.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 09 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/09/serious-code-reviewer.html</guid>
-      <dc:date>2015-02-09T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
