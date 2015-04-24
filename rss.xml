@@ -1661,7 +1661,7 @@ is that they make our code &lt;em&gt;composable&lt;/em&gt;. That&amp;#39;s why t
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.&lt;/p&gt;
 
-&lt;iframe class=&quot;video&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/D0dqC_3Bch8?rel=0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe class=&quot;video&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/D0dqC_3Bch8&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;!--more--&gt;
 
