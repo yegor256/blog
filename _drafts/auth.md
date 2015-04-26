@@ -6,7 +6,7 @@ tags: java
 description:
   Cookie based authentication is a simple and powerful mechanism
   to enable web site user login in a RESTful and lightweight way;
-  Takes framework does it with a few composable decorators
+  Takes framework does it with a few composable decorators.
 keywords:
   - cookie based authentication
   - cookies for authentication
@@ -20,8 +20,8 @@ you get into your account. Then, wherever you go in the site,
 you always see your photo at the top right corner of the page. Facebook
 remembers you and doesn't ask for the password again and again. This works
 thanks to [HTTP Cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
-and is called **cookie based authentication**. Even through this mechanism
-often causes some security concerns, it is very popular and simple.
+and is called **cookie based authentication**. Even though this mechanism
+often causes some security problems, it is very popular and simple.
 Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
 
 <!--more-->
@@ -155,9 +155,10 @@ final class TkAccount implements Take {
 
 Right after the `request` comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have `TkAuth` decorator, which wraps an existing _take_,
-decodes an incoming cookie and adds a new header to the request, with
-user identity information:
+reusable, we have [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
+decorator, which wraps an existing _take_,
+decodes an incoming cookie and adds a new `TkAuth`
+header to the request, with user identity information:
 
 {% highlight java %}
 final Codec codec = new CcHex(new CcXOR(new CcPlain()));
@@ -167,17 +168,21 @@ new TkAuth(new TkAccount(), pass);
 
 Again, when `TkAuth` receives a request with an authenticating cookie inside,
 it asks `pass` to decode the cookie and return either a
-valid `Identity` or `Identity.ANONYMOUS`.
+valid [`Identity`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Identity.html)
+or `Identity.ANONYMOUS`.
 
 Then, when the response goes back to the browser, `TkAuth` asks `pass`
 to encode the indentity back into a string and adds `Set-Cookie` to the response.
 
-`PsCookie` is using an instance of `Codec` in order to do these backward
-and forward encoding operations.
+[`PsCookie`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html)
+is using an instance of
+[`Codec`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html)
+in order to do these backward and forward encoding operations.
 
 When our `TkAccount` _take_ wants to retrieve currently authenticated
-user identity from the request, it can use `RqAuth`,
-a utility decorator of `Request`:
+user identity from the request, it can use
+[`RqAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html),
+a utility decorator of [`Request`](http://www.takes.org/apidocs-0.15.1/org/takes/Request.html):
 
 {% highlight java %}
 final class TkAccount implements Take {
@@ -191,3 +196,97 @@ final class TkAccount implements Take {
 
 `RqAuth` decorator is using the header, added by `PsCookie`, in order
 to authenticate the user and create `Identity` object.
+
+## How is it composable?
+
+This mechanism is indeed very extendable and "composable". Let's say, we
+want to skip authentication during integration testing. Here is how:
+
+{% highlight java %}
+new TkAuth(
+  take, // original application "take"
+  new PsChain(
+    new PsFake(/* if running integration tests */),
+    new PsCookie(
+      new CcHex(new CcXOR(new CcPlain()))
+    )
+  )
+);
+{% endhighlight %}
+
+[`PsChain`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsChain.html)
+implements [`Pass`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Pass.html)
+and attempts to authenticate the user by asking all encapsulated passes,
+one by one. The first one in the chain is
+[`PsFake`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html).
+Using a single boolean argument in its constructor, it makes a decision whether
+to return a fake identity or return nothing. With just a single boolean
+trigger we can switch off the entire authentication mechanism in the app.
+
+Let's say you want to authenticate users through Facebook OAuth. Here is how:
+
+{% highlight java %}
+new TkAuth(
+  take, // original application "take"
+  new PsChain(
+    new PsByFlag(
+      new PsByFlag.Pair(
+        PsFacebook.class.getSimpleName(),
+        new PsFacebook(
+          "... Facebook API key ...",
+          "... Facebook API secret ..."
+        )
+      )
+    ),
+    new PsCookie(
+      new CcHex(new CcXOR(new CcPlain()))
+    )
+  )
+);
+{% endhighlight %}
+
+When a user clicks to the login link on your site, it goes to `twitter.com`,
+where his/her identity is being verified. Then, Facebook returns a `302` redirection
+response with a `Location` header set to the URL we provide in the login link.
+The link must include something like this: `?PsByFlag=PsFacebook`. This will
+tell [`PsByFlag`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html)
+that this request authenticates a user.
+
+`PsByFlag` will iterate through all encapsulated "pairs" and try to find the
+right one.
+[`PsFacebook`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html)
+will be the first and the right. It will connect to Facebook API, using
+provided credentials and will retrieve all possible information about the user.
+
+Here is how we can implement a logout mechanism:
+
+{% highlight java %}
+new TkAuth(
+  take, // original application "take"
+  new PsChain(
+    new PsByFlag(
+      new PsByFlag.Pair(
+        PsFacebook.class.getSimpleName(),
+        new PsFacebook(
+          "... Facebook API key ...",
+          "... Facebook API secret ..."
+        )
+      ),
+      new PsByFlag.Pair(
+        PsLogout.class.getSimpleName(),
+        new PsLogout()
+      )
+    ),
+    new PsCookie(
+      new CcHex(new CcXOR(new CcPlain()))
+    )
+  )
+);
+{% endhighlight %}
+
+Now, we can add `?PsByFlag=PsLogout` to any link on the site and it will
+log current user out.
+
+You can see how all this works in a real application, check
+[`TkAppAuth`](https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java)
+class in [Rultor](http://www.rultor.com).
