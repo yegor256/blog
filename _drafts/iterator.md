@@ -1,23 +1,22 @@
 ---
 layout: post
-title: "How To Implement an Adapter Iterator"
+title: "How To Implement an Iterating Adapter"
 date: 2015-04-27
 tags: java
 description:
   In my experience, very few people understand how to implement
-  an interator in Java, this article should give a simple
-  and practical example
+  an iterating adapter in Java; this article should give a practical example.
 keywords:
   - java iterator
   - iterator in java example
-  - iterator in java
+  - iterator in java adapter
   - java iterator example
   - implement java iterator
 ---
 
 [Iterator](http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html)
 is one of fundamental Java interfaces, introduced in Java 1.2. It is supposed
-to be very simple. However, in my experience, many Java developers don't understand
+to be very simple, however, in my experience, many Java developers don't understand
 how to implement a custom one, which should iterate a stream of data
 coming from some other source. In other words, an **adapter** of
 another source of data, in form of an iterator. Hope this example will help.
@@ -34,7 +33,8 @@ final class Data {
 
 When we call `read()`, it returns a new array of bytes, which were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
-we want to create an _adapter_:
+we want to create an _adapter_ that would consume the bytes and let
+us iterate them:
 
 {% highlight java %}
 final class FluentData implements Iterator<Byte> {
