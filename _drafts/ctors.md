@@ -172,6 +172,12 @@ final Name name = new CachedName(
 
 It's a very primitive example, but I hope you get the idea.
 
+In this design we're basically splitting the object into two parts. The first
+one knows how to get the first name from English name. The second one
+knows how to cache the results of this calculation in memory. And now it's
+my decision, as a user of these classes, how exactly to use them. I will
+decide, whether I need caching or not. This is what object composition is all about.
+
 Let me re-iterate, the only allowed statement inside
 a constructor is assignment. If you need to put something else there,
 start thinking about refactoring &mdash; your class definitely needs a re-design.
