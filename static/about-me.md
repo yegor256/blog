@@ -59,6 +59,9 @@ about software quality. Here are a few facts about myself:
    source, you can see the code style we respect. I'm using
    IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
 
+ * I like to read, here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
+   about software engineering.
+
 Once in a month I'm sending a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who are
