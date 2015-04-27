@@ -4,7 +4,7 @@ title: "My Favorite Software Books"
 date: 2015-04-22
 tags: book-review
 description:
-  I highly recommend you read these books to 
+  I highly recommend you read these books to
   better understand software engineering; there are plenty
   of other good books, but these are my favorites.
 keywords:
@@ -43,18 +43,18 @@ the philosophy of project management and the role of project manager in it.
 {% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
 [**The Art of Software Testing**](http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ)
 by Glenford J. Myers et al.
-You can read my short review of this book [here]({% pst 2015/aug/2015-08-22-art-of-software-testing %}).
+You can read my short review of this book [here]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 The book perfectly explains the philosophy of testing and destroys
 many typical myths and stereotypes. No matter what your job description is,
 if you're working in the software industry, you should understand testing
-and its fundamental principles. This is the only book you need in order to 
+and its fundamental principles. This is the only book you need in order to
 get that understanding.
 
 {% badge /images/2015/04/book-goos.jpg 96 http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=D5KJ4KQEDPXZVQMQ %}
 [**Growing Object-Oriented Software, Guided by Tests**](http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=D5KJ4KQEDPXZVQMQ)
 by Steve Freeman and Nat Pryce.
 All you need to know about your unit testing is in this book. I'm fully aware
-that I didn't include famous software engineer 
+that I didn't include famous software engineer
 [Kent Beck's book](http://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321146530&linkCode=as2&tag=yegor256com-20&linkId=S63Z5BJDORBGMZ2Z)
 in this list because I don't like it at all. You definitely should read
 it, just to know what's going on, but it won't help you write good tests.
