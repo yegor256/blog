@@ -1,0 +1,183 @@
+---
+layout: post
+title: "Constructors Must Be Code-Free"
+date: 2015-04-29
+tags: java oop
+description:
+  It is a bad idea to put executing statements into class
+  constructors, because it leads to side effects and
+  uncontrollable behavior.
+keywords:
+  - how much code in constructors
+  - constructors in java
+  - oop constructors best practices
+  - best practices java constructors
+  - how much code to put into constructors
+---
+
+How much work should be done in a constructor? It seems reasonable
+to do some computations inside a constructor and then encapsulate
+results. When the results will be required by object methods, we'll have them
+ready. Sounds like a good approach? No, it's not. It's a bad idea.
+For one reason &mdash; it prevents composition of objects and makes them
+not extendable.
+
+<!--more-->
+
+Let's say, we're making an interface that would represent a name of a person:
+
+{% highlight java %}
+interface Name {
+  String first();
+}
+{% endhighlight %}
+
+Pretty easy, right? Now, let's try to implement it:
+
+{% highlight java %}
+public final class EnglishName implements Name {
+  private final String name;
+  public EnglishName(final CharSequence text) {
+    this.parts = text.toString().split(" ", 2)[0];
+  }
+  @Override
+  public String first() {
+    return this.name;
+  }
+}
+{% endhighlight %}
+
+What's wrong about it? It is faster, right? It splits the name into
+parts only once and encapsulates them. Then, no matter how many times we
+call `first()` method, it will return the same value and won't need
+to do the splitting again. This is wrong thinking! Let me show the right
+way and explain:
+
+{% highlight java %}
+public final class EnglishName implements Name {
+  private final CharSequence text;
+  public EnglishName(final CharSequence txt) {
+    this.text = txt;
+  }
+  @Override
+  public String first() {
+    return this.text.toString().split("", 2)[0];
+  }
+}
+{% endhighlight %}
+
+This is the right design. I can see you smiling. Let me prove my point.
+
+Before I start proving, let me ask you to read this article:
+[Composable Decorators vs. Imperative Utility Methods]({% pst 2015/feb/2015-02-26-composable-decorators %}).
+It explains the difference between static method and composable decorators.
+The first snippet above is very close to an imperative utility method, even
+though it looks like an object. The second example is a true object.
+
+In the first example, we are abusing `new` operator and turning it into
+a static method, which does all calculations for us _right now and here_.
+This is what _imperative_ programming is about. In imperative programming
+we do all calculations right now and return fully ready results. In declarative
+programming, instead, we are trying to delay calculations for
+as long as possible.
+
+Let's try to use our `EnglishName` class:
+
+{% highlight java %}
+final Name name = new EnglishName(new NameInPostgreSQL(/*...*/));
+if (/* something goes wrong */) {
+  throw new IllegalStateException(
+    String.format(
+      "Hi, %s, we can't proceed with your application", name.first()
+    )
+  );
+}
+{% endhighlight %}
+
+In the first line of this snippet we are just making an instance of an object
+and label it as `name`. We don't want to go to the database yet, fetch
+the full name from there, split it into parts and encapsulate them
+inside `name`. We just want to create an instance of an object. Such a parsing
+behaviour would be a side effect for us and, in this case,
+will slow down the application.
+As you see, we may need `name.first()` only if something goes wrong and
+we will need to construct an exception object.
+
+My point is that **any** computations done inside a constructor is a bad
+practice and must be avoided, because they are side-effects and are not
+requested by object owner.
+
+What about performance during re-use of `name`, you may ask. If we make an
+instance of `EnglishName` and then call `name.first()` five times, we'll
+end up with five calls to `String.split()` method.
+
+To solve that, we create another class,
+a [composable decorator]({% pst 2015/feb/2015-02-26-composable-decorators %}),
+which will help us solve this "re-use" problem:
+
+{% highlight java %}
+public final class CachedName implements Name {
+  private final Name origin;
+  public CachedName(final Name name) {
+    this.origin = name;
+  }
+  @Override
+  @Cacheable(forever = true)
+  public String first() {
+    return this.origin.first();
+  }
+}
+{% endhighlight %}
+
+I'm using [`Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
+annotation from [jcabi-aspects](http://aspects.jcabi.com/), but you can use any other
+caching tools available in Java (or other languages), for example
+[Guava Cache](https://code.google.com/p/guava-libraries/wiki/CachesExplained):
+
+{% highlight java %}
+public final class CachedName implements Name {
+  private final Cache<Long, String> cache = CacheBuilder.newBuilder().build();
+  private final Name origin;
+  public CachedName(final Name name) {
+    this.origin = name;
+  }
+  @Override
+  public String first() {
+    return this.cache.get(
+      1L,
+      new Callable<String>() {
+        @Override
+        public String call() {
+          return CachedName.this.origin.first();
+        }
+      }
+    );
+  }
+}
+{% endhighlight %}
+
+But, please, don't make `CachedName` mutable and lazy loaded &mdash;
+it's an anti-pattern, discussed before in
+[Objects Should Be Immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
+
+This is how our code will look now:
+
+{% highlight java %}
+final Name name = new CachedName(
+  new EnglishName(
+    new NameInPostgreSQL(/*...*/)
+  )
+);
+{% endhighlight %}
+
+It's a very primitive example, but I hope you get the idea.
+
+In this design we're basically splitting the object into two parts. The first
+one knows how to get the first name from English name. The second one
+knows how to cache the results of this calculation in memory. And now it's
+my decision, as a user of these classes, how exactly to use them. I will
+decide, whether I need caching or not. This is what object composition is all about.
+
+Let me re-iterate, the only allowed statement inside
+a constructor is assignment. If you need to put something else there,
+start thinking about refactoring &mdash; your class definitely needs a re-design.
