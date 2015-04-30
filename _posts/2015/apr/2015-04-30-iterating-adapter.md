@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Implement an Iterating Adapter"
-date: 2015-04-27
+date: 2015-04-30
 tags: java
 description:
   In my experience, very few people understand how to implement
