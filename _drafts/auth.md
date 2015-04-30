@@ -65,7 +65,7 @@ header and understands that it's me again! No need to ask for the
 password once more. The server trusts the informatiom from the cookie.
 That's it. That's what cookie-based authentication is all about.
 
-## Wait ... What about security?
+## Wait ... What About Security?
 
 Right, what about security? If the server trusts any browser request with
 a user email in the `Cookie` header, anyone would be able to send my email
@@ -118,23 +118,23 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure; HttpOnly
 {% endhighlight %}
 
-Presence of this flag will tell the browser that this particular cookie can
+The presence of this flag will tell the browser that this particular cookie can
 be transferred back to the server only through HTTP requests. JavaScript won't
 have access to it.
 
-## How it's done in Takes
+## How It's Done in Takes
 
-Here is how this cookie based authentication mechanism is designed in
+Here is how this cookie-based authentication mechanism is designed in the
 [Takes](http://www.takes.org) framework. The entire framework consists of
 _takes_, which receive requests and produce responses
 ([this article]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
-explains the framework in more details). When the request comes in,
-we should find the authentication cookie in `Cookie` header and translate
-it to the user identity. When the response goes out, we should add
-`Set-Cookie` header to it with the encrypted user identity. That's it. Just
+explains the framework in more detail). When the request comes in,
+we should find the authentication cookie in the `Cookie` header and translate
+it to the user credentials. When the response goes out, we should add the
+`Set-Cookie` header to it with the encrypted user credentials. That's it. Just
 these two steps.
 
-Let's say we have an account page that is supposed to show current user
+Let's say we have an account page that is supposed to show the current user's
 balance:
 
 {% highlight java %}
@@ -155,10 +155,10 @@ final class TkAccount implements Take {
 
 Right after the `request` comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
+reusable, we have the [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
 decorator, which wraps an existing _take_,
-decodes an incoming cookie and adds a new `TkAuth`
-header to the request, with user identity information:
+decodes an incoming cookie, and adds a new `TkAuth`
+header to the request with the user's identification information:
 
 {% highlight java %}
 final Codec codec = new CcHex(new CcXOR(new CcPlain()));
@@ -175,11 +175,11 @@ Then, when the response goes back to the browser, `TkAuth` asks `pass`
 to encode the indentity back into a string and adds `Set-Cookie` to the response.
 
 [`PsCookie`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html)
-is using an instance of
+uses an instance of
 [`Codec`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html)
 in order to do these backward and forward encoding operations.
 
-When our `TkAccount` _take_ wants to retrieve currently authenticated
+When our `TkAccount` _take_ wants to retrieve a currently authenticated
 user identity from the request, it can use
 [`RqAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html),
 a utility decorator of [`Request`](http://www.takes.org/apidocs-0.15.1/org/takes/Request.html):
@@ -194,12 +194,12 @@ final class TkAccount implements Take {
 }
 {% endhighlight %}
 
-`RqAuth` decorator is using the header, added by `PsCookie`, in order
-to authenticate the user and create `Identity` object.
+The `RqAuth` decorator uses the header, added by `PsCookie`, in order
+to authenticate the user and create an `Identity` object.
 
-## How is it composable?
+## How Is It Composable?
 
-This mechanism is indeed very extendable and "composable". Let's say, we
+This mechanism is indeed very extendable and "composable". Let's say we
 want to skip authentication during integration testing. Here is how:
 
 {% highlight java %}
@@ -221,7 +221,7 @@ one by one. The first one in the chain is
 [`PsFake`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html).
 Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
-trigger we can switch off the entire authentication mechanism in the app.
+trigger, we can switch off the entire authentication mechanism in the app.
 
 Let's say you want to authenticate users through Facebook OAuth. Here is how:
 
@@ -245,8 +245,8 @@ new TkAuth(
 );
 {% endhighlight %}
 
-When a user clicks to the login link on your site, it goes to `twitter.com`,
-where his/her identity is being verified. Then, Facebook returns a `302` redirection
+When a user clicks on the login link on your site, the browser goes to `facebook.com`,
+where his or her identity is verified. Then, Facebook returns a `302` redirection
 response with a `Location` header set to the URL we provide in the login link.
 The link must include something like this: `?PsByFlag=PsFacebook`. This will
 tell [`PsByFlag`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html)
@@ -255,7 +255,7 @@ that this request authenticates a user.
 `PsByFlag` will iterate through all encapsulated "pairs" and try to find the
 right one.
 [`PsFacebook`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html)
-will be the first and the right. It will connect to Facebook API, using
+will be the first and the right one. It will connect to the Facebook API using the
 provided credentials and will retrieve all possible information about the user.
 
 Here is how we can implement a logout mechanism:
@@ -285,8 +285,8 @@ new TkAuth(
 {% endhighlight %}
 
 Now, we can add `?PsByFlag=PsLogout` to any link on the site and it will
-log current user out.
+log the current user out.
 
-You can see how all this works in a real application, check
+You can see how all this works in a real application by checking out the
 [`TkAppAuth`](https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java)
 class in [Rultor](http://www.rultor.com).
