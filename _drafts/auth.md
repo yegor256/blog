@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "How Cookie Based Authentication works in Takes Framework"
+title: "How Cookie-Based Authentication Works in the Takes Framework"
 date: 2015-02-10
 tags: java
 description:
-  Cookie based authentication is a simple and powerful mechanism
-  to enable web site user login in a RESTful and lightweight way;
-  Takes framework does it with a few composable decorators.
+  Cookie-based authentication is a simple and powerful mechanism
+  to enable website user login in a RESTful and lightweight way;
+  the Takes framework does it with a few composable decorators.
 keywords:
   - cookie based authentication
   - cookies for authentication
@@ -15,12 +15,12 @@ keywords:
   - cookie authentication security
 ---
 
-When you enter your email and password into Facebook login page,
+When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
 you always see your photo at the top right corner of the page. Facebook
 remembers you and doesn't ask for the password again and again. This works
-thanks to [HTTP Cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
-and is called **cookie based authentication**. Even though this mechanism
+thanks to [HTTP cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
+and is called **cookie-based authentication**. Even though this mechanism
 often causes some security problems, it is very popular and simple.
 Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
 
@@ -28,8 +28,8 @@ Here is how [Takes](http://www.takes.org) makes it possible in a few lines of co
 
 First, let's see how it works. Moreover, let's see how I believe it should work.
 
-Step one, the user enters email and password and clicks "submit". The server
-receives POST request with this information inside:
+Step one: The user enters an email and password and clicks "submit". The server
+receives a POST request with this information inside:
 
 {% highlight text %}
 POST / HTTP/1.1
@@ -39,9 +39,9 @@ Content-Type: application/x-www-form-urlencoded
 email=me@yegor256.com&password=itisasecret
 {% endhighlight %}
 
-The server matches provided information with its records and decides what to do.
-If the information is invalid, it returns the same login page, asking to
-enter all this again. When information is valid, the server returns something
+The server matches the provided information with its records and decides what to do.
+If the information is invalid, it returns the same login page, asking you to
+enter it all again. If the information is valid, the server returns something
 like this:
 
 {% highlight text %}
@@ -50,8 +50,8 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com
 {% endhighlight %}
 
-Since the response status code is 303, the browser goes to the page,
-specified in `Location` header and opens the front page of the site. This
+Since the response status code is 303, the browser goes to the page
+specified in the `Location` header and opens the front page of the site. This
 is what it sends to the server:
 
 {% highlight text %}
@@ -60,21 +60,21 @@ Host: www.facebook.com
 Cookie: user=me@yegor256.com
 {% endhighlight %}
 
-The server gets my email from `Cookie`
-header and understands that it's me again! No need to ask me for the
-password again. The server trusts the informatiom from the cookie.
-That's it. That's what cookie based authentication is all about.
+The server gets my email from the `Cookie`
+header and understands that it's me again! No need to ask for the
+password once more. The server trusts the informatiom from the cookie.
+That's it. That's what cookie-based authentication is all about.
 
-## Wait... what about security?
+## Wait ... What About Security?
 
-Right, what about security. If the server trusts any browser request with
-user email in `Cookie` header, anyone would be able to send my email
+Right, what about security? If the server trusts any browser request with
+a user email in the `Cookie` header, anyone would be able to send my email
 from another place and get access to my account.
 
-The first step to prevent this is to encrypt the email, with a secret
-encryption key, known only to the server. Nobody, except the server itself,
-will be able to encrypt it the way the server would be able to decrypt.
-The response will look like this, for example being encrypted
+The first step to prevent this is to encrypt the email with a secret
+encryption key, known only to the server. Nobody except the server itself
+will be able to encrypt it the same way the server needs to decrypt it.
+The response would look like this, using an example of encryption
 by [XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher) with `bamboo` as a secret key:
 
 {% highlight text %}
@@ -83,18 +83,18 @@ Location: www.facebook.com
 Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39
 {% endhighlight %}
 
-This is not best encryption mechanism, for a proper encryption it's better
-to use something stronger, like [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard).
+This is not the best encryption mechanism, though; for proper encryption, it's better
+to use something stronger like [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard).
 
-Sounds good, but what if someone hijacks the traffic between the server and the
-browser and gets ahold of a properly encrypted email cookie? In this case,
-this person will able to use the same cookie for authentication, even without
-knowing its content. The server will trust this information and will let the
-person to enter my account. This type of attack is called
+This all sounds good, but what if someone hijacks the traffic between the server and the
+browser and gets a hold of a properly encrypted email cookie? In this case,
+the thief would be able to use the same cookie for authentication even without
+knowing its content. The server would trust the information and let the
+person into my account. This type of attack is called
 [man-in-the-middle](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
-To prevent this from happening we should use HTTPS and inform the browser
+To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
-SSL encryption. It's done by an extra flag at `Set-Cookie` header:
+SSL encryption. That's done by an extra flag in the `Set-Cookie` header:
 
 {% highlight text %}
 HTTP/1.1 303 See Other
@@ -102,15 +102,15 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure
 {% endhighlight %}
 
-There is yet another type of attack associated with cookie based authentication,
-based on browser ability to expose all cookies associated with a web page
+There is yet another type of attack associated with cookie-based authentication,
+based on a browser's ability to expose all cookies associated with a web page
 to JavaScript executed inside it. An attacker may inject some malicious
-JavaScript code into the page (don't ask me how... this will happen only
-if your entire HTML rendering is done wrong), and this code will get access
-to the cookie. Then, this code will send the cookie somewhere else, where
+JavaScript code into the page (Don't ask me how ... this will happen only
+if your entire HTML rendering is done wrong), and this code will gain access
+to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
 [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
-To prevent this, there is another flag for `Set-Cookie` header, called `HttpOnly`:
+To prevent this, there is another flag for the `Set-Cookie` header, called `HttpOnly`:
 
 {% highlight text %}
 HTTP/1.1 303 See Other
@@ -118,23 +118,23 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure; HttpOnly
 {% endhighlight %}
 
-Presence of this flag will tell the browser that this particular cookie can
+The presence of this flag will tell the browser that this particular cookie can
 be transferred back to the server only through HTTP requests. JavaScript won't
 have access to it.
 
-## How it's done in Takes
+## How It's Done in Takes
 
-Here is how this cookie based authentication mechanism is designed in
+Here is how this cookie-based authentication mechanism is designed in the
 [Takes](http://www.takes.org) framework. The entire framework consists of
 _takes_, which receive requests and produce responses
 ([this article]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
-explains the framework in more details). When the request comes in,
-we should find the authentication cookie in `Cookie` header and translate
-it to the user identity. When the response goes out, we should add
-`Set-Cookie` header to it with the encrypted user identity. That's it. Just
+explains the framework in more detail). When the request comes in,
+we should find the authentication cookie in the `Cookie` header and translate
+it to the user credentials. When the response goes out, we should add the
+`Set-Cookie` header to it with the encrypted user credentials. That's it. Just
 these two steps.
 
-Let's say we have an account page that is supposed to show current user
+Let's say we have an account page that is supposed to show the current user's
 balance:
 
 {% highlight java %}
@@ -155,10 +155,10 @@ final class TkAccount implements Take {
 
 Right after the `request` comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
+reusable, we have the [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
 decorator, which wraps an existing _take_,
-decodes an incoming cookie and adds a new `TkAuth`
-header to the request, with user identity information:
+decodes an incoming cookie, and adds a new `TkAuth`
+header to the request with the user's identification information:
 
 {% highlight java %}
 final Codec codec = new CcHex(new CcXOR(new CcPlain()));
@@ -175,11 +175,11 @@ Then, when the response goes back to the browser, `TkAuth` asks `pass`
 to encode the indentity back into a string and adds `Set-Cookie` to the response.
 
 [`PsCookie`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html)
-is using an instance of
+uses an instance of
 [`Codec`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html)
 in order to do these backward and forward encoding operations.
 
-When our `TkAccount` _take_ wants to retrieve currently authenticated
+When our `TkAccount` _take_ wants to retrieve a currently authenticated
 user identity from the request, it can use
 [`RqAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html),
 a utility decorator of [`Request`](http://www.takes.org/apidocs-0.15.1/org/takes/Request.html):
@@ -194,12 +194,12 @@ final class TkAccount implements Take {
 }
 {% endhighlight %}
 
-`RqAuth` decorator is using the header, added by `PsCookie`, in order
-to authenticate the user and create `Identity` object.
+The `RqAuth` decorator uses the header, added by `PsCookie`, in order
+to authenticate the user and create an `Identity` object.
 
-## How is it composable?
+## How Is It Composable?
 
-This mechanism is indeed very extendable and "composable". Let's say, we
+This mechanism is indeed very extendable and "composable". Let's say we
 want to skip authentication during integration testing. Here is how:
 
 {% highlight java %}
@@ -221,7 +221,7 @@ one by one. The first one in the chain is
 [`PsFake`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html).
 Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
-trigger we can switch off the entire authentication mechanism in the app.
+trigger, we can switch off the entire authentication mechanism in the app.
 
 Let's say you want to authenticate users through Facebook OAuth. Here is how:
 
@@ -245,8 +245,8 @@ new TkAuth(
 );
 {% endhighlight %}
 
-When a user clicks to the login link on your site, it goes to `twitter.com`,
-where his/her identity is being verified. Then, Facebook returns a `302` redirection
+When a user clicks on the login link on your site, the browser goes to `facebook.com`,
+where his or her identity is verified. Then, Facebook returns a `302` redirection
 response with a `Location` header set to the URL we provide in the login link.
 The link must include something like this: `?PsByFlag=PsFacebook`. This will
 tell [`PsByFlag`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html)
@@ -255,7 +255,7 @@ that this request authenticates a user.
 `PsByFlag` will iterate through all encapsulated "pairs" and try to find the
 right one.
 [`PsFacebook`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html)
-will be the first and the right. It will connect to Facebook API, using
+will be the first and the right one. It will connect to the Facebook API using the
 provided credentials and will retrieve all possible information about the user.
 
 Here is how we can implement a logout mechanism:
@@ -285,8 +285,8 @@ new TkAuth(
 {% endhighlight %}
 
 Now, we can add `?PsByFlag=PsLogout` to any link on the site and it will
-log current user out.
+log the current user out.
 
-You can see how all this works in a real application, check
+You can see how all this works in a real application by checking out the
 [`TkAppAuth`](https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java)
 class in [Rultor](http://www.rultor.com).
