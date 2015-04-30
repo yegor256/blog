@@ -50,11 +50,11 @@ the philosophy of project management and the role of project manager in it.&lt;/
 
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ&quot;&gt;&lt;strong&gt;The Art of Software Testing&lt;/strong&gt;&lt;/a&gt;
 by Glenford J. Myers et al.
-You can read my short review of this book &lt;a href=&quot;/&quot;&gt;here&lt;/a&gt;.
+You can read my short review of this book &lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;here&lt;/a&gt;.
 The book perfectly explains the philosophy of testing and destroys
 many typical myths and stereotypes. No matter what your job description is,
 if you&amp;#39;re working in the software industry, you should understand testing
-and its fundamental principles. This is the only book you need in order to 
+and its fundamental principles. This is the only book you need in order to
 get that understanding.&lt;/p&gt;
 
 &lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-goos.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
@@ -62,7 +62,7 @@ get that understanding.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ&quot;&gt;&lt;strong&gt;Growing Object-Oriented Software, Guided by Tests&lt;/strong&gt;&lt;/a&gt;
 by Steve Freeman and Nat Pryce.
 All you need to know about your unit testing is in this book. I&amp;#39;m fully aware
-that I didn&amp;#39;t include famous software engineer 
+that I didn&amp;#39;t include famous software engineer
 &lt;a href=&quot;http://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321146530&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=S63Z5BJDORBGMZ2Z&quot;&gt;Kent Beck&amp;#39;s book&lt;/a&gt;
 in this list because I don&amp;#39;t like it at all. You definitely should read
 it, just to know what&amp;#39;s going on, but it won&amp;#39;t help you write good tests.
