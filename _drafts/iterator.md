@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How To Implement an Iterating Adapter"
+title: "How to Implement an Iterating Adapter"
 date: 2015-04-27
 tags: java
 description:
@@ -15,11 +15,11 @@ keywords:
 ---
 
 [Iterator](http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html)
-is one of fundamental Java interfaces, introduced in Java 1.2. It is supposed
-to be very simple, however, in my experience, many Java developers don't understand
+is one of the fundamental Java interfaces, introduced in Java 1.2. It is supposed
+to be very simple; however, in my experience, many Java developers don't understand
 how to implement a custom one, which should iterate a stream of data
-coming from some other source. In other words, an **adapter** of
-another source of data, in form of an iterator. Hope this example will help.
+coming from some other source. In other words, it becomes an **adapter** of
+another source of data, in the form of an iterator. I hope this example will help.
 
 <!--more-->
 
@@ -31,7 +31,7 @@ final class Data {
 }
 {% endhighlight %}
 
-When we call `read()`, it returns a new array of bytes, which were retrieved
+When we call `read()`, it returns a new array of bytes that were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
 we want to create an _adapter_ that would consume the bytes and let
 us iterate them:
@@ -63,19 +63,19 @@ final class FluentData implements Iterator<Byte> {
   }
   public Byte next() {
     if (!this.hasNext()) {
-      throw new NoSuchElementException("nothing left");
+      throw new NoSuchElementException("Nothing left");
     }
     return this.buffer.poll();
   }
   public void remove() {
-    throw new UnsupportedOperationException("it is read-only");
+    throw new UnsupportedOperationException("It is read-only");
   }
 }
 {% endhighlight %}
 
-There is no way to make it thread-safe, because iterating process
-is outside of scope of the iterator. Even if we declare our methods
+There is no way to make it thread-safe because the iterating process
+is outside the scope of the iterator. Even if we declare our methods
 as `synchronized`, this won't guarantee that two threads won't conflict
-when they both call `hasNext()` and `next()`. So, don't bother, just
-document the iterator as not thread-safe and let its users
-synchronize one level higher, when necessary.
+when they both call `hasNext()` and `next()`. So don't bother with it and
+just document the iterator as not thread-safe, then let its users
+synchronize one level higher when necessary.
