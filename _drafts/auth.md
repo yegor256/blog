@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "How Cookie Based Authentication works in Takes Framework"
+title: "How Cookie-Based Authentication Works in the Takes Framework"
 date: 2015-02-10
 tags: java
 description:
-  Cookie based authentication is a simple and powerful mechanism
-  to enable web site user login in a RESTful and lightweight way;
-  Takes framework does it with a few composable decorators.
+  Cookie-based authentication is a simple and powerful mechanism
+  to enable website user login in a RESTful and lightweight way;
+  the Takes framework does it with a few composable decorators.
 keywords:
   - cookie based authentication
   - cookies for authentication
@@ -15,12 +15,12 @@ keywords:
   - cookie authentication security
 ---
 
-When you enter your email and password into Facebook login page,
+When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
 you always see your photo at the top right corner of the page. Facebook
 remembers you and doesn't ask for the password again and again. This works
-thanks to [HTTP Cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
-and is called **cookie based authentication**. Even though this mechanism
+thanks to [HTTP cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
+and is called **cookie-based authentication**. Even though this mechanism
 often causes some security problems, it is very popular and simple.
 Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
 
@@ -28,8 +28,8 @@ Here is how [Takes](http://www.takes.org) makes it possible in a few lines of co
 
 First, let's see how it works. Moreover, let's see how I believe it should work.
 
-Step one, the user enters email and password and clicks "submit". The server
-receives POST request with this information inside:
+Step one: The user enters an email and password and clicks "submit". The server
+receives a POST request with this information inside:
 
 {% highlight text %}
 POST / HTTP/1.1
@@ -39,9 +39,9 @@ Content-Type: application/x-www-form-urlencoded
 email=me@yegor256.com&password=itisasecret
 {% endhighlight %}
 
-The server matches provided information with its records and decides what to do.
-If the information is invalid, it returns the same login page, asking to
-enter all this again. When information is valid, the server returns something
+The server matches the provided information with its records and decides what to do.
+If the information is invalid, it returns the same login page, asking you to
+enter it all again. If the information is valid, the server returns something
 like this:
 
 {% highlight text %}
@@ -50,8 +50,8 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com
 {% endhighlight %}
 
-Since the response status code is 303, the browser goes to the page,
-specified in `Location` header and opens the front page of the site. This
+Since the response status code is 303, the browser goes to the page
+specified in the `Location` header and opens the front page of the site. This
 is what it sends to the server:
 
 {% highlight text %}
@@ -60,21 +60,21 @@ Host: www.facebook.com
 Cookie: user=me@yegor256.com
 {% endhighlight %}
 
-The server gets my email from `Cookie`
-header and understands that it's me again! No need to ask me for the
-password again. The server trusts the informatiom from the cookie.
-That's it. That's what cookie based authentication is all about.
+The server gets my email from the `Cookie`
+header and understands that it's me again! No need to ask for the
+password once more. The server trusts the informatiom from the cookie.
+That's it. That's what cookie-based authentication is all about.
 
-## Wait... what about security?
+## Wait ... What about security?
 
-Right, what about security. If the server trusts any browser request with
-user email in `Cookie` header, anyone would be able to send my email
+Right, what about security? If the server trusts any browser request with
+a user email in the `Cookie` header, anyone would be able to send my email
 from another place and get access to my account.
 
-The first step to prevent this is to encrypt the email, with a secret
-encryption key, known only to the server. Nobody, except the server itself,
-will be able to encrypt it the way the server would be able to decrypt.
-The response will look like this, for example being encrypted
+The first step to prevent this is to encrypt the email with a secret
+encryption key, known only to the server. Nobody except the server itself
+will be able to encrypt it the same way the server needs to decrypt it.
+The response would look like this, using an example of encryption
 by [XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher) with `bamboo` as a secret key:
 
 {% highlight text %}
@@ -83,18 +83,18 @@ Location: www.facebook.com
 Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39
 {% endhighlight %}
 
-This is not best encryption mechanism, for a proper encryption it's better
-to use something stronger, like [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard).
+This is not the best encryption mechanism, though; for proper encryption, it's better
+to use something stronger like [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard).
 
-Sounds good, but what if someone hijacks the traffic between the server and the
-browser and gets ahold of a properly encrypted email cookie? In this case,
-this person will able to use the same cookie for authentication, even without
-knowing its content. The server will trust this information and will let the
-person to enter my account. This type of attack is called
+This all sounds good, but what if someone hijacks the traffic between the server and the
+browser and gets a hold of a properly encrypted email cookie? In this case,
+the thief would be able to use the same cookie for authentication even without
+knowing its content. The server would trust the information and let the
+person into my account. This type of attack is called
 [man-in-the-middle](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
-To prevent this from happening we should use HTTPS and inform the browser
+To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
-SSL encryption. It's done by an extra flag at `Set-Cookie` header:
+SSL encryption. That's done by an extra flag in the `Set-Cookie` header:
 
 {% highlight text %}
 HTTP/1.1 303 See Other
@@ -102,15 +102,15 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure
 {% endhighlight %}
 
-There is yet another type of attack associated with cookie based authentication,
-based on browser ability to expose all cookies associated with a web page
+There is yet another type of attack associated with cookie-based authentication,
+based on a browser's ability to expose all cookies associated with a web page
 to JavaScript executed inside it. An attacker may inject some malicious
-JavaScript code into the page (don't ask me how... this will happen only
-if your entire HTML rendering is done wrong), and this code will get access
-to the cookie. Then, this code will send the cookie somewhere else, where
+JavaScript code into the page (Don't ask me how ... this will happen only
+if your entire HTML rendering is done wrong), and this code will gain access
+to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
 [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
-To prevent this, there is another flag for `Set-Cookie` header, called `HttpOnly`:
+To prevent this, there is another flag for the `Set-Cookie` header, called `HttpOnly`:
 
 {% highlight text %}
 HTTP/1.1 303 See Other
