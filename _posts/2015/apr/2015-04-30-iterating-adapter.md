@@ -50,7 +50,7 @@ Here is how it should look (it is not thread-safe!):
 final class FluentData implements Iterator<Byte> {
   private final Data data;
   private final Queue<Byte> buffer = new LinkedList<>();
-  public DataIterator(final Data dat) {
+  public FluentData(final Data dat) {
     this.data = dat;
   }
   public boolean hasNext() {
