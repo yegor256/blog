@@ -10,12 +10,200 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 30 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How to Protect a Business Idea While Outsourcing</title>
+      <link>http://www.yegor256.com/2015/05/04/how-to-protect-business-idea.html</link>
+      <description>&lt;p&gt;When you hire a programmer or a team of programmers to implement your
+business idea, there is a significant risk of theft and accidental loss. They
+may implement your idea (or its elements) without you using their own
+resources. Also, they may disclose it to their friends, and those friends
+may disclose it even further, until it is eventually implemented by
+someone you don&amp;#39;t even know. This happens a lot &amp;mdash; and everywhere. I&amp;#39;ve
+been on both sides. Here is my experience and a few recommendations.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/there-will-be-blood.jpg' style='width:600px;' alt='There Will Be Blood (2007) by Paul Thomas Anderson'/&gt;&lt;figcaption&gt;There Will Be Blood (2007) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are basically a few levels of protection you can obtain, and they are
+listed below, from the simplest and least secure to the most expensive and
+most secure.&lt;/p&gt;
+
+&lt;p&gt;Very often, a software team you outsource programming to is located offshore
+in a developing country where people care about laws much less than
+in, say, the United States; corruption makes it possible for them to get away
+with ignoring almost any violation. Let&amp;#39;s not forget this.&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re not discussing here the risk of losing a product. This also happens
+very often &amp;mdash; your programmers start working for you, you pay them,
+they show you something, and then things go south. You find yourself in conflict
+with them, and they don&amp;#39;t deliver you anything; they ask for extra money instead.
+You end up with nothing or something that is broken and can&amp;#39;t be put on the market.
+This is yet another risk, which I&amp;#39;ll try to describe in another article soon.&lt;/p&gt;
+
+&lt;p&gt;In this article, we&amp;#39;re talking specifically about a situation where your
+programmers are using your idea to implement something similar on their own.
+Let&amp;#39;s say you want to create a new search engine that would be smarter and
+more accurate than Google. You disclose your alrogithms to a group of
+talented programmers and they just implement it on their own. You already
+gave them a multi-billion-dollar idea; why would they work for you on the
+payroll if they can create their own startup? This is the question you,
+as a savvy entrepreneur, must be prepared to answer for yourself.&lt;/p&gt;
+
+&lt;p&gt;By the way, I&amp;#39;m not a lawyer; I&amp;#39;m speaking here from practical experience only.&lt;/p&gt;
+
+&lt;h2 id=&quot;non-disclosure-agreement-(nda)&quot;&gt;Non-Disclosure Agreement (NDA)&lt;/h2&gt;
+
+&lt;p&gt;The first and easiest step is a so-called NDA. Here is a very simple
+and useful example of one, from
+&lt;a href=&quot;http://www.nolo.com/legal-encyclopedia/sample-confidentiality-agreement-nda-33343.html&quot;&gt;NOLO&lt;/a&gt;.
+You put the name of your programmers into the document and ask them to sign it.
+They won&amp;#39;t object, and you get a piece of paper with a signature; what&amp;#39;s next?&lt;/p&gt;
+
+&lt;p&gt;If I&amp;#39;m a programmer, the document basically states that whatever you disclose
+to me, I should keep in secret and never &amp;quot;use for my own benefit, publish, copy,
+or otherwise disclose to others.&amp;quot; If you then give me your Google-killer idea
+and I create my own product using its key principles, what will be your next steps?&lt;/p&gt;
+
+&lt;p&gt;In a court of law in your country, you will have to prove that:
+1) you disclosed your idea to me, 2) I used it to create the product,
+3) I didn&amp;#39;t know about this idea beforehand, and 4) I didn&amp;#39;t invent it myself.
+Until all of these criteria are proven, I&amp;#39;m innocent and &lt;em&gt;my&lt;/em&gt; product is online, working
+and attracting customers.&lt;/p&gt;
+
+&lt;p&gt;Will you be able to prove that you disclosed the idea to me? Probably, if
+you sent me some documents. If you discussed it with me over the phone, you
+won&amp;#39;t prove anything.&lt;/p&gt;
+
+&lt;p&gt;Will you be able to prove that your exact idea was used in my product?
+How will it technically be possible if I don&amp;#39;t disclose the source code?&lt;/p&gt;
+
+&lt;p&gt;Can you prove that I didn&amp;#39;t know about something similar before meeting you?
+Or maybe I was thinking about it on my own. Or I read about it somewhere else.&lt;/p&gt;
+
+&lt;p&gt;What if I disclose your idea to my friends and they create a product? Will
+you be able to prove the fact of that disclosure?&lt;/p&gt;
+
+&lt;p&gt;There are many such questions. My point is that a signed NDA
+is a very weak protection. It&amp;#39;s more like a lock on the bathroom door
+&amp;mdash; anyone can break it with a kick from their leg, but for those with
+good manners, it&amp;#39;s a sign that the restroom is occupied.&lt;/p&gt;
+
+&lt;h2 id=&quot;non-compete-clause-(ncc)&quot;&gt;Non-Compete Clause (NCC)&lt;/h2&gt;
+
+&lt;p&gt;The next level of protection is an agreement with a &lt;a href=&quot;http://en.wikipedia.org/wiki/Non-compete_clause&quot;&gt;Non-Compete Clause&lt;/a&gt;,
+which explicitly prohibits me from engaging in the business that your
+idea is about. For example, it may sound like this: &amp;quot;The developer
+is not allowed to participate in any businesses related to online searching
+for five years.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Will I sign this agreement? It depends. But if I show any reluctance
+in signing it, you should think twice about my real intentions.&lt;/p&gt;
+
+&lt;p&gt;Will this NCC protect you if I disclose your idea to my friends and they
+implement it? No, it won&amp;#39;t.&lt;/p&gt;
+
+&lt;p&gt;Also, I would recommend you put some explicit liability numbers into the
+agreement. For example, it may sound like
+&amp;quot;a minimum penalty for a proven breach of the non-compete clause is $50,000&amp;quot;.
+In my experience, such explicit statements make contracts much more
+valuable and help prevent them from being violated.&lt;/p&gt;
+
+&lt;h2 id=&quot;copyright&quot;&gt;Copyright&lt;/h2&gt;
+
+&lt;p&gt;Copyright is where the government starts to protect you, but you have to
+pay us for it (by &amp;quot;us&amp;quot; I mean all of us, the society). Well, at least in
+the United States. In the United Kingdom, it&amp;#39;s free, for example.&lt;/p&gt;
+
+&lt;p&gt;In the U.S., you go to &lt;a href=&quot;http://www.copyright.gov&quot;&gt;copyright.gov&lt;/a&gt;,
+click &amp;quot;register a copyright&amp;quot;,
+fill in an online form,
+post the description of your business idea in a plain text file,
+pay $35, and you&amp;#39;re done.
+In a few months, you will receive a confirmation that your &amp;quot;record&amp;quot;
+is registered.&lt;/p&gt;
+
+&lt;p&gt;What does it give you? In a court of law, you can claim that this idea
+came to your mind on that specific date. Everyone who later made something
+similar &lt;em&gt;probably&lt;/em&gt; stole it from you, including me, your programmer.&lt;/p&gt;
+
+&lt;p&gt;Will you be able to prove that my product is actually based on your idea
+and steals it? Maybe.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not a very strong protection either, but I would recommend you do it
+together with an NDA and NCC.&lt;/p&gt;
+
+&lt;h2 id=&quot;patent&quot;&gt;Patent&lt;/h2&gt;
+
+&lt;p&gt;A patent is the best you can get to protect your idea. A patent is basically
+a guarantee of safety that you buy from the government. To get that
+guarantee, you have to do three things: 1) explain what exactly will be protected,
+2) prove that it doesn&amp;#39;t belong to someone else, and 3) pay your dues regularly.
+It&amp;#39;s very similar to what gangsters do when they &amp;quot;protect&amp;quot; you,
+but here we&amp;#39;re dealing with intellectual property and there is only one
+&amp;quot;gangster&amp;quot; per country :) The concept is pretty much the same.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1413320449/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1413320449&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=46F452ALSAXMPSW7'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/nolo-patent-it-yourself.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, you describe your idea in the format that patents are written. It is
+not difficult at all, but it would help if you read one of those &amp;quot;how to file
+a patent&amp;quot; books. I recommend
+&lt;a href=&quot;http://www.amazon.com/gp/product/1413320449/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1413320449&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=46F452ALSAXMPSW7&quot;&gt;Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office&lt;/a&gt;
+by David Pressman and Thomas J. Tuytschaevers.&lt;/p&gt;
+
+&lt;p&gt;Your application will likely amount to about 10 pages and should take a few days
+of your time if you know your idea well. No need to hire any attorneys; that&amp;#39;s a
+waste of money.&lt;/p&gt;
+
+&lt;p&gt;Then you should do some research to make sure something similar already
+exists &amp;mdash; but not exactly the same. For example, you can find Google patents
+for searching algorithms and mention them in your patent in the list
+of references.&lt;/p&gt;
+
+&lt;p&gt;Finally, you pay $425 (if you&amp;#39;re a small company) and submit it to the
+&lt;a href=&quot;http://www.uspto.gov&quot;&gt;USPTO&lt;/a&gt;. There is also an option to file a &amp;quot;provisional&amp;quot;
+patent, but I would recommend you not do this, as it&amp;#39;s just an extra hassle. Simply
+file a normal one.&lt;/p&gt;
+
+&lt;p&gt;Once you&amp;#39;ve paid, your protection starts immediately. If I create a product
+that uses the idea described in your patent, you can bring me to court
+and ask me to share my profit with you. You will claim that I was making
+money by using your brilliant idea, and now it&amp;#39;s time to share that success.
+Legally speaking, you will
+accuse me of &lt;a href=&quot;http://en.wikipedia.org/wiki/Patent_infringement&quot;&gt;patent infringement&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, I will try to invalidate your patent, claiming that something
+similar already existed before you filed a patent, called
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Prior_art&quot;&gt;prior art&lt;/a&gt;. If I succeed, the USPTO will
+invalidate your patent without a refund, and I&amp;#39;ll walk away, paying you nothing.&lt;/p&gt;
+
+&lt;p&gt;If I fail, I&amp;#39;ll try to prove that I didn&amp;#39;t infringe on your patent. I will say
+that my product is not using your ideas but rather is designed with something else
+in mind, just like Samsung &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.&quot;&gt;did&lt;/a&gt;.
+Maybe I&amp;#39;ll win, but my chances will be low.&lt;/p&gt;
+
+&lt;p&gt;By the way, in a few years, you will receive a patent from the USPTO and put it on the shelf.
+You will then have to pay $480 more. Also, at the end of three years, you will have to pay $800 just
+to keep your guarantee alive. That escalates to $1,800 in seven years and $3,700 in 11 years
+(see the &lt;a href=&quot;http://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule&quot;&gt;fee schedule&lt;/a&gt;).
+Told you; just like gangsters :)&lt;/p&gt;
+
+&lt;p&gt;To summarize, getting a patent is the best instrument available at the moment
+in developed countries that can protect your business idea.
+However, as Apple vs. Samsung &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.&quot;&gt;lawsuit&lt;/a&gt; demonstrates,
+it is not a 100 percent guarantee either.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 04 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/05/04/how-to-protect-business-idea.html</guid>
+      <dc:date>2015-05-04T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How to Implement an Iterating Adapter</title>
       <link>http://www.yegor256.com/2015/04/30/iterating-adapter.html</link>
@@ -2133,156 +2321,6 @@ and how small they are.&lt;/p&gt;
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</guid>
       <dc:date>2015-02-20T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>It's Not a School!</title>
-      <link>http://www.yegor256.com/2015/02/16/it-is-not-a-school.html</link>
-      <description>&lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;, we work in distributed teams and
-keep all our communications &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;in tickets&lt;/a&gt;.
-Besides that, we &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;encourage&lt;/a&gt;
-every developer on every project to
-report bugs whenever he or she finds them. We even
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;pay&lt;/a&gt; for each bug found.
-Once in a while, I see bugs reported along these lines: &amp;quot;&lt;em&gt;Can someone explain
-to me how to design this module?&lt;/em&gt;&amp;quot; or even &amp;quot;&lt;em&gt;I haven&amp;#39;t used this library before;
-please help me get started&lt;/em&gt;.&amp;quot; My usual answer is, &amp;quot;&lt;em&gt;This is not a school; nobody
-is going to teach you here!&lt;/em&gt;&amp;quot; I realize this sounds
-rather harsh to most developers who are just starting to work with us, so
-here I&amp;#39;ll try to illustrate why such an attitude makes sense and is beneficial to both
-the programmers and the project.&lt;/p&gt;
-
-&lt;p&gt;Disclaimer: I&amp;#39;m talking about software &lt;strong&gt;projects&lt;/strong&gt; here, which PMBOK defines
-as &amp;quot;&lt;em&gt;temporary&lt;/em&gt; endeavors undertaken to create unique
-products, services, or results&amp;quot;. If your team is engaged in continuous
-development or maintenance of software, this concept may not be relevant.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/gi-jane.png' style='width:600px;' alt='G.I. Jane (1997) by Ridley Scott'/&gt;&lt;figcaption&gt;G.I. Jane (1997) by Ridley Scott&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;No matter how unpleasant this could be, let&amp;#39;s face the reality:
-each software project is a business, and we, the developers, are
-its &lt;strong&gt;resources&lt;/strong&gt;. Just like concrete, wood, and glass are the resources required
-to build a house, which is also a business activity. No matter how much we think
-about ourselves as a family having fun together and writing code because
-we enjoy it, each business looks at it completely differently.&lt;/p&gt;
-
-&lt;p&gt;The project needs us to produce classes, lines of code, methods, functions,
-files, and features. Then, the project can convert them into happy customers,
-which will give us something back &amp;mdash; usually cash. Finally, the project will
-share that cash among us, investors, and the government.&lt;/p&gt;
-
-&lt;p&gt;A properly planned and managed project acquires the best resources its
-budget can afford and then relies on their quality. A programmer who doesn&amp;#39;t
-have adequate skills or knowledge is an unreliable resource. Obviously,
-no project would acquire such a resource from the start. However,
-this weakness may be revealed in the middle of the project.&lt;/p&gt;
-
-&lt;p&gt;Say you&amp;#39;re building a house and you contracted a plumber to install a
-drainage system. When it&amp;#39;s time to mount the equipment, he tells you
-that he&amp;#39;s never worked with it and doesn&amp;#39;t know how to install it.
-It was a risk, and it occurred. A good project manager always has a fallback plan
-or even a few of them. Obviously, the best option would be to contract another
-plumber. The worst option would be to train the original one on the spot.&lt;/p&gt;
-
-&lt;p&gt;Wait, why is that so obvious? The plumber is a great guy. Yes, he doesn&amp;#39;t know
-how to work with this equipment, but that doesn&amp;#39;t mean we should
-fire him immediately. Let&amp;#39;s pay for his training, send him to some
-courses, buy him some books, let him experiment with the equipment for some
-time, and then he will be able to install it in our house. Great plan, isn&amp;#39;t it?
-The plumber will be happy.&lt;/p&gt;
-
-&lt;p&gt;But the project won&amp;#39;t.&lt;/p&gt;
-
-&lt;p&gt;The goal of the project is to build a house, not to train a plumber. The
-project doesn&amp;#39;t even have funds to train the bloody plumber! If we train
-and teach all our workers, we won&amp;#39;t ever build a house. We&amp;#39;re not running
-a school here. We&amp;#39;re building a house!&lt;/p&gt;
-
-&lt;p&gt;While working on a software project, a good project manager has a staffing management
-plan that describes how skills will be recruited, tested, applied, and
-discharged when necessary. Such a plan may include training, but it would be
-as small an amount as possible &amp;mdash; mostly because a plumber trained by us costs much
-more than one trained by someone else but does exactly the same, or worse, work.
-Thus, a smart project manager acquires project members who are already
-capable of performing their duties and falls back on trainings only
-in exceptional situations.&lt;/p&gt;
-
-&lt;p&gt;Now, a logical question: What should we, as programmers, do? We want to
-learn, and we don&amp;#39;t want to spend our own money on it. We don&amp;#39;t want to
-sit home for a few years learning all possible technologies before entering
-the job market as experts, ready to be hired. We want to learn on the job.
-We basically want to use project budgets for our own personal educational needs.
-Moreover, a smart programmer exits every project with some new knowledge,
-new skills, and new technologies in his or her portfolio.&lt;/p&gt;
-
-&lt;p&gt;However, if you make your projects spend their money
-on your education, that&amp;#39;s theft. And a good project manager
-should stop you, saying &amp;quot;This is not a school!&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;What Is the Solution?&lt;/p&gt;
-
-&lt;p&gt;I believe that in the software business, there is only one workaround &amp;mdash; blame the
-project for your own deficiencies in education, skills, or information.
-I&amp;#39;m being absolutely serious.
-Let&amp;#39;s discuss a few practical situations.&lt;/p&gt;
-
-&lt;p&gt;Say you have a module to work with, and it has to be written in Python. You have
-no experience in Python; you&amp;#39;re a Java developer. Who is at fault here? You
-could think of it as your problem and ask your project manager to teach you, but he should tell
-you he&amp;#39;s not running a school and get rid of you. That&amp;#39;s a bad scenario for both of you. Instead, blame the
-project manager. He hired you. He put you into this situation. He planned
-all project activities, so he probably knows what he is doing. This means
-that the project documentation should be detailed enough for a Java
-developer to create that Python module. However, it is not detailed enough. So report
-this issue and wait for its resolution. Explain in your bug report that you
-honestly started to work with the module and realized that its documentation
-is not complete enough for a Java developer to understand. Ask the project manager
-to fix this. If the project decides to invest its money into the documentation, you
-have the chance to read it and learn. Thus, the project&amp;#39;s money spent on your education will
-also contribute to the project. It&amp;#39;s a win-win.&lt;/p&gt;
-
-&lt;p&gt;Here is another example: Say you have to fix a Java module and you&amp;#39;re a Java
-developer. You understand Java, but you don&amp;#39;t understand how this algorithm works.
-You could blame yourself for not reading
-&lt;a href=&quot;http://www.amazon.com/gp/product/0321751043/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321751043&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=FVM7INLX6KAHZV66&quot;&gt;Knuth&lt;/a&gt;
-in school and ask the project to train you on it. A good and strong project manager should tell you that it&amp;#39;s not a school
-and get rid of you. Again, a bad scenario for both of you. Instead,
-blame the project. The code is not self-descriptive and is difficult to
-understand. The algorithm implementation is not obvious and is poorly documented.
-Ask for better documentation. If the project invests its money into
-the documentation, you will learn the algorithm from it. The source
-code will be improved, and you will have improved your skills. Win-win.&lt;/p&gt;
-
-&lt;p&gt;One more example: Say you are tasked to implement a WebSockets back-end in
-an existing web app. You know how WebSockets work but can&amp;#39;t understand how
-to connect this new back-end to the existing persistence layer. You are rather
-new to the project and don&amp;#39;t understand what would be the right design. You
-could ask for the project to provide training to explain how the code works
-and how it can be extended with features like this one. A project manager
-should tell you that you&amp;#39;re not in school and are supposed to understand the
-software if the project is paying you a software developer salary. And he will
-be right. But it&amp;#39;s a bad scenario for both of you. Instead, blame the project
-for incomplete design documentation. Good software should properly document
-its architecture and design. Ask for the project to provide such documentation.
-If it invests its time and money into better documentation, you
-will learn from it and find all the necessary answers. Another win-win.&lt;/p&gt;
-
-&lt;p&gt;There are a few other examples in my
-&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;How to Cut Corners and Stay Cool&lt;/a&gt; post.&lt;/p&gt;
-
-&lt;p&gt;In conclusion, I would recommend you remember that software projects are,
-first and foremost, business activities where we, the developers, are resources.
-In order to obtain something for ourselves in terms of education and training,
-we should align our goals with project objectives. Instead of asking for
-help and information, we should blame the project for its lack of
-documentation. By fixing this flaw, the project will improve its artifacts
-and, at the same time, provide valuable knowledge to us, its participants.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/16/it-is-not-a-school.html</guid>
-      <dc:date>2015-02-16T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
