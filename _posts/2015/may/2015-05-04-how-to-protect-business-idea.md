@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Protect a Business Idea While Outsourcing"
-date: 2015-04-29
+date: 2015-05-04
 tags: mgmt
 description:
   How can an entrepreneur protect a business idea when
@@ -20,12 +20,14 @@ business idea, there is a significant risk of theft and accidental loss. They
 may implement your idea (or its elements) without you using their own
 resources. Also, they may disclose it to their friends, and those friends
 may disclose it even further, until it is eventually implemented by
-someone you don't even know. This happens a lot &mdash; and everywhere. I've 
+someone you don't even know. This happens a lot &mdash; and everywhere. I've
 been on both sides. Here is my experience and a few recommendations.
 
 <!--more-->
 
-There are basically a few levels of protection you can obtain, and they are 
+{% picture /images/2015/05/there-will-be-blood.jpg 0 There Will Be Blood (2007) by Paul Thomas Anderson %}
+
+There are basically a few levels of protection you can obtain, and they are
 listed below, from the simplest and least secure to the most expensive and
 most secure.
 
@@ -36,9 +38,9 @@ with ignoring almost any violation. Let's not forget this.
 
 We're not discussing here the risk of losing a product. This also happens
 very often &mdash; your programmers start working for you, you pay them,
-they show you something, and then things go south. You find yourself in conflict 
-with them, and they don't deliver you anything; they ask for extra money instead. 
-You end up with nothing or something that is broken and can't be put on the market. 
+they show you something, and then things go south. You find yourself in conflict
+with them, and they don't deliver you anything; they ask for extra money instead.
+You end up with nothing or something that is broken and can't be put on the market.
 This is yet another risk, which I'll try to describe in another article soon.
 
 In this article, we're talking specifically about a situation where your
@@ -60,7 +62,7 @@ and useful example of one, from
 You put the name of your programmers into the document and ask them to sign it.
 They won't object, and you get a piece of paper with a signature; what's next?
 
-If I'm a programmer, the document basically states that whatever you disclose 
+If I'm a programmer, the document basically states that whatever you disclose
 to me, I should keep in secret and never "use for my own benefit, publish, copy,
 or otherwise disclose to others." If you then give me your Google-killer idea
 and I create my own product using its key principles, what will be your next steps?
@@ -151,8 +153,8 @@ a patent" books. I recommend
 [Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office](http://www.amazon.com/gp/product/1413320449/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1413320449&linkCode=as2&tag=yegor256com-20&linkId=46F452ALSAXMPSW7)
 by David Pressman and Thomas J. Tuytschaevers.
 
-Your application will likely amount to about 10 pages and should take a few days 
-of your time if you know your idea well. No need to hire any attorneys; that's a 
+Your application will likely amount to about 10 pages and should take a few days
+of your time if you know your idea well. No need to hire any attorneys; that's a
 waste of money.
 
 Then you should do some research to make sure something similar already
@@ -162,7 +164,7 @@ of references.
 
 Finally, you pay $425 (if you're a small company) and submit it to the
 [USPTO](http://www.uspto.gov). There is also an option to file a "provisional"
-patent, but I would recommend you not do this, as it's just an extra hassle. Simply 
+patent, but I would recommend you not do this, as it's just an extra hassle. Simply
 file a normal one.
 
 Once you've paid, your protection starts immediately. If I create a product
