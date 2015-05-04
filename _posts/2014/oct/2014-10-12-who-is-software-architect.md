@@ -84,7 +84,7 @@ what delegation is all about &mdash; responsibility should always come with powe
 
 As a project manager, you should regularly evaluate the results
 of your architect. Remember, the quality of the product your team
-is working on is his personal (!) reponsibility.
+is working on is his personal (!) responsibility.
 Any problems you see are his problems.
 Don't be afraid to blame him and punish him. But, always remember that
 in order to make your punishments productive you should give your
