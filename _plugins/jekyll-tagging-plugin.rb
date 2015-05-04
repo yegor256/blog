@@ -81,10 +81,10 @@ module Jekyll
               #{post['date'].strftime('%-d %B %Y')}
             </time>
           </li>
+          <li>#{tags(post)}</li>
           <li>
             <a href='http://www.yegor256.com#{post['url']}#disqus_thread' class='notranslate'>comments</a>
           </li>
-          <li>#{tags(post)}</li>
         </ul>
       </div>".gsub(/\n/, '')
     end
