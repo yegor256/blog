@@ -141,8 +141,8 @@ temporal coupling. The first request can be removed safely
 from the code without affecting the second one.
 
 I hope this example demonstrates that the code manipulating
-immutable objects is more readable and maintainable, b
-ecause it doesn't have temporal coupling.
+immutable objects is more readable and maintainable,
+because it doesn't have temporal coupling.
 
 ## Avoiding Side Effects
 
