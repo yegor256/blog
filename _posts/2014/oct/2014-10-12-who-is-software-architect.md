@@ -36,7 +36,7 @@ Absolutely wrong!
 
 <!--more-->
 
-<iframe class="video" width="640" height="360" src="http://www.youtube.com/embed/0fuEgmibJc4" allowfullscreen></iframe>
+{% youtube 0fuEgmibJc4 %}
 
 Obviously, an architect is usually someone who
 has the most knowledge, skills, experience, and authority. Of course,

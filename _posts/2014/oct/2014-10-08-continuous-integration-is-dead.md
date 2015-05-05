@@ -30,7 +30,7 @@ Here is my response to the un-asked question:
 Even though I have some experience in this area, I won't use it as an argument.
 I'll try to rely only on logic instead.
 
-<iframe class="video" width="640" height="360" src="https://www.youtube.com/embed/3IXk5yEJMIs" allowfullscreen></iframe>
+{% youtube 3IXk5yEJMIs %}
 
 <!--more-->
 

@@ -31,7 +31,7 @@ of our code is much more important than its performance.
 
 <!--more-->
 
-<iframe class="video" width="640" height="360" src="http://www.youtube.com/embed/PNSezrlemsY" allowfullscreen></iframe>
+{% youtube PNSezrlemsY %}
 
 ## Prices vs Salaries
 

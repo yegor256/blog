@@ -22,7 +22,7 @@ which I enjoyed to give :)
 
 <!--more-->
 
-<iframe class="video" width="640" height="360" src="http://www.youtube.com/embed/TWBBZK_XRNU?rel=0" allowfullscreen></iframe>
+{% youtube TWBBZK_XRNU %}
 
 I answered these questions (approximately):
 
