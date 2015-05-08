@@ -86,11 +86,14 @@ as long as possible.
 Let's try to use our `EnglishName` class:
 
 {% highlight java %}
-final Name name = new EnglishName(new NameInPostgreSQL(/*...*/));
+final Name name = new EnglishName(
+  new NameInPostgreSQL(/*...*/)
+);
 if (/* something goes wrong */) {
   throw new IllegalStateException(
     String.format(
-      "Hi, %s, we can't proceed with your application", name.first()
+      "Hi, %s, we can't proceed with your application",
+      name.first()
     )
   );
 }
@@ -138,7 +141,8 @@ caching tools available in Java (or other languages), like
 
 {% highlight java %}
 public final class CachedName implements Name {
-  private final Cache<Long, String> cache = CacheBuilder.newBuilder().build();
+  private final Cache<Long, String> cache =
+    CacheBuilder.newBuilder().build();
   private final Name origin;
   public CachedName(final Name name) {
     this.origin = name;
