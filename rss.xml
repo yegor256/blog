@@ -10,12 +10,106 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Thu, 07 May 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Three Things I Expect From a Software Architect</title>
+      <link>http://www.yegor256.com/2015/05/11/software-architect-responsibilities.html</link>
+      <description>&lt;p&gt;A software architect is a key person in a software project, which I
+explained in my &lt;a href=&quot;/&quot;&gt;What Does a Software Architect Do?&lt;/a&gt;
+post a few months ago. The architect is personally responsible for
+the technical quality of the product we&amp;#39;re developing. No matter how
+good the team is, how complex the technology is, how messy the
+requirements are, or how chaotic the project sponsor is,
+we blame the architect and noone else. Of course, we also reward the architect
+if we succeed. Here is what I, as project manager, expect from a good architect.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/dr-strangelove.jpg' style='width:600px;' alt='Dr. Strangelove (1964) by Stanley Kubrick'/&gt;&lt;figcaption&gt;Dr. Strangelove (1964) by Stanley Kubrick&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In all projects we run at &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, I expect
+regular reports from software architects a few times a week. Each report
+includes three mandatory parts: 1) scope status, 2) issues, and 3) risks.&lt;/p&gt;
+
+&lt;h2 id=&quot;scope-status&quot;&gt;Scope Status&lt;/h2&gt;
+
+&lt;p&gt;The first and most important type of information I&amp;#39;m looking for
+is the scope status, which should be presented in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Product_breakdown_structure&quot;&gt;Product Breakdown Structure&lt;/a&gt;
+(PBS) format. No matter how complex or how small the product is, a good architect
+should be able to create a PBS of &lt;em&gt;four to eight items&lt;/em&gt;. For example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. MySQL persistence [done]
+2. OAuth login [done]
+3. Input parsing in XML [75%]
+4. S3 data storage [none]
+5. UI cross-platform testing [none]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That&amp;#39;s the size of the report I&amp;#39;m expecting to receive from a good architect
+every few days. The main goal for the architect here is to make sure
+that nothing is missed. No matter how big the project is, all its
+technical components must fit into this PBS.&lt;/p&gt;
+
+&lt;p&gt;The architect is &lt;em&gt;personally&lt;/em&gt; responsible for not missing the information
+in the PBS and making it as accurate as possible. If something is missed
+or the report is delayed, that becomes a good reason to change the architect.&lt;/p&gt;
+
+&lt;p&gt;The percentages of progress are also important here. Even though
+individual tasks are managed with the &amp;quot;0/100 completion principle&amp;quot; in mind,
+the architect must compile those percentages and make sure that compilation
+is accurate. Again, a mistake here is unforgivable.&lt;/p&gt;
+
+&lt;h2 id=&quot;issues&quot;&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;The second important part of a regular report from an architect is a list
+of current issues the development team is facing. An issue is something
+that has already happened and we&amp;#39;re suffering from it. Here are
+a few practical examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. MySQL is too slow for our performance requirements
+2. Java 1.6 doesn&amp;#39;t allow us to use library X
+3. We don&amp;#39;t have a replacement for a Ruby guy who left us
+4. Integration tests are not predictable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Again, the list must include four to eight items (no more and no less), and the architect
+should mention the most critical issues there.&lt;/p&gt;
+
+&lt;h2 id=&quot;risks&quot;&gt;Risks&lt;/h2&gt;
+
+&lt;p&gt;Now, the risks. A risk is something that hasn&amp;#39;t happened yet but may happen
+soon, and if it happens, we&amp;#39;ll be in trouble. The architect is responsible
+for keeping an eye on all potential risks and regularly reporting the most critical
+ones to the project manager. Here is an example of
+a brief risk report:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Deployment platform may not support Java 8 [3/8]
+2. Library X may take more than the two weeks planned [7/3]
+3. We may lose a good Ruby developer soon [5/6]
+4. Integration tests may not be safe enough [7/2]
+5. We may fail to find an open source library [3/8]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A project manager may require additional information about each risk, but
+that&amp;#39;s another story. What is most important is to keep the project manager
+informed about the top of the list. Each risk has two numbers associated with
+it: &lt;em&gt;probability&lt;/em&gt; and &lt;em&gt;impact&lt;/em&gt;, from 0 to 9. In the list above, the first
+risk has a probability of 3 and impact of 8. This means the architect
+believes that most likely this won&amp;#39;t happen, but if it does happen, we&amp;#39;ll be
+in big trouble.&lt;/p&gt;
+
+&lt;p&gt;Pay attention, as the key word in each risk description is &lt;em&gt;may&lt;/em&gt;. A risk
+is something that hasn&amp;#39;t happened yet. That&amp;#39;s the biggest difference between
+a risk and an issue. An issue is a risk that has already occurred.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/05/11/software-architect-responsibilities.html</guid>
+      <dc:date>2015-05-11T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Constructors Must Be Code-Free</title>
       <link>http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</link>
@@ -2220,65 +2314,6 @@ done through composable decorators.&lt;/p&gt;
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/26/composable-decorators.html</guid>
       <dc:date>2015-02-26T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>A Haircut</title>
-      <link>http://www.yegor256.com/2015/02/23/haircut.html</link>
-      <description>&lt;p&gt;I received a haircut today, and the niceness of my hairdresser led him to fill the
-appointment with courteous questions about how I wanted my hair cut, what size of clipper
-he should use, how long the sides should be, and how much should be removed
-from the front. He also offered me many types of shampoo and a cup of tea.
-All this reminded me of the work we do as programmers, and I
-decided to write a short post about it. I&amp;#39;ve already
-&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;mentioned before&lt;/a&gt;
-that trying to make a customer happy is a false objective. This hairdresser
-was a perfect illustrative example of this very mistake. By the way, in the end,
-I wasn&amp;#39;t happy, and he got no tip. How could this happen if he was so
-friendly and nice?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/the-man-who-wasnt-there.jpg' style='width:600px;' alt='The Man Who Wasn&amp;amp;apos;t There (2001) by Coen Brothers'/&gt;&lt;figcaption&gt;The Man Who Wasn't There (2001) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m not a hairdresser, and I have very little understanding of how to deal
-with hair. I came to him because I assumed he knew more about this
-business than I did. I chose him through the assistance of Yelp. I wanted &lt;em&gt;him&lt;/em&gt; to tell me
-how long the hair on the sides should be and how much should be removed on the
-top. I expected &lt;em&gt;him&lt;/em&gt; to give me his professional judgement and stand by it.&lt;/p&gt;
-
-&lt;p&gt;Instead of asking me how much I wanted removed on the sides, he should have
-told me there should be less on the sides. This is what
-a true professional would do. A true professional would give me &lt;em&gt;his&lt;/em&gt; vision
-of the haircut that best suits me and would try to convince me that
-it was the best choice.&lt;/p&gt;
-
-&lt;p&gt;A true professional would not ask me but would &lt;em&gt;tell&lt;/em&gt; me instead, because
-he would understand that my goal was not to boss him around and make him do my
-hair the way I wanted it. My goal was to get the best out
-of his professional skill.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, the guy was either weak or immature. He didn&amp;#39;t argue with me
-and didn&amp;#39;t try to convince me. He tried to &lt;em&gt;please&lt;/em&gt; me. In the end, he
-lost.&lt;/p&gt;
-
-&lt;p&gt;Exactly the same thing happens when we ask our customers about
-the technologies they want us to use. I hear this question very often:
-&lt;em&gt;What language do you want us to use&lt;/em&gt; (meaning Java or Ruby or something else)?
-Or &lt;em&gt;what database should we use?&lt;/em&gt; Or &lt;em&gt;how do you want us to design this?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t do that. Don&amp;#39;t lose like that hairdresser. Don&amp;#39;t ask your clients
-what they want. Instead, &lt;em&gt;learn&lt;/em&gt; their business requirements and then
-&lt;em&gt;suggest&lt;/em&gt; the solution you think is the best for them. Then, insist and argue
-if they don&amp;#39;t agree. Convince them. Even if they fire you in the end for
-your stubbornness, it&amp;#39;s better than being that hairdresser who is doomed
-to please every single client without getting anywhere further.&lt;/p&gt;
-
-&lt;p&gt;Remember, the client is not the king; his hairs are.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/23/haircut.html</guid>
-      <dc:date>2015-02-23T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
