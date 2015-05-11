@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Three Things I Expect From a Software Architect"
-date: 2015-05-15
+date: 2015-05-11
 tags: mgmt agile
 description:
   A software architect is responsible for the technical
@@ -19,12 +19,14 @@ A software architect is a key person in a software project, which I
 explained in my [What Does a Software Architect Do?]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
 post a few months ago. The architect is personally responsible for
 the technical quality of the product we're developing. No matter how
-good the team is, how complex the technology is, how messy the 
+good the team is, how complex the technology is, how messy the
 requirements are, or how chaotic the project sponsor is,
 we blame the architect and noone else. Of course, we also reward the architect
 if we succeed. Here is what I, as project manager, expect from a good architect.
 
 <!--more-->
+
+{% picture /images/2015/05/dr-strangelove.jpg 0 Dr. Strangelove (1964) by Stanley Kubrick %}
 
 In all projects we run at [Teamed.io](http://www.teamed.io), I expect
 regular reports from software architects a few times a week. Each report
