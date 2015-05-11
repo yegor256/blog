@@ -27,7 +27,7 @@ is that they make our code _composable_. That's why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.
 
-<iframe class="video" width="640" height="360" src="https://www.youtube.com/embed/D0dqC_3Bch8" allowfullscreen></iframe>
+{% youtube D0dqC_3Bch8 %}
 
 <!--more-->
 

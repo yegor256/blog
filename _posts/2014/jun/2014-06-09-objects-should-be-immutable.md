@@ -141,8 +141,8 @@ temporal coupling. The first request can be removed safely
 from the code without affecting the second one.
 
 I hope this example demonstrates that the code manipulating
-immutable objects is more readable and maintainable, b
-ecause it doesn't have temporal coupling.
+immutable objects is more readable and maintainable,
+because it doesn't have temporal coupling.
 
 ## Avoiding Side Effects
 
@@ -310,3 +310,6 @@ These include decreased overhead due to garbage collection, and the
 elimination of code needed to protect mutable objects from corruption.&rdquo; I agree.
 
 If you have some other arguments, please post them below and I'll try to comment.
+
+P.S. Check [takes.org](http://www.takes.org),
+a Java web framework that consists entirely of immutable objects.

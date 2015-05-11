@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Constructors Must Be Code-Free"
-date: 2015-04-29
+date: 2015-05-07
 tags: java oop
 description:
   It is a bad idea to put executing statements into class
@@ -23,6 +23,8 @@ for one reason: It prevents composition of objects and makes them
 unextendable.
 
 <!--more-->
+
+{% picture /images/2015/05/kill-bill.jpg 0 Kill Bill: Vol. 2 (2004) by Quentin Tarantino %}
 
 Let's say we're making an interface that would represent a name of a person:
 
@@ -50,7 +52,7 @@ public final class EnglishName implements Name {
 What's wrong with this? It's faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
 call the `first()` method, it will return the same value and won't need
-to do the splitting again. However, this is flawed thinking! Let me show 
+to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:
 
 {% highlight java %}
@@ -84,11 +86,14 @@ as long as possible.
 Let's try to use our `EnglishName` class:
 
 {% highlight java %}
-final Name name = new EnglishName(new NameInPostgreSQL(/*...*/));
+final Name name = new EnglishName(
+  new NameInPostgreSQL(/*...*/)
+);
 if (/* something goes wrong */) {
   throw new IllegalStateException(
     String.format(
-      "Hi, %s, we can't proceed with your application", name.first()
+      "Hi, %s, we can't proceed with your application",
+      name.first()
     )
   );
 }
@@ -136,7 +141,8 @@ caching tools available in Java (or other languages), like
 
 {% highlight java %}
 public final class CachedName implements Name {
-  private final Cache<Long, String> cache = CacheBuilder.newBuilder().build();
+  private final Cache<Long, String> cache =
+    CacheBuilder.newBuilder().build();
   private final Name origin;
   public CachedName(final Name name) {
     this.origin = name;

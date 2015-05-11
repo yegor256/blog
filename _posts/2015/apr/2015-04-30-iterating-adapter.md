@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Implement an Iterating Adapter"
-date: 2015-04-27
+date: 2015-04-30
 tags: java
 description:
   In my experience, very few people understand how to implement
@@ -50,7 +50,7 @@ Here is how it should look (it is not thread-safe!):
 final class FluentData implements Iterator<Byte> {
   private final Data data;
   private final Queue<Byte> buffer = new LinkedList<>();
-  public DataIterator(final Data dat) {
+  public FluentData(final Data dat) {
     this.data = dat;
   }
   public boolean hasNext() {

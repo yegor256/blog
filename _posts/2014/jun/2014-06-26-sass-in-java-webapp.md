@@ -30,7 +30,7 @@ Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-pl
 
 {% highlight xml %}
 <plugin>
-  <groupId>org.jasig.maven</groupId>
+  <groupId>nl.geodienstencentrum.maven</groupId>
   <artifactId>sass-maven-plugin</artifactId>
   <executions>
     <execution>

@@ -28,6 +28,8 @@ This is not how well-known immutable classes behave. Take, for example, `String`
 of an immutable object as a representative of a mutable real-world entity. How
 could an immutable object represent a mutable entity? Huh?
 
+{% youtube KwP7Ay9Z-hc %}
+
 I'm very surprised. This post is going to clarify the definition of an immutable
 object. First, here is a quick answer. How can an immutable object represent a mutable entity?
 Look at an immutable class,
