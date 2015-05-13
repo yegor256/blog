@@ -5,7 +5,7 @@ date: 2015-05-13
 tags: mgmt agile
 description:
   A software architect controls a software project through
-  two fundamental instruments: bugs and reviews.
+  two fundamental instruments - bugs and reviews.
 keywords:
   - software architect
   - software architect job description
