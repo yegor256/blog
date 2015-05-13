@@ -2,7 +2,7 @@
 layout: post
 title: "Three Things I Expect From a Software Architect"
 date: 2015-05-11
-tags: mgmt agile
+tags: mgmt agile architect
 description:
   A software architect is responsible for the technical
   success of a software project and must accurately report
@@ -106,3 +106,7 @@ in big trouble.
 Pay attention, as the key word in each risk description is _may_. A risk
 is something that hasn't happened yet. That's the biggest difference between
 a risk and an issue. An issue is a risk that has already occurred.
+
+PS. Here is how an architect can enforce the principles
+of design and architecture:
+[Two Instruments of a Software Architect]({% pst 2015/may/2015-05-13-two-instruments-of-software-architect %})
