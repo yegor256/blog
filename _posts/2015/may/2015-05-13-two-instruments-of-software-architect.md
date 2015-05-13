@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Two Instruments of a Software Architect"
-date: 2015-05-15
+date: 2015-05-13
 tags: mgmt agile
 description:
   A software architect controls a software project through
@@ -23,6 +23,8 @@ this idea in practice, an architect uses two instruments:
 **bugs and reviews**.
 
 <!--more-->
+
+{% picture /images/2015/05/rear-window.jpg 0 Rear Window (1954) by Alfred Hitchcock %}
 
 At [Teamed.io](http://www.teamed.io), we discourage any communication
 between developers unless they are formally attached to the tickets or tasks
