@@ -91,4 +91,4 @@ non-compromising code reviews, an architect enforces his design and architectura
 principles.
 
 PS. Here is how an architect is supposed to report to the project manager:
-[Three Things I Expect From a Software Architect]({% pst 2015/may/2015-05-11-software-architect-responsibilites %})
+[Three Things I Expect From a Software Architect]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
