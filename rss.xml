@@ -94,6 +94,9 @@ the architect says &amp;quot;No&amp;quot; and the branch is rejected.&lt;/p&gt;
 &lt;p&gt;Reviews are a &lt;em&gt;reactive&lt;/em&gt; instrument for an architect. Through strict and
 non-compromising code reviews, an architect enforces his design and architectural
 principles.&lt;/p&gt;
+
+&lt;p&gt;PS. Here is how an architect is supposed to report to the project manager:
+&lt;a href=&quot;/&quot;&gt;Three Things I Expect From a Software Architect&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
@@ -188,6 +191,10 @@ in big trouble.&lt;/p&gt;
 &lt;p&gt;Pay attention, as the key word in each risk description is &lt;em&gt;may&lt;/em&gt;. A risk
 is something that hasn&amp;#39;t happened yet. That&amp;#39;s the biggest difference between
 a risk and an issue. An issue is a risk that has already occurred.&lt;/p&gt;
+
+&lt;p&gt;PS. Here is how an architect can enforce the principles
+of design and architecture:
+&lt;a href=&quot;/2015/05/13/two-instruments-of-software-architect.html&quot;&gt;Two Instruments of a Software Architect&lt;/a&gt;&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Mon, 11 May 2015 00:00:00 +0000</pubDate>
