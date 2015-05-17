@@ -39,6 +39,12 @@ openly and frequently communicate **risks and issues** to you. These are
 two main success factors in software outsourcing, which are neglected
 very often.
 
+{% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2 %}
+I learned this principle from Wei Liao Zi. He said,
+according to [Military Strategy Classics of Ancient China](http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2):
+
+> ...
+
 Let me demonstrate a few practical examples of "software outsourcing
 disasters" and explain how they can be avoided if you follow said
 four-thousand-years-old principle.
