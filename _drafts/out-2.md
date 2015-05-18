@@ -16,7 +16,7 @@ keywords:
   - software outsourcing definition
 ---
 
-There are a few
+There are a few...
 
 <!--more-->
 
@@ -73,4 +73,9 @@ an eye on these numbers and their dynamics.
 
 **Have Work For Hire Agreement**.
 Make sure the contract you have with software outsourcing team
-includes the
+includes something like this: "Parties shall deem all deliverables created by
+the developer as _works made for hire_ as is defined under the
+[Copyright Law of the United States](http://www.copyright.gov/title17/)".
+This is the shortest and the easiest definition of "whatever you create
+for me is mine". Put this into the contract and the outsourcing company
+won't be able to claim that the software they created belongs to them.
