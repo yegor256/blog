@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Cookie-Based Authentication Works in the Takes Framework"
-date: 2015-02-10
+date: 2015-05-18
 tags: java
 description:
   Cookie-based authentication is a simple and powerful mechanism
@@ -14,6 +14,8 @@ keywords:
   - cookie authentication web api
   - cookie authentication security
 ---
+
+{% badge http://www.takes.org/logo.png 64 http://www.takes.org %}
 
 When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
