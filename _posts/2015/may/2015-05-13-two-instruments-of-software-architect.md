@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Two Instruments of a Software Architect"
-date: 2015-05-15
-tags: mgmt agile
+date: 2015-05-13
+tags: mgmt agile architect
 description:
   A software architect controls a software project through
-  two fundamental instruments: bugs and reviews.
+  two fundamental instruments - bugs and reviews.
 keywords:
   - software architect
   - software architect job description
@@ -23,6 +23,8 @@ this idea in practice, an architect uses two instruments:
 **bugs and reviews**.
 
 <!--more-->
+
+{% picture /images/2015/05/rear-window.jpg 0 Rear Window (1954) by Alfred Hitchcock %}
 
 At [Teamed.io](http://www.teamed.io), we discourage any communication
 between developers unless they are formally attached to the tickets or tasks
@@ -62,7 +64,7 @@ complain about incomplete documentation. For example, say an architect
 doesn't know which database to use, MongoDB or Cassandra, and needs more
 information about their pros and cons. A bug will sound like "our design documentation
 doesn't have a detailed comparison of existing NoSQL databases; please fix it".
-Whoever is assigned to this ticket will perform the comparison 
+Whoever is assigned to this ticket will perform the comparison
 and update the documentation.
 
 Bugs are a _proactive_ tool for an architect. Through reporting bugs,
@@ -87,3 +89,6 @@ the architect says "No" and the branch is rejected.
 Reviews are a _reactive_ instrument for an architect. Through strict and
 non-compromising code reviews, an architect enforces his design and architectural
 principles.
+
+PS. Here is how an architect is supposed to report to the project manager:
+[Three Things I Expect From a Software Architect]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
