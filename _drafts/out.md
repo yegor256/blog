@@ -39,8 +39,8 @@ openly and frequently communicate **risks and issues** with you. These are
 two major success factors in software outsourcing that are very often neglected.
 
 {% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2 %}
-I learned this principle from Wei Liao Zi. He said,
-according to [Military Strategy Classics of Ancient China](http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2),
+I learned this principle from [Wei Liao Zi](https://en.wikipedia.org/wiki/Wei_Liaozi).
+He said, according to [Military Strategy Classics of Ancient China](http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2),
 p.239:
 
 > When information from below reaches up high, and the concerns
