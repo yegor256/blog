@@ -4,7 +4,7 @@ title: "How to Avoid a Software Outsourcing Disaster"
 date: 2015-05-21
 tags: outsourcing mgmt
 description:
-  Software outsourcing is a business technique full of 
+  Software outsourcing is a business technique full of
   pitfalls and risks that have to be mitigated
   in time in order to prevent major failures.
 keywords:
@@ -40,13 +40,15 @@ two major success factors in software outsourcing that are very often neglected.
 
 {% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2 %}
 I learned this principle from Wei Liao Zi. He said,
-according to [Military Strategy Classics of Ancient China](http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2):
+according to [Military Strategy Classics of Ancient China](http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2),
+p.239:
 
-> ...
+> When information from below reaches up high, and the concerns
+of up high penetrate to below, this is the most ideal situation
 
 Let me demonstrate a few practical examples of software outsourcing
 disasters and explain how they can be avoided if you follow said
-4,000-year-old principle.
+2,500-year-old principle.
 
 ## It Takes Forever and I'm Over Budget!
 
@@ -96,10 +98,10 @@ the product, what exactly has to be ready by that date, and _why_,
 it starts to work against you. The emphasis here is on "why". For most
 business owners, it's difficult to answer this question.
 
-Why do you need the product to be ready by the first of June? 
-Just because you are sick of waiting? This is not a reasonable 
-answer. You're sick of it but you still have money in your bank 
-account. They will keep invoicing you, and they won't respect 
+Why do you need the product to be ready by the first of June?
+Just because you are sick of waiting? This is not a reasonable
+answer. You're sick of it but you still have money in your bank
+account. They will keep invoicing you, and they won't respect
 you. They won't treat you as a strong and goal-oriented
 business person. You either aren't smart enough to identify your
 time constraints or you're hiding them from the team. In either case,
@@ -125,7 +127,7 @@ Stop asking them to finish everything ASAP. Stop calling them twice a day
 and yelling for an hour about their poor performance. Stop using language
 in business emails. Stop making all this noise. It doesn't help you anyway.
 Moreover, it only makes the situation worse, because you're losing respect
-and they're starting to treat you like a cash cow &mdash; a rather stupid 
+and they're starting to treat you like a cash cow &mdash; a rather stupid
 and emotional one.
 
 Instead, do your homework and define your realistic milestones. Think
@@ -196,7 +198,7 @@ longer working, etc. You call again, express your frustration, make
 strong accusations, restructure milestones, redefine features, reset
 priorities, and in a few days start over. Been there, done that? Sound familiar?
 
-In my experience, this unpredictability and unreliability of a software 
+In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
 you the truth, which is usually the same thing. Some call this
@@ -211,7 +213,7 @@ When you hear any of the above, question yourself &mdash; Do you
 encourage them to tell the truth? Do you reward them for bringing you
 bad but honest news?
 
-Once again citing the fundamental principle mentioned above, I would recommend 
+Once again citing the fundamental principle mentioned above, I would recommend
 you make sure your reasoning for awards and punishments is transparent to
 your software outsourcing partner and is based on project objectives,
 not your personal emotions.
