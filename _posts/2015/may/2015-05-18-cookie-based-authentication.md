@@ -15,7 +15,7 @@ keywords:
   - cookie authentication security
 ---
 
-{% badge http://www.takes.org/logo.png 64 http://www.takes.org %}
+{% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
 
 When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,

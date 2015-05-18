@@ -61,7 +61,16 @@ this script works and how to run it. You should be able to build and deploy your
 product by yourself.
 
 **Regularly Collect Metrics**.
+Ask your outsourcing team to regularly collect metrics from the software
+they create and send you somehow (by email, maybe). I would recommend to use
+[Hits-of-Code]({% pst 2014/nov/2014-11-14-hits-of-code %}),
+unit test coverage (or just total amount of unit tests), tickets opened/closed,
+build duration. I'm talking here about process metrics. This is not what
+you're already getting from NewRelic. These metrics will measure the
+performance of the team, not of the product under development. I'm not saying
+that you should manage the team by the metrics, but you have to keep
+an eye on these numbers and their dynamics.
 
-metrics
-sign work for hire agreement
-
+**Have Work For Hire Agreement**.
+Make sure the contract you have with software outsourcing team
+includes the
