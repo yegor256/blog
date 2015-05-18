@@ -10,12 +10,274 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014</copyright>
-    <lastBuildDate>Wed, 13 May 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How Cookie-Based Authentication Works in the Takes Framework</title>
+      <link>http://www.yegor256.com/2015/05/18/cookie-based-authentication.html</link>
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.takes.org'&gt;&lt;img src='http://www.takes.org/logo.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;When you enter your email and password into the Facebook login page,
+you get into your account. Then, wherever you go in the site,
+you always see your photo at the top right corner of the page. Facebook
+remembers you and doesn&amp;#39;t ask for the password again and again. This works
+thanks to &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_cookie&quot;&gt;HTTP cookies&lt;/a&gt;
+and is called &lt;strong&gt;cookie-based authentication&lt;/strong&gt;. Even though this mechanism
+often causes some security problems, it is very popular and simple.
+Here is how &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; makes it possible in a few lines of code.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First, let&amp;#39;s see how it works. Moreover, let&amp;#39;s see how I believe it should work.&lt;/p&gt;
+
+&lt;p&gt;Step one: The user enters an email and password and clicks &amp;quot;submit&amp;quot;. The server
+receives a POST request with this information inside:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;POST / HTTP/1.1
+Host: www.facebook.com
+Content-Type: application/x-www-form-urlencoded
+
+email=me@yegor256.com&amp;amp;password=itisasecret&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The server matches the provided information with its records and decides what to do.
+If the information is invalid, it returns the same login page, asking you to
+enter it all again. If the information is valid, the server returns something
+like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
+Location: www.facebook.com
+Set-Cookie: user=me@yegor256.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Since the response status code is 303, the browser goes to the page
+specified in the &lt;code&gt;Location&lt;/code&gt; header and opens the front page of the site. This
+is what it sends to the server:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;GET / HTTP/1.1
+Host: www.facebook.com
+Cookie: user=me@yegor256.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The server gets my email from the &lt;code&gt;Cookie&lt;/code&gt;
+header and understands that it&amp;#39;s me again! No need to ask for the
+password once more. The server trusts the informatiom from the cookie.
+That&amp;#39;s it. That&amp;#39;s what cookie-based authentication is all about.&lt;/p&gt;
+
+&lt;h2 id=&quot;wait-...-what-about-security?&quot;&gt;Wait ... What About Security?&lt;/h2&gt;
+
+&lt;p&gt;Right, what about security? If the server trusts any browser request with
+a user email in the &lt;code&gt;Cookie&lt;/code&gt; header, anyone would be able to send my email
+from another place and get access to my account.&lt;/p&gt;
+
+&lt;p&gt;The first step to prevent this is to encrypt the email with a secret
+encryption key, known only to the server. Nobody except the server itself
+will be able to encrypt it the same way the server needs to decrypt it.
+The response would look like this, using an example of encryption
+by &lt;a href=&quot;https://en.wikipedia.org/wiki/XOR_cipher&quot;&gt;XOR cipher&lt;/a&gt; with &lt;code&gt;bamboo&lt;/code&gt; as a secret key:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
+Location: www.facebook.com
+Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is not the best encryption mechanism, though; for proper encryption, it&amp;#39;s better
+to use something stronger like &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_Encryption_Standard&quot;&gt;DES&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This all sounds good, but what if someone hijacks the traffic between the server and the
+browser and gets a hold of a properly encrypted email cookie? In this case,
+the thief would be able to use the same cookie for authentication even without
+knowing its content. The server would trust the information and let the
+person into my account. This type of attack is called
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot;&gt;man-in-the-middle&lt;/a&gt; (MITM).
+To prevent this from happening, we should use HTTPS and inform the browser
+that the cookie is sensitive and should never be returned to the server without
+SSL encryption. That&amp;#39;s done by an extra flag in the &lt;code&gt;Set-Cookie&lt;/code&gt; header:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
+Location: www.facebook.com
+Set-Cookie: user=me@yegor256.com; Secure&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There is yet another type of attack associated with cookie-based authentication,
+based on a browser&amp;#39;s ability to expose all cookies associated with a web page
+to JavaScript executed inside it. An attacker may inject some malicious
+JavaScript code into the page (Don&amp;#39;t ask me how ... this will happen only
+if your entire HTML rendering is done wrong), and this code will gain access
+to the cookie. Then, the code will send the cookie somewhere else so
+the attacker can collect it. This type of attack is called
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;cross-site scripting&lt;/a&gt; (XSS).
+To prevent this, there is another flag for the &lt;code&gt;Set-Cookie&lt;/code&gt; header, called &lt;code&gt;HttpOnly&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
+Location: www.facebook.com
+Set-Cookie: user=me@yegor256.com; Secure; HttpOnly&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The presence of this flag will tell the browser that this particular cookie can
+be transferred back to the server only through HTTP requests. JavaScript won&amp;#39;t
+have access to it.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it&amp;#39;s-done-in-takes&quot;&gt;How It&amp;#39;s Done in Takes&lt;/h2&gt;
+
+&lt;p&gt;Here is how this cookie-based authentication mechanism is designed in the
+&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework. The entire framework consists of
+&lt;em&gt;takes&lt;/em&gt;, which receive requests and produce responses
+(&lt;a href=&quot;/2015/03/22/takes-java-web-framework.html&quot;&gt;this article&lt;/a&gt;
+explains the framework in more detail). When the request comes in,
+we should find the authentication cookie in the &lt;code&gt;Cookie&lt;/code&gt; header and translate
+it to the user credentials. When the response goes out, we should add the
+&lt;code&gt;Set-Cookie&lt;/code&gt; header to it with the encrypted user credentials. That&amp;#39;s it. Just
+these two steps.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s say we have an account page that is supposed to show the current user&amp;#39;s
+balance:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkAccount&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Balances&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;balances&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Identity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// get it from request&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;html&amp;gt;Your balance is %s&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;balances&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;retrieve&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Right after the &lt;code&gt;request&lt;/code&gt; comes in, we should retrieve the identity of
+the user, encoded inside an authenticating cookie. To make this mechanism
+reusable, we have the &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html&quot;&gt;&lt;code&gt;TkAuth&lt;/code&gt;&lt;/a&gt;
+decorator, which wraps an existing &lt;em&gt;take&lt;/em&gt;,
+decodes an incoming cookie, and adds a new &lt;code&gt;TkAuth&lt;/code&gt;
+header to the request with the user&amp;#39;s identification information:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Codec&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;codec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Again, when &lt;code&gt;TkAuth&lt;/code&gt; receives a request with an authenticating cookie inside,
+it asks &lt;code&gt;pass&lt;/code&gt; to decode the cookie and return either a
+valid &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Identity.html&quot;&gt;&lt;code&gt;Identity&lt;/code&gt;&lt;/a&gt;
+or &lt;code&gt;Identity.ANONYMOUS&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then, when the response goes back to the browser, &lt;code&gt;TkAuth&lt;/code&gt; asks &lt;code&gt;pass&lt;/code&gt;
+to encode the indentity back into a string and adds &lt;code&gt;Set-Cookie&lt;/code&gt; to the response.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html&quot;&gt;&lt;code&gt;PsCookie&lt;/code&gt;&lt;/a&gt;
+uses an instance of
+&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html&quot;&gt;&lt;code&gt;Codec&lt;/code&gt;&lt;/a&gt;
+in order to do these backward and forward encoding operations.&lt;/p&gt;
+
+&lt;p&gt;When our &lt;code&gt;TkAccount&lt;/code&gt; &lt;em&gt;take&lt;/em&gt; wants to retrieve a currently authenticated
+user identity from the request, it can use
+&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html&quot;&gt;&lt;code&gt;RqAuth&lt;/code&gt;&lt;/a&gt;,
+a utility decorator of &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/Request.html&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkAccount&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Identity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RqAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// other manipulations with the user&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;RqAuth&lt;/code&gt; decorator uses the header, added by &lt;code&gt;PsCookie&lt;/code&gt;, in order
+to authenticate the user and create an &lt;code&gt;Identity&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-is-it-composable?&quot;&gt;How Is It Composable?&lt;/h2&gt;
+
+&lt;p&gt;This mechanism is indeed very extendable and &amp;quot;composable&amp;quot;. Let&amp;#39;s say we
+want to skip authentication during integration testing. Here is how:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFake&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* if running integration tests */&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsChain.html&quot;&gt;&lt;code&gt;PsChain&lt;/code&gt;&lt;/a&gt;
+implements &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Pass.html&quot;&gt;&lt;code&gt;Pass&lt;/code&gt;&lt;/a&gt;
+and attempts to authenticate the user by asking all encapsulated passes,
+one by one. The first one in the chain is
+&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html&quot;&gt;&lt;code&gt;PsFake&lt;/code&gt;&lt;/a&gt;.
+Using a single boolean argument in its constructor, it makes a decision whether
+to return a fake identity or return nothing. With just a single boolean
+trigger, we can switch off the entire authentication mechanism in the app.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s say you want to authenticate users through Facebook OAuth. Here is how:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API key ...&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API secret ...&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When a user clicks on the login link on your site, the browser goes to &lt;code&gt;facebook.com&lt;/code&gt;,
+where his or her identity is verified. Then, Facebook returns a &lt;code&gt;302&lt;/code&gt; redirection
+response with a &lt;code&gt;Location&lt;/code&gt; header set to the URL we provide in the login link.
+The link must include something like this: &lt;code&gt;?PsByFlag=PsFacebook&lt;/code&gt;. This will
+tell &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html&quot;&gt;&lt;code&gt;PsByFlag&lt;/code&gt;&lt;/a&gt;
+that this request authenticates a user.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;PsByFlag&lt;/code&gt; will iterate through all encapsulated &amp;quot;pairs&amp;quot; and try to find the
+right one.
+&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html&quot;&gt;&lt;code&gt;PsFacebook&lt;/code&gt;&lt;/a&gt;
+will be the first and the right one. It will connect to the Facebook API using the
+provided credentials and will retrieve all possible information about the user.&lt;/p&gt;
+
+&lt;p&gt;Here is how we can implement a logout mechanism:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API key ...&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API secret ...&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PsLogout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsLogout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we can add &lt;code&gt;?PsByFlag=PsLogout&lt;/code&gt; to any link on the site and it will
+log the current user out.&lt;/p&gt;
+
+&lt;p&gt;You can see how all this works in a real application by checking out the
+&lt;a href=&quot;https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java&quot;&gt;&lt;code&gt;TkAppAuth&lt;/code&gt;&lt;/a&gt;
+class in &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/05/18/cookie-based-authentication.html</guid>
+      <dc:date>2015-05-18T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Two Instruments of a Software Architect</title>
       <link>http://www.yegor256.com/2015/05/13/two-instruments-of-software-architect.html</link>
@@ -2099,164 +2361,6 @@ interfaces in Java and C# or protocols in Swift.&lt;/p&gt;
       <pubDate>Mon, 09 Mar 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/03/09/objects-end-with-er.html</guid>
       <dc:date>2015-03-09T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Team Morale: Myths and Reality</title>
-      <link>http://www.yegor256.com/2015/03/02/team-morale-myths-and-reality.html</link>
-      <description>&lt;p&gt;There are plenty of books, articles, and blog posts about &lt;em&gt;team morale&lt;/em&gt;. They
-will all suggest you do things like regular celebrations, team events,
-free lunches, pet-friendly offices, coffee machines, birthday presents, etc.
-All of these are instruments of &lt;strong&gt;concealed enslaving&lt;/strong&gt;.
-These traditional techniques turn employees into
-speechless monkeys, programming under the influence of Prozac. Their existence
-and popularity is our big misfortune. Let me present my own
-vision of how team morale can be boosted on a software team &amp;mdash; a team that
-has a strong leader and a good project manager.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/03/apocalypto.jpg' style='width:600px;' alt='Apocalypto (2006) by Mel Gibson'/&gt;&lt;figcaption&gt;Apocalypto (2006) by Mel Gibson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Fire Fast&lt;/strong&gt;.
-The first and most important quality of a good leader is his or her
-ability to separate bad apples from good ones as soon as possible.
-Nothing will earn you more disrespect from your team than tolerance of
-underperforming team members. Your job as a leader is to help the best players
-play better, and they can&amp;#39;t play better if they see that management
-doesn&amp;#39;t understand the difference between excellence and mediocrity. It&amp;#39;s
-a severe demotivating factor.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Honest About Problems and Risks&lt;/strong&gt;.
-Your team is following you and expecting you to be a smart leader. While they
-are writing Java, you&amp;#39;re talking to investors and customers. They want to
-be sure you know what you&amp;#39;re doing. The best way to show them
-you have no idea where the team is going is to tell them that the future
-is bright and cloudless. Everybody understands that&amp;#39;s either a lie and you
-are trying to hide risks or you&amp;#39;re stupid enough to not see them. In either
-case, the best people would attempt to quit before it&amp;#39;s too late. Thus, to keep
-morale up, regularly inform your people about problems you&amp;#39;re facing and
-risks you&amp;#39;re trying to prevent. They will appreciate it and respect you.
-A strong, professional manager deals with risks instead of ignoring them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Failures Are Yours; Success Is Theirs&lt;/strong&gt;.
-Always remember that when someone on your team makes a mistake,
-it is first of all &lt;em&gt;your&lt;/em&gt; personal mistake. You hired that person,
-you trained him or her, you delegated the responsibility, and you
-controlled and monitored the job. Then he made a mistake, and the project
-lost money, disappointed a customer, or damaged the firm&amp;#39;s reputation. Of course you need to
-take necessary disciplinary actions and maybe fire the troublemaker. But first of all,
-you have to admit in front of everyone that it was your personal mistake.
-You didn&amp;#39;t control enough, you didn&amp;#39;t plan well, or you didn&amp;#39;t take preventive actions.
-This is what the team expects from you. Also, your people expect
-you to explain to them how you&amp;#39;re going to learn from this mistake in order to prevent
-a similar one from happening in the future. A strong leader isn&amp;#39;t afraid to look
-stupid in front of the team. A weak leader does look stupid when he or she
-tries to hide mistakes that have been made.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Responsibility Is Always Personal&lt;/strong&gt;.
-The most demotivating word used in task descriptions is &amp;quot;together&amp;quot;. Don&amp;#39;t use it.
-Each task has to be personally and individually assigned (no matter what the Agile Manifesto says).
-Everybody is responsible for his or her own success or failure. How their results
-join together and lead to a mutual success or failure &amp;mdash; that&amp;#39;s &lt;em&gt;your&lt;/em&gt; business.
-Whether you succeed or fail, we all will see. Once you say we all have to succeed together,
-the team understands that you&amp;#39;re trying to shift responsibility from your own
-shoulders to theirs. It&amp;#39;s a sign of weakness, and you lose respect. Make
-tasks and goals strictly personal, and be prepared to be responsible for
-the group&amp;#39;s success. You, as a manager, break down an entire project into
-parts and delegate them to your people. If you do this job properly,
-we all will succeed. But don&amp;#39;t try to blame us if the parts fall apart.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Mention Steve Jobs&lt;/strong&gt;.
-Try to avoid global slogans and world domination speeches in the office and
-in front of the team. They demotivate. If we&amp;#39;re doing so good, why are
-our salaries not reflecting this success yet? If your vision is so global,
-why is it not yet implemented in reality? Don&amp;#39;t promise to become the next Steve Jobs.
-Instead, become the next good manager of a highly paid team that is solving
-interesting problems for real people. Your practical achievements, no matter
-how small and down-to-earth they are, will give you much more respect than
-many-hour-long speeches about our fantastic future.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Say a Word About Agile&lt;/strong&gt;.
-Even though Agile is a great attitude-changing and mind-shifting concept,
-it is absolutely inapplicable in practice, mostly because it is too
-abstract. When you&amp;#39;re proclaiming in the office that we should value
-&amp;quot;working software over comprehensive documentation&amp;quot;, it sounds like
-you don&amp;#39;t know what you&amp;#39;re doing. The team doesn&amp;#39;t need such abstract
-slogans from you. It needs specific instructions and rules in order
-to follow them and produce results, money, and satisfaction. Agile is a set
-of abstract principles that you should understand and digest. But then,
-after you chew them properly, convert them to specific and
-very unambitious rules of work. Don&amp;#39;t talk about Agile; be agile.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Close the Door&lt;/strong&gt;.
-Responsibility is personal, money is personal, and results are personal. But
-their discussions should be open to everybody. Don&amp;#39;t close the door to that
-meeting room when you&amp;#39;re talking about problems or appraising someone&amp;#39;s
-results. You want your team to work together? Give everybody an assurance
-that none of them will be terminated behind a closed door. These pompous
-speeches about &amp;quot;us working together&amp;quot; usually turn into mush once the team
-sees that someone gets fired after a private conversation with a manager.
-Are we together, or is it you against us? To keep team morale up, you, as a leader,
-have to establish ground rules of work that will define who gets what
-when we succeed and who goes home first when we fail. These rules should
-be open to everybody. These rules should rule the team, not your personal
-decisions made behind a closed door.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Celebrate Achievements Instead of Birthdays&lt;/strong&gt;.
-Team-building events are a great tool to boost team morale, but only when
-they are built around personal or team achievements instead of calendar events.
-A project team is not a group of friends or family members, even though
-some teams may feel like that. No matter how it feels, a team is here
-for one reason &amp;mdash; to create the product and make money for its sponsor.
-This is the direction we&amp;#39;re going. Our goal is not to build a community and
-live together til the end of our days. Our goal is to achieve the business
-success of the product we&amp;#39;re developing, or in other words, complete the project.
-When the only events we&amp;#39;re celebrating are our birthdays, that&amp;#39;s a sign to
-us that our leaders are trying to lie to us. They are pretending that we&amp;#39;re
-here to make a community of friends while in reality they are using us to
-build their business. It&amp;#39;s unhealthy and ruins team morale. Instead, celebrate
-achievements on your real path &amp;mdash; to the success of the product under
-development. This will show everybody that you, as a leader, are honest with
-your people and ready to show them that their true role on the team is
-to develop a product and earn money for its investors. Honesty is the best
-team morale booster.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Rule; Make Rules and Plans&lt;/strong&gt;.
-Nothing demotivates more than an upredictable manager. For the team, you are
-an abstraction of the entire world around the team. They see
-the reality through the prism of your personality. What you tell them about
-the reality is what they perceive. If you are unpredictable, the reality
-is unpredictable and scary for them. To avoid that, stop making decisions that
-are based on your personal and momentary judgement.
-Instead, make decisions that are based on the rules you&amp;#39;ve defined upfront
-and plans you&amp;#39;ve drawn beforehand. First, create a plan for team
-growth and announce it to everybody. The plan should include risks and
-their mitigations. The plan should say who will be fired
-first when or if the project goes down. The plan should give a predictable
-and measurable picture of the reality around your office. It should be a map
-of terrain you&amp;#39;re going to cross with your team. When it&amp;#39;s time to make
-a decision, everybody will understand why it&amp;#39;s made and will respect you
-as a leader who predicted the situation and managed it professionally.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Put Money on the Table&lt;/strong&gt;.
-Discuss money openly and freely, right in the office, right in front
-of everybody. This advice is for true professionals. If you can&amp;#39;t do what
-is said above, don&amp;#39;t try this one. But if you consider yourself a real
-pro in management and leadership, you should put money on the table and
-let everybody know who is getting what, when, why, and why not. Everybody
-should know everybody&amp;#39;s salaries, bonuses, benefits, and the rationale behind them.
-Each programmer should know what he or she should do in order to get
-a $5,000 raise to their annual salary. Also, he or she should know why a
-colleague is called &amp;quot;senior developer&amp;quot; while his or her title is still &amp;quot;junior&amp;quot;.
-This information should be public and printed on the wall right behind
-your chair. Why don&amp;#39;t most managers do this? Because they don&amp;#39;t have any
-rationale behind their monetary decisions. Instead of managing the money,
-they let money manage them. That&amp;#39;s a subject for another post :)&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/03/02/team-morale-myths-and-reality.html</guid>
-      <dc:date>2015-03-02T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
