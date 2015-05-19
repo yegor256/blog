@@ -74,7 +74,7 @@ but instead returns a collection of instances of `XML` interface:
 
 {% highlight java %}
 // outputs "<a>hello</a>" and "<b>world</b>"
-for (XML node : xml.xpath("/root/*"))
+for (XML node : xml.nodes("/root/*"))
   System.out.println(node);
 }
 {% endhighlight %}
