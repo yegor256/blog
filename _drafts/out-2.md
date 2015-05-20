@@ -18,13 +18,12 @@ keywords:
 
 Software outsourcing is what you go for when you want to create
 a software product, but software engineering is not your core
-expertise. It's a smart business practice, being employed by everybody,
-from $1000 personal website makers to Fortune-100 monsters.
+competence. It's a smart business practice, being employed by everybody,
+from $1,000 personal website owners to Fortune-100 monsters.
 And all of them fail, to some extend. Actually, it's very difficult
 not to fail. Here is a list of my simple hints to everybody, who
 decides to outsource software development (most important are at the bottom).
-I wish someone would give it
-to me fifteen years ago.
+I wish someone would give it to me fifteen years ago.
 
 <!--more-->
 
@@ -99,6 +98,20 @@ production branch from development branches. But don't wait! Make sure
 you see your software packaged and deployed every single week, no exceptions
 and no excuses. If outsourcing team can't give that to you, start worring
 and changing something.
+
+**Hire Independent CTO**.
+This advice is mostly for small companies or individuals who outsource
+software development and rely on their expertise, while staying focused
+on business development. That's wrong. You should have an independent
+CTO (chief technical officer) who reports to you and controls how
+outsourcing team works. This person must be on a different payment
+schedule, on different goals, terms and objectives. You should talk to
+the CTO and the CTO should control the offshore team. Very often,
+business owners are trying to become software-savvy and control software
+team directly, learning their software jargon, principles of DevOps,
+and even Java syntax (I've seen that). This is a route to failure.
+Be smart &mdash; you do the business development, CTO reports to you,
+the software team reports to the CTO.
 
 **Define Rewards and Punishments**.
 There is no management without these two key components. You're not supposed
