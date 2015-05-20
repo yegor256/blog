@@ -3,6 +3,7 @@ layout: post
 title: "How to Implement an Iterating Adapter"
 date: 2015-04-30
 tags: java
+categories: jcg
 description:
   In my experience, very few people understand how to implement
   an iterating adapter in Java; this article should give a practical example.
