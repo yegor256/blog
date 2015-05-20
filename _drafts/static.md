@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "A Few Thoughts On Unit Test Scaffolding"
+title: "A Few Thoughts on Unit Test Scaffolding"
 date: 2015-05-24
 tags: oop java
 description:
-  Most unit tests require mocks, stubs and some other
-  structures to be prepared before a test can start working,
-  here is how I recommend to do that.
+  Most unit tests require mocks, stubs, and the preparation
+  of some other structures before a test can be initiated;
+  here is how I recommend you do that.
 keywords:
   - unit test scaffolding
   - unit testing best practices
@@ -15,18 +15,18 @@ keywords:
   - unit testing of static
 ---
 
-When I start to repeat myself in unit test methods, creating
-the same objects or basically preparing some data to run the test,
-I feel sad about my design. Long test methods with a lot of code
-duplication just don't look right. To simplify and shorten them
-there are basically two options, well, in Java: 1) private properties
-initialized through `@Before` and `@BeforeClass` and 2) private static
-methods. They both look anti-OOP to me and I think there is an
+When I start to repeat myself in unit test methods by creating
+the same objects and preparing the data to run the test,
+I feel disapointed in my design. Long test methods with a lot of code
+duplication just don't look right. To simplify and shorten them,
+there are basically two options, at least in Java: 1) private properties
+initialized through `@Before` and `@BeforeClass`, and 2) private static
+methods. They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.
 
 <!--more-->
 
-Here is what JUnit officially suggests and calls it a
+JUnit officially suggests a
 [test fixture](http://junit.org/faq.html#atests_2):
 
 {% highlight java %}
@@ -37,8 +37,8 @@ public final class MetricsTest {
   public void prepare() {
     this.temp = Files.createTempDirectory("test");
     this.folder = new DiscFolder(this.temp);
-    this.folder.save("first.txt", "hello, world!");
-    this.folder.save("second.txt", "good bye!");
+    this.folder.save("first.txt", "Hello, world!");
+    this.folder.save("second.txt", "Goodbye!");
   }
   @After
   public void clean() {
@@ -56,23 +56,23 @@ public final class MetricsTest {
 {% endhighlight %}
 
 I think it's obvious what this test is doing. First, in `prepare()`,
-it creates a "test fixture", of type `Folder`. It is used in all three
-tests as an argument for `Metrics` constructor. The real class under
-test here is `Metrics`, while `this.folder` is something we need
+it creates a "test fixture" of type `Folder`. That is used in all three
+tests as an argument for the `Metrics` constructor. The real class being
+tested here is `Metrics` while `this.folder` is something we need
 in order to test it.
 
-What's wrong with this test? There is one serious issue &mdash;
+What's wrong with this test? There is one serious issue:
 **coupling** between test methods. Test methods (and all tests in general)
 must be perfectly isolated from each other. This means that changing
-one test must not affect any others. In this example it is not the case.
-When I want to change `countsWords()` test, I have to change the internals
+one test must not affect any others. In this example, that is not the case.
+When I want to change the `countsWords()` test, I have to change the internals
 of `before()`, which will affect the other method in the test "class".
 
 With all due respect to JUnit, the idea of creating test fixtures in
 `@Before` and `@After` is wrong, mostly because it encourages
 developers to couple test methods.
 
-Here is how we can improve our test and make test methods isolated:
+Here is how we can improve our test and isolate test methods:
 
 {% highlight java %}
 public final class MetricsTest {
@@ -81,8 +81,8 @@ public final class MetricsTest {
     final File dir = Files.createTempDirectory("test-1");
     final Folder folder = MetricsTest.folder(
       dir,
-      "first.txt:hello, world!",
-      "second.txt:good bye!"
+      "first.txt:Hello, world!",
+      "second.txt:Goodbye!"
     );
     try {
       assertEquals(22, new Metrics(folder).size());
@@ -95,7 +95,7 @@ public final class MetricsTest {
     final File dir = Files.createTempDirectory("test-2");
     final Folder folder = MetricsTest.folder(
       dir,
-      "alpha.txt:three words here",
+      "alpha.txt:Three words here",
       "beta.txt:two words"
       "gamma.txt:one!"
     );
@@ -118,7 +118,7 @@ public final class MetricsTest {
 
 Does it look better now? We're not there yet, but now our test
 methods are perfectly isolated. If I want to change one of them,
-I'm not going to affect others, because I pass all configuration
+I'm not going to affect the others because I pass all configuration
 parameters to a private static utility (!) method `folder()`.
 
 A utility method, huh? Yes,
@@ -127,15 +127,15 @@ A utility method, huh? Yes,
 The main issue with this design, even though it is way better than
 the previous one, is that it doesn't prevent code duplication between
 test "classes". If I need a similar test fixture of type `Folder` in
-another test case, I will have to move this static method there. Or,
-what is even worse, I will have to create a utility class.
+another test case, I will have to move this static method there. Or 
+even worse, I will have to create a utility class.
 Yes, there is [nothing worse]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 in object-oriented programming than utility classes.
 
 A much better design would be to use
 ["fake" objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %})
-instead of private static. Here is how. First, we create a fake class
-and place is into `src/main/java`. This class can be used in tests
+instead of private static utilities. Here is how. First, we create a fake class
+and place it into `src/main/java`. This class can be used in tests
 and also in production code, if necessary (`Fk` for "fake"):
 
 {% highlight java %}
@@ -165,15 +165,15 @@ public final class FkFolder implements Folder, Closeable {
 }
 {% endhighlight %}
 
-Here is how our test will look like now:
+Here is how our test will look now:
 
 {% highlight java %}
 public final class MetricsTest {
   @Test
   public void calculatesTotalSize() {
     final String[] parts = {
-      "first.txt:hello, world!",
-      "second.txt:good bye!"
+      "first.txt:Hello, world!",
+      "second.txt:Goodbye!"
     };
     try (final Folder folder = new FkFolder(parts)) {
       assertEquals(22, new Metrics(folder).size());
@@ -182,7 +182,7 @@ public final class MetricsTest {
   @Test
   public void countsWordsInFiles() {
     final String[] parts = {
-      "alpha.txt:three words here",
+      "alpha.txt:Three words here",
       "beta.txt:two words"
       "gamma.txt:one!"
     };
@@ -193,9 +193,9 @@ public final class MetricsTest {
 }
 {% endhighlight %}
 
-What do you think? Isn't it better than what JUnit is offering?
+What do you think? Isn't it better than what JUnit offers?
 Isn't it more reusable and extendable than utility methods?
 
-To summarize, I believe that scaffolding in unit testing must be
+To summarize, I believe scaffolding in unit testing must be
 done through fake objects that are shipped together with production
 code.
