@@ -2,7 +2,7 @@ name: yegor256.com
 title: "Yegor Bugayenko"
 author: "Yegor Bugayenko"
 description: "Yegor Bugayenko"
-copyright: "(c) Yegor Bugayenko, 2014"
+copyright: "(c) Yegor Bugayenko, 2014-2015"
 encoding: utf-8
 timezone: America/San_Francisco
 markdown: redcarpet

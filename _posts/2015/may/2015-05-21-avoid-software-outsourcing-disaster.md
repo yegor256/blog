@@ -30,6 +30,8 @@ a way to do software outsourcing right?
 
 <!--more-->
 
+{% picture /images/2015/05/evil-cult.jpg 0 The Evil Cult (1993) by Jing Wong %}
+
 Yes, it is possible to do it right and truly hassle-free, but you have
 to be ready to twist your management philosophy.
 
