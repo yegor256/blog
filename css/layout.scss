@@ -26,7 +26,7 @@
   text-decoration: line-through;
 }
 .main-font {
-  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-family: 'Georgia', 'Times New Roman', serif;
   @media all and (min-width: $width) {
     font-family: $main-font;
   }
