@@ -4,7 +4,7 @@ title: "There Can Be Only One Primary Constructor"
 date: 2015-05-25
 tags: oop java
 description:
-  In a properly designed class there can only be
+  In a properly designed class, there can only be
   one primary constructor and any number of
   secondary ones.
 keywords:
@@ -15,11 +15,11 @@ keywords:
   - object constructor
 ---
 
-I suggest to classify class constructors in OOP as **primary**
+I suggest classifying class constructors in OOP as **primary**
 and **secondary**. A primary constructor is the one that constructs
 an object and encapsulates other objects inside it. A secondary
-one is simply a preparation step before calling a primary one, and is not
-really a constructor, but an introductory layer in front of a real
+one is simply a preparation step before calling a primary constructor and is not
+really a constructor but rather an introductory layer in front of a real
 constructing mechanism.
 
 <!--more-->
@@ -46,16 +46,16 @@ final class Cash {
 
 There are three constructors in the class &mdash; only one is
 _primary_ and the other two are _secondary_. My definition of a
-secondary constructor is simple &mdash; it doesn't do anything besides
+secondary constructor is simple: It doesn't do anything besides
 calling a primary constructor, through `this(..)`.
 
 My point here is that a
 [properly designed class]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
-must have only one primary constructor and it should be declared
+must have only one primary constructor, and it should be declared
 after all secondary ones. Why? There is only one reason
-behind this rule &mdash; it helps eliminate code duplication.
+behind this rule: It helps eliminate code duplication.
 
-Without such a rule, we may have this design of our class:
+Without such a rule, we may have this design for our class:
 
 {% highlight java %}
 final class Cash {
@@ -77,10 +77,10 @@ final class Cash {
 }
 {% endhighlight %}
 
-Not so much of code here, but the duplication is massive and ugly, hope
-you see it yourself.
+There's not a lot of code here, but the duplication is massive and ugly;
+I hope you see it for yourself.
 
-By strictly following the suggested rule, all classes will have
+By strictly following this suggested rule, all classes will have
 a single entry point (point of construction), which is a primary
-constructor, and it will always be easy to find it, since it stays
+constructor, and it will always be easy to find because it stays
 below all secondary constructors.
