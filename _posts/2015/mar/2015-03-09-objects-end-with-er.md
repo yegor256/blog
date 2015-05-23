@@ -3,6 +3,7 @@ layout: post
 title: "Don't Create Objects That End With -ER"
 date: 2015-03-09
 tags: oop
+categories: best
 description:
   Object names that end with -er are indicators of a
   flawed design in terms of object thinking and should be
