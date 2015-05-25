@@ -195,8 +195,9 @@ and also in production code, if necessary (&lt;code&gt;Fk&lt;/code&gt; for &amp;
 Isn&amp;#39;t it more reusable and extendable than utility methods?&lt;/p&gt;
 
 &lt;p&gt;To summarize, I believe scaffolding in unit testing must be
-done through fake objects that are shipped together with production
-code.&lt;/p&gt;
+done through
+&lt;a href=&quot;/2014/09/23/built-in-fake-objects.html&quot;&gt;fake objects&lt;/a&gt;
+that are shipped together with production code.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
