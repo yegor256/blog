@@ -199,5 +199,6 @@ What do you think? Isn't it better than what JUnit offers?
 Isn't it more reusable and extendable than utility methods?
 
 To summarize, I believe scaffolding in unit testing must be
-done through fake objects that are shipped together with production
-code.
+done through
+[fake objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %})
+that are shipped together with production code.
