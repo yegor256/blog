@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "There Can Be Only One Primary Constructor"
-date: 2015-05-25
+date: 2015-05-28
 tags: oop java
 description:
   In a properly designed class, there can only be
@@ -23,6 +23,8 @@ really a constructor but rather an introductory layer in front of a real
 constructing mechanism.
 
 <!--more-->
+
+{% picture /images/2015/05/the-matrix-agent-smith 0 The Matrix (1999) by The Wachowski Brothers %}
 
 Here is what I mean:
 
