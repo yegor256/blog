@@ -24,7 +24,7 @@ constructing mechanism.
 
 <!--more-->
 
-{% picture /images/2015/05/the-matrix-agent-smith 0 The Matrix (1999) by The Wachowski Brothers %}
+{% picture /images/2015/05/the-matrix-agent-smith.jpg 0 The Matrix (1999) by The Wachowski Brothers %}
 
 Here is what I mean:
 
