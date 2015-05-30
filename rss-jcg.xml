@@ -477,7 +477,7 @@ history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&g
 &lt;p&gt;Each project must be:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Open source.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Open source (in Github).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At least 5,000 lines of code.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
@@ -511,7 +511,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 
 &lt;hr/&gt;
 
-&lt;p&gt;84 rojects submitted so far (in order of submission):&lt;/p&gt;
+&lt;p&gt;117 rojects submitted so far (in order of submission):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mdbs99/AWS&quot;&gt;mdbs99/AWS&lt;/a&gt;&lt;/li&gt;
@@ -599,6 +599,39 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ysc/word&quot;&gt;ysc/word&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/andot/hprose&quot;&gt;andot/hprose&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/guikeller/jetty-runner&quot;&gt;guikeller/jetty-runner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/frizbog/gedcom4j&quot;&gt;frizbog/gedcom4j&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/h2oai/h2o-3&quot;&gt;h2oai/h2o-3&lt;/a&gt; by &lt;a href=&quot;https://github.com/srisatish&quot;&gt;@srisatish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Feng14/MiniWeChat-Server&quot;&gt;Feng14/MiniWeChat-Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tianzhijiexian/ActivityOptionsICS&quot;&gt;tianzhijiexian/ActivityOptionsICS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/swanson/stringer%E2%80%8B&quot;&gt;swanson/stringer​&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JayFang1993/DropDownMenu&quot;&gt;JayFang1993/DropDownMenu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AizazAZ/Android-Ultra-Photo-Selector&quot;&gt;AizazAZ/Android-Ultra-Photo-Selector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/patilswapnilv/TerminalIDE&quot;&gt;patilswapnilv/TerminalIDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zhaoqp2010/andbase&quot;&gt;zhaoqp2010/andbase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/omry/banana&quot;&gt;omry/banana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jackrex/AndroidCacheFoundation&quot;&gt;jackrex/AndroidCacheFoundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/kaitoy/pcap4j&quot;&gt;kaitoy/pcap4j&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rgladwell/m2e-android&quot;&gt;rgladwell/m2e-android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scireum/parsii&quot;&gt;scireum/parsii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scireum/sirius-kernel&quot;&gt;scireum/sirius-kernel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yazeed44/GroceryShopping&quot;&gt;yazeed44/ResizableView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yazeed44/GroceryShopping&quot;&gt;yazeed44/GroceryShopping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MindMac/AndroidAppLog&quot;&gt;MindMac/AndroidAppLog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/kpbird/chips-edittext-library&quot;&gt;kpbird/chips-edittext-library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/spiffyui/spiffyui&quot;&gt;spiffyui/spiffyui&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/coala-analyzer/coala&quot;&gt;coala-analyzer/coala&lt;/a&gt; by &lt;a href=&quot;https://github.com/sils1297&quot;&gt;@sils1297&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mgarin/weblaf&quot;&gt;mgarin/weblaf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/conductor-framework/conductor&quot;&gt;conductor-framework/conductor&lt;/a&gt; by &lt;a href=&quot;https://github.com/ddavison&quot;&gt;@ddavison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ctron/package-drone&quot;&gt;ctron/package-drone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/markkerzner/FreeEed&quot;&gt;markkerzner/FreeEed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/morris/lessql&quot;&gt;morris/lessql&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jitlogic/zorka&quot;&gt;jitlogic/zorka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sdorra/angular-dashboard-framework&quot;&gt;sdorra/angular-dashboard-framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/iluwatar/java-design-patterns&quot;&gt;iluwatar/java-design-patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/chesterbr/ruby2600&quot;&gt;chesterbr/ruby2600&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/testinfected/molecule&quot;&gt;testinfected/molecule&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/testinfected/simple-petstore&quot;&gt;testinfected/simple-petstore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pchab/AndroidRTC&quot;&gt;pchab/AndroidRTC&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       <author>Yegor Bugayenko</author>
