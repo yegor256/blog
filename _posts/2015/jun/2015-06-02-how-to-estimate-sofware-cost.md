@@ -130,7 +130,6 @@ To summarize, this is wrong (because there is no "there"):
 
 And this is right:
 
-> Hey driver, how much do you charge per mile, and
-am I allowed to watch through the window and correct you?
+> Hey driver, how much do you charge per mile, and do you have a map?
 
 Hope I've made my point clear :)
