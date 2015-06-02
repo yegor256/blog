@@ -10,12 +10,143 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Thu, 28 May 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How Much For This Software?</title>
+      <link>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</link>
+      <description>&lt;p&gt;&amp;quot;Here is the specification; how much will it cost to create this software?&amp;quot;
+I hear this almost every day from clients of &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;
+and prospects that are planning to become our clients and outsource the software
+development to us. My best answer is &amp;quot;&lt;em&gt;I don&amp;#39;t know; it depends.&lt;/em&gt;&amp;quot;
+Sounds like a strange response for someone who claims
+he knows what he is doing, isn&amp;#39;t it? &amp;quot;Here is the 20-page specification
+that explains all the features of the product; how come you can&amp;#39;t estimate
+the cost?&amp;quot; I can, but I won&amp;#39;t. Here is why.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/interstate-60.jpg' style='width:600px;' alt='Interstate 60: Episodes of the Road (2002) by Bob Gale'/&gt;&lt;figcaption&gt;Interstate 60: Episodes of the Road (2002) by Bob Gale&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let me ask you something else: &lt;strong&gt;Why do you need an estimate?&lt;/strong&gt;
+Yes, I mean it &amp;mdash; why do you ask me how much it will cost
+to develop the software for you? I can tell you why.&lt;/p&gt;
+
+&lt;p&gt;Because you don&amp;#39;t trust me.&lt;/p&gt;
+
+&lt;p&gt;And obviously you have good reasons for that, simply because we both
+know that a software product is something that can stay in development forever
+and never be finished. Look at YouTube, for example. How much do you think
+it would take to create a website like this, where users are able to
+upload their videos and then stream them? A few days for a good web developer.
+Will it stream video? Yes, it will. Will it be ready to compete with YouTube?
+No, it won&amp;#39;t. Add a few hundred developers to the team, a few years, and a
+few million dollars, and even then you will be behind YouTube. Simply because
+it&amp;#39;s a never-ending process. Any software, no matter how big or good it is,
+always needs more and more improvements and bug fixes.&lt;/p&gt;
+
+&lt;p&gt;Thus, when you ask me how much it will cost to create a system similar
+to YouTube, according to your specifications, my honest and accurate answer
+should be: &amp;quot;&lt;em&gt;All of your money, and it won&amp;#39;t be enough.&lt;/em&gt;&amp;quot; Will you
+sign a contract and outsource the project to me after that answer? No, you won&amp;#39;t.
+That&amp;#39;s why I have to lie and promise something like &amp;quot;three months and $40,000&amp;quot;.
+Why would you trust me? If you&amp;#39;re smart enough, you won&amp;#39;t.&lt;/p&gt;
+
+&lt;p&gt;My point is that no matter what I promise you, I will be wrong. Terribly wrong.&lt;/p&gt;
+
+&lt;p&gt;What is the solution? What do you do? I totally understand that you
+do need a number to make your plans and secure the money.
+You need to choose the right software outsourcing partner, and you
+need to know what to expect and when, but ...&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;re asking the &lt;strong&gt;wrong question&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;This question has only one valid answer, and it&amp;#39;s the answer nobody
+will ever give you &amp;mdash; the development will take forever and will
+consume all your money. All other answers are simply a lie.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m sorry if I&amp;#39;ve delivered bad news to you.&lt;/p&gt;
+
+&lt;p&gt;But let&amp;#39;s get back to the original problem: Why are you asking
+me how much it will take to develop the software if you know it&amp;#39;s a
+never-ending process and there is basically no limit? Because you
+want to make sure your $40,000 will be used the right way and will
+produce the maximum it can produce. To get this assurance from me, you&amp;#39;re
+asking for an estimate. I&amp;#39;m telling you that your software will be ready
+for $40K, and you sleep well. Until the moment you realize you&amp;#39;ve been
+fooled. By your own self.&lt;/p&gt;
+
+&lt;p&gt;Your concern is perfectly valid. You want to spend no more than $40K, and you want
+to get a product that will help you achieve your business goals. For example,
+you want to get into the market and acquire your first few thousand users. In other words,
+your biggest worry is that your dollars will be turned into the right amount
+of the right software.&lt;/p&gt;
+
+&lt;p&gt;Any software team can consume your $40K, but each team will produce a different
+&lt;em&gt;amount&lt;/em&gt; of software with different &lt;em&gt;quality&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;My point is that instead of asking how much a software project will cost, you should
+ask how much software we can create for each dollar you give us and what
+quality will it be.&lt;/p&gt;
+
+&lt;p&gt;Basically, don&amp;#39;t ask us to estimate how much gas it will take to get
+to the finish line, because there is no finish line. Instead, ask us
+how much we charge per gallon and how many gallons we consume per mile.&lt;/p&gt;
+
+&lt;p&gt;Different teams use different metrics to measure their results
+(to be honest, most of them don&amp;#39;t use any). We, at
+&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, use
+&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits of code&lt;/a&gt;,
+bugs, pull requests, test coverage, and a few other metrics
+as measurable indicators of &lt;em&gt;quantity and quality&lt;/em&gt;. We know exactly how much
+software we can produce for each $100 you pay us.&lt;/p&gt;
+
+&lt;p&gt;Collect those numbers from other teams and compare them. Also, make sure
+you can control these numbers during the course of the project. That&amp;#39;s the
+guarantee you&amp;#39;re looking for. Now you know what you&amp;#39;re buying and how
+much you&amp;#39;re paying for it. In other words, like I said above, having these
+numbers in front of you will assure you that your money is producing
+the maximum amount of software it can produce, at the highest quality.&lt;/p&gt;
+
+&lt;p&gt;The only question left is how you can know you&amp;#39;re buying
+the right software. In other words, you know how much
+we charge per gallon and how many gallons we use per mile, but
+how do you know we&amp;#39;re driving in the right direction and not making
+too many circles or detours?&lt;/p&gt;
+
+&lt;p&gt;There is only one mechanism to guarantee that: regular checkpoints.
+You should ask us whether we deliver the software in small and regular
+increments, and whether we allow you to conduct regular
+&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent reviews&lt;/a&gt;
+of our progress. Also, make sure we prioritize our technical goals,
+use milestones, versionalize releases, publish release notes, etc.
+Make sure that in the course of our journey, you are able to control
+the progress and make corrections.&lt;/p&gt;
+
+&lt;p&gt;To summarize, this is wrong (because there is no &amp;quot;there&amp;quot;):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hey driver, how much will it cost to get there?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And this is right:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hey driver, how much do you charge per mile, and
+am I allowed to watch through the window and correct you?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hope I&amp;#39;ve made my point clear :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</guid>
+      <dc:date>2015-06-02T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>There Can Be Only One Primary Constructor</title>
       <link>http://www.yegor256.com/2015/05/28/one-primary-constructor.html</link>
@@ -2039,139 +2170,6 @@ else will mean that the build is still in progress and I should keep looping.&lt
       <pubDate>Sun, 29 Mar 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html</guid>
       <dc:date>2015-03-29T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>JAXB Is Doing It Wrong; Try Xembly</title>
-      <link>http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xembly.org'&gt;&lt;img src='http://img.xembly.org/logo-256x256.png' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
-is a 10-year-old Java technology that allows us to
-convert a Java object into an XML document (marshalling) and
-back (unmarshalling). This technology is based on
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters and getters&lt;/a&gt;
-and, in my opinion, violates key principles of object-oriented
-programming by turning objects into &lt;strong&gt;passive data structures&lt;/strong&gt;. I would
-recommend you use &lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt;
-instead for marshalling Java objects into XML documents.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;This is how JAXB marshalling works. Say you have a &lt;code&gt;Book&lt;/code&gt; class that needs to be
-marshalled into an XML document. You have to create getters and annotate them:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlRootElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@XmlRootElement&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getIsbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then you create a marshaller and ask it to convert an instance of class
-&lt;code&gt;Book&lt;/code&gt; into XML:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0132350882&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Clean Code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAXBContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JAXBContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Marshaller&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marshaller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jaxbContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createMarshaller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;marshaller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;marshal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You should be expecting something like this in the output:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;book&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;isbn&amp;gt;&lt;/span&gt;0132350882&lt;span class=&quot;nt&quot;&gt;&amp;lt;/isbn&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Clean Code&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/book&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;So what&amp;#39;s wrong with it? Pretty much the same thing that&amp;#39;s wrong with
-object-relational mapping, which is explained in
-&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM Is an Offensive Anti-Pattern&lt;/a&gt;.
-JAXB is treating an object as a bag of data, extracting the data
-and converting it into XML the way JAXB wants. The object has no control
-over this process. Therefore an object is not
-&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;an object&lt;/a&gt;
-anymore but rather a passive bag of data.&lt;/p&gt;
-
-&lt;p&gt;An ideal approach would be to redesign our class &lt;code&gt;Book&lt;/code&gt; this way:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toXML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// create XML document and return&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;However, there are a few problems with this approach. First of all, there&amp;#39;s
-massive code duplication. Building an XML document is a rather verbose
-process in Java. If every class had to re-implement it in its
-&lt;code&gt;toXML()&lt;/code&gt; method, we would have a big problem with duplicate code.&lt;/p&gt;
-
-&lt;p&gt;The second problem is that we don&amp;#39;t know exactly what type of wrapping
-our XML document should be delivered in. It may be a &lt;code&gt;String&lt;/code&gt; or an &lt;code&gt;InputStream&lt;/code&gt;
-or maybe an instance of &lt;code&gt;org.w3c.dom.Document&lt;/code&gt;. Making many &lt;code&gt;toXML()&lt;/code&gt; methods
-in each object would definitely be a disaster.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt; provides a solution. As I&amp;#39;ve
-&lt;a href=&quot;/2014/04/09/xembly-intro.html&quot;&gt;mentioned before&lt;/a&gt;, it is
-an imperative language for XML constructions and manipulations. Here is
-how we can implement our &lt;code&gt;Book&lt;/code&gt; object with the help of Xembly:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.xembly.Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toXembly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Directives&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, in order to build an XML document, we should use this code
-outside the object:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;0132350882&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Clean Code&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Xembler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toXembly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This &lt;a href=&quot;http://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html&quot;&gt;&lt;code&gt;Xembler&lt;/code&gt;&lt;/a&gt;
-class will convert Xembly directives into an XML document.&lt;/p&gt;
-
-&lt;p&gt;The beauty of this solution is that the internals of the object are
-not exposed via getters and the object is fully in charge of the XML
-marshalling process. In addition, the compexity of these directives
-may be very high &amp;mdash; much higher than the rather cumbersome annotations of JAXB.&lt;/p&gt;
-
-&lt;p&gt;Xembly is an open-source project, so feel free to submit your questions
-or corrections to &lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</guid>
-      <dc:date>2015-03-26T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
