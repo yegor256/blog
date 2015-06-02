@@ -13,9 +13,9 @@ Send newsletter to all blog subscribers
 
 Usage: send.rb [options]
   EOS
-  opt :host, 'SMTP host/server', :type=>String, :default=>'smtpcorp.com'
-  opt :port, 'SMTP port', :default=>2525
-  opt :user, 'SMTP user name', :type=>String, :default=>'yegor@tpc2.com'
+  opt :host, 'SMTP host/server', :type=>String, :default=>'email-smtp.us-east-1.amazonaws.com'
+  opt :port, 'SMTP port', :default=>587
+  opt :user, 'SMTP user name', :type=>String, :default=>'AKIAIPMIS45U6UG2TZCQ'
   opt :password, 'SMTP password', :type=>String, :required=>true
   opt :letter, 'Newsletter name, e.g. "2014/june"', :type=>String, :required=>true
   opt :subject, 'Email subject', :type=>String, :required=>true
@@ -34,7 +34,8 @@ Mail.defaults do
     :port => opts[:port],
     :user_name => opts[:user],
     :password => opts[:password],
-    :domain => 'yegor256.com'
+    :domain => 'yegor256.com',
+    :enable_starttls_auto => true
   }
 end
 

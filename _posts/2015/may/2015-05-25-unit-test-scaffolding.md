@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "A Few Thoughts on Unit Test Scaffolding"
-date: 2015-05-24
+date: 2015-05-25
 tags: oop java
+categories: jcg
 description:
   Most unit tests require mocks, stubs, and the preparation
   of some other structures before a test can be initiated;
@@ -25,6 +26,8 @@ methods. They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.
 
 <!--more-->
+
+{% picture /images/2015/05/leon-the-professional.jpg 0 Léon: The Professional by Luc Besson %}
 
 JUnit officially suggests a
 [test fixture](http://junit.org/faq.html#atests_2):
@@ -127,7 +130,7 @@ A utility method, huh? Yes,
 The main issue with this design, even though it is way better than
 the previous one, is that it doesn't prevent code duplication between
 test "classes". If I need a similar test fixture of type `Folder` in
-another test case, I will have to move this static method there. Or 
+another test case, I will have to move this static method there. Or
 even worse, I will have to create a utility class.
 Yes, there is [nothing worse]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 in object-oriented programming than utility classes.
@@ -197,5 +200,6 @@ What do you think? Isn't it better than what JUnit offers?
 Isn't it more reusable and extendable than utility methods?
 
 To summarize, I believe scaffolding in unit testing must be
-done through fake objects that are shipped together with production
-code.
+done through
+[fake objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %})
+that are shipped together with production code.

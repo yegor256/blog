@@ -94,7 +94,7 @@ your concerns_. What usually happens is that the outsourcing team remains
 unaware of a real business situation and only hears "I need this ASAP" every
 second day.
 
-"ASAP" is not a deadline. Moreover, it's a very de-motivating subsitute
+"ASAP" is not a deadline. Moreover, it's a very de-motivating substitute
 for a realistic milestone. When the team doesn't know when exactly you need
 the product, what exactly has to be ready by that date, and _why_,
 it starts to work against you. The emphasis here is on "why". For most

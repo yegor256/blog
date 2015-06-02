@@ -59,3 +59,8 @@ Big amount of work:
 
 Task lost due to lack of attention to closing, by the performer:
 [yegor256/thindeck#415](https://github.com/yegor256/thindeck/issues/415)
+
+A very long code review and modification of the code:
+[yegor256/takes#252](https://github.com/yegor256/takes/issues/252)
+and
+[yegor256/takes#262](https://github.com/yegor256/takes/pull/262)
