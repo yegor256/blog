@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Much For This Software?"
-date: 2015-06-03
+date: 2015-06-02
 tags: mgmt agile outsourcing
 description:
   The very attempt to estimate a software project
@@ -26,6 +26,8 @@ that explains all the features of the product; how come you can't estimate
 the cost?" I can, but I won't. Here is why.
 
 <!--more-->
+
+{% picture /images/2015/06/interstate-60.jpg 0 Interstate 60: Episodes of the Road (2002) by Bob Gale %}
 
 Let me ask you something else: **Why do you need an estimate?**
 Yes, I mean it &mdash; why do you ask me how much it will cost
@@ -67,7 +69,7 @@ consume all your money. All other answers are simply a lie.
 I'm sorry if I've delivered bad news to you.
 
 But let's get back to the original problem: Why are you asking
-me how much it will take to develop the software if you know it's a 
+me how much it will take to develop the software if you know it's a
 never-ending process and there is basically no limit? Because you
 want to make sure your $40,000 will be used the right way and will
 produce the maximum it can produce. To get this assurance from me, you're
