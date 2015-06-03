@@ -41,7 +41,7 @@ Pretty easy, right? Now, let's try to implement it:
 public final class EnglishName implements Name {
   private final String name;
   public EnglishName(final CharSequence text) {
-    this.parts = text.toString().split(" ", 2)[0];
+    this.name = text.toString().split(" ", 2)[0];
   }
   @Override
   public String first() {
