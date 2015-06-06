@@ -98,7 +98,7 @@ a, a:visited {
 }
 .video {
   @extend .unprintable;
-  @extend .desktop-only;
+  max-width: 100%;
   border: 0;
 }
 label {
