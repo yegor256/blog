@@ -1393,7 +1393,9 @@ user in the form of a &lt;code&gt;Response&lt;/code&gt;.&lt;/p&gt;
     <item>
       <title>Composable Decorators vs. Imperative Utility Methods</title>
       <link>http://www.yegor256.com/2015/02/26/composable-decorators.html</link>
-      <description>&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
+      <description>&lt;iframe class='video video-left' src='https://www.youtube.com/embed/D0dqC_3Bch8?controls=2' allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
 is my favorite among all other patterns I&amp;#39;m aware of. It is a very simple
 and yet very powerful mechanism to make your code
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;highly cohesive&lt;/a&gt; and
@@ -1403,8 +1405,6 @@ be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code &lt;em&gt;composable&lt;/em&gt;. That&amp;#39;s why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.&lt;/p&gt;
-
-&lt;iframe class='video' width='640' height='360' src='https://www.youtube.com/embed/D0dqC_3Bch8 ' allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;!--more--&gt;
 
