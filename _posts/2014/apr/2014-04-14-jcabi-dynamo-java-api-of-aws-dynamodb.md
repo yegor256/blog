@@ -31,6 +31,8 @@ future.
 <blockquote class="twitter-tweet" lang="en"><p>This looks cool - jcabi-dynamo - a <a href="https://twitter.com/search?q=%23Java&amp;src=hash">#Java</a> Object layer atop the <a href="https://twitter.com/search?q=%23DynamoDB&amp;src=hash">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/search?q=%23aws&amp;src=hash">#aws</a></p>&mdash; Jeff Barr (@jeffbarr) <a href="https://twitter.com/jeffbarr/statuses/380813867971915777">September 19, 2013</a></blockquote>
 <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<!--more-->
+
 DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database accessible
 through [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer)
 JSON API. Its design is relatively simple. There are tables, which basically
@@ -106,8 +108,6 @@ Item item = table.put(
     .with("job", "programmer")
 );
 {% endhighlight %}
-
-<!--more-->
 
 My code is not only shorter, but it also employs encapsulation and separates
 responsibilities of classes.
