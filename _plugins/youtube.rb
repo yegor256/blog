@@ -2,12 +2,14 @@ module Yegor
   class YoutubeBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
-      @id = markup
+      opts = markup.strip.split(/\s+/, 2)
+      @id = opts[0].strip
+      @flags = opts[1].strip unless opts[1].nil?
     end
 
     def render(context)
-      "<iframe class='video' width='640' height='360'" \
-      " src='https://www.youtube.com/embed/#{@id}' allowfullscreen></iframe>\n\n"
+      "<iframe class='video #{@flags unless @flags.nil?}'" \
+      " src='https://www.youtube.com/embed/#{@id}?controls=2' allowfullscreen></iframe>\n\n"
     end
   end
 end

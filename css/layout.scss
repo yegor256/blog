@@ -98,8 +98,17 @@ a, a:visited {
 }
 .video {
   @extend .unprintable;
+  width: 640px;
+  height: 360px;
   max-width: 100%;
   border: 0;
+  &.video-left {
+    width: 320px;
+    height: 160px;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
 }
 label {
   display: block;

@@ -42,9 +42,9 @@ public Employee getByName(String name) {
 
 What is wrong with this method?
 
-<!--more-->
-
 {% youtube o3aNJX7AP3M %}
+
+<!--more-->
 
 It may return `NULL` instead of an object &mdash; that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at all costs.
