@@ -32,7 +32,7 @@ My question is &mdash; why is this so?
 
 <!--more-->
 
-{% youtube F6NwcQyEY18 %}
+{% youtube F6NwcQyEY18 video-left %}
 
 Why doesn't money work, even when it was invented to be
 a universal instrument to measure our labor? Why can't an American dollar,
