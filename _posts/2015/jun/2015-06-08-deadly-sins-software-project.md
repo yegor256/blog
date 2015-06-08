@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Deadly Sins of a Software Project"
-date: 2015-06-03
+date: 2015-06-08
 tags: mgmt agile
 description:
   Here is a list of criteria I apply to software projects
@@ -24,13 +24,13 @@ a new developer to learn the software before he or she can start making
 serious changes in it. The longer the time, the lower the maintainability.
 In some projects, this time requirement is close to infinity, which means it is
 literally unmaintainable. I believe there are seven fundamental and fatal
-sins that make our software unmaintainable. Here they are.
+**sins** that make our software unmaintainable. Here they are.
 
 <!--more-->
 
 ## Anti-Patterns
 
-{% badge /images/2015/06/sins-1.gif 250 %}
+{% badge /images/2015/06/software-project-sins-1.gif 250 %}
 
 Unfortunately, the programming languages we're using are too _flexible_.
 They allow too much and forbid too little. For example, Java has nothing
@@ -67,7 +67,7 @@ the chance to survive.
 
 ## Untraceable Changes
 
-{% badge /images/2015/06/sins-2.gif 250 %}
+{% badge /images/2015/06/software-project-sins-2.gif 250 %}
 
 When I look at the commit history, I should be able to tell
 for every single change _what_ was changed, _who_ made a change, and
@@ -100,7 +100,7 @@ stay with you, no matter how bad (or messy) it may look to you now.
 
 ## Ad Hoc Releases
 
-{% badge /images/2015/06/sins-3.gif 250 %}
+{% badge /images/2015/06/software-project-sins-3.gif 250 %}
 
 Every piece of software must be packaged before it can
 be delivered to the end user. If it's a Java library, it has to be
@@ -131,7 +131,7 @@ procedure is fully automated and can be executed from the command line.
 
 ## Volunteer Static Analysis
 
-{% badge /images/2015/06/sins-4.gif 250 %}
+{% badge /images/2015/06/software-project-sins-4.gif 250 %}
 
 [Static analysis](https://en.wikipedia.org/wiki/Static_program_analysis)
 is what makes our code _look_ better. And by making it
@@ -155,7 +155,7 @@ rule is violated.
 
 ## Unknown Test Coverage
 
-{% badge /images/2015/06/sins-5.gif 250 %}
+{% badge /images/2015/06/software-project-sins-5.gif 250 %}
 
 Simply put, [test coverage](https://en.wikipedia.org/wiki/Code_coverage)
 is the degree to which the software has been tested by unit or integration tests. The
@@ -178,7 +178,7 @@ fail if it comes out lower than a certain pre-defined threshold
 
 ## Nonstop Development
 
-{% badge /images/2015/06/sins-6.gif 250 %}
+{% badge /images/2015/06/software-project-sins-6.gif 250 %}
 
 What I mean by nonstop is without milestones and releases. No matter what kind of
 software you're writing, you must release and versionalize it frequently.
@@ -201,7 +201,7 @@ if the project is working on 3.4 at the moment.
 
 ## Undocumented Interfaces
 
-{% badge /images/2015/06/sins-7.gif 250 %}
+{% badge /images/2015/06/software-project-sins-7.gif 250 %}
 
 Every piece of software has interfaces through which it is supposed to be used.
 If it's a Ruby gem, there are classes and methods that I'm going to
