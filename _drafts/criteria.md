@@ -30,6 +30,8 @@ sins that make our software unmaintainable. Here they are.
 
 ## Anti-Patterns
 
+{% badge /images/2015/06/sins-1.gif 250 %}
+
 Unfortunately, the programming languages we're using are too _flexible_.
 They allow too much and forbid too little. For example, Java has nothing
 against you placing the entire application in one single "class"
@@ -65,6 +67,8 @@ the chance to survive.
 
 ## Untraceable Changes
 
+{% badge /images/2015/06/sins-2.gif 250 %}
+
 When I look at the commit history, I should be able to tell
 for every single change _what_ was changed, _who_ made a change, and
 _why_ the change was made. Moreover, the time required to get those three
@@ -96,6 +100,8 @@ stay with you, no matter how bad (or messy) it may look to you now.
 
 ## Ad Hoc Releases
 
+{% badge /images/2015/06/sins-3.gif 250 %}
+
 Every piece of software must be packaged before it can
 be delivered to the end user. If it's a Java library, it has to be
 packaged as a `.jar` file and released to some repository; if it's a web
@@ -125,6 +131,8 @@ procedure is fully automated and can be executed from the command line.
 
 ## Volunteer Static Analysis
 
+{% badge /images/2015/06/sins-4.gif 250 %}
+
 [Static analysis](https://en.wikipedia.org/wiki/Static_program_analysis)
 is what makes our code _look_ better. And by making it
 look better, we are inevitably making it _work_ better. But this happens
@@ -147,6 +155,8 @@ rule is violated.
 
 ## Unknown Test Coverage
 
+{% badge /images/2015/06/sins-5.gif 250 %}
+
 Simply put, [test coverage](https://en.wikipedia.org/wiki/Code_coverage)
 is the degree to which the software has been tested by unit or integration tests. The
 higher the coverage, the greater "amount" of code was executed while
@@ -168,6 +178,8 @@ fail if it comes out lower than a certain pre-defined threshold
 
 ## Nonstop Development
 
+{% badge /images/2015/06/sins-6.gif 250 %}
+
 What I mean by nonstop is without milestones and releases. No matter what kind of
 software you're writing, you must release and versionalize it frequently.
 A project without a clear release history is an unmaintainable mess.
@@ -188,6 +200,8 @@ I have to be able to download version 0.1.3 and test it right now, even
 if the project is working on 3.4 at the moment.
 
 ## Undocumented Interfaces
+
+{% badge /images/2015/06/sins-7.gif 250 %}
 
 Every piece of software has interfaces through which it is supposed to be used.
 If it's a Ruby gem, there are classes and methods that I'm going to
