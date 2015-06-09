@@ -185,6 +185,9 @@ public class Server {
 }
 ```
 
+More about it in
+[There Can Be Only One Primary Constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %}).
+
 ## One-time Variables
 
 Avoid one-time variables at all costs. By "one-time" I mean variables that are

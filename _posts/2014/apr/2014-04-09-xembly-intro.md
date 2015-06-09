@@ -26,6 +26,8 @@ combination with related technologies.
 For example, you can expose your data in XML and render it for the end-user
 using [XSL stylesheet](http://www.w3.org/Style/XSL/).
 
+<!--more-->
+
 Another example would be when you validate the same data, before rendering, to
 ensure that the structure is correct. You can do this with the
 [XSD](http://www.w3.org/TR/xmlschema11-1/) schema. Alternatively, you can pick
@@ -73,8 +75,6 @@ a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
 Anyway, here is a tool I created a few month ago: [Xembly](http://www.xembly.org).
 It is an imperative language with a few simple directives and resembles [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
 in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.
-
-<!--more-->
 
 Let's create a simple example. Say, for instance, we want to add a new account number `36`
 to our list document. The code would look like:

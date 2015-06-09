@@ -14,6 +14,8 @@ keywords:
   - immutable objects are thread safe
 ---
 
+{% youtube KwP7Ay9Z-hc video-left %}
+
 After a few recent posts about immutability, including
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
 ["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
@@ -27,8 +29,6 @@ This is not how well-known immutable classes behave. Take, for example, `String`
 [the very definition]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of an immutable object as a representative of a mutable real-world entity. How
 could an immutable object represent a mutable entity? Huh?
-
-{% youtube KwP7Ay9Z-hc %}
 
 I'm very surprised. This post is going to clarify the definition of an immutable
 object. First, here is a quick answer. How can an immutable object represent a mutable entity?

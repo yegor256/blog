@@ -6,5 +6,6 @@
 *.ttf binary
 *.eot binary
 *.pdf binary
+*.gif binary
 favicon.ico binary
 

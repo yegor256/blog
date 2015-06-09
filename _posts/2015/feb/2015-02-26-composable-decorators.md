@@ -16,6 +16,8 @@ keywords:
   - decorator pattern real life example
 ---
 
+{% youtube D0dqC_3Bch8 video-left %}
+
 The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
 is my favorite among all other patterns I'm aware of. It is a very simple
 and yet very powerful mechanism to make your code
@@ -26,8 +28,6 @@ be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code _composable_. That's why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.
-
-{% youtube D0dqC_3Bch8 %}
 
 <!--more-->
 

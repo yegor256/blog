@@ -15,14 +15,14 @@ keywords:
   - outsource programming
 ---
 
+{% youtube TWBBZK_XRNU video-left %}
+
 Here is an interview taken by Lisette Sutherland from
 [www.CollaborationSuperpowers.com](http://www.collaborationsuperpowers.com),
 a few hours ago,
 which I enjoyed to give :)
 
 <!--more-->
-
-{% youtube TWBBZK_XRNU %}
 
 I answered these questions (approximately):
 

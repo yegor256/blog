@@ -18,6 +18,8 @@ keywords:
   - alternative to continuous integration
 ---
 
+{% youtube 3IXk5yEJMIs video-left %}
+
 A few days ago, my article
 ["Why Continuous Integration Doesn’t Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)
 was published at [DevOps.com](http://www.devops.com). Almost the same
@@ -29,8 +31,6 @@ Here is my response to the un-asked question:
 
 Even though I have some experience in this area, I won't use it as an argument.
 I'll try to rely only on logic instead.
-
-{% youtube 3IXk5yEJMIs %}
 
 <!--more-->
 
