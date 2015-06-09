@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -483,7 +483,7 @@ history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&g
 &lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The best projects will feature:&lt;/p&gt;
+&lt;p&gt;The best projects will feature (&lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;more about it&lt;/a&gt;):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Strict and visible principles of design.&lt;/p&gt;&lt;/li&gt;

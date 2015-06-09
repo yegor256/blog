@@ -10,12 +10,233 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 02 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Seven Deadly Sins of a Software Project</title>
+      <link>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</link>
+      <description>&lt;p&gt;&lt;em&gt;Maintainability&lt;/em&gt; is the &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;most valuable virtue&lt;/a&gt;
+of modern software development.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Maintainability&quot;&gt;Maintainability&lt;/a&gt;
+can basically be measured as the working time required for
+a new developer to learn the software before he or she can start making
+serious changes in it. The longer the time, the lower the maintainability.
+In some projects, this time requirement is close to infinity, which means it is
+literally unmaintainable. I believe there are seven fundamental and fatal
+&lt;strong&gt;sins&lt;/strong&gt; that make our software unmaintainable. Here they are.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;anti-patterns&quot;&gt;Anti-Patterns&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-1.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Unfortunately, the programming languages we&amp;#39;re using are too &lt;em&gt;flexible&lt;/em&gt;.
+They allow too much and forbid too little. For example, Java has nothing
+against you placing the entire application in one single &amp;quot;class&amp;quot;
+with a few thousand methods. Technically, the application will compile
+and run. But it&amp;#39;s a well-known anti-pattern called a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/God_object&quot;&gt;God object&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, an &lt;a href=&quot;https://en.wikipedia.org/wiki/Anti-pattern&quot;&gt;anti-pattern&lt;/a&gt;
+is a technically acceptable way of designing things that is
+commonly agreed to be wrong. There are many anti-patterns in each
+language. Their presence in your product is similar to a tumor in
+a living organism. Once it starts to grow, it&amp;#39;s very difficult to stop.
+Eventually, the entire body dies. Eventually, the entire software becomes
+unmaintainable and has to be re-written.&lt;/p&gt;
+
+&lt;p&gt;Once you let a few anti-patterns in, you will eventually get more of them,
+and the &amp;quot;tumor&amp;quot; will only grow.&lt;/p&gt;
+
+&lt;p&gt;This is especially true for object-oriented languages (Java, C++, Ruby, and Python),
+mostly because they inherit so much from procedural languages (C, Fortran, and COBOL).
+And because OOP developers tend to think in a procedural and imperative way.
+Unfortunately.&lt;/p&gt;
+
+&lt;p&gt;By the way, in addition to an existing &lt;a href=&quot;https://en.wikipedia.org/wiki/Anti-pattern&quot;&gt;list of well-known anti-patterns&lt;/a&gt;,
+I also consider &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;these few things&lt;/a&gt;
+as rather bad coding approaches.&lt;/p&gt;
+
+&lt;p&gt;My only practical suggestion here is to read and learn. Maybe
+&lt;a href=&quot;/2015/04/22/favorite-software-books.html&quot;&gt;these books&lt;/a&gt; will help you.
+Always try to be skeptical about the quality of your software, and don&amp;#39;t relax
+when it &amp;quot;just works&amp;quot;. Like with cancer, the earlier you diagnose it, greater is
+the chance to survive.&lt;/p&gt;
+
+&lt;h2 id=&quot;untraceable-changes&quot;&gt;Untraceable Changes&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-2.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;When I look at the commit history, I should be able to tell
+for every single change &lt;em&gt;what&lt;/em&gt; was changed, &lt;em&gt;who&lt;/em&gt; made a change, and
+&lt;em&gt;why&lt;/em&gt; the change was made. Moreover, the time required to get those three
+answers must be measured in seconds. In most projects, this is not the
+case. Here are a few practical recommendations:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Always Use Tickets&lt;/strong&gt;.
+No matter how small the project or its team is, even if it&amp;#39;s just yourself,
+create tickets (GitHub issues) for every problem you&amp;#39;re solving. Explain
+the problem briefly in the ticket and document your thinking there. Use
+the ticket as temporary storage for all information related to the problem.
+Post everything that could make any sense in the future, when
+someone else will try to understand what those &amp;quot;few strange commits&amp;quot; were about.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference Tickets in Commits&lt;/strong&gt;.
+Needless to say, every commit must have a message. Commits without
+messages are a very dirty practice; I won&amp;#39;t even discuss why. But just a message
+is not enough. Every message must start with the number of the ticket you&amp;#39;re working
+with. GitHub (I&amp;#39;m sure you are using it) will automatically link commits
+and tickets, increasing &lt;em&gt;traceability&lt;/em&gt; of changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Delete Anything&lt;/strong&gt;.
+Git allows us to do a &amp;quot;forced&amp;quot; push, which overwrites the entire branch that
+previously existed on the server. This is just one example of how
+you can destroy the history of development. Many times I&amp;#39;ve also seen
+people delete their comments in GitHub discussions to make tickets look
+more &amp;quot;clean&amp;quot;. That&amp;#39;s just wrong. Never delete anything; let your history
+stay with you, no matter how bad (or messy) it may look to you now.&lt;/p&gt;
+
+&lt;h2 id=&quot;ad-hoc-releases&quot;&gt;Ad Hoc Releases&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-3.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Every piece of software must be packaged before it can
+be delivered to the end user. If it&amp;#39;s a Java library, it has to be
+packaged as a &lt;code&gt;.jar&lt;/code&gt; file and released to some repository; if it&amp;#39;s a web
+app, it has to be deployed to some platform, etc. No matter how small
+or big the product is, there is always a standard procedure that
+tests, packages, and deploys.&lt;/p&gt;
+
+&lt;p&gt;An ideal solution would be to automate this procedure so
+it is possible to execute it from a command line with a single command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./release.sh
+...
+DONE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;took 98.7s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Most projects are far from that. Their release process always
+involves some magic, where the person responsible for it
+(also known as a DevOp) has to click some buttons here and there, login
+somewhere, check some metrics, etc. Such an &lt;em&gt;ad hoc&lt;/em&gt; release process
+is still a very typical sin of the entire software engineering industry.&lt;/p&gt;
+
+&lt;p&gt;I can give only one practical piece of advice here: Automate it. I use
+&lt;a href=&quot;/2014/09/11/deployment-script-vs-rultor.html&quot;&gt;rultor.com&lt;/a&gt; for that,
+but you can use whatever tools you like. What is important is that the entire
+procedure is fully automated and can be executed from the command line.&lt;/p&gt;
+
+&lt;h2 id=&quot;volunteer-static-analysis&quot;&gt;Volunteer Static Analysis&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-4.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Static_program_analysis&quot;&gt;Static analysis&lt;/a&gt;
+is what makes our code &lt;em&gt;look&lt;/em&gt; better. And by making it
+look better, we are inevitably making it &lt;em&gt;work&lt;/em&gt; better. But this happens
+only when the entire team is forced (!) to follow the rules dictated by the
+static analyzer(s). I&amp;#39;ve written about this in
+&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;Strict Control of Java Code Quality&lt;/a&gt;.
+I use &lt;a href=&quot;http://www.qulice.com&quot;&gt;qulice.com&lt;/a&gt; in Java projects
+and &lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;rubocop&lt;/a&gt; in Ruby, but there
+are many similar tools for nearly every language.&lt;/p&gt;
+
+&lt;p&gt;You can use any of them, but make it mandatory! In most projects
+where static analysis is used, developers just build nicely-looking
+reports and continue to write code the way they did before. Such a &amp;quot;volunteer&amp;quot;
+approach is not doing any favors for the project. Moreover, it
+creates an illusion of quality.&lt;/p&gt;
+
+&lt;p&gt;What I&amp;#39;m saying is that static analysis must be a mandatory step in
+your deployment pipeline. The build can&amp;#39;t pass if any static analysis
+rule is violated.&lt;/p&gt;
+
+&lt;h2 id=&quot;unknown-test-coverage&quot;&gt;Unknown Test Coverage&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-5.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Simply put, &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_coverage&quot;&gt;test coverage&lt;/a&gt;
+is the degree to which the software has been tested by unit or integration tests. The
+higher the coverage, the greater &amp;quot;amount&amp;quot; of code was executed while
+tests were running. Obviously, higher coverage is a good thing.&lt;/p&gt;
+
+&lt;p&gt;However, many project developers simply don&amp;#39;t know their coverage. They just don&amp;#39;t measure
+this metric. They may have some tests, but nobody knows how deeply they
+penetrate the software and what parts of it are not tested at all.
+This situation is much worse than low test coverage that is measured and
+reported to everyone.&lt;/p&gt;
+
+&lt;p&gt;High coverage is not a guarantee of high quality. That&amp;#39;s obvious. But unknown
+coverage is a clear indicator of maintainability problems. When a new
+developer enters the project, he or she should be able to make some
+changes and see how coverage is affected by them. Ideally, test coverage
+should be checked the same way as static analysis, and the build should
+fail if it comes out lower than a certain pre-defined threshold
+(usually somewhere around 80 percent).&lt;/p&gt;
+
+&lt;h2 id=&quot;nonstop-development&quot;&gt;Nonstop Development&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-6.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;What I mean by nonstop is without milestones and releases. No matter what kind of
+software you&amp;#39;re writing, you must release and versionalize it frequently.
+A project without a clear release history is an unmaintainable mess.&lt;/p&gt;
+
+&lt;p&gt;This is mostly because maintainability is all about me being able to understand you
+by reading your code.&lt;/p&gt;
+
+&lt;p&gt;When I look into the source code and its commit and release history, I have
+to be able to tell what the intention of its author(s) was, what the project
+was doing a year ago, where it is going now, what its roadmap is, etc. All
+this information must be in the source code and, more importantly,
+in Git history.&lt;/p&gt;
+
+&lt;p&gt;Git tags and GitHub release notes are two powerful instruments that provide
+me such information. Use them to their full extent. Also, don&amp;#39;t forget that
+each binary version of the product must be available for immediate download.
+I have to be able to download version 0.1.3 and test it right now, even
+if the project is working on 3.4 at the moment.&lt;/p&gt;
+
+&lt;h2 id=&quot;undocumented-interfaces&quot;&gt;Undocumented Interfaces&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-7.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Every piece of software has interfaces through which it is supposed to be used.
+If it&amp;#39;s a Ruby gem, there are classes and methods that I&amp;#39;m going to
+use as an end user of it. If it&amp;#39;s a web app, there are web pages
+that an end user will see and control in order to use the app. Every software
+project has interfaces, and they must be carefully documented.&lt;/p&gt;
+
+&lt;p&gt;Like everything above, this is also about maintainability. As a new programmer
+on a project, I will start to learn about it from its interfaces. I should be able
+to understand what it does and try to use it myself.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m talking here about documentation for users, not for developers. In
+general, I&amp;#39;m against documentation inside the software. Here I totally agree with
+the &lt;a href=&quot;http://agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; &amp;mdash; working software is
+much more important than comprehensive documentation. But that&amp;#39;s not referring to
+&amp;quot;external&amp;quot; documentation, which is supposed to be read by users, not developers.&lt;/p&gt;
+
+&lt;p&gt;So end-user interaction with the software must be clearly documented.&lt;/p&gt;
+
+&lt;p&gt;If your software is a library, then its end users are software developers
+who are going to use it &amp;mdash; not contribute to it but simply use it as a
+&amp;quot;black box.&amp;quot;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;These are the criteria being used to evaluate the open-source projects
+entered in our
+&lt;a href=&quot;/award.html&quot;&gt;award&lt;/a&gt; competition.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 08 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</guid>
+      <dc:date>2015-06-08T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How Much For This Software?</title>
       <link>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</link>
@@ -1720,7 +1941,7 @@ history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&g
 &lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The best projects will feature:&lt;/p&gt;
+&lt;p&gt;The best projects will feature (&lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;more about it&lt;/a&gt;):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Strict and visible principles of design.&lt;/p&gt;&lt;/li&gt;
@@ -2085,91 +2306,6 @@ start thinking about refactoring.&lt;/p&gt;
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</guid>
       <dc:date>2015-04-02T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</title>
-      <link>http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.appveyor.com'&gt;&lt;img src='http://www.yegor256.com/images/2014/10/appveyor.png' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt; is a great cloud continuous integration service that builds
-Windows projects. &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; is a DevOps assistant, which automates
-release, merge and deploy operations, using Docker containers. These posts
-explain how Rultor works and what it&amp;#39;s for:
-&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor.com, a Merging Bot&lt;/a&gt;
-and &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;Master Branch Must Be Read-Only&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;The problem is that Rultor is running all scripts inside Docker containers
-and Docker can&amp;#39;t build Windows projects. The only and the best logical solution
-is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor
-gives a green light, we continue with our usual in-Docker script. Otherwise,
-we fail the entire build. Below I explain how this automation was configured
-in &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes framework&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, I got a token from my AppVeyor account (at the time
-of writing it was &lt;a href=&quot;https://ci.appveyor.com/api-token&quot;&gt;here&lt;/a&gt;). I created
-a text file &lt;code&gt;curl-appveyor.cfg&lt;/code&gt; with this content (it&amp;#39;s not my real token inside,
-just an example):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;--silent
---header &amp;quot;Authorization: Bearer 1hdmsfbs7xccb9x6g1y4&amp;quot;
---header &amp;quot;Content-Type: application/json&amp;quot;
---header &amp;quot;Accept: application/json&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, I encrypted this file, using &lt;a href=&quot;https://github.com/yegor256/rultor-remote&quot;&gt;&lt;code&gt;rultor&lt;/code&gt;&lt;/a&gt;
-command line tool:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rultor encrypt -p yegor256/takes curl-appveyor.cfg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The file I creaeted was called
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc&quot;&gt;&lt;code&gt;curl-appveyor.cfg.asc&lt;/code&gt;&lt;/a&gt;.
-I committed and pushed into &lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt;
-Github repository.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add curl-appveyor.cfg.asc
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -am &lt;span class=&quot;s1&quot;&gt;&amp;#39;CURL config for Appveyor&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, I configured AppVeyor &amp;quot;pinging&amp;quot; from Docker script.
-This is what I did in &lt;a href=&quot;https://github.com/yegor256/takes/blob/master/.rultor.yml&quot;&gt;&lt;code&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;decrypt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;curl-appveyor.cfg&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;repo/curl-appveyor.cfg.asc&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;|-&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;version=$(curl -K ../curl-appveyor.cfg --data &amp;quot;{accountName: &amp;#39;yegor256&amp;#39;, projectSlug: &amp;#39;takes&amp;#39;, pullRequestId: &amp;#39;${pull_id}&amp;#39;}&amp;quot; https://ci.appveyor.com/api/builds | jq -r &amp;#39;.version&amp;#39;)&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;while true&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;do status=$(curl -K ../curl-appveyor.cfg https://ci.appveyor.com/api/projects/yegor256/takes/build/${version} | jq -r &amp;#39;.build.status&amp;#39;)&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;if [ &amp;quot;${status}&amp;quot; == &amp;quot;success&amp;quot; ]; then break; fi&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;if [ &amp;quot;${status}&amp;quot; == &amp;quot;failed&amp;quot; ]; then echo &amp;quot;see https://ci.appveyor.com/project/yegor256/takes/build/${version}&amp;quot;; exit 1; fi&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;echo &amp;quot;waiting for AppVeyor build ${version}: ${status}&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;sleep 5s&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;done&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;mvn clean install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There is no magic here, it&amp;#39;s very simple. First, I start a new build
-using &lt;code&gt;/api/builds&lt;/code&gt; end-point of
-&lt;a href=&quot;http://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only&quot;&gt;AppVeyor REST API&lt;/a&gt;.
-&lt;code&gt;${pull_id}&lt;/code&gt; is an environment variable that is coming from Rultor,
-it contains an integer number of current pull request.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m using &lt;a href=&quot;http://stedolan.github.io/jq/&quot;&gt;jq&lt;/a&gt;
-in order to parse AppVeyor JSON output.&lt;/p&gt;
-
-&lt;p&gt;Once the build is started, I&amp;#39;m getting its unique &lt;code&gt;version&lt;/code&gt; and start
-looping to check its status. I&amp;#39;m waiting for &lt;code&gt;success&lt;/code&gt; or &lt;code&gt;failed&lt;/code&gt;. Anything
-else will mean that the build is still in progress and I should keep looping.&lt;/p&gt;
-
-&lt;p&gt;You can see how it works in this pull request, for example:
-&lt;a href=&quot;https://github.com/yegor256/takes/pull/93&quot;&gt;yegor256/takes#93&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sun, 29 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html</guid>
-      <dc:date>2015-03-29T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
