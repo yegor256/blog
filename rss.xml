@@ -10,12 +10,106 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Mon, 08 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
+      <link>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
+      <description>&lt;p&gt;Here is what &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_bug&quot;&gt;Wikipedia says&lt;/a&gt;
+at the time of this writing:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A software bug is an error, flaw, failure, or fault
+in a computer program or system that causes it
+to produce an incorrect or unexpected result or
+to behave in unintended ways.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think that&amp;#39;s incomplete. The definition entirely excludes &amp;quot;non-behavioral&amp;quot;
+defects related to, for example, &lt;strong&gt;maintainability&lt;/strong&gt; and &lt;strong&gt;reusability&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;As you know, every piece of software has &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_requirement&quot;&gt;functional&lt;/a&gt;
+and &lt;a href=&quot;https://en.wikipedia.org/wiki/Non-functional_requirement&quot;&gt;non-functional&lt;/a&gt;
+requirements.
+Functional requirements tell us &lt;em&gt;what&lt;/em&gt; the software has to do, and non-functional
+requirements document &lt;em&gt;how&lt;/em&gt; it has to do it. For example, here is a functional
+requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The user can generate a PDF report.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If our software doesn&amp;#39;t generate a PDF report and crashes instead,
+that&amp;#39;s a functional bug. If instead of a PDF report, it generates an empty
+page or a plain text document, that&amp;#39;s a functional bug. If there
+is no &amp;quot;generate PDF report&amp;quot; button at all and the user simply can&amp;#39;t start
+the PDF generation process, that&amp;#39;s a functional bug.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of a non-functional requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;PDF report generation must take less than 100ms.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If our software generates a perfectly correct PDF report but it
+takes a minute, that&amp;#39;s a non-functional bug.&lt;/p&gt;
+
+&lt;p&gt;So far so good, since the bug definition given by Wikipedia perfectly
+covers both of them &amp;mdash; if they happen, they will cause our software
+&amp;quot;to &lt;em&gt;produce&lt;/em&gt; an incorrect or unexpected result or to &lt;em&gt;behave&lt;/em&gt; in an unintended way.&amp;quot;
+The emphasis here is on the words &amp;quot;produce&amp;quot; and &amp;quot;behave.&amp;quot; They presume
+the software is doing something and we&amp;#39;re observing its behavior.&lt;/p&gt;
+
+&lt;p&gt;However, that&amp;#39;s not all of it.&lt;/p&gt;
+
+&lt;p&gt;What about maintainability? I may have this kind of non-functional requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The source code of the PDF generator must be
+easy to maintain and extend for an average
+Java programmer.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s a rather vague requirement, but you get the idea.&lt;/p&gt;
+
+&lt;p&gt;Maintainability and reusability are very critical non-functional components
+of any modern software program, especially taking into account a very high
+cost of labor in the market. Very often, it&amp;#39;s more important to make sure
+the software is maintainable than fast. If it&amp;#39;s maintainable and slow, we
+can find new programmers to &lt;em&gt;improve&lt;/em&gt; the code. If it is fast
+but unmaintainable, we won&amp;#39;t be able to do anything with it later and will
+have to &lt;em&gt;rewrite&lt;/em&gt; it from scratch if some new feature is required.
+Read more about this in
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The definition of a software bug given by Wikipedia doesn&amp;#39;t cover
+maintainability and reusability flaws at all.
+That makes for a common source of confusion &amp;mdash;
+an inconsistent code style is not a bug (see the discussion under
+&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;this post&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;That is wrong.&lt;/p&gt;
+
+&lt;p&gt;An inconsistent code style &lt;strong&gt;is&lt;/strong&gt; a software bug, as is incomplete documentation,
+lack of documentation, code that&amp;#39;s too complex, the lack of a coding style guide,
+etc.&lt;/p&gt;
+
+&lt;p&gt;I would rewrite the software bug definition paragraph in Wikipedia like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A software bug is an error, flaw, failure, or fault
+in a computer program or system that causes it
+to violate at least one of its functional or
+non-functional requirements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This definition looks more accurate to me.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
+      <dc:date>2015-06-11T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Seven Deadly Sins of a Software Project</title>
       <link>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</link>
@@ -2201,111 +2295,6 @@ element that only makes data look better.&lt;/p&gt;
       <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</guid>
       <dc:date>2015-04-13T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Class Casting Is a Discriminating Anti-Pattern</title>
-      <link>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</link>
-      <description>&lt;p&gt;Type casting is a very useful technique when there is no time
-or desire to think and design objects properly. Type casting (or
-class casting) helps us work with provided objects differently,
-based on the class they belong to or the interface they implement. Class
-casting helps us &lt;strong&gt;discriminate&lt;/strong&gt; against the poor objects and &lt;strong&gt;segregate&lt;/strong&gt;
-them by their race, gender, and religion. Can this be a good practice?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/03/gadkiy-utenok.jpg' style='width:600px;' alt='Гадкий утенок (1956) by Владимир Дегтярёв'/&gt;&lt;figcaption&gt;Гадкий утенок (1956) by Владимир Дегтярёв&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is a very typical example of type casting (Google Guava is full
-of it, for example &lt;a href=&quot;https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111&quot;&gt;&lt;code&gt;Iterables.size()&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This &lt;code&gt;sizeOf()&lt;/code&gt;  method calculates the size of an iterable. However, it
-is smart enough to understand that if &lt;code&gt;items&lt;/code&gt; are also instances of &lt;code&gt;Collection&lt;/code&gt;,
-there is no need to actually iterate them. It would be much faster to
-cast them to &lt;code&gt;Collection&lt;/code&gt; and then call method &lt;code&gt;size()&lt;/code&gt;. Looks logical,
-but what&amp;#39;s wrong with this approach? I see two practical problems.&lt;/p&gt;
-
-&lt;p&gt;First, there is a &lt;strong&gt;hidden coupling&lt;/strong&gt; of &lt;code&gt;sizeOf()&lt;/code&gt; and &lt;code&gt;Collection&lt;/code&gt;. This
-coupling is not visible to the clients of &lt;code&gt;sizeOf()&lt;/code&gt;. They don&amp;#39;t know that
-method &lt;code&gt;sizeOf()&lt;/code&gt; relies on interface &lt;code&gt;Collection&lt;/code&gt;. If tomorrow we decide
-to change it, &lt;code&gt;sizeOf()&lt;/code&gt; won&amp;#39;t work. And we&amp;#39;ll be very surprised, since
-its signature says nothing about this dependency. This won&amp;#39;t happen with
-&lt;code&gt;Collection&lt;/code&gt;, obviously, since it is part of the Java SDK, but with custom
-classes, this may and will happen.&lt;/p&gt;
-
-&lt;p&gt;The second problem is an inevitably &lt;strong&gt;growing complexity&lt;/strong&gt; of method &lt;code&gt;sizeOf()&lt;/code&gt;. The
-more special types it has to treat differently, the more complex it will become.
-This if/then forking is inevitable, since it has to check all possible
-types and give them special treatment. Such complexity is a result
-of a violation of the single responsibility principle. The method is not
-only calculating the size of &lt;code&gt;Iterable&lt;/code&gt; but is also performing type
-casting and forking based on that casting.&lt;/p&gt;
-
-&lt;p&gt;What is the alternative? There are a few, but the most obvious
-is method overloading (not available in semi-OOP languages like Ruby or PHP):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Isn&amp;#39;t that more elegant?&lt;/p&gt;
-
-&lt;p&gt;Philosophically speaking, type casting is discrimination  against the object
-that comes into the method. The object complies with the contract provided by the
-method signature. It implements the &lt;code&gt;Iterable&lt;/code&gt; interface, which
-&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;is a contract&lt;/a&gt;,
-and it expects equal treatment with all other objects that come into
-the same method. But the method discriminates objects by their types.
-The method is basically asking the object about its ... race. Black
-objects go right while white objects go left. That&amp;#39;s what this &lt;code&gt;instanceof&lt;/code&gt;
-is doing, and that&amp;#39;s what discrimination is all about.&lt;/p&gt;
-
-&lt;p&gt;By using &lt;code&gt;instanceof&lt;/code&gt;, the method is segregating incoming objects by the
-certain group they belong to. In this case, there are two groups: collections
-and everybody else. If you are a collection, you get special treatment.
-Even though you abide by the &lt;code&gt;Iterable&lt;/code&gt; contract, we still treat some objects
-specially because they belong to an &amp;quot;elite&amp;quot; group called &lt;code&gt;Collection&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;You may say that &lt;code&gt;Collection&lt;/code&gt; is just another contract that an object may
-comply with. That&amp;#39;s true, but in this case, there should be another door through
-which those who work by that contract should enter. You announced that
-&lt;code&gt;sizeOf()&lt;/code&gt; accepts everybody who works on the &lt;code&gt;Iterable&lt;/code&gt; contract. I am an object,
-and I do what the contract says. I enter the method and expect
-equal treatment with everybody else who comes into the same method.
-But, apparently, once inside the method, I realize that some objects have
-some special privileges. Isn&amp;#39;t that discrimination?&lt;/p&gt;
-
-&lt;p&gt;To conclude, I would consider &lt;code&gt;instanceof&lt;/code&gt; and class casting to be
-anti-patterns and code smells. Once you see a need to use them,
-start thinking about refactoring.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html</guid>
-      <dc:date>2015-04-02T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
