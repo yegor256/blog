@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wikipedia Is Wrong With Its Definition Of A Software Bug"
-date: 2015-05-24
+date: 2015-06-11
 tags: testing
 description:
   Wikipedia defines a software bug in a functional
