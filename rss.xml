@@ -10,12 +10,134 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Thu, 11 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Software Outsourcing Survival Guide</title>
+      <link>http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html</link>
+      <description>&lt;p&gt;Software outsourcing is what you go for when you want to create
+a software product but software engineering is not your core
+competence. It&amp;#39;s a smart business practice being employed by everyone
+from $1,000 personal website owners to Fortune 100 monsters.
+And all of them fail, to some extent. Actually, it&amp;#39;s very difficult
+not to fail. Here is my list of simple hints to everyone who
+decides to outsource software development (the most important ones are
+at the bottom). I wish someone would have given it to me 15 years ago.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/u-turn.jpg' style='width:600px;' alt='U Turn (1997) by Oliver Stone'/&gt;&lt;figcaption&gt;U Turn (1997) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Have a &amp;quot;Work for Hire&amp;quot; Agreement&lt;/strong&gt;.
+Make sure the contract you have with the software outsourcing team
+includes something like this: &amp;quot;Parties shall deem all deliverables created by
+the developer as &lt;em&gt;works made for hire&lt;/em&gt; as is defined under the
+&lt;a href=&quot;http://www.copyright.gov/title17/&quot;&gt;Copyright Law of the United States&lt;/a&gt;&amp;quot;.
+This is the shortest and easiest definition of &amp;quot;whatever you create
+for me is mine&amp;quot;. Put this into the contract and the outsourcing company
+won&amp;#39;t be able to claim that the software it created belongs to it,
+which happens here and there.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Own Your Source Code Repository&lt;/strong&gt;.
+Make sure the source code repository is under your control. The best
+way to do this is to create a private GitHub repository for
+&lt;a href=&quot;https://github.com/pricing&quot;&gt;$7 per month&lt;/a&gt;. The repository will be visible and
+accessible only by you and your outsourcing team. Moreover, make sure
+the team has read-only access and can&amp;#39;t change the code directly except
+through pull requests. In Git, it&amp;#39;s possible to destroy the entire history
+with a single &amp;quot;forced&amp;quot; push to the &lt;code&gt;master&lt;/code&gt; branch. So it would be much better
+for you to be the only person with write access. To make life simpler,
+I would recommend you use &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt;
+as a tool for merging those pull requests semi-automatically.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regularly Collect Metrics&lt;/strong&gt;.
+Ask your outsourcing team members to regularly collect metrics from the software
+they create and send you them somehow (by email, maybe). I would recommend using
+&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;Hits-of-Code&lt;/a&gt;,
+unit test coverage (or just the total number of unit tests), tickets opened and closed,
+and build duration. I&amp;#39;m talking here about process metrics. This is not what
+you&amp;#39;re already getting from NewRelic. These metrics will measure the
+performance of the team, not of the product under development. I&amp;#39;m not saying
+you should manage the team by the metrics, but you have to keep
+an eye on these numbers and their dynamics.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conduct Independent Technical Reviews&lt;/strong&gt;.
+I wrote about these already in my
+&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;You Do Need Independent Technical Reviews!&lt;/a&gt;
+post a few months ago. The importance of such reviews is difficult
+to overrate. In software outsourcing, they are especially crucial.
+Actually, this is the best and likely only way of collecting
+objective information about the software you&amp;#39;re getting from the outsourcer.
+Don&amp;#39;t rely on reports, promises, guarantees, and extensive documentation.
+Instead, hire someone else on an hourly basis and ask that person
+to review what your outsourcing partner is developing. Do such reviews
+regularly and systematically. Don&amp;#39;t be afraid to offend your programmers.
+Honestly explain the reviewer&amp;#39;s concerns to them. If they are professionals, they
+will understand and respect your business objectives.
+You can also show them this article :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Automate and Control Deployment&lt;/strong&gt;.
+Ask your outsourcing team to automate the entire deployment pipeline and
+keep it under your control. I would recommend you do this during the first
+days of the project. This means the product should be compiled, tested,
+packaged, installed, and deployed to a production repository (or server/s) by
+a single click. Some script should be created to automate this chain
+of operations. That&amp;#39;s what your outsourcing partner has to create for you.
+Then, when development starts, every time a new change is made to the
+repository that has to be deployed to production, the same script has
+to be executed. What is important here is that you should know how
+this script works and how to run it. You should be able to build and deploy your
+product by yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Demand Weekly Releases&lt;/strong&gt;.
+Don&amp;#39;t wait for the final version. Ask your outsourcing team to release
+a new version every week. No matter how intensive the development is and
+how many features are &amp;quot;in progress&amp;quot;, it&amp;#39;s always possible to package
+a new version and release it. If the development is really intensive,
+ask your team to use GitFlow or something similar to isolate a stable
+production branch from development branches. But don&amp;#39;t wait! Make sure
+you see your software packaged and deployed every single week, no exceptions
+and no excuses. If your outsourcing team can&amp;#39;t give that to you, start worrying
+and change something.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hire an Independent CTO&lt;/strong&gt;.
+This advice is mostly for small companies or individuals who outsource
+software development and rely on their expertise while staying focused
+on their own business development. That&amp;#39;s unwise; you should have an independent
+chief technical officer (CTO) who reports to you and controls how the
+outsourcing team works. This person must be on a different payment
+schedule with different goals, terms, and objectives. You should talk to
+the CTO and the CTO should control the offshore team. Very often,
+business owners try to become software savvy and control the software
+team directly, learning their software jargon, principles of DevOps,
+and even Java syntax (I&amp;#39;ve seen that). This is a route to failure.
+Be smart &amp;mdash; you do the business development, the CTO reports to you,
+and the software team reports to the CTO.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Define Rewards and Punishments&lt;/strong&gt;.
+There is no management without these two key components. You&amp;#39;re not supposed
+to manage all programmers in the outsourcing shop, but you have to manage
+the entire shop as a single unit of control. You have to give them some
+structure of motivation. They have to know what will happen to them
+if they succeed and how much they will suffer if they fail. If you don&amp;#39;t
+make this mechanism explicit, you will deal with an implicit version of it
+where your chances of winning are very low. Most people assume the best
+and only motivation for a software team is to stay on the project. You&amp;#39;re
+paying them and that&amp;#39;s enough, right? Wrong. Management can&amp;#39;t be effective
+when a monthly bank transfer is a reward and its absence is a punishment.
+It is too coarse-grained; that&amp;#39;s why it&amp;#39;s absolutely ineffective. Find a better and
+more fine-grained mechanism. This post may help:
+&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;Why Monetary Awards Don&amp;#39;t Work&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html</guid>
+      <dc:date>2015-06-15T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
       <link>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
@@ -2201,107 +2323,6 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/award.html</guid>
       <dc:date>2015-04-16T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Tacit, a CSS Framework Without Classes</title>
-      <link>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</link>
-      <description>&lt;p&gt;I&amp;#39;ve been using &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;
-for more than two years in multiple projects,
-and my frustration has been building. First of all, it&amp;#39;s too massive for
-a small web app. Second, it is not fully self-sufficient; no matter
-how much you follow its principles of design, you end up with your
-own CSS styles anyway. Third, and most importantly, its internal
-design is messy. Having all this in mind, I created
-&lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;&lt;strong&gt;tacit&lt;/strong&gt;&lt;/a&gt;, my own CSS framework,
-which immediately received positive feedback on
-&lt;a href=&quot;https://news.ycombinator.com/item?id=9345271&quot;&gt;Hacker News&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;em&gt;Tacit&lt;/em&gt;, according to Google, means &amp;quot;understood or implied without being stated&amp;quot;.
-That&amp;#39;s exactly the idea of the &lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;framework&lt;/a&gt;.
-It doesn&amp;#39;t have a single
-CSS class and can be applied to any valid HTML5 document. For example, you
-have an HTML document:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Are you interested in learning more?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Email:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how it looks in Safari:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/04/html-in-safari-without-tacit.jpg' style='width:600px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, I add &lt;code&gt;tacit.min.css&lt;/code&gt; to it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://yegor256.github.io/tacit/tacit.min.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Are you interested in learning more?&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Email:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how it looks in the same Safari browser:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/04/html-in-safari-with-tacit.jpg' style='width:600px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;I hope you got the idea. The HTML itself wasn&amp;#39;t changed at all. All CSS
-styles are applied to standard HTML elements. Unlike many other CSS frameworks,
-in Tacit you don&amp;#39;t have to mention CSS classes in the HTML document. The HTML
-stays clean and only exposes the data in a pure HTML5 way.&lt;/p&gt;
-
-&lt;p&gt;The HTML document is still readable and usable, but it doesn&amp;#39;t have the
-good-looking-graphics component. Tacit adds that component in a non-intrusive
-manner.&lt;/p&gt;
-
-&lt;p&gt;Of course, in many projects, the default layout features of Tacit won&amp;#39;t
-be enough. In most cases, I still have to add my own CSS classes and inline
-styles. But Tacit gives me an adequate foundation to start from. It solves
-most of the problems associated with responsiveness of forms, appearance of
-form controls, tables, fonts, and colors.&lt;/p&gt;
-
-&lt;p&gt;Tacit allows me to focus on functionality from the first day of a project. And
-the functionality immediately looks attractive. I have tried many other
-frameworks, including &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;,
-&lt;a href=&quot;http://imperavi.com/kube/&quot;&gt;Kube&lt;/a&gt;, and
-&lt;a href=&quot;http://purecss.io/&quot;&gt;Pure&lt;/a&gt;. None of them are designed with this concept in mind.
-They all put CSS in front of HTML. In all of them, CSS is the most important
-element of web design, while HTML is something that assists.&lt;/p&gt;
-
-&lt;p&gt;Tacit takes a different approach. In Tacit, HTML is king while CSS is a supportive
-element that only makes data look better.&lt;/p&gt;
-
-&lt;p&gt;Enjoy :)&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html</guid>
-      <dc:date>2015-04-13T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
