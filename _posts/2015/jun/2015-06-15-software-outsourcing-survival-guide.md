@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Software Outsourcing Survival Guide"
-date: 2015-05-21
+date: 2015-06-15
 tags: outsourcing mgmt
 description:
   Here is a few basic recommendations that will help prevent
@@ -22,10 +22,12 @@ competence. It's a smart business practice being employed by everyone
 from $1,000 personal website owners to Fortune 100 monsters.
 And all of them fail, to some extent. Actually, it's very difficult
 not to fail. Here is my list of simple hints to everyone who
-decides to outsource software development (the most important ones are 
+decides to outsource software development (the most important ones are
 at the bottom). I wish someone would have given it to me 15 years ago.
 
 <!--more-->
+
+{% picture /images/2015/06/u-turn.jpg 0 U Turn (1997) by Oliver Stone %}
 
 **Have a "Work for Hire" Agreement**.
 Make sure the contract you have with the software outsourcing team
