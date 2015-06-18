@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Good Programmers Write Bug-Free Code, Don't They?"
-date: 2015-06-12
+date: 2015-06-18
 tags: agile mgmt
 description:
   It's a very common misconception that good programmers
   write code that's always bug-free. While that sounds nice,
-  good programmers know how to prioritize their work and 
+  good programmers know how to prioritize their work and
   sacrifice a few inexpensive bugs to avoid creating costly ones.
 keywords:
   - zero-bug
@@ -29,6 +29,8 @@ But allow me to look at this from a different perspective and assert
 that yes, indeed, good programmers create _fewer_ bugs.
 
 <!--more-->
+
+{% picture /images/2015/06/sabotage.jpg 0 Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe %}
 
 I think this is all about how we define _quality_ and what a _bug_ is.
 
@@ -65,7 +67,7 @@ in reality, it's next to impossible.
 
 We all work under pressure, and we have time and money constraints. Within these
 constraints, good programmers prefer to make functionality buggy and incomplete
-while keeping the design clean and easy to maintain. There are exceptions, of 
+while keeping the design clean and easy to maintain. There are exceptions, of
 course, where the business prioritizes functionality above everything else,
 but such situations happen very rarely (if the business is smart).
 
