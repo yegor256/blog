@@ -5,9 +5,7 @@ date: 2015-06-18
 tags: agile mgmt
 description:
   It's a very common misconception that good programmers
-  write code that's always bug-free. While that sounds nice,
-  good programmers know how to prioritize their work and
-  sacrifice a few inexpensive bugs to avoid creating costly ones.
+  write code that's always bug-free. However, I think I agree with it.
 keywords:
   - zero-bug
   - bug-free programmers
