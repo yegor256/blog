@@ -19,7 +19,6 @@ keywords:
   - xsl web framework java
   - xsl web framework
   - xsl web java
-  - xsl web framework java
 ---
 
 [Separating data and their presentation](http://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
