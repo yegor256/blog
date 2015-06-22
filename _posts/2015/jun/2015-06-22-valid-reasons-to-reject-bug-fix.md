@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Few Valid Reasons to Reject a Bug Fix"
-date: 2015-06-12
+date: 2015-06-22
 tags: agile mgmt
 description:
   A bug fix is supposed to improve the quality of
@@ -26,6 +26,8 @@ valid reasons for such a rejection, according to my experience.
 
 <!--more-->
 
+{% picture /images/2015/06/crimen-ferpecto.jpg 0 El Crimen Perfecto (2004) by Álex de la Iglesia %}
+
 ## It Degrades Code Coverage
 
 This is a very common situation: After the changes are made in one place,
@@ -49,7 +51,7 @@ we have to delete them. In those cases, don't forget to create new ones.
 There are also situations when the bug must be fixed in a few minutes
 to put the system back online and fixing all unit tests will take an hour.
 Such a situation is a strong indicator that you've got a terrible underlying
-situation with test coverage in the product. There's no doubt that we have to make 
+situation with test coverage in the product. There's no doubt that we have to make
 a fix and ask our tests to shut up for some time. But in this case, make sure
 the next task your team is working on after the bug fix is released is
 correcting those disabled unit tests. I would recommend reading
@@ -85,7 +87,7 @@ to the code base.
 
 Bug fixes are _not features_; they must be small and focused. It's a very
 typical mistake for programmers to get carried away while fixing a
-bug and introduce some refactoring together with a fix. The result is that the 
+bug and introduce some refactoring together with a fix. The result is that the
 patch gets rather big and difficult to understand. I'm not against refactoring; it's
 a very important and positive thing for a project, but do it separately
 _after_ the bug is fixed and merged.
