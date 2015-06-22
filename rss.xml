@@ -10,12 +10,124 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Thu, 18 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>A Few Valid Reasons to Reject a Bug Fix</title>
+      <link>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
+      <description>&lt;p&gt;A bug exists when something doesn&amp;#39;t work as expected. A &lt;em&gt;bug
+fix&lt;/em&gt; is basically a patch (a pull request) to the existing code base that
+is supposed to solve the problem and make sure that &amp;quot;something&amp;quot;
+works as expected. Very often, such a patch fixes one thing
+and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;strong&gt;reject&lt;/strong&gt;
+a bug fix and ask its author to re-do the patch in order to
+protect the project from bigger problems. There are a few
+valid reasons for such a rejection, according to my experience.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/crimen-ferpecto.jpg' style='width:600px;' alt='El Crimen Perfecto (2004) by Álex de la Iglesia'/&gt;&lt;figcaption&gt;El Crimen Perfecto (2004) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;it-degrades-code-coverage&quot;&gt;It Degrades Code Coverage&lt;/h2&gt;
+
+&lt;p&gt;This is a very common situation: After the changes are made in one place,
+unit tests fail in some other place. The bug is fixed, but some possibly
+unrelated unit tests start to report failure. Under pressure or simply because
+we&amp;#39;re lazy, we don&amp;#39;t fix them; we simply remove the tests or mark them
+as temporarily &amp;quot;skipped.&amp;quot; The problem is solved, the build is clean, so let&amp;#39;s
+merge the patch and call it a day, right? Wrong!&lt;/p&gt;
+
+&lt;p&gt;Even though I&amp;#39;m in favor of &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cutting corners&lt;/a&gt;
+as much as possible, this is the corner I don&amp;#39;t recommend you cut.&lt;/p&gt;
+
+&lt;p&gt;The unit tests are there precisely to prevent us from breaking the
+product when under pressure.&lt;/p&gt;
+
+&lt;p&gt;Obviously, there are situations when the unit tests are wrong and
+we have to delete them. In those cases, don&amp;#39;t forget to create new ones.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are also situations when the bug must be fixed in a few minutes
+to put the system back online and fixing all unit tests will take an hour.
+Such a situation is a strong indicator that you&amp;#39;ve got a terrible underlying
+situation with test coverage in the product. There&amp;#39;s no doubt that we have to make
+a fix and ask our tests to shut up for some time. But in this case, make sure
+the next task your team is working on after the bug fix is released is
+correcting those disabled unit tests. I would recommend reading
+&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC&quot;&gt;Working Effectively With Legacy Code&lt;/a&gt;
+by Michael Feathers, which tackles this very subject.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-doesn&amp;#39;t-reproduce-the-issue&quot;&gt;It Doesn&amp;#39;t Reproduce the Issue&lt;/h2&gt;
+
+&lt;p&gt;Sometimes the entire system may be down simply because of a small
+typo in one line of code. An obvious bug fix is to remove the typo, but
+that&amp;#39;s not what a good project is expecting from us if we care about its
+quality. The problem is not the typo but rather the absence of unit tests
+that would catch the typo at the deployment phase.&lt;/p&gt;
+
+&lt;p&gt;The real problem is the lack of test code coverage in this particular
+section of the code. By removing the typo, we&amp;#39;re not helping the project
+in any way. Moreover, we&amp;#39;re doing it a disservice &amp;mdash; we&amp;#39;re &lt;em&gt;concealing&lt;/em&gt;
+the real problem.&lt;/p&gt;
+
+&lt;p&gt;Thus, no matter how small or cosmetic the issue is, its bug fix
+must contain an extra test that first reproduces the bug. Without such
+a test, a bug fix is a waste of the project&amp;#39;s money.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, without a unit test reproducing the issue, there is no
+guarantee that our bug fix doesn&amp;#39;t introduce more bugs. I would even say that
+the more bug fixes we have, the higher the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Entropy_%28information_theory%29&quot;&gt;entropy&lt;/a&gt;.
+And the only way to decrease this uncertainty is by covering the
+code with unit tests. Without a test, a bug fix brings more disorder
+to the code base.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-too-big&quot;&gt;It Is Too Big&lt;/h2&gt;
+
+&lt;p&gt;Bug fixes are &lt;em&gt;not features&lt;/em&gt;; they must be small and focused. It&amp;#39;s a very
+typical mistake for programmers to get carried away while fixing a
+bug and introduce some refactoring together with a fix. The result is that the
+patch gets rather big and difficult to understand. I&amp;#39;m not against refactoring; it&amp;#39;s
+a very important and positive thing for a project, but do it separately
+&lt;em&gt;after&lt;/em&gt; the bug is fixed and merged.&lt;/p&gt;
+
+&lt;p&gt;No refactoring while fixing a bug!&lt;/p&gt;
+
+&lt;p&gt;Create a new unit test, reproduce the bug, and commit it. Fix the bug
+in the existing code base, no matter how ugly it is. Create new
+bugs, asking the team to improve the situation with the ugly code base.
+If interested, assign those bugs to yourself. Or maybe somebody else
+will be interested in fixing them and refactoring the code. But all that
+will happen later in other pull requests with new code reviews
+and new merges.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not about being lazy and unwilling to fix what looks bad. It&amp;#39;s about
+a discipline, which is &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;much more important&lt;/a&gt;
+than good intentions.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-solves-more-than-one-issue&quot;&gt;It Solves More Than One Issue&lt;/h2&gt;
+
+&lt;p&gt;Always fix one issue at a time &amp;mdash; simple as that. No exceptions. When
+a bug fix patch contains code changes that fix multiple issues, it is
+very difficult to understand which issue is tested, which one is reproduced,
+and how they relate to each other. Combining several bug fixes into a single
+pull request is a very bad practice.&lt;/p&gt;
+
+&lt;p&gt;No matter how simple the fix is, keep it separate from others.
+Review, test, and merge it individually. This will also increase the
+traceability of changes. It will always be easy to understand who made
+that fix, who reviewed the code, and when it was merged (and deployed).&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 22 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</guid>
+      <dc:date>2015-06-22T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Good Programmers Write Bug-Free Code, Don't They?</title>
       <link>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</link>
@@ -2020,165 +2132,6 @@ synchronize one level higher when necessary.&lt;/p&gt;
       <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/04/30/iterating-adapter.html</guid>
       <dc:date>2015-04-30T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>My Favorite Software Books</title>
-      <link>http://www.yegor256.com/2015/04/22/favorite-software-books.html</link>
-      <description>&lt;p&gt;There are plenty of books about software engineering, but only a few of them rank
-among my favorites. I read all of those that do over and over again, and I might
-just update this post in the future when I stumble upon something else that&amp;#39;s decent.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Note that I tried to put the most important books at the top of the list.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;&lt;strong&gt;Object Thinking&lt;/strong&gt;&lt;/a&gt;
-by David West.
-This is the best book I&amp;#39;ve read about object-oriented
-programming, and it totally changed my understanding of it. I would
-recommend you read it a few times. But before reading, try to forget everything
-you&amp;#39;ve heard about programming in the past. Try to start from scratch. Maybe it will
-work for you too :)&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1932735658&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=C6OZC5OD2W2IPLCM'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-pmp-rita.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1932735658&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=C6OZC5OD2W2IPLCM&quot;&gt;&lt;strong&gt;PMP Exam Prep, Eighth Edition: Rita&amp;#39;s Course in a Book for Passing the PMP Exam&lt;/strong&gt;&lt;/a&gt;
-by Rita Mulcahy.
-This book is my favorite for project management. Even though it&amp;#39;s about the
-PMI approach and PMBOK in particular, it is a must-read for everyone who
-is interested in management. Ignore the PMBOK specifics and focus on
-the philosophy of project management and the role of project manager in it.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ&quot;&gt;&lt;strong&gt;The Art of Software Testing&lt;/strong&gt;&lt;/a&gt;
-by Glenford J. Myers et al.
-You can read my short review of this book &lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;here&lt;/a&gt;.
-The book perfectly explains the philosophy of testing and destroys
-many typical myths and stereotypes. No matter what your job description is,
-if you&amp;#39;re working in the software industry, you should understand testing
-and its fundamental principles. This is the only book you need in order to
-get that understanding.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-goos.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D5KJ4KQEDPXZVQMQ&quot;&gt;&lt;strong&gt;Growing Object-Oriented Software, Guided by Tests&lt;/strong&gt;&lt;/a&gt;
-by Steve Freeman and Nat Pryce.
-All you need to know about your unit testing is in this book. I&amp;#39;m fully aware
-that I didn&amp;#39;t include famous software engineer
-&lt;a href=&quot;http://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321146530&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=S63Z5BJDORBGMZ2Z&quot;&gt;Kent Beck&amp;#39;s book&lt;/a&gt;
-in this list because I don&amp;#39;t like it at all. You definitely should read
-it, just to know what&amp;#39;s going on, but it won&amp;#39;t help you write good tests.
-Read this one instead, and read it many times.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC&quot;&gt;&lt;strong&gt;Working Effectively With Legacy Code&lt;/strong&gt;&lt;/a&gt;
-by Michael Feathers.
-This is awesome reading about modern software development, its pitfalls, and
-typical failures. Most of the code we&amp;#39;re working on now is legacy (a.k.a. open source).
-I read this book as a novel.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321601912&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MPZUCBXBGNOIHDDI'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-continuous-delivery.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321601912&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MPZUCBXBGNOIHDDI&quot;&gt;&lt;strong&gt;Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation&lt;/strong&gt;&lt;/a&gt;
-by Jez Humble and David Farley.
-This is a perfect book about software delivery, continuous integration,
-testing, packaging, versioning, and many other techniques involved in programming.
-It&amp;#39;s definitely a must-read for anyone who is serious about software engineering.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-xml-nutshell.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7&quot;&gt;&lt;strong&gt;XML in a Nutshell, Third Edition&lt;/strong&gt;&lt;/a&gt;
-by Elliotte Rusty Harold and W. Scott Means.
-XML is my favorite standard. And I hated it before I read this book. I didn&amp;#39;t
-understand all the strange prefixes, namespaces, XPath expressions, and
-schemas. Just this one book changed everything, and ever since reading it, I&amp;#39;ve used XML
-everywhere. It is very well written and easy to read. It&amp;#39;s a must for everybody.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321349601&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=AN4H5FISUMRSU3XD'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-java-concurrency.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321349601&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=AN4H5FISUMRSU3XD&quot;&gt;&lt;strong&gt;Java Concurrency in Practice&lt;/strong&gt;&lt;/a&gt;
-by Brian Goetz et al.
-This is a very practical book about Java multi-threading, and at the same time,
-it provides a lot of theoretical knowledge about concurrency in general. I highly
-recommend you read it at least once.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1491903996&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PUWBN5SFCGEQH3YH'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-c++.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1491903996&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PUWBN5SFCGEQH3YH&quot;&gt;&lt;strong&gt;Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14&lt;/strong&gt;&lt;/a&gt;
-by Scott Meyers.
-No matter what language you&amp;#39;re using, this book is very interesting and
-very useful. It makes many important suggestions about better C++ coding. If
-you understand most of them, your Java/Ruby/Python/Scala coding skills will
-improve significantly.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619670&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=KWY7Y3BVH5URNCK3'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-code-complete.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619670&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=KWY7Y3BVH5URNCK3&quot;&gt;&lt;strong&gt;Code Complete: A Practical Handbook of Software Construction, Second Edition&lt;/strong&gt;&lt;/a&gt;
-by Steve McConnell.
-Consider this the bible of clean coding. Read it a few times and use it as a reference
-manual in debates with your colleagues. It mentions the most terrible anti-patterns
-and worst practices you&amp;#39;ll see in modern programming. To be a good programmer,
-you must know all of them.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPOVQ&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=HDYS46EBUPXYSNDD'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-estimation.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPOVQ&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=HDYS46EBUPXYSNDD&quot;&gt;&lt;strong&gt;Software Estimation: Demystifying the Black Art&lt;/strong&gt;&lt;/a&gt;
-by Steve McConnell.
-This one&amp;#39;s an interesting read about software engineering and its most tricky part &amp;mdash; estimations.
-At the least, read it to be aware of the problem and possible solutions.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201702258&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=VGRW6G3LUVKEB72C'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-use-cases.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201702258&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=VGRW6G3LUVKEB72C&quot;&gt;&lt;strong&gt;Writing Effective Use Cases&lt;/strong&gt;&lt;/a&gt;
-by Alistair Cockburn.
-An old and very good book, you won&amp;#39;t actually use anything from this in your
-real projects, but you will pick up the philosophy of use cases, which will
-redirect your mind in the right direction. Don&amp;#39;t take this book as something
-practical; these use cases are hardly used anywhere today, but the idea of
-scoping functionality this way is absolutely right.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPMOA&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PRSWJK34HNP355LK'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-requirements.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPMOA&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PRSWJK34HNP355LK&quot;&gt;&lt;strong&gt;Software Requirements, Third Edition&lt;/strong&gt;&lt;/a&gt;
-by Karl Wiegers (author) and Joy Beatty.
-A superb book about requirements analysis, the first and most important
-activity in any software project. Even if you&amp;#39;re not an analyst, this book
-is a must-read.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449316387&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=LTNZ7XPLDEG4MEJO'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-git.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449316387&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=LTNZ7XPLDEG4MEJO&quot;&gt;&lt;strong&gt;Version Control With Git: Powerful Tools and Techniques for Collaborative Software Development&lt;/strong&gt;&lt;/a&gt;
-by Jon Loeliger and Matthew McCullough.
-This title serves as a practical guide for Git, a version control system. Read it from
-cover to cover and you will save many hours of your time in the future.
-Git is a de-facto standard in version control, and every programmer must
-know its fundamental principles &amp;mdash; not from a cheat sheet but from an original source.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B004XQX4K0&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=U37POLMQHPZMXXAP'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-javascript.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B004XQX4K0&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=U37POLMQHPZMXXAP&quot;&gt;&lt;strong&gt;JavaScript: The Definitive Guide: Activate Your Web Pages&lt;/strong&gt;&lt;/a&gt;
-by David Flanagan.
-JavaScript is a language of the modern Web, and this book explains it very well.
-No matter what kind of software you develop, you must know JavaScript. Don&amp;#39;t read
-it as a practical guide (even though it&amp;#39;s called a guide) but rather as
-food for thought. JavaScript offers a lot to learn for Java/Ruby/Python developers.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00457X7L8&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PSW6X7D2VCCBS6OL'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-css.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00457X7L8&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PSW6X7D2VCCBS6OL&quot;&gt;&lt;strong&gt;CSS: The Definitive Guide&lt;/strong&gt;&lt;/a&gt;
-by Eric A. Meyer.
-CSS is not just about colors and shadows, and it&amp;#39;s not only for graphic designers.
-CSS is a key language of the modern Web. Every developer must know it, whether
-you&amp;#39;re working with a back-end, front-end, or desktop application in C++.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 22 Apr 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/04/22/favorite-software-books.html</guid>
-      <dc:date>2015-04-22T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
