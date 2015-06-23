@@ -5,8 +5,8 @@ date: 2015-06-25
 tags: java xml xsl
 description:
   XML+XSLT rendering for a web page is a powerful mechanism that
-  is intensively used in Takes Framework; this post explains
-  it in details
+  is intensively used in the Takes framework; this post explains
+  it in detail.
 keywords:
   - xml xsl web page
   - xsl web framework java
@@ -15,22 +15,22 @@ keywords:
   - xslt for web app
 ---
 
-A year ago I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
-how effectively data and presentation in a web applicatoin
-can be separated with the help of XML and XSL. In a few words,
+A year ago, I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
+how effectively data and its presentation can be separated 
+in a web applicatoin with the help of XML and XSL. In a few words,
 instead of using [templating](https://en.wikipedia.org/wiki/Comparison_of_web_template_engines)
-(like JSP, Velocity, FreeMarker, etc) and injecting data into HTML,
-we compose them in a form of an XML document and then let
+(like JSP, Velocity, FreeMarker, etc.) and injection of data into HTML,
+we compose them in the form of an XML document and then let
 the XSL stylesheet transform them into HTML. Here is a brief example
-of how all this can be used together with the [Takes Framework](http://www.takes.org).
+of how all this can be used together with the [Takes framework](http://www.takes.org).
 
 <!--more-->
 
 First, let's agree that templating is a bad idea in the first place. Yes, I mean
 it. The entire design of JSP is wrong, with all due respect to its creators.
-Here is how it works. Let's say my website has to fetch current rate of EUR
-from the database and show it on the home page. That's how my `index.jsp`
-would look like:
+Here is how it works: Let's say my website has to fetch the current exchange rate of 
+the euro from a database and show it on the home page. Here's how my `index.jsp`
+would look:
 
 {% highlight jsp %}
 <html>
@@ -40,12 +40,12 @@ would look like:
 </html>
 {% endhighlight %}
 
-In order to create HTML JSP engine will have to call `get()` on object
+In order to create HTML, the JSP engine will have to call `get()` on object
 `rates` and render what's returned through `toString()`. It's a terrible
-design, for a few reasons. First, the view is tightly coupled with the model.
+design for a few reasons. First, the view is tightly coupled with the model.
 Second, the flexibility of rendering is very limited. Third, the result of
-rendering is not reusable and views are not stackable. There are many other
-reasons... more about it in one of the next articles.
+rendering is not reusable, and views are not stackable. There are many other
+reasons ... more about them in one of the next articles.
 
 Let's see how this should be done right. First, we let our model generate
 the output in XML format, for example:
@@ -57,8 +57,8 @@ the output in XML format, for example:
 </page>
 {% endhighlight %}
 
-This is what the model will produce, having no knowledge about the view. Then,
-we create the view as XSL stylesheet, which will transform XML into HTML:
+This is what the model will produce, having no knowledge of the view. Then,
+we create the view as an XSL stylesheet, which will transform XML into HTML:
 
 {% highlight xml %}
 <xsl:stylesheet version="1.0"
@@ -77,9 +77,9 @@ we create the view as XSL stylesheet, which will transform XML into HTML:
 </xsl:stylesheet>
 {% endhighlight %}
 
-As you see, the view doesn't know anything about model, in terms of
+As you see, the view doesn't know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
-by the model. Here is how you design it in [Takes Framework](http://www.takes.org).
+by the model. Here is how you design it in the [Takes framework](http://www.takes.org).
 Let's start with a simple example:
 
 {% highlight java %}
@@ -93,7 +93,7 @@ public final class Entry {
 {% endhighlight %}
 
 It's a simple web application that starts a web server
-and never ends (waits for connections in daemon mode). To make it work
+and never ends (it waits for connections in daemon mode). To make it work,
 we should create a simple "take" named `TkApp`:
 
 {% highlight java %}
@@ -113,7 +113,7 @@ final class TkApp extends TkWrap {
 {% endhighlight %}
 
 This "take" always returns the same XML response, but it doesn't
-do any XSL transforming yet. We need to add `RsXSLT` class to the picture:
+do any XSL transformation yet. We need to add the `RsXSLT` class to the picture:
 
 {% highlight java %}
 @Override
@@ -131,22 +131,22 @@ public Response act() {
 {% endhighlight %}
 
 Excuse me for using string concatenation, which is a
-[bad practice]({% pst 2014/jun/2014-06-19-avoid-string-concatenation %}),
-it's for simplicity of the example.
+[bad practice]({% pst 2014/jun/2014-06-19-avoid-string-concatenation %});
+it's merely for the simplicity of the example.
 
 As you see, I also added an XML stylesheet processing instruction to
-the XML. RsXSLT will understand it and will try to find `/xsl/index.xsl`
-resource on classpath. The contect of that file you see above.
+the XML. RsXSLT will understand it and try to find the `/xsl/index.xsl`
+resource on classpath. You see the content of that file above.
 
 That's it.
 
-Well, not really. Buidling XML from strings is not a good idea. We
-have a better instrument in the Takes Framework. We're using [Xembly](http://www.xembly.org),
+Well, not really. Building XML from strings is not a good idea. We
+have a better instrument in the Takes framework. We use [Xembly](http://www.xembly.org),
 which is a simple imperative language for building and modifying
 XML documents. More about it here:
 [Xembly, an Assembly for XML]({% pst 2014/apr/2014-04-09-xembly-intro %}).
 
-Here is how our `TkApp` would look like:
+Here is how our `TkApp` would look:
 
 {% highlight java %}
 @Override
@@ -172,39 +172,39 @@ public Response act() {
 
 The most important class here is
 [`RsXembly`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/RsXembly.html).
-The idea here is to let
-model classes expose their data through Xembly "directives", which
-later will be applied to a DOM structure by `RsXembly`.
+The idea is to let
+model classes expose their data through Xembly "directives," which
+will later be applied to a DOM structure by `RsXembly`.
 
 `XeChain`, `XeStylesheet`, `XeAppend`, and `XeDirectives` expose
-directives, but with different meaning
-(they all are instances of `XeSource` interface).
+directives but with different meanings
+(they are all instances of an `XeSource` interface).
 Their names describe their
 intentions rather well.
 [`XeChain`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeChain.html)
 just chains everything that is
-delivered by encapsulated "directive sources".
+delivered by encapsulated "directive sources."
 [`XeStylesheet`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeStylesheet.html)
 returns directives that create a single XML processing instruction.
 [`XeAppend`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeAppend.html)
-creates an XML node and adds an encapsulated directives to it.
+creates an XML node and adds encapsulated directives to it.
 [`XeDirectives`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeDirectives.html)
 simply returns what's inside.
 
 In the end, this code will create exactly the same XML document
 as I created above with string concatenation.
 
-The beauty of this approach is in perfect decoupling between data generation
-and XML building and between XML and HTML. This approach is perfectly re-usable
-and "stackable". We can transform the data in XML format multiple times,
-applying different XSL stylesheets to them. We can even transform them to
+The beauty of this approach is in the perfect decoupling of data generation
+and XML building and translation between XML and HTML. It is perfectly reusable
+and "stackable." We can transform the data in XML format multiple times,
+applying different XSL stylesheets to each one. We can even transform them into
 JSON without changing a line of code in model classes.
 
 Moreover, we can format them differently, using rather powerful XSLT 2.0
-instruments. XSLT by itself is a powerful pure-functional language that
+instruments. XSLT by itself is a powerful and purely functional language that
 enables any possible data manipulations. No templating engine is even close
 to it.
 
-Take a look at how it works in
+Take a look at how it works in the
 [`RsPage`](https://github.com/yegor256/rultor/blob/1.55/src/main/java/com/rultor/web/RsPage.java)
 class in Rultor, for example.
