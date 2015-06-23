@@ -81,7 +81,7 @@ Create `settings.xml`, next to the two `.gpg` files created in the previous step
   </profiles>
   <servers>
     <server>
-      <id>sonatype</id>
+      <id>oss.sonatype.org</id>
       <username><!-- Sonatype JIRA user name --></username>
       <password><!-- Sonatype JIRA pwd --></password>
     </server>
