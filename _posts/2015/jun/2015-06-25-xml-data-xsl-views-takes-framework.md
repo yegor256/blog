@@ -15,8 +15,10 @@ keywords:
   - xslt for web app
 ---
 
+{% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
+
 A year ago, I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
-how effectively data and its presentation can be separated 
+how effectively data and its presentation can be separated
 in a web applicatoin with the help of XML and XSL. In a few words,
 instead of using [templating](https://en.wikipedia.org/wiki/Comparison_of_web_template_engines)
 (like JSP, Velocity, FreeMarker, etc.) and injection of data into HTML,
@@ -28,7 +30,7 @@ of how all this can be used together with the [Takes framework](http://www.takes
 
 First, let's agree that templating is a bad idea in the first place. Yes, I mean
 it. The entire design of JSP is wrong, with all due respect to its creators.
-Here is how it works: Let's say my website has to fetch the current exchange rate of 
+Here is how it works: Let's say my website has to fetch the current exchange rate of
 the euro from a database and show it on the home page. Here's how my `index.jsp`
 would look:
 
