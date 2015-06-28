@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
+    <meta itemprop="author" content="{{ site.author }}" />
+    <meta itemprop="breadcrumb" content="{{ site.url }}" />
+    <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta itemprop="description" content="{{ page | description }}" />
     <meta name="description" content="{{ page | description }}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
