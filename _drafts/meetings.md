@@ -7,10 +7,10 @@ description:
   ...
 keywords:
   - meetings suck
-  - ...
-  - ...
-  - ...
-  - ...
+  - why meetings suck
+  - meetings
+  - software meetings
+  - how to organize meetings
 ---
 
 Software development is all about creativity, right? It's an art,
@@ -180,8 +180,8 @@ of our meetings, but they are just short pieces of paper with a brief
 summary of what we were talking about. Not a real "product" for a
 creative person.
 
-Thus, they de-motivate me because I don't see what two hours
-of my time were turned into.
+Thus, they de-motivate me because I simply don't see what two hours
+of my life were turned into.
 
 You may say that some meetings actually produce great ideas, which
 are a very tangible result. You may say that only in a direct
@@ -192,11 +192,83 @@ same time, and in the same room. That's true, but about it later.
 
 ## Meetings Waste Time
 
+I think it's obvious. The first few minutes at the meeting you're concentrated
+and then you start checking your Twitter and doodling. Everybody is doing
+the same. Not because we're lazy, but because there is _no demand_
+for our full focus at the meeting.
 
+Whe Monica is working with the document, making comments and suggestions,
+she is fully concentrated on the result. Mostly because there is nobody
+else to help her. She has to deliver that pull request and I'm waiting for her.
+It's like I asked her a question at the meeting and everybody is looking
+at her, waiting for an answer.
+
+Her time is used with a maximum outcome, while everybody else are doing
+something else.
+
+At the meeting, we all are working with a very low intensity. And the longer
+the meeting, the slower we are. Also, the more people are there at the meeting,
+the less we care and the more interested we are in Facebook updates.
 
 ## Meetings Burn Money
 
+It's very close to the previous one. Meetings are the most budget-consuming
+type of activity in a project. Simply because it is paying
+_everybody_ who is sitting in that room or Skype conference, while the
+result they produce is almost equal to what a single person can deliver.
+
+Even though this may sound extreme, I have to say that I consider meetings
+a legalized and appreciated way to **rob** a project. Most of that meeting
+organizers (architects, CTOs, CEOs, programmers, etc) don't realize that.
+They believe that the more they talk the better engineers they are. And their
+bosses, by mistake, appreciate that sort of activity of their sub-ordinates.
+
+It's a robbery!
+
+I told you to create a draft of a DB schema. Now you're coming to be
+and asking for a meeting because certain "aspects" are not clear?
+Did you study software engineering anywhere? Do you know how to work
+with technical documents? Are you capable of writing so that everybody
+else can understand you and respond to you in writing? No? Now you want
+the project not only to pay you for the DB schema draft, but also to
+pay me for talking to you and a few other guys to sit next to us texting
+their friends? You basically want to rob the owner of this project.
+No more, no less.
+
 ## Meetings Degrade Quality
+
+Quality goes up when it is being controlled. When someone tells me every
+day that my code is buggy and needs improvements &mdash; my quality goes up.
+When nobody cares what I do and how good are my results &mdash; my quality
+will go down, no matter how self-motivated person I am.
+
+Meetings promote group achievements and discourage individual ones. At the
+end of a meeting it's often not clear who exactly suggested a good idea
+and who made the biggest effort. In other words, at the end of a meeting
+I don't know how good I am. Am I still the same as a month ago or I'm a better
+engineer?
+
+They smile more and ask me "what do you think?" more frequently than last summer.
+That must mean something, right! I'm sure you understand that this is
+not a feedback a serious engineer would expect.
+
+A serious software developer wants to produce tangible results and receive
+tangible feedback, including money and code reviews. I want to know what
+was wrong in my DB schema draft and what did I miss. And I want this to be
+documented somewhere. This is what makes me better and this is how I learn.
 
 ## What About the "A-ha!" Moment?
 
+Now, what about the true creativity or that well-known "a-ha!" moment? Sometimes
+it's necessary to "think out loud" in order to invent something, right?
+We all know how important a face-to-face interaction could be when we're
+researching and developing something new. Where we would be without meetings?
+We can't simply work with documents, we need to talk in order to let our
+ideas out. Isn't it obvious?
+
+I have only one argument for that. Did Einstein invent his probability theory
+at a meeting with his colleagues? I don't think so. And he was solving a much
+bigger problem than a DB schema design.
+
+Meetings don't require any skills, while working with documents is a much
+more complex activity. So, train yourself and forget meetings.
