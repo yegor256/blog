@@ -3,6 +3,7 @@ layout: post
 title: "Meetings Are a Legalized Robbery"
 date: 2015-07-03
 tags: mgmt
+place: Washington, DC
 description:
   Meetings are very popular and very ineffective
   instruments of managing working time and creativity,

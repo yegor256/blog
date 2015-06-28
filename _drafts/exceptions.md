@@ -3,6 +3,7 @@ layout: post
 title: "Catch Me If You... Can't Do Otherwise"
 date: 2015-06-14
 tags: oop
+place: Dallas, TX
 description:
   Catching an exception must be your last resort;
   a properly designed application would catch

@@ -3,6 +3,7 @@ layout: post
 title: "The Better Architect You Are, The Simpler Your Diagrams"
 date: 2015-06-24
 tags: architect
+place: Palo Alto, CA
 description:
   Complex diagrams are the first and foremost
   sign of a bad architect who is not able to properly
@@ -24,7 +25,7 @@ the job of a software architect is _to make complex things simple_,
 not the other way around. They use diagrams, which are the most
 popular instruments of an architect, to explain to us, programmers,
 what he or she has in mind. But the diagrams are usually very cryptic
-and hard to digest. What's worse is that the complexity goes up 
+and hard to digest. What's worse is that the complexity goes up
 in line with their salaries &mdash;
 it's disgusting.
 
@@ -97,8 +98,8 @@ understand you much faster.
 
 **Don't Use Colors**.
 Or let me put it this way: Don't abuse colors. And in order to avoid abusing
-them, you be better off staying away from colors in the first place. If you need 
-to use colors, there must be something wrong with your diagram. It's probably 
+them, you be better off staying away from colors in the first place. If you need
+to use colors, there must be something wrong with your diagram. It's probably
 too complex; that's why you need to use colors. Simplify it by grouping elements.
 
 **Don't Be Creative**.
@@ -107,7 +108,7 @@ to deliver the message. Your goal is not to show how sophisticated your mind is.
 Moreover, your diagram style should not be personal. A diagram from you and
 a diagram from another architect should look almost exactly the same if they
 deliver the same message. It's call uniformity. That's how you make them
-easier for me to understand. I don't want to have to learn your personality 
+easier for me to understand. I don't want to have to learn your personality
 in order to understand your diagram. If it's a server, draw a
 rectangle. There's no need to put a 3D picture of an HP server there.
 A rectangle is enough. Also, please no shades, no fonts, and no styles.

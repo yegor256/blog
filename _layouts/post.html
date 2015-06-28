@@ -18,6 +18,9 @@ scripts:
             {{ page.date | date: "%-d %B %Y" }}
           </time>
         </li>
+        {% if page.place %}
+          <li>{{ page.place }}</li>
+        {% endif %}
         {{ page | modified }}
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">

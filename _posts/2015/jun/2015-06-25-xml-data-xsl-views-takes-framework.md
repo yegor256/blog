@@ -3,6 +3,7 @@ layout: post
 title: "XML Data and XSL Views in Takes Framework"
 date: 2015-06-25
 tags: java xml xsl takes.org
+place: Palo Alto, CA
 description:
   XML+XSLT rendering for a web page is a powerful mechanism that
   is intensively used in the Takes framework; this post explains
