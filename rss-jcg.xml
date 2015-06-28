@@ -442,7 +442,19 @@ synchronize one level higher when necessary.&lt;/p&gt;
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
-      <description>&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.jetbrains.com'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/jetbrains-logo.gif' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;Breaking News!&lt;/strong&gt;&lt;/span&gt;
+&lt;a href=&quot;http://www.jetbrains.com&quot;&gt;JetBrains&lt;/a&gt; is sponsoring the contest!
+The best eight projects will get 1-year open source licenses for any JetBrains products, including
+&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=idea&quot;&gt;IntelliJ IDEA&lt;/a&gt;,
+&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=ruby&quot;&gt;RubyMine&lt;/a&gt;,
+&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=phpstorm&quot;&gt;phpStorm&lt;/a&gt;, and
+&lt;a href=&quot;https://www.jetbrains.com/products.html&quot;&gt;others&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
 Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
@@ -470,6 +482,9 @@ history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&g
 &lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The best 8 projects will receive 1-year open source licenses to
+any &lt;a href=&quot;https://www.jetbrains.com/products.html&quot;&gt;JetBrains&lt;/a&gt;
+products (one license per project).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
 (although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
