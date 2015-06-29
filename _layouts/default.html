@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
+    <meta itemprop="author" content="{{ site.author }}" />
+    <meta itemprop="breadcrumb" content="{{ site.url }}" />
+    <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta itemprop="description" content="{{ page | description }}" />
     <meta name="description" content="{{ page | description }}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
@@ -11,16 +14,16 @@
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}"/>
     <meta property="og:site_name" content="yegor256"/>
-    <meta property="og:image" content="{{ site.url }}/favicon.ico?{{ site.data['hash'] }}"/>
+    <meta property="og:image" content="/favicon.ico?{{ site.data['hash'] }}"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico?{{ site.data['hash'] }}"/>
-    <link rel="apple-touch-icon" href="{{ site.url }}/favicon.ico?{{ site.data['hash'] }}"/>
+    <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="{{ site.url }}/css/layout.css?{{ site.data['hash'] }}"/>
+    <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="//img.teamed.io/yegor256/icons.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <title>{{ page.title }} - {{ site.author }}
