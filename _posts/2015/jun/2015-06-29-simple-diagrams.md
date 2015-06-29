@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Better Architect You Are, The Simpler Your Diagrams"
-date: 2015-06-24
+date: 2015-06-29
 tags: architect
 place: Palo Alto, CA
 description:
