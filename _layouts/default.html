@@ -7,7 +7,7 @@
     <meta itemprop="breadcrumb" content="{{ site.url }}" />
     <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta itemprop="description" content="{{ page | description }}" />
-    <meta name="description" content="{{ page | description }}" />
+    <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="twitter:creator" content="@yegor256"/>
