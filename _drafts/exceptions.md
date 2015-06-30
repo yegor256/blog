@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Catch Me If You... Can't Do Otherwise"
+title: "Catch Me If You ... Can't Do Otherwise"
 date: 2015-06-14
 tags: oop
 place: Dallas, TX
 description:
   Catching an exception must be your last resort;
   a properly designed application would catch
-  exceptions only in one place.
+  exceptions in one place only.
 keywords:
   - exception catching
   - catch exception
@@ -16,7 +16,7 @@ keywords:
   - exceptions java
 ---
 
-I don't know whether it's an anti-pattern or just a common and a very popular
+I don't know whether it's an anti-pattern or just a common and very popular
 mistake, but I see it everywhere and simply must write about it. I'm talking
 about exception catching without re-throwing. I'm talking about something like
 this Java code:
@@ -31,7 +31,7 @@ try {
 
 <!--more-->
 
-Pay attention, I don't have anything against this code:
+Pay attention: I don't have anything against this code:
 
 {% highlight java %}
 try {
@@ -43,10 +43,10 @@ try {
 
 This is called _exception chaining_ and is a perfectly valid construct.
 
-So, what is wrong about catching an exception and logging it? Let's try to
-look at a bigger picture first. We're talking about object-oriented
-programming &mdash; this means that we're dealing with objects. Here is
-how an object (its class, to be exact) would look like:
+So what is wrong with catching an exception and logging it? Let's try to
+look at the bigger picture first. We're talking about object-oriented
+programming &mdash; this means we're dealing with objects. Here is
+how an object (its class, to be exact) would look:
 
 {% highlight java %}
 final class Wire {
@@ -71,54 +71,53 @@ new Wire(stream).send(1);
 {% endhighlight %}
 
 Looks nice, right? I don't need to worry about that `IOException` when I'm
-calling `send(1)`. It will be handled inside and, if it occurs, the stacktrace
-will be logged... This is a totally wrong way of thinking and it's inherited
+calling `send(1)`. It will be handled internally, and if it occurs, the stacktrace
+will be logged. But this is a totally wrong way of thinking, and it's inherited
 from languages without exceptions, like C.
 
-Exceptions were invented in order to simplify our design by moving the entire
-error-handling code away from the main logic. Moreover, not just moving it away, but
+Exceptions were invented to simplify our design by moving the entire
+error handling code away from the main logic. Moreover, we're not just moving it away but
 also concentrating it in one place &mdash; in the `main()` method, the entry
 point of the entire app.
 
-The main purpose of an exception is to collect as much information as possible
-about the error and bubble it up to the highest level, where the user
-is capable of doing something about it. Exception chaining is helping us even
-further, allowing to extend that information on its way up. We basically
-are putting our bubble (the exception) into a bigger bubble every time we
-catch it and rethrow. When it hits the surface, there are many bubbles, staying
-one inside another, like a russian doll. The original exception is the
+The primary purpose of an exception is to collect as much information as possible
+about the error and float it up to the highest level, where the user
+is capable of doing something about it. Exception chaining helps even
+further by allowing us to extend that information on its way up. We are basically
+putting our bubble (the exception) into a bigger bubble every time we
+catch it and re-throw. When it hits the surface, there are many bubbles, each remaining
+inside another like a Russian doll. The original exception is the
 smallest bubble.
 
-When you catch an exception without re-throwing, you basically blows the bubble.
-Everything that was inside it, all other bubbles with the information inside
-them and the original bubble with the original exception are in your hands.
+When you catch an exception without re-throwing it, you basically pop the bubble.
+Everything inside it, including the original exception and all other bubbles 
+with the information inside them, are in your hands.
 You don't let me see them. You use them somehow, but I don't know how. You're
-doing something behind the scene, hiding potentially important information.
+doing something behind the scenes, hiding potentially important information.
 
-If you're hiding that from me, I won't promise my user that I will be honest
-with him and will openly report the problem when it happens. I simply can't
-trust your `send()` method any more and my user will not trust me.
+If you're hiding that from me, I can't promise my user that I will be honest
+with him and openly report a problem when it occurs. I simply can't
+trust your `send()` method anymore, and my user will not trust me.
 
-But catching exceptions without re-throwing you're basically breaking the
+By catching exceptions without re-throwing them, you're basically breaking the
 chain of trust between objects.
 
-My suggestion is to catch exceptions as little as possible and every time
-you catch them &mdash; re-throw.
+My suggestion is to catch exceptions as seldomly as possible, and every time
+you catch them, re-throw.
 
-Unfortunately, the design of Java is against this principle, in many places.
-For example, Java has checked and un-checked exceptions, while, in my opinion
-there should be only checked ones (the ones that you must catch or declare
+Unfortunately, the design of Java goes against this principle in many places.
+For example, Java has checked and un-checked exceptions, while there should only 
+be checked ones in my opinion (the ones you must catch or declare
 as throwable). Also, Java allows multiple exception types to be declared
-as throwable in a single method &mdash; yet another mistake, must be stricly
-one type. Also, there is a generic class `Exception` at the top of the hierarchy,
+as throwable in a single method &mdash; yet another mistake; stick to declaring just
+one type. Also, there is a generic `Exception` class at the top of the hierarchy,
 which is also wrong in my opinion. Besides that, some built-in classes don't
-allow any checked exceptions to be thrown away, like `Runnable.run()`. There
-are many other problems with exceptions Java.
+allow any checked exceptions to be thrown, like `Runnable.run()`. There
+are many other problems with exceptions in Java.
 
-But try to keep this principle in mind and your code will be cleaner &mdash;
-`catch` only if you have no other choice.
+But try to keep this principle in mind and your code will be cleaner: `catch` only if you have no other choice.
 
-ps. Here is how the class should look like:
+P.S. Here is how the class should look:
 
 {% highlight java %}
 final class Wire {
