@@ -165,6 +165,8 @@ methods are not "getters" and they should never have the "get" prefix. We're
 not "getting" anything from the dog. We're not getting her name. We're asking
 her to tell us her name. See the difference?
 
+{% youtube WSgP85kr6eU video-left %}
+
 We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,
 we're working with data, manipulating them, getting, setting,
