@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube WSgP85kr6eU video-left %}
 [July 1, 2015](https://plus.google.com/events/cabfenpghh36tj413n2p0b4r3kk).
 **Why Getters-and-Setters Is An Anti-Pattern?**
-We'll discuss why Getters-and-Setters, a very popular design
+We discussed why Getters-and-Setters, a very popular design
 pattern in object oriented languages, is instead an anti-pattern
-and must be avoided. The discussion will be based on this blog post:
+and must be avoided. The discussion was be based on this blog post:
 [Getters/Setters. Evil. Period.]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
 {% youtube o3aNJX7AP3M video-left %}
