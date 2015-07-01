@@ -39,6 +39,8 @@ Mail.defaults do
   }
 end
 
+skip = File.readlines('/code/home/leads/skip.txt').map(&:strip)
+
 if opts[:dry]
   emails = ['Yegor Bugayenko,test@yegor256.com']
 else
@@ -70,6 +72,10 @@ emails.each do |line|
       print "  #{address} ignored\n"
       next
     end
+  end
+  if skip.include? email
+    print "  #{address} skipped\n"
+    next
   end
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
   print "  sending to #{address}..."
