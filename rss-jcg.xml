@@ -17,6 +17,279 @@
       <link>http://www.yegor256.com</link>
     </image>
     <item>
+      <title>A Few Valid Reasons to Reject a Bug Fix</title>
+      <link>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
+      <description>&lt;p&gt;A bug exists when something doesn&amp;#39;t work as expected. A &lt;em&gt;bug
+fix&lt;/em&gt; is basically a patch (a pull request) to the existing code base that
+is supposed to solve the problem and make sure that &amp;quot;something&amp;quot;
+works as expected. Very often, such a patch fixes one thing
+and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;strong&gt;reject&lt;/strong&gt;
+a bug fix and ask its author to re-do the patch in order to
+protect the project from bigger problems. There are a few
+valid reasons for such a rejection, according to my experience.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/crimen-ferpecto.jpg' style='width:600px;' alt='El Crimen Perfecto (2004) by Álex de la Iglesia'/&gt;&lt;figcaption&gt;El Crimen Perfecto (2004) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;it-degrades-code-coverage&quot;&gt;It Degrades Code Coverage&lt;/h2&gt;
+
+&lt;p&gt;This is a very common situation: After the changes are made in one place,
+unit tests fail in some other place. The bug is fixed, but some possibly
+unrelated unit tests start to report failure. Under pressure or simply because
+we&amp;#39;re lazy, we don&amp;#39;t fix them; we simply remove the tests or mark them
+as temporarily &amp;quot;skipped.&amp;quot; The problem is solved, the build is clean, so let&amp;#39;s
+merge the patch and call it a day, right? Wrong!&lt;/p&gt;
+
+&lt;p&gt;Even though I&amp;#39;m in favor of &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cutting corners&lt;/a&gt;
+as much as possible, this is the corner I don&amp;#39;t recommend you cut.&lt;/p&gt;
+
+&lt;p&gt;The unit tests are there precisely to prevent us from breaking the
+product when under pressure.&lt;/p&gt;
+
+&lt;p&gt;Obviously, there are situations when the unit tests are wrong and
+we have to delete them. In those cases, don&amp;#39;t forget to create new ones.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are also situations when the bug must be fixed in a few minutes
+to put the system back online and fixing all unit tests will take an hour.
+Such a situation is a strong indicator that you&amp;#39;ve got a terrible underlying
+situation with test coverage in the product. There&amp;#39;s no doubt that we have to make
+a fix and ask our tests to shut up for some time. But in this case, make sure
+the next task your team is working on after the bug fix is released is
+correcting those disabled unit tests. I would recommend reading
+&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC&quot;&gt;Working Effectively With Legacy Code&lt;/a&gt;
+by Michael Feathers, which tackles this very subject.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-doesn&amp;#39;t-reproduce-the-issue&quot;&gt;It Doesn&amp;#39;t Reproduce the Issue&lt;/h2&gt;
+
+&lt;p&gt;Sometimes the entire system may be down simply because of a small
+typo in one line of code. An obvious bug fix is to remove the typo, but
+that&amp;#39;s not what a good project is expecting from us if we care about its
+quality. The problem is not the typo but rather the absence of unit tests
+that would catch the typo at the deployment phase.&lt;/p&gt;
+
+&lt;p&gt;The real problem is the lack of test code coverage in this particular
+section of the code. By removing the typo, we&amp;#39;re not helping the project
+in any way. Moreover, we&amp;#39;re doing it a disservice &amp;mdash; we&amp;#39;re &lt;em&gt;concealing&lt;/em&gt;
+the real problem.&lt;/p&gt;
+
+&lt;p&gt;Thus, no matter how small or cosmetic the issue is, its bug fix
+must contain an extra test that first reproduces the bug. Without such
+a test, a bug fix is a waste of the project&amp;#39;s money.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, without a unit test reproducing the issue, there is no
+guarantee that our bug fix doesn&amp;#39;t introduce more bugs. I would even say that
+the more bug fixes we have, the higher the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Entropy_%28information_theory%29&quot;&gt;entropy&lt;/a&gt;.
+And the only way to decrease this uncertainty is by covering the
+code with unit tests. Without a test, a bug fix brings more disorder
+to the code base.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-too-big&quot;&gt;It Is Too Big&lt;/h2&gt;
+
+&lt;p&gt;Bug fixes are &lt;em&gt;not features&lt;/em&gt;; they must be small and focused. It&amp;#39;s a very
+typical mistake for programmers to get carried away while fixing a
+bug and introduce some refactoring together with a fix. The result is that the
+patch gets rather big and difficult to understand. I&amp;#39;m not against refactoring; it&amp;#39;s
+a very important and positive thing for a project, but do it separately
+&lt;em&gt;after&lt;/em&gt; the bug is fixed and merged.&lt;/p&gt;
+
+&lt;p&gt;No refactoring while fixing a bug!&lt;/p&gt;
+
+&lt;p&gt;Create a new unit test, reproduce the bug, and commit it. Fix the bug
+in the existing code base, no matter how ugly it is. Create new
+bugs, asking the team to improve the situation with the ugly code base.
+If interested, assign those bugs to yourself. Or maybe somebody else
+will be interested in fixing them and refactoring the code. But all that
+will happen later in other pull requests with new code reviews
+and new merges.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not about being lazy and unwilling to fix what looks bad. It&amp;#39;s about
+a discipline, which is &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;much more important&lt;/a&gt;
+than good intentions.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-solves-more-than-one-issue&quot;&gt;It Solves More Than One Issue&lt;/h2&gt;
+
+&lt;p&gt;Always fix one issue at a time &amp;mdash; simple as that. No exceptions. When
+a bug fix patch contains code changes that fix multiple issues, it is
+very difficult to understand which issue is tested, which one is reproduced,
+and how they relate to each other. Combining several bug fixes into a single
+pull request is a very bad practice.&lt;/p&gt;
+
+&lt;p&gt;No matter how simple the fix is, keep it separate from others.
+Review, test, and merge it individually. This will also increase the
+traceability of changes. It will always be easy to understand who made
+that fix, who reviewed the code, and when it was merged (and deployed).&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 22 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</guid>
+      <dc:date>2015-06-22T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Good Programmers Write Bug-Free Code, Don't They?</title>
+      <link>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</link>
+      <description>&lt;p&gt;Good programmers create fewer bugs while bad programmers cause more. Sounds
+logical, doesn&amp;#39;t it? However, there is a lot of criticism of this way of
+thinking. Take this one, for example: Bugs are inevitable, and
+instead of expecting fewer bugs from us, let us focus on the right design
+and let testers find and report bugs; then we&amp;#39;ll fix them. Or this one:
+Being afraid to make a mistake makes me write slower and experiment less,
+which translates into lower-quality software. Read more about that
+&lt;a href=&quot;http://programmers.stackexchange.com/questions/41248&quot;&gt;here&lt;/a&gt; and
+&lt;a href=&quot;http://www.joelonsoftware.com/articles/fog0000000067.html&quot;&gt;here&lt;/a&gt;.
+But allow me to look at this from a different perspective and assert
+that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/sabotage.jpg' style='width:600px;' alt='Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe'/&gt;&lt;figcaption&gt;Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I think this is all about how we define &lt;em&gt;quality&lt;/em&gt; and what a &lt;em&gt;bug&lt;/em&gt; is.&lt;/p&gt;
+
+&lt;p&gt;If we look at a traditional and very &amp;quot;intuitive&amp;quot; definition of a bug,
+it is something that causes our software to produce an incorrect
+or unexpected result. However, if we think more about how the
+software is actually used and by whom, we&amp;#39;ll see that there are many other
+types of bugs, including scalability, reliability, and even
+maintainability ones.&lt;/p&gt;
+
+&lt;p&gt;If we put all those &amp;quot;-ilities&amp;quot; in a list and prioritize them by
+their severity and importance to the business, we&amp;#39;ll see that
+functionality-related bugs are rather far from the top.
+I would actually put &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;maintainability&lt;/a&gt;
+at the top.&lt;/p&gt;
+
+&lt;p&gt;My point is that mistakes are not all equal. If I&amp;#39;m writing a PDF report
+generated by a piece of Java code and my report misses the footer, that&amp;#39;s one
+type of bug, and its fix will cost the business X dollars.
+On the other hand, if my PDF generation code is so difficult to modify that
+in order to change its format from &lt;a href=&quot;http://en.wikipedia.org/wiki/Paper_size&quot;&gt;A4&lt;/a&gt; to
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Letter_%28paper_size%29&quot;&gt;US Letter&lt;/a&gt; we have
+to rewrite it from scratch, that&amp;#39;s a completely different type of bug.
+Needless to say, its fixing will be many times more expensive.&lt;/p&gt;
+
+&lt;p&gt;So yes, mistakes are inevitable. We should not be afraid of them and
+be ready to make them. However, good programmers make &lt;strong&gt;cheaper&lt;/strong&gt; mistakes
+in order to avoid making more expensive ones.&lt;/p&gt;
+
+&lt;p&gt;Good programmers understand that in the limited amount of time we usually
+have to implement the software, we have to sacrifice functionality
+in order to gain maintainability. Ideally, you want to achieve both, but
+in reality, it&amp;#39;s next to impossible.&lt;/p&gt;
+
+&lt;p&gt;We all work under pressure, and we have time and money constraints. Within these
+constraints, good programmers prefer to make functionality buggy and incomplete
+while keeping the design clean and easy to maintain. There are exceptions, of
+course, where the business prioritizes functionality above everything else,
+but such situations happen very rarely (if the business is smart).&lt;/p&gt;
+
+&lt;p&gt;To summarize, I think that a good programmer makes more
+functional bugs than a bad programmer, though the bugs made by a bad programmer
+are more expensive than bugs made by a good programmer.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</guid>
+      <dc:date>2015-06-18T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
+      <link>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
+      <description>&lt;p&gt;Here is what &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_bug&quot;&gt;Wikipedia says&lt;/a&gt;
+at the time of this writing:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A software bug is an error, flaw, failure, or fault
+in a computer program or system that causes it
+to produce an incorrect or unexpected result or
+to behave in unintended ways.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think that&amp;#39;s incomplete. The definition entirely excludes &amp;quot;non-behavioral&amp;quot;
+defects related to, for example, &lt;strong&gt;maintainability&lt;/strong&gt; and &lt;strong&gt;reusability&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;As you know, every piece of software has &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_requirement&quot;&gt;functional&lt;/a&gt;
+and &lt;a href=&quot;https://en.wikipedia.org/wiki/Non-functional_requirement&quot;&gt;non-functional&lt;/a&gt;
+requirements.
+Functional requirements tell us &lt;em&gt;what&lt;/em&gt; the software has to do, and non-functional
+requirements document &lt;em&gt;how&lt;/em&gt; it has to do it. For example, here is a functional
+requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The user can generate a PDF report.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If our software doesn&amp;#39;t generate a PDF report and crashes instead,
+that&amp;#39;s a functional bug. If instead of a PDF report, it generates an empty
+page or a plain text document, that&amp;#39;s a functional bug. If there
+is no &amp;quot;generate PDF report&amp;quot; button at all and the user simply can&amp;#39;t start
+the PDF generation process, that&amp;#39;s a functional bug.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of a non-functional requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;PDF report generation must take less than 100ms.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If our software generates a perfectly correct PDF report but it
+takes a minute, that&amp;#39;s a non-functional bug.&lt;/p&gt;
+
+&lt;p&gt;So far so good, since the bug definition given by Wikipedia perfectly
+covers both of them &amp;mdash; if they happen, they will cause our software
+&amp;quot;to &lt;em&gt;produce&lt;/em&gt; an incorrect or unexpected result or to &lt;em&gt;behave&lt;/em&gt; in an unintended way.&amp;quot;
+The emphasis here is on the words &amp;quot;produce&amp;quot; and &amp;quot;behave.&amp;quot; They presume
+the software is doing something and we&amp;#39;re observing its behavior.&lt;/p&gt;
+
+&lt;p&gt;However, that&amp;#39;s not all of it.&lt;/p&gt;
+
+&lt;p&gt;What about maintainability? I may have this kind of non-functional requirement:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The source code of the PDF generator must be
+easy to maintain and extend for an average
+Java programmer.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s a rather vague requirement, but you get the idea.&lt;/p&gt;
+
+&lt;p&gt;Maintainability and reusability are very critical non-functional components
+of any modern software program, especially taking into account a very high
+cost of labor in the market. Very often, it&amp;#39;s more important to make sure
+the software is maintainable than fast. If it&amp;#39;s maintainable and slow, we
+can find new programmers to &lt;em&gt;improve&lt;/em&gt; the code. If it is fast
+but unmaintainable, we won&amp;#39;t be able to do anything with it later and will
+have to &lt;em&gt;rewrite&lt;/em&gt; it from scratch if some new feature is required.
+Read more about this in
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The definition of a software bug given by Wikipedia doesn&amp;#39;t cover
+maintainability and reusability flaws at all.
+That makes for a common source of confusion &amp;mdash;
+an inconsistent code style is not a bug (see the discussion under
+&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;this post&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;That is wrong.&lt;/p&gt;
+
+&lt;p&gt;An inconsistent code style &lt;strong&gt;is&lt;/strong&gt; a software bug, as is incomplete documentation,
+lack of documentation, code that&amp;#39;s too complex, the lack of a coding style guide,
+etc.&lt;/p&gt;
+
+&lt;p&gt;I would rewrite the software bug definition paragraph in Wikipedia like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A software bug is an error, flaw, failure, or fault
+in a computer program or system that causes it
+to violate at least one of its functional or
+non-functional requirements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This definition looks more accurate to me.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
+      <dc:date>2015-06-11T00:00:00+00:00</dc:date>
+    </item>
+    <item>
       <title>A Few Thoughts on Unit Test Scaffolding</title>
       <link>http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</link>
       <description>&lt;p&gt;When I start to repeat myself in unit test methods by creating
@@ -2141,451 +2414,6 @@ to the Github &lt;a href=&quot;https://github.com/jcabi/jcabi-xml/issues&quot;&g
       <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
       <dc:date>2015-02-02T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Making Your Boss Happy Is a False Objective</title>
-      <link>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
-      <description>&lt;p&gt;We all have bosses. We also have customers who pay us for running
-their software projects. They are my bosses for the time of the contract. I&amp;#39;m also
-acting as a boss for developers who are working for &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;.
-It is obvious that a good employee/contractor is one who makes his
-boss/customer happy. But only a bad employee works toward
-this goal. Trying to make your boss happy is a false target that,
-if pursued, ruins the project. A professional employee works
-for the project, not for the boss.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/the-million-dollar-hotel.png' style='width:600px;' alt='The Million Dollar Hotel (2000) by Wim Wenders'/&gt;&lt;figcaption&gt;The Million Dollar Hotel (2000) by Wim Wenders&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;We all work on &lt;strong&gt;projects&lt;/strong&gt; as developers, designers, programmers, managers,
-testers, you name it. The boss is also a member of the project. More
-formally, he or she is a &lt;strong&gt;stakeholder&lt;/strong&gt;, same as every one of us. Each stakeholder
-has his own &lt;strong&gt;needs&lt;/strong&gt; for the project: 1) Jeff, the developer, wants to learn Scala
-and collect his paychecks every two weeks; 2) Sally, the product owner,
-wants to attend an expo in Paris and also collect her paychecks;
-3) Bob, the CTO, wants to raise round A funding and collect a big paycheck; etc.&lt;/p&gt;
-
-&lt;p&gt;The project has its own &lt;strong&gt;objectives&lt;/strong&gt;, to achieve 1 million downloads
-in less than six months and under $300,000, for example.
-This is what the project works for. This is what all of us are here for.&lt;/p&gt;
-
-&lt;p&gt;Our personal needs may be fully satisfied
-while we&amp;#39;re all working toward this goal, or some of them may
-be sacrificed. I mean all of us, including the boss, whoever he or she is,
-either a CTO, a co-founder, a project manager, or a team lead.&lt;/p&gt;
-
-&lt;p&gt;The project is the source of our checks. Not the CFO.&lt;/p&gt;
-
-&lt;p&gt;The CFO is a stakeholder, like everyone else. The project gives him more
-power than others because it&amp;#39;s necessary for the whole mechanism to
-work properly. Every project member has his or her own &lt;strong&gt;roles and responsibilities&lt;/strong&gt;.
-I write code; the CFO writes checks. I eat at McDonalds; he drives
-a Jaguar. We have different needs, and we both agreed that the project
-would satisfy them. Otherwise we wouldn&amp;#39;t be here, right?&lt;/p&gt;
-
-&lt;p&gt;We&amp;#39;re all parts of a mechanism called a &amp;quot;project&amp;quot;, which works according
-to the rules and principles of &lt;strong&gt;project management&lt;/strong&gt; whether we are aware of
-them or not. Whether we have a project manager or not. Even if we violate
-all of them and manage ourselves in total chaos, we still have a scope,
-cost, schedule, and all other attributes of project management.&lt;/p&gt;
-
-&lt;p&gt;A professional and savvy boss understands that his role in the mechanism
-is to clearly define project objectives and make sure everybody&amp;#39;s needs are
-aligned with those objectives. In a properly managed and organized project,
-everybody sees and feels how his or her personal needs are satisfied
-when the project achieves its objectives: Jeff learns Scala, Sally
-sees Paris, and Bob buys a new house.&lt;/p&gt;
-
-&lt;p&gt;However, if Jeff wants to learn Scala and we&amp;#39;re
-developing an iOS application, that is a problem for the boss to resolve.
-Either convince Jeff to fall in love with Swift (I doubt that&amp;#39;s possible)
-or replace him with someone who is already in love with it. It&amp;#39;s clear that
-a professional boss will resort to such a tragic act as firing Jeff
-not because of his personal feelings towards Jeff but because
-they are both working toward the project objectives. Jeff and the boss
-will both understand that Jeff&amp;#39;s need to learn Scala is not aligned
-with the objective of the project.&lt;/p&gt;
-
-&lt;p&gt;It is the CTO&amp;#39;s responsibility to do something about Jeff when his personal
-needs become misaligned with the objectives of the project that is paying
-his salary. A professional CEO understands that and
-always acts in the best interest of the project, not of himself or
-anyone else personally.&lt;/p&gt;
-
-&lt;p&gt;I believe a professional team player does two things:
-&lt;strong&gt;obeys and resists&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;First, you have to understand that the boss is here in order
-to help you organize your time, your tasks, your communications,
-your plans, etc. He knows more about the project and uses that
-information to help you do your job. Your real boss is the project;
-the boss you interact with is just a hired manager who translates
-project objectives into plans, instructions, schedules, etc.&lt;/p&gt;
-
-&lt;p&gt;This boss is your colleague who does management while you&amp;#39;re
-writing code. You&amp;#39;re both equal. You and he are in the same boat. Your
-functions are different than his; that&amp;#39;s all. You&amp;#39;re not working
-&lt;em&gt;for&lt;/em&gt; him but &lt;em&gt;with&lt;/em&gt; him on a project. A true professional team player
-feels himself equal to all other members of the project, no matter
-how high they are in the hierarchy.&lt;/p&gt;
-
-&lt;p&gt;At the same time, he strictly follows the process and
-obeys all project rules and instructions, not because he is afraid of
-being fired but because he wants the project to succeed.&lt;/p&gt;
-
-&lt;p&gt;Second, being a professional team player requires a constant readiness
-to resist each and every instruction if you feel it contradicts
-the project objectives. A true professional doesn&amp;#39;t work for a boss.
-He doesn&amp;#39;t want to make the boss happy. He actually doesn&amp;#39;t care whether the
-boss is happy or not. He knows that the real boss is the project and tries
-to make the project successful and ... happy.&lt;/p&gt;
-
-&lt;p&gt;A true professional always works for himself. Jeff wants to learn Scala
-and earn a certain amount of cash. He joined the project in order to satisfy these
-needs. If the project fails, Jeff won&amp;#39;t get the money and won&amp;#39;t fully learn Scala.
-So if the boss tells Jeff to do something that may jeopardize the
-project&amp;#39;s success, will Jeff do it? Does he care about disappointing the boss?
-Absolutely not. All he cares about is the project&amp;#39;s success, which translates to his
-personal success.&lt;/p&gt;
-
-&lt;p&gt;Thus, making your boss happy is a goal for the immature, fearsome, lazy, and weak.
-Making your project successful is an objective for professional,
-strong, mature, and brave team players.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</guid>
-      <dc:date>2015-01-26T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>If. Then. Throw. Else. WTF?</title>
-      <link>http://www.yegor256.com/2015/01/21/if-then-throw-else.html</link>
-      <description>&lt;p&gt;This is the code I could never understand:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X can&amp;#39;t be negative&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X is positive or zero&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I have been trying to find a proper metaphor to explain its incorrectness.
-Today I finally found it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;If-then-else is a forking mechanism of procedural programming. The CPU
-either goes to the left and &lt;strong&gt;then&lt;/strong&gt; does something or goes to the right and
-does something &lt;strong&gt;else&lt;/strong&gt;. Imagine yourself driving a car and seeing this sign:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/if-then-throw-1.png' style='width:500px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;It looks logical, doesn&amp;#39;t it? You can go in the left lane if you&amp;#39;re not driving a truck.
-Otherwise you should go in the right lane. Both lanes meet up
-in a while. No matter which one you choose, you will end up on the same road.
-This is what this code block does:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X is negative&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X is positive or zero&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, try to imagine this sign:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/if-then-throw-2.png' style='width:500px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;It looks very strange to me, and you will never see this sign anywhere
-simply because a dead end means an &lt;em&gt;end&lt;/em&gt;, a full stop, a finish.
-What is the point of drawing a lane
-after the dead end sign? There is no point.&lt;/p&gt;
-
-&lt;p&gt;This is how a proper sign would look:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/01/if-then-throw-3.png' style='width:500px;' alt='figure'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is how a proper code block would look:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X can&amp;#39;t be negative&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X is positive or zero&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The same is true for loops. This is wrong:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;found positive number&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;While this is right:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;found positive number&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There is no road after the dead end! If you draw it, your code looks
-like this very funny snippet I found a few years ago reviewing
-sources written by some very well-paid developer in one very serious
-company:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;X is negative&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Don&amp;#39;t do this.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/21/if-then-throw-else.html</guid>
-      <dc:date>2015-01-21T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How to Cut Corners and Stay Cool</title>
-      <link>http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</link>
-      <description>&lt;p&gt;You have a task assigned to you, and you don&amp;#39;t like it. You are simply
-not in the mood. You don&amp;#39;t know how to fix that damn bug. You have no idea
-how that bloody module was designed, and you don&amp;#39;t know how it works. But
-you have to fix the issue, which was reported by someone who has no clue how
-this software works. You get frustrated and blame that stupid project manager and
-programmers who were fired two years ago. You spend hours just to find out
-how the code works. Then even more hours trying to fix it. In the end,
-you miss the deadline and &lt;strong&gt;everybody blames you&lt;/strong&gt;. Been there, done that?&lt;/p&gt;
-
-&lt;p&gt;There is, however, an alternative approach that provides a professional exit
-from this situation. Here are some tips I recommend to my peers who code with me
-in &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt; projects.
-In a nutshell, I&amp;#39;m going to explain how you can &lt;strong&gt;cut corners&lt;/strong&gt; and remain
-professional, 1) protecting your nerves, 2) optimizing your project&amp;#39;s expenses,
-and 3) increasing the quality of the source code.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Here is a list of options you have, in order of preference. I would
-recommend you start with the first one on the list and proceed down when you
-have to.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-dependencies,-blame-them,-and-wait&quot;&gt;Create Dependencies, Blame Them, and Wait&lt;/h2&gt;
-
-&lt;p&gt;This is the first and most preferable option. If you can&amp;#39;t figure out
-how to fix an issue or how to implement a new feature, it&amp;#39;s a fault
-of the project, not you. Even if you can&amp;#39;t figure it out because you
-don&amp;#39;t know anything about Ruby and they hired you to fix bugs
-in a Ruby on Rails code base &amp;mdash; it&amp;#39;s their fault. Why did they hire
-you when you know nothing about Ruby?&lt;/p&gt;
-
-&lt;p&gt;So be positive; don&amp;#39;t blame yourself. If you don&amp;#39;t know how this
-damn code works, it&amp;#39;s a fault of the code, not you. Good code is
-easy to understand and maintain.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-1.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Don&amp;#39;t try to eat spaghetti code; complain to the chef and ask
-him or her to cook something better (BTW, I love spaghetti).&lt;/p&gt;
-
-&lt;p&gt;How can you do that? Create dependencies &amp;mdash; new bugs complaining
-about unclear design, lack of unit tests, absence of necessary classes, or
-whatever. Be creative and offensive &amp;mdash; in a constructive and professional way,
-of course. Don&amp;#39;t get personal. No matter who cooked that spaghetti, you have
-nothing against him or her personally. You just want another dish, that&amp;#39;s all.&lt;/p&gt;
-
-&lt;p&gt;Once you have those dependencies reported, explain in the main ticket
-that you can&amp;#39;t continue until all of them are resolved. You will
-legally stop working, and someone else will improve the code you need. Later,
-when all dependencies are resolved and the code looks better, try to
-get back to it again. If you still see issues, create new dependencies.
-Keep doing this until the code in front of you is clean and easy to fix.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t be a hero &amp;mdash; don&amp;#39;t rush into fixing the bad code you inherited. Think
-&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;like a developer, not a hacker&lt;/a&gt;.
-Remember that your first and most important responsibility as
-a disciplined engineer is to help the project &lt;strong&gt;reveal&lt;/strong&gt; maintainability issues.
-Who will fix them and how is the responsibility of a project manager.
-Your job is to reveal, not to hide. By being a hero and trying to fix everything
-in the scope of a single task, you&amp;#39;re not doing the project a favor
-&amp;mdash; you&amp;#39;re concealing the problem(s).&lt;/p&gt;
-
-&lt;p&gt;Edit: Another good example of a dependency may be a question raised
-at, for example, StackOverflow.com or a user list of a third-party library.
-If you can&amp;#39;t find a solution yourself and the problem is outside of the scope
-of your project &amp;mdash; submit a question to SO and put its link to the
-source code (in JavaDoc block, for example).&lt;/p&gt;
-
-&lt;h2 id=&quot;demand-better-documentation-and-wait&quot;&gt;Demand Better Documentation and Wait&lt;/h2&gt;
-
-&lt;p&gt;All dependencies are resolved and the code looks clean, but you still
-don&amp;#39;t understand how to fix the problem or implement a new feature. It&amp;#39;s
-too complex. Or maybe you just don&amp;#39;t know how this library works. Or you&amp;#39;ve
-never done anything like that before. Anyhow, you can&amp;#39;t continue because
-you don&amp;#39;t understand. And in order to understand, you will need a lot of time &amp;mdash;
-much more than you have from your project manager or your Scrum board. What
-do you do?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-2.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Again, think positively and don&amp;#39;t blame yourself. If the software is not
-clear enough for a total stranger, it&amp;#39;s &amp;quot;their&amp;quot; fault, not yours. They created
-the software in a way that&amp;#39;s difficult to digest and modify. But the code is
-clean; it&amp;#39;s not spaghetti anymore. It&amp;#39;s a perfectly cooked lobster, but
-you don&amp;#39;t know how to eat lobster! You&amp;#39;ve never ate it before.&lt;/p&gt;
-
-&lt;p&gt;The chef did a good job; he cooked it well, but the restaraunt didn&amp;#39;t give
-you any instructions on how to eat such a sophisticated dish. What do you do?&lt;/p&gt;
-
-&lt;p&gt;You ask for a manual. You ask for documentation. Properly designed
-and written source code must be properly documented. Once you see that
-something is not clear for you, create new dependencies that ask for better
-documentation of certain aspects of the code.&lt;/p&gt;
-
-&lt;p&gt;Again, don&amp;#39;t be a hero and try to understand everything yourself. Of course
-you&amp;#39;re a smart guy, but the project doesn&amp;#39;t need a single smart guy. The
-project needs maintainable code that is easy to modify, even by someone
-who is not as smart as yourself. So do your project a favor: reveal the
-documentation issue, and ask someone to fix it for you. Not just for you,
-for everybody. The entire team will benefit from such a request.
-Once the documentation is fixed, you will continue with your
-task, and everybody will get source code that is a bit better than it
-was before. Win-win, isn&amp;#39;t it?&lt;/p&gt;
-
-&lt;h2 id=&quot;reproduce-the-bug-and-call-it-a-day&quot;&gt;Reproduce the Bug and Call It a Day&lt;/h2&gt;
-
-&lt;p&gt;Now the code is clean, the documentation is good enough,
-but you&amp;#39;re stuck anyway. What to do?
-Well, I&amp;#39;m a big fan of test-driven development, so my next suggestion would be
-to create a test that reproduces the bug. Basically, this is what you should start
-every ticket with, be it a bug or a feature. Catch the bug with a unit test!
-Prove that the bug exists by failing the build with a new test.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=7SI6P3M636MLCO5E'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/working-effectively-with-legacy-code.png' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;This may be rather difficult to achieve, especially when the software you&amp;#39;re
-trying to fix or modify was written by &lt;span class=&quot;strike&quot;&gt;idiots&lt;/span&gt;
-someone who had no idea about unit testing. There are plenty of techniques
-that may help you find a way to make such software more testable. I would
-highly recommend you read
-&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=7SI6P3M636MLCO5E&quot;&gt;Working Effectively with Legacy Code&lt;/a&gt;
-by Michael Feathers. There are many different patterns, and most of them work.&lt;/p&gt;
-
-&lt;p&gt;Once you manage to reproduce the bug and the build fails, stop right there.
-That&amp;#39;s more than enough for a single piece of work. Skip the test
-(for example, using &lt;code&gt;@Ignore&lt;/code&gt; annotation in JUnit 4) and commit your changes.
-Then add documentation to the unit test you just created, preferably in the
-form of a &lt;code&gt;@todo&lt;/code&gt;. Explain there that you managed to reproduce the problem
-but didn&amp;#39;t have enough time to fix it. Or maybe you just don&amp;#39;t know how to
-fix it. Be honest and give all possible details.&lt;/p&gt;
-
-&lt;p&gt;I believe that catching a bug with a unit test is, in most cases, more than 80% of success.
-The rest is way more simple: just fix the code and make the test pass. Leave
-this job to someone else.&lt;/p&gt;
-
-&lt;h2 id=&quot;prove-a-bug&amp;#39;s-absence&quot;&gt;Prove a Bug&amp;#39;s Absence&lt;/h2&gt;
-
-&lt;p&gt;Very often you simply can&amp;#39;t reproduce a bug. That&amp;#39;s not because the code is not
-testable and can&amp;#39;t be used in a unit test but because you can&amp;#39;t reproduce
-an error situation. You know that the code crashes in production, but you can&amp;#39;t
-crash it in a test. The error stack trace reported by the end user or your
-production logging system is not reproducable. It&amp;#39;s a very common situation.
-What do you do?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-3.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;I think the best option here is to create a test that will prove that
-the code works as intended. The test won&amp;#39;t fail, and the build will remain clean.
-You will commit it to the repository and ... report that the problem is solved.
-You will say that the reported bug doesn&amp;#39;t really exist in real life. You
-will state that there is no bug &amp;mdash; &amp;quot;our software works correctly; here
-is the proof: see my new unit test.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Will they believe you? I don&amp;#39;t think so, but they don&amp;#39;t have a choice. They
-can&amp;#39;t push you any further. You&amp;#39;ve already done something &amp;mdash; created
-a new test that proves everything is fine. The ticket will be closed
-and the project will move on.&lt;/p&gt;
-
-&lt;p&gt;If, later on, the same problem occurs in
-production, a new bug will be reported. It will be linked to your ticket. Your
-experience will help someone investigate the bug further. Maybe that
-guy will also fail to catch the bug with a test and will also create
-a new, successful and &amp;quot;useless&amp;quot; test. And this may happen again and again.
-Eventually, this cumulative group experience will help the last guy
-catch the bug and fix it.&lt;/p&gt;
-
-&lt;p&gt;Thus, a new passing test is a good response to a bug that you can&amp;#39;t catch
-with a unit test.&lt;/p&gt;
-
-&lt;h2 id=&quot;disable-the-feature&quot;&gt;Disable the Feature&lt;/h2&gt;
-
-&lt;p&gt;Sometimes the unit test technique won&amp;#39;t work, mostly because a bug will be
-too important to be ignored. They won&amp;#39;t agree with you when you show them
-a unit test that proves the bug doesn&amp;#39;t exist. They will tell you
-that &amp;quot;when our users are trying to download a PDF, they get a blank page.&amp;quot;
-And they will also say they don&amp;#39;t really care about your bloody
-unit tests. All they care about is that PDF document that should be
-downloadable. So the trick with a unit test won&amp;#39;t work. What do you do?&lt;/p&gt;
-
-&lt;p&gt;It depends on many factors, and most of these factors are not technical.
-They are political, organizational, managerial, social, you name it. However,
-in most cases, I would recommend you disable that toxic feature,
-release a new version, and close the ticket.&lt;/p&gt;
-
-&lt;p&gt;You will take the problem off your shoulders and everybody will be pleased.
-Well, except that poor end user. But this is not your problem. This is the
-fault of management, which didn&amp;#39;t organize pre-production testing properly.
-Again, don&amp;#39;t take this blame on yourself. Your job is to keep the code
-clean and finish your tickets in a reasonable amount of time. Their
-job is to make sure that developers, testers, DevOps, marketers, product
-managers, and designers work together to deliver the product with an
-acceptable number of errors.&lt;/p&gt;
-
-&lt;p&gt;Production errors are not programmers&amp;#39; mistakes, though delayed
-tickets are. If you keep a ticket in your hands for too long, you become
-an unmanageable unit of work. They simply can&amp;#39;t manage you anymore. You&amp;#39;re doing
-something, trying to fix the bug, saying &amp;quot;I&amp;#39;m trying, I&amp;#39;m trying ...&amp;quot;
-How can they manage such a guy? Instead, you should deliver quickly, even if
-it comes at the cost of a temporarily disabled feature.&lt;/p&gt;
-
-&lt;h2 id=&quot;say-no&quot;&gt;Say No&lt;/h2&gt;
-
-&lt;p&gt;OK, let&amp;#39;s say none of the above works. The code is clean, the documentation
-is acceptable, but you can&amp;#39;t catch the bug, and they don&amp;#39;t accept a unit
-test from you as proof of the bug&amp;#39;s absence. They also don&amp;#39;t allow you to
-disable a feature, because it is critical to the user experience. What choices
-do you have? Just one.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/01/cut-corners-4.png' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Be professional and say &amp;quot;No, I can&amp;#39;t do this; find someone else.&amp;quot;
-Being a professional developer doesn&amp;#39;t mean being able to fix any problem. Instead,
-it means honesty. If you see that you can&amp;#39;t
-fix the problem, say so as soon as possible. Let them decide what to do.
-If they eventually decide to fire you because of that, you will remain a
-professional. They will remember you as a guy who was honest and took his
-reputation seriously. In the end, you will win.&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t hold the task in your hands. The minute you realize you&amp;#39;re
-not the best guy for it or you simply can&amp;#39;t fix it &amp;mdash; notify
-your manager. Make it his problem. Actually, it is his problem in the
-first place. He hired you. He interviewed you. He decided to give you this
-task. He estimated your abilities and your skills.
-So it&amp;#39;s payback time.&lt;/p&gt;
-
-&lt;p&gt;Your &amp;quot;No!&amp;quot; will be very valuable feedback for him. It will help him
-make his next important management decisions.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, if you lie just to give the impression you&amp;#39;re a guy who
-can fix anything and yet fail in the end, you will damage not only your
-reputation but also the project&amp;#39;s performance and objectives.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</guid>
-      <dc:date>2015-01-15T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
