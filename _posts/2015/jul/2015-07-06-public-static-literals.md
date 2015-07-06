@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Public Static Literals ... Are Not a Solution for Data Duplication"
-date: 2015-07-02
+date: 2015-07-06
 tags: oop java
 place: Palo Alto, CA
 description:
@@ -28,6 +28,8 @@ These guys are setting a bad example! `public` `static`
 [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 
 <!--more-->
+
+{% picture /images/2015/07/the-shining.jpg 0 The Shining (1980) by Stanley Kubrick %}
 
 Here is what I'm talking about, specifically:
 
