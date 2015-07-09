@@ -21,7 +21,7 @@
       <link>http://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html</link>
       <description>&lt;p&gt;I don&amp;#39;t know whether it&amp;#39;s an anti-pattern or just a common and very popular
 mistake, but I see it everywhere and simply must write about it. I&amp;#39;m talking
-about exception catching without re-throwing. I&amp;#39;m talking about something like
+about &lt;strong&gt;exception catching without re-throwing&lt;/strong&gt;. I&amp;#39;m talking about something like
 this Java code:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
