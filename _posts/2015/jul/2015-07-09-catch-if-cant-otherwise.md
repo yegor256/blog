@@ -18,7 +18,7 @@ keywords:
 
 I don't know whether it's an anti-pattern or just a common and very popular
 mistake, but I see it everywhere and simply must write about it. I'm talking
-about exception catching without re-throwing. I'm talking about something like
+about **exception catching without re-throwing**. I'm talking about something like
 this Java code:
 
 {% highlight java %}
