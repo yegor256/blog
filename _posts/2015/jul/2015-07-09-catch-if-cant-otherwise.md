@@ -41,7 +41,8 @@ try {
 }
 {% endhighlight %}
 
-This is called _exception chaining_ and is a perfectly valid construct.
+This is called [_exception chaining_](https://en.wikipedia.org/wiki/Exception_chaining)
+and is a perfectly valid construct.
 
 So what is wrong with catching an exception and logging it? Let's try to
 look at the bigger picture first. We're talking about object-oriented
