@@ -31,6 +31,8 @@ try {
 
 <!--more-->
 
+{% picture /images/2015/07/catch-me-if-you-can.jpg 0 Catch Me If You Can (2002) by Steven Spielberg %}
+
 Pay attention: I don't have anything against this code:
 
 {% highlight java %}
