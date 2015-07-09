@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Catch Me If You ... Can't Do Otherwise"
-date: 2015-06-14
+date: 2015-07-09
 tags: oop
 place: Dallas, TX
 description:
@@ -90,7 +90,7 @@ inside another like a Russian doll. The original exception is the
 smallest bubble.
 
 When you catch an exception without re-throwing it, you basically pop the bubble.
-Everything inside it, including the original exception and all other bubbles 
+Everything inside it, including the original exception and all other bubbles
 with the information inside them, are in your hands.
 You don't let me see them. You use them somehow, but I don't know how. You're
 doing something behind the scenes, hiding potentially important information.
@@ -106,7 +106,7 @@ My suggestion is to catch exceptions as seldomly as possible, and every time
 you catch them, re-throw.
 
 Unfortunately, the design of Java goes against this principle in many places.
-For example, Java has checked and un-checked exceptions, while there should only 
+For example, Java has checked and un-checked exceptions, while there should only
 be checked ones in my opinion (the ones you must catch or declare
 as throwable). Also, Java allows multiple exception types to be declared
 as throwable in a single method &mdash; yet another mistake; stick to declaring just
