@@ -32,6 +32,8 @@ this Java code:&lt;/p&gt;
 
 &lt;!--more--&gt;
 
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/catch-me-if-you-can.jpg' style='width:600px;' alt='Catch Me If You Can (2002) by Steven Spielberg'/&gt;&lt;figcaption&gt;Catch Me If You Can (2002) by Steven Spielberg&lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;p&gt;Pay attention: I don&amp;#39;t have anything against this code:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
