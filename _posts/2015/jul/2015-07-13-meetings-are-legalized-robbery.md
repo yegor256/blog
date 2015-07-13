@@ -273,7 +273,7 @@ was wrong in my DB schema draft and what I missed. And I want this to be
 documented somewhere. This is what makes me better, and this is how I learn
 and grow.
 
-## What About the "A-ha!" Moment?
+## What About the A-ha! Moment?
 
 Now, what about true creativity or that well-known "a-ha!" moment? Sometimes
 it's necessary to "think out loud" in order to invent something, right?
