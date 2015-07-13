@@ -13,10 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="twitter:creator" content="@yegor256"/>
     <meta property="twitter:account_id" content="4503599630178231" />
-    <meta property="og:url" content="{{ site.url }}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <meta property="og:site_name" content="yegor256"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="https://www.facebook.com/yegor.bugayenko"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
