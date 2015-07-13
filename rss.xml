@@ -10,12 +10,293 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Thu, 09 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Meetings Are Legalized Robbery</title>
+      <link>http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html</link>
+      <description>&lt;p&gt;Software development is all about creativity, right? It&amp;#39;s an art,
+not a science. As software engineers, we solve complex problems,
+and often our solutions are absolutely not obvious. We experiment,
+innovate, research, and investigate.
+To do all this, we &lt;em&gt;talk&lt;/em&gt;.
+We sit together in our meeting rooms, Skype conference calls, or Slack channels;
+we discuss our solutions;
+we ask our coworkers for their opinions;
+and we argue about the best ideas. There&amp;#39;s no doubt meetings are the key component of the modern
+software design discipline ... and it&amp;#39;s very &lt;em&gt;sad&lt;/em&gt; to see it.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/heat.jpg' style='width:600px;' alt='Heat (1995) by Michael Mann'/&gt;&lt;figcaption&gt;Heat (1995) by Michael Mann&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;A good software architect doesn&amp;#39;t need meetings and &lt;strong&gt;never&lt;/strong&gt; organizes them.&lt;/p&gt;
+
+&lt;p&gt;Meetings demotivate, waste time, burn money, and degrade quality. But more about
+that later. For now, let&amp;#39;s discuss a proposed alternative.&lt;/p&gt;
+
+&lt;p&gt;Say I&amp;#39;m an architect who needs to design the schema for a relational
+database in a new project, and I have a team of five programmers whom I want
+to help me with this design. That&amp;#39;s a very logical and appropriate desire,
+as a good architect always discusses all possible options with available
+team members before making a final decision. So I call a meeting? No!&lt;/p&gt;
+
+&lt;h2 id=&quot;a-good-architect&quot;&gt;A Good Architect&lt;/h2&gt;
+
+&lt;p&gt;I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don&amp;#39;t
+actually talk to him about it. I value and respect his time &amp;mdash;
+there&amp;#39;s no need to bother him with this organizational noise, so I just create
+a ticket and assign it to Jeff. When he has time, he creates a draft
+and returns a pull request. I review it and make some comments before he updates
+the branch, and finally
+&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;I merge it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Perfect; we have a draft.&lt;/p&gt;
+
+&lt;p&gt;At the end of the document, Jeff also listed assumptions, risks, and concerns.
+For example, this is what I got back from him (it&amp;#39;s Markdown, a very
+convenient format for simple technical documents; I highly recommend it):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## Tables
+user (id INT, name VARCHAR, email VARCHAR);
+payment (id INT, date DATETIME, amount INT);
+order (id INT, details VARCHAR, user_id INT FK(user));
+
+## Assumptions
+- All payments will be in whole dollars, no cents.
+- All users will have only one email.
+- There will be no search feature required.
+
+## Risks
+- Order details may not fit into VARCHAR.
+- Foreign keys may not be supported in the DBMS.
+
+## Concerns
+- Would NoSQL be more suitable?
+- What is the DB server we&amp;#39;ll use?&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I don&amp;#39;t know how much time Jeff would have spent on this document,
+but I just created it in 10 minutes. Of course, it&amp;#39;s a very simple schema
+for a very simple project. But even if Jeff spent an hour
+on it, every minute of that hour is valuable to the project. What I mean
+is that every dollar I pay Jeff for his time is returned to me
+in the form of a text document.&lt;/p&gt;
+
+&lt;p&gt;Now I have a draft and I&amp;#39;m taking the next step. I ask
+Monica to take a look at it and suggest changes. Again, it&amp;#39;s another
+hour and I&amp;#39;ve got back a pull request with changes, corrections,
+new assumptions, new risks, and new concerns. I&amp;#39;m not talking to Monica &amp;mdash;
+there is no need for that. She has all the information she needs
+to work with the DB schema. She is a good engineer, and I trust
+her ability to formulate her opinion in a written format.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s no need to sit together in the same room or stand at a whiteboard.
+Monica is smart enough to do this job by herself. She already has
+all the ideas expressed by Jeff in front of her;
+there is no need for her to talk to him either.&lt;/p&gt;
+
+&lt;p&gt;Once I merge her pull request (after a proper review and corrections),
+I have a new version of my &lt;code&gt;schema.md&lt;/code&gt; document.&lt;/p&gt;
+
+&lt;p&gt;Moreover, I have a Git history of this document, and I have a history
+of pull requests with comments. This is way better than meeting notes
+or even a meeting video. Anyone who joins the project later will be
+able to understand how we came to the conclusion of using PostgreSQL
+and storing monetary amounts without cents. It&amp;#39;s all there in the Git history
+and Github tickets, forever with us.&lt;/p&gt;
+
+&lt;p&gt;What if I need more opinions? Or if I&amp;#39;m still not sure the schema is good enough?
+No problem; I ask someone else to review it one more time and
+send me a pull request with changes.
+I can even ask Jeff to do it again after a few iterations with
+other programmers!&lt;/p&gt;
+
+&lt;p&gt;Moreover, I can add my own concerns to the document, and on the next iteration,
+ask Jeff to pay attention to and resolve them.&lt;/p&gt;
+
+&lt;p&gt;The more we circle this document, the better it becomes. And every minute
+the project pays for turns into a tangible product: a &lt;strong&gt;document&lt;/strong&gt;
+with a change history!&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s how a professional architect collects opinions and
+makes complex decisions. Now let&amp;#39;s see what a bad architect would do.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-bad-architect&quot;&gt;A Bad Architect&lt;/h2&gt;
+
+&lt;p&gt;I first call a meeting. No, wait; I schedule it in Google Calendar.
+No, wait, wait. First of all, I create an agenda:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Introduction: 10 min
+2. Problem: 15 min
+  - We need a DB schema
+  - Let&amp;#39;s choose a server
+3. Opinions: 15 min
+  - Jeff and Monica have experience
+  - Others?
+4. Coffee break: 10 min
+5. Discussion: 30 min
+  - Let&amp;#39;s not forget risks
+  - Ask Joe about PostgreSQL
+6. Conclusions: 10 min&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I&amp;#39;m sure you know what I&amp;#39;m talking about and you&amp;#39;ve seen these
+agendas from your &amp;quot;architects.&amp;quot; Anyway, my first step is done. I&amp;#39;ve scheduled an
+hour-and-a-half meeting where all programmers will be present. We&amp;#39;ll have fun
+and drink coffee. We&amp;#39;ll discuss the problem, hear all opinions, and find
+the best solution. We&amp;#39;ll document it in that &lt;code&gt;schema.md&lt;/code&gt; and
+get back to our tasks.&lt;/p&gt;
+
+&lt;p&gt;Instead of circulating those &lt;em&gt;dry&lt;/em&gt; and &lt;em&gt;boring&lt;/em&gt; Git documents, we&amp;#39;ll have a
+real human communication with a nice coffee break where we&amp;#39;ll share our
+opinions about the last episode of The Bing Bang Theory. Isn&amp;#39;t that what
+we all like about our office jobs anyway?&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t think so.&lt;/p&gt;
+
+&lt;p&gt;I think meetings demotivate, waste time, burn money, and degrade quality.
+Those who organize them either have no idea what they are doing or
+are silently &lt;em&gt;robbing&lt;/em&gt; the company they&amp;#39;re working for.&lt;/p&gt;
+
+&lt;p&gt;We needed meetings 30 years ago when we didn&amp;#39;t have laptops and GitHub.
+But even then, we had a pen and paper.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m talking about meetings that are intended to collect or distribute information,
+discuss or propose something, or find a solution in a &lt;em&gt;technical&lt;/em&gt; domain.
+The only &lt;em&gt;valid purpose&lt;/em&gt; of meetings is to read &lt;strong&gt;body language&lt;/strong&gt; of the people
+you are dealing with. Politicians, businessmen, poker players,
+shrinks, physicians, etc. &amp;mdash; they need meetings because they must
+read our bodies, not just our thoughts.&lt;/p&gt;
+
+&lt;p&gt;Do we really care about Monica&amp;#39;s body while we&amp;#39;re designing a DB schema?
+Well, that depends, right? But let&amp;#39;s be serious; we&amp;#39;re not paid for that.&lt;/p&gt;
+
+&lt;h2 id=&quot;meetings-demotivate&quot;&gt;Meetings Demotivate&lt;/h2&gt;
+
+&lt;p&gt;The best motivation for a creative person is to see the results of
+his or her creativity. If I&amp;#39;m not mistaken, enjoying the process
+of creativity without any results is an obvious
+sign of mental illness. A healthy and creative person like a software
+engineer, for example, wants to see how his or her efforts are turned
+into something valuable and, preferably, tangible.&lt;/p&gt;
+
+&lt;p&gt;Meetings almost never produce anything tangible and rarely something valuable.
+Sometimes we have &amp;quot;minutes&amp;quot;
+of our meetings, but they are just short pieces of paper with a brief
+summary of what we were talking about. Not a real &amp;quot;product&amp;quot; for a
+creative person.&lt;/p&gt;
+
+&lt;p&gt;Thus, they demotivate me because I simply don&amp;#39;t see what two hours
+of my life were turned into. We don&amp;#39;t really &lt;em&gt;create&lt;/em&gt; anything there,
+we just discuss. Pay attention here; I&amp;#39;m talking about meetings, not about
+collaborative work on something, like in pair programming, for example.&lt;/p&gt;
+
+&lt;p&gt;You may say that some meetings actually produce great ideas, which
+are very tangible results. You may say that only in a direct,
+face-to-face setting could these ideas be born. You may also
+say that many bright technical decisions were invented precisely due
+to a magic synergy of friends thinking in the same direction, at the
+same time, and in the same room. This argument makes sense, but I&amp;#39;ll address that later.&lt;/p&gt;
+
+&lt;h2 id=&quot;meetings-waste-time&quot;&gt;Meetings Waste Time&lt;/h2&gt;
+
+&lt;p&gt;I think it&amp;#39;s obvious. For the first few minutes of the meeting, you&amp;#39;re concentrated;
+then you start checking your Twitter feed and doodling. Everybody is doing
+the same &amp;mdash; not because we&amp;#39;re lazy but because there is &lt;em&gt;no demand&lt;/em&gt;
+for our full focus at the meeting.&lt;/p&gt;
+
+&lt;p&gt;While Monica is working with the document, making comments and suggestions,
+she is fully concentrated on the result &amp;mdash; mostly because there is nobody
+else to help her. She has to deliver that pull request, and I&amp;#39;m waiting for her.
+Her concentration is as high as it would be at the meeting, when someone
+is asking her a direct question and she has to provide a detailed answer.&lt;/p&gt;
+
+&lt;p&gt;Her time is optimized for a suitable outcome while everybody else is doing
+something else.&lt;/p&gt;
+
+&lt;p&gt;At the meeting, on the other hand, we&amp;#39;re all concentrating sparingly at best. And the longer
+the meeting, the slower we are. Also, the more people who are there,
+the less we care and the more interested we become in our Facebook updates.
+I reckon that&amp;#39;s not much of a surprise to you if you&amp;#39;ve been in the software development
+industry for at least a few months.&lt;/p&gt;
+
+&lt;h2 id=&quot;meetings-burn-money&quot;&gt;Meetings Burn Money&lt;/h2&gt;
+
+&lt;p&gt;This aligns closely with the previous conclustion. Meetings are among the biggest budget consumers
+of any type of activity in a project, simply because they pay
+&lt;em&gt;everybody&lt;/em&gt; who is sitting in that room or on that Skype conference while the
+result they produce is almost equal to what a single person can deliver.
+Or much less.&lt;/p&gt;
+
+&lt;p&gt;Even though this may sound extreme, I have to say that I consider meetings
+a legalized way to &lt;strong&gt;rob&lt;/strong&gt; a project. Most meeting
+organizers (architects, CTOs, CEOs, programmers, etc.) don&amp;#39;t realize that.
+They believe the more they talk, the better engineers they are. And their
+bosses, by mistake, appreciate that sort of activity from their subordinates.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s robbery!&lt;/p&gt;
+
+&lt;p&gt;I told you to create a draft of a DB schema. Now you&amp;#39;re coming to me
+and asking for a meeting because certain &amp;quot;aspects&amp;quot; are not clear?
+Did you study software engineering anywhere? Do you know how to work
+with technical documents? Are you capable of writing in a way that everybody
+else can understand and respond to you, also in writing? No? Now you want
+the project to not only pay you for the DB schema draft but to also
+pay me for talking to you and for a few other guys to sit next to us and text
+their friends? You basically want to rob the owner of this project.
+No more, no less.&lt;/p&gt;
+
+&lt;h2 id=&quot;meetings-degrade-quality&quot;&gt;Meetings Degrade Quality&lt;/h2&gt;
+
+&lt;p&gt;Quality goes up when it is being controlled. When someone tells me every
+day that my code is buggy and needs improvements, my quality goes up.
+When nobody cares what I do or how good my results are, my quality
+goes down, no matter how self-motivated I am.&lt;/p&gt;
+
+&lt;p&gt;Meetings promote group achievements and discourage individual ones. At the
+end of a meeting, it&amp;#39;s often not clear who exactly suggested a good idea
+and who made the biggest effort. In other words, at the end of a meeting,
+I don&amp;#39;t know how good I am. Am I still the same as a month ago or am I a better
+engineer?&lt;/p&gt;
+
+&lt;p&gt;They smile more and ask me &amp;quot;what do you think?&amp;quot; more frequently than last summer;
+that must mean something, right? I&amp;#39;m sure you understand this is
+not the kind of feedback a serious engineer would expect.&lt;/p&gt;
+
+&lt;p&gt;A serious software developer wants to produce tangible results and receive
+tangible feedback, like money or code reviews. I want to know what
+was wrong in my DB schema draft and what I missed. And I want this to be
+documented somewhere. This is what makes me better, and this is how I learn
+and grow.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-the-a-ha!-moment?&quot;&gt;What About the A-ha! Moment?&lt;/h2&gt;
+
+&lt;p&gt;Now, what about true creativity or that well-known &amp;quot;a-ha!&amp;quot; moment? Sometimes
+it&amp;#39;s necessary to &amp;quot;think out loud&amp;quot; in order to invent something, right?
+We all know how important a face-to-face interaction could be when we&amp;#39;re
+researching and developing something new. Where would we be without meetings?
+We can&amp;#39;t simply work with documents; we need to talk to each other in order to let our
+ideas out. Isn&amp;#39;t it obvious?&lt;/p&gt;
+
+&lt;p&gt;I have only one argument for that. Did Einstein invent his theory
+at a meeting with his colleagues? I don&amp;#39;t think so. And he was solving a much
+bigger problem than a DB schema design.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Let me summarize. Meetings are an activity that requires almost no skill,
+while documenting ideas in text and diagrams is a way more difficult
+job to do. So train and discipline yourself to work with documents
+and let juniors enjoy their meetings.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 13 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html</guid>
+      <dc:date>2015-07-13T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Catch Me If You ... Can't Do Otherwise</title>
       <link>http://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html</link>
@@ -2042,93 +2323,6 @@ class in &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;.&lt;/p
       <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/05/18/cookie-based-authentication.html</guid>
       <dc:date>2015-05-18T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Two Instruments of a Software Architect</title>
-      <link>http://www.yegor256.com/2015/05/13/two-instruments-of-software-architect.html</link>
-      <description>&lt;p&gt;A &lt;a href=&quot;/&quot;&gt;software architect&lt;/a&gt;
-is a key person in any software project, no matter how big or small it is.
-An architect is personally responsible for the technical outcome of
-the entire team. A good architect knows what needs to be done and how
-it&amp;#39;s going to be done, both architecturally and design-wise. In order to enforce
-this idea in practice, an architect uses two instruments:
-&lt;strong&gt;bugs and reviews&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/rear-window.jpg' style='width:600px;' alt='Rear Window (1954) by Alfred Hitchcock'/&gt;&lt;figcaption&gt;Rear Window (1954) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, we discourage any communication
-between developers unless they are formally attached to the tickets or tasks
-we&amp;#39;re working on. Read more details about this approach in
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The same principle applies to an architect. We don&amp;#39;t use meetings,
-stand-ups, Skype calls, IRC channels, or any other tools where information
-flies in the air and stays in our heads. Instead, we put everything in writing and talk
-only when we&amp;#39;re being explicitly asked to and paid to &amp;mdash; in tickets.&lt;/p&gt;
-
-&lt;h2 id=&quot;bugs&quot;&gt;Bugs&lt;/h2&gt;
-
-&lt;p&gt;With this in mind, a reasonable question may be asked: How can
-a software architect enforce his or her technical vision for the team
-if he can&amp;#39;t communicate with the team? Here is our answer:
-the architect must use &lt;strong&gt;bugs&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A bug is a ticket that has a reporter, a problem, and a resolver, just
-like &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;this post&lt;/a&gt; explains.
-Say an architect reviews an existing technical solution and finds
-something that contradicts his vision. When such a contradiction
-is found, it is a good candidate for a bug. Sometimes there is just
-not enough information in the code yet, and this is also a good candidate
-for a bug.&lt;/p&gt;
-
-&lt;p&gt;Thus, bugs reported by an architect serve as communication channels
-between him and the team. An architect doesn&amp;#39;t explain what needs to be done
-but asks the team to fix the product in a way he thinks is right.
-If the ticket resolver, a member of the team, disagrees with that approach,
-a discussion starts right in the ticket.&lt;/p&gt;
-
-&lt;p&gt;Sometimes an architect has doubts and needs to discuss a few possible solutions
-with the team or simply collect opinions. Again, we use bugs for that.
-But these bugs don&amp;#39;t report problems in the source code; instead, they
-complain about incomplete documentation. For example, say an architect
-doesn&amp;#39;t know which database to use, MongoDB or Cassandra, and needs more
-information about their pros and cons. A bug will sound like &amp;quot;our design documentation
-doesn&amp;#39;t have a detailed comparison of existing NoSQL databases; please fix it&amp;quot;.
-Whoever is assigned to this ticket will perform the comparison
-and update the documentation.&lt;/p&gt;
-
-&lt;p&gt;Bugs are a &lt;em&gt;proactive&lt;/em&gt; tool for an architect. Through reporting bugs,
-an architect influences the project and &amp;quot;dictates his will&amp;quot;.&lt;/p&gt;
-
-&lt;h2 id=&quot;reviews&quot;&gt;Reviews&lt;/h2&gt;
-
-&lt;p&gt;In our projects, every ticket is implemented in its own branch. When
-implementation is done, all tickets pass mandatory code peer review. In other
-words, developers review each others&amp;#39; code. An architect is not involved
-in this process.&lt;/p&gt;
-
-&lt;p&gt;But when peer review is done, each ticket goes to an architect and he
-has to give a final &amp;quot;OK&amp;quot; before the code goes to the &lt;code&gt;master&lt;/code&gt; branch through
-Rultor, our &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;merge bot&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is an architect&amp;#39;s opportunity for control. This is where he can
-prevent his vision from being destroyed. When the code created by a developer
-violates project design principles or any part of the entire technical idea,
-the architect says &amp;quot;No&amp;quot; and the branch is rejected.&lt;/p&gt;
-
-&lt;p&gt;Reviews are a &lt;em&gt;reactive&lt;/em&gt; instrument for an architect. Through strict and
-non-compromising code reviews, an architect enforces his design and architectural
-principles.&lt;/p&gt;
-
-&lt;p&gt;PS. Here is how an architect is supposed to report to the project manager:
-&lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;Three Things I Expect From a Software Architect&lt;/a&gt;&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/05/13/two-instruments-of-software-architect.html</guid>
-      <dc:date>2015-05-13T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
