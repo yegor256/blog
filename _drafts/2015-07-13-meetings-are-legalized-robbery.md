@@ -29,6 +29,8 @@ software design discipline ... and it's very _sad_ to see it.
 
 <!--more-->
 
+{% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
+
 A good software architect doesn't need meetings and **never** organizes them.
 
 Meetings demotivate, waste time, burn money, and degrade quality. But more about
@@ -146,7 +148,7 @@ I'm sure you know what I'm talking about and you've seen these
 agendas from your "architects." Anyway, my first step is done. I've scheduled an
 hour-and-a-half meeting where all programmers will be present. We'll have fun
 and drink coffee. We'll discuss the problem, hear all opinions, and find
-the best solution. We'll document it in that `schema.md` and 
+the best solution. We'll document it in that `schema.md` and
 get back to our tasks.
 
 Instead of circulating those _dry_ and _boring_ Git documents, we'll have a
@@ -243,7 +245,7 @@ and asking for a meeting because certain "aspects" are not clear?
 Did you study software engineering anywhere? Do you know how to work
 with technical documents? Are you capable of writing in a way that everybody
 else can understand and respond to you, also in writing? No? Now you want
-the project to not only pay you for the DB schema draft but to also 
+the project to not only pay you for the DB schema draft but to also
 pay me for talking to you and for a few other guys to sit next to us and text
 their friends? You basically want to rob the owner of this project.
 No more, no less.
