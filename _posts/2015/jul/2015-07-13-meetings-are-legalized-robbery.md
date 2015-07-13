@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meetings Are Legalized Robbery"
-date: 2015-07-03
+date: 2015-07-13
 tags: mgmt
 place: Washington, D.C.
 description:
