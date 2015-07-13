@@ -81,11 +81,5 @@ Also, a free man takes care of the food and security on his or her own.
 Is it more risky? Yes. Is it more stressful? Yes.
 But that's what freedom is about.
 
-There are many examples of this new working model on the market, for example
-Uber for taxi drivers, Rover for dog sitters, Instacart for personal shoppers,
-Upcounsel for attorneys, Upwork for programmers, etc. In all these services you may
-work as a free man, charging for results you provide, not for the time of
-your life you spend for some "master".
-
 Think about it.
 
