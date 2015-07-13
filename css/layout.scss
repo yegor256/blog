@@ -59,9 +59,12 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-a, a:visited {
+a {
   color: inherit;
   text-decoration: underline;
+  &:visited {
+    color: lighten($black, 15);
+  }
 }
 .foreign:before {
   font-size: .4 * $em;
