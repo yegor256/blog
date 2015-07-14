@@ -2,7 +2,8 @@
 layout: post
 title: "Wikipedia's Definition of a Software Bug Is Wrong"
 date: 2015-06-11
-tags: testing
+tags: bugs
+categories: jcg
 description:
   Wikipedia defines a software bug in a functional
   and behavioral way, ignoring maintainability and

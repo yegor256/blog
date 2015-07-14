@@ -2,6 +2,7 @@
 layout: post
 title: "Good Programmers Write Bug-Free Code, Don't They?"
 date: 2015-06-18
+categories: jcg
 tags: agile mgmt
 description:
   It's a very common misconception that good programmers

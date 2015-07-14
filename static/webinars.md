@@ -19,12 +19,21 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube WpP4rIhh5e4 video-left %}
+[August 5, 2015](https://plus.google.com/events/cftrih1qol7h1q8sdprcbuv0c9g)
+**Don't Create Objects That End With -ER**
+We'll talk about class naming principles and a very typical
+problem of misusing "-er" suffix for them, for example in
+Managers, Observers, Controllers, Filters, Helpers, etc. The
+discussion will be based on this post:
+[Don't Create Objects That End With -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
+
 {% youtube WSgP85kr6eU video-left %}
 [July 1, 2015](https://plus.google.com/events/cabfenpghh36tj413n2p0b4r3kk).
 **Why Getters-and-Setters Is An Anti-Pattern?**
-We'll discuss why Getters-and-Setters, a very popular design
+We discussed why Getters-and-Setters, a very popular design
 pattern in object oriented languages, is instead an anti-pattern
-and must be avoided. The discussion will be based on this blog post:
+and must be avoided. The discussion was be based on this blog post:
 [Getters/Setters. Evil. Period.]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
 {% youtube o3aNJX7AP3M video-left %}

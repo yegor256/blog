@@ -181,7 +181,7 @@ fail if it comes out lower than a certain pre-defined threshold
 {% badge /images/2015/06/software-project-sins-6.gif 250 %}
 
 What I mean by nonstop is without milestones and releases. No matter what kind of
-software you're writing, you must release and versionalize it frequently.
+software you're writing, you must release and [versionalize](http://semver.org/) it frequently.
 A project without a clear release history is an unmaintainable mess.
 
 This is mostly because maintainability is all about me being able to understand you
@@ -193,7 +193,9 @@ was doing a year ago, where it is going now, what its roadmap is, etc. All
 this information must be in the source code and, more importantly,
 in Git history.
 
-Git tags and GitHub release notes are two powerful instruments that provide
+[Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and
+GitHub [release notes](https://github.com/blog/1547-release-your-software)
+are two powerful instruments that provide
 me such information. Use them to their full extent. Also, don't forget that
 each binary version of the product must be available for immediate download.
 I have to be able to download version 0.1.3 and test it right now, even

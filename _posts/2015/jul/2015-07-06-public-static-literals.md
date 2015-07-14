@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Public Static Literals ... Are Not a Solution for Data Duplication"
-date: 2015-06-18
+date: 2015-07-06
 tags: oop java
 place: Palo Alto, CA
 description:
@@ -21,12 +21,15 @@ the same code in another place in my app. Actually, I may have
 it in many places. And every time, I have to use that `"UTF-8"` constant
 in order to create a `String` from a byte array. It would be very
 convenient to define it once somewhere and reuse it, just like Apache Commons
-is doing; see [`CharEncoding.UTF_8`]() (There are many other static
-literals there). These guys are setting a bad example! `Public` `static`
+is doing; see [`CharEncoding.UTF_8`](https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8)
+(There are many other static literals there).
+These guys are setting a bad example! `public` `static`
 "properties" are as bad as
 [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 
 <!--more-->
+
+{% picture /images/2015/07/the-shining.jpg 0 The Shining (1980) by Stanley Kubrick %}
 
 Here is what I'm talking about, specifically:
 

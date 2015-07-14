@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope itemtype="http://schema.org/WebPage">
   <head>
+    <base href="/"/>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
     <meta itemprop="author" content="{{ site.author }}" />
     <meta itemprop="breadcrumb" content="{{ site.url }}" />
     <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta itemprop="description" content="{{ page | description }}" />
-    <meta name="description" content="{{ page | description }}" />
+    <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="twitter:creator" content="@yegor256"/>
     <meta property="twitter:account_id" content="4503599630178231" />
-    <meta property="og:url" content="{{ site.url }}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    {% if page.og_image %}
+      <meta property="og:image:url" content="{{ site.url }}{{ page.og_image }}"/>
+    {% endif %}
     <meta property="og:site_name" content="yegor256"/>
-    <meta property="og:image" content="/favicon.ico?{{ site.data['hash'] }}"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="https://www.facebook.com/yegor.bugayenko"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
@@ -79,11 +85,12 @@
             <div class="entries"></div>
           </div>
         </div>
-        <div style="color:#b3d576;text-align:left;margin:2em 0;">
-          <img src="/images/2015/07/webinar-4.gif" style="width:64px;height:64px;float:left;margin-right:1em;" alt="webinar logo"/>
-          Don't miss the 4th webinar, on the 1st of July, at 11am PST; we'll discuss why
-          <a href="https://plus.google.com/events/cabfenpghh36tj413n2p0b4r3kk">Getters and Setters is an anti-pattern</a>
-          in object-oriented programming.
+        <div style="color:#48624b;text-align:left;margin:2em 0;">
+          <img src="/images/2015/08/webinar-5.gif" style="width:64px;height:64px;float:left;margin-right:1em;" alt="webinar logo"/>
+          Hey, don't miss the next webinar,
+          on the 5th of August, at 11am PST; we'll talk about
+          <a href="https://plus.google.com/events/cftrih1qol7h1q8sdprcbuv0c9g">Objects That End With -ER</a>
+          and why they are actually an anti-pattern.
         </div>
         {% raw %}
         <script id="search-results-template" type="text/mustache">

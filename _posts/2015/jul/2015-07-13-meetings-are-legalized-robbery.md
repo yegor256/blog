@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Meetings Are Legalized Robbery"
-date: 2015-07-03
-tags: mgmt
+date: 2015-07-13
+tags: mgmt architect
 place: Washington, D.C.
 description:
   Meetings are very popular but very ineffective
@@ -14,6 +14,7 @@ keywords:
   - why meetings suck
   - meetings in software team
   - how to organize meetings
+og_image: /images/2015/07/heat.jpg
 ---
 
 Software development is all about creativity, right? It's an art,
@@ -28,6 +29,8 @@ and we argue about the best ideas. There's no doubt meetings are the key compone
 software design discipline ... and it's very _sad_ to see it.
 
 <!--more-->
+
+{% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
 
 A good software architect doesn't need meetings and **never** organizes them.
 
@@ -146,7 +149,7 @@ I'm sure you know what I'm talking about and you've seen these
 agendas from your "architects." Anyway, my first step is done. I've scheduled an
 hour-and-a-half meeting where all programmers will be present. We'll have fun
 and drink coffee. We'll discuss the problem, hear all opinions, and find
-the best solution. We'll document it in that `schema.md` and 
+the best solution. We'll document it in that `schema.md` and
 get back to our tasks.
 
 Instead of circulating those _dry_ and _boring_ Git documents, we'll have a
@@ -243,7 +246,7 @@ and asking for a meeting because certain "aspects" are not clear?
 Did you study software engineering anywhere? Do you know how to work
 with technical documents? Are you capable of writing in a way that everybody
 else can understand and respond to you, also in writing? No? Now you want
-the project to not only pay you for the DB schema draft but to also 
+the project to not only pay you for the DB schema draft but to also
 pay me for talking to you and for a few other guys to sit next to us and text
 their friends? You basically want to rob the owner of this project.
 No more, no less.
@@ -271,7 +274,7 @@ was wrong in my DB schema draft and what I missed. And I want this to be
 documented somewhere. This is what makes me better, and this is how I learn
 and grow.
 
-## What About the "A-ha!" Moment?
+## What About the A-ha! Moment?
 
 Now, what about true creativity or that well-known "a-ha!" moment? Sometimes
 it's necessary to "think out loud" in order to invent something, right?
