@@ -10,12 +10,75 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Mon, 13 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Fools Don't Write Unit Tests</title>
+      <link>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</link>
+      <description>&lt;p&gt;&amp;quot;We don&amp;#39;t have time to write unit tests&amp;quot; or &amp;quot;We don&amp;#39;t have the
+budget for unit testing&amp;quot; are complaints I hear very often. Sometimes it
+may sound like, &amp;quot;We don&amp;#39;t use TDD, so that&amp;#39;s why there are no unit tests,&amp;quot; or even
+&amp;quot;TDD is too expensive for us now.&amp;quot; I&amp;#39;m sure you&amp;#39;ve heard this or even
+said it yourself. It doesn&amp;#39;t make any sense to me. I don&amp;#39;t get the
+logic. In my understanding, unit testing is not
+a product; it&amp;#39;s a &lt;strong&gt;tool&lt;/strong&gt;. You use tests to develop a product
+faster and better. How can you say you don&amp;#39;t have time to use
+the tool that makes your work faster? Let me show you how.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/ex-machina.jpg' style='width:600px;' alt='Ex Machina (2015) by Alex Garland'/&gt;&lt;figcaption&gt;Ex Machina (2015) by Alex Garland&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;TDD or not, a unit test is a unit test. Either you create it before
+the main piece of code or after it.&lt;/p&gt;
+
+&lt;p&gt;A unit test is a tool that helps you, a developer of software,
+&amp;quot;run&amp;quot; your stuff and see how it works. How else can you check if it works?
+When I hear, &amp;quot;I don&amp;#39;t have time for unit tests,&amp;quot; my next question is:
+&amp;quot;How did you test your code?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I seriously can&amp;#39;t understand how it is possible to write something
+and then not test it. Well, unless you&amp;#39;re paid monthly and nobody
+really cares about your deliverables. If you do care about the software
+you produce, you&amp;#39;re interested in seeing it in action, right?&lt;/p&gt;
+
+&lt;p&gt;So, how do you do this?&lt;/p&gt;
+
+&lt;p&gt;If it&amp;#39;s a one-page PHP website, you can probably run it locally on Apache,
+modify it on disk, and then &lt;code&gt;Cmd&lt;/code&gt;+&lt;code&gt;R&lt;/code&gt; many times. That&amp;#39;ll work for a primitive
+piece of code and only for you, a single developer of it. But I hear
+this &amp;quot;I don&amp;#39;t have time&amp;quot; argument from programmers working on enterprise
+systems. How do you guys test your code?&lt;/p&gt;
+
+&lt;p&gt;I would compare unit tests with OOP classes. You can design the entire application
+in a single class with a few thousand methods. You will save time on creating
+other classes, structuring them, thinking about connections between them, etc.
+It will be a single 20,000-line &lt;code&gt;.java&lt;/code&gt; file. And you&amp;#39;ll say that &amp;quot;you didn&amp;#39;t
+have time to create classes,&amp;quot; right? What would we say about such a product and the
+author of it? Right, we&amp;#39;d say he or she is just stupid. And it has nothing
+to do with time or budget. Such a programmer just doesn&amp;#39;t know how to use
+object-oriented programming tools, like encapsulation, inheritance, polymorphism,
+interfaces, method overloading, etc. It&amp;#39;s not about time or budget; it&amp;#39;s about
+skills and discipline.&lt;/p&gt;
+
+&lt;p&gt;The same is true for unit tests. If you create code without unit tests,
+it may work, just like that monster class with 20,000 lines, but the quality
+of your product will be very low. And not because you didn&amp;#39;t have time to
+write unit tests, but because you didn&amp;#39;t know how to do it.&lt;/p&gt;
+
+&lt;p&gt;So every time I hear, &amp;quot;I didn&amp;#39;t have time for unit testing,&amp;quot; I understand
+that you just didn&amp;#39;t know how and are trying to conceal that fact behind
+false excuses. It&amp;#39;s not professional, to say the least.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</guid>
+      <dc:date>2015-07-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Meetings Are Legalized Robbery</title>
       <link>http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html</link>
@@ -2061,268 +2124,6 @@ will contain.&lt;/p&gt;
       <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/05/21/avoid-software-outsourcing-disaster.html</guid>
       <dc:date>2015-05-21T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How Cookie-Based Authentication Works in the Takes Framework</title>
-      <link>http://www.yegor256.com/2015/05/18/cookie-based-authentication.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.takes.org'&gt;&lt;img src='http://www.takes.org/logo.png' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;When you enter your email and password into the Facebook login page,
-you get into your account. Then, wherever you go in the site,
-you always see your photo at the top right corner of the page. Facebook
-remembers you and doesn&amp;#39;t ask for the password again and again. This works
-thanks to &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_cookie&quot;&gt;HTTP cookies&lt;/a&gt;
-and is called &lt;strong&gt;cookie-based authentication&lt;/strong&gt;. Even though this mechanism
-often causes some security problems, it is very popular and simple.
-Here is how &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; makes it possible in a few lines of code.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, let&amp;#39;s see how it works. Moreover, let&amp;#39;s see how I believe it should work.&lt;/p&gt;
-
-&lt;p&gt;Step one: The user enters an email and password and clicks &amp;quot;submit&amp;quot;. The server
-receives a POST request with this information inside:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;POST / HTTP/1.1
-Host: www.facebook.com
-Content-Type: application/x-www-form-urlencoded
-
-email=me@yegor256.com&amp;amp;password=itisasecret&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The server matches the provided information with its records and decides what to do.
-If the information is invalid, it returns the same login page, asking you to
-enter it all again. If the information is valid, the server returns something
-like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
-Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Since the response status code is 303, the browser goes to the page
-specified in the &lt;code&gt;Location&lt;/code&gt; header and opens the front page of the site. This
-is what it sends to the server:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;GET / HTTP/1.1
-Host: www.facebook.com
-Cookie: user=me@yegor256.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The server gets my email from the &lt;code&gt;Cookie&lt;/code&gt;
-header and understands that it&amp;#39;s me again! No need to ask for the
-password once more. The server trusts the informatiom from the cookie.
-That&amp;#39;s it. That&amp;#39;s what cookie-based authentication is all about.&lt;/p&gt;
-
-&lt;h2 id=&quot;wait-...-what-about-security?&quot;&gt;Wait ... What About Security?&lt;/h2&gt;
-
-&lt;p&gt;Right, what about security? If the server trusts any browser request with
-a user email in the &lt;code&gt;Cookie&lt;/code&gt; header, anyone would be able to send my email
-from another place and get access to my account.&lt;/p&gt;
-
-&lt;p&gt;The first step to prevent this is to encrypt the email with a secret
-encryption key, known only to the server. Nobody except the server itself
-will be able to encrypt it the same way the server needs to decrypt it.
-The response would look like this, using an example of encryption
-by &lt;a href=&quot;https://en.wikipedia.org/wiki/XOR_cipher&quot;&gt;XOR cipher&lt;/a&gt; with &lt;code&gt;bamboo&lt;/code&gt; as a secret key:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
-Location: www.facebook.com
-Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is not the best encryption mechanism, though; for proper encryption, it&amp;#39;s better
-to use something stronger like &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_Encryption_Standard&quot;&gt;DES&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This all sounds good, but what if someone hijacks the traffic between the server and the
-browser and gets a hold of a properly encrypted email cookie? In this case,
-the thief would be able to use the same cookie for authentication even without
-knowing its content. The server would trust the information and let the
-person into my account. This type of attack is called
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot;&gt;man-in-the-middle&lt;/a&gt; (MITM).
-To prevent this from happening, we should use HTTPS and inform the browser
-that the cookie is sensitive and should never be returned to the server without
-SSL encryption. That&amp;#39;s done by an extra flag in the &lt;code&gt;Set-Cookie&lt;/code&gt; header:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
-Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com; Secure&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There is yet another type of attack associated with cookie-based authentication,
-based on a browser&amp;#39;s ability to expose all cookies associated with a web page
-to JavaScript executed inside it. An attacker may inject some malicious
-JavaScript code into the page (Don&amp;#39;t ask me how ... this will happen only
-if your entire HTML rendering is done wrong), and this code will gain access
-to the cookie. Then, the code will send the cookie somewhere else so
-the attacker can collect it. This type of attack is called
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;cross-site scripting&lt;/a&gt; (XSS).
-To prevent this, there is another flag for the &lt;code&gt;Set-Cookie&lt;/code&gt; header, called &lt;code&gt;HttpOnly&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 303 See Other
-Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com; Secure; HttpOnly&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The presence of this flag will tell the browser that this particular cookie can
-be transferred back to the server only through HTTP requests. JavaScript won&amp;#39;t
-have access to it.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-it&amp;#39;s-done-in-takes&quot;&gt;How It&amp;#39;s Done in Takes&lt;/h2&gt;
-
-&lt;p&gt;Here is how this cookie-based authentication mechanism is designed in the
-&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework. The entire framework consists of
-&lt;em&gt;takes&lt;/em&gt;, which receive requests and produce responses
-(&lt;a href=&quot;/2015/03/22/takes-java-web-framework.html&quot;&gt;this article&lt;/a&gt;
-explains the framework in more detail). When the request comes in,
-we should find the authentication cookie in the &lt;code&gt;Cookie&lt;/code&gt; header and translate
-it to the user credentials. When the response goes out, we should add the
-&lt;code&gt;Set-Cookie&lt;/code&gt; header to it with the encrypted user credentials. That&amp;#39;s it. Just
-these two steps.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say we have an account page that is supposed to show the current user&amp;#39;s
-balance:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkAccount&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Balances&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;balances&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Identity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// get it from request&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;html&amp;gt;Your balance is %s&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;balances&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;retrieve&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Right after the &lt;code&gt;request&lt;/code&gt; comes in, we should retrieve the identity of
-the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have the &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html&quot;&gt;&lt;code&gt;TkAuth&lt;/code&gt;&lt;/a&gt;
-decorator, which wraps an existing &lt;em&gt;take&lt;/em&gt;,
-decodes an incoming cookie, and adds a new &lt;code&gt;TkAuth&lt;/code&gt;
-header to the request with the user&amp;#39;s identification information:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Codec&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;codec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Again, when &lt;code&gt;TkAuth&lt;/code&gt; receives a request with an authenticating cookie inside,
-it asks &lt;code&gt;pass&lt;/code&gt; to decode the cookie and return either a
-valid &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Identity.html&quot;&gt;&lt;code&gt;Identity&lt;/code&gt;&lt;/a&gt;
-or &lt;code&gt;Identity.ANONYMOUS&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then, when the response goes back to the browser, &lt;code&gt;TkAuth&lt;/code&gt; asks &lt;code&gt;pass&lt;/code&gt;
-to encode the indentity back into a string and adds &lt;code&gt;Set-Cookie&lt;/code&gt; to the response.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html&quot;&gt;&lt;code&gt;PsCookie&lt;/code&gt;&lt;/a&gt;
-uses an instance of
-&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html&quot;&gt;&lt;code&gt;Codec&lt;/code&gt;&lt;/a&gt;
-in order to do these backward and forward encoding operations.&lt;/p&gt;
-
-&lt;p&gt;When our &lt;code&gt;TkAccount&lt;/code&gt; &lt;em&gt;take&lt;/em&gt; wants to retrieve a currently authenticated
-user identity from the request, it can use
-&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html&quot;&gt;&lt;code&gt;RqAuth&lt;/code&gt;&lt;/a&gt;,
-a utility decorator of &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/Request.html&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkAccount&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Identity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RqAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// other manipulations with the user&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code&gt;RqAuth&lt;/code&gt; decorator uses the header, added by &lt;code&gt;PsCookie&lt;/code&gt;, in order
-to authenticate the user and create an &lt;code&gt;Identity&lt;/code&gt; object.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-is-it-composable?&quot;&gt;How Is It Composable?&lt;/h2&gt;
-
-&lt;p&gt;This mechanism is indeed very extendable and &amp;quot;composable&amp;quot;. Let&amp;#39;s say we
-want to skip authentication during integration testing. Here is how:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFake&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* if running integration tests */&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsChain.html&quot;&gt;&lt;code&gt;PsChain&lt;/code&gt;&lt;/a&gt;
-implements &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Pass.html&quot;&gt;&lt;code&gt;Pass&lt;/code&gt;&lt;/a&gt;
-and attempts to authenticate the user by asking all encapsulated passes,
-one by one. The first one in the chain is
-&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html&quot;&gt;&lt;code&gt;PsFake&lt;/code&gt;&lt;/a&gt;.
-Using a single boolean argument in its constructor, it makes a decision whether
-to return a fake identity or return nothing. With just a single boolean
-trigger, we can switch off the entire authentication mechanism in the app.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say you want to authenticate users through Facebook OAuth. Here is how:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API key ...&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API secret ...&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;When a user clicks on the login link on your site, the browser goes to &lt;code&gt;facebook.com&lt;/code&gt;,
-where his or her identity is verified. Then, Facebook returns a &lt;code&gt;302&lt;/code&gt; redirection
-response with a &lt;code&gt;Location&lt;/code&gt; header set to the URL we provide in the login link.
-The link must include something like this: &lt;code&gt;?PsByFlag=PsFacebook&lt;/code&gt;. This will
-tell &lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html&quot;&gt;&lt;code&gt;PsByFlag&lt;/code&gt;&lt;/a&gt;
-that this request authenticates a user.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;PsByFlag&lt;/code&gt; will iterate through all encapsulated &amp;quot;pairs&amp;quot; and try to find the
-right one.
-&lt;a href=&quot;http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html&quot;&gt;&lt;code&gt;PsFacebook&lt;/code&gt;&lt;/a&gt;
-will be the first and the right one. It will connect to the Facebook API using the
-provided credentials and will retrieve all possible information about the user.&lt;/p&gt;
-
-&lt;p&gt;Here is how we can implement a logout mechanism:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TkAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// original application &amp;quot;take&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsFacebook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API key ...&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;... Facebook API secret ...&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PsByFlag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;PsLogout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSimpleName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsLogout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PsCookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcHex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcXOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CcPlain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, we can add &lt;code&gt;?PsByFlag=PsLogout&lt;/code&gt; to any link on the site and it will
-log the current user out.&lt;/p&gt;
-
-&lt;p&gt;You can see how all this works in a real application by checking out the
-&lt;a href=&quot;https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java&quot;&gt;&lt;code&gt;TkAppAuth&lt;/code&gt;&lt;/a&gt;
-class in &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/05/18/cookie-based-authentication.html</guid>
-      <dc:date>2015-05-18T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
