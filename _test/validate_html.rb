@@ -5,12 +5,15 @@ include W3CValidators
 @validator = MarkupValidator.new
 file = ARGV[0]
 results = ''
+attempt = 0
 3.times do
   begin
     results = @validator.validate_file(file)
     break
   rescue Exception => e
-    puts 'failure, lets try again'
+    puts "failure, lets try again, attempt ##{attempt}"
+    attempt += 1
+    raise 'W3C problem' if attempt > 2
   end
 end
 if results.errors.length > 0
