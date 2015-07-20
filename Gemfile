@@ -3,7 +3,7 @@
 #
 source 'https://rubygems.org'
 gem 'jekyll', '2.4.0'
-gem 'sass', '3.14.16'
+gem 'sass', '3.4.16'
 gem 'jekyll-sass', '1.2.2'
 gem 'jekyll-plantuml', '1.0.2'
 gem 'jekyll-press', '0.2.1'
