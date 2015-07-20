@@ -11,7 +11,7 @@ attempt = 0
     results = @validator.validate_file(file)
     break
   rescue Exception => e
-    puts "failure, lets try again, attempt ##{attempt}"
+    puts "failure, lets try again, attempt ##{attempt}: #{e}"
     attempt += 1
     raise 'W3C problem' if attempt > 2
   end
