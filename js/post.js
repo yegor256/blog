@@ -114,6 +114,12 @@ $(
       .attr('defer', 'defer')
       .attr('async', 'async')
       .appendTo('head');
+  }
+);
+
+$(
+  function() {
+    'use strict';
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');

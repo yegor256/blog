@@ -12,8 +12,8 @@ exclude_from_search: true
     <header itemprop="name">
       <h1>{{ page.title }}</h1>
     </header>
-    <main role="main">
-      <article role="article" itemprop="articleBody">
+    <main>
+      <article itemprop="articleBody">
         {% for post in page.posts %}
           {{ post | tagged }}
         {% endfor %}

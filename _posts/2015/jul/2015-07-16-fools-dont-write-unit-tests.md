@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fools Don't Write Unit Tests"
-date: 2015-07-18
+date: 2015-07-16
 tags: tdd
 place: Palo Alto, CA
 description:
@@ -28,10 +28,12 @@ the tool that makes your work faster? Let me show you how.
 
 <!--more-->
 
+{% picture /images/2015/07/ex-machina.jpg 0 Ex Machina (2015) by Alex Garland %}
+
 TDD or not, a unit test is a unit test. Either you create it before
 the main piece of code or after it.
 
-A unit test is a tool that helps you, a developer of software, 
+A unit test is a tool that helps you, a developer of software,
 "run" your stuff and see how it works. How else can you check if it works?
 When I hear, "I don't have time for unit tests," my next question is:
 "How did you test your code?"
