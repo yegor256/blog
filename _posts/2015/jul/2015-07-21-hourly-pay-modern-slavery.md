@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hourly Pay Is Modern Slavery"
-date: 2015-07-18
+date: 2015-07-21
 tags: mgmt
 place: Palo Alto, CA
 description:
@@ -27,6 +27,8 @@ ancient slaves in our offices and in front of our monitors?
 
 <!--more-->
 
+{% picture /images/2015/07/gladiator.jpg 0 Gladiator (2000) by Ridley Scott %}
+
 {% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1781252521&linkCode=as2&tag=yegor256com-20&linkId=XUYP4NCA2TZVDHBT %}
 
 This post is partially provoked by a recently published semi-historical book
@@ -51,7 +53,7 @@ me to do. In exchange, I will get paychecks every few weeks, which will
 cover my expenses.
 
 Doesn't it look similar to what I just said above about ancient slaves? The
-master (a.k.a. CEO) tells me what to do and punishes me at will; 
+master (a.k.a. CEO) tells me what to do and punishes me at will;
 in exchange, he gives me food and safety.
 
 The problem here is not about punishment.
