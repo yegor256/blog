@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Checked vs Unchecked Exceptions, the Debate Is Over?"
-date: 2015-07-25
+date: 2015-07-28
 tags: oop java
 description:
   While most programmers think that checked exceptions in Java
@@ -24,6 +24,8 @@ opposite &mdash; unchecked exceptions is a mistake. Moreover, I believe
 that multiple exception types is a bad idea too.
 
 <!--more-->
+
+{% picture /images/2015/07/true-romance.jpg 0 True Romance (1993) by Tony Scott %}
 
 Let me first explain how I understand exceptions in object-oriented programming.
 Then, I'll compare my understanding with a "traditional" approach and
