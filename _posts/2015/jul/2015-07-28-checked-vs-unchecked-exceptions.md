@@ -3,6 +3,7 @@ layout: post
 title: "Checked vs. Unchecked Exceptions: The Debate Is Not Over"
 date: 2015-07-28
 tags: oop java
+place: Sunnyvale, CA
 description:
   While most programmers think checked exceptions in Java
   are a mistake, I'm of the opposite opinion &mdash; unchecked
