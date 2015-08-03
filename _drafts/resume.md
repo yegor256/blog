@@ -4,7 +4,9 @@ title: "Pimp Your Resume"
 date: 2015-05-25
 tags: mgmt
 description:
-  ...
+  There are a few simple hints on making a resume of
+  a software developer sound bright, convincing, and
+  right to the point.
 keywords:
   - how to write a resume
   - resume programmer

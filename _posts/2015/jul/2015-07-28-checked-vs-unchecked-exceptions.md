@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Checked vs. Unchecked Exceptions: The Debate Is Over, Right?"
-date: 2015-07-25
+title: "Checked vs. Unchecked Exceptions: The Debate Is Not Over"
+date: 2015-07-28
 tags: oop java
+place: Sunnyvale, CA
 description:
   While most programmers think checked exceptions in Java
   are a mistake, I'm of the opposite opinion &mdash; unchecked
@@ -20,14 +21,16 @@ Do we need checked exceptions at all? The
 is over, isn't it?
 Not for me. While most object-oriented languages don't have them, and most programmers
 think checked exceptions are a Java mistake, I believe in the
-opposite &mdash; unchecked exceptions are the mistake. Moreover, I believe
+opposite &mdash; unchecked exceptions are the **mistake**. Moreover, I believe
 multiple exception types are a bad idea too.
 
 <!--more-->
 
+{% picture /images/2015/07/true-romance.jpg 0 True Romance (1993) by Tony Scott %}
+
 Let me first explain how I understand exceptions in object-oriented programming.
 Then I'll compare my understanding with a "traditional" approach, and
-we'll discusss the differences. So, my understanding first.
+we'll discuss the differences. So, my understanding first.
 
 Say there is a method that saves some binary data to a file:
 
