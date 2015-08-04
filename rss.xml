@@ -10,12 +10,314 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 28 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Nine Steps to Start a Software Project</title>
+      <link>http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html</link>
+      <description>&lt;p&gt;Agile or not, a software project starts with a requirements analysis
+and definition. We basically define what needs to be done somehow, be it on a
+piece of napkin or a 100-page Word document. The next step is to
+turn this into a working piece of software as fast as possible and by spending as
+few dollars as possible. Ideally, this prototyping takes a week
+and is made by an architect working &lt;strong&gt;solo&lt;/strong&gt;.
+Once the &amp;quot;skeleton&amp;quot; is ready, we start putting software &amp;quot;meat&amp;quot; on it.
+We recruit a team of programmers for that or outsource it. I see nine important steps
+in the skeleton creation part; let me show you them one by one.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/ying-xiong.jpg' style='width:600px;' alt='Ying xiong (2002) by Yimou Zhang'/&gt;&lt;figcaption&gt;Ying xiong (2002) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s use some examples to make this more illustrative. Let&amp;#39;s say I&amp;#39;m a
+software architect and the project is a &amp;quot;Google killer.&amp;quot; We&amp;#39;re hired to
+create a new search engine, and my job is to turn requirements into
+a prototype, a.k.a. a skeleton or a proof of concept. This is what I have
+as an input (let&amp;#39;s say it&amp;#39;s a piece of napkin ... what else would it be
+for a Google killer, right?):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Each page is ranked by the number of mentions in
+social networks like Twitter, LinkedIn, Facebook, etc.
+The more mentions it has, the higher the rank and the
+higher its position in the search results page.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Seems like a doable project to me, and the requirements document is
+clear enough. It doesn&amp;#39;t say anything about performance, but I
+can assume that it has to be as fast as Google. The same goes
+for scalability, stress resilience, etc.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not going to discuss how the software is created in a specific
+technical stack. That&amp;#39;s not important for this article. What&amp;#39;s important now
+is how my programming work will be &amp;quot;wrapped.&amp;quot; In other words, what will
+I hand off to the team of programmers after a week of hard work &amp;mdash;
+what is my product, or more formally, my &lt;strong&gt;deliverables&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, let&amp;#39;s assume I managed to create a piece of software and it works.&lt;/p&gt;
+
+&lt;h2 id=&quot;decisions-and-alternatives&quot;&gt;Decisions and Alternatives&lt;/h2&gt;
+
+&lt;p&gt;First of all, I have to document my key technical decisions and their
+alternatives. &lt;a href=&quot;http://www.teamed.io&quot;&gt;We&lt;/a&gt; usually work in GitHub, and the best documentation
+media is the &lt;code&gt;README.md&lt;/code&gt; file in the root directory of the repo. I just
+put my text there in a plain Markdown format. That&amp;#39;s enough for a good
+technical document &amp;mdash; it has to be short; that&amp;#39;s important.&lt;/p&gt;
+
+&lt;p&gt;For each decision I made, there has to be at least one alternative
+that I considered and rejected. There are two items at the top of my list:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Apache Lucene is a search engine. It is popular,
+  mature enough, scalable, and written in Java. Alternatives
+  are Solr, Sphinx, Gigablast, and many others.
+Java 8 is a programming language, and JVM is a
+  runtime platform. I know how they work, and the team
+  has enough experience with them. Alternatives are
+  Ruby, Python, Go, Scala, and tons of others.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;These decisions are very high-level, but I still need to document them. As you
+see, I&amp;#39;m not explaining in details why the alternatives were rejected, and it&amp;#39;s
+my choice. If someone questions my decisions in the future, they may
+say that the alternatives were not analyzed properly. It will be clear whose fault
+it was &amp;mdash; mine. So I&amp;#39;m taking full responsibility for these two
+choices I&amp;#39;ve made: Lucene and Java 8.&lt;/p&gt;
+
+&lt;p&gt;Yet another item to the list:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Three modules make up the app: UI, scraper,
+  and analyzer. They are fully decoupled and
+  communicate strictly through Lucene. I don&amp;#39;t
+  see any alternatives.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, I attach a simple diagram to illustrate my decision:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src='/uml/19b92d0465e2e819ffcf88cf46c6e333.svg' alt='UML' style='width:100%;'/&gt;&lt;/p&gt;
+
+&lt;p&gt;As you see, in this case, I totally ignored all alternatives. I didn&amp;#39;t even
+mention them. Again, I take full responsibility for that; I said,
+&amp;quot;I don&amp;#39;t see any alternatives.&amp;quot; If, later, a better alternative is
+discovered, it will be obvious why we overlooked it and whose fault
+it was. It&amp;#39;s not only about punishment but about discipline and
+traceability of decisions. Each decision must be traceable to the person
+who made it. This helps us avoid bad decisions in the future and
+makes the entire project more maintainable and transparent.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s add one more decision to the list:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Takes Framework is used for UI. It helps keep our
+  code truly object-oriented, testable, fast, and
+  decoupled from the data model. Alternatives:
+  - Spring: It is big, complex, and ugly
+  - Play: Similar to Spring, big and ugly
+  - Spark: Not as clear as Takes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case, I documented the alternatives and gave my reasons why
+they are not good for us. As you see, the reasons are very biased; I
+basically expressed my personal opinions about these three
+frameworks and definitely gave preference to my own open
+source &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework. Is it good? No, it&amp;#39;s not.
+But I&amp;#39;m the &lt;a href=&quot;/&quot;&gt;architect&lt;/a&gt;,
+and I do what I think is right for the project.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m trying to show that the point of this documentation is for
+me, the architect, to explain my way of thinking &amp;mdash; no matter how bad,
+biased, or irrational it was. I have to write my decisions down and let the
+project know them all.&lt;/p&gt;
+
+&lt;p&gt;I would suggest you keep the number of documented decisions somewhere
+between &lt;strong&gt;four and 12&lt;/strong&gt;. If there are fewer than four, I probably forgot
+to document something important. More than 12 &amp;mdash; I&amp;#39;m documenting
+too many non-important decisions. I should use other media for that,
+like JavaDoc blocks or responsive classes.&lt;/p&gt;
+
+&lt;h2 id=&quot;concerns&quot;&gt;Concerns&lt;/h2&gt;
+
+&lt;p&gt;The next chapter in the &lt;code&gt;README.md&lt;/code&gt; file has to explain how exactly I
+managed to address all concerns expressed in the initial requirements.
+I mentioned above that it goes without saying that our system must
+be as fast and scalable as Google. Thus, let&amp;#39;s say there are two &amp;quot;concerns&amp;quot; &amp;mdash;
+performance and scalability.&lt;/p&gt;
+
+&lt;p&gt;As a software architect, I must address them both. In other words, I have to
+prove that my solution is fast and scalable. Maybe it&amp;#39;s not, but if I believe
+it is, I have to explain why I think so. I can&amp;#39;t be quiet about the concerns. Here
+is what I would say about performance:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The system is as fast as the Lucene search engine, while
+Lucene is rather fast even with large amounts of data.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And this one is about scalability:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The bottleneck is in Lucene, and it is scalable
+vertically. Not sure about horizontal scalability.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you see, I&amp;#39;m trying to be honest and tell the truth. We&amp;#39;ll be able to
+review these statements later and decide whether I was right or wrong. But
+we need to have my answers to all concerns expressed in the requirements.&lt;/p&gt;
+
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
+
+&lt;p&gt;The next section is about assumptions I&amp;#39;ve made while working with the
+prototype. We usually make assumptions when we don&amp;#39;t have enough factual
+information, and we basically fill the gaps. There is nothing wrong with
+it, but we have to document which gaps were filled and why.&lt;/p&gt;
+
+&lt;p&gt;How about these two assumptions:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. I assume that social platforms won&amp;#39;t block our
+   calls and will provide counters for all pages.
+2. I assume that Lucene will be enough for both
+   indexing and data storage, so we won&amp;#39;t need a
+   database engine.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I made these assumptions without proper analysis of the situation. I don&amp;#39;t
+know whether Twitter will be happy to see millions of requests every hour
+coming from our server or not. Maybe it will ban us; I don&amp;#39;t know. I don&amp;#39;t
+have to evaluate this and find an exact answer. I just made an assumption
+and documented it.&lt;/p&gt;
+
+&lt;p&gt;Will it be enough to have Lucene only, without any additional data persistence
+layer? I don&amp;#39;t know, but I &lt;em&gt;hope&lt;/em&gt; so. I don&amp;#39;t have time to do a detailed
+analysis of our entire data model and its potential future requirements. I just
+make an assumption and call it a day.&lt;/p&gt;
+
+&lt;p&gt;If later, during the handoff, the project sponsor says this assumption
+exposes too much risk for the project, we&amp;#39;ll do a better analysis. For now, my job
+is to document what I see and move on. Remember, I have just a week of time.&lt;/p&gt;
+
+&lt;h2 id=&quot;risks&quot;&gt;Risks&lt;/h2&gt;
+
+&lt;p&gt;Now I list all potential problems I forsee and estimate
+their probability and impact. Let me show you an example first:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Lucene may not be able to handle billions of documents [6x9]
+2. Social platforms will ban our requests [8x9]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The first number in square brackets is the probability and the second one
+is the impact, on a 0 to 9 scale. If both numbers are nine, it&amp;#39;s not a risk
+anymore; it&amp;#39;s a fact. If both numbers are zero, we can simply ignore this
+risk.&lt;/p&gt;
+
+&lt;p&gt;I listed just two, but in a real system there should be somewhere
+between four and 12 risks. Too many risks is a sign that the prototype is
+not focused enough, while too few is due to a lack of attention.&lt;/p&gt;
+
+&lt;h2 id=&quot;continuous-integration&quot;&gt;Continuous Integration&lt;/h2&gt;
+
+&lt;p&gt;Now I have to make sure the product is &amp;quot;wrapped&amp;quot; in continuous integration,
+which is a &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;critical component&lt;/a&gt;
+of any software package. I have to configure it, preferably
+&lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;in the cloud&lt;/a&gt;,
+and make sure the build is clean.&lt;/p&gt;
+
+&lt;p&gt;It is also important to make sure the continuous integration pipeline
+covers all critical areas, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Building on multiple platforms, such as Linux, Windows, and Mac.&lt;/li&gt;
+&lt;li&gt;Running integration tests and unit tests.&lt;/li&gt;
+&lt;li&gt;Analyzing statically.&lt;/li&gt;
+&lt;li&gt;Collecting test coverage.&lt;/li&gt;
+&lt;li&gt;Generating documentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The stricter the pipeline, the better it is for the project. At this stage, my job,
+as an architect, is to build a &amp;quot;guard wall&amp;quot; around the product to protect
+it against future &lt;strong&gt;chaos&lt;/strong&gt;. The chaos will come from programmers making
+changes through pull requests. They will care much less about the entire
+quality of the product than I do, and that&amp;#39;s why I have to incorporate tools
+that keep the situation under control.&lt;/p&gt;
+
+&lt;p&gt;My goal is to make the continuous integration pipeline as &lt;strong&gt;fragile&lt;/strong&gt; as possible.
+Any minor error should lead to a build failure. Of course, I&amp;#39;m talking about
+reproducible failures. The build should fail in a predictable way, not
+sporadically.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-analysis&quot;&gt;Static Analysis&lt;/h2&gt;
+
+&lt;p&gt;This is yet another &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;critical component&lt;/a&gt;
+of any software project. You have to analyze the quality of code statically.
+In the most primitive approach, a static analysis will check the formatting
+of your source code and fail the build when that formatting is broken. However,
+in a more advanced variant, static analysis will catch many important bugs.&lt;/p&gt;
+
+&lt;p&gt;It is called &amp;quot;static&amp;quot; becuase it doesn&amp;#39;t require the software to be running.
+To the contrary, unit tests validate software quality in runtime
+by running the app.&lt;/p&gt;
+
+&lt;p&gt;There are many static analysis tools, for almost every language and format.
+I strongly recommend you use them. Moreover, I recommend you configure them
+as strictly as possible in order to make the build as fragile as you can.
+The fragility of the build is a key success factor in software development.&lt;/p&gt;
+
+&lt;h2 id=&quot;test-coverage&quot;&gt;Test Coverage&lt;/h2&gt;
+
+&lt;p&gt;Test coverage must be collected on every build and, at the very least, reported. In
+an ideal scenario, low test coverage must fail the build. Let&amp;#39;s say I set
+the required percentage of coverage to 75 percent (it&amp;#39;s actually a more complex metric, but
+in a primitive approach just one number is enough). If someone introduces
+a new class without a unit test, the coverage percentage goes down and
+the build breaks.&lt;/p&gt;
+
+&lt;p&gt;My job, as an architect creating a prototype, is to make sure the coverage
+is calculated on every build and is under control &amp;mdash; it can&amp;#39;t go
+lower than the threshold I set.&lt;/p&gt;
+
+&lt;p&gt;No matter how low the threshold is, what matters is whether it is under
+control or not.&lt;/p&gt;
+
+&lt;h2 id=&quot;continuous-delivery&quot;&gt;Continuous Delivery&lt;/h2&gt;
+
+&lt;p&gt;This is the final step before the handoff. I have to configure a continuous
+delivery pipeline to make sure the product is packaged and deployed in
+one click. This is a very important &amp;mdash; critically important &amp;mdash; step. Without it,
+everything done before and the piece of software itself is just a collection
+of files. A piece of software is a product when it is packagable and
+deployable in one click.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Pipeline&amp;quot; means that there are a number of elements chained sequentially;
+for a Java application, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run automated build (the same as in continuous integration)&lt;/li&gt;
+&lt;li&gt;Package JAR file&lt;/li&gt;
+&lt;li&gt;Upload JAR file to repository&lt;/li&gt;
+&lt;li&gt;Build JavaDoc site&lt;/li&gt;
+&lt;li&gt;Upload JavaDoc site to Amazon S3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;#39;m using &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt; to
+automate the entire pipeline and simplify its start, stop, and logging. I just
+post a &amp;quot;please release now&amp;quot; message to a GitHub ticket, and the product
+is packaged and deployed in a few minutes.&lt;/p&gt;
+
+&lt;h2 id=&quot;acceptance&quot;&gt;Acceptance&lt;/h2&gt;
+
+&lt;p&gt;The last step is the handoff &amp;mdash; I have to present my solution to the
+project manager, the sponsor of the project, and the team. Everybody has
+to accept it. It doesn&amp;#39;t mean they will like it, and that&amp;#39;s not the goal. The
+goal is to deliver a complete solution, with risks, assumptions, decisions
+documented, continuous integration configured, static analysis enforced, etc.
+If my solution won&amp;#39;t be good enough for their criteria, they will change
+the architect and try again.&lt;/p&gt;
+
+&lt;p&gt;My objective is &lt;strong&gt;not&lt;/strong&gt; to satisfy them but to do the best I can according
+to the requirements and my professional understanding of the problem and
+business domains. I wrote about this some time ago:
+&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;A Happy Boss Is a False Objective&lt;/a&gt;.
+Again, my objective is not to make them happy. Instead, my objective is to make
+a perfect prototype, the way I understand the word &lt;strong&gt;perfect&lt;/strong&gt;. If I fail,
+I fail. The project will get another architect and try again.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s it. The skeleton is ready, and my job is done.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html</guid>
+      <dc:date>2015-08-04T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Checked vs. Unchecked Exceptions: The Debate Is Not Over</title>
       <link>http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</link>
@@ -1907,82 +2209,6 @@ the progress and make corrections.&lt;/p&gt;
       <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</guid>
       <dc:date>2015-06-02T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>There Can Be Only One Primary Constructor</title>
-      <link>http://www.yegor256.com/2015/05/28/one-primary-constructor.html</link>
-      <description>&lt;p&gt;I suggest classifying class constructors in OOP as &lt;strong&gt;primary&lt;/strong&gt;
-and &lt;strong&gt;secondary&lt;/strong&gt;. A primary constructor is the one that constructs
-an object and encapsulates other objects inside it. A secondary
-one is simply a preparation step before calling a primary constructor and is not
-really a constructor but rather an introductory layer in front of a real
-constructing mechanism.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/the-matrix-agent-smith.jpg' style='width:600px;' alt='The Matrix (1999) by The Wachowski Brothers'/&gt;&lt;figcaption&gt;The Matrix (1999) by The Wachowski Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is what I mean:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cash&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currency&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// secondary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// secondary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;USD&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// primary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// methods here&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There are three constructors in the class &amp;mdash; only one is
-&lt;em&gt;primary&lt;/em&gt; and the other two are &lt;em&gt;secondary&lt;/em&gt;. My definition of a
-secondary constructor is simple: It doesn&amp;#39;t do anything besides
-calling a primary constructor, through &lt;code&gt;this(..)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;My point here is that a
-&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;properly designed class&lt;/a&gt;
-must have only one primary constructor, and it should be declared
-after all secondary ones. Why? There is only one reason
-behind this rule: It helps eliminate code duplication.&lt;/p&gt;
-
-&lt;p&gt;Without such a rule, we may have this design for our class:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cash&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currency&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// primary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;USD&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// primary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;USD&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Cash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// primary&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// methods here&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;There&amp;#39;s not a lot of code here, but the duplication is massive and ugly;
-I hope you see it for yourself.&lt;/p&gt;
-
-&lt;p&gt;By strictly following this suggested rule, all classes will have
-a single entry point (point of construction), which is a primary
-constructor, and it will always be easy to find because it stays
-below all secondary constructors.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/05/28/one-primary-constructor.html</guid>
-      <dc:date>2015-05-28T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
