@@ -39,7 +39,6 @@ jekyll-press:
   exclude:
     - /rss.xml
     - /rss-jcg.xml
-    - /icons/icons.css
 
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index

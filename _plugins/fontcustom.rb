@@ -18,11 +18,11 @@ module Jekyll
         fontcustom compile ${dir}/_glyphs --output=${dir}/css \
           --font-name=icons --templates=scss \
           --no-hash --force --autowidth
-        mkdir -p ${dir}/_site/icons
-        mv ${dir}/css/icons.* ${dir}/_site/icons
+        mkdir -p ${dir}/_site/css
+        mv ${dir}/css/icons.* ${dir}/_site/css
       ")
       ['svg', 'ttf', 'woff', 'eot'].each do |ext|
-        site.static_files << Jekyll::FontcustomFile.new(site, site.dest, '/', "icons/icons.#{ext}")
+        site.static_files << Jekyll::FontcustomFile.new(site, site.dest, '/', "css/icons.#{ext}")
       end
     end
   end
