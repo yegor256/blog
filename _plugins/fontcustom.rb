@@ -19,7 +19,7 @@ module Jekyll
           --font-name=icons --templates=scss \
           --no-hash --force --autowidth
         mkdir -p ${dir}/_site/icons
-        cp ${dir}/css/icons.* ${dir}/_site/icons
+        mv ${dir}/css/icons.* ${dir}/_site/icons
       ")
       ['svg', 'ttf', 'woff', 'eot'].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, '/', "icons/icons.#{ext}")
