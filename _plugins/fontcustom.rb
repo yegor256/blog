@@ -15,11 +15,13 @@ module Jekyll
       system("
         set -e
         dir=$(pwd)
-        fontcustom compile ${dir}/_glyphs --output=${dir}/_site/icons \
-          --font-name=icons --templates=css \
+        fontcustom compile ${dir}/_glyphs --output=${dir}/css \
+          --font-name=icons --templates=scss \
           --no-hash --force --autowidth
+        mkdir -p ${dir}/_site/icons
+        cp ${dir}/css/icons.* ${dir}/_site/icons
       ")
-      ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
+      ['svg', 'ttf', 'woff', 'eot'].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, '/', "icons/icons.#{ext}")
       end
     end
