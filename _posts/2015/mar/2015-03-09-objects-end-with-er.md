@@ -42,6 +42,8 @@ and that the manager is the smart procedure doing the real work".
 
 I totally agree but would like to add a few words to this.
 
+{% youtube WpP4rIhh5e4 video-left %}
+
 I mentioned already in [Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 that a good object name is not a job title, but I didn't explain why I think so.
 Besides that, in [Utility Classes Have Nothing to Do With Functional Programming]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}),
