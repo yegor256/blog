@@ -22,45 +22,45 @@ scripts:
   - /js/about.js
 ---
 
-I'm Yegor Bugayenko, a programmer and an architect, passionate
-about software quality. Here are a few facts about myself:
+I'm Yegor Bugayenko, a programmer, a founder and an investor.
 
- * I write mostly in Java, but also in Ruby and JavaScript.
-   I'm a co-founder and CTO of [teamed.io](http://www.teamed.io/) ([**hire us!**](mailto:hire@teamed.io)),
-   a software development company with an absolutely unique
-   methodology called [XDSD](http://www.xdsd.org).
+As a **programmer** I [write](https://github.com/yegor256)
+mostly in Java, but also in Ruby, PHP and JavaScript.
+I'm a founder and a lead architect of
+[takes.org](http://www.takes.org),
+[jcabi.com](http://www.jcabi.com),
+[rultor.com](http://www.rultor.com),
+[qulice.com](http://www.qulice.com),
+[s3auth.com](http://www.s3auth.com),
+and
+[stateful.co](http://www.stateful.co). I'm using
+IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
+I like to read, here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
+about software engineering.
+I'm an Oracle Certified Master, Java EE 6 Enterprise Architect
+([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
+Besides that, I'm a proud holder of
+[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
+[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
+[OCUP](http://www.omg.org/uml-certification/).
 
- * I'm a certified Project Management Professional
-  ([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx))
-  and Oracle Certified Master, Java EE 6 Enterprise Architect
-  ([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
-  Besides that, I'm a proud holder of
-  [ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
-  [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965),
-  [OCUP](http://www.omg.org/uml-certification/),
-  [RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
-  [PRINCE2 Foundation](http://www.prince2.com/),
-  [MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf) and
-  [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
+As a **founder** and CTO at [Teamed.io](http://www.teamed.io/) ([**hire us!**](mailto:hire@teamed.io)),
+a software development company with an absolutely unique
+methodology called [XDSD](http://www.xdsd.org),
+I'm an author of a few patent applications, including
+[Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)
+and
+[Method for Software Cost Estimating Using Scope Champions](https://www.google.com/patents/US20100042968).
+I'm a certified Project Management Professional
+([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx)).
+Besides that, I'm a proud holder of
+[RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
+[PRINCE2 Foundation](http://www.prince2.com/),
+[MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf) and
+[COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
- * I'm an author of a few patent applications, including
-   [Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)
-   and
-   [Method for Software Cost Estimating Using Scope Champions](https://www.google.com/patents/US20100042968)
-
- * I'm a founder and a lead architect of
-   [takes.org](http://www.takes.org),
-   [jcabi.com](http://www.jcabi.com),
-   [rultor.com](http://www.rultor.com),
-   [qulice.com](http://www.qulice.com),
-   [s3auth.com](http://www.s3auth.com),
-   and
-   [stateful.co](http://www.stateful.co). All of these projects are open
-   source, you can see the code style we respect. I'm using
-   IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
-
- * I like to read, here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
-   about software engineering.
+As an **investor** at [SeedRamp.com](http://www.seedramp.com) I have
+no results yet :)
 
 Once in a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
@@ -80,6 +80,7 @@ subscribers in my list).
 
 You can always [unsubscribe](/unsubscribe.html).
 
+<!--
 Some of my articles are also published at (in alphabetic order):
 
 <a href="http://yegor256.blogspot.com/">
@@ -106,5 +107,6 @@ Some of my articles are also published at (in alphabetic order):
   <img alt="tumblr.com" src="/images/about/tumblr.png"
     title="Yegor Bugayenko at Tumblr"
     class="about-badge"/></a>
+-->
 
 <script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
