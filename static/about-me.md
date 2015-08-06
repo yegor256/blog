@@ -44,7 +44,7 @@ Besides that, I'm a proud holder of
 [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
 [OCUP](http://www.omg.org/uml-certification/).
 
-As a **founder** and CTO at [Teamed.io](http://www.teamed.io/) ([**hire us!**](mailto:hire@teamed.io)),
+As a **founder** and CTO at [Teamed.io](http://www.teamed.io/),
 a software development company with an absolutely unique
 methodology called [XDSD](http://www.xdsd.org),
 I'm an author of a few patent applications, including
