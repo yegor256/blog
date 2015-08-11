@@ -19,9 +19,11 @@ Here is a simple principle of naming methods in object-oriented programming:
 it's a **verb** if it **manipulates**, it's a **noun** if it **builds**.
 That's it. Nothing in between. Methods like
 `saveFile()` or `getTitle()` don't fit and must be renamed and refactored.
-Moreover, methods that "manipulate" must always return `void`, for example `print()`
-or `save()`.
+Moreover, methods that "manipulate" must always return `void`,
+for example `print()` or `save()`.
 
 <!--more-->
 
-The principle is
+There are two reasons behind this principle.
+
+First, when an object builds
