@@ -3,6 +3,7 @@ layout: post
 title: "method names"
 date: 2015-05-24
 tags: oop java
+place: Kiev, Ukraine
 description:
   Giving good names to methods in object-oriented programming
   is a tough job, which can be done right if you follow this
