@@ -16,13 +16,14 @@ keywords:
   - single return in method
 ---
 
-This debate is very old, but I have something to say too. The question
+This [debate](http://programmers.stackexchange.com/questions/118703)
+is very old, but I have something to say too. The question
 is whether a method may have multiple `return` statements or always
 one? The answer may surprise you &mdash; in a pure object-oriented
-world a method must have a single return statement and nothing else.
+world a method **must** have a **single** `return` statement and **nothing** else.
 Yes, just a `return` statement and that's it. No other operators
 or statements. Just `return`. All arguments in favor of multiple
-`return`-s are just aginst the very idea of object-oriented design.
+`return`-s are just aginst the very idea of object-oriented programming.
 
 <!--more-->
 
