@@ -230,7 +230,7 @@ The only question we still have unanswered is what is that "copy"
 and what happens if we need to keep the title of the document in memory?
 
 Let's look at it from an "object thinking" point of view. We have a `document`
-object, which [is supposed to represent]({%pst%}) a real-life entity in an
+object, which [is supposed to represent]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) a real-life entity in an
 object-oriented world. If such an entity is a file, we can easily
 implement `title()` methods. If such an entity is an Amazon S3 object,
 we also implement title reading and writing methods easily, keeping the
