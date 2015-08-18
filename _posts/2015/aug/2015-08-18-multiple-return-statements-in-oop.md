@@ -53,7 +53,7 @@ public int max(int a, int b) {
 }
 {% endhighlight %}
 
-More verbose, less readable, and slower, right. Right.
+More verbose, less readable, and slower, right? Right.
 
 This is the code in a **pure** object-oriented world:
 
