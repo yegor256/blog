@@ -52,7 +52,7 @@ with a single &lt;code&gt;return&lt;/code&gt;:&lt;/p&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;More verbose, less readable, and slower, right. Right.&lt;/p&gt;
+&lt;p&gt;More verbose, less readable, and slower, right? Right.&lt;/p&gt;
 
 &lt;p&gt;This is the code in a &lt;strong&gt;pure&lt;/strong&gt; object-oriented world:&lt;/p&gt;
 
