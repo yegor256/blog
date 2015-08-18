@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Many Return Statements Are a Bad Idea in OOP"
-date: 2015-05-24
+date: 2015-08-18
 tags: oop java
 place: Kiev, Ukraine
 description:
