@@ -10,12 +10,83 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 04 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Why Many Return Statements Are a Bad Idea in OOP</title>
+      <link>http://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html</link>
+      <description>&lt;p&gt;This &lt;a href=&quot;http://programmers.stackexchange.com/questions/118703&quot;&gt;debate&lt;/a&gt;
+is very old, but I have something to say too. The question
+is whether a method may have multiple &lt;code&gt;return&lt;/code&gt; statements or always
+just one. The answer may surprise you: In a pure object-oriented
+world, a method &lt;strong&gt;must&lt;/strong&gt; have a &lt;strong&gt;single&lt;/strong&gt; &lt;code&gt;return&lt;/code&gt; statement and &lt;strong&gt;nothing&lt;/strong&gt; else.
+Yes, just a &lt;code&gt;return&lt;/code&gt; statement and that&amp;#39;s it. No other operators
+or statements. Just &lt;code&gt;return&lt;/code&gt;. All arguments in favor of multiple
+&lt;code&gt;return&lt;/code&gt; statements go against the very idea of object-oriented programming.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;This is a classical example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The code above has two &lt;code&gt;return&lt;/code&gt; statements, and it is shorter than this one
+with a single &lt;code&gt;return&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;More verbose, less readable, and slower, right. Right.&lt;/p&gt;
+
+&lt;p&gt;This is the code in a &lt;strong&gt;pure&lt;/strong&gt; object-oriented world:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;If&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GreaterThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What do you think now? There are no statements or operators. No &lt;code&gt;if&lt;/code&gt; and no &lt;code&gt;&amp;gt;&lt;/code&gt;.
+Instead, there are &lt;strong&gt;objects&lt;/strong&gt; of class &lt;code&gt;If&lt;/code&gt; and &lt;code&gt;GreaterThan&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a pure and clean object-oriented approach.&lt;/p&gt;
+
+&lt;p&gt;However, Java doesn&amp;#39;t have that. Java (and many other pseudo OOP languages)
+gives us operators like &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, etc. instead
+of giving built-in classes, which would do the same. Because of that, we continue
+to think in terms of procedures and keep talking about whether
+two &lt;code&gt;return&lt;/code&gt; statements are better than one.&lt;/p&gt;
+
+&lt;p&gt;If your code is truly object-oriented, you won&amp;#39;t be able to have more than
+one &lt;code&gt;return&lt;/code&gt;. Moreover, you will have nothing except a &lt;code&gt;return&lt;/code&gt; in each method.
+Actually, you will have only two operators in the entire
+software &amp;mdash; &lt;code&gt;new&lt;/code&gt; and &lt;code&gt;return&lt;/code&gt;. That&amp;#39;s it.&lt;/p&gt;
+
+&lt;p&gt;Until we&amp;#39;re there, let&amp;#39;s stick with just one &lt;code&gt;return&lt;/code&gt; and at least try to look
+like pure OOP.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html</guid>
+      <dc:date>2015-08-18T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Nine Steps to Start a Software Project</title>
       <link>http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html</link>
@@ -2079,136 +2150,6 @@ entered in our
       <pubDate>Mon, 08 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</guid>
       <dc:date>2015-06-08T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How Much For This Software?</title>
-      <link>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</link>
-      <description>&lt;p&gt;&amp;quot;Here is the specification; how much will it cost to create this software?&amp;quot;
-I hear this almost every day from clients of &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;
-and prospects that are planning to become our clients and outsource the software
-development to us. My best answer is &amp;quot;&lt;em&gt;I don&amp;#39;t know; it depends.&lt;/em&gt;&amp;quot;
-Sounds like a strange response for someone who claims
-he knows what he is doing, isn&amp;#39;t it? &amp;quot;Here is the 20-page specification
-that explains all the features of the product; how come you can&amp;#39;t estimate
-the cost?&amp;quot; I can, but I won&amp;#39;t. Here is why.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/interstate-60.jpg' style='width:600px;' alt='Interstate 60: Episodes of the Road (2002) by Bob Gale'/&gt;&lt;figcaption&gt;Interstate 60: Episodes of the Road (2002) by Bob Gale&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let me ask you something else: &lt;strong&gt;Why do you need an estimate?&lt;/strong&gt;
-Yes, I mean it &amp;mdash; why do you ask me how much it will cost
-to develop the software for you? I can tell you why.&lt;/p&gt;
-
-&lt;p&gt;Because you don&amp;#39;t trust me.&lt;/p&gt;
-
-&lt;p&gt;And obviously you have good reasons for that, simply because we both
-know that a software product is something that can stay in development forever
-and never be finished. Look at YouTube, for example. How much do you think
-it would take to create a website like this, where users are able to
-upload their videos and then stream them? A few days for a good web developer.
-Will it stream video? Yes, it will. Will it be ready to compete with YouTube?
-No, it won&amp;#39;t. Add a few hundred developers to the team, a few years, and a
-few million dollars, and even then you will be behind YouTube. Simply because
-it&amp;#39;s a never-ending process. Any software, no matter how big or good it is,
-always needs more and more improvements and bug fixes.&lt;/p&gt;
-
-&lt;p&gt;Thus, when you ask me how much it will cost to create a system similar
-to YouTube, according to your specifications, my honest and accurate answer
-should be: &amp;quot;&lt;em&gt;All of your money, and it won&amp;#39;t be enough.&lt;/em&gt;&amp;quot; Will you
-sign a contract and outsource the project to me after that answer? No, you won&amp;#39;t.
-That&amp;#39;s why I have to lie and promise something like &amp;quot;three months and $40,000&amp;quot;.
-Why would you trust me? If you&amp;#39;re smart enough, you won&amp;#39;t.&lt;/p&gt;
-
-&lt;p&gt;My point is that no matter what I promise you, I will be wrong. Terribly wrong.&lt;/p&gt;
-
-&lt;p&gt;What is the solution? What do you do? I totally understand that you
-do need a number to make your plans and secure the money.
-You need to choose the right software outsourcing partner, and you
-need to know what to expect and when, but ...&lt;/p&gt;
-
-&lt;p&gt;You&amp;#39;re asking the &lt;strong&gt;wrong question&lt;/strong&gt;!&lt;/p&gt;
-
-&lt;p&gt;This question has only one valid answer, and it&amp;#39;s the answer nobody
-will ever give you &amp;mdash; the development will take forever and will
-consume all your money. All other answers are simply a lie.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m sorry if I&amp;#39;ve delivered bad news to you.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;#39;s get back to the original problem: Why are you asking
-me how much it will take to develop the software if you know it&amp;#39;s a
-never-ending process and there is basically no limit? Because you
-want to make sure your $40,000 will be used the right way and will
-produce the maximum it can produce. To get this assurance from me, you&amp;#39;re
-asking for an estimate. I&amp;#39;m telling you that your software will be ready
-for $40K, and you sleep well. Until the moment you realize you&amp;#39;ve been
-fooled. By your own self.&lt;/p&gt;
-
-&lt;p&gt;Your concern is perfectly valid. You want to spend no more than $40K, and you want
-to get a product that will help you achieve your business goals. For example,
-you want to get into the market and acquire your first few thousand users. In other words,
-your biggest worry is that your dollars will be turned into the right amount
-of the right software.&lt;/p&gt;
-
-&lt;p&gt;Any software team can consume your $40K, but each team will produce a different
-&lt;em&gt;amount&lt;/em&gt; of software with different &lt;em&gt;quality&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;My point is that instead of asking how much a software project will cost, you should
-ask how much software we can create for each dollar you give us and what
-quality will it be.&lt;/p&gt;
-
-&lt;p&gt;Basically, don&amp;#39;t ask us to estimate how much gas it will take to get
-to the finish line, because there is no finish line. Instead, ask us
-how much we charge per gallon and how many gallons we consume per mile.&lt;/p&gt;
-
-&lt;p&gt;Different teams use different metrics to measure their results
-(to be honest, most of them don&amp;#39;t use any). We, at
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, use
-&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits of code&lt;/a&gt;,
-bugs, pull requests, test coverage, and a few other metrics
-as measurable indicators of &lt;em&gt;quantity and quality&lt;/em&gt;. We know exactly how much
-software we can produce for each $100 you pay us.&lt;/p&gt;
-
-&lt;p&gt;Collect those numbers from other teams and compare them. Also, make sure
-you can control these numbers during the course of the project. That&amp;#39;s the
-guarantee you&amp;#39;re looking for. Now you know what you&amp;#39;re buying and how
-much you&amp;#39;re paying for it. In other words, like I said above, having these
-numbers in front of you will assure you that your money is producing
-the maximum amount of software it can produce, at the highest quality.&lt;/p&gt;
-
-&lt;p&gt;The only question left is how you can know you&amp;#39;re buying
-the right software. In other words, you know how much
-we charge per gallon and how many gallons we use per mile, but
-how do you know we&amp;#39;re driving in the right direction and not making
-too many circles or detours?&lt;/p&gt;
-
-&lt;p&gt;There is only one mechanism to guarantee that: regular checkpoints.
-You should ask us whether we deliver the software in small and regular
-increments, and whether we allow you to conduct regular
-&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent reviews&lt;/a&gt;
-of our progress. Also, make sure we prioritize our technical goals,
-use milestones, versionalize releases, publish release notes, etc.
-Make sure that in the course of our journey, you are able to control
-the progress and make corrections.&lt;/p&gt;
-
-&lt;p&gt;To summarize, this is wrong (because there is no &amp;quot;there&amp;quot;):&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hey driver, how much will it cost to get there?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And this is right:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hey driver, how much do you charge per mile, and do you have a map?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Hope I&amp;#39;ve made my point clear :)&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/06/02/how-to-estimate-sofware-cost.html</guid>
-      <dc:date>2015-06-02T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
