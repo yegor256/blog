@@ -1,0 +1,83 @@
+---
+layout: post
+title: "When Do You Stop Testing?"
+date: 2015-08-25
+tags: testing
+description:
+  How do you know when testing is enough? When there
+  are no bugs? That is a very wrong approach! Instead, stop
+  when certain amount of bugs is found.
+keywords:
+  - testing exit criteria
+  - defining exit criteria for testing
+  - entry and exit criteria
+  - software testing
+  - test planning
+---
+
+There is a software to be tested. There is a team of testers. There is
+some money in the budget. There is some time in the schedule. We start
+right now. Testers are trying to break the product, finding bugs,
+reporting bugs, communicating with programmers when necessary, doing
+their best to find what's wrong. Eventually they stop and say
+"we're done". How do they know when to stop? When there is enough
+testing? It's obvious &mdash; when there are **no more bugs left** and the
+product can be shipped! If you think like this, I have bad news for you.
+You're **fundamentally wrong**.
+
+<!--more-->
+
+{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
+All this is perfectly explained by Glenford Myers in his great book
+[The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
+I will just summarize it here again.
+
+First, "testing is the process of executing a program with the
+intent of **finding errors**" (page 6). Pay attention, the intent is to find errors.
+Not to prove that the product works fine, but to prove that it **doesn't work**
+as intended. The goal of any tester is to show how the product can be
+broken, how it fails on different inputs, how it crashes under stress,
+how it misunderstands the user, how it doesn't satisfy the requirements.
+This is why Dr. Myers is calling testing "a destructive, even sadistic, process"
+(page 6). This is what most testers don't understand.
+
+Second, any software has an **unlimited amount of bugs**. Dr. Myers says that
+"you cannot test a program to guarantee that it is error free" (page 10)
+and that "it is impractical, often impossible, to find all the errros in
+a program" (page 8). This is also what most testers don't understand. They
+believe that there is a limited number of bugs, which they have to find
+and call it a day. There literally no limit! The amount of bugs is unlimited,
+in any software product. No matter how small or big, complex or simple,
+new or old is the product.
+
+Having these axioms in mind, let's try to decide when testers have to stop.
+According to Dr. Meyers, "one of the most difficult questions
+to answer when testing a program is determining when to stop,
+since there is no way of knowing if the error just detected is the
+last remaining error" (page 135).
+
+They can't find all bugs, no matter how much time we give them. And they
+are motivated to find more and more of them. But at some point of time we
+must make a decision and release the product. Looks like we will release
+it with bugs inside? Yes, indeed! We will release a product full of bugs.
+The only question is how many of them were found already and how critical
+they were.
+
+Let's put it all together. There are too many bugs to be able to find
+all of them in a reasonable amount of time. However, we have to release a new
+version, sooner or later. At the same time, testers will always tell us
+that there are more bugs there and they can find more, just need more
+time. What to do?
+
+Dr. Meyers says that "since the goal of testing is to find errors,
+why not make the completion criterion the detection of some predefined
+number of errors?" (page 136). Indeed, we should predict how many bugs
+are just enough to find, in order to have a desirable level of confidence
+that the product is ready to be shipped. Then, ship it, conciously
+understanding that it still has an unlimited amount of not yet discovered
+bugs.
+
+David West in "Object Thinking" says "...".
+
+Thus, the only valid criteria for exiting a testing process is the
+discovery of a forecasted amount of bugs.
