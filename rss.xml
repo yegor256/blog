@@ -10,12 +10,96 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Need Robust Software? Make It Fragile</title>
+      <link>http://www.yegor256.com/2015/08/25/fail-fast.html</link>
+      <description>&lt;p&gt;In any software project, the goal is to create something stable. We don&amp;#39;t want it
+to break in front of a user. We also don&amp;#39;t want our website to show an
+&amp;quot;internal application error&amp;quot; instead of a web page. We want our software
+to work, not fail. That&amp;#39;s a perfectly valid and logical desire,
+but in order to achive that, we have to make our software as fragile
+as possible. This may sound counterintuitive, but that&amp;#39;s the way it is.
+The more fragile your app is in development, the more robust it is
+in production.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;By fragile, I&amp;#39;m referring to the &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;
+philosophy, which is the opposite of
+Fail Safe. I believe you know the difference, but let me remind you anyway,
+by example. This is Fail Safe:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This method is supposed to calculate and return a file size. It first checks
+whether the file exists. If it doesn&amp;#39;t exist, the method returns zero. Indeed,
+the file is absent, so there is no size. We could complain that the file is
+absent, but what for? Why make noise? Let&amp;#39;s keep it quiet and return zero.
+We don&amp;#39;t fail because we&amp;#39;re trying to keep the app running. This is called Fail Safe.&lt;/p&gt;
+
+&lt;p&gt;To the contrary, this is how Fail Fast looks:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;There is no such file; I can&amp;#39;t get its length.&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can&amp;#39;t find a file? We don&amp;#39;t hide this fact. We make this situation
+public and visible. We scream and cry. We throw an exception. We &lt;strong&gt;want&lt;/strong&gt; the
+app to crash, break, and fail, because someone gave us a file that doesn&amp;#39;t
+exist. We complain and protest. This is called Fail Fast.&lt;/p&gt;
+
+&lt;p&gt;Which philosophy, if we follow it everywhere, will make our software
+robust and failure-resilient? Only the second one &amp;mdash; the Fail Fast.&lt;/p&gt;
+
+&lt;p&gt;Why? Because the quicker and easier the failure is, the faster it will
+be fixed. And the fix will be simpler and also more visible. Fail Fast
+is a much better approach for maintainability. The code becomes cleaner.
+It is much easier to track a failure. All methods are ready to break and throw
+an exception on even the tiniest problem.&lt;/p&gt;
+
+&lt;p&gt;In this example, if the method returns zero, it&amp;#39;s not obvious
+whether the file exists and its size is actually zero or if its name is wrong
+and it is just not found. The Fail Safe approach conceals problems and makes
+code less maintainable, and that&amp;#39;s why it&amp;#39;s difficult to stabilize.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, during production, we will have many crashes and errors. But
+all of them will be visible and easy to understand. We will fix them and
+cover them with unit tests. Each fix will make our software more stable
+and better covered by tests.&lt;/p&gt;
+
+&lt;p&gt;Software designed with the Fail Safe approach in mind will look more stable
+at the beginning, but it will degrade quickly and inevitably turn into
+an unmaintainable mess.&lt;/p&gt;
+
+&lt;p&gt;Software designed with the Fail Fast approach in mind will crash frequently
+at the beginning but will improve its stability with every fix and eventually
+become very stable and robust.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why fragility is the key success factor for robustness.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/08/25/fail-fast.html</guid>
+      <dc:date>2015-08-25T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Why Many Return Statements Are a Bad Idea in OOP</title>
       <link>http://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html</link>
@@ -1927,229 +2011,6 @@ non-functional requirements.&lt;/p&gt;
       <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
       <dc:date>2015-06-11T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Seven Deadly Sins of a Software Project</title>
-      <link>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</link>
-      <description>&lt;p&gt;&lt;em&gt;Maintainability&lt;/em&gt; is the &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;most valuable virtue&lt;/a&gt;
-of modern software development.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Maintainability&quot;&gt;Maintainability&lt;/a&gt;
-can basically be measured as the working time required for
-a new developer to learn the software before he or she can start making
-serious changes in it. The longer the time, the lower the maintainability.
-In some projects, this time requirement is close to infinity, which means it is
-literally unmaintainable. I believe there are seven fundamental and fatal
-&lt;strong&gt;sins&lt;/strong&gt; that make our software unmaintainable. Here they are.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;anti-patterns&quot;&gt;Anti-Patterns&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-1.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Unfortunately, the programming languages we&amp;#39;re using are too &lt;em&gt;flexible&lt;/em&gt;.
-They allow too much and forbid too little. For example, Java has nothing
-against you placing the entire application in one single &amp;quot;class&amp;quot;
-with a few thousand methods. Technically, the application will compile
-and run. But it&amp;#39;s a well-known anti-pattern called a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/God_object&quot;&gt;God object&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, an &lt;a href=&quot;https://en.wikipedia.org/wiki/Anti-pattern&quot;&gt;anti-pattern&lt;/a&gt;
-is a technically acceptable way of designing things that is
-commonly agreed to be wrong. There are many anti-patterns in each
-language. Their presence in your product is similar to a tumor in
-a living organism. Once it starts to grow, it&amp;#39;s very difficult to stop.
-Eventually, the entire body dies. Eventually, the entire software becomes
-unmaintainable and has to be re-written.&lt;/p&gt;
-
-&lt;p&gt;Once you let a few anti-patterns in, you will eventually get more of them,
-and the &amp;quot;tumor&amp;quot; will only grow.&lt;/p&gt;
-
-&lt;p&gt;This is especially true for object-oriented languages (Java, C++, Ruby, and Python),
-mostly because they inherit so much from procedural languages (C, Fortran, and COBOL).
-And because OOP developers tend to think in a procedural and imperative way.
-Unfortunately.&lt;/p&gt;
-
-&lt;p&gt;By the way, in addition to an existing &lt;a href=&quot;https://en.wikipedia.org/wiki/Anti-pattern&quot;&gt;list of well-known anti-patterns&lt;/a&gt;,
-I also consider &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;these few things&lt;/a&gt;
-as rather bad coding approaches.&lt;/p&gt;
-
-&lt;p&gt;My only practical suggestion here is to read and learn. Maybe
-&lt;a href=&quot;/2015/04/22/favorite-software-books.html&quot;&gt;these books&lt;/a&gt; will help you.
-Always try to be skeptical about the quality of your software, and don&amp;#39;t relax
-when it &amp;quot;just works&amp;quot;. Like with cancer, the earlier you diagnose it, greater is
-the chance to survive.&lt;/p&gt;
-
-&lt;h2 id=&quot;untraceable-changes&quot;&gt;Untraceable Changes&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-2.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;When I look at the commit history, I should be able to tell
-for every single change &lt;em&gt;what&lt;/em&gt; was changed, &lt;em&gt;who&lt;/em&gt; made a change, and
-&lt;em&gt;why&lt;/em&gt; the change was made. Moreover, the time required to get those three
-answers must be measured in seconds. In most projects, this is not the
-case. Here are a few practical recommendations:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Always Use Tickets&lt;/strong&gt;.
-No matter how small the project or its team is, even if it&amp;#39;s just yourself,
-create tickets (GitHub issues) for every problem you&amp;#39;re solving. Explain
-the problem briefly in the ticket and document your thinking there. Use
-the ticket as temporary storage for all information related to the problem.
-Post everything that could make any sense in the future, when
-someone else will try to understand what those &amp;quot;few strange commits&amp;quot; were about.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reference Tickets in Commits&lt;/strong&gt;.
-Needless to say, every commit must have a message. Commits without
-messages are a very dirty practice; I won&amp;#39;t even discuss why. But just a message
-is not enough. Every message must start with the number of the ticket you&amp;#39;re working
-with. GitHub (I&amp;#39;m sure you are using it) will automatically link commits
-and tickets, increasing &lt;em&gt;traceability&lt;/em&gt; of changes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Delete Anything&lt;/strong&gt;.
-Git allows us to do a &amp;quot;forced&amp;quot; push, which overwrites the entire branch that
-previously existed on the server. This is just one example of how
-you can destroy the history of development. Many times I&amp;#39;ve also seen
-people delete their comments in GitHub discussions to make tickets look
-more &amp;quot;clean&amp;quot;. That&amp;#39;s just wrong. Never delete anything; let your history
-stay with you, no matter how bad (or messy) it may look to you now.&lt;/p&gt;
-
-&lt;h2 id=&quot;ad-hoc-releases&quot;&gt;Ad Hoc Releases&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-3.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Every piece of software must be packaged before it can
-be delivered to the end user. If it&amp;#39;s a Java library, it has to be
-packaged as a &lt;code&gt;.jar&lt;/code&gt; file and released to some repository; if it&amp;#39;s a web
-app, it has to be deployed to some platform, etc. No matter how small
-or big the product is, there is always a standard procedure that
-tests, packages, and deploys.&lt;/p&gt;
-
-&lt;p&gt;An ideal solution would be to automate this procedure so
-it is possible to execute it from a command line with a single command:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./release.sh
-...
-DONE &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;took 98.7s&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Most projects are far from that. Their release process always
-involves some magic, where the person responsible for it
-(also known as a DevOp) has to click some buttons here and there, login
-somewhere, check some metrics, etc. Such an &lt;em&gt;ad hoc&lt;/em&gt; release process
-is still a very typical sin of the entire software engineering industry.&lt;/p&gt;
-
-&lt;p&gt;I can give only one practical piece of advice here: Automate it. I use
-&lt;a href=&quot;/2014/09/11/deployment-script-vs-rultor.html&quot;&gt;rultor.com&lt;/a&gt; for that,
-but you can use whatever tools you like. What is important is that the entire
-procedure is fully automated and can be executed from the command line.&lt;/p&gt;
-
-&lt;h2 id=&quot;volunteer-static-analysis&quot;&gt;Volunteer Static Analysis&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-4.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Static_program_analysis&quot;&gt;Static analysis&lt;/a&gt;
-is what makes our code &lt;em&gt;look&lt;/em&gt; better. And by making it
-look better, we are inevitably making it &lt;em&gt;work&lt;/em&gt; better. But this happens
-only when the entire team is forced (!) to follow the rules dictated by the
-static analyzer(s). I&amp;#39;ve written about this in
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;Strict Control of Java Code Quality&lt;/a&gt;.
-I use &lt;a href=&quot;http://www.qulice.com&quot;&gt;qulice.com&lt;/a&gt; in Java projects
-and &lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;rubocop&lt;/a&gt; in Ruby, but there
-are many similar tools for nearly every language.&lt;/p&gt;
-
-&lt;p&gt;You can use any of them, but make it mandatory! In most projects
-where static analysis is used, developers just build nicely-looking
-reports and continue to write code the way they did before. Such a &amp;quot;volunteer&amp;quot;
-approach is not doing any favors for the project. Moreover, it
-creates an illusion of quality.&lt;/p&gt;
-
-&lt;p&gt;What I&amp;#39;m saying is that static analysis must be a mandatory step in
-your deployment pipeline. The build can&amp;#39;t pass if any static analysis
-rule is violated.&lt;/p&gt;
-
-&lt;h2 id=&quot;unknown-test-coverage&quot;&gt;Unknown Test Coverage&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-5.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Simply put, &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_coverage&quot;&gt;test coverage&lt;/a&gt;
-is the degree to which the software has been tested by unit or integration tests. The
-higher the coverage, the greater &amp;quot;amount&amp;quot; of code was executed while
-tests were running. Obviously, higher coverage is a good thing.&lt;/p&gt;
-
-&lt;p&gt;However, many project developers simply don&amp;#39;t know their coverage. They just don&amp;#39;t measure
-this metric. They may have some tests, but nobody knows how deeply they
-penetrate the software and what parts of it are not tested at all.
-This situation is much worse than low test coverage that is measured and
-reported to everyone.&lt;/p&gt;
-
-&lt;p&gt;High coverage is not a guarantee of high quality. That&amp;#39;s obvious. But unknown
-coverage is a clear indicator of maintainability problems. When a new
-developer enters the project, he or she should be able to make some
-changes and see how coverage is affected by them. Ideally, test coverage
-should be checked the same way as static analysis, and the build should
-fail if it comes out lower than a certain pre-defined threshold
-(usually somewhere around 80 percent).&lt;/p&gt;
-
-&lt;h2 id=&quot;nonstop-development&quot;&gt;Nonstop Development&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-6.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;What I mean by nonstop is without milestones and releases. No matter what kind of
-software you&amp;#39;re writing, you must release and &lt;a href=&quot;http://semver.org/&quot;&gt;versionalize&lt;/a&gt; it frequently.
-A project without a clear release history is an unmaintainable mess.&lt;/p&gt;
-
-&lt;p&gt;This is mostly because maintainability is all about me being able to understand you
-by reading your code.&lt;/p&gt;
-
-&lt;p&gt;When I look into the source code and its commit and release history, I have
-to be able to tell what the intention of its author(s) was, what the project
-was doing a year ago, where it is going now, what its roadmap is, etc. All
-this information must be in the source code and, more importantly,
-in Git history.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Basics-Tagging&quot;&gt;Git tags&lt;/a&gt; and
-GitHub &lt;a href=&quot;https://github.com/blog/1547-release-your-software&quot;&gt;release notes&lt;/a&gt;
-are two powerful instruments that provide
-me such information. Use them to their full extent. Also, don&amp;#39;t forget that
-each binary version of the product must be available for immediate download.
-I have to be able to download version 0.1.3 and test it right now, even
-if the project is working on 3.4 at the moment.&lt;/p&gt;
-
-&lt;h2 id=&quot;undocumented-interfaces&quot;&gt;Undocumented Interfaces&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/software-project-sins-7.gif' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Every piece of software has interfaces through which it is supposed to be used.
-If it&amp;#39;s a Ruby gem, there are classes and methods that I&amp;#39;m going to
-use as an end user of it. If it&amp;#39;s a web app, there are web pages
-that an end user will see and control in order to use the app. Every software
-project has interfaces, and they must be carefully documented.&lt;/p&gt;
-
-&lt;p&gt;Like everything above, this is also about maintainability. As a new programmer
-on a project, I will start to learn about it from its interfaces. I should be able
-to understand what it does and try to use it myself.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m talking here about documentation for users, not for developers. In
-general, I&amp;#39;m against documentation inside the software. Here I totally agree with
-the &lt;a href=&quot;http://agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; &amp;mdash; working software is
-much more important than comprehensive documentation. But that&amp;#39;s not referring to
-&amp;quot;external&amp;quot; documentation, which is supposed to be read by users, not developers.&lt;/p&gt;
-
-&lt;p&gt;So end-user interaction with the software must be clearly documented.&lt;/p&gt;
-
-&lt;p&gt;If your software is a library, then its end users are software developers
-who are going to use it &amp;mdash; not contribute to it but simply use it as a
-&amp;quot;black box.&amp;quot;&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;These are the criteria being used to evaluate the open-source projects
-entered in our
-&lt;a href=&quot;/award.html&quot;&gt;award&lt;/a&gt; competition.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 08 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html</guid>
-      <dc:date>2015-06-08T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
