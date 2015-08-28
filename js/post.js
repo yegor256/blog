@@ -20,7 +20,7 @@ $(
           );
         }
       );
-      var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]);
+      var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]).replace(/\+/g, ' ');
       $.getJSON(
         'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
         function (data) {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Many Return Statements Are a Bad Idea in OOP"
-date: 2015-05-24
+date: 2015-08-18
 tags: oop java
 place: Kiev, Ukraine
 description:
@@ -53,7 +53,7 @@ public int max(int a, int b) {
 }
 {% endhighlight %}
 
-More verbose, less readable, and slower, right. Right.
+More verbose, less readable, and slower, right? Right.
 
 This is the code in a **pure** object-oriented world:
 
