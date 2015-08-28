@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How To Setup Private Maven Repository in Amazon S3"
+title: "How to Set Up a Private Maven Repository in Amazon S3"
 date: 2015-08-30
 place: Kiev, Ukraine
 tags: java maven
 description:
   Amazon S3 is a perfect place for keeping private Maven
-  artifacts, automatically deploying it there and making
-  available through s3auth.com
+  artifacts, automatically deploying them there, and making
+  them available through s3auth.com.
 keywords:
   - private maven repository
   - maven repository s3
@@ -18,28 +18,28 @@ keywords:
 
 [Amazon S3](https://aws.amazon.com/s3/)
 is a perfect place for keeping private [Maven](https://maven.apache.org/) artifacts.
-Public artifacts, I assume, you keep in
-[Maven Central]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %}), because
-you want them to be available for everybody. Private artifacts
-are those you don't want to be visible by anyone, except members
+I assume you keep public artifacts in
+[Maven Central]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %}) because
+you want them to be available to everybody. Private artifacts
+are those you don't want visible to anyone except members
 of your team. Thus, you want to deploy your `.jar` files there
 and make sure they are visible only by your team. Here is how we do
 this in all [our](http://www.teamed.io) Java projects.
 
 <!--more-->
 
-## Create S3 Bucket
+## Create an S3 Bucket
 
-First, you create a new S3 bucket. I would recommend to give it a name
-of your project domain with a prefix. For example, `repo.teamed.io`,
-where `repo` is a prefix and `teamed.io` is the domain.
+First, you create a new S3 bucket. I would recommend you name it using
+your project domain and a prefix. For example, with `repo.teamed.io`,
+`repo` is a prefix and `teamed.io` is the domain.
 
-No need to configure any permissions for this bucket. Just create it
-through [Amazon S3 console](https://console.aws.amazon.com/console/home).
+There's no need to configure any permissions for this bucket. Just create it
+through the [Amazon S3 console](https://console.aws.amazon.com/console/home).
 
-## Create IAM User
+## Create an IAM User
 
-Create a new IAM user. I would recommend to name it like `teamed-maven`,
+Create a new IAM user. I recommend you name it like `teamed-maven`
 if your project name is `teamed`.
 
 Add a new "inline policy" to the user:
@@ -59,10 +59,10 @@ Add a new "inline policy" to the user:
 }
 {% endhighlight %}
 
-Here, `repo.teamed.io` is the name of the S3 bucket you have
+Here, `repo.teamed.io` is the name of the S3 bucket you
 created a minute ago.
 
-Make sure you have "access key" for this new user. It must look similar
+Make sure you have an "access key" for this new user. It must look similar
 to this:
 
 {% highlight text %}
@@ -70,7 +70,7 @@ key: AKIAI9NNNJD5D7X4TUVA
 secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
 {% endhighlight %}
 
-The key is 20 characters (all caps), the secret is 40 characters.
+The key is 20 characters (all caps), and the secret is 40 characters.
 
 ## Extend `settings.xml`
 
@@ -116,7 +116,7 @@ Add this configuration to `pom.xml`:
 </project>
 {% endhighlight %}
 
-Then, configure [S3 wagon](https://github.com/jcaddel/maven-s3-wagon),
+Then, configure [S3 Wagon](https://github.com/jcaddel/maven-s3-wagon),
 also in `pom.xml`:
 
 {% highlight xml %}
@@ -135,7 +135,7 @@ also in `pom.xml`:
 {% endhighlight %}
 
 You're ready to go. You can deploy your artifacts just by running
-Maven from command line:
+Maven from the command line:
 
 {% highlight text %}
 $ mvn clean deploy
@@ -143,35 +143,35 @@ $ mvn clean deploy
 
 ## Configure s3auth.com
 
-Now, you want to see these artifacts in browser, in a secure mode, by
-providing secure credentials. I would recommend to use
+Now you want to see these artifacts in your browser, in a secure mode, by
+providing secure credentials. I recommend you use
 [s3auth.com](http://www.s3auth.com), as explained in
 [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %}).
 
-## Configure rultor.com
+## Configure Rultor
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
-I would recommend to configure rultor.com for deployment of your
+Another recommendation is to configure rultor.com for deployment of your
 artifacts to S3 automatically.
 
-First, encrypt your `settings.xml` with
-[rultor remote](https://github.com/yegor256/rultor-remote):
+First, encrypt your `settings.xml` with this
+[Rultor remote](https://github.com/yegor256/rultor-remote):
 
 {% highlight xml %}
 $ gem install rultor
 $ rultor encrypt -p me/test settings.xml
 {% endhighlight %}
 
-Instead of `me/test` you should use the name of your Github project.
+Instead of `me/test`, you should use the name of your GitHub project.
 
-You will get a new file `settings.xml.asc`. Add it to the root directory
-of your project, commit and push. The file contains your secret information,
+As a result, you will get a new file named `settings.xml.asc`. Add it to the root directory
+of your project, then commit and push. The file contains your secret information,
 but only the Rultor server can decrypt it.
 
 Create a `.rultor.yml` file in the root directory of your project
-([reference page](http://doc.rultor.com/reference.html)
-explains this format in details):
+(The Rultor [reference page](http://doc.rultor.com/reference.html)
+explains this format in greater detail):
 
 {% highlight yaml %}
 decrypt:
@@ -181,8 +181,8 @@ deploy:
     mvn clean deploy --settings ../settings.xml
 {% endhighlight %}
 
-Now it's time to see how it all works. Create a new ticket in the
-Github issue tracker, and post something like that into it
+Now it's time to see how it all works together. Create a new ticket in the
+GitHub issue tracker and post something like this into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}
