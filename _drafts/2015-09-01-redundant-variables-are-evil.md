@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Redundant Variables Are Pure Evil"
-date: 2015-08-04
+date: 2015-09-01
 tags: oop java
 description:
   Despite good intentions, redundant variables actually
@@ -16,13 +16,16 @@ keywords:
 
 A redundant variable is one that exists exclusively
 to **explain** its value. I strongly believe that such a variable is
-not only pure noise but also evil, with a very negative effect
+not only pure noise but also **evil**, with a very negative effect
 on code readability. When we introduce a redundant variable, we intend to make our code
 cleaner and easier to read. In reality, though, we make it more verbose
 and difficult to understand. Without exception, any variable used only
 once is redundant and must be replaced with a value.
 
 <!--more-->
+
+{% picture /images/2015/09/y-tu-mama-tambien.jpg 0 Y Tu Mamá También (2001) by Alfonso Cuarón %}
+
 
 Here, variable `fileName` is redundant:
 
@@ -48,10 +51,11 @@ code I'm looking at. The longer the timeframe, the lower the readability.
 Ideally, I want to understand any piece of code in a **few seconds**. If I can't,
 that's a failure of its **author**.
 
-Remember, if I don't understand you, it's your fault.
+[Remember]({% 2015/jun/2015-06-29-simple-diagrams %}),
+if I don't understand you, it's your fault.
 
 An increasing length of code degrades readability. So the more variable
-names I have to remember while reading through it, the longer 
+names I have to remember while reading through it, the longer
 it takes to digest the code and come to a conclusion about
 its purpose and effects. I think **four** is the maximum number
 of variables I can comfortably keep in my head without thinking
@@ -66,5 +70,5 @@ doing, stop and think. Your code is too complex and long in the first place!
 Refactor it using new objects or methods but not variables. Make your
 code shorter by moving pieces of it into new classes or private methods.
 
-Moreover, I think that in perfectly designed methods, you won't
-need **any** variables aside from method arguments.
+Moreover, I think that in [perfectly designed methods]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %}),
+you won't need **any** variables aside from method arguments.
