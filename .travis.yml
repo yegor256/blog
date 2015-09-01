@@ -4,9 +4,9 @@ branches:
   - master
 install:
 - set -e
-#- wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
-#- sudo dpkg -i plantuml_7707-1_all.deb
-#- rm -rf plantuml_7707-1_all.deb
+- wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
+- sudo dpkg -i plantuml_7707-1_all.deb
+- rm -rf plantuml_7707-1_all.deb
 - travis_retry bundle install
 - wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
 - unzip woff-code-latest.zip -d sfnt2woff
@@ -18,7 +18,6 @@ install:
 before_install:
 - set -e
 - travis_retry sudo apt-get update -qq
-- travis_retry sudo apt-get install -y plantuml
 - travis_retry sudo apt-get install -y graphviz
 - travis_retry sudo apt-get install -y gnuplot
 - travis_retry sudo apt-get install -y s3cmd
