@@ -41,3 +41,4 @@ script:
 - git config --global user.email "travis@teamed.io"
 - git config --global user.name "travis"
 - jgd -u git@github.com:yegor256/blog.git
+

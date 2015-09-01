@@ -2,6 +2,7 @@
 layout: post
 title: "Redundant Variables Are Pure Evil"
 date: 2015-09-01
+place: Kiev, Ukraine
 tags: oop java
 description:
   Despite good intentions, redundant variables actually
@@ -25,7 +26,6 @@ once is redundant and must be replaced with a value.
 <!--more-->
 
 {% picture /images/2015/09/y-tu-mama-tambien.jpg 0 Y Tu Mamá También (2001) by Alfonso Cuarón %}
-
 
 Here, variable `fileName` is redundant:
 
@@ -51,7 +51,7 @@ code I'm looking at. The longer the timeframe, the lower the readability.
 Ideally, I want to understand any piece of code in a **few seconds**. If I can't,
 that's a failure of its **author**.
 
-[Remember]({% 2015/jun/2015-06-29-simple-diagrams %}),
+[Remember]({% pst 2015/jun/2015-06-29-simple-diagrams %}),
 if I don't understand you, it's your fault.
 
 An increasing length of code degrades readability. So the more variable
