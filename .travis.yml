@@ -3,10 +3,7 @@ branches:
   only:
   - master
 install:
-- travis_retry sudo apt-get update -y
-- travis_retry sudo apt-get install -y graphviz
-- travis_retry sudo apt-get install -y gnuplot
-- travis_retry sudo apt-get install -y s3cmd
+- set -e
 - wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
 - sudo dpkg -i plantuml_7707-1_all.deb
 - rm -rf plantuml_7707-1_all.deb
@@ -24,6 +21,10 @@ install:
 - travis_retry npm install --global cssshrink
 before_install:
 - set -e
+- travis_retry sudo apt-get update -qq
+- travis_retry sudo apt-get install -y graphviz
+- travis_retry sudo apt-get install -y gnuplot
+- travis_retry sudo apt-get install -y s3cmd
 - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
 - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
 - mv id_rsa ~/.ssh
