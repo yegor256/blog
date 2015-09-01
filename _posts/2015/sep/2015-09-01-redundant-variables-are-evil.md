@@ -31,7 +31,7 @@ Here, variable `fileName` is redundant:
 
 {% highlight java %}
 String fileName = "test.txt";
-print("Length is " + new File(name).length());
+print("Length is " + new File(fileName).length());
 {% endhighlight %}
 
 This code must look differently:
