@@ -10,12 +10,74 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 25 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Redundant Variables Are Pure Evil</title>
+      <link>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</link>
+      <description>&lt;p&gt;A redundant variable is one that exists exclusively
+to &lt;strong&gt;explain&lt;/strong&gt; its value. I strongly believe that such a variable is
+not only pure noise but also &lt;strong&gt;evil&lt;/strong&gt;, with a very negative effect
+on code readability. When we introduce a redundant variable, we intend to make our code
+cleaner and easier to read. In reality, though, we make it more verbose
+and difficult to understand. Without exception, any variable used only
+once is redundant and must be replaced with a value.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/y-tu-mama-tambien.jpg' style='width:600px;' alt='Y Tu Mamá También (2001) by Alfonso Cuarón'/&gt;&lt;figcaption&gt;Y Tu Mamá También (2001) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, variable &lt;code&gt;fileName&lt;/code&gt; is redundant:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;test.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Length is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code must look differently:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Length is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;test.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This example is very primitive, but I&amp;#39;m sure you&amp;#39;ve seen these
+redundant variables many times. We use them to &amp;quot;explain&amp;quot; the code &amp;mdash;
+it&amp;#39;s not just a string literal &lt;code&gt;&amp;quot;test.txt&amp;quot;&lt;/code&gt; anymore but a &lt;code&gt;fileName&lt;/code&gt;.
+The code looks easier to understand, right? Not really.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s dig into what &amp;quot;readability&amp;quot; of code is in the first place. I think this
+quality can be measured by the number of seconds I need to understand the
+code I&amp;#39;m looking at. The longer the timeframe, the lower the readability.
+Ideally, I want to understand any piece of code in a &lt;strong&gt;few seconds&lt;/strong&gt;. If I can&amp;#39;t,
+that&amp;#39;s a failure of its &lt;strong&gt;author&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;Remember&lt;/a&gt;,
+if I don&amp;#39;t understand you, it&amp;#39;s your fault.&lt;/p&gt;
+
+&lt;p&gt;An increasing length of code degrades readability. So the more variable
+names I have to remember while reading through it, the longer
+it takes to digest the code and come to a conclusion about
+its purpose and effects. I think &lt;strong&gt;four&lt;/strong&gt; is the maximum number
+of variables I can comfortably keep in my head without thinking
+about quitting the job.&lt;/p&gt;
+
+&lt;p&gt;New variables make the code longer because they need extra lines to
+be declared. And they make the code more complex because its reader
+has to remember more names.&lt;/p&gt;
+
+&lt;p&gt;Thus, when you want to introduce a new variable to explain what your code is
+doing, stop and think. Your code is too complex and long in the first place!
+Refactor it using new objects or methods but not variables. Make your
+code shorter by moving pieces of it into new classes or private methods.&lt;/p&gt;
+
+&lt;p&gt;Moreover, I think that in &lt;a href=&quot;/2015/08/18/multiple-return-statements-in-oop.html&quot;&gt;perfectly designed methods&lt;/a&gt;,
+you won&amp;#39;t need &lt;strong&gt;any&lt;/strong&gt; variables aside from method arguments.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</guid>
+      <dc:date>2015-09-01T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Need Robust Software? Make It Fragile</title>
       <link>http://www.yegor256.com/2015/08/25/fail-fast.html</link>
@@ -1917,100 +1979,6 @@ more fine-grained mechanism. This post may help:
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html</guid>
       <dc:date>2015-06-15T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
-      <link>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
-      <description>&lt;p&gt;Here is what &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_bug&quot;&gt;Wikipedia says&lt;/a&gt;
-at the time of this writing:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A software bug is an error, flaw, failure, or fault
-in a computer program or system that causes it
-to produce an incorrect or unexpected result or
-to behave in unintended ways.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think that&amp;#39;s incomplete. The definition entirely excludes &amp;quot;non-behavioral&amp;quot;
-defects related to, for example, &lt;strong&gt;maintainability&lt;/strong&gt; and &lt;strong&gt;reusability&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;As you know, every piece of software has &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_requirement&quot;&gt;functional&lt;/a&gt;
-and &lt;a href=&quot;https://en.wikipedia.org/wiki/Non-functional_requirement&quot;&gt;non-functional&lt;/a&gt;
-requirements.
-Functional requirements tell us &lt;em&gt;what&lt;/em&gt; the software has to do, and non-functional
-requirements document &lt;em&gt;how&lt;/em&gt; it has to do it. For example, here is a functional
-requirement:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The user can generate a PDF report.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If our software doesn&amp;#39;t generate a PDF report and crashes instead,
-that&amp;#39;s a functional bug. If instead of a PDF report, it generates an empty
-page or a plain text document, that&amp;#39;s a functional bug. If there
-is no &amp;quot;generate PDF report&amp;quot; button at all and the user simply can&amp;#39;t start
-the PDF generation process, that&amp;#39;s a functional bug.&lt;/p&gt;
-
-&lt;p&gt;Here is an example of a non-functional requirement:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;PDF report generation must take less than 100ms.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If our software generates a perfectly correct PDF report but it
-takes a minute, that&amp;#39;s a non-functional bug.&lt;/p&gt;
-
-&lt;p&gt;So far so good, since the bug definition given by Wikipedia perfectly
-covers both of them &amp;mdash; if they happen, they will cause our software
-&amp;quot;to &lt;em&gt;produce&lt;/em&gt; an incorrect or unexpected result or to &lt;em&gt;behave&lt;/em&gt; in an unintended way.&amp;quot;
-The emphasis here is on the words &amp;quot;produce&amp;quot; and &amp;quot;behave.&amp;quot; They presume
-the software is doing something and we&amp;#39;re observing its behavior.&lt;/p&gt;
-
-&lt;p&gt;However, that&amp;#39;s not all of it.&lt;/p&gt;
-
-&lt;p&gt;What about maintainability? I may have this kind of non-functional requirement:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The source code of the PDF generator must be
-easy to maintain and extend for an average
-Java programmer.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It&amp;#39;s a rather vague requirement, but you get the idea.&lt;/p&gt;
-
-&lt;p&gt;Maintainability and reusability are very critical non-functional components
-of any modern software program, especially taking into account a very high
-cost of labor in the market. Very often, it&amp;#39;s more important to make sure
-the software is maintainable than fast. If it&amp;#39;s maintainable and slow, we
-can find new programmers to &lt;em&gt;improve&lt;/em&gt; the code. If it is fast
-but unmaintainable, we won&amp;#39;t be able to do anything with it later and will
-have to &lt;em&gt;rewrite&lt;/em&gt; it from scratch if some new feature is required.
-Read more about this in
-&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The definition of a software bug given by Wikipedia doesn&amp;#39;t cover
-maintainability and reusability flaws at all.
-That makes for a common source of confusion &amp;mdash;
-an inconsistent code style is not a bug (see the discussion under
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;this post&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;That is wrong.&lt;/p&gt;
-
-&lt;p&gt;An inconsistent code style &lt;strong&gt;is&lt;/strong&gt; a software bug, as is incomplete documentation,
-lack of documentation, code that&amp;#39;s too complex, the lack of a coding style guide,
-etc.&lt;/p&gt;
-
-&lt;p&gt;I would rewrite the software bug definition paragraph in Wikipedia like this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A software bug is an error, flaw, failure, or fault
-in a computer program or system that causes it
-to violate at least one of its functional or
-non-functional requirements.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This definition looks more accurate to me.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
-      <dc:date>2015-06-11T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
