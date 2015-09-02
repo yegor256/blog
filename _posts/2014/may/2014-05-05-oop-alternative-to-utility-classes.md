@@ -76,7 +76,7 @@ Additionally, there are a few questions on StackExchange about utility classes:
 
 A dry summary of all their arguments is that utility classes are not proper
 objects; therefore, they don't fit into object-oriented world. They were
-inherited from procedural programming, mostly because most were used to a
+inherited from procedural programming, mostly because we were used to a
 functional decomposition paradigm back then.
 
 Assuming you agree with the arguments and want to stop using utility classes,
