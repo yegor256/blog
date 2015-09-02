@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube psrp3TtaYYI video-left %}
 [September 2, 2015](https://plus.google.com/events/cn31s82dkejqo3pfetttq8mrgb0)
 **What's Wrong About Utility Classes?**
-We'll discuss a very common design pattern known as "Utility Class"
+We discussed a very common design pattern known as "Utility Class"
 and its negative effects on the quality of design in object-oriented
-world. The discussion will be based on this post:
+world. The discussion was be based on this post:
 [OOP Alternative to Utility Classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 
 {% youtube WpP4rIhh5e4 video-left %}
