@@ -715,19 +715,7 @@ synchronize one level higher when necessary.&lt;/p&gt;
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://www.jetbrains.com'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/jetbrains-logo.gif' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;Breaking News!&lt;/strong&gt;&lt;/span&gt;
-&lt;a href=&quot;http://www.jetbrains.com&quot;&gt;JetBrains&lt;/a&gt; is sponsoring the contest!
-The best eight projects will get 1-year open source licenses for any JetBrains product, including
-&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=idea&quot;&gt;IntelliJ IDEA&lt;/a&gt;,
-&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=ruby&quot;&gt;RubyMine&lt;/a&gt;,
-&lt;a href=&quot;https://www.jetbrains.com/buy/opensource/?product=phpstorm&quot;&gt;phpStorm&lt;/a&gt;, and
-&lt;a href=&quot;https://www.jetbrains.com/products.html&quot;&gt;others&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+      <description>&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
 Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
@@ -761,6 +749,8 @@ products (one license per project).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
 (although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.jetbrains.com'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/jetbrains-logo.gif' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Each project must be:&lt;/p&gt;
 
@@ -799,7 +789,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 
 &lt;hr/&gt;
 
-&lt;p&gt;149 rojects submitted so far (in order of submission):&lt;/p&gt;
+&lt;p&gt;158 rojects submitted so far (in order of submission):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mdbs99/AWS&quot;&gt;mdbs99/AWS&lt;/a&gt;&lt;/li&gt;
@@ -856,7 +846,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/omgware/fluid-simulator-v2&quot;&gt;omgware/fluid-simulator-v2&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/wendykierp/JTransforms&quot;&gt;wendykierp/JTransforms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/zqq90/webit-script&quot;&gt;zqq90/webit-script&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/markdenihan/owaspSecurityShepherd&quot;&gt;markdenihan/owaspSecurityShepherd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/owasp/SecurityShepherd&quot;&gt;owasp/SecurityShepherd&lt;/a&gt; by &lt;a href=&quot;https://github.com/markdenihan&quot;&gt;@markdenihan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/subchen/jetbrick-template-2x&quot;&gt;subchen/jetbrick-template-2x&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/subchen/snack-string&quot;&gt;subchen/snack-string&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/restorer/gloomy-dungeons-2&quot;&gt;restorer/gloomy-dungeons-2&lt;/a&gt;&lt;/li&gt;
@@ -954,6 +944,12 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/expercise/expercise&quot;&gt;expercise/expercise&lt;/a&gt; by &lt;a href=&quot;https://github.com/ufukuzun&quot;&gt;@ufukuzun&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/kbilsted/StatePrinter&quot;&gt;kbilsted/StatePrinter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/js-cookie/java-cookie&quot;&gt;js-cookie/java-cookie&lt;/a&gt; by &lt;a href=&quot;https://github.com/FagnerMartinsBrack&quot;&gt;@FagnerMartinsBrack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Suseika/inflectible&quot;&gt;Suseika/inflectible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mp911de/lettuce&quot;&gt;mp911de/lettuce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hackiftekhar/IQKeyboardManager&quot;&gt;hackiftekhar/IQKeyboardManager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mafagafogigante/dungeon&quot;&gt;mafagafogigante/dungeon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/colonB/Mixer&quot;&gt;colonB/Mixer&lt;/a&gt; by &lt;a href=&quot;https://github.com/kkashpur&quot;&gt;@kkashpur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/colonB/Dorm&quot;&gt;colonB/Dorm&lt;/a&gt; by &lt;a href=&quot;https://github.com/kkashpur&quot;&gt;@kkashpur&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       <author>Yegor Bugayenko</author>
