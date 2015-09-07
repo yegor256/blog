@@ -10,12 +10,179 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How to Set Up a Private Maven Repository in Amazon S3</title>
+      <link>http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html</link>
+      <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;
+is a perfect place for keeping private &lt;a href=&quot;https://maven.apache.org/&quot;&gt;Maven&lt;/a&gt; artifacts.
+I assume you keep public artifacts in
+&lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;Maven Central&lt;/a&gt; because
+you want them to be available to everybody. Private artifacts
+are those you don&amp;#39;t want visible to anyone except members
+of your team. Thus, you want to deploy your &lt;code&gt;.jar&lt;/code&gt; files there
+and make sure they are visible only by your team. Here is how we do
+this in all &lt;a href=&quot;http://www.teamed.io&quot;&gt;our&lt;/a&gt; Java projects.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;create-an-s3-bucket&quot;&gt;Create an S3 Bucket&lt;/h2&gt;
+
+&lt;p&gt;First, you create a new S3 bucket. I would recommend you name it using
+your project domain and a prefix. For example, with &lt;code&gt;repo.teamed.io&lt;/code&gt;,
+&lt;code&gt;repo&lt;/code&gt; is a prefix and &lt;code&gt;teamed.io&lt;/code&gt; is the domain.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s no need to configure any permissions for this bucket. Just create it
+through the &lt;a href=&quot;https://console.aws.amazon.com/console/home&quot;&gt;Amazon S3 console&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-an-iam-user&quot;&gt;Create an IAM User&lt;/h2&gt;
+
+&lt;p&gt;Create a new IAM user. I recommend you name it like &lt;code&gt;teamed-maven&lt;/code&gt;
+if your project name is &lt;code&gt;teamed&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Add a new &amp;quot;inline policy&amp;quot; to the user:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{
+  &amp;quot;Statement&amp;quot;: [
+    {
+      &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
+      &amp;quot;Action&amp;quot;: &amp;quot;s3:*&amp;quot;,
+      &amp;quot;Resource&amp;quot;: [
+        &amp;quot;arn:aws:s3:::repo.teamed.io&amp;quot;,
+        &amp;quot;arn:aws:s3:::repo.teamed.io/*&amp;quot;
+      ]
+    }
+  ]
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, &lt;code&gt;repo.teamed.io&lt;/code&gt; is the name of the S3 bucket you
+created a minute ago.&lt;/p&gt;
+
+&lt;p&gt;Make sure you have an &amp;quot;access key&amp;quot; for this new user. It must look similar
+to this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;key: AKIAI9NNNJD5D7X4TUVA
+secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The key is 20 characters (all caps), and the secret is 40 characters.&lt;/p&gt;
+
+&lt;h2 id=&quot;extend-settings.xml&quot;&gt;Extend &lt;code&gt;settings.xml&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Add this configuration to your &lt;code&gt;~/.m2/settings.xml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;servers&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;server&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;username&amp;gt;&lt;/span&gt;AKIAI9NNNJD5D7X4TUVA&lt;span class=&quot;nt&quot;&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;password&amp;gt;&lt;/span&gt;t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;span class=&quot;nt&quot;&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;
+    [...]
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/servers&amp;gt;&lt;/span&gt;
+  [...]
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configure-pom.xml&quot;&gt;Configure &lt;code&gt;pom.xml&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Add this configuration to &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;distributionManagement&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;snapshotRepository&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/snapshot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/snapshotRepository&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/release&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/distributionManagement&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;repositories&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/release&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repositories&amp;gt;&lt;/span&gt;
+  [...]
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, configure &lt;a href=&quot;https://github.com/jcaddel/maven-s3-wagon&quot;&gt;S3 Wagon&lt;/a&gt;,
+also in &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;extensions&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;extension&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.kuali.maven.wagons&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-s3-wagon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.2.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/extension&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/extensions&amp;gt;&lt;/span&gt;
+    [...]
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You&amp;#39;re ready to go. You can deploy your artifacts just by running
+Maven from the command line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ mvn clean deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configure-s3auth.com&quot;&gt;Configure s3auth.com&lt;/h2&gt;
+
+&lt;p&gt;Now you want to see these artifacts in your browser, in a secure mode, by
+providing secure credentials. I recommend you use
+&lt;a href=&quot;http://www.s3auth.com&quot;&gt;s3auth.com&lt;/a&gt;, as explained in
+&lt;a href=&quot;/2014/04/21/s3-http-basic-auth.html&quot;&gt;Basic HTTP Auth for S3 Buckets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-rultor&quot;&gt;Configure Rultor&lt;/h2&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;Another recommendation is to configure rultor.com for deployment of your
+artifacts to S3 automatically.&lt;/p&gt;
+
+&lt;p&gt;First, encrypt your &lt;code&gt;settings.xml&lt;/code&gt; with this
+&lt;a href=&quot;https://github.com/yegor256/rultor-remote&quot;&gt;Rultor remote&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;$ gem install rultor
+$ rultor encrypt -p me/test settings.xml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;me/test&lt;/code&gt;, you should use the name of your GitHub project.&lt;/p&gt;
+
+&lt;p&gt;As a result, you will get a new file named &lt;code&gt;settings.xml.asc&lt;/code&gt;. Add it to the root directory
+of your project, then commit and push. The file contains your secret information,
+but only the Rultor server can decrypt it.&lt;/p&gt;
+
+&lt;p&gt;Create a &lt;code&gt;.rultor.yml&lt;/code&gt; file in the root directory of your project
+(The Rultor &lt;a href=&quot;http://doc.rultor.com/reference.html&quot;&gt;reference page&lt;/a&gt;
+explains this format in greater detail):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;decrypt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;settings.xml&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;repo/settings.xml.asc&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;mvn clean deploy --settings ../settings.xml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now it&amp;#39;s time to see how it all works together. Create a new ticket in the
+GitHub issue tracker and post something like this into it
+(read more about &lt;a href=&quot;http://doc.rultor.com/basics.html&quot;&gt;Rultor commands&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@rultor deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You will get a response in a few seconds. The rest will be done by Rultor.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s it.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 07 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html</guid>
+      <dc:date>2015-09-07T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Redundant Variables Are Pure Evil</title>
       <link>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</link>
@@ -1857,128 +2024,6 @@ are more expensive than bugs made by a good programmer.&lt;/p&gt;
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</guid>
       <dc:date>2015-06-18T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Software Outsourcing Survival Guide</title>
-      <link>http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html</link>
-      <description>&lt;p&gt;Software outsourcing is what you go for when you want to create
-a software product but software engineering is not your core
-competence. It&amp;#39;s a smart business practice being employed by everyone
-from $1,000 personal website owners to Fortune 100 monsters.
-And all of them fail, to some extent. Actually, it&amp;#39;s very difficult
-not to fail. Here is my list of simple hints to everyone who
-decides to outsource software development (the most important ones are
-at the bottom). I wish someone would have given it to me 15 years ago.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/u-turn.jpg' style='width:600px;' alt='U Turn (1997) by Oliver Stone'/&gt;&lt;figcaption&gt;U Turn (1997) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Have a &amp;quot;Work for Hire&amp;quot; Agreement&lt;/strong&gt;.
-Make sure the contract you have with the software outsourcing team
-includes something like this: &amp;quot;Parties shall deem all deliverables created by
-the developer as &lt;em&gt;works made for hire&lt;/em&gt; as is defined under the
-&lt;a href=&quot;http://www.copyright.gov/title17/&quot;&gt;Copyright Law of the United States&lt;/a&gt;&amp;quot;.
-This is the shortest and easiest definition of &amp;quot;whatever you create
-for me is mine&amp;quot;. Put this into the contract and the outsourcing company
-won&amp;#39;t be able to claim that the software it created belongs to it,
-which happens here and there.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Own Your Source Code Repository&lt;/strong&gt;.
-Make sure the source code repository is under your control. The best
-way to do this is to create a private GitHub repository for
-&lt;a href=&quot;https://github.com/pricing&quot;&gt;$7 per month&lt;/a&gt;. The repository will be visible and
-accessible only by you and your outsourcing team. Moreover, make sure
-the team has read-only access and can&amp;#39;t change the code directly except
-through pull requests. In Git, it&amp;#39;s possible to destroy the entire history
-with a single &amp;quot;forced&amp;quot; push to the &lt;code&gt;master&lt;/code&gt; branch. So it would be much better
-for you to be the only person with write access. To make life simpler,
-I would recommend you use &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt;
-as a tool for merging those pull requests semi-automatically.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Regularly Collect Metrics&lt;/strong&gt;.
-Ask your outsourcing team members to regularly collect metrics from the software
-they create and send you them somehow (by email, maybe). I would recommend using
-&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;Hits-of-Code&lt;/a&gt;,
-unit test coverage (or just the total number of unit tests), tickets opened and closed,
-and build duration. I&amp;#39;m talking here about process metrics. This is not what
-you&amp;#39;re already getting from NewRelic. These metrics will measure the
-performance of the team, not of the product under development. I&amp;#39;m not saying
-you should manage the team by the metrics, but you have to keep
-an eye on these numbers and their dynamics.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Conduct Independent Technical Reviews&lt;/strong&gt;.
-I wrote about these already in my
-&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;You Do Need Independent Technical Reviews!&lt;/a&gt;
-post a few months ago. The importance of such reviews is difficult
-to overrate. In software outsourcing, they are especially crucial.
-Actually, this is the best and likely only way of collecting
-objective information about the software you&amp;#39;re getting from the outsourcer.
-Don&amp;#39;t rely on reports, promises, guarantees, and extensive documentation.
-Instead, hire someone else on an hourly basis and ask that person
-to review what your outsourcing partner is developing. Do such reviews
-regularly and systematically. Don&amp;#39;t be afraid to offend your programmers.
-Honestly explain the reviewer&amp;#39;s concerns to them. If they are professionals, they
-will understand and respect your business objectives.
-You can also show them this article :)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Automate and Control Deployment&lt;/strong&gt;.
-Ask your outsourcing team to automate the entire deployment pipeline and
-keep it under your control. I would recommend you do this during the first
-days of the project. This means the product should be compiled, tested,
-packaged, installed, and deployed to a production repository (or server/s) by
-a single click. Some script should be created to automate this chain
-of operations. That&amp;#39;s what your outsourcing partner has to create for you.
-Then, when development starts, every time a new change is made to the
-repository that has to be deployed to production, the same script has
-to be executed. What is important here is that you should know how
-this script works and how to run it. You should be able to build and deploy your
-product by yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Demand Weekly Releases&lt;/strong&gt;.
-Don&amp;#39;t wait for the final version. Ask your outsourcing team to release
-a new version every week. No matter how intensive the development is and
-how many features are &amp;quot;in progress&amp;quot;, it&amp;#39;s always possible to package
-a new version and release it. If the development is really intensive,
-ask your team to use GitFlow or something similar to isolate a stable
-production branch from development branches. But don&amp;#39;t wait! Make sure
-you see your software packaged and deployed every single week, no exceptions
-and no excuses. If your outsourcing team can&amp;#39;t give that to you, start worrying
-and change something.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Hire an Independent CTO&lt;/strong&gt;.
-This advice is mostly for small companies or individuals who outsource
-software development and rely on their expertise while staying focused
-on their own business development. That&amp;#39;s unwise; you should have an independent
-chief technical officer (CTO) who reports to you and controls how the
-outsourcing team works. This person must be on a different payment
-schedule with different goals, terms, and objectives. You should talk to
-the CTO and the CTO should control the offshore team. Very often,
-business owners try to become software savvy and control the software
-team directly, learning their software jargon, principles of DevOps,
-and even Java syntax (I&amp;#39;ve seen that). This is a route to failure.
-Be smart &amp;mdash; you do the business development, the CTO reports to you,
-and the software team reports to the CTO.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Define Rewards and Punishments&lt;/strong&gt;.
-There is no management without these two key components. You&amp;#39;re not supposed
-to manage all programmers in the outsourcing shop, but you have to manage
-the entire shop as a single unit of control. You have to give them some
-structure of motivation. They have to know what will happen to them
-if they succeed and how much they will suffer if they fail. If you don&amp;#39;t
-make this mechanism explicit, you will deal with an implicit version of it
-where your chances of winning are very low. Most people assume the best
-and only motivation for a software team is to stay on the project. You&amp;#39;re
-paying them and that&amp;#39;s enough, right? Wrong. Management can&amp;#39;t be effective
-when a monthly bank transfer is a reward and its absence is a punishment.
-It is too coarse-grained; that&amp;#39;s why it&amp;#39;s absolutely ineffective. Find a better and
-more fine-grained mechanism. This post may help:
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;Why Monetary Awards Don&amp;#39;t Work&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html</guid>
-      <dc:date>2015-06-15T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
