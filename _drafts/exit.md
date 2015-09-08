@@ -77,7 +77,13 @@ that the product is ready to be shipped. Then, ship it, conciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
 
-David West in "Object Thinking" says "...".
+{% badge /images/2015/04/book-object-thinking.jpg 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z %}
+
+David West in
+[Object Thinking](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z)
+says that "software is released for use,
+not when it is known to be correct, but when the rate of discovering
+errors slows down to one that management considers acceptable" (page 13).
 
 Thus, the only valid criteria for exiting a testing process is the
-discovery of a forecasted amount of bugs.
+discovery of a **forecasted** amount of bugs.
