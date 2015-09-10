@@ -17,6 +17,441 @@
       <link>http://www.yegor256.com</link>
     </image>
     <item>
+      <title>When Do You Stop Testing?</title>
+      <link>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
+      <description>&lt;p&gt;There is a software to be tested. There is a team of testers. There is
+some money in the budget. There is some time in the schedule. We start
+right now. Testers are trying to break the product, finding bugs,
+reporting bugs, communicating with programmers when necessary, doing
+their best to find what&amp;#39;s wrong. Eventually they stop and say
+&amp;quot;we&amp;#39;re done&amp;quot;. How do they know when to stop? When there is enough
+testing? It&amp;#39;s obvious &amp;mdash; when there are &lt;strong&gt;no more bugs left&lt;/strong&gt; and the
+product can be shipped! If you think like this, I have bad news for you.
+You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;All this is perfectly explained by Glenford Myers in his great book
+&lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;The Art of Software Testing&lt;/a&gt;.
+I will just summarize it here again.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, &amp;quot;testing is the process of executing a program with the
+intent of &lt;strong&gt;finding errors&lt;/strong&gt;&amp;quot; (page 6). Pay attention, the intent is to find errors.
+Not to prove that the product works fine, but to prove that it &lt;strong&gt;doesn&amp;#39;t work&lt;/strong&gt;
+as intended. The goal of any tester is to show how the product can be
+broken, how it fails on different inputs, how it crashes under stress,
+how it misunderstands the user, how it doesn&amp;#39;t satisfy the requirements.
+This is why Dr. Myers is calling testing &amp;quot;a destructive, even sadistic, process&amp;quot;
+(page 6). This is what most testers don&amp;#39;t understand.&lt;/p&gt;
+
+&lt;p&gt;Second, any software has an &lt;strong&gt;unlimited amount of bugs&lt;/strong&gt;. Dr. Myers says that
+&amp;quot;you cannot test a program to guarantee that it is error free&amp;quot; (page 10)
+and that &amp;quot;it is impractical, often impossible, to find all the errros in
+a program&amp;quot; (page 8). This is also what most testers don&amp;#39;t understand. They
+believe that there is a limited number of bugs, which they have to find
+and call it a day. There literally no limit! The amount of bugs is unlimited,
+in any software product. No matter how small or big, complex or simple,
+new or old is the product.&lt;/p&gt;
+
+&lt;p&gt;Having these axioms in mind, let&amp;#39;s try to decide when testers have to stop.
+According to Dr. Meyers, &amp;quot;one of the most difficult questions
+to answer when testing a program is determining when to stop,
+since there is no way of knowing if the error just detected is the
+last remaining error&amp;quot; (page 135).&lt;/p&gt;
+
+&lt;p&gt;They can&amp;#39;t find all bugs, no matter how much time we give them. And they
+are motivated to find more and more of them. But at some point of time we
+must make a decision and release the product. Looks like we will release
+it with bugs inside? Yes, indeed! We will release a product full of bugs.
+The only question is how many of them were found already and how critical
+they were.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s put it all together. There are too many bugs to be able to find
+all of them in a reasonable amount of time. However, we have to release a new
+version, sooner or later. At the same time, testers will always tell us
+that there are more bugs there and they can find more, just need more
+time. What to do?&lt;/p&gt;
+
+&lt;p&gt;Dr. Meyers says that &amp;quot;since the goal of testing is to find errors,
+why not make the completion criterion the detection of some predefined
+number of errors?&amp;quot; (page 136). Indeed, we should predict how many bugs
+are just enough to find, in order to have a desirable level of confidence
+that the product is ready to be shipped. Then, ship it, conciously
+understanding that it still has an unlimited amount of not yet discovered
+bugs.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;David West in
+&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;Object Thinking&lt;/a&gt;
+says that &amp;quot;software is released for use,
+not when it is known to be correct, but when the rate of discovering
+errors slows down to one that management considers acceptable&amp;quot; (page 13).&lt;/p&gt;
+
+&lt;p&gt;Thus, the only valid criteria for exiting a testing process is the
+discovery of a &lt;strong&gt;forecasted&lt;/strong&gt; amount of bugs.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</guid>
+      <dc:date>2015-09-10T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Need Robust Software? Make It Fragile</title>
+      <link>http://www.yegor256.com/2015/08/25/fail-fast.html</link>
+      <description>&lt;p&gt;In any software project, the goal is to create something stable. We don&amp;#39;t want it
+to break in front of a user. We also don&amp;#39;t want our website to show an
+&amp;quot;internal application error&amp;quot; instead of a web page. We want our software
+to work, not fail. That&amp;#39;s a perfectly valid and logical desire,
+but in order to achieve that, we have to make our software as fragile
+as possible. This may sound counterintuitive, but that&amp;#39;s the way it is.
+The more &lt;strong&gt;fragile&lt;/strong&gt; your app is in development, the more &lt;strong&gt;robust&lt;/strong&gt; it is
+in production.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;By fragile, I&amp;#39;m referring to the &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;
+philosophy, which is the opposite of
+Fail Safe. I believe you know the difference, but let me remind you anyway,
+by example. This is Fail Safe:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This method is supposed to calculate and return a file size. It first checks
+whether the file exists. If it doesn&amp;#39;t exist, the method returns zero. Indeed,
+the file is absent, so there is no size. We could complain that the file is
+absent, but what for? Why make noise? Let&amp;#39;s keep it quiet and return zero.
+We don&amp;#39;t fail because we&amp;#39;re trying to keep the app running. This is called Fail Safe.&lt;/p&gt;
+
+&lt;p&gt;To the contrary, this is how Fail Fast looks:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;There is no such file; I can&amp;#39;t get its length.&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can&amp;#39;t find a file? We don&amp;#39;t hide this fact. We make this situation
+public and visible. We scream and cry. We throw an exception. We &lt;strong&gt;want&lt;/strong&gt; the
+app to crash, break, and fail, because someone gave us a file that doesn&amp;#39;t
+exist. We complain and protest. This is called Fail Fast.&lt;/p&gt;
+
+&lt;p&gt;Which philosophy, if we follow it everywhere, will make our software
+robust and failure-resilient? Only the second one &amp;mdash; the Fail Fast.&lt;/p&gt;
+
+&lt;p&gt;Why? Because the quicker and easier the failure is, the faster it will
+be fixed. And the fix will be simpler and also more visible. Fail Fast
+is a much better approach for maintainability. The code becomes cleaner.
+It is much easier to track a failure. All methods are ready to break and throw
+an exception on even the tiniest problem.&lt;/p&gt;
+
+&lt;p&gt;In this example, if the method returns zero, it&amp;#39;s not obvious
+whether the file exists and its size is actually zero or if its name is wrong
+and it is just not found. The Fail Safe approach &lt;strong&gt;conceals&lt;/strong&gt; problems and makes
+code less maintainable, and that&amp;#39;s why it&amp;#39;s difficult to stabilize.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, during production, we will have many crashes and errors. But
+all of them will be visible and easy to understand. We will fix them and
+cover them with unit tests. Each fix will make our software more &lt;strong&gt;stable&lt;/strong&gt;
+and better covered by tests.&lt;/p&gt;
+
+&lt;p&gt;Software designed with the Fail Safe approach in mind will look more stable
+at the beginning, but it will degrade quickly and inevitably turn into
+an unmaintainable mess.&lt;/p&gt;
+
+&lt;p&gt;Software designed with the Fail Fast approach in mind will crash frequently
+at the beginning but will improve its stability with every fix and eventually
+become very stable and robust.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why fragility is the key success factor for robustness.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/08/25/fail-fast.html</guid>
+      <dc:date>2015-08-25T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Checked vs. Unchecked Exceptions: The Debate Is Not Over</title>
+      <link>http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</link>
+      <description>&lt;p&gt;Do we need checked exceptions at all? The
+&lt;a href=&quot;http://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation&quot;&gt;debate&lt;/a&gt;
+is over, isn&amp;#39;t it?
+Not for me. While most object-oriented languages don&amp;#39;t have them, and most programmers
+think checked exceptions are a Java mistake, I believe in the
+opposite &amp;mdash; unchecked exceptions are the &lt;strong&gt;mistake&lt;/strong&gt;. Moreover, I believe
+multiple exception types are a bad idea too.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/true-romance.jpg' style='width:600px;' alt='True Romance (1993) by Tony Scott'/&gt;&lt;figcaption&gt;True Romance (1993) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let me first explain how I understand exceptions in object-oriented programming.
+Then I&amp;#39;ll compare my understanding with a &amp;quot;traditional&amp;quot; approach, and
+we&amp;#39;ll discuss the differences. So, my understanding first.&lt;/p&gt;
+
+&lt;p&gt;Say there is a method that saves some binary data to a file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// save data to the file&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When everything goes right, the method just saves the data and returns control.
+When something is wrong, it throws &lt;code&gt;Exception&lt;/code&gt; and we have to do something
+about it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Sorry, we can&amp;#39;t save right now.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When a method says it &lt;code&gt;throws&lt;/code&gt; an exception, I understand that the
+method is not &lt;strong&gt;safe&lt;/strong&gt;. It may fail sometimes, and it&amp;#39;s my responsibility to
+either 1) handle this failure or 2) declare myself as &lt;strong&gt;unsafe&lt;/strong&gt; too.&lt;/p&gt;
+
+&lt;p&gt;I know each method is designed with a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;
+in mind. This is a guarantee to me that if method &lt;code&gt;save()&lt;/code&gt; fails, it means
+the entire saving operation can&amp;#39;t be completed. If I need to know what
+the cause of this failure was, I will &lt;a href=&quot;https://en.wikipedia.org/wiki/Exception_chaining&quot;&gt;un-chain&lt;/a&gt;
+the exception &amp;mdash; traverse the stack of chained exceptions and stack traces
+encapsulated in &lt;code&gt;ex&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I never use exceptions for flow control, which means I &lt;strong&gt;never recover&lt;/strong&gt;
+situations where exceptions are thrown. When an exception occurs, I let it float up to the
+highest level of the application. Sometimes I rethrow it in order
+to add more semantic information to the chain. That&amp;#39;s why it doesn&amp;#39;t matter
+to me what the cause of the exception thrown by &lt;code&gt;save()&lt;/code&gt; was. I just know
+the method failed. That&amp;#39;s enough for me. Always.&lt;/p&gt;
+
+&lt;p&gt;For the same reason, I don&amp;#39;t need to differentiate between different exception
+types. I just don&amp;#39;t need that type of hierarchy. &lt;code&gt;Exception&lt;/code&gt; is enough for me.
+Again, that&amp;#39;s because I don&amp;#39;t use exceptions for flow control.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s how I understand exceptions.&lt;/p&gt;
+
+&lt;p&gt;According to this paradigm, I would say we must:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;always use checked exceptions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;never throw/use unchecked exceptions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;use only &lt;code&gt;Exception&lt;/code&gt;, without any sub-types.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;always declare one exception type in the &lt;code&gt;throws&lt;/code&gt; block.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;never catch without rethrowing; read &lt;a href=&quot;/2015/07/09/catch-if-cant-otherwise.html&quot;&gt;more about that here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This paradigm diverges from many other articles I&amp;#39;ve found on this subject.
+Let&amp;#39;s compare and discuss.&lt;/p&gt;
+
+&lt;h2 id=&quot;runtime-vs.-api-exceptions&quot;&gt;Runtime vs. API Exceptions&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html&quot;&gt;Oracle says&lt;/a&gt;
+some exceptions should be part of API (checked ones) while some are
+runtime exceptions and should not be part of it (unchecked). They will be documented
+in JavaDoc but not in the method signature.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t understand the logic here, and I&amp;#39;m sure Java designers don&amp;#39;t
+understand it either. How and why are some exceptions important while
+others are not? Why do some of them deserve a proper API position
+in the &lt;code&gt;throws&lt;/code&gt; block of the method signature while others don&amp;#39;t? What is the criteria?&lt;/p&gt;
+
+&lt;p&gt;I have an answer here, though. By introducing checked and unchecked exceptions, Java
+developers tried to solve the problem of methods that are too complex and messy. When
+a method is too big and does too many things at the same time (violates
+the single responsibility principle), it&amp;#39;s definitely better to let us
+keep some exceptions &amp;quot;hidden&amp;quot; (a.k.a. unchecked).
+But it&amp;#39;s not a real solution. It is only
+a temporary patch that does all of us more harm than good &amp;mdash; methods keep
+growing in size and complexity.&lt;/p&gt;
+
+&lt;p&gt;Unchecked exceptions are a mistake in Java design, not checked ones.&lt;/p&gt;
+
+&lt;p&gt;Hiding the fact that a method may fail at some point is a mistake. That&amp;#39;s
+exactly what unchecked exceptions do.&lt;/p&gt;
+
+&lt;p&gt;Instead, we should make this fact visible. When a method does too many
+things, there will be too many points of failure, and the author of the
+method will realize that something is wrong &amp;mdash; a method should
+not throw exceptions in so many situations. This will lead to refactoring. The existence of
+unchecked exceptions leads to a mess. By the way, checked exceptions don&amp;#39;t exist
+at all in Ruby, C#, Python, PHP, etc. This means that creators of these
+languages understand OOP even less than Java authors.&lt;/p&gt;
+
+&lt;h2 id=&quot;checked-exceptions-are-too-noisy&quot;&gt;Checked Exceptions Are Too Noisy&lt;/h2&gt;
+
+&lt;p&gt;Another common argument against checked exceptions is that they make our
+code more verbose. We have to put &lt;code&gt;try/catch&lt;/code&gt; everywhere instead of
+staying focused on the main logic. Bozhidar Bozhanov even
+&lt;a href=&quot;http://techblog.bozho.net/checked-and-unchecked-exceptions-in-java/&quot;&gt;suggests&lt;/a&gt;
+a technical solution for this verbosity problem.&lt;/p&gt;
+
+&lt;p&gt;Again, I don&amp;#39;t understand this logic. If I want to do something when method
+&lt;code&gt;save()&lt;/code&gt; fails, I catch the exception and handle the situation somehow.
+If I don&amp;#39;t want to do that, I just say my method also &lt;code&gt;throws&lt;/code&gt; and pay no
+attention to exception handling. What is the problem? Where is the verbosity
+coming from?&lt;/p&gt;
+
+&lt;p&gt;I have an answer here, too. It&amp;#39;s coming from the existence of unchecked
+exceptions. We simply can&amp;#39;t always ignore failure, because the interfaces
+we&amp;#39;re using don&amp;#39;t allow us to do this. That&amp;#39;s all. For example, class
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html&quot;&gt;&lt;code&gt;Runnable&lt;/code&gt;&lt;/a&gt;,
+which is widely used for multi-thread programming, has
+method &lt;code&gt;run()&lt;/code&gt; that is not supposed to throw anything. That&amp;#39;s why we always have
+to catch everything inside the method and rethrow checked
+exceptions as unchecked.&lt;/p&gt;
+
+&lt;p&gt;If all methods in all Java interfaces would be declared either as
+&amp;quot;safe&amp;quot; (&lt;code&gt;throws&lt;/code&gt; nothing) or &amp;quot;unsafe&amp;quot; (&lt;code&gt;throws Exception&lt;/code&gt;), everything would
+become logical and clear. If you want to stay &amp;quot;safe,&amp;quot; take responsibility
+for failure handling. Otherwise, be &amp;quot;unsafe&amp;quot; and let your users worry about
+safety.&lt;/p&gt;
+
+&lt;p&gt;No noise, very clean code, and obvious logic.&lt;/p&gt;
+
+&lt;h2 id=&quot;inappropriately-exposed-implementation-details&quot;&gt;Inappropriately Exposed Implementation Details&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/library/j-jtp05254/&quot;&gt;Some say&lt;/a&gt;
+the ability to put a checked exception into &lt;code&gt;throws&lt;/code&gt; in the method
+signature instead of catching it here and rethrowing a new type
+encourages us to have too many irrelevant exception types in method
+signatures. For example, our method &lt;code&gt;save()&lt;/code&gt; may declare that it
+may throw &lt;code&gt;OutOfMemoryException&lt;/code&gt;, even though it seems to have
+nothing to do with memory allocation. But it does allocate some memory, right?
+So such a memory overflow may happen during a file saving operation.&lt;/p&gt;
+
+&lt;p&gt;Yet again, I don&amp;#39;t get the logic of this argument.
+If all exceptions are checked, and we don&amp;#39;t have multiple exception types,
+we just throw &lt;code&gt;Exception&lt;/code&gt; everywhere, and that&amp;#39;s it. Why do we need to care
+about the exception type in the first place? If we don&amp;#39;t use exceptions to control
+flow, we won&amp;#39;t do this.&lt;/p&gt;
+
+&lt;p&gt;If we really want to make our application memory overflow-resistant, we will
+introduce some memory manager, which will have something like the &lt;code&gt;bigEnough()&lt;/code&gt;
+method, which will tell us whether our heap is big enough for the next
+operation. Using exceptions in such situations is a totally inappropriate approach
+to exception management in OOP.&lt;/p&gt;
+
+&lt;h2 id=&quot;recoverable-exceptions&quot;&gt;Recoverable Exceptions&lt;/h2&gt;
+
+&lt;p&gt;Joshua Bloch, in &lt;a href=&quot;http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0321356683&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=QPTA6QN63DE364IM&quot;&gt;Effective Java&lt;/a&gt;,
+says to &amp;quot;use checked exceptions for recoverable conditions and runtime exceptions
+for programming errors.&amp;quot; He means something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// We can&amp;#39;t save the file, but it&amp;#39;s OK&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Let&amp;#39;s move on and do something else&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;How is that any different from a famous anti-pattern called
+&lt;a href=&quot;http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl&quot;&gt;Don&amp;#39;t Use Exceptions for Flow Control&lt;/a&gt;?
+Joshua, with all due respect, you&amp;#39;re wrong. There are no such things
+as recoverable conditions in OOP. An exception indicates that the execution of a
+chain of calls from method to method is broken, and it&amp;#39;s time to go up
+through the chain and stop somewhere. But we never go back again
+after the exception:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;App#run()
+  Data#update()
+    Data#write()
+      File#save() &amp;lt;-- Boom, there&amp;#39;s a failure here, so we go up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We can start this chain again, but we don&amp;#39;t go back after &lt;code&gt;throw&lt;/code&gt;. In other
+words, we don&amp;#39;t &lt;strong&gt;do&lt;/strong&gt; anything in the &lt;code&gt;catch&lt;/code&gt; block. We only report the problem
+and wrap up execution. We never &amp;quot;recover&amp;quot;!&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;All arguments against checked exceptions demonstrate nothing but
+a serious misunderstanding of object-oriented programming by their authors.
+The mistake in Java and in many other languages is the existence of unchecked
+exceptions, not checked ones.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</guid>
+      <dc:date>2015-07-28T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Fools Don't Write Unit Tests</title>
+      <link>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</link>
+      <description>&lt;p&gt;&amp;quot;We don&amp;#39;t have time to write unit tests&amp;quot; or &amp;quot;We don&amp;#39;t have the
+budget for unit testing&amp;quot; are complaints I hear very often. Sometimes it
+may sound like, &amp;quot;We don&amp;#39;t use TDD, so that&amp;#39;s why there are no unit tests,&amp;quot; or even
+&amp;quot;TDD is too expensive for us now.&amp;quot; I&amp;#39;m sure you&amp;#39;ve heard this or even
+said it yourself. It doesn&amp;#39;t make any sense to me. I don&amp;#39;t get the
+logic. In my understanding, unit testing is not
+a product; it&amp;#39;s a &lt;strong&gt;tool&lt;/strong&gt;. You use tests to develop a product
+faster and better. How can you say you don&amp;#39;t have time to use
+the tool that makes your work faster? Let me show you how.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/ex-machina.jpg' style='width:600px;' alt='Ex Machina (2015) by Alex Garland'/&gt;&lt;figcaption&gt;Ex Machina (2015) by Alex Garland&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;TDD or not, a unit test is a unit test. Either you create it before
+the main piece of code or after it.&lt;/p&gt;
+
+&lt;p&gt;A unit test is a tool that helps you, a developer of software,
+&amp;quot;run&amp;quot; your stuff and see how it works. How else can you check if it works?
+When I hear, &amp;quot;I don&amp;#39;t have time for unit tests,&amp;quot; my next question is:
+&amp;quot;How did you test your code?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I seriously can&amp;#39;t understand how it is possible to write something
+and then not test it. Well, unless you&amp;#39;re paid monthly and nobody
+really cares about your deliverables. If you do care about the software
+you produce, you&amp;#39;re interested in seeing it in action, right?&lt;/p&gt;
+
+&lt;p&gt;So, how do you do this?&lt;/p&gt;
+
+&lt;p&gt;If it&amp;#39;s a one-page PHP website, you can probably run it locally on Apache,
+modify it on disk, and then &lt;code&gt;Cmd&lt;/code&gt;+&lt;code&gt;R&lt;/code&gt; many times. That&amp;#39;ll work for a primitive
+piece of code and only for you, a single developer of it. But I hear
+this &amp;quot;I don&amp;#39;t have time&amp;quot; argument from programmers working on enterprise
+systems. How do you guys test your code?&lt;/p&gt;
+
+&lt;p&gt;I would compare unit tests with OOP classes. You can design the entire application
+in a single class with a few thousand methods. You will save time on creating
+other classes, structuring them, thinking about connections between them, etc.
+It will be a single 20,000-line &lt;code&gt;.java&lt;/code&gt; file. And you&amp;#39;ll say that &amp;quot;you didn&amp;#39;t
+have time to create classes,&amp;quot; right? What would we say about such a product and the
+author of it? Right, we&amp;#39;d say he or she is just stupid. And it has nothing
+to do with time or budget. Such a programmer just doesn&amp;#39;t know how to use
+object-oriented programming tools, like encapsulation, inheritance, polymorphism,
+interfaces, method overloading, etc. It&amp;#39;s not about time or budget; it&amp;#39;s about
+skills and discipline.&lt;/p&gt;
+
+&lt;p&gt;The same is true for unit tests. If you create code without unit tests,
+it may work, just like that monster class with 20,000 lines, but the quality
+of your product will be very low. And not because you didn&amp;#39;t have time to
+write unit tests, but because you didn&amp;#39;t know how to do it.&lt;/p&gt;
+
+&lt;p&gt;So every time I hear, &amp;quot;I didn&amp;#39;t have time for unit testing,&amp;quot; I understand
+that you just didn&amp;#39;t know how and are trying to conceal that fact behind
+false excuses. It&amp;#39;s not professional, to say the least.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</guid>
+      <dc:date>2015-07-16T00:00:00+00:00</dc:date>
+    </item>
+    <item>
       <title>A Few Valid Reasons to Reject a Bug Fix</title>
       <link>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
       <description>&lt;p&gt;A bug exists when something doesn&amp;#39;t work as expected. A &lt;em&gt;bug
@@ -1913,520 +2348,6 @@ to please every single client without getting anywhere further.&lt;/p&gt;
       <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/23/haircut.html</guid>
       <dc:date>2015-02-23T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Utility Classes Have Nothing to Do With Functional Programming</title>
-      <link>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</link>
-      <description>&lt;p&gt;I was recently &lt;a href=&quot;https://twitter.com/lukaseder/status/564866432790708224&quot;&gt;accused&lt;/a&gt; of being against
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;
-because &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;I call utility classes an anti-pattern&lt;/a&gt;.
-That&amp;#39;s absolutely wrong! Well, I do consider them a terrible anti-pattern,
-but they have nothing to do with functional programming. I believe there are
-two basic reasons why. First, functional programming is declarative, while
-utility class methods are imperative. Second,
-functional programming is based on lambda calculus, where
-a function can be assigned to a variable. Utility class methods
-are not functions in this sense. I&amp;#39;ll decode these statements in a minute.&lt;/p&gt;
-
-&lt;p&gt;In Java, there are basically two valid alternatives to these ugly utility
-classes aggressively promoted by &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;,
-&lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;, and others. The first one
-is the use of traditional classes, and the second one is &lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html&quot;&gt;Java 8 lambda&lt;/a&gt;.
-Now let&amp;#39;s see why utility classes are not even close to functional programming
-and where this misconception is coming from.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/color-me-kubrick.png' style='width:600px;' alt='Color Me Kubrick (2005) by Brian W. Cook'/&gt;&lt;figcaption&gt;Color Me Kubrick (2005) by Brian W. Cook&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is a typical example of a utility class
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html&quot;&gt;&lt;code&gt;Math&lt;/code&gt;&lt;/a&gt; from Java 1.0:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Math&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// a few dozens of other methods of the same style&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here is how you would use it when you want to calculate an absolute
-value of a floating point number:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.1415926d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;What&amp;#39;s wrong with it? We need a function, and we get it from class &lt;code&gt;Math&lt;/code&gt;.
-The class has many useful functions inside it that can be used for many typical
-mathematical operations, like calculating maximum, minimum, sine, cosine, etc.
-It is a very popular concept; just look at any commercial or open source product.
-These utility classes are used everywhere since Java was invented (this
-&lt;code&gt;Math&lt;/code&gt; class was introduced in Java&amp;#39;s first version). Well, technically
-there is nothing wrong. The code will work. But it is not object-oriented
-programming. Instead, it is imperative and procedural. Do we care? Well,
-it&amp;#39;s up to you to decide. Let&amp;#39;s see what the difference is.&lt;/p&gt;
-
-&lt;p&gt;There are basically two different approaches: declarative and imperative.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Imperative_programming&quot;&gt;Imperative programming&lt;/a&gt;
-is focused on describing &lt;strong&gt;how&lt;/strong&gt; a program operates
-in terms of statements that change a program state. We just saw an example
-of imperative programming above. Here is another (this is pure imperative/procedural
-programming that has nothing to do with OOP):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyMath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Declarative_programming&quot;&gt;Declarative programming&lt;/a&gt;
-focuses on &lt;strong&gt;what&lt;/strong&gt; the program should accomplish without prescribing
-how to do it in terms of sequences of actions to be taken. This is how
-the same code would look in Lisp, a functional programming language:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;What&amp;#39;s the catch? Just a difference in syntax? Not really.&lt;/p&gt;
-
-&lt;p&gt;There are &lt;a href=&quot;http://en.wikipedia.org/wiki/Comparison_of_programming_paradigms&quot;&gt;many definitions&lt;/a&gt;
-of the difference between imperative and declarative styles, but I will try to
-give my own. There are basically three roles interacting in the scenario
-with this &lt;code&gt;f&lt;/code&gt; function/method: a &lt;em&gt;buyer&lt;/em&gt;, a &lt;em&gt;packager&lt;/em&gt; of the result,
-and a &lt;em&gt;consumer&lt;/em&gt; of the result. Let&amp;#39;s say I call this function like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;max+abs equals to &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here, method &lt;code&gt;calc()&lt;/code&gt; is a buyer, method &lt;code&gt;Math.f()&lt;/code&gt; is a packager of the result,
-and method &lt;code&gt;foo()&lt;/code&gt; is a consumer. No matter which programming style is used,
-there are always these three guys participating in the process:
-the buyer, the packager, and the consumer.&lt;/p&gt;
-
-&lt;p&gt;Imagine you&amp;#39;re a buyer and want to purchase a gift for your (girl|boy)friend. The first
-option is to visit a shop, pay $50, let them package that perfume for you,
-and then deliver it to the friend (and get a kiss in return). This is an &lt;strong&gt;imperative&lt;/strong&gt; style.&lt;/p&gt;
-
-&lt;p&gt;The second option is to visit a shop, pay $50, and get a gift card. You then
-present this card to the friend (and get a kiss in return). When he or she decides to convert it
-to perfume, he or she will visit the shop and get it. This
-is a &lt;strong&gt;declarative&lt;/strong&gt; style.&lt;/p&gt;
-
-&lt;p&gt;See the difference?&lt;/p&gt;
-
-&lt;p&gt;In the first case, which is imperative, you force the packager (a beauty shop)
-to find that perfume in stock, package it, and present it to you as
-a ready-to-be-used product. In the second scenario, which is declarative,
-you&amp;#39;re just getting a promise from the shop that eventually, when it&amp;#39;s
-necessary, the staff will find the perfume in stock, package it, and provide it to
-those who need it. If your friend never visits the shop with that gift card,
-the perfume will remain in stock.&lt;/p&gt;
-
-&lt;p&gt;Moreover, your friend can use that gift card as a product itself, never
-visiting the shop. He or she may instead present it to somebody else as a gift
-or just exchange it for another card or product. The gift card itself
-becomes a product!&lt;/p&gt;
-
-&lt;p&gt;So the difference is what the consumer is getting &amp;mdash; either a
-product ready to be used (imperative) or a voucher for the product, which
-can later be converted into a real product (declarative).&lt;/p&gt;
-
-&lt;p&gt;Utility classes, like &lt;code&gt;Math&lt;/code&gt; from JDK or &lt;code&gt;StringUtils&lt;/code&gt; from Apache Commons,
-return products ready to be used immediately, while functions in Lisp
-and other functional languages return &amp;quot;vouchers&amp;quot;. For example, if you
-call the &lt;code&gt;max&lt;/code&gt; function in Lisp, the actual maximum between two numbers
-will only be calculated when you actually start using it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;X equals to &amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Until this &lt;code&gt;print&lt;/code&gt; actually starts to output characters to the
-screen, the function &lt;code&gt;max&lt;/code&gt; won&amp;#39;t be called. This &lt;code&gt;x&lt;/code&gt; is a &amp;quot;voucher&amp;quot; returned
-to you when you attempted to &amp;quot;buy&amp;quot; a maximum between &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note, however, that nesting Java static functions one into another doesn&amp;#39;t
-make them declarative. The code is still imperative, because its execution
-delivers the result here and now:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyMath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&amp;quot;Okay,&amp;quot; you may say, &amp;quot;I got it, but why is declarative style better than imperative?
-What&amp;#39;s the big deal?&amp;quot; I&amp;#39;m getting to it. Let me first show the difference
-between functions in functional programming and static methods in OOP.
-As mentioned above, this is the second big difference between utility
-classes and functional programming.&lt;/p&gt;
-
-&lt;p&gt;In any functional programming language, you can do this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, later, you can call that &lt;code&gt;x&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;defining&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;passing&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;an&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;argument&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Static methods in Java are not &lt;em&gt;functions&lt;/em&gt; in terms of functional programming.
-You can&amp;#39;t do anything like this with a static method. You can&amp;#39;t pass a static
-method as an argument to another method. Basically, static
-methods are procedures or, simply put, Java statements grouped under a unique
-name. The only way to access them is to call a procedure and pass all
-necessary arguments to it. The procedure will calculate something and return
-a result that is immediately ready for usage.&lt;/p&gt;
-
-&lt;p&gt;And now we&amp;#39;re getting to the final question I can hear you asking:
-&amp;quot;Okay, utility classes are not functional programming, but they look like
-functional programming, they work very fast, and they are very easy to
-use. Why not use them? Why aim for perfection when 20 years of Java history
-proves that utility classes are the main instrument of each Java developer?&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Besides OOP fundamentalism, which I&amp;#39;m very often accused of, there are
-a few very practical reasons (BTW, I am an OOP fundamentalist):&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Testability&lt;/strong&gt;.
-Calls to static methods in utility classes are hard-coded dependencies that
-can never be broken for testing purposes. If your class is calling
-&lt;code&gt;FileUtils.readFile()&lt;/code&gt;, I will never be able to test it without using
-a real file on disk.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;.
-Utility classes, due to their imperative nature, are much less efficient
-than their &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;declarative alternatives&lt;/a&gt;.
-They simply do all calculations right here and now, taking processor
-resources even when it&amp;#39;s not yet necessary. Instead of returning a promise
-to break down a string into chunks, &lt;code&gt;StringUtils.split()&lt;/code&gt; breaks it down
-right now. And it breaks it down into all possible chunks, even if only
-the first one is required by the &amp;quot;buyer&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Readability&lt;/strong&gt;.
-Utility classes tend to be huge (try to read the source code of &lt;code&gt;StringUtils&lt;/code&gt;
-or &lt;code&gt;FileUtils&lt;/code&gt; from Apache Commons). The entire idea of separation of concerns,
-which makes OOP so beautiful, is absent in utility classes. They just
-put all possible procedures into one huge &lt;code&gt;.java&lt;/code&gt; file, which becomes
-absolutely unmaintainable when it surpasses a dozen static methods.&lt;/p&gt;
-
-&lt;p&gt;To conclude, let me reiterate: Utility classes have nothing to do
-with functional programming. They are simply bags of static methods, which
-are imperative procedures. Try to stay as far as possible away from them and
-use solid, cohesive objects no matter how many of them you have to declare
-and how small they are.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</guid>
-      <dc:date>2015-02-20T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Code For the User, Not for Yourself</title>
-      <link>http://www.yegor256.com/2015/02/12/top-down-design.html</link>
-      <description>&lt;p&gt;First, no matter what the methodology is, we all write software for our
-users (a.k.a. customers, project sponsors, end users, or clients). Second,
-no matter what the methodology is, we write incrementally, releasing
-features and bug fixes one by one. Maybe I&amp;#39;m saying something absolutely obvious here,
-but it&amp;#39;s important to remember that each new version should first of all satisfy
-the needs of the user, not of us programmers. In other words, the way
-we decompose a big task into smaller pieces should be user-targeted, and that&amp;#39;s
-why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see what I mean through a practical example.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/delicatessen.png' style='width:600px;' alt='Delicatessen (1991) by Jean-Pierre Jeunet'/&gt;&lt;figcaption&gt;Delicatessen (1991) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Say I&amp;#39;m contracted by a friend of mine to create a word-counting command line
-tool very similar to &lt;a href=&quot;http://en.wikipedia.org/wiki/Wc_%28Unix%29&quot;&gt;wc&lt;/a&gt;. He
-promised to pay me $200 for this work, and I promised him I&amp;#39;d deliver the
-product in two increments &amp;mdash; an alpha and beta version. I promised him
-I&amp;#39;d release the alpha version on Saturday and the beta version on Sunday. He is
-going to pay me $100 after the first release and the rest after the second release.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;ll write in C, and he will pay in cash.&lt;/p&gt;
-
-&lt;p&gt;The tool is very primitive, and it only took me a few minutes to write. Take a look at it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;unistd.h&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;STDIN_FILENO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;But let&amp;#39;s be professional and not forget about build automation and unit
-testing. Here is a simple &lt;code&gt;Makefile&lt;/code&gt; that does them both:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-makefile&quot; data-lang=&quot;makefile&quot;&gt;&lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
-  gcc -o wc wc.c
-&lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ./wc &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s1&quot;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello, world! How are you?&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ./wc &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep &lt;span class=&quot;s1&quot;&gt;&amp;#39;5&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now I run &lt;code&gt;make&lt;/code&gt; from a command line and get this output:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ make
-echo &amp;#39;&amp;#39; | ./wc | grep &amp;#39;0&amp;#39;
-0
-echo &amp;#39;Hello, world! How are you?&amp;#39; | ./wc | grep &amp;#39;5&amp;#39;
-5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;All clean!&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m ready to get my $200. Wait, the deal was to deliver two
-versions and get cash in two installments. Let&amp;#39;s back up a little and
-think &amp;mdash; how can we break this small tool into two parts?&lt;/p&gt;
-
-&lt;p&gt;On first thought, let&amp;#39;s release the tool itself first and
-build automation and testing next. Is that a good idea? Can we
-deliver any software without running it first with a test? How can I be
-sure that it works if I don&amp;#39;t ship tests together with it? What will my friend
-think about me releasing anything without tests? This would be
-a total embarassment.&lt;/p&gt;
-
-&lt;p&gt;Okay, let&amp;#39;s release &lt;code&gt;Makefile&lt;/code&gt; first and &lt;code&gt;wc.c&lt;/code&gt; next. But what will my
-friend do with a couple of tests and no product in hand? This first
-release will be absolutely pointless, and I won&amp;#39;t get my $100.&lt;/p&gt;
-
-&lt;p&gt;Now we&amp;#39;re getting to the point of this article. What I&amp;#39;m trying to say
-is that every new increment must add some value to the product as it
-is perceived by the customer, not by us programmers. The &lt;code&gt;Makefile&lt;/code&gt; is
-definitely a valuable artifact, but it provides no value to my friend.
-He doesn&amp;#39;t need it, but I need it.&lt;/p&gt;
-
-&lt;p&gt;Here is what I&amp;#39;m going to do. I&amp;#39;ll release a skeleton of the tool, backed
-by the tests but with an absolutely dummy implementation. Look at it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And I will modify the &lt;code&gt;Makefile&lt;/code&gt; accordingly. I will disable the first test
-to make sure the build passes.&lt;/p&gt;
-
-&lt;p&gt;Does my tool work? Yes, it does. Does it count words? Yes, it does for
-some inputs. Does it have value to my friend. Obviously! He
-can run it from the command line, and he can pass a file as an input. He will
-always get number &amp;quot;5&amp;quot; as a result of counting, though. That&amp;#39;s a bummer, but it&amp;#39;s
-an alpha version. He doesn&amp;#39;t expect it to work perfectly.&lt;/p&gt;
-
-&lt;p&gt;However, it works, it is backed by tests, and it is properly packaged.&lt;/p&gt;
-
-&lt;p&gt;What I just did is a top-down approach to design. First of all, I created
-something that provides value to my customer. I made sure it also satisfies
-my technical objectives, like proper unit test coverage and build automation.
-But the most important goal for me was to make sure my friend received
-something ... and paid me.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/12/top-down-design.html</guid>
-      <dc:date>2015-02-12T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
-      <link>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Maven is a build automation tool mostly for Java projects. It&amp;#39;s a great
-tool, but it has one important drawback that has motivated the creation
-of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
-Maven gets all project build parameters from &lt;code&gt;pom.xml&lt;/code&gt;, an XML
-file that can get very long. I&amp;#39;ve seen POM files of 3,000-plus lines.
-Taking into account 1) recent DSL buzz and 2) fear of XML, it&amp;#39;s
-only logical that many people don&amp;#39;t like Maven because of its &lt;code&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
-
-&lt;p&gt;But even if you&amp;#39;re an XML fan who enjoys its strictness and elegance
-(like myself), you won&amp;#39;t like the necessity to repeat yourself in &lt;code&gt;pom.xml&lt;/code&gt;
-for every project. If you&amp;#39;re working on multiple projects, code duplication
-will be enormous. An average Java web app uses a few dozen standard Maven plugins
-and almost the same number of pretty common dependencies, like
-JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
-and configurations, which have to be specified if you want to keep
-the project stable and avoid Maven warnings. Thus, once a new version
-of a plugin is released, you have to go through all &lt;code&gt;pom.xml&lt;/code&gt; files in
-the projects you&amp;#39;re working on and update it there. You obviously understand
-what code duplication means. It&amp;#39;s a disaster. However, there is a solution.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://parent.jcabi.com&quot;&gt;jcabi-parent&lt;/a&gt; is a very simple Maven dependency
-with nothing inside it except a large &lt;code&gt;pom.xml&lt;/code&gt; with multiple pre-configured
-dependencies, profiles, and plugins. All you need to do in order to reuse them
-all in your project is define &lt;code&gt;com.jcabi:parent&lt;/code&gt; as your parent POM:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;modelVersion&amp;gt;&lt;/span&gt;4.0.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/modelVersion&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;parent&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;parent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- check the latest version at http://parent.jcabi.com --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.32.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/parent&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That&amp;#39;s all you need. Now you can remove most of your custom configurations
-from &lt;code&gt;pom.xml&lt;/code&gt; and rely on defaults provided by jcabi-parent. Its
-&lt;a href=&quot;https://github.com/jcabi/jcabi-parent/blob/master/pom.xml&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt;
-is rather large and properly configured. Multiple projects depend on it, so you
-can be confident that you&amp;#39;re using the best possible configuration of
-all standard plugins.&lt;/p&gt;
-
-&lt;p&gt;Here are a few examples of &lt;code&gt;pom.xml&lt;/code&gt; from projects that are using
-jcabi-parent (you can see how compact they are):
-&lt;a href=&quot;https://github.com/yegor256/xembly/blob/master/pom.xml&quot;&gt;Xembly&lt;/a&gt;
-&lt;a href=&quot;https://github.com/yegor256/rexsl/blob/master/pom.xml&quot;&gt;ReXSL&lt;/a&gt;
-&lt;a href=&quot;https://github.com/jcabi/jcabi-http/blob/master/pom.xml&quot;&gt;jcabi-http&lt;/a&gt;
-&lt;a href=&quot;https://github.com/teamed/qulice/blob/master/pom.xml&quot;&gt;Qulice&lt;/a&gt;&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
-      <dc:date>2015-02-05T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>XSL Transformation in Java: An Easy Way</title>
-      <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
-      <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
-(XSLT) is a powerful mechanism for converting one
-XML document into another. However, in Java, XML manipulations
-are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code &amp;mdash; and maybe even more
-than that if proper exception handling and logging is needed.
-&lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; is
-a small open source library that makes life much easier by enabling
-XML parsing and XPath traversing with
-&lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;a few simple methods&lt;/a&gt;. Let&amp;#39;s
-see how this library helps in XSL transformations.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, take a look at a practical example &amp;mdash; &lt;a href=&quot;http://www.rultor.com&quot;&gt;rultor.com&lt;/a&gt; &amp;mdash;
-a hosted DevOps assistant that
-&lt;a href=&quot;/&quot;&gt;automates&lt;/a&gt;
-release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &amp;quot;talk&amp;quot;)
-in a DynamoDB record. There are multiple situations to handle
-in each talk; that&amp;#39;s why using multiple columns of a record is not
-really feasible. Instead, we&amp;#39;re keeping only a few parameters of each talk
-in record columns (like ID and name) and putting all the rest in a single
-XML column.&lt;/p&gt;
-
-&lt;p&gt;This is approximately how our DynamoDB table looks:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+----+---------------+--------------------------------------+
-| id | name          | xml                                  |
-+----+---------------+--------------------------------------+
-| 12 | jcabi-xml#54  | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
-|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
-|    |               |   &amp;lt;request id=&amp;quot;e5f4b3&amp;quot;&amp;gt;...&amp;lt;/request&amp;gt; |
-|    |               | &amp;lt;/talk&amp;gt;                              |
-+----+---------------+--------------------------------------+
-| 13 | jcabi-email#2 | &amp;lt;?xml version=&amp;#39;1.0&amp;#39;?&amp;gt;                |
-|    |               | &amp;lt;talk public=&amp;quot;true&amp;quot;&amp;gt;                 |
-|    |               |   &amp;lt;daemon id=&amp;quot;f787fe&amp;quot;&amp;gt;...&amp;lt;/daemon&amp;gt;   |
-|    |               | &amp;lt;/talk&amp;gt;                              |
-+----+---------------+--------------------------------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once a user posts &lt;code&gt;@rultor status&lt;/code&gt; into a Github ticket, Rultor
-has to answer with a full status report about the current talk. In order
-to create such a text answer (a regular user would not appreciate an XML response),
-we have to fetch that &lt;code&gt;xml&lt;/code&gt; column from the necessary DynamoDB record and convert
-it to plain English text.&lt;/p&gt;
-
-&lt;p&gt;Here is how we&amp;#39;re doing that with the help of &lt;a href=&quot;http://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; and its
-class, &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html&quot;&gt;&lt;code&gt;XSLDocument&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// comes from DynamoDB&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;status.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;applyTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That&amp;#39;s it. Now let&amp;#39;s see what&amp;#39;s there in that &lt;code&gt;status.xsl&lt;/code&gt; file
-(this is just a skeleton of it; the full version is &lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:xsl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:output&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/talk&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:text&amp;gt;&lt;/span&gt;Hi, here is your status report:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:text&amp;gt;&lt;/span&gt;
-    ...
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;match=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:copy&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;xsl:apply-templates&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;select=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node()|@*&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:copy&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;It is good practice to create XSL documents only once per application
-run. We have a static utility method &lt;a href=&quot;http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29&quot;&gt;&lt;code&gt;XSLDocument.make()&lt;/code&gt;&lt;/a&gt; for this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STYLESHEET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSLDocument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet.xsl&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;STYLESHEET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Pay attention to the fact we&amp;#39;re using XSLT 2.0. Built-in Java implementation of XSLT
-doesn&amp;#39;t support version 2.0, and in order to make it work, we&amp;#39;re using
-these two Maven Saxon dependencies:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;saxon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;9.1.0.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;classifier&amp;gt;&lt;/span&gt;xpath&lt;span class=&quot;nt&quot;&gt;&amp;lt;/classifier&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;All you need to do to start using &lt;code&gt;jcabi-xml&lt;/code&gt; for XSL transformations is
-add this dependency to your &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.jcabi&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;jcabi-xml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you have any problems or suggestions, don&amp;#39;t hesitate to submit an issue
-to the Github &lt;a href=&quot;https://github.com/jcabi/jcabi-xml/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
-      <dc:date>2015-02-02T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
