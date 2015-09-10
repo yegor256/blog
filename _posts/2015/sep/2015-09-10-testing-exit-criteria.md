@@ -3,6 +3,7 @@ layout: post
 title: "When Do You Stop Testing?"
 date: 2015-09-10
 place: Moscow, Russia
+categories: jcg
 tags: testing
 description:
   How do you know when testing is enough? When there

@@ -3,6 +3,7 @@ layout: post
 title: "Fools Don't Write Unit Tests"
 date: 2015-07-16
 tags: tdd
+categories: jcg
 place: Palo Alto, CA
 description:
   A unit test is a tool, not a product; the absence

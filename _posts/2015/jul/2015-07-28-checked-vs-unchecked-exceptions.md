@@ -2,6 +2,7 @@
 layout: post
 title: "Checked vs. Unchecked Exceptions: The Debate Is Not Over"
 date: 2015-07-28
+categories: jcg
 tags: oop java
 place: Sunnyvale, CA
 description:
