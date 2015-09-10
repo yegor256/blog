@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When Do You Stop Testing?"
-date: 2015-08-25
+date: 2015-09-10
 tags: testing
 description:
   How do you know when testing is enough? When there
@@ -27,10 +27,13 @@ You're **fundamentally wrong**.
 
 <!--more-->
 
-{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
+{% picture /images/2015/09/la-fille-sur-le-pont.jpg 0 La fille sur le pont (1999) by Patrice Leconte %}
+
 All this is perfectly explained by Glenford Myers in his great book
 [The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 I will just summarize it here again.
+
+{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
 
 First, "testing is the process of executing a program with the
 intent of **finding errors**" (page 6). Pay attention, the intent is to find errors.

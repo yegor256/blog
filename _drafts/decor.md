@@ -34,9 +34,8 @@ interface Numbers {
 }
 {% endhighlight %}
 
-Now I want to create a list that will have only odd, unique and positive numbers,
-sorted in a descending order. The first approach is **vertical**
-(I just made this name up):
+Now I want to create a list that will have only odd, unique, positive and sorted numbers.
+The first approach is **vertical** (I just made this name up):
 
 {% highlight java %}
 Numbers numbers = new Sorted(
@@ -44,7 +43,9 @@ Numbers numbers = new Sorted(
     new Odds(
       new Positive(
         new ArrayNumbers(
-          new Integer[] {-1, 78, 4, -34, 98, 4}
+          new Integer[] {
+            -1, 78, 4, -34, 98, 4,
+          }
         )
       )
     )
@@ -57,7 +58,9 @@ The second approach is **horizontal** (again, a name I made up):
 {% highlight java %}
 Numbers numbers = new Modified(
   new ArrayNumbers(
-    new Integer[] {-1, 78, 4, -34, 98, 4}
+    new Integer[] {
+      -1, 78, 4, -34, 98, 4,
+    }
   ),
   new Modifier[] {
     new Positive(),
@@ -83,4 +86,10 @@ interface Mofifier {
 {% endhighlight %}
 
 For the user of `numbers` both approaches are the same. The difference is
-in design. Which one is better and when?...
+only in design. Which one is better and when? It seems that
+vertical decorating is easier to implement and is more suitable for
+smaller objects, which expose just a few methods.
+
+In my experience, I always tend to start with vertical decorating, since it's
+easier to implement, but eventually migrate to a horizontal one, when the
+amount of decorators starts to grow.
