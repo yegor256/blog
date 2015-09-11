@@ -64,7 +64,7 @@ last remaining error" (page 135).
 They can't find all bugs, no matter how much time we give them. And they
 are motivated to find more and more of them. But at some point of time we
 must make a decision and release the product. Looks like we will release
-it with bugs inside? Yes, indeed! We will release a product full of bugs.
+it with bugs inside? Yes, indeed! We will release a product **full of bugs**.
 The only question is how many of them were found already and how critical
 they were.
 
@@ -77,7 +77,7 @@ time. What to do?
 Dr. Meyers says that "since the goal of testing is to find errors,
 why not make the completion criterion the detection of some predefined
 number of errors?" (page 136). Indeed, we should predict how many bugs
-are just enough to find, in order to have a desirable level of confidence
+are just enough to find, in order to have a desirable level of **confidence**
 that the product is ready to be shipped. Then, ship it, conciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
