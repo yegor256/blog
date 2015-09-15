@@ -10,12 +10,75 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Thu, 10 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How to Fire Someone Right</title>
+      <link>http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html</link>
+      <description>&lt;p&gt;A friend of mine asked me today, &amp;quot;How should I fire
+someone the right way? What are the tricks to do it nicely,
+gracefully, and professionally?&amp;quot; I responded by saying that if you question yourself
+about how to do it right, you&amp;#39;re doing it wrong in the first place.
+If firing is a painful and unpleasant process for you, there is
+a problem with your management model. Firing must be an &lt;strong&gt;easy&lt;/strong&gt;
+and &lt;strong&gt;open&lt;/strong&gt; procedure, &lt;strong&gt;visible&lt;/strong&gt; and &lt;strong&gt;understood&lt;/strong&gt; by the entire team.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/up-in-the-air.jpg' style='width:600px;' alt='Up in the Air (2009) by Jason Reitman'/&gt;&lt;figcaption&gt;Up in the Air (2009) by Jason Reitman&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I mentioned this problem before in
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;my post&lt;/a&gt; about team morale.
+I said that firing someone should not be done behind &lt;strong&gt;closed doors&lt;/strong&gt;.
+Instead, the assessment of individual performance should
+occur openly and be visible to the entire team. If you need to close
+the door in order to talk &amp;quot;privately&amp;quot; to express your concerns and
+eventually to fire someone, you are a bad manager.&lt;/p&gt;
+
+&lt;p&gt;I also explained &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;some time ago&lt;/a&gt;
+that a perfectly managed team is working for the project, not for you, the boss.
+The team must share the same goal and work towards it. The boss (or CEO,
+CTO, project manager, Scrum master, team lead, etc.) is there in order
+to enforce the &lt;strong&gt;rules&lt;/strong&gt; accepted by the team. The team agrees to the rules,
+so the boss is just making sure they are &lt;strong&gt;enforced&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If firing is unpleasant for you, the rules are not clear.&lt;/p&gt;
+
+&lt;p&gt;If the rules are not clear, you&amp;#39;re a bad manager.&lt;/p&gt;
+
+&lt;p&gt;The firing is unpleasant only when your decision is not supported by the team.
+You feel you&amp;#39;re doing something wrong to the person you are firing and
+to the people who stay on the team. You feel it only because you don&amp;#39;t have
+enough support from your team. You&amp;#39;re acting as a dictator, not a true leader.&lt;/p&gt;
+
+&lt;p&gt;The firing decision should not be your decision. It should be derived
+from the rules your team agreed to work with. You should not fire when
+you don&amp;#39;t like the person. Instead, you should fire when the person doesn&amp;#39;t
+comply with the rules, like when there&amp;#39;s a lack of performance.&lt;/p&gt;
+
+&lt;p&gt;When the rules are clear, everybody understands them, and reconciliation of
+performance is done regularly and openly, everybody will understand
+your firing decision and support it &amp;mdash; including the person you&amp;#39;re firing!
+Because it won&amp;#39;t be your decision, but rather a decision logically derived
+from the rules. You will work for the project, not for your emotions or
+personal feelings.&lt;/p&gt;
+
+&lt;p&gt;By firing a person who is causing problems for the project,
+you will be doing a good thing for everybody &amp;mdash; the project, the team, and the
+person who will go and find another place for his or her skills and talents.&lt;/p&gt;
+
+&lt;p&gt;Let me reiterate: If firing is unpleasant, there is a problem
+with the manager and the management.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Wed, 16 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html</guid>
+      <dc:date>2015-09-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>When Do You Stop Testing?</title>
       <link>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
@@ -1929,118 +1992,6 @@ class in Rultor, for example.&lt;/p&gt;
       <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/06/25/xml-data-xsl-views-takes-framework.html</guid>
       <dc:date>2015-06-25T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>A Few Valid Reasons to Reject a Bug Fix</title>
-      <link>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
-      <description>&lt;p&gt;A bug exists when something doesn&amp;#39;t work as expected. A &lt;em&gt;bug
-fix&lt;/em&gt; is basically a patch (a pull request) to the existing code base that
-is supposed to solve the problem and make sure that &amp;quot;something&amp;quot;
-works as expected. Very often, such a patch fixes one thing
-and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;strong&gt;reject&lt;/strong&gt;
-a bug fix and ask its author to re-do the patch in order to
-protect the project from bigger problems. There are a few
-valid reasons for such a rejection, according to my experience.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/crimen-ferpecto.jpg' style='width:600px;' alt='El Crimen Perfecto (2004) by Álex de la Iglesia'/&gt;&lt;figcaption&gt;El Crimen Perfecto (2004) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;it-degrades-code-coverage&quot;&gt;It Degrades Code Coverage&lt;/h2&gt;
-
-&lt;p&gt;This is a very common situation: After the changes are made in one place,
-unit tests fail in some other place. The bug is fixed, but some possibly
-unrelated unit tests start to report failure. Under pressure or simply because
-we&amp;#39;re lazy, we don&amp;#39;t fix them; we simply remove the tests or mark them
-as temporarily &amp;quot;skipped.&amp;quot; The problem is solved, the build is clean, so let&amp;#39;s
-merge the patch and call it a day, right? Wrong!&lt;/p&gt;
-
-&lt;p&gt;Even though I&amp;#39;m in favor of &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cutting corners&lt;/a&gt;
-as much as possible, this is the corner I don&amp;#39;t recommend you cut.&lt;/p&gt;
-
-&lt;p&gt;The unit tests are there precisely to prevent us from breaking the
-product when under pressure.&lt;/p&gt;
-
-&lt;p&gt;Obviously, there are situations when the unit tests are wrong and
-we have to delete them. In those cases, don&amp;#39;t forget to create new ones.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are also situations when the bug must be fixed in a few minutes
-to put the system back online and fixing all unit tests will take an hour.
-Such a situation is a strong indicator that you&amp;#39;ve got a terrible underlying
-situation with test coverage in the product. There&amp;#39;s no doubt that we have to make
-a fix and ask our tests to shut up for some time. But in this case, make sure
-the next task your team is working on after the bug fix is released is
-correcting those disabled unit tests. I would recommend reading
-&lt;a href=&quot;http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC&quot;&gt;Working Effectively With Legacy Code&lt;/a&gt;
-by Michael Feathers, which tackles this very subject.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-doesn&amp;#39;t-reproduce-the-issue&quot;&gt;It Doesn&amp;#39;t Reproduce the Issue&lt;/h2&gt;
-
-&lt;p&gt;Sometimes the entire system may be down simply because of a small
-typo in one line of code. An obvious bug fix is to remove the typo, but
-that&amp;#39;s not what a good project is expecting from us if we care about its
-quality. The problem is not the typo but rather the absence of unit tests
-that would catch the typo at the deployment phase.&lt;/p&gt;
-
-&lt;p&gt;The real problem is the lack of test code coverage in this particular
-section of the code. By removing the typo, we&amp;#39;re not helping the project
-in any way. Moreover, we&amp;#39;re doing it a disservice &amp;mdash; we&amp;#39;re &lt;em&gt;concealing&lt;/em&gt;
-the real problem.&lt;/p&gt;
-
-&lt;p&gt;Thus, no matter how small or cosmetic the issue is, its bug fix
-must contain an extra test that first reproduces the bug. Without such
-a test, a bug fix is a waste of the project&amp;#39;s money.&lt;/p&gt;
-
-&lt;p&gt;Furthermore, without a unit test reproducing the issue, there is no
-guarantee that our bug fix doesn&amp;#39;t introduce more bugs. I would even say that
-the more bug fixes we have, the higher the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Entropy_%28information_theory%29&quot;&gt;entropy&lt;/a&gt;.
-And the only way to decrease this uncertainty is by covering the
-code with unit tests. Without a test, a bug fix brings more disorder
-to the code base.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-is-too-big&quot;&gt;It Is Too Big&lt;/h2&gt;
-
-&lt;p&gt;Bug fixes are &lt;em&gt;not features&lt;/em&gt;; they must be small and focused. It&amp;#39;s a very
-typical mistake for programmers to get carried away while fixing a
-bug and introduce some refactoring together with a fix. The result is that the
-patch gets rather big and difficult to understand. I&amp;#39;m not against refactoring; it&amp;#39;s
-a very important and positive thing for a project, but do it separately
-&lt;em&gt;after&lt;/em&gt; the bug is fixed and merged.&lt;/p&gt;
-
-&lt;p&gt;No refactoring while fixing a bug!&lt;/p&gt;
-
-&lt;p&gt;Create a new unit test, reproduce the bug, and commit it. Fix the bug
-in the existing code base, no matter how ugly it is. Create new
-bugs, asking the team to improve the situation with the ugly code base.
-If interested, assign those bugs to yourself. Or maybe somebody else
-will be interested in fixing them and refactoring the code. But all that
-will happen later in other pull requests with new code reviews
-and new merges.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s not about being lazy and unwilling to fix what looks bad. It&amp;#39;s about
-a discipline, which is &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;much more important&lt;/a&gt;
-than good intentions.&lt;/p&gt;
-
-&lt;h2 id=&quot;it-solves-more-than-one-issue&quot;&gt;It Solves More Than One Issue&lt;/h2&gt;
-
-&lt;p&gt;Always fix one issue at a time &amp;mdash; simple as that. No exceptions. When
-a bug fix patch contains code changes that fix multiple issues, it is
-very difficult to understand which issue is tested, which one is reproduced,
-and how they relate to each other. Combining several bug fixes into a single
-pull request is a very bad practice.&lt;/p&gt;
-
-&lt;p&gt;No matter how simple the fix is, keep it separate from others.
-Review, test, and merge it individually. This will also increase the
-traceability of changes. It will always be easy to understand who made
-that fix, who reviewed the code, and when it was merged (and deployed).&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 22 Jun 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</guid>
-      <dc:date>2015-06-22T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
