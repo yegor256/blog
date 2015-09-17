@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Set Up a Private Maven Repository in Amazon S3"
-date: 2015-08-30
+date: 2015-09-07
 place: Kiev, Ukraine
 tags: java maven
 description:

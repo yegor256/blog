@@ -63,6 +63,8 @@ Indeed, this a very convenient technique!?
 However, in an object-oriented world, utility classes are considered a very bad
 (some even may say "terrible") practice.
 
+{% youtube psrp3TtaYYI video-left %}
+
 There have been many discussions of this subject; to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,
 [Why helper, singletons and utility classes are mostly bad](http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/) by Simon Hart,
@@ -75,8 +77,8 @@ Additionally, there are a few questions on StackExchange about utility classes:
 [Utility Classes are Evil](http://stackoverflow.com/questions/3340032/utility-classes-are-evil).
 
 A dry summary of all their arguments is that utility classes are not proper
-objects; therefore, they don't fit into object-oriented world. They were
-inherited from procedural programming, mostly because most were used to a
+**objects**; therefore, they don't fit into object-oriented world. They were
+inherited from **procedural** programming, mostly because we were used to a
 functional decomposition paradigm back then.
 
 Assuming you agree with the arguments and want to stop using utility classes,

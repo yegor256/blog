@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "How to Fire Someone Right"
-date: 2015-08-18
+date: 2015-09-16
 tags: mgmt
-place: Dnepropetrovsk, Ukraine
+place: Kiev, Ukraine
 description:
   Firing can be done right &mdash; nicely and gracefully &mdash;
   if you make it professional and not personal.
@@ -24,6 +24,8 @@ a problem with your management model. Firing must be an **easy**
 and **open** procedure, **visible** and **understood** by the entire team.
 
 <!--more-->
+
+{% picture /images/2015/09/up-in-the-air.jpg 0 Up in the Air (2009) by Jason Reitman %}
 
 I mentioned this problem before in
 [my post]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) about team morale.

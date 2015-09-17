@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "When Do You Stop Testing?"
-date: 2015-08-25
+date: 2015-09-10
+place: Moscow, Russia
+categories: jcg
 tags: testing
 description:
   How do you know when testing is enough? When there
@@ -27,10 +29,13 @@ You're **fundamentally wrong**.
 
 <!--more-->
 
-{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
+{% picture /images/2015/09/la-fille-sur-le-pont.jpg 0 La fille sur le pont (1999) by Patrice Leconte %}
+
 All this is perfectly explained by Glenford Myers in his great book
 [The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 I will just summarize it here again.
+
+{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
 
 First, "testing is the process of executing a program with the
 intent of **finding errors**" (page 6). Pay attention, the intent is to find errors.
@@ -59,7 +64,7 @@ last remaining error" (page 135).
 They can't find all bugs, no matter how much time we give them. And they
 are motivated to find more and more of them. But at some point of time we
 must make a decision and release the product. Looks like we will release
-it with bugs inside? Yes, indeed! We will release a product full of bugs.
+it with bugs inside? Yes, indeed! We will release a product **full of bugs**.
 The only question is how many of them were found already and how critical
 they were.
 
@@ -72,12 +77,18 @@ time. What to do?
 Dr. Meyers says that "since the goal of testing is to find errors,
 why not make the completion criterion the detection of some predefined
 number of errors?" (page 136). Indeed, we should predict how many bugs
-are just enough to find, in order to have a desirable level of confidence
+are just enough to find, in order to have a desirable level of **confidence**
 that the product is ready to be shipped. Then, ship it, conciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
 
-David West in "Object Thinking" says "...".
+{% badge /images/2015/04/book-object-thinking.jpg 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z %}
+
+David West in
+[Object Thinking](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z)
+says that "software is released for use,
+not when it is known to be correct, but when the rate of discovering
+errors slows down to one that management considers acceptable" (page 13).
 
 Thus, the only valid criteria for exiting a testing process is the
-discovery of a forecasted amount of bugs.
+discovery of a **forecasted** amount of bugs.
