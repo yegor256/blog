@@ -83,7 +83,7 @@ know how to do it. I'm sure you know a few, too. They would
 rather call a friend when they need information than pull up
 Google.
 
-Say I'm a good friend and Jeff calls me to ask what the weather will 
+Say I'm a good friend and Jeff calls me to ask what the weather will
 be like tomorrow in California. I'll advise him to Google it, now and
 every time in the future. I will teach him how to do it. But if I was a lousy
 friend and wanted Jeff to depend on me forever, I would just
@@ -100,7 +100,7 @@ A friend of mine was looking for a house in San Francisco a few months ago. He
 actually found the house on [Zillow](http://www.zillow.com) but paid $70,000
 to two real estate agents to help him close the deal
 (the price of the house was close to $1.4 million,
-with 2.5 percent to each agent). What did these "hard-working" people do to earn his $70,000? 
+with 2.5 percent to each agent). What did these "hard-working" people do to earn his $70,000?
 They prepared the necessary paperwork and, of course,
 talked to him for a few weeks.
 
@@ -122,17 +122,17 @@ a very de-motivating effect on those who are actually delivering value while
 making a much smaller income. It obviously demonstrates that the entire
 system is defective and simply not fair.
 
-The same is true about **outstaffing** companies, which we contract with to 
+The same is true about **outstaffing** companies, which we contract with to
 gain access to programmers sitting somewhere overseas or much closer.
-They find developers, hire them full-time, and resell their skills with a 150 percent 
-or greater margin on a part-time or short-term basis. I've been getting a few offers 
+They find developers, hire them full-time, and resell their skills with a 150 percent
+or greater margin on a part-time or short-term basis. I've been getting a few offers
 from such companies every day.
 
 They want me to pay, say, $40 for each hour while a developer
 sitting in their office gets like $2,500 per month. This means
 $25 out of my $40 will be spent **not writing code** but rather on something else.
-Also, a programmer will be more motivated for the $2,500 per month than the $40, though
-it adds up to more than $7,000. So I will be paying $7K per month and getting software worth $2,500 a month.
+Also, a programmer will be motivated for the $2,500, not for $7,000.
+So I will be paying $7K per month and getting software worth $2,500 a month.
 
 I will be paying for a Mercedes-Benz S-Class but getting a Ford Focus.
 I'm not greedy; I just want my every dollar to be converted into some value.
