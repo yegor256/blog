@@ -25,6 +25,8 @@ is something completely different.
 
 <!--more-->
 
+{% picture /images/2015/09/office-space.jpg 0 Office Space (1999) by Mike Judge %}
+
 There are [tons of articles](https://www.google.com/search?q=micromanagement)
 about micromanagement. Most of them emphasize that the "micro" prefix prescribes
 the size of the tasks being managed, meaning a good manager doesn't care
