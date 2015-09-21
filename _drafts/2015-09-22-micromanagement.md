@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Micromanagement"
+title: "Are You a Micromanager?"
 date: 2015-09-11
 place: Moscow, Russia
 tags: mgmt
