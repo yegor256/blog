@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are You a Micromanager?"
-date: 2015-09-11
+date: 2015-09-22
 place: Moscow, Russia
 tags: mgmt
 description:
