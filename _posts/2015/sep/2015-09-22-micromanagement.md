@@ -89,6 +89,6 @@ manager makes the path ahead of me very clear. With a good manager, I know
 exactly what results are expected and what will happen if I fail or
 succeed.
 
-Thus, to be a good manager, you should never tell your subordinates how
-to complete their tasks. Instead, you should define what solutions and results
+Thus, to be a good manager, you should never tell your subordinates **how**
+to complete their tasks. Instead, you should define **what** solutions and results
 are expected. And, of course, what will happen in the case of success or failure.
