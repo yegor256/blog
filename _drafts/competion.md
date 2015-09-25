@@ -76,4 +76,5 @@ and straight-forward answers to, for example, these questions:
 
   * On what conditions will I be fired?
 
-Can you ask these questions in your team and get explicit answers?
+Can you ask these questions in your team and easily
+get explicit answers?
