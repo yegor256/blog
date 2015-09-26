@@ -74,7 +74,7 @@ fast, it is accurate, and it is free. The researchers are out of business.
 Are we sorry about it? Well, maybe, but that's the way it should be.
 The same will happen with IT recruiters and all those "agents." They will
 eventually be out of business and will start doing something that
-actually adds some value for all of us.
+actually adds **some value** for all of us.
 
 At the moment, they are simply taking away our money, **exploiting** the
 fact that we're lazy, or stupid, or shy, or you name it. For example, it was not obvious
@@ -150,4 +150,4 @@ why we need all that mayonnaise &mdash; to make our life **happier**? It's true 
 people love to deal with people &mdash; people we really need, people who
 speak the same language, and people who deliver real value. Not with
 producers, recruiters, real estate agents, sales agents, outstaffers, lawyers,
-or taxi dispatchers.
+travel agents, investment brokers, or taxi dispatchers.
