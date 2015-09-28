@@ -148,6 +148,6 @@ between except computer systems.
 Sometimes I hear the comment that people love to work with people, not computers. That's
 why we need all that mayonnaise &mdash; to make our life **happier**? It's true that
 people love to deal with people &mdash; people we really need, people who
-speak the same language, and people who deliver real value. Not with
+speak the same language, and people who deliver **real value**. Not with
 producers, recruiters, real estate agents, sales agents, outstaffers, lawyers,
-travel agents, investment brokers, or taxi dispatchers.
+travel agents, investment brokers, executive officers, or taxi dispatchers.
