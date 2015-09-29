@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "You're Just the Fucking Mayonnaise in a Bad Sandwich"
-date: 2015-09-18
+title: "You're Just the Mayonnaise in a Bad Sandwich"
+date: 2015-09-29
 place: Moscow, Russia
 tags: mgmt
 description:
@@ -151,3 +151,6 @@ people love to deal with people &mdash; people we really need, people who
 speak the same language, and people who deliver **real value**. Not with
 producers, recruiters, real estate agents, sales agents, outstaffers, lawyers,
 travel agents, investment brokers, executive officers, or taxi dispatchers.
+
+The point of Bruce Willis's character is that when the sandwich is bad
+you don't fix it with a mayonnaise. It won't help, but only make things worse.
