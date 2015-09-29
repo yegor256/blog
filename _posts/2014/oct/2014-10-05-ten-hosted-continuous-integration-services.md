@@ -286,6 +286,8 @@ to test them yet.
 
 [**dploy.io**](http://dploy.io/) testing now...
 
+[**vexor.io**](http://vexor.io/) testing now...
+
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
 [Jenkins](http://jenkins-ci.org/),
