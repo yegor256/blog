@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Micromanagement"
-date: 2015-09-11
+title: "Are You a Micromanager?"
+date: 2015-09-22
 place: Moscow, Russia
 tags: mgmt
 description:
@@ -24,6 +24,8 @@ Observing and controlling is not what's so bad about micromanagement. It
 is something completely different.
 
 <!--more-->
+
+{% picture /images/2015/09/office-space.jpg 0 Office Space (1999) by Mike Judge %}
 
 There are [tons of articles](https://www.google.com/search?q=micromanagement)
 about micromanagement. Most of them emphasize that the "micro" prefix prescribes
@@ -87,6 +89,6 @@ manager makes the path ahead of me very clear. With a good manager, I know
 exactly what results are expected and what will happen if I fail or
 succeed.
 
-Thus, to be a good manager, you should never tell your subordinates how
-to complete their tasks. Instead, you should define what solutions and results
+Thus, to be a good manager, you should never tell your subordinates **how**
+to complete their tasks. Instead, you should define **what** solutions and results
 are expected. And, of course, what will happen in the case of success or failure.

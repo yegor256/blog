@@ -286,6 +286,12 @@ to test them yet.
 
 [**dploy.io**](http://dploy.io/) testing now...
 
+[**vexor.io**](http://vexor.io/) looks nice and offers a rather unique
+billing model &mdash; they charge per build, not per month. I would definitely
+recommend to give it a try.
+
+[**greenhouseci.com**](http://greenhouseci.com/) testing now...
+
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
 [Jenkins](http://jenkins-ci.org/),
