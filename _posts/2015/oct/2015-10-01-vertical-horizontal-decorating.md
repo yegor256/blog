@@ -4,7 +4,7 @@ title: "Vertical and Horizontal Decorating"
 date: 2015-10-01
 place: Moscow, Russia
 tags: java oop
-description:
+description: |
   Decorators are used to extend object functionality
   without changing their interfaces, and there are two
   approaches: horizontal and vertical.
