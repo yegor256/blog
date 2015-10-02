@@ -1,0 +1,29 @@
+<p>A <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a> is one of the best ways to add features to an object without changing its interface. I use <a href="/2015/02/26/composable-decorators.html">composable decorators</a> quite often and always question myself as to how to design them right when the list of features must be configurable. I'm not sure I have the right answer, but here is some food for thought.</p><figure><img src='http://www.yegor256.com/images/2015/10/the-apartment.jpg' style='width:600px' alt='The Apartment (1960) by Billy Wilder'/><figcaption>The Apartment (1960) by Billy Wilder</figcaption></figure><p>Let's say I have a list of numbers:</p><div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Numbers</span> <span class="o">{</span>
+  <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">();</span>
+<span class="o">}</span></code></pre></div><p>Now I want to create a list that will only have odd, unique, positive, and sorted numbers. The first approach is <strong>vertical</strong> (I just made this name up):</p><div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Sorted</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Unique</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Positive</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+          <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="o">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+          <span class="o">}</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span></code></pre></div><p>The second approach is <strong>horizontal</strong> (again, a name I made up):</p><div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Modified</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+    <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="o">{</span>
+      <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+    <span class="o">}</span>
+  <span class="o">),</span>
+  <span class="k">new</span> <span class="n">Diff</span><span class="o">[]</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Positive</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Unique</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Sorted</span><span class="o">(),</span>
+  <span class="o">}</span>
+<span class="o">);</span></code></pre></div><p>See the difference? The first approach decorates <code>ArrayNumbers</code> "vertically," adding functionality through the composable decorators <code>Positive</code>, <code>Odds</code>, <code>Unique</code>, and <code>Sorted</code>.</p><p>The second approach introduces the new interface <code>Diff</code>, which implements the core functionality of iterating numbers through instances of <code>Positive</code>, <code>Odds</code>, <code>Unique</code>, and <code>Sorted</code>:</p><div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Diff</span> <span class="o">{</span>
+  <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">apply</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">origin</span><span class="o">);</span>
+<span class="o">}</span></code></pre></div><p>For the user of <code>numbers</code>, both approaches are the same. The difference is only in the design. Which one is better and when? It seems that vertical decorating is easier to implement and is more suitable for smaller objects that expose just a few methods.</p><p>As for my experience, I always tend to start with vertical decorating since it's easier to implement but eventually migrate to a horizontal one when the number of decorators starts to grow.</p>
