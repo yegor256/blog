@@ -27,7 +27,7 @@
   text-decoration: line-through;
 }
 .main-font {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Georgia', 'Times New Roman', scrif;
   @media all and (min-width: $width) {
     font-family: $main-font;
   }
@@ -71,6 +71,24 @@ a, a:visited {
 .photo {
   width: 80px;
   border-radius: 50%;
+}
+.hot {
+  @extend .unprintable;
+  font-family: $code-font;
+  font-size: 85%;
+  line-height: $em;
+  margin-top: $em;
+  margin-bottom: $em;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      border-left: 4px solid #81b341;
+      padding-left: $em;
+      margin-bottom: $em;
+      color: darken(#81b341, 25);
+    }
+  }
 }
 .header {
   @extend .unprintable;
