@@ -1150,7 +1150,10 @@ synchronize one level higher when necessary.&lt;/p&gt;
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
-      <description>&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+      <description>&lt;p&gt;&lt;strong&gt;Breaking News&lt;/strong&gt;: 11 projects were already selected as candidates for the winner.
+All others have no chances this year. The list is at &lt;a href=&quot;#11&quot;&gt;the bottom&lt;/a&gt; of the page.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
 Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
@@ -1389,11 +1392,13 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 
 &lt;hr/&gt;
 
+&lt;p&gt;&lt;span id=&quot;11&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;October, 4th:
 A few weeks ago I asked three guys, who work with me, to check every single
 project in this list and provide their feedback. I&amp;#39;ve received three plain
 text files from them. Here they are, combined into one, with almost no corrections:
-&lt;a href=&quot;/txt/award-2015.txt&quot;&gt;award-2015.txt&lt;/a&gt; (you can find your project there).
+&lt;a href=&quot;/txt/2015/award-2015.txt&quot;&gt;award-2015.txt&lt;/a&gt; (you can find your project there).
 Based on their opinions, I&amp;#39;ve decided to select the following 11 projects for closer review
 (in alphabetic order):&lt;/p&gt;
 
