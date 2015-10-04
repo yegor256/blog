@@ -77,8 +77,8 @@ a, a:visited {
   font-family: $code-font;
   font-size: 85%;
   line-height: $em;
-  margin-top: $em;
-  margin-bottom: $em;
+  margin-top: 2 * $em;
+  margin-bottom: 2 * $em;
   ul {
     list-style: none;
     padding-left: 0;
