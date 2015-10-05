@@ -1150,7 +1150,7 @@ synchronize one level higher when necessary.&lt;/p&gt;
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
-      <description>&lt;p&gt;&lt;strong&gt;Breaking News&lt;/strong&gt;: 11 projects were already selected as candidates for the winner.
+      <description>&lt;p&gt;&lt;strong&gt;Breaking News&lt;/strong&gt;: 12 projects were already selected as candidates for the winner.
 All others have no chances this year. The list is at &lt;a href=&quot;#11&quot;&gt;the bottom&lt;/a&gt; of the page.&lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
@@ -1399,7 +1399,7 @@ A few weeks ago I asked three guys, who work with me, to check every single
 project in this list and provide their feedback. I&amp;#39;ve received three plain
 text files from them. Here they are, combined into one, with almost no corrections:
 &lt;a href=&quot;/txt/2015/award-2015.txt&quot;&gt;award-2015.txt&lt;/a&gt; (you can find your project there).
-Based on their opinions, I&amp;#39;ve decided to select the following 11 projects for closer review
+Based on their opinions, I&amp;#39;ve decided to select the following 12 projects for closer review
 (in alphabetic order):&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1408,6 +1408,7 @@ Based on their opinions, I&amp;#39;ve decided to select the following 11 project
 &lt;li&gt;&lt;a href=&quot;https://github.com/citiususc/hipster&quot;&gt;citiususc/hipster&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp&quot;&gt;gulpjs/gulp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/kaitoy/pcap4j&quot;&gt;kaitoy/pcap4j&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/raphw/byte-buddy&quot;&gt;raphw/byte-buddy&lt;/a&gt; (added on Oct-5)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/subchen/snack-string&quot;&gt;subchen/snack-string&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/testinfected/molecule&quot;&gt;testinfected/molecule&lt;/a&gt;&lt;/li&gt;
@@ -1418,6 +1419,15 @@ Based on their opinions, I&amp;#39;ve decided to select the following 11 project
 
 &lt;p&gt;I&amp;#39;ll review them soon. The winner will be announced
 on the 15th of October.&lt;/p&gt;
+
+&lt;p&gt;October, 5th:
+I received an email from an author of
+&lt;a href=&quot;https://github.com/raphw/byte-buddy&quot;&gt;raphw/byte-buddy&lt;/a&gt;, asking
+me to reconsider my decision about this project. I took a quick
+look at why the project was filtered out and decided to include
+it into the list of finalists. BTW, if any of you think that your
+project was excluded by mistake, don&amp;#39;t hesitate to
+&lt;a href=&quot;mailto:yegor@teamed.io&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
