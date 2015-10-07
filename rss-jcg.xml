@@ -915,7 +915,9 @@ that are shipped together with production code.&lt;/p&gt;
     <item>
       <title>Constructors Must Be Code-Free</title>
       <link>http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</link>
-      <description>&lt;p&gt;How much work should be done within a constructor? It seems reasonable
+      <description>&lt;iframe class='video video-left' src='https://www.youtube.com/embed/9yjtsCK6Wdk?controls=2' allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
 results. That way, when the results are required by object methods, we&amp;#39;ll have them
 ready. Sounds like a good approach? No, it&amp;#39;s not. It&amp;#39;s a bad idea
