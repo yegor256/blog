@@ -16,6 +16,8 @@ keywords:
   - how much code to put into constructors
 ---
 
+{% youtube 9yjtsCK6Wdk video-left %}
+
 How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
 results. That way, when the results are required by object methods, we'll have them
