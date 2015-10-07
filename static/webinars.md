@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube 9yjtsCK6Wdk video-left %}
 [October 7, 2015](https://plus.google.com/u/0/events/cfvjhha1ltr0lovutlllk9n0cq4)
 **A Few Thoughts About Constructors in OOP**
-We'll discuss the role of constructors in OOP and a few
+We discussed the role of constructors in OOP and a few
 best practices for their design, including primary vs secondary
-and code-free design. The discussion will be based on these articles:
+and code-free design. The discussion was based on these articles:
 [There Can Be Only One Primary Constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 and
 [Constructors Must Be Code-Free](% pst 2015/may/2015-05-07-ctors-must-be-code-free %).
