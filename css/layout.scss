@@ -107,6 +107,14 @@ a, a:visited {
       text-decoration: none;
     }
   }
+  .face {
+    position: relative;
+    span {
+      position: absolute;
+      text-decoration: underline;
+      color: darken(#81b341, 15);
+    }
+  }
 }
 .footer {
   @extend .small;
