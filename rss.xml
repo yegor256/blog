@@ -10,12 +10,84 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 06 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Competition Without Rules Is Destructive</title>
+      <link>http://www.yegor256.com/2015/10/13/competition-without-rules.html</link>
+      <description>&lt;p&gt;When your team has to choose which technical decision to make,
+who has the final say? When one of your colleagues asks
+for a raise, who decides, and what is his or her decision based on?
+When it&amp;#39;s necessary to work overtime, how is it decided
+who will stay in the office?
+I&amp;#39;m expecting you to shrug your shoulders. You&amp;#39;re right, these questions never
+have explicit answers in modern organizations. We are used to working
+in a more &amp;quot;democratic&amp;quot; way, where such decisions are made
+&lt;strong&gt;subjectively&lt;/strong&gt; by managers or more senior employees.
+Is this how it should be?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-wrestler.jpg' style='width:600px;' alt='The Wrestler (2008) by Darren Aronofsky'/&gt;&lt;figcaption&gt;The Wrestler (2008) by Darren Aronofsky&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;We are trying to &lt;strong&gt;avoid explicitness&lt;/strong&gt; in these sensitive subjects. Indeed,
+how can we tell Jeff that his salary is lower than
+Monica&amp;#39;s because his performance is worse?
+This will definitely lead to depression and negativity
+within the team, right?&lt;/p&gt;
+
+&lt;p&gt;What I&amp;#39;m trying to say is that &lt;strong&gt;we don&amp;#39;t set rules&lt;/strong&gt;. We think that
+strict and explicit rules related to performance
+offend creative people. Well, all people.&lt;/p&gt;
+
+&lt;p&gt;We avoid explicitness in performance appraisals.&lt;/p&gt;
+
+&lt;p&gt;And this is totally wrong!&lt;/p&gt;
+
+&lt;p&gt;This is a &lt;strong&gt;mistake&lt;/strong&gt;, and it causes big problems!&lt;/p&gt;
+
+&lt;p&gt;When a group doesn&amp;#39;t have explicitly defined principles of
+survival and growth, it starts to create them &lt;strong&gt;naturally&lt;/strong&gt;. When
+people don&amp;#39;t know what exactly needs to be done in order to get
+a 15 percent raise, they find a way to get this information anyway. And guess what
+this information will end up being? Right &amp;mdash; you have
+&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;to make your boss happy&lt;/a&gt;;
+that&amp;#39;s how your chances for a raise improve.&lt;/p&gt;
+
+&lt;p&gt;Instead of working toward the goals set by the organization,
+we are fighting with each other for the attention of our boss.
+Instead of focusing on the results and their quality, we
+are reading the mood of our manager. Our fear becomes a guide for us.&lt;/p&gt;
+
+&lt;p&gt;Competition is &lt;strong&gt;inevitable&lt;/strong&gt; in a group, especially if the group consists
+of creative people. Creativity is all about competition. Each of us
+wants to be better than the others, and this is what drives &lt;strong&gt;innovation&lt;/strong&gt;.
+But if the team has no rules, even a minor competition seriously
+and negatively affects their motivation.&lt;/p&gt;
+
+&lt;p&gt;If you want your team to be creative and productive, clearly and explicitly
+define the rules of competition. Make sure everyone can get clear and
+straightforward answers at any time to questions like these:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Who is the best developer on our team?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Why is my salary lower than Jeff&amp;#39;s?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What do I need to do in order to get a raise?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Under what conditions will I be fired?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Can you ask these questions in your team and easily
+get explicit answers?&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 13 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/10/13/competition-without-rules.html</guid>
+      <dc:date>2015-10-13T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How to Be a Good Office Slave</title>
       <link>http://www.yegor256.com/2015/10/06/how-to-be-good-office-slave.html</link>
@@ -1623,287 +1695,6 @@ false excuses. It&amp;#39;s not professional, to say the least.&lt;/p&gt;
       <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</guid>
       <dc:date>2015-07-16T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Meetings Are Legalized Robbery</title>
-      <link>http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html</link>
-      <description>&lt;p&gt;Software development is all about creativity, right? It&amp;#39;s an art,
-not a science. As software engineers, we solve complex problems,
-and often our solutions are absolutely not obvious. We experiment,
-innovate, research, and investigate.
-To do all this, we &lt;em&gt;talk&lt;/em&gt;.
-We sit together in our meeting rooms, Skype conference calls, or Slack channels;
-we discuss our solutions;
-we ask our coworkers for their opinions;
-and we argue about the best ideas. There&amp;#39;s no doubt meetings are the key component of the modern
-software design discipline ... and it&amp;#39;s very &lt;em&gt;sad&lt;/em&gt; to see it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/heat.jpg' style='width:600px;' alt='Heat (1995) by Michael Mann'/&gt;&lt;figcaption&gt;Heat (1995) by Michael Mann&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;A good software architect doesn&amp;#39;t need meetings and &lt;strong&gt;never&lt;/strong&gt; organizes them.&lt;/p&gt;
-
-&lt;p&gt;Meetings demotivate, waste time, burn money, and degrade quality. But more about
-that later. For now, let&amp;#39;s discuss a proposed alternative.&lt;/p&gt;
-
-&lt;p&gt;Say I&amp;#39;m an architect who needs to design the schema for a relational
-database in a new project, and I have a team of five programmers whom I want
-to help me with this design. That&amp;#39;s a very logical and appropriate desire,
-as a good architect always discusses all possible options with available
-team members before making a final decision. So I call a meeting? No!&lt;/p&gt;
-
-&lt;h2 id=&quot;a-good-architect&quot;&gt;A Good Architect&lt;/h2&gt;
-
-&lt;p&gt;I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don&amp;#39;t
-actually talk to him about it. I value and respect his time &amp;mdash;
-there&amp;#39;s no need to bother him with this organizational noise, so I just create
-a ticket and assign it to Jeff. When he has time, he creates a draft
-and returns a pull request. I review it and make some comments before he updates
-the branch, and finally
-&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;I merge it&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Perfect; we have a draft.&lt;/p&gt;
-
-&lt;p&gt;At the end of the document, Jeff also listed assumptions, risks, and concerns.
-For example, this is what I got back from him (it&amp;#39;s Markdown, a very
-convenient format for simple technical documents; I highly recommend it):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## Tables
-user (id INT, name VARCHAR, email VARCHAR);
-payment (id INT, date DATETIME, amount INT);
-order (id INT, details VARCHAR, user_id INT FK(user));
-
-## Assumptions
-- All payments will be in whole dollars, no cents.
-- All users will have only one email.
-- There will be no search feature required.
-
-## Risks
-- Order details may not fit into VARCHAR.
-- Foreign keys may not be supported in the DBMS.
-
-## Concerns
-- Would NoSQL be more suitable?
-- What is the DB server we&amp;#39;ll use?&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I don&amp;#39;t know how much time Jeff would have spent on this document,
-but I just created it in 10 minutes. Of course, it&amp;#39;s a very simple schema
-for a very simple project. But even if Jeff spent an hour
-on it, every minute of that hour is valuable to the project. What I mean
-is that every dollar I pay Jeff for his time is returned to me
-in the form of a text document.&lt;/p&gt;
-
-&lt;p&gt;Now I have a draft and I&amp;#39;m taking the next step. I ask
-Monica to take a look at it and suggest changes. Again, it&amp;#39;s another
-hour and I&amp;#39;ve got back a pull request with changes, corrections,
-new assumptions, new risks, and new concerns. I&amp;#39;m not talking to Monica &amp;mdash;
-there is no need for that. She has all the information she needs
-to work with the DB schema. She is a good engineer, and I trust
-her ability to formulate her opinion in a written format.&lt;/p&gt;
-
-&lt;p&gt;There&amp;#39;s no need to sit together in the same room or stand at a whiteboard.
-Monica is smart enough to do this job by herself. She already has
-all the ideas expressed by Jeff in front of her;
-there is no need for her to talk to him either.&lt;/p&gt;
-
-&lt;p&gt;Once I merge her pull request (after a proper review and corrections),
-I have a new version of my &lt;code&gt;schema.md&lt;/code&gt; document.&lt;/p&gt;
-
-&lt;p&gt;Moreover, I have a Git history of this document, and I have a history
-of pull requests with comments. This is way better than meeting notes
-or even a meeting video. Anyone who joins the project later will be
-able to understand how we came to the conclusion of using PostgreSQL
-and storing monetary amounts without cents. It&amp;#39;s all there in the Git history
-and Github tickets, forever with us.&lt;/p&gt;
-
-&lt;p&gt;What if I need more opinions? Or if I&amp;#39;m still not sure the schema is good enough?
-No problem; I ask someone else to review it one more time and
-send me a pull request with changes.
-I can even ask Jeff to do it again after a few iterations with
-other programmers!&lt;/p&gt;
-
-&lt;p&gt;Moreover, I can add my own concerns to the document, and on the next iteration,
-ask Jeff to pay attention to and resolve them.&lt;/p&gt;
-
-&lt;p&gt;The more we circle this document, the better it becomes. And every minute
-the project pays for turns into a tangible product: a &lt;strong&gt;document&lt;/strong&gt;
-with a change history!&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s how a professional architect collects opinions and
-makes complex decisions. Now let&amp;#39;s see what a bad architect would do.&lt;/p&gt;
-
-&lt;h2 id=&quot;a-bad-architect&quot;&gt;A Bad Architect&lt;/h2&gt;
-
-&lt;p&gt;I first call a meeting. No, wait; I schedule it in Google Calendar.
-No, wait, wait. First of all, I create an agenda:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Introduction: 10 min
-2. Problem: 15 min
-  - We need a DB schema
-  - Let&amp;#39;s choose a server
-3. Opinions: 15 min
-  - Jeff and Monica have experience
-  - Others?
-4. Coffee break: 10 min
-5. Discussion: 30 min
-  - Let&amp;#39;s not forget risks
-  - Ask Joe about PostgreSQL
-6. Conclusions: 10 min&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I&amp;#39;m sure you know what I&amp;#39;m talking about and you&amp;#39;ve seen these
-agendas from your &amp;quot;architects.&amp;quot; Anyway, my first step is done. I&amp;#39;ve scheduled an
-hour-and-a-half meeting where all programmers will be present. We&amp;#39;ll have fun
-and drink coffee. We&amp;#39;ll discuss the problem, hear all opinions, and find
-the best solution. We&amp;#39;ll document it in that &lt;code&gt;schema.md&lt;/code&gt; and
-get back to our tasks.&lt;/p&gt;
-
-&lt;p&gt;Instead of circulating those &lt;em&gt;dry&lt;/em&gt; and &lt;em&gt;boring&lt;/em&gt; Git documents, we&amp;#39;ll have a
-real human communication with a nice coffee break where we&amp;#39;ll share our
-opinions about the last episode of The Bing Bang Theory. Isn&amp;#39;t that what
-we all like about our office jobs anyway?&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#39;t think so.&lt;/p&gt;
-
-&lt;p&gt;I think meetings demotivate, waste time, burn money, and degrade quality.
-Those who organize them either have no idea what they are doing or
-are silently &lt;em&gt;robbing&lt;/em&gt; the company they&amp;#39;re working for.&lt;/p&gt;
-
-&lt;p&gt;We needed meetings 30 years ago when we didn&amp;#39;t have laptops and GitHub.
-But even then, we had a pen and paper.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m talking about meetings that are intended to collect or distribute information,
-discuss or propose something, or find a solution in a &lt;em&gt;technical&lt;/em&gt; domain.
-The only &lt;em&gt;valid purpose&lt;/em&gt; of meetings is to read &lt;strong&gt;body language&lt;/strong&gt; of the people
-you are dealing with. Politicians, businessmen, poker players,
-shrinks, physicians, etc. &amp;mdash; they need meetings because they must
-read our bodies, not just our thoughts.&lt;/p&gt;
-
-&lt;p&gt;Do we really care about Monica&amp;#39;s body while we&amp;#39;re designing a DB schema?
-Well, that depends, right? But let&amp;#39;s be serious; we&amp;#39;re not paid for that.&lt;/p&gt;
-
-&lt;h2 id=&quot;meetings-demotivate&quot;&gt;Meetings Demotivate&lt;/h2&gt;
-
-&lt;p&gt;The best motivation for a creative person is to see the results of
-his or her creativity. If I&amp;#39;m not mistaken, enjoying the process
-of creativity without any results is an obvious
-sign of mental illness. A healthy and creative person like a software
-engineer, for example, wants to see how his or her efforts are turned
-into something valuable and, preferably, tangible.&lt;/p&gt;
-
-&lt;p&gt;Meetings almost never produce anything tangible and rarely something valuable.
-Sometimes we have &amp;quot;minutes&amp;quot;
-of our meetings, but they are just short pieces of paper with a brief
-summary of what we were talking about. Not a real &amp;quot;product&amp;quot; for a
-creative person.&lt;/p&gt;
-
-&lt;p&gt;Thus, they demotivate me because I simply don&amp;#39;t see what two hours
-of my life were turned into. We don&amp;#39;t really &lt;em&gt;create&lt;/em&gt; anything there,
-we just discuss. Pay attention here; I&amp;#39;m talking about meetings, not about
-collaborative work on something, like in pair programming, for example.&lt;/p&gt;
-
-&lt;p&gt;You may say that some meetings actually produce great ideas, which
-are very tangible results. You may say that only in a direct,
-face-to-face setting could these ideas be born. You may also
-say that many bright technical decisions were invented precisely due
-to a magic synergy of friends thinking in the same direction, at the
-same time, and in the same room. This argument makes sense, but I&amp;#39;ll address that later.&lt;/p&gt;
-
-&lt;h2 id=&quot;meetings-waste-time&quot;&gt;Meetings Waste Time&lt;/h2&gt;
-
-&lt;p&gt;I think it&amp;#39;s obvious. For the first few minutes of the meeting, you&amp;#39;re concentrated;
-then you start checking your Twitter feed and doodling. Everybody is doing
-the same &amp;mdash; not because we&amp;#39;re lazy but because there is &lt;em&gt;no demand&lt;/em&gt;
-for our full focus at the meeting.&lt;/p&gt;
-
-&lt;p&gt;While Monica is working with the document, making comments and suggestions,
-she is fully concentrated on the result &amp;mdash; mostly because there is nobody
-else to help her. She has to deliver that pull request, and I&amp;#39;m waiting for her.
-Her concentration is as high as it would be at the meeting, when someone
-is asking her a direct question and she has to provide a detailed answer.&lt;/p&gt;
-
-&lt;p&gt;Her time is optimized for a suitable outcome while everybody else is doing
-something else.&lt;/p&gt;
-
-&lt;p&gt;At the meeting, on the other hand, we&amp;#39;re all concentrating sparingly at best. And the longer
-the meeting, the slower we are. Also, the more people who are there,
-the less we care and the more interested we become in our Facebook updates.
-I reckon that&amp;#39;s not much of a surprise to you if you&amp;#39;ve been in the software development
-industry for at least a few months.&lt;/p&gt;
-
-&lt;h2 id=&quot;meetings-burn-money&quot;&gt;Meetings Burn Money&lt;/h2&gt;
-
-&lt;p&gt;This aligns closely with the previous conclustion. Meetings are among the biggest budget consumers
-of any type of activity in a project, simply because they pay
-&lt;em&gt;everybody&lt;/em&gt; who is sitting in that room or on that Skype conference while the
-result they produce is almost equal to what a single person can deliver.
-Or much less.&lt;/p&gt;
-
-&lt;p&gt;Even though this may sound extreme, I have to say that I consider meetings
-a legalized way to &lt;strong&gt;rob&lt;/strong&gt; a project. Most meeting
-organizers (architects, CTOs, CEOs, programmers, etc.) don&amp;#39;t realize that.
-They believe the more they talk, the better engineers they are. And their
-bosses, by mistake, appreciate that sort of activity from their subordinates.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s robbery!&lt;/p&gt;
-
-&lt;p&gt;I told you to create a draft of a DB schema. Now you&amp;#39;re coming to me
-and asking for a meeting because certain &amp;quot;aspects&amp;quot; are not clear?
-Did you study software engineering anywhere? Do you know how to work
-with technical documents? Are you capable of writing in a way that everybody
-else can understand and respond to you, also in writing? No? Now you want
-the project to not only pay you for the DB schema draft but to also
-pay me for talking to you and for a few other guys to sit next to us and text
-their friends? You basically want to rob the owner of this project.
-No more, no less.&lt;/p&gt;
-
-&lt;h2 id=&quot;meetings-degrade-quality&quot;&gt;Meetings Degrade Quality&lt;/h2&gt;
-
-&lt;p&gt;Quality goes up when it is being controlled. When someone tells me every
-day that my code is buggy and needs improvements, my quality goes up.
-When nobody cares what I do or how good my results are, my quality
-goes down, no matter how self-motivated I am.&lt;/p&gt;
-
-&lt;p&gt;Meetings promote group achievements and discourage individual ones. At the
-end of a meeting, it&amp;#39;s often not clear who exactly suggested a good idea
-and who made the biggest effort. In other words, at the end of a meeting,
-I don&amp;#39;t know how good I am. Am I still the same as a month ago or am I a better
-engineer?&lt;/p&gt;
-
-&lt;p&gt;They smile more and ask me &amp;quot;what do you think?&amp;quot; more frequently than last summer;
-that must mean something, right? I&amp;#39;m sure you understand this is
-not the kind of feedback a serious engineer would expect.&lt;/p&gt;
-
-&lt;p&gt;A serious software developer wants to produce tangible results and receive
-tangible feedback, like money or code reviews. I want to know what
-was wrong in my DB schema draft and what I missed. And I want this to be
-documented somewhere. This is what makes me better, and this is how I learn
-and grow.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-about-the-a-ha!-moment?&quot;&gt;What About the A-ha! Moment?&lt;/h2&gt;
-
-&lt;p&gt;Now, what about true creativity or that well-known &amp;quot;a-ha!&amp;quot; moment? Sometimes
-it&amp;#39;s necessary to &amp;quot;think out loud&amp;quot; in order to invent something, right?
-We all know how important a face-to-face interaction could be when we&amp;#39;re
-researching and developing something new. Where would we be without meetings?
-We can&amp;#39;t simply work with documents; we need to talk to each other in order to let our
-ideas out. Isn&amp;#39;t it obvious?&lt;/p&gt;
-
-&lt;p&gt;I have only one argument for that. Did Einstein invent his theory
-at a meeting with his colleagues? I don&amp;#39;t think so. And he was solving a much
-bigger problem than a DB schema design.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;Let me summarize. Meetings are an activity that requires almost no skill,
-while documenting ideas in text and diagrams is a way more difficult
-job to do. So train and discipline yourself to work with documents
-and let juniors enjoy their meetings.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 13 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html</guid>
-      <dc:date>2015-07-13T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
