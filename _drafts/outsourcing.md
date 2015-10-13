@@ -160,8 +160,9 @@ with my customers.
 
 Not any more.
 
-Take another example, a good Java developer in Ukraine now earns **$4,000**.
-On top of that, such a developer expects health
+Take another example, a good Java developer in Ukraine
+[now earns](http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
+**$4,000**. On top of that, such a developer expects health
 insurance, free gym, free lunch, paid vacation, paid sick leaves, etc. At the same
 time, the price of Java time is not much higher on the market now. Even
 if you charge $40/hour (which is very unlikely), your income will be $6,800.
