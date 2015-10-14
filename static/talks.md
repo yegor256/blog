@@ -19,25 +19,33 @@ I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256)
 for the most recent news.
 
-<img src="/images/2015/datflock-2015-logo.png" style="height:75px;" alt="DATFlock 2015"/><br/>
+<style>
+.talk {
+  display: block;
+  height: 75px;
+  margin-top: 2em;
+}
+</style>
+
+<img src="/images/2015/datflock-2015-logo.png" class="talk" alt="DATFlock 2015"/>
 **What keeps us motivated and why we get lazy**<br/>
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/)<br/>
 Berlin, Germany<br/>
 19-20 November 2015
 
-<img src="/images/2015/buildstuff-2015-logo.png" style="height:75px;" alt="BuildStuff 2015"/><br/>
+<img src="/images/2015/buildstuff-2015-logo.png" class="talk" alt="BuildStuff 2015"/>
 **How Do You Talk To Your Microservice?**<br/>
 [BuildStuff 2015](http://buildstuff.com.ua/)<br/>
 Kyiv, Ukraine<br/>
 23 November 2015
 
-<img src="/images/2015/devopsdays-2015-logo.png" style="height:75px;" alt="DevOpsDays 2015 Warsaw"/><br/>
+<img src="/images/2015/devopsdays-2015-logo.png" class="talk" alt="DevOpsDays 2015 Warsaw"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [DevOpsDays Warsaw 2015](http://www.devopsdays.org/events/2015-warsaw/)<br/>
 Warsaw, Poland<br/>
 24-25 November 2015
 
-<img src="/images/2015/developerweek-2015-logo.png" style="height:75px;" alt="DeveloperWeek 2015"/><br/>
+<img src="/images/2015/developerweek-2015-logo.png" class="talk" alt="DeveloperWeek 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DeveloperWeek 2016](http://www.developerweek.com/)<br/>
 San Francisco, USA<br/>
