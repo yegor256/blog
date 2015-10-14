@@ -1,9 +1,10 @@
 ---
 layout: static
 title: "Talks"
-description:
+description: |
   Here is a full list of my talks, at conferences,
-  meetups, expos, workshops, etc.
+  meetups, expos, workshops, etc. There are both
+  upcoming and already happened.
 permalink: talks.html
 keywords:
   - talks about software development
