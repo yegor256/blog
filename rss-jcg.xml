@@ -1152,8 +1152,7 @@ synchronize one level higher when necessary.&lt;/p&gt;
     <item>
       <title>Software Quality Award</title>
       <link>http://www.yegor256.com/award.html</link>
-      <description>&lt;p&gt;&lt;strong&gt;Breaking News&lt;/strong&gt;: 12 projects were already selected as candidates for the winner.
-All others have no chances this year. The list is at &lt;a href=&quot;#11&quot;&gt;the bottom&lt;/a&gt; of the page.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt; is the winner!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
@@ -1682,20 +1681,22 @@ the absence of an automated release procedure.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/kaitoy/pcap4j&quot;&gt;kaitoy/pcap4j&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Congratulations to the &lt;a href=&quot;https://github.com/suseika&quot;&gt;@suseika&lt;/a&gt;, the winner!
+&lt;p&gt;Congratulations to &lt;a href=&quot;https://github.com/suseika&quot;&gt;@suseika&lt;/a&gt;, the winner!
 Here is your badge:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.teamed.io/award/2015/winner.png&quot; style=&quot;width:338px;height:75px;&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.teamed.io/award/2015/winner.png&quot;
+  style=&quot;width:203px;height:45px;&quot;/&gt;&lt;/p&gt;
 
 &lt;p&gt;Put this code into Github &lt;code&gt;README&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;img src=&amp;quot;http://img.teamed.io/award/2015/winner.png&amp;quot;
-  style=&amp;quot;width:338px;height:75px;&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a href=&amp;quot;http://www.yegor256.com/award.html&amp;quot;&amp;gt;
+  &amp;lt;img src=&amp;quot;http://img.teamed.io/award/2015/winner.png&amp;quot;
+  style=&amp;quot;width:203px;height:45px;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;All eight projects will receive a one-user free one-year license for one JetBrains
 product. I will email you all and we&amp;#39;ll figure out how to transfer them.&lt;/p&gt;
 
-&lt;p&gt;Thanks to everybody for participation!&lt;/p&gt;
+&lt;p&gt;Thanks to everybody for participation! See you next year.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
