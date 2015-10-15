@@ -1,0 +1,1849 @@
+mdbs99/AWS (Pascal)
++
+some doc
+looks like OOP
+-
+No tickets
+No releases
+No test coverage
+No quality control
+IDE project files commited into repo
+
+
+FagnerMartinsBrack/WebStories (Mostly JS, some Java)
++
+Travis CI
+Issue tracking
+-
+No doc at all
+No releases
+No quality control
+Anemic model
+Getters/Setters, Utils, *ers
+EJB - nothing to say more
+
+robertop/triumph4php (C++)
++
+Some doc
+Issue tracking, milestones, releases
+PLEASE, CHECK IT by yourself. I'm a dumb in C++ at all
+
+blambeau/wlang (Ruby)
++
+Travis CI
+Releases
+-
+No tickets
+No test coverage
+No quality control
+
+
+alf-tool/alf-core (Ruby)
++
+Travis CI
+Releases
+Some doc
+-
+Build is in error
+No tickets
+Lot of *ers (Deleter, Reader, Generator ...)
+
+
+siom79/japicmp (Java)
++
+Travis CI
+Releases
+Good doc
+Issue tracking
+Test coverage (cobertura)
+Code quality control (Checkstyle, Findbugs)
+-
+Utils
+Lot's of *ers with public static methods
+Nulls
+Getters and setters
+
+
+tunabrain/tungsten (C++)
+-
+No tickets
+No releases
+No test coverage check
+No quality control
+PLEASE, CHECK IT by yourself (if needed)
+
+
+AdamsLair/duality (C#)
++
+Good doc
+-
+Project files commited into repo
+Releases are not tracked
+Anemic model
+Getters and setters
+
+
+openra/openra (C#)
++
+Good doc
+Releases
+Issue tracking
+Test coverage, static code analyzis (coverity)
+Travis CI
+Bountysource as a model when client pays for desired feature to be added
+-
+Multiple return statements
+Empty catches with even no logging
+Public static methods
+Mostly mutable
+Methods name are very long, classes are doing many things
+
+
+Pacmanfan/UVDLPSlicerController - REPO NOT FOUND
+
+
+openfurther/further-open-core (Java)
++
+Some doc
+Last 3 releases were published on GH
+-
+No tickets on Github (located in Jira)
+No test coverage check
+No quality control
+Spring singletones, nulls, setters/getters ...
+
+
+Bertram25/ValyriaTear - sorry, here is ZOO of technologies
+PLEASE, CHECK IT by yourself (if needed)
+
+
+odoepner/typepad (Java)
++
+Travis CI
+Sometime OOP
+-
+No tickets
+No releases
+No test coverage control
+No Code quality control
+Creator, Builder, Provider, Changer ... *er
+Utils
+
+
+vladmihalcea/flexy-pool (Java)
++
+Good doc
+Travis CI
+Test coverage control
+Releases
+Some issue tracking
+-
+No quality control
+Factory, Service, other *ers
+Public static methods
+
+
+js-cookie/js-cookie  (JS)
++
+Good doc
+Travis CI
+Test coverage control
+Quality control
+Releases
+Issue tracking
+-
+God class, nothing else
+No OOP
+
+
+jOOQ/jOOQ  (Java)
++
+Good doc
+Travis CI
+Releases
+Issue tracking
+Milestones
+-
+No test coverage control
+No code quality control
+Getters/Setters, utils, mutability, * ers
+
+
+raphw/byte-buddy  (Java)
++
+Good doc
+Travis CI
+Test coverage control
+Quality control
+Releases
+-
+All was fine before I've found a class with 6000 lines, and it's not the only one :(
+Utility classes
+God classes
+
+
+uniVocity/univocity-parsers  (Java)
++
+Good doc
+Releases
+Issues
+-
+No test coverage control
+No code quality control
+Anemic model, get/set, mutable
+
+
+arnaudroger/SimpleFlatMapper  (Java)
++
+Good doc
+Travis CI
+Releases
+Test coverage control
+-
+No code quality control
+Mapper, Builder, Factory ...
+Nulls
+
+
+elBukkit/MagicPlugin (Java)
++
+Some doc
+-
+No code quality control
+No Github issue tracking
+No Github releases
+No test coverage control
+Class length over 4k lines (MagicController)
+
+
+trade-manager/trade-manager  (Java)
++
+Travis CI
+-
+Pure doc
+No Github issue tracking
+No Github releases
+Not a maven project (Ant)
+ORM usage
+Public static methods, Mutable ...
+
+
+ParaPenguin/morphix  (Java)
++
+Travis CI
+Some Doc
+-
+No code quality control
+No test coverage control
+Utils, Helpers, Mappers, public static methods
+Mutable classes
+
+
+tzaeschke/zoodb  (Java)
++
+Doc
+Github issue tracking
+Github releases
+-
+No code quality control
+No test coverage control
+VERY pure formatting
+God classes
+Anemic model
+Lot's of *ers
+
+
+tzaeschke/critbit (Java)
++
+Github releases
+-
+No code quality control
+No test coverage control
+God classes
+Nulls
+Public static
+
+praveendath92/MDroid  (Java)
++
+Github issue tracking
+Github releases
+-
+No code quality control
+No test coverage control
+No CI
+Public static methods
+God class
+Ugly code :(
+
+
+DeqingSun/ESP8266-Dash-Button (Android)
++
+-
+No Github issue tracking
+No Github releases
+No code quality control
+No test coverage control
+No CI
+Anemic
+God class
+Ugly code :(
+
+
+javamonkey/beetl2.0  (Java)
++
+Travis CI
+Github issue tracking
+Github releases
+-
+No Test coverage control
+No Quality control
+No Doc
+Ugly code with numerous violations of encapsulation
+
+
+81813780/HandyTabBar (Android)
++
+-
+No code quality control
+No Github issue tracking
+No Github releases
+No test coverage control
+Nothing to talk about :(
+
+
+xionghuiCoder/clearpool (Java)
+-
+No code quality control
+No Github issue tracking
+No Github releases
+No test coverage control
+Nothing to talk about :(
+
+
+android-cjj/ComicReader (Android)
++
+-
+No code quality control
+No Github issue tracking
+No Github releases
+No test coverage control
+Utils, God classes, Nulls ... :(
+
+
+Dreampie/icedog (Java)
+-
+No code quality control
+No Github issue tracking
+No Github releases
+No test coverage control
+Anemic model, ORM, ugly code ...
+Nothing to talk about :(
+
+
+subchen/snack-string
+Project doesn't have any tickets and as a result commits don't reference
+tickets. Commit messages are mostyly too general (e.g. "update"), but not all.
+Generally it would be good to have issues which would explain why something is
+being done. There are 5 releases published in github. More over it uses
+conventional-github-releaser to perform release. Code coverage is published on
+the page, there are static code analysic done using jshint. There is a short
+example showing how to use the library and most methods have documentation.
+
+
+gulpjs/gulp
+Commits are well described, in some cases reference issues. Releases are
+published on github. There is a build script, but I failed to find a
+publish/release one. Code coverage is published on the page (100%), project uses
+during the build static code analysis and code style using JShint and JSCS.
+There is a large documentation available, even with a good section on how to
+contribute.  This is a very small core part of gulp. Aside for a very good user
+documentation inner workins of the library are not that well documented.
+
+
+wbotelhos/raty
+Commits have pretty decent descriptions, but don't have issues as references.
+There are few github releases (with nice descriptions), but I was unable to find
+release script. There is no code coverage published and I don't see any static
+code analysis performed. Library has very good description of the public
+interfaces (although it would be good to have them in code also), both in github
+README and on a website.
+
+
+yfpeng/pengyifan-bioc
+Project doesn't have any tickets as a result commits don't reference tickets and
+their description is quite short (additional context from issues would be
+useful). There are 2 (3 if you count snapshot) releases published to maven
+central repo.  There is no information about code coverage or code quality
+checks. There is no script that would perform release, so I assume it is somehow
+done on project maintainer machine. Public interfaces are nicely documented and
+javadocs are generated together with build, non public ones are not documented.
+Unfortunately classes are mostly mutable, with setters and expose internal state
+with getters. There is a short README showing how to add dependency on the
+project.
+
+
+subchen/jetbrick-template-2x
+Project does have commits that reference tickets but not all of commits have
+matching tickets. In case of missing issue number commit messages are sometimes
+too general (e.g. "update README.md"). There are 13 releases published in
+github, but there is no script that makes them (maybe nexus profile is used for
+snapshot ones). Code coverage is not published, but are being done using jacoco.
+Code style is enforced by automatic formatter in form of maven plugin. There are
+no static code analysis done. There is a documentation how to use the library,
+what is the maven dependency and a small usage example. Not all public classes
+have javadoc documentation. There are few Utils classes, and also some other
+classes that contain static methods.
+
+
+chylex/Hardcore-Ender-Expansion
+Commits are well described but don't reference any issues, so we don't know
+"why" a change was done. There are no releases in github, but are available on
+project website (and curseforge). There is no release script available, so it is
+unfortunately done on maintainers machine. More over there are jar dependencies
+included in the source repository. Code coverage is not published. Static
+analysis and code style is not enforced automatically during the build (although
+there is a PMD configuration file). There is a documentation how to install the
+library, and basic info how to contribute. Most of public classes don't have
+javadocs, only some have them. There are few utils classes in the project.
+
+
+ddasilva/scheme-droid
+Commits are sometimes well described, sometimes not, but there are no references
+to issues. There are no github releases but the application is available in
+Google Play store and had multiple releases there. There is no release script
+available for on click new release creation. Unfortunately there is a bundled
+(and tuned) version of JScheme in the project - it would be better to keep it in
+separate project and add dependency on it. Code coverage is not published and
+there are no static code analysis done. There is very basic documentation how to
+build the project. Some classes have javadocs and some don't.
+
+
+miku-nyan/Overchan-Android
+Commits are not that well described and they don't reference issues. Releases
+are published in github, but there is no release publish script so it is done ad
+hoc. There is no code coverage published. There is no static code analysis.
+There is a small "how to build" section. Most of the classes are documented with
+javadocs. There are few util classes with only static methods.
+
+
+owasp/SecurityShepherd
+Commits are well described, but only few reference issues or PRs. There are 2
+builds published in github repo, but there is no publish build script. There is
+no code coverage published, and no static code analysis are visible. There is
+good description how to run the application. There are many javadocs for
+classes, but not all (and sometimes parameters or return values are not
+described). There are quite a few util classes with static methods.
+
+
+wendykierp/JTransforms
+Commits are not descriptive enough and don't reference issues. There are two
+releases published to github, but there is no release script (although there is
+maven release plugin used, but no command line is provided). There is no code
+coverage published and I don't see any static code analysis. All public
+interfaces have good javadoc documentation (which is also published in maven).
+There are two big (on gigantic 10k lines) utils classes.
+
+
+daimor/NBStudio
+Project has some tickets and there is an attempt to mention issue which given
+commit fixes, but most of commits don't have that reference so their description
+doesn't give enough context. There are 7 releases published in github. There is
+a travis build configured and ant build system. There is no information about
+code coverage or code quality checks. There is no script that would perform
+release, so I assume it is somehow done on project maintainer machine using ant
+and manual upload to github. There are dependency libs inside project repo
+instead of using a public repo for those. Public interfaces are not documented.
+README.md is almost non-existent.
+
+
+TheCricket/Chisel-2
+Commits could use better descriptions, very few have issue references. There are
+no github releases available, but gradle script has a release publish section.
+There is no code coverage published and there are no static code analysis done
+(there is only eclipse formatter configuration). Some interfaces have javadoc
+description (but even if they do, frequently parameters/return values are not
+described). Static methods are sometimes used, there are also empty/marker
+interfaces.
+
+
+zqq90/webit-script
+Commits sometimes have good description and sometimes it is lacking, but there
+are no issue references. There are releases published in github, there is
+release profile in maven, but it is very basic and it doesn't do all the release
+related activities. There is no code coverage published, and no static code
+analysis. There is a simple usage example in the main README, but it would be
+better to have slightly longer one with more explanation. There are basic
+javadocs for some of the methods (classes don't have those), but no description
+of parameters or return values. There are many utils classes that have static
+methods.
+
+
+yazeed44/MultiImagePicker
+Commits have good descriptions, but very few reference issues. There are
+releases published in github, but there is no release script. There is no code
+coverage published and no trace of static code analysis. There is a short
+description of the library in the README, but there are no javadocs for any
+method or class. There are also few utils classes.
+
+
+joedayz/titanic-javaee7
+Project doesn't have any tickets, as a result commits don't reference them, but
+their description is quite good. No releases have been done, but project uses
+maven and a release candidate can be created by anyone. There is no information
+about code coverage, and no indication of code quality checks. Interfaces and
+classes are not documented, class javadocs contain only creation date. README.md
+is almost empty.
+
+
+restorer/Gloomy-Dungeons-3D
+Commit messages are too short and not descriptive enough and contain no
+reference to issues. There is a single release published to github and there is
+a script for doing releases. There is no code coverage published and no trace of
+static code analysis. There is a general description of the application and how
+to build it. There are no javadocs for classes, only few comments. There are few
+utils classes with only static methods.
+
+
+lionsoul2014/jcseg
+Project doesn't have any tickets in github (some old ones are in google code),
+as a result commits don't reference them, their description could be better
+(they lack context that would be added by issues and PRs). No github releases
+have been done but build jars are versioned inside the repo. Project uses maven
+and ant (strange to have both in one project) and contains dependency jars
+inside lib folder instead of getting them from maven. There is no information
+about code coverage, and no indication of code quality checks, there is a PR to
+add some quality checks (right now only tabs vs spaces). Interfaces, classes are
+mostly documented, most of the methods also but almost all of the method
+parameters are not. There are few anti-patterns like Util classes (actually a
+lot of static methods in many classes), all objects are mutable (setters and
+getters). README.md lacks information how to perform build (which would be
+useful seeing that it has both maven and ant configurations).
+
+
+sytolk/TaxiAndroidOpen
+Project has some tickets, but commits don't have that reference so their
+description doesn't give enough context. There are releases but instead of
+publishing them to github releases they are contained inside git repo. There is
+a travis build configured and maven build system. There is no information about
+code coverage or code quality checks. There is no script that would perform
+release. Project contains classes from other projects (I found two different
+copyrights). Classes are mostly mutable, final is used only for constants.
+Interfaces are not documented. README.md has some project information and some
+initial info about building, but it would be good to add more information there.
+
+
+restorer/gloomy-dungeons-2
+Commit messages are not well described and don't reference issues. There is no
+github release published and no mention of any other releases, but there is a
+script for doing releases. There is no code coverage published and there is no
+trace of static code analysis. There is a general  description of the
+application and how to build (and publish a release). There are no javadocs in
+the code (there are some comments) and there are few utils (some large) classes
+with only static methods.
+
+
+mrzl/LeapMotionP5
+Commits are not always well described and they don't reference issues. There is
+a single release published to github, but jar is also inside git repo. There is
+no release publish script, there isn't even any build script There is no code
+coverage published, there is no static code analysis in place. There is an
+example of usage of this library on the page, but it is only a copy pasted
+example, that would work better if it would be better described (and without
+System.out.println). Most of the interfaces are described, but sometimes they
+miss description of parameters. There is a large god-class that is used as the
+main library access point.
+
+
+yaylas/AndroidFaceRecognizer
+Project has one ticket, there are just 4 commits and they don't describe what
+was done (basically an initial commit with few fixes). There are releases but
+instead of publishing them to github they are in google play store. There is no
+build configuration, project is probably built from IDE. There is no information
+about code coverage or code quality checks (and style is inconsistent). There is
+no script that would perform release. Project contains jars inside git repo
+instead of retrieving them from some artifact repository. More over build
+artifacts (like class files) are also in the repo. Classes are mostly mutable,
+final is used only for constants. Interfaces are not documented. README.md just
+informs in one sentence what the project is about and gives link to play store,
+this doesn't encourage contribution.
+
+
+omgware/fluid-simulator-v2
+Project doesn't have any issues and commits descriptions are very general and
+not informative. There is no build configuration, project is probably built from
+IDE. There is no information about code coverage or code quality checks. There
+is no script that would perform a release. Project contains release jars inside
+git repo instead of github releases section. More over project dependencies are
+in form  of jar files inside the repo (should be retrieved from some  public
+repository like maven repo or similar). Classes are mostly mutable. Interfaces
+are not documented. README.md is quite good, informs how to run the project, how
+to compile it (in IDE), gives sources for algorithms and describes the user
+interface.
+
+
+restorer/zame-haxe-particles
+Commits are not descriptive enough and don't reference issues. There are not
+releases in github and no release publishing script available. There is no code
+coverage published, there are not static code analysis done. There are no class
+level descriptions, but there is a general how to use guide. There are few utils
+classes with static methods.
+
+
+hujiaweibujidao/TinyWeibo
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. update README several times). No
+releases have been done and main project directory looks like a home directory
+of a user, not a project. There is no information about code coverage or code
+quality checks. Interfaces and classes are mostly undocumented and when they are
+they are in inconsistently in English or in Chinese.
+
+
+hujiaweibujidao/XingShan
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. update README several times). No
+releases have been done, and no information how to do a release. There is no
+information about code coverage or code quality checks. Interfaces and classes
+are mostly undocumented. Project needs some cleanup (e.g. removing .svn
+directory)
+
+
+beartung/tclip-android
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. "done", "rock", "demo"). No releases
+have been done. There is information how to do a release but it contains several
+steps (no automation) and contains a strange step that makes it unbuildable
+without contacting the maintainer. There is no information about code coverage
+or code quality checks. Interfaces and classes are undocumented, there are
+several comments in English and few in Chinese. README.md needs proofreading.
+
+
+beartung/insta-filter
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. "gif", "readme", "work"). No releases
+have been done. Project dependency (gpuimage) is inside projects repo. There is
+no information about code coverage or code quality checks. Interfaces and
+classes are undocumented. README.md is very short, the only documentation is the
+attached demo project.
+
+
+chenjishi/SlideActivity
+Project has only 1 ticket, as a result commits don't reference tickets and their
+description is quite general (e.g. "feature complete"). No releases have been
+done. Repo contains library jars and resulting apk. There is no information
+about code coverage or code quality checks (and code style is inconsistent).
+About 1/4 of classes and interfaces has javadocs. There is an util class and on
+class that has > 1000 lines of code. README.md is almost empty.
+
+
+wewoor/ZBLOG
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. "fix some bugs" or even empty commit
+messages). No releases have been done. There is no information about code
+coverage or code quality checks (and code style is inconsistent). Interfaces and
+classes are sometimes documented, but parameters mostly not. Project build
+results are contained in the repo (target/classes directory).
+
+
+hujiaweibujidao/WeChat4j
+Project doesn't have any tickets, as a result commits don't reference them and
+their description is very general (e.g. update README several times). No
+releases have been done, and no information how to do a release (looks like the
+build can be done only from IDE), there is even a library jar included in repo.
+There is no information about code coverage or code quality checks. Interfaces
+and classes are mostly undocumented, and if they are it is using comments not
+javadoc. Project needs some cleanup (e.g. removing .svn directory). There are
+several anti-patterns (e.g. interface with only constans, almost every class has
+setters).
+
+
+relu91/niftyeditor 
+Low quality project. Some classes ending in -er, at least one *Manager class,
+implementation isn't complete. Some tasks are tracked through tickets, however
+the project has zero pull requests. Builds only supported through NetBeans. No
+unit tests (!!!). The saving grace is that the Interfaces are well documented in
+Wiki, which is actually crucial for a GUI editor.
+
+
+bparmentier/OpenBikeSharing 
+Average quality project. Uses Gradle for build. Releases are frequent (every few
+weeks). Some anti-pattens (*er classes, one Helper class), but overall design
+appears sound. NO unit tests (!!!). NO UI documentation. NO static analysis.
+
+
+graphhopper/graphhopper
+Average quality. Good user-documentation. Instructions for releases can be made
+for several IDEs and build tools. Unit tests are present but there appears to be
+no code coverage reports or enforcement. No static analysis. Regarding anti-
+patterns, a few *Helper classes (typical) and a couple of very long (>500 line)
+ones.
+
+
+t-oster/VisiCut 
+Average quality. Good user documentation. Releases appear regular. PRs and
+issues are utilized but the commits don't appear to reference them. Some anti-
+patterns (typical static utility classes). Build instructors for Netbeans only.
+Only one unit test class (!) and its meaning is not clear. No static analysis.
+
+
+arnaudroger/SimpleFlatMapper 
+Good quality project. Builds are automated with Maven. Code coverage metric
+published on README. Good documentation. Some anti-patterns typical of Java
+projects ("Helper" classes). Releases are regular. Commits reference the related
+ticket. No static analysis
+
+
+Floens/Clover 
+Poor quality project. Usual Java anti-patterns (Utility classes). Gradle used as
+build tool, but build instructions are quite complex and requires Android
+Studio. Issues are used but not referenced in the commits. No static analysis
+and no code coverage reports (because no unit tests!). Releases are done more or
+less regularly (at least once a month). I don't see any UI documentation.
+
+
+chrisshayan/TechLooper 
+Very poor quality project. Anti-patterns are similar to other Java projects
+(notably Utility class, they even have their own package). Seems to use Maven
+for building but no instructions on how to build. Thousands of commits present
+but only one issue in issue tracker. No static analysis - reviewer points out
+all the styling flaws in PRs. No documentation to speak of other than a
+marketing-speak description of the project. Unit tests are present, but no code
+coverage reports. Github releases are regular although descriptions are vague.
+
+
+bonigarcia/dualsub 
+Poor quality project. The project has the typical Java project anti-pattern of
+utility classes. There are two releases with a good description, but they are
+very far apart (>1 year) form each other, which is really more of an indication
+that development is slow than anything else. Issues and PRs are hardly used and
+aren't referenced in commits. Build instructions are given as a single Maven
+command. There is no user documentation. Unit tests are present but no code
+coverage report; and no static analysis either.
+
+
+blundell/WoodyFaceDetection 
+Very poor quality. This project is relatively small. There doesn't appear to be
+any significant anti-patterns (no util classes, even!). However, it uses no
+issue tracking and no PRs. There are a couple of Github releases with a
+changelog. Build appears to be handled with Gradle but no clear instructions on
+how to build. Documentation is also lacking.
+
+
+blundell/QuickSand 
+Poor quality. This is another relatively small project by @blundell. There are
+few anti-patterns in this project (no util classes!). Unlike QuickSand it does
+have a unit test suite but still no code coverage reports or static analysis
+checks. There is an instruction on how to include the library but no
+instructions on how to build (Gradle is used). Documentation is lacking, and
+issue tracking is not used at all.
+
+
+blundell/ArrowLogger 
+Poor quality. This is another small library by @blundell. Similarly to the other
+projects, there are no major anti-patterns, which is about the only positive
+thing with respect to the deadly sins. Documentation is a bit better than the
+other two but it still only shows two usage examples. There's instruction on how
+to include it but not now to build. No releases in Github, no issue tracking, no
+unit tests, and no static analysis.
+
+
+pushtorefresh/storio
+Top quality, one of the best projects I've seen. There are few anti-patterns
+(classes named with *-er, including some *Helper classes, but they remain short
+and don't look like static utility classes). Unit tests are present and Jacoco
+is used to report code coverage. Solid release history with detailed change
+logs. Documentation on usage is quite extensive. Looks like one-command build is
+available but it's not documented in README (it's done with Gradle and used by
+the Travis CI). Static analysis with Checkstyle for the Travis build, which is
+enforced based on the status of accepted pull requests. Releases are regular and
+well-documented, but commits don't reference their associated issues.
+
+
+mangstadt/ez-vcard
+Poor quality. The overall design of this project is quite poor - there are quite
+a few static utility classes and a God class "Ezvcard"  which is nearly 2000
+lines long. Issue tracker is not well-used and commits aren't linked to specific
+issues. Releases have no description at all. The README claims "extensive unit
+test coverage" - there are actual tests, but no coverage report. Documentation
+is pretty decent. Looks like it can be built using Maven but no instructions on
+how (it only specifies how to include it in your own project).
+
+
+jmyrland/DriSMo 
+Very poor quality project. It contains the typical Java project anti-pattern
+(util classes). The build specifically requires IntelliJ IDEA, there's no one-
+click/command build. There's a test folder but there doesn't seem to be much in
+the way of unit tests and no static analysis at all. Issue tracker is empty and
+there are no releases, either. There is a change log, but looking for the
+project itself or its release history leads to a broken link. It looks like the
+project has been taken down from Google Play.
+
+
+pmd/pmd
+Top quality. PMD is a well-known and widely used project, and its reputation is
+well deserved. Unsurprisingly, it uses static analysis during build (PMD -
+itself, and Checkstyle). Issue tracking is used and referenced in the commits.
+Releases are regular with comprehensive documentation. Code coverage is reported
+using Jacoco. The one drawback to this project is the presence of anti-patterns,
+notably the very common Helper/Utility classes.
+
+
+javaslang/javaslang 
+Top quality, one of the best projects I've seen. Javaslang is a functional
+programming library for Java 8 and above. As a result, it is written in a very
+clean and principled manner and manages to avoid any major anti-patterns.
+Single-command builds and releases are available through Maven and Gradle. Code
+coverage is reported through Coveralls. Issue tracking is used extensively and
+cross-referenced through commits. The only problem is that while releases are
+regular, there are no descriptions or changelogs attached to them.
+
+
+thothbot/parallax
+Average quality. This project has some common Java anti-patterns such as the
+Constant class. It is well documented. Releases have detailed change logs. Issue
+tracker usage seems inconsistent (some commits are referenced to tickets, most
+are not). No instructions on how to do a one-step build, unit tests are present
+but no code coverage report.
+
+
+jasonycw/MemeCreator 
+Very poor quality project. This is a small project that appears to be a college
+project, and it shows. There doesn't appear to be an issue tracker, release
+tracker, unit tests, static analysis, or build instructions. Some screenshots in
+the README serve as user documentation and that's pretty much it.
+
+
+jasonycw/TyphoonTycoon 
+Poor quality project. Just like the other jasonycw project, this appears to be a
+college project. It is implemented in HTML and JavaScript, so the only step
+needed to build/install is to extract the project files. It does use the issue
+tracker to some extent, with some cross-referencing from commits. User
+documentation is reasonably good.
+
+
+ysc/QuestionAnsweringSystem 
+Poor quality project. Contains typical Java project anti-patterns, such as
+utility classes. Issue tracker is barely used and not referenced from the
+commits. No static analysis or unit tests. One-step build is present, and
+handled using Maven. Has some user-oriented documentation.
+
+
+ysc/word 
+Poor quality project. Has typical Java project anti-patterns, notably utility
+classes. Issue tracker is almost empty. One-step build is possible through
+Maven. There are unit tests, but no coverage reports. No static analysis. There
+are a handful of releases but no descriptions or changelogs are attached to
+them.
+
+
+andot/hprose 
+Poor quality project. Usual anti-patterns like Utility classes. It appears that
+the project (Java version) can be built in one step using Maven, but no
+instructions are given on how to do this (there is a Travis configuration, so
+there should be some automation). No unit tests or static analysis. Issue
+tracker is hardly used at all, and only the most recent releases have any
+semblance of a change log.
+
+
+guikeller/jetty-runner 
+Average quality project, despite its size. As far as anti-patterns go there's a
+single utility class "IconUtil". Static analysis tools are used, however it does
+not appear that they're mandatory for the build. No explicit instructions for
+one-step build but Travis CI is present and it appears that build automation is
+handled with Gradle. Code coverage report is present. There are a few issues in
+the issue tracker but most of them are not referenced from the commits. Releases
+are frequent and are accompanied by change logs.
+
+
+frizbog/gedcom4j 
+Good quality project. Manages to avoid the static utility anti-pattern that even
+popular projects (e.g. PMD) fall into. Build automation is done using Jenkins.
+Code coverage provided by Cobertura. Static analysis is present (Checkstyle,
+Findbugs, PMD) but not mandatory, nevertheless the Jenkins build is clean. Issue
+tracker is well-used and commits reference specific issues. There are a couple
+of releases however there's no changelog or description for them.
+
+
+h2oai/h2o-3
+Average quality project. Gets into the usual utility class anti-pattern. Build
+automation using Jenkins and Gradle. Issue tracking is done with JIRA and is
+referenced in commits. Unit tests are present but there doesn't appear to be any
+coverage report. Releases are regular and there are nightly builds, however
+there are no tags for finding major releases nor any changelogs.
+
+
+Feng14/MiniWeChat-Server 
+Very poor quality project. Some class names are meaningless ("MyListener",
+"MyTask"). No releases and issue tracker is unused. No automated build, though
+some project artifacts suggest that Eclipse was used to create this project. No
+unit tests and no static analysis tools.
+
+
+tianzhijiexian/ActivityOptionsICS
+Very poor quality project. No instructions on how to build. Usual utility class
+anti-pattern. Unit tests are missing. No releases. No static analysis.
+Documentation is very disorganized and unclear.
+
+
+swanson/stringer  REPO NOT FOUND
+
+
+JayFang1993/DropDownMenu (Android)
++
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+3 out of 3 God classes
+Get/set
+Mutability
+
+
+AizazAZ/Android-Ultra-Photo-Selector  (Android)
++
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Anemic mutable model
+Utils
+
+
+patilswapnilv/TerminalIDE
++
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Utils
+public static methods
+Nulls
+Some class names started from lower case
+God classes
+
+
+zhaoqp2010/andbase (Android)
++
+Github issue tracking
+-
+No releases
+No test coverage control
+No quality control
+ORM
+Lasagna code
+Code duplication
+Nulls
+Mutability
+Utils
+Get/Set
+
+
+omry/banana  (Java)
++
+Good doc
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Utils
+Multiple return in a method
+Public static methods
+Get/Set
+Sigle char var names
+
+
+jackrex/AndroidCacheFoundation (Android)
++
+Some doc
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Anemic model
+Binding to android framework, nothing interesting
+
+
+kaitoy/pcap4j  (Java)  - It's more or less interesting, as at least some classes represent "true" objects + building Docker image
++
+Some doc
+Travis CI + Appveyor
+Code coverage (cobertura + coveralls-maven-plugin)
+Github releases
+Github issue tracking (not too many issues though)
+Change tracking (CHANGES.md)
+Build new Docker image on
+Many "true" objects
+-
+No quality control control
+Lots of public static methods (Pcaps.java)
+Utility classes
+Overloading instead of decorating
+Deep if branching
+Nulls
+Mutability
+
+
+rgladwell/m2e-android (Java) - Despite the lack of OOP approach the code looks more/less clean
++
+Travis CI
+Good doc
+Some quality control (Findbugs)
+Github releases
+Github issue tracking
+Some decorators
+-
+No test coverage control
+No other quality control tools
+Anemic model
+Mutability
+*ers (Resolver, Adaptor, Manager, Attacher, )
+Interfaces with "I"
+
+
+scireum/parsii (Java)
++
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Static is everywhere
+Mutable
+
+
+scireum/si  (Java)    Worth to see
++
+Good doc
+Looks of OOP
+Code looks readable and understandable
+Norm decomposition (not a perfect one but much better than in other projects)
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Public static methods
+Mutability
+Huge use of protected methods/fields
+
+~Interesing
+Home brew dependency injection
+
+
+yazeed44/ResizableView (Android)
++
+-
+No tickets
+No releases
+No test coverage
+No quality control
+Nothing really interesting, 5 classes with broken encapsulation
+
+
+yazeed44/GroceryShopping (Android)
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Many Utils
+Mutablity
+Lusagna code
+
+
+MindMac/AndroidAppLog  (Android)
++
+Some doc
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+Totall crap - one God class with NO formatting AT ALL!
+
+
+kpbird/chips-edittext-library (Android)
++
+Some doc
+-
+No tickets
+No releases
+No test coverage control
+No quality control
+3 classes of bad code, I can't find any positive here :(
+
+
+spiffyui/spiffyui  (Java + JS)
++
+CloudBee CI (instance is hibernated)
+jslint4java + some checkstyle (code looks pretty)
+Github releases
+-
+No issue tracking
+Util driven develipment
+Public static methods
+AuthUtil implements ...RESTAuthProvider  o_O funny
+Nulls, instanceofs
+God classes
+
+
+coala-analyzer/coala   (Python)
++
+TravisCI
+CircleCI
+Rultor !!! WOW
+Code coverage (by coverage 4.0)
+Github releases
+Github issue tracking
+Automatic builds for Linux, Windows and Mac !
+Good doc
+
+I don't understand much in Python but think this repo worth your attention!
+
+
+mgarin/weblaf (Java)
++
+Good doc
+Github releases
+Github issue tracking
+-
+No test coverage control
+No quality control
+No public CI
+Libs commited into repo :(
+Huge God classes (PluginManager.java, ProxyManager.java ...)
+
+
+conductor-framework/conductor (Java)
++
+Good doc
+Github releases
+-
+No test coverage control
+No quality control
+No Github issue tracking
+One God class (Locomotive.java)
+Public fields
+
+
+ctron/package-drone (Java)
++
+Good doc
+TravisCI
+Github releases
+Github issue tracking
+Packaged inside Docker container
+-
+Get/Set
+Utils, Helpers public static methids
+Anemic model
+No quality control
+No test coverage control
+
+
+markkerzner/FreeEed (Java + html)
++
+Findbugs, PMD, dependency analyzer
+Interesting - taglist-maven-plugin, clirr-maven-plugin
+Github issue tracking
+-
+No test coverage control
+No public CI
+Extension via inheritance
+Utils with public static methods
+Single responcibility principle violation (LotusNotesEmailParser)
+Spaghetti code (NSFParser.java)
+
+
+morris/lessql (PHP)
++
+TravisCI
+Test coverage control (codeclimate.com)
+Good doc
+Github releases
+Github issue tracking
+-
+No quality control
+Several God classes (Database.php, Result.php, Row.php) and that's it :(
+
+
+jitlogic/zorka  (Java)
++
+Github releases
+Github issue tracking
+-
+No test coverage control
+No quality control
+No public CI
+Extencion via inheritance
+Mutable state (fields are not final even if injected through a constructor)
+Multiple return statements
+
+
+sdorra/angular-dashboard-framework  (JS)
++
+TravisCI
+jshint
+Github releases
+Github issue tracking
+-
+No test coverage control
+AngularJS - more functional than OOP style
+
+
+iluwatar/java-design-patterns (Java)
++
+TravisCI
+Github issue tracking
+Test coverage control with Jacoco
+Checkstyle
+-
+No findbugs, PMD ...
+Library of design pattern examples, code is clean but I'm not sure that's enough to be chosen
+
+
+chesterbr/ruby2600  (Ruby)
++
+Github releases
+-
+No test coverage control
+No quality control
+No public CI
+
+Not sure I can assess this repo. PLEASE, CHECK IT
+
+
+testinfected/molecule (Java)  !!! - Worth to be considered, most of object are trued objects, not an Anemic ones.
++
+Good doc
+Travis CI
+Test coverage control with jacoco
+Github releases
+Github issue tracking
+-
+No quality control
+Mutable
+Processor, Parser ...
+Public static as factory methods
+
+
+testinfected/simple-petstore  (Java)
++
+Travis CI
+Test coverage control with jacoco
+-
+No quality control
+Anemic model
+For some reason, it contains the whole content of testinfected/molecule repo
+
+
+pchab/AndroidRTC  (Android)
++
+-
+No test coverage control
+No quality control
+No public CI
+Several God classes. Nothing to check at all
+
+
+dolda2000/ashd   (C !) - should not be in the list at all. We consider only object oriented languages.
+
+
+MaigoAkisame/MCPDict  (Android)
++
+-
+No test coverage control
+No quality control
+No public CI
+No tickets
+No releases
+God classes
+NO BUILDED AT ALL
+
+
+Ph1b/MaterialAudiobookPlayer  (Android)
++
+Github issue tracking
+Github release management
+-
+No test coverage control
+No quality control
+No visible CI
+Utils (ThemeUtil.java, FileRecognition.java ...)
+Anemic model
+Lost of God classes (DataBaseUpgradeHelper.java, MediaPlayerController.java, CustomMediaPlayer.java ...)
+Huge unmaitainable interfaces (MediaPlayerInterface.java)
+Lots of *er
+Mutable classes
+
+
+SVGKit/SVGKit (Objective-C)
++
+Github issue tracking
+Github release management
+-
+SORRY, PLEASE, SEE IT BY YOURSELF
+
+
+vertigo17/Cerberus  (Java)
++
+Github issue tracking
+Github release management
+-
+NO DOC!
+No visible CI
+No test coverage control
+No quality control
+Lots of Utils
+Classical enterprise (DAO/Service)
+Mixing many concerns in one class
+Tonns of pure servlets
+
+
+
+jaredsburrows/OpenQuartz (Android)
++
+Travis CI
+Some doc
+-
+No test coverage control
+No quality control
+Mutable classes
+Nulls
+Multiple returns in methods
+Getters/Setters
+
+
+jaredsburrows/AndroidGradleTemplate (Android)
++
+Travis CI
+Test coverage check with JaCoCo
+Interesting approach to catch DEV errors with http://errorprone.info/
+Github issue tracking
+-
+No quality control
+No releases (yet)
+Extend over inheritance
+God class (BaseAdapter.java)
+Utility classes
+
+
+vitalidze/traccar-web (Java)
++
+Github issue tracking
+Github release management
+-
+Enterprise - ORM (hibernate), GWT, DI
+No visible CI
+No test coverage control
+No quality control
+Maven commited into repo o_O
+server.model package contains ALL - servlets, domain entities, services, utils, ...
+
+
+ReikaKalseki/ChromatiCraft (Java)
++
+-
+NO DOC!
+NO Build tool
+No visible CI
+No test coverage control
+No quality control
+No releases
+Violating java convention about package names (not a domain format, capital letters ...)
+Anemic model
+Nulls
+Instanceofs
+God classes with numerous switches ...
+
+
+ReikaKalseki/RotaryCraft (Java)
+-
+Exactly the same shit as previous one. Same author, same approach. Except the doc.
+
+
+ReikaKalseki/DragonAPI  (Java)
+-
+all as in the previous 2 projects
+Code is completely unmaitainable. Looking at it I would suggest to instroduce
+an award for the most shity project.
+
+
+jOOQ/jOOX  (Java)
++
+Good doc
+Travis CI
+Github issue tracking
+Github release management
+-
+"Cool" God class with funny name (Impl.java). Another God class - Scanner.java
+No test coverage control
+No code quality control
+Getters/Setters, utils, mutability, * ers
+
+
+konsoletyper/teavm (Java)
++
+Some doc
+Checkstyle
+-
+No visible CI
+No test coverage control
+No other code quality control
+No releases
+God classes (TeaVMRunner.java, JCLComparisonBuilder.java)
+Broken encapsulation (default visibility for constructed objects, non final fields) - JCLClass.java, etc.
+
+
+citiususc/hipster (Java)
++
+Pretty doc
+Travis CI
+Github issue tracking
+Github release management
+Test coverage control with cobertura
+Milestones
+Mostly good decomposition
+-
+No code quality control
+Mutable objects
+Public static methods (factory methods)
+Code heavily use generics, hard to read, but that's because of domain specific
+!!! In general, the project can be considered
+
+
+katzer/cordova-plugin-local-notifications (Android + iOC + JS)
++
+Github issue tracking
+Github release management
+-
+No test coverage control
+No code quality control
+God classes (LocalNotification.java)
+Violation of code conventions (class name - "UILocalNotification+APPLocalNotification.m")
+Huge utils (LocalNotificationUtil.js)
+
+
+katzer/cordova-plugin-background-mode (Android + iOC + JS)
+Same as previous. Really, nothing interesting at all, simple binding to mobile OS frameworks
+Broken encapsulation (ForegroundService.java)
+
+
+katzer/cordova-plugin-email-composer (Android + iOC + JS + WindowsPhone)
++
+Used codeclimate.com to code analyze
+-
+God classes with broken encapsulation. Same as previous one.
+
+
+nivdul/actitracker-cassandra-spark  (Java)
+-
+No visible CI
+No test coverage control
+No code quality control
+No releases
+Broken encapsulation (RandomForests.java, DecisionTrees.java)
+Public static methods (DataManager.java, ExtractFeature.java, PrepareData.java ... )
+Mutable objects
+
+
+
+LuckyJayce/MVCHelper  (Android)
++
+Some chinese doc
+-
+No visible CI
+No test coverage control
+No code quality control
+No releases
+The project name with *Helper ... don't even know ...
+Mutable objects (TaskHelper.java)
+Get/Set (again TaskHelper.java)
+Utils (NetworkUtils.java)
+God class (MVCHelper.java)
+Extencion via inheritance
+Weird class names (Data1.java, Data2.java ...)
+Some interfaces are with "I" prefix, some are not.
+
+
+LuckyJayce/ViewPagerIndicator (Android)
+Exactly the same as previous one
+
+
+xvik/guice-persist-orient  (Java)
++
+Travis CI
+!! Interesting tool to generate files http://yeoman.io/
+!! Interesting tool https://github.com/xvik/generator-lib-java
+Checkstyle
+Github issue tracking
+Github release management
+Code coverage control (jacoco)
+-
+No other code quality control
+ORM
+Extension via inheritance (AbstractObjectInitializer.java)
+Nulls (DocumentPool.java)
+*Manager, *Provider
+DI usage
+Pure encapsulation (public fields - RepositoryMethodDescriptor.java)
+
+
+xvik/dropwizard-guicey  (Java)
++
+Good doc
+Travis CI
+Checkstyle
+Github issue tracking
+Github release management
+Code coverage control (jacoco)
+-
+Mutable objects (GuiceSupportModule.java)
+Utils, Public static (DwBundleSupport.java, OReflectionHelper.java)
+!! Basically, not bad. Worth to see it.
+
+
+mbosecke/pebble (Java)
++
+Travis CI
+Github release management
+Github issue tracking
+-
+No test coverage control
+No code quality control
+God class (PebbleEngine.java, ExpressionParser.java, LexerImpl.java)
+Mutable state (ParserImpl.java)
+Utils
+
+
+inklabs/kommerce-core (PHP)
++
+Travis CI
+Code coverage control
+-
+.idea folder is commited into repo :(
+No releases
+No issue tracking
+Anemic model (tonns of "EntityDTO" o_O)
+ORM
+Homebrew ORM with mapping in XML
+Public static methods, utils ...
+Mutable objects (ChargeResponse.php)
+DAO/Service//View ARC
+
+
+elchris/easysql (PHP)
++
+!! https://scrutinizer-ci.com/  - build, code analyze and test coverage control for PHP
+Github release management
+-
+No issue tracking
+.idea folder is commited into repo :( (as  well as build logs ...)
+Interfaces with "I"
+Autogenerated code doc is ugly
+Code is more or less clean, but nothing really special.
+
+
+checkstyle/checkstyle   (Java)
++
+Travis CI
+Appveyor
+https://codecov.io/   (checker - jacoco)
+SonarCube for code quality monitoring
+PMD, findbugs
+xml-maven-plugin for xml validation
+jdepend-maven-plugin
+maven-linkcheck-plugin
+and other interesting tools and plugins
+Not only Unit but integration tests as well
+In general, good object decomposition (at least API package)
+-
+Mutable objects, nulls everywhere (TreeWalker.java)
+Utils
+Getters/Setters (all filters, like SuppressionCommentFilter.java)
+Public static methods (SuppressionsLoader.java)
+!! Despite obvious flaws I would advice to take a look at the project.
+Some interesting tools and plugins are used.
+
+
+mifmif/mspider  (Java)
++
+-
+No visible CI
+No test coverage control
+No code quality control
+No releases
+No issue tracking
+Standart enterprise decomposition - dao/model/service/utils
+ORM usage
+Nothing to talk about, at all.
+
+
+mifmif/Generex  (Java)
++
+Travis CI
+Github release management
+PMD, Checkstyle, Findbugs, jdepend, javancss-maven-plugin
+Test coverage control (cobertura)
+-
+No issue tracking
+All SCA rules are commited into root folder as well as eclipse settings
+Checkstyle doesn't help too much - code formatting is broken in many places
+God class (Generex.java)
+Mutable state (Node.java, TransitionLevel.java)
+Iterator and Iterable interfaces are placed in utils package for some reason.
+
+
+KeldOelykke/FailFast  (Java)
++
+Travis CI
+Github release management
+Github issue tracking
+Checkstyle
+-
+No other code quality control tools
+Build with Ant
+No test coverage control
+Interfaces with "I"
+No java generics, Objects everywere
+Interface which extends 26 other interfaces (IObjectFailer.java)  I've never seen this before
+Annotation driven development
+Nulls (ACallContractor.java)
+Extension via inheritance
+
+
+erudika/para  (Java)
++
+Github release management
+!! jcabi-dynamodb-maven-plugin usage, nice :)
+Checkstyle
+-
+No visible CI
+No other code quality control tools
+No test coverage control
+No issue tracking
+Spring usage
+Utils are everywhere
+God classes (ElasticSearch.java, Api1.java)
+Interface Search is doing too much
+Enterprise approach - DAO/Service
+Mutable objects, Get/Set (AWSQueue.java)
+
+
+trautonen/coveralls-maven-plugin  (Java)
++
+Travis CI
+Github release management
+Github issue tracking
+Checsktyle, cobertura, coveralls
+-
+Mutable objects without any reason at all (JaCoCoParser.java)
+Extension via inheritance
+Some utils, but some of them they are not actually utils, no static methods
+!! Despite flaws mentioned above code looks clean, decomposition is
+more/less understandable. Would recomend to consider.
+
+
+mystilleef/eclipse4-smartsave   (Java)
++
+Github release management
+Github issue tracking
+Code decomposition is OK
+-
+No test coverage control
+No code quality control
+No visible CI
+Code formatting is rather unusual, never seen such before.
+Public static methods (ContentTypeContext.java, Store.java)
+
+
+expercise/expercise  (Java)
++
+Travis CI
+Github release management
+Github issue tracking
+-
+No test coverage control
+Huge set of utility classes
+Spring + MVC
+Enterprise ARC - DAO, domain, service, controller ... with all subsequent flaws
+Mutable objects, stateless services
+Anemic model
+
+
+kbilsted/StatePrinter (C#)
++
+Nice doc
+Appveyor CI
+Test coverage with coveralls.io
+Github release management
+Github issue tracking
+-
+Get/Set (Configuration.cs)
+Utils (ConfigurationHelper.cs)
+Multiple return statements (IntroSpector.cs)
+God class (ProjectionHarvester.cs)
+
+
+js-cookie/java-cookie   (Java)
++
+Good doc
+Travis CI
+Github release management
+Github issue tracking
+-
+No test coverage control
+No code quality control
+Get/Set (Cookies.java)
+Public static methods (Expiration.java)
+There is a lack of code to evaluate, but from what I see there is nothing interesting at all.
+
+
+Suseika/inflectible (Java)    YOU SHOULD SEE IT.
+Travis CI
+Rultor CI
+Qulice
+Code coverage control with cobertura
+Well ... This prject is really close to what we are doing with you,
+because the author is the guy who works with you.
+He applies all your tools and principles to build the lib.
+-
+No issue tracking (yet)
+No release management (yet)
+methods names sometimes are really long (GmValidated.java)
+Maybe it's a domain specific issue, but anyway.
+
+
+mp911de/lettuce  (Java)
++
+Good doc
+Travis CI
+Github release management
+Github issue tracking
+Code coverage control with jacoco
+-
+No code quality control
+Utility classes (Base16.java, CRC16.java, SlotHash.java)
+Interfaces are tooo big (RedisServerAsyncConnection.java, RedisKeysAsyncConnection) - source of God classes
+Very long classes (RedisCommandBuilder.class - 1853 lines)
+Public static methods (LettuceFutures.java, ConnectionEvents.java)
+Null driven development (AbstractRedisClient.java)
+Huge instanceofs usage (ClusterDistributionChannelWriter.java)
+
+
+hackiftekhar/IQKeyboardManager  (Objective-C, Swift)  - PLEASE, CHECK. Have no experience in that.
+
+
+mafagafogigante/dungeon  (Java)
++
+Travis CI
+Github release management
+Github issue tracking
+-
+No test coverage control
+No code quality control
+Public static methods (IssuedCommandProcessor.java)
+Nulls (Game.java, GameData.java)
+Broken encapsulations (River.java etc.)
+
+
+colonB/Mixer  (PHP)
++
+Travis CI
+Github release management
+Code coverage with coveralls
+-
+NO DOC AT ALL!
+No visible issue tracking
+Extension via inheritance
+!! Please, check it. Don't understand much in PHP
+
+
+colonB/Dorm
+Same as previous one.
+
+
+===================== PRELIMINARY REVIEW DONE BY MYSELF ========================
+
+colonB/Mixer
++ unit tests
+- no issue tracking
+- no pull requests
+- many routers, controllers, etc.
+- "getters"
+- no README with documentation
+- didn't find build automation and release automation
+- didn't find code coverage control
+- didn't find static analysis
+
+
+colonB/Dorm
++ unit tests
+- no issue tracking
+- no pull requests
+- "getters" and "setters"
+- no README with documentation
+- didn't find build automation and release automation
+- didn't find code coverage control
+- didn't find static analysis
+
+
+hackiftekhar/IQKeyboardManager
++ issue tracking
++ pull requests
+- getters and setters
+- "helpers"
+- static structures
+- didn't find CI
+- didn't find build automation and release automation
+- didn't find code coverage control
+- didn't find static analysis
+
+
+robertop/triumph4php
++ issue tracking
++ pull requests
++ unit tests
+- strange file naming convention ("Class" suffix, e.g.)
+- static methods
+- "getters"
+- didn't find CI
+- didn't find release automation
+- didn't find code coverage control
+- didn't find static analysis
+
+
+Bertram25/ValyriaTear
++ issue tracking
++ pull requests
+- didn't find tests
+- didn't find release automation
+- didn't find code coverage control
+- didn't find static analysis
+
+
+chesterbr/ruby2600
+- zero issue tracking
+- too few pull requests
+- mutable classes, "setters"
+- didn't find CI
+- didn't find release automation and documentation
+- didn't find code coverage control
+- didn't find static analysis
+- besides that, the project looks rather small. I doubt it has 5000 lines of code
+
+
+SVGKit/SVGKit
++ issue tracking
++ pull requests
+- code formatting is rather messy, difficult to read
+- some .m files are rather long
+- didn't find CI
+- didn't find release automation & documentation
+- didn't find code coverage control
+- didn't find static analysis
+

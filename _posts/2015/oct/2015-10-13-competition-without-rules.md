@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Competition Without Rules Is Destructive"
-date: 2015-09-28
+date: 2015-10-13
 place: Moscow, Russia
 tags: mgmt
 description:
@@ -29,8 +29,10 @@ Is this how it should be?
 
 <!--more-->
 
+{% picture /images/2015/10/the-wrestler.jpg 0 The Wrestler (2008) by Darren Aronofsky %}
+
 We are trying to **avoid explicitness** in these sensitive subjects. Indeed,
-how can we tell Jeff that his salary is lower than 
+how can we tell Jeff that his salary is lower than
 Monica's because his performance is worse?
 This will definitely lead to depression and negativity
 within the team, right?

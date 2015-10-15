@@ -26,6 +26,8 @@ keywords:
   - read-only master branch
 ---
 
+{% youtube 2a2nWELIk-Y video-left %}
+
 Continuous integration is easy. Download Jenkins, install,  create a job, click
 the button, and get a nice email saying that your build is broken (I assume your
 build is automated). Then, fix broken tests (I assume you have tests), and get a

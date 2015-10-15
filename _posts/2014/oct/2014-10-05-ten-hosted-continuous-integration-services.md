@@ -148,14 +148,6 @@ the best and highly recommended):
   <td class="cnt">?</td>
   <td class="cnt">?</td>
   </tr>
-<tr><td><a href="http://www.ship.io">ship.io</a></td>
-  <td class="rht"><a href="https://ship.io/pricing">free!</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt">?</td>
-  </tr>
 </tbody>
 </table>
 
@@ -267,12 +259,6 @@ definitely needs usability testing. It was rather difficult to configure
 a project via its web interface. The good thing is that it's free, but its
 quality is not high enough to recommend it.
 
-{% badge /images/2014/10/ship-io.png 64 http://www.ship.io %}
-
-[**ship.io**](http://www.ship.io) is building only mobile applications (for iOS and Android).
-Besides that, they don't support Maven for Android apps, only Gradle.
-I'll try to build iOS Swift app with them soon....
-
 [**solanolabs.com**](http://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic Github hook
 configuration when new repository is added. However, their sales spams me
@@ -291,6 +277,9 @@ billing model &mdash; they charge per build, not per month. I would definitely
 recommend to give it a try.
 
 [**greenhouseci.com**](http://greenhouseci.com/) testing now...
+
+[**ship.io**](http://ship.io/) is
+[dead](https://ship.io/ship-io-is-shutting-down/).
 
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):

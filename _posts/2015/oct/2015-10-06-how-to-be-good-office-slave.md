@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Be a Good Office Slave"
-date: 2015-09-28
+date: 2015-10-06
 place: Palo Alto, CA
 tags: mgmt
 description:
@@ -24,9 +24,11 @@ there is always an alternative to office slavery. I'm not talking about
 starting your own business. There are people in this world who work
 for someone without doing what is described below. They do exist,
 as well as companies that don't turn their employees into slaves. I really hope
-you will eventually find one. In the meantime, this manual is for you.
+you will eventually find one. In the meantime, this manual is for you :)
 
 <!--more-->
+
+{% picture /images/2015/10/the-office.jpg 0 The Office (2001–2003) %}
 
 **Help Others**.
 Find the stupidest newbies and help them. Regardless of what exactly
@@ -55,7 +57,6 @@ boss is [always right]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 Everything else may be wrong &mdash; the situation,
 colleagues, suppliers, computers, the CEO, investors, the market, or the weather,
 but not the boss you directly report to.
-
 The word of this person is the law. The boss is the god. Ideally, you should
 be the prophet. No matter what the boss says, you deliver
 it to others. And you must look like you sincerely believe that it's right.

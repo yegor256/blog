@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Vertical and Horizontal Decorating"
-date: 2015-09-11
+date: 2015-10-01
 place: Moscow, Russia
 tags: java oop
-description:
+description: |
   Decorators are used to extend object functionality
   without changing their interfaces, and there are two
   approaches: horizontal and vertical.
@@ -26,6 +26,8 @@ I'm not sure I have the right answer, but here is
 some food for thought.
 
 <!--more-->
+
+{% picture /images/2015/10/the-apartment.jpg 0 The Apartment (1960) by Billy Wilder %}
 
 Let's say I have a list of numbers:
 
@@ -63,7 +65,7 @@ Numbers numbers = new Modified(
       -1, 78, 4, -34, 98, 4,
     }
   ),
-  new Modifier[] {
+  new Diff[] {
     new Positive(),
     new Odds(),
     new Unique(),
@@ -76,13 +78,13 @@ See the difference? The first approach decorates `ArrayNumbers` "vertically,"
 adding functionality through the composable decorators `Positive`, `Odds`,
 `Unique`, and `Sorted`.
 
-The second approach introduces the new interface `Modifier`, which implements
+The second approach introduces the new interface `Diff`, which implements
 the core functionality of iterating numbers through instances of
 `Positive`, `Odds`, `Unique`, and `Sorted`:
 
 {% highlight java %}
-interface Mofifier {
-  Iterable<Integer> modify(Iterable<Integer> origin);
+interface Diff {
+  Iterable<Integer> apply(Iterable<Integer> origin);
 }
 {% endhighlight %}
 
