@@ -1430,6 +1430,272 @@ look at why the project was filtered out and decided to include
 it into the list of finalists. BTW, if any of you think that your
 project was excluded by mistake, don&amp;#39;t hesitate to
 &lt;a href=&quot;mailto:yegor@teamed.io&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;October, 11th:
+I analyzed all 12 projects today. All of them are really good projects,
+that&amp;#39;s why, in order to find the best one I was focusing on their
+&lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;sins&lt;/a&gt;, not virtues.
+Here is what I found, preliminarly.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/coala-analyzer/coala&quot;&gt;coala-analyzer/coala&lt;/a&gt; (14K Python LoC, 160K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;None&lt;/code&gt; is used in many places (over 400 places I found), which technically is &lt;code&gt;NULL&lt;/code&gt;,
+and it&amp;#39;s a serious &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;anti-pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are global functions, for example
+&lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/bears/linters/LanguageToolBear.py#L9&quot;&gt;&lt;code&gt;get_language_tool_results&lt;/code&gt;&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/misc/DictUtilities.py&quot;&gt;&lt;code&gt;DictUtilities&lt;/code&gt;&lt;/a&gt;.
+It is definitely a &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;bad idea&lt;/a&gt; in OOP.&lt;/li&gt;
+&lt;li&gt;Class &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/misc/Constants.py&quot;&gt;&lt;code&gt;Constants&lt;/code&gt;&lt;/a&gt;
+is a &lt;a href=&quot;/2015/07/06/public-static-literals.html&quot;&gt;terrible&lt;/a&gt; idea.&lt;/li&gt;
+&lt;li&gt;Checking object types in runtime is a
+&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;bad idea&lt;/a&gt;,
+e.g. &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/bears/codeclone_detection/ClangCountVectorCreator.py#L92&quot;&gt;&lt;code&gt;ClangCountVectorCreator.py&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s wrong with &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/bearlib/parsing/clang/cindex.py&quot;&gt;&lt;code&gt;cindex.py&lt;/code&gt;&lt;/a&gt;?
+There are almost 3200 lines of code, that&amp;#39;s way too many.&lt;/li&gt;
+&lt;li&gt;Static analysis is not a mandatory step in the build/release pipeline.
+That&amp;#39;s why, I believe, code formatting is not consistent and sometimes
+rather ugly. For example, &lt;a href=&quot;https://www.logilab.org/857&quot;&gt;pylint&lt;/a&gt; reports hundreds of issues.&lt;/li&gt;
+&lt;li&gt;Some methods have documentation, others don&amp;#39;t. I didn&amp;#39;t understand
+the logic. Would be great to have all methods documented. Also, not
+all classes are documented.&lt;/li&gt;
+&lt;li&gt;Score: 5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/checkstyle/checkstyle&quot;&gt;checkstyle/checkstyle&lt;/a&gt; (83K Java LoC, 553K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There are many ER-ending classes, like
+&lt;a href=&quot;https://github.com/checkstyle/checkstyle/blob/master/src/main/java/com/puppycrawl/tools/checkstyle/api/SeverityLevelCounter.java&quot;&gt;&lt;code&gt;SeverityLevelCounter&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/checkstyle/checkstyle/blob/master/src/main/java/com/puppycrawl/tools/checkstyle/api/Filter.java&quot;&gt;&lt;code&gt;Filter&lt;/code&gt;&lt;/a&gt;,
+and &lt;a href=&quot;https://github.com/checkstyle/checkstyle/blob/master/src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractLoader.java&quot;&gt;&lt;code&gt;AbstractLoader&lt;/code&gt;&lt;/a&gt; (for example),
+which are &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;anti-patterns&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;There is a &lt;a href=&quot;https://github.com/checkstyle/checkstyle/tree/master/src/main/java/com/puppycrawl/tools/checkstyle/utils&quot;&gt;whole bunch&lt;/a&gt; of utility classes,
+which are &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;definitely&lt;/a&gt;
+a bad thing in OOP. They are even groupped into a special &lt;code&gt;utils&lt;/code&gt; package,
+such a terrible idea.&lt;/li&gt;
+&lt;li&gt;Setters and getters are everywhere, together with immutable classes, which
+really are &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;not&lt;/a&gt; an OOP thing,
+for example &lt;a href=&quot;https://github.com/checkstyle/checkstyle/blob/master/src/main/java/com/puppycrawl/tools/checkstyle/checks/regexp/DetectorOptions.java&quot;&gt;&lt;code&gt;DetectorOptions&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NULL&lt;/code&gt; is actively used, in many places &amp;mdash;
+it&amp;#39;s a serious &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;anti-pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I&amp;#39;ve found five &lt;code&gt;.java&lt;/code&gt; files with over 1000 lines in each of them,
+for example 2500+ in &lt;a href=&quot;https://github.com/checkstyle/checkstyle/blob/master/src/test/java/com/puppycrawl/tools/checkstyle/checks/javadoc/ParseTreeBuilder.java&quot;&gt;&lt;code&gt;ParseTreeBuilder.java&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are direct commits to master made by different contributors
+and some of them are not linked back to any tickets. It&amp;#39;s impossible
+to understand why they were made. Look at this for example:
+&lt;a href=&quot;https://github.com/checkstyle/checkstyle/commit/7c5092271d95f34b5ddcb160e85ea460daaadb5d&quot;&gt;&lt;code&gt;7c50922&lt;/code&gt;&lt;/a&gt;.
+Was there a discussion involved? Who made a decision? Not clear at all.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/checkstyle/checkstyle/releases&quot;&gt;Releases&lt;/a&gt; are not documented at all.&lt;/li&gt;
+&lt;li&gt;Release procedure is not automated. At least I didn&amp;#39;t find any release script
+in the repository.&lt;/li&gt;
+&lt;li&gt;Score: 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/citiususc/hipster&quot;&gt;citiususc/hipster&lt;/a&gt; (5K Java LoC, 64K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;Getters and setters&lt;/a&gt;
+are used in many places, for example
+in &lt;a href=&quot;https://github.com/citiususc/hipster/blob/1.0.X/hipster-core/src/main/java/es/usc/citius/hipster/algorithm/DepthFirstSearch.java&quot;&gt;&lt;code&gt;DepthFirstSearch&lt;/code&gt;&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/citiususc/hipster/blob/1.0.X/hipster-core/src/main/java/es/usc/citius/hipster/model/Transition.java&quot;&gt;&lt;code&gt;Transition&lt;/code&gt;&lt;/a&gt;.
+Aside from that, almost all classes are mutable and are used
+as transfer bags for the needs of the algorithm. This is not how OOP
+should be used, I believe.&lt;/li&gt;
+&lt;li&gt;There are public static methods and even
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility classes&lt;/a&gt;,
+for example this one, with a funny name &lt;a href=&quot;https://github.com/citiususc/hipster/blob/1.0.X/hipster-core/src/main/java/es/usc/citius/hipster/util/F.java&quot;&gt;&lt;code&gt;F&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NULL&lt;/code&gt; is used actively, especially in iterators &amp;mdash;
+it&amp;#39;s a &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;bad idea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaDoc documentation is not consistent, some methods are documented,
+others aren&amp;#39;t.&lt;/li&gt;
+&lt;li&gt;Not all commits are linked to tickets, look at this, for example:
+&lt;a href=&quot;https://github.com/citiususc/hipster/commit/8cfa5dec281d6ef6d8e38ff53458d38e83712e48&quot;&gt;&lt;code&gt;8cfa5de&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Changes are committed directly to &lt;code&gt;master&lt;/code&gt; branch, pull requests are not
+used at all.&lt;/li&gt;
+&lt;li&gt;I didn&amp;#39;t find an automated procedure for release. I found one for
+regular snapshot deployment to Bintray, but what about releases? Are they
+done manually?&lt;/li&gt;
+&lt;li&gt;There is no static analysis, that&amp;#39;s why the code looks messy sometimes.&lt;/li&gt;
+&lt;li&gt;The amount of unit tests is rather small. Besides that, I didn&amp;#39;t find
+a real code coverage report published anywhere.&lt;/li&gt;
+&lt;li&gt;Score: 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp&quot;&gt;gulpjs/gulp&lt;/a&gt; (700 JS LoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This project is too small for the competition,
+just 700 lines of code. Disqualified.&lt;/li&gt;
+&lt;li&gt;Score: 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kaitoy/pcap4j&quot;&gt;kaitoy/pcap4j&lt;/a&gt; (42K LoC, 122K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is a &lt;a href=&quot;https://github.com/kaitoy/pcap4j/tree/master/pcap4j-core/src/main/java/org/pcap4j/util&quot;&gt;&lt;code&gt;util&lt;/code&gt;&lt;/a&gt;
+package with utility classes, which are a
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;bad practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NULL&lt;/code&gt; is used in mutable objects, for example in
+&lt;a href=&quot;https://github.com/kaitoy/pcap4j/blob/master/pcap4j-core/src/main/java/org/pcap4j/core/AbstractPcapAddress.java&quot;&gt;&lt;code&gt;AbstractPcapAddress&lt;/code&gt;&lt;/a&gt;;
+it&amp;#39;s a &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;bad idea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There too many &lt;code&gt;static&lt;/code&gt; methods and variables. They are literally
+everywhere. There is even a module called &lt;code&gt;pcap4j-packetfactory-static&lt;/code&gt;,
+full of &amp;quot;classes&amp;quot; with static methods.&lt;/li&gt;
+&lt;li&gt;JavaDoc documentation is not consistent and sometimes
+just incomplete, check &lt;a href=&quot;https://github.com/kaitoy/pcap4j/blob/master/pcap4j-core/src/main/java/org/pcap4j/core/NotOpenException.java#L21-L23&quot;&gt;this&lt;/a&gt;,
+for example&lt;/li&gt;
+&lt;li&gt;There are just a few issues and only six pull requests. Commits
+are not linked to issues. There is almost zero traceability of changes.&lt;/li&gt;
+&lt;li&gt;Release procedure is not automated,
+&lt;a href=&quot;https://github.com/kaitoy/pcap4j/releases&quot;&gt;releases&lt;/a&gt; are not documented&lt;/li&gt;
+&lt;li&gt;There is no static analysis, that&amp;#39;s why the code looks messy sometimes&lt;/li&gt;
+&lt;li&gt;Score: 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/raphw/byte-buddy&quot;&gt;raphw/byte-buddy&lt;/a&gt; (84K LoC, 503K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I found over 20 &lt;code&gt;.java&lt;/code&gt; files with over 1000 lines of code.
+&lt;a href=&quot;https://github.com/raphw/byte-buddy/blob/master/byte-buddy-dep/src/main/java/net/bytebuddy/pool/TypePool.java&quot;&gt;&lt;code&gt;TypePool.java&lt;/code&gt;&lt;/a&gt;
+even has 6200 lines!&lt;/li&gt;
+&lt;li&gt;There are many &lt;code&gt;public static&lt;/code&gt;
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;methods&lt;/a&gt; and
+&lt;a href=&quot;/2015/07/06/public-static-literals.html&quot;&gt;properties&lt;/a&gt;. I
+realize that maybe that the only way to deal with the problem domain in Java,
+but still...&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;instanceof&lt;/code&gt; is used very often, and it&amp;#39;s a
+&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;bad practice&lt;/a&gt;
+in OOP. Again, I understand that problem domain may require it sometimes,
+but still...&lt;/li&gt;
+&lt;li&gt;Most commits are made directly to master, without pull requests or tickets,
+that&amp;#39;s why traceability of them is broken.&lt;/li&gt;
+&lt;li&gt;Release procedure is not automated (I didn&amp;#39;t find a script).&lt;/li&gt;
+&lt;li&gt;Score: 5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/subchen/snack-string&quot;&gt;subchen/snack-string&lt;/a&gt; (1K LoC, 2K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The project is too small, disqualified.&lt;/li&gt;
+&lt;li&gt;Score: 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt; (5K LoC, 36K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The project is rather small, right on the edge of competition
+requirements and is made by a single developer. Besides that
+I don&amp;#39;t see any problems here. The code looks object oriented,
+all changes are traceable back to issues and pull requests,
+release procedure is automated, static analysis is mandatory,
+releases are documented. Thumbs up!&lt;/li&gt;
+&lt;li&gt;Score: 10&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/testinfected/molecule&quot;&gt;testinfected/molecule&lt;/a&gt; (10K LoC, 43K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There are a few &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility classes&lt;/a&gt;,
+for example &lt;a href=&quot;https://github.com/testinfected/molecule/blob/master/src/main/java/com/vtence/molecule/helpers/Streams.java&quot;&gt;&lt;code&gt;Streams&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are setters and getters in some classes,
+even through they are in a different naming convention,
+for example &lt;a href=&quot;https://github.com/testinfected/molecule/blob/master/src/main/java/com/vtence/molecule/Request.java&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/testinfected/molecule/blob/master/src/main/java/com/vtence/molecule/Response.java&quot;&gt;&lt;code&gt;Response&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Most of &lt;code&gt;.java&lt;/code&gt; files don&amp;#39;t have any JavDoc blocks, and they look consistent,
+but then, all of a sudden, some files do have documentation,
+for example &lt;a href=&quot;https://github.com/testinfected/molecule/blob/master/src/main/java/com/vtence/molecule/WebServer.java&quot;&gt;&lt;code&gt;WebServer&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;There are not so many issues and most of commits are not
+traceable back to any of them, for example
+&lt;a href=&quot;https://github.com/testinfected/molecule/commit/b4143a0d15023c4fc259678e2f15698c77f3a76f&quot;&gt;&lt;code&gt;b4143a0&lt;/code&gt;&lt;/a&gt; &amp;mdash;
+why it was made? Not clear. Also, there are almost no pull request. Looks
+like the author is just committing to master.&lt;/li&gt;
+&lt;li&gt;Release procedure is not documented/automated. I didn&amp;#39;t find it. Also,
+&lt;a href=&quot;https://github.com/testinfected/molecule/releases&quot;&gt;releases&lt;/a&gt; are not documented at all.&lt;/li&gt;
+&lt;li&gt;Static analysis is absent.&lt;/li&gt;
+&lt;li&gt;Score: 6&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/trautonen/coveralls-maven-plugin&quot;&gt;trautonen/coveralls-maven-plugin&lt;/a&gt; (4.5K LoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The project is too small for the competition, less than 5K lines of code.
+Besides that, it&amp;#39;s younger than one year, the first commit was
+made in May 2015.
+Disqualified.&lt;/li&gt;
+&lt;li&gt;Score: 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/wbotelhos/raty&quot;&gt;wbotelhos/raty&lt;/a&gt; (8.7K LoC, 63K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There are utility classes, for example
+&lt;a href=&quot;https://github.com/wbotelhos/raty/blob/master/spec/lib/helper.js&quot;&gt;&lt;code&gt;helper.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There are global functions, for example in
+&lt;a href=&quot;https://github.com/wbotelhos/raty/blob/master/spec/lib/helper.js&quot;&gt;&lt;code&gt;helper.js&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wbotelhos/raty/blob/master/spec/lib/jasmine.js&quot;&gt;&lt;code&gt;jasmine.js&lt;/code&gt;&lt;/a&gt;
+has 2400 lines of code, which is way too many&lt;/li&gt;
+&lt;li&gt;I didn&amp;#39;t understand why &lt;code&gt;.html&lt;/code&gt; files stay together with &lt;code&gt;.js&lt;/code&gt;
+in the same directory, for example
+&lt;a href=&quot;https://github.com/wbotelhos/raty/blob/master/spec/run.html&quot;&gt;&lt;code&gt;run.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Not all changes are traceable to issues,
+for example &lt;a href=&quot;https://github.com/wbotelhos/raty/commit/0a233e80a843afd8579878431235c2cbbd8a453e&quot;&gt;&lt;code&gt;0a233e8&lt;/code&gt;&lt;/a&gt;.
+There are not so many issues in the project and just a few pull requests.&lt;/li&gt;
+&lt;li&gt;Release procedure is not automated (at least I didn&amp;#39;t find any documentation
+about it)&lt;/li&gt;
+&lt;li&gt;There is no static analysis&lt;/li&gt;
+&lt;li&gt;There are no unit tests&lt;/li&gt;
+&lt;li&gt;Score: 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/xvik/guice-persist-orient&quot;&gt;xvik/guice-persist-orient&lt;/a&gt; (17K LoC, 54K HoC)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM&lt;/a&gt;
+and that&amp;#39;s why &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters and setters&lt;/a&gt;,
+for example in &lt;a href=&quot;https://github.com/xvik/guice-persist-orient/blob/master/src/main/java/ru/vyarus/guice/persist/orient/model/VersionedEntity.java&quot;&gt;&lt;code&gt;VersionedEntity&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dependency injection is actively used, which, I believe,
+is a &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;bad idea&lt;/a&gt; in OOP in general. But in this project, I understand,
+it is required by the problem domain. Anyway...&lt;/li&gt;
+&lt;li&gt;There are just a few issues and almost no pull requests,
+and commits are not traceable back to issues,
+for example this one: &lt;a href=&quot;https://github.com/xvik/guice-persist-orient/commit/e9c8f79cf666b92f9db40ae5dbfb8678e6721c6f&quot;&gt;&lt;code&gt;e9c8f79&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;There is no static analysis&lt;/li&gt;
+&lt;li&gt;Score: 5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I paid most attention to anti-patterns, which is the first
+and the most terrible sin we should try to avoid. Presence of
+&lt;code&gt;null&lt;/code&gt;, for example, much more seriously affected the score than
+the absence of an automated release procedure.&lt;/p&gt;
+
+&lt;p&gt;Thus, we have these best projects, out of 158 submitted to the competition:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt;: &lt;strong&gt;winner!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/testinfected/molecule&quot;&gt;testinfected/molecule&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/coala-analyzer/coala&quot;&gt;coala-analyzer/coala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/xvik/guice-persist-orient&quot;&gt;xvik/guice-persist-orient&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/raphw/byte-buddy&quot;&gt;raphw/byte-buddy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/citiususc/hipster&quot;&gt;citiususc/hipster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/checkstyle/checkstyle&quot;&gt;checkstyle/checkstyle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/kaitoy/pcap4j&quot;&gt;kaitoy/pcap4j&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Congratulations to the &lt;a href=&quot;https://github.com/suseika&quot;&gt;@suseika&lt;/a&gt;, the winner!
+Here is your badge:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://img.teamed.io/award/2015/winner.png&quot; style=&quot;width:338px;height:75px;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Put this code into Github &lt;code&gt;README&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;img src=&amp;quot;http://img.teamed.io/award/2015/winner.png&amp;quot;
+  style=&amp;quot;width:338px;height:75px;&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All eight projects will receive a one-user free one-year license for one JetBrains
+product. I will email you all and we&amp;#39;ll figure out how to transfer them.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everybody for participation!&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
