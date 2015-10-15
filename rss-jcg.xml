@@ -1150,7 +1150,7 @@ synchronize one level higher when necessary.&lt;/p&gt;
       <dc:date>2015-04-30T00:00:00+00:00</dc:date>
     </item>
     <item>
-      <title>Software Quality Award</title>
+      <title>Software Quality Award, 2015</title>
       <link>http://www.yegor256.com/award.html</link>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt; is the winner!&lt;/strong&gt;&lt;/p&gt;
 
@@ -1668,7 +1668,8 @@ and the most terrible sin we should try to avoid. Presence of
 &lt;code&gt;null&lt;/code&gt;, for example, much more seriously affected the score than
 the absence of an automated release procedure.&lt;/p&gt;
 
-&lt;p&gt;Thus, we have these best projects, out of 158 submitted to the competition:&lt;/p&gt;
+&lt;p&gt;Oct 15:
+Thus, we have these best projects, out of 158 submitted to the competition:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/suseika/inflectible&quot;&gt;suseika/inflectible&lt;/a&gt;: &lt;strong&gt;winner!&lt;/strong&gt;&lt;/li&gt;
