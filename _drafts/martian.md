@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is The Difference Between Ridley Scott and Joseph Goebbels"
-date: 2015-1014
+date: 2015-10-14
 place: Palo Alto, CA
 tags: mgmt
 description:
