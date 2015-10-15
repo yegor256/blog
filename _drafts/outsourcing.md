@@ -17,7 +17,7 @@ keywords:
 
 I want to create an iPhone app for my web service, but I don't have
 programmers. Well, I don't have iOS programmers. And I don't have money.
-Sound familiar? What do I do? Right, I go to
+Sound familiar? What do I do? Right, I go to ~~Google~~
 [Upwork](http://www.upwork.com) and find an awesome company in Bangalore
 that is excited to work with me for ~~nothing~~ reasonable money. In
 a few months and after a few thousand dollars, I realize this is not exactly
