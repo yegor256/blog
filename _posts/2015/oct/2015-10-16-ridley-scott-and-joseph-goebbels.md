@@ -41,7 +41,7 @@ It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
 But isn't it quite similar to what I've just seen a few days ago,
 produced and directed in 2015 by [Ridley Scott](http://www.imdb.com/name/nm0000631/)?
 
-In 1949, the goal of Soviet propaganda was to convience people that
+In 1949, the goal of Soviet propaganda was to convince people that
 their personal situations with a lack of food and lack of future were
 just their local, personal **exceptions** to a more general rule. And that
 rule was that the country was full of food. The country was governed by
