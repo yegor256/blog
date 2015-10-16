@@ -1659,7 +1659,7 @@ it is required by the problem domain. Anyway...&lt;/li&gt;
 &lt;li&gt;There are just a few issues and almost no pull requests,
 and commits are not traceable back to issues,
 for example this one: &lt;a href=&quot;https://github.com/xvik/guice-persist-orient/commit/e9c8f79cf666b92f9db40ae5dbfb8678e6721c6f&quot;&gt;&lt;code&gt;e9c8f79&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;There is no static analysis&lt;/li&gt;
+&lt;li&gt;~~There is no static analysis~~ (static analysis is there, with a subset of Checkstyle, PMD and FindBugs checks)&lt;/li&gt;
 &lt;li&gt;Score: 5&lt;/li&gt;
 &lt;/ul&gt;
 
