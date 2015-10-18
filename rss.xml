@@ -10,12 +10,74 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Fri, 16 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Software Quality Award, 2016</title>
+      <link>http://www.yegor256.com/2015/10/17/award-2016.html</link>
+      <description>&lt;p&gt;This is the second year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
+is still the same &amp;mdash; &lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules were changed a bit. Read on.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;One person can submit &lt;strong&gt;only one&lt;/strong&gt; project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions are accepted until the &lt;strong&gt;September 1, 2016&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions must be sent via email to &lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;me@yegor256.com&lt;/a&gt;.
+All I need is your Github login and repository name; I will check the commit
+history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15, 2016&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Open source (in Github).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least 10,000 lines of code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don&amp;#39;t care about
+popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
+your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/10/17/award-2016.html</guid>
+      <dc:date>2015-10-17T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>What Is the Difference Between Ridley Scott and Joseph Goebbels?</title>
       <link>http://www.yegor256.com/2015/10/16/ridley-scott-and-joseph-goebbels.html</link>
@@ -1663,86 +1725,6 @@ exceptions, not checked ones.&lt;/p&gt;
       <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</guid>
       <dc:date>2015-07-28T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Hourly Pay Is Modern Slavery</title>
-      <link>http://www.yegor256.com/2015/07/21/hourly-pay-modern-slavery.html</link>
-      <description>&lt;p&gt;What is the difference between a slave and a free man? A slave
-has a master. That master, a cruel and ruthless villain, is telling the slave what
-to do and punishing him at will. However, at the same time, the master
-guarantees food and a roof over the slave&amp;#39;s head. A slave understands
-this exchange of freedom for food as a fair trade, while a free man
-values freedom more. That&amp;#39;s the difference. That&amp;#39;s how it was in the
-Roman empire centuries ago. But isn&amp;#39;t that how it is now too? Aren&amp;#39;t we
-ancient slaves in our offices and in front of our monitors?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/gladiator.jpg' style='width:600px;' alt='Gladiator (2000) by Ridley Scott'/&gt;&lt;figcaption&gt;Gladiator (2000) by Ridley Scott&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1781252521&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=XUYP4NCA2TZVDHBT'&gt;&lt;img src='http://www.yegor256.com/images/2015/07/how-to-manage-your-slaves.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;This post is partially provoked by a recently published semi-historical book
-&lt;a href=&quot;http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1781252521&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=XUYP4NCA2TZVDHBT&quot;&gt;&lt;strong&gt;How to Manage Your Slaves&lt;/strong&gt;&lt;/a&gt;
-by Jerry Toner. However, there&amp;#39;s more. The entire eXtremely Distributed
-Software Development (&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) methodology
-is based on a primary fundamental principle that states,
-&amp;quot;Everyone gets paid for verified deliverables.&amp;quot; They&amp;#39;re not paid for their time
-per hour, per week, or per month, but rather for verified deliverables.
-What is the difference and what does all this have to do with slavery?
-Let&amp;#39;s see.&lt;/p&gt;
-
-&lt;p&gt;My point here is that any payment schedule based on time instead of results
-is turning us into slaves.&lt;/p&gt;
-
-&lt;p&gt;Here is an example. Say I&amp;#39;m a software developer and I need some money
-to pay my bills, buy a car, rent a house, and enjoy my life. I have
-some skills for that. I can write Java software. I find a company that needs
-my skills. It hires me, and we sign a contract. The contract says I have
-to be in the office from 9 until 5 and I have to do what my boss tells
-me to do. In exchange, I will get paychecks every few weeks, which will
-cover my expenses.&lt;/p&gt;
-
-&lt;p&gt;Doesn&amp;#39;t it look similar to what I just said above about ancient slaves? The
-master (a.k.a. CEO) tells me what to do and punishes me at will;
-in exchange, he gives me food and safety.&lt;/p&gt;
-
-&lt;p&gt;The problem here is not about punishment.
-This model of work makes me &lt;strong&gt;think like a slave&lt;/strong&gt;. I think this is a fair
-exchange &amp;mdash; I give away my freedom (my time), and I get back food and
-safety. I&amp;#39;m a slave not because the master is punishing me and I&amp;#39;m sitting
-all day long in fetters. Absolutely not. A slave is not the one who was
-captured and imprisoned. A slave is one who thinks slavery is
-a fair way of management.&lt;/p&gt;
-
-&lt;p&gt;Letting someone tell me what to do with my time in order to get food
-in return is exactly what slavery is about.&lt;/p&gt;
-
-&lt;p&gt;What is freedom, then? How should a free man make money?&lt;/p&gt;
-
-&lt;p&gt;A free man sells the &lt;strong&gt;results of his work&lt;/strong&gt;. A free man cleans someone&amp;#39;s house
-and bills him when the work is done. A free man drives passengers
-from the airport to their home and bills them when they get there.
-A free man creates a software module and bills the client when it&amp;#39;s ready.
-A free man translates a document and bills per page. A free man
-cooks a cake and bills for it.&lt;/p&gt;
-
-&lt;p&gt;A free man sells results, not time.&lt;/p&gt;
-
-&lt;p&gt;Also, a free man takes care of the food and security on his or her own.&lt;/p&gt;
-
-&lt;p&gt;Is it more risky? Yes. Is it more stressful? Yes.
-But that&amp;#39;s what freedom is about.&lt;/p&gt;
-
-&lt;p&gt;This is my favorite quote from the book:
-&amp;quot;a good slave is loyal, hard-working and vigilant&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;Think about it.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/07/21/hourly-pay-modern-slavery.html</guid>
-      <dc:date>2015-07-21T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
