@@ -149,7 +149,7 @@ public methods that are not inherited from any interface, he is badly designed.
 
 There are two practical reasons for this. First, an object working
 without a contract is impossible to mock in a unit test. Second,
-a contractless object is impossible to extend via
+a contract-less object is impossible to extend via
 [decoration](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 ## 3. He Is Unique

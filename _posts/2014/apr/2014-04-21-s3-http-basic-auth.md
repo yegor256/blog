@@ -31,11 +31,10 @@ binary objects (aka "files"). To use it, you create a "bucket" there with a
 unique name and upload your objects.
 
 Afterwards, AWS guarantees your object will be available for download through
-their [RESTful
-API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
+their [RESTful API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
 
-A few years ago, AWS introduced a S3 feature called [static website
-hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
+A few years ago, AWS introduced a S3 feature called
+[static website hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 With static website hosting, you simply turn on the feature and all objects in
 your bucket become available through public HTTP. This is an awesome feature for
@@ -61,8 +60,8 @@ few people had access to the content using their Web browsers.
 
 ## HTTP Basic Authentication
 
-The HTTP protocol offers a nice ["basic access
-authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
+The HTTP protocol offers a nice
+["basic access authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
 feature that doesn't require any extra site pages.
 
 When an HTTP request arrives at the server, it doesn't deliver the content but
@@ -133,7 +132,7 @@ Besides authentication and authorization, the
 just like Apache HTTP Server. If you have a collection of objects in your bucket
 &mdash; but the `index.html` file is missing &mdash; Amazon S3 delivers a "page
 not found" result. Conversely, my server displays a list of objects in the
-bucket, when no "index.html" is present, and makes it possible to navigate up or
+bucket, when no `index.html` is present, and makes it possible to navigate up or
 down one folder.
 
 When your bucket has the versioning feature turned on, you are able to list all

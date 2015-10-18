@@ -220,7 +220,7 @@ we have no choice. If a project we're working on needs a Lucene expert,
 we'll find the right person and do our best to get him/her on
 board. Doing our best means increasing the price, in most cases.
 
-Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and Sqlite"
+Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and SQLite"
 I realize that you know very little about databases.
 
 ## Talks and Publications

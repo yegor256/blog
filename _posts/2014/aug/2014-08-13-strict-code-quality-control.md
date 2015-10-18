@@ -124,7 +124,7 @@ public class Employee {
 }
 {% endhighlight %}
 
-Now, the method is final and can't be overriden by child classes. It is
+Now, the method is final and can't be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).
 
 So, let's say we make this rule mandatory for all classes in the project.

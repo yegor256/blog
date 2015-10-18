@@ -29,7 +29,7 @@ String name = new JdbcSession(source)
 
 Simple and straight forward, isn't it? The library
 simplifies interaction with relational databases
-via JDBC, avoiding the need to use ORMs.
+via JDBC, avoiding the need to use ORM-s.
 
 <!--more-->
 

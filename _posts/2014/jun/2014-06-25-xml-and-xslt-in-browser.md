@@ -37,7 +37,7 @@ positioning or formatting. XSL stylesheets position and decorate the data.
 XSL is a much more powerful language. That's why it's possible to avoid
 any formatting inside XML.
 
-The latest versions of Chrome, Safari, FireFox and IE all support
+The latest versions of Chrome, Safari, Firefox and IE all support
 this mechanism. When a browser retrieves an XML document from a server,
 and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
 with it &mdash; the browser transforms XML into HTML on-fly.

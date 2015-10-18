@@ -58,8 +58,8 @@ container without any fear of conflict with your main working
 platform. Let me give an example.
 
 I'm developing on MacBook, where I install and remove packages which I need for development.
-At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, phing,
-phpunit, phpcs and xdebug. Every MacOS version needs to be configured specifically
+At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, Phing,
+PHPUnit, PHPCS and xdebug. Every MacOS version needs to be configured specifically
 to get these applications up and running, and it's a time-consuming job.
 
 I can change laptops, and I can change MacOS versions, but the project stays the same. It

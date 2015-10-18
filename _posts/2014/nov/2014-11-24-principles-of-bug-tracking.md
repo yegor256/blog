@@ -138,7 +138,7 @@ All we need in a ticket is a solution(s).
 If you think the ticket should be closed because the introduced solution
 is good enough, address your comment to the ticket reporter. And start
 it with "@jeff, I think the solution you've got already is good enough, because ..."
-This way, you will help the assignee to close the ticket and move on.
+This way, you will help the assigned to close the ticket and move on.
 
 If you think the solution is wrong, address your comment to the assignee
 of the ticket, starting with "@jeff, I believe your solution is not good enough

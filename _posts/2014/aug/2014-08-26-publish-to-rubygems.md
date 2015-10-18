@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "How to Publish to Rubygems, in One Click"
+title: "How to Publish to RubyGems, in One Click"
 date: 2014-08-26
 tags: rubygems rultor devops ruby
 description:
   This tutorial explains how a Ruby gem can be
-  released to Rubygems.org in just one click and
+  released to RubyGems.org in just one click and
   zero maintenance efforts, using Rultor.com, DevOps assistant
 keywords:
   - rubygems deployment
@@ -18,17 +18,17 @@ keywords:
 ---
 
 When I release a new version of [jgd](https://github.com/yegor256/jekyll-github-deploy),
-a Ruby gem, to Rubygems.org, it takes 30 seconds of my time.
+a Ruby gem, to RubyGems.org, it takes 30 seconds of my time.
 Here is how I released a bug fix for version 1.5.1,
 in [GitHub issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
 
 {% figure /images/2014/08/github-ticket-6.png 600 %}
 
 As you see, I gave a command to [Rultor](http://www.rultor.com),
-and it released a new version to Rubygems. I didn't do anything else.
+and it released a new version to RubyGems. I didn't do anything else.
 
 Now let's see how you can do the same. How you can configure your project
-so that the release of its new version to Rubygems.org
+so that the release of its new version to RubyGems.org
 takes just a few seconds of your time.
 
 <!--more-->
@@ -37,9 +37,9 @@ By the way, I assume that you're hosting your project in GitHub. If not,
 this entire tutorial won't work. If you are still not in GitHub, I would
 strongly recommend moving there.
 
-## Create Rubygems Account
+## Create RubyGems Account
 
-Create an account in [Rubygems.org](http://www.rubygems.org).
+Create an account in [RubyGems.org](http://www.rubygems.org).
 
 ## Create rubygems.yml
 
@@ -49,7 +49,7 @@ Create a `rubygems.yml` file (you may already have it as `~/.gem/credentials`):
 :rubygems_api_key: d355d8940bb031bfe9acf03ed3da4c0d
 {% endhighlight %}
 
-You should get this API key from Rubygems.  To find your API key,
+You should get this API key from RubyGems.  To find your API key,
 click on your username when logged in to RubyGems.org and then click
 on "Edit Profile".
 

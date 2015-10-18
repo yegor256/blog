@@ -105,7 +105,7 @@ a Java object, which encapsulates all AWS interaction details.
 
 ## Extendability Through Decoration
 
-Since [jcabi-s3](http://s3.jcabi.com) exponses all entities
+Since [jcabi-s3](http://s3.jcabi.com) exposes all entities
 as interfaces, they can easily be extended through encapsulation
 ([Decorator Pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
 

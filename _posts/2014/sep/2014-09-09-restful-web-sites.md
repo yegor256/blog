@@ -4,7 +4,7 @@ title: "RESTful API and a Web Site in the Same URL"
 date: 2014-09-09
 tags: restful xslt xml
 description: |
-  The way RESTful APIs are designed perfectly
+  The way RESTful API-s are designed perfectly
   fits into the concept of web browsing, with a few
   minimal alterations
 keywords:
@@ -98,7 +98,7 @@ but in pure data in XML format.
 There is no workaround for this. Browsers don't know anything about `PUT` or `DELETE`.
 So, we should also forget them in our RESTful API-s. We should design
 our API using only two methods: `GET` and `POST`. Is this even possible?
-Yes. Why not? It won't look as fancy as with all six methods (some APIs
+Yes. Why not? It won't look as fancy as with all six methods (some API-s
 also use `OPTIONS` and `HEAD`), but it will work.
 
 ## What Do We Gain?
