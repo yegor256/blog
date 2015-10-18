@@ -140,12 +140,12 @@ is very difficult or impossible.
 Rultor offers something different. With Rultor, there is no SSH access
 to deployment scripts any more. All scripts stay in the `.rultor.yml` configuration
 file, and you start them by posting messages in your issue tracking system
-(for example Github, JIRA or Trac). Rultor runs the script and publishes
+(for example GitHub, JIRA or Trac). Rultor runs the script and publishes
 its full log right to your ticket. The log stays with your project forever.
 You can always get back to the ticket you were working with and check
 why deployment failed and what instructions were actually executed.
 
-For example, check out this Github issue, where I was deploying a new
+For example, check out this GitHub issue, where I was deploying a new
 version of Rultor itself, and failed a few times:
 [yegor256/rultor#563](https://github.com/yegor256/rultor/issues/563). All
 my failed attempts are protocolled. I can always get back to them and

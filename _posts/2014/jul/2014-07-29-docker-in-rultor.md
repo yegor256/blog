@@ -111,7 +111,7 @@ Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositor
 
 The last step is to configure Rultor to use this image in
 all builds. To do this, I will edit [`.rultor.yml`](http://doc.rultor.com/reference.html)
-in the root directory of my Github repository:
+in the root directory of my GitHub repository:
 
 {% highlight yaml %}
 docker:

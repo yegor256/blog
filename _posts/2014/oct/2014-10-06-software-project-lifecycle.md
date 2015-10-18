@@ -91,14 +91,14 @@ will cost much more than a mistake made later.
 
 Thinking is the first and the most important phase.
 
-First, we give a name to the project and create a [Github](https://github.com) repository. We
-try to keep all our projects (both open source and commercial) in Github.
+First, we give a name to the project and create a [GitHub](https://github.com) repository. We
+try to keep all our projects (both open source and commercial) in GitHub.
 Mostly because the platform is very popular, very powerful, and really cheap
 ([$7/mo](https://github.com/pricing) for a set of 5 private projects).
-We also keep all communication in the Github issue tracker.
+We also keep all communication in the GitHub issue tracker.
 
 Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
-this is done right inside the source code, but sometimes in the Github wiki. What's important
+this is done right inside the source code, but sometimes in the GitHub wiki. What's important
 is that the document should be under version control. We will modify it
 during the course of the project, very intensively. The SRS should briefly
 identify main "actors" of the system and define the product scope.
@@ -112,7 +112,7 @@ a mistake at this step.
 Then, we invite a few system analysts to the project. These guys
 are responsible for turning our initial SRS into a more complete and detailed
 specification. They start by asking questions, submitting them one by one
-as Github issues. Every question is addressed to the product owner. Using
+as GitHub issues. Every question is addressed to the product owner. Using
 his/her answers, system analysts modify the SRS document.
 This article explains how [Requs](http://www.requs.org) helps us in this process:
 [Incremental Requirements With Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
@@ -157,7 +157,7 @@ are also defined at this phase.
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
 have proven their quality. Very often we invite new people,
-finding them through StackOverflow, Github, oDesk, and other sources.
+finding them through StackOverflow, GitHub, oDesk, and other sources.
 An average team size of an average project is 10-20 programmers.
 
 At this phase, we understand any inconsistency as a bug. If something is not clear
@@ -174,17 +174,17 @@ grows in front of our very eyes, because after every bug fix
 we re-deploy the entire product to the production platform.
 
 Every bug is reported, classified, discussed, and fixed in its
-own Github ticket and its own Git branch. We never allow anyone
+own GitHub ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch &mdash; all changes must pass through
 our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 and be merged into `master` by [rultor.com](http://www.rultor.com),
 our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We
+and between programmers happen only through GitHub issues. We
 [never use any chats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}),
 Skype, emails or conferencing software. We communicate
-only through tickets and comments in Github.
+only through tickets and comments in GitHub.
 
 ## Using
 

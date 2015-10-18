@@ -168,7 +168,7 @@ maven-failsafe-plugin:verify
 
 Run `mvn clean install` and see how it works. If it doesn't work
 for some reason, don't hesitate
-[to report an issue to Github](https://github.com/jcabi/jcabi-mysql-maven-plugin/issues).
+[to report an issue to GitHub](https://github.com/jcabi/jcabi-mysql-maven-plugin/issues).
 
 Now it's time to create an integration test,
 which will connect to the temporary MySQL server, create

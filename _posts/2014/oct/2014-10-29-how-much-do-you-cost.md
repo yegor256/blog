@@ -79,10 +79,10 @@ that you won't be able to find areas of improvement in our projects either,
 while we rely on your ability to
 [discover problems creatively]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
-Thus, if your Github account is empty and your CV doesn't position you
+Thus, if your GitHub account is empty and your CV doesn't position you
 as "an active contributor to Linux kernel" (yeah, why not?), I immediately
 lose interest. On the other hand, when I see a 100+ stars project in your
-Github account, I get excited and ready to offer a higher rate.
+GitHub account, I get excited and ready to offer a higher rate.
 
 ## Geographic Location
 
@@ -157,7 +157,7 @@ Does it mean that your code was perfect? It doesn't mean any of that.
 
 Years of experience is a false indicator. It actually may play against you,
 in combination with other indicators mentioned above. If your CV says that
-you just started to program two years ago and your Github
+you just started to program two years ago and your GitHub
 and StackOverflow accounts are empty &mdash; there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-year seasoned architect" with zero

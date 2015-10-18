@@ -24,9 +24,9 @@ and [MavenCentral](http://www.yegor256.com/2014/08/19/how-to-release-to-maven-ce
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
-all I do is create one message in a Github ticket. I just say
+all I do is create one message in a GitHub ticket. I just say
 `@rultor release 0.1.4` and version 0.1.4 gets deployed
-to Heroku. See Github ticket [#5](https://github.com/aintshy/hub/issues/5).
+to Heroku. See GitHub ticket [#5](https://github.com/aintshy/hub/issues/5).
 
 You can do the same, with the help of [Rultor.com](http://www.rultor.com),
 a free hosted DevOps assistant.
@@ -61,7 +61,7 @@ $ rultor encrypt -p me/test id_rsa
 $ rultor encrypt -p me/test id_rsa.pub
 {% endhighlight %}
 
-Instead of `me/test` use the name of your Github project.
+Instead of `me/test` use the name of your GitHub project.
 
 You will get two new files `id_rsa.asc` and `id_rsa.pub.asc`.
 Add them to the root directory of your project,
@@ -99,7 +99,7 @@ You can compare your file with live Rultor
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
-Github issue tracker, and post something like this into it
+GitHub issue tracker, and post something like this into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}

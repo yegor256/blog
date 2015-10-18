@@ -16,7 +16,7 @@ keywords:
 categories: jcg
 ---
 
-Look at Github RESTful API, for example. To get information
+Look at GitHub RESTful API, for example. To get information
 about a repository you should make a GET request to
 [api.github.com/repos/yegor256/rultor](https://api.github.com/repos/yegor256/rultor).
 In response, you will get a JSON document with all the details of the
@@ -121,4 +121,4 @@ These small web apps work exactly as explained above:
 [s3auth.com](http://www.s3auth.com),
 [stateful.co](http://www.stateful.co),
 [bibrarian.com](http://www.bibrarian.com).
-They are all open source, and you can see their source code in Github.
+They are all open source, and you can see their source code in GitHub.

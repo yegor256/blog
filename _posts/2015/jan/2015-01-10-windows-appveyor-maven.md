@@ -34,7 +34,7 @@ we're using AppVeyor in combination with [Travis](http://www.travis-ci.org).
 
 This is how I managed to configure AppVeyor to build my Java Maven projects
 (this is `appveyor.yml` configuration file you're supposed to place
-in the root directory of your Github repository):
+in the root directory of your GitHub repository):
 
 {% highlight yaml %}
 version: '{build}'

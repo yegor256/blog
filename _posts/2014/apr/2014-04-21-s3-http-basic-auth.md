@@ -114,11 +114,11 @@ per line. Every line has the name of a user and a hash version of his password.
 I made this software open source mostly to guarantee to my users that the server
 doesn't store their private data anywhere, but rather acts only as a
 pass-through service. As a result, the software is on
-[Github](https://github.com/yegor256/s3auth).
+[GitHub](https://github.com/yegor256/s3auth).
 
 For the sake of privacy and convenience, I use only OAuth2 for user accounts.
 This means that I don't know who my users are. I don't possess their names or
-emails, but only their account numbers in Facebook, Google Plus or Github. Of
+emails, but only their account numbers in Facebook, Google Plus or GitHub. Of
 course, I can find their names using these numbers, but this information is
 public anyway.
 

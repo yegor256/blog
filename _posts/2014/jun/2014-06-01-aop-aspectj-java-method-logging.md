@@ -300,4 +300,4 @@ That's it. Now you can use [`@com.jcabi.aspects.Loggable`](http://aspects.jcabi.
 annotation and your methods will be logged through slf4j.
 
 If something doesn't work as explained, don't hesitate to
-submit a [Github issue](https://github.com/jcabi/jcabi-aspects/issues).
+submit a [GitHub issue](https://github.com/jcabi/jcabi-aspects/issues).

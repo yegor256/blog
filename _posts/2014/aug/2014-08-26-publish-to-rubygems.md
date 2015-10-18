@@ -20,7 +20,7 @@ keywords:
 When I release a new version of [jgd](https://github.com/yegor256/jekyll-github-deploy),
 a Ruby gem, to Rubygems.org, it takes 30 seconds of my time.
 Here is how I released a bug fix for version 1.5.1,
-in [Github issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
+in [GitHub issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
 
 {% figure /images/2014/08/github-ticket-6.png 600 %}
 
@@ -33,8 +33,8 @@ takes just a few seconds of your time.
 
 <!--more-->
 
-By the way, I assume that you're hosting your project in Github. If not,
-this entire tutorial won't work. If you are still not in Github, I would
+By the way, I assume that you're hosting your project in GitHub. If not,
+this entire tutorial won't work. If you are still not in GitHub, I would
 strongly recommend moving there.
 
 ## Create Rubygems Account
@@ -62,7 +62,7 @@ $ gem install rultor
 $ rultor encrypt -p me/test rubygems.yml
 {% endhighlight %}
 
-Instead of `me/test` use the name of your Github project.
+Instead of `me/test` use the name of your GitHub project.
 
 You will get a new file `rubygems.yml.asc`.
 Add this file to the root directory of your project,
@@ -107,7 +107,7 @@ In this example, replace `foo` with the name of your gem.
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in
-the Github issue tracker, and post something like that into it
+the GitHub issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}

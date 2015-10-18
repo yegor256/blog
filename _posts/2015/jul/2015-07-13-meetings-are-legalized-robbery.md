@@ -107,7 +107,7 @@ of pull requests with comments. This is way better than meeting notes
 or even a meeting video. Anyone who joins the project later will be
 able to understand how we came to the conclusion of using PostgreSQL
 and storing monetary amounts without cents. It's all there in the Git history
-and Github tickets, forever with us.
+and GitHub tickets, forever with us.
 
 What if I need more opinions? Or if I'm still not sure the schema is good enough?
 No problem; I ask someone else to review it one more time and

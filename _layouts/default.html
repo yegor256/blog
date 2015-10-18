@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
+  itemscope="" itemtype="http://schema.org/WebPage">
   <head>
     <base href="{{ site.url }}{{ page.url }}"/>
     <meta charset="utf-8"/>
@@ -55,7 +56,7 @@
           <ul class="menu social notranslate">
             <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/yegor256" title="my Github profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.facebook.com/yegor.bugayenko" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
@@ -129,9 +130,9 @@
     {{ content }}
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/ext/search.min.js?{{ site.data['hash'] }}"></script>
-    <script src="/js/global.js?{{ site.data['hash'] }}" async='async' defer='defer'></script>
+    <script src="/js/global.js?{{ site.data['hash'] }}"></script>
     {% for script in page.scripts %}
-      <script src="{{ script }}?{{ site.data['hash'] }}" async='async' defer='defer'></script>
+      <script src="{{ script }}?{{ site.data['hash'] }}"></script>
     {% endfor %}
   </body>
 </html>

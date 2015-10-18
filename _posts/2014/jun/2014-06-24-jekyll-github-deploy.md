@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Deploy Jekyll to Github Pages"
+title: "Deploy Jekyll to GitHub Pages"
 date: 2014-06-24
 tags: jekyll github ruby
 description:
-  Jekyll site can easily be deployed to Github Pages
+  Jekyll site can easily be deployed to GitHub Pages
   even with custom plugins; just use my jgd Ruby gem
 keywords:
   - jekyll
@@ -18,7 +18,7 @@ keywords:
 ---
 
 This blog is written in [Jekyll](http://jekyllrb.com/) and is hosted at
-[Github Pages](https://pages.github.com/). It uses half a dozen custom
+[GitHub Pages](https://pages.github.com/). It uses half a dozen custom
 plugins, which [are not allowed there](https://help.github.com/articles/using-jekyll-plugins-with-github-pages).
 
 Here is how I deploy it:
@@ -28,7 +28,7 @@ $ jgd
 {% endhighlight %}
 
 That's it. [jgd](http://rubygems.org/gems/jgd) is my
-Ruby gem (stands for "Jekyll Github Deploy"), which does
+Ruby gem (stands for "Jekyll GitHub Deploy"), which does
 the trick. Here is
 [what it does](https://github.com/yegor256/jekyll-github-deploy/blob/master/bash/deploy.sh):
 
@@ -42,7 +42,7 @@ which saves the output in another temporary directory.
 
 3. Checks out `gh-pages` branch or creates one if it doesn't exist.
 
-4. Copies the content of the site built by `jekyll build` into the branch, thus overwriting existing files, commits and pushes to Github.
+4. Copies the content of the site built by `jekyll build` into the branch, thus overwriting existing files, commits and pushes to GitHub.
 
 5. Cleans up all temporary directories.
 
@@ -51,7 +51,7 @@ Using this gem is very easy. Just install it with
 
 What is important is that your Jekyll site files be
 located in the root directory of the repository. Just
-as they do on this blog; see [its sources in Github](https://github.com/yegor256/blog).
+as they do on this blog; see [its sources in GitHub](https://github.com/yegor256/blog).
 
 You can easily integrate `jgd` with Travis. See
 [`.travis.yml`](https://github.com/yegor256/blog/blob/master/.travis.yml) of this blog.

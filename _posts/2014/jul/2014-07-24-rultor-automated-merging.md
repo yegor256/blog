@@ -4,7 +4,7 @@ title: "Rultor.com, a Merging Bot"
 date: 2014-07-24
 tags: rultor devops
 description:
-  Rultor.com is a bot that talks to you via Github
+  Rultor.com is a bot that talks to you via GitHub
   issue tracking and helps you merge pull requests by
   passing them through a full testing cycle
 keywords:
@@ -28,7 +28,7 @@ keywords:
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
-You get a Github pull request. You review it. It looks correct &mdash; it's time
+You get a GitHub pull request. You review it. It looks correct &mdash; it's time
 to merge it into `master`. You post a comment in it, asking
 [@rultor](https://github.com/rultor) to test and merge. Rultor starts a new
 [Docker](http://www.docker.io) container, merges the pull request into `master`, runs all tests and, if
@@ -37,7 +37,7 @@ everything looks clean &mdash; merges, pushes, and closes the request.
 Then, you ask [@rultor](https://github.com/rultor) to deploy the current version
 to production environment. It checks out your repository, starts a new Docker
 container, executes your deployment scripts and reports to you right there in
-the Github issue.
+the GitHub issue.
 
 <!--more-->
 
@@ -63,7 +63,7 @@ market:
    resources and make errors  easily reproduceable.
 
  * **Tell vs. Trigger**. We need to communicate with DevOps tool
-   through commands, right from our issue tracking system (Github
+   through commands, right from our issue tracking system (GitHub
    issues, in most projects). All existing DevOps systems trigger
    builds on certain conditions. We need our developers to be able
    to talk to the tool, through human-like commands in the tickets they are working with.
@@ -74,7 +74,7 @@ A combination of these three features is what differs
 ## How Rultor Merges
 
 Once Rultor finds a [merge command](http://doc.rultor.com/basics.html)
-in one of your Github pull requests, it does exactly this:
+in one of your GitHub pull requests, it does exactly this:
 
  1. Reads the [`.rultor.yml`](http://doc.rultor.com/reference.html)
     YAML config file from the root directory of your repository.
@@ -87,9 +87,9 @@ in one of your Github pull requests, it does exactly this:
 
  5. Starts a new Docker container and runs `bundle test` in it.
 
- 6. If everything is fine, pushes modified `master` branch to Github.
+ 6. If everything is fine, pushes modified `master` branch to GitHub.
 
- 7. Reports back to you, in the Github pull request.
+ 7. Reports back to you, in the GitHub pull request.
 
 You can see it in action, for example, in this pull request:
 [jcabi/jcabi-github#878](https://github.com/jcabi/jcabi-github/pull/878).

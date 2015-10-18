@@ -151,4 +151,4 @@ marshalling process. In addition, the compexity of these directives
 may be very high &mdash; much higher than the rather cumbersome annotations of JAXB.
 
 Xembly is an open-source project, so feel free to submit your questions
-or corrections to [Github](https://github.com/yegor256/xembly).
+or corrections to [GitHub](https://github.com/yegor256/xembly).

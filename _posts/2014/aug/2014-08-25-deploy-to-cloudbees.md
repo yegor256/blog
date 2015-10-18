@@ -20,7 +20,7 @@ keywords:
 When I deploy a new version of [stateful.co](http://www.stateful.co),
 a Java web application, to CloudBees, it takes 30 seconds of my time.
 Maybe even less. Recently, I deployed version 1.6.5. You can see
-how it all happened, in [Github issue #6](https://github.com/sttc/stateful/issues/6):
+how it all happened, in [GitHub issue #6](https://github.com/sttc/stateful/issues/6):
 
 {% figure /images/2014/08/github-sttc-issue-6.png 600 %}
 
@@ -141,7 +141,7 @@ $ gem install rultor
 $ rultor encrypt -p me/test settings.xml
 {% endhighlight %}
 
-Instead of `me/test` use the name of your Github project.
+Instead of `me/test` use the name of your GitHub project.
 
 You should get a `settings.xml.asc` file; add it to the root directory
 of your project, commit and push. This file contains your CloudBees
@@ -200,7 +200,7 @@ You can compare your file with live Rultor
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
-Github issue tracker, and post something like that into it
+GitHub issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}

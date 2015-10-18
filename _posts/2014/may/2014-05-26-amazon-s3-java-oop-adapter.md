@@ -223,4 +223,4 @@ The library ships as a JAR dependency in
 {% endhighlight %}
 
 As always, your comments and criticism are welcome as
-[Github issues](https://github.com/jcabi/jcabi-s3/issues).
+[GitHub issues](https://github.com/jcabi/jcabi-s3/issues).

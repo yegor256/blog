@@ -40,7 +40,7 @@ I reviewed the request and asked Rultor to merge it into `master`:
 {% figure /images/2014/07/rultor-mysql-35.png 600 %}
 
 As you can see, an actual merge operation was made by Rultor.
-I gave him access to the project by adding his Github account to
+I gave him access to the project by adding his GitHub account to
 the list of project collaborators.
 
 Before giving a "go ahead" to Rultor I checked the status
@@ -86,7 +86,7 @@ with Rultor and continuous integration with Travis gives us higher stability.
 ## Scenario #3: Release to RubyGems
 
 [jekyll-github-deploy](https://github.com/yegor256/jekyll-github-deploy)
-is a Ruby gem that [automates deployment of Jekyll sites to Github Pages]({% pst 2014/jun/2014-06-24-jekyll-github-deploy %}).
+is a Ruby gem that [automates deployment of Jekyll sites to GitHub Pages]({% pst 2014/jun/2014-06-24-jekyll-github-deploy %}).
 [@leucos](https://github.com/leucos) submitted a pull request
 [#4](https://github.com/yegor256/jekyll-github-deploy/pull/4)
 with a new feature. The request was merged successfully into `master` branch.
@@ -112,7 +112,7 @@ release:
 
 The script is parameterized, as you see. There is one parameter that
 is passed by Rultor into the script: `${tag}`. This parameter was
-provided by myself in the Github issue, when I submitted a command to Rultor.
+provided by myself in the GitHub issue, when I submitted a command to Rultor.
 
 The script tests that the gem works (integration testing) and
 clean up afterwords:
@@ -141,7 +141,7 @@ $ gem push *.gem --config-file ../rubygems.yml
 {% endhighlight %}
 
 If everything works fine and RubyGems confirms successful deployment,
-Rultor reports to Github. This is exactly what happened in
+Rultor reports to GitHub. This is exactly what happened in
 [pull request #4](https://github.com/yegor256/jekyll-github-deploy/pull/4).
 
 ## Scenario #4: Deploy to CloudBees
@@ -184,7 +184,7 @@ assets:
 {% endhighlight %}
 
 These YAML entries inform Rultor that it has to get `assets/s3auth/settings.xml`
-file from `yegor256/home` private (!) Github repository and put it into
+file from `yegor256/home` private (!) GitHub repository and put it into
 the working directory of Docker container, right before starting the Maven build.
 
 This `settings.xml` file contains that secret data CloudBees
@@ -196,8 +196,8 @@ explains this process even better.
 ## You Can Do The Same
 
 Both Rultor and Travis are free hosted products, provided your
-projects are open source and hosted at Github.
+projects are open source and hosted at GitHub.
 
-Other good examples of Rultor+Travis usage can be seen in these Github issues:
+Other good examples of Rultor+Travis usage can be seen in these GitHub issues:
 [jcabi/jcabi-http#47](https://github.com/jcabi/jcabi-http/issues/47),
 [jcabi/jcabi-http#48](https://github.com/jcabi/jcabi-http/pull/48)

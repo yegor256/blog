@@ -25,7 +25,7 @@ in unit testing. It replaces the JUnit procedural assertions of
 `org.junit.Assert` with an object-oriented mechanism. However, I will discuss
 that subject in more detail sometime later.
 
-Now, though, I want to demonstrate a new library published today on Github and
+Now, though, I want to demonstrate a new library published today on GitHub and
 Maven Central: [jcabi-matchers](http://matchers.jcabi.com).
 jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.

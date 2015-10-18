@@ -65,4 +65,4 @@ This approach may be very useful in the following situations
 
  * Fetching data through RESTful stateless APIs
 
-The project is in [Github](https://github.com/jcabi/jcabi-aspects).
+The project is in [GitHub](https://github.com/jcabi/jcabi-aspects).
