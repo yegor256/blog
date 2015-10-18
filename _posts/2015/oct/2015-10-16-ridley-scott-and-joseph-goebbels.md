@@ -47,7 +47,7 @@ just their local, personal **exceptions** to a more general rule. And that
 rule was that the country was full of food. The country was governed by
 the principles of socialism, and they were working perfectly.
 
-In 2015, the goal of Hollywood propaganda is to convience us that the
+In 2015, the goal of Hollywood propaganda is to convince us that the
 organizational and motivational problems in our offices are just local exceptions to
 the general rule. The rule is simple: project management is not important
 if we're all good friends.
@@ -93,7 +93,7 @@ Are you serious?
 
 Have you tried to deploy a new feature on a production server against
 the direct will of your boss? Try it. No spaceships, no Mars. Just
-a piece of code and a simple server. Then try to convience your boss
+a piece of code and a simple server. Then try to convince your boss
 that you're a hero.
 
 I'm sure you get the point.
