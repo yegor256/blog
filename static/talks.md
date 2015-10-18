@@ -41,7 +41,7 @@ Kyiv, Ukraine<br/>
 
 <img src="/images/2015/devopsdays-2015-logo.png" class="talk" alt="DevOpsDays 2015 Warsaw"/>
 **Continuous Integration May Have Negative Effects**<br/>
-[DevOpsDays Warsaw 2015](http://www.devopsdays.org/events/2015-warsaw/)<br/>
+[DevOpsDays Warsaw 2015](http://devopsdays.pl/)<br/>
 Warsaw, Poland<br/>
 24-25 November 2015
 
