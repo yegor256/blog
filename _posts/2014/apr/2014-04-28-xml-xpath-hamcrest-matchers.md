@@ -79,7 +79,7 @@ even an [`InputStream`](http://docs.oracle.com/javase/7/docs/api/java/io/InputSt
 Second, `XmlMatchers` from [xml-matchers](https://code.google.com/p/xml-matchers/)
 provides a very inconvenient way for working with namespaces. Before you can
 use an XPath query with a non-default namespace, you should create an instance
-of NamespaceContext.
+of `NamespaceContext`.
 
 The library provides
 [a simple implementation](https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java) of this interface,

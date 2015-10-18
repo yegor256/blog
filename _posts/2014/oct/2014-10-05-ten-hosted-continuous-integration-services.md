@@ -18,7 +18,7 @@ categories: jcg
 
 Every project I'm working with starts with a setup of continuous
 integration pipeline. I'm a big fan of cloud services,
-that's why I was always using travis-ci.org. A few of
+that's why I was always using `travis-ci.org`. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.
 
@@ -246,7 +246,7 @@ we can't modify anything in `/etc` &mdash; it is a show-stopper for us.
 didn't reply to me when I asked for a Maven version update
 (they have an old version pre-installed). Besides
 that, their badge is not updated correctly in GitHub README.md &mdash;
-when the build is broken, the bange stays green... very annoying.
+when the build is broken, the badge stays green... very annoying.
 
 {% badge /images/2014/10/circleci.png 64 http://www.circleci.com %}
 

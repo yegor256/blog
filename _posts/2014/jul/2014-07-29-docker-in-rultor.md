@@ -63,7 +63,7 @@ an image out of it and push it to the hub.
 
 Let's say, I want my Maven build to be executed in a container
 with a pre-installed `graphviz` package (in order to enable `dot` command line tool).
-First, I would start a plain vanilla Ubuntu container, and install graphviz inside it:
+First, I would start a plain vanilla Ubuntu container, and install `graphviz` inside it:
 
 {% highlight bash %}
 $ sudo docker run -i -t ubuntu /bin/bash
@@ -90,7 +90,7 @@ c5ad7718fc0e20fe4bf2c8a9bfade4db8617a25366ca5b64be2e1e8aa0de6e52
 
 I just made my new commit to a new image `yegor256/beta`.
 This image can be reused right now. I can create a new container
-from this image and it will have graphviz installed inside!
+from this image and it will have `graphviz` installed inside!
 
 Now it's time to share my image at Docker hub, in order to make it available for Rultor:
 
@@ -119,7 +119,7 @@ docker:
 {% endhighlight %}
 
 That's it. From now on, Rultor will use my custom Docker image with
-pre-installed graphviz, in every build (merge, release, deploy, etc.)
+pre-installed `graphviz`, in every build (merge, release, deploy, etc.)
 
 Moreover, if and when I want to add something else to the image,
 it's easy to do. Say, I want to install Ruby into my build image.
@@ -143,7 +143,7 @@ CONTAINER ID        IMAGE                  COMMAND             CREATED          
 
 You can now see that I have two containers. The first one is the one
 I am using right now; it contains Ruby. The second one is the one
-I was using before and it contains graphviz.
+I was using before and it contains `graphviz`.
 
 Now I have to commit again and push:
 

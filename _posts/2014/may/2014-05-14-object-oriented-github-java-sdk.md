@@ -26,7 +26,7 @@ to GitHub about three years ago and have no regrets. Moreover,
 GitHub gives access to almost all of its features through RESTful JSON API.
 
 There are [a few](https://developer.github.com/libraries/)
-Java SDKs that wrap and expose the API. I tried to use them,
+Java SDK-s that wrap and expose the API. I tried to use them,
 but faced a number of issues:
 
  * They are not really object-oriented (even though one of them has a description that says it is)
@@ -91,7 +91,7 @@ mocking via [Mockito](https://code.google.com/p/mockito/) or a similar framework
 
 ## Extendable
 
-It is based on JSR-353 and uses jcabi-http for HTTP request
+It is based on JSR-353 and uses `jcabi-http` for HTTP request
 processing. This combination makes it highly customizable and extendable,
 when some GitHub feature is not covered by the library (and there are many of them).
 

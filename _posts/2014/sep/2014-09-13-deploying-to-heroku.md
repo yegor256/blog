@@ -37,12 +37,12 @@ a free hosted DevOps assistant.
 
 Create a new project at [Heroku.com](http://www.heroku.com).
 
-Then install their [command line toolbelt](https://toolbelt.heroku.com/).
+Then install their [command line tool-belt](https://toolbelt.heroku.com/).
 
 ## Authenticate at Heroku
 
 You should authenticate your public SSH key at Heroku, using
-their command line toolbelt. The process is explained
+their command line tool-belt. The process is explained
 [here](https://devcenter.heroku.com/articles/authentication),
 but it is not much of a process. You just run `heroku login`
 and enter your login credentials. As a result, you will get
@@ -68,7 +68,7 @@ Add them to the root directory of your project,
 commit and push. These files contain your secret information,
 but only the Rultor server can decrypt them.
 
-## Create Rultor Config
+## Create Rultor Configuration
 
 Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)

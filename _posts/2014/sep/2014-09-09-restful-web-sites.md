@@ -50,7 +50,7 @@ Actually, it is much more powerful.
 Using this approach we literally remove the entire rendering layer
 ("View" in the MVC paradigm) from the server and move it to the browser.
 
-If we can make it possible, the web server will exponse just a RESTful API,
+If we can make it possible, the web server will expose just a RESTful API,
 and every response page will have an XSL stylesheet attached. What do
 we gain? We'll discuss later, at the end of the post. Now, let's see
 what problems we will face:

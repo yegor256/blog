@@ -41,7 +41,7 @@ strongly recommend moving there.
 
 Create an account in [RubyGems.org](http://www.rubygems.org).
 
-## Create rubygems.yml
+## Create `rubygems.yml`
 
 Create a `rubygems.yml` file (you may already have it as `~/.gem/credentials`):
 
@@ -53,7 +53,7 @@ You should get this API key from RubyGems.  To find your API key,
 click on your username when logged in to RubyGems.org and then click
 on "Edit Profile".
 
-## Encrypt rubygems.yml
+## Encrypt `rubygems.yml`
 
 Now, encrypt `rubygems.yml` with a [rultor remote](https://github.com/yegor256/rultor-remote):
 

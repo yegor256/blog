@@ -36,7 +36,7 @@ takes just a few seconds of your time.
 
 <p style="border:1px solid gray;padding:1em;">
 Since CloudBees is
-[shutting down its PaaS service](http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company)
+<a href="http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
 by the end of December, 2014,
 this article will have no sense after that.
 </p>
@@ -150,7 +150,7 @@ Rultor server.
 
 ## Configure Versions Plugin
 
-I recommend using [http://parent.jcabi.com](jcabi-parent). It
+I recommend using [jcabi-parent](http://parent.jcabi.com). It
 configures the required plugin out-of-the-box.
 If you're using it, skip this step.
 

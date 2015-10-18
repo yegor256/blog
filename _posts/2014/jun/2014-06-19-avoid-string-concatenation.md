@@ -83,7 +83,7 @@ String msg = "Dear " + customer.name()
   + "!";
 {% endhighlight %}
 
-This one looks much more beautiful doesn’t it:
+This one looks much more beautiful doesn't it:
 
 {% highlight java %}
 String msg = String.format(
@@ -103,7 +103,7 @@ to translate it to Greek. This is how will it look:
 I'm changing the order of substitutions in the pattern,
 but not in the actual list of methods arguments.
 
-## Apache StringUtils.join()
+## Apache `StringUtils.join()`
 
 When the text is rather long (longer than your screen width),
 I would recommend that you use the utility class

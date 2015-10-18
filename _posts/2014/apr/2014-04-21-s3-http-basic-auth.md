@@ -90,7 +90,7 @@ This time the server has authentication information and can make a decision
 whether this user is authenticated (his password matches the server's records)
 and authorized (he has permission to access the request webpage).
 
-## s3auth.com
+## `s3auth.com`
 
 Since Amazon doesn't provide this feature, I decided to create a simple web
 service, [s3auth.com](http://www.s3auth.com), which stays in front of my Amazon

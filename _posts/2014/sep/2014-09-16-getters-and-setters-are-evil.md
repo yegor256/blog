@@ -88,7 +88,7 @@ What is it then?
 In true object-oriented programming, objects are
 [living creatures]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 like you and me. They are living organisms,
-with their own behaviour, properties and a life cycle.
+with their own behavior, properties and a life cycle.
 
 Can a living organism have a setter?
 Can you "set" a ball to a dog? Not really.
@@ -191,7 +191,7 @@ or you're still writing COBOL in Java syntax.
 PS. Yes, you may ask, &mdash; what about JavaBeans, JPA, JAXB, and many other
 Java API-s that rely on the get/set notation? What about Ruby's built-in
 [feature](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/accessors.html)
-that simplies the creation of accessors? Well, all of that is our misfortune.
+that simplifies the creation of accessors? Well, all of that is our misfortune.
 It is much easier to stay in a primitive world of procedural COBOL than to
 truly understand and appreciate the beautiful world of true objects.
 

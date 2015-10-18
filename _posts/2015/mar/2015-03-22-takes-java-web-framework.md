@@ -383,7 +383,7 @@ to Heroku. This is what `Procfile` should look like:
 web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
 {% endhighlight %}
 
-## TkFork
+## `TkFork`
 
 This [`TkFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html)
 class seems to be one of the core elements of the framework. It

@@ -35,7 +35,7 @@ stakeholders and needs, features, and quality requirements.
 Product Statement is a one-paragraph declaration of intent, explaining
 to an absolute stranger what this product is about and what it is for.
 It is very similar to an [elevator pitch](https://en.wikipedia.org/wiki/Elevator_pitch).
-The Statement must answer these questions, preferrably in this specific order:
+The Statement must answer these questions, preferably in this specific order:
 
  1. Who is the customer?
  2. What does she want?

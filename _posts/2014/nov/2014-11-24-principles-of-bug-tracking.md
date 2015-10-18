@@ -140,7 +140,7 @@ is good enough, address your comment to the ticket reporter. And start
 it with "@jeff, I think the solution you've got already is good enough, because ..."
 This way, you will help the assigned to close the ticket and move on.
 
-If you think the solution is wrong, address your comment to the assignee
+If you think the solution is wrong, address your comment to the assigned
 of the ticket, starting with "@jeff, I believe your solution is not good enough
 because ..." This way, you will help the ticket reporter keep the ticket
 open until a proper solution comes up.

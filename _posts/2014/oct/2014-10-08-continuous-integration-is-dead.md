@@ -87,8 +87,8 @@ Now, my question is &mdash; who, in an actively working team, may need this?
 
 A product owner, who is interested in launching new features to the market
 as soon as possible? Or maybe a project manager, who is responsible for
-the deadlines? Or maybe programmers, who hate to fix someone else's bugs,
-especially under pressure.
+the deadlines? Or maybe programmers, who hate to fix bugs made by someone else,
+especially under pressure?
 
 Who likes this continuous integration and who needs it?
 

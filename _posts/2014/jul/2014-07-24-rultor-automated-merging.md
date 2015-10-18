@@ -77,7 +77,7 @@ Once Rultor finds a [merge command](http://doc.rultor.com/basics.html)
 in one of your GitHub pull requests, it does exactly this:
 
  1. Reads the [`.rultor.yml`](http://doc.rultor.com/reference.html)
-    YAML config file from the root directory of your repository.
+    YAML configuration file from the root directory of your repository.
 
  2. Gets automated build execution command from it, for example `bundle test`.
 

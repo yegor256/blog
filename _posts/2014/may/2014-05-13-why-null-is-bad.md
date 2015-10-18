@@ -198,7 +198,7 @@ makes much less sense. This is how our code looks from an object point of view:
 - Are you NULL?
 {% endhighlight %}
 
-The last question in this conversation sounds weird, doesn’t it?
+The last question in this conversation sounds weird, doesn't it?
 
 Instead, if they hang up the phone after our request to speak
 to Jeffrey, that causes a problem for us (Exception).
@@ -224,7 +224,7 @@ letting it break when necessary.
 Make your methods extremely demanding as to the data
 they manipulate. Let them complain by throwing exceptions,
 if the provided data provided is not sufficient or simply
-doesn’t fit with the main usage scenario of the method.
+doesn't fit with the main usage scenario of the method.
 
 Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:

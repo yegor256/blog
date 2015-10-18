@@ -50,7 +50,7 @@ artifacts to Maven Central.
 ## Register a Project With Sonatype
 
 Create an account in [Sonatype JIRA](https://issues.sonatype.org/)
-and raise a ticket, asking to approve your groupId. This
+and raise a ticket, asking to approve your `groupId`. This
 [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html)
 explains this step in more detail.
 
@@ -263,7 +263,7 @@ Otherwise, add these four plugins to your `pom.xml`:
 </project>
 {% endhighlight %}
 
-## Create Rultor Config
+## Create Rultor Configuration
 
 Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)

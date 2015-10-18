@@ -305,7 +305,7 @@ web applications that work solely with immutable objects.
 2. &ldquo;It's cheaper to update an existing object than create a new one&rdquo;.
 Oracle [thinks](http://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html)
 that &ldquo;The impact of object creation is often overestimated and can
-be offset by some of the efficiencies associated with immutable objects.
+be offset by some of the efficiency associated with immutable objects.
 These include decreased overhead due to garbage collection, and the
 elimination of code needed to protect mutable objects from corruption.&rdquo; I agree.
 

@@ -171,7 +171,7 @@ AspectJ does exactly that. We give it two binary Java classes `Foo.class`
 and `MethodLogger.class`; it gives back three &mdash; modified
 `Foo.class`, `Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
 
-In order to understand which advices should be applied to which methods,
+In order to understand which advice should be applied to which methods,
 AspectJ weaver is using annotations from `.class` files.
 Also, it uses [reflection](http://docs.oracle.com/javase/tutorial/reflect/)
 to browse all classes on classpath. It analyzes which methods satisfy

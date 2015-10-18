@@ -136,7 +136,7 @@ because of:
  * **Predictability of Design** &mdash;
    I don't have to scroll through
    the entire class to make sure it doesn't have methods that can
-   be accidentally overriden. I know for sure that this can't happen
+   be accidentally overridden. I know for sure that this can't happen
    in this project. In other words, I know what to expect.
 
  * **Less Hidden Tricks** &mdash;

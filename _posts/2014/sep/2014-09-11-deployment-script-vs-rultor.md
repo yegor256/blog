@@ -88,7 +88,7 @@ git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
 
 Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
-will only work if PHP 5.3, MySQL, phing, xdebug, phpcs and phpunit are installed.
+will only work if PHP 5.3, MySQL, Phing, xdebug, PHPCS and PHPUnit are installed.
 Again, it's a lot of work to install and configure them every time I upgrade
 my MacOS or change a laptop.
 

@@ -87,8 +87,8 @@ elements and data. It contains absolutely no information about how
 its elements have to be presented to an end-user. Actually,
 this document is more suitable for machine parsing instead of reading by a human.
 
-The document contains data, which is important for its requestor.
-It's up to the requestor on how to render the data or to not render it at all.
+The document contains data, which is important for its requester.
+It's up to the requester on how to render the data or to not render it at all.
 
 Its second line [associates](http://www.w3.org/TR/xml-stylesheet/)
 the document with the XSL stylesheet `/xsl/index.xsl` that
