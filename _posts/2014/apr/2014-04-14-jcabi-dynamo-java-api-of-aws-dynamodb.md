@@ -36,7 +36,7 @@ future.
 DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database accessible
 through [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer)
 JSON API. Its design is relatively simple. There are tables, which basically
-are collections of data structs, or in AWS terminology, "items."
+are collections of data structures, or in AWS terminology, "items."
 
 Every item has a mandatory "hash," an optional "range" and a number of other
 optional attributes. For instance, take the example table `depts`:

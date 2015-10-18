@@ -75,7 +75,7 @@ duplication](http://en.wikipedia.org/wiki/Duplicate_code).
 ## Show Me the Money
 
 In both projects, my role was called that of lead architect, and I knew their
-economics and financials. Besides that, I had access to both Git repositories,
+financial details. Besides that, I had access to both Git repositories,
 so I can measure how many new lines (or changed lines) were introduced by both
 teams in, say, a three-month period.
 

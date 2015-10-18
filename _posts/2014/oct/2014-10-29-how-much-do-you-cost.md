@@ -40,7 +40,7 @@ software developer. Do you contribute to open source projects?
 Do you have your own open source libraries that are used by
 some community? Do you write code that is publicly available and used?
 
-If you have nothing to show here, I see three posible causes.
+If you have nothing to show here, I see three possible causes.
 
 First, you're **too shy to share** your code because **it's crap**. Obviously,
 this is not a good sign. Not because your code could be bad, but because
@@ -111,7 +111,7 @@ whose expenses are lower. Our money will simply work better.
 
 ## StackOverflow.com Reputation
 
-We all know what StackOverflow has but very few people (suprisingly few!)
+We all know what StackOverflow has but very few people (surprisingly few!)
 actively contributing to it. If your profile there is empty (or you don't have
 one) I realize that you 1) don't have any questions to ask
 and 2) you have nothing to answer.
@@ -177,7 +177,7 @@ pass an exam. Not an easy one and not online. It is a real exam taken in
 a certification center, where you're sitting in front of a computer for a few
 hours, without any books or Internet access, answering questions. Rather
 humiliating activity for a respected software developer? Indeed. And there
-is a high probability of failure, which is also rather embarassing.
+is a high probability of failure, which is also rather embarrassing.
 
 It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you've earned no certifications
@@ -241,7 +241,7 @@ a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
 Besides that, if you write and present regularly, you have a very important
-skill/talent &mdash; you can present your ideas in a "digestable" way.
+skill/talent &mdash; you can present your ideas in a "digestible" way.
 In our projects we
 [discourage informal communications]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 and use ticketing systems instead. In those tickets you will have

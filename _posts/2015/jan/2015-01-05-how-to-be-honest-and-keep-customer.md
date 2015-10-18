@@ -68,7 +68,7 @@ we see that the client is trying to micro-manage us, we ask
 ourselves: "Is our process transparent enough? Do we give enough
 information to the client about milestones, risks, plans, costs, etc.?"
 In most cases, it's our own fault, and we're trying to learn and improve.
-If so, it's important to react fast, before the client becomes too agressive in his
+If so, it's important to react fast, before the client becomes too aggressive in his
 orders and instructions. It will be very difficult to escort him back to the normal
 process once he gets "micro-management" in his blood.
 
@@ -140,7 +140,7 @@ giving him the finger. He will get offended, and you won't get anything.
 The solution here is to turn the client's demands into project requirements.
 Most of them will be lost in the process, because they won't be sane enough
 to form a good requirement. Others will be documented, estimated, and crossed-out
-by the client himself, becuase he will realize they are pointless or too expensive. Only
+by the client himself, because he will realize they are pointless or too expensive. Only
 a few of them will survive, since they will be reasonable enough. And they will
 help the project. So it is also a _win-win_ solution.
 
@@ -196,7 +196,7 @@ always be right.
 In my opinion, the only way to prevent such a situation or minimize its
 consequences is to organize regular and systematic
 [independent technical reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %}).
-They will give confindence to the client that the team
+They will give confidence to the client that the team
 is not lying to him about the quality of the product and key technical
 decisions made internally.
 

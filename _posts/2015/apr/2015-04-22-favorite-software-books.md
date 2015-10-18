@@ -79,7 +79,7 @@ It's definitely a must-read for anyone who is serious about software engineering
 by Elliotte Rusty Harold and W. Scott Means.
 XML is my favorite standard. And I hated it before I read this book. I didn't
 understand all the strange prefixes, namespaces, XPath expressions, and
-schemas. Just this one book changed everything, and ever since reading it, I've used XML
+schemes. Just this one book changed everything, and ever since reading it, I've used XML
 everywhere. It is very well written and easy to read. It's a must for everybody.
 
 {% badge /images/2015/04/book-java-concurrency.jpg 96 http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=AN4H5FISUMRSU3XD %}

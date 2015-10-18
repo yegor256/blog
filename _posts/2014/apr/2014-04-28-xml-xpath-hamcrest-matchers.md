@@ -76,7 +76,7 @@ The above is a very strange limitation of Hamcrest in contrast to
 [`Reader`](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html) and
 even an [`InputStream`](http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html).
 
-Second, `XmlMatchers from [xml-matchers](https://code.google.com/p/xml-matchers/)
+Second, `XmlMatchers` from [xml-matchers](https://code.google.com/p/xml-matchers/)
 provides a very inconvenient way for working with namespaces. Before you can
 use an XPath query with a non-default namespace, you should create an instance
 of NamespaceContext.

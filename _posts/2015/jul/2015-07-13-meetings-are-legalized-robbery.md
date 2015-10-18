@@ -227,7 +227,7 @@ industry for at least a few months.
 
 ## Meetings Burn Money
 
-This aligns closely with the previous conclustion. Meetings are among the biggest budget consumers
+This aligns closely with the previous conclusion. Meetings are among the biggest budget consumers
 of any type of activity in a project, simply because they pay
 _everybody_ who is sitting in that room or on that Skype conference while the
 result they produce is almost equal to what a single person can deliver.

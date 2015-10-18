@@ -66,7 +66,7 @@ what problems we will face:
     support XSLT at all.
 
  3. Browsers support only `GET` and `POST` HTTP methods, while
-    traditional RESTful APIs exploit also, at least, `PUT` and `DELETE`.
+    traditional RESTful API-s exploit also, at least, `PUT` and `DELETE`.
 
 The first problem is not really a problem. It's just a matter
 of taste (and level of education). The last two problems are much
@@ -96,7 +96,7 @@ but in pure data in XML format.
 ## POST Instead of PUT
 
 There is no workaround for this. Browsers don't know anything about `PUT` or `DELETE`.
-So, we should also forget them in our RESTful APIs. We should design
+So, we should also forget them in our RESTful API-s. We should design
 our API using only two methods: `GET` and `POST`. Is this even possible?
 Yes. Why not? It won't look as fancy as with all six methods (some APIs
 also use `OPTIONS` and `HEAD`), but it will work.

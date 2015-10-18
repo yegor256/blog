@@ -89,7 +89,7 @@ workarounds &mdash; they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
 to close the ticket, ask its reporter to close it. Explicitly ask for that;
-don't dance arround with "looks like this solution may be accepted, if you don't mind".
+don't dance around with "looks like this solution may be accepted, if you don't mind".
 Be explicit in your intention to close the ticket and move on. Try this:
 "@jeff, please close the ticket if you don't have any further questions."
 

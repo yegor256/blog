@@ -60,7 +60,7 @@ market:
 
  * **Docker**. Every build should work in its own
    Docker container, in order to simplify configuration, isolate
-   resources and make errors  easily reproduceable.
+   resources and make errors easily reproducible.
 
  * **Tell vs. Trigger**. We need to communicate with DevOps tool
    through commands, right from our issue tracking system (GitHub

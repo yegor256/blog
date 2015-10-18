@@ -295,7 +295,7 @@ into smaller concepts &mdash; and this what I invented. Like a real-life envelop
 my `MIME` object will have stamps. Stamps will be responsible
 for configuring an object `Message` (again,
 [`Stamp`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java) is immutable,
-as well as all its implementors):
+as well as all its implementers):
 
 {% highlight java %}
 @Immutable

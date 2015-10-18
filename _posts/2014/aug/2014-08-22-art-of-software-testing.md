@@ -113,7 +113,7 @@ every tester.
 In Chapter 2, Dr. Myers also mentions that a program, no matter how simple,
 contains an unlimited number of errors. He says that "you cannot test
 a program to guarantee that it is error free" (p.10) and that "it is
-impractical, often impossible, to find all the errros in a program" (p.8).
+impractical, often impossible, to find all the errors in a program" (p.8).
 
 Furthermore, at the end of Chapter 6, he makes an important observation (p.135):
 

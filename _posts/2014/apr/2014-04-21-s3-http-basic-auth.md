@@ -104,9 +104,9 @@ at my server, connect to Amazon S3, retrieve my objects and deliver them back in
 HTTP responses.
 
 The server implements authentication and authorization using a special file
-`.htpasswd` in the root of my bucket. The format of the ".htpasswd" file is
-identical to the one used by [Apache HTTP
-Server](http://httpd.apache.org/docs/2.2/programs/htpasswd.html) &mdash; one user
+`.htpasswd` in the root of my bucket. The format of the `.htpasswd` file is
+identical to the one used by
+[Apache HTTP Server](http://httpd.apache.org/docs/2.2/programs/htpasswd.html) &mdash; one user
 per line. Every line has the name of a user and a hash version of his password.
 
 ## Implementation

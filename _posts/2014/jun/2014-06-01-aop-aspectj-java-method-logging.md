@@ -71,7 +71,7 @@ the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7
 [`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html) &mdash;
 the one I'm using in the script above &mdash; is an annotation of the second type,
 from [jcabi-aspects](http://aspects.jcabi.com).
-It stays with the bytecode in the `.class` file after compilation.
+It stays with the byte-code in the `.class` file after compilation.
 
 Again, it is important to understand that even though
 method `power()` is annotated and compiled, it doesn't

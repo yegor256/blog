@@ -5,7 +5,7 @@ date: 2014-06-25
 tags: xslt java restful
 description:
   XML+XSLT is a useful combination for web interfaces
-  and RESTful APIs at the same time. This article explains
+  and RESTful API-s at the same time. This article explains
   how it works and argues in favor of its use.
 keywords:
   - web framework

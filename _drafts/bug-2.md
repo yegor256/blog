@@ -5,7 +5,7 @@ date: 2014-04-20
 tags: xdsd mgmt
 description:
   A software defect may be treated as an elemtary component of
-  a project scope; the article outlines its lifecycle, from
+  a project scope; the article outlines its life-cycle, from
   creating to closing
 keywords:
   - software bug life cycle

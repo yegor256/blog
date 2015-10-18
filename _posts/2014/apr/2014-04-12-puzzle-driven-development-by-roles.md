@@ -142,7 +142,7 @@ formal requirements. They satisfy my customer, since they are in
 plain English, and are understandable by technical people.
 
 Thus, when I don't have time, I don't wait. I change the SRS
-using TBDs at points where I can't create a proper and formal description of the
+using TBD-s at points where I can't create a proper and formal description of the
 requirements or simply don't know what to write exactly.
 
 ## Architect

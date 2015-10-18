@@ -33,7 +33,7 @@ has a strong leader and a good project manager.
 The first and most important quality of a good leader is his or her
 ability to separate bad apples from good ones as soon as possible.
 Nothing will earn you more disrespect from your team than tolerance of
-underperforming team members. Your job as a leader is to help the best players
+under-performing team members. Your job as a leader is to help the best players
 play better, and they can't play better if they see that management
 doesn't understand the difference between excellence and mediocrity. It's
 a severe demotivating factor.
@@ -134,16 +134,16 @@ to develop a product and earn money for its investors. Honesty is the best
 team morale booster.
 
 **Don't Rule; Make Rules and Plans**.
-Nothing demotivates more than an upredictable manager. For the team, you are
+Nothing demotivates more than an unpredictable manager. For the team, you are
 an abstraction of the entire world around the team. They see
 the reality through the prism of your personality. What you tell them about
 the reality is what they perceive. If you are unpredictable, the reality
 is unpredictable and scary for them. To avoid that, stop making decisions that
-are based on your personal and momentary judgement.
+are based on your personal and momentary judgment.
 Instead, make decisions that are based on the rules you've defined upfront
 and plans you've drawn beforehand. First, create a plan for team
 growth and announce it to everybody. The plan should include risks and
-their mitigations. The plan should say who will be fired
+their mitigation actions. The plan should say who will be fired
 first when or if the project goes down. The plan should give a predictable
 and measurable picture of the reality around your office. It should be a map
 of terrain you're going to cross with your team. When it's time to make

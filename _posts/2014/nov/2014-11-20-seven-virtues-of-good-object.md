@@ -417,7 +417,7 @@ If you don't use that `final` keyword, anyone (including yourself) will
 be able to extend the class and ... offend him :( So a class without `final`
 is a bad design.
 
-An abstract class is the exact oposite case &mdash; he tells us that
+An abstract class is the exact opposite case &mdash; he tells us that
 he is incomplete and we can't use him "as is". We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as `abstract` methods.

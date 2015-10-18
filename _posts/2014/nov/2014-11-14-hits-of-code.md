@@ -101,7 +101,7 @@ correlated with the actual effort of programmers working with the code base.
 
 ## It Exposes Complexity of Lines
 
-LoC is usually critized for its neutrality towards code complexity.
+LoC is usually criticized for its neutrality towards code complexity.
 An auto-generated ORM class or a complex sorting algorithm may have the same
 size in terms of lines of code, but the first takes seconds to write, while
 the second may take weeks or months. That's why lines of code is usually

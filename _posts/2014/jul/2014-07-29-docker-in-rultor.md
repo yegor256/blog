@@ -62,7 +62,7 @@ I prepare a working environment for my application, I make
 an image out of it and push it to the hub.
 
 Let's say, I want my Maven build to be executed in a container
-with a pre-installed graphviz package (in order to enable `dot` command line tool).
+with a pre-installed `graphviz` package (in order to enable `dot` command line tool).
 First, I would start a plain vanilla Ubuntu container, and install graphviz inside it:
 
 {% highlight bash %}

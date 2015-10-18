@@ -176,15 +176,15 @@ it's always difficult to explain.
 that runs Windows builds. Even though I'm working mostly with
 Java and Ruby, which are expected to be platform independent, they
 very often appear to be exactly the opposite. When your build
-succeedes on Linux, there is almost no guarantee it will pass on
-Windows or Mac. I'm planning to use appveyor in every project,
+succeeds on Linux, there is almost no guarantee it will pass on
+Windows or Mac. I'm planning to use AppVeyor in every project,
 in combination with some other CI service. I'm still testing it though...
 
 {% badge /images/2014/10/wercker.png 64 http://www.wercker.com %}
 
 [**wercker.com**](http://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
-for all projects. The platform looks very promissing. It is still
+for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
 [investments](https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/).
 They also have an interesting concept of build "boxes", which

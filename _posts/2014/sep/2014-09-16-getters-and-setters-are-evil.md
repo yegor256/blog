@@ -189,7 +189,7 @@ many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.
 
 PS. Yes, you may ask, &mdash; what about JavaBeans, JPA, JAXB, and many other
-Java APIs that rely on the get/set notation? What about Ruby's built-in
+Java API-s that rely on the get/set notation? What about Ruby's built-in
 [feature](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/accessors.html)
 that simplies the creation of accessors? Well, all of that is our misfortune.
 It is much easier to stay in a primitive world of procedural COBOL than to

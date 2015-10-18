@@ -20,7 +20,7 @@ I saw [The Martian](http://www.imdb.com/title/tt3659388/)
 this weekend, and it triggered a few thoughts. Of course, I didn't like
 the movie as a piece of art. It is total garbage, but this is not my point.
 There is something bigger to discuss, aside from the bad acting, primitive
-storyline, politically correct but absolutely unrealistic casting,
+story-line, politically correct but absolutely unrealistic casting,
 and tons of logical inconsistencies. It's Hollywood; what
 should I expect, right? Not just that. I think the problem is bigger.
 
@@ -85,7 +85,7 @@ It is about [making sure]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %
 those who've made mistakes are **punished** while those who've
 done everything right are **rewarded**.
 
-A team of six. In a multimillion-dollar spaceship.
+A team of six. In a multi-million-dollar spaceship.
 Flying to another planet to save one person.
 Against explicit instructions from upper management.
 They come back as national heroes.

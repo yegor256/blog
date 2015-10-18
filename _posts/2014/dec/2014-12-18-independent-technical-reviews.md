@@ -77,7 +77,7 @@ to look at the code and report as many bugs as we think we need. For each
 bug, we pay 15 minutes for their time. In other words, we assume that
 a good reviewer can find and report approximately four problems in one hour. For example,
 a reviewer charges $150 per hour. We hire him and ask him to find and report the 20 most
-criticial issues he can discover. Our estimate is that he should spend five hours on this
+critical issues he can discover. Our estimate is that he should spend five hours on this
 work. Thus, he will get $750 when we have 20 bugs in our tracking system
 reported by him. If he finds fewer, he gets proportionally less money.
 This payment schedule will help you focus your reviewer on the main
@@ -186,7 +186,7 @@ interested in fixing all critical mismatches.
 Let your reviewer look at all technical resources you have, not just
 source code files (`.java`, `.rb`, `.php`, etc.) Give him access to the
 database schema, continuous integration panel, build environment,
-issue tracking system, plans and schedules, work agendas, uptime reports,
+issue tracking system, plans and schedules, work agendas, up-time reports,
 deployment pipeline, production logs,
 customer bug reports, statistics, etc. Everything that
 could help him understand how your system works, and more importantly,

@@ -259,7 +259,7 @@ In general, it is [highly recommended]({% pst 2014/jun/2014-06-09-objects-should
 to design objects
 with immutability in mind. This means that an object gets
 all necessary knowledge during its instantiating and never
-changes its state during the entire lifecycle.
+changes its state during the entire life-cycle.
 
 Very often, `NULL` values are used in [lazy loading](http://en.wikipedia.org/wiki/Lazy_loading),
 to make objects incomplete and mutable. For example:

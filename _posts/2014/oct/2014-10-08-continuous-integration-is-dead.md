@@ -53,7 +53,7 @@ compile, unit test, integration test, quality analysis, etc.
 The result is either "success" or "failure". If it is a success, we
 say that "the build is clean". If it is a failure, we say that "the build is broken".
 The build usually gets broken because someone breaks it by
-commiting new code that turns previously passing unit tests
+committing new code that turns previously passing unit tests
 into failing ones.
 
 This is the technical side of the problem. It always works. Well,

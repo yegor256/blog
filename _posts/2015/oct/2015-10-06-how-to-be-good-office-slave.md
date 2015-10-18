@@ -33,7 +33,7 @@ you will eventually find one. In the meantime, this manual is for you :)
 **Help Others**.
 Find the stupidest newbies and help them. Regardless of what exactly
 you help them with, they should rely on you. Show them where the restroom is,
-recommend a good restraunt nearby, assist in an IDE installation,
+recommend a good restaurant nearby, assist in an IDE installation,
 explain how the project works, and make standard jokes about the worst
 class in it. They must become your best friends &mdash; and not only them. Be
 helpful to everybody. No matter what is happening, everyone must know

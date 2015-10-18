@@ -63,6 +63,6 @@ This approach may be very useful in the following situations
 
  * Uploading data over the network
 
- * Fetching data through RESTful stateless APIs
+ * Fetching data through RESTful stateless API-s
 
 The project is in [GitHub](https://github.com/jcabi/jcabi-aspects).

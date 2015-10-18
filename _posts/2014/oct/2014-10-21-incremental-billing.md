@@ -60,7 +60,7 @@ and the quality will suffer.
 
 This is what a monthly T&M invoice will look like. You will pay for
 the time spent by programmers pretending to be working on your project.
-Well, as I said above, some of them will ocassionally do something useful,
+Well, as I said above, some of them will occasionally do something useful,
 but overall statistics tell us that most of that time will be wasted.
 
 No matter how good or bad the code written during that month &mdash; you still have

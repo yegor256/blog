@@ -93,5 +93,5 @@ new JdbcSession(source)
 {% endhighlight %}
 
 In this example we're executing three SQL statements one by one, leaving
-connection (and transaction) open unti `commit()` is called.
+connection (and transaction) open until `commit()` is called.
 

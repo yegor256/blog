@@ -47,7 +47,7 @@ you produce, you're interested in seeing it in action, right?
 So, how do you do this?
 
 If it's a one-page PHP website, you can probably run it locally on Apache,
-modify it on disk, and then `Cmd`+`R` many times. That'll work for a primitive
+modify it on disk, and then `Cmd`+`R` many times. That will work for a primitive
 piece of code and only for you, a single developer of it. But I hear
 this "I don't have time" argument from programmers working on enterprise
 systems. How do you guys test your code?
