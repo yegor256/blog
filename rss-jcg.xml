@@ -50,7 +50,7 @@ This is why Dr. Myers is calling testing &amp;quot;a destructive, even sadistic,
 
 &lt;p&gt;Second, any software has an &lt;strong&gt;unlimited amount of bugs&lt;/strong&gt;. Dr. Myers says that
 &amp;quot;you cannot test a program to guarantee that it is error free&amp;quot; (page 10)
-and that &amp;quot;it is impractical, often impossible, to find all the errros in
+and that &amp;quot;it is impractical, often impossible, to find all the errors in
 a program&amp;quot; (page 8). This is also what most testers don&amp;#39;t understand. They
 believe that there is a limited number of bugs, which they have to find
 and call it a day. There literally no limit! The amount of bugs is unlimited,
@@ -80,7 +80,7 @@ time. What to do?&lt;/p&gt;
 why not make the completion criterion the detection of some predefined
 number of errors?&amp;quot; (page 136). Indeed, we should predict how many bugs
 are just enough to find, in order to have a desirable level of &lt;strong&gt;confidence&lt;/strong&gt;
-that the product is ready to be shipped. Then, ship it, conciously
+that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.&lt;/p&gt;
 
@@ -108,7 +108,7 @@ to break in front of a user. We also don&amp;#39;t want our website to show an
 &amp;quot;internal application error&amp;quot; instead of a web page. We want our software
 to work, not fail. That&amp;#39;s a perfectly valid and logical desire,
 but in order to achieve that, we have to make our software as fragile
-as possible. This may sound counterintuitive, but that&amp;#39;s the way it is.
+as possible. This may sound counter-intuitive, but that&amp;#39;s the way it is.
 The more &lt;strong&gt;fragile&lt;/strong&gt; your app is in development, the more &lt;strong&gt;robust&lt;/strong&gt; it is
 in production.&lt;/p&gt;
 
@@ -421,7 +421,7 @@ you produce, you&amp;#39;re interested in seeing it in action, right?&lt;/p&gt;
 &lt;p&gt;So, how do you do this?&lt;/p&gt;
 
 &lt;p&gt;If it&amp;#39;s a one-page PHP website, you can probably run it locally on Apache,
-modify it on disk, and then &lt;code&gt;Cmd&lt;/code&gt;+&lt;code&gt;R&lt;/code&gt; many times. That&amp;#39;ll work for a primitive
+modify it on disk, and then &lt;code&gt;Cmd&lt;/code&gt;+&lt;code&gt;R&lt;/code&gt; many times. That will work for a primitive
 piece of code and only for you, a single developer of it. But I hear
 this &amp;quot;I don&amp;#39;t have time&amp;quot; argument from programmers working on enterprise
 systems. How do you guys test your code?&lt;/p&gt;
@@ -729,7 +729,7 @@ non-functional requirements.&lt;/p&gt;
       <link>http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</link>
       <description>&lt;p&gt;When I start to repeat myself in unit test methods by creating
 the same objects and preparing the data to run the test,
-I feel disapointed in my design. Long test methods with a lot of code
+I feel disappointed in my design. Long test methods with a lot of code
 duplication just don&amp;#39;t look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
 initialized through &lt;code&gt;@Before&lt;/code&gt; and &lt;code&gt;@BeforeClass&lt;/code&gt;, and 2) private static
@@ -922,7 +922,7 @@ to do some computations inside a constructor and then encapsulate
 results. That way, when the results are required by object methods, we&amp;#39;ll have them
 ready. Sounds like a good approach? No, it&amp;#39;s not. It&amp;#39;s a bad idea
 for one reason: It prevents composition of objects and makes them
-unextendable.&lt;/p&gt;
+un-extendable.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -1174,7 +1174,7 @@ value quality above everything else.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;One person can submit up to three projects.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Submissions are &lt;strike&gt;accepted until the &lt;strong&gt;September 1, 2015&lt;/strong&gt;&lt;/strike&gt; closed.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Submissions must be sent via email to &lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;me@yegor256.com&lt;/a&gt;.
-All I need is your Github login and repository name; I will check the commit
+All I need is your GitHub login and repository name; I will check the commit
 history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
@@ -1192,7 +1192,7 @@ products (one license per project).&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;Each project must be:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Open source (in Github).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At least 5,000 lines of code.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
@@ -1226,7 +1226,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 
 &lt;hr/&gt;
 
-&lt;p&gt;158 rojects submitted so far (in order of submission):&lt;/p&gt;
+&lt;p&gt;158 projects submitted so far (in order of submission):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mdbs99/AWS&quot;&gt;mdbs99/AWS&lt;/a&gt;&lt;/li&gt;
@@ -1432,7 +1432,7 @@ project was excluded by mistake, don&amp;#39;t hesitate to
 I analyzed all 12 projects today. All of them are really good projects,
 that&amp;#39;s why, in order to find the best one I was focusing on their
 &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;sins&lt;/a&gt;, not virtues.
-Here is what I found, preliminarly.&lt;/p&gt;
+Here is what I found, preliminary.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/coala-analyzer/coala&quot;&gt;coala-analyzer/coala&lt;/a&gt; (14K Python LoC, 160K HoC)&lt;/p&gt;
 
@@ -1686,7 +1686,7 @@ Here is your badge:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://img.teamed.io/award/2015/winner.png&quot;
   style=&quot;width:203px;height:45px;&quot;/&gt;&lt;/p&gt;
 
-&lt;p&gt;Put this code into Github &lt;code&gt;README&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Put this code into GitHub &lt;code&gt;README&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a href=&amp;quot;http://www.yegor256.com/award.html&amp;quot;&amp;gt;
   &amp;lt;img src=&amp;quot;http://img.teamed.io/award/2015/winner.png&amp;quot;
@@ -1824,11 +1824,11 @@ class will convert Xembly directives into an XML document.&lt;/p&gt;
 
 &lt;p&gt;The beauty of this solution is that the internals of the object are
 not exposed via getters and the object is fully in charge of the XML
-marshalling process. In addition, the compexity of these directives
+marshalling process. In addition, the complexity of these directives
 may be very high &amp;mdash; much higher than the rather cumbersome annotations of JAXB.&lt;/p&gt;
 
 &lt;p&gt;Xembly is an open-source project, so feel free to submit your questions
-or corrections to &lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+or corrections to &lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
@@ -1841,7 +1841,7 @@ or corrections to &lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;G
       <description>&lt;p&gt;I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
 JSF with Facelets, and a bit of Spark Framework. All of these solutions,
 in my humble opinion, are very far from being object-oriented and elegant.
-They all are full of static methods, untestable data structures, and
+They all are full of static methods, un-testable data structures, and
 dirty hacks. So about a month ago, I decided to create my own Java web
 framework. I put a few basic principles into its foundation: 1) No NULLs,
 2) no public static methods, 3) no mutable classes, and 4) no class casting, reflection,
@@ -2167,7 +2167,7 @@ to Heroku. This is what &lt;code&gt;Procfile&lt;/code&gt; should look like:&lt;/
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;tkfork&quot;&gt;TkFork&lt;/h2&gt;
+&lt;h2 id=&quot;tkfork&quot;&gt;&lt;code&gt;TkFork&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;This &lt;a href=&quot;http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html&quot;&gt;&lt;code&gt;TkFork&lt;/code&gt;&lt;/a&gt;
 class seems to be one of the core elements of the framework. It
@@ -2518,7 +2518,7 @@ really care where the text is coming from. It &lt;em&gt;delegates&lt;/em&gt; tex
 the encapsulated instance of &lt;code&gt;Text&lt;/code&gt;. How this encapsulated object will
 deal with the text and where it will get it doesn&amp;#39;t concern &lt;code&gt;PrintableText&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Let&amp;#39;s continue and try to create an implemetation of &lt;code&gt;Text&lt;/code&gt;
+&lt;p&gt;Let&amp;#39;s continue and try to create an implementation of &lt;code&gt;Text&lt;/code&gt;
 that will capitalize all letters in the text:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AllCapsText&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -2623,7 +2623,7 @@ friendly and nice?&lt;/p&gt;
 with hair. I came to him because I assumed he knew more about this
 business than I did. I chose him through the assistance of Yelp. I wanted &lt;em&gt;him&lt;/em&gt; to tell me
 how long the hair on the sides should be and how much should be removed on the
-top. I expected &lt;em&gt;him&lt;/em&gt; to give me his professional judgement and stand by it.&lt;/p&gt;
+top. I expected &lt;em&gt;him&lt;/em&gt; to give me his professional judgment and stand by it.&lt;/p&gt;
 
 &lt;p&gt;Instead of asking me how much I wanted removed on the sides, he should have
 told me there should be less on the sides. This is what
