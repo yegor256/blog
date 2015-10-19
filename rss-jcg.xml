@@ -17,6 +17,87 @@
       <link>http://www.yegor256.com</link>
     </image>
     <item>
+      <title>Vertical and Horizontal Decorating</title>
+      <link>http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</link>
+      <description>&lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
+is one of the best ways to add features to an object
+without changing its interface. I use
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
+quite often and always question myself as to how to design them right
+when the list of features must be configurable.
+I&amp;#39;m not sure I have the right answer, but here is
+some food for thought.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s say I have a list of numbers:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
+The first approach is &lt;strong&gt;vertical&lt;/strong&gt; (I just made this name up):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Unique&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Odds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Positive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The second approach is &lt;strong&gt;horizontal&lt;/strong&gt; (again, a name I made up):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Modified&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Positive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Odds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Unique&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See the difference? The first approach decorates &lt;code&gt;ArrayNumbers&lt;/code&gt; &amp;quot;vertically,&amp;quot;
+adding functionality through the composable decorators &lt;code&gt;Positive&lt;/code&gt;, &lt;code&gt;Odds&lt;/code&gt;,
+&lt;code&gt;Unique&lt;/code&gt;, and &lt;code&gt;Sorted&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The second approach introduces the new interface &lt;code&gt;Diff&lt;/code&gt;, which implements
+the core functionality of iterating numbers through instances of
+&lt;code&gt;Positive&lt;/code&gt;, &lt;code&gt;Odds&lt;/code&gt;, &lt;code&gt;Unique&lt;/code&gt;, and &lt;code&gt;Sorted&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For the user of &lt;code&gt;numbers&lt;/code&gt;, both approaches are the same. The difference is
+only in the design. Which one is better and when? It seems that
+vertical decorating is easier to implement and is more suitable for
+smaller objects that expose just a few methods.&lt;/p&gt;
+
+&lt;p&gt;As for my experience, I always tend to start with vertical decorating since it&amp;#39;s
+easier to implement but eventually migrate to a horizontal one when the
+number of decorators starts to grow.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</guid>
+      <dc:date>2015-10-01T00:00:00+00:00</dc:date>
+    </item>
+    <item>
       <title>When Do You Stop Testing?</title>
       <link>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
       <description>&lt;p&gt;There is a software to be tested. There is a team of testers. There is
@@ -2599,65 +2680,6 @@ done through composable decorators.&lt;/p&gt;
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/02/26/composable-decorators.html</guid>
       <dc:date>2015-02-26T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>A Haircut</title>
-      <link>http://www.yegor256.com/2015/02/23/haircut.html</link>
-      <description>&lt;p&gt;I received a haircut today, and the niceness of my hairdresser led him to fill the
-appointment with courteous questions about how I wanted my hair cut, what size of clipper
-he should use, how long the sides should be, and how much should be removed
-from the front. He also offered me many types of shampoo and a cup of tea.
-All this reminded me of the work we do as programmers, and I
-decided to write a short post about it. I&amp;#39;ve already
-&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;mentioned before&lt;/a&gt;
-that trying to make a customer happy is a false objective. This hairdresser
-was a perfect illustrative example of this very mistake. By the way, in the end,
-I wasn&amp;#39;t happy, and he got no tip. How could this happen if he was so
-friendly and nice?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/the-man-who-wasnt-there.jpg' style='width:600px;' alt='The Man Who Wasn&amp;amp;apos;t There (2001) by Coen Brothers'/&gt;&lt;figcaption&gt;The Man Who Wasn't There (2001) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m not a hairdresser, and I have very little understanding of how to deal
-with hair. I came to him because I assumed he knew more about this
-business than I did. I chose him through the assistance of Yelp. I wanted &lt;em&gt;him&lt;/em&gt; to tell me
-how long the hair on the sides should be and how much should be removed on the
-top. I expected &lt;em&gt;him&lt;/em&gt; to give me his professional judgment and stand by it.&lt;/p&gt;
-
-&lt;p&gt;Instead of asking me how much I wanted removed on the sides, he should have
-told me there should be less on the sides. This is what
-a true professional would do. A true professional would give me &lt;em&gt;his&lt;/em&gt; vision
-of the haircut that best suits me and would try to convince me that
-it was the best choice.&lt;/p&gt;
-
-&lt;p&gt;A true professional would not ask me but would &lt;em&gt;tell&lt;/em&gt; me instead, because
-he would understand that my goal was not to boss him around and make him do my
-hair the way I wanted it. My goal was to get the best out
-of his professional skill.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, the guy was either weak or immature. He didn&amp;#39;t argue with me
-and didn&amp;#39;t try to convince me. He tried to &lt;em&gt;please&lt;/em&gt; me. In the end, he
-lost.&lt;/p&gt;
-
-&lt;p&gt;Exactly the same thing happens when we ask our customers about
-the technologies they want us to use. I hear this question very often:
-&lt;em&gt;What language do you want us to use&lt;/em&gt; (meaning Java or Ruby or something else)?
-Or &lt;em&gt;what database should we use?&lt;/em&gt; Or &lt;em&gt;how do you want us to design this?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Don&amp;#39;t do that. Don&amp;#39;t lose like that hairdresser. Don&amp;#39;t ask your clients
-what they want. Instead, &lt;em&gt;learn&lt;/em&gt; their business requirements and then
-&lt;em&gt;suggest&lt;/em&gt; the solution you think is the best for them. Then, insist and argue
-if they don&amp;#39;t agree. Convince them. Even if they fire you in the end for
-your stubbornness, it&amp;#39;s better than being that hairdresser who is doomed
-to please every single client without getting anywhere further.&lt;/p&gt;
-
-&lt;p&gt;Remember, the client is not the king; his hairs are.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/02/23/haircut.html</guid>
-      <dc:date>2015-02-23T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
