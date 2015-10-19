@@ -61,7 +61,26 @@ At <span class="bullet">3</span> the bot says that the job is
 completed and its completion took nine minutes. Our conversation is over.
 That's it.
 
-Now, what is so special about it? A lot.
+Now, what is so special about it?
+
+One thing &mdash; there is no user interface. Well, there is
+no **traditional** web-based HTML/CSS user interface. There is no
+login, logout, profile, menu, or anything like this. Rultor is
+a web service that has **no web UI**. The only way to
+communicate with it is by talking to its chatbot.
+
+What's so good about it? A few things.
+
+## Easy to Scale
+
+Here is how Rultor architecture looks like:
+
+
+
+easier to implement
+delay-free dialog
+traceability of requests
+
 
 ## No Web UI
 
