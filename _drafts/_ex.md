@@ -24,6 +24,8 @@ simplify it.
 
 <!--more-->
 
+{% picture /images/2015/10/crouching-tiger-hidden-dragon.jpg 0 Crouching Tiger, Hidden Dragon (2000) by Ang Lee %}
+
 Let's start with this code:
 
 {% highlight java %}
