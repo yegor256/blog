@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Do You Do With InterruptedException?"
-date: 2015-10-17
+date: 2015-10-20
 place: Palo Alto, CA
 tags: java
 description:
