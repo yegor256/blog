@@ -1533,7 +1533,9 @@ e.g. &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/bears/
 There are almost 3200 lines of code, that&amp;#39;s way too many.&lt;/li&gt;
 &lt;li&gt;Static analysis is not a mandatory step in the build/release pipeline.
 That&amp;#39;s why, I believe, code formatting is not consistent and sometimes
-rather ugly. For example, &lt;a href=&quot;https://www.logilab.org/857&quot;&gt;pylint&lt;/a&gt; reports hundreds of issues.&lt;/li&gt;
+rather ugly. For example, &lt;a href=&quot;https://www.logilab.org/857&quot;&gt;pylint&lt;/a&gt; reports hundreds of issues.
+(update: scrutinizer is used, but I still believe that a local use of pylint
+would seriously improve the quality of code)&lt;/li&gt;
 &lt;li&gt;Some methods have documentation, others don&amp;#39;t. I didn&amp;#39;t understand
 the logic. Would be great to have all methods documented. Also, not
 all classes are documented.&lt;/li&gt;
