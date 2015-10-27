@@ -10,12 +10,196 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 20 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Why Software Outsourcing Doesn't Work ... Anymore</title>
+      <link>http://www.yegor256.com/2015/10/27/outsourcing-doesnt-work.html</link>
+      <description>&lt;p&gt;I want to create an iPhone app for my web service, but I don&amp;#39;t have
+programmers. Well, I don&amp;#39;t have iOS programmers. And I don&amp;#39;t have money.
+Sound familiar? What do I do? Right, I go to ~~Google~~
+&lt;a href=&quot;http://www.upwork.com&quot;&gt;Upwork&lt;/a&gt; and find an awesome company in Bangalore
+that is excited to work with me for ~~nothing~~ reasonable money. In
+a few months and after a few thousand dollars, I realize this is not exactly
+what I expected. After yet another few months, I swear to God I&amp;#39;ll never outsource
+any software development to anyone. Is it just me? Not really.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-godfather-ii.jpg' style='width:600px;' alt='The Godfather: Part II (1974) by Francis Ford Coppola'/&gt;&lt;figcaption&gt;The Godfather: Part II (1974) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This preamble is just a joke, but it&amp;#39;s not so far from
+&lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;the truth&lt;/a&gt;. Of course,
+in bigger companies and bigger projects, the story will be different. But the
+outcome is almost always the same &amp;mdash; it is
+&lt;a href=&quot;/2015/06/15/software-outsourcing-survival-guide.html&quot;&gt;a disaster&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m talking about outsourcing, not offshore development. The difference is
+that in outsourcing, there are two companies involved: you the client
+and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
+development, you just open an office in that same Loompaland with your own
+management and employees. Again, I&amp;#39;m discussing &lt;strong&gt;outsourcing&lt;/strong&gt; here.&lt;/p&gt;
+
+&lt;p&gt;Before writing this, I read
+&lt;a href=&quot;https://www.google.com/search?q=why+outsourcing+fails&quot;&gt;a few dozen articles&lt;/a&gt;
+about why outsourcing fails, and I&amp;#39;ve found a dozen &amp;quot;reasons&amp;quot; why. However, I think
+they all miss the point, because they are looking at the problem from
+a paying customer&amp;#39;s point of view. I try to look at it from both sides
+and tell you the ugly truth. More on that in a few paragraphs. For now, let&amp;#39;s
+explore what the usual reasons are.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cheapest Providers&lt;/strong&gt;.
+Here is the argument: &amp;quot;So you&amp;#39;re outsourcing because you want to optimize costs?
+You will end up with the cheapest software shop and sincerely regret
+it very soon.&amp;quot; OK, what&amp;#39;s the solution, then? Just pay more?
+I don&amp;#39;t think that&amp;#39;s going to solve the problem; I&amp;#39;ll
+just burn
+&lt;a href=&quot;/&quot;&gt;more money&lt;/a&gt;.
+Also, I don&amp;#39;t think this reason has anything to
+do with outsourcing specifically. In any other business transaction, a
+&amp;quot;win-lose&amp;quot; scenario is a straight path to failure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cultural Mismatch&lt;/strong&gt;.
+&amp;quot;You&amp;#39;re in California, and they are in Brazil; you
+won&amp;#39;t understand each other.&amp;quot; Is that why we have
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cost_overrun&quot;&gt;cost overruns&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Project_slippage&quot;&gt;schedule slippage&lt;/a&gt;,
+and low quality of code? I don&amp;#39;t think so. Moreover, my experience
+tells me the opposite. Our programmers at &lt;a href=&quot;http://www.teamed.io&quot;&gt;teamed.io&lt;/a&gt;
+are from more than 15 countries, and we&amp;#39;ve never had cultural issues get
+tangled up in any work conflict, which we have a lot of.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lack of Face-to-Face Talking&lt;/strong&gt;.
+&amp;quot;They are far away somewhere in Poland, so you rarely really talk to them.
+That&amp;#39;s why you misunderstand each other.&amp;quot; Look, have you ever met me and
+had a face-to-face talk with me? I&amp;#39;m talking to you, the reader of this
+post. That&amp;#39;s right, you haven&amp;#39;t met me, but you&amp;#39;re having no problem
+understanding my point just by reading this text. That&amp;#39;s mostly because
+I&amp;#39;ve made all possible efforts to ensure my point is clear to you. I&amp;#39;m
+interested in delivering my thoughts to you, and it is happening. In outsourcing,
+the problem is not with the channel but with the motivation. Read on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No Metrics to Measure Success&lt;/strong&gt;.
+&amp;quot;You simply can&amp;#39;t define clear metrics of success for a team overseas.
+That&amp;#39;s why your relationship eventually falls apart.&amp;quot; Or something like that.
+I didn&amp;#39;t quite get what&amp;#39;s meant by &amp;quot;metrics of success,&amp;quot; but if it&amp;#39;s
+what I think it is, they are right: Success for a software outsourcing
+shop in Kiev is one thing. Success for you, a client of this shop, is something
+very different. Read on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poor Specs&lt;/strong&gt;.
+&amp;quot;It&amp;#39;s just not possible to make good specifications for most projects, and a
+poorly designed spec is a recipe for failure.&amp;quot; Yes, that&amp;#39;s very true,
+but what does this have to do with outsourcing? Ah, right, they are so far
+away in Argentina and we&amp;#39;re here in New York City &amp;mdash; how can we make
+&lt;a href=&quot;/2014/10/20/how-we-write-product-vision.html&quot;&gt;a good spec&lt;/a&gt;?
+I don&amp;#39;t buy it. An inability to clearly and explicitly
+specify technical requirements is a flaw of the
+&lt;a href=&quot;/&quot;&gt;architect&lt;/a&gt;. Learning, training,
+and reading should fix this. Getting everybody together in the office
+is &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;not a solution&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leakage of Talent&lt;/strong&gt;.
+&amp;quot;Developers offshore are not your employees. They will never
+be loyal to the project, and the best of them will quit once in a while.&amp;quot;
+Yes, people may leave once in a while. But again, how is that related to their
+location? If they don&amp;#39;t use the same coffee machine as their CEO, will they
+be less loyal to the project? There are
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;many other&lt;/a&gt; more effective instruments
+to boost motivation in a team than just co-locating everybody.&lt;/p&gt;
+
+&lt;p&gt;There could be much more, but this is enough for us. As you see,
+I don&amp;#39;t find these &amp;quot;reasons&amp;quot; logical. They merely explain the
+consequences but never even touch the real problem, which I believe
+sounds like this:&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;re just a cash cow for an outsourcing company.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;re neither a partner nor a friend, despite all your expectations.&lt;/p&gt;
+
+&lt;p&gt;Your goals are opposite of their goals.&lt;/p&gt;
+
+&lt;p&gt;All these &amp;quot;reasons&amp;quot; for outsourcing failures originate in this
+fundamental confusion that exists in our heads: We think these
+10 programmers sitting in Beijing are part of our business. We believe
+they are our team. They are with us in the same boat, sharing
+the same values and looking in the same direction.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s just not true.&lt;/p&gt;
+
+&lt;p&gt;It can&amp;#39;t be true.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been in the shoes of an outsourcing company for almost 10 years
+(and quit in 2010). The ugly truth is that for a CEO of an outsourcing
+shop, the only problem is how to take care of the
+next month&amp;#39;s payroll, and 90 percent of all expenses are salaries
+for the programmers.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why a good customer for them is a paying customer. Not a customer with
+a successful project. Not a customer with a properly solved problem. Not
+a customer with
+&lt;a href=&quot;/2014/10/21/incremental-billing.html&quot;&gt;optimized costs&lt;/a&gt;.
+Not a customer with the best possible
+technology utilized. Not at all. The best customer is the one that pays,
+pays a lot, and pays on time. Period.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s the root cause of all problems with outsourcing.&lt;/p&gt;
+
+&lt;p&gt;The title of this article states that outsourcing doesn&amp;#39;t work &lt;strong&gt;anymore&lt;/strong&gt;. Why
+anymore? Did it work before? Yes, it did, when salaries of programmers
+were extremely lower in third-world (offshore) countries. For example, in 2001, we had
+a team of very good senior Java developers in the Ukraine. We paid them above
+the market price, and it was &lt;strong&gt;$300 per month&lt;/strong&gt;. At the same time, we were
+selling their time to U.S. customers for $15 per hour, which was $2,500 per month.
+See the margin?&lt;/p&gt;
+
+&lt;p&gt;With such a margin, outsourcing works fine. I was a CEO and had almost no
+worries about payroll. I had enough money to pay my team, even if we
+lost some customers eventually. Let me put it this way:
+I had the &lt;strong&gt;luxury&lt;/strong&gt; to be
+&lt;a href=&quot;/2015/01/05/how-to-be-honest-and-keep-customer.html&quot;&gt;honest&lt;/a&gt;
+with my customers.&lt;/p&gt;
+
+&lt;p&gt;Not anymore.&lt;/p&gt;
+
+&lt;p&gt;Put yourself in their shoes. Today, a good Java developer in the Ukraine
+&lt;a href=&quot;http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary&quot;&gt;earns&lt;/a&gt;
+&lt;strong&gt;$4,000&lt;/strong&gt; a month. On top of that, this developer expects health
+insurance, a free gym membership, free lunch, paid vacation, paid sick leave, etc. At the same
+time, the price of Java time is not much higher on the market than it was years ago. Even
+if you charge $40 per hour (which is very unlikely), your income would be $6,800.
+Again, your income is $6.8K and your expenses are close to $5K. See the margin?&lt;/p&gt;
+
+&lt;p&gt;And don&amp;#39;t forget about office expenses, taxes, computers,
+administrative staff, team building events, etc. Because of such a small
+margin, you will literally be broke if you lose a key paying customer. You just
+can&amp;#39;t afford to keep your programmers &amp;quot;on the bench&amp;quot; for too long.&lt;/p&gt;
+
+&lt;p&gt;Thus, your lone motivation is to keep that
+cash flow coming. No matter what. The longer the project, the better.
+The lower the quality of code, the better &amp;mdash; more money for maintenance.
+The more phone calls, meetings and other time-wasting events, the better.
+The more mess in specs, the better. Just do whatever it takes to suck
+money from the customer.&lt;/p&gt;
+
+&lt;p&gt;You have to do this, not because you&amp;#39;re evil but because you
+have to feed your team. Your team. Yes, the team is &lt;strong&gt;yours&lt;/strong&gt;. You&amp;#39;re responsible
+for their salaries, not the customer. In order to protect the team, you
+have to go against the real interests of your customers.
+You simply can&amp;#39;t be in the same boat with them.&lt;/p&gt;
+
+&lt;p&gt;The point of all this is that outsourcing simply can&amp;#39;t work, because your business interests
+can&amp;#39;t be aligned with the interests of your outsourcing &amp;quot;partner.&amp;quot;&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/10/27/outsourcing-doesnt-work.html</guid>
+      <dc:date>2015-10-27T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>What Do You Do With InterruptedException?</title>
       <link>http://www.yegor256.com/2015/10/20/interrupted-exception.html</link>
@@ -1417,308 +1601,6 @@ like pure OOP.&lt;/p&gt;
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html</guid>
       <dc:date>2015-08-18T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Nine Steps to Start a Software Project</title>
-      <link>http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html</link>
-      <description>&lt;p&gt;Agile or not, a software project starts with a requirements analysis
-and definition. We basically define what needs to be done somehow, be it on a
-piece of napkin or a 100-page Word document. The next step is to
-turn this into a working piece of software as fast as possible and by spending as
-few dollars as possible. Ideally, this prototyping takes a week
-and is made by an architect working &lt;strong&gt;solo&lt;/strong&gt;.
-Once the &amp;quot;skeleton&amp;quot; is ready, we start putting software &amp;quot;meat&amp;quot; on it.
-We recruit a team of programmers for that or outsource it. I see nine important steps
-in the skeleton creation part; let me show you them one by one.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/ying-xiong.jpg' style='width:600px;' alt='Ying xiong (2002) by Yimou Zhang'/&gt;&lt;figcaption&gt;Ying xiong (2002) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let&amp;#39;s use some examples to make this more illustrative. Let&amp;#39;s say I&amp;#39;m a
-software architect and the project is a &amp;quot;Google killer.&amp;quot; We&amp;#39;re hired to
-create a new search engine, and my job is to turn requirements into
-a prototype, a.k.a. a skeleton or a proof of concept. This is what I have
-as an input (let&amp;#39;s say it&amp;#39;s a piece of napkin ... what else would it be
-for a Google killer, right?):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Each page is ranked by the number of mentions in
-social networks like Twitter, LinkedIn, Facebook, etc.
-The more mentions it has, the higher the rank and the
-higher its position in the search results page.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Seems like a doable project to me, and the requirements document is
-clear enough. It doesn&amp;#39;t say anything about performance, but I
-can assume that it has to be as fast as Google. The same goes
-for scalability, stress resilience, etc.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m not going to discuss how the software is created in a specific
-technical stack. That&amp;#39;s not important for this article. What&amp;#39;s important now
-is how my programming work will be &amp;quot;wrapped.&amp;quot; In other words, what will
-I hand off to the team of programmers after a week of hard work &amp;mdash;
-what is my product, or more formally, my &lt;strong&gt;deliverables&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, let&amp;#39;s assume I managed to create a piece of software and it works.&lt;/p&gt;
-
-&lt;h2 id=&quot;decisions-and-alternatives&quot;&gt;Decisions and Alternatives&lt;/h2&gt;
-
-&lt;p&gt;First of all, I have to document my key technical decisions and their
-alternatives. &lt;a href=&quot;http://www.teamed.io&quot;&gt;We&lt;/a&gt; usually work in GitHub, and the best documentation
-media is the &lt;code&gt;README.md&lt;/code&gt; file in the root directory of the repo. I just
-put my text there in a plain Markdown format. That&amp;#39;s enough for a good
-technical document &amp;mdash; it has to be short; that&amp;#39;s important.&lt;/p&gt;
-
-&lt;p&gt;For each decision I made, there has to be at least one alternative
-that I considered and rejected. There are two items at the top of my list:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Apache Lucene is a search engine. It is popular,
-  mature enough, scalable, and written in Java. Alternatives
-  are Solr, Sphinx, Gigablast, and many others.
-Java 8 is a programming language, and JVM is a
-  runtime platform. I know how they work, and the team
-  has enough experience with them. Alternatives are
-  Ruby, Python, Go, Scala, and tons of others.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;These decisions are very high-level, but I still need to document them. As you
-see, I&amp;#39;m not explaining in details why the alternatives were rejected, and it&amp;#39;s
-my choice. If someone questions my decisions in the future, they may
-say that the alternatives were not analyzed properly. It will be clear whose fault
-it was &amp;mdash; mine. So I&amp;#39;m taking full responsibility for these two
-choices I&amp;#39;ve made: Lucene and Java 8.&lt;/p&gt;
-
-&lt;p&gt;Yet another item to the list:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Three modules make up the app: UI, scraper,
-  and analyzer. They are fully decoupled and
-  communicate strictly through Lucene. I don&amp;#39;t
-  see any alternatives.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, I attach a simple diagram to illustrate my decision:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src='/uml/19b92d0465e2e819ffcf88cf46c6e333.svg' alt='UML' style='width:100%;'/&gt;&lt;/p&gt;
-
-&lt;p&gt;As you see, in this case, I totally ignored all alternatives. I didn&amp;#39;t even
-mention them. Again, I take full responsibility for that; I said,
-&amp;quot;I don&amp;#39;t see any alternatives.&amp;quot; If, later, a better alternative is
-discovered, it will be obvious why we overlooked it and whose fault
-it was. It&amp;#39;s not only about punishment but about discipline and
-traceability of decisions. Each decision must be traceable to the person
-who made it. This helps us avoid bad decisions in the future and
-makes the entire project more maintainable and transparent.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s add one more decision to the list:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Takes Framework is used for UI. It helps keep our
-  code truly object-oriented, testable, fast, and
-  decoupled from the data model. Alternatives:
-  - Spring: It is big, complex, and ugly
-  - Play: Similar to Spring, big and ugly
-  - Spark: Not as clear as Takes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In this case, I documented the alternatives and gave my reasons why
-they are not good for us. As you see, the reasons are very biased; I
-basically expressed my personal opinions about these three
-frameworks and definitely gave preference to my own open
-source &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework. Is it good? No, it&amp;#39;s not.
-But I&amp;#39;m the &lt;a href=&quot;/&quot;&gt;architect&lt;/a&gt;,
-and I do what I think is right for the project.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m trying to show that the point of this documentation is for
-me, the architect, to explain my way of thinking &amp;mdash; no matter how bad,
-biased, or irrational it was. I have to write my decisions down and let the
-project know them all.&lt;/p&gt;
-
-&lt;p&gt;I would suggest you keep the number of documented decisions somewhere
-between &lt;strong&gt;four and 12&lt;/strong&gt;. If there are fewer than four, I probably forgot
-to document something important. More than 12 &amp;mdash; I&amp;#39;m documenting
-too many non-important decisions. I should use other media for that,
-like JavaDoc blocks or responsive classes.&lt;/p&gt;
-
-&lt;h2 id=&quot;concerns&quot;&gt;Concerns&lt;/h2&gt;
-
-&lt;p&gt;The next chapter in the &lt;code&gt;README.md&lt;/code&gt; file has to explain how exactly I
-managed to address all concerns expressed in the initial requirements.
-I mentioned above that it goes without saying that our system must
-be as fast and scalable as Google. Thus, let&amp;#39;s say there are two &amp;quot;concerns&amp;quot; &amp;mdash;
-performance and scalability.&lt;/p&gt;
-
-&lt;p&gt;As a software architect, I must address them both. In other words, I have to
-prove that my solution is fast and scalable. Maybe it&amp;#39;s not, but if I believe
-it is, I have to explain why I think so. I can&amp;#39;t be quiet about the concerns. Here
-is what I would say about performance:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The system is as fast as the Lucene search engine, while
-Lucene is rather fast even with large amounts of data.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And this one is about scalability:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The bottleneck is in Lucene, and it is scalable
-vertically. Not sure about horizontal scalability.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;As you see, I&amp;#39;m trying to be honest and tell the truth. We&amp;#39;ll be able to
-review these statements later and decide whether I was right or wrong. But
-we need to have my answers to all concerns expressed in the requirements.&lt;/p&gt;
-
-&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
-
-&lt;p&gt;The next section is about assumptions I&amp;#39;ve made while working with the
-prototype. We usually make assumptions when we don&amp;#39;t have enough factual
-information, and we basically fill the gaps. There is nothing wrong with
-it, but we have to document which gaps were filled and why.&lt;/p&gt;
-
-&lt;p&gt;How about these two assumptions:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. I assume that social platforms won&amp;#39;t block our
-   calls and will provide counters for all pages.
-2. I assume that Lucene will be enough for both
-   indexing and data storage, so we won&amp;#39;t need a
-   database engine.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I made these assumptions without proper analysis of the situation. I don&amp;#39;t
-know whether Twitter will be happy to see millions of requests every hour
-coming from our server or not. Maybe it will ban us; I don&amp;#39;t know. I don&amp;#39;t
-have to evaluate this and find an exact answer. I just made an assumption
-and documented it.&lt;/p&gt;
-
-&lt;p&gt;Will it be enough to have Lucene only, without any additional data persistence
-layer? I don&amp;#39;t know, but I &lt;em&gt;hope&lt;/em&gt; so. I don&amp;#39;t have time to do a detailed
-analysis of our entire data model and its potential future requirements. I just
-make an assumption and call it a day.&lt;/p&gt;
-
-&lt;p&gt;If later, during the handoff, the project sponsor says this assumption
-exposes too much risk for the project, we&amp;#39;ll do a better analysis. For now, my job
-is to document what I see and move on. Remember, I have just a week of time.&lt;/p&gt;
-
-&lt;h2 id=&quot;risks&quot;&gt;Risks&lt;/h2&gt;
-
-&lt;p&gt;Now I list all potential problems I foresee and estimate
-their probability and impact. Let me show you an example first:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Lucene may not be able to handle billions of documents [6x9]
-2. Social platforms will ban our requests [8x9]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The first number in square brackets is the probability and the second one
-is the impact, on a 0 to 9 scale. If both numbers are nine, it&amp;#39;s not a risk
-anymore; it&amp;#39;s a fact. If both numbers are zero, we can simply ignore this
-risk.&lt;/p&gt;
-
-&lt;p&gt;I listed just two, but in a real system there should be somewhere
-between four and 12 risks. Too many risks is a sign that the prototype is
-not focused enough, while too few is due to a lack of attention.&lt;/p&gt;
-
-&lt;h2 id=&quot;continuous-integration&quot;&gt;Continuous Integration&lt;/h2&gt;
-
-&lt;p&gt;Now I have to make sure the product is &amp;quot;wrapped&amp;quot; in continuous integration,
-which is a &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;critical component&lt;/a&gt;
-of any software package. I have to configure it, preferably
-&lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;in the cloud&lt;/a&gt;,
-and make sure the build is clean.&lt;/p&gt;
-
-&lt;p&gt;It is also important to make sure the continuous integration pipeline
-covers all critical areas, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Building on multiple platforms, such as Linux, Windows, and Mac.&lt;/li&gt;
-&lt;li&gt;Running integration tests and unit tests.&lt;/li&gt;
-&lt;li&gt;Analyzing statically.&lt;/li&gt;
-&lt;li&gt;Collecting test coverage.&lt;/li&gt;
-&lt;li&gt;Generating documentation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The stricter the pipeline, the better it is for the project. At this stage, my job,
-as an architect, is to build a &amp;quot;guard wall&amp;quot; around the product to protect
-it against future &lt;strong&gt;chaos&lt;/strong&gt;. The chaos will come from programmers making
-changes through pull requests. They will care much less about the entire
-quality of the product than I do, and that&amp;#39;s why I have to incorporate tools
-that keep the situation under control.&lt;/p&gt;
-
-&lt;p&gt;My goal is to make the continuous integration pipeline as &lt;strong&gt;fragile&lt;/strong&gt; as possible.
-Any minor error should lead to a build failure. Of course, I&amp;#39;m talking about
-reproducible failures. The build should fail in a predictable way, not
-sporadically.&lt;/p&gt;
-
-&lt;h2 id=&quot;static-analysis&quot;&gt;Static Analysis&lt;/h2&gt;
-
-&lt;p&gt;This is yet another &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;critical component&lt;/a&gt;
-of any software project. You have to analyze the quality of code statically.
-In the most primitive approach, a static analysis will check the formatting
-of your source code and fail the build when that formatting is broken. However,
-in a more advanced variant, static analysis will catch many important bugs.&lt;/p&gt;
-
-&lt;p&gt;It is called &amp;quot;static&amp;quot; because it doesn&amp;#39;t require the software to be running.
-To the contrary, unit tests validate software quality in runtime
-by running the app.&lt;/p&gt;
-
-&lt;p&gt;There are many static analysis tools, for almost every language and format.
-I strongly recommend you use them. Moreover, I recommend you configure them
-as strictly as possible in order to make the build as fragile as you can.
-The fragility of the build is a key success factor in software development.&lt;/p&gt;
-
-&lt;h2 id=&quot;test-coverage&quot;&gt;Test Coverage&lt;/h2&gt;
-
-&lt;p&gt;Test coverage must be collected on every build and, at the very least, reported. In
-an ideal scenario, low test coverage must fail the build. Let&amp;#39;s say I set
-the required percentage of coverage to 75 percent (it&amp;#39;s actually a more complex metric, but
-in a primitive approach just one number is enough). If someone introduces
-a new class without a unit test, the coverage percentage goes down and
-the build breaks.&lt;/p&gt;
-
-&lt;p&gt;My job, as an architect creating a prototype, is to make sure the coverage
-is calculated on every build and is under control &amp;mdash; it can&amp;#39;t go
-lower than the threshold I set.&lt;/p&gt;
-
-&lt;p&gt;No matter how low the threshold is, what matters is whether it is under
-control or not.&lt;/p&gt;
-
-&lt;h2 id=&quot;continuous-delivery&quot;&gt;Continuous Delivery&lt;/h2&gt;
-
-&lt;p&gt;This is the final step before the handoff. I have to configure a continuous
-delivery pipeline to make sure the product is packaged and deployed in
-one click. This is a very important &amp;mdash; critically important &amp;mdash; step. Without it,
-everything done before and the piece of software itself is just a collection
-of files. A piece of software is a product when it is packagable and
-deployable in one click.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;Pipeline&amp;quot; means that there are a number of elements chained sequentially;
-for a Java application, for example:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Run automated build (the same as in continuous integration)&lt;/li&gt;
-&lt;li&gt;Package JAR file&lt;/li&gt;
-&lt;li&gt;Upload JAR file to repository&lt;/li&gt;
-&lt;li&gt;Build JavaDoc site&lt;/li&gt;
-&lt;li&gt;Upload JavaDoc site to Amazon S3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I&amp;#39;m using &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt; to
-automate the entire pipeline and simplify its start, stop, and logging. I just
-post a &amp;quot;please release now&amp;quot; message to a GitHub ticket, and the product
-is packaged and deployed in a few minutes.&lt;/p&gt;
-
-&lt;h2 id=&quot;acceptance&quot;&gt;Acceptance&lt;/h2&gt;
-
-&lt;p&gt;The last step is the handoff &amp;mdash; I have to present my solution to the
-project manager, the sponsor of the project, and the team. Everybody has
-to accept it. It doesn&amp;#39;t mean they will like it, and that&amp;#39;s not the goal. The
-goal is to deliver a complete solution, with risks, assumptions, decisions
-documented, continuous integration configured, static analysis enforced, etc.
-If my solution won&amp;#39;t be good enough for their criteria, they will change
-the architect and try again.&lt;/p&gt;
-
-&lt;p&gt;My objective is &lt;strong&gt;not&lt;/strong&gt; to satisfy them but to do the best I can according
-to the requirements and my professional understanding of the problem and
-business domains. I wrote about this some time ago:
-&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;A Happy Boss Is a False Objective&lt;/a&gt;.
-Again, my objective is not to make them happy. Instead, my objective is to make
-a perfect prototype, the way I understand the word &lt;strong&gt;perfect&lt;/strong&gt;. If I fail,
-I fail. The project will get another architect and try again.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s it. The skeleton is ready, and my job is done.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html</guid>
-      <dc:date>2015-08-04T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
