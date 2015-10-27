@@ -5,7 +5,9 @@ date: 2015-10-26
 place: San Jose, CA
 tags: java
 description:
-  ...
+  This must be a good practice to add a contextual
+  message to an exception on each re-throw
+  and in all situations.
 keywords:
   - rethrow exception
   - rethrow exception java

@@ -2,7 +2,7 @@
 layout: post
 title: "Why Hiring Doesn't Work ... Anymore"
 date: 2015-10-26
-place: Seattle, CA
+place: Seattle, WA
 tags: mgmt outsourcing
 description:
   Trying to build a team of developers by acquiring
