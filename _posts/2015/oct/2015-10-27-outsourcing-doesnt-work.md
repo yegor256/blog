@@ -5,8 +5,8 @@ date: 2015-10-27
 place: Palo Alto, CA
 tags: mgmt outsourcing
 description:
-  Software outsourcing was a perfect business
-  concept 10 years ago. Not anymore. Here is why.
+  Remote software outsourcing was a perfect business
+  concept ten years ago. Not anymore. Here is why.
 keywords:
   - outsourcing doesn't work
   - why outsourcing fails
