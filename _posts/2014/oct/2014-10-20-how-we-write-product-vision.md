@@ -225,3 +225,6 @@ But don't cut corners. Don't allow your client (or anyone else) to force
 you to bloat the Product Vision. The document has to be very short and explicit.
 
 No lyrics, only statements.
+
+PS. On top of all this we place a
+[Glossary]({% pst 2015/mar/2015-03-16-technical-glossaries %}).

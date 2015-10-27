@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Software Outsourcing Doesn't Work ... Anymore"
-date: 2015-10-13
+date: 2015-10-27
 place: Palo Alto, CA
 tags: mgmt outsourcing
 description:
@@ -25,6 +25,8 @@ what I expected. After yet another few months, I swear to God I'll never outsour
 any software development to anyone. Is it just me? Not really.
 
 <!--more-->
+
+{% picture /images/2015/10/the-godfather-ii.jpg 0 The Godfather: Part II (1974) by Francis Ford Coppola %}
 
 This preamble is just a joke, but it's not so far from
 [the truth]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}). Of course,
