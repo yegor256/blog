@@ -148,7 +148,7 @@ That's the root cause of all problems with outsourcing.
 The title of this article states that outsourcing doesn't work **anymore**. Why
 anymore? Did it work before? Yes, it did, when salaries of programmers
 were extremely lower in third-world (offshore) countries. For example, in 2001, we had
-a team of very good senior Java developers in the Ukraine. We paid them above
+a team of very good senior Java developers in Ukraine. We paid them above
 the market price, and it was **$300 per month**. At the same time, we were
 selling their time to U.S. customers for $15 per hour, which was $2,500 per month.
 See the margin?
@@ -162,7 +162,7 @@ with my customers.
 
 Not anymore.
 
-Put yourself in their shoes. Today, a good Java developer in the Ukraine
+Put yourself in their shoes. Today, a good Java developer in Ukraine
 [earns](http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
 **$4,000** a month. On top of that, this developer expects health
 insurance, a free gym membership, free lunch, paid vacation, paid sick leave, etc. At the same
