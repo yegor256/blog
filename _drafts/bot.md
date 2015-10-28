@@ -217,27 +217,73 @@ it to be seamless, respond immediately, and present everything in a
 structured and organized way. If something goes wrong, it's right here
 on the web page. In the best case it's 404, in the worst one &mdash; you
 present some wrong information to the user. Even though the bug may not
-be critical inside the microservice engine, but the user doesn't know that.
+be critical inside the microservice engine, the user doesn't know that.
 The user will judge you by your appearance, and won't forget even small
 mistakes.
 
-However,
+However, when you both are clients of a message board, you don't see
+each other. The user communicates with GitHub and the microservice
+interacts with GitHub. Mistakes are less visible. Trust me, we have
+had many of them over the last 18 months of Rultor being in public use.
+We had downtimes, we had serious logical mistakes, we had data corruption.
+But very rarely these problems became visible online. We just saw them
+in our server logs. Users didn't see them. Well, mostly.
 
 ## Everything Is Traceable
 
+Since there is a communication board between us, it's very easy
+to see the entire history of discussion, which is very intuitive.
+It's like a Slack chat history. You see what did we start from,
+who said what and what conclusions were made.
+
+You basically can't have that visibility in a web UI. Well, you can
+probably create a special page with "history of operations", but
+who will check it? And how visible and simple that information will be?
+And, what is the most important, how that information will match
+with the UI?
+
+In the log you will say that "the build was started", but
+what is the build and how was is started? How can I start it again?
+Using which buttons and web controls? It's not clear.
+
+Thus, traceability of a chronological chat is unbeatable.
+
 ## Easy To Integrate With Other Services
 
-All scalability problems are solved by the communication platform,
-which is GitHub in this case. We can add more Rultor nodes to the
-picture paying almost no attention to any possible scalability
-problems. And I'm talking about horizontal scalability here, which is
-the most difficult to achieve in a web system.
+Yes, think about the future of this approach. If there is a centralized
+messaging board, where users talk to a chatbot, why other chatbots
+can't talk to each other too?
 
-Naturally, any web system is not fully horizontally scalable must
+Forget about RESTful APIs. Just a messaging board, where chatbots post
+their requests and collect responses. They are perfectly decoupled, replaceable
+and very scalable. Also, their communication protocol is visible and very
+traceable. And many other benefits, just explained above. It's much
+more convenient for us, users and programmers, to monitor them and
+to create them.
 
-## Communication Is More Intuitive
+Well, maybe it's too extreme to get rid of RESTful APIs entirely, but
+to some extend this approach is feasible, I believe.
 
-delay-free dialog
-traceability of requests
+I didn't go too far in this idea, but something was done. We have
+a messaging platform, which allows multiple chatbots to communicate
+with users. It's called [Netbout](http://www.netbout.com). It's a very
+primitive web system, with isolated discussions. Simply put, anyone
+can create a new discussion, invite a few friends and post messages there.
+Both users and chatbots can do that.
 
+So, when a new candidate wants to join [Teamed.io](http://www.teamed.io),
+we ask that person to fill an [online form](http://www.teamed.io/join.html). When
+the candidate clicks "Submit" button, a new discussion starts and the first
+chatbot decides who should interview that person. The decision is made
+by the skills listed in the form. The chatbot invites one of our
+[best programmers](http://www.teamed.io/#check-out-ourbest-developers)
+to do the interview. When interview is done, another chatbot explains
+the candidate what are the next steps, registers him or her in our
+database and starts to show the progress of work.
 
+From a user perspective it looks like he or she is talking to a few
+people that understand just a few simple commands. It is very intuitive
+and was easy to design.
+
+I think, chatbots is a good approach for interacting with microservices.
+Especially when users are more or less professional.
