@@ -125,14 +125,14 @@ fundamental confusion that exists in our heads: We think these
 they are our team. They are with us in the same boat, sharing
 the same values and looking in the same direction.
 
-It's just not true.
+**It's just not true**.
 
 It can't be true.
 
 I've been in the shoes of an outsourcing company for almost 10 years
 (and quit in 2010). The ugly truth is that for a CEO of an outsourcing
 shop, the only problem is how to take care of the
-next month's payroll, and 90 percent of all expenses are salaries
+next month's payroll, and **90 percent** of all expenses are salaries
 for the programmers.
 
 That's why a good customer for them is a paying customer. Not a customer with
@@ -173,7 +173,7 @@ Again, your income is $6.8K and your expenses are close to $5K. See the margin?
 And don't forget about office expenses, taxes, computers,
 administrative staff, team building events, etc. Because of such a small
 margin, you will literally be broke if you lose a key paying customer. You just
-can't afford to keep your programmers "on the bench" for too long.
+can't afford to keep your programmers "on the **bench**" for too long.
 
 Thus, your lone motivation is to keep that
 cash flow coming. No matter what. The longer the project, the better.
