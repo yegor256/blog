@@ -195,11 +195,16 @@ want to change companies and prefer to find a peaceful office, where you
 can stay forever. I remember I once said to a friend of mine &mdash;
 "you will greatly improve your CV if you pass this certification". He
 answered with a smile &mdash; "I hope I won't need a CV any more, I like
-this company". This attitude is very beneficial for the company you're
-working for, but it definitely works against you.
+this company". This attitude is
+[very beneficial]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+for the company you're
+working for, but it definitely works
+[against]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) you.
 
-In my experience, the best team players are those who work for themselves.
-Healthy individualism is a key success factor. If your primary objective
+In my experience, the best
+[team players]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+are those who work for themselves.
+Healthy **individualism** is a key success factor. If your primary objective
 is to earn for yourself (money, reputation, skills, or knowledge) &mdash;
 you will be very effective in our projects. Certifications in your
 profile is an indicator of that healthy individualism we're looking for.
@@ -236,7 +241,7 @@ was to get to the list of speakers.
 
 Both blog articles and conference presentations make you much more
 valuable as a specialist. Mostly because these things demonstrate that some
-people already reviewed your work and your talent. And it was not just
+people **already reviewed** your work and your talent. And it was not just
 a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
@@ -250,7 +255,7 @@ understand you. Without enough presentation skills, you won't survive
 in your projects.
 
 BTW, some software developers even file patents in their names &mdash; why
-can't you do this?
+can't you do this? Or maybe even publish a book. Why not?
 
 ## Previous Employment
 
