@@ -6,7 +6,7 @@ tags: xdsd
 description:
   In XDSD everybody is motivated to produce
   tangible and meaningful results. That's why
-  we don't use emails, Skype, Hipchat or phone calls.
+  we don't use emails, Skype, HipChat or phone calls.
 keywords:
   - communications in agile team
   - agile team meetings
@@ -43,7 +43,7 @@ This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question
 about current design, specification, configuration, etc. &mdash;
 nobody will be interested in answering it. Why not? Because there is no payment attached to this.
-Answering questions in Skype or Hipchat or by email is something that
+Answering questions in Skype, Slack, or HipChat, or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.
 

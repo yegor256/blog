@@ -33,7 +33,7 @@ and published them as a standalone library &mdash;
 to be a good time to write a few words about them.
 
 Below is an example that demonstrates how you can validate
-an HTML document against W3C compliancy rules:
+an HTML document against W3C compliance rules:
 
 {% highlight java linenos=table %}
 import com.jcabi.w3c.ValidatorBuilder;

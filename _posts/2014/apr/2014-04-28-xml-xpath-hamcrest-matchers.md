@@ -25,7 +25,7 @@ in unit testing. It replaces the JUnit procedural assertions of
 `org.junit.Assert` with an object-oriented mechanism. However, I will discuss
 that subject in more detail sometime later.
 
-Now, though, I want to demonstrate a new library published today on Github and
+Now, though, I want to demonstrate a new library published today on GitHub and
 Maven Central: [jcabi-matchers](http://matchers.jcabi.com).
 jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.
@@ -76,10 +76,10 @@ The above is a very strange limitation of Hamcrest in contrast to
 [`Reader`](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html) and
 even an [`InputStream`](http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html).
 
-Second, `XmlMatchers from [xml-matchers](https://code.google.com/p/xml-matchers/)
+Second, `XmlMatchers` from [xml-matchers](https://code.google.com/p/xml-matchers/)
 provides a very inconvenient way for working with namespaces. Before you can
 use an XPath query with a non-default namespace, you should create an instance
-of NamespaceContext.
+of `NamespaceContext`.
 
 The library provides
 [a simple implementation](https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java) of this interface,

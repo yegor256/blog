@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Why Software Outsourcing Doesn't Work ... Anymore"
-date: 2015-10-13
+date: 2015-10-27
 place: Palo Alto, CA
 tags: mgmt outsourcing
 description:
-  Software outsourcing was a perfect business
-  concept 10 years ago. Not anymore. Here is why.
+  Remote and offshore software outsourcing was a perfect business
+  concept ten years ago. Not anymore. Here is why.
 keywords:
   - outsourcing doesn't work
   - why outsourcing fails
@@ -17,14 +17,16 @@ keywords:
 
 I want to create an iPhone app for my web service, but I don't have
 programmers. Well, I don't have iOS programmers. And I don't have money.
-Sound familiar? What do I do? Right, I go to ~~Google~~
+Sound familiar? What do I do? Right, I go to <del>Google</del>
 [Upwork](http://www.upwork.com) and find an awesome company in Bangalore
-that is excited to work with me for ~~nothing~~ reasonable money. In
+that is excited to work with me for <del>nothing</del> reasonable money. In
 a few months and after a few thousand dollars, I realize this is not exactly
 what I expected. After yet another few months, I swear to God I'll never outsource
 any software development to anyone. Is it just me? Not really.
 
 <!--more-->
+
+{% picture /images/2015/10/the-godfather-ii.jpg 0 The Godfather: Part II (1974) by Francis Ford Coppola %}
 
 This preamble is just a joke, but it's not so far from
 [the truth]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}). Of course,
@@ -123,14 +125,14 @@ fundamental confusion that exists in our heads: We think these
 they are our team. They are with us in the same boat, sharing
 the same values and looking in the same direction.
 
-It's just not true.
+**It's just not true**.
 
 It can't be true.
 
 I've been in the shoes of an outsourcing company for almost 10 years
 (and quit in 2010). The ugly truth is that for a CEO of an outsourcing
 shop, the only problem is how to take care of the
-next month's payroll, and 90 percent of all expenses are salaries
+next month's payroll, and **90 percent** of all expenses are salaries
 for the programmers.
 
 That's why a good customer for them is a paying customer. Not a customer with
@@ -146,7 +148,7 @@ That's the root cause of all problems with outsourcing.
 The title of this article states that outsourcing doesn't work **anymore**. Why
 anymore? Did it work before? Yes, it did, when salaries of programmers
 were extremely lower in third-world (offshore) countries. For example, in 2001, we had
-a team of very good senior Java developers in the Ukraine. We paid them above
+a team of very good senior Java developers in Ukraine. We paid them above
 the market price, and it was **$300 per month**. At the same time, we were
 selling their time to U.S. customers for $15 per hour, which was $2,500 per month.
 See the margin?
@@ -160,7 +162,7 @@ with my customers.
 
 Not anymore.
 
-Put yourself in their shoes. Today, a good Java developer in the Ukraine
+Put yourself in their shoes. Today, a good Java developer in Ukraine
 [earns](http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
 **$4,000** a month. On top of that, this developer expects health
 insurance, a free gym membership, free lunch, paid vacation, paid sick leave, etc. At the same
@@ -171,7 +173,7 @@ Again, your income is $6.8K and your expenses are close to $5K. See the margin?
 And don't forget about office expenses, taxes, computers,
 administrative staff, team building events, etc. Because of such a small
 margin, you will literally be broke if you lose a key paying customer. You just
-can't afford to keep your programmers "on the bench" for too long.
+can't afford to keep your programmers "on the **bench**" for too long.
 
 Thus, your lone motivation is to keep that
 cash flow coming. No matter what. The longer the project, the better.

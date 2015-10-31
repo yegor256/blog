@@ -46,7 +46,7 @@ This is yet another risk, which I'll try to describe in another article soon.
 In this article, we're talking specifically about a situation where your
 programmers are using your idea to implement something similar on their own.
 Let's say you want to create a new search engine that would be smarter and
-more accurate than Google. You disclose your alrogithms to a group of
+more accurate than Google. You disclose your algorithms to a group of
 talented programmers and they just implement it on their own. You already
 gave them a multi-billion-dollar idea; why would they work for you on the
 payroll if they can create their own startup? This is the question you,

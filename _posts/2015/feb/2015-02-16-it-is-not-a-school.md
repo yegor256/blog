@@ -83,7 +83,7 @@ discharged when necessary. Such a plan may include training, but it would be
 as small an amount as possible &mdash; mostly because a plumber trained by us costs much
 more than one trained by someone else but does exactly the same, or worse, work.
 Thus, a smart project manager acquires project members who are already
-capable of performing their duties and falls back on trainings only
+capable of performing their duties and falls back on training only
 in exceptional situations.
 
 Now, a logical question: What should we, as programmers, do? We want to

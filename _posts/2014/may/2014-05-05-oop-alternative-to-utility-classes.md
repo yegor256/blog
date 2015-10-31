@@ -112,7 +112,7 @@ on every single line of code. We're defining *a procedure of execution*.
 In an object-oriented paradigm, we should instantiate and compose objects, thus
 letting them manage data when and how *they* desire. Instead of calling
 supplementary static functions, we should create objects that are capable of
-exposing the behaviour we are seeking:
+exposing the behavior we are seeking:
 
 {% highlight java %}
 public class Max implements Number {

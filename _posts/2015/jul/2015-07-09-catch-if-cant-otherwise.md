@@ -105,7 +105,7 @@ trust your `send()` method anymore, and my user will not trust me.
 By catching exceptions without re-throwing them, you're basically breaking the
 chain of trust between objects.
 
-My suggestion is to catch exceptions as seldomly as possible, and every time
+My suggestion is to catch exceptions as seldom as possible, and every time
 you catch them, re-throw.
 
 Unfortunately, the design of Java goes against this principle in many places.

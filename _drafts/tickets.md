@@ -6,7 +6,8 @@ place: Kiev, Ukraine
 tags: java oop
 description:
   Issue tracking systems is a modern replacement of
-  other old instruments of project communications.
+  other old instruments of project communications, like
+  Skype, Slack, emails or phone calls.
 keywords:
   - skype for project managment
   - slack for project management

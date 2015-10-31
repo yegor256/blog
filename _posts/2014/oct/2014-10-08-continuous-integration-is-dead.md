@@ -53,7 +53,7 @@ compile, unit test, integration test, quality analysis, etc.
 The result is either "success" or "failure". If it is a success, we
 say that "the build is clean". If it is a failure, we say that "the build is broken".
 The build usually gets broken because someone breaks it by
-commiting new code that turns previously passing unit tests
+committing new code that turns previously passing unit tests
 into failing ones.
 
 This is the technical side of the problem. It always works. Well,
@@ -87,8 +87,8 @@ Now, my question is &mdash; who, in an actively working team, may need this?
 
 A product owner, who is interested in launching new features to the market
 as soon as possible? Or maybe a project manager, who is responsible for
-the deadlines? Or maybe programmers, who hate to fix someone else's bugs,
-especially under pressure.
+the deadlines? Or maybe programmers, who hate to fix bugs made by someone else,
+especially under pressure?
 
 Who likes this continuous integration and who needs it?
 

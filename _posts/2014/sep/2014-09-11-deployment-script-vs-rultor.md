@@ -58,8 +58,8 @@ container without any fear of conflict with your main working
 platform. Let me give an example.
 
 I'm developing on MacBook, where I install and remove packages which I need for development.
-At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, phing,
-phpunit, phpcs and xdebug. Every MacOS version needs to be configured specifically
+At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, Phing,
+PHPUnit, PHPCS and xdebug. Every MacOS version needs to be configured specifically
 to get these applications up and running, and it's a time-consuming job.
 
 I can change laptops, and I can change MacOS versions, but the project stays the same. It
@@ -88,7 +88,7 @@ git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
 
 Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
-will only work if PHP 5.3, MySQL, phing, xdebug, phpcs and phpunit are installed.
+will only work if PHP 5.3, MySQL, Phing, xdebug, PHPCS and PHPUnit are installed.
 Again, it's a lot of work to install and configure them every time I upgrade
 my MacOS or change a laptop.
 
@@ -140,12 +140,12 @@ is very difficult or impossible.
 Rultor offers something different. With Rultor, there is no SSH access
 to deployment scripts any more. All scripts stay in the `.rultor.yml` configuration
 file, and you start them by posting messages in your issue tracking system
-(for example Github, JIRA or Trac). Rultor runs the script and publishes
+(for example GitHub, JIRA or Trac). Rultor runs the script and publishes
 its full log right to your ticket. The log stays with your project forever.
 You can always get back to the ticket you were working with and check
 why deployment failed and what instructions were actually executed.
 
-For example, check out this Github issue, where I was deploying a new
+For example, check out this GitHub issue, where I was deploying a new
 version of Rultor itself, and failed a few times:
 [yegor256/rultor#563](https://github.com/yegor256/rultor/issues/563). All
 my failed attempts are protocolled. I can always get back to them and

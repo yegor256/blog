@@ -95,7 +95,7 @@ build automation and testing next. Is that a good idea? Can we
 deliver any software without running it first with a test? How can I be
 sure that it works if I don't ship tests together with it? What will my friend
 think about me releasing anything without tests? This would be
-a total embarassment.
+a total embarrassment.
 
 Okay, let's release `Makefile` first and `wc.c` next. But what will my
 friend do with a couple of tests and no product in hand? This first

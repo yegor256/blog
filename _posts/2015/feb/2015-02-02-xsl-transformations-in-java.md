@@ -59,7 +59,7 @@ This is approximately how our DynamoDB table looks:
 +----+---------------+--------------------------------------+
 {% endhighlight %}
 
-Once a user posts `@rultor status` into a Github ticket, Rultor
+Once a user posts `@rultor status` into a GitHub ticket, Rultor
 has to answer with a full status report about the current talk. In order
 to create such a text answer (a regular user would not appreciate an XML response),
 we have to fetch that `xml` column from the necessary DynamoDB record and convert
@@ -139,4 +139,4 @@ add this dependency to your `pom.xml`:
 {% endhighlight %}
 
 If you have any problems or suggestions, don't hesitate to submit an issue
-to the Github [issue tracker](https://github.com/jcabi/jcabi-xml/issues).
+to the GitHub [issue tracker](https://github.com/jcabi/jcabi-xml/issues).

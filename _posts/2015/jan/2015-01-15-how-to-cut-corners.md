@@ -103,7 +103,7 @@ the software in a way that's difficult to digest and modify. But the code is
 clean; it's not spaghetti anymore. It's a perfectly cooked lobster, but
 you don't know how to eat lobster! You've never ate it before.
 
-The chef did a good job; he cooked it well, but the restaraunt didn't give
+The chef did a good job; he cooked it well, but the restaurant didn't give
 you any instructions on how to eat such a sophisticated dish. What do you do?
 
 You ask for a manual. You ask for documentation. Properly designed
@@ -158,7 +158,7 @@ Very often you simply can't reproduce a bug. That's not because the code is not
 testable and can't be used in a unit test but because you can't reproduce
 an error situation. You know that the code crashes in production, but you can't
 crash it in a test. The error stack trace reported by the end user or your
-production logging system is not reproducable. It's a very common situation.
+production logging system is not reproducible. It's a very common situation.
 What do you do?
 
 {% badge /images/2015/01/cut-corners-3.png 250 %}

@@ -40,7 +40,7 @@ software developer. Do you contribute to open source projects?
 Do you have your own open source libraries that are used by
 some community? Do you write code that is publicly available and used?
 
-If you have nothing to show here, I see three posible causes.
+If you have nothing to show here, I see three possible causes.
 
 First, you're **too shy to share** your code because **it's crap**. Obviously,
 this is not a good sign. Not because your code could be bad, but because
@@ -79,10 +79,10 @@ that you won't be able to find areas of improvement in our projects either,
 while we rely on your ability to
 [discover problems creatively]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
-Thus, if your Github account is empty and your CV doesn't position you
+Thus, if your GitHub account is empty and your CV doesn't position you
 as "an active contributor to Linux kernel" (yeah, why not?), I immediately
 lose interest. On the other hand, when I see a 100+ stars project in your
-Github account, I get excited and ready to offer a higher rate.
+GitHub account, I get excited and ready to offer a higher rate.
 
 ## Geographic Location
 
@@ -111,7 +111,7 @@ whose expenses are lower. Our money will simply work better.
 
 ## StackOverflow.com Reputation
 
-We all know what StackOverflow has but very few people (suprisingly few!)
+We all know what StackOverflow has but very few people (surprisingly few!)
 actively contributing to it. If your profile there is empty (or you don't have
 one) I realize that you 1) don't have any questions to ask
 and 2) you have nothing to answer.
@@ -157,7 +157,7 @@ Does it mean that your code was perfect? It doesn't mean any of that.
 
 Years of experience is a false indicator. It actually may play against you,
 in combination with other indicators mentioned above. If your CV says that
-you just started to program two years ago and your Github
+you just started to program two years ago and your GitHub
 and StackOverflow accounts are empty &mdash; there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-year seasoned architect" with zero
@@ -177,7 +177,7 @@ pass an exam. Not an easy one and not online. It is a real exam taken in
 a certification center, where you're sitting in front of a computer for a few
 hours, without any books or Internet access, answering questions. Rather
 humiliating activity for a respected software developer? Indeed. And there
-is a high probability of failure, which is also rather embarassing.
+is a high probability of failure, which is also rather embarrassing.
 
 It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you've earned no certifications
@@ -195,11 +195,16 @@ want to change companies and prefer to find a peaceful office, where you
 can stay forever. I remember I once said to a friend of mine &mdash;
 "you will greatly improve your CV if you pass this certification". He
 answered with a smile &mdash; "I hope I won't need a CV any more, I like
-this company". This attitude is very beneficial for the company you're
-working for, but it definitely works against you.
+this company". This attitude is
+[very beneficial]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+for the company you're
+working for, but it definitely works
+[against]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) you.
 
-In my experience, the best team players are those who work for themselves.
-Healthy individualism is a key success factor. If your primary objective
+In my experience, the best
+[team players]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+are those who work for themselves.
+Healthy **individualism** is a key success factor. If your primary objective
 is to earn for yourself (money, reputation, skills, or knowledge) &mdash;
 you will be very effective in our projects. Certifications in your
 profile is an indicator of that healthy individualism we're looking for.
@@ -220,7 +225,7 @@ we have no choice. If a project we're working on needs a Lucene expert,
 we'll find the right person and do our best to get him/her on
 board. Doing our best means increasing the price, in most cases.
 
-Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and Sqlite"
+Thus, when I hear that you're "experienced in MySQL, PostgreSQL, Oracle and SQLite"
 I realize that you know very little about databases.
 
 ## Talks and Publications
@@ -236,12 +241,12 @@ was to get to the list of speakers.
 
 Both blog articles and conference presentations make you much more
 valuable as a specialist. Mostly because these things demonstrate that some
-people already reviewed your work and your talent. And it was not just
+people **already reviewed** your work and your talent. And it was not just
 a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
 Besides that, if you write and present regularly, you have a very important
-skill/talent &mdash; you can present your ideas in a "digestable" way.
+skill/talent &mdash; you can present your ideas in a "digestible" way.
 In our projects we
 [discourage informal communications]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 and use ticketing systems instead. In those tickets you will have
@@ -250,7 +255,7 @@ understand you. Without enough presentation skills, you won't survive
 in your projects.
 
 BTW, some software developers even file patents in their names &mdash; why
-can't you do this?
+can't you do this? Or maybe even publish a book. Why not?
 
 ## Previous Employment
 

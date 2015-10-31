@@ -71,7 +71,7 @@ the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7
 [`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html) &mdash;
 the one I'm using in the script above &mdash; is an annotation of the second type,
 from [jcabi-aspects](http://aspects.jcabi.com).
-It stays with the bytecode in the `.class` file after compilation.
+It stays with the byte-code in the `.class` file after compilation.
 
 Again, it is important to understand that even though
 method `power()` is annotated and compiled, it doesn't
@@ -171,7 +171,7 @@ AspectJ does exactly that. We give it two binary Java classes `Foo.class`
 and `MethodLogger.class`; it gives back three &mdash; modified
 `Foo.class`, `Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
 
-In order to understand which advices should be applied to which methods,
+In order to understand which advice should be applied to which methods,
 AspectJ weaver is using annotations from `.class` files.
 Also, it uses [reflection](http://docs.oracle.com/javase/tutorial/reflect/)
 to browse all classes on classpath. It analyzes which methods satisfy
@@ -300,4 +300,4 @@ That's it. Now you can use [`@com.jcabi.aspects.Loggable`](http://aspects.jcabi.
 annotation and your methods will be logged through slf4j.
 
 If something doesn't work as explained, don't hesitate to
-submit a [Github issue](https://github.com/jcabi/jcabi-aspects/issues).
+submit a [GitHub issue](https://github.com/jcabi/jcabi-aspects/issues).

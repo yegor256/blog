@@ -79,7 +79,7 @@ code reviewers help the team learn and improve.
 Yet another fear is expressed like this: "_I may be wrong and they will laugh me out_"
 Even worse, they may spot my lack of knowledge. They may
 see that I don't know what I'm doing. It would be better to stay quiet and pretend
-there are no bugs in the code. At least then I wouldn't embarass myself
+there are no bugs in the code. At least then I wouldn't embarrass myself
 with stupid comments. You know that it's much easier to look smart if you keep
 your mouth shut, right? Wrong!
 
@@ -91,7 +91,7 @@ boss. Similar to ["A Happy Boss Is a False Objective"]({% pst 2015/jan/2015-01-2
 I would say that the respect of the team is a false goal. Don't try to earn respect.
 Instead, create clean code and respect will come automatically.
 
-Let me reiterate: Don't be afraid to embarass yourself by making incorrect and stupid comments
+Let me reiterate: Don't be afraid to embarrass yourself by making incorrect and stupid comments
 about someone's code. Be loyal to the project, not to the expectations of
 people around you. They expect you to be smart and bright, but the project
 expects you to say what you think about the code. So screw their opinions;

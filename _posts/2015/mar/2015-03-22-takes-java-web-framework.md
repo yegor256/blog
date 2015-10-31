@@ -19,7 +19,7 @@ keywords:
 I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
 JSF with Facelets, and a bit of Spark Framework. All of these solutions,
 in my humble opinion, are very far from being object-oriented and elegant.
-They all are full of static methods, untestable data structures, and
+They all are full of static methods, un-testable data structures, and
 dirty hacks. So about a month ago, I decided to create my own Java web
 framework. I put a few basic principles into its foundation: 1) No NULLs,
 2) no public static methods, 3) no mutable classes, and 4) no class casting, reflection,
@@ -383,7 +383,7 @@ to Heroku. This is what `Procfile` should look like:
 web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
 {% endhighlight %}
 
-## TkFork
+## `TkFork`
 
 This [`TkFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html)
 class seems to be one of the core elements of the framework. It

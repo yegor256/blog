@@ -109,10 +109,10 @@ similar to "somebody _can_ do something".
 
 The method name will state exactly the same, but without the subject. If I add a
 subject at the beginning of the method name, I should get a complete English
-sentence, as in above example: "HttpRequest returns its content in unicode".
+sentence, as in above example: "`HttpRequest` returns its content in Unicode".
 
 Pay attention that the test method doesn't start with `can`.Only JavaDoc
-comments start with 'can.'  Additionally, method names shouldn’t start with a
+comments start with 'can.'  Additionally, method names shouldn't start with a
 verb.
 
 It's a good practice to always declare test methods as throwing `Exception`.

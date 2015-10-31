@@ -273,7 +273,7 @@ In the last step, I shut down the Tomcat server.
 If you want to see how this all works in action, take
 a look at [stateful.co](http://www.stateful.co). It is a Java
 Web application hosted at [CloudBees](http://www.cloudbees.com).
-Its source code is open and available in [Github](https://github.com/sttc/stateful).
+Its source code is open and available in [GitHub](https://github.com/sttc/stateful).
 
 Its [`pom.xml`](https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml)
 contains exactly the same configurations explained above, but joined together.

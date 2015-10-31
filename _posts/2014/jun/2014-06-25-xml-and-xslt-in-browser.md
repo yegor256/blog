@@ -5,7 +5,7 @@ date: 2014-06-25
 tags: xslt java restful
 description:
   XML+XSLT is a useful combination for web interfaces
-  and RESTful APIs at the same time. This article explains
+  and RESTful API-s at the same time. This article explains
   how it works and argues in favor of its use.
 keywords:
   - web framework
@@ -37,7 +37,7 @@ positioning or formatting. XSL stylesheets position and decorate the data.
 XSL is a much more powerful language. That's why it's possible to avoid
 any formatting inside XML.
 
-The latest versions of Chrome, Safari, FireFox and IE all support
+The latest versions of Chrome, Safari, Firefox and IE all support
 this mechanism. When a browser retrieves an XML document from a server,
 and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
 with it &mdash; the browser transforms XML into HTML on-fly.
@@ -87,8 +87,8 @@ elements and data. It contains absolutely no information about how
 its elements have to be presented to an end-user. Actually,
 this document is more suitable for machine parsing instead of reading by a human.
 
-The document contains data, which is important for its requestor.
-It's up to the requestor on how to render the data or to not render it at all.
+The document contains data, which is important for its requester.
+It's up to the requester on how to render the data or to not render it at all.
 
 Its second line [associates](http://www.w3.org/TR/xml-stylesheet/)
 the document with the XSL stylesheet `/xsl/index.xsl` that

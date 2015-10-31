@@ -18,7 +18,7 @@ categories: jcg
 
 Every project I'm working with starts with a setup of continuous
 integration pipeline. I'm a big fan of cloud services,
-that's why I was always using travis-ci.org. A few of
+that's why I was always using `travis-ci.org`. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.
 
@@ -163,7 +163,7 @@ of continuous integration software and services.
 [**travis-ci.org**](http://www.travis-ci.org) is
 the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
-Github and has proper documentation. One important
+GitHub and has proper documentation. One important
 downside is the price of $129 per month. "With this money
 you can get a dedicated EC2 instance and install Jenkins there" &mdash;
 some of my clients say. I strongly disagree, since Jenkins will
@@ -176,15 +176,15 @@ it's always difficult to explain.
 that runs Windows builds. Even though I'm working mostly with
 Java and Ruby, which are expected to be platform independent, they
 very often appear to be exactly the opposite. When your build
-succeedes on Linux, there is almost no guarantee it will pass on
-Windows or Mac. I'm planning to use appveyor in every project,
+succeeds on Linux, there is almost no guarantee it will pass on
+Windows or Mac. I'm planning to use AppVeyor in every project,
 in combination with some other CI service. I'm still testing it though...
 
 {% badge /images/2014/10/wercker.png 64 http://www.wercker.com %}
 
 [**wercker.com**](http://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
-for all projects. The platform looks very promissing. It is still
+for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
 [investments](https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/).
 They also have an interesting concept of build "boxes", which
@@ -217,13 +217,13 @@ you should do everything through a UI. They also support
 [**codeship.io**](http://www.codeship.io) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
-don't notify our pull requests in Github, even though they build them.
+don't notify our pull requests in GitHub, even though they build them.
 Maybe I'll find a way, so far it's not clear...
 
 {% badge /images/2014/10/magnum.png 64 http://www.magnum-ci.com %}
 
 [**magnum-ci.com**](http://www.magnum-ci.com) is a very lightweight
-and young system. It doesn't connect automatically to Github,
+and young system. It doesn't connect automatically to GitHub,
 so you should do some manual operations of adding a web hook.
 Besides that, works just fine.
 
@@ -245,8 +245,8 @@ we can't modify anything in `/etc` &mdash; it is a show-stopper for us.
 [**drone.io**](http://www.drone.io) works fine, but their support
 didn't reply to me when I asked for a Maven version update
 (they have an old version pre-installed). Besides
-that, their badge is not updated correctly in Github README.md &mdash;
-when the build is broken, the bange stays green... very annoying.
+that, their badge is not updated correctly in GitHub README.md &mdash;
+when the build is broken, the badge stays green... very annoying.
 
 {% badge /images/2014/10/circleci.png 64 http://www.circleci.com %}
 
@@ -260,7 +260,7 @@ a project via its web interface. The good thing is that it's free, but its
 quality is not high enough to recommend it.
 
 [**solanolabs.com**](http://www.solanolabs.com) looks rather immature and
-difficult to configure. They don't even support automatic Github hook
+difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively :)
 

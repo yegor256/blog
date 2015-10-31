@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Do You Do With InterruptedException?"
-date: 2015-10-17
+date: 2015-10-20
 place: Palo Alto, CA
 tags: java
 description:
@@ -23,6 +23,8 @@ simple and easy-to-understand idea. Let me try to describe and
 simplify it.
 
 <!--more-->
+
+{% picture /images/2015/10/crouching-tiger-hidden-dragon.jpg 0 Crouching Tiger, Hidden Dragon (2000) by Ang Lee %}
 
 Let's start with this code:
 

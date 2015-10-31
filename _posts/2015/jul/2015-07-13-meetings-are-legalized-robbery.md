@@ -107,7 +107,7 @@ of pull requests with comments. This is way better than meeting notes
 or even a meeting video. Anyone who joins the project later will be
 able to understand how we came to the conclusion of using PostgreSQL
 and storing monetary amounts without cents. It's all there in the Git history
-and Github tickets, forever with us.
+and GitHub tickets, forever with us.
 
 What if I need more opinions? Or if I'm still not sure the schema is good enough?
 No problem; I ask someone else to review it one more time and
@@ -227,7 +227,7 @@ industry for at least a few months.
 
 ## Meetings Burn Money
 
-This aligns closely with the previous conclustion. Meetings are among the biggest budget consumers
+This aligns closely with the previous conclusion. Meetings are among the biggest budget consumers
 of any type of activity in a project, simply because they pay
 _everybody_ who is sitting in that room or on that Skype conference while the
 result they produce is almost equal to what a single person can deliver.

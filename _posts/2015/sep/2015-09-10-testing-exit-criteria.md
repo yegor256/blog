@@ -48,7 +48,7 @@ This is why Dr. Myers is calling testing "a destructive, even sadistic, process"
 
 Second, any software has an **unlimited amount of bugs**. Dr. Myers says that
 "you cannot test a program to guarantee that it is error free" (page 10)
-and that "it is impractical, often impossible, to find all the errros in
+and that "it is impractical, often impossible, to find all the errors in
 a program" (page 8). This is also what most testers don't understand. They
 believe that there is a limited number of bugs, which they have to find
 and call it a day. There literally no limit! The amount of bugs is unlimited,
@@ -78,7 +78,7 @@ Dr. Meyers says that "since the goal of testing is to find errors,
 why not make the completion criterion the detection of some predefined
 number of errors?" (page 136). Indeed, we should predict how many bugs
 are just enough to find, in order to have a desirable level of **confidence**
-that the product is ready to be shipped. Then, ship it, conciously
+that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
 

@@ -113,8 +113,8 @@ located in the `src/main/requs` directory in a project repository.
 My job, as a system analyst, is to make changes to some of these files and
 submit a pull request for review.
 
-[Github Guidelines]({% pst 2014/apr/2014-04-15-github-guidelines %}) explains
-[how to work with Github. However, in short, I need to:
+[GitHub Guidelines]({% pst 2014/apr/2014-04-15-github-guidelines %}) explains
+[how to work with GitHub. However, in short, I need to:
 
  * Clone the repository;
  * Check out its copy to my computer;
@@ -165,7 +165,7 @@ reviewer. Generally speaking, my requests are reviewed by other system analysts.
 Therefore, I must address all comments and make sure my changes satisfy the
 reviewer.
 
-I will make extra changes to the same branch locally, and push them to Github.
+I will make extra changes to the same branch locally, and push them to GitHub.
 The pull request will be updated automatically, so I don't need to create a new
 one.
 

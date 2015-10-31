@@ -149,7 +149,7 @@ public methods that are not inherited from any interface, he is badly designed.
 
 There are two practical reasons for this. First, an object working
 without a contract is impossible to mock in a unit test. Second,
-a contractless object is impossible to extend via
+a contract-less object is impossible to extend via
 [decoration](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 ## 3. He Is Unique
@@ -417,7 +417,7 @@ If you don't use that `final` keyword, anyone (including yourself) will
 be able to extend the class and ... offend him :( So a class without `final`
 is a bad design.
 
-An abstract class is the exact oposite case &mdash; he tells us that
+An abstract class is the exact opposite case &mdash; he tells us that
 he is incomplete and we can't use him "as is". We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as `abstract` methods.

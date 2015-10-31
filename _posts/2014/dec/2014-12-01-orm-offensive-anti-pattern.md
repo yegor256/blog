@@ -192,7 +192,7 @@ the ORM engine (session factory), knows how to deal with this data and transfers
 relational database. Look at this picture; it illustrates what ORM is doing.
 
 I, being a reader of posts, have to deal with two components: 1) the ORM
-and 2) the "obtruncated" object returned to me. The behavior I'm interacting
+and 2) the "ob-truncated" object returned to me. The behavior I'm interacting
 with is supposed to be provided through a single entry point, which is an object
 in OOP. In the case of ORM, I'm getting this behavior via two entry points &mdash;
 the ORM and the "thing", which we can't even call an object.

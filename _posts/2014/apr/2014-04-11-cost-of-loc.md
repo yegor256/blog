@@ -52,14 +52,14 @@ other informal communications. All tasks were tracked in JIRA.
 The second project was an open source Java product, developed by an [extremely
 distributed](http://www.xdsd.org) team of about 15 developers. We didn't have
 any chats or any other informal communications. We discussed everything in
-Github issues. The code base was significantly smaller with only about 30k
+GitHub issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.
 
 {% picture /images/2014/04/shaolin-temple-jet-li.png 0 Shaolin Temple (1982) by Chang Hsin Yen %}
 
 ## Maturity of Development
 
-Both projects hosted their code bases on Github. Both teams were developing in
+Both projects hosted their code bases on GitHub. Both teams were developing in
 [feature branches](http://martinfowler.com/bliki/FeatureBranch.html)- even for
 small fixes.
 
@@ -75,7 +75,7 @@ duplication](http://en.wikipedia.org/wiki/Duplicate_code).
 ## Show Me the Money
 
 In both projects, my role was called that of lead architect, and I knew their
-economics and financials. Besides that, I had access to both Git repositories,
+financial details. Besides that, I had access to both Git repositories,
 so I can measure how many new lines (or changed lines) were introduced by both
 teams in, say, a three-month period.
 
@@ -113,7 +113,7 @@ $350k vs $7k, $3.98 vs &cent;13? What do you think?
 If you're curious, I'm using [hoc](https://github.com/teamed/hoc)
 to get the numbers from Git (it is explained in
 [Hits-of-Code Instead of SLoC]({% pst 2014/nov/2014-11-14-hits-of-code %})).
-You can validate the numbers for the second project here on Github:
+You can validate the numbers for the second project here on GitHub:
 [jcabi/jcabi-github](https://github.com/jcabi/jcabi-github).
 
 ## Conclusion

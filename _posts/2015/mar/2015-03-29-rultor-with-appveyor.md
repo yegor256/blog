@@ -54,10 +54,10 @@ command line tool:
 $ rultor encrypt -p yegor256/takes curl-appveyor.cfg
 {% endhighlight %}
 
-The file I creaeted was called
+The file I created was called
 [`curl-appveyor.cfg.asc`](https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc).
 I committed and pushed into [yegor256/takes](https://github.com/yegor256/takes)
-Github repository.
+GitHub repository.
 
 {% highlight bash %}
 $ git add curl-appveyor.cfg.asc

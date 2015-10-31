@@ -68,13 +68,13 @@ forever. Well, for as long as you have something in your bank account.
 
 You want your business to succeed and flourish, right? They want the same for their
 business. Your success means a product that is finished and launched to
-end users. Their success means a neverending process of writing software
+end users. Their success means a never-ending process of writing software
 for you. These two goals have very little in common. I would even say
 they contradict each other &mdash; when you succeed, they fail.
 
 Of course, they will tell you they want to finish this product for
 you and get new contracts in the future. They will say their primary
-motiviation is to make you happy and obtain a good reference. They
+motivation is to make you happy and obtain a good reference. They
 will assure you that customer satisfaction is more important than money.
 However, I'm suggesting you be strong enough to face the reality &mdash;
 it's all lies.
@@ -195,7 +195,7 @@ You call them, make plans, declare milestones, define features, set priorities,
 agree about quality, and then hang up. In a few days, you realize it was
 a total waste of time. They don't keep their promises because there is
 always something new happening. Someone is sick, some server is broken,
-some piece of software appears to be malfunctional, some code is no
+some piece of software appears to be mal-functional, some code is no
 longer working, etc. You call again, express your frustration, make
 strong accusations, restructure milestones, redefine features, reset
 priorities, and in a few days start over. Been there, done that? Sound familiar?

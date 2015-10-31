@@ -75,7 +75,7 @@ get my authentication keys, and modify my Java code:
 
 {% highlight java %}
 Sttc sttc = new RtSttc(
-  new URN("urn:github:526301"), // my Github ID
+  new URN("urn:github:526301"), // my GitHub ID
   "9FF3-4320-73FB-EEAC" // my secret key!
 );
 Locks locks = sttc.locks();
@@ -118,4 +118,4 @@ I should not forget to add this dependency to my `pom.xml`:
 Of course, you can do the same; the service is absolutely free of charge.
 And you can use any other languages, not just Java. BTW, if interested,
 contribute with your own SDK in your preferred language; I'll add it to
-the [Github collection](https://github.com/sttc).
+the [GitHub collection](https://github.com/sttc).

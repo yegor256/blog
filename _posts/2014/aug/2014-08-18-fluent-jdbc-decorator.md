@@ -29,7 +29,7 @@ String name = new JdbcSession(source)
 
 Simple and straight forward, isn't it? The library
 simplifies interaction with relational databases
-via JDBC, avoiding the need to use ORMs.
+via JDBC, avoiding the need to use ORM-s.
 
 <!--more-->
 
@@ -93,5 +93,5 @@ new JdbcSession(source)
 {% endhighlight %}
 
 In this example we're executing three SQL statements one by one, leaving
-connection (and transaction) open unti `commit()` is called.
+connection (and transaction) open until `commit()` is called.
 

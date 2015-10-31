@@ -91,54 +91,52 @@ will cost much more than a mistake made later.
 
 Thinking is the first and the most important phase.
 
-First, we give a name to the project and create a [Github](https://github.com) repository. We
-try to keep all our projects (both open source and commercial) in Github.
+First, we give a name to the project and create a [GitHub](https://github.com) repository. We
+try to keep all our projects (both open source and commercial) in GitHub.
 Mostly because the platform is very popular, very powerful, and really cheap
 ([$7/mo](https://github.com/pricing) for a set of 5 private projects).
-We also keep all communication in the Github issue tracker.
+We also keep all communication in the GitHub issue tracker.
 
 Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
-this is done right inside the source code, but sometimes in the Github wiki. What's important
+this is done right inside the source code, but sometimes in the GitHub `README.md` file. What's important
 is that the document should be under version control. We will modify it
-during the course of the project, very intensively. The SRS should briefly
+during the course of the project, very intensively. The `README.md` should
+[briefly]({% pst 2014/oct/2014-10-20-how-we-write-product-vision %})
 identify main "actors" of the system and define the product scope.
 
 Even though it is only half a page, the creation of this initial SRS document
 is the most important and the most expensive task in the entire project.
 We pay a lot of attention to this step. Usually this document is written
-by myself in direct communication with the project sponsor. We can't afford
+by one of our system analysts in direct communication with the project sponsor. We can't afford
 a mistake at this step.
 
-Then, we invite a few system analysts to the project. These guys
-are responsible for turning our initial SRS into a more complete and detailed
+Then, we invite a few new system analysts to the project. These guys
+are responsible for turning our initial `README` into a more complete and detailed
 specification. They start by asking questions, submitting them one by one
-as Github issues. Every question is addressed to the product owner. Using
-his/her answers, system analysts modify the SRS document.
-This article explains how [Requs](http://www.requs.org) helps us in this process:
-[Incremental Requirements With Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
+as GitHub issues. Every question is addressed to the product owner. Using
+his/her answers, system analysts modify the `README` document.
 
 At the end of the Thinking phase we estimate the size of the project,
 in lines of code. Using lines of code, we can roughly
 [estimate a budget](http://www.teamed.io/calculator.html).
 
-I stay personally involved in the project during
-the entire Thinking phase.
-
 ## Building
 
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
-This is a one-man job for an architect. Every project we work on
-has an architect who is [personally responsible]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
-for the quality and technical decisions. I try to play this role
-in most projects.
+This is a one-man job for
+[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+Every project we work on
+has an architect who is [personally responsible]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
+for the quality and technical decisions. We have a few brilliant engineers
+for this role.
 
-The Building phase is rather straight forward. I have to implement the
-solution according to the SRS, in a few working days. No matter
-how big the idea and how massive the planning development, I
-still have to create (build from scratch!) the product in, say, three days.
+The Building phase is rather straight forward. The architect has to implement the
+solution according to the `README`, in a few working days. No matter
+how big the idea and how massive the planning development, the architect
+still has to create (build from scratch!) the product in, say, three days.
 
-Besides building the software itself, I have to configure all
+Besides building the software itself, the architect has to configure all
 basic DevOps processes, including:
 1) automated testing and quality control,
 2) deploying and releasing pipelines,
@@ -150,6 +148,9 @@ to its destination and available for testers. Technical
 [quality requirements]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 are also defined at this phase.
 
+More about the Building phase here:
+[Nine Steps to Start a Software Project]({% pst 2015/aug/2015-08-04-nine-steps-start-software-project %})
+
 ## Fixing
 
 {% badge /images/2014/10/lifecycle-fixing.png 250 %}
@@ -157,10 +158,11 @@ are also defined at this phase.
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
 have proven their quality. Very often we invite new people,
-finding them through StackOverflow, Github, oDesk, and other sources.
-An average team size of an average project is 10-20 programmers.
+finding them through StackOverflow, GitHub, Upwork, and other sources.
+An average team size of an average project is 15-25 programmers.
 
-At this phase, we understand any inconsistency as a bug. If something is not clear
+At this phase, we understand [any inconsistency]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
+as a bug. If something is not clear
 in the documentation, or if something can be refactored for better
 readability, or if a function can be improved for higher performance &mdash;
 it is a bug to us.
@@ -174,17 +176,17 @@ grows in front of our very eyes, because after every bug fix
 we re-deploy the entire product to the production platform.
 
 Every bug is reported, classified, discussed, and fixed in its
-own Github ticket and its own Git branch. We never allow anyone
+own GitHub ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch &mdash; all changes must pass through
 our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 and be merged into `master` by [rultor.com](http://www.rultor.com),
 our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner
-and between programmers happen only through Github issues. We
+and between programmers happen only through GitHub issues. We
 [never use any chats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}),
 Skype, emails or conferencing software. We communicate
-only through tickets and comments in Github.
+only through tickets and comments in GitHub.
 
 ## Using
 

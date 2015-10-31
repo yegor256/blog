@@ -64,7 +64,7 @@ Cookie: user=me@yegor256.com
 
 The server gets my email from the `Cookie`
 header and understands that it's me again! No need to ask for the
-password once more. The server trusts the informatiom from the cookie.
+password once more. The server trusts the information from the cookie.
 That's it. That's what cookie-based authentication is all about.
 
 ## Wait ... What About Security?
@@ -174,7 +174,7 @@ valid [`Identity`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Ide
 or `Identity.ANONYMOUS`.
 
 Then, when the response goes back to the browser, `TkAuth` asks `pass`
-to encode the indentity back into a string and adds `Set-Cookie` to the response.
+to encode the identity back into a string and adds `Set-Cookie` to the response.
 
 [`PsCookie`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html)
 uses an instance of

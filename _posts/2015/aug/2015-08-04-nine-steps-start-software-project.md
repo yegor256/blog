@@ -204,7 +204,7 @@ is to document what I see and move on. Remember, I have just a week of time.
 
 ## Risks
 
-Now I list all potential problems I forsee and estimate
+Now I list all potential problems I foresee and estimate
 their probability and impact. Let me show you an example first:
 
 {% highlight text %}
@@ -258,7 +258,7 @@ In the most primitive approach, a static analysis will check the formatting
 of your source code and fail the build when that formatting is broken. However,
 in a more advanced variant, static analysis will catch many important bugs.
 
-It is called "static" becuase it doesn't require the software to be running.
+It is called "static" because it doesn't require the software to be running.
 To the contrary, unit tests validate software quality in runtime
 by running the app.
 

@@ -5,7 +5,9 @@ date: 2015-08-11
 tags: mgmt outsourcing
 place: Kiev, Ukraine
 description:
-  ...
+  One of important success factors in an outsourcing
+  software project is customer readiness to manage
+  the project correctly.
 keywords:
   - outsourcing client
   - outsourcing tricks

@@ -90,7 +90,7 @@ really care where the text is coming from. It _delegates_ text reading to
 the encapsulated instance of `Text`. How this encapsulated object will
 deal with the text and where it will get it doesn't concern `PrintableText`.
 
-Let's continue and try to create an implemetation of `Text`
+Let's continue and try to create an implementation of `Text`
 that will capitalize all letters in the text:
 
 {% highlight java %}

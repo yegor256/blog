@@ -3,6 +3,7 @@ layout: post
 title: "Vertical and Horizontal Decorating"
 date: 2015-10-01
 place: Moscow, Russia
+categories: jcg
 tags: java oop
 description: |
   Decorators are used to extend object functionality

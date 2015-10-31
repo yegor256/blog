@@ -91,7 +91,7 @@ organize the exchange of information between team members, use morning stand-ups
 as a replacement for a correct communication model. These morning meetings
 give the impression that the manager is working hard and well deserves his
 overblown salary. To the contrary, a good manager would never have any
-regular status update meetings, becuase he knows how to use effective
+regular status update meetings, because he knows how to use effective
 communication instruments, like issue tracking tools, emails, code reviews,
 decision-making meetings, pair programming, etc.
 
@@ -181,7 +181,7 @@ on the neck of the team.
 
 **A Bad Manager De-Motivates by Public Embarassment**.
 He doesn't know how to organize a proper motivational system within the team;
-that's why he relies on a natural fear of public embarassment. It's only
+that's why he relies on a natural fear of public embarrassment. It's only
 logical that no one would feel comfortable saying, "_I forgot it_"
 in front of everybody. So the daily stand-up meeting is where he puts
 everybody in a line and asks, "_What did you do yesterday?_" This

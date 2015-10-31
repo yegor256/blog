@@ -147,8 +147,8 @@ class will convert Xembly directives into an XML document.
 
 The beauty of this solution is that the internals of the object are
 not exposed via getters and the object is fully in charge of the XML
-marshalling process. In addition, the compexity of these directives
+marshalling process. In addition, the complexity of these directives
 may be very high &mdash; much higher than the rather cumbersome annotations of JAXB.
 
 Xembly is an open-source project, so feel free to submit your questions
-or corrections to [Github](https://github.com/yegor256/xembly).
+or corrections to [GitHub](https://github.com/yegor256/xembly).

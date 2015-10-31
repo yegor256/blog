@@ -4,7 +4,7 @@ title: "RESTful API and a Web Site in the Same URL"
 date: 2014-09-09
 tags: restful xslt xml
 description: |
-  The way RESTful APIs are designed perfectly
+  The way RESTful API-s are designed perfectly
   fits into the concept of web browsing, with a few
   minimal alterations
 keywords:
@@ -16,7 +16,7 @@ keywords:
 categories: jcg
 ---
 
-Look at Github RESTful API, for example. To get information
+Look at GitHub RESTful API, for example. To get information
 about a repository you should make a GET request to
 [api.github.com/repos/yegor256/rultor](https://api.github.com/repos/yegor256/rultor).
 In response, you will get a JSON document with all the details of the
@@ -50,7 +50,7 @@ Actually, it is much more powerful.
 Using this approach we literally remove the entire rendering layer
 ("View" in the MVC paradigm) from the server and move it to the browser.
 
-If we can make it possible, the web server will exponse just a RESTful API,
+If we can make it possible, the web server will expose just a RESTful API,
 and every response page will have an XSL stylesheet attached. What do
 we gain? We'll discuss later, at the end of the post. Now, let's see
 what problems we will face:
@@ -66,7 +66,7 @@ what problems we will face:
     support XSLT at all.
 
  3. Browsers support only `GET` and `POST` HTTP methods, while
-    traditional RESTful APIs exploit also, at least, `PUT` and `DELETE`.
+    traditional RESTful API-s exploit also, at least, `PUT` and `DELETE`.
 
 The first problem is not really a problem. It's just a matter
 of taste (and level of education). The last two problems are much
@@ -96,9 +96,9 @@ but in pure data in XML format.
 ## POST Instead of PUT
 
 There is no workaround for this. Browsers don't know anything about `PUT` or `DELETE`.
-So, we should also forget them in our RESTful APIs. We should design
+So, we should also forget them in our RESTful API-s. We should design
 our API using only two methods: `GET` and `POST`. Is this even possible?
-Yes. Why not? It won't look as fancy as with all six methods (some APIs
+Yes. Why not? It won't look as fancy as with all six methods (some API-s
 also use `OPTIONS` and `HEAD`), but it will work.
 
 ## What Do We Gain?
@@ -121,4 +121,4 @@ These small web apps work exactly as explained above:
 [s3auth.com](http://www.s3auth.com),
 [stateful.co](http://www.stateful.co),
 [bibrarian.com](http://www.bibrarian.com).
-They are all open source, and you can see their source code in Github.
+They are all open source, and you can see their source code in GitHub.

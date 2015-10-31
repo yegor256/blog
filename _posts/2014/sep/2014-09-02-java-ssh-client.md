@@ -130,5 +130,5 @@ in your Maven project
 </dependency>
 {% endhighlight %}
 
-The project is in [Github](https://github.com/jcabi/jcabi-ssh).
+The project is in [GitHub](https://github.com/jcabi/jcabi-ssh).
 If you have any problems, just submit an issue. I'll try to help.

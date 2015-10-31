@@ -18,7 +18,7 @@ keywords:
 
 When I start to repeat myself in unit test methods by creating
 the same objects and preparing the data to run the test,
-I feel disapointed in my design. Long test methods with a lot of code
+I feel disappointed in my design. Long test methods with a lot of code
 duplication just don't look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
 initialized through `@Before` and `@BeforeClass`, and 2) private static

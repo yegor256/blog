@@ -35,7 +35,7 @@ I'm a founder and a lead architect of
 and
 [stateful.co](http://www.stateful.co). I'm using
 IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
-I like to read, here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
+Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering.
 I'm an Oracle Certified Master, Java EE 6 Enterprise Architect
 ([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).

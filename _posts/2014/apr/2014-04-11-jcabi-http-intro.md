@@ -86,7 +86,9 @@ Use of interfaces makes the library highly extendable. For example, we have
 [`JdkRequest`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html)
 and
 [`ApacheRequest`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html),
-which make actual HTTP calls to the server using two completely different technologies: (JDK `HttpURLConnection` and Apache Http Client, respectively). In the future, it will be possible to introduce new implementations without breaking existing code.
+which make actual HTTP calls to the server using two completely
+different technologies: (JDK `HttpURLConnection` and Apache HTTP Client, respectively).
+In the future, it will be possible to introduce new implementations without breaking existing code.
 
 Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:
 

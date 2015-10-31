@@ -198,7 +198,7 @@ makes much less sense. This is how our code looks from an object point of view:
 - Are you NULL?
 {% endhighlight %}
 
-The last question in this conversation sounds weird, doesn’t it?
+The last question in this conversation sounds weird, doesn't it?
 
 Instead, if they hang up the phone after our request to speak
 to Jeffrey, that causes a problem for us (Exception).
@@ -224,7 +224,7 @@ letting it break when necessary.
 Make your methods extremely demanding as to the data
 they manipulate. Let them complain by throwing exceptions,
 if the provided data provided is not sufficient or simply
-doesn’t fit with the main usage scenario of the method.
+doesn't fit with the main usage scenario of the method.
 
 Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:
@@ -259,7 +259,7 @@ In general, it is [highly recommended]({% pst 2014/jun/2014-06-09-objects-should
 to design objects
 with immutability in mind. This means that an object gets
 all necessary knowledge during its instantiating and never
-changes its state during the entire lifecycle.
+changes its state during the entire life-cycle.
 
 Very often, `NULL` values are used in [lazy loading](http://en.wikipedia.org/wiki/Lazy_loading),
 to make objects incomplete and mutable. For example:

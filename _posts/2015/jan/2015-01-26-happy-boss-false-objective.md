@@ -50,7 +50,7 @@ The project is the source of our checks. Not the CFO.
 The CFO is a stakeholder, like everyone else. The project gives him more
 power than others because it's necessary for the whole mechanism to
 work properly. Every project member has his or her own **roles and responsibilities**.
-I write code; the CFO writes checks. I eat at McDonalds; he drives
+I write code; the CFO writes checks. I eat at McDonald's; he drives
 a Jaguar. We have different needs, and we both agreed that the project
 would satisfy them. Otherwise we wouldn't be here, right?
 

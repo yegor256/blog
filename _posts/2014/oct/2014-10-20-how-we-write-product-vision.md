@@ -35,7 +35,7 @@ stakeholders and needs, features, and quality requirements.
 Product Statement is a one-paragraph declaration of intent, explaining
 to an absolute stranger what this product is about and what it is for.
 It is very similar to an [elevator pitch](https://en.wikipedia.org/wiki/Elevator_pitch).
-The Statement must answer these questions, preferrably in this specific order:
+The Statement must answer these questions, preferably in this specific order:
 
  1. Who is the customer?
  2. What does she want?
@@ -225,3 +225,6 @@ But don't cut corners. Don't allow your client (or anyone else) to force
 you to bloat the Product Vision. The document has to be very short and explicit.
 
 No lyrics, only statements.
+
+PS. On top of all this we place a
+[Glossary]({% pst 2015/mar/2015-03-16-technical-glossaries %}).

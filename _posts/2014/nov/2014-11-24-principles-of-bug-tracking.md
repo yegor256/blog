@@ -19,7 +19,7 @@ A team working remotely requires much stronger discipline than
 a co-located crew sitting in the same office. First of all, I mean discipline of
 communications. At [teamed.io](http://www.teamed.io), we have developed software
 remotely for the last five years. We manage tasks strictly through
-ticketing systems (like Github, JIRA, Trac, Basecamp, etc.) and
+ticketing systems (like GitHub, JIRA, Trac, Basecamp, etc.) and
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any informal communications, like Skype, HipChat, emails, or phone calls.
 Every ticket for us is an isolated task with its own life cycle,
@@ -89,7 +89,7 @@ workarounds &mdash; they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
 to close the ticket, ask its reporter to close it. Explicitly ask for that;
-don't dance arround with "looks like this solution may be accepted, if you don't mind".
+don't dance around with "looks like this solution may be accepted, if you don't mind".
 Be explicit in your intention to close the ticket and move on. Try this:
 "@jeff, please close the ticket if you don't have any further questions."
 
@@ -138,9 +138,9 @@ All we need in a ticket is a solution(s).
 If you think the ticket should be closed because the introduced solution
 is good enough, address your comment to the ticket reporter. And start
 it with "@jeff, I think the solution you've got already is good enough, because ..."
-This way, you will help the assignee to close the ticket and move on.
+This way, you will help the assigned to close the ticket and move on.
 
-If you think the solution is wrong, address your comment to the assignee
+If you think the solution is wrong, address your comment to the assigned
 of the ticket, starting with "@jeff, I believe your solution is not good enough
 because ..." This way, you will help the ticket reporter keep the ticket
 open until a proper solution comes up.

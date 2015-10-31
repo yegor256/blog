@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is the Difference Between Ridley Scott and Joseph Goebbels?"
-date: 2015-1014
+date: 2015-10-16
 place: Palo Alto, CA
 tags: mgmt
 description:
@@ -20,7 +20,7 @@ I saw [The Martian](http://www.imdb.com/title/tt3659388/)
 this weekend, and it triggered a few thoughts. Of course, I didn't like
 the movie as a piece of art. It is total garbage, but this is not my point.
 There is something bigger to discuss, aside from the bad acting, primitive
-storyline, politically correct but absolutely unrealistic casting,
+story-line, politically correct but absolutely unrealistic casting,
 and tons of logical inconsistencies. It's Hollywood; what
 should I expect, right? Not just that. I think the problem is bigger.
 
@@ -41,13 +41,13 @@ It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
 But isn't it quite similar to what I've just seen a few days ago,
 produced and directed in 2015 by [Ridley Scott](http://www.imdb.com/name/nm0000631/)?
 
-In 1949, the goal of Soviet propaganda was to convience people that
+In 1949, the goal of Soviet propaganda was to convince people that
 their personal situations with a lack of food and lack of future were
 just their local, personal **exceptions** to a more general rule. And that
 rule was that the country was full of food. The country was governed by
 the principles of socialism, and they were working perfectly.
 
-In 2015, the goal of Hollywood propaganda is to convience us that the
+In 2015, the goal of Hollywood propaganda is to convince us that the
 organizational and motivational problems in our offices are just local exceptions to
 the general rule. The rule is simple: project management is not important
 if we're all good friends.
@@ -85,7 +85,7 @@ It is about [making sure]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %
 those who've made mistakes are **punished** while those who've
 done everything right are **rewarded**.
 
-A team of six. In a multimillion-dollar spaceship.
+A team of six. In a multi-million-dollar spaceship.
 Flying to another planet to save one person.
 Against explicit instructions from upper management.
 They come back as national heroes.
@@ -93,7 +93,7 @@ Are you serious?
 
 Have you tried to deploy a new feature on a production server against
 the direct will of your boss? Try it. No spaceships, no Mars. Just
-a piece of code and a simple server. Then try to convience your boss
+a piece of code and a simple server. Then try to convince your boss
 that you're a hero.
 
 I'm sure you get the point.

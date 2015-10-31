@@ -20,7 +20,7 @@ keywords:
 
 A year ago, I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 how effectively data and its presentation can be separated
-in a web applicatoin with the help of XML and XSL. In a few words,
+in a web application with the help of XML and XSL. In a few words,
 instead of using [templating](https://en.wikipedia.org/wiki/Comparison_of_web_template_engines)
 (like JSP, Velocity, FreeMarker, etc.) and injection of data into HTML,
 we compose them in the form of an XML document and then let
@@ -138,7 +138,7 @@ Excuse me for using string concatenation, which is a
 it's merely for the simplicity of the example.
 
 As you see, I also added an XML stylesheet processing instruction to
-the XML. RsXSLT will understand it and try to find the `/xsl/index.xsl`
+the XML. `RsXSLT` will understand it and try to find the `/xsl/index.xsl`
 resource on classpath. You see the content of that file above.
 
 That's it.

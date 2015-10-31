@@ -107,7 +107,7 @@ openfurther/further-open-core (Java)
 Some doc
 Last 3 releases were published on GH
 -
-No tickets on Github (located in Jira)
+No tickets on GitHub (located in Jira)
 No test coverage check
 No quality control
 Spring singletones, nulls, setters/getters ...
@@ -210,8 +210,8 @@ elBukkit/MagicPlugin (Java)
 Some doc
 -
 No code quality control
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No test coverage control
 Class length over 4k lines (MagicController)
 
@@ -221,8 +221,8 @@ trade-manager/trade-manager  (Java)
 Travis CI
 -
 Pure doc
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 Not a maven project (Ant)
 ORM usage
 Public static methods, Mutable ...
@@ -242,8 +242,8 @@ Mutable classes
 tzaeschke/zoodb  (Java)
 +
 Doc
-Github issue tracking
-Github releases
+GitHub issue tracking
+GitHub releases
 -
 No code quality control
 No test coverage control
@@ -255,7 +255,7 @@ Lot's of *ers
 
 tzaeschke/critbit (Java)
 +
-Github releases
+GitHub releases
 -
 No code quality control
 No test coverage control
@@ -265,8 +265,8 @@ Public static
 
 praveendath92/MDroid  (Java)
 +
-Github issue tracking
-Github releases
+GitHub issue tracking
+GitHub releases
 -
 No code quality control
 No test coverage control
@@ -279,8 +279,8 @@ Ugly code :(
 DeqingSun/ESP8266-Dash-Button (Android)
 +
 -
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No code quality control
 No test coverage control
 No CI
@@ -292,8 +292,8 @@ Ugly code :(
 javamonkey/beetl2.0  (Java)
 +
 Travis CI
-Github issue tracking
-Github releases
+GitHub issue tracking
+GitHub releases
 -
 No Test coverage control
 No Quality control
@@ -305,8 +305,8 @@ Ugly code with numerous violations of encapsulation
 +
 -
 No code quality control
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No test coverage control
 Nothing to talk about :(
 
@@ -314,8 +314,8 @@ Nothing to talk about :(
 xionghuiCoder/clearpool (Java)
 -
 No code quality control
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No test coverage control
 Nothing to talk about :(
 
@@ -324,8 +324,8 @@ android-cjj/ComicReader (Android)
 +
 -
 No code quality control
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No test coverage control
 Utils, God classes, Nulls ... :(
 
@@ -333,8 +333,8 @@ Utils, God classes, Nulls ... :(
 Dreampie/icedog (Java)
 -
 No code quality control
-No Github issue tracking
-No Github releases
+No GitHub issue tracking
+No GitHub releases
 No test coverage control
 Anemic model, ORM, ugly code ...
 Nothing to talk about :(
@@ -707,7 +707,7 @@ for building but no instructions on how to build. Thousands of commits present
 but only one issue in issue tracker. No static analysis - reviewer points out
 all the styling flaws in PRs. No documentation to speak of other than a
 marketing-speak description of the project. Unit tests are present, but no code
-coverage reports. Github releases are regular although descriptions are vague.
+coverage reports. GitHub releases are regular although descriptions are vague.
 
 
 bonigarcia/dualsub 
@@ -723,7 +723,7 @@ coverage report; and no static analysis either.
 blundell/WoodyFaceDetection 
 Very poor quality. This project is relatively small. There doesn't appear to be
 any significant anti-patterns (no util classes, even!). However, it uses no
-issue tracking and no PRs. There are a couple of Github releases with a
+issue tracking and no PRs. There are a couple of GitHub releases with a
 changelog. Build appears to be handled with Gradle but no clear instructions on
 how to build. Documentation is also lacking.
 
@@ -742,7 +742,7 @@ Poor quality. This is another small library by @blundell. Similarly to the other
 projects, there are no major anti-patterns, which is about the only positive
 thing with respect to the deadly sins. Documentation is a bit better than the
 other two but it still only shows two usage examples. There's instruction on how
-to include it but not now to build. No releases in Github, no issue tracking, no
+to include it but not now to build. No releases in GitHub, no issue tracking, no
 unit tests, and no static analysis.
 
 
@@ -926,7 +926,7 @@ God classes
 
 zhaoqp2010/andbase (Android)
 +
-Github issue tracking
+GitHub issue tracking
 -
 No releases
 No test coverage control
@@ -972,8 +972,8 @@ kaitoy/pcap4j  (Java)  - It's more or less interesting, as at least some classes
 Some doc
 Travis CI + Appveyor
 Code coverage (cobertura + coveralls-maven-plugin)
-Github releases
-Github issue tracking (not too many issues though)
+GitHub releases
+GitHub issue tracking (not too many issues though)
 Change tracking (CHANGES.md)
 Build new Docker image on
 Many "true" objects
@@ -992,8 +992,8 @@ rgladwell/m2e-android (Java) - Despite the lack of OOP approach the code looks m
 Travis CI
 Good doc
 Some quality control (Findbugs)
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 Some decorators
 -
 No test coverage control
@@ -1081,7 +1081,7 @@ spiffyui/spiffyui  (Java + JS)
 +
 CloudBee CI (instance is hibernated)
 jslint4java + some checkstyle (code looks pretty)
-Github releases
+GitHub releases
 -
 No issue tracking
 Util driven develipment
@@ -1097,8 +1097,8 @@ TravisCI
 CircleCI
 Rultor !!! WOW
 Code coverage (by coverage 4.0)
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 Automatic builds for Linux, Windows and Mac !
 Good doc
 
@@ -1108,8 +1108,8 @@ I don't understand much in Python but think this repo worth your attention!
 mgarin/weblaf (Java)
 +
 Good doc
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 -
 No test coverage control
 No quality control
@@ -1121,11 +1121,11 @@ Huge God classes (PluginManager.java, ProxyManager.java ...)
 conductor-framework/conductor (Java)
 +
 Good doc
-Github releases
+GitHub releases
 -
 No test coverage control
 No quality control
-No Github issue tracking
+No GitHub issue tracking
 One God class (Locomotive.java)
 Public fields
 
@@ -1134,8 +1134,8 @@ ctron/package-drone (Java)
 +
 Good doc
 TravisCI
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 Packaged inside Docker container
 -
 Get/Set
@@ -1149,7 +1149,7 @@ markkerzner/FreeEed (Java + html)
 +
 Findbugs, PMD, dependency analyzer
 Interesting - taglist-maven-plugin, clirr-maven-plugin
-Github issue tracking
+GitHub issue tracking
 -
 No test coverage control
 No public CI
@@ -1164,8 +1164,8 @@ morris/lessql (PHP)
 TravisCI
 Test coverage control (codeclimate.com)
 Good doc
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 -
 No quality control
 Several God classes (Database.php, Result.php, Row.php) and that's it :(
@@ -1173,8 +1173,8 @@ Several God classes (Database.php, Result.php, Row.php) and that's it :(
 
 jitlogic/zorka  (Java)
 +
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 -
 No test coverage control
 No quality control
@@ -1188,8 +1188,8 @@ sdorra/angular-dashboard-framework  (JS)
 +
 TravisCI
 jshint
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 -
 No test coverage control
 AngularJS - more functional than OOP style
@@ -1198,7 +1198,7 @@ AngularJS - more functional than OOP style
 iluwatar/java-design-patterns (Java)
 +
 TravisCI
-Github issue tracking
+GitHub issue tracking
 Test coverage control with Jacoco
 Checkstyle
 -
@@ -1208,7 +1208,7 @@ Library of design pattern examples, code is clean but I'm not sure that's enough
 
 chesterbr/ruby2600  (Ruby)
 +
-Github releases
+GitHub releases
 -
 No test coverage control
 No quality control
@@ -1222,8 +1222,8 @@ testinfected/molecule (Java)  !!! - Worth to be considered, most of object are t
 Good doc
 Travis CI
 Test coverage control with jacoco
-Github releases
-Github issue tracking
+GitHub releases
+GitHub issue tracking
 -
 No quality control
 Mutable
@@ -1267,8 +1267,8 @@ NO BUILDED AT ALL
 
 Ph1b/MaterialAudiobookPlayer  (Android)
 +
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 No test coverage control
 No quality control
@@ -1283,16 +1283,16 @@ Mutable classes
 
 SVGKit/SVGKit (Objective-C)
 +
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 SORRY, PLEASE, SEE IT BY YOURSELF
 
 
 vertigo17/Cerberus  (Java)
 +
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 NO DOC!
 No visible CI
@@ -1323,7 +1323,7 @@ jaredsburrows/AndroidGradleTemplate (Android)
 Travis CI
 Test coverage check with JaCoCo
 Interesting approach to catch DEV errors with http://errorprone.info/
-Github issue tracking
+GitHub issue tracking
 -
 No quality control
 No releases (yet)
@@ -1334,8 +1334,8 @@ Utility classes
 
 vitalidze/traccar-web (Java)
 +
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 Enterprise - ORM (hibernate), GWT, DI
 No visible CI
@@ -1377,8 +1377,8 @@ jOOQ/jOOX  (Java)
 +
 Good doc
 Travis CI
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 "Cool" God class with funny name (Impl.java). Another God class - Scanner.java
 No test coverage control
@@ -1403,8 +1403,8 @@ citiususc/hipster (Java)
 +
 Pretty doc
 Travis CI
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 Test coverage control with cobertura
 Milestones
 Mostly good decomposition
@@ -1418,8 +1418,8 @@ Code heavily use generics, hard to read, but that's because of domain specific
 
 katzer/cordova-plugin-local-notifications (Android + iOC + JS)
 +
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 -
 No test coverage control
 No code quality control
@@ -1480,8 +1480,8 @@ Travis CI
 !! Interesting tool to generate files http://yeoman.io/
 !! Interesting tool https://github.com/xvik/generator-lib-java
 Checkstyle
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 Code coverage control (jacoco)
 -
 No other code quality control
@@ -1498,8 +1498,8 @@ xvik/dropwizard-guicey  (Java)
 Good doc
 Travis CI
 Checkstyle
-Github issue tracking
-Github release management
+GitHub issue tracking
+GitHub release management
 Code coverage control (jacoco)
 -
 Mutable objects (GuiceSupportModule.java)
@@ -1510,8 +1510,8 @@ Utils, Public static (DwBundleSupport.java, OReflectionHelper.java)
 mbosecke/pebble (Java)
 +
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 -
 No test coverage control
 No code quality control
@@ -1539,7 +1539,7 @@ DAO/Service//View ARC
 elchris/easysql (PHP)
 +
 !! https://scrutinizer-ci.com/  - build, code analyze and test coverage control for PHP
-Github release management
+GitHub release management
 -
 No issue tracking
 .idea folder is commited into repo :( (as  well as build logs ...)
@@ -1586,7 +1586,7 @@ Nothing to talk about, at all.
 mifmif/Generex  (Java)
 +
 Travis CI
-Github release management
+GitHub release management
 PMD, Checkstyle, Findbugs, jdepend, javancss-maven-plugin
 Test coverage control (cobertura)
 -
@@ -1601,8 +1601,8 @@ Iterator and Iterable interfaces are placed in utils package for some reason.
 KeldOelykke/FailFast  (Java)
 +
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 Checkstyle
 -
 No other code quality control tools
@@ -1618,7 +1618,7 @@ Extension via inheritance
 
 erudika/para  (Java)
 +
-Github release management
+GitHub release management
 !! jcabi-dynamodb-maven-plugin usage, nice :)
 Checkstyle
 -
@@ -1637,8 +1637,8 @@ Mutable objects, Get/Set (AWSQueue.java)
 trautonen/coveralls-maven-plugin  (Java)
 +
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 Checsktyle, cobertura, coveralls
 -
 Mutable objects without any reason at all (JaCoCoParser.java)
@@ -1650,8 +1650,8 @@ more/less understandable. Would recomend to consider.
 
 mystilleef/eclipse4-smartsave   (Java)
 +
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 Code decomposition is OK
 -
 No test coverage control
@@ -1664,8 +1664,8 @@ Public static methods (ContentTypeContext.java, Store.java)
 expercise/expercise  (Java)
 +
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 -
 No test coverage control
 Huge set of utility classes
@@ -1680,8 +1680,8 @@ kbilsted/StatePrinter (C#)
 Nice doc
 Appveyor CI
 Test coverage with coveralls.io
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 -
 Get/Set (Configuration.cs)
 Utils (ConfigurationHelper.cs)
@@ -1693,8 +1693,8 @@ js-cookie/java-cookie   (Java)
 +
 Good doc
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 -
 No test coverage control
 No code quality control
@@ -1722,8 +1722,8 @@ mp911de/lettuce  (Java)
 +
 Good doc
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 Code coverage control with jacoco
 -
 No code quality control
@@ -1741,8 +1741,8 @@ hackiftekhar/IQKeyboardManager  (Objective-C, Swift)  - PLEASE, CHECK. Have no e
 mafagafogigante/dungeon  (Java)
 +
 Travis CI
-Github release management
-Github issue tracking
+GitHub release management
+GitHub issue tracking
 -
 No test coverage control
 No code quality control
@@ -1754,7 +1754,7 @@ Broken encapsulations (River.java etc.)
 colonB/Mixer  (PHP)
 +
 Travis CI
-Github release management
+GitHub release management
 Code coverage with coveralls
 -
 NO DOC AT ALL!

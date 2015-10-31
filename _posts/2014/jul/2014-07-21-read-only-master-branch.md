@@ -142,7 +142,7 @@ time.
 Some CI servers offer pre-flight builds feature, which means testing branches
 before they get merged into `master`. Travis, for example, has this feature and
 it is very helpful. When you make a new commit to a branch, Travis immediately
-tries to build it, and reports in Github pull request, if there are problems.
+tries to build it, and reports in GitHub pull request, if there are problems.
 
 Pay attention, pre-flight builds don't merge. They just check whether your
 individual branch is clean. After merge, it can easily break `master`. And, of
@@ -156,7 +156,7 @@ In order to start working as explained above, all you have to do is to revoke
 write permissions to `master` branch (or `/trunk`, in Subversion).
 
 Unfortunately, this is [not possible](http://stackoverflow.com/questions/10381672)
-in Github. The only solution is to work through forks and pull requests only.
+in GitHub. The only solution is to work through forks and pull requests only.
 Simply remove everybody from the list of "collaborators" and they will
 have to submit changes through pull requests.
 

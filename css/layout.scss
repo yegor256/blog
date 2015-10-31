@@ -72,6 +72,16 @@ a, a:visited {
   width: 80px;
   border-radius: 50%;
 }
+.teamed-banner {
+  @extend .unprintable;
+  @extend .desktop-only;
+  width: 100%;
+  margin-top: 2 * $em;
+  margin-bottom: 2 * $em;
+  img {
+    width: 100%;
+  }
+}
 .hot {
   @extend .unprintable;
   font-family: $code-font;

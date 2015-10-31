@@ -124,7 +124,7 @@ public class Employee {
 }
 {% endhighlight %}
 
-Now, the method is final and can't be overriden by child classes. It is
+Now, the method is final and can't be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).
 
 So, let's say we make this rule mandatory for all classes in the project.
@@ -136,7 +136,7 @@ because of:
  * **Predictability of Design** &mdash;
    I don't have to scroll through
    the entire class to make sure it doesn't have methods that can
-   be accidentally overriden. I know for sure that this can't happen
+   be accidentally overridden. I know for sure that this can't happen
    in this project. In other words, I know what to expect.
 
  * **Less Hidden Tricks** &mdash;

@@ -31,11 +31,10 @@ binary objects (aka "files"). To use it, you create a "bucket" there with a
 unique name and upload your objects.
 
 Afterwards, AWS guarantees your object will be available for download through
-their [RESTful
-API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
+their [RESTful API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).
 
-A few years ago, AWS introduced a S3 feature called [static website
-hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
+A few years ago, AWS introduced a S3 feature called
+[static website hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 
 With static website hosting, you simply turn on the feature and all objects in
 your bucket become available through public HTTP. This is an awesome feature for
@@ -61,8 +60,8 @@ few people had access to the content using their Web browsers.
 
 ## HTTP Basic Authentication
 
-The HTTP protocol offers a nice ["basic access
-authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
+The HTTP protocol offers a nice
+["basic access authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
 feature that doesn't require any extra site pages.
 
 When an HTTP request arrives at the server, it doesn't deliver the content but
@@ -91,7 +90,7 @@ This time the server has authentication information and can make a decision
 whether this user is authenticated (his password matches the server's records)
 and authorized (he has permission to access the request webpage).
 
-## s3auth.com
+## `s3auth.com`
 
 Since Amazon doesn't provide this feature, I decided to create a simple web
 service, [s3auth.com](http://www.s3auth.com), which stays in front of my Amazon
@@ -104,9 +103,9 @@ at my server, connect to Amazon S3, retrieve my objects and deliver them back in
 HTTP responses.
 
 The server implements authentication and authorization using a special file
-`.htpasswd` in the root of my bucket. The format of the ".htpasswd" file is
-identical to the one used by [Apache HTTP
-Server](http://httpd.apache.org/docs/2.2/programs/htpasswd.html) &mdash; one user
+`.htpasswd` in the root of my bucket. The format of the `.htpasswd` file is
+identical to the one used by
+[Apache HTTP Server](http://httpd.apache.org/docs/2.2/programs/htpasswd.html) &mdash; one user
 per line. Every line has the name of a user and a hash version of his password.
 
 ## Implementation
@@ -114,11 +113,11 @@ per line. Every line has the name of a user and a hash version of his password.
 I made this software open source mostly to guarantee to my users that the server
 doesn't store their private data anywhere, but rather acts only as a
 pass-through service. As a result, the software is on
-[Github](https://github.com/yegor256/s3auth).
+[GitHub](https://github.com/yegor256/s3auth).
 
 For the sake of privacy and convenience, I use only OAuth2 for user accounts.
 This means that I don't know who my users are. I don't possess their names or
-emails, but only their account numbers in Facebook, Google Plus or Github. Of
+emails, but only their account numbers in Facebook, Google Plus or GitHub. Of
 course, I can find their names using these numbers, but this information is
 public anyway.
 
@@ -133,7 +132,7 @@ Besides authentication and authorization, the
 just like Apache HTTP Server. If you have a collection of objects in your bucket
 &mdash; but the `index.html` file is missing &mdash; Amazon S3 delivers a "page
 not found" result. Conversely, my server displays a list of objects in the
-bucket, when no "index.html" is present, and makes it possible to navigate up or
+bucket, when no `index.html` is present, and makes it possible to navigate up or
 down one folder.
 
 When your bucket has the versioning feature turned on, you are able to list all

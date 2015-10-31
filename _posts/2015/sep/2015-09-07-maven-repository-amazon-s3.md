@@ -141,7 +141,7 @@ Maven from the command line:
 $ mvn clean deploy
 {% endhighlight %}
 
-## Configure s3auth.com
+## Configure `s3auth.com`
 
 Now you want to see these artifacts in your browser, in a secure mode, by
 providing secure credentials. I recommend you use

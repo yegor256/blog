@@ -23,7 +23,7 @@ categories: jcg
 When I release a new version of [jcabi-aspects](http://aspects.jcabi.com),
 a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
-how it all happened, in [Github issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
+how it all happened, in [GitHub issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
 
 {% figure /images/2014/08/github-ticket-80.png 600 %}
 
@@ -36,21 +36,21 @@ takes just a few seconds of your time.
 
 <!--more-->
 
-By the way, I assume that you're hosting your project in Github. If not,
-this entire tutorial won't work. If you are still not in Github, I would
+By the way, I assume that you're hosting your project in GitHub. If not,
+this entire tutorial won't work. If you are still not in GitHub, I would
 strongly recommend moving there.
 
 ## Prepare Your POM
 
 Make sure your `pom.xml` contains all elements required by Sonatype,
 explained in [Central Sync Requirements](http://central.sonatype.org/pages/requirements.html).
-We will deploy to Sonatype, and they will syncronize all JAR (and not only)
+We will deploy to Sonatype, and they will synchronize all JAR (and not only)
 artifacts to Maven Central.
 
 ## Register a Project With Sonatype
 
 Create an account in [Sonatype JIRA](https://issues.sonatype.org/)
-and raise a ticket, asking to approve your groupId. This
+and raise a ticket, asking to approve your `groupId`. This
 [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html)
 explains this step in more detail.
 
@@ -103,7 +103,7 @@ $ rultor encrypt -p me/test secring.gpg
 $ rultor encrypt -p me/test settings.xml
 {% endhighlight %}
 
-Instead of `me/test` you should use the name of your Github project.
+Instead of `me/test` you should use the name of your GitHub project.
 
 You will get three new files: `pubring.gpg.asc`, `secring.gpg.asc`
 and `settings.xml.asc`. Add them to the root directory of your project,
@@ -263,7 +263,7 @@ Otherwise, add these four plugins to your `pom.xml`:
 </project>
 {% endhighlight %}
 
-## Create Rultor Config
+## Create Rultor Configuration
 
 Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
@@ -289,7 +289,7 @@ You can compare your file with live Rultor
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
-Github issue tracker, and post something like that into it
+GitHub issue tracker, and post something like that into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}
@@ -306,10 +306,10 @@ submit a ticket to
 I will try to help you.
 
 Yeah, forgot to mention, Rultor is also doing two important things. First,
-it creates a Github release with a proper description. Second, it
+it creates a GitHub release with a proper description. Second, it
 posts a tweet about the release, which you can retweet, to make
 an announcement to your followers. Both features are very convenient
 for me. For example:
 
 <blockquote class="twitter-tweet" lang="en"><p>DynamoDB Local Maven Plugin, 0.7.1 released <a href="https://t.co/C3KULouuKS">https://t.co/C3KULouuKS</a></p>&mdash; rultor.com (@rultors) <a href="https://twitter.com/rultors/statuses/501617747269517312">August 19, 2014</a></blockquote>
-<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async='' src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>

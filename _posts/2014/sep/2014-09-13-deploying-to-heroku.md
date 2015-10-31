@@ -24,9 +24,9 @@ and [MavenCentral](http://www.yegor256.com/2014/08/19/how-to-release-to-maven-ce
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
-all I do is create one message in a Github ticket. I just say
+all I do is create one message in a GitHub ticket. I just say
 `@rultor release 0.1.4` and version 0.1.4 gets deployed
-to Heroku. See Github ticket [#5](https://github.com/aintshy/hub/issues/5).
+to Heroku. See GitHub ticket [#5](https://github.com/aintshy/hub/issues/5).
 
 You can do the same, with the help of [Rultor.com](http://www.rultor.com),
 a free hosted DevOps assistant.
@@ -37,12 +37,12 @@ a free hosted DevOps assistant.
 
 Create a new project at [Heroku.com](http://www.heroku.com).
 
-Then install their [command line toolbelt](https://toolbelt.heroku.com/).
+Then install their [command line tool-belt](https://toolbelt.heroku.com/).
 
 ## Authenticate at Heroku
 
 You should authenticate your public SSH key at Heroku, using
-their command line toolbelt. The process is explained
+their command line tool-belt. The process is explained
 [here](https://devcenter.heroku.com/articles/authentication),
 but it is not much of a process. You just run `heroku login`
 and enter your login credentials. As a result, you will get
@@ -61,14 +61,14 @@ $ rultor encrypt -p me/test id_rsa
 $ rultor encrypt -p me/test id_rsa.pub
 {% endhighlight %}
 
-Instead of `me/test` use the name of your Github project.
+Instead of `me/test` use the name of your GitHub project.
 
 You will get two new files `id_rsa.asc` and `id_rsa.pub.asc`.
 Add them to the root directory of your project,
 commit and push. These files contain your secret information,
 but only the Rultor server can decrypt them.
 
-## Create Rultor Config
+## Create Rultor Configuration
 
 Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
@@ -99,7 +99,7 @@ You can compare your file with live Rultor
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
-Github issue tracker, and post something like this into it
+GitHub issue tracker, and post something like this into it
 (read more about [Rultor commands](http://doc.rultor.com/basics.html)):
 
 {% highlight text %}

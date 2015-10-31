@@ -219,7 +219,7 @@ paper is a "copy" utilized in these methods.
 Now we can make frequent changes to the immutable document, and the
 document stays the same. It doesn't stop being immutable, since it's
 state (`id`) is not changed. It is the same document, even though we
-change its title, becuase the title is not a state of the document. It
+change its title, because the title is not a state of the document. It
 is something in the real world, outside of the document. The document
 is just a proxy between us and that "something". Reading and writing
 the title are behaviors of the document, not its state.
@@ -250,7 +250,7 @@ Think.
 How could it be that our object doesn't represent a real-world entity?
 Remember, the *real world* is everything around the living environment of an object.
 Is it possible that an object doesn't represent anyone and acts
-on its own? No, it's not possible. Every object is a representantive of
+on its own? No, it's not possible. Every object is a representative of
 a real-world entity. So, who does it represent if we want to keep `title` inside
 it and we don't have any file or HTTP page behind the object?
 
