@@ -239,51 +239,51 @@ who said what, and which conclusions were made.
 Basically, you can't have that visibility in a web UI. Well, you can
 probably create a special page with the "history of operations," but
 who would check it? And how visible and simple would that information be?
-And, what is the most important, how that information will match
+And, what's most important, how would that information match up
 with the UI?
 
-In the log you will say that "the build was started", but
-what is the build and how was is started? How can I start it again?
+In the log, you'll state that "the build was started," but
+what's the build and how was it started? How can I start it again?
 Using which buttons and web controls? It's not clear.
 
-Thus, traceability of a chronological chat is unbeatable.
+Thus, the traceability of a chronological chat is unbeatable.
 
-## Easy To Integrate With Other Services
+## Easy to Integrate With Other Services
 
 Yes, think about the future of this approach. If there is a centralized
-messaging board, where users talk to a chatbot, why other chatbots
-can't talk to each other too?
+message board where users talk to a chatbot, why can't other chatbots
+talk to each other too?
 
-Forget about RESTful APIs. Just a messaging board, where chatbots post
-their requests and collect responses. They are perfectly decoupled, replaceable
+Forget about RESTful APIs. Just a message board where chatbots post
+their requests and collect responses. They are perfectly decoupled, replaceable,
 and very scalable. Also, their communication protocol is visible and very
-traceable. And many other benefits, just explained above. It's much
-more convenient for us, users and programmers, to monitor them and
-to create them.
+traceable. And they boast many other benefits, as was just explained above. It's much
+more convenient for us, both users and programmers, to monitor them and
+create them.
 
 Well, maybe it's too extreme to get rid of RESTful APIs entirely, but
-to some extend this approach is feasible, I believe.
+to some extent, this approach is feasible, I believe.
 
-I didn't go too far in this idea, but something was done. We have
-a messaging platform, which allows multiple chatbots to communicate
+I didn't go too far with this idea, but something was done. We have
+a messaging platform that allows multiple chatbots to communicate
 with users. It's called [Netbout](http://www.netbout.com). It's a very
-primitive web system, with isolated discussions. Simply put, anyone
-can create a new discussion, invite a few friends and post messages there.
+primitive web system with isolated discussions. Simply put, anyone
+can create a new discussion, invite a few friends, and post messages there.
 Both users and chatbots can do that.
 
 So, when a new candidate wants to join [Teamed.io](http://www.teamed.io),
-we ask that person to fill an [online form](http://www.teamed.io/join.html). When
-the candidate clicks "Submit" button, a new discussion starts and the first
+we ask that person to fill out an [online form](http://www.teamed.io/join.html). When
+the candidate clicks the "Submit" button, a new discussion starts, and the first
 chatbot decides who should interview that person. The decision is made
-by the skills listed in the form. The chatbot invites one of our
+according to the skills listed in the form. The chatbot invites one of our
 [best programmers](http://www.teamed.io/#check-out-ourbest-developers)
-to do the interview. When interview is done, another chatbot explains
-the candidate what are the next steps, registers him or her in our
-database and starts to show the progress of work.
+to conduct the interview. When the interview is done, another chatbot explains to
+the candidate what the next steps are, registers him or her in our
+database, and starts to show the progress of work.
 
-From a user perspective it looks like he or she is talking to a few
-people that understand just a few simple commands. It is very intuitive
+From a user perspective, it looks like he or she is talking to a few
+people who understand just a few simple commands. It is very intuitive
 and was easy to design.
 
-I think, chatbots is a good approach for interacting with microservices.
+I think chatbots are a good approach for interacting with microservices.
 Especially when users are more or less professional.
