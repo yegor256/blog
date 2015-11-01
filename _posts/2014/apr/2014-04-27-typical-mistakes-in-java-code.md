@@ -134,7 +134,9 @@ private File content;
 public HttpRequest request;
 ```
 
-Sometimes, you may have collisions between constructor parameters and in-class
+Sometimes, you may have collisions between
+[constructor]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
+parameters and in-class
 properties if the constructor saves incoming data in an instantiated object. In
 this case, I recommend to create abbreviations by removing vowels (see how
 [USPS abbreviates street names](http://pe.usps.gov/text/pub28/28apc_002.htm)).

@@ -52,7 +52,7 @@ GitHub ticket:
 
 Let's see what's going on here, and then we'll discuss
 how it's designed inside. Essentially, I'm talking to a chatbot here.
-The name of the chatbot is `Rultor` (I wrote about it
+The name of the chatbot is `@rultor` (I wrote about it
 [last year]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})).
 At <span class="bullet">1</span>, I'm asking the chatbot to release
 a new version of the [jcabi-http](https://github.com/jcabi/jcabi-http) library.

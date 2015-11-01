@@ -3,6 +3,7 @@ layout: post
 title: "Why Software Outsourcing Doesn't Work ... Anymore"
 date: 2015-10-27
 place: Palo Alto, CA
+categories: best
 tags: mgmt outsourcing
 description:
   Remote and offshore software outsourcing was a perfect business

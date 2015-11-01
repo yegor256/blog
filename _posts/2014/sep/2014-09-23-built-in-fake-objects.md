@@ -78,7 +78,9 @@ public void testMe() {
 }
 {% endhighlight %}
 
-And all of this is just a scaffolding before the actual testing.
+And all of this is just a
+[scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %})
+before the actual testing.
 
 ## Sample Use Case
 
@@ -172,3 +174,6 @@ inside the library and for its users.
 BTW, a great article on the same subject:
 [tl;dw: Stop mocking, start testing](http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html)
 by Ned Batchelder.
+
+PS. Check this out, on a very similar subject:
+[Mocking of HTTP Server in Java]({% pst 2014/apr/2014-04-18-jcabi-http-server-mocking %}).

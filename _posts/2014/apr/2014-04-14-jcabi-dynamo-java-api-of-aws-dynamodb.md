@@ -20,8 +20,8 @@ keywords:
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://dynamo.jcabi.com %}
 
-I'm a big fan of cloud computing in general and of [Amazon Web
-Services](http://aws.amazon.com/) in particular. I honestly believe that in a
+I'm a big fan of cloud computing in general and of
+[Amazon Web Services](http://aws.amazon.com/) in particular. I honestly believe that in a
 few years big providers will host all, or almost all, computing and storage
 resources. When this is the case, we won't have to worry too much anymore about
 downtime, backups and system administrators.
@@ -132,7 +132,10 @@ RESTful API. We interact solely with an instance of
 [`Item`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html) class.
 
 By the way, all public entities in [jcabi-dynamo](http://dynamo.jcabi.com) are
-Java interfaces. Thanks to that, you can test and mock the library completely.
+Java interfaces. Thanks to that, you can test and mock the library completely
+(but I would recommend to use
+[DynamoDB Local]({% pst 2014/may/2014-05-01-dynamodb-local-maven-plugin %})
+and create integration tests).
 
 Let's consider a more complex example, which would take a page of code if we
 were to use a bare AWS SDK. Let's say that we want to remove all workers from

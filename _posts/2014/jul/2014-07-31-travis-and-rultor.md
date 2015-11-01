@@ -131,8 +131,9 @@ $ sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
 $ gem build jgd.gemspec
 {% endhighlight %}
 
-Finally, it pushes a newly built `.gem` to RubyGems, using
-login credentials from `../rubygems.yml`. This file is created by
+Finally, it pushes a newly built `.gem` to
+[RubyGems]({% pst 2014/aug/2014-08-26-publish-to-rubygems %}),
+using login credentials from `../rubygems.yml`. This file is created by
 Rultor right before starting the script (this mechanism is discussed below):
 
 {% highlight bash %}
@@ -201,3 +202,6 @@ projects are open source and hosted at GitHub.
 Other good examples of Rultor+Travis usage can be seen in these GitHub issues:
 [jcabi/jcabi-http#47](https://github.com/jcabi/jcabi-http/issues/47),
 [jcabi/jcabi-http#48](https://github.com/jcabi/jcabi-http/pull/48)
+
+PS. You can do something similar with AppVeyor, for Windows platform:
+[How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them]({% pst 2015/mar/2015-03-29-rultor-with-appveyor %})

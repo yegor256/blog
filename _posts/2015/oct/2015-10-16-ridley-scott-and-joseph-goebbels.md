@@ -18,7 +18,9 @@ keywords:
 
 I saw [The Martian](http://www.imdb.com/title/tt3659388/)
 this weekend, and it triggered a few thoughts. Of course, I didn't like
-the movie as a piece of art. It is total garbage, but this is not my point.
+the movie as a
+[piece of art]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}).
+It is total garbage, but this is not my point.
 There is something bigger to discuss, aside from the bad acting, primitive
 story-line, politically correct but absolutely unrealistic casting,
 and tons of logical inconsistencies. It's Hollywood; what

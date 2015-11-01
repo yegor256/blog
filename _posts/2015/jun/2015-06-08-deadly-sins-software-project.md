@@ -159,7 +159,9 @@ rule is violated.
 {% badge /images/2015/06/software-project-sins-5.gif 250 %}
 
 Simply put, [test coverage](https://en.wikipedia.org/wiki/Code_coverage)
-is the degree to which the software has been tested by unit or integration tests. The
+is the degree to which the software has been
+[tested]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %})
+by unit or integration tests. The
 higher the coverage, the greater "amount" of code was executed while
 tests were running. Obviously, higher coverage is a good thing.
 

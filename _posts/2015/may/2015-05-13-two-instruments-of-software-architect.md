@@ -46,7 +46,9 @@ the architect must use **bugs**.
 A bug is a ticket that has a reporter, a problem, and a resolver, just
 like [this post]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}) explains.
 Say an architect reviews an existing technical solution and finds
-something that contradicts his vision. When such a contradiction
+something that
+[contradicts]({% pst 2015/jun/2015-06-22-valid-reasons-to-reject-bug-fix %})
+his vision. When such a contradiction
 is found, it is a good candidate for a bug. Sometimes there is just
 not enough information in the code yet, and this is also a good candidate
 for a bug.

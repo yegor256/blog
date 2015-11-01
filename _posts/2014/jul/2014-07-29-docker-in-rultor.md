@@ -40,7 +40,8 @@ deploy, package, test and merge them.
 
 ## Why Docker?
 
-What benefits does it give us? And why Docker,
+What benefits does it give us? And why
+[Docker]({% pst 2014/aug/2014-08-29-docker-non-root %}),
 when there are many [other virtualization technologies](https://en.wikipedia.org/wiki/Operating_system-level_virtualization),
 like LXC, for example?
 

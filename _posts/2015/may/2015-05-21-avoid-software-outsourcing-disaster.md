@@ -87,7 +87,9 @@ And your project is not an exception. Thus, let's forget about these
 beautiful promises and focus on the ugly reality &mdash; you're on your own.
 
 Keeping in mind the principle I mentioned above, here is my recommendation:
-Make sure the team understands 1) your real time and scope constraints
+Make sure the team understands 1) your real time,
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
+and scope constraints,
 and 2) the consequences of their violation. This is about the first
 part of the principle &mdash; _you should openly and frequently communicate
 your concerns_. What usually happens is that the outsourcing team remains

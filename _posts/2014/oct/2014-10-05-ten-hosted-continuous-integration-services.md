@@ -178,7 +178,9 @@ Java and Ruby, which are expected to be platform independent, they
 very often appear to be exactly the opposite. When your build
 succeeds on Linux, there is almost no guarantee it will pass on
 Windows or Mac. I'm planning to use AppVeyor in every project,
-in combination with some other CI service. I'm still testing it though...
+in combination with some other CI service. I'm still
+[testing]({% pst 2015/jan/2015-01-10-windows-appveyor-maven %})
+it though...
 
 {% badge /images/2014/10/wercker.png 64 http://www.wercker.com %}
 

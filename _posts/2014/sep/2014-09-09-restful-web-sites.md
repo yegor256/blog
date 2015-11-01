@@ -39,7 +39,8 @@ the data?
 
 {% picture /images/2014/09/good_bad_weird.png 0 The Good, the Bad, The Wierd (2008) by Kim Jee-woon %}
 
-XSLT is the technology that can help us do this.
+[XSLT]({% pst 2015/feb/2015-02-02-xsl-transformations-in-java %})
+is the technology that can help us do this.
 In ["XML+XSLT in a Browser"]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 I explained briefly how it works in a browser. In a nutshell, the
 server returns an XML with some data and a link to the XSL stylesheet. The

@@ -100,7 +100,8 @@ in the existing code base, no matter how ugly it is. Create new
 bugs, asking the team to improve the situation with the ugly code base.
 If interested, assign those bugs to yourself. Or maybe somebody else
 will be interested in fixing them and refactoring the code. But all that
-will happen later in other pull requests with new code reviews
+will happen later in other pull requests with new
+[code reviews]({% pst 2015/feb/2015-02-09-serious-code-reviewer %})
 and new merges.
 
 It's not about being lazy and unwilling to fix what looks bad. It's about

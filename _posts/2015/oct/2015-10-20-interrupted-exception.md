@@ -130,7 +130,9 @@ don't want to deal with any interruptions.
 If your code is slow and may take seconds to execute, make it explicit
 and handle interruptions somehow.
 
-That's why `InterruptedException` is a checked exception. Its design
+That's why `InterruptedException` is a
+[checked]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %})
+exception. Its design
 tells you that if you want to pause for a few milliseconds, make your
 code interruption-ready. This is how it looks in practice:
 
@@ -148,8 +150,9 @@ catch it and do something with the thread. Ideally, just stop it, since that's
 what the flag is about. If `InterruptedException` is thrown, it means
 someone checked the flag and our thread has to finish what it's doing ASAP.
 
-The owner of the thread doesn't want to wait any longer. And we must
-respect the decision of our owner.
+The owner of the thread
+[doesn't want to wait]({% pst 2014/jun/2014-06-20-limit-method-execution-time %})
+any longer. And we must respect the decision of our owner.
 
 Thus, when you catch `InterruptedException`, you have to do whatever
 it takes to wrap up what you're doing and exit.

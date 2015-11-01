@@ -32,7 +32,10 @@ software design discipline ... and it's very _sad_ to see it.
 
 {% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
 
-A good software architect doesn't need meetings and **never** organizes them.
+A good [software architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}),
+as well as a good project manager, doesn't need
+[meetings]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
+and **never** organizes them.
 
 Meetings demotivate, waste time, burn money, and degrade quality. But more about
 that later. For now, let's discuss a proposed alternative.

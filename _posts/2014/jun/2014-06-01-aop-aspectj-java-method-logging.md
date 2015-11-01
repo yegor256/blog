@@ -97,7 +97,9 @@ to avoid re-implementation of some common behavior in multiple classes.
 
 Logging is a supplementary feature to our main functionality,
 and we don't want to pollute our code with multiple logging
-instructions. Instead, we want logging to happen behind the scenes.
+instructions. Instead, we want
+[logging]({% pst 2014/may/2014-05-23-avoid-java-static-logger %})
+to happen behind the scenes.
 
 In terms of AOP, our solution can be explained as creating
 an **aspect** that **cross-cuts** the code at certain

@@ -64,7 +64,9 @@ A professional and savvy boss understands that his role in the mechanism
 is to clearly define project objectives and make sure everybody's needs are
 aligned with those objectives. In a properly managed and organized project,
 everybody sees and feels how his or her personal needs are satisfied
-when the project achieves its objectives: Jeff learns Scala, Sally
+when the project
+[achieves]({% pst 2015/feb/2015-02-12-top-down-design %})
+its objectives: Jeff learns Scala, Sally
 sees Paris, and Bob buys a new house.
 
 However, if Jeff wants to learn Scala and we're

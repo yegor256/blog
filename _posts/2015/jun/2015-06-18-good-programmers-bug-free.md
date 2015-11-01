@@ -15,7 +15,9 @@ keywords:
   - zero-bug programmers
 ---
 
-Good programmers create fewer bugs while bad programmers cause more. Sounds
+Good programmers create fewer
+[bugs]({% pst 2015/jun/2015-06-11-wikipedia-bug-definition %})
+while bad programmers cause more. Sounds
 logical, doesn't it? However, there is a lot of criticism of this way of
 thinking. Take this one, for example: Bugs are inevitable, and
 instead of expecting fewer bugs from us, let us focus on the right design

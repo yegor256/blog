@@ -48,7 +48,8 @@ and [AppVeyor](http://www.appveyor.com).
 The idea is simple and obvious. Every time you make a new commit
 to the `master` branch (or `/trunk` in Subversion), a continuous integration
 server (or service) attempts to build the entire product. "Build" means
-compile, unit test, integration test, quality analysis, etc.
+compile, unit test, integration test, quality analysis,
+[etc.]({% pst 2014/jun/2014-06-21-casperjs-with-maven %})
 
 The result is either "success" or "failure". If it is a success, we
 say that "the build is clean". If it is a failure, we say that "the build is broken".

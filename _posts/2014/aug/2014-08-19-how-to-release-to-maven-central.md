@@ -112,7 +112,7 @@ but only the Rultor server can decrypt them.
 
 ## Add Sonatype Repositories
 
-I would recommend using [jcabi-parent](http://parent.jcabi.com), as
+I would recommend using [jcabi-parent]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}), as
 a parent pom for your project. This will make many further steps
 unnecessary. If you're using jcabi-parent, skip this step.
 

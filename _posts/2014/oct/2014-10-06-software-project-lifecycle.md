@@ -115,6 +115,7 @@ are responsible for turning our initial `README` into a more complete and detail
 specification. They start by asking questions, submitting them one by one
 as GitHub issues. Every question is addressed to the product owner. Using
 his/her answers, system analysts modify the `README` document.
+Sometimes we're using [Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %}).
 
 At the end of the Thinking phase we estimate the size of the project,
 in lines of code. Using lines of code, we can roughly

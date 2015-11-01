@@ -72,7 +72,7 @@ public Employee getByName(String name) {
 }
 {% endhighlight %}
 
-The second possible alternative is to [fail fast](http://martinfowler.com/ieeeSoftware/failFast.pdf)
+The second possible alternative is to [fail fast]({% pst 2015/aug/2015-08-25-fail-fast %})
 by throwing an **Exception** when you can't return an object:
 
 {% highlight java %}

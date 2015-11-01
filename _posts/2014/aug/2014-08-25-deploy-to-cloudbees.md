@@ -150,8 +150,8 @@ Rultor server.
 
 ## Configure Versions Plugin
 
-I recommend using [jcabi-parent](http://parent.jcabi.com). It
-configures the required plugin out-of-the-box.
+I recommend using [jcabi-parent]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}).
+It configures the required plugin out-of-the-box.
 If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -217,6 +217,7 @@ submit a ticket to the
 I will try to help you.
 
 Also, a similar configuration can be performed
-for Heroku (using [jcabi-heroku-maven-plugin](http://heroku.jcabi.com))
+for [Heroku]({% pst 2014/sep/2014-09-13-deploying-to-heroku %})
+(using [jcabi-heroku-maven-plugin](http://heroku.jcabi.com))
 and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](http://beanstalk.jcabi.com)).
 I'll probably dedicate individual posts to them, as well.

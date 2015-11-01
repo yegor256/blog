@@ -55,7 +55,9 @@ which are very similar features. Still, they're not exactly the same.
 In case of an atomic counter, you should create a supplementary
 table and keep the latest value of `id` in it.
 
-In case of conditional updates, you should retry a few times in case of collisions.
+In case of conditional updates, you should
+[retry]({% pst 2014/aug/2014-08-15-retry-java-method-on-exception %})
+a few times in case of collisions.
 
 {% badge http://img.stateful.co/pomegranate.svg 128 %}
 

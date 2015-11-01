@@ -121,7 +121,8 @@ and arrows.
 
 <hr/>
 
-As I mentioned above, the goal of all this is to reduce complexity
+As I mentioned above, the goal of all this is to
+[reduce complexity]({% pst 2015/apr/2015-04-13-tacit-css-framework-for-dummies %})
 and help me, a programmer, understand you, an architect. Remember,
 if I can't understand you, it's your fault. You're a bad architect
 if you can't deliver your ideas in a plain, simple form.

@@ -19,7 +19,9 @@ keywords:
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 In this post, I'll try to walk you through a project managed
-with the spirit of Puzzle Driven Development (PDD). As I do this, I will attempt to convey typical points
+with the spirit of
+[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
+(PDD). As I do this, I will attempt to convey typical points
 of view of various project members.
 
 Basically, there are six key roles in any software team:

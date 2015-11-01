@@ -681,3 +681,6 @@ In other words, a _take_ is like a snapshot of the reality.
 The same applies to this framework. Each instance of `Take` represents
 a reality at one particular moment in time. This reality is then sent to the
 user in the form of a `Response`.
+
+PS. There are a few words about authentication:
+[How Cookie-Based Authentication Works in the Takes Framework]({% pst 2015/may/2015-05-18-cookie-based-authentication %}).

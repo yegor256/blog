@@ -27,8 +27,9 @@ CSS is supposed to format that data in order to make it readable by a human. Yea
 that was probably the intention of HTML/CSS, but in reality it doesn't work like that.
 Mostly because CSS is not powerful enough.
 
-We still have to format our data using HTML tags, while CSS can help
-slightly with positioning and decorating.
+We still have to format our data using HTML tags, while
+[CSS]({% pst 2014/jun/2014-06-26-sass-in-java-webapp %})
+can help slightly with positioning and decorating.
 
 On the other hand, XML with [XSLT](http://en.wikipedia.org/wiki/XSLT)
 implements perfectly the idea of separating data and presentation. XML documents,
@@ -196,7 +197,8 @@ This is exactly how [ReXSL framework](http://www.rexsl.com) works.
 Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer
 and you will see an HTML document, not an XML document as is the case with Chrome.
 
-In one of the next posts, I'll explain [ReXSL framework](http://www.rexsl.com).
+BTW, see how all this is implemented:
+[XML Data and XSL Views in Takes Framework]({% pst 2015/jun/2015-06-25-xml-data-xsl-views-takes-framework %}).
 
 Read this one, it continues the discussion of this subject:
 [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %})

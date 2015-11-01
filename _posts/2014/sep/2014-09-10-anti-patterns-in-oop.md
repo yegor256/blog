@@ -37,4 +37,6 @@ Here they come:
 
 <!--more-->
 
-Avoid them at all cost.
+Avoid them at all cost. Check
+[this list]({% pst 2014/apr/2014-04-27-typical-mistakes-in-java-code %})
+too.
