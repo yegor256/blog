@@ -15,3 +15,12 @@ for f in $(find _site -name '*.html'); do
   echo "OK"
 done
 
+for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
+  echo -n "checking name of $f... "
+  echo $f | sed "s|[^a-zA-Z]| |g" | \
+    LC_ALL='C' sort | \
+    aspell --lang=en_US --ignore=2 --ignore-case -p ./_test/aspell.en.pws pipe | \
+    grep ^\&
+  if [[ $? != 1 ]]; then exit -1; fi
+  echo "OK"
+done
