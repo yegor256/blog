@@ -20,7 +20,7 @@ find _site -name '*.html' \
 
 cat _temp/pings.txt | grep -v '^200 ' > _temp/broken.txt
 broken=$(cat _temp/broken.txt | wc -l | cut -f1 -d ' ')
-if [ "$broken" -gt "20" ]]; then
+if [ "$broken" -gt "20" ]; then
   cat _temp/broken.txt
   exit -1
 fi
