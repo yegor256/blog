@@ -10,7 +10,7 @@ for f in $(find . -regex '.*_site/[0-9]\{4\}/.*\.html'); do
     sed "s/href=\"\([^\"]*\)\"/\1/g" | \
     sed "s/ /\n/g" >> _temp/links.txt
   echo "" >> _temp/links.txt
-  echo $f | sed 's/\.\/_site//g' >> _temp/links.txt
+  echo $f | sed 's/.*_site//g' >> _temp/links.txt
   echo "OK"
 done
 
