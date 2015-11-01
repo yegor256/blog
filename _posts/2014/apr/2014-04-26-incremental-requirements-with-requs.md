@@ -179,3 +179,8 @@ that the SRS was fixed and request that he review it. His original problem
 should be fixed by now &mdash; the SRS should provide the information required.
 
 He then closes the task and the project manager pays me within a few hours.
+
+PS. Also, check [this article]({% pst 2014/jun/2014-06-29-custom-lexer-in-jekyll %})
+about a custom lexer for Jekyll,
+which I created in order to highlight Requs syntax in this
+blog post.

@@ -166,7 +166,8 @@ return employees.get("Jeffrey"); // second search
 Obviously, this is method is twice as slow as the first one. What to do?
 
 The `Map` interface (no offense to its authors) has a design flaw.
-Its method `get()` should have been returning an `Iterator`
+Its method `get()` should have been returning an
+[`Iterator`]({% pst 2015/apr/2015-04-30-iterating-adapter %})
 so that our code would look like:
 
 {% highlight java %}

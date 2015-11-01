@@ -351,4 +351,3 @@ class and turn it into an unmaintainable monster.
 That's [jcabi-email](http://email.jcabi.com). I hope
 this example was illustrative enough and that you will start writing
 cleaner code with immutable objects.
-

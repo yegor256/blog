@@ -23,7 +23,7 @@ XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
 you have to write a few dozen lines of code &mdash; and maybe even more
 than that if proper exception handling and logging is needed.
-[jcabi-xml](http://xml.jcabi.com) is
+[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %}) is
 a small open source library that makes life much easier by enabling
 XML parsing and XPath traversing with
 [a few simple methods]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}). Let's
@@ -65,8 +65,10 @@ to create such a text answer (a regular user would not appreciate an XML respons
 we have to fetch that `xml` column from the necessary DynamoDB record and convert
 it to plain English text.
 
-Here is how we're doing that with the help of [jcabi-xml](http://xml.jcabi.com) and its
-class, [`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
+Here is how we're doing that with the help of
+[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %})
+and its class,
+[`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
 
 {% highlight java %}
 final String xml = // comes from DynamoDB
