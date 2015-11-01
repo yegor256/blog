@@ -4,7 +4,7 @@ set -x
 
 mkdir -p _temp
 rm -rf _temp/links.txt
-for f in $(find . -regex '.*_site/[0-9]\{4\}/.*\.html'); do
+for f in $(find . -regextype posix-extended -regex '.*_site/[0-9]\{4\}/.*\.html'); do
   echo -n "fetching links from $f... "
   tidy -i -asxml $f 2>/dev/null | \
     xmllint -html -xpath '//article//a[starts-with(@href,"/")]/@href' - 2>/dev/null | \
