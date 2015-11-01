@@ -3,7 +3,7 @@ set -e
 
 mkdir -p _temp
 rm -rf _temp/links.txt
-for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
+for f in $(find . -regex '.*_site/[0-9]\{4\}/.*\.html'); do
   tidy -i -asxml $f 2>/dev/null | \
     xmllint -html -xpath '//article//a[starts-with(@href,"/")]/@href' - 2>/dev/null | \
     sed "s/href=\"\([^\"]*\)\"/\1/g" | \
