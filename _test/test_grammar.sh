@@ -24,3 +24,5 @@ for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
   if [[ $? != 1 ]]; then exit -1; fi
   echo "OK"
 done
+
+echo "grammar is clean!"

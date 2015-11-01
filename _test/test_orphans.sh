@@ -17,3 +17,5 @@ done
   uniq -c | \
   sort | \
   grep ' 1 '
+
+echo "no orphans, good!"
