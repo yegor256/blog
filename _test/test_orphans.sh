@@ -12,10 +12,11 @@ for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
   echo $f | sed 's/\.\/_site//g' >> _temp/links.txt
 done
 
-! cat _temp/links.txt | \
+cat _temp/links.txt | \
   sort | \
   uniq -c | \
   sort | \
   grep ' 1 '
+if [[ $? != 1 ]]; then exit -1; fi
 
 echo "no orphans, good!"
