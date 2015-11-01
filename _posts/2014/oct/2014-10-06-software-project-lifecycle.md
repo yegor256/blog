@@ -126,7 +126,7 @@ in lines of code. Using lines of code, we can roughly
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
 This is a one-man job for
-[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+[an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 Every project we work on
 has an architect who is [personally responsible]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
 for the quality and technical decisions. We have a few brilliant engineers

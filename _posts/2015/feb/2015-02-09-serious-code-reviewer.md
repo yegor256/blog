@@ -130,7 +130,7 @@ over a piece of code:
  the situation and re-write everything. And learn something too.
 
  * "_Let's do what the architect says!_" In every project, there is
- a [software architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+ a [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
  who makes final decisions. Appeal to his opinion and get his final decision.
  Invite him into the discussion, and ask him to take one side in the conflict. Once
  he tells you that you're wrong, accept the decision and try to learn from it.

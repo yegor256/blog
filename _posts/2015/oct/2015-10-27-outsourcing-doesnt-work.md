@@ -96,7 +96,7 @@ away in Argentina and we're here in New York City &mdash; how can we make
 [a good spec]({% pst 2014/oct/2014-10-20-how-we-write-product-vision %})?
 I don't buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
-[architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}). Learning, training,
+[architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}). Learning, training,
 and reading should fix this. Getting everybody together in the office
 is [not a solution]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 

@@ -16,7 +16,7 @@ keywords:
 ---
 
 A software architect is a key person in a software project, which I
-explained in my [What Does a Software Architect Do?]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+explained in my [What Does a Software Architect Do?]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 post a few months ago. The architect is personally responsible for
 the technical quality of the product we're developing. No matter how
 good the team is, how complex the technology is, how messy the

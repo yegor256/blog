@@ -82,7 +82,7 @@ project.
 ## He Is Asking Too Much
 
 A technically-savvy client can turn the life of
-[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 into a nightmare by constantly asking him to explain every
 single technical decision made, from "Why PostgreSQL instead of MySQL?"
 to "Why doesn't this method throw a checked exception?" Constantly answering
@@ -99,7 +99,7 @@ what is not clear and how much detail is expected in the explanation.
 Second, we look at such requests positively &mdash; they
 are good indicators of certain inconsistencies in the software. If it's
 not clear for the client why PostgreSQL is used and not MySQL, it's a fault
-of [our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+of [our architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 He didn't document his decision and didn't explain
 how it was made, what other options were considered, what selection criteria
 were applied, etc. Thus, a request from a client is [a bug]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
@@ -116,7 +116,7 @@ ready to explain anything he wants, but he will pay for it.
 
 This problem is even bigger than the previous one. Some clients
 believe they are savvy enough to argue with
-[our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[our architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 and our programmers about how the software should be developed. They don't just
 ask why PostgreSQL is used, they tell us that we should use MySQL,
 because "I know that it's a great database; my friend is using it, and his

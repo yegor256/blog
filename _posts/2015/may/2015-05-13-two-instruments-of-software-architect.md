@@ -14,7 +14,7 @@ keywords:
   - software architect vs engineer
 ---
 
-A [software architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+A [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 is a key person in any software project, no matter how big or small it is.
 An architect is personally responsible for the technical outcome of
 the entire team. A good architect knows what needs to be done and how
