@@ -17,6 +17,7 @@ install:
 - rm -rf sfnt2woff
 - git clone https://github.com/htacg/tidy-html5.git
 - cd tidy-html5/build/cmake
+- git checkout 5.1.9
 - cmake ../..
 - make
 - sudo make install
@@ -30,6 +31,9 @@ before_install:
 - travis_retry sudo apt-get install -y gnuplot
 - travis_retry sudo apt-get install -y s3cmd
 - travis_retry sudo apt-get install -y fontforge
+- sudo apt-get install software-properties-common
+- sudo add-apt-repository ppa:george-edison55/cmake-3.x
+- travis_retry sudo apt-get update -qq
 - travis_retry sudo apt-get install -y cmake
 - travis_retry npm install phantomjs -g
 - travis_retry npm install casperjs -g
