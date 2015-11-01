@@ -18,7 +18,8 @@ keywords:
 
 Software outsourcing is what you go for when you want to create
 a software product but software engineering is not your core
-competence. It's a smart business practice being employed by everyone
+competence. It's a [smart business practice]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+being employed by everyone
 from $1,000 personal website owners to Fortune 100 monsters.
 And all of them fail, to some extent. Actually, it's very difficult
 not to fail. Here is my list of simple hints to everyone who

@@ -162,7 +162,9 @@ and StackOverflow accounts are empty &mdash; there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-year seasoned architect" with zero
 open source contribution &mdash; this means that you're either lying about
-that ten years or you're absolutely useless as an architect.
+that ten years or you're
+[absolutely useless]({% pst 2015/sep/2015-09-29-mayonnaise %})
+as an architect.
 
 My point is that the "years of experience" argument should be used very carefully.
 Play this card only if you have other merits. Otherwise, keep it to yourself.

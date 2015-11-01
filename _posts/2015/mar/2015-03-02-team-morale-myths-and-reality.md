@@ -18,10 +18,12 @@ keywords:
 There are plenty of books, articles, and blog posts about _team morale_. They
 will all suggest you do things like regular celebrations, team events,
 free lunches, pet-friendly offices, coffee machines, birthday presents, etc.
-All of these are instruments of **concealed enslaving**.
+All of these are instruments of
+[**concealed enslaving**]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 These traditional techniques turn employees into
 speechless monkeys, programming under the influence of Prozac. Their existence
-and popularity is our big misfortune. Let me present my own
+and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
+is our big misfortune. Let me present my own
 vision of how team morale can be boosted on a software team &mdash; a team that
 has a strong leader and a good project manager.
 
@@ -33,7 +35,8 @@ has a strong leader and a good project manager.
 The first and most important quality of a good leader is his or her
 ability to separate bad apples from good ones as soon as possible.
 Nothing will earn you more disrespect from your team than tolerance of
-under-performing team members. Your job as a leader is to help the best players
+[under-performing]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+team members. Your job as a leader is to help the best players
 play better, and they can't play better if they see that management
 doesn't understand the difference between excellence and mediocrity. It's
 a severe demotivating factor.

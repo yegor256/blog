@@ -121,7 +121,9 @@ final class TrimmedText implements Text {
 }
 {% endhighlight %}
 
-I can go on and on with these decorators. I can create many of them,
+I can go on and on with these
+[decorators]({% pst 2015/oct/2015-10-01-vertical-horizontal-decorating %}).
+I can create many of them,
 suitable for their own individual use cases. But let's see how they all
 can play together. Let's say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want

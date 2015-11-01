@@ -145,3 +145,7 @@ the end of the URL to display the list. Next, click a version to have
 I created this service mostly for myself, but apparently I'm not the only with
 the problems described above. At the moment, [s3auth.com](http://www.s3auth.com)
 hosts over 300 domains and sends through more than 10Mb of data each hour.
+
+PS. This post explains how [s3auth.com](http://www.s3auth.com) can be
+used as a front-end to your Maven repository:
+[How to Set Up a Private Maven Repository in Amazon S3]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}).
