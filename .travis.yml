@@ -17,10 +17,9 @@ install:
 - rm -rf sfnt2woff
 - git clone https://github.com/htacg/tidy-html5.git
 - cd tidy-html5/build/cmake
-- git checkout 5.1.9
 - cmake ../..
 - make
-- make install
+- sudo make install
 - cd ../..
 before_install:
 - set -e
