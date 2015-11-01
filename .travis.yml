@@ -15,16 +15,23 @@ install:
 - sudo mv sfnt2woff /usr/local/bin/
 - cd ..
 - rm -rf sfnt2woff
+- git clone https://github.com/htacg/tidy-html5.git
+- cd tidy-html5/build/cmake
+- git checkout 5.1.9
+- cmake ../..
+- make
+- make install
+- cd ../..
 before_install:
 - set -e
 - travis_retry sudo apt-get update -qq
-- travis_retry sudo apt-get install -y tidy
 - travis_retry sudo apt-get install -y aspell
 - travis_retry sudo apt-get install -y libxml2-utils
 - travis_retry sudo apt-get install -y graphviz
 - travis_retry sudo apt-get install -y gnuplot
 - travis_retry sudo apt-get install -y s3cmd
 - travis_retry sudo apt-get install -y fontforge
+- travis_retry sudo apt-get install -y cmake
 - travis_retry npm install phantomjs -g
 - travis_retry npm install casperjs -g
 - travis_retry npm install --global cssshrink
