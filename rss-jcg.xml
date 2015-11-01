@@ -133,7 +133,9 @@ This is why Dr. Myers is calling testing &amp;quot;a destructive, even sadistic,
 &amp;quot;you cannot test a program to guarantee that it is error free&amp;quot; (page 10)
 and that &amp;quot;it is impractical, often impossible, to find all the errors in
 a program&amp;quot; (page 8). This is also what most testers don&amp;#39;t understand. They
-believe that there is a limited number of bugs, which they have to find
+believe that there is a
+&lt;a href=&quot;/2015/06/18/good-programmers-bug-free.html&quot;&gt;limited number&lt;/a&gt;
+of bugs, which they have to find
 and call it a day. There literally no limit! The amount of bugs is unlimited,
 in any software product. No matter how small or big, complex or simple,
 new or old is the product.&lt;/p&gt;
@@ -620,7 +622,8 @@ in the existing code base, no matter how ugly it is. Create new
 bugs, asking the team to improve the situation with the ugly code base.
 If interested, assign those bugs to yourself. Or maybe somebody else
 will be interested in fixing them and refactoring the code. But all that
-will happen later in other pull requests with new code reviews
+will happen later in other pull requests with new
+&lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;code reviews&lt;/a&gt;
 and new merges.&lt;/p&gt;
 
 &lt;p&gt;It&amp;#39;s not about being lazy and unwilling to fix what looks bad. It&amp;#39;s about
@@ -648,7 +651,9 @@ that fix, who reviewed the code, and when it was merged (and deployed).&lt;/p&gt
     <item>
       <title>Good Programmers Write Bug-Free Code, Don't They?</title>
       <link>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</link>
-      <description>&lt;p&gt;Good programmers create fewer bugs while bad programmers cause more. Sounds
+      <description>&lt;p&gt;Good programmers create fewer
+&lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bugs&lt;/a&gt;
+while bad programmers cause more. Sounds
 logical, doesn&amp;#39;t it? However, there is a lot of criticism of this way of
 thinking. Take this one, for example: Bugs are inevitable, and
 instead of expecting fewer bugs from us, let us focus on the right design
@@ -1480,7 +1485,8 @@ A few weeks ago I asked three guys, who work with me, to check every single
 project in this list and provide their feedback. I&amp;#39;ve received three plain
 text files from them. Here they are, combined into one, with almost no corrections:
 &lt;a href=&quot;/txt/2015/award-2015.txt&quot;&gt;award-2015.txt&lt;/a&gt; (you can find your project there).
-Based on their opinions, I&amp;#39;ve decided to select the following 12 projects for closer review
+Based on &lt;a href=&quot;/txt/2015/award-2015.txt&quot;&gt;their opinions&lt;/a&gt;,
+I&amp;#39;ve decided to select the following 12 projects for closer review
 (in alphabetic order):&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1772,7 +1778,7 @@ Here is your badge:&lt;/p&gt;
 
 &lt;p&gt;Put this code into GitHub &lt;code&gt;README&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a href=&amp;quot;http://www.yegor256.com/award.html&amp;quot;&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a href=&amp;quot;http://www.yegor256.com/2015/04/16/award.html&amp;quot;&amp;gt;
   &amp;lt;img src=&amp;quot;http://img.teamed.io/award/2015/winner.png&amp;quot;
   style=&amp;quot;width:203px;height:45px;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2528,6 +2534,9 @@ to capture the reality and put it on film. Each capture is called a &lt;em&gt;ta
 &lt;p&gt;The same applies to this framework. Each instance of &lt;code&gt;Take&lt;/code&gt; represents
 a reality at one particular moment in time. This reality is then sent to the
 user in the form of a &lt;code&gt;Response&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS. There are a few words about authentication:
+&lt;a href=&quot;/2015/05/18/cookie-based-authentication.html&quot;&gt;How Cookie-Based Authentication Works in the Takes Framework&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Sun, 22 Mar 2015 00:00:00 +0000</pubDate>
