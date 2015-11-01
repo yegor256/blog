@@ -360,7 +360,8 @@ But it&amp;#39;s not a real solution. It is only
 a temporary patch that does all of us more harm than good &amp;mdash; methods keep
 growing in size and complexity.&lt;/p&gt;
 
-&lt;p&gt;Unchecked exceptions are a mistake in Java design, not checked ones.&lt;/p&gt;
+&lt;p&gt;Unchecked exceptions are a mistake in Java design, not
+&lt;a href=&quot;/2015/10/20/interrupted-exception.html&quot;&gt;checked&lt;/a&gt; ones.&lt;/p&gt;
 
 &lt;p&gt;Hiding the fact that a method may fail at some point is a mistake. That&amp;#39;s
 exactly what unchecked exceptions do.&lt;/p&gt;
@@ -1778,7 +1779,8 @@ Here is your badge:&lt;/p&gt;
 &lt;p&gt;All eight projects will receive a one-user free one-year license for one JetBrains
 product. I will email you all and we&amp;#39;ll figure out how to transfer them.&lt;/p&gt;
 
-&lt;p&gt;Thanks to everybody for participation! See you next year.&lt;/p&gt;
+&lt;p&gt;Thanks to everybody for participation! See you
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;next year&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
@@ -2628,7 +2630,9 @@ that will capitalize all letters in the text:&lt;/p&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;I can go on and on with these decorators. I can create many of them,
+&lt;p&gt;I can go on and on with these
+&lt;a href=&quot;/2015/10/01/vertical-horizontal-decorating.html&quot;&gt;decorators&lt;/a&gt;.
+I can create many of them,
 suitable for their own individual use cases. But let&amp;#39;s see how they all
 can play together. Let&amp;#39;s say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want
