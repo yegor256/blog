@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 
 mkdir -p _temp
 rm -rf _temp/links.txt
