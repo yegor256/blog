@@ -286,7 +286,14 @@ We must store user email locally, for future needs.
 The point is that I have nothing against requirements, but I'm
 strongly against implementation instructions.
 
-## Lack of User Perspective
+## Lack of Actor Perspective
+
+The text may look like:
+
+{% highlight text %}
+
+{% endhighlight %}
+
 
 ## Noise
 
