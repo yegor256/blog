@@ -5,7 +5,9 @@ date: 2015-10-27
 place: Palo Alto, CA
 tags: requirements mgmt
 description:
-  ...
+  Requirements specification is where we make
+  the most expensive mistakes, which are very
+  difficult to correct.
 keywords:
   - software specification
   - software specification template
@@ -21,8 +23,9 @@ It's a must read for every software engineer, I believe. No
 need to repeat what it says, but there are a few very
 simple and very typical mistakes we keep making in our
 specs. I keep seeing them in our documents again and again,
-that's why decided to summaries. Twelve most critical and typical of them,
-from a programmer point of view, reading a specification document.
+that's why decided to summarize. Here they are,
+twelve most critical and typical of them,
+from a programmer point of view, who is reading a specification document.
 
 <!--more-->
 
@@ -46,8 +49,8 @@ or just a "spec". Of course, there is a lot of space for creativity, but
 we're **engineers**, not artists. We must follow rules and standards,
 mostly because they are making our communication easier.
 
-Now I'm getting to my point. The specs I usually see violate pretty much
-all eight principles mentioned earlier. Below is a summary of how exactly
+Now, I'm getting to my point. The specs I usually see violate pretty much
+**all** eight principles mentioned earlier. Below is a summary of how exactly
 they do it. BTW, all examples are taken from real documents in
 real commercial software projects.
 
@@ -71,13 +74,13 @@ I've written already that
 In my experience, this is the biggest problem in all requirement
 documents. It's not prose! It's not a love letter! It's technical
 documentation. We can't juggle words for the sake of fun. We should
-not use product specs to express ourselves. We're writing in order
-to be understood, not to impress the reader. And the rule is the
+not use product specs just to express ourselves. We're writing in order
+to be understood, and not to impress the reader. And the rule is the
 same here as with
 [diagrams]({% pst 2015/jun/2015-06-29-simple-diagrams %})
 &mdash; if I don't understand you, it's your fault.
 
-Here is how that text would look after a proper rewriting:
+Here is how that text would look after a proper re-writing:
 
 {% highlight text %}
 UUID is user unique ID, positive 4-bytes integer.
@@ -103,9 +106,9 @@ post your thoughts here.
 
 Yes, this text literally, in a requirements document. First, the
 author expresses his personal opinion about the subject. Then,
-the author asks the reader, what possible options are out there. Then,
-the author suggests us to consider something, and, after that,
-the author invites us for a talk.
+the author asks me, what possible options are out there. Then,
+the author suggests me to consider something, and, after that,
+the author invites me for a talk.
 
 Impressive, right? Obviously, the author has a very creative personality.
 But we should keep this person as far away from project documentation as possible.
@@ -150,17 +153,33 @@ think so. But once it is here, we don't care who it came from and what
 the author thought about this problem. This information would just
 confuse us more, skip it. Just facts, no opinions.
 
+Don't get me wrong, I'm not against creativity. Programmers are not robots,
+quietly implementing what the document says. But a messy document has
+nothing to do with creativity. If you want me to be creating, define
+the borders of that creativity and let me experiment within them, for example:
+
+{% highlight text %}
+Multiple versions of the API must be supported. How exactly
+it is done, doesn't really matter.
+{% endhighlight %}
+
+This is how you invite me to be creative. I realize that the user
+of the product doesn't really have any restrictions or expectations
+about the versioning mechanims in the API. I'm free to do whatever
+I can. Great, I'll do it my way.
+
+But, again, let me re-iterate, a specification is not a discussion board.
+
 ## Mixing Functional and Quality Requirements
 
 This is how it looks:
 
 {% highlight text %}
 User must be able to scroll down through
-the list of images in the profile,
-smoothly and fast.
+the list of images in the profile, smoothly and fast.
 {% endhighlight %}
 
-It's a typical mistake in almost every spec I see. Here we mix
+It's a typical mistake in almost every spec I've seen. Here we mix
 together a functional requirement ("to scroll images") and
 and a non-functional one ("scrolling is smooth and fast"). Why is it
 bad? Well, there is no specific reason, but it's just a lack
@@ -178,7 +197,7 @@ Then, a few days later, we will want to say that "fast" means less than
 in two places. See how messy our document may become eventually?
 
 Thus, I would strongly recommend to document functional and non-functional
-requirements separately.
+requirements always separately.
 
 ## Unmeasurable Quality Requirements
 
@@ -190,9 +209,11 @@ How about this:
 
 
 
-## layout/implementation details
-## mixing funcs and supplementary docs
-## lack of user stories
+## Implementation Instructions
+
+## Mixing Requirements and Supplementary Docs
+
+## Lack of User Perspective
 
 ## Noise
 
@@ -203,15 +224,46 @@ Our primary concern is performance and attractive
 user interface.
 {% endhighlight %}
 
+This is noise. I, the reader of this document, am neither an investor,
+not a user. I'm a programmer. I don't care what is your "primary concern"
+in this project. My job is to implement the product so that it matches
+the specs. If performance is your primary concern, create a measuable
+and testable requirement(s) for me. I will make sure the product satisfies them.
+If you can't create a requirement, don't spam me with this irrelevant
+information.
 
+I don't want to share your concerns, your beliefs or intentions. It's your
+business. And you're paid to properly and unambiguously translate all that
+into testable and measureable requirements. If you can't do this, it's
+your problem and **your fault**. Don't try to make it mine.
 
-## will work, need to work, must work
+Very often... wait. Very very often. No. Almost always. Wrong again. Always!
+That's right. Always and all spec documents are full of noise.
+Some of them have a bit less, some have more. I believe, that this
+is a symptom of a **lazy** and unprofessional document authors. In most cases,
+just lazy.
 
-## don't explain why
+They don't want to think and translate that concerns, ideas, thoughts,
+intents, and objectives into functional and non-functional requirements.
+They just put them into the document and hope that programmers will
+somehow find the right solution. Good programmers should figure out
+what means good performance, right? Let's just tell them that performance
+is a concern for us and they will figure something out.
 
-I'm not in
-favor of big requirements documents. Well, mostly because the longer
-the document, the easier it is to turn it into mess. That's why,
-we're always trying to stay within a few pages, usualy in `README`
-file in GitHub.
+No! Don't do that. Do your job right and let programmers do theirs.
+
+And we, programmers, should never accept such documents. We should just reject
+them and ask requirements authors to re-work and remove noise. I would recommend not
+even start working with a product, if there is a lot of noise in its spec.
+
+## Will work, Need to work, Must work
+
+This is yet another very typical mistake:
+
+{% highlight text %}
+The API will support JSON and XML. Both formats
+must fully support all data items.
+{% endhighlight %}
+
+See how messy it sounds?
 

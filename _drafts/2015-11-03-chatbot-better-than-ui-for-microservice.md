@@ -51,7 +51,7 @@ GitHub ticket:
 </style>
 
 Let's see what's going on here, and then we'll discuss
-how it's designed inside. Essentially, I'm talking to a chatbot here.
+how it's designed inside. Essentially, I'm **talking** to a chatbot here.
 The name of the chatbot is `@rultor` (I wrote about it
 [last year]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})).
 At <span class="bullet">1</span>, I'm asking the chatbot to release
@@ -83,13 +83,15 @@ User -> [Service]
 {% endplantuml %}
 
 A user gives instructions to a service and receives responses.
-This communication happens through a user interface &mdash; a bunch
+This communication happens through a **user interface** (UI) &mdash; a bunch
 of HTTP entry points that receive requests from a browser and return
 HTML+CSS responses. Or, if a user is on another service, requests may
 contain some data, and responses will be in XML or JSON. You get the idea;
 a user is a client, and the service is a server.
 
-Like in a restaurant &mdash; you say what you want, and a server goes
+{% badge /images/2015/11/bot-3.jpg 250 %}
+
+Like in a restaurant &mdash; you say what you want, and a **server** goes
 to the kitchen, waits there, and in a few minutes, comes back with
 spaghetti carbonara. You're a client, and that cute lady is a server.
 
@@ -98,20 +100,18 @@ architecture:
 
 {% plantuml %}
 skinparam componentStyle uml2
-[GitHub] -left-> User
-[GitHub] -right-> [Service]
-[Service] -right-> [Database]
+[GitHub] <-down- User
+[GitHub] <-down- [Service]
+[Service] -down-> [Database]
 {% endplantuml %}
 
 First, a user posts a request to GitHub through a web user interface
-provided by GitHub. It is a communication hub for us. Then, the service
+provided by GitHub. It is a communication **hub** for us. Then, the service
 connects to GitHub through its RESTful API and checks whether there
 are any new requests there. If something new is found, the service
 does the job, prepares a response, and posts it there. The client receives
 an email notification about a new response just posted to the ticket. The
 client then checks GitHub and finds the response.
-
-{% badge /images/2015/11/bot-3 250 %}
 
 Here is how this would look in a restaurant: There would be a board with sticky notes.
 First, you write the note, "I'd like spaghetti carbonara
@@ -123,11 +123,11 @@ virgin olive oil ... yeah, he makes it right ... and puts it next to the board.
 You hear an announcement that order number 15 is ready. You go there,
 collect the food, return to your table, and enjoy.
 
-The point is that there is no cute lady involved anymore. There is no
+The point is that there is **no cute lady** involved anymore. There is no
 server. There are two parties communicating with the board &mdash; you and
 the kitchen. The kitchen is our microservice, but it's not a server anymore.
 
-These two parties are perfectly decoupled now. They never talk to each other. And
+These two parties are perfectly **decoupled** now. They never talk to each other. And
 they both are **clients** of the communication hub, which is GitHub or
 a board in the restaurant.
 
@@ -137,7 +137,7 @@ provides a lot of benefits to us, its developers.
 
 ## No Need to Be Fast
 
-{% badge /images/2015/11/bot-5 250 %}
+{% badge /images/2015/11/bot-5.jpg 250 %}
 
 First of all, we don't need to care much about the performance of our
 UI. Well, we don't care at all, since we don't have a UI. Do we care
@@ -162,7 +162,7 @@ otherwise, I immediately get frustrated. The same thing happens to you, right?
 
 ## No Need to Look Cute
 
-{% badge /images/2015/11/bot-4 250 %}
+{% badge /images/2015/11/bot-4.jpg 250 %}
 
 Another advantage of this no-server design is that there is no need
 to look pretty. There is no web interface, no HTML, no CSS,
@@ -193,7 +193,7 @@ on being **nice**. We spend them on being **useful**.
 
 ## Much Easier to Scale
 
-{% badge /images/2015/11/bot-6 250 %}
+{% badge /images/2015/11/bot-6.jpg 250 %}
 
 If we have too many stickies on that board, we just hire more cooks,
 or maybe even build another kitchen, and the problem is solved.
@@ -203,7 +203,7 @@ Well, as long as the board is powerful enough to handle multiple parallel users.
 GitHub is a pretty big platform, with hundreds of thousands of users
 and projects. If we have too many requests coming in, we can just
 add more processing nodes to Rultor. Remember, we're not a server anymore;
-we are a client of GitHub. We decide when to connect to GitHub and when
+we are a **client of GitHub**. We decide when to connect to GitHub and when
 to create responses to the requests submitted.
 
 It is much easier to create a scalable client than a scalable server, mostly
@@ -213,13 +213,13 @@ decision of when to process them is made by us.
 
 ## Mistakes Are Not So Visible
 
-{% badge /images/2015/11/bot-2 250 %}
+{% badge /images/2015/11/bot-2.jpg 250 %}
 
 When you're standing in front of a customer, most of your mistakes
 are unforgivable, primarily because they are very visible. On the other
 hand, when you're cooking something in the kitchen, nobody can see
 you and spot your faults. They will only spot them if the spaghetti
-has too much salt. In other words, they will judge you by your results,
+has too much salt. In other words, they will **judge** you by your **results**,
 not by how you produce them.
 
 It's the same story with the microservice. When it works as a server, we expect
@@ -234,14 +234,14 @@ mistakes.
 However, when you both are clients of a message board, you don't see
 each other. The user communicates with GitHub, and the microservice
 interacts with GitHub. Mistakes are less visible. Trust me, we have
-had many of them over the 18 months that Rultor has been in public use.
+had **many of them** over the 18 months that Rultor has been in public use.
 We've had downtimes, we've had serious logical mistakes, and we've had data corruption.
 But very rarely have these problems become visible online. We merely saw them
-in our server logs. Users didn't see them. Well, mostly.
+in our server logs. Users didn't see them. Well, mostly :)
 
 ## Everything Is Traceable
 
-{% badge /images/2015/11/bot-1 250 %}
+{% badge /images/2015/11/bot-1.jpg 250 %}
 
 Since there is a communication board between us, it's very easy
 to see the entire history of our discussion, which is very intuitive.
@@ -258,7 +258,7 @@ In the log, you'll state that "the build was started," but
 what's the build and how was it started? How can I start it again?
 Using which buttons and web controls? It's not clear.
 
-Thus, the traceability of a chronological chat is unbeatable.
+Thus, the traceability of a **chronological** chat is unbeatable.
 
 ## Easy to Integrate With Other Services
 
