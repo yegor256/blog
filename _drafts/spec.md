@@ -216,7 +216,16 @@ And the problem is always the same &mdash; it is very difficult
 to define a truly testable and measurable non-functional requirement.
 
 Yes, it's difficult. Mostly because there are many factors. Take this
-line, for example
+line, for example: "the app must launch in 2 seconds". On what equipment?
+With what amount of data in user profile? What means "launch", does it include
+profile loading time? What if there are launching problems, do they count?
+There are a lot of questions like that.
+
+If we answer **all** of them, the requirement text will be as long as
+a full-text page. Nobody wants that, but having un-measurable requirements
+is a bigger evil.
+
+There is no single solution. My suggestion is to
 
 ## Implementation Instructions
 
