@@ -10,8 +10,5 @@ architect
 maven
 immutable
 programmers
-deployment
 exception
 outsourcing
-award
-oop

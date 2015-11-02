@@ -50,6 +50,7 @@ script:
 - jekyll build
 - _test/test_grammar.sh
 - _test/test_orphans.sh
+- _test/test_keywords.sh
 - _test/ping_links.sh
 - _test/w3c_validate.sh
 - _test/test_excerps.sh
