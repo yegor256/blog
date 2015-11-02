@@ -248,6 +248,21 @@ What if I use files instead of a database? Will it be important for you?
 I don't think so. Well, in very rare cases it will matter. In most
 cases it's just micro-management.
 
+The spec may only require what really matters for the business. Everything
+else is up to us, programmers. We decide what database to use, where the
+button will be placed, what information will be stored in the database.
+
+If you really care about that because there are certain higher level
+limitations &mdash; say so. But again, not as implementation instructions
+to us, programmers, but as non-functional requirements, for example:
+
+{% highlight text %}
+Login page must look like this (screenshot attached).
+We must store user email locally, for future needs.
+{% endhighlight %}
+
+The point is that I have nothing against requirements, but I'm
+strongly against implementation instructions.
 
 ## Mixing Requirements and Supplementary Docs
 
