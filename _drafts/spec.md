@@ -225,16 +225,28 @@ If we answer **all** of them, the requirement text will be as long as
 a full-text page. Nobody wants that, but having un-measurable requirements
 is a bigger evil.
 
-There is no single solution. My suggestion is to
+Again, it's not easy, but it's necessary. Try to make sure all
+quality requirements are complete and non-ambiguous.
 
 ## Implementation Instructions
 
-This is what:
+It's a very common pitfall, for example:
 
 {% highlight text %}
-Our primary concern is performance and attractive
-user interface.
+User authenticates via Facebook login button
+and we store user name, avatar and email in the
+database.
 {% endhighlight %}
+
+This is micro-management. This is what you, as a requirements analyst, should
+never do to me, a programmers. You should not tell me how to implement
+the functionality. You want to give a user an ability to login via Facebook?
+Say so. Do you really care whether it's going to happen through a button
+click or somehow else? Do you really care what I store in the database?
+What if I use files instead of a database? Will it be important for you?
+
+I don't think so. Well, in very rare cases it will matter. In most
+cases it's just micro-management.
 
 
 ## Mixing Requirements and Supplementary Docs
