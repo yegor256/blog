@@ -24,13 +24,12 @@ install:
 - cd ../..
 before_install:
 - set -e
-- export DEBIAN_FRONTEND=noninteractive
-- travis_retry sudo apt-get remove -y postgresql-9.1
-- travis_retry sudo apt-get remove -y postgresql-9.2
-- travis_retry sudo apt-get remove -y postgresql-9.3
-- travis_retry sudo apt-get remove -y postgresql-9.4
-- travis_retry sudo apt-get upgrade -qq -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
-- sudo apt-get install build-essential
+# - travis_retry sudo apt-get remove -y postgresql-9.1
+# - travis_retry sudo apt-get remove -y postgresql-9.2
+# - travis_retry sudo apt-get remove -y postgresql-9.3
+# - travis_retry sudo apt-get remove -y postgresql-9.4
+# - travis_retry sudo apt-get upgrade -qq -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
+- sudo apt-get install -y build-essential
 - wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
 - tar xf cmake-3.2.2.tar.gz
 - cd cmake-3.2.2
