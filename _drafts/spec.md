@@ -211,6 +211,8 @@ How about this:
 
 ## Implementation Instructions
 
+
+
 ## Mixing Requirements and Supplementary Docs
 
 ## Lack of User Perspective
@@ -262,8 +264,32 @@ This is yet another very typical mistake:
 
 {% highlight text %}
 The API will support JSON and XML. Both formats
-must fully support all data items.
+must fully support all data items. XML need to
+be validated by XSD schema.
 {% endhighlight %}
 
-See how messy it sounds?
+See how messy it sounds? There are three different points of view and
+all of them are not suitable for a specification document. A spec
+must describe a product as if it already exists. A spec must
+sound like a manual, a tutorial, a reference. This text must be
+re-written like this:
 
+{% highlight text %}
+The API supports JSON and XML. Both formats
+fully support all data items. XML si validated
+by XSD schema.
+{% endhighlight %}
+
+See the difference? All that "must", "need", and "will" are just
+adding some doubt to the document. For me, a reader of this spec,
+"_the API will support_" sounds like "_some time in the future, maybe in
+the next version, it will support_". This is not what the author
+had in mind, right? There should no doubt, no double meaning, no
+maybe. The API supports. That's it.
+
+<hr/>
+
+Maybe I forgot something important, but these issues are so obvious
+and so annoying... I'm going to use this post as a simple guide for our
+system analysts. Feel free to share your experience with requirements
+documents, below in the comments.
