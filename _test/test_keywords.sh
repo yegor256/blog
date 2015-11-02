@@ -9,13 +9,18 @@ for f in $(find _site -name '*.html'); do
     sed "s/[^a-zA-Z]/ /g" | \
     tr A-Z a-z | \
     sed 's/[ \t\n]/\n/g' | \
-    sed "s/^[a-z]\{,4\}$/ /g" >> _temp/words.txt
+    sed "s/^[a-z]\{,3\}$/ /g" >> _temp/words.txt
 done
 
 cat _temp/words.txt | \
   sort | \
   uniq -c | \
   sort -r | \
-  head -200 > _temp/top-words.txt
+  head -400 > _temp/top-words.txt
 
-grep 'java' _temp/top-words.txt
+while read k; do
+  echo "${k}:"
+  grep $k _temp/top-words.txt
+  if [[ $? = 1 ]]; then exit -1; fi
+done < _test/core-keywords.txt
+
