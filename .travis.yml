@@ -21,7 +21,7 @@ install:
 - cmake ../..
 - make
 - sudo make install
-- cd ../../..
+- cd ../../..; rm -rf tidy-html5
 before_install:
 - set -e
 # - travis_retry sudo apt-get remove -y postgresql-9.1
@@ -36,7 +36,7 @@ before_install:
 - ./configure
 - make
 - sudo make install
-- cd ..
+- cd ..; rm -rf cmake-3.2.2
 - travis_retry sudo apt-get install -y aspell
 - travis_retry sudo apt-get install -y libxml2-utils
 - travis_retry sudo apt-get install -y graphviz
