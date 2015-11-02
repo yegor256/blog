@@ -11,14 +11,14 @@ for f in $(find _site -name '*.html'); do
     LC_ALL='C' sort | \
     uniq | \
     aspell --lang=en_US --ignore=3 -p ./_test/aspell.en.pws pipe | \
-    grep ^\&
-  if [[ $? != 1 ]]; then
+    grep '^&'
+  if [ $? -ne 1 ]; then
     ((errors++))
   else
     echo "OK"
   fi
 done
-if [[ $errors != 0 ]]; then
+if [ "$errors" -ne "0" ]; then
   echo "there are ${errors} problems above"
   exit -1
 fi
@@ -30,13 +30,13 @@ for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
     LC_ALL='C' sort | \
     aspell --lang=en_US --ignore=2 --ignore-case -p ./_test/aspell.en.pws pipe | \
     grep ^\&
-  if [[ $? != 1 ]]; then
+  if [ $? -ne "1" ]; then
     ((errors++))
   else
     echo "OK"
   fi
 done
-if [[ $errors != 0 ]]; then
+if [ $errors -ne 0 ]; then
   echo "there are ${errors} problems above"
   exit -1
 fi

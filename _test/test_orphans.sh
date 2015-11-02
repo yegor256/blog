@@ -1,8 +1,4 @@
 #!/bin/bash
-set -e
-
-xmllint -version
-tidy -version
 
 mkdir -p _temp
 rm -rf _temp/links.txt
@@ -28,6 +24,9 @@ cat _temp/links.txt | \
   sort | \
   uniq -c | \
   grep ' 1 '
-if [[ $? != 1 ]]; then exit -1; fi
+if [ $? -ne 1 ]; then
+  echo "some pages are orphans"
+  exit -1
+fi
 
 echo "no orphans, good!"
