@@ -36,6 +36,7 @@ before_install:
 - ./configure
 - make
 - sudo make install
+- cd ..
 - travis_retry sudo apt-get install -y aspell
 - travis_retry sudo apt-get install -y libxml2-utils
 - travis_retry sudo apt-get install -y graphviz
