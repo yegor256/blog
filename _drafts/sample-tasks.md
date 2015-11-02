@@ -39,7 +39,7 @@ The task was assigned to 10 different people and only the last one
 completed it. It took 7 months.
 
 [jcabi-aspects#81](https://github.com/jcabi/jcabi-aspects/issues/81):
-The first implementaiton didn't satisfy the author of the bug
+The first implementation didn't satisfy the author of the bug
 and the developer had to find out what was wrong and submitted
 a new implementation.
 
