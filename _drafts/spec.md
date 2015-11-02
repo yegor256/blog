@@ -204,10 +204,19 @@ requirements always separately.
 This is what I'm talking about:
 
 {% highlight text %}
-
+Credit card numbers must be encrypted.
+The app should launch in less than 2 seconds.
+Each web page must open in less than 500 msec.
+User interface must be responsive.
 {% endhighlight %}
 
+I can find many more of them, just by opening requirement specs in
+many projects I've seen over the last years. They all look the same.
+And the problem is always the same &mdash; it is very difficult
+to define a truly testable and measurable non-functional requirement.
 
+Yes, it's difficult. Mostly because there are many factors. Take this
+line, for example
 
 ## Implementation Instructions
 
