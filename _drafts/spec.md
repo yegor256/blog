@@ -211,6 +211,12 @@ How about this:
 
 ## Implementation Instructions
 
+This is what:
+
+{% highlight text %}
+Our primary concern is performance and attractive
+user interface.
+{% endhighlight %}
 
 
 ## Mixing Requirements and Supplementary Docs
