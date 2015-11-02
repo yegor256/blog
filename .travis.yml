@@ -21,7 +21,7 @@ install:
 - cmake ../..
 - make
 - sudo make install
-- cd ../..
+- cd ../../..
 before_install:
 - set -e
 # - travis_retry sudo apt-get remove -y postgresql-9.1
