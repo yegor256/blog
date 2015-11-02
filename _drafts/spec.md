@@ -199,6 +199,28 @@ in two places. See how messy our document may become eventually?
 Thus, I would strongly recommend to document functional and non-functional
 requirements always separately.
 
+## Mixing Requirements and Supplementary Docs
+
+This is similar to a previous problem and may look like:
+
+{% highlight text %}
+User can download PDF report, that includes a full
+list of transactions. Each transaction has ID,
+date, description, account, full amount. The report
+also contains summary and a link to user account.
+{% endhighlight %}
+
+It's obvious, that there are two things described in this
+paragraph. First, a user can download a PDF report. Second,
+how this report should look like. The first thing is a functional
+requirement, the second one must be described in a supplementary
+document (or appendix).
+
+In general, functional requirements must be very short:
+"user downloads", "user saves", "client requests and receives", etc.
+If your text is getting longer, there is something wrong.
+Try to move part of it to a supplementary document.
+
 ## Unmeasurable Quality Requirements
 
 This is what I'm talking about:
@@ -263,8 +285,6 @@ We must store user email locally, for future needs.
 
 The point is that I have nothing against requirements, but I'm
 strongly against implementation instructions.
-
-## Mixing Requirements and Supplementary Docs
 
 ## Lack of User Perspective
 
