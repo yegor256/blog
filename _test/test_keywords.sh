@@ -27,13 +27,19 @@ echo "done, $(wc -l _temp/good-words.txt | cut -f1 -d ' ') good words left"
 
 cat _temp/good-words.txt | head -200 > _temp/top-words.txt
 
+errors=0
 while read k; do
   echo -n "${k}: "
   grep -q $k _temp/top-words.txt
   if [ $? -eq 1 ]; then
     echo "is absent!"
-    exit -1
+    ((errors++))
+  else
+    echo "OK"
   fi
-  echo "OK"
 done < _test/core-keywords.txt
+if [ "$errors" -ne "0" ]; then
+  echo "there are ${errors} missed keywords, see above"
+  exit -1
+fi
 
