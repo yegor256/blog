@@ -23,7 +23,6 @@ done
 
 cat _temp/links.txt | \
   uniq | \
-  tr A-Z a-z | \
   sed '/^[ \t]*$/d' | \
   grep -v 'http://www.yegor256.com' > _temp/unique-links.txt
 
