@@ -89,8 +89,6 @@ HTML+CSS responses. Or, if a user is on another service, requests may
 contain some data, and responses will be in XML or JSON. You get the idea;
 a user is a client, and the service is a server.
 
-{% badge /images/2015/11/bot-3.jpg 250 %}
-
 Like in a restaurant &mdash; you say what you want, and a **server** goes
 to the kitchen, waits there, and in a few minutes, comes back with
 spaghetti carbonara. You're a client, and that cute lady is a server.
@@ -100,9 +98,9 @@ architecture:
 
 {% plantuml %}
 skinparam componentStyle uml2
-[GitHub] <-down- User
-[GitHub] <-down- [Service]
-[Service] -down-> [Database]
+User -up-> [GitHub]
+[Service] -up-> [GitHub]
+[Database] -up-> [Service]
 {% endplantuml %}
 
 First, a user posts a request to GitHub through a web user interface
@@ -112,6 +110,8 @@ are any new requests there. If something new is found, the service
 does the job, prepares a response, and posts it there. The client receives
 an email notification about a new response just posted to the ticket. The
 client then checks GitHub and finds the response.
+
+{% badge /images/2015/11/bot-3.jpg 250 %}
 
 Here is how this would look in a restaurant: There would be a board with sticky notes.
 First, you write the note, "I'd like spaghetti carbonara
