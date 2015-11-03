@@ -30,7 +30,7 @@ some food for thought.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s say I have a list of numbers:&lt;/p&gt;
 
@@ -112,13 +112,13 @@ You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;All this is perfectly explained by Glenford Myers in his great book
 &lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;The Art of Software Testing&lt;/a&gt;.
 I will just summarize it here again.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, &amp;quot;testing is the process of executing a program with the
 intent of &lt;strong&gt;finding errors&lt;/strong&gt;&amp;quot; (page 6). Pay attention, the intent is to find errors.
@@ -167,7 +167,7 @@ that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;David West in
 &lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;Object Thinking&lt;/a&gt;
@@ -197,7 +197,7 @@ in production.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;By fragile, I&amp;#39;m referring to the &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;
 philosophy, which is the opposite of
@@ -280,7 +280,7 @@ multiple exception types are a bad idea too.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/true-romance.jpg' style='width:600px;' alt='True Romance (1993) by Tony Scott'/&gt;&lt;figcaption&gt;True Romance (1993) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/07/true-romance.jpg' style='width:600px;' alt='True Romance (1993) by Tony Scott'/&gt;&lt;figcaption&gt;True Romance (1993) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let me first explain how I understand exceptions in object-oriented programming.
 Then I&amp;#39;ll compare my understanding with a &amp;quot;traditional&amp;quot; approach, and
@@ -487,7 +487,7 @@ the tool that makes your work faster? Let me show you how.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/07/ex-machina.jpg' style='width:600px;' alt='Ex Machina (2015) by Alex Garland'/&gt;&lt;figcaption&gt;Ex Machina (2015) by Alex Garland&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/07/ex-machina.jpg' style='width:600px;' alt='Ex Machina (2015) by Alex Garland'/&gt;&lt;figcaption&gt;Ex Machina (2015) by Alex Garland&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;TDD or not, a unit test is a unit test. Either you create it before
 the main piece of code or after it.&lt;/p&gt;
@@ -549,7 +549,7 @@ valid reasons for such a rejection, according to my experience.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/crimen-ferpecto.jpg' style='width:600px;' alt='El Crimen Perfecto (2004) by Álex de la Iglesia'/&gt;&lt;figcaption&gt;El Crimen Perfecto (2004) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/06/crimen-ferpecto.jpg' style='width:600px;' alt='El Crimen Perfecto (2004) by Álex de la Iglesia'/&gt;&lt;figcaption&gt;El Crimen Perfecto (2004) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;it-degrades-code-coverage&quot;&gt;It Degrades Code Coverage&lt;/h2&gt;
 
@@ -569,7 +569,7 @@ product when under pressure.&lt;/p&gt;
 &lt;p&gt;Obviously, there are situations when the unit tests are wrong and
 we have to delete them. In those cases, don&amp;#39;t forget to create new ones.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0131177052&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=D2WNVUW64RHDRGSC'&gt;&lt;img src='/images/2015/04/book-legacy.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are also situations when the bug must be fixed in a few minutes
 to put the system back online and fixing all unit tests will take an hour.
@@ -667,7 +667,7 @@ that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/06/sabotage.jpg' style='width:600px;' alt='Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe'/&gt;&lt;figcaption&gt;Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/06/sabotage.jpg' style='width:600px;' alt='Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe'/&gt;&lt;figcaption&gt;Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;I think this is all about how we define &lt;em&gt;quality&lt;/em&gt; and what a &lt;em&gt;bug&lt;/em&gt; is.&lt;/p&gt;
 
@@ -825,7 +825,7 @@ alternative. Let me explain.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/leon-the-professional.jpg' style='width:600px;' alt='Léon: The Professional by Luc Besson'/&gt;&lt;figcaption&gt;Léon: The Professional by Luc Besson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/05/leon-the-professional.jpg' style='width:600px;' alt='Léon: The Professional by Luc Besson'/&gt;&lt;figcaption&gt;Léon: The Professional by Luc Besson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;JUnit officially suggests a
 &lt;a href=&quot;http://junit.org/faq.html#atests_2&quot;&gt;test fixture&lt;/a&gt;:&lt;/p&gt;
@@ -1013,7 +1013,7 @@ un-extendable.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/05/kill-bill.jpg' style='width:600px;' alt='Kill Bill: Vol. 2 (2004) by Quentin Tarantino'/&gt;&lt;figcaption&gt;Kill Bill: Vol. 2 (2004) by Quentin Tarantino&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/05/kill-bill.jpg' style='width:600px;' alt='Kill Bill: Vol. 2 (2004) by Quentin Tarantino'/&gt;&lt;figcaption&gt;Kill Bill: Vol. 2 (2004) by Quentin Tarantino&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s say we&amp;#39;re making an interface that would represent a name of a person:&lt;/p&gt;
 
@@ -1274,7 +1274,7 @@ products (one license per project).&lt;/p&gt;&lt;/li&gt;
 (although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.jetbrains.com'&gt;&lt;img src='http://www.yegor256.com/images/2015/06/jetbrains-logo.gif' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.jetbrains.com'&gt;&lt;img src='/images/2015/06/jetbrains-logo.gif' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Each project must be:&lt;/p&gt;
 
@@ -1943,7 +1943,7 @@ Let&amp;#39;s see what was created and how it works.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/03/godfather-shooting-scene.jpg' style='width:600px;' alt='Making of The Godfather (1972) by Francis Ford Coppola'/&gt;&lt;figcaption&gt;Making of The Godfather (1972) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/03/godfather-shooting-scene.jpg' style='width:600px;' alt='Making of The Godfather (1972) by Francis Ford Coppola'/&gt;&lt;figcaption&gt;Making of The Godfather (1972) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;java-web-architecture-in-a-nutshell&quot;&gt;Java Web Architecture in a Nutshell&lt;/h2&gt;
 
@@ -2561,7 +2561,7 @@ utility methods, which make our code procedural rather than object-oriented.&lt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/02/russina-matroshka.jpg' style='width:600px;' alt='Матрёшка'/&gt;&lt;figcaption&gt;Матрёшка&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/02/russina-matroshka.jpg' style='width:600px;' alt='Матрёшка'/&gt;&lt;figcaption&gt;Матрёшка&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:&lt;/p&gt;

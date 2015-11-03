@@ -30,7 +30,7 @@ any software development to anyone. Is it just me? Not really.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-godfather-ii.jpg' style='width:600px;' alt='The Godfather: Part II (1974) by Francis Ford Coppola'/&gt;&lt;figcaption&gt;The Godfather: Part II (1974) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/the-godfather-ii.jpg' style='width:600px;' alt='The Godfather: Part II (1974) by Francis Ford Coppola'/&gt;&lt;figcaption&gt;The Godfather: Part II (1974) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This preamble is just a joke, but it&amp;#39;s not so far from
 &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;the truth&lt;/a&gt;. Of course,
@@ -99,7 +99,7 @@ away in Argentina and we&amp;#39;re here in New York City &amp;mdash; how can we
 &lt;a href=&quot;/2014/10/20/how-we-write-product-vision.html&quot;&gt;a good spec&lt;/a&gt;?
 I don&amp;#39;t buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
-&lt;a href=&quot;/&quot;&gt;architect&lt;/a&gt;. Learning, training,
+&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;. Learning, training,
 and reading should fix this. Getting everybody together in the office
 is &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;not a solution&lt;/a&gt;.&lt;/p&gt;
 
@@ -211,7 +211,7 @@ simplify it.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/crouching-tiger-hidden-dragon.jpg' style='width:600px;' alt='Crouching Tiger, Hidden Dragon (2000) by Ang Lee'/&gt;&lt;figcaption&gt;Crouching Tiger, Hidden Dragon (2000) by Ang Lee&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/crouching-tiger-hidden-dragon.jpg' style='width:600px;' alt='Crouching Tiger, Hidden Dragon (2000) by Ang Lee'/&gt;&lt;figcaption&gt;Crouching Tiger, Hidden Dragon (2000) by Ang Lee&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with this code:&lt;/p&gt;
 
@@ -479,7 +479,7 @@ should I expect, right? Not just that. I think the problem is bigger.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/cossacks-of-the-kuban.jpg' style='width:600px;' alt='Cossacks of the Kuban (1950) by Ivan Pyryev'/&gt;&lt;figcaption&gt;Cossacks of the Kuban (1950) by Ivan Pyryev&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/cossacks-of-the-kuban.jpg' style='width:600px;' alt='Cossacks of the Kuban (1950) by Ivan Pyryev'/&gt;&lt;figcaption&gt;Cossacks of the Kuban (1950) by Ivan Pyryev&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Have any of you seen this movie: &lt;a href=&quot;http://www.imdb.com/title/tt0041562/&quot;&gt;Cossacks of the Kuban&lt;/a&gt;?
 It was shot in 1949, when &lt;a href=&quot;https://en.wikipedia.org/wiki/Joseph_Stalin&quot;&gt;Joseph Stalin&lt;/a&gt;
@@ -593,7 +593,7 @@ Is this how it should be?&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-wrestler.jpg' style='width:600px;' alt='The Wrestler (2008) by Darren Aronofsky'/&gt;&lt;figcaption&gt;The Wrestler (2008) by Darren Aronofsky&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/the-wrestler.jpg' style='width:600px;' alt='The Wrestler (2008) by Darren Aronofsky'/&gt;&lt;figcaption&gt;The Wrestler (2008) by Darren Aronofsky&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;We are trying to &lt;strong&gt;avoid explicitness&lt;/strong&gt; in these sensitive subjects. Indeed,
 how can we tell Jeff that his salary is lower than
@@ -664,7 +664,7 @@ you will eventually find one. In the meantime, this manual is for you :)&lt;/p&g
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-office.jpg' style='width:600px;' alt='The Office (2001–2003)'/&gt;&lt;figcaption&gt;The Office (2001–2003)&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/the-office.jpg' style='width:600px;' alt='The Office (2001–2003)'/&gt;&lt;figcaption&gt;The Office (2001–2003)&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Help Others&lt;/strong&gt;.
 Find the stupidest newbies and help them. Regardless of what exactly
@@ -781,7 +781,7 @@ some food for thought.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s say I have a list of numbers:&lt;/p&gt;
 
@@ -868,7 +868,7 @@ everywhere else.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/what-just-happened.jpg' style='width:600px;' alt='What Just Happened (2008) by Barry Levinson'/&gt;&lt;figcaption&gt;What Just Happened (2008) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/what-just-happened.jpg' style='width:600px;' alt='What Just Happened (2008) by Barry Levinson'/&gt;&lt;figcaption&gt;What Just Happened (2008) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Seriously, look at &lt;strong&gt;IT recruiters&lt;/strong&gt;, for example. To find a programmer, one has to pay
 about $30K (in Silicon Valley, if a programmer&amp;#39;s salary is, say, $120K a year)
@@ -1008,7 +1008,7 @@ is something completely different.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/office-space.jpg' style='width:600px;' alt='Office Space (1999) by Mike Judge'/&gt;&lt;figcaption&gt;Office Space (1999) by Mike Judge&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/office-space.jpg' style='width:600px;' alt='Office Space (1999) by Mike Judge'/&gt;&lt;figcaption&gt;Office Space (1999) by Mike Judge&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are &lt;a href=&quot;https://www.google.com/search?q=micromanagement&quot;&gt;tons of articles&lt;/a&gt;
 about micromanagement. Most of them emphasize that the &amp;quot;micro&amp;quot; prefix prescribes
@@ -1090,7 +1090,7 @@ and &lt;strong&gt;open&lt;/strong&gt; procedure, &lt;strong&gt;visible&lt;/stron
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/up-in-the-air.jpg' style='width:600px;' alt='Up in the Air (2009) by Jason Reitman'/&gt;&lt;figcaption&gt;Up in the Air (2009) by Jason Reitman&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/up-in-the-air.jpg' style='width:600px;' alt='Up in the Air (2009) by Jason Reitman'/&gt;&lt;figcaption&gt;Up in the Air (2009) by Jason Reitman&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;I mentioned this problem before in
 &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;my post&lt;/a&gt; about team morale.
@@ -1155,13 +1155,13 @@ You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;All this is perfectly explained by Glenford Myers in his great book
 &lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;The Art of Software Testing&lt;/a&gt;.
 I will just summarize it here again.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, &amp;quot;testing is the process of executing a program with the
 intent of &lt;strong&gt;finding errors&lt;/strong&gt;&amp;quot; (page 6). Pay attention, the intent is to find errors.
@@ -1210,7 +1210,7 @@ that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='http://www.yegor256.com/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;David West in
 &lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;Object Thinking&lt;/a&gt;
@@ -1406,7 +1406,7 @@ once is redundant and must be replaced with a value.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/09/y-tu-mama-tambien.jpg' style='width:600px;' alt='Y Tu Mamá También (2001) by Alfonso Cuarón'/&gt;&lt;figcaption&gt;Y Tu Mamá También (2001) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/09/y-tu-mama-tambien.jpg' style='width:600px;' alt='Y Tu Mamá También (2001) by Alfonso Cuarón'/&gt;&lt;figcaption&gt;Y Tu Mamá También (2001) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here, variable &lt;code&gt;fileName&lt;/code&gt; is redundant:&lt;/p&gt;
 
@@ -1469,7 +1469,7 @@ in production.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src='http://www.yegor256.com/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src='/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;By fragile, I&amp;#39;m referring to the &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;
 philosophy, which is the opposite of
