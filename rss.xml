@@ -89,8 +89,6 @@ HTML+CSS responses. Or, if a user is on another service, requests may
 contain some data, and responses will be in XML or JSON. You get the idea;
 a user is a client, and the service is a server.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;img src='/images/2015/11/bot-3.jpg' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
-
 &lt;p&gt;Like in a restaurant &amp;mdash; you say what you want, and a &lt;strong&gt;server&lt;/strong&gt; goes
 to the kitchen, waits there, and in a few minutes, comes back with
 spaghetti carbonara. You&amp;#39;re a client, and that cute lady is a server.&lt;/p&gt;
@@ -98,7 +96,7 @@ spaghetti carbonara. You&amp;#39;re a client, and that cute lady is a server.&lt
 &lt;p&gt;In the case of a chatbot, that&amp;#39;s not the case anymore. Look at the
 architecture:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src='/uml/2ba7a5c2327e7f477de501fc97959cec.svg'
+&lt;p&gt;&lt;img src='/uml/d103661ebf8494340e260442970bf4af.svg'
         alt='PlantUML diagram' class='plantuml'/&gt;&lt;/p&gt;
 
 &lt;p&gt;First, a user posts a request to GitHub through a web user interface
@@ -108,6 +106,8 @@ are any new requests there. If something new is found, the service
 does the job, prepares a response, and posts it there. The client receives
 an email notification about a new response just posted to the ticket. The
 client then checks GitHub and finds the response.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;img src='/images/2015/11/bot-3.jpg' style='width:250px;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is how this would look in a restaurant: There would be a board with sticky notes.
 First, you write the note, &amp;quot;I&amp;#39;d like spaghetti carbonara
