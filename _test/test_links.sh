@@ -37,5 +37,8 @@ if [ "$broken" -gt "20" ]; then
   echo "${broken} link(s) broken (out of ${total}):"
   cat _temp/broken.txt
   exit -1
+else
+  echo "just ${broken} broken link(s)(out of ${total}), it's acceptable:"
+  cat _temp/broken.txt
 fi
 
