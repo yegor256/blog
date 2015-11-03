@@ -57,7 +57,7 @@ script:
 - _test/test_grammar.sh
 - _test/test_orphans.sh
 # - _test/test_keywords.sh
-# - _test/test_links.sh
+- _test/test_links.sh
 - _test/test_w3c.sh
 - _test/test_excerps.sh
 - _test/test_pages_existence.sh
