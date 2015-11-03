@@ -19,7 +19,7 @@ echo -n "removing stop words... "
 cat _temp/words.txt | sort | uniq -c | sort -r | cut -c9- | \
 while read k; do
   grep -q $k _test/stop-words.txt
-  if [[ $? != 0 ]]; then
+  if [ $? -ne 0 ]; then
     echo $k >> _temp/good-words.txt
   fi
 done
@@ -30,7 +30,7 @@ cat _temp/good-words.txt | head -200 > _temp/top-words.txt
 while read k; do
   echo -n "${k}: "
   grep -q $k _temp/top-words.txt
-  if [[ $? = 1 ]]; then
+  if [ $? -eq 1 ]; then
     echo "is absent!"
     exit -1
   fi
