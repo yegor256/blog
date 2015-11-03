@@ -40,6 +40,7 @@ while read k; do
 done < _test/core-keywords.txt
 if [ "$errors" -ne "0" ]; then
   echo "there are ${errors} missed keywords, see above"
+  cat _temp/top-words.txt
   exit -1
 fi
 
