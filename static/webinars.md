@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube l6MpCBzwDbg video-left %}
 [November 4, 2015](https://plus.google.com/u/0/events/cl4ugsfapl84d086gpihqq5c49k)
 **What Fake Objects Are For?**
-We'll discuss the role of fake objects and the importance
+We discussed the role of fake objects and the importance
 of their existence in every object-oriented library. The discussion
-will be based on this post:
+was based on this post:
 [Built-in Fake Objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %}).
 
 {% youtube 9yjtsCK6Wdk video-left %}
