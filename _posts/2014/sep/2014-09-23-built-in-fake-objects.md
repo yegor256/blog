@@ -85,7 +85,8 @@ before the actual testing.
 ## Sample Use Case
 
 Let's say, you're developing a project that uses jcabi-dynamo for
-managing data in DynamoDB. Your class may look similar to this:
+managing data in [DynamoDB](https://aws.amazon.com/dynamodb/).
+Your class may look similar to this:
 
 {% highlight java %}
 public class Employee {
@@ -131,8 +132,9 @@ is doing. Just look at its [JavaDoc](http://dynamo.jcabi.com/apidocs-0.16.1/inde
 There is a package called `com.jcabi.dynamo.mock` that contains
 only fake classes, suitable only for unit testing.
 
-Even though their sole purpose is to optimize unit testing, we ship
-them together with production code, in the same JAR package.
+Even though their sole purpose is to optimize unit testing, we
+[ship them]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})
+together with production code, in the same JAR package.
 
 This is what a test will look like, when a fake class `MkRegion` is used:
 

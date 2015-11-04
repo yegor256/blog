@@ -19,7 +19,7 @@ keywords:
 A chatbot (or [chatterbot](https://en.wikipedia.org/wiki/Chatterbot), as Wikipedia says)
 is a piece of software that talks to you in chat format.
 [We](http://www.teamed.io) use chatbots in a few (micro)services, and they
-fully replace user interfaces. I don't think there is any innovation
+fully **replace** user interfaces. I don't think there is any innovation
 in this approach, but it has proved to be very effective over the last year or so.
 That's the impetus for this post.
 Here is how the [Rultor](http://www.rultor.com) chatbot works for
