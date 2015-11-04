@@ -299,3 +299,5 @@ and was easy to design.
 
 I think chatbots are a good approach for interacting with microservices.
 Especially when users are more or less professional.
+
+PS. Illustrations by [Kristina Wheat](https://www.behance.net/wheeat).
