@@ -22,7 +22,7 @@
       <description>&lt;p&gt;A chatbot (or &lt;a href=&quot;https://en.wikipedia.org/wiki/Chatterbot&quot;&gt;chatterbot&lt;/a&gt;, as Wikipedia says)
 is a piece of software that talks to you in chat format.
 &lt;a href=&quot;http://www.teamed.io&quot;&gt;We&lt;/a&gt; use chatbots in a few (micro)services, and they
-fully replace user interfaces. I don&amp;#39;t think there is any innovation
+fully &lt;strong&gt;replace&lt;/strong&gt; user interfaces. I don&amp;#39;t think there is any innovation
 in this approach, but it has proved to be very effective over the last year or so.
 That&amp;#39;s the impetus for this post.
 Here is how the &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; chatbot works for
@@ -295,6 +295,8 @@ and was easy to design.&lt;/p&gt;
 
 &lt;p&gt;I think chatbots are a good approach for interacting with microservices.
 Especially when users are more or less professional.&lt;/p&gt;
+
+&lt;p&gt;PS. Illustrations by &lt;a href=&quot;https://www.behance.net/wheeat&quot;&gt;Kristina Wheat&lt;/a&gt;.&lt;/p&gt;
 </description>
       <author>Yegor Bugayenko</author>
       <pubDate>Tue, 03 Nov 2015 00:00:00 +0000</pubDate>
