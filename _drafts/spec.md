@@ -291,9 +291,24 @@ strongly against implementation instructions.
 The text may look like:
 
 {% highlight text %}
-
+PDF report is generated when required. It is
+possible to download a report or save it
+in the account.
 {% endhighlight %}
 
+The problem here is that there is no "actor" involved. This functionality
+is more or less clear, but it's not clear who is doing all this. Where
+is the user? It is just a story of something happening somewhere. Not
+really what programmers need in order to implement it.
+
+The best way to explain functionality is through user stories. And a good
+user story always has, guess what... a user. It always starts with
+"the user...", followed but a verb. The user downloads, the user saves,
+the user clicks, prints, delets, formats, etc.
+
+It is not necessarily has to be a human. It may be a system, a RESTful API
+client, a database, anything. But always someone. "It is possible to download..."
+is not a user story. Possible for who?
 
 ## Noise
 
