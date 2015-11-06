@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DI Containers are Code Polluters"
+title: "Dependency Injection Containers are Code Polluters"
 date: 2014-10-03
 tags: oop anti-pattern
 description:
