@@ -153,7 +153,8 @@ the best and highly recommended):
 
 <!--more-->
 
-If you know any other good continuous integration services,
+If you know any other good
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) services,
 [email me](/about-me.html), I'll review and add them to this list.
 BTW, here is a ["full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
 of continuous integration software and services.

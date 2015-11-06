@@ -63,7 +63,9 @@ Both projects hosted their code bases on GitHub. Both teams were developing in
 [feature branches](http://martinfowler.com/bliki/FeatureBranch.html)- even for
 small fixes.
 
-Both teams used build automation, continuous integration, pre-flight builds,
+Both teams used build automation,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
+pre-flight builds,
 static analysis and code reviews. This indicates the maturity of the project
 teams.
 

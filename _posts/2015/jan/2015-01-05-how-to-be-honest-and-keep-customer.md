@@ -20,7 +20,8 @@ Most of our clients are rather surprised when we explain to them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including the Git repository, bug reports, discussions
-between programmers, continuous integration fails, etc.
+between programmers,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) fails, etc.
 They often tell me that other software development
 [outsourcing teams]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 keep this information in-house and deliver only final releases,
@@ -173,7 +174,7 @@ of reading it, it is very possible that one day he will tell us that
 our code is crap and we have to learn how to program better. It has not
 happened in our projects for many years, but it has happened before,
 when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
-in our continuous integration pipeline.
+in our [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) pipeline.
 
 Another funny possibility is when the client shows the source code to a "friend",
 and he gives a "professional" opinion, which sounds like, "They don't know what they

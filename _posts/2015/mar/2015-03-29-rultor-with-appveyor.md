@@ -17,7 +17,8 @@ keywords:
 
 {% badge /images/2014/10/appveyor.png 100 http://www.appveyor.com %}
 
-[AppVeyor](http://www.appveyor.com) is a great cloud continuous integration service that builds
+[AppVeyor](http://www.appveyor.com) is a great cloud
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service that builds
 Windows projects. [Rultor](http://www.rultor.com) is a DevOps assistant, which automates
 release, merge and deploy operations, using Docker containers. These posts
 explain how Rultor works and what it's for:

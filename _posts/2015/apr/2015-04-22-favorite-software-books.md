@@ -70,7 +70,8 @@ I read this book as a novel.
 {% badge /images/2015/04/book-continuous-delivery.jpg 96 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=MPZUCBXBGNOIHDDI %}
 [**Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation**](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=MPZUCBXBGNOIHDDI)
 by Jez Humble and David Farley.
-This is a perfect book about software delivery, continuous integration,
+This is a perfect book about software delivery,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
 testing, packaging, versioning, and many other techniques involved in programming.
 It's definitely a must-read for anyone who is serious about software engineering.
 

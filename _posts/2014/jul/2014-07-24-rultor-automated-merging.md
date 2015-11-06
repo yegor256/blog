@@ -43,7 +43,8 @@ the GitHub issue.
 
 ## Why not Jenkins or Travis?
 
-There are many tools on the market, which automate continuous integration and
+There are many tools on the market, which automate
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and
 continuous delivery (let's call them DevOps).
 For example, downloadable open-source
 [Jenkins](http://jenkins-ci.org/) and hosted

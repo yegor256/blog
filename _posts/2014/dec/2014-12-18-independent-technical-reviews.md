@@ -185,7 +185,9 @@ interested in fixing all critical mismatches.
 **Review Everything, Not Just Source Code**.
 Let your reviewer look at all technical resources you have, not just
 source code files (`.java`, `.rb`, `.php`, etc.) Give him access to the
-database schema, continuous integration panel, build environment,
+database schema,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+panel, build environment,
 issue tracking system, plans and schedules, work agendas, up-time reports,
 deployment pipeline, production logs,
 customer bug reports, statistics, etc. Everything that

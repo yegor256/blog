@@ -130,7 +130,8 @@ We don't want to start a server on its default 3306 port,
 because there could be another server already running there.
 Besides that, if we use a hard-coded TCP port, we won't be able to
 run multiple builds in parallel. Maybe not a big deal when
-you're developing locally, but in continuous integration
+you're developing locally, but in
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 environment this can be a problem. That's why we're reserving a TCP port first.
 
 2. [**maven-dependency-plugin**](http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)

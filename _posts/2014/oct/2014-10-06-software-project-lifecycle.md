@@ -52,7 +52,8 @@ There are four phases in every project I work with in
    with anyone else. The architect builds the product according to the
    specification in a very limited time frame. The result will have
    multiple bugs and open ends, but it will implement the main user story.
-   The architect also configures continuous integration and delivery pipelines.
+   The architect also configures
+   [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and delivery pipelines.
    Deliverables: working software.
    Duration: 2-5 days.
    Participants: architect.

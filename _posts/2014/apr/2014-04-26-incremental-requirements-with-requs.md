@@ -106,7 +106,8 @@ Requs files.
 
 ## Requs Files
 
-The SRS document is generated automatically on every continuous integration
+The SRS document is generated automatically on every
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 build cycle. It is compiled from pieces called `.req` files, which are usually
 located in the `src/main/requs` directory in a project repository.
 
@@ -132,8 +133,9 @@ directories with files.
 
 Before submitting a pull request, I will try to validate that my changes are
 syntactically and grammatically valid. I will compile Requs files into the SRS
-document using the same method our continuous integration server uses to compile
-them.
+document using the same method our
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+server uses to compile them.
 
 Before I can compile, though, I need to install
 [JDK7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)

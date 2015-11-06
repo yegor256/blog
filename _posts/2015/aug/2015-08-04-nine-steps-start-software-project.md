@@ -225,7 +225,8 @@ not focused enough, while too few is due to a lack of attention.
 
 ## Continuous Integration
 
-Now I have to make sure the product is "wrapped" in continuous integration,
+Now I have to make sure the product is "wrapped" in
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
 which is a [critical component]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %})
 of any software package. I have to configure it, preferably
 [in the cloud]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}),
@@ -297,7 +298,7 @@ deployable in one click.
 "Pipeline" means that there are a number of elements chained sequentially;
 for a Java application, for example:
 
- * Run automated build (the same as in continuous integration)
+ * Run automated build (the same as in [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}))
  * Package JAR file
  * Upload JAR file to repository
  * Build JavaDoc site

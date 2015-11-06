@@ -23,7 +23,8 @@ Java code, including [Checkstyle](http://checkstyle.sourceforge.net/),
 [Cobertura](http://cobertura.github.io/cobertura/), etc.
 All of them are usually used to analyze quality and build
 some fancy reports. Very often, those reports are published
-by continuous integration servers, like Jenkins.
+by [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+servers, like Jenkins.
 
 {% badge http://img.qulice.com/logo.svg 128 http://www.qulice.com %}
 

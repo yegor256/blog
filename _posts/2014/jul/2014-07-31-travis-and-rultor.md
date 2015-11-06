@@ -21,7 +21,8 @@ keywords:
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 [Rultor](http://www.rultor.com) is a coding team assistant.
-[Travis](http://travis-ci.org) is a hosted continuous integration system.
+[Travis](http://travis-ci.org) is a hosted
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) system.
 In this article I'll show how our open source projects are
 using them in tandem to achieve seamless continuous delivery.
 
@@ -81,7 +82,9 @@ are environment independent. However, in reality, unit tests are far
 from being ideal.
 
 That's why a combination of [read-only master]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
-with Rultor and continuous integration with Travis gives us higher stability.
+with Rultor and
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+with Travis gives us higher stability.
 
 ## Scenario #3: Release to RubyGems
 
