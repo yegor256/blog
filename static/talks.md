@@ -22,7 +22,7 @@ for the most recent news.
 <style>
 .talk {
   display: block;
-  height: 75px;
+  height: 50px;
   margin-top: 2em;
 }
 </style>
