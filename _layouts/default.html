@@ -82,10 +82,13 @@
           </ul>
         </nav>
         <div id="search">
-          <form method="get" action="https://www.google.com/search">
+          <form method="get" action="https://www.google.com/search" style="position:relative">
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input id="search-query" class="field field-text"
+              onfocusin="$('#google').css('display', 'inline-block');"
               name="q" placeholder="Search" autocomplete="off"/>
+            <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
+              style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;"/>
           </form>
           <div id="search-results" style="display: none;">
             <div class="entries"></div>
