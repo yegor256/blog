@@ -21,7 +21,8 @@ they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including the Git repository, bug reports, discussions
 between programmers, continuous integration fails, etc.
-They often tell me that other software development outsourcing teams
+They often tell me that other software development
+[outsourcing teams]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 keep this information in-house and deliver only final releases,
 rarely together with the source code.
 
@@ -179,7 +180,9 @@ and he gives a "professional" opinion, which sounds like, "They don't know what 
 are doing." Once such an opinion hits your client's ears, the project is at
 a significant risk of closure. It'll be very difficult, almost impossible,
 to convince the client not to listen to the "friend" and continue
-to work with you. That's why most outsourcers prefer to keep their sources
+to work with you. That's why most
+[outsourcers]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+prefer to keep their sources
 private until the very end of the project, when the final invoice is paid.
 
 I think that an accidental appearance of a "friend" with a negative opinion

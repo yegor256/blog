@@ -23,7 +23,9 @@ turn this into a working piece of software as fast as possible and by spending a
 few dollars as possible. Ideally, this prototyping takes a week
 and is made by an architect working **solo**.
 Once the "skeleton" is ready, we start putting software "meat" on it.
-We recruit a team of programmers for that or outsource it. I see nine important steps
+We recruit a team of programmers for that or
+[outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+it. I see nine important steps
 in the skeleton creation part; let me show you them one by one.
 
 <!--more-->

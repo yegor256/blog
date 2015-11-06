@@ -32,7 +32,7 @@ at the bottom). I wish someone would have given it to me 15 years ago.
 
 **Have a "Work for Hire" Agreement**.
 Make sure [the contract]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %})
-you have with the software outsourcing team
+you have with the [software outsourcing team]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 includes something like this: "Parties shall deem all deliverables created by
 the developer as _works made for hire_ as is defined under the
 [Copyright Law of the United States](http://www.copyright.gov/title17/)".
