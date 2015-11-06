@@ -82,8 +82,11 @@
           </ul>
         </nav>
         <div id="search">
-          <input id="search-query" class="field field-text"
-            name="q" placeholder="Search" autocomplete="off"/>
+          <form method="get" action="https://www.google.com/search">
+            <input name="sitesearch" value="yegor256.com" type="hidden"/>
+            <input id="search-query" class="field field-text"
+              name="q" placeholder="Search" autocomplete="off"/>
+          </form>
           <div id="search-results" style="display: none;">
             <div class="entries"></div>
           </div>
