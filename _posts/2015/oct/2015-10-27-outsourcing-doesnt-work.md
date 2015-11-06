@@ -116,7 +116,7 @@ I don't find these "reasons" logical. They merely explain the
 consequences but never even touch the real problem, which I believe
 sounds like this:
 
-You're just a cash cow for an outsourcing company.
+You're just a **cash cow** for an outsourcing company.
 
 You're neither a partner nor a friend, despite all your expectations.
 
