@@ -36,7 +36,8 @@ outcome is almost always the same &mdash; it is
 [a disaster]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %}).
 
 I'm talking about outsourcing, not offshore development. The difference is
-that in outsourcing, there are two companies involved: you the client
+that in outsourcing, there are two companies involved: you the
+[client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
 development, you just open an office in that same Loompaland with your own
 management and employees. Again, I'm discussing **outsourcing** here.

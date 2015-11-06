@@ -76,7 +76,8 @@ In the end &mdash; you lose.
 In Fixed Price you will feel secure at the beginning &mdash; "the statement
 of work specifies everything and the price is fixed, how can I lose?"
 According to the statistics above, however, programmers are much smarter than their
-clients. You will lose in quality. Yes, you will get something for that
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
+You will lose in quality. Yes, you will get something for that
 fixed price, but it will be a throw-away software. And when you decide to
 modify it, new costs will bubble up. In the end, the whole project will be ruined
 and your money will simply be turned into programmers' salaries. This model is even more

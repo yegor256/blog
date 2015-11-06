@@ -167,7 +167,8 @@ it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
 downside is the price of $129 per month. "With this money
 you can get a dedicated EC2 instance and install Jenkins there" &mdash;
-some of my clients say. I strongly disagree, since Jenkins will
+some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 

@@ -17,7 +17,9 @@ keywords:
 ---
 
 "Here is the specification; how much will it cost to create this software?"
-I hear this almost every day from clients of [Teamed.io](http://www.teamed.io)
+I hear this almost every day from
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+of [Teamed.io](http://www.teamed.io)
 and prospects that are planning to become our clients and
 [outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) the software
 development to us. My best answer is "_I don't know; it depends._"

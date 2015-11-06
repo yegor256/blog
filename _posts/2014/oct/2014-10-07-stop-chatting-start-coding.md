@@ -27,7 +27,8 @@ pass a code review and make sure the code is
 [merged into the destination branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 Only then, is his result appreciated and paid for.
 
-For most of my clients this already sounds extreme.
+For most of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+this already sounds extreme.
 They are used to a traditional scheme of paying per hour
 or per month. They immediately realize the benefits of XDSD, though,
 because for them this approach means that project

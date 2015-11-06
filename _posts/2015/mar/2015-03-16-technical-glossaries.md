@@ -16,7 +16,9 @@ keywords:
 ---
 
 I read a few technical specifications every week from our current
-and potential clients, and there's one thing I can't take anymore;
+and potential
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
+and there's one thing I can't take anymore;
 I have to write about it: 99 percent of the documents I'm reading don't
 have glossaries, and because of that, they are very difficult to read
 and digest. Even when they do have glossaries, their definitions

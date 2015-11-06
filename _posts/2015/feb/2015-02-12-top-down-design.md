@@ -17,7 +17,8 @@ keywords:
 ---
 
 First, no matter what the methodology is, we all write software for our
-users (a.k.a. customers, project sponsors, end users, or clients). Second,
+users (a.k.a. customers, project sponsors, end users, or
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})). Second,
 no matter what the methodology is, we write incrementally, releasing
 features and bug fixes one by one. Maybe I'm saying something absolutely obvious here,
 but it's important to remember that each new version should first of all satisfy

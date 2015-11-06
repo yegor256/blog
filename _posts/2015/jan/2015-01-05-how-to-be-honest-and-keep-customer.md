@@ -16,7 +16,9 @@ keywords:
   - software development outsourcing
 ---
 
-Most of our clients are rather surprised when we explain to them that
+Most of our
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+are rather surprised when we explain to them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including the Git repository, bug reports, discussions

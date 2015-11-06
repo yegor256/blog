@@ -66,7 +66,8 @@ and Prozac doesn't help anymore. How does this sound? Familiar?
 
 I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,
-or how many promises were made, they want to keep you as a client
+or how many promises were made, they want to keep you as a
+[client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 forever. Well, for as long as you have something in your bank account.
 
 You want your business to succeed and flourish, right? They want the same for their
