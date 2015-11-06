@@ -58,7 +58,8 @@ We're all parts of a mechanism called a "project", which works according
 to the rules and principles of **project management** whether we are aware of
 them or not. Whether we have a project manager or not. Even if we violate
 all of them and manage ourselves in total chaos, we still have a scope,
-cost, schedule, and all other attributes of project management.
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
+schedule, and all other attributes of project management.
 
 A professional and savvy boss understands that his role in the mechanism
 is to clearly define project objectives and make sure everybody's needs are

@@ -83,8 +83,9 @@ There are four phases in every project I work with in
 
 The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
 usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &mdash; Thinking. A mistake made during Thinking
-will cost much more than a mistake made later.
+and risky phase is the first one &mdash; Thinking. A mistake made during Thinking will
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
+much more than a mistake made later.
 
 ## Thinking
 

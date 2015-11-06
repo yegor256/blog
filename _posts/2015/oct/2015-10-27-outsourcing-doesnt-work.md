@@ -51,7 +51,8 @@ and tell you the ugly truth. More on that in a few paragraphs. For now, let's
 explore what the usual reasons are.
 
 **Cheapest Providers**.
-Here is the argument: "So you're outsourcing because you want to optimize costs?
+Here is the argument: "So you're outsourcing because you want to optimize
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})?
 You will end up with the cheapest software shop and sincerely regret
 it very soon." OK, what's the solution, then? Just pay more?
 I don't think that's going to solve the problem; I'll

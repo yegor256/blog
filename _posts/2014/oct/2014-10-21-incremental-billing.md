@@ -55,7 +55,8 @@ In T&M you will simply pay and pray. If your programmers
 appear to be honest workaholics you may get lucky and get something done.
 As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
 there won't be any workaholics in your project. Even if you adopt micro-management
-and corporal punishment, your overall costs will be much higher than expected
+and corporal punishment, your overall
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) will be much higher than expected
 and the quality will suffer.
 
 This is what a monthly T&M invoice will look like. You will pay for
@@ -109,7 +110,9 @@ a micro-step towards any of these.
 
 By the end of a week you get a bill that lists every single increment
 delivered during the week, the amount of time spent on its development
-and its total cost. Every increment costs you 30-60 minutes of a programmer's
+and its
+[total cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}).
+Every increment costs you 30-60 minutes of a programmer's
 time (plus our fees).
 
 Besides that, by the end of the week, you get an updated version

@@ -80,7 +80,8 @@ a school here. We're building a house!
 While working on a software project, a good project manager has a staffing management
 plan that describes how skills will be recruited, tested, applied, and
 discharged when necessary. Such a plan may include training, but it would be
-as small an amount as possible &mdash; mostly because a plumber trained by us costs much
+as small an amount as possible &mdash; mostly because a plumber trained by us
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) much
 more than one trained by someone else but does exactly the same, or worse, work.
 Thus, a smart project manager acquires project members who are already
 capable of performing their duties and falls back on training only

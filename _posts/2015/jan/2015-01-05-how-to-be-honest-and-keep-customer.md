@@ -70,7 +70,8 @@ us by giving explicit instructions regarding the most important tasks. We've
 seen it before, and we are always trying to learn from this. As soon as
 we see that the client is trying to micro-manage us, we ask
 ourselves: "Is our process transparent enough? Do we give enough
-information to the client about milestones, risks, plans, costs, etc.?"
+information to the client about milestones, risks, plans,
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}), etc.?"
 In most cases, it's our own fault, and we're trying to learn and improve.
 If so, it's important to react fast, before the client becomes too aggressive in his
 orders and instructions. It will be very difficult to escort him back to the normal

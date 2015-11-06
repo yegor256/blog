@@ -93,7 +93,8 @@ The first one, in three months, produced 59k new lines and removed 29k in
 changes in the `master` branch, which totals 88k lines of code. The project
 resulted in about 10,000 man hours to produce these lines (20 programmers, three
 months, 170 working hours per month) &mdash; which equates to about $350k. Therefore,
-the project cost a whopping
+the project
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) a whopping
 
 <p style="color:red;text-align:center;font-size:2em;">$3.98 per line</p>
 
