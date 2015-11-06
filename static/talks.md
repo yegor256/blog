@@ -59,14 +59,14 @@ Olomouc, Czech Republic<br/>
 
 <hr/>
 
-"Continuous Integration Is Dead"<br/>
-[Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/)<br/>
-Kyiv, Ukraine<br/>
-19 September 2015<br/>
+"Continuous Integration Is Dead";
+[Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
+Kyiv, Ukraine;
+19 September 2015;
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 
-"CI is DEAD. Or is it?!"<br/>
-[San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/)<br/>
-San Francisco, USA<br/>
-23 April 2015<br/>
+"CI is DEAD. Or is it?!";
+[San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);
+San Francisco, USA;
+23 April 2015;
 [video](https://www.youtube.com/watch?v=3IXk5yEJMIs)
