@@ -41,7 +41,8 @@ software projects fail to achieve their objectives and
 [about 30%](http://thenextweb.com/insider/2014/09/25/top-20-reasons-startups-fail-report/)
 of startups fail by running out of cash.
 However, very few programmers (if any)
-fail to get their monthly salaries on time.
+[fail]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+to get their monthly salaries on time.
 
 What does this tell us?
 
