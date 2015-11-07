@@ -3,7 +3,7 @@ layout: post
 title: "Are You a Micromanager?"
 date: 2015-09-22
 place: Moscow, Russia
-tags: mgmt
+tags: management
 description:
   Everyone knows micromanagement is evil, but very few
   understand what exactly it is and what's a better alternative.

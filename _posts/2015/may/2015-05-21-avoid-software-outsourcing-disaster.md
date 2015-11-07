@@ -2,7 +2,7 @@
 layout: post
 title: "How to Avoid a Software Outsourcing Disaster"
 date: 2015-05-21
-tags: outsourcing mgmt
+tags: outsourcing management
 description:
   Software outsourcing is a business technique full of
   pitfalls and risks that have to be mitigated

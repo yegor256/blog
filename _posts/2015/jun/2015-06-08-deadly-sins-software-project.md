@@ -2,7 +2,7 @@
 layout: post
 title: "Seven Deadly Sins of a Software Project"
 date: 2015-06-08
-tags: mgmt agile
+tags: management agile
 categories: best
 description:
   Here is a list of criteria I apply to software projects

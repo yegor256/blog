@@ -2,7 +2,7 @@
 layout: post
 title: "Four Habits Of A Software Architect"
 date: 2014-12-20
-tags: mgmt
+tags: management
 description:
   A good software is a very rare creature that possesses
   a few very unique and important habits, which are the following...

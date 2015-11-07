@@ -2,7 +2,7 @@
 layout: post
 title: "How XDSD Is Different"
 date: 2014-04-17
-tags: xdsd mgmt
+tags: xdsd management
 description: |
   This article lays out the most important and critical
   differences between XDSD and traditional software

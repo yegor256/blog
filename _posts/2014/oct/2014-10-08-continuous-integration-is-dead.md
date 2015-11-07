@@ -2,7 +2,7 @@
 layout: post
 title: "Continuous Integration is Dead"
 date: 2014-10-08
-tags: mgmt devops
+tags: management devops
 categories: jcg best
 description:
   Continuous integration is an awesome idea that

@@ -3,7 +3,7 @@ layout: post
 title: "Why Hiring Doesn't Work ... Anymore"
 date: 2015-10-26
 place: Seattle, WA
-tags: mgmt outsourcing
+tags: management outsourcing
 description:
   Trying to build a team of developers by acquiring
   and hiring talents is a recipe for failure. Here is why.

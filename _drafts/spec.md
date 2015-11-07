@@ -3,7 +3,7 @@ layout: post
 title: "Ten Typical Mistakes in Specs"
 date: 2015-10-27
 place: Palo Alto, CA
-tags: requirements mgmt
+tags: requirements management
 description:
   Requirements specification is where we make
   the most expensive mistakes, which are very

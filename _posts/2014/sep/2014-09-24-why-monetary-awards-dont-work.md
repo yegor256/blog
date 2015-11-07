@@ -2,7 +2,7 @@
 layout: post
 title: "Why Monetary Awards Don't Work?"
 date: 2014-09-24
-tags: mgmt
+tags: management
 description:
   Monetary awards can be very demotivating or they
   can be very effective. It depends on your ability

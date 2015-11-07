@@ -2,7 +2,7 @@
 layout: post
 title: Project Lifecycle in Teamed.io
 date: 2014-10-06
-tags: mgmt
+tags: management
 description:
   There are four standard phases in
   a software development lifecycle for all projects

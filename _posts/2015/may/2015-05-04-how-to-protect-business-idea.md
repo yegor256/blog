@@ -2,7 +2,7 @@
 layout: post
 title: "How to Protect a Business Idea While Outsourcing"
 date: 2015-05-04
-tags: mgmt outsourcing
+tags: management outsourcing
 description:
   How can an entrepreneur protect a business idea when
   it's necessary to disclose it to a hired team of

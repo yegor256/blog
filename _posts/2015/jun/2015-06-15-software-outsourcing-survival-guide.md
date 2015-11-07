@@ -2,7 +2,7 @@
 layout: post
 title: "Software Outsourcing Survival Guide"
 date: 2015-06-15
-tags: outsourcing mgmt
+tags: outsourcing management
 description:
   Here is a few basic recommendations that will help prevent
   you from becoming a victim of a bad software outsourcing project

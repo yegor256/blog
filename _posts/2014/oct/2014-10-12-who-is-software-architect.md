@@ -2,7 +2,7 @@
 layout: post
 title: "What Does a Software Architect Do?"
 date: 2014-10-12
-tags: mgmt architect
+tags: management architect
 categories: jcg best
 description:
   The role of a software architect is mission critical

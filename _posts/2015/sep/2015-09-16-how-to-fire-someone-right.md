@@ -2,7 +2,7 @@
 layout: post
 title: "How to Fire Someone Right"
 date: 2015-09-16
-tags: mgmt
+tags: management
 place: Kiev, Ukraine
 description:
   Firing can be done right &mdash; nicely and gracefully &mdash;

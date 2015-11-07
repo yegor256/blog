@@ -2,7 +2,7 @@
 layout: post
 title: "Hourly Pay Is Modern Slavery"
 date: 2015-07-21
-tags: mgmt
+tags: management
 place: Palo Alto, CA
 description:
   Paying by the hour is a modern form of slavery that

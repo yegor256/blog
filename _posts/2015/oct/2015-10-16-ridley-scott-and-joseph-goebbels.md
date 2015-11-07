@@ -3,7 +3,7 @@ layout: post
 title: "What Is the Difference Between Ridley Scott and Joseph Goebbels?"
 date: 2015-10-16
 place: Palo Alto, CA
-tags: mgmt
+tags: management
 description:
   Hollywood movies seem to tell us the wrong stories
   about motivation, teamwork, and basic principles of management.

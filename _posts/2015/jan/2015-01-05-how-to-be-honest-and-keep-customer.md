@@ -2,7 +2,7 @@
 layout: post
 title: "How to Be Honest and Keep a Customer"
 date: 2015-01-05
-tags: mgmt
+tags: management
 categories: jcg
 description:
   Most software outsourcing companies don't show their source

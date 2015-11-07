@@ -2,7 +2,7 @@
 layout: post
 title: "Software Outsourcers, "
 date: 2014-11-03
-tags: mgmt
+tags: management
 description:
   We work with many programmers remotely, but we never
   work with software outsourcing companies, here is why...

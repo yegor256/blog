@@ -2,7 +2,7 @@
 layout: post
 title: "Meetings Are Legalized Robbery"
 date: 2015-07-13
-tags: mgmt
+tags: management
 place: Washington, D.C.
 description:
   Meetings are very popular but very ineffective

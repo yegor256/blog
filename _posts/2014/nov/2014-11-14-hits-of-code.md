@@ -2,7 +2,7 @@
 layout: post
 title: Hits-of-Code Instead of SLoC
 date: 2014-11-14
-tags: mgmt
+tags: management
 description:
   The Hits of Code (HoC) metric is an alternative measurement
   indicator that can replace Software Lines Of Code (SLoC) and help
