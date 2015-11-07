@@ -99,6 +99,8 @@ information to help you do your job. Your real boss is the project;
 the boss you interact with is just a hired manager who translates
 project objectives into plans, instructions, schedules, etc.
 
+{% quote Being a professional team player requires a constant readiness to resist each and every instruction %}
+
 This boss is your colleague who does management while you're
 writing code. You're both equal. You and he are in the same boat. Your
 functions are different than his; that's all. You're not working

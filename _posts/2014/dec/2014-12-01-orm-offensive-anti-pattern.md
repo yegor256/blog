@@ -167,6 +167,8 @@ I'm claiming that the entire idea behind ORM is wrong. Its invention
 was maybe the second big mistake in OOP after
 [NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
+{% quote ORM, instead of encapsulating database interaction inside an object, extracts it away, literally tearing a solid and cohesive living organism apart %}
+
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
 this subject has already been published by very respected authors, including
