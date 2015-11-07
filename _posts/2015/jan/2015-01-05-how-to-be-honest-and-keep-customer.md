@@ -31,7 +31,8 @@ rarely together with the source code.
 
 I understand why other developers are trying to hide as much as possible.
 Giving a project sponsor full access to the development environment
-is not easy at all. Here is a summary
+is [not easy]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+at all. Here is a summary
 of problems we've been having and our solutions. I hope they help you
 honestly show your clients all project internals and still keep them on board.
 
@@ -138,7 +139,7 @@ wrong direction; don't even think about going there.
 The second choice is to tell the client to mind his own business and let
 us do ours. He hired us because we're professional enough to develop the
 software according to his requirements. If he questions our capabilities,
-he is free to change the contractor. But until then, he has
+he is free to **change** the contractor. But until then, he has
 to trust our decisions. Will this work? I doubt it. It's the same as
 giving him the finger. He will get offended, and you won't get anything.
 

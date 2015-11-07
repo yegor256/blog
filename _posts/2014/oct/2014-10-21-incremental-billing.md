@@ -51,13 +51,16 @@ I guess it means that in all failures you &mdash; the client &mdash; will be the
 
 {% figure /images/2014/10/time-and-material-contract.svg 500 %}
 
-In T&M you will simply pay and pray. If your programmers
+In T&M you will simply
+[pay and pray]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}).
+If your programmers
 appear to be honest workaholics you may get lucky and get something done.
 As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
 there won't be any workaholics in your project. Even if you adopt micro-management
 and corporal punishment, your overall
-[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) will be much higher than expected
-and the quality will suffer.
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
+will be much higher than expected and the quality will
+[suffer]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}).
 
 This is what a monthly T&M invoice will look like. You will pay for
 the time spent by programmers pretending to be working on your project.
@@ -80,7 +83,8 @@ According to the statistics above, however, programmers are much smarter than th
 [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
 You will lose in quality. Yes, you will get something for that
 fixed price, but it will be a throw-away software. And when you decide to
-modify it, new costs will bubble up. In the end, the whole project will be ruined
+modify it, new costs will bubble up. In the end, the whole project will be
+[ruined]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
 and your money will simply be turned into programmers' salaries. This model is even more
 risky than T&M, where you at least have a chance.
 
