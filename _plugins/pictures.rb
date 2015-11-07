@@ -25,7 +25,7 @@ module Yegor
     end
 
     def render(context)
-      html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" \
+      html = "<figure class='unprintable'><img src='#{Yegor::Img.new(@src, context)}'" \
         " style='width:#{@width}px;'" \
         " alt='figure'/></figure>\n\n"
     end
