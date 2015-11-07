@@ -40,18 +40,3 @@ $(
       .appendTo('head');
   }
 );
-
-// Google Analytics
-var _gaq = [];
-_gaq.push(['_setAccount', 'UA-1963507-32']);
-_gaq.push(['_trackPageview']);
-$(
-  function() {
-    'use strict';
-    $('<script>')
-      .attr('src', '//stats.g.doubleclick.net/dc.js')
-      .attr('async', 'async')
-      .attr('defer', 'defer')
-      .appendTo('head');
-  }
-);
