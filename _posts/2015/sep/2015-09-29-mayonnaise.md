@@ -117,6 +117,8 @@ involved. Can we? I'm sure we can, and that's the future.
 What will the army of real estate agents do? Well, maybe something useful,
 like **cleaning streets**.
 
+{% quote $25 out of my $40 will be spent not writing code but rather on something else %}
+
 The very existence of this mayonnaise in our modern business environment
 is a very negative thing. Money is simply not working the way it should.
 Also, since this mayonnaise is rather expensive, its existence creates
