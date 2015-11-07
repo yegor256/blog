@@ -428,6 +428,8 @@ shop, the only problem is how to take care of the
 next month&amp;#39;s payroll, and &lt;strong&gt;90 percent&lt;/strong&gt; of all expenses are salaries
 for the programmers.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;Your business interests can't be aligned with the interests of your outsourcing partner&lt;/aside&gt;
+
 &lt;p&gt;That&amp;#39;s why a good customer for them is a paying customer. Not a customer with
 a successful project. Not a customer with a properly solved problem. Not
 a customer with
@@ -794,6 +796,8 @@ organizational and motivational problems in our offices are just local exception
 the general rule. The rule is simple: project management is not important
 if we&amp;#39;re all good friends.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;The truth is that you are not going to get anywhere if you follow the spirit of this movie&lt;/aside&gt;
+
 &lt;p&gt;Ridley Scott is telling us that in a perfect organization, such as
 &lt;a href=&quot;https://www.nasa.gov/&quot;&gt;NASA&lt;/a&gt;,
 everybody &lt;strong&gt;loves&lt;/strong&gt; everyone; that&amp;#39;s why they can get a man from Mars without
@@ -899,6 +903,8 @@ offend creative people. Well, all people.&lt;/p&gt;
 &lt;p&gt;And this is totally wrong!&lt;/p&gt;
 
 &lt;p&gt;This is a &lt;strong&gt;mistake&lt;/strong&gt;, and it causes big problems!&lt;/p&gt;
+
+&lt;aside class='quote'&gt;Competition is inevitable in a group, especially if the group consists of creative people&lt;/aside&gt;
 
 &lt;p&gt;When a group doesn&amp;#39;t have explicitly defined principles of
 survival and growth, it starts to create them &lt;strong&gt;naturally&lt;/strong&gt;. When
@@ -1173,6 +1179,8 @@ search function to someone for $30K?&lt;/p&gt;
 
 &lt;p&gt;Well, yes and no.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;IT recruiters stay between us, stealing our money and protecting that position for themselves&lt;/aside&gt;
+
 &lt;p&gt;On one hand, there are plenty of job sites and rather powerful
 technologies for finding the right person.
 There is &lt;a href=&quot;https://careers.stackoverflow.com/&quot;&gt;StackOverflow Careers&lt;/a&gt;,
@@ -1306,6 +1314,8 @@ about the small stuff while a micromanager employs
 &amp;quot;excessive control or attention to details&amp;quot;, as
 &lt;a href=&quot;http://www.merriam-webster.com/dictionary/micromanage&quot;&gt;Merriam-Webster&lt;/a&gt; says.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;A good manager declares what needs to be done, never telling me how I must achieve it&lt;/aside&gt;
+
 &lt;p&gt;It seems that in order to become a good manager, one should just
 stop paying attention to details. Huh?
 What could be worse than a manager who doesn&amp;#39;t pay attention to details?&lt;/p&gt;
@@ -1399,6 +1409,8 @@ so the boss is just making sure they are &lt;strong&gt;enforced&lt;/strong&gt;.&
 &lt;p&gt;If firing is unpleasant for you, the rules are not clear.&lt;/p&gt;
 
 &lt;p&gt;If the rules are not clear, you&amp;#39;re a bad manager.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;The firing decision should not be your decision&lt;/aside&gt;
 
 &lt;p&gt;The firing is unpleasant only when your decision is not supported by the team.
 You feel you&amp;#39;re doing something wrong to the person you are firing and
@@ -1711,6 +1723,8 @@ redundant variables many times. We use them to &amp;quot;explain&amp;quot; the c
 it&amp;#39;s not just a string literal &lt;code&gt;&amp;quot;test.txt&amp;quot;&lt;/code&gt; anymore but a &lt;code&gt;fileName&lt;/code&gt;.
 The code looks easier to understand, right? Not really.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;The more variable names I have to remember, the longer it takes to digest the code&lt;/aside&gt;
+
 &lt;p&gt;Let&amp;#39;s dig into what &amp;quot;readability&amp;quot; of code is in the first place. I think this
 quality can be measured by the number of seconds I need to understand the
 code I&amp;#39;m looking at. The longer the timeframe, the lower the readability.
@@ -1793,6 +1807,8 @@ We don&amp;#39;t fail because we&amp;#39;re trying to keep the app running. This
 public and visible. We scream and cry. We throw an exception. We &lt;strong&gt;want&lt;/strong&gt; the
 app to crash, break, and fail, because someone gave us a file that doesn&amp;#39;t
 exist. We complain and protest. This is called Fail Fast.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;Fail Safe approach conceals problems and makes code less maintainable, and that's why it's difficult to stabilize&lt;/aside&gt;
 
 &lt;p&gt;Which philosophy, if we follow it everywhere, will make our software
 robust and failure-resilient? Only the second one &amp;mdash; the Fail Fast.&lt;/p&gt;
