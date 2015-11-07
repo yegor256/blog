@@ -87,8 +87,10 @@
             <input id="search-query" class="field field-text"
               onfocusin="$('#google').css('display', 'inline-block');"
               name="q" placeholder="Search" autocomplete="off"/>
-            <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
-              style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;"/>
+            <span class="desktop-only">
+              <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
+                style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;"/>
+            </span>
           </form>
           <div id="search-results" style="display: none;">
             <div class="entries"></div>
