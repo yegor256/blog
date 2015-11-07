@@ -30,7 +30,8 @@ and discuss some very interesting numbers.
 ## Project #1: Traditionally Co-located
 
 The first project I was a part of was performed  by a traditionally co-located
-group of programmers. There were about 20 of them (I'm not counting managers,
+group of programmers. There were about 20 of them (I'm not counting
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
 analysts, product owners, SCRUM masters, etc.) The project was a web auctioning
 site with pretty high traffic numbers (over two million page views per day).
 

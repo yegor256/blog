@@ -87,7 +87,8 @@ the stable state.
 Now, my question is &mdash; who, in an actively working team, may need this?
 
 A product owner, who is interested in launching new features to the market
-as soon as possible? Or maybe a project manager, who is responsible for
+as soon as possible? Or maybe a
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), who is responsible for
 the deadlines? Or maybe programmers, who hate to fix bugs made by someone else,
 especially under pressure?
 

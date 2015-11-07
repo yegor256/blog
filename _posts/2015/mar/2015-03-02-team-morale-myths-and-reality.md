@@ -25,7 +25,8 @@ speechless monkeys, programming under the influence of Prozac. Their existence
 and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
 is our big misfortune. Let me present my own
 vision of how team morale can be boosted on a software team &mdash; a team that
-has a strong leader and a good project manager.
+has a strong leader and a
+[good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <!--more-->
 
@@ -86,7 +87,8 @@ Try to avoid global slogans and world domination speeches in the office and
 in front of the team. They demotivate. If we're doing so good, why are
 our salaries not reflecting this success yet? If your vision is so global,
 why is it not yet implemented in reality? Don't promise to become the next Steve Jobs.
-Instead, become the next good manager of a highly paid team that is solving
+Instead, become the next [good manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+of a highly paid team that is solving
 interesting problems for real people. Your practical achievements, no matter
 how small and down-to-earth they are, will give you much more respect than
 many-hour-long speeches about our fantastic future.

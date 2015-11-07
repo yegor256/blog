@@ -53,7 +53,7 @@ multi-tier architecture, and I can't. He definitely earns my respect, right?
 
 Wrong! A good architect knows his main role is to decompose a complex problem
 into less complex components and let programmers solve them one by one. Just as
-a good project manager has to decompose a complex task into smaller ones.
+a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) has to decompose a complex task into smaller ones.
 When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.

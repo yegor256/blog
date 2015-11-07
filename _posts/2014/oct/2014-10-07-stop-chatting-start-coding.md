@@ -55,7 +55,8 @@ any technical issues on Skype or by phone.
 So, how do we resolve problems and share information?
 
 We use task tracking systems for that. When a developer has a question,
-he submits it as a new "ticket". The project manager then picks it up
+he submits it as a new "ticket". The project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}) then picks it up
 and assigns it to another developer, who is able to answer it. Then, the
 answer goes back through the tracking system or directly into
 the source code.

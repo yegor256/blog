@@ -22,7 +22,8 @@ the technical quality of the product we're developing. No matter how
 good the team is, how complex the technology is, how messy the
 requirements are, or how chaotic the project sponsor is,
 we blame the architect and no one else. Of course, we also reward the architect
-if we succeed. Here is what I, as project manager, expect from a good architect.
+if we succeed. Here is what I, as
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), expect from a good architect.
 
 <!--more-->
 

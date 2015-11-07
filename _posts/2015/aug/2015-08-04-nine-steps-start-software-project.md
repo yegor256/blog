@@ -312,7 +312,8 @@ is packaged and deployed in a few minutes.
 ## Acceptance
 
 The last step is the handoff &mdash; I have to present my solution to the
-project manager, the sponsor of the project, and the team. Everybody has
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+the sponsor of the project, and the team. Everybody has
 to accept it. It doesn't mean they will like it, and that's not the goal. The
 goal is to deliver a complete solution, with risks, assumptions, decisions
 documented, continuous integration configured, static analysis enforced, etc.

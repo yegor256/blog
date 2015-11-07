@@ -38,7 +38,8 @@ by Rita Mulcahy.
 This book is my favorite for project management. Even though it's about the
 PMI approach and PMBOK in particular, it is a must-read for everyone who
 is interested in management. Ignore the PMBOK specifics and focus on
-the philosophy of project management and the role of project manager in it.
+the philosophy of project management and the role of
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) in it.
 
 {% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
 [**The Art of Software Testing**](http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ)

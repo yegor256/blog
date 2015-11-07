@@ -80,7 +80,9 @@ many developers seem to have an attitude that is counter to extensive testing
 
 This is what Dr. Myers says on the second page, and I can humbly confirm
 that in all software groups I've been worked in thus far,
-almost everyone, including testers, project managers, and programmers, share this philosophy.
+almost everyone, including testers,
+[project managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
+and programmers, share this philosophy.
 They all believe that "testing is the process of demonstrating
 that errors are not present" (p.5)
 

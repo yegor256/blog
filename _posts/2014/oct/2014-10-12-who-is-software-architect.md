@@ -64,7 +64,8 @@ he will use his knowledge and skills, or quality control
 [tools]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}), or
 unit testing frameworks, or authority, or coaching, or corporal punishment
 &mdash; it's his business.
-A project manager delegates quality control to the software architect,
+A project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}) delegates quality control to the software architect,
 and [it is up to]({% pst 2015/feb/2015-02-23-haircut %})
 the software architect how to delegate it further.
 

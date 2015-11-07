@@ -21,7 +21,8 @@ You have a task assigned to you, and you don't like it. You are simply
 not in the mood. You don't know how to fix that damn bug. You have no idea
 how that bloody module was designed, and you don't know how it works. But
 you have to fix the issue, which was reported by someone who has no clue how
-this software works. You get frustrated and blame that stupid project manager and
+this software works. You get frustrated and blame that
+[stupid project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) and
 programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
 you miss the deadline and **everybody blames you**. Been there, done that?

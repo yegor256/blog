@@ -78,7 +78,9 @@ reaches its peak and starts to go down.
 
 ## Project Manager
 
-The job of a project manager is to do as much as possible
+The job of a project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+is to do as much as possible
 to fix the project. He has to use the sponsor's time and money in order
 to remove all bugs and inconsistencies and return the project back
 to a "fixed" state.

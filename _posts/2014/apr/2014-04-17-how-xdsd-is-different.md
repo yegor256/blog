@@ -85,7 +85,8 @@ author in the ticket to clarify task requirements.
 
 When the requirements of a task are clear &mdash; and you understand them fully
 &mdash; deliver the result to the author and wait for him to close the task.
-After the author closes the task, the project manager pays you.
+After the author closes the task, the
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) pays you.
 
 {% picture /images/2014/04/goodfellas-paulie-talking.png 0 Goodfellas (1990) by Martin Scorsese %}
 

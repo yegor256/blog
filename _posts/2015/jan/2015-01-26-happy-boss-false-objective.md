@@ -28,7 +28,8 @@ for the project, not for the boss.
 
 {% picture /images/2015/01/the-million-dollar-hotel.png 0 The Million Dollar Hotel (2000) by Wim Wenders %}
 
-We all work on **projects** as developers, designers, programmers, managers,
+We all work on **projects** as developers, designers, programmers,
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
 testers, you name it. The boss is also a member of the project. More
 formally, he or she is a **stakeholder**, same as every one of us. Each stakeholder
 has his own **needs** for the project: 1) Jeff, the developer, wants to learn Scala

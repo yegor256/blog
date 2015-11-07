@@ -33,7 +33,7 @@ software design discipline ... and it's very _sad_ to see it.
 {% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
 
 A good [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
-as well as a good project manager, doesn't need
+as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), doesn't need
 [meetings]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
 and **never** organizes them.
 

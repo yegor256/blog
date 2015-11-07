@@ -23,7 +23,8 @@ A stand-up meeting (or simply "stand-up") is
 to the team members", according to [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting).
 In the next few paragraphs, I attempt to explain why these meetings,
 despite being so popular in software development teams, are **pure evil**
-and should never be used by good managers.
+and should never be used by good
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 I'm not saying they can be done right or wrong;
 there are plenty of articles about that. I'm not
@@ -31,7 +32,8 @@ trying to give advice about how to do them properly so they
 work, either. I'm saying that a good manager should **never** have daily stand-ups.
 Because they not only "don't work" but also do very bad, sometimes catastrophic,
 things to your management process, whether it's agile or not. On the other hand,
-a bad manager will always use daily stand-ups as his or her
+a [bad manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+will always use daily stand-ups as his or her
 key management instrument.
 
 <!--more-->
@@ -65,7 +67,8 @@ never asks his people. Instead, they tell him when necessary. And when
 someone does stop to tell him something, a good project manager fixes such a broken communication channel.
 But he never uses daily meetings to collect information.
 
-As a good manager, inform your team what your goals are and what's important
+As a [good manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+inform your team what your goals are and what's important
 to you as a project manager (or Scrum master). They should know what's
 important for you to know about their progress, risks, impediments,
 and failures. They should understand what trouble you will get into

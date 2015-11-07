@@ -60,7 +60,8 @@ that's how your chances for a raise improve.
 Instead of working toward the goals set by the organization,
 we are fighting with each other for the attention of our boss.
 Instead of focusing on the results and their quality, we
-are reading the mood of our manager. Our fear becomes a guide for us.
+are reading the mood of our
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}). Our fear becomes a guide for us.
 
 Competition is **inevitable** in a group, especially if the group consists
 of creative people. Creativity is all about competition. Each of us

@@ -82,6 +82,8 @@ Thus, this "micro" prefix is not really about the size of the tasks a manager
 keeps under control. It is about what a manager wants to see inside them &mdash;
 a black box or a glass box under a **microscope**.
 
+{% quote A good manager pays extreme attention to defining quality standards for my work %}
+
 A good manager doesn't care about what I'm doing now, what tasks I'm working on,
 or what my plans, problems, and risks are. Instead, a good manager cares about my
 **results**, to a very specific level of details. A good manager pays extreme

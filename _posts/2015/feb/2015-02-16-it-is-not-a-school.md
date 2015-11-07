@@ -59,7 +59,9 @@ this weakness may be revealed in the middle of the project.
 Say you're building a house and you contracted a plumber to install a
 drainage system. When it's time to mount the equipment, he tells you
 that he's never worked with it and doesn't know how to install it.
-It was a risk, and it occurred. A good project manager always has a fallback plan
+It was a risk, and it occurred. A good
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+always has a fallback plan
 or even a few of them. Obviously, the best option would be to contract another
 plumber. The worst option would be to train the original one on the spot.
 

@@ -77,7 +77,9 @@ you will do for the project. Long-living tickets are a management nightmare.
 It is difficult to track them and control them. It's difficult to understand
 what's going on. Have you seen those two-year-old tickets in open source projects
 that have hundreds of comments and no deliverables? It is a mistake
-by their project managers and ticket participants. Each ticket should be
+by their
+[project managers]({% pst 2015/sep/2015-09-22-micromanagement %})
+and ticket participants. Each ticket should be
 short and focused &mdash; 1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.

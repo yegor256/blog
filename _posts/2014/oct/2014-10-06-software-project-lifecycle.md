@@ -43,7 +43,8 @@ There are four phases in every project I work with in
    who will work with the software (actors) and how will they work with it (user stories).
    Deliverables: specification.
    Duration: from 2 days up to 3 weeks.
-   Participants: product owner, analyst(s), architect, project manager.
+   Participants: product owner, analyst(s), architect,
+   [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
  * **Building**.
    Here the software architect is creating a [proof-of-concept](https://en.wikipedia.org/wiki/Proof_of_concept)

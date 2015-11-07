@@ -39,7 +39,8 @@ Then everybody begins working and we start hearing excuses:
  * "I tried, but this doesn't work; what can I do?"
  * "This installation requires all of my time. I can't finish the task"
 
-With excuses, team members transfer responsibility back to the project manager.
+With excuses, team members transfer responsibility back to the project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 There was a very famous article ["Management Time: Who's Got the
 Monkey?"](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
 published in the Harvard Business Review about this very subject.

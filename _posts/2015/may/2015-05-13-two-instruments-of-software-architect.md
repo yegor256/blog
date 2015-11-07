@@ -96,5 +96,6 @@ Reviews are a _reactive_ instrument for an architect. Through strict and
 non-compromising code reviews, an architect enforces his design and architectural
 principles.
 
-PS. Here is how an architect is supposed to report to the project manager:
+PS. Here is how an architect is supposed to report to the
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}):
 [Three Things I Expect From a Software Architect]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
