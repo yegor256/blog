@@ -47,6 +47,8 @@ either a CTO, a co-founder, a project manager, or a team lead.
 
 The project is the source of our checks. Not the CFO.
 
+{% quote A true professional team player feels himself equal to all other members of the project, no matter how high they are in the hierarchy %}
+
 The CFO is a stakeholder, like everyone else. The project gives him more
 power than others because it's necessary for the whole mechanism to
 work properly. Every project member has his or her own **roles and responsibilities**.
@@ -74,7 +76,8 @@ However, if Jeff wants to learn Scala and we're
 developing an iOS application, that is a problem for the boss to resolve.
 Either convince Jeff to fall in love with Swift (I doubt that's possible)
 or replace him with someone who is already in love with it. It's clear that
-a professional boss will resort to such a tragic act as firing Jeff
+a professional boss will resort to such a tragic act as
+[firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) Jeff
 not because of his personal feelings towards Jeff but because
 they are both working toward the project objectives. Jeff and the boss
 will both understand that Jeff's need to learn Scala is not aligned

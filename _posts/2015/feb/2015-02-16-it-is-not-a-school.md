@@ -63,6 +63,8 @@ It was a risk, and it occurred. A good project manager always has a fallback pla
 or even a few of them. Obviously, the best option would be to contract another
 plumber. The worst option would be to train the original one on the spot.
 
+{% quote The goal of the project is to build a house, not to train a plumber %}
+
 Wait, why is that so obvious? The plumber is a great guy. Yes, he doesn't know
 how to work with this equipment, but that doesn't mean we should
 fire him immediately. Let's pay for his training, send him to some
@@ -86,6 +88,8 @@ more than one trained by someone else but does exactly the same, or worse, work.
 Thus, a smart project manager acquires project members who are already
 capable of performing their duties and falls back on training only
 in exceptional situations.
+
+{% quote If you make your projects spend their money on your education, that's theft %}
 
 Now, a logical question: What should we, as programmers, do? We want to
 learn, and we don't want to spend our own money on it. We don't want to

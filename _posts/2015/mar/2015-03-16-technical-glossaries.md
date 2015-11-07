@@ -36,6 +36,8 @@ I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone
 would be interested in reading it. Anyway, I will try.
 
+{% quote A detailed and accurate glossary saves a reader a lot of time %}
+
 A glossary (a.k.a. vocabulary) is a list of terms used by the project
 that is usually included at the beginning of the technical specification document.
 Ideally, every technical term used in the document should be
