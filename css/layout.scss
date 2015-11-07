@@ -65,6 +65,8 @@ a, a:visited {
   text-decoration: underline;
 }
 .foreign:before {
+  @extend .unprintable;
+  @extend .desktop-only;
   font-size: .4 * $em;
   vertical-align: top;
 }
