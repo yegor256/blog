@@ -44,7 +44,7 @@ I answered these questions (approximately):
 
  * What challenges do we have (14:50)?
 
- * What about micro-management (17:55)?
+ * What about [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}) (17:55)?
 
  * Can this work in a non-IT sector (19:40)?
 

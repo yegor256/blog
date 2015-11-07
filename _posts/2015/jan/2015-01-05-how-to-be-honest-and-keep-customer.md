@@ -49,7 +49,8 @@ directly to programmers, walking around
 "I'm paying these guys; why can't I tell them what to do?" is a very typical mindset.
 Instead of submitting requests through our standard change management mechanism,
 such a client goes directly to one of the programmers and tells him what
-should be fixed, how, and when. It's micro-management in its worst form.
+should be fixed, how, and when. It's
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}) in its worst form.
 We see it very often. What do we do?
 
 First, we try to understand why it's happening. The simplest answer
@@ -69,7 +70,8 @@ success while working with us.
 Maybe our **management is chaotic**, and the client is trying to "organize"
 us by giving explicit instructions regarding the most important tasks. We've
 seen it before, and we are always trying to learn from this. As soon as
-we see that the client is trying to micro-manage us, we ask
+we see that the client is trying to
+[micro-manage]({% pst 2015/sep/2015-09-22-micromanagement %}) us, we ask
 ourselves: "Is our process transparent enough? Do we give enough
 information to the client about milestones, risks, plans,
 [costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}), etc.?"
@@ -133,7 +135,9 @@ a Singleton pattern here!"
 Our first choice is to agree and do what he wants. But it's a road to nowhere.
 Once you do it, your project is ruined, and you should start thinking
 about a divorce with this client. Your entire team will quickly turn into
-a group of coding monkeys, micro-managed by someone with some cash. It's a very
+a group of coding monkeys,
+[micro-managed]({% pst 2015/sep/2015-09-22-micromanagement %})
+by someone with some cash. It's a very
 wrong direction; don't even think about going there.
 
 The second choice is to tell the client to mind his own business and let

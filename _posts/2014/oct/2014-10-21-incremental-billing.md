@@ -56,7 +56,8 @@ In T&M you will simply
 If your programmers
 appear to be honest workaholics you may get lucky and get something done.
 As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
-there won't be any workaholics in your project. Even if you adopt micro-management
+there won't be any workaholics in your project. Even if you adopt
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %})
 and corporal punishment, your overall
 [costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 will be much higher than expected and the quality will

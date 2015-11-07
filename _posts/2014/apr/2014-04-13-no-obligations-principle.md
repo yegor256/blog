@@ -63,7 +63,8 @@ Personally, I find this management style extremely annoying and destructive for
 the project. The project environment becomes very unhealthy and good people
 usually end up leaving.
 
-Another traditional management method is micro-management. This results when the
+Another traditional management method is
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}). This results when the
 project manager checks task statuses every few hours and tells people what to do
 and how to handle problems. Needless to say, this management style ruins the
 team and causes good people to leave even faster.

@@ -260,7 +260,9 @@ and we store user name, avatar and email in the
 database.
 {% endhighlight %}
 
-This is micro-management. This is what you, as a requirements analyst, should
+This is
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}).
+This is what you, as a requirements analyst, should
 never do to me, a programmers. You should not tell me how to implement
 the functionality. You want to give a user an ability to login via Facebook?
 Say so. Do you really care whether it's going to happen through a button
