@@ -34,6 +34,8 @@ about the small stuff while a micromanager employs
 "excessive control or attention to details", as
 [Merriam-Webster](http://www.merriam-webster.com/dictionary/micromanage) says.
 
+{% quote A good manager declares what needs to be done, never telling me how I must achieve it %}
+
 It seems that in order to become a good manager, one should just
 stop paying attention to details. Huh?
 What could be worse than a manager who doesn't pay attention to details?

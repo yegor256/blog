@@ -138,6 +138,8 @@ shop, the only problem is how to take care of the
 next month's payroll, and **90 percent** of all expenses are salaries
 for the programmers.
 
+{% quote Your business interests can't be aligned with the interests of your outsourcing partner %}
+
 That's why a good customer for them is a paying customer. Not a customer with
 a successful project. Not a customer with a properly solved problem. Not
 a customer with

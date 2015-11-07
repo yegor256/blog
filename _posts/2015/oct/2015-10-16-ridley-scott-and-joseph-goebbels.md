@@ -54,6 +54,8 @@ organizational and motivational problems in our offices are just local exception
 the general rule. The rule is simple: project management is not important
 if we're all good friends.
 
+{% quote The truth is that you are not going to get anywhere if you follow the spirit of this movie %}
+
 Ridley Scott is telling us that in a perfect organization, such as
 [NASA](https://www.nasa.gov/),
 everybody **loves** everyone; that's why they can get a man from Mars without

@@ -93,10 +93,10 @@ a, a:visited {
     list-style: none;
     padding-left: 0;
     li {
-      border-left: 4px solid #81b341;
+      border-left: 4px solid $green;
       padding-left: $em;
       margin-bottom: $em;
-      color: darken(#81b341, 25);
+      color: darken($green, 25);
     }
   }
 }
@@ -248,6 +248,20 @@ blockquote {
     margin-left: 0;
     padding-left: 0;
     border-left: 0;
+  }
+}
+.quote {
+  @extend .desktop-only;
+  @extend .unprintable;
+  float: right;
+  padding-left: .75 * $em;
+  margin: .5 * $em -5 * $em .5 * $em $em;
+  font-size: 1.6 * $em;
+  line-height: 1.6 * $em;
+  border-left: 4px solid $green;
+  width: 15 * $em;
+  &:before {
+    content: "ˮ";
   }
 }
 figure {

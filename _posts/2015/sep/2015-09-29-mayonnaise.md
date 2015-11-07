@@ -49,6 +49,8 @@ search function to someone for $30K?
 
 Well, yes and no.
 
+{% quote IT recruiters stay between us, stealing our money and protecting that position for themselves %}
+
 On one hand, there are plenty of job sites and rather powerful
 technologies for finding the right person.
 There is [StackOverflow Careers](https://careers.stackoverflow.com/),

@@ -58,6 +58,8 @@ When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.
 
+{% quote A good architect would never be proud of a complex diagram %}
+
 The main virtue of an architect is the ability to _reduce_ complexity. Thus,
 a good architect would never be proud of a complex diagram. Instead, he would
 be proud of a simple and easy-to-understand drawing with a few rectangles that

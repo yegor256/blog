@@ -47,6 +47,8 @@ And this is totally wrong!
 
 This is a **mistake**, and it causes big problems!
 
+{% quote Competition is inevitable in a group, especially if the group consists of creative people %}
+
 When a group doesn't have explicitly defined principles of
 survival and growth, it starts to create them **naturally**. When
 people don't know what exactly needs to be done in order to get
