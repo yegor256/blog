@@ -8,8 +8,8 @@ description:
   Everyone knows micromanagement is evil, but very few
   understand what exactly it is and what's a better alternative.
 keywords:
-  - micromanagement
-  - micromanagement good or bad
+  - micromanager
+  - micro-management good or bad
   - micromanagement effects
   - micromanagement quotes
   - micromanagement meaning

@@ -35,6 +35,8 @@ in bigger companies and bigger projects, the story will be different. But the
 outcome is almost always the same &mdash; it is
 [a disaster]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %}).
 
+{% quote All these reasons merely explain the consequences but never even touch the real problem %}
+
 I'm talking about outsourcing, not offshore development. The difference is
 that in outsourcing, there are two companies involved: you the
 [client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
@@ -174,6 +176,8 @@ insurance, a free gym membership, free lunch, paid vacation, paid sick leave, et
 time, the price of Java time is not much higher on the market than it was years ago. Even
 if you charge $40 per hour (which is very unlikely), your income would be $6,800.
 Again, your income is $6.8K and your expenses are close to $5K. See the margin?
+
+{% quote Your lone motivation is to keep that cash flow coming. No matter what. %}
 
 And don't forget about office expenses, taxes, computers,
 administrative staff, team building events, etc. Because of such a small
