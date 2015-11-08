@@ -53,6 +53,8 @@ for you to be the only person with write access. To make life simpler,
 I would recommend you use [Rultor]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 as a tool for merging those pull requests semi-automatically.
 
+{% quote Don't rely on reports, promises, guarantees, and extensive documentation %}
+
 **Regularly Collect Metrics**.
 Ask your outsourcing team members to regularly collect metrics from the software
 they create and send you them somehow (by email, maybe). I would recommend using
@@ -102,6 +104,8 @@ production branch from development branches. But don't wait! Make sure
 you see your software packaged and deployed every single week, no exceptions
 and no excuses. If your outsourcing team can't give that to you, start worrying
 and change something.
+
+{% quote They have to know what will happen to them if they succeed and how much they will suffer if they fail %}
 
 **Hire an Independent CTO**.
 This advice is mostly for small companies or individuals who outsource
