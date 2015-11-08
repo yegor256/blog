@@ -82,11 +82,15 @@ will understand and respect your business objectives.
 You can also show them this article :)
 
 **Automate and Control Deployment**.
-Ask your outsourcing team to automate the entire deployment pipeline and
+Ask your
+[outsourcing team]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+to automate the entire deployment pipeline and
 keep it under your control. I would recommend you do this during the first
 days of the project. This means the product should be compiled, tested,
 packaged, installed, and deployed to a production repository (or server/s) by
-a single click. Some script should be created to automate this chain
+a single click. Some
+[script]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %})
+should be created to automate this chain
 of operations. That's what your outsourcing partner has to create for you.
 Then, when development starts, every time a new change is made to the
 repository that has to be deployed to production, the same script has
@@ -96,10 +100,14 @@ product by yourself.
 
 **Demand Weekly Releases**.
 Don't wait for the final version. Ask your outsourcing team to release
-a new version every week. No matter how intensive the development is and
+a new version
+[every week]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %}).
+No matter how intensive the development is and
 how many features are "in progress", it's always possible to package
 a new version and release it. If the development is really intensive,
-ask your team to use GitFlow or something similar to isolate a stable
+ask your team to use
+[GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
+or something similar to isolate a stable
 production branch from development branches. But don't wait! Make sure
 you see your software packaged and deployed every single week, no exceptions
 and no excuses. If your outsourcing team can't give that to you, start worrying
@@ -108,11 +116,13 @@ and change something.
 {% quote They have to know what will happen to them if they succeed and how much they will suffer if they fail %}
 
 **Hire an Independent CTO**.
-This advice is mostly for small companies or individuals who outsource
+This advice is mostly for small companies or individuals who
+[outsource]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
 software development and rely on their expertise while staying focused
 on their own business development. That's unwise; you should have an independent
 chief technical officer (CTO) who reports to you and controls how the
-outsourcing team works. This person must be on a different payment
+[outsourcing team works]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}).
+This person must be on a different payment
 schedule with different goals, terms, and objectives. You should talk to
 the CTO and the CTO should control the offshore team. Very often,
 business owners try to become software savvy and control the software
@@ -122,13 +132,18 @@ Be smart &mdash; you do the business development, the CTO reports to you,
 and the software team reports to the CTO.
 
 **Define Rewards and Punishments**.
-There is no management without these two key components. You're not supposed
+There is no
+[management]({% pst 2015/sep/2015-09-22-micromanagement %})
+without these two key components. You're not supposed
 to manage all programmers in the outsourcing shop, but you have to manage
 the entire shop as a single unit of control. You have to give them some
-structure of motivation. They have to know what will happen to them
+structure of
+[motivation]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}).
+They have to know what will happen to them
 if they succeed and how much they will suffer if they fail. If you don't
-make this mechanism explicit, you will deal with an implicit version of it
-where your chances of winning are very low. Most people assume the best
+make this mechanism explicit, you will deal with an
+[implicit version]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+of it where your chances of winning are very low. Most people assume the best
 and only motivation for a software team is to stay on the project. You're
 paying them and that's enough, right? Wrong. Management can't be effective
 when a monthly bank transfer is a reward and its absence is a punishment.
