@@ -2,7 +2,7 @@
 layout: post
 title: "Who Is Your Boss?"
 date: 2014-09-24
-tags: mgmt
+tags: management
 description:
   It is mission critical, in a software team, to
   define explicit vertical lines of subordination,

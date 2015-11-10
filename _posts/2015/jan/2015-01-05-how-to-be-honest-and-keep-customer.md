@@ -2,7 +2,7 @@
 layout: post
 title: "How to Be Honest and Keep a Customer"
 date: 2015-01-05
-tags: mgmt
+tags: management
 categories: jcg
 description:
   Most software outsourcing companies don't show their source
@@ -16,18 +16,23 @@ keywords:
   - software development outsourcing
 ---
 
-Most of our clients are rather surprised when we explain to them that
+Most of our
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+are rather surprised when we explain to them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
 the project, including the Git repository, bug reports, discussions
-between programmers, continuous integration fails, etc.
-They often tell me that other software development outsourcing teams
+between programmers,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) fails, etc.
+They often tell me that other software development
+[outsourcing teams]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 keep this information in-house and deliver only final releases,
 rarely together with the source code.
 
 I understand why other developers are trying to hide as much as possible.
 Giving a project sponsor full access to the development environment
-is not easy at all. Here is a summary
+is [not easy]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+at all. Here is a summary
 of problems we've been having and our solutions. I hope they help you
 honestly show your clients all project internals and still keep them on board.
 
@@ -44,7 +49,8 @@ directly to programmers, walking around
 "I'm paying these guys; why can't I tell them what to do?" is a very typical mindset.
 Instead of submitting requests through our standard change management mechanism,
 such a client goes directly to one of the programmers and tells him what
-should be fixed, how, and when. It's micro-management in its worst form.
+should be fixed, how, and when. It's
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}) in its worst form.
 We see it very often. What do we do?
 
 First, we try to understand why it's happening. The simplest answer
@@ -64,9 +70,11 @@ success while working with us.
 Maybe our **management is chaotic**, and the client is trying to "organize"
 us by giving explicit instructions regarding the most important tasks. We've
 seen it before, and we are always trying to learn from this. As soon as
-we see that the client is trying to micro-manage us, we ask
+we see that the client is trying to
+[micro-manage]({% pst 2015/sep/2015-09-22-micromanagement %}) us, we ask
 ourselves: "Is our process transparent enough? Do we give enough
-information to the client about milestones, risks, plans, costs, etc.?"
+information to the client about milestones, risks, plans,
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}), etc.?"
 In most cases, it's our own fault, and we're trying to learn and improve.
 If so, it's important to react fast, before the client becomes too aggressive in his
 orders and instructions. It will be very difficult to escort him back to the normal
@@ -82,7 +90,7 @@ project.
 ## He Is Asking Too Much
 
 A technically-savvy client can turn the life of
-[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 into a nightmare by constantly asking him to explain every
 single technical decision made, from "Why PostgreSQL instead of MySQL?"
 to "Why doesn't this method throw a checked exception?" Constantly answering
@@ -99,7 +107,7 @@ what is not clear and how much detail is expected in the explanation.
 Second, we look at such requests positively &mdash; they
 are good indicators of certain inconsistencies in the software. If it's
 not clear for the client why PostgreSQL is used and not MySQL, it's a fault
-of [our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+of [our architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 He didn't document his decision and didn't explain
 how it was made, what other options were considered, what selection criteria
 were applied, etc. Thus, a request from a client is [a bug]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
@@ -116,7 +124,7 @@ ready to explain anything he wants, but he will pay for it.
 
 This problem is even bigger than the previous one. Some clients
 believe they are savvy enough to argue with
-[our architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[our architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 and our programmers about how the software should be developed. They don't just
 ask why PostgreSQL is used, they tell us that we should use MySQL,
 because "I know that it's a great database; my friend is using it, and his
@@ -127,13 +135,15 @@ a Singleton pattern here!"
 Our first choice is to agree and do what he wants. But it's a road to nowhere.
 Once you do it, your project is ruined, and you should start thinking
 about a divorce with this client. Your entire team will quickly turn into
-a group of coding monkeys, micro-managed by someone with some cash. It's a very
+a group of coding monkeys,
+[micro-managed]({% pst 2015/sep/2015-09-22-micromanagement %})
+by someone with some cash. It's a very
 wrong direction; don't even think about going there.
 
 The second choice is to tell the client to mind his own business and let
 us do ours. He hired us because we're professional enough to develop the
 software according to his requirements. If he questions our capabilities,
-he is free to change the contractor. But until then, he has
+he is free to **change** the contractor. But until then, he has
 to trust our decisions. Will this work? I doubt it. It's the same as
 giving him the finger. He will get offended, and you won't get anything.
 
@@ -172,14 +182,16 @@ of reading it, it is very possible that one day he will tell us that
 our code is crap and we have to learn how to program better. It has not
 happened in our projects for many years, but it has happened before,
 when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
-in our continuous integration pipeline.
+in our [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) pipeline.
 
 Another funny possibility is when the client shows the source code to a "friend",
 and he gives a "professional" opinion, which sounds like, "They don't know what they
 are doing." Once such an opinion hits your client's ears, the project is at
 a significant risk of closure. It'll be very difficult, almost impossible,
 to convince the client not to listen to the "friend" and continue
-to work with you. That's why most outsourcers prefer to keep their sources
+to work with you. That's why most
+[outsourcers]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+prefer to keep their sources
 private until the very end of the project, when the final invoice is paid.
 
 I think that an accidental appearance of a "friend" with a negative opinion

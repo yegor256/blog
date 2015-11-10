@@ -43,11 +43,13 @@ the GitHub issue.
 
 ## Why not Jenkins or Travis?
 
-There are many tools on the market, which automate continuous integration and
+There are many tools on the market, which automate
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and
 continuous delivery (let's call them DevOps).
 For example, downloadable open-source
-[Jenkins](http://jenkins-ci.org/) and hosted [Travis](http://travis-ci.org) both perform these
-tasks. So, why do we need one more?
+[Jenkins](http://jenkins-ci.org/) and hosted
+[Travis]({% pst 2014/jul/2014-07-31-travis-and-rultor %})
+both perform these tasks. So, why do we need one more?
 
 Well, there are three very important features that we need for our projects, but
 we can't find all of them in any of the DevOps tools currently available on the

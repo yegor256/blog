@@ -2,7 +2,7 @@
 layout: post
 title: "How We Write a Product Vision"
 date: 2014-10-20
-tags: mgmt
+tags: management
 description:
   Product Vision is a fundamental document in any software development project
   that explains what the product is about and defines its scope boundaries.
@@ -159,7 +159,9 @@ Every section must be no more than twenty lines in length. Even if you're
 developing a Google killer with a $50 million dollar budget, your Vision
 document must be as short as two pages.
 
-For most of my clients this is a very complex and brain damaging task. They
+For most of my
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+this is a very complex and brain damaging task. They
 usually come to us with a 50-page document explaining their business
 ideas with all the important details. From this document, we should only extract
 information that really makes a difference.
@@ -221,7 +223,9 @@ will be called "supplementary documentation" and will contain all that
 valuable information you've got from the client. You may use
 that documentation later, during the course of product development.
 
-But don't cut corners. Don't allow your client (or anyone else) to force
+But don't cut corners. Don't allow your
+[client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+(or anyone else) to force
 you to bloat the Product Vision. The document has to be very short and explicit.
 
 No lyrics, only statements.

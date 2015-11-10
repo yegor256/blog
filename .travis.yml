@@ -15,10 +15,23 @@ install:
 - sudo mv sfnt2woff /usr/local/bin/
 - cd ..
 - rm -rf sfnt2woff
+- git clone https://github.com/htacg/tidy-html5.git
+- cd tidy-html5/build/cmake
+- git checkout 5.1.9
+- cmake ../..
+- make
+- sudo make install
+- cd ../../..; rm -rf tidy-html5
 before_install:
 - set -e
-- travis_retry sudo apt-get update -qq
-- travis_retry sudo apt-get install -y tidy
+- sudo apt-get install -y build-essential
+- wget --no-check-certificate http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+- tar xf cmake-3.2.2.tar.gz
+- cd cmake-3.2.2
+- ./configure
+- make
+- sudo make install
+- cd ..; rm -rf cmake-3.2.2
 - travis_retry sudo apt-get install -y aspell
 - travis_retry sudo apt-get install -y libxml2-utils
 - travis_retry sudo apt-get install -y graphviz
@@ -36,9 +49,11 @@ script:
 - set -e
 - _test/test_casperjs.sh
 - jekyll build
-#- _test/ping_links.sh
-- _test/w3c_validate.sh
 - _test/test_grammar.sh
+- _test/test_orphans.sh
+# - _test/test_keywords.sh
+- _test/test_links.sh
+- _test/test_w3c.sh
 - _test/test_excerps.sh
 - _test/test_pages_existence.sh
 - for i in $(ls js/*.js); do jslint $i; done

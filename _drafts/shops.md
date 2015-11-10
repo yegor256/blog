@@ -2,7 +2,7 @@
 layout: post
 title: "Software Outsourcers, "
 date: 2014-11-03
-tags: mgmt
+tags: management
 description:
   We work with many programmers remotely, but we never
   work with software outsourcing companies, here is why...
@@ -14,7 +14,8 @@ keywords:
   - software outsourcing companies
 ---
 
-We work with many programmers [remotely](http://www.teamed.io/developer.html),
+We work with many programmers
+[remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %}),
 but we never do any business with software outsourcing companies. I'm getting
 a few emails every day from them, offering "the best and the cheapest"
 services in almost every area of software programming, and I always

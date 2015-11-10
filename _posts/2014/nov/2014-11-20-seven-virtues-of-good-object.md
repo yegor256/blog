@@ -154,7 +154,8 @@ a contract-less object is impossible to extend via
 
 ## 3. He Is Unique
 
-A good object should always encapsulate something in order
+A good object should always
+[encapsulate]({% pst 2014/dec/2014-12-15-how-much-your-objects-encapsulate %}) something in order
 to be unique. If there is nothing to encapsulate, an object may
 have identical clones, which I believe is bad. Here is an example
 of a bad object, which may have clones:

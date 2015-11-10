@@ -2,7 +2,7 @@
 layout: post
 title: "How to Fire Someone Right"
 date: 2015-09-16
-tags: mgmt
+tags: management
 place: Kiev, Ukraine
 description:
   Firing can be done right &mdash; nicely and gracefully &mdash;
@@ -33,7 +33,8 @@ I said that firing someone should not be done behind **closed doors**.
 Instead, the assessment of individual performance should
 occur openly and be visible to the entire team. If you need to close
 the door in order to talk "privately" to express your concerns and
-eventually to fire someone, you are a bad manager.
+eventually to fire someone, you are a
+[bad manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 I also explained [some time ago]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 that a perfectly managed team is working for the project, not for you, the boss.
@@ -44,7 +45,10 @@ so the boss is just making sure they are **enforced**.
 
 If firing is unpleasant for you, the rules are not clear.
 
-If the rules are not clear, you're a bad manager.
+If the rules are not clear, you're a
+[bad manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
+
+{% quote The firing decision should not be your decision %}
 
 The firing is unpleasant only when your decision is not supported by the team.
 You feel you're doing something wrong to the person you are firing and

@@ -3,7 +3,7 @@ layout: post
 title: "Competition Without Rules Is Destructive"
 date: 2015-10-13
 place: Moscow, Russia
-tags: mgmt
+tags: management
 description:
   When your team doesn't have rules of competition, you
   get competition without rules, which ruins team
@@ -47,6 +47,8 @@ And this is totally wrong!
 
 This is a **mistake**, and it causes big problems!
 
+{% quote Competition is inevitable in a group, especially if the group consists of creative people %}
+
 When a group doesn't have explicitly defined principles of
 survival and growth, it starts to create them **naturally**. When
 people don't know what exactly needs to be done in order to get
@@ -58,7 +60,8 @@ that's how your chances for a raise improve.
 Instead of working toward the goals set by the organization,
 we are fighting with each other for the attention of our boss.
 Instead of focusing on the results and their quality, we
-are reading the mood of our manager. Our fear becomes a guide for us.
+are reading the mood of our
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}). Our fear becomes a guide for us.
 
 Competition is **inevitable** in a group, especially if the group consists
 of creative people. Creativity is all about competition. Each of us

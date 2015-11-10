@@ -279,3 +279,6 @@ Its [`pom.xml`](https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml)
 contains exactly the same configurations explained above, but joined together.
 
 If you have any questions, please don't hesitate to ask below.
+
+PS. Also, check this:
+[PhantomJS as an HTML Validator]({% pst 2014/apr/2014-04-06-phandom %})

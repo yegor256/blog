@@ -2,7 +2,7 @@
 layout: post
 title: "Hourly Pay Is Modern Slavery"
 date: 2015-07-21
-tags: mgmt
+tags: management
 place: Palo Alto, CA
 description:
   Paying by the hour is a modern form of slavery that
@@ -68,6 +68,8 @@ Letting someone tell me what to do with my time in order to get food
 in return is exactly what slavery is about.
 
 What is freedom, then? How should a free man make money?
+
+{% quote A free man sells results, not time %}
 
 A free man sells the **results of his work**. A free man cleans someone's house
 and bills him when the work is done. A free man drives passengers

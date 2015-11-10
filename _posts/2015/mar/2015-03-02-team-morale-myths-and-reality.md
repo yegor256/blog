@@ -2,7 +2,7 @@
 layout: post
 title: "Team Morale: Myths and Reality"
 date: 2015-03-02
-tags: mgmt agile
+tags: management agile
 description:
   Team morale is a key performance driver in any group,
   especially a software development team; however, there are
@@ -18,12 +18,15 @@ keywords:
 There are plenty of books, articles, and blog posts about _team morale_. They
 will all suggest you do things like regular celebrations, team events,
 free lunches, pet-friendly offices, coffee machines, birthday presents, etc.
-All of these are instruments of **concealed enslaving**.
+All of these are instruments of
+[**concealed enslaving**]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 These traditional techniques turn employees into
 speechless monkeys, programming under the influence of Prozac. Their existence
-and popularity is our big misfortune. Let me present my own
+and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
+is our big misfortune. Let me present my own
 vision of how team morale can be boosted on a software team &mdash; a team that
-has a strong leader and a good project manager.
+has a strong leader and a
+[good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <!--more-->
 
@@ -33,7 +36,8 @@ has a strong leader and a good project manager.
 The first and most important quality of a good leader is his or her
 ability to separate bad apples from good ones as soon as possible.
 Nothing will earn you more disrespect from your team than tolerance of
-under-performing team members. Your job as a leader is to help the best players
+[under-performing]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+team members. Your job as a leader is to help the best players
 play better, and they can't play better if they see that management
 doesn't understand the difference between excellence and mediocrity. It's
 a severe demotivating factor.
@@ -83,7 +87,8 @@ Try to avoid global slogans and world domination speeches in the office and
 in front of the team. They demotivate. If we're doing so good, why are
 our salaries not reflecting this success yet? If your vision is so global,
 why is it not yet implemented in reality? Don't promise to become the next Steve Jobs.
-Instead, become the next good manager of a highly paid team that is solving
+Instead, become the next [good manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+of a highly paid team that is solving
 interesting problems for real people. Your practical achievements, no matter
 how small and down-to-earth they are, will give you much more respect than
 many-hour-long speeches about our fantastic future.

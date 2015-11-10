@@ -2,7 +2,7 @@
 layout: post
 title: "Making Your Boss Happy Is a False Objective"
 date: 2015-01-26
-tags: mgmt
+tags: management
 categories: jcg
 description:
   It is very important to understand who you work for,
@@ -28,7 +28,8 @@ for the project, not for the boss.
 
 {% picture /images/2015/01/the-million-dollar-hotel.png 0 The Million Dollar Hotel (2000) by Wim Wenders %}
 
-We all work on **projects** as developers, designers, programmers, managers,
+We all work on **projects** as developers, designers, programmers,
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
 testers, you name it. The boss is also a member of the project. More
 formally, he or she is a **stakeholder**, same as every one of us. Each stakeholder
 has his own **needs** for the project: 1) Jeff, the developer, wants to learn Scala
@@ -47,6 +48,8 @@ either a CTO, a co-founder, a project manager, or a team lead.
 
 The project is the source of our checks. Not the CFO.
 
+{% quote A true professional team player feels himself equal to all other members of the project, no matter how high they are in the hierarchy %}
+
 The CFO is a stakeholder, like everyone else. The project gives him more
 power than others because it's necessary for the whole mechanism to
 work properly. Every project member has his or her own **roles and responsibilities**.
@@ -58,20 +61,24 @@ We're all parts of a mechanism called a "project", which works according
 to the rules and principles of **project management** whether we are aware of
 them or not. Whether we have a project manager or not. Even if we violate
 all of them and manage ourselves in total chaos, we still have a scope,
-cost, schedule, and all other attributes of project management.
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
+schedule, and all other attributes of project management.
 
 A professional and savvy boss understands that his role in the mechanism
 is to clearly define project objectives and make sure everybody's needs are
 aligned with those objectives. In a properly managed and organized project,
 everybody sees and feels how his or her personal needs are satisfied
-when the project achieves its objectives: Jeff learns Scala, Sally
+when the project
+[achieves]({% pst 2015/feb/2015-02-12-top-down-design %})
+its objectives: Jeff learns Scala, Sally
 sees Paris, and Bob buys a new house.
 
 However, if Jeff wants to learn Scala and we're
 developing an iOS application, that is a problem for the boss to resolve.
 Either convince Jeff to fall in love with Swift (I doubt that's possible)
 or replace him with someone who is already in love with it. It's clear that
-a professional boss will resort to such a tragic act as firing Jeff
+a professional boss will resort to such a tragic act as
+[firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) Jeff
 not because of his personal feelings towards Jeff but because
 they are both working toward the project objectives. Jeff and the boss
 will both understand that Jeff's need to learn Scala is not aligned
@@ -92,6 +99,8 @@ your plans, etc. He knows more about the project and uses that
 information to help you do your job. Your real boss is the project;
 the boss you interact with is just a hired manager who translates
 project objectives into plans, instructions, schedules, etc.
+
+{% quote Being a professional team player requires a constant readiness to resist each and every instruction %}
 
 This boss is your colleague who does management while you're
 writing code. You're both equal. You and he are in the same boat. Your

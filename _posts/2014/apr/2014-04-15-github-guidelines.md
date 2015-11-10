@@ -132,8 +132,9 @@ insist that someone else review them.
 
 ## 7. Merge
 
-When everything looks good to the reviewer, he will inform our automated merge
-bot. The automated merge bot will then select your pull request and try to merge
+When everything looks good to the reviewer, he will inform our automated
+[merge bot]({% pst 2015/nov/2015-11-03-chatbot-better-than-ui-for-microservice %}).
+The automated merge bot will then select your pull request and try to merge
 it into `master` branch. For various reasons, this operation fails often. If the
 merge fails, regardless of the reason, it is your responsibility to make sure
 that your branch is merged successfully.

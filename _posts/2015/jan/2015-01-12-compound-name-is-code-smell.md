@@ -83,3 +83,6 @@ names were invented later in order to resolve ambiguity. To keep
 your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
 and methods unique single-word names, just like Adam and Eve were named
 by you know who :)
+
+PS. Also, [redundant variables]({% pst 2015/sep/2015-09-01-redundant-variables-are-evil %})
+are evil as well.

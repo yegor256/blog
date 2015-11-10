@@ -23,13 +23,15 @@ keywords:
   - java xml traversing
 ---
 
+{% badge http://img.jcabi.com/logo-square.svg 64 http://xml.jcabi.com %}
+
 Unlike with many other modern languages, parsing XML in Java requires  more than
 one line of code. XML traversing using XPath takes even more code,  and I find
 this is unfair and annoying.
 
 I'm a big fan of XML and use it it in almost every Java application. Some time
 ago, I decided to put all of that XML-to-DOM parsing code into a small library
-&mdash;[jcabi-xml](http://xml.jcabi.com).
+&mdash; [jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %}).
 
 Put simply, the library is a convenient wrapper for JDK-native DOM
 manipulations. That's why it is small and dependency-free. With the following
@@ -80,5 +82,9 @@ for (XML node : xml.nodes("/root/*"))
 {% endhighlight %}
 
 Besides XML parsing, printing and XPath traversing,
-[jcabi-xml](http://xml.jcabi.com) also provides XSD validation
+[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %})
+also provides XSD validation
 and XSL transformations. I'll write about those features in the next post :)
+
+PS. Also, check this:
+[XML/XPath Matchers for Hamcrest]({% pst 2014/apr/2014-04-28-xml-xpath-hamcrest-matchers %}).

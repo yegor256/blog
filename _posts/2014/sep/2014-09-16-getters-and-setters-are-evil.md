@@ -191,7 +191,8 @@ or you're still writing COBOL in Java syntax.
 PS. Yes, you may ask, &mdash; what about JavaBeans, JPA, JAXB, and many other
 Java API-s that rely on the get/set notation? What about Ruby's built-in
 [feature](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/accessors.html)
-that simplifies the creation of accessors? Well, all of that is our misfortune.
+that simplifies the creation of accessors? Well, all of that is our
+[misfortune]({% pst 2013/dec/2013-12-29-proto %}).
 It is much easier to stay in a primitive world of procedural COBOL than to
 truly understand and appreciate the beautiful world of true objects.
 

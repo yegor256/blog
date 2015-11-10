@@ -53,10 +53,12 @@ multi-tier architecture, and I can't. He definitely earns my respect, right?
 
 Wrong! A good architect knows his main role is to decompose a complex problem
 into less complex components and let programmers solve them one by one. Just as
-a good project manager has to decompose a complex task into smaller ones.
+a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) has to decompose a complex task into smaller ones.
 When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.
+
+{% quote A good architect would never be proud of a complex diagram %}
 
 The main virtue of an architect is the ability to _reduce_ complexity. Thus,
 a good architect would never be proud of a complex diagram. Instead, he would
@@ -121,7 +123,8 @@ and arrows.
 
 <hr/>
 
-As I mentioned above, the goal of all this is to reduce complexity
+As I mentioned above, the goal of all this is to
+[reduce complexity]({% pst 2015/apr/2015-04-13-tacit-css-framework-for-dummies %})
 and help me, a programmer, understand you, an architect. Remember,
 if I can't understand you, it's your fault. You're a bad architect
 if you can't deliver your ideas in a plain, simple form.

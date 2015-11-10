@@ -2,7 +2,7 @@
 layout: post
 title: "Continuous Integration is Dead"
 date: 2014-10-08
-tags: mgmt devops
+tags: management devops
 categories: jcg best
 description:
   Continuous integration is an awesome idea that
@@ -48,7 +48,8 @@ and [AppVeyor](http://www.appveyor.com).
 The idea is simple and obvious. Every time you make a new commit
 to the `master` branch (or `/trunk` in Subversion), a continuous integration
 server (or service) attempts to build the entire product. "Build" means
-compile, unit test, integration test, quality analysis, etc.
+compile, unit test, integration test, quality analysis,
+[etc.]({% pst 2014/jun/2014-06-21-casperjs-with-maven %})
 
 The result is either "success" or "failure". If it is a success, we
 say that "the build is clean". If it is a failure, we say that "the build is broken".
@@ -86,7 +87,8 @@ the stable state.
 Now, my question is &mdash; who, in an actively working team, may need this?
 
 A product owner, who is interested in launching new features to the market
-as soon as possible? Or maybe a project manager, who is responsible for
+as soon as possible? Or maybe a
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), who is responsible for
 the deadlines? Or maybe programmers, who hate to fix bugs made by someone else,
 especially under pressure?
 

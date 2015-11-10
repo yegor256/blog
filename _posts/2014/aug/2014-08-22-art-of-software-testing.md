@@ -80,7 +80,9 @@ many developers seem to have an attitude that is counter to extensive testing
 
 This is what Dr. Myers says on the second page, and I can humbly confirm
 that in all software groups I've been worked in thus far,
-almost everyone, including testers, project managers, and programmers, share this philosophy.
+almost everyone, including testers,
+[project managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
+and programmers, share this philosophy.
 They all believe that "testing is the process of demonstrating
 that errors are not present" (p.5)
 
@@ -121,7 +123,8 @@ Furthermore, at the end of Chapter 6, he makes an important observation (p.135):
 is determining when to stop, since there is no way of knowing if the
 error just detected is the last remaining error
 
-The problem is obvious. Since any program contains an unlimited
+The problem is [obvious]({% pst 2015/sep/2015-09-10-testing-exit-criteria %}).
+Since any program contains an unlimited
 number of errors, it doesn't matter how long we test, we won't find
 all of them. So when do we stop? What goals do we set for our testers?
 And even more importantly, when do we pay them and how much

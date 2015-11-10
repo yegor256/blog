@@ -2,7 +2,7 @@
 layout: post
 title: "Five Principles of Bug Tracking"
 date: 2014-11-24
-tags: mgmt
+tags: management
 description:
   Managing work in a ticketing system requires more
   discipline than with a co-located team; this article
@@ -15,7 +15,8 @@ keywords:
   - task management system
 ---
 
-A team working remotely requires much stronger discipline than
+A team working [remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %})
+requires much stronger discipline than
 a co-located crew sitting in the same office. First of all, I mean discipline of
 communications. At [teamed.io](http://www.teamed.io), we have developed software
 remotely for the last five years. We manage tasks strictly through
@@ -76,7 +77,9 @@ you will do for the project. Long-living tickets are a management nightmare.
 It is difficult to track them and control them. It's difficult to understand
 what's going on. Have you seen those two-year-old tickets in open source projects
 that have hundreds of comments and no deliverables? It is a mistake
-by their project managers and ticket participants. Each ticket should be
+by their
+[project managers]({% pst 2015/sep/2015-09-22-micromanagement %})
+and ticket participants. Each ticket should be
 short and focused &mdash; 1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.

@@ -3,7 +3,7 @@ layout: post
 title: "Daily Stand-Up Meetings Are a Good Tool for a Bad Manager"
 date: 2015-01-08
 categories: best
-tags: mgmt
+tags: management
 description:
   Daily stand-up meetings are a common practice among software
   development teams (especially in Scrum), even though they are a bad
@@ -23,7 +23,8 @@ A stand-up meeting (or simply "stand-up") is
 to the team members", according to [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting).
 In the next few paragraphs, I attempt to explain why these meetings,
 despite being so popular in software development teams, are **pure evil**
-and should never be used by good managers.
+and should never be used by good
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 I'm not saying they can be done right or wrong;
 there are plenty of articles about that. I'm not
@@ -31,7 +32,8 @@ trying to give advice about how to do them properly so they
 work, either. I'm saying that a good manager should **never** have daily stand-ups.
 Because they not only "don't work" but also do very bad, sometimes catastrophic,
 things to your management process, whether it's agile or not. On the other hand,
-a bad manager will always use daily stand-ups as his or her
+a [bad manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+will always use daily stand-ups as his or her
 key management instrument.
 
 <!--more-->
@@ -65,7 +67,8 @@ never asks his people. Instead, they tell him when necessary. And when
 someone does stop to tell him something, a good project manager fixes such a broken communication channel.
 But he never uses daily meetings to collect information.
 
-As a good manager, inform your team what your goals are and what's important
+As a [good manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+inform your team what your goals are and what's important
 to you as a project manager (or Scrum master). They should know what's
 important for you to know about their progress, risks, impediments,
 and failures. They should understand what trouble you will get into
@@ -79,14 +82,19 @@ until the next morning to ask your developers what they were doing yesterday
 and what problems they experienced. You would have seen this information earlier, exactly
 when you needed it. You would stay informed about your project affairs
 even outside of the office. Actually, you would not need an office at all,
-but that's a subject for another discussion :)
+but that's a subject for
+[another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) :)
+
+{% quote These morning meetings give the impression that the manager is working hard and well deserves his overblown salary %}
 
 Someone may say that daily stand-ups are a perfect place and time to
 exchange information among programmers, not just to inform the Scrum master and
 get his feedback. Again, we have the same argument here &mdash; why can't they
 exchange information when it's required, during the day? Why do we need to
 put 10 people together every morning to discuss something that concerns
-only five of them? I can answer. Bad managers, who don't know how else to
+only five of them? I can answer.
+[Bad managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
+who don't know how else to
 organize the exchange of information between team members, use morning stand-ups
 as a replacement for a correct communication model. These morning meetings
 give the impression that the manager is working hard and well deserves his
@@ -108,7 +116,9 @@ place where he can ask each of us what we're doing and then tell us
 what we should do instead. This manager forces us to disclose our personal goals and plans
 in order to correct them when he feels necessary. How many times have you heard
 something like this: "_I'm planning to test X. ... No, next week; today you work with Y_"
-This is micro-management. Daily stand-ups are the perfect tool for a micro-manager.
+This is
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}).
+Daily stand-ups are the perfect tool for a micro-manager.
 
 **A Good Manager Delegates Responsibility**.
 Ideal management involves four steps:
@@ -125,6 +135,8 @@ isn't ready by the end of the week, you lose the project, as we agreed._"
 Why would such a manager need daily stand-ups? Why would he need to
 ask his people what they are doing? He is not meddling in their plans.
 Instead, he trusts them and controls their results only.
+
+{% quote Only a good manager is capable of defining awards, penalties, and rules so explicitly and strictly %}
 
 Let me reiterate: I strongly believe that responsibility must be
 delegated, and this delegation consists of three components:
@@ -170,8 +182,12 @@ And we don't need a manager to check our progress. He already gave us
 a very clear definition of our objectives. Why would we talk about them again
 every morning?
 
-A bad manager isn't capable of defining objectives; that's why he
-wants to micro-manage us every morning. Actually, a bad manager is doing
+A bad manager isn't capable of
+[defining objectives]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %});
+that's why he
+wants to
+[micro-manage]({% pst 2015/sep/2015-09-22-micromanagement %})
+us every morning. Actually, a bad manager is doing
 it during the day too. He is afraid that without well-known goals and rules,
 the team will do something wrong or won't do anything at all. That's why
 he has "to keep his hand on the pulse". In reality, he keeps his hand

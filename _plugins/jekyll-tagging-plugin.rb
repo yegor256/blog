@@ -82,7 +82,7 @@ module Jekyll
             </time>
           </li>
           <li>#{tags(post)}</li>
-          <li>
+          <li class='unprintable'>
             <a href='http://www.yegor256.com#{post['url']}#disqus_thread' class='notranslate'>comments</a>
           </li>
         </ul>

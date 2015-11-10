@@ -23,7 +23,9 @@ turn this into a working piece of software as fast as possible and by spending a
 few dollars as possible. Ideally, this prototyping takes a week
 and is made by an architect working **solo**.
 Once the "skeleton" is ready, we start putting software "meat" on it.
-We recruit a team of programmers for that or outsource it. I see nine important steps
+We recruit a team of programmers for that or
+[outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+it. I see nine important steps
 in the skeleton creation part; let me show you them one by one.
 
 <!--more-->
@@ -127,7 +129,7 @@ they are not good for us. As you see, the reasons are very biased; I
 basically expressed my personal opinions about these three
 frameworks and definitely gave preference to my own open
 source [Takes](http://www.takes.org) framework. Is it good? No, it's not.
-But I'm the [architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}),
+But I'm the [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 and I do what I think is right for the project.
 
 I'm trying to show that the point of this documentation is for
@@ -223,7 +225,8 @@ not focused enough, while too few is due to a lack of attention.
 
 ## Continuous Integration
 
-Now I have to make sure the product is "wrapped" in continuous integration,
+Now I have to make sure the product is "wrapped" in
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
 which is a [critical component]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %})
 of any software package. I have to configure it, preferably
 [in the cloud]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}),
@@ -295,7 +298,7 @@ deployable in one click.
 "Pipeline" means that there are a number of elements chained sequentially;
 for a Java application, for example:
 
- * Run automated build (the same as in continuous integration)
+ * Run automated build (the same as in [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}))
  * Package JAR file
  * Upload JAR file to repository
  * Build JavaDoc site
@@ -309,7 +312,8 @@ is packaged and deployed in a few minutes.
 ## Acceptance
 
 The last step is the handoff &mdash; I have to present my solution to the
-project manager, the sponsor of the project, and the team. Everybody has
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+the sponsor of the project, and the team. Everybody has
 to accept it. It doesn't mean they will like it, and that's not the goal. The
 goal is to deliver a complete solution, with risks, assumptions, decisions
 documented, continuous integration configured, static analysis enforced, etc.

@@ -50,7 +50,9 @@ Second, any software has an **unlimited amount of bugs**. Dr. Myers says that
 "you cannot test a program to guarantee that it is error free" (page 10)
 and that "it is impractical, often impossible, to find all the errors in
 a program" (page 8). This is also what most testers don't understand. They
-believe that there is a limited number of bugs, which they have to find
+believe that there is a
+[limited number]({% pst 2015/jun/2015-06-18-good-programmers-bug-free %})
+of bugs, which they have to find
 and call it a day. There literally no limit! The amount of bugs is unlimited,
 in any software product. No matter how small or big, complex or simple,
 new or old is the product.

@@ -68,7 +68,7 @@ mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous
 subscribers in my list).
 
-<form id="eform"><fieldset id="form">
+<form id="eform" class="unprintable"><fieldset id="form">
   <label for="email">Your email</label>
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you? Why interested?</label>

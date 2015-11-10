@@ -292,14 +292,17 @@ fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
 [jcabi-http](http://http.jcabi.com),
-[jcabi-xml](http://xml.jcabi.com),
-[jcabi-github](http://github.jcabi.com),
-[jcabi-s3](http://s3.jcabi.com),
-[jcabi-dynamo](http://dynamo.jcabi.com),
-[jcabi-simpledb](http://simpledb.jcabi.com)
+[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %}),
+[jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
+[jcabi-s3]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
+[jcabi-dynamo]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),
+[jcabi-w3c]({% pst 2014/apr/2014-04-29-w3c-java-validators %}),
+[jcabi-jdbc]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}),
+[jcabi-simpledb](http://simpledb.jcabi.com),
+[jcabi-ssh]({% pst 2014/sep/2014-09-02-java-ssh-client %}).
 The above are all Java libraries that work solely with immutable
 classes/objects. [netbout.com](https://github.com/netbout/netbout)
-and [stateful.co](https://github.com/sttc/stateful) are
+and [stateful.co]({% pst 2014/dec/2014-12-04-synchronization-between-nodes %}) are
 web applications that work solely with immutable objects.
 
 2. &ldquo;It's cheaper to update an existing object than create a new one&rdquo;.

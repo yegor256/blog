@@ -18,9 +18,9 @@ keywords:
 
 There were a few articles already about our usage of Rultor
 for automating continuous delivery cycles of Java and Ruby projects,
-including [Rubygems](http://www.yegor256.com/2014/08/26/publish-to-rubygems.html),
+including [RubyGems](http://www.yegor256.com/2014/08/26/publish-to-rubygems.html),
 [CloudBees](http://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
-and [MavenCentral](http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
+and [Maven Central](http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
@@ -114,3 +114,8 @@ BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to the
 [Rultor issue tracker](https://github.com/yegor256/rultor/issues).
 I will try to help you.
+
+PS. I would also recommend to versionalize artifacts
+through `MANIFEST.MF` and use
+[jcabi-manifests]({% pst 2014/jul/2014-07-03-how-to-read-manifest-mf %})
+to read them later.

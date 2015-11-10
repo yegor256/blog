@@ -106,7 +106,8 @@ Requs files.
 
 ## Requs Files
 
-The SRS document is generated automatically on every continuous integration
+The SRS document is generated automatically on every
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 build cycle. It is compiled from pieces called `.req` files, which are usually
 located in the `src/main/requs` directory in a project repository.
 
@@ -132,8 +133,9 @@ directories with files.
 
 Before submitting a pull request, I will try to validate that my changes are
 syntactically and grammatically valid. I will compile Requs files into the SRS
-document using the same method our continuous integration server uses to compile
-them.
+document using the same method our
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+server uses to compile them.
 
 Before I can compile, though, I need to install
 [JDK7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
@@ -179,3 +181,8 @@ that the SRS was fixed and request that he review it. His original problem
 should be fixed by now &mdash; the SRS should provide the information required.
 
 He then closes the task and the project manager pays me within a few hours.
+
+PS. Also, check [this article]({% pst 2014/jun/2014-06-29-custom-lexer-in-jekyll %})
+about a custom lexer for Jekyll,
+which I created in order to highlight Requs syntax in this
+blog post.

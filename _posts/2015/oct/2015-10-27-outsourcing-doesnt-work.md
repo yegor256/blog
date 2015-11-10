@@ -3,7 +3,8 @@ layout: post
 title: "Why Software Outsourcing Doesn't Work ... Anymore"
 date: 2015-10-27
 place: Palo Alto, CA
-tags: mgmt outsourcing
+categories: best
+tags: management outsourcing
 description:
   Remote and offshore software outsourcing was a perfect business
   concept ten years ago. Not anymore. Here is why.
@@ -34,8 +35,11 @@ in bigger companies and bigger projects, the story will be different. But the
 outcome is almost always the same &mdash; it is
 [a disaster]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %}).
 
+{% quote All these reasons merely explain the consequences but never even touch the real problem %}
+
 I'm talking about outsourcing, not offshore development. The difference is
-that in outsourcing, there are two companies involved: you the client
+that in outsourcing, there are two companies involved: you the
+[client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
 development, you just open an office in that same Loompaland with your own
 management and employees. Again, I'm discussing **outsourcing** here.
@@ -49,7 +53,8 @@ and tell you the ugly truth. More on that in a few paragraphs. For now, let's
 explore what the usual reasons are.
 
 **Cheapest Providers**.
-Here is the argument: "So you're outsourcing because you want to optimize costs?
+Here is the argument: "So you're outsourcing because you want to optimize
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})?
 You will end up with the cheapest software shop and sincerely regret
 it very soon." OK, what's the solution, then? Just pay more?
 I don't think that's going to solve the problem; I'll
@@ -95,7 +100,7 @@ away in Argentina and we're here in New York City &mdash; how can we make
 [a good spec]({% pst 2014/oct/2014-10-20-how-we-write-product-vision %})?
 I don't buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
-[architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}). Learning, training,
+[architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}). Learning, training,
 and reading should fix this. Getting everybody together in the office
 is [not a solution]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
@@ -113,7 +118,7 @@ I don't find these "reasons" logical. They merely explain the
 consequences but never even touch the real problem, which I believe
 sounds like this:
 
-You're just a cash cow for an outsourcing company.
+You're just a **cash cow** for an outsourcing company.
 
 You're neither a partner nor a friend, despite all your expectations.
 
@@ -134,6 +139,8 @@ I've been in the shoes of an outsourcing company for almost 10 years
 shop, the only problem is how to take care of the
 next month's payroll, and **90 percent** of all expenses are salaries
 for the programmers.
+
+{% quote Your business interests can't be aligned with the interests of your outsourcing partner %}
 
 That's why a good customer for them is a paying customer. Not a customer with
 a successful project. Not a customer with a properly solved problem. Not
@@ -169,6 +176,8 @@ insurance, a free gym membership, free lunch, paid vacation, paid sick leave, et
 time, the price of Java time is not much higher on the market than it was years ago. Even
 if you charge $40 per hour (which is very unlikely), your income would be $6,800.
 Again, your income is $6.8K and your expenses are close to $5K. See the margin?
+
+{% quote Your lone motivation is to keep that cash flow coming. No matter what. %}
 
 And don't forget about office expenses, taxes, computers,
 administrative staff, team building events, etc. Because of such a small

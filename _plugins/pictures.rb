@@ -2,7 +2,7 @@ module Yegor
   class Img
     def initialize(src, ctx)
       if src.index('/') == 0
-        @url = ctx.registers[:site].config['url'] + src
+        @url = src
         raise "file doesn't exist: #{src}" unless
           File.exists?('./_site' + src) ||
           File.exists?('.' + src) ||
@@ -25,7 +25,7 @@ module Yegor
     end
 
     def render(context)
-      html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" \
+      html = "<figure class='unprintable'><img src='#{Yegor::Img.new(@src, context)}'" \
         " style='width:#{@width}px;'" \
         " alt='figure'/></figure>\n\n"
     end

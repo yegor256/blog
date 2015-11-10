@@ -167,6 +167,8 @@ I'm claiming that the entire idea behind ORM is wrong. Its invention
 was maybe the second big mistake in OOP after
 [NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
+{% quote ORM, instead of encapsulating database interaction inside an object, extracts it away, literally tearing a solid and cohesive living organism apart %}
+
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
 this subject has already been published by very respected authors, including
@@ -242,7 +244,9 @@ table, and `Post` will represent the row.
 As I also mentioned in that [article]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 every object should work by contract
 and implement an interface. Let's start our design with two interfaces.
-Of course, our objects will be immutable. Here is how `Posts` would look:
+Of course, our objects will be
+[immutable]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}).
+Here is how `Posts` would look:
 
 {% highlight java %}
 @Immutable

@@ -2,7 +2,7 @@
 layout: post
 title: "Master Branch Must Be Read-Only"
 date: 2014-07-21
-tags: rultor devops mgmt
+tags: rultor devops management
 categories: best
 description:
   Continuous integration doesn't work while programmers
@@ -33,7 +33,8 @@ the button, and get a nice email saying that your build is broken (I assume your
 build is automated). Then, fix broken tests (I assume you have tests), and get a
 much better looking email saying that your build is clean.
 
-Then, tweet about it, claiming that your team is using continuous integration.
+Then, tweet about it, claiming that your team is using
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}).
 
 Then, in a few weeks, start filtering out Jenkins alerts, into their own folder,
 so that they don't bother you anymore. Anyway, your team doesn't have the time
@@ -62,7 +63,8 @@ flag immediately after an error gets into `master`.
 
 It is a well-known practice, when fixing that error becomes
 a top priority for its author and the entire team. The error
-should be fixed right after a red flag is raised by the continuous integration server.
+should be fixed right after a red flag is raised by the
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) server.
 
 {% badge /images/2014/07/continuous-delivery-book.png 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
 

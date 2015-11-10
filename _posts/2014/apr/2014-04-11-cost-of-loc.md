@@ -2,7 +2,7 @@
 layout: post
 title: "How much do you pay per line of code?"
 date: 2014-04-11
-tags: xdsd mgmt
+tags: xdsd management
 categories: jcg
 description: |
   This article compares two projects and calculates
@@ -30,7 +30,8 @@ and discuss some very interesting numbers.
 ## Project #1: Traditionally Co-located
 
 The first project I was a part of was performed  by a traditionally co-located
-group of programmers. There were about 20 of them (I'm not counting managers,
+group of programmers. There were about 20 of them (I'm not counting
+[managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
 analysts, product owners, SCRUM masters, etc.) The project was a web auctioning
 site with pretty high traffic numbers (over two million page views per day).
 
@@ -63,7 +64,9 @@ Both projects hosted their code bases on GitHub. Both teams were developing in
 [feature branches](http://martinfowler.com/bliki/FeatureBranch.html)- even for
 small fixes.
 
-Both teams used build automation, continuous integration, pre-flight builds,
+Both teams used build automation,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
+pre-flight builds,
 static analysis and code reviews. This indicates the maturity of the project
 teams.
 
@@ -91,7 +94,8 @@ The first one, in three months, produced 59k new lines and removed 29k in
 changes in the `master` branch, which totals 88k lines of code. The project
 resulted in about 10,000 man hours to produce these lines (20 programmers, three
 months, 170 working hours per month) &mdash; which equates to about $350k. Therefore,
-the project cost a whopping
+the project
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) a whopping
 
 <p style="color:red;text-align:center;font-size:2em;">$3.98 per line</p>
 

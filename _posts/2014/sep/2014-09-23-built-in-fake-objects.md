@@ -25,6 +25,8 @@ mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
 "mocking is bad" and "mocking is evil".
 
+{% youtube l6MpCBzwDbg video-left %}
+
 The root cause of this complexity is that our objects
 are too big. They have many methods and these methods
 return other objects, which also have methods. When we pass
@@ -78,12 +80,15 @@ public void testMe() {
 }
 {% endhighlight %}
 
-And all of this is just a scaffolding before the actual testing.
+And all of this is just a
+[scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %})
+before the actual testing.
 
 ## Sample Use Case
 
 Let's say, you're developing a project that uses jcabi-dynamo for
-managing data in DynamoDB. Your class may look similar to this:
+managing data in [DynamoDB](https://aws.amazon.com/dynamodb/).
+Your class may look similar to this:
 
 {% highlight java %}
 public class Employee {
@@ -129,8 +134,9 @@ is doing. Just look at its [JavaDoc](http://dynamo.jcabi.com/apidocs-0.16.1/inde
 There is a package called `com.jcabi.dynamo.mock` that contains
 only fake classes, suitable only for unit testing.
 
-Even though their sole purpose is to optimize unit testing, we ship
-them together with production code, in the same JAR package.
+Even though their sole purpose is to optimize unit testing, we
+[ship them]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})
+together with production code, in the same JAR package.
 
 This is what a test will look like, when a fake class `MkRegion` is used:
 
@@ -172,3 +178,6 @@ inside the library and for its users.
 BTW, a great article on the same subject:
 [tl;dw: Stop mocking, start testing](http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html)
 by Ned Batchelder.
+
+PS. Check this out, on a very similar subject:
+[Mocking of HTTP Server in Java]({% pst 2014/apr/2014-04-18-jcabi-http-server-mocking %}).

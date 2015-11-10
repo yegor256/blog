@@ -3,7 +3,7 @@ layout: post
 title: "What Is the Difference Between Ridley Scott and Joseph Goebbels?"
 date: 2015-10-16
 place: Palo Alto, CA
-tags: mgmt
+tags: management
 description:
   Hollywood movies seem to tell us the wrong stories
   about motivation, teamwork, and basic principles of management.
@@ -18,7 +18,9 @@ keywords:
 
 I saw [The Martian](http://www.imdb.com/title/tt3659388/)
 this weekend, and it triggered a few thoughts. Of course, I didn't like
-the movie as a piece of art. It is total garbage, but this is not my point.
+the movie as a
+[piece of art]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}).
+It is total garbage, but this is not my point.
 There is something bigger to discuss, aside from the bad acting, primitive
 story-line, politically correct but absolutely unrealistic casting,
 and tons of logical inconsistencies. It's Hollywood; what
@@ -51,6 +53,8 @@ In 2015, the goal of Hollywood propaganda is to convince us that the
 organizational and motivational problems in our offices are just local exceptions to
 the general rule. The rule is simple: project management is not important
 if we're all good friends.
+
+{% quote The truth is that you are not going to get anywhere if you follow the spirit of this movie %}
 
 Ridley Scott is telling us that in a perfect organization, such as
 [NASA](https://www.nasa.gov/),

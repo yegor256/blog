@@ -2,7 +2,7 @@
 layout: post
 title: "PDD by Roles"
 date: 2014-04-12
-tags: xdsd pdd mgmt
+tags: xdsd pdd management
 description: |
   The article explains how Puzzle Driven Development
   is seen by people in different project roles,
@@ -19,7 +19,9 @@ keywords:
 {% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 In this post, I'll try to walk you through a project managed
-with the spirit of Puzzle Driven Development (PDD). As I do this, I will attempt to convey typical points
+with the spirit of
+[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
+(PDD). As I do this, I will attempt to convey typical points
 of view of various project members.
 
 Basically, there are six key roles in any software team:
@@ -76,7 +78,9 @@ reaches its peak and starts to go down.
 
 ## Project Manager
 
-The job of a project manager is to do as much as possible
+The job of a project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+is to do as much as possible
 to fix the project. He has to use the sponsor's time and money in order
 to remove all bugs and inconsistencies and return the project back
 to a "fixed" state.

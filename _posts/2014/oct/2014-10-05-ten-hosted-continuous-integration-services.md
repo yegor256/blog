@@ -153,7 +153,8 @@ the best and highly recommended):
 
 <!--more-->
 
-If you know any other good continuous integration services,
+If you know any other good
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) services,
 [email me](/about-me.html), I'll review and add them to this list.
 BTW, here is a ["full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
 of continuous integration software and services.
@@ -166,7 +167,8 @@ it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
 downside is the price of $129 per month. "With this money
 you can get a dedicated EC2 instance and install Jenkins there" &mdash;
-some of my clients say. I strongly disagree, since Jenkins will
+some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 
@@ -178,7 +180,9 @@ Java and Ruby, which are expected to be platform independent, they
 very often appear to be exactly the opposite. When your build
 succeeds on Linux, there is almost no guarantee it will pass on
 Windows or Mac. I'm planning to use AppVeyor in every project,
-in combination with some other CI service. I'm still testing it though...
+in combination with some other CI service. I'm still
+[testing]({% pst 2015/jan/2015-01-10-windows-appveyor-maven %})
+it though...
 
 {% badge /images/2014/10/wercker.png 64 http://www.wercker.com %}
 

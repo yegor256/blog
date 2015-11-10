@@ -2,7 +2,7 @@
 layout: post
 title: "How Much For This Software?"
 date: 2015-06-02
-tags: mgmt agile outsourcing
+tags: management agile outsourcing
 description:
   The very attempt to estimate a software project
   has fundamental flaws and can't be done right; instead,
@@ -17,8 +17,11 @@ keywords:
 ---
 
 "Here is the specification; how much will it cost to create this software?"
-I hear this almost every day from clients of [Teamed.io](http://www.teamed.io)
-and prospects that are planning to become our clients and outsource the software
+I hear this almost every day from
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+of [Teamed.io](http://www.teamed.io)
+and prospects that are planning to become our clients and
+[outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) the software
 development to us. My best answer is "_I don't know; it depends._"
 Sounds like a strange response for someone who claims
 he knows what he is doing, isn't it? "Here is the 20-page specification
@@ -35,6 +38,8 @@ to develop the software for you? I can tell you why.
 
 Because you don't trust me.
 
+{% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes %}
+
 And obviously you have good reasons for that, simply because we both
 know that a software product is something that can stay in development forever
 and never be finished. Look at YouTube, for example. How much do you think
@@ -49,7 +54,9 @@ always needs more and more improvements and bug fixes.
 Thus, when you ask me how much it will cost to create a system similar
 to YouTube, according to your specifications, my honest and accurate answer
 should be: "_All of your money, and it won't be enough._" Will you
-sign a contract and outsource the project to me after that answer? No, you won't.
+sign a contract and
+[outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+the project to me after that answer? No, you won't.
 That's why I have to lie and promise something like "three months and $40,000".
 Why would you trust me? If you're smart enough, you won't.
 
@@ -57,8 +64,9 @@ My point is that no matter what I promise you, I will be wrong. Terribly wrong.
 
 What is the solution? What do you do? I totally understand that you
 do need a number to make your plans and secure the money.
-You need to choose the right software outsourcing partner, and you
-need to know what to expect and when, but ...
+You need to choose the right
+[software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+partner, and you need to know what to expect and when, but ...
 
 You're asking the **wrong question**!
 

@@ -115,7 +115,8 @@ But it's not a real solution. It is only
 a temporary patch that does all of us more harm than good &mdash; methods keep
 growing in size and complexity.
 
-Unchecked exceptions are a mistake in Java design, not checked ones.
+Unchecked exceptions are a mistake in Java design, not
+[checked]({% pst 2015/oct/2015-10-20-interrupted-exception %}) ones.
 
 Hiding the fact that a method may fail at some point is a mistake. That's
 exactly what unchecked exceptions do.

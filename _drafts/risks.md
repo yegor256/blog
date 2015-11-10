@@ -2,7 +2,7 @@
 layout: post
 title: "Typical Risks in Software Outsourcing"
 date: 2015-05-21
-tags: outsourcing mgmt
+tags: outsourcing management
 description:
   There are a few typical risks that exist in all
   software outsourcing projects and must be mitigated

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Avoid a Software Outsourcing Disaster"
 date: 2015-05-21
-tags: outsourcing mgmt
+tags: outsourcing management
 description:
   Software outsourcing is a business technique full of
   pitfalls and risks that have to be mitigated
@@ -26,7 +26,8 @@ are severely violated, and the level of frustration is skyrocketing. And the
 "best" part is that you can't get away or else all the money you've spent so far
 will go down the drain and you will have to start from scratch. You have to
 stay "married" to this team because you can't afford a "divorce". Is there
-a way to do software outsourcing right?
+a way to do
+[software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) right?
 
 <!--more-->
 
@@ -38,7 +39,9 @@ to be ready to twist your management philosophy.
 The basic fundamental principle here is that 1) you should openly and frequently
 communicate your **concerns** with the outsourcing team, and 2) they should
 openly and frequently communicate **risks and issues** with you. These are
-two major success factors in software outsourcing that are very often neglected.
+two major success factors in
+[software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+that are very often neglected.
 
 {% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://www.amazon.com/gp/product/1937021033/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1937021033&linkCode=as2&tag=yegor256com-20&linkId=S5KTMPGVOXPSCJN2 %}
 I learned this principle from [Wei Liao Zi](https://en.wikipedia.org/wiki/Wei_Liaozi).
@@ -63,7 +66,8 @@ and Prozac doesn't help anymore. How does this sound? Familiar?
 
 I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,
-or how many promises were made, they want to keep you as a client
+or how many promises were made, they want to keep you as a
+[client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 forever. Well, for as long as you have something in your bank account.
 
 You want your business to succeed and flourish, right? They want the same for their
@@ -87,7 +91,9 @@ And your project is not an exception. Thus, let's forget about these
 beautiful promises and focus on the ugly reality &mdash; you're on your own.
 
 Keeping in mind the principle I mentioned above, here is my recommendation:
-Make sure the team understands 1) your real time and scope constraints
+Make sure the team understands 1) your real time,
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
+and scope constraints,
 and 2) the consequences of their violation. This is about the first
 part of the principle &mdash; _you should openly and frequently communicate
 your concerns_. What usually happens is that the outsourcing team remains
@@ -217,7 +223,9 @@ bad but honest news?
 
 Once again citing the fundamental principle mentioned above, I would recommend
 you make sure your reasoning for awards and punishments is transparent to
-your software outsourcing partner and is based on project objectives,
+your
+[software outsourcing partner]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+and is based on project objectives,
 not your personal emotions.
 
 In [one of my previous posts]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),

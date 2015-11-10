@@ -2,7 +2,7 @@
 layout: post
 title: "Five Habits of a Successful Outsourcing Client"
 date: 2015-08-11
-tags: mgmt outsourcing
+tags: management outsourcing
 place: Kiev, Ukraine
 description:
   One of important success factors in an outsourcing

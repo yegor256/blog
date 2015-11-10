@@ -3,7 +3,6 @@ layout: post
 title: "Strict Control of Java Code Quality"
 date: 2014-08-13
 tags: java qulice static-analysis
-categories: best
 description:
   Qulice.com is a Java Maven plugin that aggregates
   Checkstyle, PMD, FindBugs, Cobertura and a few other
@@ -24,7 +23,8 @@ Java code, including [Checkstyle](http://checkstyle.sourceforge.net/),
 [Cobertura](http://cobertura.github.io/cobertura/), etc.
 All of them are usually used to analyze quality and build
 some fancy reports. Very often, those reports are published
-by continuous integration servers, like Jenkins.
+by [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+servers, like Jenkins.
 
 {% badge http://img.qulice.com/logo.svg 128 http://www.qulice.com %}
 
@@ -164,7 +164,9 @@ to discuss.
 
 As a programmer, I hope you already realize what you get from working
 in a project that raises its quality bar as high as Qulice asks. Yes,
-you'll learn a lot of new things about writing quality Java code.
+you'll learn [a lot]({% pst 2015/jan/2015-01-21-if-then-throw-else %}) of
+[new things]({% pst 2014/nov/2014-11-03-empty-line-code-smell %})
+about writing quality Java code.
 
 On top of that though, I would actually say that you are getting free lessons with every
 new line of code you write. And the teacher is a software, written

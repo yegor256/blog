@@ -3,7 +3,7 @@ layout: post
 title: "How to Be a Good Office Slave"
 date: 2015-10-06
 place: Palo Alto, CA
-tags: mgmt
+tags: management
 description:
   Office slavery is what most companies
   practice and what most office workers suffer
@@ -41,6 +41,8 @@ that you're ready to help. Ideally, they all must depend on your
 kindness and readiness to save them from the
 [chaos]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}) around.
 
+{% quote Important people don't write code; they attend meetings %}
+
 **Be the Last to Leave the Office**.
 Nothing annoys a manager more than an employee who leaves the office
 at 5 p.m. sharp. It's a sign of disrespect. Don't you like it here? Is there
@@ -60,6 +62,8 @@ but not the boss you directly report to.
 The word of this person is the law. The boss is the god. Ideally, you should
 be the prophet. No matter what the boss says, you deliver
 it to others. And you must look like you sincerely believe that it's right.
+
+{% quote Loyalty is what makes you a good slave; don't forget it! %}
 
 **Attend All Meetings**.
 No matter what they are about, you must be there. And don't just be present;

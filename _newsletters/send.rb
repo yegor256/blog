@@ -47,6 +47,7 @@ else
   emails = File.readlines(opts[:file]).collect(&:strip).reject(&:blank?).uniq
 end
 
+sent = []
 ignore = !opts[:from].nil?
 puts "Sending #{emails.length} email(s) to #{opts[:host]}:#{opts[:port]} as #{opts[:user]}"
 emails.each do |line|
@@ -59,7 +60,7 @@ emails.each do |line|
     first, last = name.split(' ')
     address = "#{name} <#{email}>"
   end
-  email = email.downcase
+  email = email.strip.downcase
   markdown = template.render(
     'email' => email,
     'first' => first,
@@ -75,6 +76,10 @@ emails.each do |line|
   end
   if skip.include? email
     print "  #{address} skipped\n"
+    next
+  end
+  if sent.include? email
+    print "  #{email} is a duplicate\n"
     next
   end
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
@@ -94,7 +99,8 @@ emails.each do |line|
     end
   end
   mail.deliver!
+  sent.push email
   puts ' done'
 end
 
-puts "sent #{emails.size} emails"
+puts "sent #{sent.size} emails"

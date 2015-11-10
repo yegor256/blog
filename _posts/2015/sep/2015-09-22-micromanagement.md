@@ -3,13 +3,13 @@ layout: post
 title: "Are You a Micromanager?"
 date: 2015-09-22
 place: Moscow, Russia
-tags: mgmt
+tags: management
 description:
   Everyone knows micromanagement is evil, but very few
   understand what exactly it is and what's a better alternative.
 keywords:
-  - micromanagement
-  - micromanagement good or bad
+  - micromanager
+  - micro-management good or bad
   - micromanagement effects
   - micromanagement quotes
   - micromanagement meaning
@@ -33,6 +33,8 @@ the size of the tasks being managed, meaning a good manager doesn't care
 about the small stuff while a micromanager employs
 "excessive control or attention to details", as
 [Merriam-Webster](http://www.merriam-webster.com/dictionary/micromanage) says.
+
+{% quote A good manager declares what needs to be done, never telling me how I must achieve it %}
 
 It seems that in order to become a good manager, one should just
 stop paying attention to details. Huh?
@@ -79,6 +81,8 @@ not imperative.
 Thus, this "micro" prefix is not really about the size of the tasks a manager
 keeps under control. It is about what a manager wants to see inside them &mdash;
 a black box or a glass box under a **microscope**.
+
+{% quote A good manager pays extreme attention to defining quality standards for my work %}
 
 A good manager doesn't care about what I'm doing now, what tasks I'm working on,
 or what my plans, problems, and risks are. Instead, a good manager cares about my

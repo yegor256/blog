@@ -2,7 +2,7 @@
 layout: post
 title: "Pimp Your Resume"
 date: 2015-05-25
-tags: mgmt
+tags: management
 description:
   There are a few simple hints on making a resume of
   a software developer sound bright, convincing, and

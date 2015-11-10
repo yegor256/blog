@@ -2,7 +2,7 @@
 layout: post
 title: "Seven Deadly Sins of a Software Architect"
 date: 2015-01-20
-tags: oop mgmt
+tags: oop management
 description:
   Software architect is a central figure in a software
   project, his merits and sins may severly affect the

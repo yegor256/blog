@@ -2,7 +2,7 @@
 layout: post
 title: "Incremental Billing"
 date: 2014-10-21
-tags: xdsd mgmt
+tags: xdsd management
 description:
   With either a Fixed Price or Time and Material contract,
   your chances of getting the project done are very low.
@@ -35,13 +35,14 @@ in [Teamed.io](http://www.teamed.io).
 
 The difference between fixed-cost and T&M is in who takes the risk of spending
 money and getting nothing in return. This risk is huge in the software
-development industry, especially in outsourcing.
+development industry, especially in [outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}).
 [Over 80%](http://www.projectsmart.co.uk/docs/chaos-report.pdf) of all
 software projects fail to achieve their objectives and
 [about 30%](http://thenextweb.com/insider/2014/09/25/top-20-reasons-startups-fail-report/)
 of startups fail by running out of cash.
 However, very few programmers (if any)
-fail to get their monthly salaries on time.
+[fail]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+to get their monthly salaries on time.
 
 What does this tell us?
 
@@ -51,12 +52,17 @@ I guess it means that in all failures you &mdash; the client &mdash; will be the
 
 {% figure /images/2014/10/time-and-material-contract.svg 500 %}
 
-In T&M you will simply pay and pray. If your programmers
+In T&M you will simply
+[pay and pray]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}).
+If your programmers
 appear to be honest workaholics you may get lucky and get something done.
 As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
-there won't be any workaholics in your project. Even if you adopt micro-management
-and corporal punishment, your overall costs will be much higher than expected
-and the quality will suffer.
+there won't be any workaholics in your project. Even if you adopt
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %})
+and corporal punishment, your overall
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
+will be much higher than expected and the quality will
+[suffer]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}).
 
 This is what a monthly T&M invoice will look like. You will pay for
 the time spent by programmers pretending to be working on your project.
@@ -76,9 +82,11 @@ In the end &mdash; you lose.
 In Fixed Price you will feel secure at the beginning &mdash; "the statement
 of work specifies everything and the price is fixed, how can I lose?"
 According to the statistics above, however, programmers are much smarter than their
-clients. You will lose in quality. Yes, you will get something for that
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
+You will lose in quality. Yes, you will get something for that
 fixed price, but it will be a throw-away software. And when you decide to
-modify it, new costs will bubble up. In the end, the whole project will be ruined
+modify it, new costs will bubble up. In the end, the whole project will be
+[ruined]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
 and your money will simply be turned into programmers' salaries. This model is even more
 risky than T&M, where you at least have a chance.
 
@@ -108,7 +116,9 @@ a micro-step towards any of these.
 
 By the end of a week you get a bill that lists every single increment
 delivered during the week, the amount of time spent on its development
-and its total cost. Every increment costs you 30-60 minutes of a programmer's
+and its
+[total cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}).
+Every increment costs you 30-60 minutes of a programmer's
 time (plus our fees).
 
 Besides that, by the end of the week, you get an updated version

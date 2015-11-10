@@ -2,7 +2,7 @@
 layout: post
 title: No Obligations
 date: 2014-04-13
-tags: xdsd mgmt
+tags: xdsd management
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders
@@ -39,7 +39,8 @@ Then everybody begins working and we start hearing excuses:
  * "I tried, but this doesn't work; what can I do?"
  * "This installation requires all of my time. I can't finish the task"
 
-With excuses, team members transfer responsibility back to the project manager.
+With excuses, team members transfer responsibility back to the project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 There was a very famous article ["Management Time: Who's Got the
 Monkey?"](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
 published in the Harvard Business Review about this very subject.
@@ -63,7 +64,8 @@ Personally, I find this management style extremely annoying and destructive for
 the project. The project environment becomes very unhealthy and good people
 usually end up leaving.
 
-Another traditional management method is micro-management. This results when the
+Another traditional management method is
+[micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}). This results when the
 project manager checks task statuses every few hours and tells people what to do
 and how to handle problems. Needless to say, this management style ruins the
 team and causes good people to leave even faster.

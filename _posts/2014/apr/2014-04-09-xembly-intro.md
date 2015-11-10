@@ -113,7 +113,8 @@ Xembly performs all manipulations through DOM. Consequently, Xembly can be
 implemented inside any language that has a built-in DOM implementation.
 
 In the meantime, there is only one implementation of Xembly language
-&mdash; in Java. Here is how it works:
+&mdash; in Java. Here is how
+[it works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
 {% highlight java linenos=table %}
 Iterable<Directive> directives = new Directives()

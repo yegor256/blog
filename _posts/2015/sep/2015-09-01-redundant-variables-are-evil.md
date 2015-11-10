@@ -45,6 +45,8 @@ redundant variables many times. We use them to "explain" the code &mdash;
 it's not just a string literal `"test.txt"` anymore but a `fileName`.
 The code looks easier to understand, right? Not really.
 
+{% quote The more variable names I have to remember, the longer it takes to digest the code %}
+
 Let's dig into what "readability" of code is in the first place. I think this
 quality can be measured by the number of seconds I need to understand the
 code I'm looking at. The longer the timeframe, the lower the readability.

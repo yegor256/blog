@@ -2,7 +2,7 @@
 layout: post
 title: "Worst Technical Specifications Have No Glossaries"
 date: 2015-03-16
-tags: mgmt agile
+tags: management agile
 description:
   A good technical specification is built around a good
   glossary that plays the role of skeleton for the entire
@@ -16,7 +16,9 @@ keywords:
 ---
 
 I read a few technical specifications every week from our current
-and potential clients, and there's one thing I can't take anymore;
+and potential
+[clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
+and there's one thing I can't take anymore;
 I have to write about it: 99 percent of the documents I'm reading don't
 have glossaries, and because of that, they are very difficult to read
 and digest. Even when they do have glossaries, their definitions
@@ -33,6 +35,8 @@ a glossary.
 I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone
 would be interested in reading it. Anyway, I will try.
+
+{% quote A detailed and accurate glossary saves a reader a lot of time %}
 
 A glossary (a.k.a. vocabulary) is a list of terms used by the project
 that is usually included at the beginning of the technical specification document.

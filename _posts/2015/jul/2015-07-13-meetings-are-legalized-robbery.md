@@ -2,7 +2,7 @@
 layout: post
 title: "Meetings Are Legalized Robbery"
 date: 2015-07-13
-tags: mgmt
+tags: management
 place: Washington, D.C.
 description:
   Meetings are very popular but very ineffective
@@ -32,7 +32,10 @@ software design discipline ... and it's very _sad_ to see it.
 
 {% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
 
-A good software architect doesn't need meetings and **never** organizes them.
+A good [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
+as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), doesn't need
+[meetings]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
+and **never** organizes them.
 
 Meetings demotivate, waste time, burn money, and degrade quality. But more about
 that later. For now, let's discuss a proposed alternative.
@@ -117,6 +120,8 @@ other programmers!
 
 Moreover, I can add my own concerns to the document, and on the next iteration,
 ask Jeff to pay attention to and resolve them.
+
+{% quote Train and discipline yourself to work with documents and let juniors enjoy their meetings %}
 
 The more we circle this document, the better it becomes. And every minute
 the project pays for turns into a tangible product: a **document**

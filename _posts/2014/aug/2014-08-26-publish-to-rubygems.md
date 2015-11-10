@@ -50,7 +50,7 @@ Create a `rubygems.yml` file (you may already have it as `~/.gem/credentials`):
 {% endhighlight %}
 
 You should get this API key from RubyGems.  To find your API key,
-click on your username when logged in to RubyGems.org and then click
+click on your user name when logged in to RubyGems.org and then click
 on "Edit Profile".
 
 ## Encrypt `rubygems.yml`

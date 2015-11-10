@@ -2,7 +2,7 @@
 layout: post
 title: "How to Protect a Business Idea While Outsourcing"
 date: 2015-05-04
-tags: mgmt outsourcing
+tags: management outsourcing
 description:
   How can an entrepreneur protect a business idea when
   it's necessary to disclose it to a hired team of
@@ -31,7 +31,9 @@ There are basically a few levels of protection you can obtain, and they are
 listed below, from the simplest and least secure to the most expensive and
 most secure.
 
-Very often, a software team you outsource programming to is located offshore
+Very often, a software team you
+[outsource programming]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+to is located offshore
 in a developing country where people care about laws much less than
 in, say, the United States; corruption makes it possible for them to get away
 with ignoring almost any violation. Let's not forget this.

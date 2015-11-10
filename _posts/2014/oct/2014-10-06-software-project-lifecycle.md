@@ -2,7 +2,7 @@
 layout: post
 title: Project Lifecycle in Teamed.io
 date: 2014-10-06
-tags: mgmt
+tags: management
 description:
   There are four standard phases in
   a software development lifecycle for all projects
@@ -43,7 +43,8 @@ There are four phases in every project I work with in
    who will work with the software (actors) and how will they work with it (user stories).
    Deliverables: specification.
    Duration: from 2 days up to 3 weeks.
-   Participants: product owner, analyst(s), architect, project manager.
+   Participants: product owner, analyst(s), architect,
+   [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
  * **Building**.
    Here the software architect is creating a [proof-of-concept](https://en.wikipedia.org/wiki/Proof_of_concept)
@@ -52,7 +53,8 @@ There are four phases in every project I work with in
    with anyone else. The architect builds the product according to the
    specification in a very limited time frame. The result will have
    multiple bugs and open ends, but it will implement the main user story.
-   The architect also configures continuous integration and delivery pipelines.
+   The architect also configures
+   [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and delivery pipelines.
    Deliverables: working software.
    Duration: 2-5 days.
    Participants: architect.
@@ -82,8 +84,9 @@ There are four phases in every project I work with in
 
 The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
 usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &mdash; Thinking. A mistake made during Thinking
-will cost much more than a mistake made later.
+and risky phase is the first one &mdash; Thinking. A mistake made during Thinking will
+[cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
+much more than a mistake made later.
 
 ## Thinking
 
@@ -115,6 +118,7 @@ are responsible for turning our initial `README` into a more complete and detail
 specification. They start by asking questions, submitting them one by one
 as GitHub issues. Every question is addressed to the product owner. Using
 his/her answers, system analysts modify the `README` document.
+Sometimes we're using [Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %}).
 
 At the end of the Thinking phase we estimate the size of the project,
 in lines of code. Using lines of code, we can roughly
@@ -125,7 +129,7 @@ in lines of code. Using lines of code, we can roughly
 {% badge /images/2014/10/lifecycle-building.png 250 %}
 
 This is a one-man job for
-[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %}).
+[an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 Every project we work on
 has an architect who is [personally responsible]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
 for the quality and technical decisions. We have a few brilliant engineers

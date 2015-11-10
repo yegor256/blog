@@ -72,7 +72,7 @@ public Employee getByName(String name) {
 }
 {% endhighlight %}
 
-The second possible alternative is to [fail fast](http://martinfowler.com/ieeeSoftware/failFast.pdf)
+The second possible alternative is to [fail fast]({% pst 2015/aug/2015-08-25-fail-fast %})
 by throwing an **Exception** when you can't return an object:
 
 {% highlight java %}
@@ -166,7 +166,8 @@ return employees.get("Jeffrey"); // second search
 Obviously, this is method is twice as slow as the first one. What to do?
 
 The `Map` interface (no offense to its authors) has a design flaw.
-Its method `get()` should have been returning an `Iterator`
+Its method `get()` should have been returning an
+[`Iterator`]({% pst 2015/apr/2015-04-30-iterating-adapter %})
 so that our code would look like:
 
 {% highlight java %}

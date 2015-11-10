@@ -130,7 +130,8 @@ We don't want to start a server on its default 3306 port,
 because there could be another server already running there.
 Besides that, if we use a hard-coded TCP port, we won't be able to
 run multiple builds in parallel. Maybe not a big deal when
-you're developing locally, but in continuous integration
+you're developing locally, but in
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 environment this can be a problem. That's why we're reserving a TCP port first.
 
 2. [**maven-dependency-plugin**](http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
@@ -211,6 +212,8 @@ is called "resources filtering", and you can read about it
 
 That's pretty much it. I'm using [jcabi-mysql-maven-plugin](http://mysql.jcabi.com)
 in a few projects, and it helps me to stay confident that my code works
-with a real MySQL server. I'm also using the Liquibase Maven plugin in
+with a real MySQL server. I'm also using the
+[Liquibase]({% pst 2014/jul/2014-07-20-liquibase-in-maven %})
+Maven plugin in
 order to populate an empty server with tables required for the application.
 Nevertheless, that is a story for the next post :)

@@ -2,7 +2,7 @@
 layout: post
 title: "It's Not a School!"
 date: 2015-02-16
-tags: mgmt agile
+tags: management agile
 description:
   A project is not a school, and it shouldn't pay for our education; however,
   we want to learn while working on a project. Here is some simple
@@ -59,9 +59,13 @@ this weakness may be revealed in the middle of the project.
 Say you're building a house and you contracted a plumber to install a
 drainage system. When it's time to mount the equipment, he tells you
 that he's never worked with it and doesn't know how to install it.
-It was a risk, and it occurred. A good project manager always has a fallback plan
+It was a risk, and it occurred. A good
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %})
+always has a fallback plan
 or even a few of them. Obviously, the best option would be to contract another
 plumber. The worst option would be to train the original one on the spot.
+
+{% quote The goal of the project is to build a house, not to train a plumber %}
 
 Wait, why is that so obvious? The plumber is a great guy. Yes, he doesn't know
 how to work with this equipment, but that doesn't mean we should
@@ -80,11 +84,14 @@ a school here. We're building a house!
 While working on a software project, a good project manager has a staffing management
 plan that describes how skills will be recruited, tested, applied, and
 discharged when necessary. Such a plan may include training, but it would be
-as small an amount as possible &mdash; mostly because a plumber trained by us costs much
+as small an amount as possible &mdash; mostly because a plumber trained by us
+[costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) much
 more than one trained by someone else but does exactly the same, or worse, work.
 Thus, a smart project manager acquires project members who are already
 capable of performing their duties and falls back on training only
 in exceptional situations.
+
+{% quote If you make your projects spend their money on your education, that's theft %}
 
 Now, a logical question: What should we, as programmers, do? We want to
 learn, and we don't want to spend our own money on it. We don't want to

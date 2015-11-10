@@ -2,7 +2,7 @@
 layout: post
 title: "Two Instruments of a Software Architect"
 date: 2015-05-13
-tags: mgmt agile architect
+tags: management agile architect
 description:
   A software architect controls a software project through
   two fundamental instruments - bugs and reviews.
@@ -14,7 +14,7 @@ keywords:
   - software architect vs engineer
 ---
 
-A [software architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+A [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 is a key person in any software project, no matter how big or small it is.
 An architect is personally responsible for the technical outcome of
 the entire team. A good architect knows what needs to be done and how
@@ -43,10 +43,14 @@ a software architect enforce his or her technical vision for the team
 if he can't communicate with the team? Here is our answer:
 the architect must use **bugs**.
 
+{% quote Bugs reported by an architect serve as communication channels between him and the team %}
+
 A bug is a ticket that has a reporter, a problem, and a resolver, just
 like [this post]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}) explains.
 Say an architect reviews an existing technical solution and finds
-something that contradicts his vision. When such a contradiction
+something that
+[contradicts]({% pst 2015/jun/2015-06-22-valid-reasons-to-reject-bug-fix %})
+his vision. When such a contradiction
 is found, it is a good candidate for a bug. Sometimes there is just
 not enough information in the code yet, and this is also a good candidate
 for a bug.
@@ -77,6 +81,8 @@ implementation is done, all tickets pass mandatory code peer review. In other
 words, developers review each others' code. An architect is not involved
 in this process.
 
+{% quote Through strict and non-compromising code reviews, an architect enforces his design and architectural principles %}
+
 But when peer review is done, each ticket goes to an architect and he
 has to give a final "OK" before the code goes to the `master` branch through
 Rultor, our [merge bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
@@ -90,5 +96,6 @@ Reviews are a _reactive_ instrument for an architect. Through strict and
 non-compromising code reviews, an architect enforces his design and architectural
 principles.
 
-PS. Here is how an architect is supposed to report to the project manager:
+PS. Here is how an architect is supposed to report to the
+[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}):
 [Three Things I Expect From a Software Architect]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})

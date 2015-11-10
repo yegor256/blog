@@ -2,7 +2,7 @@
 layout: post
 title: Hits-of-Code Instead of SLoC
 date: 2014-11-14
-tags: mgmt
+tags: management
 description:
   The Hits of Code (HoC) metric is an alternative measurement
   indicator that can replace Software Lines Of Code (SLoC) and help
@@ -64,7 +64,9 @@ Lines-of-Code is not acting like this. You may have a huge code
 base today, but after refactoring it will become much smaller. The number
 of lines of code is decreased. Does it mean you are less effective?
 Definitely not, but the LoC metric says so, to a non-programmer.
-A project manager, for example, may decide that since the size
+A project
+[manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+for example, may decide that since the size
 of the code base stayed the same over the last month, the team is not working.
 
 HoC doesn't have this counter-intuitive effect. Instead, HoC grows together with your

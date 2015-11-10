@@ -36,7 +36,8 @@ via JDBC, avoiding the need to use ORM-s.
 [jcabi-jdbc](http://jdbc.jcabi.com) is a lightweight wrapper of
 [JDBC](http://www.oracle.com/technetwork/java/javase/jdbc/index.html).
 It is very convenient to use when you don't need a full-scale
-ORM (like Hibernate), but want just to select, insert, or update
+[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
+(like Hibernate), but want just to select, insert, or update
 a few rows in a relational database.
 
 Every instance of `JdbcSession` is a "transaction" in a database.

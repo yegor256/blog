@@ -2,7 +2,7 @@
 layout: post
 title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-18
-tags: mgmt
+tags: management
 categories: jcg
 description:
   Regularly and systematically having your programmers' technical deliverables
@@ -88,7 +88,7 @@ the issues with your current technical solution are. That's what you're paying f
 **Hire the Best and Pay Well**.
 My experience tells me that the position of an independent reviewer is a very
 important one. He is not just a programmer but more of
-[an architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 who is capable of looking at the solution from a very high level of abstraction,
 while at the same time paying a lot of attention to details; he should be very
 good at designing similar systems; he should know how to report a bug
@@ -185,7 +185,9 @@ interested in fixing all critical mismatches.
 **Review Everything, Not Just Source Code**.
 Let your reviewer look at all technical resources you have, not just
 source code files (`.java`, `.rb`, `.php`, etc.) Give him access to the
-database schema, continuous integration panel, build environment,
+database schema,
+[continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
+panel, build environment,
 issue tracking system, plans and schedules, work agendas, up-time reports,
 deployment pipeline, production logs,
 customer bug reports, statistics, etc. Everything that
@@ -199,7 +201,7 @@ Once you get a report from the reviewer, make sure that the most important
 issues immediately get into your team's backlog. Then, make sure they are
 addressed and closed. That doesn't mean you should fix them all and listen
 to everything said by the reviewer. Definitely not! Your
-[architect]({% pst 2014/oct/2014-10-14-who-is-software-architect %})
+[architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 runs the show, not the reviewer. Your architect should decide what is right
 and what is wrong in the technical implementation of the product. But it's
 important to make him resolve all concerns raised by the reviewer. Very often
