@@ -15,7 +15,8 @@ keywords:
   - how to write good specification
 ---
 
-I read a few technical specifications every week from our current
+I read a few technical
+[specifications]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) every week from our current
 and potential
 [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
 and there's one thing I can't take anymore;

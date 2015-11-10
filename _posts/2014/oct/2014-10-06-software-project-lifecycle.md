@@ -41,7 +41,7 @@ There are four phases in every project I work with in
    Here we're trying to understand: What is the problem that the product
    is going to solve? We're also investigating the product's boundaries &mdash;
    who will work with the software (actors) and how will they work with it (user stories).
-   Deliverables: specification.
+   Deliverables: [specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
    Duration: from 2 days up to 3 weeks.
    Participants: product owner, analyst(s), architect,
    [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
@@ -115,7 +115,8 @@ a mistake at this step.
 
 Then, we invite a few new system analysts to the project. These guys
 are responsible for turning our initial `README` into a more complete and detailed
-specification. They start by asking questions, submitting them one by one
+[specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
+They start by asking questions, submitting them one by one
 as GitHub issues. Every question is addressed to the product owner. Using
 his/her answers, system analysts modify the `README` document.
 Sometimes we're using [Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %}).

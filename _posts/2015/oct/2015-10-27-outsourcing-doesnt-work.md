@@ -93,7 +93,8 @@ shop in Kiev is one thing. Success for you, a client of this shop, is something
 very different. Read on.
 
 **Poor Specs**.
-"It's just not possible to make good specifications for most projects, and a
+"It's just not possible to make good
+[specifications]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) for most projects, and a
 poorly designed spec is a recipe for failure." Yes, that's very true,
 but what does this have to do with outsourcing? Ah, right, they are so far
 away in Argentina and we're here in New York City &mdash; how can we make
