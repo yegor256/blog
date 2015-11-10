@@ -333,7 +333,7 @@ user interface.
 This is noise. As the reader of this document, I'm neither an investor
 nor a user. I'm a programmer. I don't care what your "primary concern" is
 in this project. My job is to implement the product so that it matches
-the specs. If performance is your primary concern, create measuable
+the specs. If performance is your primary concern, create measurable
 and testable requirements for me. I will make sure the product satisfies them.
 If you can't create a requirement, don't spam me with this irrelevant
 information.
