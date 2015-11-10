@@ -10,12 +10,379 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 03 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>10 Typical Mistakes in Specs</title>
+      <link>http://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html</link>
+      <description>&lt;p&gt;There is a great book called
+&lt;a href=&quot;http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00JDMPMOA&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=PRSWJK34HNP355LK&quot;&gt;Software Requirements&lt;/a&gt;
+written by Karl Wiegers about, well, software requirements.
+It&amp;#39;s a must read for every software engineer, in my opinion. There&amp;#39;s
+no need for me to repeat what it says, but there are a few very
+simple and very typical mistakes we keep making in our
+specs. I see them in our documents again and again,
+which is why I&amp;#39;ve decided to summarize them. So here they are,
+the 12 most critical and typical of them,
+from the point of view of a programmer reading a specification document.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/11/reservoir-dogs.jpg' style='width:600px;' alt='Reservoir Dogs (1992) by Quentin Tarantino'/&gt;&lt;figcaption&gt;Reservoir Dogs (1992) by Quentin Tarantino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Chapter 4.3 of a famous standard
+&lt;a href=&quot;https://standards.ieee.org/findstds/standard/830-1998.html&quot;&gt;IEEE 830-1998&lt;/a&gt;
+says that a good
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Software_requirements_specification&quot;&gt;specification&lt;/a&gt;
+should be &lt;strong&gt;correct&lt;/strong&gt;, &lt;strong&gt;unambiguous&lt;/strong&gt;, &lt;strong&gt;complete&lt;/strong&gt;, &lt;strong&gt;consistent&lt;/strong&gt;,
+&lt;strong&gt;ranked&lt;/strong&gt;, &lt;strong&gt;verifiable&lt;/strong&gt;, &lt;strong&gt;modifiable&lt;/strong&gt;, and &lt;strong&gt;traceable&lt;/strong&gt;.
+Eight qualities in total. Then, the standard explains them one by one
+in pretty simple English. But do we have time to read those boring standards?
+They are for university professors and certification boards.
+We are practitioners, for goodness sake! ... Hold on, I&amp;#39;m joking.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='https://standards.ieee.org/findstds/standard/830-1998.html'&gt;&lt;img src='/images/2015/11/ieee-830.jpg' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;No matter how small the project is and how practical we are, there
+is always a document that explains what needs to be done, and it
+may be called the &amp;quot;software requirements specification,&amp;quot; or &amp;quot;specification,&amp;quot;
+or just &amp;quot;spec.&amp;quot; Of course, there is a lot of space for creativity, but
+we&amp;#39;re &lt;strong&gt;engineers&lt;/strong&gt;, not artists. We must follow rules and standards,
+mostly because they make our communication easier.&lt;/p&gt;
+
+&lt;p&gt;Now, I&amp;#39;m getting to my point. The specs I usually see violate pretty much
+&lt;strong&gt;all&lt;/strong&gt; eight principles mentioned earlier. Below is a summary of how exactly
+they do it. By the way, all examples are taken from real documents in
+real commercial software projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-glossary-or-a-messy-one&quot;&gt;No Glossary or a Messy One&lt;/h2&gt;
+
+&lt;p&gt;How about this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;UUID is set incrementally to make sure there
+are no two users with the same account number.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What is the difference between UUID and account number? Is it the
+same thing? It seems so, right? Or maybe they are different ... it would
+be great to know what UUID stands for. Is it &amp;quot;unique user ID&amp;quot; or maybe
+&amp;quot;unified user identity descriptor&amp;quot;? I have no idea. I&amp;#39;m lost, and I want
+to find the author of this text and do something bad to him ... or her.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;We're writing in order to be understood, not to impress the reader&lt;/aside&gt;
+
+&lt;p&gt;I&amp;#39;ve written already that the
+&lt;a href=&quot;/2015/03/16/technical-glossaries.html&quot;&gt;worst technical specifications have no glossaries&lt;/a&gt;.
+In my experience, this is the biggest problem in all requirement
+documents. It&amp;#39;s not prose! It&amp;#39;s not a love letter! It&amp;#39;s technical
+documentation. We can&amp;#39;t juggle words for the sake of fun. We should
+not use product specs just to express ourselves. We&amp;#39;re writing in order
+to be understood, not to impress the reader. And the rule is the
+same here as with
+&lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;diagrams&lt;/a&gt;:
+if I don&amp;#39;t understand you, it&amp;#39;s your fault.&lt;/p&gt;
+
+&lt;p&gt;Here is how that text would look after a proper re-writing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;UUID is user unique ID, a positive 4-bytes integer.
+UUID is set incrementally to make sure there
+are no two users with the same UUID.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Better now?&lt;/p&gt;
+
+&lt;p&gt;Thus, the first and biggest problem is a frivolous
+use of terms and just words, without having them pre-defined in a glossary.&lt;/p&gt;
+
+&lt;h2 id=&quot;questions,-discussions,-suggestions,-opinions&quot;&gt;Questions, Discussions, Suggestions, Opinions&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;ve seen this very recently in a product spec:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;I believe that multiple versions of the API
+must be supported. What options do we have? I&amp;#39;d
+suggest we go with versioned URLs. Feel free to
+post your thoughts here.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Yes, this text exists verbatim in a requirements document. First, the
+author expresses his personal opinion about the subject. Then,
+the author asks me what possible options are out there. Then,
+he suggests I consider something, and after that,
+he invites me for a talk.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;Find all your answers before writing the document, that's what you're paid for&lt;/aside&gt;
+
+&lt;p&gt;Impressive, right? Obviously, the author has a very creative personality.
+But we should keep this person as far away from project documentation as possible.
+This is not what a requirements document appreciates. Well, we appreciate
+creativity, but these four things are strictly prohibited:
+questions, discussions, suggestions, and opinions.&lt;/p&gt;
+
+&lt;p&gt;Specifications can&amp;#39;t have any &lt;strong&gt;questions&lt;/strong&gt; in them. Who are these questions
+addressed to? Me, a programmer? Am I supposed to implement the
+software or answer your questions? I&amp;#39;m not interested in brainstorming
+with you. I expect you, a requirements author, to tell me
+what needs to be done. Find all your answers before writing the document. That&amp;#39;s
+what you&amp;#39;re paid for. If you don&amp;#39;t have the answers, put something like
+TBD (&amp;quot;to be determined&amp;quot;) there. But don&amp;#39;t ask questions. It&amp;#39;s annoying.&lt;/p&gt;
+
+&lt;p&gt;A requirements document is not a &lt;strong&gt;discussion&lt;/strong&gt; board. As a reader of the
+spec, I expect to see exactly what needs to be done without any &amp;quot;maybe&amp;quot; or
+&amp;quot;we could do it differently.&amp;quot; Of course you need to discuss these issues,
+but do it before documenting it. Do it somewhere else, like in Skype, on Slack,
+or by email. If you really want to discuss in the document, use Google Docs or
+Word with version tracking. But when the discussion is over, remove its history
+from the document. Its presence only confuses me, a programmer.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s no need to format requirements as &lt;strong&gt;suggestions&lt;/strong&gt; either. Just say what
+needs to be done and how the software has to work without fear of being wrong.
+Usually, people resort to suggestion when they are afraid to say it straight. Instead
+of saying &amp;quot;the app must work on Android 3.x and higher,&amp;quot; they say
+&amp;quot;I would suggest making the app compatible with Android 3.x and higher.&amp;quot;
+See the difference? In the first sentence, the author is trying to avoid
+personal responsibility. He&amp;#39;s not saying &amp;quot;exactly Android 3.x;&amp;quot; he&amp;#39;s just
+suggesting. Don&amp;#39;t be a coward; say it straight. If you make a mistake,
+we&amp;#39;ll correct you.&lt;/p&gt;
+
+&lt;p&gt;And, of course, &lt;strong&gt;opinions&lt;/strong&gt; are not appreciated at all. It&amp;#39;s not a letter
+to a friend; it&amp;#39;s a formal document that belongs to the project. In a few
+months or weeks, you may leave the project, and somebody else will work with
+your document. The spec is a contract between the project sponsor and project
+team. The opinion of a document author doesn&amp;#39;t make any difference here.
+Instead of noting &amp;quot;it seems Java would be faster&amp;quot; and suggesting &amp;quot;we should use it,&amp;quot;
+say &amp;quot;Java is faster, so we must use it.&amp;quot; Obviously you put it there because you
+thought so. But once it&amp;#39;s there, we don&amp;#39;t care who it came from and what
+you thought about this problem. The information would just
+confuse us more, so skip it. Just facts, no opinions.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t get me wrong, I&amp;#39;m not against creativity. Programmers are not robots,
+quietly implementing what the document says. But a messy document has
+nothing to do with creativity. If you want me to create, define
+the limits of that creativity and let me experiment within them; for example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Multiple versions of the API must be supported. How exactly
+that is done doesn&amp;#39;t really matter.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how you invite me to be creative. I realize that the user
+of the product doesn&amp;#39;t really have any justifications or expectations
+for the versioning mechanisms in the API. I&amp;#39;m free to do whatever
+I can. Great, I&amp;#39;ll do it my way.&lt;/p&gt;
+
+&lt;p&gt;But again, let me reiterate: A specification is not a discussion board.&lt;/p&gt;
+
+&lt;h2 id=&quot;mixing-functional-and-quality-requirements&quot;&gt;Mixing Functional and Quality Requirements&lt;/h2&gt;
+
+&lt;p&gt;This is how it looks:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;User must be able to scroll down through
+the list of images in the profile smoothly and fast.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s a typical mistake in almost every spec I&amp;#39;ve seen. Here, we mix
+together a functional requirement (&amp;quot;to scroll images&amp;quot;) and
+and a non-functional one (&amp;quot;scrolling is smooth and fast&amp;quot;). Why is it
+bad? Well, there is no specific reason, but it exhibits a lack
+of discipline.&lt;/p&gt;
+
+&lt;p&gt;Such a requirement is difficult to verify or test, difficult to trace,
+and difficult to implement. As a programmer, I don&amp;#39;t know what is more
+important: to scroll or to make sure the scrolling is fast.&lt;/p&gt;
+
+&lt;p&gt;Also, it is difficult to modify such a statement. If tomorrow we add
+another functional requirement &amp;mdash; scrolling a list
+of friends, for example &amp;mdash; we&amp;#39;ll want to require this scrolling to also be smooth and fast.
+Then, a few days later, we&amp;#39;ll want to say that &amp;quot;fast&amp;quot; means less than
+10 milliseconds of reaction time. We&amp;#39;ll then have to duplicate this information
+in two places. See how messy our document may become eventually?&lt;/p&gt;
+
+&lt;p&gt;Thus, I would strongly recommend you always document functional and non-functional
+requirements separately.&lt;/p&gt;
+
+&lt;h2 id=&quot;mixing-requirements-and-supplementary-docs&quot;&gt;Mixing Requirements and Supplementary Docs&lt;/h2&gt;
+
+&lt;p&gt;This is similar to a previous problem and may look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;User can download a PDF report that includes a full
+list of transactions. Each transaction has ID,
+date, description, account, and full amount. The report
+also contains a summary and a link to the user account.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s obvious there are two things described in this
+paragraph. First is that a user can download a PDF report. Second is
+how this report should look. The first thing is a functional
+requirement, and the second one must be described in a supplementary
+document (or appendix).&lt;/p&gt;
+
+&lt;p&gt;In general, functional requirements must be very short:
+&amp;quot;user downloads,&amp;quot; &amp;quot;user saves,&amp;quot; &amp;quot;client requests and receives,&amp;quot; etc.
+If your text gets any longer, there is something wrong.
+Try to move part of it to a supplementary document.&lt;/p&gt;
+
+&lt;h2 id=&quot;unmeasurable-quality-requirements&quot;&gt;Unmeasurable Quality Requirements&lt;/h2&gt;
+
+&lt;p&gt;This is what I&amp;#39;m talking about:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Credit card numbers must be encrypted.
+The app should launch in less than 2 seconds.
+Each web page must open in less than 500 milliseconds.
+User interface must be responsive.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I can find many more examples just by opening requirement specs in
+many projects I&amp;#39;ve seen over the past few years. They all look the same.
+And the problem is always the same: It is very difficult
+to define a truly testable and measurable non-functional requirement.&lt;/p&gt;
+
+&lt;p&gt;Yes, it&amp;#39;s difficult. Mostly because there are many factors. Take this
+line, for example: &amp;quot;The app must launch in 2 seconds.&amp;quot; On what equipment?
+With what amount of data in the user profile? What does &amp;quot;launch&amp;quot; mean; does it include
+profile loading time? What if there are launching problems? Do they count?
+There are a lot of questions like that.&lt;/p&gt;
+
+&lt;p&gt;If we answer &lt;strong&gt;all&lt;/strong&gt; of them, the requirement text will fill an entire
+page. Nobody wants that, but having unmeasurable requirements
+is a greater evil.&lt;/p&gt;
+
+&lt;p&gt;Again, it&amp;#39;s not easy, but it&amp;#39;s necessary. Try to make sure all
+quality requirements are complete and without ambiguity.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementation-instructions&quot;&gt;Implementation Instructions&lt;/h2&gt;
+
+&lt;p&gt;This example illustrates a very common pitfall:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;User authenticates via Facebook login button
+and we store username, avatar, and email in the
+database.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is
+&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanagement&lt;/a&gt;, and
+it&amp;#39;s something a requirements analyst should never do to a programmer.
+You shouldn&amp;#39;t tell me how to implement the functionality you desire.
+You want to give a user the ability to login via Facebook?
+Say so. Do you really care whether it&amp;#39;s going to happen through a button
+click or somehow else? Do you really care what I store in the database?
+What if I use files instead of a database? Is that important to you?&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t think so. Only in very rare cases will it matter. Most
+of the time, it&amp;#39;s just micromanagement.&lt;/p&gt;
+
+&lt;p&gt;The spec should only require what really matters for the business. Everything
+else is up to us, the programmers. We decide what database to use, where the
+button will be placed, and what information will be stored in the database.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;You shouldn't tell me how to implement the functionality you desire&lt;/aside&gt;
+
+&lt;p&gt;If you really care about that because there are certain higher-level
+limitations &amp;mdash; say so. But again, not as implementation instructions
+to us programmers, but rather as non-functional requirements like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Login page must look like this (screenshot attached).
+We must store user email locally for future needs.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The point is that I have nothing against requirements, but I&amp;#39;m
+strongly against implementation instructions.&lt;/p&gt;
+
+&lt;h2 id=&quot;lack-of-actor-perspective&quot;&gt;Lack of Actor Perspective&lt;/h2&gt;
+
+&lt;p&gt;The text may look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;PDF report is generated when required. It is
+possible to download a report or save it
+in the account.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The problem here is that there is no &amp;quot;actor&amp;quot; involved. This functionality
+is more or less clear, but it&amp;#39;s not clear who is doing all this. Where
+is the user? It is just a story of something happening somewhere. That&amp;#39;s not
+really what programmers need in order to implement it.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;A good user story always has, guess what ... a user&lt;/aside&gt;
+
+&lt;p&gt;The best way to explain functionality is through user stories. And a good
+user story always has, guess what ... a user. It always starts with
+&amp;quot;the user ...,&amp;quot; followed by a verb. The user downloads, the user saves,
+the user clicks, prints, deletes, formats, etc.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not necessary for the user to be a human. It may be a system, a RESTful API
+client, a database, anything. But always someone. &amp;quot;It is possible to download ...&amp;quot;
+is not a user story. It&amp;#39;s possible for who?&lt;/p&gt;
+
+&lt;h2 id=&quot;noise&quot;&gt;Noise&lt;/h2&gt;
+
+&lt;p&gt;How about this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Our primary concern is performance and an attractive
+user interface.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is noise. As the reader of this document, I&amp;#39;m neither an investor
+nor a user. I&amp;#39;m a programmer. I don&amp;#39;t care what your &amp;quot;primary concern&amp;quot; is
+in this project. My job is to implement the product so that it matches
+the specs. If performance is your primary concern, create measurable
+and testable requirements for me. I will make sure the product satisfies them.
+If you can&amp;#39;t create a requirement, don&amp;#39;t spam me with this irrelevant
+information.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;Good programmers should figure out what good performance means, right?&lt;/aside&gt;
+
+&lt;p&gt;I don&amp;#39;t want to share your concerns, your beliefs, or your intentions. That&amp;#39;s your
+business. And you&amp;#39;re paid to properly and unambiguously translate all that
+into testable and measurable requirements. If you can&amp;#39;t do this, it&amp;#39;s
+your problem and &lt;strong&gt;your fault&lt;/strong&gt;. Don&amp;#39;t try to make it mine.&lt;/p&gt;
+
+&lt;p&gt;Very often ... wait. Very, very often. No. Almost always. Wrong again. Always!
+That&amp;#39;s right, spec documents are always full of noise.
+Some of them have a bit less; some have more. I believe this
+is a symptom of &lt;strong&gt;lazy&lt;/strong&gt; and unprofessional document authors. In most cases,
+just lazy.&lt;/p&gt;
+
+&lt;p&gt;They don&amp;#39;t want to think and translate their concerns, ideas, thoughts,
+intentions, and objectives into functional and non-functional requirements.
+They just put them into the document and hope the programmers will
+somehow find the right solution. Good programmers should figure out
+what good performance means, right? Let&amp;#39;s just tell them that performance
+is a concern for us, and they will figure something out.&lt;/p&gt;
+
+&lt;p&gt;No! Don&amp;#39;t do that. Do your job right and let programmers do theirs.&lt;/p&gt;
+
+&lt;p&gt;And we, programmers, should never accept such documents. We should just reject
+them and ask requirements authors to re-work and remove noise. I would recommend not
+even starting to work on a product if there is a lot of noise in its specs.&lt;/p&gt;
+
+&lt;h2 id=&quot;will-work,-needs-to-work,-must-work&quot;&gt;Will Work, Needs to Work, Must Work&lt;/h2&gt;
+
+&lt;p&gt;This is yet another very typical mistake:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The API will support JSON and XML. Both formats
+must fully support all data items. XML needs to
+be validated by XSD schema.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See how messy it sounds? There are three different points of view, and
+none of them are suitable for a specification document. A spec
+must describe a product as if it already exists. A spec must
+sound like a manual, a tutorial, or a reference. This text must be
+re-written like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The API supports JSON and XML. Both formats
+fully support all data items. XML is validated
+by XSD schema.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See the difference? All the &amp;quot;must,&amp;quot; &amp;quot;need,&amp;quot; and &amp;quot;will&amp;quot; words are just
+adding doubt to the document. For a reader of this spec,
+&amp;quot;&lt;em&gt;the API will support&lt;/em&gt;&amp;quot; sounds like &amp;quot;&lt;em&gt;some time in the future, maybe in
+the next version, it will support&lt;/em&gt;.&amp;quot; This is not what the author
+had in mind, right? There should be no doubt, no double meaning, no
+maybe. The API supports. That&amp;#39;s it.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;I may have forgotten something important, but these issues are so obvious
+and so annoying ... I&amp;#39;m going to use this post as a simple guide for our
+system analysts. Feel free to share your experience with requirements
+documents below in the comments.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html</guid>
+      <dc:date>2015-11-10T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>A Chatbot Is Better Than a UI for a Microservice</title>
       <link>http://www.yegor256.com/2015/11/03/chatbot-better-than-ui-for-microservice.html</link>
@@ -383,7 +750,8 @@ shop in Kiev is one thing. Success for you, a client of this shop, is something
 very different. Read on.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Poor Specs&lt;/strong&gt;.
-&amp;quot;It&amp;#39;s just not possible to make good specifications for most projects, and a
+&amp;quot;It&amp;#39;s just not possible to make good
+&lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;specifications&lt;/a&gt; for most projects, and a
 poorly designed spec is a recipe for failure.&amp;quot; Yes, that&amp;#39;s very true,
 but what does this have to do with outsourcing? Ah, right, they are so far
 away in Argentina and we&amp;#39;re here in New York City &amp;mdash; how can we make
@@ -1772,92 +2140,6 @@ you won&amp;#39;t need &lt;strong&gt;any&lt;/strong&gt; variables aside from met
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</guid>
       <dc:date>2015-09-01T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Need Robust Software? Make It Fragile</title>
-      <link>http://www.yegor256.com/2015/08/25/fail-fast.html</link>
-      <description>&lt;p&gt;In any software project, the goal is to create something stable. We don&amp;#39;t want it
-to break in front of a user. We also don&amp;#39;t want our website to show an
-&amp;quot;internal application error&amp;quot; instead of a web page. We want our software
-to work, not fail. That&amp;#39;s a perfectly valid and logical desire,
-but in order to achieve that, we have to make our software as fragile
-as possible. This may sound counter-intuitive, but that&amp;#39;s the way it is.
-The more &lt;strong&gt;fragile&lt;/strong&gt; your app is in development, the more &lt;strong&gt;robust&lt;/strong&gt; it is
-in production.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/08/black-cat-white-cat.jpg' style='width:600px;' alt='Black Cat, White Cat (1998) by Emir Kusturica'/&gt;&lt;figcaption&gt;Black Cat, White Cat (1998) by Emir Kusturica&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;By fragile, I&amp;#39;m referring to the &lt;a href=&quot;http://martinfowler.com/ieeeSoftware/failFast.pdf&quot;&gt;Fail Fast&lt;/a&gt;
-philosophy, which is the opposite of
-Fail Safe. I believe you know the difference, but let me remind you anyway,
-by example. This is Fail Safe:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This method is supposed to calculate and return a file size. It first checks
-whether the file exists. If it doesn&amp;#39;t exist, the method returns zero. Indeed,
-the file is absent, so there is no size. We could complain that the file is
-absent, but what for? Why make noise? Let&amp;#39;s keep it quiet and return zero.
-We don&amp;#39;t fail because we&amp;#39;re trying to keep the app running. This is called Fail Safe.&lt;/p&gt;
-
-&lt;p&gt;To the contrary, this is how Fail Fast looks:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;There is no such file; I can&amp;#39;t get its length.&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We can&amp;#39;t find a file? We don&amp;#39;t hide this fact. We make this situation
-public and visible. We scream and cry. We throw an exception. We &lt;strong&gt;want&lt;/strong&gt; the
-app to crash, break, and fail, because someone gave us a file that doesn&amp;#39;t
-exist. We complain and protest. This is called Fail Fast.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;Fail Safe approach conceals problems and makes code less maintainable, and that's why it's difficult to stabilize&lt;/aside&gt;
-
-&lt;p&gt;Which philosophy, if we follow it everywhere, will make our software
-robust and failure-resilient? Only the second one &amp;mdash; the Fail Fast.&lt;/p&gt;
-
-&lt;p&gt;Why? Because the quicker and easier the failure is, the faster it will
-be fixed. And the fix will be simpler and also more visible. Fail Fast
-is a much better approach for maintainability. The code becomes cleaner.
-It is much easier to track a failure. All methods are ready to break and throw
-an exception on even the tiniest problem.&lt;/p&gt;
-
-&lt;p&gt;In this example, if the method returns zero, it&amp;#39;s not obvious
-whether the file exists and its size is actually zero or if its name is wrong
-and it is just not found. The Fail Safe approach &lt;strong&gt;conceals&lt;/strong&gt; problems and makes
-code less maintainable, and that&amp;#39;s why it&amp;#39;s difficult to stabilize.&lt;/p&gt;
-
-&lt;p&gt;In the beginning, during production, we will have many crashes and errors. But
-all of them will be visible and easy to understand. We will fix them and
-cover them with unit tests. Each fix will make our software more &lt;strong&gt;stable&lt;/strong&gt;
-and better covered by tests.&lt;/p&gt;
-
-&lt;p&gt;Software designed with the Fail Safe approach in mind will look more stable
-at the beginning, but it will degrade quickly and inevitably turn into
-an unmaintainable mess.&lt;/p&gt;
-
-&lt;p&gt;Software designed with the Fail Fast approach in mind will crash frequently
-at the beginning but will improve its stability with every fix and eventually
-become very stable and robust.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s why fragility is the key success factor for robustness.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/08/25/fail-fast.html</guid>
-      <dc:date>2015-08-25T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
