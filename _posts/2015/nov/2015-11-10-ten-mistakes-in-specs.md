@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "10 Typical Mistakes in Specs"
-date: 2015-10-27
+date: 2015-11-10
 place: Palo Alto, CA
 tags: requirements management
 description:
@@ -28,7 +28,7 @@ from the point of view of a programmer reading a specification document.
 
 <!--more-->
 
-{% badge /images/2015/11/ieee-830.jpg 128 https://standards.ieee.org/findstds/standard/830-1998.html %}
+{% picture /images/2015/11/reservoir-dogs.jpg 0 Reservoir Dogs (1992) by Quentin Tarantino %}
 
 Chapter 4.3 of a famous standard
 [IEEE 830-1998](https://standards.ieee.org/findstds/standard/830-1998.html)
@@ -40,6 +40,8 @@ Eight qualities in total. Then, the standard explains them one by one
 in pretty simple English. But do we have time to read those boring standards?
 They are for university professors and certification boards.
 We are practitioners, for goodness sake! ... Hold on, I'm joking.
+
+{% badge /images/2015/11/ieee-830.jpg 128 https://standards.ieee.org/findstds/standard/830-1998.html %}
 
 No matter how small the project is and how practical we are, there
 is always a document that explains what needs to be done, and it
@@ -67,6 +69,8 @@ same thing? It seems so, right? Or maybe they are different ... it would
 be great to know what UUID stands for. Is it "unique user ID" or maybe
 "unified user identity descriptor"? I have no idea. I'm lost, and I want
 to find the author of this text and do something bad to him ... or her.
+
+{% quote We're writing in order to be understood, not to impress the reader %}
 
 I've written already that the
 [worst technical specifications have no glossaries]({% pst 2015/mar/2015-03-16-technical-glossaries %}).
@@ -109,6 +113,8 @@ the author asks me what possible options are out there. Then,
 he suggests I consider something, and after that,
 he invites me for a talk.
 
+{% quote Find all your answers before writing the document, that's what you're paid for %}
+
 Impressive, right? Obviously, the author has a very creative personality.
 But we should keep this person as far away from project documentation as possible.
 This is not what a requirements document appreciates. Well, we appreciate
@@ -124,16 +130,16 @@ what you're paid for. If you don't have the answers, put something like
 TBD ("to be determined") there. But don't ask questions. It's annoying.
 
 A requirements document is not a **discussion** board. As a reader of the
-spec, I expect to see exactly what needs to be done without any "maybe" or 
-"we could do it differently." Of course you need to discuss these issues, 
+spec, I expect to see exactly what needs to be done without any "maybe" or
+"we could do it differently." Of course you need to discuss these issues,
 but do it before documenting it. Do it somewhere else, like in Skype, on Slack,
-or by email. If you really want to discuss in the document, use Google Docs or 
+or by email. If you really want to discuss in the document, use Google Docs or
 Word with version tracking. But when the discussion is over, remove its history
 from the document. Its presence only confuses me, a programmer.
 
-There's no need to format requirements as **suggestions** either. Just say what 
-needs to be done and how the software has to work without fear of being wrong. 
-Usually, people resort to suggestion when they are afraid to say it straight. Instead 
+There's no need to format requirements as **suggestions** either. Just say what
+needs to be done and how the software has to work without fear of being wrong.
+Usually, people resort to suggestion when they are afraid to say it straight. Instead
 of saying "the app must work on Android 3.x and higher," they say
 "I would suggest making the app compatible with Android 3.x and higher."
 See the difference? In the first sentence, the author is trying to avoid
@@ -146,7 +152,7 @@ to a friend; it's a formal document that belongs to the project. In a few
 months or weeks, you may leave the project, and somebody else will work with
 your document. The spec is a contract between the project sponsor and project
 team. The opinion of a document author doesn't make any difference here.
-Instead of noting "it seems Java would be faster" and suggesting "we should use it," 
+Instead of noting "it seems Java would be faster" and suggesting "we should use it,"
 say "Java is faster, so we must use it." Obviously you put it there because you
 thought so. But once it's there, we don't care who it came from and what
 you thought about this problem. The information would just
@@ -261,8 +267,8 @@ database.
 
 This is
 [micromanagement]({% pst 2015/sep/2015-09-22-micromanagement %}), and
-it's something a requirements analyst should never do to a programmer. 
-You shouldn't tell me how to implement the functionality you desire. 
+it's something a requirements analyst should never do to a programmer.
+You shouldn't tell me how to implement the functionality you desire.
 You want to give a user the ability to login via Facebook?
 Say so. Do you really care whether it's going to happen through a button
 click or somehow else? Do you really care what I store in the database?
@@ -274,6 +280,8 @@ of the time, it's just micromanagement.
 The spec should only require what really matters for the business. Everything
 else is up to us, the programmers. We decide what database to use, where the
 button will be placed, and what information will be stored in the database.
+
+{% quote You shouldn't tell me how to implement the functionality you desire %}
 
 If you really care about that because there are certain higher-level
 limitations &mdash; say so. But again, not as implementation instructions
@@ -302,6 +310,8 @@ is more or less clear, but it's not clear who is doing all this. Where
 is the user? It is just a story of something happening somewhere. That's not
 really what programmers need in order to implement it.
 
+{% quote A good user story always has, guess what ... a user %}
+
 The best way to explain functionality is through user stories. And a good
 user story always has, guess what ... a user. It always starts with
 "the user ...," followed by a verb. The user downloads, the user saves,
@@ -327,6 +337,8 @@ the specs. If performance is your primary concern, create measuable
 and testable requirements for me. I will make sure the product satisfies them.
 If you can't create a requirement, don't spam me with this irrelevant
 information.
+
+{% quote Good programmers should figure out what good performance means, right? %}
 
 I don't want to share your concerns, your beliefs, or your intentions. That's your
 business. And you're paid to properly and unambiguously translate all that
