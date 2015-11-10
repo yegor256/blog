@@ -170,7 +170,7 @@ that is done doesn't really matter.
 
 This is how you invite me to be creative. I realize that the user
 of the product doesn't really have any justifications or expectations
-for the versioning mechanims in the API. I'm free to do whatever
+for the versioning mechanisms in the API. I'm free to do whatever
 I can. Great, I'll do it my way.
 
 But again, let me reiterate: A specification is not a discussion board.
@@ -342,7 +342,7 @@ information.
 
 I don't want to share your concerns, your beliefs, or your intentions. That's your
 business. And you're paid to properly and unambiguously translate all that
-into testable and measureable requirements. If you can't do this, it's
+into testable and measurable requirements. If you can't do this, it's
 your problem and **your fault**. Don't try to make it mine.
 
 Very often ... wait. Very, very often. No. Almost always. Wrong again. Always!
