@@ -32,8 +32,6 @@ $(
     'use strict';
     $('<script>')
       .attr('src', '/js/ext/search.min.js')
-      .attr('async', 'async')
-      .attr('defer', 'defer')
       .appendTo('head');
     $('#search-query').lunrSearch(
       {
