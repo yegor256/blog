@@ -27,6 +27,7 @@ $(
   }
 );
 
+/*
 $(window).on(
   'load',
   function() {
@@ -44,4 +45,4 @@ $(window).on(
     );
   }
 );
-
+*/
