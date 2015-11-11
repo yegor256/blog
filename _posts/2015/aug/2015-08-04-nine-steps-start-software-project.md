@@ -51,6 +51,8 @@ clear enough. It doesn't say anything about performance, but I
 can assume that it has to be as fast as Google. The same goes
 for scalability, stress resilience, etc.
 
+{% quote For each decision I made, there has to be at least one alternative that I considered and rejected %}
+
 I'm not going to discuss how the software is created in a specific
 technical stack. That's not important for this article. What's important now
 is how my programming work will be "wrapped." In other words, what will
@@ -64,7 +66,8 @@ Thus, let's assume I managed to create a piece of software and it works.
 First of all, I have to document my key technical decisions and their
 alternatives. [We](http://www.teamed.io) usually work in GitHub, and the best documentation
 media is the `README.md` file in the root directory of the repo. I just
-put my text there in a plain Markdown format. That's enough for a good
+put my text there in a plain [Markdown](https://daringfireball.net/projects/markdown/)
+format. That's enough for a good
 technical document &mdash; it has to be short; that's important.
 
 For each decision I made, there has to be at least one alternative
@@ -80,10 +83,15 @@ Java 8 is a programming language, and JVM is a
   Ruby, Python, Go, Scala, and tons of others.
 {% endhighlight %}
 
+{% quote Each decision must be traceable to the person who made it %}
+
 These decisions are very high-level, but I still need to document them. As you
-see, I'm not explaining in details why the alternatives were rejected, and it's
+see, I'm not explaining
+[in details]({% pst 2015/jun/2015-06-29-simple-diagrams %})
+why the alternatives were rejected, and it's
 my choice. If someone questions my decisions in the future, they may
-say that the alternatives were not analyzed properly. It will be clear whose fault
+say that the alternatives were not analyzed properly. It will be clear whose
+[fault]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 it was &mdash; mine. So I'm taking full responsibility for these two
 choices I've made: Lucene and Java 8.
 
@@ -104,12 +112,14 @@ Then, I attach a simple diagram to illustrate my decision:
 [Analyzer] - [Lucene]
 {% endplantuml %}
 
-As you see, in this case, I totally ignored all alternatives. I didn't even
+As you see, in this case, I totally **ignored** all alternatives. I didn't even
 mention them. Again, I take full responsibility for that; I said,
 "I don't see any alternatives." If, later, a better alternative is
 discovered, it will be obvious why we overlooked it and whose fault
 it was. It's not only about punishment but about discipline and
-traceability of decisions. Each decision must be traceable to the person
+traceability of decisions. Each decision must be
+[traceable]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %})
+to the person
 who made it. This helps us avoid bad decisions in the future and
 makes the entire project more maintainable and transparent.
 
@@ -134,11 +144,12 @@ and I do what I think is right for the project.
 
 I'm trying to show that the point of this documentation is for
 me, the architect, to explain my way of thinking &mdash; no matter how bad,
-biased, or irrational it was. I have to write my decisions down and let the
-project know them all.
+biased, or **irrational** it was. I have to write my decisions down and let the project
+[know]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
+them all.
 
 I would suggest you keep the number of documented decisions somewhere
-between **four and 12**. If there are fewer than four, I probably forgot
+between **four and twelve**. If there are fewer than four, I probably forgot
 to document something important. More than 12 &mdash; I'm documenting
 too many non-important decisions. I should use other media for that,
 like JavaDoc blocks or responsive classes.
@@ -146,7 +157,8 @@ like JavaDoc blocks or responsive classes.
 ## Concerns
 
 The next chapter in the `README.md` file has to explain how exactly I
-managed to address all concerns expressed in the initial requirements.
+managed to address all concerns expressed in the initial
+[requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
 I mentioned above that it goes without saying that our system must
 be as fast and scalable as Google. Thus, let's say there are two "concerns" &mdash;
 performance and scalability.
@@ -168,7 +180,7 @@ The bottleneck is in Lucene, and it is scalable
 vertically. Not sure about horizontal scalability.
 {% endhighlight %}
 
-As you see, I'm trying to be honest and tell the truth. We'll be able to
+As you see, I'm trying to be **honest** and tell the truth. We'll be able to
 review these statements later and decide whether I was right or wrong. But
 we need to have my answers to all concerns expressed in the requirements.
 
@@ -177,7 +189,7 @@ we need to have my answers to all concerns expressed in the requirements.
 The next section is about assumptions I've made while working with the
 prototype. We usually make assumptions when we don't have enough factual
 information, and we basically fill the gaps. There is nothing wrong with
-it, but we have to document which gaps were filled and why.
+it, but we have to document which **gaps** were filled and why.
 
 How about these two assumptions:
 
@@ -192,15 +204,19 @@ How about these two assumptions:
 I made these assumptions without proper analysis of the situation. I don't
 know whether Twitter will be happy to see millions of requests every hour
 coming from our server or not. Maybe it will ban us; I don't know. I don't
-have to evaluate this and find an exact answer. I just made an assumption
+have to evaluate this and find an exact answer. I just made an **assumption**
 and documented it.
+
+{% quote I just make an assumption and call it a day %}
 
 Will it be enough to have Lucene only, without any additional data persistence
 layer? I don't know, but I _hope_ so. I don't have time to do a detailed
 analysis of our entire data model and its potential future requirements. I just
 make an assumption and call it a day.
 
-If later, during the handoff, the project sponsor says this assumption
+If later, during the handoff, the
+[project sponsor]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+says this assumption
 exposes too much risk for the project, we'll do a better analysis. For now, my job
 is to document what I see and move on. Remember, I have just a week of time.
 
@@ -216,11 +232,11 @@ their probability and impact. Let me show you an example first:
 
 The first number in square brackets is the probability and the second one
 is the impact, on a 0 to 9 scale. If both numbers are nine, it's not a risk
-anymore; it's a fact. If both numbers are zero, we can simply ignore this
+anymore; it's a **fact**. If both numbers are zero, we can simply ignore this
 risk.
 
 I listed just two, but in a real system there should be somewhere
-between four and 12 risks. Too many risks is a sign that the prototype is
+between **four and twelve** risks. Too many risks is a sign that the prototype is
 not focused enough, while too few is due to a lack of attention.
 
 ## Continuous Integration
@@ -237,9 +253,11 @@ covers all critical areas, including:
 
  * Building on multiple platforms, such as Linux, Windows, and Mac.
  * Running integration tests and unit tests.
- * Analyzing statically.
+ * Analyzing [statically]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}).
  * Collecting test coverage.
  * Generating documentation.
+
+{% quote The goal is to make the continuous integration pipeline as fragile as possible %}
 
 The stricter the pipeline, the better it is for the project. At this stage, my job,
 as an architect, is to build a "guard wall" around the product to protect
@@ -256,10 +274,13 @@ sporadically.
 ## Static Analysis
 
 This is yet another [critical component]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %})
-of any software project. You have to analyze the quality of code statically.
+of any software project. You have to analyze the quality of code
+[statically]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}).
 In the most primitive approach, a static analysis will check the formatting
 of your source code and fail the build when that formatting is broken. However,
 in a more advanced variant, static analysis will catch many important bugs.
+
+{% quote The fragility of the build is a key success factor in software development %}
 
 It is called "static" because it doesn't require the software to be running.
 To the contrary, unit tests validate software quality in runtime
@@ -267,7 +288,8 @@ by running the app.
 
 There are many static analysis tools, for almost every language and format.
 I strongly recommend you use them. Moreover, I recommend you configure them
-as strictly as possible in order to make the build as fragile as you can.
+as strictly as possible in order to make the build as
+[fragile]({% pst 2015/aug/2015-08-25-fail-fast %}) as you can.
 The fragility of the build is a key success factor in software development.
 
 ## Test Coverage
@@ -281,7 +303,7 @@ the build breaks.
 
 My job, as an architect creating a prototype, is to make sure the coverage
 is calculated on every build and is under control &mdash; it can't go
-lower than the threshold I set.
+lower than the **threshold** I set.
 
 No matter how low the threshold is, what matters is whether it is under
 control or not.
@@ -290,7 +312,8 @@ control or not.
 
 This is the final step before the handoff. I have to configure a continuous
 delivery pipeline to make sure the product is packaged and deployed in
-one click. This is a very important &mdash; critically important &mdash; step. Without it,
+[one click]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %}).
+This is a very important &mdash; critically important &mdash; step. Without it,
 everything done before and the piece of software itself is just a collection
 of files. A piece of software is a product when it is packagable and
 deployable in one click.
@@ -306,7 +329,8 @@ for a Java application, for example:
 
 I'm using [Rultor]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}) to
 automate the entire pipeline and simplify its start, stop, and logging. I just
-post a "please release now" message to a GitHub ticket, and the product
+[post]({% pst 2015/nov/2015-11-03-chatbot-better-than-ui-for-microservice %})
+a "please release now" message to a GitHub ticket, and the product
 is packaged and deployed in a few minutes.
 
 ## Acceptance
@@ -317,7 +341,8 @@ the sponsor of the project, and the team. Everybody has
 to accept it. It doesn't mean they will like it, and that's not the goal. The
 goal is to deliver a complete solution, with risks, assumptions, decisions
 documented, continuous integration configured, static analysis enforced, etc.
-If my solution won't be good enough for their criteria, they will change
+If my solution won't be good enough for their criteria, they will
+[change]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
 the architect and try again.
 
 My objective is **not** to satisfy them but to do the best I can according
