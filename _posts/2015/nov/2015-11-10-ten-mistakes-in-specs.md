@@ -142,7 +142,7 @@ needs to be done and how the software has to work without fear of being wrong.
 Usually, people resort to suggestion when they are afraid to say it straight. Instead
 of saying "the app must work on Android 3.x and higher," they say
 "I would suggest making the app compatible with Android 3.x and higher."
-See the difference? In the first sentence, the author is trying to avoid
+See the difference? In the second sentence, the author is trying to avoid
 personal responsibility. He's not saying "exactly Android 3.x;" he's just
 suggesting. Don't be a coward; say it straight. If you make a mistake,
 we'll correct you.
