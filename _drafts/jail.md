@@ -25,18 +25,20 @@ against **irresponsible coding**?
 
 <!--more-->
 
-Software is part of my life. It is my **life**, not just part of it. I stare
+Software is part of my life. It actually **is** my **life**, not just part of it. I stare
 at this MacBook much more time every day than I drive, talk or listen
 to the radio.
 
-The code is the **territory** where I interfere with others. This is where
+The code is the **territory** where I
+[interfere]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
+with others. This is where
 we may bother each other. Irresponsible coding is exactly how one
 of us can really disturb another one. So why **police** is is not protecting
 me against, say, authors of Apache Hadoop?
 
 They created something that turns part of my life into a nightmare. Much
 faster and much more severely than that drunk drivers. So, where is
-the police? Why they are not protecting me for my tax dollars? Why
+the police? Why they are not protecting me, for my tax dollars? Why
 that Java guys are not in **jail** yet? :)
 
 We need a law against irresponsible coding!
