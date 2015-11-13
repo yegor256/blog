@@ -25,6 +25,8 @@ against **irresponsible coding**?
 
 <!--more-->
 
+{% picture /images/2015/11/thursday.jpg 0 Thursday (1998) by Skip Woods %}
+
 Software is part of my life. It actually **is** my **life**, not just part of it. I stare
 at this MacBook much more time every day than I drive, talk or listen
 to the radio.
