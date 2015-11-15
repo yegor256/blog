@@ -170,7 +170,9 @@ The Product Vision document must keep its reader on the highest level
 of abstraction. The document must take less than a minute to read,
 from start to finish.
 
-If you can't keep it short &mdash; you don't understand your product well enough.
+If you can't keep it
+[short]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
+&mdash; you don't understand your product well enough.
 
 ## Example
 

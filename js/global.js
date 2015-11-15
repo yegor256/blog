@@ -2,20 +2,6 @@
 $(
   function() {
     'use strict';
-    $('#search-query').lunrSearch(
-      {
-        indexUrl: '/search.json',
-        results: '#search-results',
-        entries: '.entries',
-        template: '#search-results-template'
-      }
-    );
-  }
-);
-
-$(
-  function() {
-    'use strict';
     $('.main p a, .main ul a, .main ol a').each(
       function () {
         var $this = $(this), domain = new URL(this.href).hostname;
@@ -40,3 +26,23 @@ $(
       .appendTo('head');
   }
 );
+
+/*
+$(window).on(
+  'load',
+  function() {
+    'use strict';
+    $('<script>')
+      .attr('src', '/js/ext/search.min.js')
+      .appendTo('head');
+    $('#search-query').lunrSearch(
+      {
+        indexUrl: '/search.json',
+        results: '#search-results',
+        entries: '.entries',
+        template: '#search-results-template'
+      }
+    );
+  }
+);
+*/

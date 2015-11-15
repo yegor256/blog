@@ -26,7 +26,7 @@ I don't think you're a good entrepreneur.
 
 <!--more-->
 
-You want a good programmer to build a product. Or maybe a group
+You want a good programmer to build your product. Or maybe a group
 of good programmers. And you are ready to give me some equity
 in exchange. This is reasonable.
 

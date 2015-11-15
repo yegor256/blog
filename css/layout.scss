@@ -27,10 +27,7 @@
   text-decoration: line-through;
 }
 .main-font {
-  font-family: 'Georgia', 'Times New Roman', scrif;
-  @media all and (min-width: $width) {
-    font-family: $main-font;
-  }
+  font-family: $main-font;
 }
 .desktop-only {
   @media all and (max-width: $width) {

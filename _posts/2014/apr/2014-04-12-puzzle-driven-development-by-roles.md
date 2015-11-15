@@ -115,7 +115,8 @@ Now let's take a closer look at project roles.
 
 A product owner submits an informal feature request, which usually
 starts with "it would be nice to have..." I'm a system analyst and my
-job is to translate owner's English into formal specifications in the SRS,
+job is to translate owner's English into
+[formal specifications]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) in the SRS,
 understandable both by programmers and myself. It's not my responsibility
 to implement the feature.
 
