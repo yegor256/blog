@@ -48,7 +48,7 @@ with it &mdash; the browser transforms XML into HTML on-fly.
 ## Working Example
 
 Let's review a simple Java web application that works
-this way. It is using [ReXSL framework](http://www.rexsl.com)
+this way. It is using [Takes Framework](http://www.takes.org)
 that makes this mechanism possible. In the next post, I'll explain
 how ReXSL works. For now, though, let's focus on the idea of delivering
 bare data in XML and formatting it with an XSL stylesheet.
@@ -193,7 +193,7 @@ is making a request (via its [`User-Agent`](http://en.wikipedia.org/wiki/User_ag
 and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
 we will deliver XML and for all others &mdash; HTML.
 
-This is exactly how [ReXSL framework](http://www.rexsl.com) works.
+This is exactly how [ReXSL framework](https://github.com/yegor256/rexsl) works.
 Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer
 and you will see an HTML document, not an XML document as is the case with Chrome.
 
