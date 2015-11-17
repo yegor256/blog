@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 10 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -2385,7 +2385,8 @@ from rultor.com.&lt;/p&gt;
 &lt;h2 id=&quot;how-about-templates?&quot;&gt;How About Templates?&lt;/h2&gt;
 
 &lt;p&gt;Returning simple &amp;quot;Hello, world&amp;quot; pages is not a big problem, as we can see. But
-what about more complex output like HTML pages, XML documents, JSON
+what about more complex output like HTML pages, &lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;XML&lt;/a&gt;
+documents, JSON
 data sets, etc? There are a few convenient &lt;code&gt;Response&lt;/code&gt; decorators that
 enable all of that. Let&amp;#39;s start with &lt;a href=&quot;http://velocity.apache.org&quot;&gt;Velocity&lt;/a&gt;,
 a simple templating engine. Well, it&amp;#39;s not that simple. It&amp;#39;s rather powerful,

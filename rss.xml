@@ -10,12 +10,165 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 10 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Stop Comparing JSON and XML</title>
+      <link>http://www.yegor256.com/2015/11/16/json-vs-xml.html</link>
+      <description>&lt;p&gt;JSON or XML? Which one is better? Which one is faster? Which
+one should I use in my next project? Stop it! These things are not comparable.
+It&amp;#39;s similar to comparing a bicycle and an
+&lt;a href=&quot;http://www.mbusa.com/mercedes/vehicles/model/class-S/model-S65V&quot;&gt;AMG S65&lt;/a&gt;. Seriously,
+which one is better? They both can take you from home to the office, right?
+In some cases, a bicycle will do it better. But does that mean
+they can be compared to each other? The same applies here with JSON and XML.
+They are very different things with their own areas of applicability.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/11/the-man-who-stare-at-goats.jpg' style='width:600px;' alt='The Men Who Stare at Goats (2009) by Grant Heslov'/&gt;&lt;figcaption&gt;The Men Who Stare at Goats (2009) by Grant Heslov&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;aside class='quote'&gt;JSON is a good data format, and it is just a data format&lt;/aside&gt;
+
+&lt;p&gt;Here is how a simple JSON piece of data may look
+(140 characters):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;David West&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;published&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;by&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Microsoft Press&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2004&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A similar document would look like this in XML
+(167 characters):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;?xml&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;lt;book&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;123&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;&amp;lt;title&amp;gt;Object&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;Thinking&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;&amp;lt;author&amp;gt;David&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;West&amp;lt;/author&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;&amp;lt;published&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;by&amp;gt;Microsoft&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;Press&amp;lt;/by&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;year&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2004&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;/year&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;&amp;lt;/published&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;lt;/book&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Looks easy to compare, right? The first example is a bit shorter,
+is easier to understand since it&amp;#39;s less &amp;quot;cryptic,&amp;quot; and is also
+perfectly parseable in JavaScript. That&amp;#39;s it, then; let&amp;#39;s use JSON
+and manifest the death of XML! Who needs this heavyweight 15-year-old
+XML in the first place?&lt;/p&gt;
+
+&lt;p&gt;Well, I need it, and I love it. Let me explain why.&lt;/p&gt;
+
+&lt;p&gt;And don&amp;#39;t get me wrong; I&amp;#39;m not against JSON. Not at all.
+It&amp;#39;s a good &lt;strong&gt;data format&lt;/strong&gt;. But it&amp;#39;s just a data format.
+We&amp;#39;re using it &lt;strong&gt;temporarily&lt;/strong&gt; to transfer a piece
+of data from point A to point B. Indeed, it is shorter than XML and
+more readable. That&amp;#39;s it.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7'&gt;&lt;img src='/images/2015/04/book-xml-nutshell.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;XML is not a data format; it is a &lt;strong&gt;language&lt;/strong&gt;. A very powerful one. Let me
+show you what it&amp;#39;s capable of. Let me basically explain why I love it. And I would
+strongly recommend you read
+&lt;a href=&quot;http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0596007647&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=MWLP356M3CQZSBS7&quot;&gt;&lt;strong&gt;XML in a Nutshell, Third Edition&lt;/strong&gt;&lt;/a&gt;
+by Elliotte Rusty Harold and W. Scott Means.&lt;/p&gt;
+
+&lt;p&gt;I believe there are four features XML has that seriously set it apart from
+JSON or any other simple data format, like
+&lt;a href=&quot;https://en.wikipedia.org/wiki/YAML&quot;&gt;YAML&lt;/a&gt; for example.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;XPath&lt;/strong&gt;.
+To get data like the year of publication from the document above, I just
+send an &lt;a href=&quot;http://www.w3.org/TR/xpath20/&quot;&gt;XPath&lt;/a&gt;
+query: &lt;code&gt;/book/published/year/text()&lt;/code&gt;. However, there has to be
+an XPath processor that understands my request and returns &lt;code&gt;2004&lt;/code&gt;.
+The beauty of this is that XPath &lt;a href=&quot;http://www.xml.com/pub/a/2002/03/20/xpath2.html&quot;&gt;2.0&lt;/a&gt;
+is a very powerful query engine
+with its own functions, predicates, axes, etc. You can literally put
+any logic into your XPath request without writing any traversing logic
+in Java, for example. You may ask &amp;quot;How many books were published by David West in 2004?&amp;quot;
+and get an answer, just via XPath. JSON is not even close to this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Attributes and Namespaces&lt;/strong&gt;.
+You can attach metadata to your data, just like it&amp;#39;s done above
+with the &lt;code&gt;id&lt;/code&gt; attribute. The data stays inside elements, just like the
+name of the book author, for example, while metadata (data about data)
+can and should be placed into attributes. This significantly helps in organizing
+and structuring information. On top of that, both elements and attributes
+can be marked as belonging to certain &lt;a href=&quot;http://www.w3.org/TR/REC-xml-names/&quot;&gt;namespaces&lt;/a&gt;.
+This is a very useful technique during times
+when a few applications are working with the same XML document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;XML Schema&lt;/strong&gt;.
+When you create an XML document in one place, modify it a few times somewhere
+else, and then transfer it to yet another place, you want to make sure its
+structure is not broken by any of these actions. One of them may
+use &lt;code&gt;&amp;lt;year&amp;gt;&lt;/code&gt; to store the publication date while another uses
+&lt;code&gt;&amp;lt;date&amp;gt;&lt;/code&gt; with ISO-8601. To avoid that mess in structure, create a supplementary
+document, which is called &lt;a href=&quot;http://www.w3.org/XML/Schema&quot;&gt;XML Schema&lt;/a&gt;,
+and ship it together with the main document.
+Everyone who wants to work with the main document will first &lt;strong&gt;validate&lt;/strong&gt;
+its correctness using the schema supplied. This is a sort of integration testing
+in production. &lt;a href=&quot;http://relaxng.org/&quot;&gt;RelaxNG&lt;/a&gt;
+is a similar but simpler mechanism; give it a try if you find XML Schema too complex.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;XSL&lt;/strong&gt;.
+You can make modifications to your XML document without any Java/Ruby/etc. code
+at all. Just create an
+&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt; document and &amp;quot;apply&amp;quot; it to your
+original XML. As an output, you will get a new XML. The
+&lt;a href=&quot;http://www.w3.org/Style/XSL/&quot;&gt;XSL&lt;/a&gt; language
+(it is purely functional, by the way) is designed for hierarchical data
+manipulations. It is much more suitable for this task than Java or any other
+OOP/procedural approach. You can transform an XML document into anything, including
+plain text and
+&lt;a href=&quot;/2014/06/25/xml-and-xslt-in-browser.html&quot;&gt;HTML&lt;/a&gt;.
+Some complain about XSL&amp;#39;s complexity, but please
+give it a try. You won&amp;#39;t need all of it, while its core functionality is
+pretty straight-forward.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is not a full list, but these four features really mean a lot to me.
+They give my document the ability to be &amp;quot;self-sufficient.&amp;quot; It can validate
+itself (XML Schema), it knows how to modify itself (XSL), and
+it gives me very convenient access to anything inside it (XPath).&lt;/p&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;http://users.jyu.fi/%7Eairi/xmlfamily.html&quot;&gt;many more&lt;/a&gt;
+languages, standards, and applications developed around XML, including
+&lt;a href=&quot;http://www.w3.org/MarkUp/Forms/&quot;&gt;XForms&lt;/a&gt;,
+&lt;a href=&quot;http://www.w3.org/Graphics/SVG/&quot;&gt;SVG&lt;/a&gt;,
+&lt;a href=&quot;http://www.w3.org/Math/&quot;&gt;MathML&lt;/a&gt;,
+&lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF&lt;/a&gt;,
+&lt;a href=&quot;http://www.w3.org/2001/sw/wiki/OWL&quot;&gt;OWL&lt;/a&gt;,
+&lt;a href=&quot;http://www.w3.org/TR/wsdl&quot;&gt;WSDL&lt;/a&gt;, etc.
+But you are less likely to use them
+in a mainstream project, as they are rather &amp;quot;niche.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;JSON was not designed to have such features, even though some of them
+are now trying to find their places in the JSON world, including
+&lt;a href=&quot;http://goessner.net/articles/JsonPath/&quot;&gt;JSONPath&lt;/a&gt; for querying,
+&lt;a href=&quot;http://stackoverflow.com/questions/1618038&quot;&gt;some tools&lt;/a&gt; for transformations, and
+&lt;a href=&quot;http://json-schema.org/&quot;&gt;json-schema&lt;/a&gt; for validation. But they are just
+weak parodies compared to what XML offers, and I don&amp;#39;t think they have any future. Or
+let&amp;#39;s put it this way: I wish they would disappear sooner or later. They just
+turn a good, simple format into something &lt;strong&gt;clumsy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, to conclude, JSON is a simple data format with no additional
+functionality. Its best-use case is &lt;a href=&quot;https://en.wikipedia.org/wiki/Ajax_%28programming%29&quot;&gt;AJAX&lt;/a&gt;.
+In all other cases, I strongly recommend you use XML.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Mon, 16 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/11/16/json-vs-xml.html</guid>
+      <dc:date>2015-11-16T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>10 Typical Mistakes in Specs</title>
       <link>http://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html</link>
@@ -453,7 +606,8 @@ communicate with it is by talking with its chatbot.&lt;/p&gt;
 This communication happens through a &lt;strong&gt;user interface&lt;/strong&gt; (UI) &amp;mdash; a bunch
 of HTTP entry points that receive requests from a browser and return
 HTML+CSS responses. Or, if a user is on another service, requests may
-contain some data, and responses will be in XML or JSON. You get the idea;
+contain some data, and responses will be in
+&lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;XML or JSON&lt;/a&gt;. You get the idea;
 a user is a client, and the service is a server.&lt;/p&gt;
 
 &lt;p&gt;Like in a restaurant &amp;mdash; you say what you want, and a &lt;strong&gt;server&lt;/strong&gt; goes
@@ -2076,70 +2230,6 @@ GitHub issue tracker and post something like this into it
       <pubDate>Mon, 07 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html</guid>
       <dc:date>2015-09-07T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Redundant Variables Are Pure Evil</title>
-      <link>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</link>
-      <description>&lt;p&gt;A redundant variable is one that exists exclusively
-to &lt;strong&gt;explain&lt;/strong&gt; its value. I strongly believe that such a variable is
-not only pure noise but also &lt;strong&gt;evil&lt;/strong&gt;, with a very negative effect
-on code readability. When we introduce a redundant variable, we intend to make our code
-cleaner and easier to read. In reality, though, we make it more verbose
-and difficult to understand. Without exception, any variable used only
-once is redundant and must be replaced with a value.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/09/y-tu-mama-tambien.jpg' style='width:600px;' alt='Y Tu Mamá También (2001) by Alfonso Cuarón'/&gt;&lt;figcaption&gt;Y Tu Mamá También (2001) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, variable &lt;code&gt;fileName&lt;/code&gt; is redundant:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;test.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Length is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This code must look differently:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Length is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;test.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This example is very primitive, but I&amp;#39;m sure you&amp;#39;ve seen these
-redundant variables many times. We use them to &amp;quot;explain&amp;quot; the code &amp;mdash;
-it&amp;#39;s not just a string literal &lt;code&gt;&amp;quot;test.txt&amp;quot;&lt;/code&gt; anymore but a &lt;code&gt;fileName&lt;/code&gt;.
-The code looks easier to understand, right? Not really.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;The more variable names I have to remember, the longer it takes to digest the code&lt;/aside&gt;
-
-&lt;p&gt;Let&amp;#39;s dig into what &amp;quot;readability&amp;quot; of code is in the first place. I think this
-quality can be measured by the number of seconds I need to understand the
-code I&amp;#39;m looking at. The longer the timeframe, the lower the readability.
-Ideally, I want to understand any piece of code in a &lt;strong&gt;few seconds&lt;/strong&gt;. If I can&amp;#39;t,
-that&amp;#39;s a failure of its &lt;strong&gt;author&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;Remember&lt;/a&gt;,
-if I don&amp;#39;t understand you, it&amp;#39;s your fault.&lt;/p&gt;
-
-&lt;p&gt;An increasing length of code degrades readability. So the more variable
-names I have to remember while reading through it, the longer
-it takes to digest the code and come to a conclusion about
-its purpose and effects. I think &lt;strong&gt;four&lt;/strong&gt; is the maximum number
-of variables I can comfortably keep in my head without thinking
-about quitting the job.&lt;/p&gt;
-
-&lt;p&gt;New variables make the code longer because they need extra lines to
-be declared. And they make the code more complex because its reader
-has to remember more names.&lt;/p&gt;
-
-&lt;p&gt;Thus, when you want to introduce a new variable to explain what your code is
-doing, stop and think. Your code is too complex and long in the first place!
-Refactor it using new objects or methods but not variables. Make your
-code shorter by moving pieces of it into new classes or private methods.&lt;/p&gt;
-
-&lt;p&gt;Moreover, I think that in &lt;a href=&quot;/2015/08/18/multiple-return-statements-in-oop.html&quot;&gt;perfectly designed methods&lt;/a&gt;,
-you won&amp;#39;t need &lt;strong&gt;any&lt;/strong&gt; variables aside from method arguments.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html</guid>
-      <dc:date>2015-09-01T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
