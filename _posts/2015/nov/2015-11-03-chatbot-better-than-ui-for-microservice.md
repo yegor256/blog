@@ -86,7 +86,8 @@ A user gives instructions to a service and receives responses.
 This communication happens through a **user interface** (UI) &mdash; a bunch
 of HTTP entry points that receive requests from a browser and return
 HTML+CSS responses. Or, if a user is on another service, requests may
-contain some data, and responses will be in XML or JSON. You get the idea;
+contain some data, and responses will be in
+[XML or JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %}). You get the idea;
 a user is a client, and the service is a server.
 
 Like in a restaurant &mdash; you say what you want, and a **server** goes

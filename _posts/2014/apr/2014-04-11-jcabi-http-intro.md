@@ -103,7 +103,8 @@ page = new ApacheRequest(uri).fetch();
 
 There are two common standards that I wanted the library to support right out of
 the box. In most cases, the response retrieved from a server is in either XML or
-JSON format. It has always been a hassle, and extra work, for me to parse the
+[JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %})
+format. It has always been a hassle, and extra work, for me to parse the
 output to take care of formatting issues.
 
 [jcabi-http](http://http.jcabi.com/) client supports them both out of the box,

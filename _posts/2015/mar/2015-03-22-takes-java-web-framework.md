@@ -520,7 +520,8 @@ from rultor.com.
 ## How About Templates?
 
 Returning simple "Hello, world" pages is not a big problem, as we can see. But
-what about more complex output like HTML pages, XML documents, JSON
+what about more complex output like HTML pages, [XML]({% pst 2015/nov/2015-11-16-json-vs-xml %})
+documents, JSON
 data sets, etc? There are a few convenient `Response` decorators that
 enable all of that. Let's start with [Velocity](http://velocity.apache.org),
 a simple templating engine. Well, it's not that simple. It's rather powerful,

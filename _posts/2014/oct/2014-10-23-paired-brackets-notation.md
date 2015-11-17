@@ -80,7 +80,8 @@ As you see, the same principle applies to square and curled brackets.
 
 ## JSON
 
-The same principle is applicable to JSON formatting. This is
+The same principle is applicable to
+[JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %}) formatting. This is
 a small JSON document in [Coda 2](http://panic.com/coda/):
 
 {% figure /images/2014/10/coda-json-indentation.png 406 %}

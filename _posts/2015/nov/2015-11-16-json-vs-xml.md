@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop Comparing JSON and XML"
-date: 2015-11-20
+date: 2015-11-16
 place: Palo Alto, CA
 tags: xml json
 description:
@@ -26,6 +26,8 @@ they can be compared to each other? The same applies here with JSON and XML.
 They are very different things with their own areas of applicability.
 
 <!--more-->
+
+{% picture /images/2015/11/the-man-who-stare-at-goats.jpg 0 The Men Who Stare at Goats (2009) by Grant Heslov %}
 
 {% quote JSON is a good data format, and it is just a data format %}
 
@@ -85,55 +87,55 @@ I believe there are four features XML has that seriously set it apart from
 JSON or any other simple data format, like
 [YAML](https://en.wikipedia.org/wiki/YAML) for example.
 
-**XPath**.
-To get data like the year of publication from the document above, I just
-send an [XPath](http://www.w3.org/TR/xpath20/)
-query: `/book/published/year/text()`. However, there has to be
-an XPath processor that understands my request and returns `2004`.
-The beauty of this is that XPath [2.0](http://www.xml.com/pub/a/2002/03/20/xpath2.html)
-is a very powerful query engine
-with its own functions, predicates, axes, etc. You can literally put
-any logic into your XPath request without writing any traversing logic
-in Java, for example. You may ask "How many books were published by David West in 2004?"
-and get an answer, just via XPath. JSON is not even close to this.
+ * **XPath**.
+  To get data like the year of publication from the document above, I just
+  send an [XPath](http://www.w3.org/TR/xpath20/)
+  query: `/book/published/year/text()`. However, there has to be
+  an XPath processor that understands my request and returns `2004`.
+  The beauty of this is that XPath [2.0](http://www.xml.com/pub/a/2002/03/20/xpath2.html)
+  is a very powerful query engine
+  with its own functions, predicates, axes, etc. You can literally put
+  any logic into your XPath request without writing any traversing logic
+  in Java, for example. You may ask "How many books were published by David West in 2004?"
+  and get an answer, just via XPath. JSON is not even close to this.
 
-**Attributes and Namespaces**.
-You can attach metadata to your data, just like it's done above
-with the `id` attribute. The data stays inside elements, just like the
-name of the book author, for example, while metadata (data about data)
-can and should be placed into attributes. This significantly helps in organizing
-and structuring information. On top of that, both elements and attributes
-can be marked as belonging to certain [namespaces](http://www.w3.org/TR/REC-xml-names/).
-This is a very useful technique during times
-when a few applications are working with the same XML document.
+ * **Attributes and Namespaces**.
+  You can attach metadata to your data, just like it's done above
+  with the `id` attribute. The data stays inside elements, just like the
+  name of the book author, for example, while metadata (data about data)
+  can and should be placed into attributes. This significantly helps in organizing
+  and structuring information. On top of that, both elements and attributes
+  can be marked as belonging to certain [namespaces](http://www.w3.org/TR/REC-xml-names/).
+  This is a very useful technique during times
+  when a few applications are working with the same XML document.
 
-**XML Schema**.
-When you create an XML document in one place, modify it a few times somewhere
-else, and then transfer it to yet another place, you want to make sure its
-structure is not broken by any of these actions. One of them may
-use `<year>` to store the publication date while another uses
-`<date>` with ISO-8601. To avoid that mess in structure, create a supplementary
-document, which is called [XML Schema](http://www.w3.org/XML/Schema),
-and ship it together with the main document.
-Everyone who wants to work with the main document will first **validate**
-its correctness using the schema supplied. This is a sort of integration testing
-in production. [RelaxNG](http://relaxng.org/)
-is a similar but simpler mechanism; give it a try if you find XML Schema too complex.
+ * **XML Schema**.
+  When you create an XML document in one place, modify it a few times somewhere
+  else, and then transfer it to yet another place, you want to make sure its
+  structure is not broken by any of these actions. One of them may
+  use `<year>` to store the publication date while another uses
+  `<date>` with ISO-8601. To avoid that mess in structure, create a supplementary
+  document, which is called [XML Schema](http://www.w3.org/XML/Schema),
+  and ship it together with the main document.
+  Everyone who wants to work with the main document will first **validate**
+  its correctness using the schema supplied. This is a sort of integration testing
+  in production. [RelaxNG](http://relaxng.org/)
+  is a similar but simpler mechanism; give it a try if you find XML Schema too complex.
 
-**XSL**.
-You can make modifications to your XML document without any Java/Ruby/etc. code
-at all. Just create an
-[XSL transformation](http://www.w3.org/TR/xslt20/) document and "apply" it to your
-original XML. As an output, you will get a new XML. The
-[XSL](http://www.w3.org/Style/XSL/) language
-(it is purely functional, by the way) is designed for hierarchical data
-manipulations. It is much more suitable for this task than Java or any other
-OOP/procedural approach. You can transform an XML document into anything, including
-plain text and
-[HTML]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %}).
-Some complain about XSL's complexity, but please
-give it a try. You won't need all of it, while its core functionality is
-pretty straight-forward.
+ * **XSL**.
+  You can make modifications to your XML document without any Java/Ruby/etc. code
+  at all. Just create an
+  [XSL transformation](http://www.w3.org/TR/xslt20/) document and "apply" it to your
+  original XML. As an output, you will get a new XML. The
+  [XSL](http://www.w3.org/Style/XSL/) language
+  (it is purely functional, by the way) is designed for hierarchical data
+  manipulations. It is much more suitable for this task than Java or any other
+  OOP/procedural approach. You can transform an XML document into anything, including
+  plain text and
+  [HTML]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %}).
+  Some complain about XSL's complexity, but please
+  give it a try. You won't need all of it, while its core functionality is
+  pretty straight-forward.
 
 This is not a full list, but these four features really mean a lot to me.
 They give my document the ability to be "self-sufficient." It can validate

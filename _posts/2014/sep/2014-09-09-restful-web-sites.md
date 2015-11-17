@@ -57,7 +57,8 @@ we gain? We'll discuss later, at the end of the post. Now, let's see
 what problems we will face:
 
  1. JSON doesn't have a rendering layer. There is no such thing
-    as XSLT for JSON. So, we will have to forget about JSON and stay
+    as [XSLT]({% pst 2015/nov/2015-11-16-json-vs-xml %}) for JSON.
+    So, we will have to forget about JSON and stay
     with XML only. For me, this sounds perfectly all right. Others
     don't like XML and prefer to work with JSON only.
     Never understood them :)
