@@ -15,9 +15,6 @@ keywords:
   - aws dynamodb maven
   - maven plugin for dynamodb local
   - dynamodblocal
-  - dynamodb local maven plugin
-  - dynamodb local integration testing
-  - integration test dynamodb
 ---
 
 {% badge /images/2014/04/dynamodb-logo.png 150 http://aws.amazon.com/dynamodb %}

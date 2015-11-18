@@ -14,9 +14,6 @@ keywords:
   - httpclient fluent
   - httpclient java
   - java http client
-  - java httpclient
-  - sample http client in java
-  - simple http client in java
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}

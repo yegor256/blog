@@ -14,13 +14,6 @@ keywords:
   - java xml parsing example
   - java xml parsing library example
   - java xml parsing best practices
-  - java xml parsing example code
-  - java parsing of xml
-  - DOM parsing java
-  - simple parsing of xml in java
-  - traversing xml using xpath
-  - xml traversing using xpath
-  - java xml traversing
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://xml.jcabi.com %}

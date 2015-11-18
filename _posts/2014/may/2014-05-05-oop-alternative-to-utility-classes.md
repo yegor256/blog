@@ -16,18 +16,6 @@ keywords:
   - utility classes are evil
   - utility classes are bad
   - utility classes is a bad practice
-  - utility class
-  - utility classes
-  - how to avoid utility classes
-  - utility class alternative
-  - alternative of utility class
-  - alternative to utility class
-  - singleton is evil
-  - singleton is bad practice
-  - singleton is bad
-  - bad practices utility class
-  - helper class is evil
-  - helper class is bad
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods

@@ -13,9 +13,6 @@ keywords:
   - java dynamodb query
   - java dynamodb client
   - java dynamodb query example
-  - java dynamodb create table
-  - java api dynamodb
-  - object oriented dynamodb java
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://dynamo.jcabi.com %}
