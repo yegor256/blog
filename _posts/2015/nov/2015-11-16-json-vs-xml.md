@@ -29,8 +29,6 @@ They are very different things with their own areas of applicability.
 
 {% picture /images/2015/11/the-man-who-stare-at-goats.jpg 0 The Men Who Stare at Goats (2009) by Grant Heslov %}
 
-{% quote JSON is a good data format, and it is just a data format %}
-
 Here is how a simple JSON piece of data may look
 (140 characters):
 
@@ -60,6 +58,8 @@ A similar document would look like this in XML
   </published>
 </book>
 {% endhighlight %}
+
+{% quote JSON is a good data format, and it is just a data format %}
 
 Looks easy to compare, right? The first example is a bit shorter,
 is easier to understand since it's less "cryptic," and is also
