@@ -50,7 +50,8 @@ rule was that the country was full of food. The country was governed by
 the principles of socialism, and they were working perfectly.
 
 In 2015, the goal of Hollywood propaganda is to convince us that the
-organizational and motivational problems in our offices are just local exceptions to
+organizational and motivational problems in our
+[offices]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) are just local exceptions to
 the general rule. The rule is simple: project management is not important
 if we're all good friends.
 

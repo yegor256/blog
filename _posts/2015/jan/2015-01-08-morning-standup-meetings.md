@@ -47,7 +47,8 @@ work.
 ## Information
 
 **A Bad Manager Asks How Things Are Going**.
-Strolling around the office asking how things are going is a great habit
+Strolling around the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+asking how things are going is a great habit
 of a terrible manager. He doesn't know what his team is doing because
 he is not smart enough to organize the process and information flow correctly.
 However, he needs to know what's going on because his boss is also asking him from time to time.

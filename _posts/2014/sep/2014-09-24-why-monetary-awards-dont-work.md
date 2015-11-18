@@ -39,7 +39,8 @@ a universal instrument to measure our labor? Why can't an American dollar,
 which has been used for centuries as a trading tool between working
 people, be used anymore?
 
-Why, in a modern office, do we try to hide
+Why, in a [modern office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
+do we try to hide
 monetary motivation and replace it with
 [everything else](http://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,

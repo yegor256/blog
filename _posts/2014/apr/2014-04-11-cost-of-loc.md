@@ -44,7 +44,9 @@ It was a commercial project, so I can't disclose its name.
 
 {% picture /images/2014/04/brazil-crowded-office.png 0 Brazil (1985) by Terry Gilliam %}
 
-The team was co-located in one office in Europe where everybody was working
+The team was co-located in one
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+in Europe where everybody was working
 "from nine 'til five". We had meetings, lunches, desk-to-desk chats and lots of
 other informal communications. All tasks were tracked in JIRA.
 
@@ -135,7 +137,8 @@ the huge waste of money that comes with them?
 ## Can We Do the Same?
 
 Of course, the same results can't be achieved by just telling your programmers
-to work from home and never come to the office. XDSD is not about that.
+to work from home and never come to the
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). XDSD is not about that.
 [XDSD](http://www.xdsd.org) is about strict quality principles, which should be
 followed by the entire team.
 

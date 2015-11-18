@@ -41,7 +41,8 @@ I'm talking about outsourcing, not offshore development. The difference is
 that in outsourcing, there are two companies involved: you the
 [client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
-development, you just open an office in that same Loompaland with your own
+development, you just open an
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) in that same Loompaland with your own
 management and employees. Again, I'm discussing **outsourcing** here.
 
 Before writing this, I read
@@ -102,7 +103,8 @@ away in Argentina and we're here in New York City &mdash; how can we make
 I don't buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
 [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}). Learning, training,
-and reading should fix this. Getting everybody together in the office
+and reading should fix this. Getting everybody together in the
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 is [not a solution]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
 **Leakage of Talent**.

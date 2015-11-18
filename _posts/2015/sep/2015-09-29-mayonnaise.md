@@ -133,7 +133,8 @@ or greater margin on a part-time or short-term basis. I've been getting a few of
 from such companies every day.
 
 They want me to pay, say, $40 for each hour while a developer
-sitting in their office gets like $2,500 per month. This means
+sitting in their [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+gets like $2,500 per month. This means
 $25 out of my $40 will be spent **not writing code** but rather on something else.
 Also, a programmer will be motivated for the $2,500, not for $7,000.
 So I will be paying $7K per month and getting software worth $2,500 a month.

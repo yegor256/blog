@@ -117,7 +117,8 @@ one) I realize that you 1) don't have any questions to ask
 and 2) you have nothing to answer.
 
 First, if you're not asking anything there, you are not growing. Your education
-process stopped some time ago, probably right after you got an office job.
+process stopped some time ago, probably right after you got an
+[office job]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In any case, it's sad.
@@ -128,7 +129,8 @@ You're simply wiring together well-known components and
 collecting your paychecks.
 
 Very often I hear people saying that they solve most of their problems
-by asking their colleagues sitting next to them in the office. They say
+by asking their colleagues sitting next to them in the
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). They say
 they simply don't need StackOverflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
 That's good for the team and bad for you. Why? You don't have a very important skill &mdash;
@@ -136,7 +138,8 @@ finding an answer in a public Internet. In our projects we
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any horizontal communications between programmers, and you won't be
 able to get any help from anyone. You will be on your own and you will fail,
-because you are used to patronizing someone senior, in your office.
+because you are used to patronizing someone senior, in your
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 StackOverflow is not just an indicator of how smart you are and how many
 upvotes you got for the ["best programming joke"](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke).

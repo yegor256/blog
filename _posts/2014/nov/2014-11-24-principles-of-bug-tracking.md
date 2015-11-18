@@ -17,7 +17,9 @@ keywords:
 
 A team working [remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %})
 requires much stronger discipline than
-a co-located crew sitting in the same office. First of all, I mean discipline of
+a co-located crew sitting in the same
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
+First of all, I mean discipline of
 communications. At [teamed.io](http://www.teamed.io), we have developed software
 remotely for the last five years. We manage tasks strictly through
 ticketing systems (like GitHub, JIRA, Trac, Basecamp, etc.) and

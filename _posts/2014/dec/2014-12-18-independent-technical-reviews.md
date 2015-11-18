@@ -22,12 +22,12 @@ chosen them from a hundred candidates! Are they passionate about the product?
 Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink
 anything except coffee! Do they believe in your business success? No doubts about it;
 they live and breathe all those features, releases, continuous delivery, user
-experience, etc. Are you sure they are developing the product correctly?
+experience, etc. Are you sure they are developing the product **correctly**?
 Well, yes, you're pretty sure; why wouldn't they? ...
 
 Does this sound familiar? I can't count how many times I've heard
 these stories told by startup founders. Most of them are in love with their teams ...
-until that day when it's time to hire a new one. There could be many
+until that day when it's time to hire **a new one**. There could be many
 possible reasons for such a fiasco, but one of them is a lack of
 regular, systematic, and independent **technical reviews**.
 Nothing demotivates a development team more than a lack of attention
@@ -122,7 +122,7 @@ psychologically you make him engaged to the source code. He's seen it once;
 now he has to see it again. He already told you about some problem, and
 now he has to repeat it again. He won't feel comfortable doing it. Instead,
 he will start feeling like a member of the team and will feel
-responsible for the source code and its mistakes. He, as any other
+**responsible** for the source code and its mistakes. He, as any other
 team member, will start hiding issues instead of revealing them. Thus,
 for every independent technical review, get a new person.
 
@@ -170,10 +170,12 @@ Don't expect a review to produce any bugs in functionality, like
 "I click this button and the system crashes". This will happen rarely, if ever.
 Your team is very good at discovering these issues and fixing them. Independent
 reviews are not about that kind of bugs. The main goal of an independent review is to
-discover bugs in the architecture and design. Your product may work, but its
+[discover bugs]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
+in the architecture and design. Your product may work, but its
 architecture may have serious design flaws that won't allow you, for example,
-to handle exponential growth in web traffic. An independent reviewer will help you
-find those flaws and address them sooner than later. In order to get bugs
+to handle exponential growth in web traffic. An independent reviewer will help you find those
+[flaws]({% pst 2015/aug/2015-08-25-fail-fast %})
+and address them sooner than later. In order to get bugs
 of that kind from the reviewer, you should encourage him to report
 _anything_ he doesn't like &mdash; unmotivated use of a technology,
 lack of documentation, unclear purpose of a file, absence of
