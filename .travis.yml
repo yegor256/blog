@@ -2,36 +2,18 @@ language: ruby
 branches:
   only:
   - master
-install:
-- set -e
-- wget --retry-connrefused --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
-- sudo dpkg -i plantuml_7707-1_all.deb
-- rm -rf plantuml_7707-1_all.deb
-- travis_retry bundle install
-- wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
-- unzip woff-code-latest.zip -d sfnt2woff
-- cd sfnt2woff
-- make
-- sudo mv sfnt2woff /usr/local/bin/
-- cd ..
-- rm -rf sfnt2woff
-- git clone https://github.com/htacg/tidy-html5.git
-- cd tidy-html5/build/cmake
-- git checkout 5.1.9
-- cmake ../..
-- make
-- sudo make install
-- cd ../../..; rm -rf tidy-html5
 before_install:
 - set -e
+- git config --global user.email "travis@teamed.io"
+- git config --global user.name "travis"
+- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
+- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
+- mv id_rsa ~/.ssh
+- chmod 600 ~/.ssh/id_rsa
+install:
+- set -e
 - sudo apt-get install -y build-essential
-- wget --no-check-certificate http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
-- tar xf cmake-3.2.2.tar.gz
-- cd cmake-3.2.2
-- ./configure
-- make
-- sudo make install
-- cd ..; rm -rf cmake-3.2.2
+- _travis/install_cmake.sh
 - travis_retry sudo apt-get install -y aspell
 - travis_retry sudo apt-get install -y libxml2-utils
 - travis_retry sudo apt-get install -y graphviz
@@ -41,23 +23,20 @@ before_install:
 - travis_retry npm install phantomjs -g
 - travis_retry npm install casperjs -g
 - travis_retry npm install --global cssshrink
-- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
-- openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
-- mv id_rsa ~/.ssh
-- chmod 600 ~/.ssh/id_rsa
+- _travis/install_plantuml.sh
+- _travis/install_sfnt2woff.sh
+- _travis/install_tidy.sh
+- travis_retry bundle install
 script:
 - set -e
-- _test/test_casperjs.sh
-- jekyll build
-- _test/test_grammar.sh
-- _test/test_orphans.sh
-# - _test/test_keywords.sh
-- _test/test_links.sh
-- _test/test_w3c.sh
-- _test/test_excerps.sh
-- _test/test_pages_existence.sh
-- for i in $(ls js/*.js); do jslint $i; done
-- git config --global user.email "travis@teamed.io"
-- git config --global user.name "travis"
+- _travis/test_casperjs.sh
+- _travis/test_grammar.sh
+- _travis/test_orphans.sh
+# - _travis/test_keywords.sh
+- _travis/test_links.sh
+- _travis/test_w3c.sh
+- _travis/test_excerps.sh
+- _travis/test_pages_existence.sh
+- _travis/test_jslint.sh
 - jgd -u git@github.com:yegor256/blog.git
 

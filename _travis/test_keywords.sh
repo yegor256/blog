@@ -18,7 +18,7 @@ rm -rf _temp/good-words.txt
 echo -n "removing stop words... "
 cat _temp/words.txt | sort | uniq -c | sort -r | cut -c9- | \
 while read k; do
-  grep -q $k _test/stop-words.txt
+  grep -q $k _travis/stop-words.txt
   if [ $? -ne 0 ]; then
     echo $k >> _temp/good-words.txt
   fi
@@ -37,7 +37,7 @@ while read k; do
   else
     echo "OK"
   fi
-done < _test/core-keywords.txt
+done < _travis/core-keywords.txt
 if [ "$errors" -ne "0" ]; then
   echo "there are ${errors} missed keywords, see above"
   cat _temp/top-words.txt
