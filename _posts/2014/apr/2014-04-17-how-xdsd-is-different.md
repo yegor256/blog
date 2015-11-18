@@ -83,7 +83,8 @@ the scope of individual tasks. When assigned a task, your single and only point
 of contact (and your only customer) is the task author. You communicate with the
 author in the ticket to clarify task requirements.
 
-When the requirements of a task are clear &mdash; and you understand them fully
+When the [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
+of a task are clear &mdash; and you understand them fully
 &mdash; deliver the result to the author and wait for him to close the task.
 After the author closes the task, the
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) pays you.

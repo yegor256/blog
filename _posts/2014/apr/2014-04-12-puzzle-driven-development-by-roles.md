@@ -89,7 +89,7 @@ to a "fixed" state.
 
 When I say "bugs," I mean more than just software errors but also:
 
- * unclear or ambiguous requirements
+ * unclear or ambiguous [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
  * features not yet implemented
  * functional and non-functional bugs
  * lack of test coverage
@@ -170,7 +170,8 @@ digraph G {
 }
 {% endgraphviz %}
 
-I receive requirements from the SRS, produce UML diagrams and
+I receive [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
+from the SRS, produce UML diagrams and
 explain to designers how to create source code according to my diagrams.
 I don't really care how source code is implemented. I'm more concerned
 with the interaction of components and how well the entire architecture satisfies

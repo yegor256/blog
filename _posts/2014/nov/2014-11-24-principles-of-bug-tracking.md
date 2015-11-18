@@ -173,7 +173,8 @@ I think it is obvious, but I will reiterate: Every bug has
 to be reproducible. Every time you report a bug, you should explain
 how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly, or
-doesn't satisfy the requirements, etc.
+doesn't satisfy the
+[requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), etc.
 
 Every bug report should follow the same simple formula: "This is what we *have*,
 this is what we *should have* instead, so fix it". Every ticket, be it a bug,
@@ -183,6 +184,8 @@ is not right at point A, and it will be much better for all of us to be
 at that point B. So it's obvious that you have to explain where these points
 A and B are. It is highly desirable if you can explain how to get there &mdash;
 how to reproduce a problem and how to fix it.
+
+{% quote Your job, as a ticket reporter, is to draw that line from point A to point B %}
 
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient

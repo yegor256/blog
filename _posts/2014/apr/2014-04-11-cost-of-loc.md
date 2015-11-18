@@ -72,7 +72,9 @@ pre-flight builds,
 static analysis and code reviews. This indicates the maturity of the project
 teams.
 
-Both projects satisfied the requirements of their users. I'm mentioning this to
+Both projects satisfied the
+[requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
+of their users. I'm mentioning this to
 emphasize that both projects produced valuable and useful lines of code. There
 was no garbage and almost no [code
 duplication](http://en.wikipedia.org/wiki/Duplicate_code).
