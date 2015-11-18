@@ -32,8 +32,6 @@ They are very different things with their own areas of applicability.&lt;/p&gt;
 
 &lt;figure&gt;&lt;img src='/images/2015/11/the-man-who-stare-at-goats.jpg' style='width:600px;' alt='The Men Who Stare at Goats (2009) by Grant Heslov'/&gt;&lt;figcaption&gt;The Men Who Stare at Goats (2009) by Grant Heslov&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;aside class='quote'&gt;JSON is a good data format, and it is just a data format&lt;/aside&gt;
-
 &lt;p&gt;Here is how a simple JSON piece of data may look
 (140 characters):&lt;/p&gt;
 
@@ -59,6 +57,8 @@ They are very different things with their own areas of applicability.&lt;/p&gt;
     &lt;span class=&quot;err&quot;&gt;&amp;lt;year&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2004&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;/year&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;err&quot;&gt;&amp;lt;/published&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;err&quot;&gt;&amp;lt;/book&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;aside class='quote'&gt;JSON is a good data format, and it is just a data format&lt;/aside&gt;
 
 &lt;p&gt;Looks easy to compare, right? The first example is a bit shorter,
 is easier to understand since it&amp;#39;s less &amp;quot;cryptic,&amp;quot; and is also
