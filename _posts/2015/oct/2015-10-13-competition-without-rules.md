@@ -20,7 +20,7 @@ When your team has to choose which technical decision to make,
 who has the final say? When one of your colleagues asks
 for a raise, who decides, and what is his or her decision based on?
 When it's necessary to work overtime, how is it decided
-who will stay in the office?
+who will stay in the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})?
 I'm expecting you to shrug your shoulders. You're right, these questions never
 have explicit answers in modern organizations. We are used to working
 in a more "democratic" way, where such decisions are made

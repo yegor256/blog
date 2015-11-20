@@ -14,9 +14,6 @@ keywords:
   - httpclient fluent
   - httpclient java
   - java http client
-  - java httpclient
-  - sample http client in java
-  - simple http client in java
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
@@ -103,7 +100,8 @@ page = new ApacheRequest(uri).fetch();
 
 There are two common standards that I wanted the library to support right out of
 the box. In most cases, the response retrieved from a server is in either XML or
-JSON format. It has always been a hassle, and extra work, for me to parse the
+[JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %})
+format. It has always been a hassle, and extra work, for me to parse the
 output to take care of formatting issues.
 
 [jcabi-http](http://http.jcabi.com/) client supports them both out of the box,

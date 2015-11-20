@@ -25,7 +25,7 @@ A few years ago, I created two Java wrappers for W3C validators: ([HTML](http://
 Both wrappers seemed to be working fine and were
 even listed by W3C on [their website](http://validator.w3.org/docs/api.html)
 in the API section. Until recently, these wrappers have
-always been part of [ReXSL](http://www.rexsl.com) library.
+always been part of [ReXSL](https://github.com/yegor256/rexsl) library.
 
 A few days ago, though, I took the wrappers out of ReXSL
 and published them as a standalone library &mdash;

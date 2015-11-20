@@ -5,7 +5,7 @@ module Yegor
       if list.nil?
         list = []
       end
-      if list.length > 20
+      if list.length > 8
         fail "too many keywords in [#{page['title']}]"
       end
       if list.length > 1 && list.length < 5

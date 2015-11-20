@@ -48,7 +48,9 @@ Here is an example. Say I'm a software developer and I need some money
 to pay my bills, buy a car, rent a house, and enjoy my life. I have
 some skills for that. I can write Java software. I find a company that needs
 my skills. It hires me, and we sign a contract. The contract says I have
-to be in the office from 9 until 5 and I have to do what my boss tells
+to be in the
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+from 9 until 5 and I have to do what my boss tells
 me to do. In exchange, I will get paychecks every few weeks, which will
 cover my expenses.
 

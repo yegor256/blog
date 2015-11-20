@@ -160,7 +160,7 @@ get back to our tasks.
 Instead of circulating those _dry_ and _boring_ Git documents, we'll have a
 real human communication with a nice coffee break where we'll share our
 opinions about the last episode of The Bing Bang Theory. Isn't that what
-we all like about our office jobs anyway?
+we all like about our [office jobs]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) anyway?
 
 I don't think so.
 

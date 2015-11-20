@@ -56,7 +56,7 @@ pays you to produce high-quality software. The sponsor doesn't care how much you
 intention to increase quality offends others, who care less. The sponsor
 wants his money to produce deliverables that can be sold to customers and
 returned back in profit. The sponsor is not paying you to make friends in
-the office.
+the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 The next type of fear sounds like this: "_If I reject this code, I will delay the release_"
 Again, it goes without saying that such an attitude does a significant disservice to the entire project.

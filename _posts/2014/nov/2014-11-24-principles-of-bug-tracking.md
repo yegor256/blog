@@ -17,7 +17,9 @@ keywords:
 
 A team working [remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %})
 requires much stronger discipline than
-a co-located crew sitting in the same office. First of all, I mean discipline of
+a co-located crew sitting in the same
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
+First of all, I mean discipline of
 communications. At [teamed.io](http://www.teamed.io), we have developed software
 remotely for the last five years. We manage tasks strictly through
 ticketing systems (like GitHub, JIRA, Trac, Basecamp, etc.) and
@@ -41,11 +43,13 @@ is a task, I'm ordering you to do it &mdash; you're doing it. In any case,
 there are two main characters. No matter how many people are involved in the ticket
 resolution, only these two characters have formal roles.
 
+{% quote Remember what is happening there - one person is selling his solution to another person %}
+
 The responsibility of the ticket reporter is to **defend the problem**. When I
 report a bug, I have to insist that it exists &mdash; this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
-a task is too vague and nobody understands it. There may be many issues
+a task is too **vague** and nobody understands it. There may be many issues
 of that kind. My job is to do the best I can in order to *keep the ticket alive*.
 Obviously, if the bug is not reproducible, I'll be forced to close
 the ticket. However, until the ticket is closed, I'm its guardian angel. :)
@@ -68,12 +72,15 @@ them is help or distraction (see below).
 
 ## 2. Close It!
 
-Remember that a ticket is not a chat. You're not there to talk.
+Remember that a ticket is
+[not a chat]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
+You're not there to talk.
 You're there to *close*. When the ticket is assigned to you,
-focus on closing it as soon as possible.
+focus on closing it as soon as possible
+([Always Be Closing](https://www.youtube.com/watch?v=wVQPY4LlbJ4), remember?).
 
 Also, keep in mind that the sooner you close the ticket, the better job
-you will do for the project. Long-living tickets are a management nightmare.
+you will do for the project. Long-living tickets are a management **nightmare**.
 It is difficult to track them and control them. It's difficult to understand
 what's going on. Have you seen those two-year-old tickets in open source projects
 that have hundreds of comments and no deliverables? It is a mistake
@@ -83,6 +90,8 @@ and ticket participants. Each ticket should be
 short and focused &mdash; 1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.
+
+{% quote Long-living tickets are a management nightmare %}
 
 As soon as you realize that your ticket is turning into a long discussion,
 try to close it even faster. How can I close it if the reporter doesn't
@@ -106,8 +115,10 @@ of the ticket solver, who is trying to understand your report and provide
 a solution; and also 4) for the time of everybody else who will participate
 in the discussion.
 
+{% quote Anything would work, but not nothing %}
+
 If you close the ticket without a problem being properly solved,
-you put this money into the trash bin. Once the ticket is started, there
+you put this money into the **trash** bin. Once the ticket is started, there
 is no way back. We can't just say, "Nah, ignore it; it's not important anymore."
 Your ticket already consumed project time and budget resources, and in order to turn
 them into something useful, you have to make sure that *some*
@@ -122,7 +133,7 @@ Look at it from a different perspective. When you started that ticket, you had
 something in mind. Something was not right with the product. That's why you
 reported a bug. If you close the ticket without anyone even touching that place
 of code, someone else will have the same concern in a few days or a few years.
-And then the project will have to pay again for a similar ticket or discussion
+And then the project will have to **pay again** for a similar ticket or discussion
 of the same problem. Even if you're convinced that the issue you found in
 the code is not really an issue, ask a ticket resolver to document it right
 in the source code in order to prevent such confusion from happening again in the future.
@@ -131,12 +142,14 @@ in the source code in order to prevent such confusion from happening again in th
 
 Every time you post a message to the ticket, address it to someone. Otherwise,
 if you post just because you want to express your opinion, your
-comments become communication noise. Remember, a ticket is a conversation
+comments become communication **noise**. Remember, a ticket is a conversation
 between two people &mdash; one of them reported an issue and the other one is
 trying to fix it. Comments like, "How about we try another approach"
 or "I remember I had a similar issue some time ago" are very annoying
 and distracting. Let's be honest, nobody really needs or cares about "opinions".
 All we need in a ticket is a solution(s).
+
+{% quote Don't pollute the air with generic opinions %}
 
 If you think the ticket should be closed because the introduced solution
 is good enough, address your comment to the ticket reporter. And start
@@ -160,7 +173,8 @@ I think it is obvious, but I will reiterate: Every bug has
 to be reproducible. Every time you report a bug, you should explain
 how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly, or
-doesn't satisfy the requirements, etc.
+doesn't satisfy the
+[requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), etc.
 
 Every bug report should follow the same simple formula: "This is what we *have*,
 this is what we *should have* instead, so fix it". Every ticket, be it a bug,
@@ -170,6 +184,8 @@ is not right at point A, and it will be much better for all of us to be
 at that point B. So it's obvious that you have to explain where these points
 A and B are. It is highly desirable if you can explain how to get there &mdash;
 how to reproduce a problem and how to fix it.
+
+{% quote Your job, as a ticket reporter, is to draw that line from point A to point B %}
 
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient

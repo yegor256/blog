@@ -12,20 +12,10 @@ keywords:
   - null
   - null java
   - null c++
-  - object design
+  - null reference
   - null pointer
-  - why null is bad
-  - why null is bad
-  - null is a bad practice
-  - null reference is bad
-  - worst practices null referece
   - null is bad
-  - best practices null
-  - null worst practices
   - null is evil
-  - nulls are evil
-  - null objects are evil
-  - say no to null
 ---
 
 A simple example of `NULL` usage in Java:

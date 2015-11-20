@@ -14,13 +14,6 @@ keywords:
   - bad practices in programming
   - good practices in programming
   - bad practices in java
-  - proper variable names
-  - variable naming convention
-  - class names
-  - good name of a class
-  - good class name
-  - name of class in java
-  - java class name
 categories: jcg
 ---
 

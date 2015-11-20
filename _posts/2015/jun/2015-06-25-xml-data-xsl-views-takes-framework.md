@@ -201,7 +201,8 @@ The beauty of this approach is in the perfect decoupling of data generation
 and XML building and translation between XML and HTML. It is perfectly reusable
 and "stackable." We can transform the data in XML format multiple times,
 applying different XSL stylesheets to each one. We can even transform them into
-JSON without changing a line of code in model classes.
+[JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %})
+without changing a line of code in model classes.
 
 Moreover, we can format them differently, using rather powerful XSLT 2.0
 instruments. XSLT by itself is a powerful and purely functional language that

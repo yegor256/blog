@@ -27,12 +27,6 @@ for the most recent news.
 }
 </style>
 
-<img src="/images/2015/datflock-2015-logo.png" class="talk" alt="DATFlock 2015"/>
-**What keeps us motivated and why we get lazy**<br/>
-[Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/)<br/>
-Berlin, Germany<br/>
-19-20 November 2015
-
 <img src="/images/2015/buildstuff-2015-logo.png" class="talk" alt="BuildStuff 2015"/>
 **How Do You Talk To Your Microservice?**<br/>
 [BuildStuff 2015](http://buildstuff.com.ua/)<br/>
@@ -58,6 +52,11 @@ Olomouc, Czech Republic<br/>
 4-8 April 2016
 
 <hr/>
+
+**What keeps us motivated and why we get lazy**;
+[Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
+Berlin, Germany;
+19-20 November 2015
 
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
