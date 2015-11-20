@@ -33,14 +33,15 @@ task &mdash; to create as many words as possible using letters in a given word.
 It's a pretty simple task, which just needs some time and creativity.
 
 The first group was working as a team. They had just one piece of paper
-and one pen to write down the words they found. We called them a "co-located" team.
+and one pen to write down the words they found. We called them a
+**co-located** team.
 
-The second group of four people were working in a "distributed" mode &mdash;
+The second group of four people were working in a **distributed** mode &mdash;
 they had four pieces of paper and four pens. They didn't communicate to
 each other and were just creating words. They knew that the best performer
-would get a prize (it was a chocolate bar from California).
+would get a prize (it was a bar of organic chocolate).
 
-I promised a prize to the co-located team. The same chocolate bar.
+I promised a prize to the co-located team too. A very similar chocolate bar.
 
 We gave them just 5 minutes.
 
@@ -48,12 +49,14 @@ Our result was this: **38 words** found by a co-located team and **41 words**
 found by a distributed team. Of course, we removed duplicates and non-English
 words.
 
+Distributed team was **8%** more productive than a co-located one.
+
 Of course, this may be not a clear experiment and we can't use these numbers
-to prove anything, but it was interesting to see how groups work and what
+to really prove anything, but it was interesting to see how groups work and what
 actually motivate us to achieve results. We had an hour-long discussion afterwords,
 trying to find out what each of group member felt while working in a group
 or individually.
 
 You can try to repeat this (or a similar experiment) in your team and check
 the results. Post them below in comments, would be interesting to see whether
-it works in your situation.
+it does or doesn't work in your case.
