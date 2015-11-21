@@ -10,12 +10,72 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Mon, 16 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Ringelmann Effect vs. Agile</title>
+      <link>http://www.yegor256.com/2015/11/21/ringelmann-effect-vs-agile.html</link>
+      <description>&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Ringelmann_effect&quot;&gt;Ringelmann Effect&lt;/a&gt;
+(a.k.a. &lt;a href=&quot;https://en.wikipedia.org/wiki/Social_loafing&quot;&gt;social loafing&lt;/a&gt;)
+is basically about people experiencing &lt;strong&gt;decreasing&lt;/strong&gt; productivity
+when working in groups. We&amp;#39;re basically more productive when
+we work individually to achieve personal goals rather than being
+teamed up. That was discovered by Prof. &lt;a href=&quot;https://en.wikipedia.org/wiki/Max_Ringelmann&quot;&gt;Max Ringelmann&lt;/a&gt; a hundred
+years ago in 1913. Today, during my workshop in Berlin at
+&lt;a href=&quot;http://distributed-agile-teams.org/workshops/&quot;&gt;DATFlock 2015&lt;/a&gt;, we tried
+to reproduce that experiment. It seems the French professor was right.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='https://en.wikipedia.org/wiki/Max_Ringelmann'&gt;&lt;img src='https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg' style='width:72px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is what we did. We created two groups with four people in each of them,
+all non-native English speakers. Then, both groups received the same
+task &amp;mdash; to create as many words as possible using the letters in a single given word.
+It&amp;#39;s a pretty simple task that just requires some time and creativity.&lt;/p&gt;
+
+&lt;p&gt;The first group worked as a team. They had just one piece of paper
+and one pen to write down the words they found. We called them a
+&lt;strong&gt;co-located&lt;/strong&gt; team.&lt;/p&gt;
+
+&lt;p&gt;The second group of four people worked in a &lt;strong&gt;distributed&lt;/strong&gt; mode &amp;mdash;
+they had four pieces of paper and four pens. They didn&amp;#39;t communicate with
+each other and just created words. They knew that the best performer
+would receive a prize (a bar of organic chocolate).&lt;/p&gt;
+
+&lt;p&gt;I promised a prize to the co-located team too. A very similar chocolate bar.&lt;/p&gt;
+
+&lt;p&gt;We gave them both just 5 minutes.&lt;/p&gt;
+
+&lt;p&gt;Our result was this: &lt;strong&gt;38 words&lt;/strong&gt; found by a co-located team and &lt;strong&gt;41 words&lt;/strong&gt;
+found by a distributed team. Of course, we removed duplicates and non-English
+words.&lt;/p&gt;
+
+&lt;p&gt;The distributed team was &lt;strong&gt;8 percent&lt;/strong&gt; more productive than the co-located one.&lt;/p&gt;
+
+&lt;p&gt;Of course, this may not be a clear experiment, and we can&amp;#39;t use these numbers
+to really prove anything, but it was interesting to see how groups work and what
+actually motivates us to achieve results. We had an hour-long discussion afterward
+in an attempt to find out what each group member felt while working in a group
+or individually.&lt;/p&gt;
+
+&lt;p&gt;You can try to repeat this (or a similar experiment) in your team and check
+the results. Post them below in the comments; it would be interesting to see whether
+it does or doesn&amp;#39;t work in your case.&lt;/p&gt;
+
+&lt;p&gt;Now, my main question. If I understand it right, Agile promotes group
+responsibility and discourages &lt;strong&gt;individualism&lt;/strong&gt;. How does it go along
+with the Ringelmann Effect? Any thoughts?&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Sat, 21 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/11/21/ringelmann-effect-vs-agile.html</guid>
+      <dc:date>2015-11-21T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Stop Comparing JSON and XML</title>
       <link>http://www.yegor256.com/2015/11/16/json-vs-xml.html</link>
@@ -852,7 +912,8 @@ outcome is almost always the same &amp;mdash; it is
 that in outsourcing, there are two companies involved: you the
 &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;client&lt;/a&gt;
 and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
-development, you just open an office in that same Loompaland with your own
+development, you just open an
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office&lt;/a&gt; in that same Loompaland with your own
 management and employees. Again, I&amp;#39;m discussing &lt;strong&gt;outsourcing&lt;/strong&gt; here.&lt;/p&gt;
 
 &lt;p&gt;Before writing this, I read
@@ -913,7 +974,8 @@ away in Argentina and we&amp;#39;re here in New York City &amp;mdash; how can we
 I don&amp;#39;t buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
 &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;. Learning, training,
-and reading should fix this. Getting everybody together in the office
+and reading should fix this. Getting everybody together in the
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office&lt;/a&gt;
 is &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;not a solution&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Leakage of Talent&lt;/strong&gt;.
@@ -1318,7 +1380,8 @@ rule was that the country was full of food. The country was governed by
 the principles of socialism, and they were working perfectly.&lt;/p&gt;
 
 &lt;p&gt;In 2015, the goal of Hollywood propaganda is to convince us that the
-organizational and motivational problems in our offices are just local exceptions to
+organizational and motivational problems in our
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;offices&lt;/a&gt; are just local exceptions to
 the general rule. The rule is simple: project management is not important
 if we&amp;#39;re all good friends.&lt;/p&gt;
 
@@ -1403,7 +1466,7 @@ so Ridley Scott built fake ones for us.&lt;/p&gt;
 who has the final say? When one of your colleagues asks
 for a raise, who decides, and what is his or her decision based on?
 When it&amp;#39;s necessary to work overtime, how is it decided
-who will stay in the office?
+who will stay in the &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office&lt;/a&gt;?
 I&amp;#39;m expecting you to shrug your shoulders. You&amp;#39;re right, these questions never
 have explicit answers in modern organizations. We are used to working
 in a more &amp;quot;democratic&amp;quot; way, where such decisions are made
@@ -1794,7 +1857,8 @@ or greater margin on a part-time or short-term basis. I&amp;#39;ve been getting 
 from such companies every day.&lt;/p&gt;
 
 &lt;p&gt;They want me to pay, say, $40 for each hour while a developer
-sitting in their office gets like $2,500 per month. This means
+sitting in their &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office&lt;/a&gt;
+gets like $2,500 per month. This means
 $25 out of my $40 will be spent &lt;strong&gt;not writing code&lt;/strong&gt; but rather on something else.
 Also, a programmer will be motivated for the $2,500, not for $7,000.
 So I will be paying $7K per month and getting software worth $2,500 a month.&lt;/p&gt;
@@ -2063,173 +2127,6 @@ discovery of a &lt;strong&gt;forecasted&lt;/strong&gt; amount of bugs.&lt;/p&gt;
       <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</guid>
       <dc:date>2015-09-10T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How to Set Up a Private Maven Repository in Amazon S3</title>
-      <link>http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html</link>
-      <description>&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;
-is a perfect place for keeping private &lt;a href=&quot;https://maven.apache.org/&quot;&gt;Maven&lt;/a&gt; artifacts.
-I assume you keep public artifacts in
-&lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;Maven Central&lt;/a&gt; because
-you want them to be available to everybody. Private artifacts
-are those you don&amp;#39;t want visible to anyone except members
-of your team. Thus, you want to deploy your &lt;code&gt;.jar&lt;/code&gt; files there
-and make sure they are visible only by your team. Here is how we do
-this in all &lt;a href=&quot;http://www.teamed.io&quot;&gt;our&lt;/a&gt; Java projects.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;create-an-s3-bucket&quot;&gt;Create an S3 Bucket&lt;/h2&gt;
-
-&lt;p&gt;First, you create a new S3 bucket. I would recommend you name it using
-your project domain and a prefix. For example, with &lt;code&gt;repo.teamed.io&lt;/code&gt;,
-&lt;code&gt;repo&lt;/code&gt; is a prefix and &lt;code&gt;teamed.io&lt;/code&gt; is the domain.&lt;/p&gt;
-
-&lt;p&gt;There&amp;#39;s no need to configure any permissions for this bucket. Just create it
-through the &lt;a href=&quot;https://console.aws.amazon.com/console/home&quot;&gt;Amazon S3 console&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-an-iam-user&quot;&gt;Create an IAM User&lt;/h2&gt;
-
-&lt;p&gt;Create a new IAM user. I recommend you name it like &lt;code&gt;teamed-maven&lt;/code&gt;
-if your project name is &lt;code&gt;teamed&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Add a new &amp;quot;inline policy&amp;quot; to the user:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{
-  &amp;quot;Statement&amp;quot;: [
-    {
-      &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
-      &amp;quot;Action&amp;quot;: &amp;quot;s3:*&amp;quot;,
-      &amp;quot;Resource&amp;quot;: [
-        &amp;quot;arn:aws:s3:::repo.teamed.io&amp;quot;,
-        &amp;quot;arn:aws:s3:::repo.teamed.io/*&amp;quot;
-      ]
-    }
-  ]
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here, &lt;code&gt;repo.teamed.io&lt;/code&gt; is the name of the S3 bucket you
-created a minute ago.&lt;/p&gt;
-
-&lt;p&gt;Make sure you have an &amp;quot;access key&amp;quot; for this new user. It must look similar
-to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;key: AKIAI9NNNJD5D7X4TUVA
-secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The key is 20 characters (all caps), and the secret is 40 characters.&lt;/p&gt;
-
-&lt;h2 id=&quot;extend-settings.xml&quot;&gt;Extend &lt;code&gt;settings.xml&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Add this configuration to your &lt;code&gt;~/.m2/settings.xml&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;servers&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;server&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;username&amp;gt;&lt;/span&gt;AKIAI9NNNJD5D7X4TUVA&lt;span class=&quot;nt&quot;&gt;&amp;lt;/username&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;password&amp;gt;&lt;/span&gt;t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;span class=&quot;nt&quot;&gt;&amp;lt;/password&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/server&amp;gt;&lt;/span&gt;
-    [...]
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/servers&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;configure-pom.xml&quot;&gt;Configure &lt;code&gt;pom.xml&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Add this configuration to &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;distributionManagement&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;snapshotRepository&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/snapshot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/snapshotRepository&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/release&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/distributionManagement&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;repositories&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;repository&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;repo.teamed.io&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;s3://repo.teamed.io/release&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repository&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/repositories&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, configure &lt;a href=&quot;https://github.com/jcaddel/maven-s3-wagon&quot;&gt;S3 Wagon&lt;/a&gt;,
-also in &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;extensions&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;extension&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.kuali.maven.wagons&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-s3-wagon&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.2.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/extension&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/extensions&amp;gt;&lt;/span&gt;
-    [...]
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You&amp;#39;re ready to go. You can deploy your artifacts just by running
-Maven from the command line:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ mvn clean deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;configure-s3auth.com&quot;&gt;Configure &lt;code&gt;s3auth.com&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Now you want to see these artifacts in your browser, in a secure mode, by
-providing secure credentials. I recommend you use
-&lt;a href=&quot;http://www.s3auth.com&quot;&gt;s3auth.com&lt;/a&gt;, as explained in
-&lt;a href=&quot;/2014/04/21/s3-http-basic-auth.html&quot;&gt;Basic HTTP Auth for S3 Buckets&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;configure-rultor&quot;&gt;Configure Rultor&lt;/h2&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Another recommendation is to configure rultor.com for deployment of your
-artifacts to S3 automatically.&lt;/p&gt;
-
-&lt;p&gt;First, encrypt your &lt;code&gt;settings.xml&lt;/code&gt; with this
-&lt;a href=&quot;https://github.com/yegor256/rultor-remote&quot;&gt;Rultor remote&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;$ gem install rultor
-$ rultor encrypt -p me/test settings.xml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Instead of &lt;code&gt;me/test&lt;/code&gt;, you should use the name of your GitHub project.&lt;/p&gt;
-
-&lt;p&gt;As a result, you will get a new file named &lt;code&gt;settings.xml.asc&lt;/code&gt;. Add it to the root directory
-of your project, then commit and push. The file contains your secret information,
-but only the Rultor server can decrypt it.&lt;/p&gt;
-
-&lt;p&gt;Create a &lt;code&gt;.rultor.yml&lt;/code&gt; file in the root directory of your project
-(The Rultor &lt;a href=&quot;http://doc.rultor.com/reference.html&quot;&gt;reference page&lt;/a&gt;
-explains this format in greater detail):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;decrypt&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;settings.xml&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;repo/settings.xml.asc&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p-Indicator&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;mvn clean deploy --settings ../settings.xml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now it&amp;#39;s time to see how it all works together. Create a new ticket in the
-GitHub issue tracker and post something like this into it
-(read more about &lt;a href=&quot;http://doc.rultor.com/basics.html&quot;&gt;Rultor commands&lt;/a&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@rultor deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You will get a response in a few seconds. The rest will be done by Rultor.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s it.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Mon, 07 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html</guid>
-      <dc:date>2015-09-07T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
