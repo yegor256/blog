@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Imprisonment For Irresponsible Coding!"
+title: "Imprisonment for Irresponsible Coding!"
 date: 2015-11-20
 place: Palo Alto, CA
 tags: quality
@@ -16,11 +16,11 @@ keywords:
   - irresponsible coding
 ---
 
-If I drive too fast and they catch me, I may get a ticket. If I drive
-under influence, and they catch me, I may go to jail. If I turn
-radio too loud in the middle of the night, my neighbours call police
-and I may get into trouble, if I don't stop. The law basically protects
-us from making trouble to each other. Why don't we have a law
+If I drive too fast and I get caught, I may get a ticket. If I drive
+under the influence and get caught, I may go to jail. If I turn my
+radio up too loud in the middle of the night and my neighbors call the police,
+I may get into trouble if I don't stop it. The law basically protects
+us from causing trouble with each other. Why don't we have a law
 against **irresponsible coding**?
 
 <!--more-->
@@ -28,22 +28,22 @@ against **irresponsible coding**?
 {% picture /images/2015/11/thursday.jpg 0 Thursday (1998) by Skip Woods %}
 
 Software is part of my life. It actually **is** my **life**, not just part of it. I stare
-at this MacBook much more time every day than I drive, talk or listen
+at this MacBook for much more time every day than I drive, talk, or listen
 to the radio.
 
-The code is the **territory** where I
+Code is the **territory** where I
 [interfere]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
-with others. This is where
-we may bother each other. Irresponsible coding is exactly how one
-of us can really disturb another one. So why **police** is is not protecting
+with others, and this is where
+we may bother each other. Irresponsible coding is precisely how one
+of us can really disturb the other. So why don't the **police** protect
 me against, say, authors of Apache Hadoop?
 
-They created something that turns part of my life into a nightmare. Much
-faster and much more severely than that drunk drivers. So, where is
-the police? Why they are not protecting me, for my tax dollars? Why
-that Java guys are not in **jail** yet? :)
+They created something that turns part of my life into a nightmare &mdash; much
+faster and much more severely than drunk drivers. So, where is
+the police? Why aren't they protecting me, for my tax dollars? Why
+aren't those Java guys in **jail** yet? :)
 
 We need a law against irresponsible coding!
 
-How about two months imprisonment for a
+How about two months of imprisonment for a
 [singleton](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)?
