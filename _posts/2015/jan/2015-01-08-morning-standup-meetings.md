@@ -31,7 +31,8 @@ there are plenty of articles about that. I'm not
 trying to give advice about how to do them properly so they
 work, either. I'm saying that a good manager should **never** have daily stand-ups.
 Because they not only "don't work" but also do very bad, sometimes catastrophic,
-things to your management process, whether it's agile or not. On the other hand,
+things to your management process, whether it's
+[agile]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}) or not. On the other hand,
 a [bad manager]({% pst 2015/sep/2015-09-22-micromanagement %})
 will always use daily stand-ups as his or her
 key management instrument.
