@@ -7,4 +7,5 @@ git checkout 5.1.9
 cmake ../..
 make
 sudo make install
-cd ../../..; rm -rf tidy-html5
+cd ../../..
+rm -rf tidy-html5

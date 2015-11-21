@@ -14,11 +14,6 @@ keywords:
   - yegor bugayenko blog
   - quality of software
   - software blog
-  - high quality programming
-  - static analysis
-  - software testing
-  - ruby blog
-  - javascript blog
 exclude_from_search: true
 ---
 

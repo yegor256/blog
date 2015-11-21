@@ -6,7 +6,7 @@ module Yegor
         list = []
       end
       if list.length > 8
-        fail "too many keywords in [#{page['title']}]"
+        fail "too many keywords in [#{page['url']}]: #{list}"
       end
       if list.length > 1 && list.length < 5
         fail "too few keywords in [#{page['title']}]: #{list.length}"

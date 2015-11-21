@@ -12,18 +12,11 @@ description:
 keywords:
   - aop annotations
   - aop java logging
-  - aop log
-  - aop logging
   - aop logging annotations
   - aop logging java
   - aspect oriented programming java
   - aspectj logging
   - aspectj weaving annotations
-  - every method logging java
-  - java annotation logging example
-  - java method execution time annotation
-  - log every method java
-  - method logging java
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)

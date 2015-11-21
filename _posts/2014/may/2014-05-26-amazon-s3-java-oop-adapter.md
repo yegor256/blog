@@ -16,16 +16,6 @@ keywords:
   - s3 java api example
   - s3 java adapter
   - s3 java object-oriented
-  - s3 java read write text object
-  - s3 java simple read write
-  - s3 amazon java read
-  - s3 amazon java list objects
-  - amazon java object-oriented
-  - object-oriented java s3
-  - s3 adapter java
-  - aws s3 upload java
-  - aws s3 download java
-  -
 ---
 
 {% badge /images/2014/05/s3-logo.png 150 %}

@@ -16,14 +16,6 @@ keywords:
   - continuous integration pre-flight builds
   - continuous integration preflight builds
   - continuous delivery pre-flight builds
-  - continuous delivery preflight builds
-  - build before merge
-  - merging pull request docker
-  - github pull request docker
-  - continous delivery docker
-  - builds in docker containers
-  - jenkins pre-flight builds
-  - jenkins preflight builds
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}

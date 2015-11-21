@@ -14,14 +14,6 @@ keywords:
   - integration tests with casperjs
   - maven tests with casperjs
   - phantomjs maven plugin
-  - casperjs maven plugin
-  - casperjs maven
-  - casperjs java
-  - casperjs maven build
-  - casperjs maven tests
-  - casperjs jenkins
-  - use casperjs with maven
-  - test casperjs with maven
 ---
 
 I'm a big fan of automated testing in general and integration

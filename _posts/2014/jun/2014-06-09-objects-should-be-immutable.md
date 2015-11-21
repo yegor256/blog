@@ -16,12 +16,6 @@ keywords:
   - java immutable object advantage
   - java immutable value object
   - java mutable immutable object
-  - mutable and immutable object in java
-  - mutable immutable objects java examples
-  - object immutable in java
-  - oop immutable objects
-  - why immutable
-  - why immutable objects are better
 ---
 
 In object-oriented programming, an object is
