@@ -57,6 +57,8 @@ and call it a day. There literally no limit! The amount of bugs is unlimited,
 in any software product. No matter how small or big, complex or simple,
 new or old is the product.
 
+{% quote They can't find all bugs, no matter how much time we give them %}
+
 Having these axioms in mind, let's try to decide when testers have to stop.
 According to Dr. Meyers, "one of the most difficult questions
 to answer when testing a program is determining when to stop,
