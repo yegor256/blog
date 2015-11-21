@@ -53,7 +53,7 @@ Olomouc, Czech Republic<br/>
 
 <hr/>
 
-**What keeps us motivated and why we get lazy**;
+"What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
 19-20 November 2015
