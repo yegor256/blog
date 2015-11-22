@@ -42,6 +42,6 @@ them, based on your review. For example, if I'm saying that a
 static method is a bad thing and you disagree, don't try to
 convince me, it won't help :) This is my opinion and this is what the
 book is about. However, I'm sure that my **explanations** and **arguments**
-have many flaws. As an early reviewer, you will help me to find them.
+have many flaws. As an early reviewer, you will help me find them.
 Again, don't argue with **what** I'm preaching, but complain about **how** I do it.
 
