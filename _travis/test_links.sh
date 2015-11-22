@@ -29,7 +29,7 @@ cat _temp/links.txt | \
 total=$(wc -l _temp/unique-links.txt | cut -f1 -d ' ')
 echo "${total} unique foreign links found"
 
-cat _temp/unique-links.txt | xargs -P 10 -n 1 /bin/bash -c 'ping_uri "$0" >> _temp/pings.txt'
+cat _temp/unique-links.txt | xargs -P 10 -n 1 /bin/bash -c 'ping_uri "$0" >> _temp/pings.txt; echo "$0"'
 
 cat _temp/pings.txt | grep -v '^200 ' > _temp/broken.txt
 broken=$(cat _temp/broken.txt | wc -l | cut -f1 -d ' ')
