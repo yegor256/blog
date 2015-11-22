@@ -2,7 +2,7 @@
 layout: static
 title: "Elegant Objects"
 description:
-  "Elegant Objects" is a book about object-oriented
+  Elegant Objects is a book about object-oriented
   programming, from an idealistic and a bit futuristic
   point of view.
 permalink: elegant-objects.html
