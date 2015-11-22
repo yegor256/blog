@@ -1325,14 +1325,14 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mdbs99/AWS&quot;&gt;mdbs99/AWS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/FagnerMartinsBrack/WebStories&quot;&gt;FagnerMartinsBrack/WebStories&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/robertop/triumph4php&quot;&gt;robertop/triumph4php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;robertop/triumph4php&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/blambeau/wlang&quot;&gt;blambeau/wlang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/alf-tool/alf-core&quot;&gt;alf-tool/alf-core&lt;/a&gt; by &lt;a href=&quot;https://github.com/blambeau&quot;&gt;@blambeau&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/siom79/japicmp&quot;&gt;siom79/japicmp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tunabrain/tungsten&quot;&gt;tunabrain/tungsten&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/AdamsLair/duality&quot;&gt;AdamsLair/duality&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/openra/openra&quot;&gt;openra/openra&lt;/a&gt; by &lt;a href=&quot;https://github.com/chrisforbes&quot;&gt;@chrisforbes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Pacmanfan/UVDLPSlicerController&quot;&gt;Pacmanfan/UVDLPSlicerController&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pacmanfan/UVDLPSlicerController&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/openfurther/further-open-core&quot;&gt;openfurther/further-open-core&lt;/a&gt; by &lt;a href=&quot;https://github.com/rahuofu&quot;&gt;@rahuofu&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Bertram25/ValyriaTear&quot;&gt;Bertram25/ValyriaTear&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/odoepner/typepad&quot;&gt;odoepner/typepad&lt;/a&gt;&lt;/li&gt;
@@ -1411,7 +1411,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/h2oai/h2o-3&quot;&gt;h2oai/h2o-3&lt;/a&gt; by &lt;a href=&quot;https://github.com/srisatish&quot;&gt;@srisatish&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Feng14/MiniWeChat-Server&quot;&gt;Feng14/MiniWeChat-Server&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tianzhijiexian/ActivityOptionsICS&quot;&gt;tianzhijiexian/ActivityOptionsICS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/swanson/stringer%E2%80%8B&quot;&gt;swanson/stringer​&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/swanson/stringer&quot;&gt;swanson/stringer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/JayFang1993/DropDownMenu&quot;&gt;JayFang1993/DropDownMenu&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/AizazAZ/Android-Ultra-Photo-Selector&quot;&gt;AizazAZ/Android-Ultra-Photo-Selector&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/patilswapnilv/TerminalIDE&quot;&gt;patilswapnilv/TerminalIDE&lt;/a&gt;&lt;/li&gt;
@@ -2165,7 +2165,7 @@ this is the request:&lt;/p&gt;
 this request parsing functionality to its decorators. This approach helps the
 framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in the &lt;a href=&quot;http://www.takes.org/apidocs-0.9/org/takes/rq/index.html&quot;&gt;&lt;code&gt;org.takes.rq&lt;/code&gt;&lt;/a&gt; package.
+are in the &lt;a href=&quot;http://www.takes.org/apidocs-0.27/org/takes/rq/package-summary.html&quot;&gt;&lt;code&gt;org.takes.rq&lt;/code&gt;&lt;/a&gt; package.
 As you already probably understand, the &lt;code&gt;Rq&lt;/code&gt; prefix stands for &lt;code&gt;Request&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-real-web-app&quot;&gt;First Real Web App&lt;/h2&gt;
@@ -2184,7 +2184,7 @@ required by Java to start an app from the command line:&lt;/p&gt;
 
 &lt;p&gt;This class contains just a single &lt;code&gt;main()&lt;/code&gt; static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates &lt;a href=&quot;http://www.takes.org/apidocs-0.9/org/takes/http/FtCLI.html&quot;&gt;&lt;code&gt;FtCLI&lt;/code&gt;&lt;/a&gt;,
+instantiates &lt;a href=&quot;http://www.takes.org/apidocs-0.27/org/takes/http/FtCLI.html&quot;&gt;&lt;code&gt;FtCLI&lt;/code&gt;&lt;/a&gt;,
 giving it an instance of class &lt;code&gt;TkApp&lt;/code&gt; and command
 line arguments. We&amp;#39;ll create the &lt;code&gt;TkApp&lt;/code&gt; class in a second. &lt;code&gt;FtCLI&lt;/code&gt;
 (translates to &amp;quot;front-end with command line interface&amp;quot;) makes an instance
@@ -2267,7 +2267,7 @@ to Heroku. This is what &lt;code&gt;Procfile&lt;/code&gt; should look like:&lt;/
 
 &lt;h2 id=&quot;tkfork&quot;&gt;&lt;code&gt;TkFork&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;This &lt;a href=&quot;http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html&quot;&gt;&lt;code&gt;TkFork&lt;/code&gt;&lt;/a&gt;
+&lt;p&gt;This &lt;a href=&quot;http://www.takes.org/apidocs-0.27/org/takes/facets/fork/TkFork.html&quot;&gt;&lt;code&gt;TkFork&lt;/code&gt;&lt;/a&gt;
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right &lt;em&gt;take&lt;/em&gt;. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
