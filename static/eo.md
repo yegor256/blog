@@ -1,13 +1,11 @@
 ---
 layout: static
 title: "Elegant Objects"
-date: 2015-11-22
-tags: oop book
-permalink: elegant-objects.html
 description:
   "Elegant Objects" is a book about object-oriented
   programming, from an idealistic and a bit futuristic
   point of view.
+permalink: elegant-objects.html
 keywords:
   - book about object-oriented programming
   - book about oop
