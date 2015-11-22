@@ -33,7 +33,7 @@ UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/servic
 Your name will be in the book, on the first page,
 in the list of **acknowledgements**!
 
-{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 96 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 /elegant-objects.html %}
 
 I'm interested in your negative feedback mostly.
 Tell me what is not clear, what is missing, what needs a more detailed

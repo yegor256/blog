@@ -1,27 +1,23 @@
 ---
 layout: post
-title: "Procedures, Functions, Methods, and Temporal Coupling"
+title: "How to Reduce Temporal Coupling"
 date: 2015-11-25
 place: Kyiv, Ukraine
 tags: java oop
 description:
-  ...
+  Sequential method calls inevitably mean
+  temporal coupling, which is a bottleneck for
+  effective refactoring, avoid them.
 keywords:
-  - procedures vs functions
-  - oop procedures
-  - procedures in oop
   - temporal coupling
-  - methods vs functions
+  - temporal coupling java
+  - temporal coupling hidden
+  - temporal coupling in oop
+  - temporal coupling definition
 ---
 
-There is no much of a difference between them, right? Procedures,
-methods, functions &mdash; just a piece of code that accepts some
-arguments and performs something for us. Basically, a set of
-instructions for the CPU, with a name and a list of parameters. Right.
-This is a procedure. Functions and methods are something else, something
-very different. But, theory aside, I want to show a practical example
-of refactoring, which makes procedural code more object-oriented and
-removes temporal coupling.
+Temporal coupling is a negative is when a few lines of code must stay
+in one particular code
 
 <!--more-->
 
@@ -164,7 +160,13 @@ While this one is much better:
 
 {% highlight java %}
 list.add("Jeff");
-Foo.listWithEnoughSpace(list).add("Walter");
+Foo.withEnoughSpace(list).add("Walter");
 {% endhighlight %}
 
 See the difference?
+
+And, of course, an ideal approach would be use
+[composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
+instead of these ugly static methods. But if it's not possible, for
+some reason, just don't make that static methods look like procedures.
+Create
