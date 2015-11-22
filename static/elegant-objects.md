@@ -32,7 +32,7 @@ Then, I will send you a book. It's free and I will
 pay for shipping. You will read it (200 pages), and make your corrections
 right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
-Your name will be in the book, on the first page,
+Your name will be in the book, on the 9th page,
 in the list of **acknowledgements**!
 
 I'm interested in your negative feedback mostly.
