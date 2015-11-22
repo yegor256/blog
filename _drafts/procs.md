@@ -129,7 +129,42 @@ that it's important to call them in that particular order?
 
 Nobody. Nowere. This is called **temporal coupling**.
 
-Our lines are coupled together. They must stay in this particular order and this
-knowledge is hidden. It's easy to violate this order and our compiler won't
-be able to catch us.
+Our lines are **coupled** together. They must stay in this particular order and the
+knowledge about the order is hidden. It's easy to destroy
+the order and our compiler won't be able to catch us.
 
+To the contrary, this design doesn't have any "order":
+
+{% highlight java %}
+return Foo.with(
+  Foo.with(
+    new LinkedList(),
+    "Jeff"
+  ),
+  "Walter"
+);
+{% endhighlight %}
+
+It just **returns** a list, which is constructed by a few calls to `with()`
+method. It is a single line, instead of four.
+
+As [discussed before]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %}),
+an ideal method in OOP must have just a single statement and this statement is
+`return`.
+
+The same is true about validation. For example, this code is bad:
+
+{% highlight java %}
+list.add("Jeff");
+Foo.checkIfListStillHasSpace(list);
+list.add("Walter");
+{% endhighlight %}
+
+While this one is much better:
+
+{% highlight java %}
+list.add("Jeff");
+Foo.listWithEnoughSpace(list).add("Walter");
+{% endhighlight %}
+
+See the difference?

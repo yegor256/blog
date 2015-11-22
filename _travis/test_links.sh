@@ -8,7 +8,6 @@ function ping_uri {
     -H 'Cache-Control:max-age=0' \
     --retry 8 \
     --write-out '%{http_code} %{url_effective}\n' $1
-  echo "ping to $1"
 }
 export -f ping_uri
 
