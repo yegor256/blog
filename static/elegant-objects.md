@@ -18,7 +18,7 @@ keywords:
 programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
-more solid and architure more visible.
+more solid and architecture more visible.
 
 <!--more-->
 
