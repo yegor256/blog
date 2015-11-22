@@ -30,6 +30,7 @@ install:
 script:
 - set -e
 - _travis/test_casperjs.sh
+- rm -rf _site
 - jekyll build
 - _travis/test_grammar.sh
 - _travis/test_orphans.sh
