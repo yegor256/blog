@@ -26,8 +26,9 @@ more solid and architecture more visible.
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
 I invite you to become its first reviewer. Send me
-an [email](mailto:book@yegor256.com) with a short description about yourself (I will select
-5-8 reviewers). Then, I will send you a book. It's free and I will
+an [email](mailto:book@yegor256.com) with a short description about yourself.
+I will select a few reviewers (8 is the number I have in mind now).
+Then, I will send you a book. It's free and I will
 pay for shipping. You will read it (200 pages), and make your corrections
 right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
