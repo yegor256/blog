@@ -22,6 +22,7 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 /elegant-objects.html %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
 I invite you to become its first reviewer. Send me
@@ -32,8 +33,6 @@ right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
 Your name will be in the book, on the first page,
 in the list of **acknowledgements**!
-
-{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 /elegant-objects.html %}
 
 I'm interested in your negative feedback mostly.
 Tell me what is not clear, what is missing, what needs a more detailed
