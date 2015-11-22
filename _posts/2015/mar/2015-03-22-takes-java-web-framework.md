@@ -273,7 +273,7 @@ The idea here is to keep the `Request` interface simple and provide
 this request parsing functionality to its decorators. This approach helps the
 framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in the [`org.takes.rq`](http://www.takes.org/apidocs-0.9/org/takes/rq/index.html) package.
+are in the [`org.takes.rq`](http://www.takes.org/apidocs-0.27/org/takes/rq/package-summary.html) package.
 As you already probably understand, the `Rq` prefix stands for `Request`.
 
 ## First Real Web App
@@ -294,7 +294,7 @@ public final class Entry {
 
 This class contains just a single `main()` static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates [`FtCLI`](http://www.takes.org/apidocs-0.9/org/takes/http/FtCLI.html),
+instantiates [`FtCLI`](http://www.takes.org/apidocs-0.27/org/takes/http/FtCLI.html),
 giving it an instance of class `TkApp` and command
 line arguments. We'll create the `TkApp` class in a second. `FtCLI`
 (translates to "front-end with command line interface") makes an instance
@@ -385,7 +385,7 @@ web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --por
 
 ## `TkFork`
 
-This [`TkFork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/TkFork.html)
+This [`TkFork`](http://www.takes.org/apidocs-0.27/org/takes/facets/fork/TkFork.html)
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right _take_. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
