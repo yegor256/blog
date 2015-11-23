@@ -24,7 +24,8 @@ done
 cat _temp/links.txt | \
   uniq | \
   sed '/^[ \t]*$/d' | \
-  grep -v 'http://www.yegor256.com' > _temp/unique-links.txt
+  grep -v 'http://www.yegor256.com' | \
+  grep -v '^000 ' > _temp/unique-links.txt
 
 total=$(wc -l _temp/unique-links.txt | cut -f1 -d ' ')
 echo "${total} unique foreign links found"
