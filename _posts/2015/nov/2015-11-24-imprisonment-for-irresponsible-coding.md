@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Imprisonment for Irresponsible Coding!"
-date: 2015-11-20
+date: 2015-11-24
 place: Palo Alto, CA
 tags: quality
 description:

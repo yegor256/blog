@@ -203,7 +203,8 @@ there, and the thread will remain alive. The owner of the thread will be disappo
 
 We have to inform the higher level that we just caught an interruption
 request. We can't just throw a runtime exception. Such behavior would
-be too irresponsible. The entire thread received an interruption request,
+be too [irresponsible]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
+The entire thread received an interruption request,
 and we merely swallow it and convert it into a `RuntimeException`.
 We can't treat such a serious situation so loosely.
 
