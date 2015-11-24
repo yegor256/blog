@@ -27,12 +27,6 @@ for the most recent news.
 }
 </style>
 
-<img src="/images/2015/buildstuff-2015-logo.png" class="talk" alt="BuildStuff 2015"/>
-**How Do You Talk To Your Microservice?**<br/>
-[BuildStuff 2015](http://buildstuff.com.ua/)<br/>
-Kyiv, Ukraine<br/>
-23 November 2015
-
 <img src="/images/2015/devopsdays-2015-logo.png" class="talk" alt="DevOpsDays 2015 Warsaw"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/)<br/>
@@ -52,6 +46,12 @@ Olomouc, Czech Republic<br/>
 4-8 April 2016
 
 <hr/>
+
+"How Do You Talk To Your Microservice?";
+[BuildStuff 2015](http://buildstuff.com.ua/);
+Kyiv, Ukraine;
+23 November 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360)
 
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
