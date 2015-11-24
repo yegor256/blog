@@ -56,7 +56,8 @@ Kyiv, Ukraine;
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
-19-20 November 2015
+19-20 November 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208081948956442)
 
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
