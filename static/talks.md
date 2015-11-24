@@ -63,6 +63,7 @@ Berlin, Germany;
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
 Kyiv, Ukraine;
 19 September 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10207965398482753);
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 
 "CI is DEAD. Or is it?!";
