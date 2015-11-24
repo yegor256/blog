@@ -10,12 +10,52 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Sat, 21 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Imprisonment for Irresponsible Coding!</title>
+      <link>http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html</link>
+      <description>&lt;p&gt;If I drive too fast and I get caught, I may get a ticket. If I drive
+under the influence and get caught, I may go to jail. If I turn my
+radio up too loud in the middle of the night and my neighbors call the police,
+I may get into trouble if I don&amp;#39;t stop it. The law basically protects
+us from causing trouble with each other. Why don&amp;#39;t we have a law
+against &lt;strong&gt;irresponsible coding&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/11/thursday.jpg' style='width:600px;' alt='Thursday (1998) by Skip Woods'/&gt;&lt;figcaption&gt;Thursday (1998) by Skip Woods&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Software is part of my life. It actually &lt;strong&gt;is&lt;/strong&gt; my &lt;strong&gt;life&lt;/strong&gt;, not just part of it. I stare
+at this MacBook for much more time every day than I drive, talk, or listen
+to the radio.&lt;/p&gt;
+
+&lt;p&gt;Code is the &lt;strong&gt;territory&lt;/strong&gt; where I
+&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;interfere&lt;/a&gt;
+with others, and this is where
+we may bother each other. Irresponsible coding is precisely how one
+of us can really disturb the other. So why don&amp;#39;t the &lt;strong&gt;police&lt;/strong&gt; protect
+me against, say, authors of Apache Hadoop?&lt;/p&gt;
+
+&lt;p&gt;They created something that turns part of my life into a nightmare &amp;mdash; much
+faster and much more severely than drunk drivers. So, where is
+the police? Why aren&amp;#39;t they protecting me, for my tax dollars? Why
+aren&amp;#39;t those Java guys in &lt;strong&gt;jail&lt;/strong&gt; yet? :)&lt;/p&gt;
+
+&lt;p&gt;We need a law against irresponsible coding!&lt;/p&gt;
+
+&lt;p&gt;How about two months of imprisonment for a
+&lt;a href=&quot;http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons&quot;&gt;singleton&lt;/a&gt;?&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 24 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html</guid>
+      <dc:date>2015-11-24T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Ringelmann Effect vs. Agile</title>
       <link>http://www.yegor256.com/2015/11/21/ringelmann-effect-vs-agile.html</link>
@@ -1255,7 +1295,8 @@ there, and the thread will remain alive. The owner of the thread will be disappo
 
 &lt;p&gt;We have to inform the higher level that we just caught an interruption
 request. We can&amp;#39;t just throw a runtime exception. Such behavior would
-be too irresponsible. The entire thread received an interruption request,
+be too &lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;irresponsible&lt;/a&gt;.
+The entire thread received an interruption request,
 and we merely swallow it and convert it into a &lt;code&gt;RuntimeException&lt;/code&gt;.
 We can&amp;#39;t treat such a serious situation so loosely.&lt;/p&gt;
 
@@ -2041,94 +2082,6 @@ with the manager and the management.&lt;/p&gt;
       <pubDate>Wed, 16 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html</guid>
       <dc:date>2015-09-16T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>When Do You Stop Testing?</title>
-      <link>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
-      <description>&lt;p&gt;There is a software to be tested. There is a team of testers. There is
-some money in the budget. There is some time in the schedule. We start
-right now. Testers are trying to break the product, finding bugs,
-reporting bugs, communicating with programmers when necessary, doing
-their best to find what&amp;#39;s wrong. Eventually they stop and say
-&amp;quot;we&amp;#39;re done&amp;quot;. How do they know when to stop? When there is enough
-testing? It&amp;#39;s obvious &amp;mdash; when there are &lt;strong&gt;no more bugs left&lt;/strong&gt; and the
-product can be shipped! If you think like this, I have bad news for you.
-You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/09/la-fille-sur-le-pont.jpg' style='width:600px;' alt='La fille sur le pont (1999) by Patrice Leconte'/&gt;&lt;figcaption&gt;La fille sur le pont (1999) by Patrice Leconte&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;All this is perfectly explained by Glenford Myers in his great book
-&lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;The Art of Software Testing&lt;/a&gt;.
-I will just summarize it here again.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1118031962&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=ZSPUL4X4IBFT6ZVJ'&gt;&lt;img src='/images/2015/04/book-art-of-testing.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, &amp;quot;testing is the process of executing a program with the
-intent of &lt;strong&gt;finding errors&lt;/strong&gt;&amp;quot; (page 6). Pay attention, the intent is to find errors.
-Not to prove that the product works fine, but to prove that it &lt;strong&gt;doesn&amp;#39;t work&lt;/strong&gt;
-as intended. The goal of any tester is to show how the product can be
-broken, how it fails on different inputs, how it crashes under stress,
-how it misunderstands the user, how it doesn&amp;#39;t satisfy the requirements.
-This is why Dr. Myers is calling testing &amp;quot;a destructive, even sadistic, process&amp;quot;
-(page 6). This is what most testers don&amp;#39;t understand.&lt;/p&gt;
-
-&lt;p&gt;Second, any software has an &lt;strong&gt;unlimited amount of bugs&lt;/strong&gt;. Dr. Myers says that
-&amp;quot;you cannot test a program to guarantee that it is error free&amp;quot; (page 10)
-and that &amp;quot;it is impractical, often impossible, to find all the errors in
-a program&amp;quot; (page 8). This is also what most testers don&amp;#39;t understand. They
-believe that there is a
-&lt;a href=&quot;/2015/06/18/good-programmers-bug-free.html&quot;&gt;limited number&lt;/a&gt;
-of bugs, which they have to find
-and call it a day. There literally no limit! The amount of bugs is unlimited,
-in any software product. No matter how small or big, complex or simple,
-new or old is the product.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;They can't find all bugs, no matter how much time we give them&lt;/aside&gt;
-
-&lt;p&gt;Having these axioms in mind, let&amp;#39;s try to decide when testers have to stop.
-According to Dr. Meyers, &amp;quot;one of the most difficult questions
-to answer when testing a program is determining when to stop,
-since there is no way of knowing if the error just detected is the
-last remaining error&amp;quot; (page 135).&lt;/p&gt;
-
-&lt;p&gt;They can&amp;#39;t find all bugs, no matter how much time we give them. And they
-are motivated to find more and more of them. But at some point of time we
-must make a decision and release the product. Looks like we will release
-it with bugs inside? Yes, indeed! We will release a product &lt;strong&gt;full of bugs&lt;/strong&gt;.
-The only question is how many of them were found already and how critical
-they were.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s put it all together. There are too many bugs to be able to find
-all of them in a reasonable amount of time. However, we have to release a new
-version, sooner or later. At the same time, testers will always tell us
-that there are more bugs there and they can find more, just need more
-time. What to do?&lt;/p&gt;
-
-&lt;p&gt;Dr. Meyers says that &amp;quot;since the goal of testing is to find errors,
-why not make the completion criterion the detection of some predefined
-number of errors?&amp;quot; (page 136). Indeed, we should predict how many bugs
-are just enough to find, in order to have a desirable level of &lt;strong&gt;confidence&lt;/strong&gt;
-that the product is ready to be shipped. Then, ship it, consciously
-understanding that it still has an unlimited amount of not yet discovered
-bugs.&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z'&gt;&lt;img src='/images/2015/04/book-object-thinking.jpg' style='width:96px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;David West in
-&lt;a href=&quot;http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0735619654&amp;amp;linkCode=as2&amp;amp;tag=yegor256com-20&amp;amp;linkId=T5AHAWGQIY5ZZK2Z&quot;&gt;Object Thinking&lt;/a&gt;
-says that &amp;quot;software is released for use,
-not when it is known to be correct, but when the rate of discovering
-errors slows down to one that management considers acceptable&amp;quot; (page 13).&lt;/p&gt;
-
-&lt;p&gt;Thus, the only valid criteria for exiting a testing process is the
-discovery of a &lt;strong&gt;forecasted&lt;/strong&gt; amount of bugs.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</guid>
-      <dc:date>2015-09-10T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
