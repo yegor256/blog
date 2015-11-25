@@ -27,12 +27,6 @@ for the most recent news.
 }
 </style>
 
-<img src="/images/2015/devopsdays-2015-logo.png" class="talk" alt="DevOpsDays 2015 Warsaw"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[DevOpsDays Warsaw 2015](http://devopsdays.pl/)<br/>
-Warsaw, Poland<br/>
-24-25 November 2015
-
 <img src="/images/2015/developerweek-2015-logo.png" class="talk" alt="DeveloperWeek 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DeveloperWeek 2016](http://www.developerweek.com/)<br/>
@@ -47,11 +41,18 @@ Olomouc, Czech Republic<br/>
 
 <hr/>
 
+"Continuous Integration May Have Negative Effects"s;
+[DevOpsDays Warsaw 2015](http://devopsdays.pl/);
+Warsaw, Poland;
+24-25 November 2015;
+[slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead)
+
 "How Do You Talk To Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
 Kyiv, Ukraine;
 23 November 2015;
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360)
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360);
+[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice)
 
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
