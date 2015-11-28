@@ -53,7 +53,8 @@ Warsaw, Poland;
 Kyiv, Ukraine;
 23 November 2015;
 [photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360);
-[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice)
+[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice);
+[video](https://www.youtube.com/watch?v=jUil-aTImgU)
 
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
