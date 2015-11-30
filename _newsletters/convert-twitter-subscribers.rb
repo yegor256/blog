@@ -4,10 +4,13 @@ STDOUT.sync = true
 emails = []
 lines = []
 
-File.readlines('/Users/yegor/Downloads/leads.csv').each do |row|
+list = '/code/home/subscribers.txt'
+
+File.readlines(list).each do |row|
   line = row.strip
   next if line.empty?
-  date, id, name, twitter, email = line.split(',')
+  next if !line.include? '@'
+  name, email = line.split(',')
   address = email.strip.downcase
   if !emails.include? address
     lines.push("#{name.strip},#{address}")
@@ -15,12 +18,10 @@ File.readlines('/Users/yegor/Downloads/leads.csv').each do |row|
   end
 end
 
-list = '/code/home/subscribers.txt'
-
-File.readlines(list).each do |row|
+File.readlines('/Users/yegor/Downloads/leads.csv').each do |row|
   line = row.strip
   next if line.empty?
-  name, email = line.split(',')
+  date, id, name, twitter, email = line.split(',')
   address = email.strip.downcase
   if !emails.include? address
     lines.push("#{name.strip},#{address}")
