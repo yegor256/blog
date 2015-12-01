@@ -261,7 +261,9 @@ public class Stack {
 {% endhighlight %}
 
 It is obvious that an object of class `Stack` will be left
-in a broken state if it throws a runtime exception on overflow.
+in a broken state if it
+[throws]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
+a runtime exception on overflow.
 Its `size` property will be incremented, while `items` won't get a new element.
 
 Immutability prevents this problem. An object will never be

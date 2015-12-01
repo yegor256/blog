@@ -18,7 +18,8 @@ keywords:
 {% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 If you have a method that fails occasionally and
-you want to retry it a few times before throwing
+you want to retry it a few times before
+[throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
 an exception. [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html) from
 [jcabi-aspects](http://aspects.jcabi.com) can help.
 For example, if you're downloading the following web page:

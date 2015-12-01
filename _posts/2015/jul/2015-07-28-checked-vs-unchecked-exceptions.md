@@ -43,7 +43,9 @@ public void save(File file, byte[] data)
 {% endhighlight %}
 
 When everything goes right, the method just saves the data and returns control.
-When something is wrong, it throws `Exception` and we have to do something
+When something is wrong, it
+[throws]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
+`Exception` and we have to do something
 about it:
 
 {% highlight java %}
@@ -68,8 +70,9 @@ encapsulated in `ex`.
 
 I never use exceptions for flow control, which means I **never recover**
 situations where exceptions are thrown. When an exception occurs, I let it float up to the
-highest level of the application. Sometimes I rethrow it in order
-to add more semantic information to the chain. That's why it doesn't matter
+highest level of the application. Sometimes I
+[rethrow]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
+it in order to add more semantic information to the chain. That's why it doesn't matter
 to me what the cause of the exception thrown by `save()` was. I just know
 the method failed. That's enough for me. Always.
 

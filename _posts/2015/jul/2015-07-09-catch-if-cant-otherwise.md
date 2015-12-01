@@ -18,7 +18,8 @@ keywords:
 
 I don't know whether it's an anti-pattern or just a common and very popular
 mistake, but I see it everywhere and simply must write about it. I'm talking
-about **exception catching without re-throwing**. I'm talking about something like
+about **exception catching without
+[re-throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})**. I'm talking about something like
 this Java code:
 
 {% highlight java %}
@@ -88,7 +89,9 @@ about the error and float it up to the highest level, where the user
 is capable of doing something about it. Exception chaining helps even
 further by allowing us to extend that information on its way up. We are basically
 putting our bubble (the exception) into a bigger bubble every time we
-catch it and re-throw. When it hits the surface, there are many bubbles, each remaining
+catch it and
+[re-throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}).
+When it hits the surface, there are many bubbles, each remaining
 inside another like a Russian doll. The original exception is the
 smallest bubble.
 
@@ -106,7 +109,8 @@ By catching exceptions without re-throwing them, you're basically breaking the
 chain of trust between objects.
 
 My suggestion is to catch exceptions as seldom as possible, and every time
-you catch them, re-throw.
+you catch them,
+[re-throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}).
 
 Unfortunately, the design of Java goes against this principle in many places.
 For example, Java has checked and un-checked exceptions, while there should only

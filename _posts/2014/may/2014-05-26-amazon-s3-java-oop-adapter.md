@@ -100,7 +100,8 @@ as interfaces, they can easily be extended through encapsulation
 ([Decorator Pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
 
 For example, you want your code to retry S3 object read operations
-a few times before giving up and throwing an `IOException`
+a few times before giving up and
+[throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) an `IOException`
 (by the way, this is a very good practice when working with web services).
 So, you want all your S3 reading operations to be redone a few times
 if first attempts fail.

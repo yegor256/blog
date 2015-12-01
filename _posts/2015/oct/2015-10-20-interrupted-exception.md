@@ -179,7 +179,7 @@ The owner of the thread asked us to stop,
 `Thread.sleep()` detected that request,
 removed it, and threw `InterruptedException`. If you call `Thread.sleep()`,
 again, it will not know anything about that interruption request and will
-not throw anything.
+not [throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) anything.
 
 See what I'm getting at? It's very important not to lose that
 `InterruptedException`. We can't just swallow it and move on. That would
