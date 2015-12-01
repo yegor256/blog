@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 24 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -231,7 +231,8 @@ We don&amp;#39;t fail because we&amp;#39;re trying to keep the app running. This
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can&amp;#39;t find a file? We don&amp;#39;t hide this fact. We make this situation
-public and visible. We scream and cry. We throw an exception. We &lt;strong&gt;want&lt;/strong&gt; the
+public and visible. We scream and cry. We
+&lt;a href=&quot;/2015/12/01/rethrow-exceptions.html&quot;&gt;throw&lt;/a&gt; an exception. We &lt;strong&gt;want&lt;/strong&gt; the
 app to crash, break, and fail, because someone gave us a file that doesn&amp;#39;t
 exist. We complain and protest. This is called Fail Fast.&lt;/p&gt;
 
@@ -298,7 +299,9 @@ we&amp;#39;ll discuss the differences. So, my understanding first.&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;When everything goes right, the method just saves the data and returns control.
-When something is wrong, it throws &lt;code&gt;Exception&lt;/code&gt; and we have to do something
+When something is wrong, it
+&lt;a href=&quot;/2015/12/01/rethrow-exceptions.html&quot;&gt;throws&lt;/a&gt;
+&lt;code&gt;Exception&lt;/code&gt; and we have to do something
 about it:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -321,8 +324,9 @@ encapsulated in &lt;code&gt;ex&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;I never use exceptions for flow control, which means I &lt;strong&gt;never recover&lt;/strong&gt;
 situations where exceptions are thrown. When an exception occurs, I let it float up to the
-highest level of the application. Sometimes I rethrow it in order
-to add more semantic information to the chain. That&amp;#39;s why it doesn&amp;#39;t matter
+highest level of the application. Sometimes I
+&lt;a href=&quot;/2015/12/01/rethrow-exceptions.html&quot;&gt;rethrow&lt;/a&gt;
+it in order to add more semantic information to the chain. That&amp;#39;s why it doesn&amp;#39;t matter
 to me what the cause of the exception thrown by &lt;code&gt;save()&lt;/code&gt; was. I just know
 the method failed. That&amp;#39;s enough for me. Always.&lt;/p&gt;
 

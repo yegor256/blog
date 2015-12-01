@@ -10,12 +10,127 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 24 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Throwing an Exception Without Proper Context Is a Bad Habit</title>
+      <link>http://www.yegor256.com/2015/12/01/rethrow-exceptions.html</link>
+      <description>&lt;p&gt;I keep repeating the same mistake again and again. So it&amp;#39;s time to
+stop and make a rule to prevent this from happening anymore. The mistake
+is not fatal, but it&amp;#39;s very annoying. When I look at production logs, I often see
+something like &lt;code&gt;&amp;quot;File doesn&amp;#39;t exist&amp;quot;&lt;/code&gt;, and I ask myself:
+What file? Where is it supposed to exist? What did the server try to do with it?
+What was going on a second before it crashed?
+There is no answer in the log, and it&amp;#39;s totally my fault.
+I either 1) don&amp;#39;t re-throw or 2) re-throw without providing context.
+Both are wrong.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/12/four-rooms.jpg' style='width:600px;' alt='Four Rooms (1995) by Allison Anders et al.'/&gt;&lt;figcaption&gt;Four Rooms (1995) by Allison Anders et al.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is how the code may look:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;File doesn&amp;#39;t exist&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It may also look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Both examples demonstrate an inadequate style of handling situations that
+involve exceptions and reporting them. What&amp;#39;s wrong here? The exception messages
+are not thorough enough. They simply don&amp;#39;t contain any information
+from the place where they originated from.&lt;/p&gt;
+
+&lt;p&gt;This is how they should look instead:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;User profile file %s doesn&amp;#39;t exist&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAbsolutePath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And the second example should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;Can&amp;#39;t delete user profile data file %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAbsolutePath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See the difference? This may look like redundant code, but it&amp;#39;s not.
+Of course, when I&amp;#39;m writing all this, I don&amp;#39;t really care about
+logs and exceptions. I&amp;#39;m not really expecting this file
+to be absent.&lt;/p&gt;
+
+&lt;p&gt;But I should.&lt;/p&gt;
+
+&lt;p&gt;There should be a rule: Every time we throw or re-throw, an
+exception message must describe the problem with as much
+detail as possible.&lt;/p&gt;
+
+&lt;p&gt;Of course, we can&amp;#39;t forget about security and risk putting any
+sensitive information into the exception message, like passwords,
+credit card numbers, etc. Besides that, as much as possible
+must be exposed to the exception catcher at a higher level.&lt;/p&gt;
+
+&lt;p&gt;Throwing an exception is literally an escalation of a problem
+to a higher level of management. Imagine that my boss is asking
+me to install a new server. I come back to him in a few hours
+and say, &amp;quot;I failed; sorry.&amp;quot; That would sound strange. He
+would ask for more details. Why did I fail? What exactly went wrong?
+Is it possible to do it differently? Etc.&lt;/p&gt;
+
+&lt;p&gt;Such code is literally a sign of disrespect to the client:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;File doesn&amp;#39;t exist&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I have to be more verbose and give more details.&lt;/p&gt;
+
+&lt;p&gt;And I&amp;#39;m not alone in this mistake. I see it everywhere, and it really
+makes debugging difficult, especially in production, where it&amp;#39;s
+almost impossible to reproduce the problem right away.&lt;/p&gt;
+
+&lt;p&gt;Thus, please be more verbose in your exception messages. I will do the same
+in my code :)&lt;/p&gt;
+
+&lt;p&gt;And one more thing before you go. In most OOP languages, exceptions
+are unchecked, which means that catching them is not a mandatory
+operation, &lt;a href=&quot;/2015/07/28/checked-vs-unchecked-exceptions.html&quot;&gt;unfortunately&lt;/a&gt;.
+Nevertheless, I recommend you catch, add context, and
+re-throw them all, &lt;strong&gt;always&lt;/strong&gt;. This may seem like pure noise, but it&amp;#39;s not!
+Just make your methods smaller and ensure all exceptions
+sent out of them have enough information about their origins.
+You will do yourself and everybody else a big favor.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/12/01/rethrow-exceptions.html</guid>
+      <dc:date>2015-12-01T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Imprisonment for Irresponsible Coding!</title>
       <link>http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html</link>
@@ -1273,7 +1388,7 @@ interruption request sent by the owner.&lt;/p&gt;
 &lt;code&gt;Thread.sleep()&lt;/code&gt; detected that request,
 removed it, and threw &lt;code&gt;InterruptedException&lt;/code&gt;. If you call &lt;code&gt;Thread.sleep()&lt;/code&gt;,
 again, it will not know anything about that interruption request and will
-not throw anything.&lt;/p&gt;
+not &lt;a href=&quot;/2015/12/01/rethrow-exceptions.html&quot;&gt;throw&lt;/a&gt; anything.&lt;/p&gt;
 
 &lt;p&gt;See what I&amp;#39;m getting at? It&amp;#39;s very important not to lose that
 &lt;code&gt;InterruptedException&lt;/code&gt;. We can&amp;#39;t just swallow it and move on. That would
@@ -2015,73 +2130,6 @@ are expected. And, of course, what will happen in the case of success or failure
       <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/22/micromanagement.html</guid>
       <dc:date>2015-09-22T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>How to Fire Someone Right</title>
-      <link>http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html</link>
-      <description>&lt;p&gt;A friend of mine asked me today, &amp;quot;How should I fire
-someone the right way? What are the tricks to do it nicely,
-gracefully, and professionally?&amp;quot; I responded by saying that if you question yourself
-about how to do it right, you&amp;#39;re doing it wrong in the first place.
-If firing is a painful and unpleasant process for you, there is
-a problem with your management model. Firing must be an &lt;strong&gt;easy&lt;/strong&gt;
-and &lt;strong&gt;open&lt;/strong&gt; procedure, &lt;strong&gt;visible&lt;/strong&gt; and &lt;strong&gt;understood&lt;/strong&gt; by the entire team.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/09/up-in-the-air.jpg' style='width:600px;' alt='Up in the Air (2009) by Jason Reitman'/&gt;&lt;figcaption&gt;Up in the Air (2009) by Jason Reitman&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I mentioned this problem before in
-&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;my post&lt;/a&gt; about team morale.
-I said that firing someone should not be done behind &lt;strong&gt;closed doors&lt;/strong&gt;.
-Instead, the assessment of individual performance should
-occur openly and be visible to the entire team. If you need to close
-the door in order to talk &amp;quot;privately&amp;quot; to express your concerns and
-eventually to fire someone, you are a
-&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;bad manager&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also explained &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;some time ago&lt;/a&gt;
-that a perfectly managed team is working for the project, not for you, the boss.
-The team must share the same goal and work towards it. The boss (or CEO,
-CTO, project manager, Scrum master, team lead, etc.) is there in order
-to enforce the &lt;strong&gt;rules&lt;/strong&gt; accepted by the team. The team agrees to the rules,
-so the boss is just making sure they are &lt;strong&gt;enforced&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;If firing is unpleasant for you, the rules are not clear.&lt;/p&gt;
-
-&lt;p&gt;If the rules are not clear, you&amp;#39;re a
-&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;bad manager&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;The firing decision should not be your decision&lt;/aside&gt;
-
-&lt;p&gt;The firing is unpleasant only when your decision is not supported by the team.
-You feel you&amp;#39;re doing something wrong to the person you are firing and
-to the people who stay on the team. You feel it only because you don&amp;#39;t have
-enough support from your team. You&amp;#39;re acting as a dictator, not a true leader.&lt;/p&gt;
-
-&lt;p&gt;The firing decision should not be your decision. It should be derived
-from the rules your team agreed to work with. You should not fire when
-you don&amp;#39;t like the person. Instead, you should fire when the person doesn&amp;#39;t
-comply with the rules, like when there&amp;#39;s a lack of performance.&lt;/p&gt;
-
-&lt;p&gt;When the rules are clear, everybody understands them, and reconciliation of
-performance is done regularly and openly, everybody will understand
-your firing decision and support it &amp;mdash; including the person you&amp;#39;re firing!
-Because it won&amp;#39;t be your decision, but rather a decision logically derived
-from the rules. You will work for the project, not for your emotions or
-personal feelings.&lt;/p&gt;
-
-&lt;p&gt;By firing a person who is causing problems for the project,
-you will be doing a good thing for everybody &amp;mdash; the project, the team, and the
-person who will go and find another place for his or her skills and talents.&lt;/p&gt;
-
-&lt;p&gt;Let me reiterate: If firing is unpleasant, there is a problem
-with the manager and the management.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Wed, 16 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html</guid>
-      <dc:date>2015-09-16T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
