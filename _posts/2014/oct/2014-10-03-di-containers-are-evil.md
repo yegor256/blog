@@ -29,6 +29,8 @@ turn it into an **anti-pattern**.
 
 <!--more-->
 
+{% youtube oV6Utb5Jows video-left %}
+
 I'm not going to discuss obvious arguments against
 "setter injections"
 (like in [Spring IoC](http://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
