@@ -27,6 +27,12 @@ for the most recent news.
 }
 </style>
 
+<img src="/images/2016/devnexus-2016-logo.png" class="talk" alt="DevNexus 2015"/>
+**Talk To Your Microservice Via a Chat Bot, not UI**<br/>
+[DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko)<br/>
+Atlanta, USA<br/>
+15-17 February 2016
+
 <img src="/images/2015/developerweek-2015-logo.png" class="talk" alt="DeveloperWeek 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DeveloperWeek 2016](http://www.developerweek.com/)<br/>
