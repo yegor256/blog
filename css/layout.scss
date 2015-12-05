@@ -67,10 +67,6 @@ a, a:visited {
   font-size: .4 * $em;
   vertical-align: top;
 }
-.photo {
-  width: 80px;
-  border-radius: 50%;
-}
 .teamed-banner {
   @extend .unprintable;
   @extend .desktop-only;
@@ -118,8 +114,24 @@ a, a:visited {
   }
   .face {
     position: relative;
-    span {
+    .photo {
+      width: 80px;
+      border-radius: 50%;
+    }
+    .hire {
       position: absolute;
+      top: 0px;
+      left: 50%;
+      margin-left: 50px;
+      text-decoration: underline;
+      color: darken(#81b341, 15);
+    }
+    .sub {
+      position: absolute;
+      top: 50px;
+      right: 50%;
+      text-align: right;
+      margin-right: 50px;
       text-decoration: underline;
       color: darken(#81b341, 15);
     }
