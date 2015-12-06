@@ -22,6 +22,12 @@ more solid and architecture more visible.
 
 <!--more-->
 
+Dec 6, 2015:
+I've received 63 emails so far and it's time to choose the best candidates.
+I will do it in the next few days and will email them. I will announce
+the names of selected reviewers here, soon. Thanks a lot to all of you,
+for your readiness to help!
+
 {% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 /elegant-objects.html %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
