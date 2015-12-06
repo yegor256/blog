@@ -31,8 +31,6 @@ of our code is much more important than its performance.
 
 <!--more-->
 
-{% youtube PNSezrlemsY %}
-
 ## Prices vs Salaries
 
 {% badge /images/2014/10/trends.png 300 %}
@@ -44,6 +42,8 @@ The first trend falls down and shows how much cheaper
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
 
+{% youtube PNSezrlemsY video-left %}
+
 The second trend demonstrates how much software developers' salaries
 escalated over the same period. More accurately, they tripled. I didn't find
 an official report about that, but I'm sure it's no secret to anyone
@@ -52,6 +52,8 @@ a senior developer is not a dream any more... while twenty years
 ago $60K was the best offer around. I found
 [this article](http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html)
 very interesting about this very subject.
+
+{% quote Twenty years ago computers were expensive and programmers were cheap; that was the time of the hacker mentality %}
 
 Basically, this means that in order to create a PHP website
 in 1994 we had to spend 1000 times more on hardware and three times
@@ -101,6 +103,8 @@ it mostly for fun. I would say, he is married to his code and can't imagine
 its happy life after an eventual divorce. Code ownership is
 what a hacker is about &mdash; he understands himself as an "owner"
 of the code.
+
+{% quote In 1994 it was much more efficient to hire more programmers and ask them to optimize the code or even rewrite it, instead of buying new hardware %}
 
 When I ask one of my hacker friends &mdash; "How will someone understand
 what this code does?" I almost always hear the same answer &mdash;
@@ -156,6 +160,8 @@ run our applications in elastic computational platforms with unlimited
 amounts of memory, CPU power and storage space. We will simply pay
 for resource utilization and almost any performance issue will just add a few extra
 dollars to our monthly bills. We won't care about optimization any more.
+
+{% quote The best solution you can get is the most readable, maintainable, and automated; not the fastest %}
 
 At the same time, good software engineers will become more and more expensive
 and will charge $500+ per hour just to check out software and give
