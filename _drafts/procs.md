@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Reduce Temporal Coupling"
+title: "Temporal Coupling Between Method Calls"
 date: 2015-11-25
 place: Kyiv, Ukraine
 tags: java oop
@@ -16,8 +16,11 @@ keywords:
   - temporal coupling definition
 ---
 
-Temporal coupling is a negative is when a few lines of code must stay
-in one particular code
+Temporal coupling happens between sequential method calls,
+when they must stay in a particular order. This is inevitable
+in imperative programming, but we can reduce the negative effect
+of it just by turning that static procedures into functions. Here
+is an example.
 
 <!--more-->
 
@@ -100,7 +103,7 @@ return list;
 
 Is it so clear now that `append()` is actually adding `"Jeff"` to `list`? What
 will happen if I remove that line? Will it affect the result being
-returned in the last line? I don't know. I need to check the body of method
+returned in the last line? I don't know. I need to **check** the body of method
 `append()` to make sure.
 
 Also, how about returning `list` first and calling `append()` afterwards? This
@@ -123,7 +126,7 @@ tell me that these two calls to `append()` must happen before `return list`?
 Second, we changed the order of `append()` calls. Again, did anyone tell me
 that it's important to call them in that particular order?
 
-Nobody. Nowere. This is called **temporal coupling**.
+Nobody. Nowhere. This is called **temporal coupling**.
 
 Our lines are **coupled** together. They must stay in this particular order and the
 knowledge about the order is hidden. It's easy to destroy
@@ -165,8 +168,9 @@ Foo.withEnoughSpace(list).add("Walter");
 
 See the difference?
 
-And, of course, an ideal approach would be use
+And, of course, an ideal approach would be to use
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
-instead of these ugly static methods. But if it's not possible, for
+instead of these ugly static methods. But, if it's not possible, for
 some reason, just don't make that static methods look like procedures.
-Create
+Make sure they always return results, which become arguments to
+further calls.
