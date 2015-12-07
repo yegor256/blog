@@ -12,6 +12,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 install:
 - set -e
+- travis_retry sudo apt-get update -y
 - travis_retry sudo apt-get install -y build-essential
 - travis_retry _travis/install_cmake.sh
 - travis_retry sudo apt-get install -y libxml2-utils
@@ -31,7 +32,7 @@ script:
 - _travis/test_casperjs.sh
 - rm -rf _site
 - jekyll build
-# - _travis/test_grammar.sh
+- _travis/test_grammar.sh
 - _travis/test_orphans.sh
 # - _travis/test_keywords.sh
 - _travis/test_links.sh
