@@ -41,4 +41,3 @@ script:
 - _travis/test_pages_existence.sh
 - _travis/test_jslint.sh
 - jgd -u git@github.com:yegor256/blog.git
-
