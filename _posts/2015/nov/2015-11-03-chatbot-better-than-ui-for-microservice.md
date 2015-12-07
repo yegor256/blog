@@ -92,7 +92,7 @@ a user is a client, and the service is a server.
 
 Like in a restaurant &mdash; you say what you want, and a **server** goes
 to the kitchen, waits there, and in a few minutes, comes back with
-spaghetti carbonara. You're a client, and that cute lady is a server.
+spaghetti carbonara. You're a client, and that waitperson is a server.
 
 In the case of a chatbot, that's not the case anymore. Look at the
 architecture:
@@ -124,7 +124,7 @@ virgin olive oil ... yeah, he makes it right ... and puts it next to the board.
 You hear an announcement that order number 15 is ready. You go there,
 collect the food, return to your table, and enjoy.
 
-The point is that there is **no cute lady** involved anymore. There is no
+The point is that there is **no waitperson** involved anymore. There is no
 server. There are two parties communicating with the board &mdash; you and
 the kitchen. The kitchen is our microservice, but it's not a server anymore.
 
@@ -161,14 +161,15 @@ time to process our information, to think, and to type something back.
 But a user interface doesn't have that luxury. It has to be bullet-fast;
 otherwise, I immediately get frustrated. The same thing happens to you, right?
 
-## No Need to Look Cute
+## No Need for Small Talk
 
 {% badge /images/2015/11/bot-4.jpg 250 %}
 
 Another advantage of this no-server design is that there is no need
-to look pretty. There is no web interface, no HTML, no CSS,
+for the "Hi, my name is Jake, and I'll be your serer tonight!" <Oversized grin>!
+There is no web interface, no HTML, no CSS,
 **no graphic design**. Perhaps not everybody really likes that.
-Most non-professional users may still prefer to talk to a cute server
+Some non-professional users may still prefer to make small talk with a server
 instead of sticking some paper notes to the board.
 But if we're dealing with professional
 computer engineers, they're not that demanding.
