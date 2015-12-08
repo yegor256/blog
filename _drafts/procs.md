@@ -7,7 +7,7 @@ tags: java oop
 description:
   Sequential method calls inevitably mean
   temporal coupling, which is a bottleneck for
-  effective refactoring, avoid them.
+  effective refactoring; avoid them.
 keywords:
   - temporal coupling
   - temporal coupling java
@@ -16,11 +16,11 @@ keywords:
   - temporal coupling definition
 ---
 
-Temporal coupling happens between sequential method calls,
+Temporal coupling happens between sequential method calls
 when they must stay in a particular order. This is inevitable
 in imperative programming, but we can reduce the negative effect
-of it just by turning that static procedures into functions. Here
-is an example.
+of it just by turning those static procedures into functions. Take
+a look at this example.
 
 <!--more-->
 
@@ -41,18 +41,18 @@ class Foo {
 }
 {% endhighlight %}
 
-What do you think about it? I believe, it's clear what `names()` is doing &mdash;
+What do you think about that? I believe it's clear what `names()` is doing &mdash;
 creating a list of names. In order to avoid duplication, there is a supplementary
-_procedure_ `append()`, which converts an item to lower case and adds to the
+_procedure_, `append()`, which converts an item to lowercase and adds it to the
 list.
 
-This design is bad.
+This is poor design.
 
-It is a **procedural** design and there is **temporal coupling** between
+It is a **procedural** design, and there is **temporal coupling** between
 lines in method `names()`.
 
-Let me show you first what is a better (not the best!) design,
-than will try to explain its benefits:
+Let me first show you a better (though not the best!) design,
+then I will try to explain its benefits:
 
 {% highlight java %}
 class Foo {
@@ -73,9 +73,9 @@ class Foo {
 }
 {% endhighlight %}
 
-An ideal design of method `with()` would create a new instance of
-`List`, populate it through `addAll(list)`, then `add(item)` to it and
-then return. That would be perfectly
+An ideal design for method `with()` would create a new instance of
+`List`, populate it through `addAll(list)`, then `add(item)` to it, and
+finally return. That would be perfectly
 [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html),
 but slow.
 
@@ -88,9 +88,9 @@ Foo.append(list, "Walter");
 return list;
 {% endhighlight %}
 
-Looks pefectly clean, right? Instantiate a list, append two items to it, and
-return it. Yes, it is clean, for now. Because we remember what `append()` is
-doing. In a few months we'll get back to this code and it will look like this:
+It looks perfectly clean, doesn't it? Instantiate a list, append two items to it, and
+return it. Yes, it is clean &mdash; for now. Because we remember what `append()` is
+doing. In a few months, we'll get back to this code, and it will look like this:
 
 {% highlight java %}
 List<String> list = new LinkedList();
@@ -128,9 +128,9 @@ that it's important to call them in that particular order?
 
 Nobody. Nowhere. This is called **temporal coupling**.
 
-Our lines are **coupled** together. They must stay in this particular order and the
-knowledge about the order is hidden. It's easy to destroy
-the order and our compiler won't be able to catch us.
+Our lines are **coupled** together. They must stay in this particular order, but the
+knowledge about that order is hidden. It's easy to destroy
+the order, and our compiler won't be able to catch us.
 
 To the contrary, this design doesn't have any "order":
 
@@ -144,11 +144,11 @@ return Foo.with(
 );
 {% endhighlight %}
 
-It just **returns** a list, which is constructed by a few calls to `with()`
-method. It is a single line, instead of four.
+It just **returns** a list, which is constructed by a few calls to the `with()`
+method. It is a single line instead of four.
 
 As [discussed before]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %}),
-an ideal method in OOP must have just a single statement and this statement is
+an ideal method in OOP must have just a single statement, and this statement is
 `return`.
 
 The same is true about validation. For example, this code is bad:
@@ -170,7 +170,7 @@ See the difference?
 
 And, of course, an ideal approach would be to use
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
-instead of these ugly static methods. But, if it's not possible, for
-some reason, just don't make that static methods look like procedures.
+instead of these ugly static methods. But if it's not possible for
+some reason, just don't make those static methods look like procedures.
 Make sure they always return results, which become arguments to
 further calls.
