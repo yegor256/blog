@@ -227,7 +227,7 @@ In a nutshell, immutable objects are better because:
 
  * Immutable objects are simpler to construct, test, and use.
  * Truly immutable objects are always thread-safe.
- * They help avoid temporal coupling.
+ * They help avoid [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %}).
  * Their usage is side-effect free (no defensive copies).
  * They always have failure atomicity.
  * They are much easier to cache.

@@ -45,7 +45,7 @@ This is an incomplete list of arguments in favor of immutability:
 
  * immutable objects are simpler to construct, test, and use
  * truly immutable objects are always thread-safe
- * they help to avoid temporal coupling
+ * they help to avoid [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
  * their usage is side-effect free (no defensive copies)
  * identity mutability problem is avoided
  * they always have failure atomicity
@@ -101,7 +101,8 @@ String second = request.fetch();
 {% endhighlight %}
 
 Now, the script is broken although it compiled without errors. This is
-what temporal coupling is about &mdash; there is always some hidden
+what [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
+is about &mdash; there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.
@@ -136,7 +137,8 @@ from the code without affecting the second one.
 
 I hope this example demonstrates that the code manipulating
 immutable objects is more readable and maintainable,
-because it doesn't have temporal coupling.
+because it doesn't have
+[temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %}).
 
 ## Avoiding Side Effects
 
