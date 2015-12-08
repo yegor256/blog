@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Temporal Coupling Between Method Calls"
-date: 2015-11-25
+date: 2015-12-08
 place: Kyiv, Ukraine
 tags: java oop
 description:
@@ -23,6 +23,8 @@ of it just by turning those static procedures into functions. Take
 a look at this example.
 
 <!--more-->
+
+{% picture /images/2015/12/blueberry.jpg 0 Blueberry (2004) by Jan Kounen %}
 
 Here is the code:
 
