@@ -25,9 +25,11 @@ is a natural technique of composing objects in OOP
 [Java EE6 CDI](http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html),
 [Dagger](http://square.github.io/dagger/) and other
 [DI frameworks](https://en.wikipedia.org/wiki/Dependency_injection)
-turn it into an anti-pattern.
+turn it into an **anti-pattern**.
 
 <!--more-->
+
+{% youtube oV6Utb5Jows video-left %}
 
 I'm not going to discuss obvious arguments against
 "setter injections"
@@ -44,13 +46,13 @@ and [may not contain setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are
 
 Instead, let's talk about "constructor injection"
 (like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))
-and its use with **dependency injection containers**.
+and its use with dependency injection **containers**.
 I'll try to show why I consider these containers a redundancy, at least.
 
 ## What is Dependency Injection?
 
 This is what dependency injection is (not really different
-from a plain old object composition):
+from a plain old object [composition]({% pst 2015/feb/2015-02-26-composable-decorators %})):
 
 {% highlight java %}
 public class Budget {
@@ -91,24 +93,29 @@ to let `Budget` decide what database it wants to work with:
 
 {% highlight java %}
 public class Budget {
-  private final DB db = new Postgres("jdbc:postgresql:5740/main");
+  private final DB db =
+    new Postgres("jdbc:postgresql:5740/main");
   // class methods
 }
 {% endhighlight %}
 
 This is very dirty and leads to 1) code duplication, 2) inability
-to reuse, and 3) inability to test, etc. No need to discuss why. It's obvious.
+to reuse, and 3) inability to test, etc. No need to discuss
+why. It's [obvious](http://programmers.stackexchange.com/questions/19203).
 
 Thus, dependency injection via a constructor is an amazing technique.
 Well, not even a technique, really. More like a feature of Java and all other object-oriented
-languages. It's expected that almost any object will want to encapsulate
-some knowledge (aka, a "state"). That's what constructors are for.
+languages. It's expected that almost any object will want to
+[encapsulate]({% pst 2014/dec/2014-12-15-how-much-your-objects-encapsulate %})
+some knowledge (aka, a "state"). That's what
+[constructors]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) are for.
 
 ## What is a DI Container?
 
 So far so good, but here comes the dark side &mdash; a dependency
-injection container. Here is how it works (let's use Google Guice as
-an example):
+injection container. Here is how it works (let's use
+[Google Guice](https://github.com/google/guice)
+as an example):
 
 {% highlight java %}
 import javax.inject.Inject;
@@ -185,7 +192,7 @@ Why can't we use plain old `new` in the main class of the application?
 
 The container we created simply adds more lines to the code base,
 or even more files, if we use XML. And it doesn't add anything, except
-an additional complexity. We should always remember this
+an additional **complexity**. We should always remember this
 if we have the question: "What database is used as an argument of a Budget?"
 
 ## The Right Way
@@ -197,7 +204,8 @@ an application. This is how we create a "thinking engine" in
 
 <script src="https://gist.github.com/c76c06baee1f74e3100e.js?file=Agents.java"> </script>
 
-Impressive? This is a true object composition.
+Impressive? This is a true
+[object composition]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 I believe this is how a proper object-oriented application
 should be instantiated.
 

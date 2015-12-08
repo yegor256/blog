@@ -16,14 +16,6 @@ keywords:
   - continous deployment
   - continuous delivery preflight builds
   - continuous integration
-  - continuous integration preflight builds
-  - build before merge
-  - devops automated merge
-  - master branch
-  - pre-flight builds
-  - preflight builds
-  - prohibit commits to master branch
-  - read-only master branch
 ---
 
 {% youtube 2a2nWELIk-Y video-left %}

@@ -183,29 +183,33 @@ Well, that depends, right? But let's be serious; we're not paid for that.
 
 ## Meetings Demotivate
 
-The best motivation for a creative person is to see the results of
-his or her creativity. If I'm not mistaken, enjoying the process
+The best motivation for a creative person is to see the
+[results]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
+of his or her creativity. If I'm not mistaken, enjoying the process
 of creativity without any results is an obvious
 sign of mental illness. A healthy and creative person like a software
 engineer, for example, wants to see how his or her efforts are turned
-into something valuable and, preferably, tangible.
+into something **valuable** and, preferably, **tangible**.
 
 Meetings almost never produce anything tangible and rarely something valuable.
 Sometimes we have "minutes"
 of our meetings, but they are just short pieces of paper with a brief
-summary of what we were talking about. Not a real "product" for a
+summary of what we were talking about. Not a real "**product**" for a
 creative person.
 
-Thus, they demotivate me because I simply don't see what two hours
+Thus, they demotivate me because I simply don't see what
+[two hours]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 of my life were turned into. We don't really _create_ anything there,
-we just discuss. Pay attention here; I'm talking about meetings, not about
+we just **discuss**. Pay attention here; I'm talking about meetings, not about
 collaborative work on something, like in pair programming, for example.
+
+{% quote Did Einstein invent his theory at a meeting with his colleagues? %}
 
 You may say that some meetings actually produce great ideas, which
 are very tangible results. You may say that only in a direct,
 face-to-face setting could these ideas be born. You may also
 say that many bright technical decisions were invented precisely due
-to a magic synergy of friends thinking in the same direction, at the
+to a magic synergy of **friends** thinking in the same direction, at the
 same time, and in the same room. This argument makes sense, but I'll address that later.
 
 ## Meetings Waste Time
@@ -215,9 +219,12 @@ then you start checking your Twitter feed and doodling. Everybody is doing
 the same &mdash; not because we're lazy but because there is _no demand_
 for our full focus at the meeting.
 
-While Monica is working with the document, making comments and suggestions,
-she is fully concentrated on the result &mdash; mostly because there is nobody
-else to help her. She has to deliver that pull request, and I'm waiting for her.
+While Monica is working with the document, making comments and suggestions, she is
+[fully concentrated]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
+on the result &mdash; mostly because there is nobody
+else to
+[help]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
+her. She has to deliver that pull request, and I'm waiting for her.
 Her concentration is as high as it would be at the meeting, when someone
 is asking her a direct question and she has to provide a detailed answer.
 
@@ -258,15 +265,20 @@ No more, no less.
 
 ## Meetings Degrade Quality
 
-Quality goes up when it is being controlled. When someone tells me every
+Quality goes up when it is being
+[controlled]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}).
+When someone tells me every
 day that my code is buggy and needs improvements, my quality goes up.
 When nobody cares what I do or how good my results are, my quality
-goes down, no matter how self-motivated I am.
+goes **down**, no matter how self-motivated I am.
 
-Meetings promote group achievements and discourage individual ones. At the
+Meetings promote group achievements and
+[discourage]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
+individual ones. At the
 end of a meeting, it's often not clear who exactly suggested a good idea
 and who made the biggest effort. In other words, at the end of a meeting,
-I don't know how good I am. Am I still the same as a month ago or am I a better
+I don't know how good I am. Am I still the same as a month ago or am I a
+[better]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
 engineer?
 
 They smile more and ask me "what do you think?" more frequently than last summer;
@@ -274,10 +286,12 @@ that must mean something, right? I'm sure you understand this is
 not the kind of feedback a serious engineer would expect.
 
 A serious software developer wants to produce tangible results and receive
-tangible feedback, like money or code reviews. I want to know what
+tangible feedback, like money or
+[code reviews]({% pst 2015/feb/2015-02-09-serious-code-reviewer %}).
+I want to know what
 was wrong in my DB schema draft and what I missed. And I want this to be
-documented somewhere. This is what makes me better, and this is how I learn
-and grow.
+documented somewhere. This is what makes me better, and this is how I **learn**
+and **grow**.
 
 ## What About the A-ha! Moment?
 

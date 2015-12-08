@@ -282,7 +282,7 @@ recommend to give it a try.
 
 [**greenhouseci.com**](http://greenhouseci.com/) testing now...
 
-[**ship.io**](http://ship.io/) is
+**ship.io** is
 [dead](https://ship.io/ship-io-is-shutting-down/).
 
 BTW, if you don't like the idea of keeping continuous integration

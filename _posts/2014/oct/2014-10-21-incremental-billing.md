@@ -64,10 +64,14 @@ and corporal punishment, your overall
 will be much higher than expected and the quality will
 [suffer]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}).
 
+{% quote If your programmers appear to be honest workaholics you may get lucky and get something done %}
+
 This is what a monthly T&M invoice will look like. You will pay for
 the time spent by programmers pretending to be working on your project.
 Well, as I said above, some of them will occasionally do something useful,
-but overall statistics tell us that most of that time will be wasted.
+but overall
+[statistics]({% pst 2014/apr/2014-04-11-cost-of-loc %})
+tell us that most of that time will be wasted.
 
 No matter how good or bad the code written during that month &mdash; you still have
 to pay the bill. How many more invoices you will get until the

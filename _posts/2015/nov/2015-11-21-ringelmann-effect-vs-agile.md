@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ringelmann Effect vs. Agile"
-date: 2015-11-20
+date: 2015-11-21
 place: Berlin, Germany
 tags: agile management
 description:
@@ -17,6 +17,7 @@ keywords:
 ---
 
 The [Ringelmann Effect](https://en.wikipedia.org/wiki/Ringelmann_effect)
+(a.k.a. [social loafing](https://en.wikipedia.org/wiki/Social_loafing))
 is basically about people experiencing **decreasing** productivity
 when working in groups. We're basically more productive when
 we work individually to achieve personal goals rather than being
@@ -26,6 +27,8 @@ years ago in 1913. Today, during my workshop in Berlin at
 to reproduce that experiment. It seems the French professor was right.
 
 <!--more-->
+
+{% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg 72 https://en.wikipedia.org/wiki/Max_Ringelmann %}
 
 Here is what we did. We created two groups with four people in each of them,
 all non-native English speakers. Then, both groups received the same
@@ -60,3 +63,7 @@ or individually.
 You can try to repeat this (or a similar experiment) in your team and check
 the results. Post them below in the comments; it would be interesting to see whether
 it does or doesn't work in your case.
+
+Now, my main question. If I understand it right, Agile promotes group
+responsibility and discourages **individualism**. How does it go along
+with the Ringelmann Effect? Any thoughts?

@@ -72,7 +72,8 @@ simple commands.
 
 ## Shell.Safe
 
-`Shell.Safe` decorates an instance of `Shell` and throws an exception
+`Shell.Safe` decorates an instance of `Shell` and
+[throws]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) an exception
 if the `exec` exit code is not equal to zero. This may be very useful when
 you want to make sure that your command executed successfully, but don't
 want to duplicate `if/throw` in many places of your code.

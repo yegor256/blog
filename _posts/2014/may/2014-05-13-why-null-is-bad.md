@@ -127,7 +127,8 @@ object or `NULL`. Otherwise, ambiguity is inevitable for a code reader.
 Thus, to keep semantic unambiguous, you should give longer names to functions.
 
 To get rid of this ambiguity, always return a real object,
-a null object or throw an exception.
+a null object or
+[throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) an exception.
 
 Some may argue that we sometimes have to return `NULL`,
 for the sake of performance. For example, method `get()` of

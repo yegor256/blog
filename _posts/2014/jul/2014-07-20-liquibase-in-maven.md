@@ -14,15 +14,6 @@ keywords:
   - liquibase maven example
   - liquibase maven integration test
   - liquibase maven mysql
-  - liquibase maven plugin
-  - liquibase maven postgresql
-  - liquibase maven repository
-  - liquibase maven test
-  - liquibase maven tutorial
-  - maven linux liquibase
-  - maven liquibase java test
-  - mysql maven liquibase
-  - postgresql maven
 ---
 
 [Liquibase](http://www.liquibase.org) is a migration management tool

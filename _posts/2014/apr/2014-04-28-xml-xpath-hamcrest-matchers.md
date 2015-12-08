@@ -58,7 +58,7 @@ public class FooTest {
 
 There are two alternatives to the above that I'm aware of, which are do almost the same thing:
 [xml-matchers](https://code.google.com/p/xml-matchers/) by
-[David Ehringer](http://blog.davidehringer.com/testing/xmlmatchers-hamcrest-matchers-xml/)
+David Ehringer
 and
 [`hasXPath()`](http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html#hasXPath%28java.lang.String%29)
 method in Hamcrest itself.

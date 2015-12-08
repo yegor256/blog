@@ -116,7 +116,7 @@ your changes frequently &mdash; that is how you tell Git about your work progres
 
 ## Conclusion
 
-Finally, look at [this list of open projects](http://www.teamed.io/portfolio.html)
+Finally, look at [this list of open projects](http://at.teamed.io/portfolio.html)
 completed by our team over the
 last few years. Every project has two metrics: Lines-of-Code and Hits-of-Code.
 It is interesting to see how relatively small projects have very big

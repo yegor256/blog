@@ -27,17 +27,11 @@ for the most recent news.
 }
 </style>
 
-<img src="/images/2015/buildstuff-2015-logo.png" class="talk" alt="BuildStuff 2015"/>
-**How Do You Talk To Your Microservice?**<br/>
-[BuildStuff 2015](http://buildstuff.com.ua/)<br/>
-Kyiv, Ukraine<br/>
-23 November 2015
-
-<img src="/images/2015/devopsdays-2015-logo.png" class="talk" alt="DevOpsDays 2015 Warsaw"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[DevOpsDays Warsaw 2015](http://devopsdays.pl/)<br/>
-Warsaw, Poland<br/>
-24-25 November 2015
+<img src="/images/2016/devnexus-2016-logo.png" class="talk" alt="DevNexus 2015"/>
+**Talk To Your Microservice Via a Chat Bot, not UI**<br/>
+[DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko)<br/>
+Atlanta, USA<br/>
+16 February 2016
 
 <img src="/images/2015/developerweek-2015-logo.png" class="talk" alt="DeveloperWeek 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
@@ -53,15 +47,32 @@ Olomouc, Czech Republic<br/>
 
 <hr/>
 
-**What keeps us motivated and why we get lazy**;
+"Continuous Integration May Have Negative Effects"s;
+[DevOpsDays Warsaw 2015](http://devopsdays.pl/);
+Warsaw, Poland;
+24-25 November 2015;
+[slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead);
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208114809057924)
+
+"How Do You Talk To Your Microservice?";
+[BuildStuff 2015](http://buildstuff.com.ua/);
+Kyiv, Ukraine;
+23 November 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360);
+[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice);
+[video](https://www.youtube.com/watch?v=jUil-aTImgU)
+
+"What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
-19-20 November 2015
+19-20 November 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208081948956442)
 
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
 Kyiv, Ukraine;
 19 September 2015;
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10207965398482753);
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 
 "CI is DEAD. Or is it?!";

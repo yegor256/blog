@@ -14,10 +14,6 @@ keywords:
   - nosql auto increment
   - auto increment online
   - cloud autoincrement counter
-  - cloud counter
-  - auto-increment cloud
-  - atomic counters online
-  - online atomic counter
 ---
 
 {% badge /images/2014/04/dynamodb-logo.png 150 %}

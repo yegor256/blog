@@ -71,7 +71,8 @@ when all dependencies are resolved and the code looks better, try to
 get back to it again. If you still see issues, create new dependencies.
 Keep doing this until the code in front of you is clean and easy to fix.
 
-Don't be a hero &mdash; don't rush into fixing the bad code you inherited. Think
+Don't be a hero &mdash; don't rush into fixing the
+[bad code]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}) you inherited. Think
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Remember that your first and most important responsibility as
 a disciplined engineer is to help the project **reveal** maintainability issues.

@@ -124,7 +124,7 @@ $(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
         if (id) {
-          $element.append(
+          $element.attr('name', id).append(
             $('<a/>').addClass('link')
               .attr('href', '#' + id)
               .append('<i class="icon icon-link notranslate"></i>')

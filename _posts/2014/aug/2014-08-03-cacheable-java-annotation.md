@@ -13,7 +13,6 @@ keywords:
   - cache result of java method
   - java method caching
   - java cache method results
-  - java cache method calls
   - java method cache annotation
   - "@Cacheable"
 ---

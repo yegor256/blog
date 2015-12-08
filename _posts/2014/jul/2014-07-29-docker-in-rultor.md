@@ -14,8 +14,6 @@ keywords:
   - jenkins docker
   - docker builds ci
   - unit tests in docker
-  - docker container continuous integration
-  - docker devops
 ---
 
 {% badge http://doc.rultor.com/images/docker-logo.png 100 http://www.docker.io %}

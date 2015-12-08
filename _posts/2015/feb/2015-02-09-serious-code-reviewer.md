@@ -68,7 +68,8 @@ be a good team player, right? Wrong!
 
 As I've [mentioned before]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}), a professional
 team player understands his or her personal role in a project and doesn't cover
-anyone's ass. If the rejection of bad code delays the release, that's
+anyone's ass. If the rejection of
+[bad code]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}) delays the release, that's
 the fault of its author. Your professional responsibility is to make this fault visible.
 That's how you help the team learn and improve.
 

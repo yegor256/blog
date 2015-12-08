@@ -16,16 +16,6 @@ keywords:
   - s3 java api example
   - s3 java adapter
   - s3 java object-oriented
-  - s3 java read write text object
-  - s3 java simple read write
-  - s3 amazon java read
-  - s3 amazon java list objects
-  - amazon java object-oriented
-  - object-oriented java s3
-  - s3 adapter java
-  - aws s3 upload java
-  - aws s3 download java
-  -
 ---
 
 {% badge /images/2014/05/s3-logo.png 150 %}
@@ -110,7 +100,8 @@ as interfaces, they can easily be extended through encapsulation
 ([Decorator Pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
 
 For example, you want your code to retry S3 object read operations
-a few times before giving up and throwing an `IOException`
+a few times before giving up and
+[throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) an `IOException`
 (by the way, this is a very good practice when working with web services).
 So, you want all your S3 reading operations to be redone a few times
 if first attempts fail.

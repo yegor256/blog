@@ -13,11 +13,6 @@ keywords:
   - best practice string concatenation
   - how to avoid string concatenation
   - replacement of string concatenation
-  - alternative of string concatenation
-  - string concatenation is evil
-  - string concatenation is a bad practice
-  - string.format vs concatenation
-  - formatter vs concatenation
 ---
 
 This is "string concatenation", and it is a bad practice:

@@ -15,10 +15,6 @@ keywords:
   - java read manifest.mf
   - manifest files java
   - how to read manifest.mf
-  - what manifest.mf is for
-  - purpose of manifest.mf
-  - reading manifest.mf from web application
-  - webapp read manifest.mf
 ---
 
 {% badge http://img.jcabi.com/logo-square.svg 64 http://manifests.jcabi.com %}

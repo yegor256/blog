@@ -179,7 +179,7 @@ The owner of the thread asked us to stop,
 `Thread.sleep()` detected that request,
 removed it, and threw `InterruptedException`. If you call `Thread.sleep()`,
 again, it will not know anything about that interruption request and will
-not throw anything.
+not [throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) anything.
 
 See what I'm getting at? It's very important not to lose that
 `InterruptedException`. We can't just swallow it and move on. That would
@@ -203,7 +203,8 @@ there, and the thread will remain alive. The owner of the thread will be disappo
 
 We have to inform the higher level that we just caught an interruption
 request. We can't just throw a runtime exception. Such behavior would
-be too irresponsible. The entire thread received an interruption request,
+be too [irresponsible]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
+The entire thread received an interruption request,
 and we merely swallow it and convert it into a `RuntimeException`.
 We can't treat such a serious situation so loosely.
 

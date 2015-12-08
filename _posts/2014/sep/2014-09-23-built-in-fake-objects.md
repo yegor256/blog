@@ -14,9 +14,6 @@ keywords:
   - best practices of mocking
   - java mocking
   - java mock framework
-  - why mocking is evil
-  - mockito java
-  - java mockito example
 categories: jcg
 ---
 

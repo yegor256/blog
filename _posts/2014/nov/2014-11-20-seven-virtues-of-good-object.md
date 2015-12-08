@@ -359,7 +359,9 @@ create another class that will inherit his properties. This is not allowed
 because of that `final` modifier. The only way to extend such a final class
 is through decoration of his children. Let's say I have the class `HTTPStatus` (see
 above), and I don't like him. Well, I like him, but he's not powerful enough
-for me. I want him to throw an exception if HTTP status is over 400. I want
+for me. I want him to
+[throw]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
+an exception if HTTP status is over 400. I want
 his method, `read()`, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:
 

@@ -19,12 +19,21 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube DEqcn4-freM video-left %}
+[January 6, 2015](https://plus.google.com/u/0/events/c2l3nfnkkmfg01e2gvoks028a1c)
+**Why ORM is an Anti-Pattern?**
+We'll discuss why Object-Relational Mapping (ORM) is actually
+an anti-pattern and its usage must be replaced with
+SQL-speaking objects. The discussion will be based on
+this blog post:
+[ORM Is an Offensive Anti-Pattern]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
+
 {% youtube oV6Utb5Jows video-left %}
 [December 1, 2015](https://plus.google.com/u/0/events/c6pfo5ku07kd5a92dgrmj5b1o6g)
 **Dependency Injection Container is a Bad Idea**
-We'll discuss why Dependency Injection (DI) containers are not
+We discussed why Dependency Injection (DI) containers were not
 a good idea in object-oriented programming and what they
-should be replaced with. The discussion will mostly be based
+should be replaced with. The discussion was mostly be based
 on
 [DI Containers are Code Polluters]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 

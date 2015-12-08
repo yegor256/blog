@@ -15,8 +15,6 @@ keywords:
   - maven central release
   - fast release to maven central
   - publish from github to maven central
-  - upload to maven central
-  - publishing to maven central with sonatype
 categories: jcg
 ---
 

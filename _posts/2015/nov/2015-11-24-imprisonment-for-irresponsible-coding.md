@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Imprisonment for Irresponsible Coding!"
-date: 2015-11-20
+date: 2015-11-24
 place: Palo Alto, CA
 tags: quality
 description:
@@ -46,4 +46,4 @@ aren't those Java guys in **jail** yet? :)
 We need a law against irresponsible coding!
 
 How about two months of imprisonment for a
-[singleton](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)?
+[Singleton](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)?

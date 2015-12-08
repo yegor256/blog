@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Throwing an Exception Without Proper Context Is a Bad Habit"
-date: 2015-10-26
+date: 2015-12-01
 place: San Jose, CA
 tags: java
+category: jcg
 description:
   One of the most helpful things you can do is add a contextual
   message to an exception on each re-throw &dash; and
@@ -27,6 +28,8 @@ I either 1) don't re-throw or 2) re-throw without providing context.
 Both are wrong.
 
 <!--more-->
+
+{% picture /images/2015/12/four-rooms.jpg 0 Four Rooms (1995) by Allison Anders et al. %}
 
 This is how the code may look:
 

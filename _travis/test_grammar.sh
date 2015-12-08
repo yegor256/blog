@@ -1,5 +1,7 @@
 #!/bin/bash
 
+travis_retry sudo apt-get install -y aspell
+
 errors=0
 for f in $(find _site -name '*.html'); do
   echo -n "checking grammar in $f... "
