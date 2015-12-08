@@ -10,12 +10,165 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Temporal Coupling Between Method Calls</title>
+      <link>http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</link>
+      <description>&lt;p&gt;Temporal coupling happens between sequential method calls
+when they must stay in a particular order. This is inevitable
+in imperative programming, but we can reduce the negative effect
+of it just by turning those static procedures into functions. Take
+a look at this example.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/12/blueberry.jpg' style='width:600px;' alt='Blueberry (2004) by Jan Kounen'/&gt;&lt;figcaption&gt;Blueberry (2004) by Jan Kounen&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is the code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What do you think about that? I believe it&amp;#39;s clear what &lt;code&gt;names()&lt;/code&gt; is doing &amp;mdash;
+creating a list of names. In order to avoid duplication, there is a supplementary
+&lt;em&gt;procedure&lt;/em&gt;, &lt;code&gt;append()&lt;/code&gt;, which converts an item to lowercase and adds it to the
+list.&lt;/p&gt;
+
+&lt;p&gt;This is poor design.&lt;/p&gt;
+
+&lt;p&gt;It is a &lt;strong&gt;procedural&lt;/strong&gt; design, and there is &lt;strong&gt;temporal coupling&lt;/strong&gt; between
+lines in method &lt;code&gt;names()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let me first show you a better (though not the best!) design,
+then I will try to explain its benefits:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;An ideal design for method &lt;code&gt;with()&lt;/code&gt; would create a new instance of
+&lt;code&gt;List&lt;/code&gt;, populate it through &lt;code&gt;addAll(list)&lt;/code&gt;, then &lt;code&gt;add(item)&lt;/code&gt; to it, and
+finally return. That would be perfectly
+&lt;a href=&quot;http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable&lt;/a&gt;,
+but slow.&lt;/p&gt;
+
+&lt;p&gt;So, what is wrong with this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It looks perfectly clean, doesn&amp;#39;t it? Instantiate a list, append two items to it, and
+return it. Yes, it is clean &amp;mdash; for now. Because we remember what &lt;code&gt;append()&lt;/code&gt; is
+doing. In a few months, we&amp;#39;ll get back to this code, and it will look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Is it so clear now that &lt;code&gt;append()&lt;/code&gt; is actually adding &lt;code&gt;&amp;quot;Jeff&amp;quot;&lt;/code&gt; to &lt;code&gt;list&lt;/code&gt;? What
+will happen if I remove that line? Will it affect the result being
+returned in the last line? I don&amp;#39;t know. I need to &lt;strong&gt;check&lt;/strong&gt; the body of method
+&lt;code&gt;append()&lt;/code&gt; to make sure.&lt;/p&gt;
+
+&lt;p&gt;Also, how about returning &lt;code&gt;list&lt;/code&gt; first and calling &lt;code&gt;append()&lt;/code&gt; afterwards? This
+is what possible &amp;quot;refactoring&amp;quot; may do to our code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* something */&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;First of all, we return &lt;code&gt;list&lt;/code&gt; too early, when it is not ready. But did anyone
+tell me that these two calls to &lt;code&gt;append()&lt;/code&gt; must happen before &lt;code&gt;return list&lt;/code&gt;?
+Second, we changed the order of &lt;code&gt;append()&lt;/code&gt; calls. Again, did anyone tell me
+that it&amp;#39;s important to call them in that particular order?&lt;/p&gt;
+
+&lt;p&gt;Nobody. Nowhere. This is called &lt;strong&gt;temporal coupling&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our lines are &lt;strong&gt;coupled&lt;/strong&gt; together. They must stay in this particular order, but the
+knowledge about that order is hidden. It&amp;#39;s easy to destroy
+the order, and our compiler won&amp;#39;t be able to catch us.&lt;/p&gt;
+
+&lt;p&gt;To the contrary, this design doesn&amp;#39;t have any &amp;quot;order&amp;quot;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It just &lt;strong&gt;returns&lt;/strong&gt; a list, which is constructed by a few calls to the &lt;code&gt;with()&lt;/code&gt;
+method. It is a single line instead of four.&lt;/p&gt;
+
+&lt;p&gt;As &lt;a href=&quot;/2015/08/18/multiple-return-statements-in-oop.html&quot;&gt;discussed before&lt;/a&gt;,
+an ideal method in OOP must have just a single statement, and this statement is
+&lt;code&gt;return&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The same is true about validation. For example, this code is bad:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;checkIfListStillHasSpace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;While this one is much better:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withEnoughSpace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See the difference?&lt;/p&gt;
+
+&lt;p&gt;And, of course, an ideal approach would be to use
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
+instead of these ugly static methods. But if it&amp;#39;s not possible for
+some reason, just don&amp;#39;t make those static methods look like procedures.
+Make sure they always return results, which become arguments to
+further calls.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</guid>
+      <dc:date>2015-12-08T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Throwing an Exception Without Proper Context Is a Bad Habit</title>
       <link>http://www.yegor256.com/2015/12/01/rethrow-exceptions.html</link>
@@ -1529,6 +1682,8 @@ wealthy villages, rich peasants, and tables full of food.&lt;/p&gt;
 &lt;p&gt;But isn&amp;#39;t it quite similar to what I&amp;#39;ve just seen a few days ago,
 produced and directed in 2015 by &lt;a href=&quot;http://www.imdb.com/name/nm0000631/&quot;&gt;Ridley Scott&lt;/a&gt;?&lt;/p&gt;
 
+&lt;figure class='badge'&gt;&lt;a href='https://en.wikipedia.org/wiki/Soviet_Union'&gt;&lt;img src='/images/2015/10/ussr-symbol.jpg' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
 &lt;p&gt;In 1949, the goal of Soviet propaganda was to convince people that
 their personal situations with a lack of food and lack of future were
 just their local, personal &lt;strong&gt;exceptions&lt;/strong&gt; to a more general rule. And that
@@ -1596,6 +1751,8 @@ Why is he giving us a false picture of reality?
 Intentionally false. He knows better than I do how real management
 works in real-life organizations. Hollywood is not much different
 than Silicon Valley in this aspect. So, why is he lying?&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='https://en.wikipedia.org/wiki/Nazi_Germany'&gt;&lt;img src='/images/2015/10/third-reich-symbol.jpg' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Why was &lt;a href=&quot;https://en.wikipedia.org/wiki/Joseph_Goebbels&quot;&gt;Joseph Goebbels&lt;/a&gt;,
 a minister of propaganda in the Third Reich,
@@ -2044,92 +2201,6 @@ you don&amp;#39;t fix it with a mayonnaise. It won&amp;#39;t help, but only make
       <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/09/29/mayonnaise.html</guid>
       <dc:date>2015-09-29T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Are You a Micromanager?</title>
-      <link>http://www.yegor256.com/2015/09/22/micromanagement.html</link>
-      <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Micromanagement&quot;&gt;Micromanagement&lt;/a&gt;,
-according to Wikipedia at the time of this writing, is &amp;quot;a management style
-whereby a manager closely &lt;strong&gt;observes&lt;/strong&gt; or &lt;strong&gt;controls&lt;/strong&gt; the work of subordinates
-or employees.&amp;quot; Everyone knows micromanagement is evil, but what
-could be wrong with closely observing or controlling people&amp;#39;s work? Nothing.
-Observing and controlling is not what&amp;#39;s so bad about micromanagement. It
-is something completely different.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/09/office-space.jpg' style='width:600px;' alt='Office Space (1999) by Mike Judge'/&gt;&lt;figcaption&gt;Office Space (1999) by Mike Judge&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are &lt;a href=&quot;https://www.google.com/search?q=micromanagement&quot;&gt;tons of articles&lt;/a&gt;
-about micromanagement. Most of them emphasize that the &amp;quot;micro&amp;quot; prefix prescribes
-the size of the tasks being managed, meaning a good manager doesn&amp;#39;t care
-about the small stuff while a micromanager employs
-&amp;quot;excessive control or attention to details&amp;quot;, as
-&lt;a href=&quot;http://www.merriam-webster.com/dictionary/micromanage&quot;&gt;Merriam-Webster&lt;/a&gt; says.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;A good manager declares what needs to be done, never telling me how I must achieve it&lt;/aside&gt;
-
-&lt;p&gt;It seems that in order to become a good manager, one should just
-stop paying attention to details. Huh?
-What could be worse than a manager who doesn&amp;#39;t pay attention to details?&lt;/p&gt;
-
-&lt;p&gt;Micromanagement has nothing to do with the details observed or the amount
-of control a manager exerts over subordinates. Instead, it is all about
-&lt;strong&gt;how&lt;/strong&gt; the details are observed and control is exercised. A micromanager
-gives instructions while a good manager defines goals and rules.&lt;/p&gt;
-
-&lt;p&gt;A micromanager defines &lt;strong&gt;algorithms&lt;/strong&gt; for achieving results and insists
-on them being implemented according to his or her will. This is what
-a micromanager would sound like:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;- Could you please stop what you&amp;#39;re doing now
-  and install Nginx on a new server? I beg you,
-  don&amp;#39;t do anything else until it&amp;#39;s done.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how a good manager would delegate a similar task:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;- Hey, the server with Nginx configured must
-  be up and running by 6 p.m. I&amp;#39;m counting on you.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Pay attention to how polite our micromanager is and how rude the good manager is.
-However, it&amp;#39;s obvious that the first one is extremely annoying while
-the second doesn&amp;#39;t irritate us at all. Because it&amp;#39;s all about how
-the task is defined &amp;mdash; as an &lt;strong&gt;algorithm&lt;/strong&gt; or as a &lt;strong&gt;goal with rules&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A micromanager treats me as a dumb executor of his or her will. A micromanager
-is &lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot;&gt;&lt;strong&gt;imperative&lt;/strong&gt;&lt;/a&gt;.
-A good manager, on the other hand, is
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Declarative_programming&quot;&gt;&lt;strong&gt;declarative&lt;/strong&gt;&lt;/a&gt;. A good manager
-declares what needs to be done, never telling me how I must achieve it.&lt;/p&gt;
-
-&lt;p&gt;By the way, there is &amp;mdash; surprisingly &amp;mdash; a lot in common between management and
-object-oriented programming :) Good object-oriented programming is
-&lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;also declarative&lt;/a&gt;,
-not imperative.&lt;/p&gt;
-
-&lt;p&gt;Thus, this &amp;quot;micro&amp;quot; prefix is not really about the size of the tasks a manager
-keeps under control. It is about what a manager wants to see inside them &amp;mdash;
-a black box or a glass box under a &lt;strong&gt;microscope&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;A good manager pays extreme attention to defining quality standards for my work&lt;/aside&gt;
-
-&lt;p&gt;A good manager doesn&amp;#39;t care about what I&amp;#39;m doing now, what tasks I&amp;#39;m working on,
-or what my plans, problems, and risks are. Instead, a good manager cares about my
-&lt;strong&gt;results&lt;/strong&gt;, to a very specific level of details. A good manager pays extreme
-attention to defining quality standards for my work, clearly explaining
-expectations to me, and explicitly defining the rules of failure and success. A good
-manager makes the path ahead of me very clear. With a good manager, I know
-exactly what results are expected and what will happen if I fail or
-succeed.&lt;/p&gt;
-
-&lt;p&gt;Thus, to be a good manager, you should never tell your subordinates &lt;strong&gt;how&lt;/strong&gt;
-to complete their tasks. Instead, you should define &lt;strong&gt;what&lt;/strong&gt; solutions and results
-are expected. And, of course, what will happen in the case of success or failure.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/09/22/micromanagement.html</guid>
-      <dc:date>2015-09-22T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
