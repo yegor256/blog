@@ -17,7 +17,8 @@ exclude_from_search: true
 
 I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256)
-for the most recent news.
+for the most recent news. Also, I can give a lecture in your office,
+here is [how](/lectures.html).
 
 <style>
 .talk {

@@ -16,13 +16,15 @@ keywords:
   - sillicon valley
 ---
 
+{% badge http://www.seedramp.com/logo.jpg 96 http://www.seedramp.com %}
+
 We're starting a new thing, a seed fund. Its name is
-[SeedRamp](http://www.seedramp.com). The formula is simple. You schedule
+[SeedRamp](http://www.seedramp.com). The formula is simple: You schedule
 an interview, we have a one-hour conversation, you present me your
 startup idea, we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
 is made right there. It's something similar to angel investments, but the
-amount is even smaller &mdash; less than $20K.
+amount is even smaller &mdash; less than **$20K**.
 
 <!--more-->
 
