@@ -42,7 +42,7 @@ San Francisco, USA<br/>
 
 <img src="/images/2016/agilia-conference-2016.png" class="talk" alt="Agilia Conference 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
-[Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/)<br/>
+[Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
 Olomouc, Czech Republic<br/>
 4-8 April 2016
 
