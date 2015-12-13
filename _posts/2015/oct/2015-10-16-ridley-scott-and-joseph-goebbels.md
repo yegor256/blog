@@ -107,9 +107,9 @@ I'm sure you get the point.
 
 {% picture http://www.popsci.com/sites/popsci.com/files/styles/large_1x_/public/psc1015_mt_088.jpg 0 Shooting The Martian (by popsci.com) %}
 
-So, why is Ridley Scott lying to us?
+So, why is Ridley Scott **lying** to us?
 Why is he giving us a false picture of reality?
-Intentionally false. He knows better than I do how real management
+Intentionally **false**. He knows better than I do how real management
 works in real-life organizations. Hollywood is not much different
 than Silicon Valley in this aspect. So, why is he lying?
 
@@ -119,10 +119,10 @@ Why was [Joseph Goebbels](https://en.wikipedia.org/wiki/Joseph_Goebbels),
 a minister of propaganda in the Third Reich,
 lying to the German people?
 
-Because that's what we like to hear.
+Because that's what we like to hear, **unfortunately**.
 
-We don't want to know the truth. We didn't want to know about
-Nazi war crimes &mdash; so Joseph Goebbels built a fake reality for us.
+It is sad, but we don't want to know the truth. We didn't want to know about
+Nazi war crimes &mdash; so Joseph Goebbels built a **fake** reality for us.
 We don't want to know about the true principles of management &mdash;
 so Ridley Scott built fake ones for us.
 
