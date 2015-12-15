@@ -2,13 +2,12 @@ require 'w3c_validators'
 
 include W3CValidators
 
-# temporary off, something is wrong with this ruby lib
-exit
-
 @validator = MarkupValidator.new
 file = ARGV[0]
+puts "#{file}"
 results = ''
 attempt = 0
+
 3.times do
   begin
     results = @validator.validate_file(file)
