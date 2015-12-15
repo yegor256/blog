@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Good Programmers Don't Work for Equity"
-date: 2015-11-10
+date: 2015-12-20
 place: Palo Alto, CA
 tags: business
 description:
@@ -41,13 +41,15 @@ for the work of a good programmer?
 I will create a product for you, but you will most certainly
 fail. You **already** failed. You failed to find initial
 investment for the business, to cover its initial expenses.
-Why will you succeed after the product is ready?
+Why do you think you will you succeed after the product is ready?
 
-A good programmer will never work for equity. Not because a good
-programmer is greedy, or doesn't want to risk, or doesn't believe
+The point being is that a good programmer will **never**
+work for equity. Not because a good programmer is greedy,
+or doesn't want to risk, or doesn't believe
 in new ideas. Not at all.
 
 A good programmer wants to work with a **good** entrepreneur. And
-a good entrepreneur knows how to find money.
+a good entrepreneur knows how to find money. That's the definition
+of a decent entrepreneur.
 
 Period.
