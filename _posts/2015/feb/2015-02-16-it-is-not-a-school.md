@@ -48,7 +48,9 @@ we enjoy it, each business looks at it completely differently.
 The project needs us to produce classes, lines of code, methods, functions,
 files, and features. Then, the project can convert them into happy customers,
 which will give us something back &mdash; usually cash. Finally, the project will
-share that cash among us, investors, and the government.
+share that cash among us,
+[investors]({% pst 2015/dec/2015-12-16-investors-are-too-scared %}),
+and the government.
 
 A properly planned and managed project acquires the best resources its
 budget can afford and then relies on their quality. A programmer who doesn't
