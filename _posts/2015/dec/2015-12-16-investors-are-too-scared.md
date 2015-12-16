@@ -165,4 +165,4 @@ startup. You decide how much, but it has to be enough to make us
 interested. It all depends on your situation. A few percent, I'd guess.
 
 We're planning to host our first interviews in the middle of January 2016.
-You can schedule them right here:
+You can schedule them [right here](https://calendly.com/yegor256/seedramp).
