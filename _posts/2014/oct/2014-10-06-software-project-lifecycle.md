@@ -122,8 +122,9 @@ his/her answers, system analysts modify the `README` document.
 Sometimes we're using [Requs]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %}).
 
 At the end of the Thinking phase we estimate the size of the project,
-in lines of code. Using lines of code, we can roughly
-[estimate a budget](http://www.teamed.io/calculator.html).
+in [Hits of Code]({% pst 2014/nov/2014-11-14-hits-of-code %}).
+Using this HoC metric, we can roughly
+[estimate a budget](http://at.teamed.io/calculator.html).
 
 ## Building
 
@@ -175,7 +176,8 @@ And [bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) in our pr
 We encourage everybody to report as many bugs as possible. This is how
 we achieve high quality.
 
-That is why the phase is called Fixing, after all. We are reporting bugs and fixing
+That is why the phase is called Fixing, after all. We are reporting bugs and
+[fixing]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %})
 them. Hundreds of bugs. Sometimes thousands. The product
 grows in front of our very eyes, because after every bug fix
 we re-deploy the entire product to the production platform.
@@ -191,7 +193,9 @@ Also important to mention is that all communications with the product owner
 and between programmers happen only through GitHub issues. We
 [never use any chats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}),
 Skype, emails or conferencing software. We communicate
-only through tickets and comments in GitHub.
+only through tickets and
+[comments]({% pst 2015/nov/2015-11-03-chatbot-better-than-ui-for-microservice %})
+in GitHub.
 
 ## Using
 
