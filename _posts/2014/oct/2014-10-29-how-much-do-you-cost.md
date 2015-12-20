@@ -323,4 +323,5 @@ start writing some code, we measure your performance and you may get
 completely different numbers, see
 [How Hourly Rate Is Calculated]({% pst 2014/apr/2014-04-20-how-hourly-rate-is-calculated %})
 
-BTW, illustrations you see above are created by Andreea Mironiuc.
+BTW, illustrations you see above are created by
+[Andreea Mironiuc](http://andreeamironiuc.com/).
