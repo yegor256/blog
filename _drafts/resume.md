@@ -124,22 +124,54 @@ so difficult to create it.
 ## Certificates
 
 Some may say that they are not important. Maybe so. But your resume must have
-them. Some of them are not so difficult
+them. Some of them are not so difficult to get. Just a few weeks of study,
+a few hundred dollars and you are not just a Java programmer, but
+a [certified](https://en.wikipedia.org/wiki/Oracle_Certification_Program) one.
+There are not so many of them out there. There are millions of Java coders
+in the world, but only a few percents of them are certified. No matter, whether
+you think it's important or not &mdash; get that certifications.
 
-## sound numbers
+As many as you like. But stay away from
+[BrainBench](https://www.brainbench.com/) and similar ones. Well,
+you can get certified there, but don't put them into your resume. That will
+only demonstrate that you are proud of a very questional achievement. Not
+a good sign.
 
-## sound company names
+## Sound Names and Numbers
 
-## blog
+It's a dangerous trick, be careful. Here is how it works. You have to go through
+your entire professional history and find well-known names or big numbers.
+For example, ten years ago I was helping a startup create a software, which
+they were subscribing IBM to. They managed to get some tracking and in
+two months IBM decided not to use them. It's a true story. I can put something
+like this into my resume: "wrote software for IBM". Am I lying? Not really.
+If they ask me what exactly I did for IBM, I will explain. In most cases, they
+won't ask. They will just buy this big name and put my resume on top of
+others.
 
-## education
+The same you can do with numbers. There is another true story. A few years ago,
+I was helping a company configure continuous integration pipeline. Not a big
+deal, but the company was serving over 5 million hits per day on their website.
+It's a big number. I had nothing to do with this big web traffic, but I was
+in that company for a few months. So, I may say in my resume:
+"configured delivery pipeline for 5M+/hits-per-day web store". If they
+ask me for details, I will be able to give them. I'm not lying.
+
+Use this technique carefully, never lie. But do it. Don't be scared.
+Your resume needs big names and numbers.
+
+## Blog
+
+## Education
 
 ## ACM, IEEE memberships
 
-## carrer history (experience)
 
-## hobbies
 
-## layout/graphics
+## Carrer history (experience)
 
-## example
+## Hobbies
+
+## Layout/Graphics
+
+## Example
