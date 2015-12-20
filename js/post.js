@@ -29,15 +29,16 @@ $(
           }
         }
       );
-      $.getJSON(
-        'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + url,
-        function(json) {
-          var count = json.count;
-          if (count > 0) {
-            $('.count-twitter').html(number(count)).fadeIn();
-          }
-        }
-      );
+      // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
+      // $.getJSON(
+      //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + url,
+      //   function(json) {
+      //     var count = json.count;
+      //     if (count > 0) {
+      //       $('.count-twitter').html(number(count)).fadeIn();
+      //     }
+      //   }
+      // );
       $.getJSON(
         'https://api.facebook.com/method/links.getStats?format=json&urls=' + url,
         function(json) {
