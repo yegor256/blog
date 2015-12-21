@@ -276,7 +276,7 @@ release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean deploy --settings /home/r/settings.xml
+    mvn clean deploy -Pjcabi --settings /home/r/settings.xml
 {% endhighlight %}
 
 You can compare your file with live Rultor

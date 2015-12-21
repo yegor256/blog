@@ -34,7 +34,7 @@ takes just a few seconds of your time.
 
 <!--more-->
 
-<p style="border:1px solid gray;padding:1em;">
+<p style="border:1px solid red;padding:1em;color:red;">
 Since CloudBees is
 <a href="http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
 by the end of December, 2014,
