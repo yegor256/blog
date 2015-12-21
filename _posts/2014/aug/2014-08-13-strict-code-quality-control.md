@@ -170,6 +170,8 @@ you'll learn [a lot]({% pst 2015/jan/2015-01-21-if-then-throw-else %}) of
 [new things]({% pst 2014/nov/2014-11-03-empty-line-code-smell %})
 about writing quality Java code.
 
+{% quote You are getting free lessons with every new line of code you write %}
+
 On top of that though, I would actually say that you are getting free lessons with every
 new line of code you write. And the teacher is a software, written
 by hundreds of Java developers, for the last ten years. Qulice just
