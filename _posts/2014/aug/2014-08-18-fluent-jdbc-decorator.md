@@ -29,7 +29,8 @@ String name = new JdbcSession(source)
 
 Simple and straight forward, isn't it? The library
 simplifies interaction with relational databases
-via JDBC, avoiding the need to use ORM-s.
+via JDBC, avoiding the need to use
+[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
 
 <!--more-->
 

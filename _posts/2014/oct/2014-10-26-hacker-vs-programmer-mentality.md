@@ -89,11 +89,11 @@ I would highlight these qualities of a good
 [hacker](https://en.wikipedia.org/wiki/Hacker_%28computer_security%29):
 
  * uses all known (and unknown) features of a programming language
- * discriminates others as hackers and newbies and writes for hackers
- * gets bored and frustrated by rules and standards
+ * discriminates others as hackers and newbies and codes for hackers
+ * gets bored and frustrated by [rules]({% pst 2015/oct/2015-10-13-competition-without-rules %}) and [standards]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
  * doesn't write unit tests &mdash; juniors will write them later
  * enjoys fire-fighting &mdash; that's how his talent manifests
- * prefers talks over docs, since they are much more fun
+ * prefers talks over [docs]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), since they are much more fun
  * hates to see his code being modified by someone else
  * likes to dedicate himself to one project at a time
 

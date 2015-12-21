@@ -54,12 +54,14 @@ and, then, [Rultor will merge]({% pst 2014/jul/2014-07-24-rultor-automated-mergi
 your changes into `master`. Before actually merging, though, [Rultor](http://www.rultor.com) will run an
 automated build script to make sure that your branch doesn't break it.
 
+{% quote If your changes break any of Qulice's rules, your entire branch gets rejected %}
+
 As a static analysis tool, Qulice is just one of the steps in the automated
 build script. It is actually a Maven plugin and we automate Java builds
 with Maven 3x. Thus, if your changes break any of Qulice's rules,
 your entire branch gets rejected.
 
-Your first reaction - I've seen it hundreds of times - will be negative.
+Your first reaction &mdash; I've seen it hundreds of times &mdash; will be negative.
 You may actually become frustrated enough to leave the project immediately.
 You may say something like this (I'm quoting real life stories):
 
@@ -100,7 +102,7 @@ Why is it good? Read on.
 
 Let's take one simple rule as an example. Here is a piece of Java
 code that Qulice would complain about
-(due to  the [`DesignForExtension`](http://checkstyle.sourceforge.net/config_design.html#DesignForExtension) rule from Checkstyle):
+(due to the [`DesignForExtension`](http://checkstyle.sourceforge.net/config_design.html#DesignForExtension) rule from Checkstyle):
 
 {% highlight java %}
 public class Employee {
@@ -167,6 +169,8 @@ in a project that raises its quality bar as high as Qulice asks. Yes,
 you'll learn [a lot]({% pst 2015/jan/2015-01-21-if-then-throw-else %}) of
 [new things]({% pst 2014/nov/2014-11-03-empty-line-code-smell %})
 about writing quality Java code.
+
+{% quote You are getting free lessons with every new line of code you write %}
 
 On top of that though, I would actually say that you are getting free lessons with every
 new line of code you write. And the teacher is a software, written

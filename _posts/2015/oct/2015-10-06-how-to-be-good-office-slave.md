@@ -119,6 +119,19 @@ colleagues, let yourself go. Tell them who you think is the weakest part
 of the team and what you would do with him or her if you were the boss.
 Don't restrict yourself, but always make sure there are only a few people who can hear you.
 
+**Never Ask for Vacation**.
+When the time is right, your boss will inform you that you can go on vacation.
+He is the one who knows when it is suitable for the company to have you away
+for a few days. It can't be in the middle of a project obviously,
+nor in the beginning, and definitely not near the end of it. It is usually
+matched with popular vacation periods in a year (e.g. Christmas, New Year).
+That might be a bit more expensive for you, but reward of not betraying
+the company is priceless. If you do make a mistake of asking for a vacation,
+try to make it short. The worst thing you can do while trying to extend
+vacation days is to mention that you could "still work while out of the office" &mdash;
+that will immediately get you in a position where you don't need the office,
+hence the office doesn't need you.
+
 <hr/>
 
 If you follow all these rules, you won't be fired, ever. Well, until

@@ -86,20 +86,16 @@ It should be a simple document
 calls it a Staffing Management Plan) that helps me, as a team member,
 answer at least these basic questions:
 
- * How my personal results are measured?
+  * How my personal results are measured?
+  * Who gives me tasks and who do I report to?
+  * How should I resolve conflicts between tasks?
+  * What are my personal deadlines for every task?
+  * Do I have measurable quality expectations for my deliverables?
+  * How do my mistakes affect my performance grade?
 
- * Who gives me tasks and who do I report to?
-
- * How should I resolve conflicts between tasks?
-
- * What are my personal deadlines for every task?
-
- * Do I have measurable quality expectations for my deliverables?
-
- * How do my mistakes affect my performance grade?
-
-The ground rules document should be superior to your boss. If the document
-says that your results get an A+ grade, the boss should have no say. If she
+The [ground rules]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+document should be superior to your boss. If the document
+says that your results get an A+ grade, the boss should have **no say**. If she
 doesn't like you personally, it doesn't matter. You get an A+ grade, and you
 are the best. That's it.
 
@@ -110,7 +106,9 @@ scientific research says. Rewards will motivate
 the most cunning to take advantage of the most hard
 working and good-natured. Team spirit will suffer, big time.
 
-On the other hand, if you have that "ground rules" document and you
+{% quote Fair competition leads to a better cumulative result %}
+
+On the other hand, if you have that "[ground rules]({% pst 2015/oct/2015-10-13-competition-without-rules %})" document and you
 strictly follow it, giving monetary rewards to your workers will
 significantly increase their performance and motivation. They will
 know exactly what needs to be done to get the rewards, and they won't have
@@ -120,7 +118,8 @@ know exactly what needs to be done to improve. Fair competition
 will lead to a better cumulative result.
 
 Moreover, if your ground rules are strict and explicit, you can
-use not only rewards, but also punishments. And your team will gladly accept
+use not only rewards, but also punishments. And your team will
+[gladly]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) accept
 them, because they will help emphasize
 what (and who) works best and help get rid of the waste.
 

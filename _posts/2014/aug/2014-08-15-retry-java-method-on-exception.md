@@ -25,7 +25,11 @@ an exception. [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfai
 For example, if you're downloading the following web page:
 
 {% highlight java %}
-@RetryOnFailure(attempts = 3, delay = 10, unit = TimeUnit.SECONDS)
+@RetryOnFailure(
+  attempts = 3,
+  delay = 10,
+  unit = TimeUnit.SECONDS
+)
 public String load(URL url) {
   return url.openConnection().getContent();
 }
@@ -58,9 +62,9 @@ while (attempts++ < 3) {
 This approach may be very useful in the following situations
 (based on my experience):
 
- * Executing JDBC `SELECT` statements
+ * Executing [JDBC]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}) `SELECT` statements
 
- * Loading data from HTTP, S3, FTP, etc resources
+ * Loading data from HTTP, [S3]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}), FTP, etc resources
 
  * Uploading data over the network
 

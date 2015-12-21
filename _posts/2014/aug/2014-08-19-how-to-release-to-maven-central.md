@@ -23,7 +23,7 @@ a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in [GitHub issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
 
-{% figure /images/2014/08/github-ticket-80.png 600 %}
+{% figure /images/2014/08/github-ticket-80.jpg 600 %}
 
 As you see, I gave a command to [Rultor](http://www.rultor.com),
 and it released a new version to Maven central. I didn't do anything else.
@@ -276,7 +276,7 @@ release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean deploy --settings /home/r/settings.xml
+    mvn clean deploy -Pjcabi --settings /home/r/settings.xml
 {% endhighlight %}
 
 You can compare your file with live Rultor

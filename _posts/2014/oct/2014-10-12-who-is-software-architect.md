@@ -36,13 +36,15 @@ Absolutely wrong!
 
 <!--more-->
 
-{% youtube 0fuEgmibJc4 %}
+{% youtube 0fuEgmibJc4 video-left %}
 
 Obviously, an architect is usually someone who
 has the most knowledge, skills, experience, and authority. Of course,
 an architect usually knows more than others and is able to communicate
 his knowledge with diplomacy and pedagogy when required. An architect is usually
 one of the smartest guys on the team.
+
+{% quote An architect is the one who takes the blame for the quality %}
 
 This is not, however, what makes him/her an architect.
 
@@ -59,6 +61,8 @@ takes all the credit from happy customers, when the quality is good.
 
 This is what the team needs &mdash; someone personally responsible
 for the quality of the software being developed.
+
+{% quote The job of the PM is to make sure that every technical decision the architect makes is not doubted by anyone %}
 
 How this guy will delegate this responsibility to others is his job. Whether
 he will use his knowledge and skills, or quality control
@@ -94,7 +98,9 @@ in order to make your punishments productive you should give your
 architect full power in his actions. Let me reiterate: his decisions should be final.
 
 If you, as a project manager, are not happy with the quality of the product
-and the architect doesn't improve the situation, replace him. Downgrade him
+and the architect doesn't improve the situation,
+[replace]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+him. Downgrade him
 to a programmer and promote one of the programmers to an architect.
 But always remember that there can only be one architect in the team,
 and that his decisions are final.

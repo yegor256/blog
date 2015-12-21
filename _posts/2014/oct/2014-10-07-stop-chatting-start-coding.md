@@ -29,10 +29,13 @@ Only then, is his result appreciated and paid for.
 
 For most of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 this already sounds extreme.
-They are used to a traditional scheme of paying per hour
+They are used to a traditional scheme of paying
+[per hour]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 or per month. They immediately realize the benefits of XDSD, though,
 because for them this approach means that project
-funds are not wasted on activities that don't produce results.
+funds are
+[not wasted]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
+on activities that don't produce results.
 
 But that's not all.
 
@@ -49,9 +52,14 @@ Answering questions in Skype, Slack, or HipChat, or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.
 
+More about this philosophy here:
+[It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
+
 We don't use **any** (I mean it!) informal communication channels in
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
+
+{% quote Every hour spent by a team member is traceable to the line of code produced %}
 
 So, how do we resolve problems and share information?
 

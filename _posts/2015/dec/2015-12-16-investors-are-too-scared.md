@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Investors Are Cowards; We Are Not"
-date: 2015-12-11
+title: "Investors Are Too Scared"
+date: 2015-12-16
 place: Palo Alto, CA
 tags: startup
 description:
@@ -16,17 +16,17 @@ keywords:
   - silicon valley
 ---
 
-{% badge http://www.seedramp.com/logo.jpg 96 http://www.seedramp.com %}
-
 We're starting a new thing, a seed fund. Its name is
 [SeedRamp](http://www.seedramp.com). The formula is simple: You schedule
 an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
 is made right there. It's something similar to angel investment, but the
-amount is smaller &mdash; less than **$20K**.
+amount is smaller &mdash; less than **$20K**, and decisions are faster.
 
 <!--more-->
+
+{% picture /images/2015/12/the-game.jpg 0 The Game (1997) by David Fincher %}
 
 There are basically three problems we're trying to solve with this
 new idea: 1) Investors are **cowards**, 2) investors are **cowards**, and
@@ -111,7 +111,7 @@ All your expenses have to be approved. You're simply under the full control
 of your **board**.
 
 Why is that? Because they are afraid of you being **free**. They are afraid
-of losing their money. That's why they are doing everything they can 
+of losing their money. That's why they are doing everything they can
 to keep a close eye on you.
 
 It's disgusting and very counter-productive.
@@ -121,6 +121,8 @@ cases, they lose their money, you lose your time, and the market loses the oppor
 to get a new product.
 
 ## We Are Not Cowards
+
+{% badge http://www.seedramp.com/logo.jpg 128 http://www.seedramp.com %}
 
 [SeedRamp](http://www.seedramp.com) is going to solve all of these three problems.
 
@@ -163,4 +165,4 @@ startup. You decide how much, but it has to be enough to make us
 interested. It all depends on your situation. A few percent, I'd guess.
 
 We're planning to host our first interviews in the middle of January 2016.
-You can schedule them right here:
+You can schedule them [right here](https://calendly.com/yegor256/seedramp).
