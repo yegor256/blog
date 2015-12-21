@@ -5,8 +5,8 @@ date: 2015-12-24
 place: Kiev, Ukraine
 tags: programming
 description:
-  An active open source contribution is a good
-  habit of a software developer, passionate about
+  An active open-source contribution is a good
+  habit for a software developer who is passionate about
   his or her job.
 keywords:
   - open source contribution
@@ -16,27 +16,27 @@ keywords:
   - open source definition
 ---
 
-In the [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
-post, last year, I said that open source contribution is a very
-important factor in defining who is good and who is bad. I mean programmers.
+In my [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
+post last year, I said open-source contribution is a very
+important factor in defining who is good and who isn't, as far as programmers go.
 I was saying that if you're not contributing to open source, if your
-GitHub profile is not full of projects and commits, your "value", as a
-software developer, is low. Simply because this lack of open source
+GitHub profile is not full of projects and commits, your "value" as a
+software developer is low, simply because this lack of open-source
 activity tells everybody that you're not passionate about software
-development and are simply working for money. I keep getting angry comments,
-every week. Let me answer them all here.
+development and are simply working for money. I keep getting angry comments
+about that every week. Let me answer them all here.
 
 <!--more-->
 
-The gist of all that comments is this: "I don't contribute to open source,
+The gist of all those comments is this: "I don't contribute to open source,
 but I'm still very passionate about software development". Then, there is
 a list of reasons why the author of the comment doesn't contribute:
 
-  * I spend my free time with my family
-  * I'm already busy in the office, why doing any extra work?
-  * I'm well paid, why doing anything for free?
-  * My employer doesn't allow me to contribute to open source
-  * My company won't pay me for writing open source code
+  * I spend my free time with my family.
+  * I'm already busy in the office; why should I do extra work?
+  * I'm well-paid; why should I do anything for free?
+  * My employer doesn't allow me to contribute to open source.
+  * My company won't pay me for writing open-source code.
 
 Good excuses, but let's try to look at it with
 
