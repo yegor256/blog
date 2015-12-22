@@ -52,6 +52,8 @@ In most cases, they are open source (Microsoft is an exception, and it must die)
 Thus, no matter what software you're creating, you're using modules
 created for you by **others**. Someone else spent his or her time to help you.
 
+{% quote Just admit that you don't care; it's not a crime, after all %}
+
 Now, you're not giving anything back. I'm curious, why is that?
 
 There could be two reasons. The first one is that you just don't care.
