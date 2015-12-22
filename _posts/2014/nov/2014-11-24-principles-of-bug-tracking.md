@@ -82,7 +82,8 @@ focus on closing it as soon as possible
 Also, keep in mind that the sooner you close the ticket, the better job
 you will do for the project. Long-living tickets are a management **nightmare**.
 It is difficult to track them and control them. It's difficult to understand
-what's going on. Have you seen those two-year-old tickets in open source projects
+what's going on. Have you seen those two-year-old tickets in
+[open source projects]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 that have hundreds of comments and no deliverables? It is a mistake
 by their
 [project managers]({% pst 2015/sep/2015-09-22-micromanagement %})

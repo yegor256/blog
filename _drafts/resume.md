@@ -110,8 +110,9 @@ That's enough. Post a link to your profile right into your resume.
 
 GitHub is a de-facto standard platform for open source code. There are others,
 like BitBucket, but, I hope, they will die, sooner or later. As a modern
-software developer, you must be there. You have to contribute to some
-open source. You have to be present on GitHub.
+software developer, you must be there. You
+[have to contribute]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
+to some open source. You have to be present on GitHub.
 
 As your potential employer, I want to see what the **market** is thinking about
 your code and about yourself. Just like with StackOverflow, I need to see

@@ -74,7 +74,9 @@ You may say something like this (I'm quoting real life stories):
    ridiculous quality checking..."
 
 This first reaction is only logical. I've seen many people say things like this,
-in both open source and commercial projects. Not only in Java, but also
+in both
+[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
+and commercial projects. Not only in Java, but also
 in PHP (with [phpcs](http://pear.php.net/package/PHP_CodeSniffer/)
 and [phpmd](http://phpmd.org/)) and
 Ruby (with [rubocop](https://github.com/bbatsov/rubocop)

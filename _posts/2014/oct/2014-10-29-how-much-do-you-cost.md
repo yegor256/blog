@@ -37,12 +37,14 @@ I do find them objective and logical, though &mdash; so let me explain.
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
-Do you have your own open source libraries that are used by
+Do you have your own
+[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) libraries that are used by
 some community? Do you write code that is publicly available and used?
 
 If you have nothing to show here, I see three possible causes.
 
-First, you're **too shy to share** your code because **it's crap**. Obviously,
+First, you're **too shy to share** your code because **it's crap**.
+[Obviously]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}),
 this is not a good sign. Not because your code could be bad, but because
 you're not brave enough to face this fact and improve. In our teams we
 [pay a lot of attention]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})

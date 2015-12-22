@@ -173,7 +173,7 @@ production always means using secure credentials, like login, password, SSH keys
 
 In this particular example, [Maven CloudBees  Plugin](https://wiki.cloudbees.com/bin/view/RUN/MavenGuide)
 needed API key, secret and web application name. These three parameters are kept secure
-and can't be revealed in an "open source" way.
+and can't be revealed in an "[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})" way.
 
 So, there is [a mechanism](http://doc.rultor.com/reference.html#assets)
 that configures Rultor accordingly through its

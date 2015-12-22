@@ -78,7 +78,7 @@ them clean and transparent. We also save a lot of project funds, since
 every hour spent by a team member is traceable to the line of code he produced.
 
 You can see how this happens in action, for example, in this ticket
-(the project is open source; that's why all communications are open):
+(the project is [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}); that's why all communications are open):
 [jcabi/jcabi-github#731](https://github.com/jcabi/jcabi-github/issues/731).
 One Java developer is having a problem with his Git repository. Apparently
 he did something wrong and couldn't solve the problem by himself. He asked

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Why Don't You Contribute?"
-date: 2015-12-24
+title: "Why Don't You Contribute to Open Source?"
+date: 2015-12-22
 place: Kiev, Ukraine
 tags: programming
 description:
@@ -22,15 +22,17 @@ important factor in defining who is good and who isn't, as far as programmers go
 I was saying that if you're not contributing to open source, if your
 GitHub profile is not full of projects and commits, your "value" as a
 software developer is low, simply because this lack of open-source
-activity tells everybody that you're not passionate about software
+activity tells everybody that you're **not passionate** about software
 development and are simply working for money. I keep getting angry comments
 about that every week. Let me answer them all here.
 
 <!--more-->
 
+{% picture /images/2015/12/kung-fu-hustle.jpg 0 Kung Fu Hustle (2004) by Stephen Chow %}
+
 The gist of all those comments is this: "I don't contribute to open source,
 but I'm still very passionate about software development". Then, there is
-a list of reasons why the author of the comment doesn't contribute:
+a list of **reasons** why the author of the comment doesn't contribute:
 
   * I spend my free time with my family.
   * I'm already busy in the office; why should I do extra work?
@@ -38,9 +40,9 @@ a list of reasons why the author of the comment doesn't contribute:
   * My employer doesn't allow me to contribute to open source.
   * My company won't pay me for writing open-source code.
 
-Good excuses, but let's try to look at it with
+Good excuses, but let's try to look at it from a different perspective.
 
-Today, it's not possible at all to create software without using
+Today, it's **not possible** at all to create software without using
 open-source components. I'm sure nobody will argue with this. Only something
 very basic and simple can be created without code reuse. Nah, I'm wrong. Even
 super small pieces of software can't be created without open-source
@@ -48,14 +50,17 @@ super small pieces of software can't be created without open-source
 In most cases, they are open source (Microsoft is an exception, and it must die).
 
 Thus, no matter what software you're creating, you're using modules
-created for you by others. Someone else spent his or her time to help you.
+created for you by **others**. Someone else spent his or her time to help you.
+
+{% quote Just admit that you don't care; it's not a crime, after all %}
 
 Now, you're not giving anything back. I'm curious, why is that?
 
 There could be two reasons. The first one is that you just don't care.
 They give you something, and you're not giving anything back. You simply
 don't feel like being a player in this market. You take their libraries,
-reuse them in your product, collect a paycheck, and go home. You don't care
+reuse them in your product, collect a
+[paycheck]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}), and go home. You don't care
 what will happen with the industry, with those programmers, with the language
 you're writing in, with the platform, etc. You don't want to improve the
 libraries, you don't want to create and share new ones, you don't want to
@@ -64,12 +69,12 @@ requests to them.
 
 I do understand that. Millions of programmers are like that; you're not alone.
 But please, don't tell me that you're passionate about software development.
-Just admit that you don't care. It's not a crime, after all. You're not stealing
+Just admit that you don't care. It's **not a crime**, after all. You're not stealing
 anything (although I actually think you are, but that's a different story).
 
 That was the first reason why you may not contribute.
 However, in most cases, my typical opponent tells me he or she does care,
-but just can't. There are obstacles, right? Your family is taking
+but just can't. There are **obstacles**, right? Your family is taking
 all your free time, and in the office, you simply are not allowed to
 work on something that is outside of your business scope. I can imagine that,
 but let's see what's happening behind the scenes.
@@ -89,10 +94,13 @@ Sometimes, the boss says he or she doesn't care about any open source
 and wants you to focus on your product. Maybe this happens rather often;
 I don't know.
 
+{% quote If you don't walk away, you accept this attitude; you're part of it %}
+
 In that case, my next question is philosophical. You're working for such a person and
-such a company. You're accepting their paychecks. Aren't you a part
-of this team and this mentality? If you don't walk away, you accept this
-attitude. You're part of it. It's you who doesn't care, not just them.
+such a company. You're accepting their
+[paychecks]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}). Aren't you a part
+of this team and this mentality? If you don't walk away, you **accept** this
+attitude. You're part of it. It's **you** who doesn't care, not just them.
 Because of your existence, they have an ability to not care.
 
 Tomorrow if they ask you to use stolen software, you may say
@@ -102,8 +110,8 @@ I had to steal, because that's what my company asked me to do".
 Does it sound like a good excuse?
 
 The same story goes for open source. If you do care and you're passionate
-about software development, you will either contribute actively
-or walk away from the company that doesn't share your passion. What, you can't
+about software development, you will either **contribute** actively
+or **walk away** from the company that doesn't share your passion. What, you can't
 walk away because of some reasons? Then don't tell me about your passion.
 Simply admit that you're too weak to follow your passion.
 
