@@ -10,7 +10,7 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Wed, 16 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
@@ -1375,7 +1375,8 @@ company through which I put my admiration of discipline and clean design into pr
 &lt;!--more--&gt;
 
 &lt;p&gt;I want to encourage you to share my passion &amp;mdash; not just by reading this blog
-but through making real open source software in a disciplined way.
+but through making real
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;open source software&lt;/a&gt; in a disciplined way.
 This award is for those who are brave enough to swim against the current and
 value quality above everything else.&lt;/p&gt;
 

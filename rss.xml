@@ -10,12 +10,119 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Wed, 16 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Dec 2015 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Why Don't You Contribute to Open Source?</title>
+      <link>http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html</link>
+      <description>&lt;p&gt;In my &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;How Much Do You Cost?&lt;/a&gt;
+post last year, I said open-source contribution is a very
+important factor in defining who is good and who isn&amp;#39;t, as far as programmers go.
+I was saying that if you&amp;#39;re not contributing to open source, if your
+GitHub profile is not full of projects and commits, your &amp;quot;value&amp;quot; as a
+software developer is low, simply because this lack of open-source
+activity tells everybody that you&amp;#39;re &lt;strong&gt;not passionate&lt;/strong&gt; about software
+development and are simply working for money. I keep getting angry comments
+about that every week. Let me answer them all here.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2015/12/kung-fu-hustle.jpg' style='width:600px;' alt='Kung Fu Hustle (2004) by Stephen Chow'/&gt;&lt;figcaption&gt;Kung Fu Hustle (2004) by Stephen Chow&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The gist of all those comments is this: &amp;quot;I don&amp;#39;t contribute to open source,
+but I&amp;#39;m still very passionate about software development&amp;quot;. Then, there is
+a list of &lt;strong&gt;reasons&lt;/strong&gt; why the author of the comment doesn&amp;#39;t contribute:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I spend my free time with my family.&lt;/li&gt;
+&lt;li&gt;I&amp;#39;m already busy in the office; why should I do extra work?&lt;/li&gt;
+&lt;li&gt;I&amp;#39;m well-paid; why should I do anything for free?&lt;/li&gt;
+&lt;li&gt;My employer doesn&amp;#39;t allow me to contribute to open source.&lt;/li&gt;
+&lt;li&gt;My company won&amp;#39;t pay me for writing open-source code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good excuses, but let&amp;#39;s try to look at it from a different perspective.&lt;/p&gt;
+
+&lt;p&gt;Today, it&amp;#39;s &lt;strong&gt;not possible&lt;/strong&gt; at all to create software without using
+open-source components. I&amp;#39;m sure nobody will argue with this. Only something
+very basic and simple can be created without code reuse. Nah, I&amp;#39;m wrong. Even
+super small pieces of software can&amp;#39;t be created without open-source
+&amp;quot;neighbors&amp;quot;. You need at the very least an operating system and a programming language.
+In most cases, they are open source (Microsoft is an exception, and it must die).&lt;/p&gt;
+
+&lt;p&gt;Thus, no matter what software you&amp;#39;re creating, you&amp;#39;re using modules
+created for you by &lt;strong&gt;others&lt;/strong&gt;. Someone else spent his or her time to help you.&lt;/p&gt;
+
+&lt;p&gt;Now, you&amp;#39;re not giving anything back. I&amp;#39;m curious, why is that?&lt;/p&gt;
+
+&lt;p&gt;There could be two reasons. The first one is that you just don&amp;#39;t care.
+They give you something, and you&amp;#39;re not giving anything back. You simply
+don&amp;#39;t feel like being a player in this market. You take their libraries,
+reuse them in your product, collect a
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;paycheck&lt;/a&gt;, and go home. You don&amp;#39;t care
+what will happen with the industry, with those programmers, with the language
+you&amp;#39;re writing in, with the platform, etc. You don&amp;#39;t want to improve the
+libraries, you don&amp;#39;t want to create and share new ones, you don&amp;#39;t want to
+report bugs and feature requests, and you don&amp;#39;t want to send patches and pull
+requests to them.&lt;/p&gt;
+
+&lt;p&gt;I do understand that. Millions of programmers are like that; you&amp;#39;re not alone.
+But please, don&amp;#39;t tell me that you&amp;#39;re passionate about software development.
+Just admit that you don&amp;#39;t care. It&amp;#39;s &lt;strong&gt;not a crime&lt;/strong&gt;, after all. You&amp;#39;re not stealing
+anything (although I actually think you are, but that&amp;#39;s a different story).&lt;/p&gt;
+
+&lt;p&gt;That was the first reason why you may not contribute.
+However, in most cases, my typical opponent tells me he or she does care,
+but just can&amp;#39;t. There are &lt;strong&gt;obstacles&lt;/strong&gt;, right? Your family is taking
+all your free time, and in the office, you simply are not allowed to
+work on something that is outside of your business scope. I can imagine that,
+but let&amp;#39;s see what&amp;#39;s happening behind the scenes.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;re telling me that your company doesn&amp;#39;t care about the software industry,
+right? They don&amp;#39;t allow you to give anything back to the open-source community.
+They want you to use those free libraries and give nothing back. And it is their
+corporate strategy. I doubt that&amp;#39;s the case.
+Did you ask your CTO about it?&lt;/p&gt;
+
+&lt;p&gt;I strongly believe that in 95 percent of cases, when you explain that your software
+seriously depends on a few open-source libraries that may need some
+improvements, your boss will have nothing against you becoming a contributor.
+Try it.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, the boss says he or she doesn&amp;#39;t care about any open source
+and wants you to focus on your product. Maybe this happens rather often;
+I don&amp;#39;t know.&lt;/p&gt;
+
+&lt;p&gt;In that case, my next question is philosophical. You&amp;#39;re working for such a person and
+such a company. You&amp;#39;re accepting their
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;paychecks&lt;/a&gt;. Aren&amp;#39;t you a part
+of this team and this mentality? If you don&amp;#39;t walk away, you &lt;strong&gt;accept&lt;/strong&gt; this
+attitude. You&amp;#39;re part of it. It&amp;#39;s &lt;strong&gt;you&lt;/strong&gt; who doesn&amp;#39;t care, not just them.
+Because of your existence, they have an ability to not care.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow if they ask you to use stolen software, you may say
+you had no choice: &amp;quot;My boss asked me to do this. I did care about
+copyright and strongly believed that software authors must be paid, but
+I had to steal, because that&amp;#39;s what my company asked me to do&amp;quot;.
+Does it sound like a good excuse?&lt;/p&gt;
+
+&lt;p&gt;The same story goes for open source. If you do care and you&amp;#39;re passionate
+about software development, you will either &lt;strong&gt;contribute&lt;/strong&gt; actively
+or &lt;strong&gt;walk away&lt;/strong&gt; from the company that doesn&amp;#39;t share your passion. What, you can&amp;#39;t
+walk away because of some reasons? Then don&amp;#39;t tell me about your passion.
+Simply admit that you&amp;#39;re too weak to follow your passion.&lt;/p&gt;
+
+&lt;p&gt;Again, it&amp;#39;s not a crime. It&amp;#39;s just who you are.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 22 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html</guid>
+      <dc:date>2015-12-22T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Investors Are Too Scared</title>
       <link>http://www.yegor256.com/2015/12/16/investors-are-too-scared.html</link>
@@ -2140,87 +2247,6 @@ You will be safe, and your resume will have an
       <pubDate>Tue, 06 Oct 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/10/06/how-to-be-good-office-slave.html</guid>
       <dc:date>2015-10-06T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Vertical and Horizontal Decorating</title>
-      <link>http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</link>
-      <description>&lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
-is one of the best ways to add features to an object
-without changing its interface. I use
-&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
-quite often and always question myself as to how to design them right
-when the list of features must be configurable.
-I&amp;#39;m not sure I have the right answer, but here is
-some food for thought.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/10/the-apartment.jpg' style='width:600px;' alt='The Apartment (1960) by Billy Wilder'/&gt;&lt;figcaption&gt;The Apartment (1960) by Billy Wilder&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let&amp;#39;s say I have a list of numbers:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
-The first approach is &lt;strong&gt;vertical&lt;/strong&gt; (I just made this name up):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Unique&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Odds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Positive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The second approach is &lt;strong&gt;horizontal&lt;/strong&gt; (again, a name I made up):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Numbers&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Modified&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArrayNumbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;98&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Positive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Odds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Unique&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;See the difference? The first approach decorates &lt;code&gt;ArrayNumbers&lt;/code&gt; &amp;quot;vertically,&amp;quot;
-adding functionality through the composable decorators &lt;code&gt;Positive&lt;/code&gt;, &lt;code&gt;Odds&lt;/code&gt;,
-&lt;code&gt;Unique&lt;/code&gt;, and &lt;code&gt;Sorted&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The second approach introduces the new interface &lt;code&gt;Diff&lt;/code&gt;, which implements
-the core functionality of iterating numbers through instances of
-&lt;code&gt;Positive&lt;/code&gt;, &lt;code&gt;Odds&lt;/code&gt;, &lt;code&gt;Unique&lt;/code&gt;, and &lt;code&gt;Sorted&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;For the user of &lt;code&gt;numbers&lt;/code&gt;, both approaches are the same. The difference is
-only in the design. Which one is better and when? It seems that
-vertical decorating is easier to implement and is more suitable for
-smaller objects that expose just a few methods.&lt;/p&gt;
-
-&lt;p&gt;As for my experience, I always tend to start with vertical decorating since it&amp;#39;s
-easier to implement but eventually migrate to a horizontal one when the
-number of decorators starts to grow.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</guid>
-      <dc:date>2015-10-01T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
