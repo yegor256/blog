@@ -94,6 +94,8 @@ Sometimes, the boss says he or she doesn't care about any open source
 and wants you to focus on your product. Maybe this happens rather often;
 I don't know.
 
+{% quote If you don't walk away, you accept this attitude; you're part of it %}
+
 In that case, my next question is philosophical. You're working for such a person and
 such a company. You're accepting their
 [paychecks]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}). Aren't you a part
