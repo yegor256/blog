@@ -65,7 +65,8 @@ Read this one instead, and read it many times.
 [**Working Effectively With Legacy Code**](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=D2WNVUW64RHDRGSC)
 by Michael Feathers.
 This is awesome reading about modern software development, its pitfalls, and
-typical failures. Most of the code we're working on now is legacy (a.k.a. open source).
+typical failures. Most of the code we're working on now is legacy
+(a.k.a. [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})).
 I read this book as a novel.
 
 {% badge /images/2015/04/book-continuous-delivery.jpg 96 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=MPZUCBXBGNOIHDDI %}

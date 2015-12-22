@@ -104,7 +104,8 @@ called "Prevent Conflicts in Distributed Agile PHP Projects". In the article,
 a solution was proposed (full article in [PDF](/pdf/2014/guard-article.pdf))
 for Subversion and PHP.
 
-Since that time, I used experimentally that approach in multiple open source
+Since that time, I used experimentally that approach in multiple
+[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 projects and a few commercial ones with PHP, Java, Ruby and JavaScript, Git and
 Subversion. In all cases, my experience was only positive, and that's why
 [rultor.com](http://www.rultor.com) was born (later about that though).

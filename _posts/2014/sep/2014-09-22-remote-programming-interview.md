@@ -30,7 +30,7 @@ I answered these questions (approximately):
 
  * How do we control programmers remotely (1:59)?
 
- * Do we compare ourselves with open source (3:52)?
+ * Do we compare ourselves with [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) (3:52)?
 
  * How do we build a network of programmers (5:10)?
 
