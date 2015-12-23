@@ -4,8 +4,8 @@ title: "About Me"
 date: 2014-04-06
 permalink: about-me.html
 description:
-  Personal blog of Yegor Bugayenko about programming, mostly
-  in Java, PHP, JavaScript and also Ruby, Python and Lisp
+  Yegor Bugayenko is a software architect, writer, blogger,
+  project manager, CTO, seed investor, and philanthropist.
 keywords:
   - java
   - programming
