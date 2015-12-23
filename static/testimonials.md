@@ -14,6 +14,9 @@ keywords:
 exclude_from_search: true
 ---
 
+This is what my readers think about me. If you want to add
+something, just [email me](mailto:me@yegor256.com).
+
 "I have still a good opinion of you but some posts are just holy crap"
 &mdash; Siv N.
 
