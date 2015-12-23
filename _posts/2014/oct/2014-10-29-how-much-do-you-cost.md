@@ -55,6 +55,8 @@ or if you will give up and quit. If you didn't share your code before
 and have never dealt with negative feedback, you won't feel comfortable
 in our projects, where quality requirements are very high.
 
+{% quote You're not able to at least find and fix one bug in some open source product you're using? %}
+
 The second possible cause is that
 you work from nine till five, for food, **without passion**. Actually,
 nobody manifests it that way. Instead, I often hear something like
@@ -94,6 +96,8 @@ their rates are $70+ per hour. The same skills and experience cost
 $15-20 in Karachi. The reason here is the cost of living &mdash;
 it is much higher in the US than in Pakistan.
 
+{% quote We prefer to work with people whose expenses are lower %}
+
 However, this reason doesn't sound logical to me. If you're driving a more
 expensive car, we have to pay you a higher salary? The same with the
 place to stay. You've chosen the country that
@@ -124,6 +128,8 @@ process stopped some time ago, probably right after you got an
 Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In any case, it's sad.
+
+{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know %}
 
 Second, if you're not answering, you simply have nothing to say. In most cases,
 this means that you're not solving complex and unique problems.
@@ -224,6 +230,8 @@ I'm not saying that it's not possible to be an expert in many things at the same
 competition. There are thousands of "Java7 programmers" on the market &mdash;
 we can easily choose whoever we need. But there are not so many
 "Hadoop programmers" or "XSLT designers".
+
+{% quote We end up paying more to narrow-skilled specialists because we have no choice %}
 
 If you focus on some specific area and become an expert there,
 your chances of finding a job are lower, but the payout will be bigger.
