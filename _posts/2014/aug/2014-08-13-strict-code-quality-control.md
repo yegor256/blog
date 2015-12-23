@@ -33,7 +33,7 @@ aggregates a few quality checkers, configures them to a maximum
 strict mode, and breaks your build if any of them fail.
 
 Seriously. There are
-[over 130 checks](http://checkstyle.sourceforge.net/availablechecks.html) in Checkstyle,
+[over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,
 [over 400 rules](http://pmd.sourceforge.net/pmd-5.1.2/rules/index.html) in PMD, and
 [over 400 bugs](http://findbugs.sourceforge.net/bugDescriptions.html) in FindBugs.
 All of them should say: "Yes, we like your code".
