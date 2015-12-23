@@ -14,6 +14,13 @@ keywords:
 exclude_from_search: true
 ---
 
+"I have still a good opinion of you but some posts are just holy crap"
+&mdash; Siv N.
+
+"I love your approach to team management and quality control &mdash;
+this is what I'm lacking on my job, definitely!"
+&mdash; Tomasz G.
+
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."
 &mdash; anonymous
@@ -22,9 +29,9 @@ under the weight of your giant ego, you clueless asshole."
 Mind blown by many of your articles, will follow."
 &mdash; Christian B.
 
-"I love your approach to team management and quality control &mdash;
-this is what I'm lacking on my job, definitely!"
-&mdash; Tomasz G.
+"You are great at writing code that
+is painful to understand, use and explain."
+&mdash; Ross W.
 
 "Your articles are very thought provoking, especially the
 ones on design patterns and anti-patterns."
@@ -33,5 +40,3 @@ ones on design patterns and anti-patterns."
 "The ideas that you share are just awesome!"
 &mdash; Adrian C.
 
-"Your blog is exceptionally well written."
-&mdash; Sam A.
