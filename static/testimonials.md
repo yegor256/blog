@@ -37,6 +37,10 @@ is painful to understand, use and explain."
 ones on design patterns and anti-patterns."
 &mdash; David J.
 
+"If I would be the one to decide what is irresponsible coding
+you would be imprisoned for a lifetime by me."
+&mdash; David R.
+
 "The ideas that you share are just awesome!"
 &mdash; Adrian C.
 
