@@ -25,6 +25,8 @@ be very harmful.
 
 <!--more-->
 
+{% picture /images/2015/12/commando.jpg 0 Commando (1985) by Mark L. Lester %}
+
 I've found this
 [good article](http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
 where John Sullivan explains why low turnover could be a troubling
