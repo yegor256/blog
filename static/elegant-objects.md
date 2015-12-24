@@ -22,7 +22,7 @@ more solid and architecture more visible.
 
 <!--more-->
 
-{% badge /images/books/elegant-objects/seven-pages.jpg 125 /images/books/elegant-objects/seven-pages.pdf %}
+{% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
 in the book &mdash; seven pages from chapter 2.4, which
