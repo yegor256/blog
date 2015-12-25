@@ -25,7 +25,7 @@ more solid and architecture more visible.
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
-in the book &mdash; seven pages from chapter 2.4, which
+in the book &mdash; [seven pages from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
 covers the subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book. This is the
 text my selected 11 reviewers received this week from me by mail.
