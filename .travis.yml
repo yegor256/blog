@@ -21,7 +21,6 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 install:
 - set -e
-- travis_retry sudo apt-get update -y
 - travis_retry _travis/install_cmake.sh; sudo apt-get install -y libxml2-utils
 - travis_retry npm install --global phantomjs
 - travis_retry npm install --global casperjs
@@ -44,4 +43,3 @@ script:
 - _travis/test_pages_existence.sh
 - _travis/test_jslint.sh
 - jgd -u git@github.com:yegor256/blog.git
-
