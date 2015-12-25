@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o pipefail
 
 errors=0
 for f in $(find _site -name '*.html'); do
