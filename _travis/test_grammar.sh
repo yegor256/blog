@@ -11,7 +11,7 @@ for f in $(find _site -name '*.html'); do
     sed 's/[ \t\n]/\n/g' | \
     LC_ALL='C' sort | \
     uniq | \
-    aspell --lang=en_US --ignore=3 -p ./_travis/aspell.en.pws pipe | \
+    aspell --ignore=3 -p ./_travis/aspell.en.pws pipe | \
     grep '^&'
   if [ $? -ne 1 ]; then
     ((errors++))
