@@ -30,17 +30,17 @@ covers the subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book. This is the
 text my selected 11 reviewers received this week from me by mail.
 By the way, their names are (in alphabetic order):
-[Andrei Istomin](https://www.linkedin.com/in/andrej-istomin-51ba7530),
-[Aneesh Dogra](https://in.linkedin.com/in/aneeshdogra),
-[Francesco Bianchi](https://ie.linkedin.com/in/francesco-bianchi-4b49784),
-[Ion Bordian](https://dk.linkedin.com/in/ion-bordian-06701a88),
-[Kanstantsin Kamkou](https://de.linkedin.com/in/kkamkou/en),
-[Michal Švec](https://cz.linkedin.com/in/michal-švec-77065711),
-[Nicos Kekchidis](https://www.linkedin.com/in/nicoskek),
-[Philip Buuck](https://www.linkedin.com/in/philipbuuck),
-[Simon Tsai](https://www.linkedin.com/in/simonjtsai),
-[Thanasis Papapanagiotou](https://nl.linkedin.com/in/thanpa),
-and [Xiasong Pan](https://www.linkedin.com/in/xipan).
+[Andrei Istomin](http://www.linkedin.com/in/andrej-istomin-51ba7530),
+[Aneesh Dogra](http://in.linkedin.com/in/aneeshdogra),
+[Francesco Bianchi](http://ie.linkedin.com/in/francesco-bianchi-4b49784),
+[Ion Bordian](http://dk.linkedin.com/in/ion-bordian-06701a88),
+[Kanstantsin Kamkou](http://de.linkedin.com/in/kkamkou/en),
+[Michal Švec](http://cz.linkedin.com/in/michal-švec-77065711),
+[Nicos Kekchidis](http://www.linkedin.com/in/nicoskek),
+[Philip Buuck](http://www.linkedin.com/in/philipbuuck),
+[Simon Tsai](http://www.linkedin.com/in/simonjtsai),
+[Thanasis Papapanagiotou](http://nl.linkedin.com/in/thanpa),
+and [Xiasong Pan](http://www.linkedin.com/in/xipan).
 I hope to receive their reviews by the end of January. Then, will
 spend another 2-3 weeks to take their recommendations into account
 and they book will go out at the end of February.
