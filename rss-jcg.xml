@@ -1655,15 +1655,14 @@ Here is what I found, preliminary.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;None&lt;/code&gt; is used in many places (over 400 places I found), which technically is &lt;code&gt;NULL&lt;/code&gt;,
 and it&amp;#39;s a serious &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;anti-pattern&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;There are global functions, for example
-&lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/bears/linters/LanguageToolBear.py#L9&quot;&gt;&lt;code&gt;get_language_tool_results&lt;/code&gt;&lt;/a&gt;
-and &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/misc/DictUtilities.py&quot;&gt;&lt;code&gt;DictUtilities&lt;/code&gt;&lt;/a&gt;.
+&lt;code&gt;get_language_tool_results&lt;/code&gt; and &lt;code&gt;DictUtilities&lt;/code&gt;.
 It is definitely a &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;bad idea&lt;/a&gt; in OOP.&lt;/li&gt;
 &lt;li&gt;Class &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/misc/Constants.py&quot;&gt;&lt;code&gt;Constants&lt;/code&gt;&lt;/a&gt;
 is a &lt;a href=&quot;/2015/07/06/public-static-literals.html&quot;&gt;terrible&lt;/a&gt; idea.&lt;/li&gt;
 &lt;li&gt;Checking object types in runtime is a
 &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;bad idea&lt;/a&gt;,
-e.g. &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/bears/codeclone_detection/ClangCountVectorCreator.py#L92&quot;&gt;&lt;code&gt;ClangCountVectorCreator.py&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;What&amp;#39;s wrong with &lt;a href=&quot;https://github.com/coala-analyzer/coala/blob/master/coalib/bearlib/parsing/clang/cindex.py&quot;&gt;&lt;code&gt;cindex.py&lt;/code&gt;&lt;/a&gt;?
+e.g. &lt;code&gt;ClangCountVectorCreator.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s wrong with &lt;code&gt;cindex.py&lt;/code&gt;?
 There are almost 3200 lines of code, that&amp;#39;s way too many.&lt;/li&gt;
 &lt;li&gt;Static analysis is not a mandatory step in the build/release pipeline.
 That&amp;#39;s why, I believe, code formatting is not consistent and sometimes
