@@ -107,7 +107,7 @@ However, if you make your projects spend their money
 on your education, that's theft. And a good project manager
 should stop you, saying "This is not a school!"
 
-What Is the Solution?
+What is the solution?
 
 I believe that in the software business, there is only one workaround &mdash; blame the
 project for your own deficiencies in education, skills, or information.

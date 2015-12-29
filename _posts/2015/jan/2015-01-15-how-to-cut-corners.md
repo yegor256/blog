@@ -71,7 +71,8 @@ when all dependencies are resolved and the code looks better, try to
 get back to it again. If you still see issues, create new dependencies.
 Keep doing this until the code in front of you is clean and easy to fix.
 
-Don't be a hero &mdash; don't rush into fixing the
+Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})
+&mdash; don't rush into fixing the
 [bad code]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}) you inherited. Think
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Remember that your first and most important responsibility as
@@ -115,7 +116,9 @@ documentation of certain aspects of the code.
 
 Again, don't be a hero and try to understand everything yourself. Of course
 you're a smart guy, but the project doesn't need a single smart guy. The
-project needs maintainable code that is easy to modify, even by someone
+project needs
+[maintainable code]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})
+that is easy to modify, even by someone
 who is not as smart as yourself. So do your project a favor: reveal the
 documentation issue, and ask someone to fix it for you. Not just for you,
 for everybody. The entire team will benefit from such a request.

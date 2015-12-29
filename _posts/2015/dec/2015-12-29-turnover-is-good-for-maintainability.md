@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Employee Turnover Is Good for the Maintainability of Your Code Base"
-date: 2015-12-24
+date: 2015-12-29
 place: Kiev, Ukraine
 tags: management
 description:
