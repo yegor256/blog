@@ -36,6 +36,8 @@ turnover. I've learned that low turnover negatively affects code maintainability
 and encourages **hero-driven development** and **strong code ownership**
 (both of which are bad practices).
 
+{% quote If you consider programmers to be a valuable long-term asset, you're wrong %}
+
 "Turnover" is basically the act of replacing an employee
 with a new employee for any reason, including termination,
 retirement, resignation, or any other. Simply put, the more
@@ -63,6 +65,8 @@ it's easier to work with something you're familiar with instead of jumping
 from module to module. Needless to say, strong code ownership is
 a bad practice. Collective code ownership is a much better alternative,
 as [explained](http://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
+
+{% quote Having strong experts on the team inevitably leads to hero-driven development %}
 
 Then, having strong experts on the team inevitably leads to
 hero-driven development, where firefighting is very much appreciated.
