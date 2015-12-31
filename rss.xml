@@ -39,6 +39,8 @@ turnover. I&amp;#39;ve learned that low turnover negatively affects code maintai
 and encourages &lt;strong&gt;hero-driven development&lt;/strong&gt; and &lt;strong&gt;strong code ownership&lt;/strong&gt;
 (both of which are bad practices).&lt;/p&gt;
 
+&lt;aside class='quote'&gt;If you consider programmers to be a valuable long-term asset, you're wrong&lt;/aside&gt;
+
 &lt;p&gt;&amp;quot;Turnover&amp;quot; is basically the act of replacing an employee
 with a new employee for any reason, including termination,
 retirement, resignation, or any other. Simply put, the more
@@ -66,6 +68,8 @@ it&amp;#39;s easier to work with something you&amp;#39;re familiar with instead 
 from module to module. Needless to say, strong code ownership is
 a bad practice. Collective code ownership is a much better alternative,
 as &lt;a href=&quot;http://martinfowler.com/bliki/CodeOwnership.html&quot;&gt;explained&lt;/a&gt; by Martin Fowler.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;Having strong experts on the team inevitably leads to hero-driven development&lt;/aside&gt;
 
 &lt;p&gt;Then, having strong experts on the team inevitably leads to
 hero-driven development, where firefighting is very much appreciated.
