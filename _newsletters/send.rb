@@ -47,6 +47,7 @@ else
   emails = File.readlines(opts[:file]).collect(&:strip).reject(&:blank?).uniq
 end
 
+total = 0
 sent = []
 ignore = !opts[:from].nil?
 puts "Sending #{emails.length} email(s) to #{opts[:host]}:#{opts[:port]} as #{opts[:user]}"
@@ -100,7 +101,8 @@ emails.each do |line|
   end
   mail.deliver!
   sent.push email
-  puts ' done'
+  total += 1
+  puts " done (##{total})"
 end
 
 puts "sent #{sent.size} emails"
