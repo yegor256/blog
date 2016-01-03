@@ -67,7 +67,8 @@ mostly because IT recruiters stay between us, **stealing** our money
 and protecting that position for themselves.
 Just like taxi companies remain between passengers and drivers,
 or real estate agents get in between house owners and house buyers,
-or outstaffing companies squeeze in the middle of project sponsors and engineers.
+or [outstaffing companies]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+squeeze in the middle of project sponsors and engineers.
 
 Imagine if there was no Google and you had to hire a "researcher" every
 time you needed to find some information. That's how it worked 50 years

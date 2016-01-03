@@ -14,8 +14,8 @@ keywords:
   - startup failure stories
 ---
 
-How do you do that? There are many ways to punish your employees.
-Some of them are more effective, others simply don't work. This is
+How do you do that? There are many ways to punish them.
+Some are more effective, others simply don't work. This is
 not an exact science. I would say, it's an art. You must be creative,
 innovative and very open-minded. You never know which way of
 punishment will work with who. Some people respond to one method,

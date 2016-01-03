@@ -29,8 +29,6 @@ ancient slaves in our offices and in front of our monitors?
 
 {% picture /images/2015/07/gladiator.jpg 0 Gladiator (2000) by Ridley Scott %}
 
-{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1781252521&linkCode=as2&tag=yegor256com-20&linkId=XUYP4NCA2TZVDHBT %}
-
 This post is partially provoked by a recently published semi-historical book
 [**How to Manage Your Slaves**](http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1781252521&linkCode=as2&tag=yegor256com-20&linkId=XUYP4NCA2TZVDHBT)
 by Jerry Toner. However, there's more. The entire eXtremely Distributed
@@ -40,6 +38,8 @@ is based on a primary fundamental principle that states,
 per hour, per week, or per month, but rather for verified deliverables.
 What is the difference and what does all this have to do with slavery?
 Let's see.
+
+{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 http://www.amazon.com/gp/product/1781252521/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1781252521&linkCode=as2&tag=yegor256com-20&linkId=XUYP4NCA2TZVDHBT %}
 
 My point here is that any payment schedule based on time instead of results
 is turning us into slaves.

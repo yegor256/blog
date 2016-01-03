@@ -57,6 +57,8 @@ in order to change its format from [A4](http://en.wikipedia.org/wiki/Paper_size)
 to rewrite it from scratch, that's a completely different type of bug.
 Needless to say, its fixing will be many times more expensive.
 
+{% quote Good programmers make cheaper mistakes in order to avoid making more expensive ones %}
+
 So yes, mistakes are inevitable. We should not be afraid of them and
 be ready to make them. However, good programmers make **cheaper** mistakes
 in order to avoid making more expensive ones.
