@@ -819,6 +819,8 @@ in order to change its format from &lt;a href=&quot;http://en.wikipedia.org/wiki
 to rewrite it from scratch, that&amp;#39;s a completely different type of bug.
 Needless to say, its fixing will be many times more expensive.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;Good programmers make cheaper mistakes in order to avoid making more expensive ones&lt;/aside&gt;
+
 &lt;p&gt;So yes, mistakes are inevitable. We should not be afraid of them and
 be ready to make them. However, good programmers make &lt;strong&gt;cheaper&lt;/strong&gt; mistakes
 in order to avoid making more expensive ones.&lt;/p&gt;
