@@ -79,6 +79,8 @@ calling `send(1)`. It will be handled internally, and if it occurs, the stacktra
 will be logged. But this is a totally wrong way of thinking, and it's inherited
 from languages without exceptions, like C.
 
+{% quote An exception collects as much information as possible about the error and floats it up %}
+
 Exceptions were invented to simplify our design by moving the entire
 error handling code away from the main logic. Moreover, we're not just moving it away but
 also concentrating it in one place &mdash; in the `main()` method, the entry

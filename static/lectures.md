@@ -23,8 +23,10 @@ Just pick any post on the blog and I will make a one-hour lecture about it,
 right in your office. The lecture itself will take 30 minutes.
 Then, we will spend another 30 minutes for Q&A.
 
-The only thing you have to pay for is professional **video recording**
-and photo shooting. Depending on the location, this will cost you somewhere
+The only thing you must pay for is **professional** video recording
+and photo shooting (two video operators, one photographer, standalone
+sound recording, editing afterwards).
+Depending on the location, this will cost you somewhere
 around $200-500. The lecture will be published on
 [my YouTube channel](http://www.youtube.com/user/technoparkcorp), to
 give everybody an ability to watch it too.

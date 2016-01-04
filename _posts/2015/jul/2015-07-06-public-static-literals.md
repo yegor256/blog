@@ -63,6 +63,8 @@ a better alternative (yet!). But in your own code, don't use public
 static properties &mdash; ever. Even if this code may look convenient to you,
 it's a very bad design.
 
+{% quote Every time you see data duplication, start thinking about the functionality you're duplicating %}
+
 The reason why is very similar to
 [utility classes]({% pst 2015/feb/2015-02-26-composable-decorators %})
 with public static

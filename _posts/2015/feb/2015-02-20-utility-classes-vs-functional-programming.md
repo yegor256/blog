@@ -55,6 +55,8 @@ value of a floating point number:
 double x = Math.abs(3.1415926d);
 {% endhighlight %}
 
+{% quote The code will work, but it is not object-oriented programming %}
+
 What's wrong with it? We need a function, and we get it from class `Math`.
 The class has many useful functions inside it that can be used for many typical
 mathematical operations, like calculating maximum, minimum, sine, cosine, etc.
@@ -130,7 +132,7 @@ See the difference?
 In the first case, which is imperative, you force the packager (a beauty shop)
 to find that perfume in stock, package it, and present it to you as
 a ready-to-be-used product. In the second scenario, which is declarative,
-you're just getting a promise from the shop that eventually, when it's
+you're just getting a **promise** from the shop that eventually, when it's
 necessary, the staff will find the perfume in stock, package it, and provide it to
 those who need it. If your friend never visits the shop with that gift card,
 the perfume will remain in stock.
@@ -207,27 +209,27 @@ proves that utility classes are the main instrument of each Java developer?"
 Besides OOP fundamentalism, which I'm very often accused of, there are
 a few very practical reasons (BTW, I am an OOP fundamentalist):
 
-**Testability**.
-Calls to static methods in utility classes are hard-coded dependencies that
-can never be broken for testing purposes. If your class is calling
-`FileUtils.readFile()`, I will never be able to test it without using
-a real file on disk.
+  * **Testability**.
+    Calls to static methods in utility classes are hard-coded dependencies that
+    can never be broken for testing purposes. If your class is calling
+    `FileUtils.readFile()`, I will never be able to test it without using
+    a real file on disk.
 
-**Efficiency**.
-Utility classes, due to their imperative nature, are much less efficient
-than their [declarative alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
-They simply do all calculations right here and now, taking processor
-resources even when it's not yet necessary. Instead of returning a promise
-to break down a string into chunks, `StringUtils.split()` breaks it down
-right now. And it breaks it down into all possible chunks, even if only
-the first one is required by the "buyer".
+  * **Efficiency**.
+    Utility classes, due to their imperative nature, are much less efficient
+    than their [declarative alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
+    They simply do all calculations right here and now, taking processor
+    resources even when it's not yet necessary. Instead of returning a promise
+    to break down a string into chunks, `StringUtils.split()` breaks it down
+    right now. And it breaks it down into all possible chunks, even if only
+    the first one is required by the "buyer".
 
-**Readability**.
-Utility classes tend to be huge (try to read the source code of `StringUtils`
-or `FileUtils` from Apache Commons). The entire idea of separation of concerns,
-which makes OOP so beautiful, is absent in utility classes. They just
-put all possible procedures into one huge `.java` file, which becomes
-absolutely unmaintainable when it surpasses a dozen static methods.
+  * **Readability**.
+    Utility classes tend to be huge (try to read the source code of `StringUtils`
+    or `FileUtils` from Apache Commons). The entire idea of separation of concerns,
+    which makes OOP so beautiful, is absent in utility classes. They just
+    put all possible procedures into one huge `.java` file, which becomes
+    absolutely unmaintainable when it surpasses a dozen static methods.
 
 To conclude, let me reiterate: Utility classes have nothing to do
 with functional programming. They are simply bags of static methods, which

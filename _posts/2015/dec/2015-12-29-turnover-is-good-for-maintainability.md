@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Employee Turnover Is Good for the Maintainability of Your Code Base"
-date: 2015-12-24
+date: 2015-12-29
 place: Kiev, Ukraine
 tags: management
 description:
@@ -25,6 +25,8 @@ be very harmful.
 
 <!--more-->
 
+{% picture /images/2015/12/commando.jpg 0 Commando (1985) by Mark L. Lester %}
+
 I've found this
 [good article](http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
 where John Sullivan explains why low turnover could be a troubling
@@ -33,6 +35,8 @@ teams. My experience is mostly focused on programmers and their
 turnover. I've learned that low turnover negatively affects code maintainability
 and encourages **hero-driven development** and **strong code ownership**
 (both of which are bad practices).
+
+{% quote If you consider programmers to be a valuable long-term asset, you're wrong %}
 
 "Turnover" is basically the act of replacing an employee
 with a new employee for any reason, including termination,
@@ -61,6 +65,8 @@ it's easier to work with something you're familiar with instead of jumping
 from module to module. Needless to say, strong code ownership is
 a bad practice. Collective code ownership is a much better alternative,
 as [explained](http://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
+
+{% quote Having strong experts on the team inevitably leads to hero-driven development %}
 
 Then, having strong experts on the team inevitably leads to
 hero-driven development, where firefighting is very much appreciated.

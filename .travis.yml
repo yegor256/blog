@@ -1,7 +1,17 @@
 language: ruby
+sudo: required
 branches:
   only:
   - master
+addons:
+  apt:
+    packages:
+      - aspell
+      - build-essential
+      - graphviz
+      - gnuplot
+      - s3cmd
+      - fontforge
 before_install:
 - set -e
 - git config --global user.email "travis@teamed.io"
@@ -12,14 +22,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 install:
 - set -e
-- travis_retry sudo apt-get update -y
-- travis_retry sudo apt-get install -y build-essential
-- travis_retry _travis/install_cmake.sh
-- travis_retry sudo apt-get install -y libxml2-utils
-- travis_retry sudo apt-get install -y graphviz
-- travis_retry sudo apt-get install -y gnuplot
-- travis_retry sudo apt-get install -y s3cmd
-- travis_retry sudo apt-get install -y fontforge
+- travis_retry _travis/install_cmake.sh; sudo apt-get install -y libxml2-utils
 - travis_retry npm install --global phantomjs
 - travis_retry npm install --global casperjs
 - travis_retry npm install --global cssshrink
