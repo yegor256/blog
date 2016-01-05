@@ -65,6 +65,8 @@ to laugh alongside everybody else, but this won't last for the long term. In the
 end, everybody will laugh at him, and he will do whatever it takes just to stop it.
 He will obey any order you give!
 
+{% quote Having a personal life outside the office is not for everybody; it is a luxury %}
+
 **Mistakes Must be Visible**.
 Is he wrong? Did he miss a deadline? Did he deploy a broken version to production?
 Did he forget something? Don't resolve this face to face. Always make such things
@@ -101,6 +103,8 @@ team member anymore. The team doesn't need his results. The team can live
 without them. You will see how soon he realizes who the boss is and
 what it means when the boss is not happy!
 
+{% quote Obviously, the best desk is the one at which nobody can see your monitor %}
+
 **A Bad Office Spot Is a Great De-Motivator**.
 This is a classic instrument of punishment: The worst desks go to
 those who forget who the boss is around here. Obviously, the best desk is the
@@ -125,6 +129,8 @@ all others. Boring, ambiguous, unfocused, unnecessary, under-funded, and routine
 tasks all go to the employee who deserves punishment. Of course,
 you must look unbiased &mdash; be very polite and supportive, acting as if you're
 a good friend!
+
+{% quote Leaving the office at 5 p.m. is a privilege; only the best employees can afford it %}
 
 **Spread Rumors**.
 Simply show your annoyance of his poor results, but not to his face. Talk
