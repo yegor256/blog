@@ -1,4 +1,4 @@
-@import "defs";
+@import 'defs';
 
 .icon:before {
   font-size: $em;
@@ -9,11 +9,11 @@
 .icon-facebook:hover { color: #3b5998; }
 .icon-googleplus:hover { color: #dd4b39; }
 .icon-linkedin:hover { color: #007bb6; }
-.icon-hackernews:hover { color: #ff6600; }
-.icon-rss:hover { color: #ff6600; }
+.icon-hackernews:hover { color: #f60; }
+.icon-rss:hover { color: #f60; }
 .icon-reddit:hover { color: #cee3f8; }
 .icon-coderanch:hover { color: #995c56; }
-.icon-digg:hover { color: #356AA0; }
+.icon-digg:hover { color: #356aa0; }
 .icon-stumbleupon:hover { color: #ea4724; }
 .icon-pinterest:hover { color: #c92228; }
 .icon-youtube:hover { color: #e52d27; }

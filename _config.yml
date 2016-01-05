@@ -22,7 +22,7 @@ excerpt_separator: <!--more-->
 gems:
   - jekyll-sass
   - jekyll-plantuml
-  - jekyll-press
+  # - jekyll-press
 
 # https://github.com/agelber/jekyll-rss
 url: http://www.yegor256.com

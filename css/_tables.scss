@@ -1,21 +1,25 @@
-@import "defs";
-@import "fonts";
+@import 'defs';
+@import 'fonts';
 
 table {
-  td, th {
+  td,
+  th {
     &.rht {
       text-align: right;
     }
+
     &.cnt {
       text-align: center;
     }
+
     &.vert {
-      white-space: nowrap;
       vertical-align: bottom;
+      white-space: nowrap;
+
       > div {
-        transform: translate(0, -0.5 * $em) rotate(270deg);
-        width: 2 * $em;
         text-align: left;
+        transform: translate(0, -.5 * $em) rotate(270deg);
+        width: 2 * $em;
       }
     }
   }
