@@ -67,7 +67,8 @@ for the quality of the software being developed.
 How this guy will delegate this responsibility to others is his job. Whether
 he will use his knowledge and skills, or quality control
 [tools]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}), or
-unit testing frameworks, or authority, or coaching, or corporal punishment
+unit testing frameworks, or authority, or coaching, or
+[corporal punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
 &mdash; it's his business.
 A project
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}) delegates quality control to the software architect,

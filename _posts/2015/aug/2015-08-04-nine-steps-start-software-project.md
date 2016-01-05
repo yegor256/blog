@@ -116,7 +116,8 @@ As you see, in this case, I totally **ignored** all alternatives. I didn't even
 mention them. Again, I take full responsibility for that; I said,
 "I don't see any alternatives." If, later, a better alternative is
 discovered, it will be obvious why we overlooked it and whose fault
-it was. It's not only about punishment but about discipline and
+it was. It's not only about
+[punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}) but about discipline and
 traceability of decisions. Each decision must be
 [traceable]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %})
 to the person

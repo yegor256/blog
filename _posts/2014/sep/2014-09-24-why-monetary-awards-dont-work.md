@@ -118,7 +118,8 @@ know exactly what needs to be done to improve. Fair competition
 will lead to a better cumulative result.
 
 Moreover, if your ground rules are strict and explicit, you can
-use not only rewards, but also punishments. And your team will
+use not only rewards, but also
+[punishments]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}). And your team will
 [gladly]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) accept
 them, because they will help emphasize
 what (and who) works best and help get rid of the waste.

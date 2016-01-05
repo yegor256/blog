@@ -117,7 +117,7 @@ on the dashboard and want to turn it into a green one.
 Yes, there is another side of this coin. We can try to enforce
 discipline in the team. We can make it a strict rule, that our
 build is always clean and whoever breaks it gets some sort of
-a punishment.
+a [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 
 Try doing this and you will get a **fear driven development**. Programmers
 will be afraid of committing anything to the repository because
