@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Do You Punish Your Employees?"
-date: 2015-10-20
+date: 2016-01-05
 place: Kiev, Ukraine
 tags: management
 description:
@@ -27,6 +27,8 @@ Here is a list of the most effective methods :)
 
 <!--more-->
 
+{% picture /images/2016/01/office-space.jpg 0 Office Space (1999) by Mike Judge %}
+
 Disclaimer: I'm using the pronoun "he" merely for simplicity of speech. The
 same exact rules apply to both males and females.
 
@@ -35,7 +37,7 @@ This, of course, is your best instrument of
 [punishment](https://en.wikipedia.org/wiki/Punishment). Make sure he is scared
 of you. He must know who he works for &mdash; you, his boss. The rule
 of thumb is that the one with the strongest voice is the boss. Thus, you
-must be heard, you must **rule** with your voice, and he must physically 
+must be heard, you must **rule** with your voice, and he must physically
 feel your presence in the room. Even if it's just a Skype call,
 your voice must sound stronger than all others.
 Moreover, don't let him speak if he is trying to argue back.
