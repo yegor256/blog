@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube DEqcn4-freM video-left %}
 [January 6, 2015](https://plus.google.com/u/0/events/c2l3nfnkkmfg01e2gvoks028a1c)
 **Why ORM is an Anti-Pattern?**
-We'll discuss why Object-Relational Mapping (ORM) is actually
+We discussed why Object-Relational Mapping (ORM) was actually
 an anti-pattern and its usage must be replaced with
-SQL-speaking objects. The discussion will be based on
+SQL-speaking objects. The discussion was based on
 this blog post:
 [ORM Is an Offensive Anti-Pattern]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
 

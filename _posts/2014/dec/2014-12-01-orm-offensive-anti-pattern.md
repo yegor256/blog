@@ -151,6 +151,8 @@ What's wrong with it, you may ask? Everything!
 
 ## What's Wrong With ORM?
 
+{% youtube DEqcn4-freM video-left %}
+
 Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
 for more than 10 years already. Almost every SQL-intensive application in the world
 is using it. Each Java tutorial would mention Hibernate (or maybe
