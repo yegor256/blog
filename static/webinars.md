@@ -19,8 +19,17 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube ibT5oKToMoQ video-left %}
+[Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
+**Daily Stand-Up Meetings Are Evil**
+We'll talk about famous daily meetings and why they are
+actually a bad idea in a properly managed
+and disciplined software project. The discussion will be
+based on this post:
+[Daily Stand-Up Meetings Are a Good Tool for a Bad Manager]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
+
 {% youtube DEqcn4-freM video-left %}
-[January 6, 2015](https://plus.google.com/u/0/events/c2l3nfnkkmfg01e2gvoks028a1c)
+[January 6, 2016](https://plus.google.com/u/0/events/c2l3nfnkkmfg01e2gvoks028a1c)
 **Why ORM is an Anti-Pattern?**
 We discussed why Object-Relational Mapping (ORM) was actually
 an anti-pattern and its usage must be replaced with
