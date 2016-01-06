@@ -281,9 +281,14 @@ hr {
 }
 
 .badge {
-  @extend %desktop-only;
   float: right;
   margin-left: 2em;
+  @media all and (max-width: $width) {
+    float: none;
+    margin-bottom: $em;
+    margin-top: $em;
+    max-width: 100%;
+  }
 }
 
 blockquote {
