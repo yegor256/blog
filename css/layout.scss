@@ -286,6 +286,7 @@ hr {
   @media all and (max-width: $width) {
     float: none;
     margin-bottom: $em;
+    margin-left: 0;
     margin-top: $em;
     max-width: 100%;
   }
