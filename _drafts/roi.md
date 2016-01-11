@@ -22,7 +22,8 @@ say if I tell you that this cheap Java developer is hardly writing two
 primitive lines of code per day. You're paying $600 every week,
 rarely getting anything back. How cheap is this Java guy now?
 My point is that using hourly rate as a cost indicator is a very wrong idea.
-Either with outsourcing or in-house teams.
+Either with [outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
+or in-house teams.
 
 <!--more-->
 
@@ -111,13 +112,15 @@ Instead, we should ask: How much you can do for $100?
 As you can see, we can easily demonstrate how much we are capable
 of delivering in $100. Can you and your team do the same?
 
-Thus, your [ROI](), while working with an outsourcing team, mostly
+Thus, your [ROI](https://en.wikipedia.org/wiki/Return_on_investment),
+while working with an [outsourcing team]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}), mostly
 depends on their **results-per-dollar**, not dollars-per-hour. The first
 metric is difficult to calculate and only the best teams will be able
 to do so. The second metric is absolutely misleading, but anyone
 will give it to you.
 
-An outsourcing team is expensive when its results-per-dollar is low,
+An [outsourcing team]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %})
+is expensive when its results-per-dollar is low,
 no matter how big or small is dollars-per-hour. To the contrary,
 a team is financially very efficient if its results-per-dollar is high.
 Doesn't really matter what is the value of the second metric.
