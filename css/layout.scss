@@ -29,7 +29,7 @@
 
 %desktop-only {
   @media all and (max-width: $width) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -37,7 +37,7 @@
 
 %unprintable {
   @media print {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -45,7 +45,7 @@
 
 %printable {
   @media not print  {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -90,30 +90,43 @@ a:visited {
   }
 }
 
-.hot {
-  @extend %unprintable;
-  font-family: $code-font;
-  font-size: 85%;
-  line-height: $em;
-  margin-bottom: 2 * $em;
-  margin-top: 2 * $em;
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-
-    li {
-      border-left: 4px solid $green;
-      color: darken($green, 25);
-      margin-bottom: $em;
-      padding-left: $em;
-    }
+.header-toggle {
+  cursor: pointer;
+  font-size: 1.4 * $em;
+  @media all and (min-width: $width) {
+    display: none;
   }
 }
 
 .header {
+  @extend %desktop-only;
   @extend %unprintable;
   text-align: center;
+  @media all and (max-width: $width) {
+    text-align: left;
+  }
+
+  .hot {
+    @extend %unprintable;
+    font-family: $code-font;
+    font-size: 85%;
+    line-height: $em;
+    margin-bottom: 2 * $em;
+    margin-top: 2 * $em;
+    text-align: left;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        border-left: 4px solid $green;
+        color: darken($green, 25);
+        margin-bottom: $em;
+        padding-left: $em;
+      }
+    }
+  }
 
   .menu {
     list-style: none;
@@ -121,8 +134,7 @@ a:visited {
 
     li {
       display: inline;
-      margin-left: .2 * $em;
-      margin-right: .2 * $em;
+      margin-right: .4 * $em;
     }
   }
 
@@ -141,6 +153,7 @@ a:visited {
     }
 
     .hire {
+      @extend %desktop-only;
       color: darken($green, 15);
       left: 50%;
       margin-left: 45px;
@@ -150,6 +163,7 @@ a:visited {
     }
 
     .sub {
+      @extend %desktop-only;
       color: darken($green, 15);
       margin-right: 45px;
       position: absolute;
