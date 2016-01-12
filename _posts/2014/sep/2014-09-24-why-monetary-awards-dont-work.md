@@ -41,7 +41,8 @@ people, be used anymore?
 
 Why, in a [modern office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
 do we try to hide
-monetary motivation and replace it with
+[monetary]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
+motivation and replace it with
 [everything else](http://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,
 paid vacations, etc. Why don't we just say
