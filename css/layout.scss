@@ -37,7 +37,7 @@
 
 %unprintable {
   @media print {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -45,7 +45,7 @@
 
 %printable {
   @media not print  {
-    display: none;
+    display: none !important;
   }
 }
 
