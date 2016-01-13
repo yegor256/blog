@@ -10,12 +10,60 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 05 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2016 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>Good Programmers Don't Work for Equity</title>
+      <link>http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</link>
+      <description>&lt;p&gt;&amp;quot;You&amp;#39;re a good programmer. I&amp;#39;m a great entrepreneur. This is a
+breakthrough idea. Help me build it. I don&amp;#39;t have cash, but I will
+give you equity. Deal?&amp;quot; I hear this at least once a month, and
+I always say no. Not because I don&amp;#39;t like your idea. Indeed, it
+is really interesting. And not because I&amp;#39;m too busy. I would
+definitely find time for a good idea. It&amp;#39;s not that. I say no because
+I don&amp;#39;t think you&amp;#39;re a good entrepreneur.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2016/01/how-much-do-you-love-me.jpg' style='width:600px;' alt='Combien tu m&amp;amp;apos;aimes? (2005) by Bertrand Blier'/&gt;&lt;figcaption&gt;Combien tu m'aimes? (2005) by Bertrand Blier&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;So you want a good programmer to build your product. Or maybe a group
+of good programmers. And you are ready to give me some equity
+in exchange. That&amp;#39;s reasonable.&lt;/p&gt;
+
+&lt;p&gt;But what is your part of the deal?&lt;/p&gt;
+
+&lt;p&gt;How much are you putting on the table?&lt;/p&gt;
+
+&lt;p&gt;You say that you&amp;#39;re a good entrepreneur, right? How come
+you don&amp;#39;t have money, then? How come you can&amp;#39;t find someone to pay
+for the work of a good programmer?&lt;/p&gt;
+
+&lt;p&gt;I will create a product for you, but you will most certainly
+fail. You &lt;strong&gt;already&lt;/strong&gt; failed. You failed to find initial
+investment to cover the startup expenses of the business.
+Why do you think you will succeed after the product is ready?&lt;/p&gt;
+
+&lt;p&gt;The point is that a good programmer will &lt;strong&gt;never&lt;/strong&gt;
+work for equity. Not because a good programmer is greedy,
+or doesn&amp;#39;t want to risk, or doesn&amp;#39;t believe
+in new ideas. Not at all.&lt;/p&gt;
+
+&lt;p&gt;A good programmer wants to work with a &lt;strong&gt;good&lt;/strong&gt; entrepreneur. And
+a good entrepreneur knows how to find money. That&amp;#39;s the definition
+of a decent entrepreneur.&lt;/p&gt;
+
+&lt;p&gt;Period.&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 12 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</guid>
+      <dc:date>2016-01-12T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>How Do You Punish Your Employees?</title>
       <link>http://www.yegor256.com/2016/01/05/how-to-punish-employees.html</link>
@@ -2173,126 +2221,6 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/10/17/award-2016.html</guid>
       <dc:date>2015-10-17T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>What Is the Difference Between Ridley Scott and Joseph Goebbels?</title>
-      <link>http://www.yegor256.com/2015/10/16/ridley-scott-and-joseph-goebbels.html</link>
-      <description>&lt;p&gt;I saw &lt;a href=&quot;http://www.imdb.com/title/tt3659388/&quot;&gt;The Martian&lt;/a&gt;
-this weekend, and it triggered a few thoughts. Of course, I didn&amp;#39;t like
-the movie as a
-&lt;a href=&quot;/2014/04/06/movies-for-thanasis.html&quot;&gt;piece of art&lt;/a&gt;.
-It is total garbage, but this is not my point.
-There is something bigger to discuss, aside from the bad acting, primitive
-story-line, politically correct but absolutely unrealistic casting,
-and tons of logical inconsistencies. It&amp;#39;s Hollywood; what
-should I expect, right? Not just that. I think the problem is bigger.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src='/images/2015/10/cossacks-of-the-kuban.jpg' style='width:600px;' alt='Cossacks of the Kuban (1950) by Ivan Pyryev'/&gt;&lt;figcaption&gt;Cossacks of the Kuban (1950) by Ivan Pyryev&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Have any of you seen this movie: &lt;a href=&quot;http://www.imdb.com/title/tt0041562/&quot;&gt;Cossacks of the Kuban&lt;/a&gt;?
-It was shot in 1949, when &lt;a href=&quot;https://en.wikipedia.org/wiki/Joseph_Stalin&quot;&gt;Joseph Stalin&lt;/a&gt;
-was in power, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Soviet_Union&quot;&gt;Soviet Union&lt;/a&gt;
-was literally broke, and &lt;a href=&quot;https://en.wikipedia.org/wiki/World_War_II&quot;&gt;WWII&lt;/a&gt;
-brought people to the point of &lt;strong&gt;starvation&lt;/strong&gt;.
-However, the film showed something completely opposite &amp;mdash;
-wealthy villages, rich peasants, and tables full of food.&lt;/p&gt;
-
-&lt;p&gt;It was &lt;a href=&quot;https://en.wikipedia.org/wiki/Propaganda&quot;&gt;propaganda&lt;/a&gt; in 1949.&lt;/p&gt;
-
-&lt;p&gt;But isn&amp;#39;t it quite similar to what I&amp;#39;ve just seen a few days ago,
-produced and directed in 2015 by &lt;a href=&quot;http://www.imdb.com/name/nm0000631/&quot;&gt;Ridley Scott&lt;/a&gt;?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='https://en.wikipedia.org/wiki/Soviet_Union'&gt;&lt;img src='/images/2015/10/ussr-symbol.jpg' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;In 1949, the goal of Soviet propaganda was to convince people that
-their personal situations with a lack of food and lack of future were
-just their local, personal &lt;strong&gt;exceptions&lt;/strong&gt; to a more general rule. And that
-rule was that the country was full of food. The country was governed by
-the principles of socialism, and they were working perfectly.&lt;/p&gt;
-
-&lt;p&gt;In 2015, the goal of Hollywood propaganda is to convince us that the
-organizational and motivational problems in our
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;offices&lt;/a&gt; are just local exceptions to
-the general rule. The rule is simple: project management is not important
-if we&amp;#39;re all good friends.&lt;/p&gt;
-
-&lt;aside class='quote'&gt;The truth is that you are not going to get anywhere if you follow the spirit of this movie&lt;/aside&gt;
-
-&lt;p&gt;Ridley Scott is telling us that in a perfect organization, such as
-&lt;a href=&quot;https://www.nasa.gov/&quot;&gt;NASA&lt;/a&gt;,
-everybody &lt;strong&gt;loves&lt;/strong&gt; everyone; that&amp;#39;s why they can get a man from Mars without
-even a map. Do the same in your company and you will be fine. You don&amp;#39;t
-need risk planning, you just need a hero. Actually, you&amp;#39;d be better off
-with a couple of heroes who love each other.&lt;/p&gt;
-
-&lt;p&gt;That doesn&amp;#39;t work for you? It must be a problem with implementation.
-Keep trying and smiling.&lt;/p&gt;
-
-&lt;p&gt;Make friends, don&amp;#39;t make plans.&lt;/p&gt;
-
-&lt;p&gt;It is a lie, very similar to the lie we heard in 1949.&lt;/p&gt;
-
-&lt;p&gt;The truth is that you are not going to get anywhere if you follow
-the spirit of this movie. In reality, teamwork must look completely
-different. There are conflicts, fights, politics, betrayals, back-stabbing,
-leakage of information, and just primitive incompetence. To manage all
-this, one can&amp;#39;t just be a &lt;strong&gt;nice guy&lt;/strong&gt; with a big heart. I would even say
-that being a nice guy is a drawback for any management position in a modern
-organization. Well, in any organization at any time and in any place.&lt;/p&gt;
-
-&lt;p&gt;Project management is &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;not&lt;/a&gt;
-about compassion and sympathy. It is about
-accurate and routine comparison of risks, probabilities, impacts, and
-their mitigation plans. It is about
-&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;setting rules&lt;/a&gt;
-and making &lt;strong&gt;decisions&lt;/strong&gt;. It is about making sure
-these decisions are being executed, precisely and without mistakes.
-It is about &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;making sure&lt;/a&gt;
-those who&amp;#39;ve made mistakes are &lt;strong&gt;punished&lt;/strong&gt; while those who&amp;#39;ve
-done everything right are &lt;strong&gt;rewarded&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A team of six. In a multi-million-dollar spaceship.
-Flying to another planet to save one person.
-Against explicit instructions from upper management.
-They come back as national heroes.
-Are you serious?&lt;/p&gt;
-
-&lt;p&gt;Have you tried to deploy a new feature on a production server against
-the direct will of your boss? Try it. No spaceships, no Mars. Just
-a piece of code and a simple server. Then try to convince your boss
-that you&amp;#39;re a hero.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m sure you get the point.&lt;/p&gt;
-
-&lt;figure&gt;&lt;img src='http://www.popsci.com/sites/popsci.com/files/styles/large_1x_/public/psc1015_mt_088.jpg' style='width:600px;' alt='Shooting The Martian (by popsci.com)'/&gt;&lt;figcaption&gt;Shooting The Martian (by popsci.com)&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;So, why is Ridley Scott &lt;strong&gt;lying&lt;/strong&gt; to us?
-Why is he giving us a false picture of reality?
-Intentionally &lt;strong&gt;false&lt;/strong&gt;. He knows better than I do how real management
-works in real-life organizations. Hollywood is not much different
-than Silicon Valley in this aspect. So, why is he lying?&lt;/p&gt;
-
-&lt;figure class='badge'&gt;&lt;a href='https://en.wikipedia.org/wiki/Nazi_Germany'&gt;&lt;img src='/images/2015/10/third-reich-symbol.jpg' style='width:128px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Why was &lt;a href=&quot;https://en.wikipedia.org/wiki/Joseph_Goebbels&quot;&gt;Joseph Goebbels&lt;/a&gt;,
-a minister of propaganda in the Third Reich,
-lying to the German people?&lt;/p&gt;
-
-&lt;p&gt;Because that&amp;#39;s what we like to hear, &lt;strong&gt;unfortunately&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;It is sad, but we don&amp;#39;t want to know the truth. We didn&amp;#39;t want to know about
-Nazi war crimes &amp;mdash; so Joseph Goebbels built a &lt;strong&gt;fake&lt;/strong&gt; reality for us.
-We don&amp;#39;t want to know about the true principles of management &amp;mdash;
-so Ridley Scott built fake ones for us.&lt;/p&gt;
-
-&lt;p&gt;Think about it.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Fri, 16 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/10/16/ridley-scott-and-joseph-goebbels.html</guid>
-      <dc:date>2015-10-16T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
