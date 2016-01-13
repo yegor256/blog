@@ -43,7 +43,8 @@ class Report {
 }
 {% endhighlight %}
 
-Pretty defensive, right? If we remove these validations, the code
+Pretty [defensive](https://en.wikipedia.org/wiki/Defensive_programming), right?
+If we remove these validations, the code
 will be way shorter, but it will crash with rather confusing messages,
 if `NULL` is provided by the client. Moreover, if the file already exists,
 our `Report` will silently overwrite it. Pretty dangerous, right?
