@@ -7,10 +7,10 @@ tags: oop
 description:
   ...
 keywords:
-  - why startups fail
-  - failure of startup
-  - startup failure reasons
-  - startup failure rate
+  - defensive programming
+  - validators in oop
+  - check for null
+  - validate method arguments
   - startup failure stories
 ---
 
@@ -18,12 +18,12 @@ Do you check input parameters of your methods for validity?
 I don't. But I did. Not any more.
 I just let my methods crash with null pointer and other exceptions,
 when parameters are not valid.
-This may sound illogical, but I have some reasons.
-I'll try to convience you now.
+This may sound illogical, but only in the beginning.
+I'm suggesting to use **validating decorators** instead.
 
 <!--more-->
 
-Let's take a look at this rather typical example:
+Let's take a look at this rather typical Java example:
 
 {% highlight java %}
 class Report {
@@ -46,9 +46,9 @@ class Report {
 Pretty defensive, right? If we remove these validations, the code
 will be way shorter, but it will crash with rather confusing messages,
 if `NULL` is provided by the client. Moreover, if the file already exists,
-our `Report` will silently overwrite it.
+our `Report` will silently overwrite it. Pretty dangerous, right?
 
-We must protect ourselves. We must be defensive.
+Yes, we must protect ourselves and we must be defensive.
 
 But not this way. Not by bloating the class with validations,
 which have nothing to do with its core functionality. Instead, we should
@@ -61,7 +61,7 @@ interface Report {
 }
 {% endhighlight %}
 
-Then, the class that implement the core functionality:
+Then, the class that implements the core functionality:
 
 {% highlight java %}
 class DefaultReport implements Report {
@@ -72,7 +72,7 @@ class DefaultReport implements Report {
 }
 {% endhighlight %}
 
-And finally, a number of decorators that will protect us:
+And, finally, a number of decorators that will protect us:
 
 {% highlight java %}
 class NoWriteOverReport implements Report {
@@ -107,15 +107,15 @@ report.export(file);
 
 What do we achieve with this approach?
 First and foremost &mdash; smaller objects.
-And smaller objects always mean higher maintainability.
+And smaller objects always mean higher **maintainability**.
 Our `DefaultReport` class will always stay small, no matter
 how many validations we may invent in the future. The
 more things we need to validate, the more validating decorators
-we'll create. All of them will be small and cohesive. And we'll
+we will create. All of them will be small and cohesive. And we'll
 be able to put them together in different variations.
 
 Besides that, this approach makes our code much more
-reusable, since classes are performing very few operations
+**reusable**, since classes are performing very few operations
 and don't defend themselves by default. When being defensive
 is an important feature, we'll use validating decorators. But
 this will not always be the case. Sometimes validation is just
@@ -123,6 +123,6 @@ too expensive in terms of time and memory and we want to work
 directly with objects that don't defend themselves anyhow.
 
 I also decided not to use Java Validation API any more. For the
-same reason. Its annotations make my classes much more verbose
+same reason. Its annotations make classes much more verbose
 and less cohesive. I'm using validating decorators instead.
 
