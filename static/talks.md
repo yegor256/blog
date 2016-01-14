@@ -53,7 +53,8 @@ Olomouc, Czech Republic<br/>
 Warsaw, Poland;
 24-25 November 2015;
 [slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead);
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208114809057924)
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208114809057924);
+[video](https://www.youtube.com/watch?v=6SfIc5ff-8U)
 
 "How Do You Talk To Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
