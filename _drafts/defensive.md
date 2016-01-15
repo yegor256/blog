@@ -14,12 +14,12 @@ keywords:
   - startup failure stories
 ---
 
-Do you check input parameters of your methods for validity?
-I don't. But I did. Not any more.
-I just let my methods crash with null pointer and other exceptions,
+Do you check the input parameters of your methods for validity?
+I don't. I used to, but not anymore.
+I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I'm suggesting to use **validating decorators** instead.
+I'm suggesting you use **validating decorators** instead.
 
 <!--more-->
 
@@ -30,30 +30,30 @@ class Report {
   void export(File file) {
     if (file == null) {
       throw new IllegalArgumentException(
-        "file is NULL, can't export"
+        "File is NULL; can't export."
       );
     }
     if (file.exists()) {
       throw new IllegalArgumentException(
-        "file already exists"
+        "File already exists."
       );
     }
-    // export the report to the file
+    // Export the report to the file
   }
 }
 {% endhighlight %}
 
 Pretty [defensive](https://en.wikipedia.org/wiki/Defensive_programming), right?
 If we remove these validations, the code
-will be way shorter, but it will crash with rather confusing messages,
+will be much shorter, but it will crash with rather confusing messages
 if `NULL` is provided by the client. Moreover, if the file already exists,
 our `Report` will silently overwrite it. Pretty dangerous, right?
 
-Yes, we must protect ourselves and we must be defensive.
+Yes, we must protect ourselves, and we must be defensive.
 
-But not this way. Not by bloating the class with validations,
-which have nothing to do with its core functionality. Instead, we should
-use decorators, which will do the validation. Here is how. First,
+But not this way, not by bloating the class with validations that
+have nothing to do with its core functionality. Instead, we should
+use decorators to do the validation. Here is how. First,
 there must be an interface `Report`:
 
 {% highlight java %}
@@ -62,13 +62,13 @@ interface Report {
 }
 {% endhighlight %}
 
-Then, the class that implements the core functionality:
+Then, a class that implements the core functionality:
 
 {% highlight java %}
 class DefaultReport implements Report {
   @Override
   void export(File file) {
-    // export the report to the file
+    // Export the report to the file
   }
 }
 {% endhighlight %}
@@ -85,7 +85,7 @@ class NoWriteOverReport implements Report {
   void export(File file) {
     if (file.exists()) {
       throw new IllegalArgumentException(
-        "file already exists"
+        "File already exists."
       );
     }
     this.origin.export(file);
@@ -93,9 +93,9 @@ class NoWriteOverReport implements Report {
 }
 {% endhighlight %}
 
-Now, the client has flexibility of composing a complex object
-from decorators, which perform their specific tasks. The core object
-will do the reporting, while decorators will validate parameters:
+Now, the client has the flexibility of composing a complex object
+from decorators that perform their specific tasks. The core object
+will do the reporting, while the decorators will validate parameters:
 
 {% highlight java %}
 Report report = new NoNullReport(
@@ -107,23 +107,23 @@ report.export(file);
 {% endhighlight %}
 
 What do we achieve with this approach?
-First and foremost &mdash; smaller objects.
+First and foremost: smaller objects.
 And smaller objects always mean higher **maintainability**.
-Our `DefaultReport` class will always stay small, no matter
+Our `DefaultReport` class will always remain small, no matter
 how many validations we may invent in the future. The
 more things we need to validate, the more validating decorators
 we will create. All of them will be small and cohesive. And we'll
 be able to put them together in different variations.
 
 Besides that, this approach makes our code much more
-**reusable**, since classes are performing very few operations
-and don't defend themselves by default. When being defensive
+**reusable**, as classes perform very few operations
+and don't defend themselves by default. While being defensive
 is an important feature, we'll use validating decorators. But
 this will not always be the case. Sometimes validation is just
-too expensive in terms of time and memory and we want to work
-directly with objects that don't defend themselves anyhow.
+too expensive in terms of time and memory, and we may want to work
+directly with objects that don't defend themselves.
 
-I also decided not to use Java Validation API any more. For the
+I also decided not to use the Java Validation API anymore for the
 same reason. Its annotations make classes much more verbose
 and less cohesive. I'm using validating decorators instead.
 
