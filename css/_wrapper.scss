@@ -1,17 +1,22 @@
-@import "defs";
+@import 'defs';
 
-.wrapper {
+%wrapper {
   box-sizing: border-box;
+  line-height: 1.4 * $em;
   margin-left: auto;
   margin-right: auto;
-  width: $width;
-  line-height: 1.4 * $em;
   padding-left: 2 * $em;
   padding-right: 2 * $em;
+  width: $width;
+
   @media all and (max-width: $width) {
-    width: 100%;
     line-height: 1.6 * $em;
     padding-left: $em;
     padding-right: $em;
+    width: 100%;
   }
+}
+
+.wrapper {
+  @extend %wrapper;
 }

@@ -63,26 +63,21 @@ public class Post {
   private int id;
   private Date date;
   private String title;
-
   @Id
   @GeneratedValue
   public int getId() {
     return this.id;
   }
-
   @Temporal(TemporalType.TIMESTAMP)
   public Date getDate() {
     return this.date;
   }
-
   public Title getTitle() {
     return this.title;
   }
-
   public void setDate(Date when) {
     this.date = when;
   }
-
   public void setTitle(String txt) {
     this.title = txt;
   }
@@ -156,6 +151,8 @@ What's wrong with it, you may ask? Everything!
 
 ## What's Wrong With ORM?
 
+{% youtube DEqcn4-freM video-left %}
+
 Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
 for more than 10 years already. Almost every SQL-intensive application in the world
 is using it. Each Java tutorial would mention Hibernate (or maybe
@@ -196,8 +193,8 @@ relational database. Look at this picture; it illustrates what ORM is doing.
 I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "ob-truncated" object returned to me. The behavior I'm interacting
 with is supposed to be provided through a single entry point, which is an object
-in OOP. In the case of ORM, I'm getting this behavior via two entry points &mdash;
-the ORM and the "thing", which we can't even call an object.
+in OOP. In the case of ORM, I'm getting this behavior via **two** entry points &mdash;
+the ORM engine and the "thing", which we can't even call an object.
 
 Because of this terrible and offensive violation of the object-oriented
 paradigm, we have a lot of practical issues already mentioned in
@@ -214,8 +211,9 @@ deal with a relational model in order to get or save something. Thus,
 ORM doesn't hide and wrap the SQL but pollutes the entire application with it.
 
 **Difficult to Test**.
-When some object is working a list of posts, it needs to deal with an
-instance of `SessionFactory`. How can we mock this dependency? We have to
+When some object is working with a list of posts, it needs to deal with an
+instance of `SessionFactory`. How can we
+[mock]({% pst 2014/sep/2014-09-23-built-in-fake-objects %}) this dependency? We have to
 create a mock of it? How complex is this task? Look at the code above, and you
 will realize how verbose and cumbersome that unit test will be. Instead,
 we can write integration tests and connect the entire application to a test
@@ -249,7 +247,6 @@ Of course, our objects will be
 Here is how `Posts` would look:
 
 {% highlight java %}
-@Immutable
 interface Posts {
   Iterable<Post> iterate();
   Post add(Date date, String title);
@@ -259,7 +256,6 @@ interface Posts {
 This is how a single `Post` would look:
 
 {% highlight java %}
-@Immutable
 interface Post {
   int id();
   Date date();
@@ -298,7 +294,6 @@ inside objects. Let's start with `Posts` and implement it in class
 `PgPosts` ("pg" stands for PostgreSQL):
 
 {% highlight java %}
-@Immutable
 final class PgPosts implements Posts {
   private final Source dbase;
   public PgPosts(DataSource data) {
@@ -334,7 +329,6 @@ final class PgPosts implements Posts {
 Next, let's implement the `Post` interface in class `PgPost`:
 
 {% highlight java %}
-@Immutable
 final class PgPost implements Post {
   private final Source dbase;
   private final int number;
@@ -390,7 +384,6 @@ a decorator of `PgPost` that will accept all data in its constructor
 and cache it internally, forever:
 
 {% highlight java %}
-@Immutable
 final class ConstPost implements Post {
   private final Post origin;
   private final Date dte;
@@ -420,7 +413,6 @@ Now let's create another implementation of `Posts` that will return
 the "constant" objects:
 
 {% highlight java %}
-@Immutable
 final class ConstPgPosts implements Posts {
   // ...
   public Iterable<Post> iterate() {
@@ -447,7 +439,8 @@ final class ConstPgPosts implements Posts {
 Now all posts returned by `iterate()` of this new class are pre-equipped with dates and titles
 fetched in one round trip to the database.
 
-Using decorators and multiple implementations of the same interface, you
+Using [decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
+and multiple implementations of the same interface, you
 can compose any functionality you wish. What is the most important is that
 while functionality is being extended, the complexity of the design is
 not escalating, because classes don't grow in size. Instead, we're introducing

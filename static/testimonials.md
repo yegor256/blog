@@ -14,6 +14,8 @@ keywords:
 exclude_from_search: true
 ---
 
+{% badge /images/angry-testimonials.png 220 %}
+
 This is what my readers think about me. If you want to add
 something, just [email me](mailto:me@yegor256.com).
 

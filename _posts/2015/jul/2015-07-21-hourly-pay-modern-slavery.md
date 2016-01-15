@@ -58,7 +58,8 @@ Doesn't it look similar to what I just said above about ancient slaves? The
 master (a.k.a. CEO) tells me what to do and punishes me at will;
 in exchange, he gives me food and safety.
 
-The problem here is not about punishment.
+The problem here is not about
+[punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 This model of work makes me **think like a slave**. I think this is a fair
 exchange &mdash; I give away my freedom (my time), and I get back food and
 safety. I'm a slave not because the master is punishing me and I'm sitting

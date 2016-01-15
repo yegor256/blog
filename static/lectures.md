@@ -15,6 +15,8 @@ keywords:
 exclude_from_search: true
 ---
 
+{% badge /images/yegor-is-presenting.png 250 %}
+
 I can visit your office with a lecture about object-oriented
 programming, project management, DevOps or software engineering
 in general. And it's **free**!

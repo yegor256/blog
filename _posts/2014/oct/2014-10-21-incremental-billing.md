@@ -59,7 +59,7 @@ appear to be honest workaholics you may get lucky and get something done.
 As you can see from the numbers above, however, this is rarely the case. Don't fool yourself;
 there won't be any workaholics in your project. Even if you adopt
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %})
-and corporal punishment, your overall
+and corporal [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}), your overall
 [costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 will be much higher than expected and the quality will
 [suffer]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}).

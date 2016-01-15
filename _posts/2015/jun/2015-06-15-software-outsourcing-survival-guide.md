@@ -146,7 +146,8 @@ make this mechanism explicit, you will deal with an
 of it where your chances of winning are very low. Most people assume the best
 and only motivation for a software team is to stay on the project. You're
 paying them and that's enough, right? Wrong. Management can't be effective
-when a monthly bank transfer is a reward and its absence is a punishment.
+when a monthly bank transfer is a reward and its absence is a
+[punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 It is too coarse-grained; that's why it's absolutely ineffective. Find a better and
 more fine-grained mechanism. This post may help:
 [Why Monetary Awards Don't Work]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}).

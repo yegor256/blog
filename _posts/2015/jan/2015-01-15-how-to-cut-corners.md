@@ -145,6 +145,8 @@ highly recommend you read
 [Working Effectively with Legacy Code](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=7SI6P3M636MLCO5E)
 by Michael Feathers. There are many different patterns, and most of them work.
 
+{% quote Catching a bug with a unit test is, in most cases, more than 80% of success %}
+
 Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
 (for example, using `@Ignore` annotation in JUnit 4) and commit your changes.
@@ -201,6 +203,8 @@ And they will also say they don't really care about your bloody
 unit tests. All they care about is that PDF document that should be
 downloadable. So the trick with a unit test won't work. What do you do?
 
+{% quote Production errors are not programmers' mistakes, though delayed tickets are %}
+
 It depends on many factors, and most of these factors are not technical.
 They are political, organizational, managerial, social, you name it. However,
 in most cases, I would recommend you disable that toxic feature,
@@ -246,6 +250,8 @@ your manager. Make it his problem. Actually, it is his problem in the
 first place. He hired you. He interviewed you. He decided to give you this
 task. He estimated your abilities and your skills.
 So it's payback time.
+
+{% quote Being a professional developer doesn't mean being able to fix any problem %}
 
 Your "No!" will be very valuable feedback for him. It will help him
 make his next important management decisions.

@@ -22,6 +22,12 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
+Jan 13, 2016:
+You can [pre-order](http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/)
+the book on Amazon.com. The price is $40.96.
+As promised, the book will be published on Feb 22.
+
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested

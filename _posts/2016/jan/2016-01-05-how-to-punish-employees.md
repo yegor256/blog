@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Do You Punish Your Employees?"
-date: 2015-10-20
+date: 2016-01-05
 place: Kiev, Ukraine
 tags: management
 description:
@@ -27,6 +27,8 @@ Here is a list of the most effective methods :)
 
 <!--more-->
 
+{% picture /images/2016/01/office-space.jpg 0 Office Space (1999) by Mike Judge %}
+
 Disclaimer: I'm using the pronoun "he" merely for simplicity of speech. The
 same exact rules apply to both males and females.
 
@@ -35,7 +37,7 @@ This, of course, is your best instrument of
 [punishment](https://en.wikipedia.org/wiki/Punishment). Make sure he is scared
 of you. He must know who he works for &mdash; you, his boss. The rule
 of thumb is that the one with the strongest voice is the boss. Thus, you
-must be heard, you must **rule** with your voice, and he must physically 
+must be heard, you must **rule** with your voice, and he must physically
 feel your presence in the room. Even if it's just a Skype call,
 your voice must sound stronger than all others.
 Moreover, don't let him speak if he is trying to argue back.
@@ -62,6 +64,8 @@ you're the boss and he basically can't do anything to you. He will first try
 to laugh alongside everybody else, but this won't last for the long term. In the
 end, everybody will laugh at him, and he will do whatever it takes just to stop it.
 He will obey any order you give!
+
+{% quote Having a personal life outside the office is not for everybody; it is a luxury %}
 
 **Mistakes Must be Visible**.
 Is he wrong? Did he miss a deadline? Did he deploy a broken version to production?
@@ -99,6 +103,8 @@ team member anymore. The team doesn't need his results. The team can live
 without them. You will see how soon he realizes who the boss is and
 what it means when the boss is not happy!
 
+{% quote Obviously, the best desk is the one at which nobody can see your monitor %}
+
 **A Bad Office Spot Is a Great De-Motivator**.
 This is a classic instrument of punishment: The worst desks go to
 those who forget who the boss is around here. Obviously, the best desk is the
@@ -123,6 +129,8 @@ all others. Boring, ambiguous, unfocused, unnecessary, under-funded, and routine
 tasks all go to the employee who deserves punishment. Of course,
 you must look unbiased &mdash; be very polite and supportive, acting as if you're
 a good friend!
+
+{% quote Leaving the office at 5 p.m. is a privilege; only the best employees can afford it %}
 
 **Spread Rumors**.
 Simply show your annoyance of his poor results, but not to his face. Talk

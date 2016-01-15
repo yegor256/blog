@@ -1,333 +1,412 @@
-@import "defs";
-@import "fonts";
-@import "highlight";
-@import "ico";
-@import "disqus";
-@import "post";
-@import "wrapper";
-@import "tables";
-@import "icons";
+@import 'defs';
+@import 'fonts';
+@import 'highlight';
+@import 'ico';
+@import 'disqus';
+@import 'post';
+@import 'wrapper';
+@import 'tables';
+@import 'icons';
 
-.green {
-  color: green;
-}
-.gray {
+.green { color: $green; }
+
+%gray {
   color: $gray;
-  a, a:visited {
+
+  a,
+  a:visited {
     color: inherit;
   }
 }
-.light-gray {
-  color: $light-gray;
-}
-.small {
-  font-size: 0.85 * $em;
-}
-.strike {
-  text-decoration: line-through;
-}
-.main-font {
-  font-family: $main-font;
-}
-.desktop-only {
+
+%light-gray { color: $light-gray; }
+
+%small { font-size: .85 * $em; }
+
+%strike { text-decoration: line-through; }
+
+%main-font { font-family: $main-font; }
+
+%desktop-only {
   @media all and (max-width: $width) {
-    display: none !important;
+    display: none;
   }
 }
-.unprintable {
+
+.desktop-only { @extend %desktop-only; }
+
+%unprintable {
   @media print {
     display: none !important;
   }
 }
-.printable {
+
+.unprintable { @extend %unprintable; }
+
+%printable {
   @media not print  {
     display: none !important;
   }
 }
+
+.printable { @extend %printable; }
+
 body {
-  @extend .main-font;
-  height: 100%;
-  font-weight: 400;
-  background-color: #fff;
+  @extend %main-font;
+  background-color: $white;
   color: $black;
   font-size: $em;
+  font-weight: 400;
+  height: 100%;
   margin: 0;
-  padding-top: 2 * $em;
-  padding-bottom: 2 * $em;
-  position: relative;
   overflow-x: hidden;
+  padding-bottom: 2 * $em;
+  padding-top: 2 * $em;
+  position: relative;
 }
-a, a:visited {
+
+a,
+a:visited {
   color: inherit;
   text-decoration: underline;
 }
+
 .foreign:before {
-  @extend .unprintable;
-  @extend .desktop-only;
+  @extend %unprintable;
+  @extend %desktop-only;
   font-size: .4 * $em;
   vertical-align: top;
 }
+
 .teamed-banner {
-  @extend .unprintable;
-  @extend .desktop-only;
-  width: 100%;
-  margin-top: 2 * $em;
+  @extend %unprintable;
+  @extend %desktop-only;
   margin-bottom: 2 * $em;
+  margin-top: 2 * $em;
+  width: 100%;
+
   img {
     width: 100%;
   }
 }
-.hot {
-  @extend .unprintable;
-  font-family: $code-font;
-  font-size: 85%;
-  line-height: $em;
-  margin-top: 2 * $em;
-  margin-bottom: 2 * $em;
-  ul {
-    list-style: none;
-    padding-left: 0;
-    li {
-      border-left: 4px solid $green;
-      padding-left: $em;
-      margin-bottom: $em;
-      color: darken($green, 25);
-    }
+
+.header-toggle {
+  cursor: pointer;
+  font-size: 1.4 * $em;
+  @media all and (min-width: $width) {
+    display: none;
   }
 }
+
 .header {
-  @extend .unprintable;
+  @extend %desktop-only;
+  @extend %unprintable;
   text-align: center;
+  @media all and (max-width: $width) {
+    text-align: left;
+  }
+
+  .hot {
+    @extend %unprintable;
+    font-family: $code-font;
+    font-size: 85%;
+    line-height: $em;
+    margin-bottom: 2 * $em;
+    margin-top: 2 * $em;
+    text-align: left;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        border-left: 4px solid $green;
+        color: darken($green, 25);
+        margin-bottom: $em;
+        padding-left: $em;
+      }
+    }
+  }
+
   .menu {
     list-style: none;
     padding-left: 0;
+
     li {
       display: inline;
-      margin-left: 0.2 * $em;
-      margin-right: 0.2 * $em;
+      margin-right: .4 * $em;
     }
   }
+
   .social {
     a {
       text-decoration: none;
     }
   }
+
   .face {
     position: relative;
+
     .photo {
-      width: 80px;
       border-radius: 50%;
+      width: 80px;
     }
+
     .hire {
-      position: absolute;
-      top: 0px;
+      @extend %desktop-only;
+      color: darken($green, 15);
       left: 50%;
       margin-left: 45px;
-      text-decoration: underline;
-      color: darken(#81b341, 15);
-    }
-    .sub {
       position: absolute;
-      top: 50px;
+      text-decoration: underline;
+      top: 0;
+    }
+
+    .sub {
+      @extend %desktop-only;
+      color: darken($green, 15);
+      margin-right: 45px;
+      position: absolute;
       right: 50%;
       text-align: right;
-      margin-right: 45px;
       text-decoration: underline;
-      color: darken(#81b341, 15);
+      top: 50px;
     }
   }
 }
+
 .footer {
-  @extend .small;
-  @extend .gray;
-  @extend .desktop-only;
+  @extend %small;
+  @extend %gray;
+  @extend %desktop-only;
   margin-top: 5 * $em;
   text-align: center;
 }
+
 .video {
-  @extend .unprintable;
-  width: 640px;
+  @extend %unprintable;
+  border: 0;
   height: 360px;
   max-width: 100%;
-  border: 0;
+  width: 640px;
+
   &.video-left {
-    width: 320px;
-    height: 160px;
     float: left;
-    margin-right: 1em;
+    height: 160px;
     margin-bottom: 1em;
+    margin-right: 1em;
+    width: 320px;
   }
 }
+
 label {
   display: block;
 }
+
 fieldset {
   border: 0;
   padding: 0;
 }
+
 .field {
-  @extend .main-font;
+  @extend %main-font;
   box-sizing: border-box;
   font-size: $em;
   padding: .2 * $em .5 * $em;
 }
+
 .field-text {
   border: 1px solid $black;
   @media all and (max-width: $width) {
     width: 100%;
   }
 }
+
 h1 {
-  font-weight: 600;
   font-size: 2 * $em;
+  font-weight: 600;
   line-height: 2 * $em;
   margin-bottom: .5 * $em;
+
   a {
     text-decoration: none;
   }
 }
-h2, h3 {
+
+h2,
+h3 {
   position: relative;
 }
+
 h2 {
   margin-top: 2 * $em;
-  a.link {
-    @extend .gray;
-    @extend .desktop-only;
+
+  .link {
+    @extend %gray;
+    @extend %desktop-only;
     margin-left: .3 * $em;
     text-decoration: none;
+
     &:hover {
       color: inherit;
       opacity: 1;
     }
   }
 }
+
 .subline {
-  @extend .gray;
-  @extend .small;
+  @extend %gray;
+  @extend %small;
   list-style: none;
-  padding-left: 0;
   margin-top: 0;
+  padding-left: 0;
+
   li {
     display: inline;
     margin-right: .5 * $em;
   }
 }
+
 .front {
-  margin-top: 2 * $em;
   margin-bottom: 4 * $em;
+  margin-top: 2 * $em;
 }
+
 .pagination {
-  @extend .unprintable;
+  @extend %unprintable;
   text-align: center;
+
   .mute {
-    @extend .gray;
+    @extend %gray;
   }
+
   a {
     text-decoration: none;
   }
 }
+
 hr {
+  border: 0;
+  border-top: 1px solid $light-gray;
+  height: 0;
   margin-top: 2 * $em;
   text-align: left;
-  border: 0;
-  height: 0;
   width: 50%;
-  border-top: 1px solid $light-gray;
 }
+
 .badge {
-  @extend .desktop-only;
   float: right;
   margin-left: 2em;
-}
-blockquote {
-  margin-left: 1.5 * $em;
-  padding-left: 0.5 * $em !important;
-  border-left: 3px solid $light-gray;
-  position: relative;
-  font-style: italic;
-  p:before {
-    @extend .gray;
-    @extend .desktop-only;
-    position: absolute;
-    left: -1.5 * $em;
-    top: .5 * $em;
-    content: "ˮ";
-    font-size: 2.5 * $em;
-  }
   @media all and (max-width: $width) {
+    float: none;
+    margin-bottom: $em;
+    margin-left: 0;
+    margin-top: $em;
+    max-width: 100%;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $light-gray;
+  font-style: italic;
+  margin-left: 1.5 * $em;
+  padding-left: .5 * $em !important;
+  position: relative;
+
+  p:before {
+    @extend %gray;
+    @extend %desktop-only;
+    content: 'ˮ';
+    font-size: 2.5 * $em;
+    left: -1.5 * $em;
+    position: absolute;
+    top: .5 * $em;
+  }
+
+  @media all and (max-width: $width) {
+    border-left: 0;
     margin-left: 0;
     padding-left: 0;
-    border-left: 0;
   }
 }
+
 .quote {
-  @extend .desktop-only;
-  @extend .unprintable;
+  @extend %desktop-only;
+  @extend %unprintable;
+  border-left: 4px solid $green;
   float: right;
-  padding-left: .75 * $em;
-  margin: .5 * $em -5 * $em .5 * $em $em;
   font-size: 1.6 * $em;
   line-height: 1.6 * $em;
-  border-left: 4px solid $green;
+  margin: .5 * $em -5 * $em .5 * $em $em;
+  padding-left: .75 * $em;
   width: 15 * $em;
+
   &:before {
-    content: "ˮ";
+    content: 'ˮ';
   }
 }
+
 figure {
-  position: relative;
   margin: 0;
+  position: relative;
+
   img {
     max-width: 100%;
   }
+
   figcaption {
-    position: absolute;
-    font-size: .8em;
-    line-height: 1em;
-    left: .5em;
+    background-color: rgba(0, 0, 0, .7);
     bottom: 1em;
     color: lighten($black, 40);
-    background-color: rgba(0, 0, 0, .7);
+    font-size: .8em;
+    left: .5em;
+    line-height: 1em;
+    position: absolute;
   }
+
   figcaption:before {
-    content: "© ";
+    content: '© ';
   }
 }
+
 .graphviz-wrapper {
   text-align: center;
 }
+
 .tagged {
   margin: $em 0;
 }
+
 .tag {
-  white-space: nowrap;
+  background-color: $gray;
+  color: $white !important;
   font-family: $code-font;
   font-size: .8 * $em;
   margin-right: .2 * $em;
   padding: 0 .5 * $em;
-  background-color: $gray;
   text-decoration: none;
-  color: white !important;
-  @media all and (max-width: $width) {
-    font-family: monospace;
-  }
+  white-space: nowrap;
+
   &:visited {
-    color: white !important;
+    color: $white !important;
   }
+
   &:hover {
     background-color: $black;
   }
 }
+
 .note {
-  margin-top: 0;
+  color: $gray;
   font-size: .8 * $em;
   line-height: $em;
-  color: $gray;
+  margin-top: 0;
 }
+
 .about-badge {
   height: 24px;
 }
+
 .gist {
   pre {
     font-size: 12px !important;

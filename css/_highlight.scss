@@ -1,63 +1,74 @@
-code, pre {
+code,
+pre {
   font-family: $code-font;
   font-weight: 400;
   @media all and (max-width: $width) {
-    font-family: monospace;
+    font-family: 'Ubuntu Mono';
+    letter-spacing: -1px;
   }
 }
+
 code {
   background-color: $light-gray;
   line-height: $em;
-  padding: 0 0.3 * $em;
+  padding: 0 .3 * $em;
 }
+
 .highlight {
+  border-left: 3px solid $light-gray;
+  margin-left: 2 * $em;
+  padding-left: .5 * $em !important;
+  @media all and (max-width: $width) {
+    border-left: 0;
+    margin-left: 0;
+    overflow-x: auto;
+    padding-left: 0 !important;
+  }
+
   .kn,
   .kd,
   .kt {
     font-weight: bold;
   }
+
   .c1 {
-    color: #777;
+    color: $dark-gray;
   }
 }
+
 .highlighttable {
   border-spacing: 0;
-  width: 100%;
   table-layout: fixed;
+  width: 100%;
+
   .linenos {
-    @extend .gray;
-    @extend .desktop-only;
-    width: 2 * $em;
-    padding-right: 2px;
+    @extend %gray;
+    @extend %desktop-only;
     min-width: 2 * $em;
+    padding-right: 2px;
     text-align: right;
+    width: 2 * $em;
   }
+
   .highlight {
     margin-left: 0;
   }
+
   @media all and (max-width: $width) {
     overflow-x: auto;
   }
 }
-.highlight {
-  margin-left: 2 * $em;
-  padding-left: 0.5 * $em !important;
-  border-left: 3px solid $light-gray;
-  @media all and (max-width: $width) {
-    margin-left: 0;
-    padding-left: 0 !important;
-    border-left: 0;
-    overflow-x: auto;
-  }
-}
+
 pre {
   display: block;
-  font-size: 0.9 * $em;
+  font-size: .9 * $em;
   line-height: 1.2 * $em;
+
   code {
     background-color: inherit;
     padding: 0;
   }
+
   @media all and (max-width: $width) {
     line-height: 1.2 * $em;
   }

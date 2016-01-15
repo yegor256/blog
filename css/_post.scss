@@ -1,41 +1,47 @@
 .buttons {
-  @extend .unprintable;
+  @extend %unprintable;
+
   .share {
-    a, a:visited {
+    a,
+    a:visited {
       text-decoration: none;
     }
+
     a {
       position: relative;
+
       .count {
-        display: none;
-        position: absolute;
-        font-family: $code-font;
-        top: -.7 * $em;
-        right: .3 * $em;
-        font-size: .6 * $em;
-        padding: 0 .2 * $em;
-        line-height: .7 * $em;
-        background-color: white;
+        background-color: $white;
         border: 1px solid $gray;
         color: $gray;
+        display: none;
+        font-family: $code-font;
+        font-size: .6 * $em;
+        line-height: .7 * $em;
+        padding: 0 .2 * $em;
+        position: absolute;
+        right: .3 * $em;
+        top: -.7 * $em;
       }
+
       .icon {
         $size: 1.2;
-        padding: .4 * $size * $em;
+        border: 1px solid $gray;
         border-radius: 50%;
+        color: $gray;
+        display: inline-block;
         height: $size * $em;
-        width: $size * $em;
         line-height: $size * $em;
-        margin-right: .2 * $em;
         margin-bottom: .2 * $em;
+        margin-right: .2 * $em;
+        padding: .4 * $size * $em;
         text-align: center;
         vertical-align: middle;
-        border: 1px solid $gray;
-        display: inline-block;
-        color: $gray;
+        width: $size * $em;
+
         &:hover {
           background-color: $gray;
-          color: white;
+          color: $white;
         }
       }
     }
