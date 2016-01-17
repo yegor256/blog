@@ -289,7 +289,7 @@ by Fredrik Rubensson is right about this problem.&lt;/p&gt;
 robustness of the product, we must &lt;strong&gt;rotate&lt;/strong&gt; programmers, preventing
 them from becoming subject matter experts.&lt;/p&gt;
 
-&lt;p&gt;I realize this idea sounds counterintuitive, but think about it.
+&lt;p&gt;I realize this idea sounds counter-intuitive, but think about it.
 By keeping people together, working on the same problem for a long time,
 we put a lot of knowledge into their heads, not our source code.
 These people become the &lt;strong&gt;asset&lt;/strong&gt;. They become smarter, they know the
@@ -307,7 +307,7 @@ consequences may be fatal.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;It&amp;#39;s Not a School!&lt;/a&gt; &amp;mdash;
 This earlier post explains how this problem can be solved without
-firing or rotating programmers, but few teams, especially colocated ones,
+firing or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can&amp;#39;t, just try to keep your turnover high
 enough to prevent the appearance of &lt;strong&gt;heros&lt;/strong&gt; (a.k.a. subject matter experts).&lt;/p&gt;
 </description>
@@ -1309,7 +1309,7 @@ document (or appendix).&lt;/p&gt;
 If your text gets any longer, there is something wrong.
 Try to move part of it to a supplementary document.&lt;/p&gt;
 
-&lt;h2 id=&quot;unmeasurable-quality-requirements&quot;&gt;Unmeasurable Quality Requirements&lt;/h2&gt;
+&lt;h2 id=&quot;un-measurable-quality-requirements&quot;&gt;Un-measurable Quality Requirements&lt;/h2&gt;
 
 &lt;p&gt;This is what I&amp;#39;m talking about:&lt;/p&gt;
 
@@ -1330,7 +1330,7 @@ profile loading time? What if there are launching problems? Do they count?
 There are a lot of questions like that.&lt;/p&gt;
 
 &lt;p&gt;If we answer &lt;strong&gt;all&lt;/strong&gt; of them, the requirement text will fill an entire
-page. Nobody wants that, but having unmeasurable requirements
+page. Nobody wants that, but having un-measurable requirements
 is a greater evil.&lt;/p&gt;
 
 &lt;p&gt;Again, it&amp;#39;s not easy, but it&amp;#39;s necessary. Try to make sure all
