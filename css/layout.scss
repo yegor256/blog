@@ -135,6 +135,7 @@ a:visited {
     li {
       display: inline;
       margin-right: .4 * $em;
+
       &:after {
         content: ' ';
       }
