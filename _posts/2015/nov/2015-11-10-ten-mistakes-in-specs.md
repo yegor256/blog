@@ -226,7 +226,7 @@ In general, functional requirements must be very short:
 If your text gets any longer, there is something wrong.
 Try to move part of it to a supplementary document.
 
-## Unmeasurable Quality Requirements
+## Un-measurable Quality Requirements
 
 This is what I'm talking about:
 
@@ -249,7 +249,7 @@ profile loading time? What if there are launching problems? Do they count?
 There are a lot of questions like that.
 
 If we answer **all** of them, the requirement text will fill an entire
-page. Nobody wants that, but having unmeasurable requirements
+page. Nobody wants that, but having un-measurable requirements
 is a greater evil.
 
 Again, it's not easy, but it's necessary. Try to make sure all
