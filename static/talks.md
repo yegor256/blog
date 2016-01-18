@@ -38,13 +38,13 @@ Atlanta, USA<br/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DeveloperWeek 2016](http://www.developerweek.com/)<br/>
 San Francisco, USA<br/>
-12-18 February 2016
+17 February 2016
 
 <img src="/images/2016/agilia-conference-2016.png" class="talk" alt="Agilia Conference 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
 Olomouc, Czech Republic<br/>
-4-8 April 2016
+5 April 2016
 
 <img src="/images/2016/geekout-2016.png" class="talk" alt="GeekOUT 2016"/>
 **Chatbots and Microservices<br/>
