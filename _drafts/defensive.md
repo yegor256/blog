@@ -5,7 +5,9 @@ date: 2015-10-20
 place: Palo Alto, CA
 tags: oop
 description:
-  ...
+  Defensive programming is a good idea, but the way
+  it gets implemented is, in most cases, very wrong;
+  here is what I'm suggesting instead.
 keywords:
   - defensive programming
   - validators in oop

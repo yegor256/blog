@@ -5,7 +5,9 @@ date: 2016-01-08
 place: Kiev, Ukraine
 tags: architecture
 description:
-  ...
+  DSL is a hype for the last few years, but is it
+  really such a good idea that may help us
+  make code cleaner?
 keywords:
   - domain specific language
   - DSL design pattern
@@ -13,8 +15,6 @@ keywords:
   - DSL is bad
   - DSL vs configuration
 ---
-
-
 
 Using DSL (Domain Specific Language) instead of configuration
 is a very popular concept and I don't

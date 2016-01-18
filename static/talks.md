@@ -46,6 +46,12 @@ San Francisco, USA<br/>
 Olomouc, Czech Republic<br/>
 4-8 April 2016
 
+<img src="/images/2016/geekout-2016.png" class="talk" alt="GeekOUT 2016"/>
+**Chatbots and Microservices<br/>
+[GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/)<br/>
+Tallinn, Estonia<br/>
+9-10 June 2016
+
 <hr/>
 
 "Continuous Integration May Have Negative Effects"s;
