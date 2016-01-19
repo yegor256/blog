@@ -10,12 +10,136 @@
     <description>Yegor Bugayenko</description>
     <language>en-us</language>
     <copyright>(c) Yegor Bugayenko, 2014-2015</copyright>
-    <lastBuildDate>Tue, 12 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2016 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon-128x128.png</url>
       <title>yegor256.com</title>
       <link>http://www.yegor256.com</link>
     </image>
+    <item>
+      <title>How Expensive Is Your Outsourcing Team?</title>
+      <link>http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing.html</link>
+      <description>&lt;p&gt;Let me put it this way: $15 per hour for a senior Java developer &amp;mdash;
+is that cheap or expensive? It&amp;#39;s cheap, right? Right. What would you
+say if I told you this cheap Java developer hardly writes two
+primitive lines of code per day? You&amp;#39;re paying $600 every week but
+rarely getting anything back. How cheap is this Java guy now?
+My point is that using hourly rate as a cost indicator is a very bad idea,
+whether with &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;
+or in-house teams.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src='/images/2016/01/the-fan.jpg' style='width:600px;' alt='The Fan (1996) by Tony Scott'/&gt;&lt;figcaption&gt;The Fan (1996) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I actually decided to write this after a short sales meeting recently
+with a prospect from Illinois. He wanted to hire &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; for his
+Java project and seemed to like our approach. I explained how we work,
+how we control &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality&lt;/a&gt;,
+and why and how we&amp;#39;re &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;different&lt;/a&gt;
+from everybody else. He seemed to be impressed.
+Then, he asked, &amp;quot;&lt;strong&gt;How much&lt;/strong&gt; do you charge?&amp;quot;&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.teamed.io'&gt;&lt;img src='http://img.teamed.io/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;I told him that we are also different in the way we bill for our work,
+because we don&amp;#39;t charge for the time spent by our programmers sitting
+in front of monitors. Instead, we bill for &lt;strong&gt;results&lt;/strong&gt; produced, merged,
+and delivered. I showed him this article about
+&lt;a href=&quot;/2014/10/21/incremental-billing.html&quot;&gt;incremental billing&lt;/a&gt;.
+He seemed to understand the advantages of our approach, compared to the
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;hourly salaries&lt;/a&gt;
+being paid by &lt;del&gt;almost&lt;/del&gt; everybody else in the market.&lt;/p&gt;
+
+&lt;p&gt;Still, the question remained &amp;mdash; how much?&lt;/p&gt;
+
+&lt;p&gt;What could I do? I had to give him an answer.&lt;/p&gt;
+
+&lt;p&gt;I told him that our best Java programmers earn $30 to $50 per hour and
+we add our margin on top of that, in the amount of 100 percent, for management.
+In the end, &amp;quot;one hour&amp;quot; will cost him $60 to $100. He ran away.&lt;/p&gt;
+
+&lt;p&gt;What did I do wrong? I think I know what it was.
+I didn&amp;#39;t explain to him that, under different management,
+programmers deliver very different results in the same
+60 minutes. By &amp;quot;very different&amp;quot;, I mean &lt;strong&gt;dramatically&lt;/strong&gt; different. Let
+me demonstrate the numbers (I actually did that already almost two
+years ago, in my &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How Much Do You Pay Per Line of Code?&lt;/a&gt;
+post, but will try again from a different perspective).&lt;/p&gt;
+
+&lt;p&gt;Take a look at &lt;a href=&quot;https://github.com/yegor256/takes/issues/430&quot;&gt;yegor256/takes#430&lt;/a&gt;,
+a feature request in the &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;,
+one of the projects we&amp;#39;re managing.
+Let&amp;#39;s see how much the project paid for the work done in this ticket:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;15 minutes to me for creating a new ticket&lt;/li&gt;
+&lt;li&gt;30 minutes to &lt;a href=&quot;https://github.com/hdouss&quot;&gt;@hdous&lt;/a&gt; for fixing it&lt;/li&gt;
+&lt;li&gt;52 minutes to &lt;a href=&quot;https://github.com/pinaf&quot;&gt;@pinaf&lt;/a&gt; for code review&lt;/li&gt;
+&lt;li&gt;20 minutes to &lt;a href=&quot;https://github.com/ypshenychka&quot;&gt;@ypshenychka&lt;/a&gt; for QA review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Assuming that an average price &amp;quot;per hour&amp;quot; is $50
+($25 for developers and $25 for our management),
+the total cost of this new feature was $97.50 (117 minutes).&lt;/p&gt;
+
+&lt;p&gt;Look at these two tickets again.
+&lt;a href=&quot;https://github.com/yegor256/takes/issues/430&quot;&gt;#430&lt;/a&gt; is the feature
+request and &lt;a href=&quot;https://github.com/yegor256/takes/issues/493&quot;&gt;#493&lt;/a&gt; is
+the pull request with two new Java files and code review comments.&lt;/p&gt;
+
+&lt;p&gt;Four people worked on this feature. If you put them all together
+in an office, full-time, with the same hourly rate, they will cost
+$800 per day (I&amp;#39;m not adding any management costs!).
+Now the question is whether they will be able to
+create &lt;strong&gt;eight&lt;/strong&gt; new features &lt;strong&gt;every day&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re a manager, you know the velocity of your programmers.
+If you&amp;#39;re a programmer, you know how much code you can write in a day.
+Now, honestly tell me if you find and solve eight bugs per day with that
+level of complexity, detailed code review, and precision of
+documentation? I seriously doubt it.&lt;/p&gt;
+
+&lt;figure class='badge'&gt;&lt;a href='http://www.xdsd.org'&gt;&lt;img src='http://img.xdsd.org/logo.svg' style='width:100px;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;In that &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How Much Do You Pay Per Line of Code?&lt;/a&gt;
+post, I actually did a comparison of a co-located project, where I was an architect,
+with a distributed one, where I also was an architect. My numbers tell
+me that a traditionally managed team is at least 10 times less
+productive than a team managed by &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; under
+&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt; principles.&lt;/p&gt;
+
+&lt;p&gt;My point is that asking &amp;quot;What is your hourly rate?&amp;quot; is just as wrong as
+asking &lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;How Much for This Software?&lt;/a&gt;
+if we&amp;#39;re talking about software developers motivated by results,
+not &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slaves&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Instead, we should ask: How much can you do for $100?&lt;/p&gt;
+
+&lt;p&gt;As you can see, we can easily demonstrate how much we are capable
+of delivering for $100. Can you and your team do the same?&lt;/p&gt;
+
+&lt;p&gt;Thus, your &lt;a href=&quot;https://en.wikipedia.org/wiki/Return_on_investment&quot;&gt;ROI&lt;/a&gt;
+while working with an &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;outsourced team&lt;/a&gt; mostly
+depends on their &lt;strong&gt;results per dollar&lt;/strong&gt;, not dollars per hour. The first
+metric is difficult to calculate, and only the best teams will be able
+to dod so. The second metric is absolutely misleading, but anyone
+will give it to you.&lt;/p&gt;
+
+&lt;p&gt;An &lt;a href=&quot;/2015/06/15/software-outsourcing-survival-guide.html&quot;&gt;outsourced team&lt;/a&gt;
+is expensive when its results per dollar are low,
+no matter how big or small its dollars-per-hour rate is. To the contrary,
+a team is financially very efficient if its results per dollar is high.
+It doesn&amp;#39;t really matter what the value of the second metric is.&lt;/p&gt;
+
+&lt;p&gt;P.S. I&amp;#39;m going to show this article to that prospect who ran away. Maybe
+he will come back :)&lt;/p&gt;
+</description>
+      <author>Yegor Bugayenko</author>
+      <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing.html</guid>
+      <dc:date>2016-01-19T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Good Programmers Don't Work for Equity</title>
       <link>http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</link>
@@ -2161,66 +2285,6 @@ of this problem here:
       <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
       <guid>http://www.yegor256.com/2015/10/20/interrupted-exception.html</guid>
       <dc:date>2015-10-20T00:00:00+00:00</dc:date>
-    </item>
-    <item>
-      <title>Software Quality Award, 2016</title>
-      <link>http://www.yegor256.com/2015/10/17/award-2016.html</link>
-      <description>&lt;p&gt;This is the second year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
-is still the same &amp;mdash; &lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules were changed a bit. Read on.
-BTW, 2015 is &lt;a href=&quot;/2015/04/16/award.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;One person can submit &lt;strong&gt;only one&lt;/strong&gt; project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Submissions are accepted until the &lt;strong&gt;September 1, 2016&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Submissions must be sent via email to &lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;me@yegor256.com&lt;/a&gt;.
-All I need is your GitHub login and repository name; I will check the commit
-history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15, 2016&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least 10,000 lines of code.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don&amp;#39;t care about
-popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
-your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <author>Yegor Bugayenko</author>
-      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>http://www.yegor256.com/2015/10/17/award-2016.html</guid>
-      <dc:date>2015-10-17T00:00:00+00:00</dc:date>
     </item>
     <generator>Jekyll</generator>
   </channel>
