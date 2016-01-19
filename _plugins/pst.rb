@@ -13,7 +13,7 @@ module Jekyll
 
       def render(context)
         site = context.registers[:site]
-        site.posts.each do |p|
+        site.posts.docs.each do |p|
           if @post == p
             return p.url
           end

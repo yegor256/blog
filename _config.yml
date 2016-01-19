@@ -20,15 +20,15 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
 gems:
-  - jekyll-sass
+  - jekyll-feed
+  - jekyll-paginate
   - jekyll-plantuml
-  - jekyll-press
+  # - jekyll-press
+  - jekyll-sitemap
 
-# https://github.com/agelber/jekyll-rss
-url: http://www.yegor256.com
-rss_post_limit: 15
+feed:
+  path: rss.xml
 
-# see https://github.com/noct/jekyll-sass
 sass:
   style: compressed
   deploy_style: compressed
@@ -43,14 +43,3 @@ jekyll-press:
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
 tag_page_dir: tag
-
-# see https://github.com/kinnetica/jekyll-plugins
-sitemap:
-  file: "/sitemap.xml"
-  exclude:
-    - "/rss.xml"
-    - "/rss-jcg.xml"
-  include_posts:
-    - "/index.html"
-  change_frequency_name: "change_frequence"
-  priority_name: "priority"
