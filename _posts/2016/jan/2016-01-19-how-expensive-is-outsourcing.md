@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Expensive Is Your Outsourcing Team?"
-date: 2016-01-18
+date: 2016-01-19
 place: Palo Alto, CA
 tags: outsourcing
 description:
@@ -27,7 +27,7 @@ or in-house teams.
 
 <!--more-->
 
-{% badge http://img.teamed.io/logo.svg 100 http://www.teamed.io %}
+{% picture /images/2015/01/the-fan.jpg 0 The Fan (1996) by Tony Scott %}
 
 I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his
@@ -36,6 +36,8 @@ how we control [quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control 
 and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from everybody else. He seemed to be impressed.
 Then, he asked, "**How much** do you charge?"
+
+{% badge http://img.teamed.io/logo.svg 100 http://www.teamed.io %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting
@@ -89,7 +91,7 @@ create **eight** new features **every day**.
 
 If you're a manager, you know the velocity of your programmers.
 If you're a programmer, you know how much code you can write in a day.
-Now, honestly tell me if you find and solve eight bugs per day with that 
+Now, honestly tell me if you find and solve eight bugs per day with that
 level of complexity, detailed code review, and precision of
 documentation? I seriously doubt it.
 
