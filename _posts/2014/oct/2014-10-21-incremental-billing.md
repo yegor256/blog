@@ -111,7 +111,7 @@ contracts with programmers?
 
 {% figure /images/2014/10/xdsd-invoice-example.svg 500 %}
 
-Yes, [it is]({% pst 2016-01-19-how-expensive-is-outsourcing %}).
+Yes, [it is]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %}).
 We call it "Incremental Billing".
 
 Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
