@@ -41,7 +41,7 @@ San Francisco, USA<br/>
 17 February 2016
 
 <img src="/images/2016/cascadiait-2016.png" class="talk" alt="CascadiaIT 2016"/>
-**Talk To Your Microservice Via a Chat Bot, not UI **<br/>
+**Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [CascadiaIT](http://casitconf.org/casitconf16/talks/)<br/>
 Seattle, USA<br/>
 12 March 2016
@@ -53,7 +53,7 @@ Olomouc, Czech Republic<br/>
 5 April 2016
 
 <img src="/images/2016/geekout-2016.png" class="talk" alt="GeekOUT 2016"/>
-**Chatbots and Microservices<br/>
+**Chatbots and Microservices**<br/>
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
 9-10 June 2016
