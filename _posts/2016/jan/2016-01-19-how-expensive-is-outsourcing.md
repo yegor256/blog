@@ -118,7 +118,7 @@ Thus, your [ROI](https://en.wikipedia.org/wiki/Return_on_investment)
 while working with an [outsourced team]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}) mostly
 depends on their **results per dollar**, not dollars per hour. The first
 metric is difficult to calculate, and only the best teams will be able
-to dod so. The second metric is absolutely misleading, but anyone
+to do so. The second metric is absolutely misleading, but anyone
 will give it to you.
 
 An [outsourced team]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %})
