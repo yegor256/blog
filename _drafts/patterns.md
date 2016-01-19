@@ -43,30 +43,30 @@ any object would be easy to create, just through its constructors.
 [<span class='green'>Chain of Responsibility</span>](https://en.wikipedia.org/wiki/Chain_of_responsibility_pattern).
 Seems fine.
 
-[<span class='red'>Command</span>](https://en.wikipedia.org/wiki/Command_pattern).
-That's a bad idea, since it's an anemic data structure, not
-a real object.
-???
+[<span class='green'>Command</span>](https://en.wikipedia.org/wiki/Command_pattern).
+It's OK.
 
 [<span class=''>Composite</span>](https://en.wikipedia.org/wiki/Composite_pattern).
-???
+Good one, check [this]({% pst 2015/oct/2015-10-01-vertical-horizontal-decorating %}) too.
 
 [<span class='green'>Decorator</span>](https://en.wikipedia.org/wiki/Decorator_pattern).
-My favorite one. Highly recommend to use.
+My [favorite]({% pst 2015/feb/2015-02-26-composable-decorators %}) one.
+Highly recommend to use.
 
 [<span class='red'>Facade</span>](https://en.wikipedia.org/wiki/Facade_pattern).
-Bad idea. In OOP we need objects and only only objects.
+Bad idea. In OOP we need objects and only objects.
 Not facades to them. This design pattern is very procedural
-in its spirit, since facade is nothing else by a collection
-of procedures.
+in its spirit, since a facade is nothing else by a collection
+of [procedures]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
 
 [<span class='orange'>Factory Method</span>](https://en.wikipedia.org/wiki/Factory_method_pattern).
-This one seems OK, although I don't really understand
-why it's called a pattern. Just a normal inheritance
-and method overriding.
+This one seems OK.
 
-[<span class=''>Flyweight</span>](https://en.wikipedia.org/wiki/Flyweight_pattern).
-???
+[<span class='red'>Flyweight</span>](https://en.wikipedia.org/wiki/Flyweight_pattern).
+It's a workaround, as I see it, not a good design pattern. I would
+recommend not to use it. Unless, there is a really critical performance
+issue. But calling it a design pattern... No way. A fix for a
+performance problem in Java? Yes. But not a pattern.
 
 [<span class='red'>Front Controller</span>](https://en.wikipedia.org/wiki/Front_controller).
 Terrible idea, as well as the entire

@@ -26,6 +26,12 @@ here is [how](/lectures.html).
   height: 50px;
   margin-top: 2em;
 }
+.photo {
+  float: left;
+  width: 160px;
+  height: 90px;
+  margin-right: 1em;
+}
 </style>
 
 <img src="/images/2016/devnexus-2016-logo.png" class="talk" alt="DevNexus 2015"/>
@@ -60,7 +66,8 @@ Tallinn, Estonia<br/>
 
 <hr/>
 
-"Continuous Integration May Have Negative Effects"s;
+<img src="/images/2015/devopsdays-warsaw-2015.jpg" class="photo" alt="DevOpsDays Warsaw 2015"/>
+"Continuous Integration May Have Negative Effects";
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
 Warsaw, Poland;
 24-25 November 2015;
@@ -68,6 +75,7 @@ Warsaw, Poland;
 [photos](https://www.facebook.com/yegor.bugayenko/posts/10208114809057924);
 [video](https://www.youtube.com/watch?v=6SfIc5ff-8U)
 
+<img src="/images/2015/buildstuff-2015.jpg" class="photo" alt="BuildStuff 2015"/>
 "How Do You Talk To Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
 Kyiv, Ukraine;
@@ -76,12 +84,14 @@ Kyiv, Ukraine;
 [slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice);
 [video](https://www.youtube.com/watch?v=jUil-aTImgU)
 
+<img src="/images/2015/dat-flock-2015.jpg" class="photo" alt="DATFlock 2015"/>
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
 19-20 November 2015;
 [photos](https://www.facebook.com/yegor.bugayenko/posts/10208081948956442)
 
+<img src="/images/2015/kyiv-devops-2015.jpg" class="photo" alt="Kyiv DevOps 2015"/>
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
 Kyiv, Ukraine;
@@ -89,6 +99,7 @@ Kyiv, Ukraine;
 [photos](https://www.facebook.com/yegor.bugayenko/posts/10207965398482753);
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 
+<img src="/images/2015/sf-devops-2015.jpg" class="photo" alt="San Francisco DevOps 2015"/>
 "CI is DEAD. Or is it?!";
 [San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);
 San Francisco, USA;
