@@ -27,7 +27,7 @@ or in-house teams.
 
 <!--more-->
 
-{% picture /images/2015/01/the-fan.jpg 0 The Fan (1996) by Tony Scott %}
+{% picture /images/2016/01/the-fan.jpg 0 The Fan (1996) by Tony Scott %}
 
 I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his
