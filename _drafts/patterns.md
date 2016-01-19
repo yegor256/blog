@@ -25,6 +25,7 @@ Now, let me try to go through all of them and show you how much
 I love or hate each one. Follow me, in alphabetic order.
 
 <!--more-->
+
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.
 
@@ -46,7 +47,7 @@ Seems fine.
 [<span class='green'>Command</span>](https://en.wikipedia.org/wiki/Command_pattern).
 It's OK.
 
-[<span class=''>Composite</span>](https://en.wikipedia.org/wiki/Composite_pattern).
+[<span class='green'>Composite</span>](https://en.wikipedia.org/wiki/Composite_pattern).
 Good one, check [this]({% pst 2015/oct/2015-10-01-vertical-horizontal-decorating %}) too.
 
 [<span class='green'>Decorator</span>](https://en.wikipedia.org/wiki/Decorator_pattern).
@@ -73,48 +74,52 @@ Terrible idea, as well as the entire
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 It's very [procedural]({% pst 2015/mar/2015-03-09-objects-end-with-er %}), that's why.
 
-[<span class=''>Interpreter</span>](https://en.wikipedia.org/wiki/Interpreter_pattern).
-???
+[<span class='orange'>Interpreter</span>](https://en.wikipedia.org/wiki/Interpreter_pattern).
+It's OK, but I [don't like]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
+the name. "Expression" would be a much better alternative.
 
 [<span class='red'>Iterator</span>](https://en.wikipedia.org/wiki/Iterator_pattern).
 Bad idea, since it is mutable. Would be much better
-to have immutable "cursors".
-???
+to have [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) "cursors".
 
-[<span class=''>Lazy Initialization</span>](https://en.wikipedia.org/wiki/Lazy_initialization).
-???
+[<span class='green'>Lazy Initialization</span>](https://en.wikipedia.org/wiki/Lazy_initialization).
+It's OK.
 
-[<span class=''>Marker</span>](https://en.wikipedia.org/wiki/Marker_interface_pattern).
-???
+[<span class='red'>Marker</span>](https://en.wikipedia.org/wiki/Marker_interface_pattern).
+It's a terrible idea, as well as reflection and
+[type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}).
 
 [<span class='red'>MVC</span>](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
 Bad idea, since very procedural. [Controllers]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
 is the key broken element in this
-idea. We need real objects, not procedural controllers.
+concept. We need real objects, not procedural controllers.
 
-[<span class=''>Mediator</span>](https://en.wikipedia.org/wiki/Mediator_pattern).
-???
+[<span class='red'>Mediator</span>](https://en.wikipedia.org/wiki/Mediator_pattern).
+I don't like it. Even though it sounds like a technique
+of decreasing complexity and coupling, it is not realy object-oriented.
+Who is this mediator? Just a "channel" between objects? Why objects
+shouldn't communicate directly? Because they are too complex? So make
+them smaller and simpler, instead of inventing these mediators.
 
-[<span class=''>Memento</span>](https://en.wikipedia.org/wiki/Memento_pattern).
-???
+[<span class='red'>Memento</span>](https://en.wikipedia.org/wiki/Memento_pattern).
+This idea implies that objects are [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}),
+which is what I'm in general against.
 
-[<span class=''>Module</span>](https://en.wikipedia.org/wiki/Module_pattern).
-???
+[<span class='red'>Module</span>](https://en.wikipedia.org/wiki/Module_pattern).
+If Wikipedia is right about this pattern, it's something
+even more terrible than a Singleton.
 
 [<span class='red'>Multiton</span>](https://en.wikipedia.org/wiki/Multiton_pattern).
 Really bad idea. Same as Singleton.
-???
 
 [<span class='green'>Null Object</span>](https://en.wikipedia.org/wiki/Null_Object_pattern).
-Good idea. See [Why NULL is Bad?]({% pst 2014/may/2014-05-13-why-null-is-bad %})
+Good one. By the way, see [Why NULL is Bad?]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 
-[<span class=''>Object Library</span>](https://en.wikipedia.org/wiki/Design_pattern_object_library).
-???
+[<span class='green'>Object Library</span>](https://en.wikipedia.org/wiki/Design_pattern_object_library).
+It's good.
 
-[<span class='red'>Object Pool</span>](https://en.wikipedia.org/wiki/Object_pool_pattern).
-It's a workaround. This functionality has to be provided by
-the language itself. I would not recommend to use this.
-???
+[<span class='green'>Object Pool</span>](https://en.wikipedia.org/wiki/Object_pool_pattern).
+Good one.
 
 [<span class='orange'>Observer</span>](https://en.wikipedia.org/wiki/Observer_pattern).
 The idea is good, but the name is bad, since it
@@ -122,40 +127,44 @@ The idea is good, but the name is bad, since it
 A much better one would be "Source" and "Target". The Source
 is generating events and the Target is listening to them.
 
-[<span class='orange'>ORM</span>](https://en.wikipedia.org/wiki/Object-relational_mapping).
+[<span class='red'>ORM</span>](https://en.wikipedia.org/wiki/Object-relational_mapping).
 It's terrible and "offensive", check
 [this]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) out.
 
 [<span class='orange'>Prototype</span>](https://en.wikipedia.org/wiki/Prototype_pattern).
 Good idea, but what is has to do with OOP?
 
-[<span class=''>Proxy</span>](https://en.wikipedia.org/wiki/Proxy_pattern).
-???
+[<span class='green'>Proxy</span>](https://en.wikipedia.org/wiki/Proxy_pattern).
+Good one.
 
 [<span class='green'>RAII</span>](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization).
 This is a really good one, highly recommend to use it.
 
-[<span class=''>Servant</span>](https://en.wikipedia.org/wiki/Design_pattern_Servant).
-???
+[<span class='red'>Servant</span>](https://en.wikipedia.org/wiki/Design_pattern_Servant).
+Very bad idea, because highly [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
 
 [<span class='red'>Singleton</span>](https://en.wikipedia.org/wiki/Singleton_pattern).
 It's a king of all anti-patterns. Stay away from it, at all cost.
 
-[<span class=''>Specification</span>](https://en.wikipedia.org/wiki/Specification_pattern).
-???
+[<span class='green'>Specification</span>](https://en.wikipedia.org/wiki/Specification_pattern).
+It's OK.
 
-[<span class=''>State</span>](https://en.wikipedia.org/wiki/State_pattern).
-???
+[<span class='orange'>State</span>](https://en.wikipedia.org/wiki/State_pattern).
+Although it's not implied, I feel that in most cases
+the use of this pattern means mutability, and this is what
+I'm [against]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) of, in general.
 
-[<span class=''>Strategy</span>](https://en.wikipedia.org/wiki/Strategy_pattern).
-???
+[<span class='green'>Strategy</span>](https://en.wikipedia.org/wiki/Strategy_pattern).
+A good one.
 
 [<span class='green'>Template Method</span>](https://en.wikipedia.org/wiki/Template_method_pattern).
-Seems fine.
-???
+Seems fine, as long you keep classes
+[final]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
-[<span class=''>Visitor</span>](https://en.wikipedia.org/wiki/Visitor_pattern).
-???
+[<span class='red'>Visitor</span>](https://en.wikipedia.org/wiki/Visitor_pattern).
+A rather [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
+concept, which treats objects as
+data structures, which we can manipulate with.
 
 <hr/>
 
