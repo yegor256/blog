@@ -22,6 +22,14 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
+Jan 19, 2016:
+Almost all reviewers have finished already. I'm waiting for the
+last two to send me their results and will start making
+final changes. Fortunately, the overall feedback is positive
+so far. All reviewers said that the book was worth reading.
+Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
+
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/)
