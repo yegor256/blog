@@ -26,23 +26,23 @@ more solid and architecture more visible.
 Jan 19, 2016:
 Almost all reviewers have finished already. I'm waiting for the
 last two to send me their results and will start making
-final changes. Fortunately, the overall feedback is positive
+final changes. Fortunately, the overall feedback is **positive**
 so far. All reviewers said that the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/)
-the book on Amazon.com. The price is $40.96.
-As promised, the book will be published on Feb 22.
+the book on Amazon.com. The price is **$40.96**.
+As promised, the book will be published on **Feb 22**.
 
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
-in the book &mdash; [seven pages from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
+in the book &mdash; [**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
 covers the subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book. This is the
-text my selected 11 reviewers received this week from me by mail.
+text my selected **11 reviewers** received this week from me by mail.
 By the way, their names are (in alphabetic order):
 [Andrei Istomin](http://www.linkedin.com/in/andrej-istomin-51ba7530),
 [Aneesh Dogra](http://in.linkedin.com/in/aneeshdogra),
@@ -60,7 +60,7 @@ spend another 2-3 weeks to take their recommendations into account
 and they book will go out at the end of February.
 
 Dec 6, 2015:
-I've received 63 emails so far and it's time to choose the best candidates.
+I've received **63 emails** so far and it's time to choose the best candidates.
 I will do it in the next few days and will email them. I will announce
 the names of selected reviewers here, soon. Thanks a lot to all of you,
 for your readiness to help!
