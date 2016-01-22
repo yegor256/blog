@@ -58,6 +58,12 @@ Seattle, USA<br/>
 Olomouc, Czech Republic<br/>
 5 April 2016
 
+<img src="/images/2016/item-2016.png" class="talks-talk" alt="ITEM 2016"/>
+**Meetings or Discipline, It's Your Choice**<br/>
+[ITEM 2016](http://item.dp.ua/en/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
+Dnepropetrovsk, Ukraine<br/>
+2-3 June 2016
+
 <img src="/images/2016/geekout-2016.png" class="talks-talk" alt="GeekOUT 2016"/>
 **Chatbots and Microservices**<br/>
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/)<br/>
