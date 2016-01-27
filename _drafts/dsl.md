@@ -17,8 +17,8 @@ keywords:
 ---
 
 Using DSL (Domain Specific Language) instead of configuration
-is a very popular concept and I don't
-really like it. I'm not a big expert, since I know just a few DSLs,
+is a very popular concept. However, I don't really like it.
+I'm not a big expert, since I know just a few DSLs,
 but my experience is mostly negative. As I see, DSL
 
 <!--more-->

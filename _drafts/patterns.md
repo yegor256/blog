@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Design Patterns and Anti-Patterns, Love and Hate Story"
+title: "Design Patterns and Anti-Patterns, Love and Hate"
 date: 2016-01-20
 place: Palo Alto, CA
 tags: oop
 description:
   These are most popular design patterns in
   object-oriented programming, while some of them
-  are actually anti-patterns.
+  are actually anti-patterns, in my opinion.
 keywords:
   - design pattern
   - oop design pattern
@@ -113,7 +113,8 @@ even more terrible than a Singleton.
 Really bad idea. Same as Singleton.
 
 [<span class='green'>Null Object</span>](https://en.wikipedia.org/wiki/Null_Object_pattern).
-Good one. By the way, see [Why NULL is Bad?]({% pst 2014/may/2014-05-13-why-null-is-bad %})
+Good one. By the way, see
+[Why NULL is Bad?]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 
 [<span class='green'>Object Library</span>](https://en.wikipedia.org/wiki/Design_pattern_object_library).
 It's good.
@@ -141,7 +142,8 @@ Good one.
 This is a really good one, highly recommend to use it.
 
 [<span class='red'>Servant</span>](https://en.wikipedia.org/wiki/Design_pattern_Servant).
-Very bad idea, because highly [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
+A very bad idea, because highly
+[procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
 
 [<span class='red'>Singleton</span>](https://en.wikipedia.org/wiki/Singleton_pattern).
 It's a king of all anti-patterns. Stay away from it, at all cost.
