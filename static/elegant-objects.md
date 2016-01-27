@@ -22,6 +22,15 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge /images/books/elegant-objects/cactus.svg 125 %}
+Jan 27, 2016:
+This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
+will be on the cover of the book. For a number of reasons. First,
+because it's elegant. Isn't it? Second, it's alive, just like
+all our object in Java. Right? Third, it's pretty hard to offend by
+breaking its skin and treating it as a bag for other objects. And forth,
+I just like it.
+
 {% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
 Jan 19, 2016:
 Almost all reviewers have finished already. I'm waiting for the
@@ -65,7 +74,7 @@ I will do it in the next few days and will email them. I will announce
 the names of selected reviewers here, soon. Thanks a lot to all of you,
 for your readiness to help!
 
-{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
 I invite you to become its first reviewer. Send me
