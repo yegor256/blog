@@ -34,6 +34,12 @@ here is [how](/lectures.html).
 }
 </style>
 
+<img src="/images/2016/tecclub-2016.png" class="talks-talk" alt="TECClub 2016"/>
+**XDSD : Meetings-Free Software Development Methodology**<br/>
+[The Entrepreneurs' Club](https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729)<br/>
+Palo Alto, USA<br/>
+11 February 2016
+
 <img src="/images/2016/devnexus-2016-logo.png" class="talks-talk" alt="DevNexus 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko)<br/>
@@ -57,6 +63,12 @@ Seattle, USA<br/>
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
 Olomouc, Czech Republic<br/>
 5 April 2016
+
+<img src="/images/2016/agileee-2016.png" class="talks-talk" alt="AgileEE 2016"/>
+**Meeting-Free Software Development**<br/>
+[AgileEE 2016](http://kiev2016.agileee.org/)<br/>
+Kiev, Ukraine<br/>
+8-9 April 2016
 
 <img src="/images/2016/item-2016.svg" class="talks-talk" alt="ITEM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
