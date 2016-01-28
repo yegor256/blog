@@ -27,7 +27,7 @@ Jan 27, 2016:
 This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
 will be on the cover of the book. For a number of reasons. First,
 because it's elegant. Isn't it? Second, it's alive, just like
-all our object in Java. Right? Third, it's pretty hard to offend by
+all our objects in Java. Right? Third, it's pretty hard to offend by
 breaking its skin and treating it as a bag for other objects. And forth,
 I just like it.
 
