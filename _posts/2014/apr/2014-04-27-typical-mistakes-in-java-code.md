@@ -93,6 +93,7 @@ spaces. It's easier to explain by example:
  * HttpRequest can return its content in Unicode.
  * @throws Exception If test fails
  */
+@Test
 public void returnsItsContentInUnicode() throws Exception {
 }
 ```
