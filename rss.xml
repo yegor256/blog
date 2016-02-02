@@ -168,6 +168,8 @@ being paid by &lt;del&gt;almost&lt;/del&gt; everybody else in the market.&lt;/p&
 
 &lt;p&gt;What could I do? I had to give him an answer.&lt;/p&gt;
 
+&lt;aside class='quote'&gt;Under different management, programmers deliver very different results in the same 60 minutes&lt;/aside&gt;
+
 &lt;p&gt;I told him that our best Java programmers earn $30 to $50 per hour and
 we add our margin on top of that, in the amount of 100 percent, for management.
 In the end, &amp;quot;one hour&amp;quot; will cost him $60 to $100. He ran away.&lt;/p&gt;
@@ -271,6 +273,8 @@ I don&amp;#39;t think you&amp;#39;re a good entrepreneur.&lt;/p&gt;
 &lt;p&gt;So you want a good programmer to build your product. Or maybe a group
 of good programmers. And you are ready to give me some equity
 in exchange. That&amp;#39;s reasonable.&lt;/p&gt;
+
+&lt;aside class='quote'&gt;You're a good entrepreneur, right? How come you don't have money, then?&lt;/aside&gt;
 
 &lt;p&gt;But what is your part of the deal?&lt;/p&gt;
 
@@ -504,7 +508,9 @@ and try to retain them at all cost, you&amp;#39;re doing it wrong.&lt;/p&gt;
 &lt;strong&gt;replace&lt;/strong&gt; programmers &lt;strong&gt;regularly&lt;/strong&gt;. I would say having one
 person on board for longer than a year is asking for trouble.&lt;/p&gt;
 
-&lt;p&gt;By replacing, I don&amp;#39;t necessarily mean firing. Not at all. I mean moving them
+&lt;p&gt;By replacing, I don&amp;#39;t necessarily mean
+&lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;firing&lt;/a&gt;.
+Not at all. I mean moving them
 &lt;strong&gt;away&lt;/strong&gt; from the code base. Obviously, if you have a single code
 base, replacing will mean firing.&lt;/p&gt;
 
@@ -550,7 +556,8 @@ consequences may be fatal.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;It&amp;#39;s Not a School!&lt;/a&gt; &amp;mdash;
 This earlier post explains how this problem can be solved without
-firing or rotating programmers, but few teams, especially co-located ones,
+&lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;firing&lt;/a&gt;
+or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can&amp;#39;t, just try to keep your turnover high
 enough to prevent the appearance of &lt;strong&gt;heros&lt;/strong&gt; (a.k.a. subject matter experts).&lt;/p&gt;
 </description>
