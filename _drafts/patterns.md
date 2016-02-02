@@ -133,7 +133,7 @@ It's terrible and "offensive", check
 [this]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) out.
 
 [<span class='orange'>Prototype</span>](https://en.wikipedia.org/wiki/Prototype_pattern).
-Good idea, but what is has to do with OOP?
+Good idea, but what it has to do with OOP?
 
 [<span class='green'>Proxy</span>](https://en.wikipedia.org/wiki/Proxy_pattern).
 Good one.

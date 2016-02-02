@@ -32,6 +32,8 @@ So you want a good programmer to build your product. Or maybe a group
 of good programmers. And you are ready to give me some equity
 in exchange. That's reasonable.
 
+{% quote You're a good entrepreneur, right? How come you don't have money, then? %}
+
 But what is your part of the deal?
 
 How much are you putting on the table?
