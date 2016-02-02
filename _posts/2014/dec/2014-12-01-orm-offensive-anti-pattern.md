@@ -14,6 +14,8 @@ keywords:
   - object relational mapping tutorials
   - orm is an anti-pattern
   - orm is antipattern
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 ---
 
 TL;DR ORM is a terrible anti-pattern that violates all principles of

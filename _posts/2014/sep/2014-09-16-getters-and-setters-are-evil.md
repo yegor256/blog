@@ -14,6 +14,8 @@ keywords:
   - getters and setters are evil
   - why getters and setters are evil
   - getters and setters is an anti-pattern
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
 ---
 
 There is an old debate, started in 2003 by Allen Holub

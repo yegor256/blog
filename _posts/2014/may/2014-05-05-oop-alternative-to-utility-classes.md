@@ -16,6 +16,8 @@ keywords:
   - utility classes are evil
   - utility classes are bad
   - utility classes is a bad practice
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods

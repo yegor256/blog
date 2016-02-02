@@ -14,6 +14,8 @@ keywords:
   - object oriented methodology
   - object oriented principles
   - object oriented programming concepts
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
 ---
 
 Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):

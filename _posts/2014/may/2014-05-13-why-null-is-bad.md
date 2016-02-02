@@ -16,6 +16,8 @@ keywords:
   - null pointer
   - null is bad
   - null is evil
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 ---
 
 A simple example of `NULL` usage in Java:
