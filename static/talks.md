@@ -70,11 +70,29 @@ Olomouc, Czech Republic<br/>
 Kiev, Ukraine<br/>
 8-9 April 2016
 
+<img src="/images/2016/beyond-2016.png" class="talks-talk" alt="Beyond20 2016"/>
+**Continuous Integration May Have Negative Effects**<br/>
+[Beyond20'16](https://www.beyond20conference.com/)<br/>
+Washington, USA<br/>
+2-3 May 2016
+
+<img src="/images/2016/itake-2016.png" class="talks-talk" alt="I T.A.K.E. Unconference 2016"/>
+**Chatbots**<br/>
+[I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
+Budapest, Romania<br/>
+19-20 May 2016
+
 <img src="/images/2016/item-2016.svg" class="talks-talk" alt="ITEM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
 [ITEM 2016](http://item.dp.ua/en/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
 Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
+
+<img src="/images/2016/cloudexpo-2016.jpg" class="talks-talk" alt="CloudExpo 2016"/>
+**Chat Bots vs. UI**<br/>
+[18th Cloud Expo](http://www.cloudcomputingexpo.com/)<br/>
+New York, USA<br/>
+7-9 June 2016
 
 <img src="/images/2016/geekout-2016.png" class="talks-talk" alt="GeekOUT 2016"/>
 **Chatbots and Microservices**<br/>
