@@ -89,8 +89,8 @@ Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
 
 <img src="/images/2016/cloudexpo-2016.jpg" class="talks-talk" alt="CloudExpo 2016"/>
-**Chat Bots vs. UI**<br/>
-[18th Cloud Expo](http://www.cloudcomputingexpo.com/)<br/>
+**Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
+[18th Cloud Expo](http://soa.sys-con.com/node/3661412)<br/>
 New York, USA<br/>
 7-9 June 2016
 
