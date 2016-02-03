@@ -67,7 +67,8 @@ explains how it can help you to cache Java method results for some time.
 Setting the `forever` attribute to `true` means that we don't want this
 method to be called more than once. Instead, we want the connection pool
 to be created just once, and every second call should return its
-existing instance (kind of like a Singleton pattern).
+existing instance (kind of like a
+[Singleton pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})).
 
 [jcabi-jdbc](http://jdbc.jcabi.com) website explains how you
 can [insert](http://jdbc.jcabi.com/example-insert.html),

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Design Patterns and Anti-Patterns, Love and Hate"
-date: 2016-01-20
+date: 2016-02-03
 place: Palo Alto, CA
 tags: oop
 description:
@@ -25,6 +25,8 @@ Now, let me try to go through all of them and show you how much
 I love or hate each one. Follow me, in alphabetic order.
 
 <!--more-->
+
+{% picture /images/2016/02/the-shining.jpg 0 The Shining (1980) by Stanley Kubrick %}
 
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.
@@ -174,5 +176,5 @@ I have nothing against [concurrency patterns](https://en.wikipedia.org/wiki/Conc
 they are all <span class="green">good</span>, since they
 have almost nothing to do with object-oriented programming.
 
-If you know some other design (anti-)patterns, let me know 
+If you know some other design (anti-)patterns, let me know
 in the comments below. I'll add them here.

@@ -39,4 +39,5 @@ Here they come:
 
 Avoid them at all cost. Check
 [this list]({% pst 2014/apr/2014-04-27-typical-mistakes-in-java-code %})
+and [this one]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 too.
