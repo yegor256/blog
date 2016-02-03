@@ -5,7 +5,7 @@ date: 2016-01-29
 tags: tdd
 place: Palo Alto, CA
 description:
-  A necessity in debugging is an indicator of code problems
+  The necessity of debugging is an indicator of code problems
   and a great motivator for immediate refactoring
   and unit testing.
 keywords:
@@ -17,9 +17,9 @@ keywords:
 ---
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)
-is "a process or running a program/method interactively,
-breaking execution flow after each statement and showing..." It is
-a very useful technique ... of a bad programmer. Or of an old programmer,
+is "a process of running a program/method interactively,
+breaking execution flow after each statement and showing ..." It is
+a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code &mdash; they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
@@ -27,8 +27,8 @@ If debugging is required, the **design is bad**.
 
 <!--more-->
 
-Let's say, I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
-procedural imperative programmer, and this is my Java code:
+Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+imperative procedural programmer, and this is my Java code:
 
 {% highlight java %}
 class FileUtils {
