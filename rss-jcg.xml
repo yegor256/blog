@@ -2604,7 +2604,7 @@ mechanism, which is absolutely container-free. Read more about it in
 &lt;p&gt;Since every class is immutable and all dependencies are injected only
 through constructors, unit testing is extremely easy. Let&amp;#39;s say we want
 to test &lt;code&gt;TkStatus&lt;/code&gt;, which is supposed to return an HTML response
-(I&amp;#39;m using &lt;a href=&quot;http://junit.org/&quot;&gt;JUnit 4&lt;/a&gt; and &lt;a href=&quot;http://www.hamcrest.org/&quot;&gt;Hamcrest&lt;/a&gt;):&lt;/p&gt;
+(I&amp;#39;m using &lt;a href=&quot;http://junit.org/&quot;&gt;JUnit 4&lt;/a&gt; and &lt;a href=&quot;http://hamcrest.org/&quot;&gt;Hamcrest&lt;/a&gt;):&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
