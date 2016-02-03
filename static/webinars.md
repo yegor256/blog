@@ -22,9 +22,9 @@ development, object-oriented programming and project management.
 {% youtube ibT5oKToMoQ video-left %}
 [Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
 **Daily Stand-Up Meetings Are Evil**
-We'll talk about famous daily meetings and why they are
+We talked about famous daily meetings and why they were
 actually a bad idea in a properly managed
-and disciplined software project. The discussion will be
+and disciplined software project. The discussion was
 based on this post:
 [Daily Stand-Up Meetings Are a Good Tool for a Bad Manager]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
 
