@@ -15,6 +15,8 @@ keywords:
   - software project management
   - software project lifecycle
   - software maintainability
+translated:
+  Russian: https://habrahabr.ru/post/260241/
 ---
 
 _Maintainability_ is the [most valuable virtue]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})

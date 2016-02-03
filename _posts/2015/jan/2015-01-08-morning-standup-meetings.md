@@ -16,6 +16,8 @@ keywords:
   - daily meeting
   - morning stand-up meeting
   - scrum standup
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
 ---
 
 A stand-up meeting (or simply "stand-up") is

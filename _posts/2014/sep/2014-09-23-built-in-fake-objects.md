@@ -62,7 +62,7 @@ public interface Table {
 Interface `Frame`, returned by the `frame()` method, also has its
 own methods. And so on.
 In order to create a properly mocked instance of interface `Region`,
-one would normally create a dozen other mock objects. With [Mockito](http://www.mockito.org)
+one would normally create a dozen other mock objects. With [Mockito](http://mockito.org)
 it will look like this:
 
 {% highlight java %}

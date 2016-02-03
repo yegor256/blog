@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Defensive Programming?"
-date: 2015-10-20
+title: "Defensive Programming via Validating Decorators"
+date: 2016-01-26
 place: Palo Alto, CA
 tags: oop
 description:
-  ...
+  Defensive programming is a good idea, but the way
+  it gets implemented is, in most cases, very wrong;
+  here is what I'm suggesting instead.
 keywords:
   - defensive programming
   - validators in oop
@@ -22,6 +24,8 @@ This may sound illogical, but only in the beginning.
 I'm suggesting you use **validating decorators** instead.
 
 <!--more-->
+
+{% picture /images/2016/01/shi-mian-mai-fu.jpg 0 Shi mian mai fu (2004) by Yimou Zhang %}
 
 Let's take a look at this rather typical Java example:
 

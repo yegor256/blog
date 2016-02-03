@@ -619,7 +619,7 @@ mechanism, which is absolutely container-free. Read more about it in
 Since every class is immutable and all dependencies are injected only
 through constructors, unit testing is extremely easy. Let's say we want
 to test `TkStatus`, which is supposed to return an HTML response
-(I'm using [JUnit 4](http://junit.org/) and [Hamcrest](http://www.hamcrest.org/)):
+(I'm using [JUnit 4](http://junit.org/) and [Hamcrest](http://hamcrest.org/)):
 
 {% highlight java %}
 import org.junit.Test;

@@ -9,6 +9,8 @@
 @import 'icons';
 
 .green { color: $green; }
+.red { color: $red; }
+.orange { color: $orange; }
 
 %gray {
   color: $gray;
@@ -135,6 +137,10 @@ a:visited {
     li {
       display: inline;
       margin-right: .4 * $em;
+
+      &:after {
+        content: ' ';
+      }
     }
   }
 

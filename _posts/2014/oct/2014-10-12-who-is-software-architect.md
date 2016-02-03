@@ -14,6 +14,8 @@ keywords:
   - what software architect is for
   - software architect salary
   - software architect job description
+translated:
+  Japanese: http://tbd.kaitoy.xyz/2016/01/11/who-is-software-architect/
 ---
 
 Do you have a software architect in your project? Do you need one?

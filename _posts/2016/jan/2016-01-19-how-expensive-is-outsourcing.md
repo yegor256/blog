@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Expensive Is Your Outsourcing Team?"
-date: 2016-01-18
+date: 2016-01-19
 place: Palo Alto, CA
 tags: outsourcing
 description:
@@ -27,7 +27,7 @@ or in-house teams.
 
 <!--more-->
 
-{% badge http://img.teamed.io/logo.svg 100 http://www.teamed.io %}
+{% picture /images/2016/01/the-fan.jpg 0 The Fan (1996) by Tony Scott %}
 
 I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his
@@ -36,6 +36,8 @@ how we control [quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control 
 and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from everybody else. He seemed to be impressed.
 Then, he asked, "**How much** do you charge?"
+
+{% badge http://img.teamed.io/logo.svg 100 http://www.teamed.io %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting
@@ -49,6 +51,8 @@ being paid by <del>almost</del> everybody else in the market.
 Still, the question remained &mdash; how much?
 
 What could I do? I had to give him an answer.
+
+{% quote Under different management, programmers deliver very different results in the same 60 minutes %}
 
 I told him that our best Java programmers earn $30 to $50 per hour and
 we add our margin on top of that, in the amount of 100 percent, for management.
@@ -89,7 +93,7 @@ create **eight** new features **every day**.
 
 If you're a manager, you know the velocity of your programmers.
 If you're a programmer, you know how much code you can write in a day.
-Now, honestly tell me if you find and solve eight bugs per day with that 
+Now, honestly tell me if you find and solve eight bugs per day with that
 level of complexity, detailed code review, and precision of
 documentation? I seriously doubt it.
 
@@ -116,7 +120,7 @@ Thus, your [ROI](https://en.wikipedia.org/wiki/Return_on_investment)
 while working with an [outsourced team]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}) mostly
 depends on their **results per dollar**, not dollars per hour. The first
 metric is difficult to calculate, and only the best teams will be able
-to dod so. The second metric is absolutely misleading, but anyone
+to do so. The second metric is absolutely misleading, but anyone
 will give it to you.
 
 An [outsourced team]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %})
