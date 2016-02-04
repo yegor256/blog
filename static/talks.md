@@ -86,7 +86,7 @@ Washington, USA<br/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
 [Agile & Beyond](http://www.agileandbeyond.com/2016/#/)<br/>
 Ypsilanti, MI, USA<br/>
-5-6 May 2016
+5 May 2016
 
 <img src="/images/2016/itake-2016.png" class="talks-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Chatbots**<br/>
