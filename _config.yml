@@ -23,7 +23,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-plantuml
-  # - jekyll-press
+  - jekyll-press
   - jekyll-sitemap
 
 feed:
