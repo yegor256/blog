@@ -27,7 +27,7 @@ gems:
   - jekyll-sitemap
 
 feed:
-  path: rss.xml
+  path: rss
 
 sass:
   style: compressed
