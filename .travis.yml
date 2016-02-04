@@ -10,6 +10,7 @@ addons:
   apt:
     packages:
       - aspell
+      - aspell-en
       - build-essential
       - graphviz
       - gnuplot

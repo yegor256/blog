@@ -52,6 +52,12 @@ Atlanta, USA<br/>
 San Francisco, USA<br/>
 17 February 2016
 
+<img src="/images/2016/kyiv-devops-day.png" class="talks-talk" alt="Kyiv DevOps Day"/>
+**Need Robust Software? Make It Fragile**<br/>
+[Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/)<br/>
+Kyiv, Ukraine<br/>
+27 February 2016
+
 <img src="/images/2016/cascadiait-2016.png" class="talks-talk" alt="CascadiaIT 2016"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [CascadiaIT](http://casitconf.org/casitconf16/talks/)<br/>
