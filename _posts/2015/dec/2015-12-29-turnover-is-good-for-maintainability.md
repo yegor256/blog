@@ -53,7 +53,9 @@ My point is that a healthy software team must
 **replace** programmers **regularly**. I would say having one
 person on board for longer than a year is asking for trouble.
 
-By replacing, I don't necessarily mean firing. Not at all. I mean moving them
+By replacing, I don't necessarily mean
+[firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}).
+Not at all. I mean moving them
 **away** from the code base. Obviously, if you have a single code
 base, replacing will mean firing.
 
@@ -99,7 +101,8 @@ In the end, programmers control management, not the other way around.
 
 [It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}) &mdash;
 This earlier post explains how this problem can be solved without
-firing or rotating programmers, but few teams, especially co-located ones,
+[firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can't, just try to keep your turnover high
 enough to prevent the appearance of **heros** (a.k.a. subject matter experts).
 

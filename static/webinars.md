@@ -19,12 +19,21 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube nheD2LNYrpk video-left %}
+[March 2, 2016](https://plus.google.com/events/ch54gu0ddhb5sj2v9v1hhrfc71s)
+**Takes, Java Web Framework, Intro**
+This will be a very practical Java coding webinar. We will
+create a web system, using Takes Framework, immutable objects
+and the best practices of pure fanatical object-oriented programming.
+We'll use this blog post as a guidance:
+[Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
+
 {% youtube ibT5oKToMoQ video-left %}
 [Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
 **Daily Stand-Up Meetings Are Evil**
-We'll talk about famous daily meetings and why they are
+We talked about famous daily meetings and why they were
 actually a bad idea in a properly managed
-and disciplined software project. The discussion will be
+and disciplined software project. The discussion was
 based on this post:
 [Daily Stand-Up Meetings Are a Good Tool for a Bad Manager]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
 
@@ -62,7 +71,7 @@ best practices for their design, including primary vs secondary
 and code-free design. The discussion was based on these articles:
 [There Can Be Only One Primary Constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 and
-[Constructors Must Be Code-Free](% pst 2015/may/2015-05-07-ctors-must-be-code-free %).
+[Constructors Must Be Code-Free]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 
 {% youtube psrp3TtaYYI video-left %}
 [September 2, 2015](https://plus.google.com/events/cn31s82dkejqo3pfetttq8mrgb0)

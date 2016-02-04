@@ -22,6 +22,8 @@ scripts:
   - /js/about.js
 ---
 
+{% badge /images/about/yegor-speaking.jpg 300 %}
+
 I'm Yegor Bugayenko, a programmer, a founder and an investor.
 
 As a **programmer** I [write](https://github.com/yegor256)

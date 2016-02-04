@@ -116,7 +116,7 @@ a "class" by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
 all the data you may need. Why is this bad? Well, why do we need encapsulation
 in the first place? In order to protect one programmer from another, aka
-[defensive programming](https://en.wikipedia.org/wiki/Defensive_programming).
+[defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %}).
 While I'm busy changing the subject of the MIME message, I want to be
 sure that I'm not interfered with by some other method's activity, that is
 changing a sender and touching my subject by mistake. Encapsulation helps

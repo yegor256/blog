@@ -135,7 +135,7 @@ to your `pom.xml`:
 
 ## Configure GPG Plugin
 
-Again, I'd recommend using [http://parent.jcabi.com](jcabi-parent),
+Again, I'd recommend using [jcabi-parent](http://parent.jcabi.com),
 which configures this plugin automatically. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
