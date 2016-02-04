@@ -2,6 +2,7 @@
 [
   '/about-me.html',
   '/unsubscribe.html',
+  '/rss',
   '/rss.xml',
   '/sitemap.xml',
   '/index.html',
