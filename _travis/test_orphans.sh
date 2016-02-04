@@ -13,17 +13,16 @@ for f in $(find . -regex '.*_site/[0-9][0-9][0-9][0-9]/.*\.html'); do
   echo "OK"
 done
 
-links=$(cat _temp/links.txt | sort | uniq -c | wc -l | cut -f1 -d ' ')
+cat _temp/links.txt | sort | uniq -c | sort > _temp/unique_links.txt
+
+links=$(cat _temp/unique_links.txt | wc -l | cut -f1 -d ' ')
 if [ "$links" -lt "150" ]; then
   cat _temp/links.txt
   echo "something is wrong with this list... total=${links}"
   exit -1
 fi
 
-cat _temp/links.txt | \
-  sort | \
-  uniq -c | \
-  grep ' 1 '
+cat _temp/unique_links.txt | grep ' 1 '
 if [ $? -ne 1 ]; then
   echo "some pages are orphans"
   exit -1

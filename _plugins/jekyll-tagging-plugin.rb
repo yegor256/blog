@@ -44,7 +44,7 @@ module Jekyll
     def to_liquid
       hash = orig_to_liquid
       hash['title'] = @title
-      hash['description'] = "#{hash['description']}: #{@title}"
+      hash['description'] = "#{@title}: more about #{@title} in this collection of recently published articles... the list is updated every few weeks."
       hash
     end
 
