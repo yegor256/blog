@@ -19,6 +19,15 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube nheD2LNYrpk video-left %}
+[March 2, 2016](https://plus.google.com/events/ch54gu0ddhb5sj2v9v1hhrfc71s)
+**Takes, Java Web Framework, Intro**
+This will be a very practical Java coding webinar. We will
+create a web system, using Takes Framework, immutable objects
+and the best practices of pure fanatical object-oriented programming.
+We'll use this blog post as a guidance:
+[Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
+
 {% youtube ibT5oKToMoQ video-left %}
 [Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
 **Daily Stand-Up Meetings Are Evil**

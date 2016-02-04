@@ -18,7 +18,7 @@ keywords:
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)
 is "a process of running a program/method interactively,
-breaking execution flow after each statement and showing ..." It is
+breaking execution flow after each statement and showing..." In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code &mdash; they write unit tests. My point here
@@ -81,7 +81,7 @@ Then we fix the problem and make sure the test passes. That's how we save
 our investments in problem solving. We won't fix it again, because it won't
 happen again. Our **test** will prevent it from happening.
 
-However, all this will work only if it's easy to create a unit test. If it's 
+However, all this will work only if it's easy to create a unit test. If it's
 difficult, I'll be too lazy to do it. I will just debug and fix the problem.
 In this particular example, creating a test is a rather expensive procedure.
 What I mean is the complexity of the unit test will be rather high. We have to
