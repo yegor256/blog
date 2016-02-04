@@ -11,7 +11,7 @@
     <meta itemprop="description" content="{{ page | description }}" />
     <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="twitter:creator" content="@yegor256"/>
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
