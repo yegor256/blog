@@ -24,7 +24,7 @@ satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is
 how my [jcabi-http](http://http.jcabi.com/) client interacts when you make an
 HTTP request and expect a successful HTML page in return:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 String html = new JdkRequest("https://www.google.com")
   .uri().path("/users").queryParam("id", 333).back()
   .method(Request.GET)
@@ -46,7 +46,7 @@ easy to use. In most cases, I need only to make an HTTP request and parse the
 JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 String rate = new JdkRequest("http://www.getexchangerates.com/api/latest.json")
   .header("Accept", "application/json")
   .fetch()

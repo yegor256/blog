@@ -81,7 +81,7 @@ line and then save the results in another file. This is can be done with
 [`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html)
 from Apache Commons:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 void transform(File in, File out) {
   Collection<String> src = FileUtils.readLines(in, "UTF-8");
   Collection<String> dest = new ArrayList<>(src.size());
@@ -138,7 +138,7 @@ Potato, potato? Not really; just read on...
 This is how I would design the same file-transforming functionality as above but
 in an object-oriented manner:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 void transform(File in, File out) {
   Collection<String> src = new Trimmed(
     new FileLines(new UnicodeFile(in))

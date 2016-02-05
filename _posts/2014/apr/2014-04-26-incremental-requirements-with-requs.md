@@ -31,7 +31,7 @@ a [controlled natural language](http://en.wikipedia.org/wiki/Controlled_natural_
 that sounds like English, while at the same time is parseable by computers.
 A simple requirements document in Requs may look similar to:
 
-{% highlight text {% post_url %}
+{% highlight text linenos=table %}
 Department has employee-s.
 Employee has name and salary.
 UC1 where Employee gets raise: "TBD".
@@ -144,7 +144,7 @@ and [Maven](http://maven.apache.org/download.cgi).
 
 Afterwards, I make the following command line call in the project directory:
 
-{% highlight bash {% post_url %}
+{% highlight bash linenos=table %}
 mvn clean requs:compile
 {% endhighlight %}
 

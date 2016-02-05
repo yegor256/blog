@@ -81,7 +81,7 @@ in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions o
 Let's create a simple example. Say, for instance, we want to add a new account number `36`
 to our list document. The code would look like:
 
-{% highlight asm {% post_url %}
+{% highlight asm linenos=table %}
 XPATH '/accounts';
 ADD 'account';
 ATTR 'id', '36';
@@ -118,7 +118,7 @@ In the meantime, there is only one implementation of Xembly language
 &mdash; in Java. Here is how
 [it works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 Iterable<Directive> directives = new Directives()
   .xpath("/accounts")
   .add("account")

@@ -80,7 +80,7 @@ it may look like this:
 
 My deployment script looked like this before I started to use Rultor:
 
-{% highlight bash {% post_url %}
+{% highlight bash linenos=table %}
 #!/bin/bash
 phing test
 git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
@@ -99,7 +99,7 @@ work again.
 So, here is a new script, which I'm using now.
 It is being executed inside a new Docker container, every time:
 
-{% highlight bash {% post_url %}
+{% highlight bash linenos=table %}
 #!/bin/bash
 # First, we install all prerequisites
 sudo apt-get install -y php5 php5-mysql mysql

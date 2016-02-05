@@ -35,7 +35,7 @@ to be a good time to write a few words about them.
 Below is an example that demonstrates how you can validate
 an HTML document against W3C compliance rules:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 import com.jcabi.w3c.ValidatorBuilder;
 assert ValidatorBuilder.html()
   .validate("<html>hello, world!</html>")
@@ -48,7 +48,7 @@ The `valid()` method is a black or white indicator that
 returns `false` when the document is not valid. Additionally,
 you can obtain more information through a list of "defects" returned by the W3C server:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 Collection<Defect> defects = ValidatorBuilder.html()
   .validate("<html>hello, world!</html>")
   .errors();
@@ -56,7 +56,7 @@ Collection<Defect> defects = ValidatorBuilder.html()
 
 The same can be done with CSS:
 
-{% highlight java {% post_url %}
+{% highlight java linenos=table %}
 Collection<Defect> defects = ValidatorBuilder.css()
   .validate("body { font-family: Arial; }")
   .errors();
