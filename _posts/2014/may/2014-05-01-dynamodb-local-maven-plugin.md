@@ -74,7 +74,7 @@ to use a [randomly allocated port](http://mojo.codehaus.org/build-helper-maven-p
 When the DynamoDB Local server is up and running,
 we can create an integration test for it:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
@@ -155,7 +155,7 @@ The table will be created during the
 `post-integration-test` phase. Now, we can make our
 integration test much more meaningful with the help of [jcabi-dynamo](http://dynamo.jcabi.com):
 
-{% highlight java linenos=table %}
+{% highlight java %}
 import com.jcabi.dynamo.Attributes;
 import com.jcabi.dynamo.Conditions;
 import com.jcabi.dynamo.Credentials;

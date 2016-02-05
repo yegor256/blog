@@ -70,7 +70,7 @@ This is what the Amazon server needs to know in order to create a new item in
 the table. This is how you're supposed to make this call through the AWS Java
 SDK:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 PutItemRequest request = new PutItemRequest();
 request.setTableName("depts");
 Map<String, AttributeValue> attributes = new HashMap<>();
@@ -95,7 +95,7 @@ To allow you to compare, let me show what I've done with
 same thing, but in an
 [object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) way:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 Region region = // instantiate it with credentials
 Table table = region.table("depts");
 Item item = table.put(

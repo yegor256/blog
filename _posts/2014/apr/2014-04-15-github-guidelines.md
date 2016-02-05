@@ -53,7 +53,7 @@ Finally, don't forget to add your private SSH key to GitHub:
 Once you have a forked our repository to your account, clone it to your
 computer, and then check out the `master` branch. For example:
 
-{% highlight bash linenos=table %}
+{% highlight bash %}
 git clone git@github.com:yegor256/jcabi.git
 git checkout master
 {% endhighlight %}
@@ -61,7 +61,7 @@ git checkout master
 Now, it's time to branch (`123` is the number of the GitHub issue you're going
 to work with, and the name of the branch):
 
-{% highlight bash linenos=table %}
+{% highlight bash %}
 git checkout -b 123
 {% endhighlight %}
 
@@ -100,7 +100,7 @@ Make any needed changes using a text editor or IDE. It's a good practice to
 commit changes as soon as you make them. Don't accumulate large numbers of
 changes too long before committing them.
 
-{% highlight bash linenos=table %}
+{% highlight bash %}
 git commit -am '#123: the description of the changes'
 git push origin 123
 {% endhighlight %}

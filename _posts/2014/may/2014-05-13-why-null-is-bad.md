@@ -22,7 +22,7 @@ translated:
 
 A simple example of `NULL` usage in Java:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 public Employee getByName(String name) {
   int id = database.find(name);
   if (id == 0) {
