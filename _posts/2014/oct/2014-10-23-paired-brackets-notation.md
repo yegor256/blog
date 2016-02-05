@@ -26,7 +26,7 @@ for method/function calls.
 Here is how your code will look, if you follow
 this "Paired Brackets" notation:
 
-{% highlight java linenos=table %}
+{% highlight java {% post_url %}
 new Foo( // ends the line
   Math.max(10, 40), // open/close at the same line
   String.format(

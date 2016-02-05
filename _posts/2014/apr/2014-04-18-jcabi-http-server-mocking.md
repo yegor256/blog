@@ -37,7 +37,7 @@ can help you in unit and integration testing of your HTTP clients.
 Let me show you an example first. In the example, I'm using
 [hamcrest](http://hamcrest.org/JavaHamcrest/) for assertions.
 
-{% highlight java linenos=table %}
+{% highlight java {% post_url %}
 MkContainer container = new MkGrizzlyContainer()
   .next(new MkAnswer.Simple("hello, world!"))
   .start();

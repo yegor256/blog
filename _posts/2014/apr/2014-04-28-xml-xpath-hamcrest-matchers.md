@@ -36,7 +36,7 @@ world!"`
 
 This is how that code would look in a unit test:
 
-{% highlight java linenos=table %}
+{% highlight java {% post_url %}
 import com.jcabi.matchers.XhtmlMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
@@ -91,7 +91,7 @@ problems even further, as it pre-defines most popular namespaces, including
 
 The following example works right out-of-the-box &mdash; without any extra configuration:
 
-{% highlight java linenos=table %}
+{% highlight java {% post_url %}
 MatcherAssert.assertThat(
   new URL("http://www.google.com").getContent(),
   XhtmlMatchers.hasXPath("//xhtml:body")

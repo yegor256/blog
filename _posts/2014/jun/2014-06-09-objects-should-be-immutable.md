@@ -78,7 +78,7 @@ in more details in their very famous book
 Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):
 
-{% highlight java linenos=table %}
+{% highlight java {% post_url %}
 Request request = new Request("http://example.com");
 request.method("POST");
 String first = request.fetch();
