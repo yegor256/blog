@@ -1,6 +1,6 @@
-scss_files: 'css/**/*.scss'
+scss_files: '**/*.scss'
 
-exclude: 'css/_icons.scss'
+exclude: 'css/layout.scss'
 
 linters:
   NestingDepth:
@@ -11,4 +11,4 @@ linters:
     enabled: false
   ColorVariable:
     exclude:
-      - 'css/_ico.scss'
+      - '_sass/_ico.scss'
