@@ -9,6 +9,7 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
+      system("#{site.config['source']}/_glyphs/compile.sh")
       system('mkdir -p _site/css')
       ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, 'css', "icons.#{ext}")

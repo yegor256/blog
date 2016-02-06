@@ -7,6 +7,7 @@
   '/sitemap.xml',
   '/index.html',
   '/css/layout.css',
+  '/css/icons.css',
   '/robots.txt',
   '/js/global.js'
 ].forEach(

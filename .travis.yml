@@ -41,8 +41,6 @@ install:
   - travis_retry gem install jgd -v 1.6.5
 script:
   - set -e
-  - fontcustom compile _glyphs --output=_temp/icons --font-name=icons --templates=css --no-hash --force --autowidth
-  - sed -i "s|./icons|/css/icons|g" _temp/icons/icons.css
   - _travis/test_casperjs.sh
   - rm -rf _site
   - jekyll build
