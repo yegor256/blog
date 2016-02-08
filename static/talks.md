@@ -76,6 +76,12 @@ Olomouc, Czech Republic<br/>
 Kiev, Ukraine<br/>
 8-9 April 2016
 
+<img src="/images/2016/ntpm.jpg" class="talks-talk" alt="NTPM 2016"/>
+**Meetings or Discipline, It's Your Choice**<br/>
+[New Trends in Project Management](https://www.facebook.com/PMIGB.NTPM)<br/>
+Gdynia, Poland<br/>
+24-25 April 2016
+
 <img src="/images/2016/beyond-2016.png" class="talks-talk" alt="Beyond20 2016"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [Beyond20'16](https://www.beyond20conference.com/)<br/>
