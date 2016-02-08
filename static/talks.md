@@ -78,7 +78,7 @@ Kiev, Ukraine<br/>
 
 <img src="/images/2016/ntpm.jpg" class="talks-talk" alt="NTPM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
-[New Trends in Project Management](https://www.facebook.com/PMIGB.NTPM)<br/>
+[New Trends in Project Management](http://ntpm.pl/)<br/>
 Gdynia, Poland<br/>
 24-25 April 2016
 
