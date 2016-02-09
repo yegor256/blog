@@ -16,10 +16,6 @@ keywords:
   - static analysis
   - software testing
 exclude_from_search: true
-scripts:
-  - /js/send.js
-  - /js/subscribe.js
-  - /js/about.js
 ---
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
@@ -112,3 +108,6 @@ Some of my articles are also published at (in alphabetic order):
 -->
 
 <script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
+<script src="/js/subscribe.js?{{ site.data['hash'] }}"></script>
+<script src="/js/send.js?{{ site.data['hash'] }}"></script>
+<script src="/js/about.js?{{ site.data['hash'] }}"></script>
