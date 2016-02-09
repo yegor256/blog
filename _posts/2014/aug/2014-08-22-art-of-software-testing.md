@@ -52,7 +52,8 @@ years ago this information may have had some value. Nowadays,
 ["Growing Object-Oriented Softare, Guided by Tests"](http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=OW3LHYHVBT2G7ZWF) by Steven Freeman and Nat Pryce
 is a much better source for this subject.
 
-There are also articles about usability testing, debugging,
+There are also articles about usability testing,
+[debugging]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}),
 web application testing, and mobile testing. Here we have the same
 issue &mdash; they are not abstract enough and they are much too
 outdated to be relevant to the current issues in software testing.

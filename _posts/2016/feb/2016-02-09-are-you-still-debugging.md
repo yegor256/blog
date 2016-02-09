@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are You Still Debugging?"
-date: 2016-01-29
+date: 2016-02-09
 tags: tdd
 place: Palo Alto, CA
 description:
@@ -26,6 +26,8 @@ is that unit testing is a technique that completely replaces debugging.
 If debugging is required, the **design is bad**.
 
 <!--more-->
+
+{% picture /images/2016/02/the-revenant.jpg 0 The Revenant (2015) by Alejandro G. Iñárritu %}
 
 Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 imperative procedural programmer, and this is my Java code:
