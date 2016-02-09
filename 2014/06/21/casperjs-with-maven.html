@@ -1,14 +1,229 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebPage"><head><base href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html"/><meta charset="utf-8"/><meta itemprop="name" content="CasperJS Tests in Maven Build"/><meta itemprop="author" content="Yegor Bugayenko"/><meta itemprop="breadcrumb" content="http://www.yegor256.com"/><meta itemprop="keywords" content="integration tests with casperjs, maven casperjs, maven phantomjs, maven phantomjs tomcat, maven tests with casperjs, maven tomcat casperjs, phantomjs maven plugin"/><meta itemprop="description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS"/><meta name="description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS"/><meta name="keywords" content="integration tests with casperjs, maven casperjs, maven phantomjs, maven phantomjs tomcat, maven tests with casperjs, maven tomcat casperjs, phantomjs maven plugin"/><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/><meta name="twitter:creator" content="@yegor256"/><meta property="twitter:account_id" content="4503599630178231"/><meta property="og:url" content="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html"/><meta property="og:site_name" content="yegor256"/><meta property="og:title" content="CasperJS Tests in Maven Build"/><meta property="og:description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="fb:admins" content="10203747823006002"/><meta name="twitter:site" content="@yegor256"/><meta name="twitter:creator" content="@yegor256"/><meta name="twitter:url" content="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html"/><meta property="article:author" content="https://www.facebook.com/yegor.bugayenko"/><meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/><link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256"/><link rel="shortcut icon" href="/favicon.ico?2a3d0eb"/><link rel="apple-touch-icon" href="/favicon.ico?2a3d0eb"/><link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/><link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author"/><link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418"/><link rel="stylesheet" href="/css/layout.css?2a3d0eb"/><link rel="canonical" href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html"/><title>CasperJS Tests in Maven Build - Yegor Bugayenko</title></head><body><div class="wrapper"> <aside class="header-toggle" id="header-toggle" title="show head menu" onclick="$('#header').show(),$('#header-toggle').hide()">☰</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html" class="sub"><span>subscribe</span></a> <a href="/about-me.html"> <img src="/images/yegor-bugayenko-192x192.png" class="photo" alt="photo of Yegor Bugayenko"/> </a> <a href="/about-me.html" class="hire"><span>hire me</span></a></div> <nav><ul class="menu social notranslate"><li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li><li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li><li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li><li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li><li><a href="https://www.facebook.com/yegor.bugayenko" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li><li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li><li><a href="http://www.youtube.com/user/technoparkcorp" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li><li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li><li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"><li><a href="/" title="home page">home</a></li><li><a href="/best.html" title="best articles to read">12 best</a></li><li><a href="/contents.html" title="blog contents">all 165</a></li><li><a href="/webinars.html" title="webinars">webinars</a></li><li><a href="/talks.html" title="talks">talks</a></li><li><a href="/books.html" title="books">books</a></li><li><a href="/award.html" title="software quality award">award</a></li></ul> </nav><div id="search"><form action="https://www.google.com/search" style="position:relative"> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input id="search-query" class="field field-text" onfocus="$('#google').css('display','inline-block')" name="q" placeholder="Search" autocomplete="off"/> <span class="desktop-only"> <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google" style="width:3em;height:3em;display:none;position:absolute;margin-left:1em" alt="search via Google"/> </span></form><div id="search-results" style="display:none"><div class="entries"></div></div></div> <script id="search-results-template" type="text/mustache">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
+  itemscope="" itemtype="http://schema.org/WebPage">
+  <head>
+    <base href="/2014/06/21/casperjs-with-maven.html"/>
+    <meta charset="utf-8"/>
+    <meta itemprop="name" content="CasperJS Tests in Maven Build" />
+    <meta itemprop="author" content="Yegor Bugayenko" />
+    <meta itemprop="breadcrumb" content="" />
+    <meta itemprop="keywords" content="integration tests with casperjs, maven casperjs, maven phantomjs, maven phantomjs tomcat, maven tests with casperjs, maven tomcat casperjs, phantomjs maven plugin" />
+    <meta itemprop="description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS" />
+    <meta name="description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS" />
+    <meta name="keywords" content="integration tests with casperjs, maven casperjs, maven phantomjs, maven phantomjs tomcat, maven tests with casperjs, maven tomcat casperjs, phantomjs maven plugin" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <meta name="twitter:creator" content="@yegor256"/>
+    <meta property="twitter:account_id" content="4503599630178231" />
+    <meta property="og:url" content="/2014/06/21/casperjs-with-maven.html"/>
+    
+    <meta property="og:site_name" content="yegor256"/>
+    <meta property="og:title" content="CasperJS Tests in Maven Build"/>
+    <meta property="og:description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="fb:admins" content="10203747823006002"/>
+    <meta name="twitter:site" content="@yegor256"/>
+    <meta name="twitter:creator" content="@yegor256"/>
+    <meta name="twitter:url" content="/2014/06/21/casperjs-with-maven.html"/>
+    <meta property="article:author" content="https://www.facebook.com/yegor.bugayenko"/>
+    <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
+    <link rel="shortcut icon" href="/favicon.ico?4917456"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?4917456"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="/rss.xml"/>
+    <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
+    <link rel="stylesheet" href="/css/layout.css?4917456"/>
+    <link rel="stylesheet" href="/css/icons.css?4917456"/>
+    <link rel="canonical" href="/2014/06/21/casperjs-with-maven.html" />
+    <title>CasperJS Tests in Maven Build - Yegor Bugayenko
+      </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="header-toggle" id="header-toggle" title="show head menu"
+        onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
+      <header class="header" id="header">
+        <div class="face">
+          <a href="/about-me.html" class="sub"><span>subscribe</span></a>
+          <a href="/about-me.html">
+            <img src="/images/yegor-bugayenko-192x192.png" class="photo"
+              alt="photo of Yegor Bugayenko"/>
+          </a>
+          <a href="/about-me.html" class="hire"><span>hire me</span></a>
+        </div>
+        <nav>
+          <ul class="menu social notranslate">
+            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/yegor.bugayenko" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="/" title="home page">home</a></li>
+            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&nbsp;166</a></li>
+            <li><a href="/webinars.html" title="webinars">webinars</a></li>
+            <li><a href="/talks.html" title="talks">talks</a></li>
+            <li><a href="/books.html" title="books">books</a></li>
+            <li><a href="/award.html" title="software quality award">award</a></li>
+          </ul>
+        </nav>
+        <div id="search">
+          <form method="get" action="https://www.google.com/search" style="position:relative">
+            <input name="sitesearch" value="yegor256.com" type="hidden"/>
+            <input id="search-query" class="field field-text"
+              onfocus="$('#google').css('display', 'inline-block');"
+              name="q" placeholder="Search" autocomplete="off"/>
+            <span class="desktop-only">
+              <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
+                style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;" alt="search via Google"/>
+            </span>
+          </form>
+          <div id="search-results" style="display: none;">
+            <div class="entries"></div>
+          </div>
+        </div>
+        
+        <script id="search-results-template" type="text/mustache">
           {{#entries}}
             <div>
               <a href="{{url}}">{{title}}</a>
             </div>
           {{/entries}}
-        </script><div class="hot"><ul><li> I'll be talking about <a href="http://www.xdsd.org">XDSD</a> at the <a href="https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729">The Entrepreneurs' Club</a> in Palo Alto, on Feb 11.</li><li> Meet me in Atlanta on Feb 16, at <a href="https://www.devnexus.com/s/speakers#Yegor_Bugayenko">DevNexus</a>, I'll be talking about chat bots and <a href="http://www.rultor.com">Rultor</a></li><li> <a href="https://plus.google.com/events/ch54gu0ddhb5sj2v9v1hhrfc71s">Webinar #12</a> will be very practical, with a lot of Java coding, using <strong>Takes Framework</strong>; join us on Mar 2, at 11am PST</li></ul></div> </header></div> <section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><p class="printable"> <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html&amp;format=svg" style="width:125px;height:125px" alt="QR code"/></p><p class="printable"> <code>http://www.yegor256.com/2014/06/21/casperjs-with-maven.html</code></p><h1 itemprop="name">CasperJS Tests in Maven Build</h1><ul class="subline"><li> <time itemprop="datePublished" datetime="2014-06-21T00:00:00+00:00"> 21 June 2014 </time></li><li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/jun/2014-06-21-casperjs-with-maven.md'>modified</a> on <time itemprop='dateModified' datetime='2015-11-21T06:26:40+0000'>21 November 2015</time></li><li class="printable">Yegor Bugayenko</li><li class="unprintable"> <i class="icon icon-comments"></i> <a href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html#disqus_thread">comments</a></li></ul><p class="unprintable"><a href='/tag/maven.html' class='tag notranslate'>maven</a> <a href='/tag/casperjs.html' class='tag notranslate'>casperjs</a> <a href='/tag/phantomjs.html' class='tag notranslate'>phantomjs</a> <a href='/tag/testing.html' class='tag notranslate'>testing</a></p><div class="buttons notranslate desktop-only"> <nav class="share" role="navigation"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html" title="Share on Facebook" class="button"> <span class="count count-facebook">0</span> <i class="icon icon-facebook notranslate" aria-hidden="true"></i> </a> <a href="https://twitter.com/share?url=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html&amp;text=CasperJS+Tests+in+Maven+Build" title="Share on Twitter" class="button"> <span class="count count-twitter">0</span> <i class="icon icon-twitter notranslate" aria-hidden="true"></i> </a> <a href="https://plus.google.com/share?url=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html" title="Share on Google+" class="button"> <span class="count count-googleplus">0</span> <i class="icon icon-googleplus notranslate" aria-hidden="true"></i> </a> <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html" title="Share on LinkedIn" class="button"> <span class="count count-linkedin">0</span> <i class="icon icon-linkedin notranslate" aria-hidden="true"></i> </a> <a href="http://www.stumbleupon.com/submit?url=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html&amp;title=CasperJS+Tests+in+Maven+Build" title="Share on StumbleUpon" class="button"> <span class="count count-stumbleupon">0</span> <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i> </a> <a href="http://reddit.com/submit?url=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html%3F2014-24&amp;title=CasperJS+Tests+in+Maven+Build" title="Share on Reddit" class="button"> <span class="count count-reddit">0</span> <i class="icon icon-reddit notranslate" aria-hidden="true"></i> </a> <a href="http://news.ycombinator.com/submitlink?u=http://www.yegor256.com/2014/06/21/casperjs-with-maven.html%3F2014-24&amp;t=CasperJS+Tests+in+Maven+Build" title="Share on Hacker News" class="button"> <i class="icon icon-hackernews notranslate" aria-hidden="true"></i> </a> </nav></div> </header> <main> <article class="main" itemprop="articleBody"><p>I'm a big fan of automated testing in general and integration testing in particular. I strongly believe that effort spent on writing tests are direct investments into quality and stability of the product under development.</p><p><a href="http://casperjs.org/">CasperJS</a> is a testing framework on top of <a href="http://phantomjs.org/">PhantomJS</a>, which is a headless browser. Using CasperJS, we can ensure that our application responds correctly to requests sent by a regular web browser.</p><p>This is a sample CasperJS test, which makes an HTTP request to a home page of a running WAR application and asserts that the response has <code>200</code> HTTP status code:</p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span>
-  <span class="s1">'home page can be rendered'</span><span class="p">,</span>
+        </script>
+        
+        <div class="hot">
+          <ul>
+            <li>
+              I'll be talking about <a href="http://www.xdsd.org">XDSD</a> at the
+              <a href="https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729">The Entrepreneurs' Club</a>
+              in Palo Alto, on Feb 11.
+            </li>
+            <li>
+              Meet me in Atlanta on Feb 16, at
+              <a href="https://www.devnexus.com/s/speakers#Yegor_Bugayenko">DevNexus</a>,
+              I'll be talking about chat bots and <a href="http://www.rultor.com">Rultor</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/events/ch54gu0ddhb5sj2v9v1hhrfc71s">Webinar #12</a>
+              will be very practical, with a lot of
+              Java coding, using <strong>Takes Framework</strong>;
+              join us on Mar 2, at 11am PST
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <section itemscope="" itemtype="http://schema.org/BlogPosting">
+
+  <div class="wrapper">
+    <header>
+      <p class="printable">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=/2014/06/21/casperjs-with-maven.html&amp;format=svg"
+          style="width:125px;height:125px;" alt="QR code"/>
+      </p>
+      <p class="printable">
+        <code>/2014/06/21/casperjs-with-maven.html</code>
+      </p>
+      <h1 itemprop="name">CasperJS Tests in Maven Build</h1>
+      <ul class="subline">
+        <li>
+          <time itemprop="datePublished" datetime="2014-06-21T00:00:00+00:00">
+            21 June 2014
+          </time>
+        </li>
+        
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/jun/2014-06-21-casperjs-with-maven.md'>modified</a>          on <time itemprop='dateModified' datetime='2015-11-21T06:26:40+0000'>21 November 2015</time></li>
+        <li class="printable">Yegor Bugayenko</li>
+        <li class="unprintable">
+          <i class="icon icon-comments"></i>
+          <a href="/2014/06/21/casperjs-with-maven.html#disqus_thread">comments</a>
+        </li>
+      </ul>
+      <p class="unprintable"><a href='/tag/maven.html' class='tag notranslate'>maven</a> <a href='/tag/casperjs.html' class='tag notranslate'>casperjs</a> <a href='/tag/phantomjs.html' class='tag notranslate'>phantomjs</a> <a href='/tag/testing.html' class='tag notranslate'>testing</a></p>
+      <div class="buttons notranslate desktop-only">
+        <nav class="share" role="navigation">
+          <a href="http://www.facebook.com/sharer/sharer.php?u=/2014/06/21/casperjs-with-maven.html"
+            title="Share on Facebook" class="button">
+            <span class="count count-facebook">0</span>
+            <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/share?url=/2014/06/21/casperjs-with-maven.html&amp;text=CasperJS+Tests+in+Maven+Build"
+            title="Share on Twitter" class="button">
+            <span class="count count-twitter">0</span>
+            <i class="icon icon-twitter notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://plus.google.com/share?url=/2014/06/21/casperjs-with-maven.html"
+            title="Share on Google+" class="button">
+            <span class="count count-googleplus">0</span>
+            <i class="icon icon-googleplus notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/cws/share?url=/2014/06/21/casperjs-with-maven.html"
+            title="Share on LinkedIn" class="button">
+            <span class="count count-linkedin">0</span>
+            <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="http://www.stumbleupon.com/submit?url=/2014/06/21/casperjs-with-maven.html&amp;title=CasperJS+Tests+in+Maven+Build"
+            title="Share on StumbleUpon" class="button">
+            <span class="count count-stumbleupon">0</span>
+            <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i>
+          </a>
+          <!--
+          <a href="http://del.icio.us/post?url=/2014/06/21/casperjs-with-maven.html&amp;title=CasperJS+Tests+in+Maven+Build"
+            title="Share on Delicious" class="button">
+            <span class="count count-delicious">0</span>
+            <i class="icon icon-delicious notranslate" aria-hidden="true"></i>
+          </a>
+          -->
+          <!--
+          <a href="http://digg.com/submit?phase=2&amp;url=/2014/06/21/casperjs-with-maven.html&amp;title=CasperJS+Tests+in+Maven+Build"
+            title="Share on Digg" class="button">
+            <span class="count count-digg">0</span>
+            <i class="icon icon-digg notranslate" aria-hidden="true"></i>
+          </a>
+          -->
+          <a href="http://reddit.com/submit?url=/2014/06/21/casperjs-with-maven.html%3F2014-24&amp;title=CasperJS+Tests+in+Maven+Build"
+            title="Share on Reddit" class="button">
+            <span class="count count-reddit">0</span>
+            <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="http://news.ycombinator.com/submitlink?u=/2014/06/21/casperjs-with-maven.html%3F2014-24&amp;t=CasperJS+Tests+in+Maven+Build"
+            title="Share on Hacker News" class="button">
+            <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article class="main" itemprop="articleBody">
+        <p>I&#39;m a big fan of automated testing in general and integration
+testing in particular. I strongly believe that effort spent on
+writing tests are direct investments into quality and stability
+of the product under development.</p>
+
+<p><a href="http://casperjs.org/">CasperJS</a> is a testing framework on top of
+<a href="http://phantomjs.org/">PhantomJS</a>, which is a headless browser. Using
+CasperJS, we can ensure that our application responds correctly
+to requests sent by a regular web browser.</p>
+
+<!--more-->
+
+<p>This is a sample CasperJS test, which makes an HTTP request to a home page
+of a running WAR application and asserts that the response has
+<code>200</code> HTTP status code:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span>
+  <span class="s1">&#39;home page can be rendered&#39;</span><span class="p">,</span>
   <span class="kd">function</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span>
-      <span class="nx">casper</span><span class="p">.</span><span class="nx">cli</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'home'</span><span class="p">),</span> <span class="c1">// URL of home page</span>
+      <span class="nx">casper</span><span class="p">.</span><span class="nx">cli</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">),</span> <span class="c1">// URL of home page</span>
       <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="nx">test</span><span class="p">.</span><span class="nx">assertHttpStatus</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
       <span class="p">}</span>
@@ -19,7 +234,38 @@
       <span class="p">}</span>
     <span class="p">);</span>
   <span class="p">}</span>
-<span class="p">);</span></code></pre></div><p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file. Let's see how CasperJS can be executed automatically on every Maven build.</p><p>Here is the test scenario, implemented with a combination of Maven plugins:</p><ol><li><p>Install PhantomJS</p></li><li><p>Install CasperJS</p></li><li><p>Reserve a random TCP port</p></li><li><p>Start Tomcat on that TCP port (with WAR inside)</p></li><li><p>Run CasperJS tests and point them to the running Tomcat</p></li><li><p>Shutdown Tomcat</p></li></ol><p>I'm using a combination of plugins. Let's go through the steps one by one.</p><p>BTW, I'm not showing plugin versions in the examples below, primarily because most of them are in active development. Check their versions at <a href="http://search.maven.org/">Maven Central</a> (yes, all of them are available there).</p><h2 id="1.-install-phantomjs">1. Install PhantomJS</h2><p>First of all, we have to download the PhantomJS executable. It is a platform-specific binary. Thanks to <a href="https://github.com/klieber">Kyle Lieber</a>, we have an off-the-shelf Maven plugin: <a href="https://github.com/klieber/phantomjs-maven-plugin">phantomjs-maven-plugin</a> that understands what the current platform is and downloads the appropriate binary automatically, placing it into the <code>target</code> directory.</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file.
+Let&#39;s see how CasperJS can be executed automatically on every Maven build.</p>
+
+<p>Here is the test scenario, implemented with a combination of Maven plugins:</p>
+
+<ol>
+<li><p>Install PhantomJS</p></li>
+<li><p>Install CasperJS</p></li>
+<li><p>Reserve a random TCP port</p></li>
+<li><p>Start Tomcat on that TCP port (with WAR inside)</p></li>
+<li><p>Run CasperJS tests and point them to the running Tomcat</p></li>
+<li><p>Shutdown Tomcat</p></li>
+</ol>
+
+<p>I&#39;m using a combination of plugins. Let&#39;s go through the steps one by one.</p>
+
+<p>BTW, I&#39;m not showing plugin versions in the examples below, primarily
+because most of them are in active development. Check their versions
+at <a href="http://search.maven.org/">Maven Central</a> (yes, all of them are available there).</p>
+
+<h2 id="1-install-phantomjs">1. Install PhantomJS</h2>
+
+<p>First of all, we have to download the PhantomJS executable.
+It is a platform-specific binary. Thanks to <a href="https://github.com/klieber">Kyle Lieber</a>,
+we have an off-the-shelf Maven plugin:
+<a href="https://github.com/klieber/phantomjs-maven-plugin">phantomjs-maven-plugin</a>
+that understands what the current platform is and downloads the appropriate
+binary automatically, placing it into the <code>target</code> directory.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>com.github.klieber<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>phantomjs-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -32,7 +278,18 @@
   <span class="nt">&lt;configuration&gt;</span>
     <span class="nt">&lt;version&gt;</span>1.9.2<span class="nt">&lt;/version&gt;</span>
   <span class="nt">&lt;/configuration&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><p>The exact name of the downloaded binary is stored in the <code>${phantomjs.binary}</code> Maven property.</p><h2 id="2.-install-casperjs">2. Install CasperJS</h2><p>Unfortunately, there is no similar plugin for the CasperJS installation (at least I haven't found any as of yet). That's why I'm using plain old <code>git</code> (you should have it installed on your build machine).</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<p>The exact name of the downloaded binary is stored in the
+<code>${phantomjs.binary}</code> Maven property.</p>
+
+<h2 id="2-install-casperjs">2. Install CasperJS</h2>
+
+<p>Unfortunately, there is no similar plugin for the CasperJS installation
+(at least I haven&#39;t found any as of yet). That&#39;s why I&#39;m using plain
+old <code>git</code> (you should have it installed on your build machine).</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -53,7 +310,19 @@
       <span class="nt">&lt;/configuration&gt;</span>
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><h2 id="3.-reserve-tcp-port">3. Reserve TCP Port</h2><p>I need to obtain a random TCP port where Tomcat will be started. The port has to be available on the build machine. I want to be able to run multiple Maven builds in parallel, so that's why I get a random port on every build.</p><p>In other examples, you may see people using fixed port numbers, like <code>5555</code> or something similar. This is a very bad practice. Always reserve a new random port when you need it.</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<h2 id="3-reserve-tcp-port">3. Reserve TCP Port</h2>
+
+<p>I need to obtain a random TCP port where Tomcat will be started.
+The port has to be available on the build machine. I want to be able
+to run multiple Maven builds in parallel, so that&#39;s why I get a random port on every build.</p>
+
+<p>In other examples, you may see people using fixed port numbers,
+like <code>5555</code> or something similar. This is a very bad practice.
+Always reserve a new random port when you need it.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>build-helper-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -69,7 +338,17 @@
       <span class="nt">&lt;/configuration&gt;</span>
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><p>The plugin reserves a port and sets it value to the <code>${tomcat.port}</code> Maven property.</p><h2 id="4.-start-tomcat">4. Start Tomcat</h2><p>Now, it's time to start Tomcat with the WAR package inside. I'm using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a> that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<p>The plugin reserves a port and sets it value to the <code>${tomcat.port}</code> Maven property.</p>
+
+<h2 id="4-start-tomcat">4. Start Tomcat</h2>
+
+<p>Now, it&#39;s time to start Tomcat with the WAR package inside.
+I&#39;m using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
+that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;configuration&gt;</span>
@@ -88,7 +367,19 @@
       <span class="nt">&lt;/configuration&gt;</span>
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues to run when the plugin execution finishes. That's exactly what I need.</p><h2 id="5.-run-casperjs">5. Run CasperJS</h2><p>Now, it's time to run CasperJS. Even though there are some plugins exist for this, I'm using plain old <a href="http://mojo.codehaus.org/exec-maven-plugin/">exec-maven-plugin</a>, mostly because it is more configurable.</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues
+to run when the plugin execution finishes. That&#39;s exactly what I need.</p>
+
+<h2 id="5-run-casperjs">5. Run CasperJS</h2>
+
+<p>Now, it&#39;s time to run CasperJS. Even though there are some
+plugins exist for this, I&#39;m using plain old
+<a href="http://mojo.codehaus.org/exec-maven-plugin/">exec-maven-plugin</a>,
+mostly because it is more configurable.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -115,7 +406,17 @@
       <span class="nt">&lt;/configuration&gt;</span>
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><p>The environment variable <code>PHANTOMJS_EXECUTABLE</code> is the undocumented feature that makes this whole scenario possible. It configures the location of the PhantomJS executable, which was downloaded a few steps above.</p><h2 id="6.-shutdown-tomcat">6. Shutdown Tomcat</h2><p>In the last step, I shut down the Tomcat server.</p><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<p>The environment variable <code>PHANTOMJS_EXECUTABLE</code> is the undocumented
+feature that makes this whole scenario possible. It configures
+the location of the PhantomJS executable, which was downloaded a few steps above.</p>
+
+<h2 id="6-shutdown-tomcat">6. Shutdown Tomcat</h2>
+
+<p>In the last step, I shut down the Tomcat server.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -127,4 +428,87 @@
       <span class="nt">&lt;/goals&gt;</span>
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></div><h2 id="real-example">Real Example</h2><p>If you want to see how this all works in action, take a look at <a href="http://www.stateful.co">stateful.co</a>. It is a Java Web application hosted at <a href="http://www.cloudbees.com">CloudBees</a>. Its source code is open and available in <a href="https://github.com/sttc/stateful">GitHub</a>.</p><p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code>pom.xml</code></a> contains exactly the same configurations explained above, but joined together.</p><p>If you have any questions, please don't hesitate to ask below.</p><p>PS. Also, check this: <a href="/2014/04/06/phandom.html">PhantomJS as an HTML Validator</a></p></article> </main><div class="unprintable"><h2>Related Posts</h2><p>You may also find these posts interesting:</p><ul><li><a href="/2014/04/06/phandom.html">PhantomJS as an HTML Validator</a></li><li><a href="/2015/09/10/testing-exit-criteria.html">When Do You Stop Testing?</a></li><li><a href="/2014/08/22/art-of-software-testing.html">The Art of Software Testing by Glenford Myers</a></li><li><a href="/2014/04/28/xml-xpath-hamcrest-matchers.html">XML/XPath Matchers for Hamcrest</a></li><li><a href="/2015/09/07/maven-repository-amazon-s3.html">How to Set Up a Private Maven Repository in Amazon S3</a></li></ul></div><div class="teamed-banner"> <a href="http://www.teamed.io"><img src="/images/teamed-banner.jpg" alt="teamed banner"/></a></div></div><div class="disqus" role="complementary"><div id="disqus_thread" class="disqus-thread"></div> <a href="http://disqus.com" class="dsq-brlink"> comments powered by <span class="logo-disqus">Disqus</span> </a></div><div class="wrapper"> <footer class="footer"><p> © <span itemprop="author">Yegor Bugayenko</span>, 2014-2015</p> </footer></div></section><script src="http://code.jquery.com/jquery-2.1.0.min.js"></script><script src="/js/global.js?2a3d0eb"></script><script src="/js/post.js?2a3d0eb"></script><script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-1963507-32","auto"),ga("send","pageview")</script></body></html>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<h2 id="real-example">Real Example</h2>
+
+<p>If you want to see how this all works in action, take
+a look at <a href="http://www.stateful.co">stateful.co</a>. It is a Java
+Web application hosted at <a href="http://www.cloudbees.com">CloudBees</a>.
+Its source code is open and available in <a href="https://github.com/sttc/stateful">GitHub</a>.</p>
+
+<p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code>pom.xml</code></a>
+contains exactly the same configurations explained above, but joined together.</p>
+
+<p>If you have any questions, please don&#39;t hesitate to ask below.</p>
+
+<p>PS. Also, check this:
+<a href="/2014/04/06/phandom.html">PhantomJS as an HTML Validator</a></p>
+
+      </article>
+    </main>
+    
+      <div class="unprintable">
+        <h2>Related Posts</h2>
+        <p>You may also find these posts interesting:</p>
+        <ul>
+          
+            <li><a href="/2016/02/09/are-you-still-debugging.html">Are You Still Debugging?</a></li>
+          
+            <li><a href="/2016/02/03/design-patterns-and-anti-patterns.html">Design Patterns and Anti-Patterns, Love and Hate</a></li>
+          
+            <li><a href="/2016/01/26/defensive-programming.html">Defensive Programming via Validating Decorators</a></li>
+          
+            <li><a href="/2016/01/19/how-expensive-is-outsourcing.html">How Expensive Is Your Outsourcing Team?</a></li>
+          
+            <li><a href="/2016/01/12/good-programmers-dont-work-for-equity.html">Good Programmers Don't Work for Equity</a></li>
+          
+            <li><a href="/2016/01/05/how-to-punish-employees.html">How Do You Punish Your Employees?</a></li>
+          
+            <li><a href="/2015/12/29/turnover-is-good-for-maintainability.html">Employee Turnover Is Good for the Maintainability of Your Code Base</a></li>
+          
+            <li><a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">Why Don't You Contribute to Open Source?</a></li>
+          
+            <li><a href="/2015/12/16/investors-are-too-scared.html">Investors Are Too Scared</a></li>
+          
+            <li><a href="/2015/12/08/temporal-coupling-between-method-calls.html">Temporal Coupling Between Method Calls</a></li>
+          
+        </ul>
+      </div>
+    
+    <div class="teamed-banner">
+      <a href="http://www.teamed.io"><img src="/images/teamed-banner.jpg" alt="teamed banner"/></a>
+    </div>
+  </div>
+
+  <div class="disqus" role="complementary">
+    <div id="disqus_thread" class="disqus-thread"></div>
+    <a href="http://disqus.com" class="dsq-brlink">
+      comments powered by
+      <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+
+  <div class="wrapper">
+    <footer class="footer">
+      <p>
+        &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014-2015
+      </p>
+    </footer>
+  </div>
+
+</section>
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/global.js?4917456"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1963507-32', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
