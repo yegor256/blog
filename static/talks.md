@@ -90,14 +90,14 @@ Washington, USA<br/>
 
 <img src="/images/2016/agile-and-beyond-2016.png" class="talks-talk" alt="Agile &amp; Beyond 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
-[Agile & Beyond](http://www.agileandbeyond.com/2016/#/)<br/>
+[Agile & Beyond](http://www.agileandbeyond.com/2016/)<br/>
 Ypsilanti, MI, USA<br/>
 5 May 2016
 
 <img src="/images/2016/itake-2016.png" class="talks-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Chatbots**<br/>
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
-Budapest, Romania<br/>
+Bucharest, Romania<br/>
 19-20 May 2016
 
 <img src="/images/2016/item-2016.svg" class="talks-talk" alt="ITEM 2016"/>

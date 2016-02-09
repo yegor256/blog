@@ -5,7 +5,8 @@ set -e
 unset BUNDLE_GEMFILE
 cd /tmp
 
-dir=$(dirname $0)
+x=$(readlink --canonicalize-existing "$0")
+dir=$(dirname "$x")
 
 mkdir -p "${dir}/../_temp/icons"
 fontcustom compile "${dir}" \
