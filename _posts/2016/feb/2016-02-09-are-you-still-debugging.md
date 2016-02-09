@@ -48,7 +48,8 @@ class FileUtils {
 }
 {% endhighlight %}
 
-This static utility method reads file content and then
+This static [utility]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+method reads file content and then
 finds all the unique words in it. Pretty simple. However, if
 it doesn't work, what do we do? Let's say this is the file:
 
