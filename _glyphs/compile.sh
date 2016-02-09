@@ -8,8 +8,10 @@ cd /tmp
 x=$(readlink --canonicalize-existing "$0")
 dir=$(dirname "$x")
 
-mkdir -p "${dir}/../_temp/icons"
+target=$1
+
+mkdir -p "${target}"
 fontcustom compile "${dir}" \
-  "--output=${dir}/../_temp/icons" \
+  "--output=${target}" \
   --font-name=icons --templates=css --no-hash --force --autowidth
-sed -i "s|./icons|/css/icons|g" "${dir}/../_temp/icons/icons.css"
+sed -i "s|./icons|/css/icons|g" "${target}/icons.css"
