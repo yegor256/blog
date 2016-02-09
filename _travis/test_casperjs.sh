@@ -2,10 +2,11 @@
 set -e
 
 DIR=$(dirname $0)
+cd "${DIR}/.."
 PORT=4000
-jekyll serve --port=$PORT --host=localhost "--source=$DIR/.." &
+jekyll serve --port=$PORT --host=localhost &
 PID=$!
-trap 'kill -9 $PID; rm -rf $DIR/../_site' EXIT
+trap 'kill -9 $PID; rm -rf _site' EXIT
 
 COUNT=1
 echo "Jekyll started, PID: ${PID}"
