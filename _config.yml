@@ -47,6 +47,7 @@ sass:
 # see https://github.com/stereobooster/jekyll-press
 jekyll-press:
   exclude:
+    - /rss
     - /rss.xml
     - /rss-jcg.xml
 
