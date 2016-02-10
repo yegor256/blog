@@ -75,19 +75,11 @@ layout: default
         {{ content }}
       </article>
     </main>
-    {% if site.related_posts.size > 0 %}
-      <div class="unprintable">
-        <h2>Related Posts</h2>
-        <p>You may also find these posts interesting:</p>
-        <ul>
-          {% for post in site.related_posts %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
+    <related-posts />
     <div class="teamed-banner">
-      <a href="http://www.teamed.io"><img src="/images/teamed-banner.jpg" alt="teamed banner"/></a>
+      <a href="http://www.teamed.io">
+        <img src="/images/teamed-banner.jpg" alt="teamed banner"/>
+      </a>
     </div>
   </div>
 

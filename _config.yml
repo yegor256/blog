@@ -28,6 +28,13 @@ gems:
   - jekyll-plantuml
   - jekyll-press
   - jekyll-sitemap
+  - jekyll-related-posts
+
+# see https://github.com/alfanick/jekyll-related-posts
+related:
+  max_count: 5
+  min_score: 0.1
+  accuracy: 0.75
 
 feed:
   path: rss.xml

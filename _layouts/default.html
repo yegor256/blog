@@ -5,7 +5,7 @@
     <base href="{{ site.url }}{{ page.url }}"/>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
-    <meta itemprop="author" content="{{ site.author }}" />
+    <meta itemprop="author" content="{{ site.author.name }}" />
     <meta itemprop="breadcrumb" content="{{ site.url }}" />
     <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta itemprop="description" content="{{ page | description }}" />
@@ -47,7 +47,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <aside class="header-toggle" id="header-toggle" title="show head menu"
+      <aside class="header-toggle unprintable" id="header-toggle" title="show head menu"
         onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
       <header class="header" id="header">
         <div class="face">

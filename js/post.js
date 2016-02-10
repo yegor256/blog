@@ -77,32 +77,6 @@ $(
           }
         }
       );
-      /*
-      $.getJSON(
-        'http://feeds.delicious.com/v2/json/urlinfo/data?url=' + url + '&callback=?',
-        function(data) {
-          var count = 0;
-          if (data.length > 0) {
-            count = data[0].total_posts;
-          }
-          if (count !== 0) {
-            $('.count-delicious').html(number(data[0].total_posts)).fadeIn();
-          }
-        }
-      );
-      */
-      /*
-      digg API doesn't work at the momemt, they are refactoring it
-      $.getJSON(
-        'http://services.digg.com/1.0/endpoint?method=story.getAll?type=javascript&callback=?&link=' + url,
-        function(data) {
-          var count = data.stories[0].diggs;
-          if (count !== 0) {
-            $('.count-digg').html(data.stories[0].diggs).fadeIn();
-          }
-        }
-      );
-      */
     }
   }
 );
