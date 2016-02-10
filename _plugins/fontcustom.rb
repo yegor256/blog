@@ -14,8 +14,12 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
-      system("#{site.config['source']}/_glyphs/compile.sh #{site.config['source']}/_temp/icons")
-      system("mkdir -p #{site.config['source']}/_site/css")
+      puts %x[
+        set -e
+        #{site.config['source']}/_glyphs/compile.sh #{site.config['source']}/_temp/icons
+        mkdir -p #{site.config['source']}/_site/css
+      ]
+      raise 'failed to build icon files' if !$?.exitstatus
       ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, 'css', "icons.#{ext}")
       end

@@ -17,15 +17,16 @@ module Jekyll
       Dir.glob("#{site.config['source']}/_gnuplot/**/*.gpi").each do |f|
         path = File.dirname(f).gsub(/^.*_gnuplot\//, '')
         base = File.basename(f).gsub(/\.gpi$/, '')
-        system("
+        puts %x[
           set -e
-          dir=$(pwd)
-          cd _gnuplot/#{path}
+          dir=#{site.config['source']}
+          cd ${dir}/_gnuplot/#{path}
           gnuplot #{base}.gpi
+          mkdir -p ${dir}/_site/gnuplot/#{path}
           mkdir -p ${dir}/_temp/gnuplot/#{path}
-          mv #{base}.svg ${dir}/_temp/gnuplot/#{path}
-          cd ${dir}
-        ")
+          cp #{base}.svg ${dir}/_temp/gnuplot/#{path}
+        ]
+        raise 'failed to build gnuplot image' if !$?.exitstatus
         site.static_files << Jekyll::GnuplotFile.new(site, site.dest, 'gnuplot', "#{path}/#{base}.svg")
       end
     end
