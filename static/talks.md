@@ -82,11 +82,17 @@ Kiev, Ukraine<br/>
 Moscow, Russia<br/>
 22-23 April 2016
 
+<img src="/images/2016/dotw-2016.png" class="talks-talk" alt="Delivery of Things World 2016"/>
+**Problems with Continuous Integration**<br/>
+[Delivery of Things World 2016](http://deliveryofthingsworld.com/en/)<br/>
+Berlin, Germany<br/>
+24 April 2016
+
 <img src="/images/2016/ntpm.jpg" class="talks-talk" alt="NTPM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
 [New Trends in Project Management](http://ntpm.pl/)<br/>
 Gdynia, Poland<br/>
-24-25 April 2016
+26 April 2016
 
 <img src="/images/2016/beyond-2016.png" class="talks-talk" alt="Beyond20 2016"/>
 **Continuous Integration May Have Negative Effects**<br/>

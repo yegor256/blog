@@ -42,6 +42,9 @@ install:
   - travis_retry gem install jgd -v 1.6.5
 script:
   - set -e
+  - gnuplot --version
+  - fontcustom --version
+  - jslint --version
   - _travis/test_casperjs.sh
   - rm -rf _site
   - jekyll build
