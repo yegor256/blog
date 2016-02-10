@@ -1,10 +1,12 @@
 module Jekyll
   class GnuplotFile < StaticFile
     def write(dest)
-      begin
-        super(dest)
-      rescue
-      end
+      target = File.join(dest, @dir, @name)
+      FileUtils.copy_file(
+        File.join(dest, "/../_temp/gnuplot/#{@name}"),
+        target
+      )
+      puts "#{target} created (#{File.size(target)} bytes)"
       true
     end
   end
@@ -20,11 +22,11 @@ module Jekyll
           dir=$(pwd)
           cd _gnuplot/#{path}
           gnuplot #{base}.gpi
-          mkdir -p ${dir}/_site/gnuplot/#{path}
-          mv #{base}.svg ${dir}/_site/gnuplot/#{path}
+          mkdir -p ${dir}/_temp/gnuplot/#{path}
+          mv #{base}.svg ${dir}/_temp/gnuplot/#{path}
           cd ${dir}
         ")
-        site.static_files << Jekyll::GnuplotFile.new(site, site.dest, '/', "gnuplot/#{path}/#{base}.svg")
+        site.static_files << Jekyll::GnuplotFile.new(site, site.dest, 'gnuplot', "#{path}/#{base}.svg")
       end
     end
   end

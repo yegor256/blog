@@ -1,10 +1,12 @@
 module Jekyll
   class FontcustomFile < StaticFile
     def write(dest)
+      target = File.join(dest, @dir, @name)
       FileUtils.copy_file(
         File.join(dest, "/../_temp/icons/#{@name}"),
-        File.join(dest, @dir, @name)
+        target
       )
+      puts "#{target} created (#{File.size(target)} bytes)"
       true
     end
   end
