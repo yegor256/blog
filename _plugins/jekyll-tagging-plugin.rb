@@ -74,7 +74,7 @@ module Jekyll
 
     def tagged(post)
       "<div class='tagged'>
-        <div><a href='#{post['url']}'>#{post['title']}</a></div>
+        <div><a href='#{post.url}'>#{post['title']}</a></div>
         <ul class='subline'>
           <li>
             <time datetime='#{post['date'].xmlschema()}'>
@@ -83,7 +83,7 @@ module Jekyll
           </li>
           <li>#{tags(post)}</li>
           <li class='unprintable'>
-            <a href='http://www.yegor256.com#{post['url']}#disqus_thread' class='notranslate'>comments</a>
+            <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='notranslate'>comments</a>
           </li>
         </ul>
       </div>".gsub(/\n/, '')
