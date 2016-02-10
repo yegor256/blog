@@ -26,7 +26,6 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-plantuml
-  - jekyll-press
   - jekyll-sitemap
   - jekyll-related-posts
 
@@ -43,13 +42,6 @@ sass:
   style: compressed
   deploy_style: compressed
   compile_in_place: false
-
-# see https://github.com/stereobooster/jekyll-press
-jekyll-press:
-  exclude:
-    - /rss
-    - /rss.xml
-    - /rss-jcg.xml
 
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
