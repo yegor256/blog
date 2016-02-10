@@ -14,7 +14,7 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
-      Dir.glob("./_gnuplot/**/*.gpi").each do |f|
+      Dir.glob("#{site.config['source']}/_gnuplot/**/*.gpi").each do |f|
         path = File.dirname(f).gsub(/^.*_gnuplot\//, '')
         base = File.basename(f).gsub(/\.gpi$/, '')
         system("
