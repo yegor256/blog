@@ -16,6 +16,7 @@ addons:
       - gnuplot
       - s3cmd
       - fontforge
+      - liblapack-dev
 before_install:
   - set -e
   - git config --global user.email "travis@teamed.io"
