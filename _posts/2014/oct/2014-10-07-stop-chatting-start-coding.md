@@ -16,7 +16,7 @@ keywords:
 categories: jcg
 ---
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 The first principle of eXtremely Distributed Software Development
 ([XDSD](http://www.xdsd.org)) states that

@@ -23,7 +23,7 @@ basically two types of contracts:
 They are fundamentally different but the truth is that in either case &mdash;
 **you lose**.
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 In the eXtremely Distributed Software Development
 ([XDSD](http://www.xdsd.org)) methodology everything is different, including

@@ -17,7 +17,7 @@ keywords:
   - project responsibility
 ---
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 It is a very common problem in project management &mdash; how to make team
 members more responsible and avoid [micro

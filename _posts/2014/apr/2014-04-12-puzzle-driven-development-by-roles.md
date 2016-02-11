@@ -16,7 +16,7 @@ keywords:
   - distributed programming
 ---
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 In this post, I'll try to walk you through a project managed
 with the spirit of
