@@ -36,6 +36,8 @@ related:
   accuracy: 0.75
 
 feed:
+  title: yegor256.com
+  subtitle: Programming Blog
   path: rss.xml
 
 sass:
