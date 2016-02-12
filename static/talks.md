@@ -127,8 +127,8 @@ Tallinn, Estonia<br/>
 <hr/>
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12710820_10208653505765005_2904908739386245403_o.jpg" class="talks-photo" alt="TECClub 2016"/>
-**XDSD : Meetings-Free Software Development Methodology**;
-[The Entrepreneurs' Club](https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729);
+XDSD : Meetings-Free Software Development Methodology;
+[The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
 Palo Alto, USA;
 11 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings);
