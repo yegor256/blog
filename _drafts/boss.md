@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Who Is Your Boss?"
-date: 2014-09-24
+title: "Holacracy for Organizations, Autocracy for Projects"
+date: 2016-02-14
+place: Palo Alto, CA
 tags: management
 description:
   It is mission critical, in a software team, to
   define explicit vertical lines of subordination,
-  to prevent... bad things
+  to prevent... chaos.
 keywords:
   - subordinates in agile
   - software development team subordination
@@ -15,31 +16,63 @@ keywords:
   - flat vs hierarcical management
 ---
 
-Holacracy for organizations, autocracy for projects!
-
-This is the gist of the next few pages.
-
-I stongly believe, and will try to convience you, that while
-it is very effective to structure an organization in a democratic
-and sociocratic way, a project should be managed in
-a completely opposite approach.
-
+I stongly believe that while it is very effective to structure
+an organization in a democratic and sociocratic way, a project
+should be managed differently, completely.
 A project should resemble a dictatorship, authoritarianism or a military hierarchy,
-with a single strong result-oriented leader, giving explicit orders,
+with a single strong result-oriented leader, who is giving explicit orders,
 which are never doubted by subordinates.
 
-## What Is The Difference?
+<!--more-->
 
-Project vs Organization
+According to Wikipedia at the time of writing, **holacracy** is ...
+On the other hand, **autocracy** is ...
 
-## Story #1: Mr. Wolf
+When I say organization, I mean a team, a startup, a company, that
+sort of thing. Something with a brand, an office, a business entity
+and a bank account. The role of an organization is very similar
+to the role of a country or a government --- to provide security
+in exchange for freedom. A democratic management structure
+in a country, as well as in a team, guarantees **equality** to its members,
+which is the most important component of security.
 
-## Story #2:
+Holacracy, also known as "flat organization", technically means absence
+of bureaucracy, special privileges, expensive furniture and private parties
+for top management. In a flat team a distance between CEO and
+a junior programmer is very small. They sit together in the same room,
+they are eat in the same cafe, they discuss team strategy like friends. There
+are no bosses in a flat team, only **leaders**. They don't give orders, they
+inspire. They don't punish, they celebrate success and mourn about failures
+together with everybody. Well, that's the idea of holacracy.
+And it actually work, I've seen it many times.
+
+However, when we're talking about **project** management, the same approach will
+have catastrophic consequencies. A project is something very different
+from a team. A project is a "temporary endeavor
+undertaken to create a unique product, service, or result", according to PMBOK.
+A project is something that starts and ends. The key objective of a project
+is to **end**, while an organization's objective is to **survive**. See the
+difference? A new mobile app, a conference, a new release, a round of
+investments &mdash; these are examples of projects. They start and they end. We
+don't want any of them to live forever, we want to them finish as soon as
+possible, with a positive outcome.
+
+A project must be managed by an authoritative person, who gives orders and
+has enough guts to ensure that the orders are obeyed. That person is
+called a project manager. And the project will be successful only if
+the organizational structure is strictly hierarchical, just like in a military operation.
+A project can not be flat, or it will fall apart.
+
+Since an object is a temporary endeavor, it doesn't give security to its
+participants. And it doesn't take away our freedom. The arrangement is
+different. A project gives us money and takes our time.
+
+
 
 I believe that modern organizations should be
 as flat in their management structure as possible, avoiding
 bureaucracy. I also believe that project they run should be
-as much hierarcical
+as much hierarcical and authoritative as possible.
 
 There are basically two different extremes in organizational structures:
 flat and hierarcical. Both have their pros and cons, however flat structure

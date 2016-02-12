@@ -34,12 +34,6 @@ here is [how](/lectures.html).
 }
 </style>
 
-<img src="/images/2016/tecclub-2016.png" class="talks-talk" alt="TECClub 2016"/>
-**XDSD : Meetings-Free Software Development Methodology**<br/>
-[The Entrepreneurs' Club](https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729)<br/>
-Palo Alto, USA<br/>
-11 February 2016
-
 <img src="/images/2016/devnexus-2016-logo.png" class="talks-talk" alt="DevNexus 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko)<br/>
@@ -131,6 +125,15 @@ Tallinn, Estonia<br/>
 9-10 June 2016
 
 <hr/>
+
+<img src="/images/2016/tecclub-2016.png" class="talks-photo" alt="TECClub 2016"/>
+**XDSD : Meetings-Free Software Development Methodology**;
+[The Entrepreneurs' Club](https://www.eventbrite.com/e/xdsd-meetings-free-software-development-methodology-tickets-21016102729);
+Palo Alto, USA;
+11 February 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings);
+[photos](https://www.facebook.com/yegor.bugayenko/posts/10208653076874283);
+[video](https://www.youtube.com/watch?v=qRZYJGYdrwk)
 
 <img src="/images/2015/devopsdays-warsaw-2015.jpg" class="talks-photo" alt="DevOpsDays Warsaw 2015"/>
 "Continuous Integration May Have Negative Effects";
