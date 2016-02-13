@@ -21,7 +21,7 @@ I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256)
 for the most recent news. Also, I can give a lecture in your office,
 here is [how](/lectures.html). Here is the latest presentation I've
-given.
+given in Palo Alto, CA, on the 11th of February:
 
 <style>
 .talks-talk {
@@ -36,6 +36,8 @@ given.
   margin-right: 1em;
 }
 </style>
+
+## Upcoming Events
 
 <img src="/images/2016/devnexus-2016-logo.png" class="talks-talk" alt="DevNexus 2015"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
@@ -133,7 +135,7 @@ New York, USA<br/>
 Tallinn, Estonia<br/>
 9-10 June 2016
 
-<hr/>
+## Past Events
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12710820_10208653505765005_2904908739386245403_o.jpg" class="talks-photo" alt="TECClub 2016"/>
 XDSD : Meetings-Free Software Development Methodology;
