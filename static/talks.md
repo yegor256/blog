@@ -15,10 +15,13 @@ keywords:
 exclude_from_search: true
 ---
 
+{% youtube qRZYJGYdrwk video-right %}
+
 I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256)
 for the most recent news. Also, I can give a lecture in your office,
-here is [how](/lectures.html).
+here is [how](/lectures.html). Here is the latest presentation I've
+given.
 
 <style>
 .talks-talk {

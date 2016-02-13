@@ -205,6 +205,14 @@ a:visited {
     margin-right: 1em;
     width: 320px;
   }
+
+  &.video-right {
+    float: right;
+    height: 160px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    width: 320px;
+  }
 }
 
 label {
