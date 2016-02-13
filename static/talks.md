@@ -62,7 +62,7 @@ Seattle, USA<br/>
 12 March 2016
 
 <img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
-**Talk To Your Microservice Via a Chat Bot, not UI**<br/>
+** Meeting-Free Software Development, in Distributed Teams**<br/>
 [SEDC 2016](http://www.sedcconference.org/)<br/>
 Washington DC, USA<br/>
 31 March 2016
