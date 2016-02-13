@@ -239,6 +239,7 @@ fieldset {
 }
 
 h1 {
+  clear: both;
   font-size: 2 * $em;
   font-weight: 600;
   line-height: 2 * $em;
@@ -251,6 +252,7 @@ h1 {
 
 h2,
 h3 {
+  clear: both;
   position: relative;
 }
 
