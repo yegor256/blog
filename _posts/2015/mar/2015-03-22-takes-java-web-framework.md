@@ -224,7 +224,7 @@ Obviously, `Exit.NEVER` always responds with, "Don't stop, please".
 
 ## HTTP Request
 
-Now let's see what's inside the HTTP request arriving at `TsFoo` and what
+Now let's see what's inside the HTTP request arriving at `TkFoo` and what
 we can get out of it. This is how the
 [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html)
 interface is defined in [Takes](http://www.takes.org):
