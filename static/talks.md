@@ -58,6 +58,12 @@ Kyiv, Ukraine<br/>
 Seattle, USA<br/>
 12 March 2016
 
+<img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
+**Talk To Your Microservice Via a Chat Bot, not UI**<br/>
+[SEDC 2016](http://www.sedcconference.org/)<br/>
+Washington DC, USA<br/>
+31 March 2016
+
 <img src="/images/2016/agilia-conference-2016.png" class="talks-talk" alt="Agilia Conference 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
