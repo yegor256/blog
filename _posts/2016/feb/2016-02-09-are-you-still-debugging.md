@@ -108,7 +108,7 @@ class Words implements Iterable<String> {
     this.file = src;
   }
   @Override
-  public Iterator<String> read() {
+  public Iterator<String> iterator() {
     String text = new String(
       Files.readAllBytes(Paths.get(this.file)),
       "UTF-8"
@@ -126,7 +126,7 @@ It looks better already, but the complexity is still there. Next, I would
 break it down into smaller classes:
 
 {% highlight java %}
-class Text implements Iterable {
+class Text {
   private final File file;
   Text(File src) {
     this.file = src;
@@ -139,13 +139,13 @@ class Text implements Iterable {
     );
   }
 }
-class Words implements Iterable {
+class Words implements Iterable<String> {
   private final String text;
   Words(String txt) {
     this.text = txt;
   }
   @Override
-  public Iterator<String> read() {
+  public Iterator<String> iterator() {
     Set<String> words = new HashSet<>();
     for (String word : this.text.split(" ")) {
       words.add(word);
