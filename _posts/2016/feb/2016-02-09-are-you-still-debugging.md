@@ -102,7 +102,7 @@ I would turn it into a class, because utility static methods are a
 [bad practice]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}):
 
 {% highlight java %}
-class Words implements Iterable {
+class Words implements Iterable<String> {
   private final File file;
   Words(File src) {
     this.file = src;

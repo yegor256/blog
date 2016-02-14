@@ -49,3 +49,9 @@ you would be imprisoned for a lifetime by me."
 "The ideas that you share are just awesome!"
 &mdash; Adrian C.
 
+"As much as I find your views on OOP quite radical and almost
+flame-war-starting and (at least initially) don't agree with many of them,
+I must admit that, after skimming a few of your articles and bits of code...
+I feel strangely intrigued, even drawn into your style."
+&mdash; Octavian N.
+
