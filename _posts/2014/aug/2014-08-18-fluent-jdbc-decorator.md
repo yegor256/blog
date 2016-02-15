@@ -47,7 +47,7 @@ You start it by instantiating the class with a single parameter
 
 You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use
-[BoneCP](http://jolbox.com/). Below is an example of how you would connect to PostgreSQL:
+[BoneCP](http://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
 
 {% highlight java %}
 @Cacheable(forever = true)

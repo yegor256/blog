@@ -143,7 +143,7 @@ XDSD : Meetings-Free Software Development Methodology;
 Palo Alto, USA;
 11 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings);
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208653076874283);
+[photos](https://www.facebook.com/yegor256/posts/10208653076874283);
 [video](https://www.youtube.com/watch?v=qRZYJGYdrwk)
 
 <img src="/images/2015/devopsdays-warsaw-2015.jpg" class="talks-photo" alt="DevOpsDays Warsaw 2015"/>
@@ -152,7 +152,7 @@ Palo Alto, USA;
 Warsaw, Poland;
 24-25 November 2015;
 [slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead);
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208114809057924);
+[photos](https://www.facebook.com/yegor256/posts/10208114809057924);
 [video](https://www.youtube.com/watch?v=6SfIc5ff-8U)
 
 <img src="/images/2015/buildstuff-2015.jpg" class="talks-photo" alt="BuildStuff 2015"/>
@@ -160,7 +160,7 @@ Warsaw, Poland;
 [BuildStuff 2015](http://buildstuff.com.ua/);
 Kyiv, Ukraine;
 23 November 2015;
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208100666144360);
+[photos](https://www.facebook.com/yegor256/posts/10208100666144360);
 [slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice);
 [video](https://www.youtube.com/watch?v=jUil-aTImgU)
 
@@ -169,14 +169,14 @@ Kyiv, Ukraine;
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
 19-20 November 2015;
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10208081948956442)
+[photos](https://www.facebook.com/yegor256/posts/10208081948956442)
 
 <img src="/images/2015/kyiv-devops-2015.jpg" class="talks-photo" alt="Kyiv DevOps 2015"/>
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
 Kyiv, Ukraine;
 19 September 2015;
-[photos](https://www.facebook.com/yegor.bugayenko/posts/10207965398482753);
+[photos](https://www.facebook.com/yegor256/posts/10207965398482753);
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 
 <img src="/images/2015/sf-devops-2015.jpg" class="talks-photo" alt="San Francisco DevOps 2015"/>

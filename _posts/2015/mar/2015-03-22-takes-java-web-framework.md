@@ -572,7 +572,7 @@ constructors of custom _takes_.
 For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
 initialize a connection to it in the `Entry` class (I'm using
-a [BoneCP](http://jolbox.com/) connection pool):
+a [BoneCP](http://www.jolbox.com/) connection pool):
 
 {% highlight java %}
 public final class Entry {
