@@ -201,9 +201,16 @@ from my blog.
 
 ## Education
 
-## ACM, IEEE memberships
+I would limit yourself to a few letters in this area. Just "MSc" or "BSc" is
+enough. No need to say when did you graduate and which school. You can
+give that details later. Well, there are just two exceptions to this rule.
 
-Just get them.
+First, if you're a PhD. Put it on top of your CV. It's important and
+it's valuable. Simply because there are not so many of them among programmers.
+Second, if your school is Stanford, MIT or similar. If that's the case,
+also put it on top of the CV.
+
+In all other situations, just BSc and that's it.
 
 ## Conferences
 
@@ -216,16 +223,53 @@ check regularly which conferences are looking for speakers. Submit there
 and you will be surprised to see that some of them will actually accept
 some of your ideas.
 
-Your speaking subjects may sound close to these:
-"How we use Docker in our web service",
-"What problems we had with transition to Java 8",
-"How
+The easiest subjects to start with are stories about your practical
+experience with some modern technologies and tools. Something like
+"How Docker Helps Us Optimize Delivery" or
+"Five Apache Spark Installation Issues". Just describe what you've done
+in your recent project. It doesn't really matter what will you talk about.
+What matters is that you're visible. The market accepts you &mdash;
+the employer will trust you more. That's exactly what you need in order
+to request a higher rate.
 
-## Carrer history (experience)
+## Carrer History
 
-## Hobbies
+I'll be speaking for myelf here
+
+## ACM, IEEE, JUG, and other memberships
+
+They mean literally nothing, but will demonstrate that you are
+part of the community. Just like with most other things mentioned above,
+employers will trust you more if the market already trusts you. These
+memberships don't really mean that anyone recognized you. You can get them
+just by paying annual fees. But still, you're paying that fees and most
+other CVs don't. See?
+
+## Mention Hobbies
+
+I think this information is important. Some say it's not, but I believe
+that a personal "click" between you and your potential employer plays
+an important role. There is a human on that side. He or she is reading
+your CV and he or she wants to like you. Again, in order to be comfortable
+to make a hiring decision. Help him or her like you faster. Mention that
+you like skiing, feed monkeys in the zoo and watch Jimmy Kimmel. Be creative,
+don't be boring. Just like in dating.
 
 ## Layout/Graphics
+
+How should your onepage look? Stand out. It should show your personality.
+Don't use that "resume templates" downloadable for free. Create your own
+layout and design. If you're not a designer, ask your Photoshop friend
+to do it for you. There is not much to do, just select the right font
+and add a few colors here and there.
+
+This CV is your product. You made it. It's your baby. If it's just a Word
+document, in a standard template, they will feel that you didn't pay
+attention to it. You didn't even care to create that little and very
+important product nicely. How will you create their software? With the
+same attitude. Don't ruin the whole show by a careless design. That's the
+key word here &mdash; careless. It doesn't need to be complex. It may be
+very simple. But it must be **yours**. Made with care and love.
 
 <hr/>
 
