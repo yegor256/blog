@@ -234,33 +234,47 @@ to request a higher rate.
 
 ## Carrer History
 
-I'll be speaking for myelf here
+I'll be speaking for myself here. As an employer, I don't really care
+about your history at all. Moreover, if you have never been working anywhere
+full-time, I would be more interested to work with you. But that's just
+me, since I truly believe that modern offices and full-time jobs
+turn programmers into
+[slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) (not only programmers).
+
+Other employers may think differently. Well, they most likely think differently.
+That's why, you have to demonstrate in which offices you've spent ten recent
+years of your life. I would recommend to keep this list short. Even if you've
+changed eight companies over the last two years, don't say that. Just three
+places is enough. That will show them that you're a good slave &mdash;
+very loyal to previous masters. That's what they want to see, since they
+are planning to buy you and become your next master. Right? Sounds harsh?
+Isn't [it true]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})?
 
 ## ACM, IEEE, JUG, and other memberships
 
-They mean literally nothing, but will demonstrate that you are
-part of the community. Just like with most other things mentioned above,
+These memberships mean literally nothing, but will demonstrate that you are
+part of that communities. Just like with most other things mentioned above,
 employers will trust you more if the market already trusts you. These
-memberships don't really mean that anyone recognized you. You can get them
+memberships don't really mean that anyone recognized you, since you get them
 just by paying annual fees. But still, you're paying that fees and most
-other CVs don't. See?
+other CVs don't. You're definitely more reliable than many others.
 
 ## Mention Hobbies
 
-I think this information is important. Some say it's not, but I believe
+I think information about hobbies is important. Some say it's not, but I believe
 that a personal "click" between you and your potential employer plays
 an important role. There is a human on that side. He or she is reading
-your CV and he or she wants to like you. Again, in order to be comfortable
+your CV and he or she wants to like you. Mostly in order to be comfortable
 to make a hiring decision. Help him or her like you faster. Mention that
-you like skiing, feed monkeys in the zoo and watch Jimmy Kimmel. Be creative,
-don't be boring. Just like in dating.
+you enjoy skiing, monkey-feeding in the zoo and Jimmy Kimmel. Be creative,
+don't be boring. Just like you do in online dating.
 
 ## Layout/Graphics
 
-How should your onepage look? Stand out. It should show your personality.
+How should your onepage look? Stand out! It must express your personality.
 Don't use that "resume templates" downloadable for free. Create your own
 layout and design. If you're not a designer, ask your Photoshop friend
-to do it for you. There is not much to do, just select the right font
+to do it for you. Actually, there is not much to do, just select the right font
 and add a few colors here and there.
 
 This CV is your product. You made it. It's your baby. If it's just a Word
@@ -268,11 +282,14 @@ document, in a standard template, they will feel that you didn't pay
 attention to it. You didn't even care to create that little and very
 important product nicely. How will you create their software? With the
 same attitude. Don't ruin the whole show by a careless design. That's the
-key word here &mdash; careless. It doesn't need to be complex. It may be
+key word here &mdash; "careless". It doesn't need to be complex. It may be
 very simple. But it must be **yours**. Made with care and love.
 
 <hr/>
 
-As you've probably guessed already, I apply all that recommendations
-to my own personal resume. That's how I build my profile. Here is the current
-version of my CV: [yegor-bugayenko.pdf](). What do you think?
+Want a free advice on your resume? Send it to
+[mailto:cv@yegor256.com](cv@yegor256.com) and I'll let you know
+what I think. I will reply to all emails, but be ready to hear
+mostly what's wrong. What's right you will know without me, when
+they pay you $200/hour.
+
