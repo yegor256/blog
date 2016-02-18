@@ -58,3 +58,4 @@ script:
   - tail -n +3 css/layout.scss > _temp/layout.scss
   - scss-lint -c .scss-lint.yml
   - jgd -u git@github.com:yegor256/blog.git
+
