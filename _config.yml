@@ -35,6 +35,7 @@ related:
   min_score: 0.1
   accuracy: 0.75
 
+# jekyll-feed
 feed:
   title: yegor256.com
   subtitle: Programming Blog
