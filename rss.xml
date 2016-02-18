@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-02-18T05:58:27+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Are You Still Debugging?</title><link href="http://www.yegor256.com/2016/02/09/are-you-still-debugging.html" rel="alternate" type="text/html" title="Are You Still Debugging?" /><published>2016-02-09T00:00:00+00:00</published><updated>2016-02-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/09/are-you-still-debugging</id><content type="html" xml:base="http://www.yegor256.com/2016/02/09/are-you-still-debugging.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Debugging&quot;&gt;Debugging&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-02-18T20:37:24+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Holacracy or Autocracy? Both!</title><link href="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html" rel="alternate" type="text/html" title="Holacracy or Autocracy? Both!" /><published>2016-02-18T00:00:00+00:00</published><updated>2016-02-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/18/holacracy-autocracy</id><content type="html" xml:base="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html">&lt;p&gt;I strongly believe that while it is very effective to structure
+an organization in a democratic and sociocratic way, a project
+should be managed completely different.
+A project should resemble a dictatorship, authoritarian or military hierarchy
+with a single strong, result-oriented leader who gives explicit orders
+that are never doubted by subordinates and an explicitly defined hierarchy.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;/images/2016/02/apocalypse-now.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Apocalypse Now (1979) by Francis Ford Coppola&#39;/&gt;&lt;figcaption&gt;Apocalypse Now (1979) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;According to Wikipedia at the time of writing, a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Holacracy&quot;&gt;&lt;strong&gt;holacracy&lt;/strong&gt;&lt;/a&gt; exists when
+&amp;quot;authority and decision-making are distributed&amp;quot; while,
+on the other hand,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Autocracy&quot;&gt;&lt;strong&gt;autocracy&lt;/strong&gt;&lt;/a&gt; exists when
+&amp;quot;supreme power is concentrated in the hands of one person&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;When I say organization, I mean a team, a startup, a company, that
+sort of thing. It&amp;#39;s something with a brand, an office, a business entity
+and a bank account. The role of an organization is very similar
+to the role of a country or a government: to provide security
+in exchange for freedom. Democracy in a country, as well as in a team,
+guarantees &lt;strong&gt;equality&lt;/strong&gt; to its members,
+which is the most important component of security.&lt;/p&gt;
+
+&lt;p&gt;A holacracy, also known as a &amp;quot;flat organization&amp;quot;, technically refers to the absence
+of bureaucracy, special privileges, expensive furniture and private parties
+for top management. In a flat team, the distance between the CEO and
+a junior programmer is very small. They sit together in the same room,
+eat in the same cafe, and discuss team strategy like friends. There
+are no &amp;quot;bosses&amp;quot; on a flat team, only &amp;quot;&lt;strong&gt;leaders&lt;/strong&gt;&amp;quot;. They don&amp;#39;t give orders, they
+&lt;strong&gt;inspire&lt;/strong&gt;. They don&amp;#39;t punish, they celebrate success and mourn failure
+together with everybody. Well, that&amp;#39;s the idea of a holacracy.
+And it actually works. I&amp;#39;ve seen it many times.&lt;/p&gt;
+
+&lt;p&gt;However, when we&amp;#39;re talking about &lt;strong&gt;project&lt;/strong&gt; management, this very same approach will
+have catastrophic consequences. A project is something very different
+than a team. A project is a &amp;quot;temporary endeavor
+undertaken to create a unique product, service, or result&amp;quot;, according to
+&lt;a href=&quot;http://www.pmi.org/PMBOK-Guide-and-Standards.aspx&quot;&gt;PMBOK&lt;/a&gt;.
+A project is something that starts and ends. The key objective of a project
+is to &lt;strong&gt;end&lt;/strong&gt;, while an organization&amp;#39;s objective is to &lt;strong&gt;survive&lt;/strong&gt;. See the
+difference? A new mobile app, a conference, a new release, a round of
+investments &amp;mdash; these are examples of projects. They start, and they end. We
+don&amp;#39;t want any of them to live forever; we want them to finish as soon as
+possible, and obviously with a positive outcome.&lt;/p&gt;
+
+&lt;p&gt;Because of this fundamental difference, a project must be managed by
+an authoritative person who gives orders and
+has enough guts to ensure those orders are obeyed. That person is
+called a &lt;strong&gt;project manager&lt;/strong&gt; (PM). And the project will be successful only if
+its management structure is strictly hierarchical, just like in a military operation.
+A project cannot be flat, or it will fall apart.&lt;/p&gt;
+
+&lt;p&gt;Since a project is a temporary endeavor, it doesn&amp;#39;t give security to its
+participants. And it doesn&amp;#39;t take away our freedom. The arrangement is
+different: A project gives us &lt;strong&gt;money&lt;/strong&gt; and takes our &lt;strong&gt;time&lt;/strong&gt;. The project
+basically says to all of us, its participants: &amp;quot;Let&amp;#39;s get it done and go
+our own ways&amp;quot;. Having this philosophy in mind and understanding the motivation
+of everybody involved, the PM must use instruments that have nothing to do
+with what keeps the organization alive.&lt;/p&gt;
+
+&lt;p&gt;An organization/team/company/family will stay together for a long time if
+we value things like tolerance, respect, patience, equality, and appreciation.&lt;/p&gt;
+
+&lt;p&gt;To the contrary, a project will finish successfully if we value completely
+different things: discipline, subordination, awards, punishments, and rules.&lt;/p&gt;
+
+&lt;p&gt;To summarize my thoughts, I would say that a successful company combines
+these two approaches by being a &lt;a href=&quot;https://en.wikipedia.org/wiki/Matrix_management&quot;&gt;matrix&lt;/a&gt;
+organization that promotes holacracy in the team and autocracy in
+the projects it is working on.&lt;/p&gt;</content><category term="management" /><summary>I strongly believe that while it is very effective to structure
+an organization in a democratic and sociocratic way, a project
+should be managed completely different.
+A project should resemble a dictatorship, authoritarian or military hierarchy
+with a single strong, result-oriented leader who gives explicit orders
+that are never doubted by subordinates and an explicitly defined hierarchy.</summary></entry><entry><title>Are You Still Debugging?</title><link href="http://www.yegor256.com/2016/02/09/are-you-still-debugging.html" rel="alternate" type="text/html" title="Are You Still Debugging?" /><published>2016-02-09T00:00:00+00:00</published><updated>2016-02-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/09/are-you-still-debugging</id><content type="html" xml:base="http://www.yegor256.com/2016/02/09/are-you-still-debugging.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Debugging&quot;&gt;Debugging&lt;/a&gt;
 is &amp;quot;a process of running a program/method interactively,
 breaking execution flow after each statement and showing...&amp;quot; In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
@@ -1154,151 +1231,4 @@ an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don&amp;#39;t
 feel like it. We don&amp;#39;t do any due diligence or background checks. The decision
 is made right there. It&amp;#39;s something similar to angel investment, but the
-amount is smaller &amp;mdash; less than $20K, and decisions are faster.</summary></entry><entry><title>Temporal Coupling Between Method Calls</title><link href="http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html" rel="alternate" type="text/html" title="Temporal Coupling Between Method Calls" /><published>2015-12-08T00:00:00+00:00</published><updated>2015-12-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls</id><content type="html" xml:base="http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html">&lt;p&gt;Temporal coupling happens between sequential method calls
-when they must stay in a particular order. This is inevitable
-in imperative programming, but we can reduce the negative effect
-of it just by turning those static procedures into functions. Take
-a look at this example.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;/images/2015/12/blueberry.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Blueberry (2004) by Jan Kounen&#39;/&gt;&lt;figcaption&gt;Blueberry (2004) by Jan Kounen&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is the code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What do you think about that? I believe it&amp;#39;s clear what &lt;code&gt;names()&lt;/code&gt; is doing &amp;mdash;
-creating a list of names. In order to avoid duplication, there is a supplementary
-&lt;em&gt;procedure&lt;/em&gt;, &lt;code&gt;append()&lt;/code&gt;, which converts an item to lowercase and adds it to the
-list.&lt;/p&gt;
-
-&lt;p&gt;This is poor design.&lt;/p&gt;
-
-&lt;p&gt;It is a &lt;strong&gt;procedural&lt;/strong&gt; design, and there is &lt;strong&gt;temporal coupling&lt;/strong&gt; between
-lines in method &lt;code&gt;names()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let me first show you a better (though not the best!) design,
-then I will try to explain its benefits:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;An ideal design for method &lt;code&gt;with()&lt;/code&gt; would create a new instance of
-&lt;code&gt;List&lt;/code&gt;, populate it through &lt;code&gt;addAll(list)&lt;/code&gt;, then &lt;code&gt;add(item)&lt;/code&gt; to it, and
-finally return. That would be perfectly
-&lt;a href=&quot;http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable&lt;/a&gt;,
-but slow.&lt;/p&gt;
-
-&lt;p&gt;So, what is wrong with this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It looks perfectly clean, doesn&amp;#39;t it? Instantiate a list, append two items to it, and
-return it. Yes, it is clean &amp;mdash; for now. Because we remember what &lt;code&gt;append()&lt;/code&gt; is
-doing. In a few months, we&amp;#39;ll get back to this code, and it will look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Is it so clear now that &lt;code&gt;append()&lt;/code&gt; is actually adding &lt;code&gt;&amp;quot;Jeff&amp;quot;&lt;/code&gt; to &lt;code&gt;list&lt;/code&gt;? What
-will happen if I remove that line? Will it affect the result being
-returned in the last line? I don&amp;#39;t know. I need to &lt;strong&gt;check&lt;/strong&gt; the body of method
-&lt;code&gt;append()&lt;/code&gt; to make sure.&lt;/p&gt;
-
-&lt;p&gt;Also, how about returning &lt;code&gt;list&lt;/code&gt; first and calling &lt;code&gt;append()&lt;/code&gt; afterwards? This
-is what possible &amp;quot;refactoring&amp;quot; may do to our code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* something */&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 10 more lines here&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, we return &lt;code&gt;list&lt;/code&gt; too early, when it is not ready. But did anyone
-tell me that these two calls to &lt;code&gt;append()&lt;/code&gt; must happen before &lt;code&gt;return list&lt;/code&gt;?
-Second, we changed the order of &lt;code&gt;append()&lt;/code&gt; calls. Again, did anyone tell me
-that it&amp;#39;s important to call them in that particular order?&lt;/p&gt;
-
-&lt;p&gt;Nobody. Nowhere. This is called &lt;strong&gt;temporal coupling&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Our lines are &lt;strong&gt;coupled&lt;/strong&gt; together. They must stay in this particular order, but the
-knowledge about that order is hidden. It&amp;#39;s easy to destroy
-the order, and our compiler won&amp;#39;t be able to catch us.&lt;/p&gt;
-
-&lt;p&gt;To the contrary, this design doesn&amp;#39;t have any &amp;quot;order&amp;quot;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It just &lt;strong&gt;returns&lt;/strong&gt; a list, which is constructed by a few calls to the &lt;code&gt;with()&lt;/code&gt;
-method. It is a single line instead of four.&lt;/p&gt;
-
-&lt;p&gt;As &lt;a href=&quot;/2015/08/18/multiple-return-statements-in-oop.html&quot;&gt;discussed before&lt;/a&gt;,
-an ideal method in OOP must have just a single statement, and this statement is
-&lt;code&gt;return&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The same is true about validation. For example, this code is bad:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;checkIfListStillHasSpace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;While this one is much better:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Jeff&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withEnoughSpace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Walter&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;See the difference?&lt;/p&gt;
-
-&lt;p&gt;And, of course, an ideal approach would be to use
-&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
-instead of these ugly static methods. But if it&amp;#39;s not possible for
-some reason, just don&amp;#39;t make those static methods look like procedures.
-Make sure they always return results, which become arguments to
-further calls.&lt;/p&gt;</content><category term="java" /><category term="oop" /><summary>Temporal coupling happens between sequential method calls
-when they must stay in a particular order. This is inevitable
-in imperative programming, but we can reduce the negative effect
-of it just by turning those static procedures into functions. Take
-a look at this example.</summary></entry></feed>
+amount is smaller &amp;mdash; less than $20K, and decisions are faster.</summary></entry></feed>

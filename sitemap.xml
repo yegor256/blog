@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.yegor256.com/2016/02/18/holacracy-autocracy.html</loc>
+<lastmod>2016-02-18T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://www.yegor256.com/2016/02/09/are-you-still-debugging.html</loc>
 <lastmod>2016-02-09T00:00:00+00:00</lastmod>
 </url>
