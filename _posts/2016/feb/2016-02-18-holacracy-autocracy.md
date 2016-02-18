@@ -16,7 +16,7 @@ keywords:
   - holacracy in management
 ---
 
-I stongly believe that while it is very effective to structure
+I strongly believe that while it is very effective to structure
 an organization in a democratic and sociocratic way, a project
 should be managed completely different.
 A project should resemble a dictatorship, authoritarian or military hierarchy
