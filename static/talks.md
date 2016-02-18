@@ -150,8 +150,8 @@ Talk To Your Microservice Via a Chat Bot, not UI;
 Atlanta, USA;
 16 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
-<!--[photos](),
-[video]().-->
+[photos](...),
+[video](https://www.youtube.com/watch?v=Xj226o2xI9Y).
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12710820_10208653505765005_2904908739386245403_o.jpg" class="talks-photo" alt="TECClub 2016"/>
 XDSD : Meetings-Free Software Development Methodology;
