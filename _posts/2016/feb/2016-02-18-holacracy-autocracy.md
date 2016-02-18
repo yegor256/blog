@@ -87,5 +87,5 @@ different things: discipline, subordination, awards, punishments, and rules.
 
 To summarize my thoughts, I would say that a successful company combines
 these two approaches by being a [matrix](https://en.wikipedia.org/wiki/Matrix_management)
-organization that promotes holocracy in the team and autocracy in
+organization that promotes holacracy in the team and autocracy in
 the projects it is working on.
