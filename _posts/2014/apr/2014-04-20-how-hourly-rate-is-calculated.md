@@ -78,7 +78,7 @@ expect you to finish it on time.
 
 Our
 [No Obligation Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %})
-gives our project managers freedom
+gives our [project managers]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) freedom
 to take any task away from you if don’t complete it in a
 reasonable amount of time (ten days).
 

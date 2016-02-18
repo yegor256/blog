@@ -87,7 +87,7 @@ When the [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 of a task are clear &mdash; and you understand them fully
 &mdash; deliver the result to the author and wait for him to close the task.
 After the author closes the task, the
-[project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) pays you.
+[project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) pays you.
 
 {% picture /images/2014/04/goodfellas-paulie-talking.png 0 Goodfellas (1990) by Martin Scorsese %}
 

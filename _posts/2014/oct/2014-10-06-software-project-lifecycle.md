@@ -44,7 +44,7 @@ There are four phases in every project I work with in
    Deliverables: [specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
    Duration: from 2 days up to 3 weeks.
    Participants: product owner, analyst(s), architect,
-   [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
+   [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}).
 
  * **Building**.
    Here the software architect is creating a [proof-of-concept](https://en.wikipedia.org/wiki/Proof_of_concept)

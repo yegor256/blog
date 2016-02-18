@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Holacracy or Autocracy?"
-date: 2016-02-14
+title: "Holacracy or Autocracy? Both!"
+date: 2016-02-18
 place: Palo Alto, CA
 tags: management
 description:
@@ -24,6 +24,8 @@ with a single strong, result-oriented leader who gives explicit orders
 that are never doubted by subordinates and an explicitly defined hierarchy.
 
 <!--more-->
+
+{% picture /images/2016/02/apocalypse-now.jpg 0 Apocalypse Now (1979) by Francis Ford Coppola %}
 
 According to Wikipedia at the time of writing, a
 [**holacracy**](https://en.wikipedia.org/wiki/Holacracy) exists when
