@@ -135,7 +135,7 @@ Tallinn, Estonia<br/>
 
 ### 2016
 
-<img src="/images/2015/developerweek-2015-logo.png" class="talks-photo" alt="DeveloperWeek 2015"/>
+<img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xlp1/t31.0-8/12716134_10208695417172764_967441772087398479_o.jpg" class="talks-photo" alt="DeveloperWeek 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
 [DeveloperWeek 2016](http://www.developerweek.com/);
 San Francisco, USA;
