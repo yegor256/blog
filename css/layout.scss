@@ -1,3 +1,6 @@
+---
+---
+
 @import 'defs';
 @import 'fonts';
 @import 'highlight';
@@ -6,7 +9,6 @@
 @import 'post';
 @import 'wrapper';
 @import 'tables';
-@import 'icons';
 
 .green { color: $green; }
 .red { color: $red; }
@@ -203,6 +205,14 @@ a:visited {
     margin-right: 1em;
     width: 320px;
   }
+
+  &.video-right {
+    float: right;
+    height: 160px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    width: 320px;
+  }
 }
 
 label {
@@ -229,6 +239,7 @@ fieldset {
 }
 
 h1 {
+  clear: both;
   font-size: 2 * $em;
   font-weight: 600;
   line-height: 2 * $em;
@@ -241,6 +252,7 @@ h1 {
 
 h2,
 h3 {
+  clear: both;
   position: relative;
 }
 

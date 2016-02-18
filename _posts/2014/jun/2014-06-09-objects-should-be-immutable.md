@@ -78,7 +78,7 @@ in more details in their very famous book
 Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):
 
-{% highlight java linenos=table %}
+{% highlight java %}
 Request request = new Request("http://example.com");
 request.method("POST");
 String first = request.fetch();
@@ -290,7 +290,7 @@ fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
 [jcabi-http](http://http.jcabi.com),
-[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %}),
+[jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}),
 [jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
 [jcabi-s3]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
 [jcabi-dynamo]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),

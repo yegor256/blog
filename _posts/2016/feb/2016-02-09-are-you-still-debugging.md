@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are You Still Debugging?"
-date: 2016-01-29
+date: 2016-02-09
 tags: tdd
 place: Palo Alto, CA
 description:
@@ -18,7 +18,7 @@ keywords:
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)
 is "a process of running a program/method interactively,
-breaking execution flow after each statement and showing ..." It is
+breaking execution flow after each statement and showing..." In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code &mdash; they write unit tests. My point here
@@ -26,6 +26,8 @@ is that unit testing is a technique that completely replaces debugging.
 If debugging is required, the **design is bad**.
 
 <!--more-->
+
+{% picture /images/2016/02/the-revenant.jpg 0 The Revenant (2015) by Alejandro G. Iñárritu %}
 
 Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 imperative procedural programmer, and this is my Java code:
@@ -46,7 +48,8 @@ class FileUtils {
 }
 {% endhighlight %}
 
-This static utility method reads file content and then
+This static [utility]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+method reads file content and then
 finds all the unique words in it. Pretty simple. However, if
 it doesn't work, what do we do? Let's say this is the file:
 
@@ -81,7 +84,7 @@ Then we fix the problem and make sure the test passes. That's how we save
 our investments in problem solving. We won't fix it again, because it won't
 happen again. Our **test** will prevent it from happening.
 
-However, all this will work only if it's easy to create a unit test. If it's 
+However, all this will work only if it's easy to create a unit test. If it's
 difficult, I'll be too lazy to do it. I will just debug and fix the problem.
 In this particular example, creating a test is a rather expensive procedure.
 What I mean is the complexity of the unit test will be rather high. We have to
@@ -99,13 +102,13 @@ I would turn it into a class, because utility static methods are a
 [bad practice]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}):
 
 {% highlight java %}
-class Words implements Iterable {
+class Words implements Iterable<String> {
   private final File file;
   Words(File src) {
     this.file = src;
   }
   @Override
-  public Iterator<String> read() {
+  public Iterator<String> iterator() {
     String text = new String(
       Files.readAllBytes(Paths.get(this.file)),
       "UTF-8"
@@ -123,7 +126,7 @@ It looks better already, but the complexity is still there. Next, I would
 break it down into smaller classes:
 
 {% highlight java %}
-class Text implements Iterable {
+class Text {
   private final File file;
   Text(File src) {
     this.file = src;
@@ -136,13 +139,13 @@ class Text implements Iterable {
     );
   }
 }
-class Words implements Iterable {
+class Words implements Iterable<String> {
   private final String text;
   Words(String txt) {
     this.text = txt;
   }
   @Override
-  public Iterator<String> read() {
+  public Iterator<String> iterator() {
     Set<String> words = new HashSet<>();
     for (String word : this.text.split(" ")) {
       words.add(word);

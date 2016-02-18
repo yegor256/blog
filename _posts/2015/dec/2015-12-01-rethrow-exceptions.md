@@ -119,7 +119,8 @@ throw new IllegalArgumentException(
 I have to be more verbose and give more details.
 
 And I'm not alone in this mistake. I see it everywhere, and it really
-makes debugging difficult, especially in production, where it's
+makes [debugging]({% pst 2016/feb/2016-02-09-are-you-still-debugging %})
+difficult, especially in production, where it's
 almost impossible to reproduce the problem right away.
 
 Thus, please be more verbose in your exception messages. I will do the same

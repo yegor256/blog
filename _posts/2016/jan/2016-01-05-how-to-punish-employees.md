@@ -123,7 +123,7 @@ but you must look like a
 You decide who does what, and you distribute tasks and projects &mdash; that's your
 instrument of power. Easy-to-do tasks are how you reward those who are loyal
 and supportive. They complete such tasks, hardly expending any effort. Complex
-and risky projects, on the other hand, are assigned to the underperforming employee. He will most likely
+and risky projects, on the other hand, are assigned to the under-performing employee. He will most likely
 fail, and there won't be anyone to blame &mdash; it's just a project, like
 all others. Boring, ambiguous, unfocused, unnecessary, under-funded, and routine
 tasks all go to the employee who deserves punishment. Of course,

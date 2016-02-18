@@ -24,7 +24,7 @@ this is unfair and annoying.
 
 I'm a big fan of XML and use it it in almost every Java application. Some time
 ago, I decided to put all of that XML-to-DOM parsing code into a small library
-&mdash; [jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %}).
+&mdash; [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}).
 
 Put simply, the library is a convenient wrapper for JDK-native DOM
 manipulations. That's why it is small and dependency-free. With the following
@@ -75,7 +75,7 @@ for (XML node : xml.nodes("/root/*"))
 {% endhighlight %}
 
 Besides XML parsing, printing and XPath traversing,
-[jcabi-xml]({% pst 2014/apr/2014-04-24-jcabi-xml-parsing-and-traversing %})
+[jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %})
 also provides XSD validation
 and XSL transformations. I'll write about those features in the next post :)
 

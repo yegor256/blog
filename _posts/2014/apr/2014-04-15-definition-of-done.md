@@ -16,7 +16,7 @@ keywords:
   - human resource management
 ---
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 [Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
 key definition used in Scrum and the one we also use in [XDSD](http://www.xdsd.org).
@@ -50,9 +50,9 @@ complete tasks and receive payments without too much frustration:
  * Don't even start a task unless you're sure you can finish it;
  * Ask any and all questions of the task author in advance (before beginning work);
  * Don't assume anything &mdash; ask if you're not sure;
- * Stay after the author to close tasks &mdash; be aggressive;
+ * Stay after the author to close tasks &mdash; be aggressive, no matter who is he/she;
  * Don't expect any help from anyone &mdash; you're on your own;
- * Ask about payment if you don’t receive it automatically after an author closes your task(s)
+ * Ask PM about payment if you don’t receive it automatically after an author closes your task(s)
 
 It is important to remember that, as a developer, it is your responsibility to
 ensure that tasks are closed and you receive payment.

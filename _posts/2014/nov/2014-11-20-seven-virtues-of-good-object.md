@@ -99,7 +99,8 @@ it is perfectly correct to create its representative inside the program.
 
 A controller, a parser, a filter, a validator, a service locator,
 a singleton, or a factory are **not** good objects
-(yes, most GoF patterns are anti-patterns!).
+(yes, most GoF patterns are
+[anti-patterns]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})!).
 They don't exist apart from your software, in real life. They
 are invented just to tie other objects together. They are artificial
 and fake creatures. They don't represent anyone. Seriously, an XML parser

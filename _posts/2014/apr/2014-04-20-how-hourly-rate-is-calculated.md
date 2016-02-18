@@ -15,7 +15,7 @@ keywords:
   - how to rate a freelancer
 ---
 
-{% badge http://img.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
 
 In [XDSD](http://www.xdsd.org), everyone &mdash; including project managers,  analysts, programmers,
 and product owners &mdash; receives payments based on deliverables with agreed

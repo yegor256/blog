@@ -1,8 +1,11 @@
 name: yegor256.com
+url: http://www.yegor256.com
 title: "Yegor Bugayenko"
-author: "Yegor Bugayenko"
+author:
+  name: "Yegor Bugayenko"
+  email: yegor@teamed.io
 description: "Yegor Bugayenko"
-copyright: "(c) Yegor Bugayenko, 2014-2015"
+copyright: "(c) Yegor Bugayenko, 2014-2016"
 encoding: utf-8
 timezone: America/San_Francisco
 markdown: redcarpet
@@ -20,37 +23,29 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
 gems:
-  - jekyll-sass
+  - jekyll-feed
+  - jekyll-paginate
   - jekyll-plantuml
-  - jekyll-press
+  - jekyll-sitemap
+  - jekyll-related-posts
 
-# https://github.com/agelber/jekyll-rss
-url: http://www.yegor256.com
-rss_post_limit: 15
+# see https://github.com/alfanick/jekyll-related-posts
+related:
+  max_count: 5
+  min_score: 0.1
+  accuracy: 0.75
 
-# see https://github.com/noct/jekyll-sass
+# jekyll-feed
+feed:
+  title: yegor256.com
+  subtitle: Programming Blog
+  path: rss.xml
+
 sass:
   style: compressed
   deploy_style: compressed
   compile_in_place: false
 
-# see https://github.com/stereobooster/jekyll-press
-jekyll-press:
-  exclude:
-    - /rss.xml
-    - /rss-jcg.xml
-
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
 tag_page_dir: tag
-
-# see https://github.com/kinnetica/jekyll-plugins
-sitemap:
-  file: "/sitemap.xml"
-  exclude:
-    - "/rss.xml"
-    - "/rss-jcg.xml"
-  include_posts:
-    - "/index.html"
-  change_frequency_name: "change_frequence"
-  priority_name: "priority"

@@ -1,10 +1,12 @@
 module Jekyll
   class FontcustomFile < StaticFile
     def write(dest)
-      begin
-        super(dest)
-      rescue
-      end
+      target = File.join(dest, @dir, @name)
+      FileUtils.copy_file(
+        File.join(dest, "/../_temp/icons/#{@name}"),
+        target
+      )
+      puts "#{target} created (#{File.size(target)} bytes)"
       true
     end
   end
@@ -12,17 +14,14 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
-      system("
+      puts %x[
         set -e
-        dir=$(pwd)
-        fontcustom compile ${dir}/_glyphs --output=${dir}/css \
-          --font-name=icons --templates=scss \
-          --no-hash --force --autowidth
-        mkdir -p ${dir}/_site/css
-        mv ${dir}/css/icons.* ${dir}/_site/css
-      ")
-      ['svg', 'ttf', 'woff', 'eot'].each do |ext|
-        site.static_files << Jekyll::FontcustomFile.new(site, site.dest, '/', "css/icons.#{ext}")
+        #{site.config['source']}/_glyphs/compile.sh #{site.config['source']}/_temp/icons
+        mkdir -p #{site.config['source']}/_site/css
+      ]
+      raise 'failed to build icon files' if !$?.exitstatus
+      ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
+        site.static_files << Jekyll::FontcustomFile.new(site, site.dest, 'css', "icons.#{ext}")
       end
     end
   end

@@ -22,7 +22,7 @@ translated:
 
 A simple example of `NULL` usage in Java:
 
-{% highlight java linenos=table %}
+{% highlight java %}
 public Employee getByName(String name) {
   int id = database.find(name);
   if (id == 0) {
@@ -52,7 +52,8 @@ how `NULL` usage can be avoided and replaced with proper object-oriented constru
 Basically, there are two possible alternatives to `NULL`.
 
 The first one is **[Null Object](http://en.wikipedia.org/wiki/Null_Object_pattern)**
-design pattern (the best way is to make it a constant):
+design [pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
+(the best way is to make it a constant):
 
 {% highlight java %}
 public Employee getByName(String name) {

@@ -23,6 +23,7 @@ a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible.
 To be published: 22 Feb 2016.
 
+<!--
 <div style="clear:both;"></div>
 {% badge /images/books/elegant-management/cover.png 125 /elegant-management.html %}
 [Elegant Mangement](/elegant-management.html)
@@ -31,5 +32,7 @@ management, just management, leadership, awards, punishments,
 philosophy, life, love, hate, motivation, idiots, and pain. Everything
 that basically is a modern management.
 To be published: end of 2016.
+-->
 
+<div style="clear:both;"></div>
 To be continued...

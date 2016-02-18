@@ -3,22 +3,16 @@ module Jekyll
     class Pst < Liquid::Tag
       def initialize(tag_name, post, tokens)
         super
-        @orig_post = post.strip
-        begin
-          @post = PostComparer.new(@orig_post)
-        rescue
-          @post = nil
-        end
+        @post = post.strip
+        @file = "_posts/#{@post}.md"
+        raise "file #{@file} doesn't exist" unless File.exists?(@file)
       end
 
       def render(context)
-        site = context.registers[:site]
-        site.posts.each do |p|
-          if @post == p
-            return p.url
-          end
-        end unless @post.nil?
-        return '/'
+        context.registers[:site].posts.docs.each do |p|
+          return p.url if p.relative_path == @file
+        end
+        raise "can't fine post with \"#{@post}\" name"
       end
     end
   end

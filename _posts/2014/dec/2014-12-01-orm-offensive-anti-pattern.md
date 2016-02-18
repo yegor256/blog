@@ -18,7 +18,8 @@ translated:
   Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 ---
 
-TL;DR ORM is a terrible anti-pattern that violates all principles of
+TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
+that violates all principles of
 object-oriented programming, tearing objects apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
