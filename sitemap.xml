@@ -789,10 +789,7 @@
 <loc>http://www.yegor256.com/tag/requirements</loc>
 </url>
 <url>
-<loc>http://www.yegor256.com/tag/anti-pattern</loc>
-</url>
-<url>
-<loc>http://www.yegor256.com/tag/oop</loc>
+<loc>http://www.yegor256.com/tag/quality</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/hamcrest</loc>
@@ -805,6 +802,12 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/maven</loc>
+</url>
+<url>
+<loc>http://www.yegor256.com/tag/oop</loc>
+</url>
+<url>
+<loc>http://www.yegor256.com/tag/anti-pattern</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/stateful</loc>
@@ -910,9 +913,6 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/json</loc>
-</url>
-<url>
-<loc>http://www.yegor256.com/tag/quality</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/startup</loc>
