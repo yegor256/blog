@@ -368,8 +368,7 @@ blockquote {
   @extend %desktop-only;
   @extend %unprintable;
   float: right;
-  font-size: 1.6 * $em;
-  line-height: 1.6 * $em;
+  font-family: $code-font;
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: .75 * $em;
   width: 15 * $em;
