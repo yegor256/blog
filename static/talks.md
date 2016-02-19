@@ -20,7 +20,7 @@ exclude_from_search: true
 I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256)
 for the most recent news. Also, I can give a lecture in your office,
-here is [how](/lectures.html). Here is the latest presentation I've
+here is [how](/lectures.html). Here is one of the latest presentation I've
 given in Palo Alto, CA, on the 11th of February:
 
 <style>
@@ -150,7 +150,7 @@ Talk To Your Microservice Via a Chat Bot, not UI;
 Atlanta, USA;
 16 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10208707358871299),
 [video](https://www.youtube.com/watch?v=Xj226o2xI9Y).
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12710820_10208653505765005_2904908739386245403_o.jpg" class="talks-photo" alt="TECClub 2016"/>
