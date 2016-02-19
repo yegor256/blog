@@ -19,7 +19,7 @@ layout: default
       {% endif %}
       <ul class="subline">
         <li>
-          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" style="white-space:nowrap;">
             {{ page.date | date: "%-d %B %Y" }}
           </time>
         </li>
@@ -30,7 +30,7 @@ layout: default
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread">comments</a>
+          <a href="{{ site.url }}{{ page.url }}#disqus_thread" style="white-space:nowrap;">comments</a>
         </li>
       </ul>
       <p class="unprintable">{{ page | tags }}</p>
@@ -97,7 +97,9 @@ layout: default
   <div class="wrapper">
     <footer class="footer">
       <p>
-        &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014-2016
+        &copy;
+        <span itemprop="author">Yegor Bugayenko</span>,
+        2014-2016
       </p>
     </footer>
   </div>
@@ -105,3 +107,4 @@ layout: default
 </section>
 
 <script src="/js/post.js?{{ site.data['hash'] }}"></script>
+<script src="//a.disquscdn.com/embed.js?{{ site.data['hash'] }}"></script>
