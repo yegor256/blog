@@ -144,7 +144,7 @@ San Francisco, USA;
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
 
-<img src="/images/2016/devnexus-2016-logo.png" class="talks-photo" alt="DevNexus 2015"/>
+<img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xtf1/t31.0-8/12697208_10208707348791047_4450453450768330486_o.jpg" class="talks-photo" alt="DevNexus 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
 Atlanta, USA;
