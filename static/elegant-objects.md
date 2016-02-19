@@ -41,7 +41,7 @@ Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
-You can [pre-order](http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/)
+You can [pre-order](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 
