@@ -364,6 +364,17 @@ blockquote {
   }
 }
 
+.book {
+  @extend %desktop-only;
+  @extend %unprintable;
+  float: right;
+  font-size: 1.6 * $em;
+  line-height: 1.6 * $em;
+  margin: .5 * $em -5 * $em .5 * $em $em;
+  padding-left: .75 * $em;
+  width: 15 * $em;
+}
+
 figure {
   margin: 0;
   position: relative;

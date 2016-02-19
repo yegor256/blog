@@ -14,9 +14,8 @@ keywords:
   - oop constructors best practices
   - best practices java constructors
   - how much code to put into constructors
+book: elegant-objects 1.3
 ---
-
-{% youtube 9yjtsCK6Wdk video-left %}
 
 How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
@@ -78,6 +77,8 @@ Before I start proving, though, let me ask you to read this article:
 It explains the difference between a static method and composable decorators.
 The first snippet above is very close to an imperative utility method, even
 though it looks like an object. The second example is a true object.
+
+{% youtube 9yjtsCK6Wdk video-left %}
 
 In the first example, we are abusing the `new` operator and turning it into
 a static method, which does all calculations for us _right here and now_.
