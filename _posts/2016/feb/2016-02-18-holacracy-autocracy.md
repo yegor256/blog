@@ -52,6 +52,8 @@ are no "bosses" on a flat team, only "**leaders**". They don't give orders, they
 together with everybody. Well, that's the idea of a holacracy.
 And it actually works. I've seen it many times.
 
+{% quote The key objective of a project is to end, while an organization's objective is to survive %}
+
 However, when we're talking about **project** management, this very same approach will
 have catastrophic consequences. A project is something very different
 than a team. A project is a "temporary endeavor
@@ -78,6 +80,8 @@ basically says to all of us, its participants: "Let's get it done and go
 our own ways". Having this philosophy in mind and understanding the motivation
 of everybody involved, the PM must use instruments that have nothing to do
 with what keeps the organization alive.
+
+{% quote A project will finish successfully if we value discipline, subordination, awards, punishments, and rules %}
 
 An organization/team/company/family will stay together for a long time if
 we value things like tolerance, respect, patience, equality, and appreciation.
