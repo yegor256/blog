@@ -2,7 +2,7 @@
 layout: post
 title: "If. Then. Throw. Else. WTF?"
 date: 2015-01-21
-tags: java oop
+tags: java quality
 categories: jcg
 description: |
   When it comes to an if-then-else statement that
