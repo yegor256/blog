@@ -282,6 +282,7 @@ h2 {
   li {
     display: inline;
     margin-right: .5 * $em;
+    white-space: nowrap;
   }
 }
 
@@ -371,7 +372,13 @@ blockquote {
   font-family: $code-font;
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: .75 * $em;
-  width: 15 * $em;
+  width: 20 * $em;
+
+  img {
+    float: left;
+    height: 175px;
+    margin-right: $em;
+  }
 }
 
 figure {

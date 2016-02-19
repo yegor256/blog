@@ -19,7 +19,7 @@ layout: default
       {% endif %}
       <ul class="subline">
         <li>
-          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" style="white-space:nowrap;">
+          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
             {{ page.date | date: "%-d %B %Y" }}
           </time>
         </li>
@@ -30,7 +30,7 @@ layout: default
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread" style="white-space:nowrap;">comments</a>
+          <a href="{{ site.url }}{{ page.url }}#disqus_thread">comments</a>
         </li>
       </ul>
       <p class="unprintable">{{ page | tags }}</p>
