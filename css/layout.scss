@@ -372,12 +372,12 @@ blockquote {
   font-family: $code-font;
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: .75 * $em;
-  width: 20 * $em;
+  width: 16 * $em;
 
   img {
     float: left;
-    height: 175px;
-    margin-right: $em;
+    height: 160px;
+    margin-right: .6 * $em;
   }
 }
 
