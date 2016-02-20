@@ -2,11 +2,14 @@ module Yegor
   module Filters
     def book(book)
       opts = book.strip.split(/\s+/, 2)
+      link = 'http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O'
       "<aside class='book'>" \
-      "<a href='http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O'>" \
+      "<a href='#{link}'>" \
       "<img src='/images/books/elegant-objects/cover.png'>" \
       "</a>" \
-      "Read more about this subject in Section&nbsp;#{opts[1]} of this book" \
+      "Read more about this subject in " \
+      "<a href='#{link}'>Section&nbsp;#{opts[1]}</a>" \
+      " of this book" \
       "</aside>"
     end
   end
