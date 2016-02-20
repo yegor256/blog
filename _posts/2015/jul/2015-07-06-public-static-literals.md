@@ -14,6 +14,7 @@ keywords:
   - public static java
   - public static
   - public static literals
+book: elegant-objects 2.5
 ---
 
 I have a `new String(array,"UTF-8")` in one place and exactly

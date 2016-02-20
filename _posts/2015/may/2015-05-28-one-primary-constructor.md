@@ -13,6 +13,7 @@ keywords:
   - java constructor
   - class constructor
   - object constructor
+book: elegant-objects 1.2
 ---
 
 I suggest classifying class constructors in OOP as **primary**

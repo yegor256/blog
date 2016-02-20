@@ -16,6 +16,7 @@ keywords:
   - getters and setters is an anti-pattern
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
+book: elegant-objects 3.5
 ---
 
 There is an old debate, started in 2003 by Allen Holub

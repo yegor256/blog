@@ -13,6 +13,7 @@ keywords:
   - class name ends with er
   - controllers in oop
   - managers in oop
+book: elegant-objects 1.1
 ---
 
 Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.

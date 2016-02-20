@@ -16,6 +16,7 @@ keywords:
   - java immutable object advantage
   - java immutable value object
   - java mutable immutable object
+book: elegant-objects 2.6
 ---
 
 In object-oriented programming, an object is

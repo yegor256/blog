@@ -15,6 +15,7 @@ keywords:
   - java mocking
   - java mock framework
 categories: jcg
+book: elegant-objects 2.8
 ---
 
 While mock objects are perfect instruments for unit testing,

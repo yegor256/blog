@@ -13,6 +13,7 @@ keywords:
   - encapsulation
   - object constructor
   - object method vs constructor
+book: elegant-objects 2.2
 ---
 
 Which line do you like more, the first or the second:
