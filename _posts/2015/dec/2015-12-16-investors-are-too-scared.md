@@ -122,7 +122,7 @@ to get a new product.
 
 ## We Are Not Cowards
 
-{% badge http://www.seedramp.com/logo-256x256.png 128 http://www.seedramp.com %}
+{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
 
 [SeedRamp](http://www.seedramp.com) is going to solve all of these three problems.
 
