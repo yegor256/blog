@@ -14,8 +14,6 @@ keywords:
   - immutable objects are thread safe
 ---
 
-{% youtube KwP7Ay9Z-hc video-left %}
-
 After a few recent posts about immutability, including
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
 ["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
@@ -93,6 +91,8 @@ It does encapsulate some data, which helps to locate the entity in the real worl
 data is the **coordinates** of the entity being represented. In the case
 of `String` or `URL`, the coordinates are the same as the
 entity itself, but this is just an isolated incident, not a generic rule.
+
+{% youtube KwP7Ay9Z-hc video-left %}
 
 An immutable object is not a data structure that doesn't change, even
 though `String`, `BigInteger`, and `URL` look like one. An object is immutable
