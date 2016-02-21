@@ -30,7 +30,7 @@ projects. Why?
 
 <!--more-->
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs

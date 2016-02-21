@@ -97,7 +97,7 @@ Now, honestly tell me if you find and solve eight bugs per day with that
 level of complexity, detailed code review, and precision of
 documentation? I seriously doubt it.
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 In that [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-of-loc %})
 post, I actually did a comparison of a co-located project, where I was an architect,

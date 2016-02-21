@@ -15,7 +15,7 @@ keywords:
   - xdsd
 ---
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 eXtremely Distributed Software Development, or [XDSD](http://www.xdsd.org) for short, is a methodology
 that differs significantly from working in traditional software development
