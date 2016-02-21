@@ -374,10 +374,14 @@ blockquote {
   padding-left: .75 * $em;
   width: 14 * $em;
 
-  img {
+  .book-cover {
     float: left;
     height: 160px;
     margin-right: .6 * $em;
+  }
+
+  .amazon-button {
+    height: 20px;
   }
 }
 
