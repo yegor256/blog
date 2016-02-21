@@ -16,6 +16,7 @@ keywords:
   - java send email html
   - java email api
   - java email send sdk
+book: elegant-objects 2.6
 ---
 
 In a few recent posts, including
