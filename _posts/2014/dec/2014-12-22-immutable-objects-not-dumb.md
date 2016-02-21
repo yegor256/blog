@@ -12,6 +12,7 @@ keywords:
   - immutable objects in java
   - immutable objects in java example
   - immutable objects are thread safe
+book: elegant-objects 2.6
 ---
 
 After a few recent posts about immutability, including
