@@ -33,7 +33,7 @@ definitely include them in the next edition. If you decide to buy it,
 please leave your feedback
 [on Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
 It will help me attract more readers. After reading, please shoot me
-an email to [mailto:book@yegor256.com](book@yegor256.com).
+an email to [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested to know what you think. Thanks!
 
 {% badge /images/books/elegant-objects/cactus.svg 125 %}
