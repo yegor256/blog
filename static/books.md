@@ -21,7 +21,7 @@ programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible.
-To be published: 22 Feb 2016.
+Published: 22 Feb 2016.
 
 <div style="clear:both;"></div>
 To be continued...

@@ -22,6 +22,20 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge /images/books/elegant-objects/cover.png 125 %}
+Feb 22, 2016:
+The book is published! It is for sale,
+[on Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
+The price is $40.96. The size is 229 pages. The paper is creamy.
+The cover is mate. I took into account recommendations and corrections
+of 9 reviewers. Two of them were missed, for technical reasons. I will
+definitely include them in the next edition. If you decide to buy it,
+please leave your feedback
+[on Amazon]http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O.
+It will help me attract more readers. After reading, please shoot me
+an email to [mailto:book@yegor256.com](book@yegor256.com).
+I'm very interested to know what you think. Thanks!
+
 {% badge /images/books/elegant-objects/cactus.svg 125 %}
 Jan 27, 2016:
 This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
