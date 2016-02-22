@@ -81,13 +81,11 @@ Moscow, Russia<br/>
 Berlin, Germany<br/>
 24 April 2016
 
-<!--
-<img src="/images/2016/dotw-2016.png" class="talks-talk" alt="Delivery of Things World 2016"/>
-**Problems with Continuous Integration**<br/>
+<img src="/images/2016/jet-2016.png" class="talks-talk" alt="JET Conferene 2016"/>
+**An Immutable Object-Oriented Web Framework**<br/>
 [JET Conference](http://jetconf.by/)<br/>
 Minsk, Belarus<br/>
 25 April 2016
--->
 
 <img src="/images/2016/ntpm.jpg" class="talks-talk" alt="NTPM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
