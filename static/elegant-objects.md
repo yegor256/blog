@@ -22,7 +22,7 @@ more solid and architecture more visible.
 
 <!--more-->
 
-{% badge /images/books/elegant-objects/cover.png 125 %}
+{% badge /images/books/elegant-objects/cover.png 125 http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O %}
 Feb 22, 2016:
 The book is published! It is for sale,
 [on Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
