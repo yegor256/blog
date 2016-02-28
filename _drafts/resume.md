@@ -5,8 +5,8 @@ date: 2015-12-28
 place: Atlanta, GA
 tags: career
 description:
-  There are a few simple hints on making a resume of
-  a software developer sound bright, convincing, and
+  Here are a few simple hints for making a software
+  developer's resume sound bright, convincing, and
   right to the point.
 keywords:
   - how to write a resume
@@ -18,278 +18,277 @@ keywords:
 
 There are tons of articles about resume writing. Literally,
 [tons of them](https://www.google.com/search?q=how+to+write+resume).
-Here is yet another one? Well, maybe... but I don't think so. I'll try to
-give you a few **practical** hints on how to make your resume look
-"sexier" and position you above a "good programmer" category, right into
-the super-star zone. It make take a few years to truly pimp up your CV, but
-when it's done, you will charge $100+ per hour, facing no hesitation
-in paying them.
+And here's yet another one? Well, maybe ... but I don't think so. I'll try to
+give you a few **practical** hints for how to make your resume look
+"sexier", and how to position yourself beyond the "good programmer" category and into
+the superstar zone. It may take a few years to truly pimp up your CV, but
+when it's done, you will charge $100-plus per hour and face no hesitation
+from your clients in paying.
 
 <!--more-->
 
 ## One Page, No Exceptions
 
-I think it's obvious, but only one out of ten resumes I'm getting
-every day fits into one page. All others take 3+ pages and this looks
-very unprofessional. If you can't explain yourself in one page, they will doubt
-your skills of scope management, which are very important for a software engineer.
-You simply can't filter out what's non-important and focus
+I think it's obvious, but only one out of 10 resumes I've been getting
+each day fits onto one page. All the others take three or more pages, and this looks
+very unprofessional. If you can't explain yourself in one page, there will be doubts
+about your skills in scope management, which are very important for a software engineer.
+It shows you simply can't filter out what's non-important and focus
 on what really matters. Besides, it's just boring to read three pages.
 
-Thus, strictly one page, no exceptions. Your resume is an "executive summary"
+Thus, strictly limit yourself to one page, no exceptions. Your resume is an "executive summary"
 of the product you're trying to sell. It's a marketing brochure. A sales
 flyer. A sticker on my refrigerator, if you wish. It has to be short
-and straight forward. They either buy it or throw away. They don't want to read it,
-they want to buy you. Or to throw your brochure away.
-4-page brochures have way less chances than one pagers.
+and straightforward. Employers will either buy it or throw it away. They don't want to read it;
+they want to buy you. Or throw your brochure away.
+Four-page brochures have far fewer chances than one-pagers.
 
 ## Don't Lie
 
-No matter what you do with your resume, never lie in any single word. You
-can tell half of the truth, you can hide some information, you can re-phrase
+No matter what you do with your resume, never lie about a single word. You
+can tell half of the truth, you can hide some information, and you can rephrase
 the truth, but never lie. You don't know who is reading your CV and which
-desk will it end up on. Be ready to answer for every word you have there.
+desk it will end up on. Be ready to answer for every word you have on it.
 
 If you're saying that you're an "expert in JavaScript",
-be ready to explain what are the key new features of
-ECMAScript version 6. You can't? Don't use the word "expert". The point
+be ready to explain what the key new features of
+ECMAScript version 6 are. If you can't, don't use the word "expert". The point
 is that you have to be ready to prove every word.
 
 ## Sexy Photo on the Top
 
-You want them to work with you? They want to see you. So, a photo is a mandatory
+You want them to work with you, right? They want to see you. So a photo is a mandatory
 component of a CV. And try to make it look sexy and artistic. Ask your
-friend graphic designer to style it. Maybe even pay for this work.
-Pay attention to the photo, it's very important.
+graphic designer friend to style it. Maybe even pay for this work.
+Just pay attention to the photo; it's very important.
 
 Do I have to say that you must smile on that photo? Well, yes, you must.
-And make it casual, with a t-shirt and funny background. You must look
-relaxed and successful. You don't want to get hired, they want to hire you &mdash;
-this is the message your photo is sending. Just like in online dating.
+And make it casual, with a T-shirt and funny background. You must look
+relaxed and successful. You don't want to get hired; they want to hire you &mdash;
+this is the message your photo should send, just like in online dating.
 
 ## Skip "Objective" and "Title"
 
 "Senior Software Developer", "Seasoned Java Programmer",
 "Talented IT Professional", etc. It's boring and doesn't sell you at all.
-They know who you're, since they are reading your resume.
+They know what you are, because they are reading your resume.
 
-Besides that, you're limitting yourself with that title. Maybe they are looking
-for a VP/Engineering, while your resume says "Software Architect". That's
-immediately a mismatch for them. It's against you. Your **name** is the title
+Besides that, you're limiting yourself with that title. Maybe they are looking
+for a VP of engineering while your resume says "Software Architect". That's
+immediately a mismatch for them. It's a strike against you. Your **name** is the title
 of your resume. That's it.
 
 ## A Dozen Skills
 
-This section in your resume actually tells them about your "tech focus".
-It must have a very short list of skills. Definitely, **below twelve**. You simply
+This section of your resume actually tells them about your "tech focus".
+It must have a very short list of skills, definitely **under 12**. You simply
 can't be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
-If there are too many skills, it's a sign of a "jack of all trades", who is
+If there are too many skills, it's a sign of a "jack of all trades" who is
 almost always a "master of none". Don't do that.
 
 Find the most important skills in your profile and put them there.
 Just a few. And make sure the skills are all on the same level of abstraction.
-Java and AngularJS must not be present together. Java is a few levels bigger
-than AngularJS. Thus, it's either "Java, SQL and HTTP" or "AngularJS, Spring Framework,
-and Web Sockets". I would recommend to stay at the lowest level you can, until
-you become a serious market figure. Say, "Java" as a skill would look good
-in [John Skeet](...)'s resume, since he definitely knows the entire Java and the
-market recognized that. But if you're just a three-year old experience programmer,
-how come you "know Java"? You barely know a few hundred classes from there.
-That's why, better say specifically what parts of Java you definitely know.
+Java and AngularJS must not be present together. Java is a few levels higher
+than AngularJS. Thus, it's either "Java, SQL, and HTTP" or "AngularJS, Spring Framework,
+and Web Sockets". I would recommend you stay at the lowest level you can until
+you become a serious market figure. For example, "Java" as a skill would look good
+in [John Skeet](...)'s resume, because he definitely knows the entire Java world, and the
+market has recognized that. But if you're a programmer with just three years of experience,
+how can you "know Java"? You barely know a few hundred classes from it.
+That's why it's better to state specifically which parts of Java you definitely know.
 Like I said, be as low-level and specific in your skills as possible.
 
 ## StackOverflow Profile
 
 No matter what anyone [says]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
 [StackOverflow](http://www.stackoverflow.com)
-is a de-facto standard platform for asking and answering technical questions.
-Your presence there and your high rating are a clear message to your
-potential employer that you're a super star (or a rising one). No so many
-people have 100k+ reputation points there. You must be one of them.
+is the de-facto standard platform for asking and answering technical questions.
+Your presence there and your high rating send a clear message to your
+potential employer that you're a superstar (or a rising one). No so many
+people have 100K or more reputation points there. You must be one of them.
 
-So, even if you don't have a StackOverflow profile now, create it.
-Spend one hour every day. for a few months, answering
+So even if you don't have a StackOverflow profile now, create one.
+Spend one hour on it every day for a few months, answering
 [new questions](http://stackoverflow.com/?tab=interesting).
-You will earn 1000+ reputation points. Well, provided you have something to say.
-That's enough. Post a link to your profile right into your resume.
+You will earn 1,000 or more reputation points. Well, provided you have something to say.
+That's enough. Post a link to your profile right in your resume.
 
 Even if you don't have much to say, be there. Read answers made by others,
-comment on them, try to help them and correct. Become an active
+comment on them, try to help them, and correct them. Become an active
 part of the community.
 
 ## GitHub Profile
 
-GitHub is a de-facto standard platform for open source code. There are others,
-like BitBucket, but, I hope, they will die, sooner or later. As a modern
+GitHub is the de-facto standard platform for open-source code. There are others
+like BitBucket, but &mdash; I hope &mdash; they will die sooner or later. As a modern
 software developer, you must be on GitHub. You
 [have to contribute]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
-to some open source. You have to be visible in open source world, if you
+to some open source. You have to be visible in the open-source world if you
 want to sell yourself high.
 
 Your potential employer wants to see what the **market** is thinking about
-your code and about yourself. They are afraid to make a mistake by hiring you.
-Your presence in open source world is a guarantee for them. Someone already
-saw your code, someone gave some kudos to your projects. Someone virtually
-vouches for you. They will feel more comfortable in hiring you.
+your code and about you. They are afraid of making a mistake by hiring you.
+Your presence in the open-source world is a guarantee for them. Someone has already
+seen your code, and someone has already given some kudos to your projects. Someone virtually
+vouches for you. As a result, they will feel more comfortable in hiring you.
 
-To be in the "elite", you don't have to spend all of your time in open source
+To be in the "elite", you don't have to spend all your time on open-source
 projects. Just contribute to the ones you're using already. You're using
-Sinatra at work? Check their source code. You will find a lot of places that
+Sinatra at work? Check its source code. You will find a lot of places that
 need improvement. Offer them your help and simply submit small pull requests
 here and there. Besides that, create your own products and market them. You will
-be surprised how many users and followers you will earn, in just a few years
-of that activity.
+be surprised by how many users and followers you will attract in just a few years
+of such activity.
 
 ## Certificates
 
-Some may say that they are not important. Maybe so. But your resume must have
-them. Some of them are not so difficult to get. Just a few weeks of study,
-a few hundred dollars and you are not just a Java programmer, but
+Some may say they are not important. Maybe so. But your resume must have
+them. Some of them are not so difficult to get. With just a few weeks of study
+and a few hundred dollars, you are not just a Java programmer but
 a [certified](https://en.wikipedia.org/wiki/Oracle_Certification_Program) one.
-There are not so many of them out there. There are millions of Java coders
-in the world, but only a few percents of them are certified. No matter, whether
-you think it's important or not &mdash; get that certifications.
+And there are not so many of those out there. There are millions of Java coders
+in the world, but only a few percent of them are certified. Regardless of whether
+you think it's important or not, get those certifications.
 
 As many as you like. But stay away from
-[BrainBench](https://www.brainbench.com/) and similar ones. Well,
+[BrainBench](https://www.brainbench.com/) and similar sites. Well,
 you can get certified there, but don't put them into your resume. That will
-only demonstrate that you are proud of a very questional achievement. Not
+only demonstrate that you are proud of a very questionable achievement. It's not
 a good sign.
 
 ## Sound Names and Numbers
 
-It's a dangerous trick, be careful. Here is how it works. You have to go through
+It's a dangerous trick, so be careful. Here is how it works. You have to go through
 your entire professional history and find well-known names or big numbers.
-For example, ten years ago I was helping a startup create a software, which
-they were subscribing IBM to. They managed to get some tracking and in
-two months IBM decided not to use them. It's a true (and sad) story. I can put something
-like this into my resume: "wrote software for IBM". Am I lying? Not really.
+For example, 10 years ago I was helping a startup create software that 
+had IBM as a subscriber. They managed to get some tracking, and in
+two months, IBM decided not to use them anymore. It's a true (and sad) story, but I can 
+put something like this into my resume: "wrote software for IBM". Am I lying? Not really.
 If they ask me what exactly I did for IBM, I will explain. In most cases, they
 won't ask. They will just buy this big name and put my resume on top of
 others.
 
-The same you can do with numbers. There is another true story. A few years ago,
-I was helping a company configure continuous integration pipeline. Not a big
-deal, but the company was serving over 5 million hits per day on their website.
-It's a big number. I had nothing to do with this big web traffic, but I was
-in that company for a few months. So, I may say in my resume:
-"configured delivery pipeline for 5M+/hits-per-day web store". If they
+You can do the same with numbers. Here is another true story. A few years ago,
+I was helping a company configure a continuous integration pipeline. It was not a big
+deal, but the company was serving more than 5 million hits per day on its website.
+That's a big number. I had nothing to do with this substantial web traffic, but I was
+in that company for a few months. So I may say in my resume:
+"configured the delivery pipeline for a 5M-hits-per-day web store". If they
 ask me for details, I will be able to give them. I'm not lying.
 
-Use this technique carefully, never lie. But do it. Don't be scared.
+Use this technique carefully, and never lie. But do it. Don't be scared.
 Your resume needs big names and numbers.
 
 ## Blog
 
-Create your own blog. Start writing. About what? About your every day
+Create your own blog. Start writing. About what? About your everyday
 achievements. About the code you write and read.
 About what you observe in the office. About your thoughts
 and your plans. About the books you read. You absolutely need to have
-a blog, if you position yourself as an expensive software engineer.
+a blog if you want to position yourself as an expensive software engineer.
 
-It doesn't need to be a very popular blog, don't focus on numbers. But
-it has to be properly created, designed and hosted. Don't use
-[WordPress](http://www.wordpress.com), [Blogger](http://www.blogger.com)
+It doesn't need to be a very popular blog; don't focus on numbers. But
+it has to be properly created, designed, and hosted. Don't use
+[WordPress](http://www.wordpress.com), [Blogger](http://www.blogger.com),
 or [Tumblr](http://www.tumblr.com). Instead,
-I would recommend to think about static site generators, like Jekyll, and host
+I would recommend you think about static site generators like Jekyll and host
 it all on GitHub pages. That's what I'm doing.
 
 Besides being a valuable addition to your resume,
-a systematic and regular writing will help you structure
-your thoughts, plans and decisions. Well, that's what I'm getting
+systematic and regular writing will help you structure
+your thoughts, plans, and decisions. Well, that's what I'm getting
 from my blog.
 
 ## Education
 
 I would limit yourself to a few letters in this area. Just "MSc" or "BSc" is
-enough. No need to say when did you graduate and which school. You can
-give that details later. Well, there are just two exceptions to this rule.
+enough. There's no need to say when you graduated and from which school. You can
+give those details later. Well, there are just two exceptions to this rule.
 
-First, if you're a PhD. Put it on top of your CV. It's important and
-it's valuable. Simply because there are not so many of them among programmers.
-Second, if your school is Stanford, MIT or similar. If that's the case,
-also put it on top of the CV.
+First, if you're a PhD, put that on top of your CV. It's important, and
+it's valuable, simply because there are not so many of them among programmers.
+Second is if your school is Stanford, MIT, or something similar. If that's the case,
+also put it on top of your CV.
 
-In all other situations, just BSc and that's it.
+In all other situations, just write BSc and that's it.
 
 ## Conferences
 
-Every year you must give a few presentations at JavaOne. I'm kidding.
-About the JavaOne part, but the "every year" part is very true. You must
-regularly make some speeches somewhere. Preferrably, at JavaOne. But until
+Every year, you must give a few presentations at JavaOne. I'm kidding.
+About the JavaOne part, anyway. But the "every year" part is very true. You must
+regularly make some speeches somewhere, preferably at JavaOne. But until
 you get there, speak where you can. Well, where they accept you. Create
 a profile at [lanyrd](http://www.lanyrd.com) (or something similar) and
-check regularly which conferences are looking for speakers. Submit there
-and you will be surprised to see that some of them will actually accept
+regularly check which conferences are looking for speakers. Submit there
+and you will be surprised to see that a few of them will actually accept
 some of your ideas.
 
 The easiest subjects to start with are stories about your practical
-experience with some modern technologies and tools. Something like
+experience with some modern technologies and tools, something like
 "How Docker Helps Us Optimize Delivery" or
 "Five Apache Spark Installation Issues". Just describe what you've done
-in your recent project. It doesn't really matter what will you talk about.
-What matters is that you're visible. The market accepts you &mdash;
+on a recent project. It doesn't really matter what you talk about.
+What matters is that you're visible. If the market accepts you,
 the employer will trust you more. That's exactly what you need in order
 to request a higher rate.
 
-## Carrer History
+## Career History
 
 I'll be speaking for myself here. As an employer, I don't really care
-about your history at all. Moreover, if you have never been working anywhere
-full-time, I would be more interested to work with you. But that's just
-me, since I truly believe that modern offices and full-time jobs
+about your history at all. Moreover, if you have never worked anywhere
+full-time, I would probably be more interested in working with you. But that's just
+me, because I truly believe that modern offices and full-time jobs
 turn programmers into
-[slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) (not only programmers).
+[slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) (and not only programmers).
 
 Other employers may think differently. Well, they most likely think differently.
-That's why, you have to demonstrate in which offices you've spent ten recent
-years of your life. I would recommend to keep this list short. Even if you've
+That's why you have to demonstrate with which offices you've spent 10 recent
+years of your life. I would recommend you keep this list short. Even if you've
 changed eight companies over the last two years, don't say that. Just three
-places is enough. That will show them that you're a good slave &mdash;
-very loyal to previous masters. That's what they want to see, since they
+places is enough. That will show them you're a good slave &mdash;
+very loyal to previous masters. That's what they want to see, because they
 are planning to buy you and become your next master. Right? Sounds harsh?
 Isn't [it true]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})?
 
-## ACM, IEEE, JUG, and other memberships
+## ACM, IEEE, JUG, and Other Memberships
 
-These memberships mean literally nothing, but will demonstrate that you are
-part of that communities. Just like with most other things mentioned above,
+These memberships mean literally nothing but will demonstrate that you are
+part of those communities. Just like with most other things mentioned above,
 employers will trust you more if the market already trusts you. These
-memberships don't really mean that anyone recognized you, since you get them
-just by paying annual fees. But still, you're paying that fees and most
-other CVs don't. You're definitely more reliable than many others.
+memberships don't really mean that anyone has recognized you, since you get them
+just by paying annual fees. But still, you're paying those fees, and most
+other applicants aren't. You're definitely more reliable than many others.
 
 ## Mention Hobbies
 
 I think information about hobbies is important. Some say it's not, but I believe
 that a personal "click" between you and your potential employer plays
 an important role. There is a human on that side. He or she is reading
-your CV and he or she wants to like you. Mostly in order to be comfortable
-to make a hiring decision. Help him or her like you faster. Mention that
-you enjoy skiing, monkey-feeding in the zoo and Jimmy Kimmel. Be creative,
-don't be boring. Just like you do in online dating.
+your CV, and he or she wants to like you &mdash; mostly in order to be comfortable
+making a hiring decision. Help him or her like you faster. Mention that
+you enjoy skiing, monkey-feeding in the zoo, and Jimmy Kimmel. Be creative,
+not boring. Just like you do in online dating.
 
 ## Layout/Graphics
 
-How should your onepage look? Stand out! It must express your personality.
-Don't use that "resume templates" downloadable for free. Create your own
+How should your one page look? Stand out! It must express your personality.
+Don't use the "resume templates" downloadable for free. Create your own
 layout and design. If you're not a designer, ask your Photoshop friend
-to do it for you. Actually, there is not much to do, just select the right font
+to do it for you. Actually, there is not much to do; just select the right font
 and add a few colors here and there.
 
 This CV is your product. You made it. It's your baby. If it's just a Word
-document, in a standard template, they will feel that you didn't pay
-attention to it. You didn't even care to create that little and very
+document in a standard template, they will feel you didn't pay
+attention to it. You didn't even care to create that small but very
 important product nicely. How will you create their software? With the
-same attitude. Don't ruin the whole show by a careless design. That's the
+same attitude. Don't ruin the whole show with a careless design. That's the
 key word here &mdash; "careless". It doesn't need to be complex. It may be
-very simple. But it must be **yours**. Made with care and love.
+very simple. But it must be **yours**, made with care and love.
 
 <hr/>
 
-Want a free advice on your resume? Send it to
-[mailto:cv@yegor256.com](cv@yegor256.com) and I'll let you know
+Want free advice on your resume? Send it to
+[mailto:cv@yegor256.com](cv@yegor256.com), and I'll let you know
 what I think. I will reply to all emails, but be ready to hear
 mostly what's wrong. What's right you will know without me, when
-they pay you $200/hour.
-
+they pay you $200 per hour.
