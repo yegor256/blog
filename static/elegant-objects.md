@@ -22,6 +22,23 @@ more solid and architecture more visible.
 
 <!--more-->
 
+Feb 28, 2016:
+Over a 100 books sold already, in just one week! I'm glad to see
+that you're interested in reading it. I haven't got a single review yet,
+but I'm sure there will be some. I would like to ask you to post your
+reviews, either negative or positive, directly to
+[Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
+I'me getting many requests about an **electronic version** of the book.
+I'm not planning to turn this into an e-book, at least until the end
+of 2018. Mostly because I'm greedy. I realize that the moment I publish
+a Kindle version, it will be available for a free download somewhere.
+Although, some of you are saying that the "dead tree" format is not
+convenient, since it takes too much space, etc. Here is the the offer.
+You buy a paper book now, read it, make a picture of it,
+and throw it away, so that it doesn't take space. When an e-book is available,
+send me that picture and I will send you a Kindle/epub/PDF/whatever
+file **for free**. How does this sound?
+
 {% badge /images/books/elegant-objects/cover.png 125 http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O %}
 Feb 22, 2016:
 The book is published! It is for sale,
