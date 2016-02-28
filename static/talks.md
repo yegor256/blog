@@ -39,12 +39,6 @@ given in Palo Alto, CA, on the 11th of February:
 
 ## Upcoming Events
 
-<img src="/images/2016/kyiv-devops-day.png" class="talks-talk" alt="Kyiv DevOps Day"/>
-**Need Robust Software? Make It Fragile**<br/>
-[Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/)<br/>
-Kyiv, Ukraine<br/>
-27 February 2016
-
 <img src="/images/2016/cascadiait-2016.png" class="talks-talk" alt="CascadiaIT 2016"/>
 **Talk To Your Microservice Via a Chat Bot, not UI**<br/>
 [CascadiaIT](http://casitconf.org/casitconf16/talks/)<br/>
@@ -132,6 +126,15 @@ Tallinn, Estonia<br/>
 ## Past Events
 
 ### 2016
+
+<img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xap1/t31.0-8/12779114_10208769429623029_6520293207651056937_o.jpg" class="talks-photo" alt="Kyiv DevOps Day"/>
+Need Robust Software? Make It Fragile;
+[Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
+Kyiv, Ukraine;
+27 February 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/need-robust-software-make-it-fragile),
+[photos](https://www.facebook.com/yegor256/posts/10208769445463425?pnref=story),
+video is coming.
 
 <img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xlp1/t31.0-8/12716134_10208695417172764_967441772087398479_o.jpg" class="talks-photo" alt="DeveloperWeek 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
