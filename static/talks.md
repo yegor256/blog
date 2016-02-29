@@ -134,7 +134,7 @@ Kyiv, Ukraine;
 27 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/need-robust-software-make-it-fragile),
 [photos](https://www.facebook.com/yegor256/posts/10208769445463425?pnref=story),
-video is coming.
+[video](https://www.youtube.com/watch?v=QMcDa2eyRBY).
 
 <img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xlp1/t31.0-8/12716134_10208695417172764_967441772087398479_o.jpg" class="talks-photo" alt="DeveloperWeek 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
