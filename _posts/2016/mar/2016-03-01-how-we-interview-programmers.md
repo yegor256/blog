@@ -80,7 +80,7 @@ all of them are from our candidates.
 Most companies talk a lot about diversity and equality, yet most of them
 will also require a Skype video call or at least a phone call before
 getting you on board. How does this really jive with the equality emphasis? A face-to-face
-interview is a very stressful process even for experienced and extraverted
+interview is a very stressful process even for experienced and extroverted
 people. We can imagine how difficult it is for some programmers who are
 anti-social introverts just like me.
 
