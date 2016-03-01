@@ -99,6 +99,12 @@ Washington, USA<br/>
 Ypsilanti, MI, USA<br/>
 5 May 2016
 
+<img src="/images/2016/baltic-devops.png" class="talks-talk" alt="Baltic DevOps 2016"/>
+**Continuous Integration May Have Negative Effects**<br/>
+[Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/)<br/>
+Tallinn, Estonia<br/>
+10 May 2016
+
 <img src="/images/2016/itake-2016.png" class="talks-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Chatbots**<br/>
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
