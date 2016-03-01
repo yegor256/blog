@@ -247,7 +247,8 @@ reputation seriously. In the end, you will win.
 Don't hold the task in your hands. The minute you realize you're
 not the best guy for it or you simply can't fix it &mdash; notify
 your manager. Make it his problem. Actually, it is his problem in the
-first place. He hired you. He interviewed you. He decided to give you this
+first place. He hired you. He [interviewed]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
+you. He decided to give you this
 task. He estimated your abilities and your skills.
 So it's payback time.
 

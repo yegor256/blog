@@ -87,7 +87,8 @@ And it's disgusting.
 
 In our recruitment process at [Teamed.io](http://www.teamed.io), we do
 exactly the opposite. You apply to us, we ask one of our programmers to
-interview you, and then, when finished, we make a decision about whether you're
+[interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
+you, and then, when finished, we make a decision about whether you're
 a good candidate or not. We discuss your profile right in front of you. We
 don't have any discussions without you. We make our decision fully disclosing
 our reasoning to you. This is how it should be everywhere, I believe.

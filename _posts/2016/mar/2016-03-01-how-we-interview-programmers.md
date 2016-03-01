@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Interview Programmers"
-date: 2016-02-10
+date: 2016-02-01
 place: Palo Alto, CA
 tags: management
 description:
@@ -16,6 +16,8 @@ keywords:
   - developer interview
 ---
 
+{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
+
 At [Teamed.io](http://www.teamed.io), we've been getting
 about 10 resumes every day from programmers who want to work
 with us. We don't do video or online coding interviews. We don't
@@ -26,6 +28,8 @@ never offend anyone. So how exactly does it work?
 There are a few basic principles I would like to share.
 
 <!--more-->
+
+{% picture /images/2016/03/wall-street.jpg 0 Wall Street (1987) by Oliver Stone %}
 
 ## The Market Interviews You, Not Us
 
