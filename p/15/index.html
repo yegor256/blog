@@ -28,20 +28,20 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?c0591ea"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?c0591ea"/>
+    <link rel="shortcut icon" href="/favicon.ico?3881ad9"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?3881ad9"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?c0591ea"/>
-    <link rel="stylesheet" href="/css/icons.css?c0591ea"/>
+    <link rel="stylesheet" href="/css/layout.css?3881ad9"/>
+    <link rel="stylesheet" href="/css/icons.css?3881ad9"/>
     <link rel="canonical" href="http://www.yegor256.com/p/15/" />
     <title>Programming Blog - Yegor Bugayenko
       
         (page 15)
       </title>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?c0591ea"></script>
+    <script src="/js/global.js?3881ad9"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;167</a></li>
+            <li><a href="/contents.html" title="blog contents">all&nbsp;168</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -132,6 +132,92 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/05/18/cloud-autoincrement-counters.html">
+            Atomic Counters at Stateful.co
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-05-18T00:00:00+00:00">
+              18 May 2014
+            </time>
+          </li>
+          <li>
+            360 words
+          </li>
+          <li>
+            
+            
+              
+                  two
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><img src='/images/2014/04/dynamodb-logo.png' style='width:150px;' alt='badge'/></figure>
+
+<p>Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
+highly reliable and rather powerful. I&#39;m using it in many web systems.</p>
+
+<p>There is one feature that it lacks, though &mdash; auto-increment attributes.</p>
+
+<p>Say that you have a table with a list of messages:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">+------+----------------------------+
+| id   | Attributes                 |
++------+----------------------------+
+| 205  | author=&quot;jeff&quot;, text=&quot;...&quot;  |
+| 206  | author=&quot;bob&quot;, text=&quot;...&quot;   |
+| 207  | author=&quot;alice&quot;, text=&quot;...&quot; |
++------+----------------------------+</code></pre></figure>
+
+<p>Every time you add a new item to the table, a new value
+of <code>id</code> has to be set. And this has to be done with concurrency in mind.
+SQL databases like PostgreSQL, Oracle, MySQL and others support
+auto-increment features. When you add a new record to the table,
+the value of the primary key is omitted and the server retrieves
+the next one automatically. If a number of <code>INSERT</code> requests
+arrive at the same time the server guarantees that the numbers won&#39;t be duplicated.</p>
+
+<p>However, DynamoDB doesn&#39;t have this feature. Instead,
+DynamoDB has <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.AtomicCounters">Atomic Counters</a>
+and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.ConditionalUpdate">Conditional Updates</a>,
+which are very similar features. Still, they&#39;re not exactly the same.</p>
+
+<p>In case of an atomic counter, you should create a supplementary
+table and keep the latest value of <code>id</code> in it.</p>
+
+<p>In case of conditional updates, you should
+<a href="/2014/08/15/retry-java-method-on-exception.html">retry</a>
+a few times in case of collisions.</p>
+
+<figure class='badge'><img src='http://img.stateful.co/pomegranate.svg' style='width:128px;' alt='badge'/></figure>
+
+<p>To make life easier in a few of my applications, I created a simple web
+service &mdash; <a href="http://www.stateful.co">stateful.co</a>.
+It provides a simple atomic counter feature through its RESTful API.</p>
+
+      </div>
+      <p>
+        <a href="/2014/05/18/cloud-autoincrement-counters.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -694,77 +780,6 @@ example, you can see just how simple XML parsing can be:</p>
       </div>
       <p>
         <a href="/2014/04/24/java-xml-parsing-and-traversing.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/04/21/s3-http-basic-auth.html">
-            Basic HTTP Auth for S3 Buckets
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-04-21T00:00:00+00:00">
-              21 April 2014
-            </time>
-          </li>
-          <li>
-            855 words
-          </li>
-          <li>
-            
-            
-              
-                  four
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/04/21/s3-http-basic-auth.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <figure class='badge'><a href='http://www.s3auth.com'><img src='http://img.s3auth.com/logo.png' style='width:200px;' alt='badge'/></a></figure>
-
-<p><a href="http://aws.amazon.com/s3/">Amazon S3</a> is a simple and very useful storage of
-binary objects (aka &quot;files&quot;). To use it, you create a &quot;bucket&quot; there with a
-unique name and upload your objects.</p>
-
-<p>Afterwards, AWS guarantees your object will be available for download through
-their <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html">RESTful API</a>.</p>
-
-<p>A few years ago, AWS introduced a S3 feature called
-<a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">static website hosting</a>.</p>
-
-<p>With static website hosting, you simply turn on the feature and all objects in
-your bucket become available through public HTTP. This is an awesome feature for
-hosting static content, such as images, JavaScript files, video and audio
-content.</p>
-
-<p>When using the hosting, you need to change the CNAME record in your DNS so that
-it points to <code>www.example.com.aws.amazon.com</code>. After changing the DNS entry,
-your static website is available at <code>www.example.com</code> just as it would be
-normally.</p>
-
-<p>When using Amazon S3, though, it is not possible to protect your website because
-the content is purely static. This means you can&#39;t have a login page on the
-front end. With the service, you can either make your objects either absolutely
-public &mdash; so that anyone can see them online &mdash; or assign access
-rights to them &mdash; but only for users connected through RESTful API.</p>
-
-      </div>
-      <p>
-        <a href="/2014/04/21/s3-http-basic-auth.html">
           continue...
         </a>
       </p>

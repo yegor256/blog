@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-02-29T09:15:07+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Holacracy or Autocracy? Both!</title><link href="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html" rel="alternate" type="text/html" title="Holacracy or Autocracy? Both!" /><published>2016-02-18T00:00:00+00:00</published><updated>2016-02-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/18/holacracy-autocracy</id><content type="html" xml:base="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html">&lt;p&gt;I strongly believe that while it is very effective to structure
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-01T08:19:20+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How We Interview Programmers</title><link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html" rel="alternate" type="text/html" title="How We Interview Programmers" /><published>2016-03-01T00:00:00+00:00</published><updated>2016-03-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/01/how-we-interview-programmers</id><content type="html" xml:base="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:120px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, we&amp;#39;ve been getting
+about 10 resumes every day from programmers who want to work
+with us. We don&amp;#39;t do video or online coding interviews. We don&amp;#39;t
+ask you to solve any puzzles or demonstrate your
+algorithm-writing abilities. Moreover, when we decide not to
+hire you, we honestly and openly explain why. And we almost
+never offend anyone. So how exactly does it work?
+There are a few basic principles I would like to share.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;/images/2016/03/wall-street.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Wall Street (1987) by Oliver Stone&#39;/&gt;&lt;figcaption&gt;Wall Street (1987) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;the-market-interviews-you-not-us&quot;&gt;The Market Interviews You, Not Us&lt;/h2&gt;
+
+&lt;p&gt;We believe that the market is a much better interviewer than
+any one of us. &amp;quot;&lt;em&gt;Instead of demonstrating to us how great your
+code is, show it to the market and see what it says&lt;/em&gt;&amp;quot; &amp;mdash; that&amp;#39;s what
+we&amp;#39;re saying to you, our candidate.&lt;/p&gt;
+
+&lt;p&gt;How does the market validate that code?
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;Open source&lt;/a&gt; &amp;mdash;
+that&amp;#39;s what is the most convincing to us.
+We ask you to show us which open-source products you have and how
+popular they are.&lt;/p&gt;
+
+&lt;p&gt;Then show us your blog, your conference talks, your hackathon
+gold medals, your certifications, and any other awards the market
+has given you. Don&amp;#39;t convince us that you&amp;#39;re cool; convince them. If they
+will be convinced, we will be glad to hire you. Isn&amp;#39;t that objective?
+I believe it is.&lt;/p&gt;
+
+&lt;h2 id=&quot;quiz&quot;&gt;Quiz&lt;/h2&gt;
+
+&lt;p&gt;The way we understand quality of code is
+&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;very different&lt;/a&gt;
+than what you might
+expect. Simply put, our quality bar is much higher. Besides that, the
+way we understand object-oriented programming is also
+&lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;very different&lt;/a&gt;.
+So occasionally we&amp;#39;ll find that we simply don&amp;#39;t trust the market as our only
+source of information, especially when the market has almost nothing to say about you.
+Some programmers come to us with zero
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;open-source&lt;/a&gt; experience, no certificates,
+and no public work. Still, they claim they are
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;the best&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To put them to the test, we provide a piece of code and ask them to refactor it &amp;mdash; just make
+it better. I think this approach perfectly demonstrates who is in front of me:
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;a hacker or a designer&lt;/a&gt;.
+In this way, we filter out a lot of people who pay attention to
+minor implementation tricks but miss the bigger design issues.&lt;/p&gt;
+
+&lt;p&gt;The quiz is &lt;a href=&quot;https://github.com/teamed/quiz&quot;&gt;here&lt;/a&gt;.
+You can see how many pull requests there are already &amp;mdash;
+all of them are from our candidates.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-phone-or-video-calls&quot;&gt;No Phone or Video Calls&lt;/h2&gt;
+
+&lt;p&gt;Most companies talk a lot about diversity and equality, yet most of them
+will also require a Skype video call or at least a phone call before
+getting you on board. How does this really jive with the equality emphasis? A face-to-face
+interview is a very stressful process even for experienced and extroverted
+people. We can imagine how difficult it is for some programmers who are
+anti-social introverts just like me.&lt;/p&gt;
+
+&lt;p&gt;Video interviewing is a terrible practice unless you&amp;#39;re hiring a
+stand-up comedian or a flight attendant. Programmers are not supposed
+to achieve their goals by interacting with people face to face. Well, at
+least not in our &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;remote work&lt;/a&gt;
+mode. We expect you to write code
+and communicate via GitHub. Why on earth would we need to call you? We
+just don&amp;#39;t do it, and I think that&amp;#39;s how everybody else should operate. That&amp;#39;s
+what true equality and diversity is &amp;mdash; no phone or video calls.&lt;/p&gt;
+
+&lt;h2 id=&quot;we-explain-when-we-reject&quot;&gt;We Explain When We Reject&lt;/h2&gt;
+
+&lt;p&gt;You apply to us and spend time presenting yourself, talking to us,
+and demonstrating to us your skills and profile. We feel that we have
+to give something back, especially if we don&amp;#39;t hire you. That&amp;#39;s why
+we always explain what&amp;#39;s wrong with your application. We are not
+hiding anything, and sometimes our responses may sound rather
+disturbing. You may hear something like this:
+&amp;quot;Your quiz solution is not what I would expect from an experienced developer&amp;quot;
+(I&amp;#39;m quoting one of our interviewers).&lt;/p&gt;
+
+&lt;p&gt;Unlike many other companies, we will never say something like,
+&amp;quot;Thanks for applying, but we decided not to proceed further. Wish you
+luck!&amp;quot; That&amp;#39;s shallow and ignorant. But that&amp;#39;s what most big companies
+do, including Google, Facebook, and other
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_be_evil&quot;&gt;&amp;quot;no evils&amp;quot;&lt;/a&gt;. Try to
+apply there, and you will see for yourself.&lt;/p&gt;
+
+&lt;p&gt;Instead, we believe that an honest and straightforward negative answer is exactly what
+our candidates are looking for in the case of a rejection. We understand
+that it&amp;#39;s not the end of the world for you &amp;mdash; you&amp;#39;re going to continue
+learning and improving. Our feedback will help you. So why should we
+hide it behind that polite &amp;quot;good luck&amp;quot; answer? We won&amp;#39;t. You will
+know exactly why you are not good enough for us.&lt;/p&gt;
+
+&lt;p&gt;Moreover, we are always trying to suggest a direction for improvement. We will
+recommend what to learn, what to do, and how to grow before coming back to us.
+I haven&amp;#39;t seen a single company do that in my personal job searches from the
+past.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Try to apply; the form is &lt;a href=&quot;http://at.teamed.io/join.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="management" /><summary>At Teamed.io, we&amp;#39;ve been getting
+about 10 resumes every day from programmers who want to work
+with us. We don&amp;#39;t do video or online coding interviews. We don&amp;#39;t
+ask you to solve any puzzles or demonstrate your
+algorithm-writing abilities. Moreover, when we decide not to
+hire you, we honestly and openly explain why. And we almost
+never offend anyone. So how exactly does it work?
+There are a few basic principles I would like to share.</summary></entry><entry><title>Holacracy or Autocracy? Both!</title><link href="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html" rel="alternate" type="text/html" title="Holacracy or Autocracy? Both!" /><published>2016-02-18T00:00:00+00:00</published><updated>2016-02-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/18/holacracy-autocracy</id><content type="html" xml:base="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html">&lt;p&gt;I strongly believe that while it is very effective to structure
 an organization in a democratic and sociocratic way, a project
 should be managed completely different.
 A project should resemble a dictatorship, authoritarian or military hierarchy
@@ -1080,159 +1196,4 @@ GitHub profile is not full of projects and commits, your &amp;quot;value&amp;quo
 software developer is low, simply because this lack of open-source
 activity tells everybody that you&amp;#39;re not passionate about software
 development and are simply working for money. I keep getting angry comments
-about that every week. Let me answer them all here.</summary></entry><entry><title>Investors Are Too Scared</title><link href="http://www.yegor256.com/2015/12/16/investors-are-too-scared.html" rel="alternate" type="text/html" title="Investors Are Too Scared" /><published>2015-12-16T00:00:00+00:00</published><updated>2015-12-16T00:00:00+00:00</updated><id>http://www.yegor256.com/2015/12/16/investors-are-too-scared</id><content type="html" xml:base="http://www.yegor256.com/2015/12/16/investors-are-too-scared.html">&lt;p&gt;We&amp;#39;re starting a new thing, a seed fund. Its name is
-&lt;a href=&quot;http://www.seedramp.com&quot;&gt;SeedRamp&lt;/a&gt;. The formula is simple: You schedule
-an interview, we have a one-hour conversation, you present me your
-startup idea, and we either give you cash right away or explain why we don&amp;#39;t
-feel like it. We don&amp;#39;t do any due diligence or background checks. The decision
-is made right there. It&amp;#39;s something similar to angel investment, but the
-amount is smaller &amp;mdash; less than &lt;strong&gt;$20K&lt;/strong&gt;, and decisions are faster.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;/images/2015/12/the-game.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;The Game (1997) by David Fincher&#39;/&gt;&lt;figcaption&gt;The Game (1997) by David Fincher&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are basically three problems we&amp;#39;re trying to solve with this
-new idea: 1) Investors are &lt;strong&gt;cowards&lt;/strong&gt;, 2) investors are &lt;strong&gt;cowards&lt;/strong&gt;, and
-3) investors are &lt;strong&gt;cowards&lt;/strong&gt;. Here is why.&lt;/p&gt;
-
-&lt;h2 id=&quot;they-are-afraid-of-strangers&quot;&gt;They Are Afraid of Strangers&lt;/h2&gt;
-
-&lt;p&gt;It&amp;#39;s no secret that Silicon Valley is very &amp;quot;&lt;strong&gt;corrupted&lt;/strong&gt;&amp;quot; territory,
-where in order to get access to money people, you must know some other
-money people or someone who knows someone, etc. You must be &lt;strong&gt;well-connected&lt;/strong&gt;
-in order to be successful. You simply can&amp;#39;t raise money just by having an
-awesome idea or even a great implementation. You need connections.&lt;/p&gt;
-
-&lt;p&gt;I think that&amp;#39;s disgusting.&lt;/p&gt;
-
-&lt;p&gt;I am, in general, a big fan of &lt;strong&gt;meritocracy&lt;/strong&gt;, where those who are smarter
-or stronger win the most. This is the principle we,
-at &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, apply to software developers who come to us.
-I explained it last year in this rather popular and provocative post:
-&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;How Much Do You Cost?&lt;/a&gt;.
-We simply don&amp;#39;t care how many years of experience you have,
-how much time you&amp;#39;ve spent with your previous employer,
-or how many programming languages you know. We only care about your
-objective achievements, which are validated by the market. And, of course,
-we don&amp;#39;t pay attention to any references or any previous relationships.&lt;/p&gt;
-
-&lt;p&gt;I strongly believe this is how it should be.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, this is not how it is in Silicon Valley when a young
-startup is looking for $100K to $150K of seed money. Angel investors are difficult
-to reach. They are afraid of you, if you come out of nowhere. They only want
-to talk to someone they can &lt;strong&gt;complain&lt;/strong&gt; about to their friends. This
-basically encourages startup founders to spend their time on friend-making
-activities instead of business-making ones. Very often, good teams simply
-&lt;strong&gt;miss&lt;/strong&gt; their chance.&lt;/p&gt;
-
-&lt;h2 id=&quot;they-are-afraid-of-telling-the-truth&quot;&gt;They Are Afraid of Telling the Truth&lt;/h2&gt;
-
-&lt;p&gt;Have you ever talked to a venture capital firm? To angel investors? To
-any investors, basically? If you have, you&amp;#39;d know they all
-are very &lt;strong&gt;polite&lt;/strong&gt;, nodding their heads and smiling while listening
-to your pitch. They usually are &amp;quot;very excited&amp;quot; to meet you and
-&amp;quot;learn more&amp;quot; about your business.&lt;/p&gt;
-
-&lt;p&gt;In the end, they don&amp;#39;t give you the money.&lt;/p&gt;
-
-&lt;p&gt;Why? Who knows. They won&amp;#39;t tell you. They are cowards, and they are afraid
-of telling you that your idea sucks and your business plan is totally wrong.
-They are afraid of being &lt;strong&gt;honest&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;There is an almost identical situation with recruitment. You send your resume
-to Facebook, they interview you, and you spend a few hours with them, answering
-their questions. In the end, they email you, saying &amp;quot;We decided not to proceed
-any further; good luck in your job search&amp;quot;. They are afraid of telling you
-the &lt;strong&gt;truth&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;And it&amp;#39;s disgusting.&lt;/p&gt;
-
-&lt;p&gt;In our recruitment process at &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, we do
-exactly the opposite. You apply to us, we ask one of our programmers to
-interview you, and then, when finished, we make a decision about whether you&amp;#39;re
-a good candidate or not. We discuss your profile right in front of you. We
-don&amp;#39;t have any discussions without you. We make our decision fully disclosing
-our reasoning to you. This is how it should be everywhere, I believe.
-Especially with regard to investments.&lt;/p&gt;
-
-&lt;h2 id=&quot;they-are-afraid-of-losses&quot;&gt;They are Afraid of Losses&lt;/h2&gt;
-
-&lt;p&gt;It&amp;#39;s a very infamous problem, mentioned everywhere there&amp;#39;s a list
-of &amp;quot;top 10 reasons for startup failures&amp;quot;. Investors simply turn you
-into an &lt;strong&gt;employee&lt;/strong&gt;. Before you get their money, you&amp;#39;re on your own. You make
-your own decisions, you manage your business, you&amp;#39;re in charge.&lt;/p&gt;
-
-&lt;p&gt;Then, you get the money. It doesn&amp;#39;t mean you&amp;#39;re &lt;strong&gt;rich&lt;/strong&gt;. Not at all. It means
-that, from now on, you&amp;#39;re their employee. They decide what your salary is.
-They decide whether you can rent this office or not. They decide what
-car you can afford.&lt;/p&gt;
-
-&lt;p&gt;Keep in mind that your salary is lower than your friends are getting,
-working somewhere on Facebook. Your salary is low, and you can&amp;#39;t change it.
-All your expenses have to be approved. You&amp;#39;re simply under the full control
-of your &lt;strong&gt;board&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why is that? Because they are afraid of you being &lt;strong&gt;free&lt;/strong&gt;. They are afraid
-of losing their money. That&amp;#39;s why they are doing everything they can
-to keep a close eye on you.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s disgusting and very counter-productive.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s similar to trying to win in poker by always making small bets. In most
-cases, they lose their money, you lose your time, and the market loses the opportunity
-to get a new product.&lt;/p&gt;
-
-&lt;h2 id=&quot;we-are-not-cowards&quot;&gt;We Are Not Cowards&lt;/h2&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.seedramp.com&#39;&gt;&lt;img src=&#39;http://www.seedramp.com/images/logo.svg&#39; style=&#39;width:128px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.seedramp.com&quot;&gt;SeedRamp&lt;/a&gt; is going to solve all of these three problems.&lt;/p&gt;
-
-&lt;p&gt;First of all, we completely remove the necessity to have any connections
-in order to reach us. You need money? Just &lt;strong&gt;schedule&lt;/strong&gt; an appointment online.
-We don&amp;#39;t care who you are, where you&amp;#39;re coming from, or who you know. We
-give you one hour of our time, and if we reject your idea, you can apply again in
-a month. Thus, any young startup without any friends or connections is
-&lt;strong&gt;welcome&lt;/strong&gt;. Just bring your strategy, your existing results, and your passion, and
-we&amp;#39;ll talk.&lt;/p&gt;
-
-&lt;p&gt;Second, we don&amp;#39;t say, &amp;quot;We will call you back&amp;quot;. We give you our reasons right
-away, and we always tell the truth. Moreover, we record our interview and
-publish it on &lt;strong&gt;YouTube&lt;/strong&gt;. Yes, that&amp;#39;s not a joke; we will publish all interviews
-online, and you can see how we talk about other startups. We are not afraid of
-telling the truth; it&amp;#39;s part of our marketing strategy.&lt;/p&gt;
-
-&lt;p&gt;Third, we don&amp;#39;t sit on your board after the investment is made. We simply
-give you a check, and you can fly to Vegas the next day and spend all of that
-money there. We don&amp;#39;t care. When our decision is made, we don&amp;#39;t tell you
-what to do with the money. If we gave you the money, we believed in you
-and your judgment. If you think that the best use of this money would
-be a new &lt;strong&gt;Kawasaki&lt;/strong&gt;, do it.&lt;/p&gt;
-
-&lt;h2 id=&quot;instant-micro-investments&quot;&gt;Instant Micro Investments&lt;/h2&gt;
-
-&lt;p&gt;To make it all happen, we have a few principles and limitations.&lt;/p&gt;
-
-&lt;p&gt;First, we expect you to ask for enough cash for one calendar month. You simply
-have to explain to us how much you need for one month and how you&amp;#39;re planning
-to spend this money, approximately. One calendar month. We expect you
-to come back to us in a month, demonstrate your progress, and ask for one
-more month. Of course, we may say no.&lt;/p&gt;
-
-&lt;p&gt;Second, the maximum we can give you is $20,000. Maybe, in the future,
-we will raise this limit. For now, it is $20K.&lt;/p&gt;
-
-&lt;p&gt;And one last thing. We will ask you to give us some stock in your
-startup. You decide how much, but it has to be enough to make us
-interested. It all depends on your situation. A few percent, I&amp;#39;d guess.&lt;/p&gt;
-
-&lt;p&gt;We&amp;#39;re planning to host our first interviews in the middle of January 2016.
-You can schedule them &lt;a href=&quot;https://calendly.com/yegor256/seedramp&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;</content><category term="startup" /><summary>We&amp;#39;re starting a new thing, a seed fund. Its name is
-SeedRamp. The formula is simple: You schedule
-an interview, we have a one-hour conversation, you present me your
-startup idea, and we either give you cash right away or explain why we don&amp;#39;t
-feel like it. We don&amp;#39;t do any due diligence or background checks. The decision
-is made right there. It&amp;#39;s something similar to angel investment, but the
-amount is smaller &amp;mdash; less than $20K, and decisions are faster.</summary></entry></feed>
+about that every week. Let me answer them all here.</summary></entry></feed>
