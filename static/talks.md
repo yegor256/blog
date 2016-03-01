@@ -63,6 +63,12 @@ Olomouc, Czech Republic<br/>
 Kiev, Ukraine<br/>
 8-9 April 2016
 
+<img src="/images/2016/nextbuild-2016.png" class="talks-talk" alt="NextBuild 2016"/>
+**Meeting-Free Software Development, in Distributed Teams**<br/>
+[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
+Eindhoven, Netherlands<br/>
+16 April 2016
+
 <img src="/images/2016/jpoint-2016.png" class="talks-talk" alt="JPoint 2016"/>
 **ORM is an Offensive Anti-Pattern**<br/>
 [JPoint 2016](http://javapoint.ru/en/)<br/>
