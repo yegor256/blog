@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Interview Programmers"
-date: 2016-02-01
+date: 2016-03-01
 place: Palo Alto, CA
 tags: management
 description:
