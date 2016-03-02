@@ -97,7 +97,7 @@ Gdynia, Poland<br/>
 **The Potential Pitfalls of Continuous Integration**<br/>
 [Beyond20'16](http://www.beyond20conference.com/sessions/the-potential-pitfalls-of-continuous-integration/)<br/>
 Washington, USA<br/>
-2-3 May 2016
+2 May 2016
 
 <img src="/images/2016/agile-and-beyond-2016.png" class="talks-talk" alt="Agile &amp; Beyond 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
