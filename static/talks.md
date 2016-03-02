@@ -94,8 +94,8 @@ Gdynia, Poland<br/>
 26 April 2016
 
 <img src="/images/2016/beyond-2016.png" class="talks-talk" alt="Beyond20 2016"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[Beyond20'16](https://www.beyond20conference.com/)<br/>
+**The Potential Pitfalls of Continuous Integration**<br/>
+[Beyond20'16](http://www.beyond20conference.com/sessions/the-potential-pitfalls-of-continuous-integration/)<br/>
 Washington, USA<br/>
 2-3 May 2016
 
