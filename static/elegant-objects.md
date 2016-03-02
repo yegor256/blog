@@ -27,7 +27,7 @@ Over a 100 books sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,
 but I'm sure there will be some. I would like to ask you to post your
 reviews, either negative or positive, directly to
-[Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
+[Amazon](http://goo.gl/5Yfx1i).
 I'm getting many requests about an **electronic version** of the book.
 I'm not planning to turn this into an e-book, at least until the end
 of 2018. Mostly because I'm greedy. I realize that the moment I publish
@@ -39,16 +39,16 @@ and throw it away, so that it doesn't take space. When an e-book is available,
 send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does this sound?
 
-{% badge /images/books/elegant-objects/cover.png 125 http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O %}
+{% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/5Yfx1i %}
 Feb 22, 2016:
 The book is published! It is for sale,
-[on Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
+[on Amazon](http://goo.gl/5Yfx1i).
 The price is $40.96. The size is 229 pages. The paper is creamy.
 The cover is mate. I took into account recommendations and corrections
 of 9 reviewers. Two of them were missed, for technical reasons. I will
 definitely include them in the next edition. If you decide to buy it,
 please leave your feedback
-[on Amazon](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O).
+[on Amazon](http://goo.gl/5Yfx1i).
 It will help me attract more readers. After reading, please shoot me
 an email to [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested to know what you think. Thanks!
@@ -72,7 +72,7 @@ Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
-You can [pre-order](http://www.amazon.com/gp/product/1519166915/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1519166915&linkCode=as2&tag=yegor256com-20&linkId=RMGEO4ESPM4CGD3O)
+You can [pre-order](http://goo.gl/5Yfx1i)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 
