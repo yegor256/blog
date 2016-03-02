@@ -61,7 +61,7 @@ Olomouc, Czech Republic<br/>
 **Meeting-Free Software Development**<br/>
 [AgileEE 2016](http://kiev2016.agileee.org/)<br/>
 Kiev, Ukraine<br/>
-8-9 April 2016
+9 April 2016
 
 <img src="/images/2016/nextbuild-2016.png" class="talks-talk" alt="NextBuild 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
