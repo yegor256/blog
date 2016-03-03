@@ -117,6 +117,12 @@ Tallinn, Estonia<br/>
 Bucharest, Romania<br/>
 19-20 May 2016
 
+<img src="/images/2016/jeeconf-logo.png" class="talks-talk" alt="JEEConf 2016"/>
+**How Immutability Helps in OOP** and **ORM is an Offensive Anti-Pattern**<br/>
+[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/)<br/>
+Kiev, Ukraine<br/>
+20-21 May 2016
+
 <img src="/images/2016/devopspro-2016.png" class="talks-talk" alt="DevOpsPro 2016"/>
 **Deployment Scripts Are Dead, Meet Rultor**<br/>
 [DevOps Pro](http://devopspro.lt/)<br/>
