@@ -114,7 +114,7 @@ class Words implements Iterable<String> {
       "UTF-8"
     );
     Set<String> words = new HashSet<>();
-    for (String word : words.split(" ")) {
+    for (String word : text.split(" ")) {
       words.add(word);
     }
     return words.iterator();
