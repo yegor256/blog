@@ -17,25 +17,26 @@ keywords:
 
 {% badge http://www.wring.io/images/logo.svg 92 http://www.wring.io %}
 
-I'm taking participation in over 50 repositories in GitHub. We manage all
-our software projects there. GitHub is sending me hundreds of emails
-per day. I'm serious. Hundreds! I tried to filter them somehow in Gmail,
+I'm taking participation in over 50 repositories in GitHub. [We](http://www.teamed.io)
+manage all our projects there. GitHub is sending me hundreds of emails
+every day. I'm serious. Hundreds! I tried to filter them somehow in Gmail,
 but it's not really possible. Gmail filters are not powerful enough to
-understand the difference between different types of notifications.
+understand the difference between different types of notifications, and there
+are many other problems.
 I decided to create my own simple filtering machine. It's called
 [wring.io](http://www.wring.io).
 
 <!--more-->
 
 The idea of wring.io is simple. First, I'm registering my sources
-of notifications (called "pipes"). For example, GitHub. I'm giving
-[wring.io](http://www.wring.io) permissions
+of notifications (called "pipes"). For example, GitHub. Then, I'm giving
+[wring.io](http://www.wring.io) a permission
 to connect to GitHub on my behalf and fetch whatever is new there.
 
-Then, I'm configuring what should be filtered out, using text matching or
+Then, I'm configuring what should be filtered out, using text matching and/or
 regular expressions. Right after a new pipe is created,
 [wring.io](http://www.wring.io) starts pulling all my sources and updating my inbox.
-All I need to do is to delete them from there, when I'm done with them.
+All I need to do is to delete new messages from the inbox, when I'm done with them.
 That's it.
 
 Let's see by example. First, I'm creating a new pipe:
@@ -48,8 +49,8 @@ class that will be pulling my notifications from GitHub. The project is
 open source, you can see how that class actually works:
 [`AgGithub`](https://github.com/yegor256/wring/blob/0.8.5/src/main/java/io/wring/agents/github/AgGithub.java).
 
-Property `token` must be set to the personal authentication token that
-I should create first, in GitHub. The server will connect to GitHub
+Property `token` must be set to the [personal access token](https://github.com/settings/tokens/new)
+that I should create first, in GitHub. The server will connect to GitHub
 on my behalf and under my credentials:
 
 {% figure /images/2016/03/wring-2.png 600 %}
@@ -57,14 +58,13 @@ on my behalf and under my credentials:
 Property `ignore` must have an array of strings. Each item is a matching
 pattern. I can use a text or a regular expression. By default it's
 a text. If exactly the same text will be found in a notification, it
-will be ignored. To use a regular expression, I wrap it in slashes. Just
-like in the example. You may skip that property and just specify
-this JSON:
+will be ignored. To use a regular expression, I need to wrap it in slashes (for example `/[a-z]+/`).
+You may skip that property and just specify this JSON:
 
 {% highlight json %}
 {
   "class": "io.wring.agents.github.AgGithub",
-  "token": "your personal access token"
+  "token": "your-personal-access-token"
 }
 {% endhighlight %}
 
