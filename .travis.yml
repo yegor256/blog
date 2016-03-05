@@ -47,6 +47,7 @@ script:
   - _travis/test_casperjs.sh
   - rm -rf _site
   - jekyll build
+  - "grep -R --files-with-match xxx _site; if [ $? == 0 ]; then exit -1; fi"
   - _travis/test_grammar.sh
   - _travis/test_orphans.sh
   # - _travis/test_keywords.sh

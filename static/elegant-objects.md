@@ -22,6 +22,7 @@ more solid and architecture more visible.
 
 <!--more-->
 
+{% badge https://goo.gl/xMLwpe 180 https://goo.gl/bkuily %}
 Feb 28, 2016:
 Over a 100 books sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,

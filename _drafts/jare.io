@@ -40,19 +40,19 @@ That's it.
 
 Let's see by example. First, I'm creating a new pipe:
 
-xxx
+IMG
 
 It's a JSON object. Property `class` must be set to
 `io.wring.agents.github.AgGithub`. This is the name of the Java
 class that will be pulling my notifications from GitHub. The project is
 open source, you can see how that class actually works:
-[`AgGithub`](xxx).
+[`AgGithub`](...).
 
 Property `token` must be set to the personal authentication token that
 I should create first, in GitHub. The server will connect to GitHub
 on my behalf and under my credentials:
 
-xxx
+IMG
 
 Property `ignore` must have an array of strings. Each item is a matching
 pattern. I can use a text or a regular expression. By default it's
