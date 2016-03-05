@@ -14,6 +14,8 @@ keywords:
   - debugging vs unit testing
   - debugging is evil
   - stop debugging
+translated:
+  Russian: https://habrahabr.ru/company/piter/blog/278567/
 ---
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)

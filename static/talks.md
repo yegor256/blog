@@ -147,6 +147,12 @@ New York, USA<br/>
 Tallinn, Estonia<br/>
 9-10 June 2016
 
+<img src="/images/2016/swanseacon-2016.png" class="talks-talk" alt="SwanseaCon 2016"/>
+**Meetings or Discipline, It's Your Choice**<br/>
+[SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
+Swansea, UK<br/>
+12 September 2016
+
 ## Past Events
 
 ### 2016
