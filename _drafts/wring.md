@@ -40,25 +40,33 @@ That's it.
 
 Let's see by example. First, I'm creating a new pipe:
 
-xxx
+{% figure /images/2016/03/wring-1.png 600 %}
 
 It's a JSON object. Property `class` must be set to
 `io.wring.agents.github.AgGithub`. This is the name of the Java
 class that will be pulling my notifications from GitHub. The project is
 open source, you can see how that class actually works:
-[`AgGithub`](xxx).
+[`AgGithub`](https://github.com/yegor256/wring/blob/0.8.5/src/main/java/io/wring/agents/github/AgGithub.java).
 
 Property `token` must be set to the personal authentication token that
 I should create first, in GitHub. The server will connect to GitHub
 on my behalf and under my credentials:
 
-xxx
+{% figure /images/2016/03/wring-2.png 600 %}
 
 Property `ignore` must have an array of strings. Each item is a matching
 pattern. I can use a text or a regular expression. By default it's
 a text. If exactly the same text will be found in a notification, it
 will be ignored. To use a regular expression, I wrap it in slashes. Just
-like in the example.
+like in the example. You may skip that property and just specify
+this JSON:
+
+{% highlight json %}
+{
+  "class": "io.wring.agents.github.AgGithub",
+  "token": "your personal access token"
+}
+{% endhighlight %}
 
 Then, I go to my inbox and read what's there.
 
