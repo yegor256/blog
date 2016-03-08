@@ -1,7 +1,294 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-08T02:41:03+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How We Interview Programmers</title><link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html" rel="alternate" type="text/html" title="How We Interview Programmers" /><published>2016-03-01T00:00:00+00:00</published><updated>2016-03-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/01/how-we-interview-programmers</id><content type="html" xml:base="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:120px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-08T21:36:42+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Pimp Up Your Resume</title><link href="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html" rel="alternate" type="text/html" title="Pimp Up Your Resume" /><published>2016-03-08T00:00:00+00:00</published><updated>2016-03-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/08/pimp-up-your-resume</id><content type="html" xml:base="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html">&lt;p&gt;There are tons of articles about resume writing. Literally,
+&lt;a href=&quot;https://www.google.com/search?q=how+to+write+resume&quot;&gt;tons of them&lt;/a&gt;.
+And here&amp;#39;s yet another one? Well, maybe ... but I don&amp;#39;t think so. I&amp;#39;ll try to
+give you a few &lt;strong&gt;practical&lt;/strong&gt; hints for how to make your resume look
+&amp;quot;sexier&amp;quot;, and how to position yourself beyond the &amp;quot;good programmer&amp;quot; category and into
+the superstar zone. It may take a few years to truly pimp up your CV, but
+when it&amp;#39;s done, you will charge $100-plus per hour and face no hesitation
+from your clients in paying.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fdelicatessen.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Delicatessen (1991) by Jean-Pierre Jeunet&#39;/&gt;&lt;figcaption&gt;Delicatessen (1991) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;one-page-no-exceptions&quot;&gt;One Page, No Exceptions&lt;/h2&gt;
+
+&lt;p&gt;I think it&amp;#39;s obvious, but only one out of 10 resumes I&amp;#39;ve been getting
+each day fits onto one page. All the others take three or more pages, and this looks
+very &lt;strong&gt;unprofessional&lt;/strong&gt;. If you can&amp;#39;t explain yourself in one page, there will be doubts
+about your skills in scope management, which are very important for a software engineer.
+It shows you simply can&amp;#39;t filter out what&amp;#39;s non-important and focus
+on what really matters. Besides, it&amp;#39;s just boring to read three pages.&lt;/p&gt;
+
+&lt;p&gt;Thus, strictly limit yourself to one page, &lt;strong&gt;no exceptions&lt;/strong&gt;. Your resume is an &amp;quot;executive summary&amp;quot;
+of the product you&amp;#39;re trying to sell. It&amp;#39;s a marketing brochure. A sales
+flyer. A sticker on my refrigerator, if you wish. It has to be short
+and straightforward. Employers will either buy it or throw it away. They don&amp;#39;t want to read it;
+they want to buy you. Or throw your brochure away.
+Four-page brochures have far fewer chances than one-pagers.&lt;/p&gt;
+
+&lt;h2 id=&quot;don-39-t-lie&quot;&gt;Don&amp;#39;t Lie&lt;/h2&gt;
+
+&lt;p&gt;No matter what you do with your resume, never lie about a single word. You
+can tell half of the truth, you can hide some information, and you can rephrase
+the truth, but never lie. You don&amp;#39;t know who is reading your CV and which
+desk it will end up on. Be ready to answer for every word you have on it.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re saying that you&amp;#39;re an &amp;quot;expert in JavaScript&amp;quot;,
+be ready to explain what the key new features of
+ECMAScript version 6 are. If you can&amp;#39;t, don&amp;#39;t use the word &amp;quot;expert&amp;quot;. The point
+is that you have to be ready to prove every word.&lt;/p&gt;
+
+&lt;h2 id=&quot;sexy-photo-on-the-top&quot;&gt;Sexy Photo on the Top&lt;/h2&gt;
+
+&lt;p&gt;You want them to work with you, right? They want to see you. So a photo is a mandatory
+component of a CV. And try to make it look sexy and artistic. Ask your
+graphic designer friend to style it. Maybe even pay for this work.
+Just pay attention to the photo; it&amp;#39;s very important.&lt;/p&gt;
+
+&lt;p&gt;Do I have to say that you must smile on that photo? Well, yes, you must.
+And make it casual, with a T-shirt and funny background. You must look
+relaxed and successful. You don&amp;#39;t want to get hired; they want to hire you &amp;mdash;
+this is the message your photo should send, just like in online &lt;strong&gt;dating&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;skip-quot-objective-quot-and-quot-title-quot&quot;&gt;Skip &amp;quot;Objective&amp;quot; and &amp;quot;Title&amp;quot;&lt;/h2&gt;
+
+&lt;p&gt;&amp;quot;Senior Software Developer&amp;quot;, &amp;quot;Seasoned Java Programmer&amp;quot;,
+&amp;quot;Talented IT Professional&amp;quot;, etc. It&amp;#39;s boring and doesn&amp;#39;t sell you at all.
+They know what you are, because they are reading your resume.&lt;/p&gt;
+
+&lt;p&gt;Besides that, you&amp;#39;re limiting yourself with that title. Maybe they are looking
+for a VP of engineering while your resume says &amp;quot;Software Architect&amp;quot;. That&amp;#39;s
+immediately a mismatch for them. It&amp;#39;s a strike against you. Your &lt;strong&gt;name&lt;/strong&gt; is the title
+of your resume. That&amp;#39;s it.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-dozen-skills&quot;&gt;A Dozen Skills&lt;/h2&gt;
+
+&lt;p&gt;This section of your resume actually tells them about your &amp;quot;tech focus&amp;quot;.
+It must have a very short list of skills, definitely &lt;strong&gt;under 12&lt;/strong&gt;. You simply
+can&amp;#39;t be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
+If there are too many skills, it&amp;#39;s a sign of a &amp;quot;jack of all trades&amp;quot; who is
+almost always a &amp;quot;master of none&amp;quot;. Don&amp;#39;t do that.&lt;/p&gt;
+
+&lt;p&gt;Find the most important skills in your profile and put them there.
+Just a few. And make sure the skills are all on the same level of abstraction.
+Java and AngularJS must not be present together. Java is a few levels higher
+than AngularJS. Thus, it&amp;#39;s either &amp;quot;Java, SQL, and HTTP&amp;quot; or &amp;quot;AngularJS, Spring Framework,
+and Web Sockets&amp;quot;. I would recommend you stay at the lowest level you can until
+you become a serious market figure. For example, &amp;quot;Java&amp;quot; as a skill would look good
+in &lt;a href=&quot;http://stackoverflow.com/users/22656/jon-skeet&quot;&gt;John Skeet&lt;/a&gt;&amp;#39;s resume,
+because he definitely knows the entire Java world, and the
+market has recognized that. But if you&amp;#39;re a programmer with just three years of experience,
+how can you &amp;quot;know Java&amp;quot;? You barely know a few hundred classes from it.
+That&amp;#39;s why it&amp;#39;s better to state specifically which parts of Java you definitely know.
+Like I said, be as low-level and specific in your skills as possible.&lt;/p&gt;
+
+&lt;h2 id=&quot;stackoverflow-profile&quot;&gt;StackOverflow Profile&lt;/h2&gt;
+
+&lt;p&gt;No matter what anyone &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;says&lt;/a&gt;,
+&lt;a href=&quot;http://www.stackoverflow.com&quot;&gt;StackOverflow&lt;/a&gt;
+is the de-facto standard platform for asking and answering technical questions.
+Your presence there and your high rating send a clear message to your
+potential employer that you&amp;#39;re a superstar (or a rising one). No so many
+people have 100K or more reputation points there. You must be one of them.&lt;/p&gt;
+
+&lt;p&gt;So even if you don&amp;#39;t have a StackOverflow profile now, create one.
+Spend one hour on it every day for a few months, answering
+&lt;a href=&quot;http://stackoverflow.com/?tab=interesting&quot;&gt;new questions&lt;/a&gt;.
+You will earn 1,000 or more reputation points. Well, provided you have something to say.
+That&amp;#39;s enough for a start. Post a link to your profile right in your resume.&lt;/p&gt;
+
+&lt;p&gt;Even if you don&amp;#39;t have much to say, be there. Read answers made by others,
+comment on them, try to help them, and correct them. Become an active
+part of the community.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-profile&quot;&gt;GitHub Profile&lt;/h2&gt;
+
+&lt;p&gt;GitHub is the de-facto standard platform for open-source code. There are others
+like BitBucket, but &amp;mdash; I hope &amp;mdash; they will die sooner or later. As a modern
+software developer, you must be on GitHub. You
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;have to contribute&lt;/a&gt;
+to some open source. You have to be visible in the open-source world if you
+want to sell yourself high.&lt;/p&gt;
+
+&lt;p&gt;Your potential employer wants to see what the &lt;strong&gt;market&lt;/strong&gt; is thinking about
+your code and about you. They are afraid of making a mistake by hiring you.
+Your presence in the open-source world is a &lt;strong&gt;guarantee&lt;/strong&gt; for them. Someone has already
+seen your code, and someone has already given some kudos to your projects. Someone virtually
+vouches for you. As a result, they will feel more comfortable in hiring you.&lt;/p&gt;
+
+&lt;p&gt;To be in the &amp;quot;elite&amp;quot;, you don&amp;#39;t have to spend all your time on open-source
+projects. Just contribute to the ones you&amp;#39;re using already. You&amp;#39;re using
+Sinatra at work? Check its source code. You will find a lot of places that
+need improvement. Offer them your help and simply submit small pull requests
+here and there. Besides that, create your own products and market them. You will
+be surprised by how many users and followers you will attract in just a few years
+of such activity.&lt;/p&gt;
+
+&lt;h2 id=&quot;certificates&quot;&gt;Certificates&lt;/h2&gt;
+
+&lt;p&gt;Some may say they are not important. Maybe so. But your resume must have
+them. Some of them are not so difficult to get. With just a few weeks of study
+and a few hundred dollars, you are not just a Java programmer but
+a &lt;a href=&quot;https://en.wikipedia.org/wiki/Oracle_Certification_Program&quot;&gt;certified&lt;/a&gt; one.
+And there are not so many of those out there. There are millions of Java coders
+in the world, but only a few percent of them are certified. Regardless of whether
+you think it&amp;#39;s important or not, get those certifications.&lt;/p&gt;
+
+&lt;p&gt;As many as you like. But stay away from
+&lt;a href=&quot;https://www.brainbench.com/&quot;&gt;BrainBench&lt;/a&gt; and similar sites. Well,
+you can get certified there, but don&amp;#39;t put them into your resume. That will
+only demonstrate that you are proud of a very questionable achievement. It&amp;#39;s not
+a good sign.&lt;/p&gt;
+
+&lt;h2 id=&quot;sound-names-and-numbers&quot;&gt;Sound Names and Numbers&lt;/h2&gt;
+
+&lt;p&gt;It&amp;#39;s a dangerous trick, so be careful. Here is how it works. You have to go through
+your entire professional history and find well-known names or big numbers.
+For example, 10 years ago I was helping a startup create software that
+had IBM as a subscriber. They managed to get some tracking, and in
+two months, IBM decided not to use them anymore. It&amp;#39;s a true (and sad) story, but I can
+put something like this into my resume: &amp;quot;wrote software for IBM&amp;quot;. Am I lying? Not really.
+If they ask me what exactly I did for IBM, I will explain. In most cases, they
+won&amp;#39;t ask. They will just buy this big name and put my resume on top of
+others.&lt;/p&gt;
+
+&lt;p&gt;You can do the same with numbers. Here is another true story. A few years ago,
+I was helping a company configure a continuous integration pipeline. It was not a big
+deal, but the company was serving more than 5 million hits per day on its website.
+That&amp;#39;s a big number. I had nothing to do with this substantial web traffic, but I was
+in that company for a few months. So I may say in my resume:
+&amp;quot;configured the delivery pipeline for a 5M-hits-per-day web store&amp;quot;. If they
+ask me for details, I will be able to give them. I&amp;#39;m not lying.&lt;/p&gt;
+
+&lt;p&gt;Use this technique carefully, and never lie. But do it. Don&amp;#39;t be scared.
+Your resume needs big names and numbers.&lt;/p&gt;
+
+&lt;h2 id=&quot;blog&quot;&gt;Blog&lt;/h2&gt;
+
+&lt;p&gt;Create your own blog. Start writing. About what? About your everyday
+achievements. About the code you write and read.
+About what you observe in the office. About your thoughts
+and your plans. About the books you read. You absolutely need to have
+a blog if you want to position yourself as an expensive software engineer.&lt;/p&gt;
+
+&lt;p&gt;It doesn&amp;#39;t need to be a very popular blog; don&amp;#39;t focus on numbers. But
+it has to be properly created, designed, and hosted. Don&amp;#39;t use
+&lt;a href=&quot;http://www.wordpress.com&quot;&gt;WordPress&lt;/a&gt;, &lt;a href=&quot;http://www.blogger.com&quot;&gt;Blogger&lt;/a&gt;,
+or &lt;a href=&quot;http://www.tumblr.com&quot;&gt;Tumblr&lt;/a&gt;. Instead,
+I would recommend you think about static site generators like
+&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and host
+it all on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;. That&amp;#39;s what I&amp;#39;m doing.&lt;/p&gt;
+
+&lt;p&gt;Besides being a valuable addition to your resume,
+systematic and regular writing will help you structure
+your thoughts, plans, and decisions. Well, that&amp;#39;s what I&amp;#39;m getting
+from my blog.&lt;/p&gt;
+
+&lt;h2 id=&quot;education&quot;&gt;Education&lt;/h2&gt;
+
+&lt;p&gt;I would limit yourself to a few letters in this area. Just &amp;quot;MSc&amp;quot; or &amp;quot;BSc&amp;quot; is
+enough. There&amp;#39;s no need to say when you graduated and from which school. You can
+give those details later. Well, there are just two exceptions to this rule.&lt;/p&gt;
+
+&lt;p&gt;First, if you&amp;#39;re a PhD, put that on top of your CV. It&amp;#39;s important, and
+it&amp;#39;s valuable, simply because there are not so many of them among programmers.
+Second is if your school is Stanford, MIT, or something similar. If that&amp;#39;s the case,
+also put it on top of your CV.&lt;/p&gt;
+
+&lt;p&gt;In all other situations, just write &amp;quot;BSc&amp;quot; and that&amp;#39;s it.&lt;/p&gt;
+
+&lt;h2 id=&quot;conferences&quot;&gt;Conferences&lt;/h2&gt;
+
+&lt;p&gt;Every year, you must give a few presentations at &lt;a href=&quot;https://www.oracle.com/javaone/index.html&quot;&gt;JavaOne&lt;/a&gt;.
+I&amp;#39;m kidding.
+About the JavaOne part, anyway. But the &amp;quot;every year&amp;quot; part is very true. You must
+regularly make some speeches somewhere, preferably at JavaOne. But until
+you get there, speak where you can. Well, where they accept you. Create
+a profile at &lt;a href=&quot;http://www.lanyrd.com&quot;&gt;lanyrd&lt;/a&gt; (or something similar) and
+regularly check which conferences are looking for speakers. Submit there
+and you will be surprised to see that a few of them will actually accept
+some of your ideas.&lt;/p&gt;
+
+&lt;p&gt;The easiest subjects to start with are stories about your practical
+experience with some modern technologies and tools, something like
+&amp;quot;How Docker Helps Us Optimize Delivery&amp;quot; or
+&amp;quot;Five Apache Spark Installation Issues&amp;quot;. Just describe what you&amp;#39;ve done
+on a recent project. It doesn&amp;#39;t really matter what you talk about.
+What matters is that you&amp;#39;re visible. If the market accepts you,
+the employer will trust you more. That&amp;#39;s exactly what you need in order
+to request a higher rate.&lt;/p&gt;
+
+&lt;h2 id=&quot;career-history&quot;&gt;Career History&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;ll be speaking for myself here. As an employer, I don&amp;#39;t really care
+about your history at all. Moreover, if you have never worked anywhere
+full-time, I would probably be more interested in working with you. But that&amp;#39;s just
+me, because I truly believe that modern offices and full-time jobs
+turn programmers into
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slaves&lt;/a&gt; (and not only programmers).&lt;/p&gt;
+
+&lt;p&gt;Other employers may think differently. Well, they most likely think differently.
+That&amp;#39;s why you have to demonstrate with which offices you&amp;#39;ve spent 10 recent
+years of your life. I would recommend you keep this list short. Even if you&amp;#39;ve
+changed eight companies over the last two years, don&amp;#39;t say that. Just three
+places is enough. That will show them you&amp;#39;re a good slave &amp;mdash;
+very loyal to previous masters. That&amp;#39;s what they want to see, because they
+are planning to buy you and become your next master. Right? Sounds harsh?
+Isn&amp;#39;t &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;it true&lt;/a&gt;?&lt;/p&gt;
+
+&lt;h2 id=&quot;acm-ieee-jug-and-other-memberships&quot;&gt;ACM, IEEE, JUG, and Other Memberships&lt;/h2&gt;
+
+&lt;p&gt;These memberships mean literally nothing but will demonstrate that you are
+part of those communities. Just like with most other things mentioned above,
+employers will trust you more if the market already trusts you. These
+memberships don&amp;#39;t really mean that anyone has recognized you, since you get them
+just by paying annual fees. But still, you&amp;#39;re paying those fees, and most
+other applicants aren&amp;#39;t. You&amp;#39;re definitely more reliable than many others.&lt;/p&gt;
+
+&lt;h2 id=&quot;mention-hobbies&quot;&gt;Mention Hobbies&lt;/h2&gt;
+
+&lt;p&gt;I think information about hobbies is important. Some say it&amp;#39;s not, but I believe
+that a personal &amp;quot;click&amp;quot; between you and your potential employer plays
+an important role. There is a human on that side. He or she is reading
+your CV, and he or she wants to like you &amp;mdash; mostly in order to be comfortable
+making a hiring decision. Help him or her like you faster. Mention that
+you enjoy skiing, monkey-feeding in the zoo, and Jimmy Kimmel. Be creative,
+not boring. Just like you do in online dating.&lt;/p&gt;
+
+&lt;h2 id=&quot;layout-graphics&quot;&gt;Layout/Graphics&lt;/h2&gt;
+
+&lt;p&gt;How should your one page look? Stand out! It must express your personality.
+Don&amp;#39;t use the &amp;quot;resume templates&amp;quot; downloadable for free. Create your own
+layout and design. If you&amp;#39;re not a designer, ask your Photoshop friend
+to do it for you. Actually, there is not much to do; just select the right font
+and add a few colors here and there.&lt;/p&gt;
+
+&lt;p&gt;This CV is your product. You made it. It&amp;#39;s your baby. If it&amp;#39;s just a Word
+document in a standard template, they will feel you didn&amp;#39;t pay
+attention to it. You didn&amp;#39;t even care to create that small but very
+important product nicely. How will you create their software? With the
+same attitude. Don&amp;#39;t ruin the whole show with a careless design. That&amp;#39;s the
+key word here &amp;mdash; &amp;quot;careless&amp;quot;. It doesn&amp;#39;t need to be complex. It may be
+very simple. But it must be &lt;strong&gt;yours&lt;/strong&gt;, made with care and love.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Want free advice on your resume? Send it to
+&lt;a href=&quot;cv@yegor256.com&quot;&gt;mailto:cv@yegor256.com&lt;/a&gt;, and I&amp;#39;ll let you know
+what I think. I will reply to all emails, but be ready to hear
+mostly what&amp;#39;s wrong. What&amp;#39;s right you will know without me, when
+they pay you $200 per hour.&lt;/p&gt;</content><category term="career" /><summary>There are tons of articles about resume writing. Literally,
+tons of them.
+And here&amp;#39;s yet another one? Well, maybe ... but I don&amp;#39;t think so. I&amp;#39;ll try to
+give you a few practical hints for how to make your resume look
+&amp;quot;sexier&amp;quot;, and how to position yourself beyond the &amp;quot;good programmer&amp;quot; category and into
+the superstar zone. It may take a few years to truly pimp up your CV, but
+when it&amp;#39;s done, you will charge $100-plus per hour and face no hesitation
+from your clients in paying.</summary></entry><entry><title>How We Interview Programmers</title><link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html" rel="alternate" type="text/html" title="How We Interview Programmers" /><published>2016-03-01T00:00:00+00:00</published><updated>2016-03-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/01/how-we-interview-programmers</id><content type="html" xml:base="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:120px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, we&amp;#39;ve been getting
-about 10 resumes every day from programmers who want to work
+about 10 &lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resumes&lt;/a&gt; every day from programmers who want to work
 with us. We don&amp;#39;t do video or online coding interviews. We don&amp;#39;t
 ask you to solve any puzzles or demonstrate your
 algorithm-writing abilities. Moreover, when we decide not to
@@ -1087,113 +1374,4 @@ enough to prevent the appearance of &lt;strong&gt;heros&lt;/strong&gt; (a.k.a. s
 productivity if skilled workers are often leaving,
 and the worker population contains a high percentage of novices.&amp;quot;
 I agree. However, I believe that low turnover may also
-be very harmful.</summary></entry><entry><title>Why Don&amp;#39;t You Contribute to Open Source?</title><link href="http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html" rel="alternate" type="text/html" title="Why Don&#39;t You Contribute to Open Source?" /><published>2015-12-22T00:00:00+00:00</published><updated>2015-12-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source</id><content type="html" xml:base="http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html">&lt;p&gt;In my &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;How Much Do You Cost?&lt;/a&gt;
-post last year, I said open-source contribution is a very
-important factor in defining who is good and who isn&amp;#39;t, as far as programmers go.
-I was saying that if you&amp;#39;re not contributing to open source, if your
-GitHub profile is not full of projects and commits, your &amp;quot;value&amp;quot; as a
-software developer is low, simply because this lack of open-source
-activity tells everybody that you&amp;#39;re &lt;strong&gt;not passionate&lt;/strong&gt; about software
-development and are simply working for money. I keep getting angry comments
-about that every week. Let me answer them all here.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2015%2F12%2Fkung-fu-hustle.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Kung Fu Hustle (2004) by Stephen Chow&#39;/&gt;&lt;figcaption&gt;Kung Fu Hustle (2004) by Stephen Chow&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The gist of all those comments is this: &amp;quot;I don&amp;#39;t contribute to open source,
-but I&amp;#39;m still very passionate about software development&amp;quot;. Then, there is
-a list of &lt;strong&gt;reasons&lt;/strong&gt; why the author of the comment doesn&amp;#39;t contribute:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I spend my free time with my family.&lt;/li&gt;
-&lt;li&gt;I&amp;#39;m already busy in the office; why should I do extra work?&lt;/li&gt;
-&lt;li&gt;I&amp;#39;m well-paid; why should I do anything for free?&lt;/li&gt;
-&lt;li&gt;My employer doesn&amp;#39;t allow me to contribute to open source.&lt;/li&gt;
-&lt;li&gt;My company won&amp;#39;t pay me for writing open-source code.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Good excuses, but let&amp;#39;s try to look at it from a different perspective.&lt;/p&gt;
-
-&lt;p&gt;Today, it&amp;#39;s &lt;strong&gt;not possible&lt;/strong&gt; at all to create software without using
-open-source components. I&amp;#39;m sure nobody will argue with this. Only something
-very basic and simple can be created without code reuse. Nah, I&amp;#39;m wrong. Even
-super small pieces of software can&amp;#39;t be created without open-source
-&amp;quot;neighbors&amp;quot;. You need at the very least an operating system and a programming language.
-In most cases, they are open source (Microsoft is an exception, and it must die).&lt;/p&gt;
-
-&lt;p&gt;Thus, no matter what software you&amp;#39;re creating, you&amp;#39;re using modules
-created for you by &lt;strong&gt;others&lt;/strong&gt;. Someone else spent his or her time to help you.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Just admit that you don&amp;#39;t care; it&amp;#39;s not a crime, after all&lt;/aside&gt;
-
-&lt;p&gt;Now, you&amp;#39;re not giving anything back. I&amp;#39;m curious, why is that?&lt;/p&gt;
-
-&lt;p&gt;There could be two reasons. The first one is that you just don&amp;#39;t care.
-They give you something, and you&amp;#39;re not giving anything back. You simply
-don&amp;#39;t feel like being a player in this market. You take their libraries,
-reuse them in your product, collect a
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;paycheck&lt;/a&gt;, and go home. You don&amp;#39;t care
-what will happen with the industry, with those programmers, with the language
-you&amp;#39;re writing in, with the platform, etc. You don&amp;#39;t want to improve the
-libraries, you don&amp;#39;t want to create and share new ones, you don&amp;#39;t want to
-report bugs and feature requests, and you don&amp;#39;t want to send patches and pull
-requests to them.&lt;/p&gt;
-
-&lt;p&gt;I do understand that. Millions of programmers are like that; you&amp;#39;re not alone.
-But please, don&amp;#39;t tell me that you&amp;#39;re passionate about software development.
-Just admit that you don&amp;#39;t care. It&amp;#39;s &lt;strong&gt;not a crime&lt;/strong&gt;, after all. You&amp;#39;re not stealing
-anything (although I actually think you are, but that&amp;#39;s a different story).&lt;/p&gt;
-
-&lt;p&gt;That was the first reason why you may not contribute.
-However, in most cases, my typical opponent tells me he or she does care,
-but just can&amp;#39;t. There are &lt;strong&gt;obstacles&lt;/strong&gt;, right? Your family is taking
-all your free time, and in the office, you simply are not allowed to
-work on something that is outside of your business scope. I can imagine that,
-but let&amp;#39;s see what&amp;#39;s happening behind the scenes.&lt;/p&gt;
-
-&lt;p&gt;You&amp;#39;re telling me that your company doesn&amp;#39;t care about the software industry,
-right? They don&amp;#39;t allow you to give anything back to the open-source community.
-They want you to use those free libraries and give nothing back. And it is their
-corporate strategy. I doubt that&amp;#39;s the case.
-Did you ask your CTO about it?&lt;/p&gt;
-
-&lt;p&gt;I strongly believe that in 95 percent of cases, when you explain that your software
-seriously depends on a few open-source libraries that may need some
-improvements, your boss will have nothing against you becoming a contributor.
-Try it.&lt;/p&gt;
-
-&lt;p&gt;Sometimes, the boss says he or she doesn&amp;#39;t care about any open source
-and wants you to focus on your product. Maybe this happens rather often;
-I don&amp;#39;t know.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If you don&amp;#39;t walk away, you accept this attitude; you&amp;#39;re part of it&lt;/aside&gt;
-
-&lt;p&gt;In that case, my next question is philosophical. You&amp;#39;re working for such a person and
-such a company. You&amp;#39;re accepting their
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;paychecks&lt;/a&gt;. Aren&amp;#39;t you a part
-of this team and this mentality? If you don&amp;#39;t walk away, you &lt;strong&gt;accept&lt;/strong&gt; this
-attitude. You&amp;#39;re part of it. It&amp;#39;s &lt;strong&gt;you&lt;/strong&gt; who doesn&amp;#39;t care, not just them.
-Because of your existence, they have an ability to not care.&lt;/p&gt;
-
-&lt;p&gt;Tomorrow if they ask you to use stolen software, you may say
-you had no choice: &amp;quot;My boss asked me to do this. I did care about
-copyright and strongly believed that software authors must be paid, but
-I had to steal, because that&amp;#39;s what my company asked me to do&amp;quot;.
-Does it sound like a good excuse?&lt;/p&gt;
-
-&lt;p&gt;The same story goes for open source. If you do care and you&amp;#39;re passionate
-about software development, you will either &lt;strong&gt;contribute&lt;/strong&gt; actively
-or &lt;strong&gt;walk away&lt;/strong&gt; from the company that doesn&amp;#39;t share your passion. What, you can&amp;#39;t
-walk away because of some reasons? Then don&amp;#39;t tell me about your passion.
-Simply admit that you&amp;#39;re too weak to follow your passion.&lt;/p&gt;
-
-&lt;p&gt;Again, it&amp;#39;s not a crime. It&amp;#39;s just who you are.&lt;/p&gt;</content><category term="programming" /><summary>In my How Much Do You Cost?
-post last year, I said open-source contribution is a very
-important factor in defining who is good and who isn&amp;#39;t, as far as programmers go.
-I was saying that if you&amp;#39;re not contributing to open source, if your
-GitHub profile is not full of projects and commits, your &amp;quot;value&amp;quot; as a
-software developer is low, simply because this lack of open-source
-activity tells everybody that you&amp;#39;re not passionate about software
-development and are simply working for money. I keep getting angry comments
-about that every week. Let me answer them all here.</summary></entry></feed>
+be very harmful.</summary></entry></feed>

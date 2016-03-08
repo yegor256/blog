@@ -28,20 +28,20 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?8059665"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?8059665"/>
+    <link rel="shortcut icon" href="/favicon.ico?9e18fc6"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?9e18fc6"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?8059665"/>
-    <link rel="stylesheet" href="/css/icons.css?8059665"/>
+    <link rel="stylesheet" href="/css/layout.css?9e18fc6"/>
+    <link rel="stylesheet" href="/css/icons.css?9e18fc6"/>
     <link rel="canonical" href="http://www.yegor256.com/p/12/" />
     <title>Programming Blog - Yegor Bugayenko
       
         (page 12)
       </title>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?8059665"></script>
+    <script src="/js/global.js?9e18fc6"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;168</a></li>
+            <li><a href="/contents.html" title="blog contents">all&nbsp;169</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -139,6 +139,65 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/09/11/deployment-script-vs-rultor.html">
+            Deployment Script vs. Rultor
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-09-11T00:00:00+00:00">
+              11 September 2014
+            </time>
+          </li>
+          <li>
+            1419 words
+          </li>
+          <li>
+            
+            
+              
+                  6
+              
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><a href='http://www.rultor.com'><img src='http://doc.rultor.com/images/logo.svg' style='width:100px;' alt='badge'/></a></figure>
+
+<p>When I explain how <a href="http://www.rultor.com">Rultor</a> automates deployment/release processes,
+very often I hear something like:</p>
+
+<blockquote>
+<p>But I already have a script that deploys everything automatically.</p>
+</blockquote>
+
+<p>This response is very common, so I decided to summarize my three main arguments for
+automated Rultor deployment/release processes in one article: 1) isolated docker containers,
+2) visibility of logs and 3) security of credentials.</p>
+
+<p>Read about them and see what Rultor gives you on top of <strong>your existing</strong>
+deployment script(s).</p>
+
+      </div>
+      <p>
+        <a href="/2014/09/11/deployment-script-vs-rultor.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -634,67 +693,6 @@ via JDBC, avoiding the need to use
       </div>
       <p>
         <a href="/2014/08/18/fluent-jdbc-decorator.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/08/15/retry-java-method-on-exception.html">
-            How to Retry Java Method Call on Exception
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-08-15T00:00:00+00:00">
-              15 August 2014
-            </time>
-          </li>
-          <li>
-            132 words
-          </li>
-          <li>
-            
-            
-              a minute
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/08/15/retry-java-method-on-exception.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <figure class='badge'><a href='http://aspects.jcabi.com'><img src='http://img.jcabi.com/logo-square.svg' style='width:64px;' alt='badge'/></a></figure>
-
-<p>If you have a method that fails occasionally and
-you want to retry it a few times before
-<a href="/2015/12/01/rethrow-exceptions.html">throwing</a>
-an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code>@RetryOnFailure</code></a> from
-<a href="http://aspects.jcabi.com">jcabi-aspects</a> can help.
-For example, if you&#39;re downloading the following web page:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RetryOnFailure</span><span class="o">(</span>
-  <span class="n">attempts</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span>
-  <span class="n">delay</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span>
-  <span class="n">unit</span> <span class="o">=</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span>
-<span class="o">)</span>
-<span class="kd">public</span> <span class="n">String</span> <span class="nf">load</span><span class="o">(</span><span class="n">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>This method call will throw an exception only after three
-failed executions with a ten seconds interval between them.</p>
-
-      </div>
-      <p>
-        <a href="/2014/08/15/retry-java-method-on-exception.html">
           continue...
         </a>
       </p>
