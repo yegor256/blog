@@ -60,7 +60,7 @@ is that you have to be ready to prove every word.
 ## Sexy Photo on the Top
 
 You want them to work with you, right? They want to see you. So a photo is a mandatory
-component of a CV. And try to make it look sexy and artistic. Ask your
+component of a CV. And try to make it look artistic. Ask your
 graphic designer friend to style it. Maybe even pay for this work.
 Just pay attention to the photo; it's very important.
 
