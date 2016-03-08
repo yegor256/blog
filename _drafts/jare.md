@@ -46,7 +46,7 @@ First, I register my domain at [jare.io](http://www.jare.io):
 Second, I change my HTML:
 
 {% highlight html %}
-<img src="http://cf.jare.io/?u=http://www.teamed.io/image/logo.svg"/>
+<img src="http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/>
 {% endhighlight %}
 
 That's it.
@@ -68,7 +68,7 @@ for that. Like in the example above. This is the URL: `http://www.teamed.io/imag
 There are three important parts in this address. First, it's `http`, the
 [protocol](https://en.wikipedia.org/wiki/Communications_protocol).
 Second, it's `www.teamed.io`, the [host](https://en.wikipedia.org/wiki/Host_%28network%29) name,
-and the tail `/image/logo.svg`, the
+and the tail `/images/logo.svg`, the
 [path](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax).
 To load the image the browser has to open a
 [socket](https://en.wikipedia.org/wiki/Network_socket),
@@ -97,22 +97,52 @@ Address: 199.27.79.133
 IP address of `www.teamed.io` is `199.27.79.133`, at the time of writing.
 
 When the address is known, the browser opens a new socket and sends
-an HTTP request through it:
+an [HTTP request](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message)
+through it:
 
-The server responds with an HTTP response:
+{% highlight text %}
+GET /images/logo.svg HTTP/1.1
+Host: www.teamed.io
+Accept: image/*
+{% endhighlight %}
 
-That is the SVG image we're looking for. The browser renders it on the web page
+The server responds with an
+[HTTP response](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message):
+
+{% highlight text %}
+HTTP/1.1 200 OK
+Content-Type: image/svg+xml
+
+[SVG image content goes here, over 1000 bytes]
+{% endhighlight %}
+
+That is the [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+image we're looking for. The browser renders it on the web page
 and that's it.
 
-## The Network of Delivery Nodes
+## The Network of Edge Servers
 
 So far so good, but if the distance between your browser and that IP address
 is rather big, loading of the image will take a lot of time. Well, hundreds
 of milliseconds. Try to load this image, which is located on the server
-that is hosted in Prague, Czech Republic:
+that is hosted in Prague, Czech Republic (I'm using `curl` as suggested
+[here](https://josephscott.org/archives/2011/10/timing-details-with-curl/)):
+
+{% highlight text %}
+$ curl -w "@f.txt" -o /dev/null -s \
+  http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.004
+       time_connect:  0.180
+    time_appconnect:  0.000
+   time_pretransfer:  0.180
+      time_redirect:  0.000
+ time_starttransfer:  0.361
+                    ----------
+         time_total:  0.361
+{% endhighlight %}
 
 I'm trying to do it from Palo Alto, California, which is about half a globe
-away from Prague. As you see, it takes over 200ms. That's too much, especially
+away from Prague. As you see, it takes over 300ms. That's too much, especially
 if a web page contains many images. Overall page loading may take seconds,
 just because the server is too far away from me. Well, it will inevitably
 too far away from some users, no matter where we host it. If we host it here,
@@ -126,5 +156,19 @@ Like in our example with a logo. This logo doesn't need to be unique for
 each user. It is a very _static_ resource, which needs to be created only once
 and be delivered to everybody, without any changes.
 
+So, how about we install a server somewhere here, in California. And let
+Californian users connect to it. When a request for `logo.gif` will come
+to one of that _edge_ servers, it will connect to the central server
+in Prague and load the file. This will happen only once. After that, the
+edge server will not request the file
+from the central server. It will return it immediately, from its internal cache.
 
+We need to have many edge servers, preferably in all countries where
+our users may be located. The first request will take longer, but all others
+will be way faster. Because they will be servered from the closest edge server.
+
+Now, the question is how the browser will know which edge server is the closest, right?
+We simply trick the domain name resolution process.
+That's how [AWS CloudFront](https://aws.amazon.com/cloudfront/) works, for example.
+Let's query `cf.jare.io` and see what comes back:
 
