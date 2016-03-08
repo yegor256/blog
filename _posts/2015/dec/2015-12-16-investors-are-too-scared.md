@@ -77,7 +77,8 @@ Why? Who knows. They won't tell you. They are cowards, and they are afraid
 of telling you that your idea sucks and your business plan is totally wrong.
 They are afraid of being **honest**.
 
-There is an almost identical situation with recruitment. You send your resume
+There is an almost identical situation with recruitment. You send your
+[resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
 to Facebook, they interview you, and you spend a few hours with them, answering
 their questions. In the end, they email you, saying "We decided not to proceed
 any further; good luck in your job search". They are afraid of telling you

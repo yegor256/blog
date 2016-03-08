@@ -19,7 +19,7 @@ keywords:
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
 At [Teamed.io](http://www.teamed.io), we've been getting
-about 10 resumes every day from programmers who want to work
+about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) every day from programmers who want to work
 with us. We don't do video or online coding interviews. We don't
 ask you to solve any puzzles or demonstrate your
 algorithm-writing abilities. Moreover, when we decide not to
