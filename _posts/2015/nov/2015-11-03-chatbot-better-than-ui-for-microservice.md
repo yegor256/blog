@@ -31,7 +31,7 @@ Let me give an example first. Look at the
 [jcabi/jcabi-http#115](https://github.com/jcabi/jcabi-http/issues/115)
 GitHub ticket:
 
-{% figure /images/2015/10/chatbot-1.jpg 600 %}
+{% figure /images/2015/10/chatbot-1.png 600 %}
 
 <style>
 .bullet {
