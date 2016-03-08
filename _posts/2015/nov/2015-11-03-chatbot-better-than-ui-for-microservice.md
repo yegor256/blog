@@ -267,6 +267,8 @@ Yes, think about the future of this approach. If there is a centralized
 message board where users talk to a chatbot, why can't other chatbots
 talk to each other too?
 
+{% youtube mHCwlZSlZeU video-left %}
+
 Forget about RESTful APIs. Just a message board where chatbots post
 their requests and collect responses. They are perfectly decoupled, replaceable,
 and very scalable. Also, their communication protocol is visible and very
