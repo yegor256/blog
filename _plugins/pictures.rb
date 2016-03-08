@@ -10,6 +10,10 @@ module Yegor
       else
         @url = src
       end
+      if !@url.start_with?('http')
+        base = "http://www.yegor256.com#{@url}";
+        @url = "http://cf.jare.io/?u=#{CGI::escape(base)}"
+      end
     end
     def to_s
       CGI.escapeHTML(@url)
