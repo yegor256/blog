@@ -19,6 +19,18 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+{% youtube VzhIpjPdJyM video-left %}
+[April 6, 2016](https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4)
+**Who is Software Architect?**
+Software architect is responsible for failures. Software is powerful
+enough to make and overrule any decision. But that's not it.
+We will also talk about delegation of responsibility and micromanagement.﻿
+Mostly, this webinar will summarize what these articles are talking
+about:
+[Are You a Micromanager?]({% pst 2015/sep/2015-09-22-micromanagement %})
+and
+[Who Is Software Architect?]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
+
 {% youtube nheD2LNYrpk video-left %}
 [March 2, 2016](https://plus.google.com/events/ch54gu0ddhb5sj2v9v1hhrfc71s)
 **Takes, Java Web Framework, Intro**
