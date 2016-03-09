@@ -141,7 +141,7 @@ Vilnius, Lithuania<br/>
 Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
 
-<img src="/images/2016/ndcoslo-2016.jpg" class="talks-talk" alt="NDC Oslo 2016"/>
+<img src="/images/2016/ndcoslo-2016.png" class="talks-talk" alt="NDC Oslo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
 [NDC Oslo](http://ndcoslo.com/speaker/yegor-bugayenko/)<br/>
 Oslo, Norway<br/>
