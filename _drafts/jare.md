@@ -131,18 +131,16 @@ that is hosted in Prague, Czech Republic (I'm using `curl` as suggested
 {% highlight text %}
 $ curl -w "@f.txt" -o /dev/null -s \
   http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
-    time_namelookup:  0.004
-       time_connect:  0.180
-    time_appconnect:  0.000
-   time_pretransfer:  0.180
-      time_redirect:  0.000
- time_starttransfer:  0.361
+    time_namelookup:  0.005
+       time_connect:  0.376
+   time_pretransfer:  0.377
+ time_starttransfer:  0.566
                     ----------
-         time_total:  0.361
+         time_total:  0.567
 {% endhighlight %}
 
 I'm trying to do it from Palo Alto, California, which is about half a globe
-away from Prague. As you see, it takes over 300ms. That's too much, especially
+away from Prague. As you see, it takes over 500ms. That's too much, especially
 if a web page contains many images. Overall page loading may take seconds,
 just because the server is too far away from me. Well, it will inevitably
 too far away from some users, no matter where we host it. If we host it here,
@@ -168,7 +166,125 @@ our users may be located. The first request will take longer, but all others
 will be way faster. Because they will be servered from the closest edge server.
 
 Now, the question is how the browser will know which edge server is the closest, right?
-We simply trick the domain name resolution process.
-That's how [AWS CloudFront](https://aws.amazon.com/cloudfront/) works, for example.
-Let's query `cf.jare.io` and see what comes back:
+We simply trick the domain name resolution process. Depending on who is asking,
+the DNS will give different answers. Let's take `cf.jare.io` for example (it
+is the name of all edge servers responsible for delivering our content
+in AWS CloudFront, a CNAME for `djk1be5eatcae.cloudfront.net`).
+If I'm looking it up from California, I'm getting this answer:
 
+{% highlight text %}
+$ nslookup cf.jare.io
+Server:   192.168.1.1
+Address:  192.168.1.1#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 54.230.141.211
+{% endhighlight %}
+
+An edge server with IP address `54.230.141.211` is located in
+[San Francisco](https://db-ip.com/54.230.141.211). This
+is rather close to me, less than a fifty miles. If I do the same operation
+from a server in Virginia, I'm getting a different response:
+
+{% highlight text %}
+$ nslookup cf.jare.io
+Server:   172.16.0.23
+Address:  172.16.0.23#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 52.85.131.217
+{% endhighlight %}
+
+An edge server with IP address `52.85.131.217` is located in
+[Washington](https://db-ip.com/52.85.131.217), which is far away from
+me, but very close to the server I was making that lookup from.
+
+There are thousands of name servers around the world and all of them
+have different information about where that edge server `cf.jare.io`
+is physically located. Depending on who is asking the answer is different.
+
+## AWS CloudFront
+
+[CloudFront](https://aws.amazon.com/cloudfront/) is one of the simplest
+CDN solutions. All you have to do to start delivering your content
+through their edge nodes is to create a "distribution" and configure it.
+A distribution is basically a connector between content origin and
+edge servers:
+
+{% plantuml %}
+skinparam componentStyle uml2
+Browser -right-> [Edge]
+[Edge] -right-> [Central]
+[Central] -right-> [Origin]
+{% endplantuml %}
+
+One of edge servers receives an HTTP request. If it already has that
+`logo.svg` in its cache, it immediately returns an HTTP response with its
+content inside. If its cache is empty, the edge server makes an HTTP
+request to the central server. This server knows about the "distribution"
+and its configuration. It makes an HTTP connection to the origin server,
+which is `www.teamed.io` and asks it to return `logo.svg`. When done,
+the image is returned to the edge server, where it is cached.
+
+Looks rather simple, but it's not free and it's that quick to configure.
+You have to create an account with CloudFront, register your credit card
+there, get an approval. Then, you have to create a distribution and configure it.
+Then, you should create that CNAME in your name server. If you're doing it
+for a single website, it's not a big deal. If you have a dozen of websites,
+it's a time consuming operation.
+
+## Jare.io, a Middle Man
+
+Jare.io is an extra component in that diagram, which makes your
+life easier:
+
+{% plantuml %}
+skinparam componentStyle uml2
+Browser -right-> [Edge]
+[Edge] -right-> [Central]
+[Central] -down-> [Relay]
+[Relay] -right-> [Origin]
+{% endplantuml %}
+
+Jare.io has a "relay", which acts as an origin server for CloudFront. All
+requests that arrive to `cf.jare.io` are dispatched to the relay. The relay
+decides what to do with them. The decision is based on the information
+from the HTTP request URI. For example, the request from the browser
+has this URI path:
+
+{% highlight text %}
+/?u=http://www.teamed.io/images/logo.svg
+{% endhighlight %}
+
+Remember, the request is made to `cf.jare.io`, which is the address of
+the edge server. This exact URI arrives to `relay.jare.io`. The URI contains
+enough information to make a decision which file has to be returned.
+The relay makes a new HTTP request to `www.teamed.io` and retrieves the image.
+
+The beauty of this solution is that it's easy. For small websites
+it is a free and quick CDN.
+
+By the way, when we query the same image through jare.io (and CloudFront),
+it comes back way faster:
+
+{% highlight text %}
+$ curl -w "@f.txt" -o /dev/null -s \
+  http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.005
+       time_connect:  0.021
+   time_pretransfer:  0.021
+ time_starttransfer:  0.041
+                    ----------
+         time_total:  0.041
+{% endhighlight %}
+
+The main work is done by AWS CloudFront, while jare.io is just a
+relay that makes its configuration more convenient. Besides, it makes
+it free, because jare.io is sponsored by
+[Teamed.io](http://www.teamed.io). In other words, my company will
+pay for your usage of CloudFront. I will appreciate if you keep that in
+mind and don't use jare.io for traffic-intensive resources.
