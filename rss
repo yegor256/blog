@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-09T20:36:39+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Pimp Up Your Resume</title><link href="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html" rel="alternate" type="text/html" title="Pimp Up Your Resume" /><published>2016-03-08T00:00:00+00:00</published><updated>2016-03-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/08/pimp-up-your-resume</id><content type="html" xml:base="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html">&lt;p&gt;There are tons of articles about resume writing. Literally,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-09T23:09:25+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Pimp Up Your Resume</title><link href="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html" rel="alternate" type="text/html" title="Pimp Up Your Resume" /><published>2016-03-08T00:00:00+00:00</published><updated>2016-03-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/08/pimp-up-your-resume</id><content type="html" xml:base="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html">&lt;p&gt;There are tons of articles about resume writing. Literally,
 &lt;a href=&quot;https://www.google.com/search?q=how+to+write+resume&quot;&gt;tons of them&lt;/a&gt;.
 And here&amp;#39;s yet another one? Well, maybe ... but I don&amp;#39;t think so. I&amp;#39;ll try to
 give you a few &lt;strong&gt;practical&lt;/strong&gt; hints for how to make your resume look
@@ -670,7 +670,7 @@ To the contrary, the second example is about what will be achieved. It&amp;#39;s
 the &lt;code&gt;Text&lt;/code&gt; of the file or &lt;code&gt;Words&lt;/code&gt; of the text (both are &lt;strong&gt;nouns&lt;/strong&gt;).&lt;/p&gt;
 
 &lt;p&gt;I believe there is no place for debugging in clean object-oriented
-programming. Only unit testing!&lt;/p&gt;</content><category term="tdd" /><summary>Debugging
+programming. Only unit testing!&lt;/p&gt;</content><category term="jcg" /><category term="tdd" /><summary>Debugging
 is &amp;quot;a process of running a program/method interactively,
 breaking execution flow after each statement and showing...&amp;quot; In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
@@ -838,7 +838,7 @@ they are all &lt;span class=&quot;green&quot;&gt;good&lt;/span&gt;, since they
 have almost nothing to do with object-oriented programming.&lt;/p&gt;
 
 &lt;p&gt;If you know some other design (anti-)patterns, let me know
-in the comments below. I&amp;#39;ll add them here.&lt;/p&gt;</content><category term="oop" /><summary>Design Patterns are ...
+in the comments below. I&amp;#39;ll add them here.&lt;/p&gt;</content><category term="jcg" /><category term="oop" /><summary>Design Patterns are ...
 Come on, you know what they are. They are
 something we love and hate. We love them because they let us
 write code without thinking. We hate them when we see the code
@@ -947,7 +947,7 @@ directly with objects that don&amp;#39;t defend themselves.&lt;/p&gt;
 
 &lt;p&gt;I also decided not to use the Java Validation API anymore for the
 same reason. Its annotations make classes much more verbose
-and less cohesive. I&amp;#39;m using validating decorators instead.&lt;/p&gt;</content><category term="oop" /><summary>Do you check the input parameters of your methods for validity?
+and less cohesive. I&amp;#39;m using validating decorators instead.&lt;/p&gt;</content><category term="jcg" /><category term="oop" /><summary>Do you check the input parameters of your methods for validity?
 I don&amp;#39;t. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
@@ -1115,7 +1115,7 @@ in new ideas. Not at all.&lt;/p&gt;
 a good entrepreneur knows how to find money. That&amp;#39;s the definition
 of a decent entrepreneur.&lt;/p&gt;
 
-&lt;p&gt;Period.&lt;/p&gt;</content><category term="business" /><summary>&amp;quot;You&amp;#39;re a good programmer. I&amp;#39;m a great entrepreneur. This is a
+&lt;p&gt;Period.&lt;/p&gt;</content><category term="jcg" /><category term="business" /><summary>&amp;quot;You&amp;#39;re a good programmer. I&amp;#39;m a great entrepreneur. This is a
 breakthrough idea. Help me build it. I don&amp;#39;t have cash, but I will
 give you equity. Deal?&amp;quot; I hear this at least once a month, and
 I always say no. Not because I don&amp;#39;t like your idea. Indeed, it
