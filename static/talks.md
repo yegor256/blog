@@ -141,6 +141,12 @@ Vilnius, Lithuania<br/>
 Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
 
+<img src="/images/2016/ndcoslo-2016.jpg" class="talks-talk" alt="NDC Oslo 2016"/>
+**Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
+[NDC Oslo](http://ndcoslo.com/speaker/yegor-bugayenko/)<br/>
+Oslo, Norway<br/>
+8 June 2016
+
 <img src="/images/2016/cloudexpo-2016.jpg" class="talks-talk" alt="CloudExpo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
 [18th Cloud Expo](http://soa.sys-con.com/node/3661412)<br/>
