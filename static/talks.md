@@ -57,6 +57,12 @@ Washington DC, USA<br/>
 Olomouc, Czech Republic<br/>
 5 April 2016
 
+<img src="/images/2016/outsource-people-2016.png" class="talks-talk" alt="Outsource People 2016"/>
+**Software Outsourcing, 10 Years Ahead Prediction**<br/>
+[Outsource People 2016](http://outsource-people.com/en)<br/>
+Minsk, Belarus<br/>
+8 April 2016
+
 <img src="/images/2016/agileee-2016.png" class="talks-talk" alt="AgileEE 2016"/>
 **Meeting-Free Software Development**<br/>
 [AgileEE 2016](http://kiev2016.agileee.org/)<br/>
