@@ -8,6 +8,7 @@ description:
   Sequential method calls inevitably mean
   temporal coupling, which is a bottleneck for
   effective refactoring; avoid them.
+category: jcg
 keywords:
   - temporal coupling
   - temporal coupling java

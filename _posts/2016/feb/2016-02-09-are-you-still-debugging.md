@@ -8,6 +8,7 @@ description:
   The necessity of debugging is an indicator of code problems
   and a great motivator for immediate refactoring
   and unit testing.
+category: jcg
 keywords:
   - debugging
   - debugging vs testing

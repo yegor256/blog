@@ -8,6 +8,7 @@ description:
   These are the most popular design patterns in
   object-oriented programming, though some of them
   are actually anti-patterns, in my opinion.
+category: jcg
 keywords:
   - design pattern
   - oop design pattern
