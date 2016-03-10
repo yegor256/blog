@@ -76,10 +76,11 @@ Eindhoven, Netherlands<br/>
 16 April 2016
 
 <img src="/images/2016/jpoint-2016.png" class="talks-talk" alt="JPoint 2016"/>
-**ORM is an Offensive Anti-Pattern**<br/>
+**ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
+[Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
 [JPoint 2016](http://javapoint.ru/en/)<br/>
 Moscow, Russia<br/>
-22-23 April 2016
+22-24 April 2016
 
 <img src="/images/2016/dotw-2016.png" class="talks-talk" alt="Delivery of Things World 2016"/>
 **Problems with Continuous Integration**<br/>
