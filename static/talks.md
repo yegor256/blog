@@ -88,7 +88,7 @@ Moscow, Russia<br/>
 Berlin, Germany<br/>
 24 April 2016
 
-<img src="/images/2016/jet-2016.png" class="talks-talk" alt="JET Conferene 2016"/>
+<img src="/images/2016/jet-2016.png" class="talks-talk" alt="JET Conference 2016"/>
 **An Immutable Object-Oriented Web Framework**<br/>
 [JET Conference](http://jetconf.by/)<br/>
 Minsk, Belarus<br/>
@@ -144,7 +144,7 @@ Dnepropetrovsk, Ukraine<br/>
 
 <img src="/images/2016/ndcoslo-2016.png" class="talks-talk" alt="NDC Oslo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
-[NDC Oslo](http://ndcoslo.com/speaker/yegor-bugayenko/)<br/>
+[NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/)<br/>
 Oslo, Norway<br/>
 8 June 2016
 
