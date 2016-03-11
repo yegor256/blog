@@ -18,11 +18,11 @@ keywords:
 
 Revenue means **cash** that is coming to your bank account every month,
 from your customers. Not investors. Customers. Those who are buying
-your products or your service. You are doing everything you can
+your products or services. You are doing everything you can
 to make sure this number grows. Mostly because you use this money
 to pay your rent, buy food and settle that graphic designer's invoices.
-Without revenue your business will die, right? Yes, maybe. But, in my experience,
-a growing revenue may kill you even faster than its absence.
+Without revenue your startup will die, right? Yes, maybe. But, in my experience,
+a growing revenue may kill it even faster.
 
 <!--more-->
 
@@ -30,45 +30,76 @@ a growing revenue may kill you even faster than its absence.
 
 I see this rather typical pattern in many startups we're interviewing
 in [SeedRamp](http://www.seedramp.com). The idea is great, the prototype
-works, first customers are on board, first payments are coming in,
-founders are excited. They spend all their energy to make sure that
-customers are happy by making new features, fixing bugs and employing
-new customer retention tools. They are also trying to acquire new
-customers, paying for marketing, promotion and AdWords. The numbers
+works, first customers are on board and first payments are coming in.
+Founders are excited. They spend all their energy to make sure that
+first paying customers are happy by making new features, fixing bugs and employing
+new CRMs. They are also trying to acquire new
+buyers, paying for marketing, promotion and Google AdWords. The numbers
 are growing every month and ... they don't realize that they are
 actually **killing** their own startup.
 
-There is a big difference between a
-[lifestyle business](https://en.wikipedia.org/wiki/Lifestyle_business)
-and a [startup company](https://en.wikipedia.org/wiki/Startup_company).
-You create a lifestyle business in order to generate revenue and become
-rich by taking part of its
-[profit](https://en.wikipedia.org/wiki/Profit_%28accounting%29) as
+If you're building a cafe, a bakery, a web development studio,
+or a bicycle repair shop, a growing customer base with a stable revenue
+must be your main objective. Because your main source of income is the
+[profit](https://en.wikipedia.org/wiki/Profit_%28accounting%29)
+you will get from the business, in form of
 [dividends](https://en.wikipedia.org/wiki/Dividend).
-A good example of a lifestyle business is a
-cafe, a bakery, a law firm, a body shop, or a web development studio.
-Your goal in a lifestyle business is to **make money**, for yourself. Your
-goal is the profit, as part of the revenue.
-On the first day and in five years. You could be making
-$500 a month or $100 million a year, as a founder of that business &mdash;
-it is still a lifestyle business.
 
-A startup company is a different story.
+How rich you will become depends on many factors, but usually such a
+[lifestyle business](https://en.wikipedia.org/wiki/Lifestyle_business)
+takes years to really take off and start making millions of dollars, which
+you're obviously looking for.
 
-Your customers and your revenue is not the goal in a startup, but just
-an **instrument** that helps you achieve your real goal &mdash;
+In that type of business, almost everything depends on your energy,
+your management skills, you ability to work non-stop and motivate others
+do the same. If you have all that in place, you most certainly will
+get what you deserve, sooner or later. In most cases, later.
+But you will get it.
+
+The concept of a [startup company](https://en.wikipedia.org/wiki/Startup_company)
+is completely different. A startup is a **wild bet** you're making on some
+crazy idea, which makes "the world a better place". You're building
+a new Facebook, a Google killer, or a Snapchat replacement. Your goal
+is huge, while the investment is very small. Just a few years of work
+and you score hundreds of millions. This money will come not from
+happy customers and a steadily growing revenue. Not at all. You will
+become filthy rich only when someone buys your startup.
+
+These two strategies are opposite to each other:
+a traditional business vs. a startup.
+
+Customers and revenue is not the goal in a startup, but just
+an **instrument** that helps you achieve the real goal &mdash;
 [valuation](https://en.wikipedia.org/wiki/Business_valuation). You are
-supposed to use your revenue and customer base to convince investors
-that the prototype works and your valuation is already high enough. Moreover,
-a steadily growing revenue must be used as a primitive demonstration of a future
+supposed to use your revenue to convince investors
+that the prototype works and your valuation is already high enough.
+Your current steadily growing cashflow must be used as a demonstration of a future
 [customer acquisition](https://en.wikipedia.org/wiki/Customer_acquisition_management)
-model. But it is not the result by itself. It is just an instrument,
-a mean, a tool.
+model. But it is not the result by itself. It is just a tool in your hands.
 
-The valuation of
+Your valuation is what makes you rich, **not** your revenue or your happy
+customers. Of course, the revenue is important, but only as long as
+it serves the main goal &mdash; increase valuation, at an extremely
+fast pace. The revenue is not the goal, but the way to achieve it. The valuation
+is the goal.
 
-When you focus on your revenue, you're turning your startup into
-a lifestyle business.
+Startup valuation must grow fast, probably doubling itself every few months.
+If it's not happening, close the business and start something else. The
+valuation must **sky-rocket** or you have to abandon the startup and start
+another one, as soon as possible.
 
-There is a difference between
+One of the biggest mistakes a startup founder can make is to forget
+about this "sky-rocketing valuation" principle and focus on making
+customers happy and revenue growing. You will most likely kill your
+startup and, maybe, turn it into a lifestyle business.
 
+Savvy investors will avoid you, mostly because they
+understand that a growing revenue is just one of many other
+**elements** of a growing valuation. If you're focused on just one element,
+you most likely won't multiply your valuation a hundred times over the
+next year. Maybe you will multiply the revenue a few times, but who cares?
+The revenue is good for you, but not really good for investors.
+
+What is good for investors? What do they want to see you doing,
+which will convince them that you're working hard on making the valuation
+grow? I'll try to cover it in one of the next articles.
