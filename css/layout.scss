@@ -426,6 +426,14 @@ figure {
   text-decoration: none;
   white-space: nowrap;
 
+  img {
+    display: inline-block;
+    height: 1em;
+    margin-right: .2em;
+    margin-top: -.25em;
+    vertical-align: middle;
+  }
+
   &:visited {
     color: $white !important;
   }

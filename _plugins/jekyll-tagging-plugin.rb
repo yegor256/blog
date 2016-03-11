@@ -61,7 +61,13 @@ module Jekyll
     end
 
     def tag_link(tag)
-      %Q{<a href='#{tag_url(tag)}' class='tag notranslate'>#{tag}</a>}
+      prefix = case tag
+      when 'oop'
+        "<img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>"
+      else
+        ""
+      end
+      "<a href='#{tag_url(tag)}' class='tag notranslate'>#{prefix}#{tag}</a>"
     end
 
     def tag_url(tag)
@@ -81,7 +87,7 @@ module Jekyll
               #{post['date'].strftime('%-d %B %Y')}
             </time>
           </li>
-          <li>#{tags(post)}</li>
+          <li class='tags'>#{tags(post)}</li>
           <li class='unprintable'>
             <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='notranslate'>comments</a>
           </li>
