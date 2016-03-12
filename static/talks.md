@@ -144,7 +144,7 @@ Vilnius, Lithuania<br/>
 
 <img src="/images/2016/item-2016.svg" class="talks-talk" alt="ITEM 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
-[ITEM 2016](http://item.dp.ua/en/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
+[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
 Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
 
