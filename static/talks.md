@@ -37,6 +37,12 @@ given in Palo Alto, CA, on the 11th of February:
 }
 </style>
 
+There is a list of all venues I've been talking at with my short
+summary of their quality. Well, not just a summary, but an evaluation.
+No every conference is as good as some others. That's why I decided to
+give them some feedback, at least here, on the blog &mdash;
+[here it is](/venues.html).
+
 ## Upcoming Events
 
 <img src="/images/2016/cascadiait-2016.png" class="talks-talk" alt="CascadiaIT 2016"/>
