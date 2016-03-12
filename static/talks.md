@@ -118,6 +118,12 @@ Ypsilanti, MI, USA<br/>
 Tallinn, Estonia<br/>
 10 May 2016
 
+<img src="/images/2016/geecon-2016.png" class="talks-talk" alt="GeeCON 2016"/>
+**Need Robust Software? Make It Fragile**<br/>
+[GeeCON](http://2016.geecon.org/)<br/>
+Kraków, Poland<br/>
+11-13 May 2016
+
 <img src="/images/2016/itake-2016.png" class="talks-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Chatbots**<br/>
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
