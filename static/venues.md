@@ -95,7 +95,8 @@ in a hype market. It's a shame.
 That was a huge event with, I would say, over 2000 participants and almost
 zero efforts from organizers to make it interesting. Talks were mostly
 from sponsors, promoting their own products, or from clowns making
-living by talking about "why . Needless to say that they didn't
+living by talking about "why writing clean code is important".
+Needless to say that they didn't
 compensate travel expenses of speakers, while making a lot of money
 on tickets. It was a waste of time and money.
 
