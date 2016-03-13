@@ -176,13 +176,13 @@ Swansea, UK<br/>
 
 ### 2016
 
-<img src="..." class="talks-photo" alt="CascadiaIT 2016"/>
+<img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="talks-photo" alt="CascadiaIT 2016"/>
 Microservices as Chat Bots;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
 Seattle, USA;
 12 March 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
-[photos](...).
+[photos](https://www.facebook.com/yegor256/posts/10208900274414067).
 
 <img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xap1/t31.0-8/12779114_10208769429623029_6520293207651056937_o.jpg" class="talks-photo" alt="Kyiv DevOps Day"/>
 Need Robust Software? Make It Fragile;
