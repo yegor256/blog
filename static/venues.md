@@ -47,7 +47,7 @@ rate is <span class="green">**A+**</span>, while the worst is
 </style>
 
 <img src="/images/2016/tecclub-2016.png" class="venue-logo" alt="TECClub 2016"/>
-<aside class="venue-rate green">B</aside>
+<aside class="venue-rate green">B+</aside>
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/); 11 February 2016; Palo Alto, USA<br/>
 There were about 50 people in the room, most of whom were rather
 interested and engaged. The place was comfortable, equipment was of
