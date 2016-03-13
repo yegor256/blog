@@ -34,6 +34,7 @@ given in Palo Alto, CA, on the 11th of February:
   width: 160px;
   height: 90px;
   margin-right: 1em;
+  margin-bottom: 1em;
 }
 </style>
 
