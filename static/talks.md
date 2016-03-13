@@ -176,6 +176,7 @@ Swansea, UK<br/>
 
 ### 2016
 
+<div style="clear:both"/>
 <img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="talks-photo" alt="CascadiaIT 2016"/>
 Microservices as Chat Bots;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
@@ -184,6 +185,7 @@ Seattle, USA;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10208900274414067).
 
+<div style="clear:both"/>
 <img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xap1/t31.0-8/12779114_10208769429623029_6520293207651056937_o.jpg" class="talks-photo" alt="Kyiv DevOps Day"/>
 Need Robust Software? Make It Fragile;
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
@@ -193,6 +195,7 @@ Kyiv, Ukraine;
 [photos](https://www.facebook.com/yegor256/posts/10208769445463425),
 [video](https://www.youtube.com/watch?v=QMcDa2eyRBY).
 
+<div style="clear:both"/>
 <img src="https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xlp1/t31.0-8/12716134_10208695417172764_967441772087398479_o.jpg" class="talks-photo" alt="DeveloperWeek 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
 [DeveloperWeek 2016](http://www.developerweek.com/);
@@ -202,6 +205,7 @@ San Francisco, USA;
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
 
+<div style="clear:both"/>
 <img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xtf1/t31.0-8/12697208_10208707348791047_4450453450768330486_o.jpg" class="talks-photo" alt="DevNexus 2015"/>
 Talk To Your Microservice Via a Chat Bot, not UI;
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
@@ -211,6 +215,7 @@ Atlanta, USA;
 [photos](https://www.facebook.com/yegor256/posts/10208707358871299),
 [video](https://www.youtube.com/watch?v=Xj226o2xI9Y).
 
+<div style="clear:both"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12710820_10208653505765005_2904908739386245403_o.jpg" class="talks-photo" alt="TECClub 2016"/>
 XDSD : Meetings-Free Software Development Methodology;
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
@@ -222,6 +227,7 @@ Palo Alto, USA;
 
 ### 2015
 
+<div style="clear:both"/>
 <img src="/images/2015/devopsdays-warsaw-2015.jpg" class="talks-photo" alt="DevOpsDays Warsaw 2015"/>
 "Continuous Integration May Have Negative Effects";
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
@@ -231,6 +237,7 @@ Warsaw, Poland;
 [photos](https://www.facebook.com/yegor256/posts/10208114809057924),
 [video](https://www.youtube.com/watch?v=6SfIc5ff-8U).
 
+<div style="clear:both"/>
 <img src="/images/2015/buildstuff-2015.jpg" class="talks-photo" alt="BuildStuff 2015"/>
 "How Do You Talk To Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
@@ -240,6 +247,7 @@ Kyiv, Ukraine;
 [slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice),
 [video](https://www.youtube.com/watch?v=jUil-aTImgU).
 
+<div style="clear:both"/>
 <img src="/images/2015/dat-flock-2015.jpg" class="talks-photo" alt="DATFlock 2015"/>
 "What keeps us motivated and why we get lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
@@ -247,6 +255,7 @@ Berlin, Germany;
 19-20 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208081948956442).
 
+<div style="clear:both"/>
 <img src="/images/2015/kyiv-devops-2015.jpg" class="talks-photo" alt="Kyiv DevOps 2015"/>
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
@@ -255,6 +264,7 @@ Kyiv, Ukraine;
 [photos](https://www.facebook.com/yegor256/posts/10207965398482753),
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y).
 
+<div style="clear:both"/>
 <img src="/images/2015/sf-devops-2015.jpg" class="talks-photo" alt="San Francisco DevOps 2015"/>
 "CI is DEAD. Or is it?!";
 [San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);

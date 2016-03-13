@@ -27,6 +27,7 @@ rate is <span class="green">**A+**</span>, while the worst is
   display: block;
   height: 50px;
   margin-top: 2em;
+  max-width: 100%;
 }
 .venue-rate {
   float: right;
