@@ -44,7 +44,7 @@ No every conference is as good as some others. That's why I decided to
 give them some feedback, at least here, on the blog &mdash;
 [here it is](/venues.html).
 
-## Upcoming Events
+## 22 Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
