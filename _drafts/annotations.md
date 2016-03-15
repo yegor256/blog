@@ -5,7 +5,9 @@ date: 2016-03-21
 place: Seattle, WA
 tags: java oop
 description:
-  ....
+  Even though Java annotations are very popular and
+  convenient, they are making Java code less object-oriented
+  and more messy.
 keywords:
   - java annotations
   - java annotations example
