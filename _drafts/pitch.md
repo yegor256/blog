@@ -16,7 +16,7 @@ keywords:
   - startup pitch presentation
 ---
 
-Your success depends on the quality of your elevator pitch. Basically, your
+Your success depends on the quality of your **elevator pitch**. Basically, your
 success doesn't depend on almost anything else. The pitch is the king.
 You have to impress the <del>catcher</del> investor in just a few seconds, while
 the elevator is still moving (that's where you are supposed to hunt for that
@@ -42,17 +42,17 @@ principles and become a expert. Here they are. The principles.
   is an environmental breakthrough". Nobody knows what it means, but everybody
   understands that you're a big time innovator. Even if it's just a yet
   another calories calculator. Investors must understand that you're not just
-  making a software product, you innovate.
+  making a software product, you _innovate_.
 
   * **Complicate**.
   Internet of Things instead of a thermometer,
   Augmented Reality instead of goggles with a camera,
-  Global Health instead of a database of doctors and patients. You got the idea.
+  Global Health instead of a database of dentists. You got the idea.
   Don't be specific, it's dangerous. They may ask you what kind of database
   is that and how it is different from another fifty databases on the market. But
   if you're saying Global Health, they won't have any idea what you're talking
   about, which is exactly what you need. Learn that words and use them wherever
-  possible. Some of my favorite for you to remember: business model canvas, viral
+  possible. Some of my favorites for you to remember: business model canvas, viral
   mechanics, growth hacking, data-driven mentality, design thinking, and
   game-changing disruption.
 
@@ -84,6 +84,15 @@ principles and become a expert. Here they are. The principles.
   BTW, don't use Steven Jobs, it's not a trend any more.
   Moreover, he is dead already. Stick to Musk.
 
+  * **Respect**.
+  Always remember that you and your potential investors are not equal.
+  They have money, experience, reputation, and a Tesla. You have nothing.
+  You must demonstrate that you always remember that. Always position yourself
+  a bit lower, play newbie, ask questions, immitate interest in everything
+  they are saying. Never compete with them or even try to argue! They are always
+  right and they are simply awesome, you're just another nobody. Something
+  like "I'm honored to be in the same room with you" is a very good opener.
+
   * **Co-found**.
   You absolutely must have a co-founder, or even a few of them. They could
   be anybody. A room mate will work or just a friend of friend who recently
@@ -113,13 +122,13 @@ principles and become a expert. Here they are. The principles.
   into such a huge and promising market?
 
   * **Beg**.
-  Always remember that you are not equal. They have money, experience, reputation,
-  and a Tesla. You have nothing. You have to demonstrate that didn't forget
-  about this. Always position yourself a bit lower, play newbie, ask
-  questions, immitate interest in everything they are saying. Never compete
-  with them or argue! They are awesome, you're yet to be awesome. Something
-  like "I'm honored to be in the same room with you" may be too much, but
-  the direction is right.
+  You may mistakenly think that it's a balanced transaction &mdash;
+  they give money, you give part of your equity. You may expect that
+  both parties are equally interested in this. Don't make that mistake.
+  You're begging, they are giving. Out of courtesy. That's a win position
+  for you. By having money they expect to be on top of others. This is
+  what capitalism is about, right? Don't take this away from them. You
+  must be ready to shine their shoes. With a big smile on your face.
 
   * **Love**.
   The truth is that investors don't want to make money. They want to
@@ -130,6 +139,8 @@ principles and become a expert. Here they are. The principles.
   gamblers. Not any more. Give them what they want &mdash; love. Money
   are not so important, as long as you love each other. Remember, first
   they must fall in love with you, then they send the terms sheet.
+
+Did I miss something?
 
 Rehearse your pitch in front of the mirror, in the bathroom, three times
 every morning. I guarantee it, in less than two weeks you will sound
