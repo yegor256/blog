@@ -94,6 +94,15 @@ principles and become a expert. Here they are. The principles.
   and there is nothing left. Also, it's more fun to invest into a group
   of people &mdash; investors look more serious in that case.
 
+  * **Positive Thinking**.
+  Never say anything bad about anything or anyone. You literally have
+  to be 100% positive. That competitor who is stealing your customers is
+  "such a nice guy". That cup of coffee made out of some dark powder
+  is "very delicious". The programmers from Pakistan you found on
+  Upwork for $10/hour are "absolutely awesome". The marketing plan you
+  invented yesterday is "simply great". Never admit any mistakes,
+  risks, or threats. Simply ignore them. Stay positive. Investors like that.
+
   * **Market**.
   You have to mention that the market is absolutely huge. At least a hundred
   billion dollars. They won't be able to check anyway. Actually, nobody
@@ -103,7 +112,18 @@ principles and become a expert. Here they are. The principles.
   just saying it, you actually did some math. How can they not invest
   into such a huge and promising market?
 
+  * **Love**.
+  The truth is that investors don't want to make money. They want to
+  make love. You're are a perfect candidate. They are mostly old, rich,
+  lonely and miserable. Their success stories are behind them. All they
+  have is money, which they are afraid to spent, because they understand
+  that they won't make them again. They are used-to-be successful
+  gamblers. Not any more. Give them what they want &mdash; love. Money
+  are not so important, as long as you love each other. Remember, first
+  they must fall in love with you, then they send the terms sheet.
+
 Rehearse your pitch in front of the mirror, in the bathroom, three times
 every morning. I guarantee it, in less than two weeks you will sound
 like a proper SV startup founder. Well, a co-founder,
 don't forget that. Good luck, you will need a lot of it!
+
