@@ -25,7 +25,7 @@ principles and become a expert. Here they are. The principles.
 
 <!--more-->
 
-  * **Zuck's Look**.
+  * **Look**.
   Rule number one, you must look right. Like Mark Zuckerberg &mdash; the
   same gray t-shirt everyday with the same smile. The way you look must demonstrate
   that you're part of the community. You're one of us!
@@ -44,7 +44,7 @@ principles and become a expert. Here they are. The principles.
   another calories calculator. Investors must understand that you're not just
   making a software product, you innovate.
 
-  * **Wordz**.
+  * **Complicate**.
   Internet of Things instead of a thermometer,
   Augmented Reality instead of goggles with a camera,
   Global Health instead of a database of doctors and patients. You got the idea.
@@ -65,7 +65,7 @@ principles and become a expert. Here they are. The principles.
   everything! You love everyone! ... But, be careful, don't overact or you may
   end up in a mental hospital.
 
-  * **Uber**.
+  * **Compare**.
   Compare yourself to Uber, you will never lose. It was Airbnb a few years
   ago and Dropbox even before that. Today it's Uber. Start your pitch with
   "It's like Uber, but..." No matter what you put after that, it will work.
@@ -74,17 +74,17 @@ principles and become a expert. Here they are. The principles.
   just say that you're "like Uber, but" and your chances to score Round A
   will become higher.
 
-  * **Elon Musk**.
-  You have to mention this guy, you absolutely must. Try this:
+  * **Imitate**.
+  Elon Musk! You have to mention this guy, you absolutely must. Try this:
   "as Elon Musk said in his book, it is very difficult to build a successful
-  startup". You being aware of a wisdom like that will give them an impression
+  startup". You, being aware of a wisdom like that, gives them an impression
   that you're related to the Silicon Valley culture, which is what they want to feel.
   Always try to show that Elon Musk is a role model for you. Having a t-shirt
   with his face will also help.
   BTW, don't use Steven Jobs, it's not a trend any more.
   Moreover, he is dead already. Stick to Musk.
 
-  * **Co-founders**.
+  * **Co-found**.
   You absolutely must have a co-founder, or even a few of them. They could
   be anybody. A room mate will work or just a friend of friend who recently
   quit her full time job. It doesn't matter who they are, as long as you
@@ -94,16 +94,16 @@ principles and become a expert. Here they are. The principles.
   and there is nothing left. Also, it's more fun to invest into a group
   of people &mdash; investors look more serious in that case.
 
-  * **Positive Thinking**.
+  * **Radiate**.
   Never say anything bad about anything or anyone. You literally have
-  to be 100% positive. That competitor who is stealing your customers is
+  to be 100% in positive thinking mode. That competitor who is stealing your customers is
   "such a nice guy". That cup of coffee made out of some dark powder
   is "very delicious". The programmers from Pakistan you found on
   Upwork for $10/hour are "absolutely awesome". The marketing plan you
   invented yesterday is "simply great". Never admit any mistakes,
   risks, or threats. Simply ignore them. Stay positive. Investors like that.
 
-  * **Market**.
+  * **Bluff**.
   You have to mention that the market is absolutely huge. At least a hundred
   billion dollars. They won't be able to check anyway. Actually, nobody
   can check that, so don't worry. But don't give a round number, that would be a mistake! It
@@ -111,6 +111,15 @@ principles and become a expert. Here they are. The principles.
   them the confidence you need &mdash; the market is huge and you're not
   just saying it, you actually did some math. How can they not invest
   into such a huge and promising market?
+
+  * **Beg**.
+  Always remember that you are not equal. They have money, experience, reputation,
+  and a Tesla. You have nothing. You have to demonstrate that didn't forget
+  about this. Always position yourself a bit lower, play newbie, ask
+  questions, immitate interest in everything they are saying. Never compete
+  with them or argue! They are awesome, you're yet to be awesome. Something
+  like "I'm honored to be in the same room with you" may be too much, but
+  the direction is right.
 
   * **Love**.
   The truth is that investors don't want to make money. They want to
