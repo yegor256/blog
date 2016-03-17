@@ -29,7 +29,16 @@ The book just made it into the top 100 Amazon Best Sellers in
 There are [three reviews](http://goo.gl/5Yfx1i)
 already. Many thanks to their authors! Would
 be great if you publish yours &mdash; this will greatly help
-in promoting the manuscript.
+in promoting the manuscript. Besides that, I will be presenting the
+book at the following conferences in the next few months:
+[JPoint](http://javapoint.ru/en/) in Moscow, April 22;
+[JETConf](http://jetconf.by/#/yegor_bugayenko) in Minsk, April 25;
+[GeeCON](http://2016.geecon.org/) in Krakow, May 11;
+[DEVit](http://devitconf.org/) in Thessaloniki, May 20.
+[JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kiev, May 21.
+I will give away a few copies at each event, to those who
+ask the most interesting questions after my presentations. Don't miss your
+chance to get a free book :)
 
 <div style="clear:both"/>
 {% badge https://goo.gl/xMLwpe 180 https://goo.gl/bkuily %}

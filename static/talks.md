@@ -97,7 +97,7 @@ Berlin, Germany<br/>
 
 <img src="/images/2016/jet-2016.png" class="talks-talk" alt="JET Conference 2016"/>
 **An Immutable Object-Oriented Web Framework**<br/>
-[JET Conference](http://jetconf.by/)<br/>
+[JET Conference](http://jetconf.by/#/yegor_bugayenko)<br/>
 Minsk, Belarus<br/>
 25 April 2016
 
