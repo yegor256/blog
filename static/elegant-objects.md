@@ -22,6 +22,16 @@ more solid and architecture more visible.
 
 <!--more-->
 
+<div style="clear:both"/>
+Mar 17, 2016:
+The book just made it into the top 100 Amazon Best Sellers in
+[Object-Oriented Design category](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last)!
+There are [three reviews](http://goo.gl/5Yfx1i)
+already. Many thanks to their authors! Would
+be great if you publish yours &mdash; this will greatly help
+in promoting the manuscript.
+
+<div style="clear:both"/>
 {% badge https://goo.gl/xMLwpe 180 https://goo.gl/bkuily %}
 Feb 28, 2016:
 Over a 100 books sold already, in just one week! I'm glad to see
@@ -40,6 +50,7 @@ and throw it away, so that it doesn't take space. When an e-book is available,
 send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does this sound?
 
+<div style="clear:both"/>
 {% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/5Yfx1i %}
 Feb 22, 2016:
 The book is published! It is for sale,
@@ -54,6 +65,7 @@ It will help me attract more readers. After reading, please shoot me
 an email to [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested to know what you think. Thanks!
 
+<div style="clear:both"/>
 {% badge /images/books/elegant-objects/cactus.svg 125 %}
 Jan 27, 2016:
 This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
@@ -63,6 +75,7 @@ all our objects in Java. Right? Third, it's pretty hard to offend by
 breaking its skin and treating it as a bag for other objects. And forth,
 I just like it.
 
+<div style="clear:both"/>
 {% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
 Jan 19, 2016:
 Almost all reviewers have finished already. I'm waiting for the
@@ -71,12 +84,14 @@ final changes. Fortunately, the overall feedback is **positive**
 so far. All reviewers said that the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
+<div style="clear:both"/>
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://goo.gl/5Yfx1i)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 
+<div style="clear:both"/>
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
@@ -100,12 +115,14 @@ I hope to receive their reviews by the end of January. Then, will
 spend another 2-3 weeks to take their recommendations into account
 and they book will go out at the end of February.
 
+<div style="clear:both"/>
 Dec 6, 2015:
 I've received **63 emails** so far and it's time to choose the best candidates.
 I will do it in the next few days and will email them. I will announce
 the names of selected reviewers here, soon. Thanks a lot to all of you,
 for your readiness to help!
 
+<div style="clear:both"/>
 {% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
