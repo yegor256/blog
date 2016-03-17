@@ -2,7 +2,7 @@
 layout: post
 title: "Getters/Setters. Evil. Period."
 date: 2014-09-16
-tags: oop anti-pattern
+tags: oop
 categories: best jcg
 description:
   Getters and setters is a terrible anti-pattern in

@@ -2,7 +2,7 @@
 layout: post
 title: "10 Hosted Continuous Integration Services for a Private Repository"
 date: 2014-10-05
-tags: ci devops
+tags: devops
 description:
   I tried to use them all and made a comparison
   chart, which may help you to chose the most
