@@ -44,7 +44,7 @@ No every conference is as good as some others. That's why I decided to
 give them some feedback, at least here, on the blog &mdash;
 [here it is](/venues.html).
 
-## 22 Upcoming Events
+## 23 Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
@@ -75,6 +75,12 @@ Kiev, Ukraine<br/>
 [NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
 Eindhoven, Netherlands<br/>
 16 April 2016
+
+<img src="/images/2016/webit-2016.png" class="talks-talk" alt="WEBIT.Festival 2016"/>
+**Continuous Integration May Have Negative Effects**<br/>
+[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128)<br/>
+Sophia, Bulgaria<br/>
+20 April 2016
 
 <img src="/images/2016/jpoint-2016.png" class="talks-talk" alt="JPoint 2016"/>
 **ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
