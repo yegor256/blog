@@ -771,9 +771,6 @@
 <loc>http://www.yegor256.com/tag/java</loc>
 </url>
 <url>
-<loc>http://www.yegor256.com/tag/bugs</loc>
-</url>
-<url>
 <loc>http://www.yegor256.com/tag/dynamodb</loc>
 </url>
 <url>
@@ -814,9 +811,6 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/oop</loc>
-</url>
-<url>
-<loc>http://www.yegor256.com/tag/anti-pattern</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/stateful</loc>
@@ -870,12 +864,6 @@
 <loc>http://www.yegor256.com/tag/qulice</loc>
 </url>
 <url>
-<loc>http://www.yegor256.com/tag/static-analysis</loc>
-</url>
-<url>
-<loc>http://www.yegor256.com/tag/jdbc</loc>
-</url>
-<url>
 <loc>http://www.yegor256.com/tag/book-review</loc>
 </url>
 <url>
@@ -891,9 +879,6 @@
 <loc>http://www.yegor256.com/tag/tdd</loc>
 </url>
 <url>
-<loc>http://www.yegor256.com/tag/ci</loc>
-</url>
-<url>
 <loc>http://www.yegor256.com/tag/architect</loc>
 </url>
 <url>
@@ -906,7 +891,7 @@
 <loc>http://www.yegor256.com/tag/agile</loc>
 </url>
 <url>
-<loc>http://www.yegor256.com/tag/takes.org</loc>
+<loc>http://www.yegor256.com/tag/takes</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/css</loc>
@@ -925,9 +910,6 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/startup</loc>
-</url>
-<url>
-<loc>http://www.yegor256.com/tag/business</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/career</loc>
