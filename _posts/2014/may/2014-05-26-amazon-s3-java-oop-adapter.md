@@ -2,7 +2,7 @@
 layout: post
 title: "Object-Oriented Java Adapter of Amazon S3 SDK"
 date: 2014-05-26
-tags: aws s3 java
+tags: aws java
 description:
   jcabi-s3 is an object-oriented Java adapter for Amazon S3
   that simplifies basic read and write operations and
