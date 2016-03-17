@@ -22,7 +22,7 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
-This is a full list of articles published in my blog.
+This is a full list of blogs published:
 
 {{ site.posts | tagged_list }}
 
