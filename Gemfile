@@ -2,7 +2,7 @@
 # Just run "bundle"
 #
 source 'https://rubygems.org'
-gem 'jekyll', '3.1.1'
+gem 'jekyll', '3.1.2'
 gem 'sass', '3.4.21'
 gem 'jekyll-feed', '0.4.0'
 gem 'jekyll-gist', '1.4.0'
