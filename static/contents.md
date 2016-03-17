@@ -18,8 +18,11 @@ keywords:
 exclude_from_search: true
 ---
 
+All tags:
+
+{{ site.tags | tag_cloud }}
+
 This is a full list of articles published in my blog.
 
 {{ site.posts | tagged_list }}
 
-All tags: {{ site.tags | tag_cloud }}
