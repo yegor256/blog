@@ -18,7 +18,7 @@ keywords:
 exclude_from_search: true
 ---
 
-All tags:
+All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
