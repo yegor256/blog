@@ -83,7 +83,7 @@ Sophia, Bulgaria<br/>
 20 April 2016
 
 <img src="/images/2016/mixit-2016.png" class="talks-talk" alt="mix-IT 2016"/>
-**Meetings or Discipline, It's Your Choice** in
+**Meetings or Discipline, It's Your Choice**<br/>
 [mix-IT 2016](https://www.mix-it.fr/member/speaker/6392)<br/>
 Lyon, France<br/>
 21 April 2016
