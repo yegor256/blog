@@ -82,6 +82,12 @@ Eindhoven, Netherlands<br/>
 Sophia, Bulgaria<br/>
 20 April 2016
 
+<img src="/images/2016/mixit-2016.png" class="talks-talk" alt="mix-IT 2016"/>
+**Meetings or Discipline, It's Your Choice** in
+[mix-IT 2016](https://www.mix-it.fr/member/speaker/6392)<br/>
+Lyon, France<br/>
+21 April 2016
+
 <img src="/images/2016/jpoint-2016.png" class="talks-talk" alt="JPoint 2016"/>
 **ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
