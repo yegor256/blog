@@ -161,7 +161,6 @@ right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
 Your name will be in the book, on the 9th page,
 in the list of **acknowledgements**!
-
 I'm interested in your negative feedback mostly.
 Tell me what is not clear, what is missing, what needs a more detailed
 explanation. But, please, **don't argue** with my ideas. I won't change
@@ -172,4 +171,12 @@ book is about. However, I'm sure that my **explanations** and **arguments**
 have many flaws. As an early reviewer, you will help me find them.
 Again, don't argue with **what** I'm preaching, but complain about **how** I do it.
 
+<div style="clear:both"/>
+Sep 1, 2015:
+The manuscript is finished, in its first draft. Took about 200 hours. Most
+of the ideas were taken from the articles previously published on the blog.
+
+<div style="clear:both"/>
+Jul 5, 2015:
+I started to write it.
 
