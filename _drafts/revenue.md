@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Growing Revenue May Kill You"
+title: "A Growing Revenue May Kill Your Startup"
 date: 2016-03-14
 place: Palo Alto, CA
 tags: startup
