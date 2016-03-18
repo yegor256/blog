@@ -23,11 +23,13 @@ more solid and architecture more visible.
 <!--more-->
 
 <div style="clear:both"/>
-<img src="/images/2016/jpoint-2016.png" style="float:right;height:45px;" alt="JPoint 2016"/>
-<img src="/images/2016/jet-2016.png" style="float:right;height:45px;" alt="JET Conference 2016"/>
-<img src="/images/2016/geecon-2016.png" style="float:right;height:45px;" alt="GeeCON 2016"/>
-<img src="/images/2016/devit-logo.svg" style="float:right;height:45px;" alt="DEVit 2016"/>
-<img src="/images/2016/jeeconf-logo.png" style="float:right;height:45px;" alt="JEEConf 2016"/>
+<div style="float:right;margin-left:1em">
+  <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/><br/>
+  <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/><br/>
+  <img src="/images/2016/geecon-2016.png" style="height:45px;" alt="GeeCON 2016"/><br/>
+  <img src="/images/2016/devit-logo.svg" style="height:45px;" alt="DEVit 2016"/><br/>
+  <img src="/images/2016/jeeconf-logo.png" style="height:45px;" alt="JEEConf 2016"/>
+</div>
 Mar 17, 2016:
 The book just made it into the top 100 Amazon Best Sellers in
 [Object-Oriented Design category](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last)!
