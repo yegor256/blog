@@ -105,8 +105,8 @@ principles and become a expert. Here they are. The principles.
 
   * **Radiate**.
   Never say anything bad about anything or anyone. You literally have
-  to be 100% in positive thinking mode. That competitor who is stealing your customers is
-  "such a nice guy". That cup of coffee made out of some dark powder
+  to be 100% in _positive thinking_ mode. That competitor who is stealing your customers is
+  "such a nice guy". That cup of coffee made of some dark powder
   is "very delicious". The programmers from Pakistan you found on
   Upwork for $10/hour are "absolutely awesome". The marketing plan you
   invented yesterday is "simply great". Never admit any mistakes,
