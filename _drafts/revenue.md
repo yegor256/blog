@@ -26,8 +26,6 @@ a growing revenue may kill it even faster.
 
 <!--more-->
 
-{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
-
 I see this rather typical pattern in many startups we're interviewing
 in [SeedRamp](http://www.seedramp.com). The idea is great, the prototype
 works, first customers are on board and first payments are coming in.
@@ -37,6 +35,8 @@ new CRMs. They are also trying to acquire new
 buyers, paying for marketing, promotion and Google AdWords. The numbers
 are growing every month and ... they don't realize that they are
 actually **killing** their own startup.
+
+{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
 
 If you're building a cafe, a bakery, a web development studio,
 or a bicycle repair shop, a growing customer base with a stable revenue
