@@ -25,20 +25,15 @@ more solid and architecture more visible.
 <div style="clear:both"/>
 <div style="float:right;margin-left:1em">
   <a href="http://javapoint.ru/en/">
-    <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/>
-  </a><br/>
+    <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/></a><br/>
   <a href="http://jetconf.by/#/yegor_bugayenko">
-    <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/>
-  </a><br/>
+    <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/></a><br/>
   <a href="http://2016.geecon.org/">
-    <img src="/images/2016/geecon-2016.png" style="height:45px;" alt="GeeCON 2016"/>
-  </a><br/>
+    <img src="/images/2016/geecon-2016.png" style="height:45px;" alt="GeeCON 2016"/></a><br/>
   <a href="http://devitconf.org/">
-    <img src="/images/2016/devit-logo.svg" style="height:45px;" alt="DEVit 2016"/>
-  </a><br/>
+    <img src="/images/2016/devit-logo.svg" style="height:45px;" alt="DEVit 2016"/></a><br/>
   <a href="http://jeeconf.com/speaker/yegor-bugayenko/">
-    <img src="/images/2016/jeeconf-logo.png" style="height:45px;" alt="JEEConf 2016"/>
-  </a>
+    <img src="/images/2016/jeeconf-logo.png" style="height:45px;" alt="JEEConf 2016"/></a>
 </div>
 Mar 17, 2016:
 The book just made it into the top 100 Amazon Best Sellers in
