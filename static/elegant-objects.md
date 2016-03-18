@@ -39,7 +39,7 @@ book at the following conferences in the next few months:
 [JPoint](http://javapoint.ru/en/) in Moscow, April 22;
 [JETConf](http://jetconf.by/#/yegor_bugayenko) in Minsk, April 25;
 [GeeCON](http://2016.geecon.org/) in Krakow, May 11;
-[DEVit](http://devitconf.org/) in Thessaloniki, May 20.
+[DEVit](http://devitconf.org/) in Thessaloniki, May 20;
 [JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kiev, May 21.
 I will give away a few copies at each event, to those who
 ask the most interesting questions after my presentations. Don't miss your
