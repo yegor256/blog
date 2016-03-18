@@ -121,6 +121,15 @@ principles and become a expert. Here they are. The principles.
   just saying it, you actually did some math. How can they not invest
   into such a huge and promising market?
 
+  * **Scream**.
+  Especially if you're in a public place, you must speak as if you're
+  a bit deaf. Be loud. That will prove that you're absolutely
+  confident in what you're saying, today and always. The investor
+  will be sure that you are capable of attracting <del>mates</del> customers and
+  other investors, at least because you're not afraid of being that ugly loud
+  in public. You're a 100% extravert &mdash; you must demonstrate it,
+  shamelessly.
+
   * **Beg**.
   You may mistakenly think that it's a balanced transaction &mdash;
   they give money, you give part of your equity. You may expect that
