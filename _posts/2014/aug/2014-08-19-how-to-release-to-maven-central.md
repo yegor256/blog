@@ -167,7 +167,7 @@ Otherwise, add this plugin to your `pom.xml`:
 
 ## Configure Versions Plugin
 
-Once again, I recommend using [http://parent.jcabi.com](jcabi-parent). It
+Once again, I recommend using [jcabi-parent](http://parent.jcabi.com). It
 configures all required plugins out-of-the-box. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -194,7 +194,7 @@ Otherwise, add this plugin to your `pom.xml`:
 
 ## Configure Sonatype Plugin
 
-Yes, you're right, [http://parent.jcabi.com](jcabi-parent) will help
+Yes, you're right, [jcabi-parent](http://parent.jcabi.com) will help
 you here as well. If you're using it, skip this step too.
 
 Otherwise, add these four plugins to your `pom.xml`:
