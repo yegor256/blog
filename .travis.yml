@@ -2,7 +2,6 @@ language: ruby
 rvm:
   - 2.0.0
 sudo: required
-cache: bundler
 branches:
   only:
     - master
