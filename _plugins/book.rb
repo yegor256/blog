@@ -9,7 +9,7 @@ module Yegor
       "</a>" \
       "Read more about this subject in " \
       "<a href='#{link}'>Section&nbsp;#{opts[1]}</a>" \
-      " of this book" \
+      " of my book" \
       "<a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button'/></a>" \
       "</aside>"
     end

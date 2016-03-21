@@ -15,6 +15,7 @@ keywords:
   - decorator pattern java
   - decorator java
   - encapsulation
+book: elegant-objects 3.2.6
 ---
 
 A [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
