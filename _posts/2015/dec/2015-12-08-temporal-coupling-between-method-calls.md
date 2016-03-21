@@ -15,6 +15,7 @@ keywords:
   - temporal coupling hidden
   - temporal coupling in oop
   - temporal coupling definition
+book: elegant-objects 2.6.3
 ---
 
 Temporal coupling happens between sequential method calls
