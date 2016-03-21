@@ -370,9 +370,9 @@ blockquote {
   @extend %unprintable;
   float: right;
   font-family: $code-font;
-  margin: .5 * $em -5 * $em .5 * $em $em;
+  margin: .5 * $em -6 * $em .5 * $em $em;
   padding-left: .75 * $em;
-  width: 14 * $em;
+  width: 15 * $em;
 
   .book-cover {
     float: left;
