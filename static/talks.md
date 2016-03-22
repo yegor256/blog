@@ -23,6 +23,12 @@ for the most recent news. Also, I can give a lecture in your office,
 here is [how](/lectures.html). Here is one of the latest presentation I've
 given in Palo Alto, CA, on the 11th of February:
 
+<script>
+$(function() {
+  $('#total').text($('img.talks-talk').length);
+}
+</script>
+
 <style>
 .talks-talk {
   display: block;
@@ -44,7 +50,7 @@ No every conference is as good as some others. That's why I decided to
 give them some feedback, at least here, on the blog &mdash;
 [here it is](/venues.html).
 
-## 23 Upcoming Events
+## <span id='total'>Some</span> Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
 **How Many Meetings Is Enough for a Distributed Team**<br/>
