@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Try. Finally. If. Null."
+title: "Try. Finally. If. Not. Null."
 date: 2016-02-16
 place: Palo Alto, CA
 tags: java oop
