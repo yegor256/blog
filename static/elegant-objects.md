@@ -37,7 +37,7 @@ more solid and architecture more visible.
 </div>
 Mar 17, 2016:
 The book just made it into the top 100 Amazon Best Sellers in
-[Object-Oriented Design category](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last)!
+[Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/5Yfx1i)
 already. Many thanks to their authors! Would
 be great if you publish yours &mdash; this will greatly help

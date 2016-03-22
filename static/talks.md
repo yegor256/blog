@@ -47,7 +47,7 @@ give them some feedback, at least here, on the blog &mdash;
 ## 23 Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="talks-talk" alt="SEDC 2016"/>
-**Meeting-Free Software Development, in Distributed Teams**<br/>
+**How Many Meetings Is Enough for a Distributed Team**<br/>
 [SEDC 2016](http://www.sedcconference.org/)<br/>
 Washington DC, USA<br/>
 31 March 2016
