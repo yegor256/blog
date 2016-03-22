@@ -27,7 +27,7 @@ given in Palo Alto, CA, on the 11th of February:
 $(function() {
   $('#future-talks-total').text($('img.future-talk').length);
   $('#past-talks-total').text($('img.past-talk').length);
-}
+});
 </script>
 
 <style>
