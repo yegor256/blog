@@ -51,7 +51,7 @@ No every conference is as good as some others. That's why I decided to
 give them some feedback, at least here, on the blog &mdash;
 [here it is](/venues.html).
 
-## <span id='future-talks-total'>Some</span> Upcoming Events
+## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="future-talk" alt="SEDC 2016"/>
 **How Many Meetings Is Enough for a Distributed Team**<br/>
@@ -198,7 +198,7 @@ Tallinn, Estonia<br/>
 Swansea, UK<br/>
 12 September 2016
 
-## <span id='past-talks-total'>Some</span> Past Events
+## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
 
