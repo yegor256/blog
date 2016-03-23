@@ -128,7 +128,7 @@ Washington, USA<br/>
 
 <img src="/images/2016/agile-and-beyond-2016.png" class="future-talk" alt="Agile &amp; Beyond 2016"/>
 **Meeting-Free Software Development, in Distributed Teams**<br/>
-[Agile & Beyond](http://www.agileandbeyond.com/2016/)<br/>
+[Agile &amp; Beyond](http://www.agileandbeyond.com/2016/)<br/>
 Ypsilanti, MI, USA<br/>
 5 May 2016
 
