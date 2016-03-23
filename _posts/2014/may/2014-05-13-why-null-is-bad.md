@@ -41,7 +41,7 @@ What is wrong with this method?
 
 It may return `NULL` instead of an object &mdash; that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at
-[all costs]({% pst 2016/mar/2016-02-22-try-finally-if-not-null %}).
+[all costs]({% pst 2016/mar/2016-03-22-try-finally-if-not-null %}).
 There have been a number of opinions about this published already, including
 [Null References, The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
 presentation by Tony Hoare and the entire
