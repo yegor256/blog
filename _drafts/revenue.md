@@ -85,21 +85,21 @@ is the goal.
 
 Startup valuation must grow fast, ideally doubling itself every few months.
 If that's not happening, close the business and start something else. The
-valuation must **sky-rocket** or you have to abandon the startup and start
-another one, as soon as possible.
+valuation must **skyrocket** or you have to abandon the startup and try your
+hand on another one as soon as possible.
 
 One of the biggest mistakes a startup founder can make is to forget
-about this "sky-rocketing valuation" principle and focus on making
-customers happy and revenue growing. You will most likely kill your
-startup and, maybe, turn it into a lifestyle business.
+about this "skyrocketing valuation" principle and focus on making
+customers happy and grow revenue. You will most likely kill your
+startup and maybe turn it into a lifestyle business.
 
 Savvy investors will avoid you, mostly because they
-understand that a growing revenue is just one of many other
+understand that growing revenue is just one of many other
 **elements** of a growing valuation. If you're focused on just one element,
 you most likely won't multiply your valuation a hundred times over the
-next year. Maybe you will multiply the revenue a few times, but who cares?
-The revenue is good for you, but not really good for investors.
+next year. Maybe you will multiply revenue a few times, but who cares?
+The revenue is good for you but not really good for investors.
 
-What is good for investors? What do they want to see you doing,
-which will convince them that you're working hard on making the valuation
-grow? I'll try to cover it in one of the next articles.
+What is good for investors? What do they want to see you doing
+to convince them that you're working hard on making the valuation
+grow? I'll try to cover that in one of the next articles.
