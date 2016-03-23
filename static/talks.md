@@ -54,13 +54,13 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <img src="/images/2016/sedc-2016.png" class="future-talk" alt="SEDC 2016"/>
-**How Many Meetings Is Enough for a Distributed Team**<br/>
+**Meetings And Motivation, Friends Or Enemies?**<br/>
 [SEDC 2016](http://www.sedcconference.org/)<br/>
 Washington DC, USA<br/>
 31 March 2016
 
 <img src="/images/2016/agilia-conference-2016.png" class="future-talk" alt="Agilia Conference 2016"/>
-**Meeting-Free Software Development, in Distributed Teams**<br/>
+**Meetings Help Us And Kill Our Projects**<br/>
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
 Olomouc, Czech Republic<br/>
 5 April 2016
@@ -72,13 +72,13 @@ Minsk, Belarus<br/>
 8 April 2016
 
 <img src="/images/2016/agileee-2016.png" class="future-talk" alt="AgileEE 2016"/>
-**Meeting-Free Software Development**<br/>
+**Meetings Are a Threat To  Code Quality**<br/>
 [AgileEE 2016](http://kiev2016.agileee.org/)<br/>
 Kiev, Ukraine<br/>
 9 April 2016
 
 <img src="/images/2016/nextbuild-2016.png" class="future-talk" alt="NextBuild 2016"/>
-**Meeting-Free Software Development, in Distributed Teams**<br/>
+**Meetings Make Us Less Bug Tolerant, Which Is Bad**<br/>
 [NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
 Eindhoven, Netherlands<br/>
 16 April 2016
@@ -90,7 +90,7 @@ Sophia, Bulgaria<br/>
 20 April 2016
 
 <img src="/images/2016/mixit-2016.png" class="future-talk" alt="mix-IT 2016"/>
-**Meetings or Discipline, It's Your Choice**<br/>
+**How Stand Up Meetings Kill Motivation**<br/>
 [mix-IT 2016](https://www.mix-it.fr/member/speaker/6392)<br/>
 Lyon, France<br/>
 21 April 2016
@@ -115,7 +115,7 @@ Minsk, Belarus<br/>
 25 April 2016
 
 <img src="/images/2016/ntpm.jpg" class="future-talk" alt="NTPM 2016"/>
-**Meetings or Discipline, It's Your Choice**<br/>
+**Compromise-Free Definition of Done in Distributed Teams**<br/>
 [New Trends in Project Management](http://ntpm.pl/)<br/>
 Gdynia, Poland<br/>
 26 April 2016
@@ -127,7 +127,7 @@ Washington, USA<br/>
 2 May 2016
 
 <img src="/images/2016/agile-and-beyond-2016.png" class="future-talk" alt="Agile &amp; Beyond 2016"/>
-**Meeting-Free Software Development, in Distributed Teams**<br/>
+**How XDSD Achieves Quality Without Meetings and With Incomplete Deliverables**<br/>
 [Agile &amp; Beyond](http://www.agileandbeyond.com/2016/)<br/>
 Ypsilanti, MI, USA<br/>
 5 May 2016
@@ -184,7 +184,7 @@ Oslo, Norway<br/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
 [18th Cloud Expo](http://soa.sys-con.com/node/3661412)<br/>
 New York, USA<br/>
-7-9 June 2016
+7-9 June 2016 (<span class="red">not sure about this one</span>)
 
 <img src="/images/2016/geekout-2016.png" class="future-talk" alt="GeekOUT 2016"/>
 **Chatbots and Microservices**<br/>
