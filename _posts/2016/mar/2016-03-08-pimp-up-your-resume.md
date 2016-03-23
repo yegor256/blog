@@ -293,7 +293,7 @@ very simple. But it must be **yours**, made with care and love.
 <hr/>
 
 Want free advice on your resume? Send it to
-[mailto:cv@yegor256.com](cv@yegor256.com), and I'll let you know
+[cv@yegor256.com](mailto:cv@yegor256.com), and I'll let you know
 what I think. I will reply to all emails, but be ready to hear
 mostly what's wrong. What's right you will know without me, when
 they pay you $200 per hour.
