@@ -2,7 +2,7 @@
 layout: post
 title: "Avoid String Concatenation"
 date: 2014-06-19
-tags: java oop anti-pattern
+tags: java quality
 description:
   String concatenation in Java is a bad practice;
   this article explains why and how to avoid it to create cleaner code

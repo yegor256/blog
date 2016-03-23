@@ -16,6 +16,7 @@ keywords:
   - orm is antipattern
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
+book: elegant-objects 3.5
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})

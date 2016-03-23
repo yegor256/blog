@@ -2,7 +2,7 @@
 layout: post
 title: "Getters/Setters. Evil. Period."
 date: 2014-09-16
-tags: oop anti-pattern
+tags: oop
 categories: best jcg
 description:
   Getters and setters is a terrible anti-pattern in
@@ -16,6 +16,7 @@ keywords:
   - getters and setters is an anti-pattern
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
+book: elegant-objects 3.5
 ---
 
 There is an old debate, started in 2003 by Allen Holub

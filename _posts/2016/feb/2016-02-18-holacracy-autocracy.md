@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Holacracy or Autocracy?"
-date: 2016-02-14
+title: "Holacracy or Autocracy? Both!"
+date: 2016-02-18
 place: Palo Alto, CA
 tags: management
 description:
@@ -16,7 +16,7 @@ keywords:
   - holacracy in management
 ---
 
-I stongly believe that while it is very effective to structure
+I strongly believe that while it is very effective to structure
 an organization in a democratic and sociocratic way, a project
 should be managed completely different.
 A project should resemble a dictatorship, authoritarian or military hierarchy
@@ -24,6 +24,8 @@ with a single strong, result-oriented leader who gives explicit orders
 that are never doubted by subordinates and an explicitly defined hierarchy.
 
 <!--more-->
+
+{% picture /images/2016/02/apocalypse-now.jpg 0 Apocalypse Now (1979) by Francis Ford Coppola %}
 
 According to Wikipedia at the time of writing, a
 [**holacracy**](https://en.wikipedia.org/wiki/Holacracy) exists when
@@ -49,6 +51,8 @@ are no "bosses" on a flat team, only "**leaders**". They don't give orders, they
 **inspire**. They don't punish, they celebrate success and mourn failure
 together with everybody. Well, that's the idea of a holacracy.
 And it actually works. I've seen it many times.
+
+{% quote The key objective of a project is to end, while an organization's objective is to survive %}
 
 However, when we're talking about **project** management, this very same approach will
 have catastrophic consequences. A project is something very different
@@ -77,6 +81,8 @@ our own ways". Having this philosophy in mind and understanding the motivation
 of everybody involved, the PM must use instruments that have nothing to do
 with what keeps the organization alive.
 
+{% quote A project will finish successfully if we value discipline, subordination, awards, punishments, and rules %}
+
 An organization/team/company/family will stay together for a long time if
 we value things like tolerance, respect, patience, equality, and appreciation.
 
@@ -85,5 +91,5 @@ different things: discipline, subordination, awards, punishments, and rules.
 
 To summarize my thoughts, I would say that a successful company combines
 these two approaches by being a [matrix](https://en.wikipedia.org/wiki/Matrix_management)
-organization that promotes holocracy in the team and autocracy in
+organization that promotes holacracy in the team and autocracy in
 the projects it is working on.

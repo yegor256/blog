@@ -67,9 +67,7 @@ $(
         }
       );
       $.getJSON(
-        'https://jsonp.nodejitsu.com/?url=' + encodeURIComponent(
-          'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url
-        ),
+        'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
         function(json) {
           var count = json.result.views;
           if (count > 0) {
@@ -78,17 +76,6 @@ $(
         }
       );
     }
-  }
-);
-
-$(
-  function() {
-    'use strict';
-    $('<script>')
-      .attr('src', '//a.disquscdn.com/embed.js')
-      .attr('defer', 'defer')
-      .attr('async', 'async')
-      .appendTo('head');
   }
 );
 

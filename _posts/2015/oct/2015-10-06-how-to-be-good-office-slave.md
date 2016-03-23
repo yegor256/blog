@@ -137,7 +137,7 @@ hence the office doesn't need you.
 If you follow all these rules, you won't be fired, ever. Well, until
 the company is bankrupt, that is. If it's a startup, it will go bankrupt for sure,
 thanks to you and people like you. If it's a big enterprise, it probably won't, unfortunately.
-You will be safe, and your resume will have an
+You will be safe, and your [resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) will have an
 [impressive]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
 "12 years at Oracle" statement. Well, that's an achievement, isn't it?
 

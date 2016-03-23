@@ -17,7 +17,7 @@ keywords:
   - project responsibility
 ---
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 It is a very common problem in project management &mdash; how to make team
 members more responsible and avoid [micro
@@ -46,7 +46,9 @@ Monkey?"](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
 published in the Harvard Business Review about this very subject.
 
 I recommend that you read it. Its authors present problems as monkeys sitting on
-our shoulders. When the project manager assigns a task to a programmer &mdash;
+our shoulders. When the
+[project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
+assigns a task to a programmer &mdash;
 he moves the monkey from his shoulders to the programmer's shoulders.
 
 The programmer usually presents the excuse "I don't know what to do". Now the

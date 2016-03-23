@@ -15,6 +15,7 @@ keywords:
   - checked vs unchecked exceptions example
   - checked vs unchecked exceptions c#
   - checked vs unchecked exceptions debate
+book: elegant-objects 4.2
 ---
 
 Do we need checked exceptions at all? The

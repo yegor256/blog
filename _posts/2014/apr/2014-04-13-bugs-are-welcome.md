@@ -2,7 +2,7 @@
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
-tags: bugs xdsd management
+tags: testing xdsd management
 description: |
   Unlike a very common understanding of a software bug as something negative,
   XDSD encourages all team members to find and report as many bugs
@@ -30,7 +30,7 @@ projects. Why?
 
 <!--more-->
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs

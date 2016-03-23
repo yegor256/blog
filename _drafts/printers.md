@@ -17,12 +17,14 @@ keywords:
 
 Getters and setters [are evil]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 No need to argue about this, it's settled. You disagree?
-It's not important now. Let's say, we want to get rid of getters.
+It's not important, for now. Let's say, we want to get rid of getters.
+The key question is how is it possible at all? We do need to get
+the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
 I'm suggesting to use "printers" instead. Instead of exposing
-data via getters, an object will have a functionality of printing
+data via getters, an object will have a functionality of **printing**
 itself to some media.
 
 Let's say, this is our class:
@@ -59,12 +61,14 @@ public class Book {
 }
 {% endhighlight %}
 
-It's a very offensive way of treating the object. We're basically
+It's a very [offensive]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
+way of treating the
+[object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}). We're basically
 exposing everything that's inside, to the public. It was a nice
 little self-suffient solid object and we turned it into a bag of data,
 which anyone can access, in any possible way. Can access for reading, of course.
 
-It is convenient to have these getters, you may say. We all are used to them.
+It is convenient to have these "getters", you may say. We all are used to them.
 If we want to convert it into JSON, they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.

@@ -15,7 +15,7 @@ keywords:
   - how to rate a freelancer
 ---
 
-{% badge http://www.xdsd.org/logo.svg 100 http://www.xdsd.org %}
+{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
 In [XDSD](http://www.xdsd.org), everyone &mdash; including project managers,  analysts, programmers,
 and product owners &mdash; receives payments based on deliverables with agreed
@@ -78,7 +78,7 @@ expect you to finish it on time.
 
 Our
 [No Obligation Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %})
-gives our project managers freedom
+gives our [project managers]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) freedom
 to take any task away from you if don’t complete it in a
 reasonable amount of time (ten days).
 

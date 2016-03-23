@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pimp Up Your Resume"
-date: 2015-12-28
+date: 2016-03-08
 place: Atlanta, GA
 tags: career
 description:
@@ -27,16 +27,18 @@ from your clients in paying.
 
 <!--more-->
 
+{% picture /images/2016/03/delicatessen.jpg 0 Delicatessen (1991) by Jean-Pierre Jeunet %}
+
 ## One Page, No Exceptions
 
 I think it's obvious, but only one out of 10 resumes I've been getting
 each day fits onto one page. All the others take three or more pages, and this looks
-very unprofessional. If you can't explain yourself in one page, there will be doubts
+very **unprofessional**. If you can't explain yourself in one page, there will be doubts
 about your skills in scope management, which are very important for a software engineer.
 It shows you simply can't filter out what's non-important and focus
 on what really matters. Besides, it's just boring to read three pages.
 
-Thus, strictly limit yourself to one page, no exceptions. Your resume is an "executive summary"
+Thus, strictly limit yourself to one page, **no exceptions**. Your resume is an "executive summary"
 of the product you're trying to sell. It's a marketing brochure. A sales
 flyer. A sticker on my refrigerator, if you wish. It has to be short
 and straightforward. Employers will either buy it or throw it away. They don't want to read it;
@@ -58,14 +60,14 @@ is that you have to be ready to prove every word.
 ## Sexy Photo on the Top
 
 You want them to work with you, right? They want to see you. So a photo is a mandatory
-component of a CV. And try to make it look sexy and artistic. Ask your
+component of a CV. And try to make it look artistic. Ask your
 graphic designer friend to style it. Maybe even pay for this work.
 Just pay attention to the photo; it's very important.
 
 Do I have to say that you must smile on that photo? Well, yes, you must.
 And make it casual, with a T-shirt and funny background. You must look
 relaxed and successful. You don't want to get hired; they want to hire you &mdash;
-this is the message your photo should send, just like in online dating.
+this is the message your photo should send, just like in online **dating**.
 
 ## Skip "Objective" and "Title"
 
@@ -92,7 +94,8 @@ Java and AngularJS must not be present together. Java is a few levels higher
 than AngularJS. Thus, it's either "Java, SQL, and HTTP" or "AngularJS, Spring Framework,
 and Web Sockets". I would recommend you stay at the lowest level you can until
 you become a serious market figure. For example, "Java" as a skill would look good
-in [John Skeet](...)'s resume, because he definitely knows the entire Java world, and the
+in [John Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
+because he definitely knows the entire Java world, and the
 market has recognized that. But if you're a programmer with just three years of experience,
 how can you "know Java"? You barely know a few hundred classes from it.
 That's why it's better to state specifically which parts of Java you definitely know.
@@ -111,7 +114,7 @@ So even if you don't have a StackOverflow profile now, create one.
 Spend one hour on it every day for a few months, answering
 [new questions](http://stackoverflow.com/?tab=interesting).
 You will earn 1,000 or more reputation points. Well, provided you have something to say.
-That's enough. Post a link to your profile right in your resume.
+That's enough for a start. Post a link to your profile right in your resume.
 
 Even if you don't have much to say, be there. Read answers made by others,
 comment on them, try to help them, and correct them. Become an active
@@ -128,7 +131,7 @@ want to sell yourself high.
 
 Your potential employer wants to see what the **market** is thinking about
 your code and about you. They are afraid of making a mistake by hiring you.
-Your presence in the open-source world is a guarantee for them. Someone has already
+Your presence in the open-source world is a **guarantee** for them. Someone has already
 seen your code, and someone has already given some kudos to your projects. Someone virtually
 vouches for you. As a result, they will feel more comfortable in hiring you.
 
@@ -160,9 +163,9 @@ a good sign.
 
 It's a dangerous trick, so be careful. Here is how it works. You have to go through
 your entire professional history and find well-known names or big numbers.
-For example, 10 years ago I was helping a startup create software that 
+For example, 10 years ago I was helping a startup create software that
 had IBM as a subscriber. They managed to get some tracking, and in
-two months, IBM decided not to use them anymore. It's a true (and sad) story, but I can 
+two months, IBM decided not to use them anymore. It's a true (and sad) story, but I can
 put something like this into my resume: "wrote software for IBM". Am I lying? Not really.
 If they ask me what exactly I did for IBM, I will explain. In most cases, they
 won't ask. They will just buy this big name and put my resume on top of
@@ -191,8 +194,9 @@ It doesn't need to be a very popular blog; don't focus on numbers. But
 it has to be properly created, designed, and hosted. Don't use
 [WordPress](http://www.wordpress.com), [Blogger](http://www.blogger.com),
 or [Tumblr](http://www.tumblr.com). Instead,
-I would recommend you think about static site generators like Jekyll and host
-it all on GitHub pages. That's what I'm doing.
+I would recommend you think about static site generators like
+[Jekyll](https://jekyllrb.com/) and host
+it all on [GitHub Pages](https://pages.github.com/). That's what I'm doing.
 
 Besides being a valuable addition to your resume,
 systematic and regular writing will help you structure
@@ -210,11 +214,12 @@ it's valuable, simply because there are not so many of them among programmers.
 Second is if your school is Stanford, MIT, or something similar. If that's the case,
 also put it on top of your CV.
 
-In all other situations, just write BSc and that's it.
+In all other situations, just write "BSc" and that's it.
 
 ## Conferences
 
-Every year, you must give a few presentations at JavaOne. I'm kidding.
+Every year, you must give a few presentations at [JavaOne](https://www.oracle.com/javaone/index.html).
+I'm kidding.
 About the JavaOne part, anyway. But the "every year" part is very true. You must
 regularly make some speeches somewhere, preferably at JavaOne. But until
 you get there, speak where you can. Well, where they accept you. Create

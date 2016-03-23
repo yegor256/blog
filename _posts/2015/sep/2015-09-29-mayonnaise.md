@@ -96,7 +96,7 @@ That's exactly what recruiters are doing.
 Their entire business is based on the fact that we're **not smart** enough
 to use existing software systems, publicly available and in most cases
 very cheap or simply free. Or we're **too shy** to apply for a new job ourselves.
-Or we just **don't know** how to write a good resume and emphasize
+Or we just **don't know** how to write a [good resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) and emphasize
 our skills properly. They are exploiting our weaknesses to make money.
 
 A friend of mine was looking for a house in San Francisco a few months ago. He

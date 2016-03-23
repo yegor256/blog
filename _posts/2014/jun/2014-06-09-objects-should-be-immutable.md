@@ -2,7 +2,7 @@
 layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
-tags: oop anti-pattern
+tags: oop
 categories: best jcg
 description:
   The article gives arguments about why
@@ -16,6 +16,7 @@ keywords:
   - java immutable object advantage
   - java immutable value object
   - java mutable immutable object
+book: elegant-objects 2.6
 ---
 
 In object-oriented programming, an object is

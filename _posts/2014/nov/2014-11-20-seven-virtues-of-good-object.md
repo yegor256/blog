@@ -16,6 +16,7 @@ keywords:
   - object oriented programming concepts
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
+book: elegant-objects 2.3
 ---
 
 Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):

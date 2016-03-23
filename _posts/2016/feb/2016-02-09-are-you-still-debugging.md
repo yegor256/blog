@@ -8,12 +8,15 @@ description:
   The necessity of debugging is an indicator of code problems
   and a great motivator for immediate refactoring
   and unit testing.
+category: jcg
 keywords:
   - debugging
   - debugging vs testing
   - debugging vs unit testing
   - debugging is evil
   - stop debugging
+translated:
+  Russian: https://habrahabr.ru/company/piter/blog/278567/
 ---
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)
@@ -114,7 +117,7 @@ class Words implements Iterable<String> {
       "UTF-8"
     );
     Set<String> words = new HashSet<>();
-    for (String word : words.split(" ")) {
+    for (String word : text.split(" ")) {
       words.add(word);
     }
     return words.iterator();

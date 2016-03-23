@@ -106,7 +106,8 @@ git push origin 123
 {% endhighlight %}
 
 If you have questions about the scope of work, post them in the GitHub issue and
-wait for an answer. If you think that the existing code needs improvements,
+[wait]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %})
+for an answer. If you think that the existing code needs improvements,
 don't hesitate to submit a new issue to GitHub.
 
 Don't try to fix all problems in one branch; let other programmers take care of

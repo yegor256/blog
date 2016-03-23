@@ -13,6 +13,7 @@ keywords:
   - instanceof
   - type casting in java
   - class casting is evil
+book: elegant-objects 3.7
 ---
 
 Type casting is a very useful technique when there is no time

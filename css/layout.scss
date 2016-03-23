@@ -282,6 +282,7 @@ h2 {
   li {
     display: inline;
     margin-right: .5 * $em;
+    white-space: nowrap;
   }
 }
 
@@ -364,6 +365,26 @@ blockquote {
   }
 }
 
+.book {
+  @extend %desktop-only;
+  @extend %unprintable;
+  float: right;
+  font-family: $code-font;
+  margin: .5 * $em -6 * $em .5 * $em $em;
+  padding-left: .75 * $em;
+  width: 15 * $em;
+
+  .book-cover {
+    float: left;
+    height: 160px;
+    margin-right: .6 * $em;
+  }
+
+  .amazon-button {
+    height: 20px;
+  }
+}
+
 figure {
   margin: 0;
   position: relative;
@@ -404,6 +425,14 @@ figure {
   padding: 0 .5 * $em;
   text-decoration: none;
   white-space: nowrap;
+
+  img {
+    display: inline-block;
+    height: 1em;
+    margin-right: .2em;
+    margin-top: -.25em;
+    vertical-align: middle;
+  }
 
   &:visited {
     color: $white !important;

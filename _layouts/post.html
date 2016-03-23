@@ -14,6 +14,9 @@ layout: default
         <code>{{ site.url }}{{ page.url }}</code>
       </p>
       <h1 itemprop="name">{{ page.title }}</h1>
+      {% if page.book %}
+        {{ page.book | book }}
+      {% endif %}
       <ul class="subline">
         <li>
           <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
@@ -94,7 +97,9 @@ layout: default
   <div class="wrapper">
     <footer class="footer">
       <p>
-        &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014-2016
+        &copy;
+        <span itemprop="author">Yegor Bugayenko</span>,
+        2014-2016
       </p>
     </footer>
   </div>
@@ -102,3 +107,4 @@ layout: default
 </section>
 
 <script src="/js/post.js?{{ site.data['hash'] }}"></script>
+<script src="//a.disquscdn.com/embed.js?{{ site.data['hash'] }}"></script>

@@ -53,6 +53,8 @@ or how many programming languages you know. We only care about your
 objective achievements, which are validated by the market. And, of course,
 we don't pay attention to any references or any previous relationships.
 
+{% quote We simply don't care how many years of experience you have %}
+
 I strongly believe this is how it should be.
 
 Unfortunately, this is not how it is in Silicon Valley when a young
@@ -77,7 +79,10 @@ Why? Who knows. They won't tell you. They are cowards, and they are afraid
 of telling you that your idea sucks and your business plan is totally wrong.
 They are afraid of being **honest**.
 
-There is an almost identical situation with recruitment. You send your resume
+{% quote They are afraid of telling you that your idea sucks %}
+
+There is an almost identical situation with recruitment. You send your
+[resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
 to Facebook, they interview you, and you spend a few hours with them, answering
 their questions. In the end, they email you, saying "We decided not to proceed
 any further; good luck in your job search". They are afraid of telling you
@@ -87,7 +92,8 @@ And it's disgusting.
 
 In our recruitment process at [Teamed.io](http://www.teamed.io), we do
 exactly the opposite. You apply to us, we ask one of our programmers to
-interview you, and then, when finished, we make a decision about whether you're
+[interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
+you, and then, when finished, we make a decision about whether you're
 a good candidate or not. We discuss your profile right in front of you. We
 don't have any discussions without you. We make our decision fully disclosing
 our reasoning to you. This is how it should be everywhere, I believe.
@@ -110,6 +116,8 @@ working somewhere on Facebook. Your salary is low, and you can't change it.
 All your expenses have to be approved. You're simply under the full control
 of your **board**.
 
+{% quote They are trying to win in poker by always making small bets %}
+
 Why is that? Because they are afraid of you being **free**. They are afraid
 of losing their money. That's why they are doing everything they can
 to keep a close eye on you.
@@ -122,7 +130,7 @@ to get a new product.
 
 ## We Are Not Cowards
 
-{% badge http://www.seedramp.com/logo-256x256.png 128 http://www.seedramp.com %}
+{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
 
 [SeedRamp](http://www.seedramp.com) is going to solve all of these three problems.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "OOP Alternative to Utility Classes"
 date: 2014-05-05
-tags: oop anti-pattern
+tags: oop
 categories: best jcg
 description:
   Utility classes are a very popular design pattern
@@ -18,6 +18,7 @@ keywords:
   - utility classes is a bad practice
 translated:
   Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
+book: elegant-objects 3.2
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods

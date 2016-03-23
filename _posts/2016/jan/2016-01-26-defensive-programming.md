@@ -8,6 +8,7 @@ description:
   Defensive programming is a good idea, but the way
   it gets implemented is, in most cases, very wrong;
   here is what I'm suggesting instead.
+category: jcg
 keywords:
   - defensive programming
   - validators in oop

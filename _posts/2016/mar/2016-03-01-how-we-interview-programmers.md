@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Interview Programmers"
-date: 2016-02-10
+date: 2016-03-01
 place: Palo Alto, CA
 tags: management
 description:
@@ -16,8 +16,10 @@ keywords:
   - developer interview
 ---
 
+{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
+
 At [Teamed.io](http://www.teamed.io), we've been getting
-about 10 resumes every day from programmers who want to work
+about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) every day from programmers who want to work
 with us. We don't do video or online coding interviews. We don't
 ask you to solve any puzzles or demonstrate your
 algorithm-writing abilities. Moreover, when we decide not to
@@ -26,6 +28,8 @@ never offend anyone. So how exactly does it work?
 There are a few basic principles I would like to share.
 
 <!--more-->
+
+{% picture /images/2016/03/wall-street.jpg 0 Wall Street (1987) by Oliver Stone %}
 
 ## The Market Interviews You, Not Us
 
@@ -76,7 +80,7 @@ all of them are from our candidates.
 Most companies talk a lot about diversity and equality, yet most of them
 will also require a Skype video call or at least a phone call before
 getting you on board. How does this really jive with the equality emphasis? A face-to-face
-interview is a very stressful process even for experienced and extraverted
+interview is a very stressful process even for experienced and extroverted
 people. We can imagine how difficult it is for some programmers who are
 anti-social introverts just like me.
 
