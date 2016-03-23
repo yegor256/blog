@@ -134,25 +134,24 @@ principles and become a expert. Here they are, the principles.
   You may mistakenly think that this is a balanced transaction &mdash;
   they give money and you give part of your equity. You may expect that
   both parties are equally interested in this. But don't make that mistake.
-  You're begging, they are giving. Out of courtesy. That's a win position
-  for you. By having money they expect to be on top of others. This is
+  You're begging, and they are giving. Out of courtesy. That's a win position
+  for you. By having money, they expect to be on top of others. This is
   what capitalism is about, right? Don't take this away from them. You
   must be ready to shine their shoes. With a big smile on your face.
 
   * **Love**.
   The truth is that investors don't want to make money. They want to
-  make love. You're are a perfect candidate. They are mostly old, rich,
-  lonely and miserable. Their success stories are behind them. All they
-  have is money, which they are afraid to spent, because they understand
-  that they won't make them again. They are used-to-be successful
-  gamblers. Not any more. Give them what they want &mdash; love. Money
-  are not so important, as long as you love each other. Remember, first
-  they must fall in love with you, then they send the terms sheet.
+  make love. You're a perfect candidate. They are mostly old, rich,
+  lonely, and miserable. Their success stories are behind them. All they
+  have is money, which they are afraid to spend because they understand
+  that they won't make it again. They are used-to-be successful
+  gamblers, but not anymore. Give them what they want: love. Money
+  is not so important, so long as you love each other. Remember, first
+  they must fall in love with you, then they will send the terms sheet.
 
 Did I miss something?
 
-Rehearse your pitch in front of the mirror, in the bathroom, three times
-every morning. I guarantee it, in less than two weeks you will sound
-like a proper SV startup founder. Well, a co-founder,
-don't forget that. Good luck, you will need a lot of it!
-
+Rehearse your pitch in front of the mirror in the bathroom three times
+every morning. I guarantee that in fewer than two weeks, you will sound
+like a proper SV startup founder. Well, a co-founder &mdash;
+don't forget that. Good luck; you will need a lot of it!
