@@ -190,7 +190,13 @@ New York, USA<br/>
 **Chatbots and Microservices**<br/>
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
-9-10 June 2016
+9 June 2016
+
+<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay 2016"/>
+**Java vs OOP** (keynote)<br/>
+[JavaDay 2016](http://javaday.by/)<br/>
+Minsk, Belarus<br/>
+11 June 2016
 
 <img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
