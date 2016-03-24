@@ -20,29 +20,172 @@ keywords:
 were introduced in Java 6 in 2006, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code, where we need them. No more
-[marker interfaces](https://en.wikipedia.org/wiki/Marker_interface_pattern)!
-Just a [runtime-retained](https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html)
-[reflection-discoverable](http://stackoverflow.com/questions/4296910/) annotation.
+[marker interfaces](https://en.wikipedia.org/wiki/Marker_interface_pattern),
+just a [runtime-retained](https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html)
+[reflection-discoverable](http://stackoverflow.com/questions/4296910/) annotation!
 I was excited too. Moreover, I've made a few open source libraries, which
-use annotations heavily. Take [jcabi-aspects](https://github.com/jcabi/jcabi-aspects),
+use annotations heavily, take [jcabi-aspects](https://github.com/jcabi/jcabi-aspects),
 for example. However, I'm not excited any more. Moreover, I believe that
-annotations in Java is a big mistake in language design.
+annotations is a big mistake in Java design.
 
 <!--more-->
 
-I'm talking about annotations that either stay with the bytecode after
-compilation or are being used by [apt](http://docs.oracle.com/javase/7/docs/technotes/guides/apt/)
-(or similar tools) to post-compile modify bytecode. There are a few
-typical usage scenarios, where annotations seem to be very convenient. Let's
-discuss them one by one and I'll show that in each case they are very much against
-[the principles]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
-of a proper object-oriented programming.
+Long story short, there is one big problem with annotations &mdash;
+they encourage us to implement
+[object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+functionality **outside** of an object,
+which is against the very principle of
+[encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29).
+The object is not solid any more, since its behavior is not defined entirely by its own
+methods &mdash; some functionality stays somewhere else. Why it's bad? Let's
+see, in a few examples.
 
-That is basically the main reason why I call annotations a mistake &mdash;
-looking like a very convenient technique they make code
-**less maintainable**. Let's discuss each situation separately.
+## `@Inject`
 
-## AOP Weaving and APT
+Say, we annotate a property with `@Inject`:
+
+{% highlight java %}
+import javax.inject.Inject;
+public class Books {
+  @Inject
+  private final DB db;
+  // some methods here, which use this.db
+}
+{% endhighlight %}
+
+Then, we have an injector, which knows what to inject:
+
+{% highlight java %}
+Injector injector = Guice.createInjector(
+  new AbstractModule() {
+    @Override
+    public void configure() {
+      this.bind(DB.class).toInstance(
+        new Postgres("jdbc:postgresql:5740/main")
+      );
+    }
+  }
+);
+{% endhighlight %}
+
+Now, we're making an instance of class `Books`, via the container:
+
+{% highlight java %}
+Books books = injector.getInstance(Books.class);
+{% endhighlight %}
+
+The class `Books` have no idea how and who will inject an instance
+of class `DB` into it. This will happen behind the scene and outside
+of its control. The injection will do it. It may look convenient,
+but this attitude causes a lot of damage to the entire code base. The
+control is lost (not inverted, but lost!). The object is not in charge
+any more. It can't be responsible for what's happening with it.
+
+Instead, here is how this should be done:
+
+{% highlight java %}
+class Books {
+  private final DB db;
+  Books(final DB base) {
+    this.db = base;
+  }
+  // some methods here, which use this.db
+}
+{% endhighlight %}
+
+This article explains why Dependency Injection containers are
+a wrong idea in the first place:
+[Dependency Injection Containers are Code Polluters]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
+Annotations basically provoke us to make that containers and use them.
+
+## `@XmlElement`
+
+This is how JAXB
+[works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}), when you want to convert your
+[POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) to XML. First,
+you attach `@XmlElement` annotation to the getter:
+
+{% highlight java %}
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
+public class Book {
+  private final String title;
+  public Book(final String title) {
+    this.title = title;
+  }
+  @XmlElement
+  public String getTitle() {
+    return this.title;
+  }
+}
+{% endhighlight %}
+
+Then, you create a marshaller and ask it to convert an instance of class
+`Book` into XML:
+
+{% highlight java %}
+final Book book = new Book("0132350882", "Clean Code");
+final JAXBContext context = JAXBContext.newInstance(Book.class);
+final Marshaller marshaller = jaxbContext.createMarshaller();
+marshaller.marshal(book, System.out);
+{% endhighlight %}
+
+Who is creating the XML? Not the `book`. Someone else, outside of the
+class `Book`. This is very wrong. Instead, this is how this should have
+been done. First, the class, which has no idea about XML:
+
+{% highlight java %}
+class DefaultBook implements Book {
+  private final String title;
+  DefaultBook(final String title) {
+    this.title = title;
+  }
+  @Override
+  public String getTitle() {
+    return this.title;
+  }
+}
+{% endhighlight %}
+
+Then, the
+[decorator]({% pst 2015/feb/2015-02-26-composable-decorators %})
+that prints it to the XML:
+
+{% highlight java %}
+class XmlBook implements Book{
+  private final Book origin;
+  XmlBook(final Book book) {
+    this.origin = book;
+  }
+  @Override
+  public String getTitle() {
+    return this.origin.getTitle();
+  }
+  public String toXML() {
+    return String.format(
+      "<book><title>%s</title></book>",
+      this.getTitle()
+    );
+  }
+}
+{% endhighlight %}
+
+Now, in order to print the book in XML we do this:
+
+{% highlight java %}
+String xml = new XmlBook(
+  new DefaultBook("Elegant Objects")
+).toXML();
+{% endhighlight %}
+
+The XML printing functionality is inside `XmlBook`. If you don't like the
+decorator idea, you can move `toXML()` method to the `DefaultBook` class. It's
+not important. What is important is that the functionality always stays
+where it belongs &mdash; inside the object. Only the object knows how
+to print itself to the XML. Nobody else!
+
+## `@RetryOnFailure`
 
 Here is an example
 (from [my own library]({% pst 2014/aug/2014-08-15-retry-java-method-on-exception %})):
@@ -147,9 +290,24 @@ class Retry {
 
 The code is longer? Yes. Is it cleaner? A lot more. I regret that I
 didn't understand it two years ago, when I started to work with
-[jcabi-aspects](https://github.com/jcabi/jcabi-aspects). Most of AOP
-aspects must be implemented by decorators, just like in this
-example. Not all of them, but most.
+[jcabi-aspects](https://github.com/jcabi/jcabi-aspects).
 
-But why exactly it's cleaner?
+<hr/>
+
+The bottom line is that annotations are bad. Don't use them. What to use
+instead? Object [composition]({% pst 2015/feb/2015-02-26-composable-decorators %}).
+
+What could be worse that annotations? Configurations.
+For example, XML configurations. Spring XML configuration mechanisms is a perfect
+example of a terrible design. I've said it before and many times. Let
+me repeat it again &mdash; Spring Framework is one of the worst
+software products in Java world. If you can stay away from it, you will
+do yourself a big favor.
+
+There should not be any "configurations" in OOP. We can't configure our
+objects, if they are real objects. We can only instantiate them. And the
+best method of instantiation is operator `new`. This operator is the key
+instrument for an OOP developer. Taking it away from us and giving us
+"configuration mechanisms" is an unforgiveable
+[crime]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
 
