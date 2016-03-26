@@ -80,6 +80,9 @@ void process(Work work);
 void append(File file, String line);
 ```
 
+You can read more about this idea in
+[Elegant Objects](/elegant-objects.html) book,
+section [2.4](/images/books/elegant-objects/contents.pdf).
 There is only one exception to the rule just mentioned
 &mdash; test methods for JUnit. They are explained below.
 

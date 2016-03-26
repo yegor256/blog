@@ -36,7 +36,7 @@ more solid and architecture more visible.
     <img src="/images/2016/jeeconf-logo.png" style="height:45px;" alt="JEEConf 2016"/></a>
 </div>
 Mar 17, 2016:
-The book just made it into the top 100 Amazon Best Sellers in
+The book just made it into the **top 100 Amazon Best Sellers** in
 [Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/5Yfx1i)
 already. Many thanks to their authors! Would
