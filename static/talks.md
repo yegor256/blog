@@ -140,7 +140,7 @@ Tallinn, Estonia<br/>
 
 <img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2016"/>
 **Need Robust Software? Make It Fragile**<br/>
-[GeeCON](http://2016.geecon.org/)<br/>
+[GeeCON](http://2016.geecon.org/speakers/info.html?id=120)<br/>
 Krakow, Poland<br/>
 11-13 May 2016
 
