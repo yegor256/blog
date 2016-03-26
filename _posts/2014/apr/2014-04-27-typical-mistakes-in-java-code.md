@@ -308,3 +308,5 @@ line, he/she has to spend extra time finding where else `"Jeff"` is used in the
 same method.
 
 To avoid this data coupling, you should introduce a variable.
+More about it here:
+[A Few Thoughts on Unit Test Scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %}).
