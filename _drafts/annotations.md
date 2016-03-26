@@ -97,6 +97,16 @@ This article explains why Dependency Injection containers are
 a wrong idea in the first place:
 [Dependency Injection Containers are Code Polluters]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 Annotations basically provoke us to make that containers and use them.
+We move functionality outside of our objects and put it into
+containers, or somewhere else. Because, we don't want to duplicate the
+same code over and over again, right? That's correct, duplication is
+bad, but tearing an object apart is even worse. Way worse. The same is
+true about ORM (JPA/Hibernate), where annotations are being actively used.
+Check this post, it explains what is wrong about ORM:
+[ORM Is an Offensive Anti-Pattern]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
+Annotations by themselves are not the key motivator, but they help us
+and encourage us tearing objects apart and keeping parts in different
+places: containers, sessions, managers, controllers, etc.
 
 ## `@XmlElement`
 

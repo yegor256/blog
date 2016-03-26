@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pitches in Elevators"
+title: "Elevator Pitchers"
 date: 2016-03-23
 place: Palo Alto, CA
 tags: startup
@@ -149,7 +149,7 @@ principles and become a expert. Here they are, the principles.
   is not so important, so long as you love each other. Remember, first
   they must fall in love with you, then they will send the terms sheet.
 
-Did I miss something?
+Did I miss anything?
 
 Rehearse your pitch in front of the mirror in the bathroom three times
 every morning. I guarantee that in fewer than two weeks, you will sound
