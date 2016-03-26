@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?12aaba7"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?12aaba7"/>
+    <link rel="shortcut icon" href="/favicon.ico?8508e90"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?8508e90"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?12aaba7"/>
-    <link rel="stylesheet" href="/css/icons.css?12aaba7"/>
+    <link rel="stylesheet" href="/css/layout.css?8508e90"/>
+    <link rel="stylesheet" href="/css/icons.css?8508e90"/>
     <link rel="canonical" href="http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html" />
     <title>Typical Mistakes in Java Code - Yegor Bugayenko
       </title>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?12aaba7"></script>
+    <script src="/js/global.js?8508e90"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -155,7 +155,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/apr/2014-04-27-typical-mistakes-in-java-code.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-02-19T18:56:51+0000'>19 February 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/apr/2014-04-27-typical-mistakes-in-java-code.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-03-26T23:45:43+0000'>26 March 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -258,7 +258,10 @@ use the <code>get</code> prefix <a href="/2014/09/16/getters-and-setters-are-evi
 <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Work</span> <span class="n">work</span><span class="o">);</span>
 <span class="kt">void</span> <span class="nf">append</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">,</span> <span class="n">String</span> <span class="n">line</span><span class="o">);</span>
 </code></pre></div>
-<p>There is only one exception to the rule just mentioned
+<p>You can read more about this idea in
+<a href="/elegant-objects.html">Elegant Objects</a> book,
+section <a href="/images/books/elegant-objects/contents.pdf">2.4</a>.
+There is only one exception to the rule just mentioned
 &mdash; test methods for JUnit. They are explained below.</p>
 
 <h2 id="test-method-names">Test Method Names</h2>
@@ -440,7 +443,9 @@ line. If, a few months later, someone wants to change the value on the third
 line, he/she has to spend extra time finding where else <code>&quot;Jeff&quot;</code> is used in the
 same method.</p>
 
-<p>To avoid this data coupling, you should introduce a variable.</p>
+<p>To avoid this data coupling, you should introduce a variable.
+More about it here:
+<a href="/2015/05/25/unit-test-scaffolding.html">A Few Thoughts on Unit Test Scaffolding</a>.</p>
 
       </article>
     </main>
@@ -451,23 +456,23 @@ same method.</p>
     <ul>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="5.572719514516348">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="5.393893979540836">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="3.9590860556963725">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="3.850569692355631">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.300109960195305">How to Set Up a Private Maven Repository in Amazon S3</a>
+          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.276599958507457">How to Set Up a Private Maven Repository in Amazon S3</a>
         </li>
       
         <li>
-          <a href="/2015/11/10/ten-mistakes-in-specs.html" data-score="1.2795985688920406">10 Typical Mistakes in Specs</a>
+          <a href="/2015/11/10/ten-mistakes-in-specs.html" data-score="1.2541346865134713">10 Typical Mistakes in Specs</a>
         </li>
       
         <li>
-          <a href="/2015/06/08/deadly-sins-software-project.html" data-score="1.2608827333612267">Seven Deadly Sins of a Software Project</a>
+          <a href="/2015/06/08/deadly-sins-software-project.html" data-score="1.2406365037572153">Seven Deadly Sins of a Software Project</a>
         </li>
       
     </ul>
@@ -501,8 +506,8 @@ same method.</p>
 
 </section>
 
-<script src="/js/post.js?12aaba7"></script>
-<script src="//a.disquscdn.com/embed.js?12aaba7"></script>
+<script src="/js/post.js?8508e90"></script>
+<script src="//a.disquscdn.com/embed.js?8508e90"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
