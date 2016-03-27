@@ -13,4 +13,4 @@ keywords:
 
 I'm sorry to see you go :( Hope you to see you back some time later.
 
-You can [subscribe again](/subscribe.html), if you did this by mistake.
+You can [subscribe again](/about-me.html), if you did this by mistake.

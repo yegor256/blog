@@ -30,7 +30,7 @@ I'm sorry to see you leaving :(
   <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
-  <label for="unsubscribe"></label>
+  <label for="unsubscribe">&nbsp;</label>
   <button id="unsubscribe" class="field">Unsubscribe</button>
 </fieldset></form>
 
