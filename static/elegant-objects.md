@@ -14,6 +14,8 @@ keywords:
   - object thinking
 ---
 
+{% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/5Yfx1i %}
+
 "Elegant Objects" is my first book. It is about object-oriented
 programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
