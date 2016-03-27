@@ -3,9 +3,10 @@ layout: static
 title: "Unsubscribed"
 date: 2016-03-26
 permalink: unsubscribed.html
-description:
+description: |
   Sorry to see you go. Keep in mind that you can
-  always get back to the list, just email me.
+  always get back to the list, just email me:
+  blog@yegor256.com.
 keywords:
   - unsubscribe
 ---
