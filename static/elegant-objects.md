@@ -21,7 +21,8 @@ programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible. It is available for sale
-on [Amazon](http://goo.gl/5Yfx1i) (please, don't forget to review it there!)
+on [Amazon](http://goo.gl/5Yfx1i) (please, don't forget to review it there!),
+ISBN: 1519166915.
 
 <!--more-->
 
