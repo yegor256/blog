@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?705da91"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?705da91"/>
+    <link rel="shortcut icon" href="/favicon.ico?a588197"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?a588197"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?705da91"/>
-    <link rel="stylesheet" href="/css/icons.css?705da91"/>
+    <link rel="stylesheet" href="/css/layout.css?a588197"/>
+    <link rel="stylesheet" href="/css/icons.css?a588197"/>
     <link rel="canonical" href="http://www.yegor256.com/unsubscribe.html" />
     <title>Unsubscribe - Yegor Bugayenko
       </title>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?705da91"></script>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/global.js?a588197"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -142,21 +142,31 @@
     </header>
     <main>
       <article class="main" itemprop="articleBody">
-        <p>I&#39;m sorry to see you leaving :(</p>
+        <script>
+$('#email').ready(
+  function() {
+    var query = window.location.search,
+      matches = query.match(/email=([^&]+)/);
+    if (matches !== null) {
+      $('#email').val(matches[1]);
+    }
+  }
+);
+</script>
 
-<form id="eform"><fieldset id="form">
+<p>I&#39;m sorry to see you leaving :(</p>
+
+<form action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
+  <input type="hidden" name="_next" value="http://www.yegor256.com/unsubscribed.html"/>
+  <input type="hidden" name="_subject" value="unsubscribe me"/>
+  <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="unsubscribe"></label>
   <button id="unsubscribe" class="field">Unsubscribe</button>
-  <span id="error" style="color:red;"></span>
 </fieldset></form>
 
 <p>You can always <a href="/about-me.html">subscribe</a> again.</p>
-
-<script src="/js/unsubscribe.js?705da91"></script>
-
-<script src="/js/send.js?705da91"></script>
 
       </article>
     </main>
@@ -165,7 +175,7 @@
         This blog is built with <a href="http://jekyllrb.com/">Jekyll</a>
         and hosted on <a href="https://pages.github.com/">GitHub Pages</a>
         <br/>
-        <a href="https://github.com/yegor256/blog/commit/705da91"><i class="ico ico-x-github"></i></a>
+        <a href="https://github.com/yegor256/blog/commit/a588197"><i class="ico ico-x-github"></i></a>
       </p>
     </footer>
   </div>

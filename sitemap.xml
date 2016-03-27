@@ -715,6 +715,9 @@
 <loc>http://www.yegor256.com/lectures.html</loc>
 </url>
 <url>
+<loc>http://www.yegor256.com/subscribed.html</loc>
+</url>
+<url>
 <loc>http://www.yegor256.com/talks.html</loc>
 </url>
 <url>
@@ -722,6 +725,9 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/unsubscribe.html</loc>
+</url>
+<url>
+<loc>http://www.yegor256.com/unsubscribed.html</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/venues.html</loc>
