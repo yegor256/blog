@@ -10,17 +10,28 @@ keywords:
   - unsubscribe
 ---
 
+<script>
+$('#email').ready(
+  function() {
+    var query = window.location.search,
+      matches = query.match(/email=([^&]+)/);
+    if (matches !== null) {
+      $('#email').val(matches[1]);
+    }
+  }
+);
+</script>
+
 I'm sorry to see you leaving :(
 
-<form id="eform"><fieldset id="form">
+<form action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
+  <input type="hidden" name="_next" value="http://www.yegor256.com/unsubscribed.html"/>
+  <input type="hidden" name="_subject" value="unsubscribe me"/>
+  <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="unsubscribe"></label>
   <button id="unsubscribe" class="field">Unsubscribe</button>
-  <span id="error" style="color:red;"></span>
 </fieldset></form>
 
 You can always [subscribe](/about-me.html) again.
-
-<script src="/js/unsubscribe.js?{{ site.data['hash'] }}"></script>
-<script src="/js/send.js?{{ site.data['hash'] }}"></script>
