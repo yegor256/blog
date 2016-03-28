@@ -94,7 +94,7 @@ Java and AngularJS must not be present together. Java is a few levels higher
 than AngularJS. Thus, it's either "Java, SQL, and HTTP" or "AngularJS, Spring Framework,
 and Web Sockets". I would recommend you stay at the lowest level you can until
 you become a serious market figure. For example, "Java" as a skill would look good
-in [John Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
+in [Jon Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
 because he definitely knows the entire Java world, and the
 market has recognized that. But if you're a programmer with just three years of experience,
 how can you "know Java"? You barely know a few hundred classes from it.
