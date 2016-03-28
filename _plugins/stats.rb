@@ -1,6 +1,17 @@
 require 'fileutils'
 
 module Jekyll
+  class StatsFile < StaticFile
+    def write(dest)
+      target = File.join(dest, @dir, @name)
+      FileUtils.copy_file(
+        File.join(dest, "/../_temp/stats/#{@name}"),
+        target
+      )
+      puts "#{target} created (#{File.size(target)} bytes)"
+      true
+    end
+  end
   class StatsGenerator < Generator
     priority :low
     safe true
@@ -31,8 +42,7 @@ module Jekyll
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
       ]
       raise 'failed to build gnuplot stats image' if !$?.exitstatus
-      site.static_files << Jekyll::StaticFile.new(site, site.dest, '', 'stats.svg')
-      puts "_site/stats.svg created: #{File.size(File.join(site.dest, 'stats.svg'))} bytes"
+      site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
     end
   end
 end
