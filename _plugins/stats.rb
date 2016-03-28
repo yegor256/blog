@@ -32,7 +32,7 @@ module Jekyll
       ]
       raise 'failed to build gnuplot stats image' if !$?.exitstatus
       site.static_files << Jekyll::StaticFile.new(site, site.dest, '', 'stats.svg')
-      puts "stats.svg created: #{File.size(File.join(site.dest, 'stats.svg'))} bytes"
+      puts "_site/stats.svg created: #{File.size(File.join(site.dest, 'stats.svg'))} bytes"
       exit
     end
   end
