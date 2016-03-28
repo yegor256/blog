@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?995d0ed"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?995d0ed"/>
+    <link rel="shortcut icon" href="/favicon.ico?c9480b3"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?c9480b3"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?995d0ed"/>
-    <link rel="stylesheet" href="/css/icons.css?995d0ed"/>
+    <link rel="stylesheet" href="/css/layout.css?c9480b3"/>
+    <link rel="stylesheet" href="/css/icons.css?c9480b3"/>
     <link rel="canonical" href="http://www.yegor256.com/2015/07/06/public-static-literals.html" />
     <title>Public Static Literals ... Are Not a Solution for Data Duplication - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?995d0ed"></script>
+    <script src="/js/global.js?c9480b3"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -141,7 +141,7 @@
         
           <li class="desktop-only">Palo Alto, CA</li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/jul/2015-07-06-public-static-literals.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-02-20T00:13:46+0000'>20 February 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/jul/2015-07-06-public-static-literals.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-03-28T00:25:07+0000'>28 March 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -266,7 +266,7 @@ instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.</p>
 
 <p>Placing data into one shared place (<code>CharEncoding.UTF_8</code>)
-doesn&#39;t really solve the duplication problem; it actually makes it worse, mostly
+doesn&#39;t really solve the duplication problem; it actually makes it <strong>worse</strong>, mostly
 because it encourages everybody to duplicate functionality using the same
 piece of shared data.</p>
 
@@ -277,6 +277,8 @@ class for this code and place the data there, as a <code>private</code> property
 <code>static</code> property). That&#39;s how you will improve your design and truly get rid
 of duplication.</p>
 
+<p>PS. You can use a method instead of a class, but not a static literal.</p>
+
       </article>
     </main>
     
@@ -286,23 +288,23 @@ of duplication.</p>
     <ul>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="3.5998476413389944">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="3.557769984349211">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2016/03/15/wring-dispatcher-github-notifications.html" data-score="1.362912030784923">Wring.io, a Dispatcher of GitHub Notifications</a>
+          <a href="/2016/03/15/wring-dispatcher-github-notifications.html" data-score="1.3647542137975803">Wring.io, a Dispatcher of GitHub Notifications</a>
         </li>
       
         <li>
-          <a href="/2015/11/10/ten-mistakes-in-specs.html" data-score="1.2149516724850509">10 Typical Mistakes in Specs</a>
+          <a href="/2015/11/10/ten-mistakes-in-specs.html" data-score="1.1965157099334296">10 Typical Mistakes in Specs</a>
         </li>
       
         <li>
-          <a href="/2016/03/08/pimp-up-your-resume.html" data-score="1.0278977561916487">Pimp Up Your Resume</a>
+          <a href="/2016/03/08/pimp-up-your-resume.html" data-score="1.0312676538047267">Pimp Up Your Resume</a>
         </li>
       
         <li>
-          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="0.9878701360635088">How to Set Up a Private Maven Repository in Amazon S3</a>
+          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="0.9835215545841018">How to Set Up a Private Maven Repository in Amazon S3</a>
         </li>
       
     </ul>
@@ -336,8 +338,8 @@ of duplication.</p>
 
 </section>
 
-<script src="/js/post.js?995d0ed"></script>
-<script src="//a.disquscdn.com/embed.js?995d0ed"></script>
+<script src="/js/post.js?c9480b3"></script>
+<script src="//a.disquscdn.com/embed.js?c9480b3"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
