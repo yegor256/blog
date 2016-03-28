@@ -129,7 +129,7 @@ a bit deaf. Be loud. That will prove that you're absolutely
 confident in what you're saying, today and always. The investor
 will be sure you are capable of attracting <del>mates</del> customers and
 other investors, if for no other reason than because you're not afraid of being that ugly loud
-in public. You're 100% extravert &mdash; you must demonstrate it
+in public. You're 100% extrovert &mdash; you must demonstrate it
 shamelessly.
 
 **Beg**.
