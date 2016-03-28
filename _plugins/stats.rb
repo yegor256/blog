@@ -27,6 +27,7 @@ module Jekyll
         cp ${src}/_stats/stats.gpi ${tmp}/stats.gpi
         cd ${tmp}
         gnuplot stats.gpi
+        mkdir -p ${src}/_site
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
       ]
       raise 'failed to build gnuplot stats image' if !$?.exitstatus
