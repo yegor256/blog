@@ -53,6 +53,8 @@ or how many programming languages you know. We only care about your
 objective achievements, which are validated by the market. And, of course,
 we don't pay attention to any references or any previous relationships.
 
+{% quote We simply don't care how many years of experience you have %}
+
 I strongly believe this is how it should be.
 
 Unfortunately, this is not how it is in Silicon Valley when a young
@@ -76,6 +78,8 @@ In the end, they don't give you the money.
 Why? Who knows. They won't tell you. They are cowards, and they are afraid
 of telling you that your idea sucks and your business plan is totally wrong.
 They are afraid of being **honest**.
+
+{% quote They are afraid of telling you that your idea sucks %}
 
 There is an almost identical situation with recruitment. You send your
 [resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
@@ -111,6 +115,8 @@ Keep in mind that your salary is lower than your friends are getting,
 working somewhere on Facebook. Your salary is low, and you can't change it.
 All your expenses have to be approved. You're simply under the full control
 of your **board**.
+
+{% quote They are trying to win in poker by always making small bets %}
 
 Why is that? Because they are afraid of you being **free**. They are afraid
 of losing their money. That's why they are doing everything they can

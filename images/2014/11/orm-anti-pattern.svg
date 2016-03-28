@@ -1,1 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="413px" height="323px" version="1.1"><defs/><g transform="translate(0.5,0.5)"><rect x="1" y="112" width="210" height="209" rx="31.35" ry="31.35" fill="#7ea6e0" stroke="#000000" pointer-events="none"/><rect x="271" y="172" width="140" height="141" rx="21" ry="21" fill="#9ac7bf" stroke="#000000" pointer-events="none"/><ellipse cx="256" cy="9" rx="7.5" ry="7.5" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 256 16 L 256 41 M 256 21 L 241 21 M 256 21 L 271 21 M 256 41 L 241 61 M 256 41 L 271 61" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="311" y="179" width="60" height="30" fill="none" stroke="none" pointer-events="none"/><g transform="translate(313,182)"><switch><foreignObject pointer-events="all" width="56" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; overflow: hidden; max-height: 26px; max-width: 56px; width: 56px; white-space: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">ORM Session</div></div></foreignObject><text x="28" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><rect x="76" y="121" width="60" height="30" fill="none" stroke="none" pointer-events="none"/><g transform="translate(93,129)"><switch><foreignObject pointer-events="all" width="26" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; overflow: hidden; max-height: 26px; max-width: 56px; width: 26px; white-space: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Post</div></div></foreignObject><text x="13" y="15" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><path d="M 207.29 107.33 L 241 71" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 203.72 111.18 L 205.91 103.67 L 207.29 107.33 L 211.05 108.43 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 327.47 155.7 L 271 71" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 330.38 160.07 L 323.58 156.19 L 327.47 155.7 L 329.41 152.3 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 98.5 207 C 68.5 207 61 235 85 240.6 C 61 252.92 88 279.8 107.5 268.6 C 121 291 166 291 181 268.6 C 211 268.6 211 246.2 192.25 235 C 211 212.6 181 190.2 154.75 201.4 C 136 184.6 106 184.6 98.5 207 Z" fill="#ffffff" stroke="none" pointer-events="none"/><rect x="82" y="205" width="120" height="76" fill="none" stroke="none" pointer-events="none"/><g transform="translate(84,213)"><switch><foreignObject pointer-events="all" width="116" height="62" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; overflow: hidden; max-height: 72px; max-width: 116px; width: 116px; white-space: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">piece of object is taken away and implemented by ORM</div></div></foreignObject><text x="58" y="37" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><rect x="311" y="235" width="60" height="68" fill="none" stroke="none" pointer-events="none"/><path d="M 311 249 C 311 230.33 371 230.33 371 249 L 371 289 C 371 307.67 311 307.67 311 289 Z" fill="#67ab9f" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 311 249 C 311 263 371 263 371 249" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="311" y="265" width="60" height="30" fill="none" stroke="none" pointer-events="none"/><g transform="translate(324,273)"><switch><foreignObject pointer-events="all" width="34" height="17" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; overflow: hidden; max-height: 26px; max-width: 56px; width: 34px; white-space: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">JDBC</div></div></foreignObject><text x="17" y="15" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="411px" height="321px" viewBox="0 0 411 321" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.500000, 0.500000)">
+            <rect id="Rectangle-path" stroke="#000000" fill="#7EA6E0" x="0" y="111" width="210" height="209" rx="31.35"></rect>
+            <rect id="Rectangle-path" stroke="#000000" fill="#9AC7BF" x="270" y="171" width="140" height="141" rx="21"></rect>
+            <ellipse id="Oval" stroke="#000000" fill="#FFFFFF" cx="255" cy="8" rx="7.5" ry="7.5"></ellipse>
+            <path d="M255,15 L255,40 M255,20 L240,20 M255,20 L270,20 M255,40 L240,60 M255,40 L270,60" id="Shape" stroke="#000000"></path>
+            <rect id="Rectangle-path" x="310" y="178" width="60" height="30"></rect>
+            <g transform="translate(304.000000, 187.000000)" id="ORM-session" font-size="12" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <g>
+                    <text>
+                        <tspan x="0" y="11">ORM session</tspan>
+                    </text>
+                </g>
+            </g>
+            <rect id="Rectangle-path" x="75" y="120" width="60" height="30"></rect>
+            <g transform="translate(87.000000, 132.000000)" id="Post" font-size="12" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <g>
+                    <text>
+                        <tspan x="0" y="11">Post</tspan>
+                    </text>
+                </g>
+            </g>
+            <path d="M206.29,106.33 L240,70" id="Shape" stroke="#000000"></path>
+            <path d="M202.72,110.18 L204.91,102.67 L206.29,106.33 L210.05,107.43 L202.72,110.18 Z" id="Shape" stroke="#000000" fill="#000000"></path>
+            <path d="M326.47,154.7 L270,70" id="Shape" stroke="#000000"></path>
+            <path d="M329.38,159.07 L322.58,155.19 L326.47,154.7 L328.41,151.3 L329.38,159.07 Z" id="Shape" stroke="#000000" fill="#000000"></path>
+            <path d="M97.5,206 C67.5,206 60,234 84,239.6 C60,251.92 87,278.8 106.5,267.6 C120,290 165,290 180,267.6 C210,267.6 210,245.2 191.25,234 C210,211.6 180,189.2 153.75,200.4 C135,183.6 105,183.6 97.5,206 L97.5,206 Z" id="Shape" fill="#FFFFFF"></path>
+            <rect id="Rectangle-path" x="81" y="204" width="120" height="76"></rect>
+            <g transform="translate(90.000000, 202.000000)" id="piece-of-object-is-t" font-size="12" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <g>
+                    <text>
+                        <tspan x="9.80761719" y="11">piece of object is </tspan>
+                        <tspan x="39.8222656" y="25">taken</tspan>
+                        <tspan x="28.8154297" y="39">away and </tspan>
+                        <tspan x="20.1494141" y="53">implemented</tspan>
+                        <tspan x="32.4980469" y="67">by ORM</tspan>
+                    </text>
+                </g>
+            </g>
+            <rect id="Rectangle-path" x="310" y="234" width="60" height="68"></rect>
+            <path d="M310,248 C310,229.33 370,229.33 370,248 L370,288 C370,306.67 310,306.67 310,288 L310,248 Z" id="Shape" stroke="#000000" fill="#67AB9F"></path>
+            <path d="M310,248 C310,262 370,262 370,248" id="Shape" stroke="#000000"></path>
+            <rect id="Rectangle-path" x="310" y="264" width="60" height="30"></rect>
+            <g transform="translate(321.000000, 274.000000)" id="JDBC" font-size="12" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <g>
+                    <text>
+                        <tspan x="0" y="11">JDBC</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

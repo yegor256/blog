@@ -13,7 +13,6 @@ $(
   }
 );
 
-// disqus.com
 var disqus_shortname = 'yegor256';
 var disqus_url = document.location.href.split('?')[0].split('#')[0];
 $(
@@ -26,23 +25,3 @@ $(
       .appendTo('head');
   }
 );
-
-/*
-$(window).on(
-  'load',
-  function() {
-    'use strict';
-    $('<script>')
-      .attr('src', '/js/ext/search.min.js')
-      .appendTo('head');
-    $('#search-query').lunrSearch(
-      {
-        indexUrl: '/search.json',
-        results: '#search-results',
-        entries: '.entries',
-        template: '#search-results-template'
-      }
-    );
-  }
-);
-*/

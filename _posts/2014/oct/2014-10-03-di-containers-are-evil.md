@@ -2,7 +2,7 @@
 layout: post
 title: "Dependency Injection Containers are Code Polluters"
 date: 2014-10-03
-tags: oop anti-pattern
+tags: oop
 description:
   While dependency injection is a natural object-oriented
   mechanism, DI frameworks turn it into an anti-pattern.

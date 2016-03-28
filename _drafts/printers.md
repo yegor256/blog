@@ -7,6 +7,7 @@ tags: java oop
 description:
   Since getters are an anti-pattern, how are we supposed
   to convert an object to, say, JSON or plain text?
+  I'm suggesting to use printers.
 keywords:
   - getters and setters
   - how to avoid getters
@@ -17,12 +18,14 @@ keywords:
 
 Getters and setters [are evil]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 No need to argue about this, it's settled. You disagree?
-It's not important now. Let's say we want to get rid of getters.
+Let's discuss that later. For now, let's say, we want to get rid of getters.
+The key question is how is it possible at all? We do need to get
+the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
 I'm suggesting to use "printers" instead. Instead of exposing
-data via getters, an object will have a functionality of printing
+data via getters, an object will have a functionality of **printing**
 itself to some media.
 
 Let's say this is our class:
@@ -59,7 +62,9 @@ public class Book {
 }
 {% endhighlight %}
 
-This is a very offensive way of treating the object. We're basically
+This is a very [offensive]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
+way of treating the
+[object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}). We're basically
 exposing everything that's inside to the public. It was a nice
 little self-suffient solid object and we turned it into a bag of data,
 which anyone can access in many possible ways. We can access it for reading, of course.
@@ -69,14 +74,14 @@ If we want to convert it into JSON, they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.
 
-This is not because they are so effective. This is because we're so
-procedural in our way of thinking. We don't trust our objects. We only trust
+This is **not** because they are so effective. This is because we're so
+**procedural** in our way of thinking. We **don't trust** our objects. We only trust
 the data they store. We don't want this `Book` object to generate the XML. We
 want it to give us the data. We will build the XML. The `Book` is too stupid
-to do that job.
+to do that job. We're way smarter!
 
 I'm suggesting to stop thinking this way. Instead, let's try to give
-this poor `Book` a chance, and equip it with a printer:
+this poor `Book` a chance, and equip it with a "printer":
 
 {% highlight java %}
 public class Book {
@@ -93,7 +98,8 @@ public class Book {
 }
 {% endhighlight %}
 
-This isn't the best implementation, but you got the idea. The object is not
+This isn't the [best]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %})
+implementation, but you got the idea. The object is not
 exposing its internals any more. We can't get its ISBN and its title. We
 can only ask it to print itself in XML format.
 
@@ -121,4 +127,68 @@ You may say that the object will be rather big if there will be many formats.
 That's true, but a big object is a bad design in the first place. I would
 say that if there is more than one printer &mdash; it's a problem.
 
-to be continued...
+So, what to do if we need multiple formats? Use "media", where that printers
+will be able to print to. Say, we have an object that represents a
+record in MySQL. We want it to be printable to XML, HTML, JSON, some binary
+format and God knows what else. We can add that many printers to it, but
+the object will be big and ugly. To avoid that, introduce a new object,
+that represents the media where the data will be printed to:
+
+{% highlight java %}
+public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+  public Media print(Media media) {
+    return media
+      .with("isbn", this.isbn)
+      .with("title", this.title);
+  }
+}
+{% endhighlight %}
+
+Again, it's a very primitive design of that
+[immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+`Media` class, but you got
+the idea &mdash; the `media` accepts the data.
+Now, we want to print our object to JSON
+(this design is not really perfect, since `JsonObjectBuilder` is not immutable,
+even though it looks like one...):
+
+{% highlight java %}
+class JsonMedia implements Media {
+  private final JsonObjectBuilder builder;
+  JsonMedia() {
+    this(Json.createObjectBuilder());
+  }
+  JsonMedia(JsonObjectBuilder bdr) {
+    this.builder = bdr;
+  }
+  @Override
+  public Media with(String name, String value) {
+    return new JsonMedia(
+      this.builder.add(name, value)
+    );
+  }
+  public JsonObject json() {
+    return this.builder.build();
+  }
+}
+{% endhighlight %}
+
+Now, we make an instance of `JsonMedia` and ask our book to print
+itself there:
+
+{% highlight java %}
+JsonMedia media = new JsonMedia("book");
+JsonObject json = book.print(media).json();
+{% endhighlight %}
+
+Voilà! The JSON object is ready and the book has no idea about what
+exactly what printed just now. We need to print the book to XML? We
+create `XmlMedia`, which will print the book to XML. The `Book` class
+stays small, while the complexity of "media" objects is unlimited.
+
+My point here is simple &mdash; no getters, just printers!
+

@@ -8,12 +8,14 @@ description:
   Sequential method calls inevitably mean
   temporal coupling, which is a bottleneck for
   effective refactoring; avoid them.
+category: jcg
 keywords:
   - temporal coupling
   - temporal coupling java
   - temporal coupling hidden
   - temporal coupling in oop
   - temporal coupling definition
+book: elegant-objects 2.6.3
 ---
 
 Temporal coupling happens between sequential method calls

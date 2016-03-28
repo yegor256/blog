@@ -1,0 +1,14 @@
+set terminal svg size 700, 260
+set termoption font 'monospace,10'
+set output 'stats.svg'
+set xdata time
+set timefmt "%Y-%m"
+set ytics format "%.0fK" textcolor rgb 'black'
+set grid linecolor rgb 'gray'
+set xtics format "%b/%y" font 'monospace,8' textcolor rgb 'black'
+set autoscale
+set style fill solid
+set boxwidth 0.75 relative
+
+set ylabel "words per month" textcolor rgb 'black'
+plot "stats.dat" using 1:($2/1000) with boxes title "" linecolor rgb "#81b341"

@@ -370,14 +370,15 @@ blockquote {
   @extend %unprintable;
   float: right;
   font-family: $code-font;
-  margin: .5 * $em -5 * $em .5 * $em $em;
+  margin: .5 * $em -6 * $em .5 * $em $em;
   padding-left: .75 * $em;
-  width: 14 * $em;
+  width: 15 * $em;
 
   .book-cover {
     float: left;
     height: 160px;
     margin-right: .6 * $em;
+    width: 108px;
   }
 
   .amazon-button {
@@ -425,6 +426,14 @@ figure {
   padding: 0 .5 * $em;
   text-decoration: none;
   white-space: nowrap;
+
+  img {
+    display: inline-block;
+    height: 1em;
+    margin-right: .2em;
+    margin-top: -.25em;
+    vertical-align: middle;
+  }
 
   &:visited {
     color: $white !important;

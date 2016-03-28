@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Try. Finally. If. Null."
-date: 2016-02-16
+title: "Try. Finally. If. Not. Null."
+date: 2016-03-22
 place: Palo Alto, CA
 tags: java oop
 description:
@@ -14,15 +14,18 @@ keywords:
   - java finally
   - java close stream in finally
   - java close stream try catch
+book: elegant-objects 2.6
 ---
 
 There is a very typical mistake in pre-Java7 "try/finally" scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
 Java7 introduced a solution, but it doesn't cover all situations.
-Sometimes we need to deal with non-AutoCloseable resources. Let's
+Sometimes we need to deal with non-`AutoCloseable` resources. Let's
 open and close them correctly, please.
 
 <!--more-->
+
+{% picture /images/2016/03/lock-stock-two-smoking-barrels.jpg 0 Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie %}
 
 This is how it looks (assuming we are in Java 6):
 

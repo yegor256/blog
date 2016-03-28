@@ -153,3 +153,4 @@ CSS is not just about colors and shadows, and it's not only for graphic designer
 CSS is a key language of the modern Web. Every developer must know it, whether
 you're working with a back-end, front-end, or desktop application in C++.
 
+Also, check my [GoodReads profile](https://www.goodreads.com/user/show/54072702-yegor-bugayenko).

@@ -2,7 +2,7 @@
 layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
-tags: oop anti-pattern
+tags: oop
 categories: best jcg
 description:
   The article gives arguments about why

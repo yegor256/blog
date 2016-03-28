@@ -2,7 +2,7 @@
 layout: post
 title: Anti-Patterns in OOP
 date: 2014-09-10
-tags: oop anti-pattern
+tags: oop
 description:
   An ideal object-oriented design and architecture doesn't
   have getters and setters, signletons, static methods,

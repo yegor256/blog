@@ -5,7 +5,9 @@ date: 2016-02-26
 place: Palo Alto, CA
 tags: management
 description:
-  ...
+  Panic-driven customers is a big threat to a software
+  project, especially when they have enough money
+  to dictate their will.
 keywords:
   - why startups fail
   - failure of startup
@@ -29,6 +31,3 @@ right solution. The next few paragraphs are mostly for my future clients.
 First of all, I totally understand why you are doing this. I understand
 that you are in a very tough spot. You need something done
 
-yolks.io
-cruxes.io
-wring.io

@@ -9,6 +9,8 @@ linters:
     enabled: false
   ImportantRule:
     enabled: false
+  UrlFormat:
+    enabled: false
   ColorVariable:
     exclude:
       - '_sass/_ico.scss'

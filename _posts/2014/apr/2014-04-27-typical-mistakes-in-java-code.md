@@ -80,6 +80,9 @@ void process(Work work);
 void append(File file, String line);
 ```
 
+You can read more about this idea in
+[Elegant Objects](/elegant-objects.html) book,
+section [2.4](/images/books/elegant-objects/contents.pdf).
 There is only one exception to the rule just mentioned
 &mdash; test methods for JUnit. They are explained below.
 
@@ -305,3 +308,5 @@ line, he/she has to spend extra time finding where else `"Jeff"` is used in the
 same method.
 
 To avoid this data coupling, you should introduce a variable.
+More about it here:
+[A Few Thoughts on Unit Test Scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %}).

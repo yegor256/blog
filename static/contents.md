@@ -18,8 +18,15 @@ keywords:
 exclude_from_search: true
 ---
 
-This is a full list of articles published in my blog.
+All tags (alphabetic order):
+
+{{ site.tags | tag_cloud }}
+
+Intensity of writing:
+
+{% figure /stats.svg 700 %}
+
+This is a full list of blogs published:
 
 {{ site.posts | tagged_list }}
 
-All tags: {{ site.tags | tag_cloud }}

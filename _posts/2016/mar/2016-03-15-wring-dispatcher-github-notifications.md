@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wring.io, a Dispatcher of GitHub Notifications"
-date: 2016-02-26
+date: 2016-03-15
 place: Frankfurt, Germany
 tags: github
 description:
