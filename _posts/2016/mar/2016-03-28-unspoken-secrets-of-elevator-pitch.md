@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unspoken Secrets of an Elevator Pitch"
+title: "Unspoken Secrets of Elevator Pitch"
 date: 2016-03-28
 place: Palo Alto, CA
 tags: startup
