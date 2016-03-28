@@ -103,7 +103,7 @@ instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.
 
 Placing data into one shared place (`CharEncoding.UTF_8`)
-doesn't really solve the duplication problem; it actually makes it worse, mostly
+doesn't really solve the duplication problem; it actually makes it **worse**, mostly
 because it encourages everybody to duplicate functionality using the same
 piece of shared data.
 
@@ -113,3 +113,5 @@ You will easily find the code that is repeated again and again. Make a new
 class for this code and place the data there, as a `private` property (or private
 `static` property). That's how you will improve your design and truly get rid
 of duplication.
+
+PS. You can use a method instead of a class, but not a static literal.
