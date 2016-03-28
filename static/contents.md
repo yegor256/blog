@@ -22,6 +22,10 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
+Intensity of writing:
+
+{% figure /stats.svg 700 %}
+
 This is a full list of blogs published:
 
 {{ site.posts | tagged_list }}
