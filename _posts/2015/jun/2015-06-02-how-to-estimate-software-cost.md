@@ -98,7 +98,8 @@ Any software team can consume your $40K, but each team will produce a different
 _amount_ of software with different _quality_.
 
 My point is that instead of asking how much a software project will cost, you should
-ask how much software we can create for each dollar you give us and what
+ask [how much software]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %})
+we can create for each dollar you give us and what
 quality will it be.
 
 Basically, don't ask us to estimate how much gas it will take to get
