@@ -119,10 +119,10 @@ you can control these numbers during the course of the project. That's the
 guarantee you're looking for. Now you know what you're buying and how
 much you're paying for it. In other words, like I said above, having these
 numbers in front of you will assure you that your money is producing
-the maximum amount of software it can produce, at the highest quality.
+the maximum **amount** of software it can produce, at the highest **quality**.
 
 The only question left is how you can know you're buying
-the right software. In other words, you know how much
+the **right** software. In other words, you know how much
 we charge per gallon and how many gallons we use per mile, but
 how do you know we're driving in the right direction and not making
 too many circles or detours?
