@@ -86,6 +86,8 @@ asking for an estimate. I'm telling you that your software will be ready
 for $40K, and you sleep well. Until the moment you realize you've been
 fooled. By your own self.
 
+{% quote The development will take forever and will consume all your money %}
+
 Your concern is perfectly valid. You want to spend no more than $40K, and you want
 to get a product that will help you achieve your business goals. For example,
 you want to get into the market and acquire your first few thousand users. In other words,
