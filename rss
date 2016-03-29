@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-29T17:03:04+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Unspoken Secrets of an Elevator Pitch</title><link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html" rel="alternate" type="text/html" title="Unspoken Secrets of an Elevator Pitch" /><published>2016-03-28T00:00:00+00:00</published><updated>2016-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch</id><content type="html" xml:base="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html">&lt;p&gt;Your success depends on the quality of your &lt;strong&gt;elevator pitch&lt;/strong&gt;. Basically, your
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-29T18:22:47+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Unspoken Secrets of an Elevator Pitch</title><link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html" rel="alternate" type="text/html" title="Unspoken Secrets of an Elevator Pitch" /><published>2016-03-28T00:00:00+00:00</published><updated>2016-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch</id><content type="html" xml:base="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html">&lt;p&gt;Your success depends on the quality of your &lt;strong&gt;elevator pitch&lt;/strong&gt;. Basically, your
 success doesn&amp;#39;t depend on much of anything else. The pitch is king.
 You have to impress the &lt;del&gt;catcher&lt;/del&gt; investor in just a few seconds while
 the elevator is still moving (that&amp;#39;s where you are supposed to hunt for that
@@ -7,7 +7,7 @@ principles and become a expert. Here they are, the principles.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fhuevos-de-oro.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Huevos de oro (1993) by Bigas Luna&#39;/&gt;&lt;figcaption&gt;Huevos de oro (1993) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fhuevos-de-oro.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Huevos de oro (1993) by Bigas Luna&#39;/&gt;&lt;figcaption&gt;Huevos de oro (1993) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Look&lt;/strong&gt;.
 Rule number 1: You must look right, like Mark Zuckerberg &amp;mdash; the
@@ -161,7 +161,7 @@ open and close them correctly, please.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Flock-stock-two-smoking-barrels.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie&#39;/&gt;&lt;figcaption&gt;Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Flock-stock-two-smoking-barrels.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie&#39;/&gt;&lt;figcaption&gt;Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is how it looks (assuming we are in Java 6):&lt;/p&gt;
 
@@ -222,7 +222,7 @@ are good for &lt;code&gt;null&lt;/code&gt;.&lt;/p&gt;</content><category term="j
 which I keep seeing in so many code reviews. I just have to write about it.
 Java7 introduced a solution, but it doesn&amp;#39;t cover all situations.
 Sometimes we need to deal with non-AutoCloseable resources. Let&amp;#39;s
-open and close them correctly, please.</summary></entry><entry><title>Wring.io, a Dispatcher of GitHub Notifications</title><link href="http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications.html" rel="alternate" type="text/html" title="Wring.io, a Dispatcher of GitHub Notifications" /><published>2016-03-15T00:00:00+00:00</published><updated>2016-03-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications</id><content type="html" xml:base="http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.wring.io&#39;&gt;&lt;img src=&#39;http://www.wring.io/images/logo.svg&#39; style=&#39;width:92px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+open and close them correctly, please.</summary></entry><entry><title>Wring.io, a Dispatcher of GitHub Notifications</title><link href="http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications.html" rel="alternate" type="text/html" title="Wring.io, a Dispatcher of GitHub Notifications" /><published>2016-03-15T00:00:00+00:00</published><updated>2016-03-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications</id><content type="html" xml:base="http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.wring.io&#39;&gt;&lt;img src=&#39;http://www.wring.io/images/logo.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;I&amp;#39;m taking participation in over 50 repositories in GitHub. &lt;a href=&quot;http://www.teamed.io&quot;&gt;We&lt;/a&gt;
 manage all of our projects there. GitHub is sending me hundreds of emails
@@ -248,7 +248,7 @@ That&amp;#39;s it.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s see an example. First I&amp;#39;m creating a new pipe:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-1.png&#39; style=&#39;width:600px;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-1.png&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;It&amp;#39;s a JSON object. Property &lt;code&gt;class&lt;/code&gt; must be set to
 &lt;code&gt;io.wring.agents.github.AgGithub&lt;/code&gt;. This is the name of the Java
@@ -260,7 +260,7 @@ open source, so you can see how the class actually works:
 that I should create first in GitHub. The server will connect to GitHub
 on my behalf and under my credentials:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-2.png&#39; style=&#39;width:600px;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-2.png&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;Property &lt;code&gt;ignore&lt;/code&gt; must have an array of strings. Each item is a matching
 pattern. I can use a text or a regular expression. By default, it&amp;#39;s
@@ -295,7 +295,7 @@ from your clients in paying.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fdelicatessen.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Delicatessen (1991) by Jean-Pierre Jeunet&#39;/&gt;&lt;figcaption&gt;Delicatessen (1991) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fdelicatessen.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Delicatessen (1991) by Jean-Pierre Jeunet&#39;/&gt;&lt;figcaption&gt;Delicatessen (1991) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;one-page-no-exceptions&quot;&gt;One Page, No Exceptions&lt;/h2&gt;
 
@@ -571,7 +571,7 @@ give you a few practical hints for how to make your resume look
 &amp;quot;sexier&amp;quot;, and how to position yourself beyond the &amp;quot;good programmer&amp;quot; category and into
 the superstar zone. It may take a few years to truly pimp up your CV, but
 when it&amp;#39;s done, you will charge $100-plus per hour and face no hesitation
-from your clients in paying.</summary></entry><entry><title>How We Interview Programmers</title><link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html" rel="alternate" type="text/html" title="How We Interview Programmers" /><published>2016-03-01T00:00:00+00:00</published><updated>2016-03-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/01/how-we-interview-programmers</id><content type="html" xml:base="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:120px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+from your clients in paying.</summary></entry><entry><title>How We Interview Programmers</title><link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html" rel="alternate" type="text/html" title="How We Interview Programmers" /><published>2016-03-01T00:00:00+00:00</published><updated>2016-03-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/01/how-we-interview-programmers</id><content type="html" xml:base="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:120px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;At &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;, we&amp;#39;ve been getting
 about 10 &lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resumes&lt;/a&gt; every day from programmers who want to work
@@ -584,7 +584,7 @@ There are a few basic principles I would like to share.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwall-street.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Wall Street (1987) by Oliver Stone&#39;/&gt;&lt;figcaption&gt;Wall Street (1987) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwall-street.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Wall Street (1987) by Oliver Stone&#39;/&gt;&lt;figcaption&gt;Wall Street (1987) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;the-market-interviews-you-not-us&quot;&gt;The Market Interviews You, Not Us&lt;/h2&gt;
 
@@ -696,7 +696,7 @@ that are never doubted by subordinates and an explicitly defined hierarchy.&lt;/
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fapocalypse-now.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Apocalypse Now (1979) by Francis Ford Coppola&#39;/&gt;&lt;figcaption&gt;Apocalypse Now (1979) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fapocalypse-now.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Apocalypse Now (1979) by Francis Ford Coppola&#39;/&gt;&lt;figcaption&gt;Apocalypse Now (1979) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;According to Wikipedia at the time of writing, a
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Holacracy&quot;&gt;&lt;strong&gt;holacracy&lt;/strong&gt;&lt;/a&gt; exists when
@@ -779,7 +779,7 @@ If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fthe-revenant.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;The Revenant (2015) by Alejandro G. Iñárritu&#39;/&gt;&lt;figcaption&gt;The Revenant (2015) by Alejandro G. Iñárritu&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fthe-revenant.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Revenant (2015) by Alejandro G. Iñárritu&#39;/&gt;&lt;figcaption&gt;The Revenant (2015) by Alejandro G. Iñárritu&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s say I&amp;#39;m a &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;bad&lt;/a&gt;
 imperative procedural programmer, and this is my Java code:&lt;/p&gt;
@@ -973,7 +973,7 @@ I love or hate each one. Follow me, in alphabetic order.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fthe-shining.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;The Shining (1980) by Stanley Kubrick&#39;/&gt;&lt;figcaption&gt;The Shining (1980) by Stanley Kubrick&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fthe-shining.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Shining (1980) by Stanley Kubrick&#39;/&gt;&lt;figcaption&gt;The Shining (1980) by Stanley Kubrick&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Abstract_factory_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Abstract Factory&lt;/span&gt;&lt;/a&gt;.
 It&amp;#39;s OK.&lt;/p&gt;
@@ -1139,7 +1139,7 @@ I&amp;#39;m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F01%2Fshi-mian-mai-fu.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;Shi mian mai fu (2004) by Yimou Zhang&#39;/&gt;&lt;figcaption&gt;Shi mian mai fu (2004) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F01%2Fshi-mian-mai-fu.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Shi mian mai fu (2004) by Yimou Zhang&#39;/&gt;&lt;figcaption&gt;Shi mian mai fu (2004) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s take a look at this rather typical Java example:&lt;/p&gt;
 
@@ -1249,7 +1249,7 @@ or in-house teams.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F01%2Fthe-fan.jpg&#39; style=&#39;width:600px;&#39; alt=&#39;The Fan (1996) by Tony Scott&#39;/&gt;&lt;figcaption&gt;The Fan (1996) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F01%2Fthe-fan.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Fan (1996) by Tony Scott&#39;/&gt;&lt;figcaption&gt;The Fan (1996) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; for his
@@ -1259,7 +1259,7 @@ and why and how we&amp;#39;re &lt;a href=&quot;/2014/04/17/how-xdsd-is-different
 from everybody else. He seemed to be impressed.
 Then, he asked, &amp;quot;&lt;strong&gt;How much&lt;/strong&gt; do you charge?&amp;quot;&lt;/p&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:100px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;I told him that we are also different in the way we bill for our work,
 because we don&amp;#39;t charge for the time spent by our programmers sitting
@@ -1321,7 +1321,7 @@ Now, honestly tell me if you find and solve eight bugs per day with that
 level of complexity, detailed code review, and precision of
 documentation? I seriously doubt it.&lt;/p&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;In that &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How Much Do You Pay Per Line of Code?&lt;/a&gt;
 post, I actually did a comparison of a co-located project, where I was an architect,
