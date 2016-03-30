@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jare.io, an Instant and Free CDN"
-date: 2016-03-09
+date: 2016-03-30
 place: Palo Alto, CA
 tags: cdn
 description:
