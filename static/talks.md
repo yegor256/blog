@@ -187,7 +187,7 @@ Tallinn, Estonia<br/>
 9 June 2016
 
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay 2016"/>
-**Java vs OOP** (keynote)<br/>
+**Java vs OOP**<br/>
 [JavaDay 2016](http://javaday.by/)<br/>
 Minsk, Belarus<br/>
 11 June 2016
