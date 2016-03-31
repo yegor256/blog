@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html</loc>
+<lastmod>2016-03-30T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html</loc>
 <lastmod>2016-03-28T00:00:00+00:00</lastmod>
 </url>
@@ -915,6 +919,9 @@
 </url>
 <url>
 <loc>http://www.yegor256.com/tag/startup</loc>
+</url>
+<url>
+<loc>http://www.yegor256.com/tag/cdn</loc>
 </url>
 <url>
 <loc>http://www.yegor256.com/p/2/</loc>

@@ -1,4 +1,254 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-30T18:31:00+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Unspoken Secrets of an Elevator Pitch</title><link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html" rel="alternate" type="text/html" title="Unspoken Secrets of an Elevator Pitch" /><published>2016-03-28T00:00:00+00:00</published><updated>2016-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch</id><content type="html" xml:base="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html">&lt;p&gt;Your success depends on the quality of your &lt;strong&gt;elevator pitch&lt;/strong&gt;. Basically, your
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-03-31T04:18:30+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Jare.io, an Instant and Free CDN</title><link href="http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html" rel="alternate" type="text/html" title="Jare.io, an Instant and Free CDN" /><published>2016-03-30T00:00:00+00:00</published><updated>2016-03-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/30/jare-instant-free-cdn</id><content type="html" xml:base="http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.jare.io&#39;&gt;&lt;img src=&#39;http://www.jare.io/images/logo.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;CDN stands for a Content Delivery Network. Technically, it is a bunch
+of servers located in different countries and continents. You give them
+your &lt;code&gt;logo.gif&lt;/code&gt; and they give you a URL, which resolves to a different
+server depending on who is trying to resolve it. As a result, the
+file is always close to the end-user and your website loads much faster
+than without a CDN. Sounds good, but all CDN providers want money
+for their service and usually a rather complex setup and registration
+procedure. My pet project &lt;a href=&quot;http://www.jare.io&quot;&gt;jare.io&lt;/a&gt; is a free
+CDN that is simple to configure. It utilizes AWS CloudFront resources.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First, let me show how it works and then, if you&amp;#39;re interested in
+the details, I will explain how it&amp;#39;s done internally. Say you have
+this HTML:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.teamed.io/image/logo.svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I want this &lt;code&gt;logo.svg&lt;/code&gt; to be delivered via a CDN. There are two steps.
+First, I register my domain at &lt;a href=&quot;http://www.jare.io&quot;&gt;jare.io&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fjare-1.png&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Second, I change my HTML:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That&amp;#39;s it.&lt;/p&gt;
+
+&lt;p&gt;Try it with your own resources and you will see how
+much faster they will be loaded.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s absolutely free, but I ask you to be reasonable. If your traffic
+is huge, you need your own account in CloudFront or somewhere else. My
+service is for small projects.&lt;/p&gt;
+
+&lt;p&gt;Now for more technical details, if you want to know how technically
+this solution works. First, let&amp;#39;s discuss what CDN is and how it works.&lt;/p&gt;
+
+&lt;h2 id=&quot;url-dns-tcp-http&quot;&gt;URL, DNS, TCP, HTTP&lt;/h2&gt;
+
+&lt;p&gt;When your browser wants to load an image, it has a &lt;a href=&quot;https://en.wikipedia.org/wiki/Uniform_Resource_Locator&quot;&gt;URL&lt;/a&gt;
+for that, like in the example above. This is the URL: &lt;code&gt;http://www.teamed.io/image/logo.svg&lt;/code&gt;.
+There are three important parts in this address. First is &lt;code&gt;http&lt;/code&gt;, the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Communications_protocol&quot;&gt;protocol&lt;/a&gt;.
+Second is &lt;code&gt;www.teamed.io&lt;/code&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Host_%28network%29&quot;&gt;host&lt;/a&gt; name,
+and the tail &lt;code&gt;/images/logo.svg&lt;/code&gt;, which is the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax&quot;&gt;path&lt;/a&gt;.
+To load the image, the browser has to open a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Network_socket&quot;&gt;socket&lt;/a&gt;,
+connecting your computer and the server, which has the image. To open a
+socket, the browser needs to know the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/IP_address&quot;&gt;IP address&lt;/a&gt; of the server.&lt;/p&gt;
+
+&lt;p&gt;There is no such address in that URL. In order to find the IP address,
+the browser is doing what is called a lookup. It connects to the
+nearest &lt;a href=&quot;https://en.wikipedia.org/wiki/Name_server&quot;&gt;name server&lt;/a&gt;
+and asks &amp;quot;what is the IP address of &lt;a href=&quot;http://www.teamed.io?&quot;&gt;www.teamed.io?&lt;/a&gt;&amp;quot;
+The answer usually contains a single IP address:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup www.teamed.io
+Server:   172.16.0.1
+Address:  172.16.0.1#53
+
+Non-authoritative answer:
+www.teamed.io canonical name = teamed.github.io.
+teamed.github.io  canonical name = github.map.fastly.net.
+Name: github.map.fastly.net
+Address: 199.27.79.133&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;IP address of &lt;code&gt;www.teamed.io&lt;/code&gt; is &lt;code&gt;199.27.79.133&lt;/code&gt;, at the time of writing.&lt;/p&gt;
+
+&lt;p&gt;When the address is known, the browser opens a new socket and sends
+an &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message&quot;&gt;HTTP request&lt;/a&gt;
+through it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;GET /images/logo.svg HTTP/1.1
+Host: www.teamed.io
+Accept: image/*&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The server responds with an
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message&quot;&gt;HTTP response&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 200 OK
+Content-Type: image/svg+xml
+
+[SVG image content goes here, over 1000 bytes]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Scalable_Vector_Graphics&quot;&gt;SVG&lt;/a&gt;
+image we&amp;#39;re looking for. The browser renders it on the web page
+and that&amp;#39;s it.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-network-of-edge-servers&quot;&gt;The Network of Edge Servers&lt;/h2&gt;
+
+&lt;p&gt;So far so good, but if the distance between your browser and that IP address
+is rather large, loading the image will take a lot of time. Well, hundreds
+of milliseconds. Try to load this image, which is located on a server
+that is hosted in Prague, Czech Republic (I&amp;#39;m using &lt;code&gt;curl&lt;/code&gt; as suggested
+&lt;a href=&quot;https://josephscott.org/archives/2011/10/timing-details-with-curl/&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ curl -w &amp;quot;@f.txt&amp;quot; -o /dev/null -s \
+  http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.005
+       time_connect:  0.376
+   time_pretransfer:  0.377
+ time_starttransfer:  0.566
+                    ----------
+         time_total:  0.567&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I&amp;#39;m trying to do it from Palo Alto, California, which is about half a globe
+away from Prague. As you can see, it takes over 500ms. That&amp;#39;s too much, especially
+if a web page contains many images. Overall, page loading may take seconds,
+just because the server is too far away from me. Well, it will inevitably be
+too far away from some users, no matter where we host it. If we host it here
+in California, it will be close enough to me and the image will be loaded
+instantly (less than 50ms). But then it will be too slow for users in Prague.&lt;/p&gt;
+
+&lt;p&gt;This problem has no solutions if the server generates images or pages
+on the fly in some unique way and if we can&amp;#39;t install a number of servers
+in different countries and continents. But in most cases, such as our logo example, this is not a problem.
+This logo doesn&amp;#39;t need to be unique for
+each user. It is a very &lt;em&gt;static&lt;/em&gt; resource, which needs to be created only once
+and be delivered to everybody, without any changes.&lt;/p&gt;
+
+&lt;p&gt;So, how about we install a server somewhere here in California and let
+Californian users connect to it. When a request for &lt;code&gt;logo.gif&lt;/code&gt; comes
+to one of the &lt;em&gt;edge&lt;/em&gt; servers, it will connect to the central server
+in Prague and load the file. This will happen only once. After that, the
+edge server will not request the file
+from the central server. It will return it immediately, from its internal cache.&lt;/p&gt;
+
+&lt;p&gt;We need to have many edge servers, preferably in all countries where
+our users may be located. The first request will take longer, but all others
+will be much faster because they will be served from the closest edge server.&lt;/p&gt;
+
+&lt;p&gt;Now, the question is how the browser will know which edge server is the closest, right?
+We simply trick the domain name resolution process. Depending on who is asking,
+the DNS will give different answers. Let&amp;#39;s take &lt;code&gt;cf.jare.io&lt;/code&gt;, for example (it
+is the name of all edge servers responsible for delivering our content
+in AWS CloudFront, a CNAME for &lt;code&gt;djk1be5eatcae.cloudfront.net&lt;/code&gt;).
+If I&amp;#39;m looking it up from California, I&amp;#39;m getting the following answer:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup cf.jare.io
+Server:   192.168.1.1
+Address:  192.168.1.1#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 54.230.141.211&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;An edge server with IP address &lt;code&gt;54.230.141.211&lt;/code&gt; is located in
+&lt;a href=&quot;https://db-ip.com/54.230.141.211&quot;&gt;San Francisco&lt;/a&gt;. This
+is rather close to me, less than fifty miles. If I do the same operation
+from a server in Virginia, I get a different response:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup cf.jare.io
+Server:   172.16.0.23
+Address:  172.16.0.23#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 52.85.131.217&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;An edge server with IP address &lt;code&gt;52.85.131.217&lt;/code&gt; is located in
+&lt;a href=&quot;https://db-ip.com/52.85.131.217&quot;&gt;Washington&lt;/a&gt;, which is far away from
+me, but very close to the server I was making the lookup from.&lt;/p&gt;
+
+&lt;p&gt;There are thousands of name servers around the world and all of them
+have different information about where that edge server &lt;code&gt;cf.jare.io&lt;/code&gt;
+is physically located. Depending on who is asking, the answer will be different.&lt;/p&gt;
+
+&lt;h2 id=&quot;aws-cloudfront&quot;&gt;AWS CloudFront&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/&quot;&gt;CloudFront&lt;/a&gt; is one of the simplest
+CDN solutions. All you have to do to start delivering your content
+through their edge nodes is to create a &amp;quot;distribution&amp;quot; and configure it.
+A distribution is basically a connector between content origin and
+edge servers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/uml/b5d40b6498ca48f6d2efc8671dd6d1e6.svg&#39;
+        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
+
+&lt;p&gt;One of edge servers receives an HTTP request. If it already has that
+&lt;code&gt;logo.svg&lt;/code&gt; in its cache, it immediately returns an HTTP response with its
+content inside. If its cache is empty, the edge server makes an HTTP
+request to the central server. This server knows about the &amp;quot;distribution&amp;quot;
+and its configuration. It makes an HTTP connection to the origin server,
+which is &lt;code&gt;www.teamed.io&lt;/code&gt; and asks it to return &lt;code&gt;logo.svg&lt;/code&gt;. When done,
+the image is returned to the edge server, where it is cached.&lt;/p&gt;
+
+&lt;p&gt;This looks rather simple, but it&amp;#39;s not free and it&amp;#39;s not that quick to configure.
+You have to create an account with CloudFront, register your credit card
+there, and get an approval. Then you have to create a distribution and configure it.
+You should then create that CNAME in your name server. If you&amp;#39;re doing it
+for a single website, it&amp;#39;s not a big deal. If you have a dozen websites,
+it&amp;#39;s a time consuming operation.&lt;/p&gt;
+
+&lt;h2 id=&quot;jare-io-a-middle-man&quot;&gt;Jare.io, a Middle Man&lt;/h2&gt;
+
+&lt;p&gt;Jare.io is an extra component in that diagram, which makes your
+life easier:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/uml/aecf8b3862f82e6d5d8d27e948d45c83.svg&#39;
+        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Jare.io has a &amp;quot;relay&amp;quot;, which acts as an origin server for CloudFront. All
+requests that arrive to &lt;code&gt;cf.jare.io&lt;/code&gt; are dispatched to the relay. The relay
+decides what to do with them. The decision is based on the information
+from the HTTP request URI. For example, the request from the browser
+has this URI path:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/?u=http://www.teamed.io/images/logo.svg&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Remember, the request is made to &lt;code&gt;cf.jare.io&lt;/code&gt;, which is the address of
+the edge server. This exact URI arrives at &lt;code&gt;relay.jare.io&lt;/code&gt;. The URI contains
+enough information to make a decision about which file has to be returned.
+The relay makes a new HTTP request to &lt;code&gt;www.teamed.io&lt;/code&gt; and retrieves the image.&lt;/p&gt;
+
+&lt;p&gt;The beauty of this solution is that it&amp;#39;s easy. For small websites,
+it is a free and quick CDN.&lt;/p&gt;
+
+&lt;p&gt;By the way, when we query the same image through jare.io (and CloudFront),
+it comes back much faster:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ curl -w &amp;quot;@f.txt&amp;quot; -o /dev/null -s \
+  http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.005
+       time_connect:  0.021
+   time_pretransfer:  0.021
+ time_starttransfer:  0.041
+                    ----------
+         time_total:  0.041&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Most of the work is done by AWS CloudFront, while jare.io is just a
+relay that makes its configuration more convenient. Besides, it makes
+it free, because jare.io is sponsored by
+&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;. In other words, my company will
+pay for your usage of CloudFront. I would appreciate if you kept that in
+mind and didn&amp;#39;t use jare.io for traffic-intensive resources.&lt;/p&gt;</content><category term="cdn" /><summary>CDN stands for a Content Delivery Network. Technically, it is a bunch
+of servers located in different countries and continents. You give them
+your logo.gif and they give you a URL, which resolves to a different
+server depending on who is trying to resolve it. As a result, the
+file is always close to the end-user and your website loads much faster
+than without a CDN. Sounds good, but all CDN providers want money
+for their service and usually a rather complex setup and registration
+procedure. My pet project jare.io is a free
+CDN that is simple to configure. It utilizes AWS CloudFront resources.</summary></entry><entry><title>Unspoken Secrets of an Elevator Pitch</title><link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html" rel="alternate" type="text/html" title="Unspoken Secrets of an Elevator Pitch" /><published>2016-03-28T00:00:00+00:00</published><updated>2016-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch</id><content type="html" xml:base="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html">&lt;p&gt;Your success depends on the quality of your &lt;strong&gt;elevator pitch&lt;/strong&gt;. Basically, your
 success doesn&amp;#39;t depend on much of anything else. The pitch is king.
 You have to impress the &lt;del&gt;catcher&lt;/del&gt; investor in just a few seconds while
 the elevator is still moving (that&amp;#39;s where you are supposed to hunt for that
@@ -1238,127 +1488,4 @@ I don&amp;#39;t. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I&amp;#39;m suggesting you use validating decorators instead.</summary></entry><entry><title>How Expensive Is Your Outsourcing Team?</title><link href="http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing.html" rel="alternate" type="text/html" title="How Expensive Is Your Outsourcing Team?" /><published>2016-01-19T00:00:00+00:00</published><updated>2016-01-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing</id><content type="html" xml:base="http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing.html">&lt;p&gt;Let me put it this way: $15 per hour for a senior Java developer &amp;mdash;
-is that cheap or expensive? It&amp;#39;s cheap, right? Right. What would you
-say if I told you this cheap Java developer hardly writes two
-primitive lines of code per day? You&amp;#39;re paying $600 every week but
-rarely getting anything back. How cheap is this Java guy now?
-My point is that using hourly rate as a cost indicator is a very bad idea,
-whether with &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;
-or in-house teams.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F01%2Fthe-fan.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Fan (1996) by Tony Scott&#39;/&gt;&lt;figcaption&gt;The Fan (1996) by Tony Scott&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I actually decided to write this after a short sales meeting recently
-with a prospect from Illinois. He wanted to hire &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; for his
-Java project and seemed to like our approach. I explained how we work,
-how we control &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality&lt;/a&gt;,
-and why and how we&amp;#39;re &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;different&lt;/a&gt;
-from everybody else. He seemed to be impressed.
-Then, he asked, &amp;quot;&lt;strong&gt;How much&lt;/strong&gt; do you charge?&amp;quot;&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.teamed.io&#39;&gt;&lt;img src=&#39;http://img.teamed.io/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I told him that we are also different in the way we bill for our work,
-because we don&amp;#39;t charge for the time spent by our programmers sitting
-in front of monitors. Instead, we bill for &lt;strong&gt;results&lt;/strong&gt; produced, merged,
-and delivered. I showed him this article about
-&lt;a href=&quot;/2014/10/21/incremental-billing.html&quot;&gt;incremental billing&lt;/a&gt;.
-He seemed to understand the advantages of our approach, compared to the
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;hourly salaries&lt;/a&gt;
-being paid by &lt;del&gt;almost&lt;/del&gt; everybody else in the market.&lt;/p&gt;
-
-&lt;p&gt;Still, the question remained &amp;mdash; how much?&lt;/p&gt;
-
-&lt;p&gt;What could I do? I had to give him an answer.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Under different management, programmers deliver very different results in the same 60 minutes&lt;/aside&gt;
-
-&lt;p&gt;I told him that our best Java programmers earn $30 to $50 per hour and
-we add our margin on top of that, in the amount of 100 percent, for management.
-In the end, &amp;quot;one hour&amp;quot; will cost him $60 to $100. He ran away.&lt;/p&gt;
-
-&lt;p&gt;What did I do wrong? I think I know what it was.
-I didn&amp;#39;t explain to him that, under different management,
-programmers deliver very different results in the same
-60 minutes. By &amp;quot;very different&amp;quot;, I mean &lt;strong&gt;dramatically&lt;/strong&gt; different. Let
-me demonstrate the numbers (I actually did that already almost two
-years ago, in my &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How Much Do You Pay Per Line of Code?&lt;/a&gt;
-post, but will try again from a different perspective).&lt;/p&gt;
-
-&lt;p&gt;Take a look at &lt;a href=&quot;https://github.com/yegor256/takes/issues/430&quot;&gt;yegor256/takes#430&lt;/a&gt;,
-a feature request in the &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;,
-one of the projects we&amp;#39;re managing.
-Let&amp;#39;s see how much the project paid for the work done in this ticket:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;15 minutes to me for creating a new ticket&lt;/li&gt;
-&lt;li&gt;30 minutes to &lt;a href=&quot;https://github.com/hdouss&quot;&gt;@hdous&lt;/a&gt; for fixing it&lt;/li&gt;
-&lt;li&gt;52 minutes to &lt;a href=&quot;https://github.com/pinaf&quot;&gt;@pinaf&lt;/a&gt; for code review&lt;/li&gt;
-&lt;li&gt;20 minutes to &lt;a href=&quot;https://github.com/ypshenychka&quot;&gt;@ypshenychka&lt;/a&gt; for QA review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Assuming that an average price &amp;quot;per hour&amp;quot; is $50
-($25 for developers and $25 for our management),
-the total cost of this new feature was $97.50 (117 minutes).&lt;/p&gt;
-
-&lt;p&gt;Look at these two tickets again.
-&lt;a href=&quot;https://github.com/yegor256/takes/issues/430&quot;&gt;#430&lt;/a&gt; is the feature
-request and &lt;a href=&quot;https://github.com/yegor256/takes/issues/493&quot;&gt;#493&lt;/a&gt; is
-the pull request with two new Java files and code review comments.&lt;/p&gt;
-
-&lt;p&gt;Four people worked on this feature. If you put them all together
-in an office, full-time, with the same hourly rate, they will cost
-$800 per day (I&amp;#39;m not adding any management costs!).
-Now the question is whether they will be able to
-create &lt;strong&gt;eight&lt;/strong&gt; new features &lt;strong&gt;every day&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#39;re a manager, you know the velocity of your programmers.
-If you&amp;#39;re a programmer, you know how much code you can write in a day.
-Now, honestly tell me if you find and solve eight bugs per day with that
-level of complexity, detailed code review, and precision of
-documentation? I seriously doubt it.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;In that &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;How Much Do You Pay Per Line of Code?&lt;/a&gt;
-post, I actually did a comparison of a co-located project, where I was an architect,
-with a distributed one, where I also was an architect. My numbers tell
-me that a traditionally managed team is at least 10 times less
-productive than a team managed by &lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; under
-&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt; principles.&lt;/p&gt;
-
-&lt;p&gt;My point is that asking &amp;quot;What is your hourly rate?&amp;quot; is just as wrong as
-asking &lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;How Much for This Software?&lt;/a&gt;
-if we&amp;#39;re talking about software developers motivated by results,
-not &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slaves&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Instead, we should ask: How much can you do for $100?&lt;/p&gt;
-
-&lt;p&gt;As you can see, we can easily demonstrate how much we are capable
-of delivering for $100. Can you and your team do the same?&lt;/p&gt;
-
-&lt;p&gt;Thus, your &lt;a href=&quot;https://en.wikipedia.org/wiki/Return_on_investment&quot;&gt;ROI&lt;/a&gt;
-while working with an &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;outsourced team&lt;/a&gt; mostly
-depends on their &lt;strong&gt;results per dollar&lt;/strong&gt;, not dollars per hour. The first
-metric is difficult to calculate, and only the best teams will be able
-to do so. The second metric is absolutely misleading, but anyone
-will give it to you.&lt;/p&gt;
-
-&lt;p&gt;An &lt;a href=&quot;/2015/06/15/software-outsourcing-survival-guide.html&quot;&gt;outsourced team&lt;/a&gt;
-is expensive when its results per dollar are low,
-no matter how big or small its dollars-per-hour rate is. To the contrary,
-a team is financially very efficient if its results per dollar is high.
-It doesn&amp;#39;t really matter what the value of the second metric is.&lt;/p&gt;
-
-&lt;p&gt;P.S. I&amp;#39;m going to show this article to that prospect who ran away. Maybe
-he will come back :)&lt;/p&gt;</content><category term="outsourcing" /><summary>Let me put it this way: $15 per hour for a senior Java developer &amp;mdash;
-is that cheap or expensive? It&amp;#39;s cheap, right? Right. What would you
-say if I told you this cheap Java developer hardly writes two
-primitive lines of code per day? You&amp;#39;re paying $600 every week but
-rarely getting anything back. How cheap is this Java guy now?
-My point is that using hourly rate as a cost indicator is a very bad idea,
-whether with outsourcing
-or in-house teams.</summary></entry></feed>
+I&amp;#39;m suggesting you use validating decorators instead.</summary></entry></feed>
