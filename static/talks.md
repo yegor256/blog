@@ -53,12 +53,6 @@ give them some feedback, at least here, on the blog &mdash;
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
-<img src="/images/2016/sedc-2016.png" class="future-talk" alt="SEDC 2016"/>
-**Meetings And Motivation, Friends Or Enemies?**<br/>
-[SEDC 2016](http://www.sedcconference.org/)<br/>
-Washington DC, USA<br/>
-31 March 2016
-
 <img src="/images/2016/agilia-conference-2016.png" class="future-talk" alt="Agilia Conference 2016"/>
 **Meetings Help Us And Kill Our Projects**<br/>
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
@@ -207,6 +201,15 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<img src="/images/2016/sedc-2016.png" class="past-talk" alt="SEDC 2016"/>
+Meetings And Motivation, Friends Or Enemies?;
+[SEDC 2016](http://www.sedcconference.org/);
+Washington DC, USA;
+31 March 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
+[photos](...),
+[video](...).
 
 <div style="clear:both"/>
 <img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="past-talk" alt="CascadiaIT 2016"/>
