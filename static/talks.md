@@ -72,7 +72,7 @@ Minsk, Belarus<br/>
 8 April 2016
 
 <img src="/images/2016/agileee-2016.png" class="future-talk" alt="AgileEE 2016"/>
-**Meetings Are a Threat To  Code Quality**<br/>
+**Meetings Are a Threat To Code Quality**<br/>
 [AgileEE 2016](http://kiev2016.agileee.org/)<br/>
 Kiev, Ukraine<br/>
 9 April 2016
