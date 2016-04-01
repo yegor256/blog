@@ -74,7 +74,7 @@ subscribers in my list).
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you? Why interested?</label>
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
-  <label for="subscribe"></label>
+  <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
   <span class="note">1000+ Happy Subscribers and Counting...</span>
 </fieldset></form>
