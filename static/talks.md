@@ -174,11 +174,13 @@ Dnepropetrovsk, Ukraine<br/>
 Oslo, Norway<br/>
 8 June 2016
 
+<!--
 <img src="/images/2016/cloudexpo-2016.jpg" class="future-talk" alt="CloudExpo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
 [18th Cloud Expo](http://soa.sys-con.com/node/3661412)<br/>
 New York, USA<br/>
-7-9 June 2016 (<span class="red">not sure about this one</span>)
+7-9 June 2016
+-->
 
 <img src="/images/2016/geekout-2016.png" class="future-talk" alt="GeekOUT 2016"/>
 **Chatbots and Microservices**<br/>
