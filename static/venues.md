@@ -74,6 +74,15 @@ was rather passive and presentations were mostly from sponsors. The event was th
 mostly to make money, which is always a downside. The location was rather
 bad &mdash; an old Soviet-time hotel.
 
+<img src="/images/2016/sedc-2016.png" class="venue-logo" alt="SEDC 2016"/>
+<aside class="venue-rate green">C</aside>
+[SEDC 2016](http://www.sedcconference.org/); 31 March 2016; Washington, DC<br/>
+The place was good, the food was very good, the organization was not bad, but
+the audience was rather old and out-of-subject. Maybe system engineering is
+not really my thing, but most of these guys live somewhere in 1990. And there
+were less than a hundred people for four tracks. Just about twenty per
+presentation. It's not really a conference, but more like a meetup.
+
 <img src="/images/2015/datflock-2015-logo.png" class="venue-logo" alt="DATFlock 2015"/>
 <aside class="venue-rate orange">C</aside>
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/); 20 November 2015; Berlin, Germany<br/>
