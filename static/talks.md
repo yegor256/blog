@@ -209,7 +209,7 @@ Washington DC, USA;
 31 March 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
 [photos](...),
-[video](...).
+[video](https://www.youtube.com/watch?v=LB_YLWhGrco).
 
 <div style="clear:both"/>
 <img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="past-talk" alt="CascadiaIT 2016"/>
