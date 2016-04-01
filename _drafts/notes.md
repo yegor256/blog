@@ -14,11 +14,11 @@ keywords:
   - convertible notes vs safe
 ---
 
-Convertible notes is what you most probably will hear, when
+"Convertible Notes" is what you most probably will hear when
 getting first money for your first startup. They will give you
-cash and will ask you to give them that notes (or SAFE,
+cash asking to give them that convertible notes (or SAFE,
 which is very similar). Convertible notes are just a few pages of paper
-with two signatures at the bottom.
+with two signatures at the bottom. Not too much to worry about.
 It's basically a contract between your startup and the investor.
 Let's see what exactly it says and what you, as a founder,
 should pay attention to.
@@ -28,6 +28,162 @@ should pay attention to.
 ## Why Not Equity?
 
 The first question is why convertible notes? Why not just shares of stock?
-And what the hell is "shares of stock" in the first place, right?
+And what the hell "shares of stock" is in the first place, right? Basically,
+there are two questions in each business or in any group activity, be it
+a new mobile app, a multi-national corporation or a bank robbery:
+1) who is the boss, and 2) who gets the profit. To regulate that process
+"shares of stock" were invented
+(if you know who and when invented them, let me know).
+
+Say, we're planning to <del>rob a bank</del> create a Facebook killer. There are three
+of us. We print three papers, each of which says: "whoever holds this paper
+has one vote and will get an equal part of the profit". How does it sound? Each of us
+has the same paper. When it's time to decide whether we use Java or PHP,
+we sit together, show our papers and vote. One vote for Java, two for PHP &mdash;
+the decision is made, we will use PHP. When our startup finally dies
+and it's time to decide what to do with the domain name, we sell it for
+$300 and give $100 to each holder of that paper, since there are just three
+papers and they have equal rights.
+
+Thus, basically, each share of stock (this is an official name of that piece
+of paper) is a **promise**. A promise of some rights to vote and to get
+profit. The company (our startup) is promising us.
+
+By the way, I can sell my share of stock to my friend. When it's time to
+decide whether it's Java or PHP, he will show up and vote. You may not like
+that, since you see that dude for the first time, but you will have to obey &mdash;
+he's got that paper in his hands. That's why shares of stock are also
+called **equity**. I can sell them just like I can sell my car. No matter who
+owns them, he or she has exactly the same rights as the original or the
+previous owner. They are assets.
+
+Usually, there are millions or billions of shares of stock. When a company
+starts, it prints, say, a million of them, giving 200,000 to each co-founder
+and leaving 400,000 in the so-called "pool". Later, an investor shows up
+and says: "I will put $500,000 to the bank account of the company and the
+company prints 300,000 more shares of stock for me." The amount of shares
+"issued" is growing. For example, at the time of writing there are
+[7.91 billion](https://www.google.com/finance?cid=358464)
+shares with Microsoft name of them. Microsoft Corporation has
+been printing extra shares X times over 30 years of their history.
+When Bill Gates founded the company, he had X shares, which were equal
+to X %. Now he has X, which is
+
+Now, the most annoying part. In reality, shares are not just a piece of paper
+with a few sentences on it, like in our example above. It's a big legal
+document that explains exactly how its holder can vote and exactly when and how
+he or she will get the profit. There are tons of legal clauses, which
+usually take weeks or months of discussions, between the company and
+investors. In reality, an investor says: "I will put $500,000 to the bank
+account of the company and the company prints 300,000 more shares of stock for me,
+_terms and conditions of which my lawyer will now start discussing with you_."
+
+If we're talking about $500K, you will have no problem meeting that lawyers.
+However, if it's just $25K... To make life easier for smaller investments,
+convertible notes were invented. They are **not equity**. Investors that
+have convertible notes can't vote. They can't sell convertible notes and they
+can't get any profit from the company. So, what they are for then? I'll explain
+in a minute. My goal so far was to show why young companies don't want
+to deal with shares of stock &mdash; because of that greedy lawyers and, of
+course, the complexity of terms and conditions.
+
+## What Convertible Notes Are?
+
+They are just debts. They are not real investments. The company simply
+borrows money from an investor, promising to return them back. Why not
+just call them "money borrowing notes"? Because investors don't want their
+money back. They want equity.
+
+So, here is how it works. Say, I'm an investor, giving you $25K. You give
+me convertible notes. Then, we wait. We wait until a more serious investor
+shows up and gives you a bigger sum of money. And it's not just a matter
+of amount. What's important is that this investor must get shares of stock
+from you. This will be called "equity financing". You get finance and give
+away equity. When this happens, I show up, give you that convertible notes
+and you give me equity too. On the same terms as you gave to that investor.
+I won't send you my lawyers, you won't discuss terms and conditions. You will
+just **convert** my notes to equity, on the same terms as agreed with that
+investor. Plain and simple.
+
+A practical example. There is you and your co-founder. You guys have
+1,000,000 shares of stock, 500K issued to each of you. I give you $25K, you give
+me convertible notes. In a few months an investor comes in and
+your company issues 100,000 shares and sells them for $400,000
+(your post a $400K check to the bank account of your company).
+This means that now there are 1,100,000 shares in total. You just sold 100K of them
+with the price of $4 per share. Now it's time to convert my convertible notes.
+You will have to give me 6,250 shares and I'll return you the notes.
+Thus, in the end, there will be 1,106,250 shares total and your company post-money
+valuation will be $4,425,000. Got the math?
+
+My shares will have exacty the same
+"rights, privileges, preferences and restrictions" as the shares you
+gave to the investor. And I won't have an option to negotiate. I will just
+receive them and accept.
+
+One more thing. If that investor will never show up, you still owe me $25K.
+A debt is a debt.
+
+Now, since we know what convertible notes are for and how they work, let's
+see what is important to pay attention to. There are just a few things, but
+they are really important.
+
+## The Valuation Cap
+
+Let's take a look again at the example above. You are selling 100,000 shares
+for $4. This technically means that the shares you two guys had, before the
+investor showed up, suddenly got some value, right? They were just papers,
+but now someone is ready to pay $4 for each of them.
+
+This means that each of you, being a holder of 500K shares, owns equity for
+$2,000,000 (I'm just multiplying 500K by $4). Also, this means that the
+valuation of the company is $4M. I'm just multiplying the total amount
+of shares, which is a million, by the price of each share. This valuation
+is also called **pre-money valuation** (the valuation before that $400K
+landed at your bank account).
+
+There is also a post-money valuation, which, as you can imagine, is calculated
+by multiplying total amount of shares after the investment, by their price. In
+this case, it's $4.4M (1,100,000 by $4).
+
+Let's see what happeed in our example with my $25K. I gave them to you when
+your company was very young. Your valuation was rather low, because you
+barely had any results. You needed small cash to pay your bills and fill
+your car with gas. The valuation was definitely lower than $4M. So, why are
+you converting my notes as if at the time of my investment the valuation
+was already that high. It's not fair. I want to get more than 6,250 shares.
+I want my part to be calculated as if your valuation was, say, $500K. In that
+case, I will get 20,000 shares. That's fair. The investor will pay $400K to get
+100K shares, but I paid just $25K to get 20K of them. I earned more equity,
+because my risk was way higher.
+
+To make that math happen, we put "valuation cap" into the convertible notes.
+There will be a clause that guarantees that no matter what will be that
+pre-money valuation at the moment of "equity financing", in my formula
+it will stay $500K.
+
+Obviously, for you, as a founder, an ideal situation would be to have "no cap"
+convertible notes. That's the first thing you should try to insist on:
+no cap! Most investors will smile back and disagree. It's only logical. Then,
+try to negotiate the value of the cap. Try to make it as big as possible.
+
+But remember, it's better to have money and a small cap that
+a big cap and no money. Does it sound too obvious?
+
+## The Discount
+
+Here is the same problem, but a different instrument. Again, as an investor,
+I don't like that you're selling me shares for $4. This is the price you
+are giving to the investor who came way later than myself. Their risks
+are way lower. I want a discount!
+
+We can put a clause into convertible notes, which will say that the price
+for me will be same as for the investor at the moment of "equity financing",
+minus, say, 50% discount.
+
+Again, as a founder, you should insist on "no discount" convertible notes. Will
+I agree? Probably not. Especially if there is no cap. Try to negotiate
+a smaller discount. Maybe 10%, just give me a feeling of appreciation.
 
 ##
+
