@@ -71,7 +71,7 @@ emails.each do |line|
     if opts[:from] == email
       ignore = false
     else
-      print "  #{address} ignored\n"
+      print "  #{email} ignored (waiting for #{opts[:from]})\n"
       next
     end
   end

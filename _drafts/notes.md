@@ -65,9 +65,11 @@ company prints 300,000 more shares of stock for me." The amount of shares
 "issued" is growing. For example, at the time of writing there are
 [7.91 billion](https://www.google.com/finance?cid=358464)
 shares with Microsoft name of them. Microsoft Corporation has
-been printing extra shares X times over 30 years of their history.
-When Bill Gates founded the company, he had X shares, which were equal
-to X %. Now he has X, which is
+been printing extra shares [nine times](https://www.microsoft.com/en-us/Investor/FAQ.aspx) after their IPO in 1986.
+When Bill Gates founded the company in April 1975, he had 500K shares, which were equal
+to 50% (I'm guessing, do you know exact numbers?).
+Now he holds [nearly 223M](http://www.investopedia.com/articles/investing/122215/top-4-microsoft-shareholders.asp),
+which are just 2.8% of the total.
 
 Now, the most annoying part. In reality, shares are not just a piece of paper
 with a few sentences on it, like in our example above. It's a big legal
@@ -76,7 +78,7 @@ he or she will get the profit. There are tons of legal clauses, which
 usually take weeks or months of discussions, between the company and
 investors. In reality, an investor says: "I will put $500,000 to the bank
 account of the company and the company prints 300,000 more shares of stock for me,
-_terms and conditions of which my lawyer will now start discussing with you_."
+_terms and conditions of which my lawyer will discuss with you_."
 
 If we're talking about $500K, you will have no problem meeting that lawyers.
 However, if it's just $25K... To make life easier for smaller investments,
@@ -179,7 +181,7 @@ are way lower. I want a discount!
 
 We can put a clause into convertible notes, which will say that the price
 for me will be same as for the investor at the moment of "equity financing",
-minus, say, 50% discount.
+minus, say, 50% **discount**.
 
 Again, as a founder, you should insist on "no discount" convertible notes. Will
 I agree? Probably not. Especially if there is no cap. Try to negotiate

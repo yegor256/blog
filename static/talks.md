@@ -204,13 +204,13 @@ Swansea, UK<br/>
 
 ### 2016
 
-<img src="/images/2016/sedc-2016.png" class="past-talk" alt="SEDC 2016"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/11080491_10209166061658582_6077232981402936588_o.jpg" class="past-talk" alt="SEDC 2016"/>
 Meetings And Motivation, Friends Or Enemies?;
 [SEDC 2016](http://www.sedcconference.org/);
 Washington DC, USA;
 31 March 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10209166064338649),
 [video](https://www.youtube.com/watch?v=LB_YLWhGrco).
 
 <div style="clear:both"/>
