@@ -51,7 +51,6 @@ module Jekyll
     def read_yaml(*)
       # Do nothing
     end
-
   end
 
   module Filters
