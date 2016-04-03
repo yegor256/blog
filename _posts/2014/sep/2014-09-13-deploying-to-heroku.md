@@ -87,7 +87,9 @@ release:
     mkdir ~/.ssh
     mv ../id_rsa ../id_rsa.pub ~/.ssh
     chmod -R 600 ~/.ssh/*
-    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
+    echo -e \
+      "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" \
+      > ~/.ssh/config
     git push -f heroku $(git symbolic-ref --short HEAD):master
 {% endhighlight %}
 

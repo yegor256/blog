@@ -44,7 +44,9 @@ version in [Maven Central](http://search.maven.org/)):
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-maven-plugin</artifactId>
         <configuration>
-          <changeLogFile>${basedir}/src/main/liquibase/master.xml</changeLogFile>
+          <changeLogFile>
+            ${basedir}/src/main/liquibase/master.xml
+          </changeLogFile>
           <driver>com.mysql.jdbc.Driver</driver>
           <url>jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}</url>
           <username>${mysql.login}</username>
@@ -103,7 +105,8 @@ run `mvn liquibase:help` in order to download all artifacts.
 Then, replace placeholders with your actual credentials:
 
 {% highlight bash %}
-$ java -jar ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar \
+$ java -jar \
+  ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar \
   --driver=com.mysql.jdbc.Driver \
   --url=jdbc:mysql://db.example.com:3306/example \
   --username=example --password=example \
@@ -121,7 +124,8 @@ Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
 <databaseChangeLog
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
   <includeAll path="src/main/liquibase/2014" />
 </databaseChangeLog>
 {% endhighlight %}
@@ -138,7 +142,8 @@ Let's create a simple changeset, which adds a new column to an existing table:
 {% highlight xml %}
 <databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
+  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
   <changeSet id="002" author="Yegor">
     <sql>
       ALTER TABLE user ADD COLUMN address VARCHAR(1024);

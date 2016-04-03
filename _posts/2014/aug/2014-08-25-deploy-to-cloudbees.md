@@ -57,7 +57,9 @@ Add this profile to your `pom.xml`:
       <pluginRepositories>
         <pluginRepository>
           <id>cloudbees-public-release</id>
-          <url>http://repository-cloudbees.forge.cloudbees.com/public-release</url>
+          <url>
+            http://repository-cloudbees.forge.cloudbees.com/public-release
+          </url>
         </pluginRepository>
       </pluginRepositories>
       <build>

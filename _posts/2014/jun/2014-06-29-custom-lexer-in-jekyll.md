@@ -41,7 +41,7 @@ class RequsLexer(RegexLexer):
     'root': [
       (r'"[^"]+"', String),
       (r'""".+"""', Text),
-      (r'\b(needs|includes|requires|when|fail|since|must|is|a|the)\s*\b', Keyword),
+      (r'\b(needs|includes|requires|when|fail|is|a|the)\s*\b', Keyword),
       (r'([A-Z][a-z]+)+', Name),
       (r'[,;:]', Punctuation),
     ],
@@ -56,7 +56,7 @@ and installed locally:
 {% highlight bash %}
 $ easy_install src/requs_pygment
 Processing requs_pygment
-Running setup.py -q bdist_egg --dist-dir /Volumes/ssd2/code/requs/src/requs_pygment/egg-dist-tmp-ISj8Nx
+Running setup.py -q bdist_egg --dist-dir ...
 zip_safe flag not set; analyzing archive contents...
 Adding requs-pygment 0.1 to easy-install.pth file
 Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg

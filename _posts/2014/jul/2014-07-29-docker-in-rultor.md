@@ -64,7 +64,7 @@ Let's say, I want my Maven build to be executed in a container
 with a pre-installed `graphviz` package (in order to enable `dot` command line tool).
 First, I would start a plain vanilla Ubuntu container, and install `graphviz` inside it:
 
-{% highlight bash %}
+{% highlight text %}
 $ sudo docker run -i -t ubuntu /bin/bash
 root@215d2696e8ad:/# sudo apt-get install -y graphviz
 Reading package lists... Done
@@ -93,7 +93,7 @@ from this image and it will have `graphviz` installed inside!
 
 Now it's time to share my image at Docker hub, in order to make it available for Rultor:
 
-{% highlight bash %}
+{% highlight text %}
 $ sudo docker push yegor256/beta
 The push refers to a repository [yegor256/beta] (len: 1)
 Sending image list
@@ -125,7 +125,7 @@ it's easy to do. Say, I want to install Ruby into my build image.
 I start a container from the image and install it (pay attention,
 I'm starting a container not from `ubuntu` image, as I did before, but from `yegor256/beta`):
 
-{% highlight bash %}
+{% highlight text %}
 $ sudo docker run -i -t yegor256/beta /bin/bash
 root@7e0fbd9806c9:/# sudo apt-get install -y ruby
 Reading package lists... Done

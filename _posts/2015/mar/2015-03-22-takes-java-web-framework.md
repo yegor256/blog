@@ -333,11 +333,12 @@ We'll discuss this `TkFork` class in a minute.
 
 If you're using Maven, this is the `pom.xml` you should start with:
 
-{% highlight java %}
+{% highlight xml %}
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>foo</groupId>
   <artifactId>foo</artifactId>
@@ -376,7 +377,8 @@ can run the app from the command line:
 
 {% highlight bash %}
 $ mvn clean package
-$ java -Dfile.encoding=UTF-8 -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
+$ java -Dfile.encoding=UTF-8 \
+  -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
 {% endhighlight %}
 
 The application is ready, and you can deploy it to, say, Heroku. Just
@@ -384,7 +386,9 @@ create a `Procfile` file in the root of the repository and push the repo
 to Heroku. This is what `Procfile` should look like:
 
 {% highlight text %}
-web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
+web: java -Dfile.encoding=UTF-8 \
+  -cp target/foo.jar:target/deps/* \
+  foo.Entry --port=${PORT}
 {% endhighlight %}
 
 ## `TkFork`

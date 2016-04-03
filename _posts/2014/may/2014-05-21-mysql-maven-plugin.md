@@ -74,7 +74,9 @@ This is how you configure it in `pom.xml`
                   <classifier>${mysql.classifier}</classifier>
                   <type>zip</type>
                   <overWrite>false</overWrite>
-                  <outputDirectory>${project.build.directory}/mysql-dist</outputDirectory>
+                  <outputDirectory>
+                    ${project.build.directory}/mysql-dist
+                  </outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
