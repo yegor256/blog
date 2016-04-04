@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?ba34d99"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?ba34d99"/>
+    <link rel="shortcut icon" href="/favicon.ico?6fab0c1"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?6fab0c1"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?ba34d99"/>
-    <link rel="stylesheet" href="/css/icons.css?ba34d99"/>
+    <link rel="stylesheet" href="/css/layout.css?6fab0c1"/>
+    <link rel="stylesheet" href="/css/icons.css?6fab0c1"/>
     <link rel="canonical" href="http://www.yegor256.com/2015/03/22/takes-java-web-framework.html" />
     <title>Java Web App Architecture In Takes Framework - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?ba34d99"></script>
+    <script src="/js/global.js?6fab0c1"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -69,8 +69,8 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;173</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;173</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -106,7 +106,20 @@
             <li>
               <a href="https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4">Webinar #13</a>
               will be about the role of a Software Architect;
-              join us on Apr 6, at 11am PST
+              join us on Apr 6, at 11am PST.
+            </li>
+            <li>
+              Meet me at
+              <a href="http://outsource-people.com/en">Outsource People</a> (Minsk/Apr-8),
+              <a href="http://kiev2016.agileee.org/">AgileEE</a> (Kiev/Apr-9),
+              <a href="http://nextbuild.nl/speakers/yegor-bugayenko/">NextBuild</a> (Eindhoven/Apr-16),
+              <a href="http://javapoint.ru/en/">JPoint</a> (Moscow/Apr-22),
+              <a href="http://jetconf.by/#/yegor_bugayenko">JETConf</a> (Minsk/Apr-25),
+              <a href="http://2016.geecon.org/">GeeCON</a> (Krakow/May-11),
+              <a href="http://devitconf.org/">DEVit</a> (Thessaloniki/May-20),
+              <a href="http://jeeconf.com/speaker/yegor-bugayenko/">JEEConf</a> (Kiev/May-21),
+              and later
+              <a href="/talks.html">somewhere else</a>.
             </li>
           </ul>
         </div>
@@ -132,7 +145,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/mar/2015-03-22-takes-java-web-framework.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-03-30T22:12:33+0000'>30 March 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/mar/2015-03-22-takes-java-web-framework.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-03T21:21:31+0000'>3 April 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -466,53 +479,57 @@ the <code>FtBasic</code> constructor.</p>
 
 <p>If you&#39;re using Maven, this is the <code>pom.xml</code> you should start with:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">&lt;?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s">&quot;1.0&quot;</span><span class="o">?&gt;</span>
-<span class="o">&lt;</span><span class="n">project</span> <span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
-  <span class="nl">xmlns:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="nl">xsi:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">foo</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">foo</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="o">.</span><span class="na">takes</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">takes</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.9</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span> <span class="o">&lt;!--</span> <span class="n">check</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">in</span> <span class="n">Maven</span> <span class="n">Central</span> <span class="o">--&gt;</span>
-    <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">finalName</span><span class="o">&gt;</span><span class="n">foo</span><span class="o">&lt;/</span><span class="n">finalName</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">plugins</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">dependency</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">executions</span><span class="o">&gt;</span>
-          <span class="o">&lt;</span><span class="n">execution</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="n">goals</span><span class="o">&gt;</span>
-              <span class="o">&lt;</span><span class="n">goal</span><span class="o">&gt;</span><span class="n">copy</span><span class="o">-</span><span class="n">dependencies</span><span class="o">&lt;/</span><span class="n">goal</span><span class="o">&gt;</span>
-            <span class="o">&lt;/</span><span class="n">goals</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
-              <span class="o">&lt;</span><span class="n">outputDirectory</span><span class="o">&gt;</span><span class="n">$</span><span class="o">{</span><span class="n">project</span><span class="o">.</span><span class="na">build</span><span class="o">.</span><span class="na">directory</span><span class="o">}/</span><span class="n">deps</span><span class="o">&lt;/</span><span class="n">outputDirectory</span><span class="o">&gt;</span>
-            <span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
-          <span class="o">&lt;/</span><span class="n">execution</span><span class="o">&gt;</span>
-        <span class="o">&lt;/</span><span class="n">executions</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-    <span class="o">&lt;/</span><span class="n">plugins</span><span class="o">&gt;</span>
-  <span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+  <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0</span>
+<span class="s">    http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>foo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>foo<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.takes<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>takes<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>0.9<span class="nt">&lt;/version&gt;</span> <span class="c">&lt;!-- check the latest in Maven Central --&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;finalName&gt;</span>foo<span class="nt">&lt;/finalName&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-dependency-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>copy-dependencies<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;outputDirectory&gt;</span>${project.build.directory}/deps<span class="nt">&lt;/outputDirectory&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span></code></pre></figure>
 
 <p>Running <code>mvn clean package</code> should build a <code>foo.jar</code> file in <code>target</code> directory
 and a collection of all JAR dependencies in <code>target/deps</code>. Now you
 can run the app from the command line:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>mvn clean package
-<span class="nv">$ </span>java -Dfile.encoding<span class="o">=</span>UTF-8 -cp ./target/foo.jar:./target/deps/* foo.Entry --port<span class="o">=</span>8080</code></pre></figure>
+<span class="nv">$ </span>java -Dfile.encoding<span class="o">=</span>UTF-8 <span class="se">\</span>
+  -cp ./target/foo.jar:./target/deps/* foo.Entry --port<span class="o">=</span>8080</code></pre></figure>
 
 <p>The application is ready, and you can deploy it to, say, Heroku. Just
 create a <code>Procfile</code> file in the root of the repository and push the repo
 to Heroku. This is what <code>Procfile</code> should look like:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">web: java -Dfile.encoding=UTF-8 \
+  -cp target/foo.jar:target/deps/* \
+  foo.Entry --port=${PORT}</code></pre></figure>
 
 <h2 id="tkfork"><code>TkFork</code></h2>
 
@@ -811,23 +828,23 @@ Takes Framework and their code is open:
     <ul>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="3.131862858762126">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="3.1537016309789934">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="2.5983027930751312">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="2.619507391707484">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2014/12/15/how-much-your-objects-encapsulate.html" data-score="1.9262763566692203">How Much Your Objects Encapsulate?</a>
+          <a href="/2014/12/15/how-much-your-objects-encapsulate.html" data-score="1.9272593833729799">How Much Your Objects Encapsulate?</a>
         </li>
       
         <li>
-          <a href="/2015/02/26/composable-decorators.html" data-score="1.8154843764431523">Composable Decorators vs. Imperative Utility Methods</a>
+          <a href="/2015/02/26/composable-decorators.html" data-score="1.8068058807286302">Composable Decorators vs. Imperative Utility Methods</a>
         </li>
       
         <li>
-          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.579629465169349">Jare.io, an Instant and Free CDN</a>
+          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.5851009595254488">Jare.io, an Instant and Free CDN</a>
         </li>
       
     </ul>
@@ -861,8 +878,8 @@ Takes Framework and their code is open:
 
 </section>
 
-<script src="/js/post.js?ba34d99"></script>
-<script src="//a.disquscdn.com/embed.js?ba34d99"></script>
+<script src="/js/post.js?6fab0c1"></script>
+<script src="//a.disquscdn.com/embed.js?6fab0c1"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

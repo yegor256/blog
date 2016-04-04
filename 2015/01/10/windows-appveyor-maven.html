@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?ba34d99"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?ba34d99"/>
+    <link rel="shortcut icon" href="/favicon.ico?6fab0c1"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?6fab0c1"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?ba34d99"/>
-    <link rel="stylesheet" href="/css/icons.css?ba34d99"/>
+    <link rel="stylesheet" href="/css/layout.css?6fab0c1"/>
+    <link rel="stylesheet" href="/css/icons.css?6fab0c1"/>
     <link rel="canonical" href="http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html" />
     <title>Continuous Integration on Windows, with Appveyor and Maven - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?ba34d99"></script>
+    <script src="/js/global.js?6fab0c1"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -69,8 +69,8 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;173</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;173</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -106,7 +106,20 @@
             <li>
               <a href="https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4">Webinar #13</a>
               will be about the role of a Software Architect;
-              join us on Apr 6, at 11am PST
+              join us on Apr 6, at 11am PST.
+            </li>
+            <li>
+              Meet me at
+              <a href="http://outsource-people.com/en">Outsource People</a> (Minsk/Apr-8),
+              <a href="http://kiev2016.agileee.org/">AgileEE</a> (Kiev/Apr-9),
+              <a href="http://nextbuild.nl/speakers/yegor-bugayenko/">NextBuild</a> (Eindhoven/Apr-16),
+              <a href="http://javapoint.ru/en/">JPoint</a> (Moscow/Apr-22),
+              <a href="http://jetconf.by/#/yegor_bugayenko">JETConf</a> (Minsk/Apr-25),
+              <a href="http://2016.geecon.org/">GeeCON</a> (Krakow/May-11),
+              <a href="http://devitconf.org/">DEVit</a> (Thessaloniki/May-20),
+              <a href="http://jeeconf.com/speaker/yegor-bugayenko/">JEEConf</a> (Kiev/May-21),
+              and later
+              <a href="/talks.html">somewhere else</a>.
             </li>
           </ul>
         </div>
@@ -132,7 +145,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/jan/2015-01-10-windows-appveyor-maven.md'>modified</a>          on <time itemprop='dateModified' datetime='2015-10-18T19:22:01+0000'>18 October 2015</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2015/jan/2015-01-10-windows-appveyor-maven.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-03T21:21:31+0000'>3 April 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -202,28 +215,28 @@ we&#39;re using AppVeyor in combination with <a href="http://www.travis-ci.org">
 (this is <code>appveyor.yml</code> configuration file you&#39;re supposed to place
 in the root directory of your GitHub repository):</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&#39;{build}&#39;</span>
-<span class="l-Scalar-Plain">os</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Windows Server 2012</span>
-<span class="l-Scalar-Plain">install</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ps</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
-      <span class="no">Add-Type -AssemblyName System.IO.Compression.FileSystem</span>
-      <span class="no">if (!(Test-Path -Path &quot;C:\maven&quot; )) {</span>
-        <span class="no">(new-object System.Net.WebClient).DownloadFile(</span>
-          <span class="no">&#39;http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip&#39;,</span>
-          <span class="no">&#39;C:\maven-bin.zip&#39;</span>
-        <span class="no">)</span>
-        <span class="no">[System.IO.Compression.ZipFile]::ExtractToDirectory(&quot;C:\maven-bin.zip&quot;, &quot;C:\maven&quot;)</span>
-      <span class="no">}</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">cmd</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">cmd</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">cmd</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g</span>
-<span class="l-Scalar-Plain">build_script</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">mvn clean package --batch-mode -DskipTest</span>
-<span class="l-Scalar-Plain">test_script</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">mvn clean install --batch-mode</span>
-<span class="l-Scalar-Plain">cache</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">C:\maven\</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">C:\Users\appveyor\.m2</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">version: &#39;{build}&#39;
+os: Windows Server 2012
+install:
+  - ps: |
+      Add-Type -AssemblyName System.IO.Compression.FileSystem
+      if (!(Test-Path -Path &quot;C:\maven&quot; )) {
+        (new-object System.Net.WebClient).DownloadFile(
+          &#39;http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip&#39;,
+          &#39;C:\maven-bin.zip&#39;
+        )
+        [System.IO.Compression.ZipFile]::ExtractToDirectory(&quot;C:\maven-bin.zip&quot;, &quot;C:\maven&quot;)
+      }
+  - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%
+  - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
+  - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g
+build_script:
+  - mvn clean package --batch-mode -DskipTest
+test_script:
+  - mvn clean install --batch-mode
+cache:
+  - C:\maven\
+  - C:\Users\appveyor\.m2</code></pre></figure>
 
 <p>It was not that easy at all, so I decided to share. You can see
 how this configuration works in these projects:
@@ -241,23 +254,23 @@ how this configuration works in these projects:
     <ul>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="2.570099921664748">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="2.572185133377132">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="2.46446562232531">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="2.464513122436793">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/04/22/favorite-software-books.html" data-score="1.3446814153729807">My Favorite Software Books</a>
+          <a href="/2015/04/22/favorite-software-books.html" data-score="1.3444027077168268">My Favorite Software Books</a>
         </li>
       
         <li>
-          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.1729970294644168">How to Set Up a Private Maven Repository in Amazon S3</a>
+          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.1667596830240303">How to Set Up a Private Maven Repository in Amazon S3</a>
         </li>
       
         <li>
-          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.1302320033520514">Jare.io, an Instant and Free CDN</a>
+          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.1380042741667802">Jare.io, an Instant and Free CDN</a>
         </li>
       
     </ul>
@@ -291,8 +304,8 @@ how this configuration works in these projects:
 
 </section>
 
-<script src="/js/post.js?ba34d99"></script>
-<script src="//a.disquscdn.com/embed.js?ba34d99"></script>
+<script src="/js/post.js?6fab0c1"></script>
+<script src="//a.disquscdn.com/embed.js?6fab0c1"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

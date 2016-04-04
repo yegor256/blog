@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p>Say, you have a method that takes time to execute and you want
+its result to be cached. There are <a href="http://www.coderanch.com/how-to/java/CachingStrategies">many solutions</a>,
+including
+<a href="http://commons.apache.org/proper/commons-jcs/">Apache Commons JCS</a>,
+<a href="http://www.ehcache.org">Ehcache</a>,
+<a href="https://jcp.org/en/jsr/detail?id=107">JSR 107</a>,
+<a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Caching</a>
+and many others.</p>
+
+<p><a href="http://aspects.jcabi.com/annotation-cacheable.html">jcabi-aspects</a> offers a very simple one,
+based on AOP aspects and Java6 annotations:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.aspects.Cacheable</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">lifetime</span> <span class="o">=</span> <span class="mi">5</span><span class="o">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MINUTES</span><span class="o">)</span>
+  <span class="n">String</span> <span class="nf">load</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">&quot;http://google.com&quot;</span><span class="o">).</span><span class="na">getContent</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The result of <code>load()</code> method will be cached in memory for five minutes.</p>
+
+<!--more-->
+
+<h2 id="how-it-works">How It Works?</h2>
+
+<p>This post about <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP, AspectJ and method loging</a>
+explains how &quot;aspect weaving&quot; works (I highly recommend that you read it first).</p>
+
+<p>Here I&#39;ll explain how caching works.</p>
+
+<p>The approach is very straight forward. There is a static hash map with keys
+as &quot;method coordinates&quot; and values as their results. Method coordinates consist
+of the object, an owner of the method and a method name with parameter types.</p>
+
+<p>In the example above, right after the method <code>load()</code>
+finishes, the map gets a new entry (simplified example, of course):</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">key: [page, &quot;load()&quot;]
+value: &quot;&lt;html&gt;...&lt;/html&gt;&quot;</code></pre></figure>
+
+<p>Every consecutive call to <code>load()</code> will be intercepted by the aspect
+from <a href="http://aspects.jcabi.com">jcabi-aspects</a> and resolved immediately
+with a value from the cache map. The method will not get any control until
+the end of its lifetime, which is five minutes in the example above.</p>
+
+<h2 id="what-about-cache-flushing">What About Cache Flushing?</h2>
+
+<p>Sometimes it&#39;s necessary to have the ability to flush cache before
+the end of its lifetime. Here is a practical example:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.aspects.Cacheable</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employees</span> <span class="o">{</span>
+  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">lifetime</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">HOURS</span><span class="o">)</span>
+  <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// calculate their amount in MySQL</span>
+  <span class="o">}</span>
+  <span class="nd">@Cacheable.FlushBefore</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// add a new one to MySQL</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>It&#39;s obvious that the number of employees in the database
+will be different after <code>add()</code> method execution and the
+result of <code>size()</code> should be invalidated in cache. This invalidation
+operation is called &quot;flushing&quot; and <code>@Cacheable.FlushBefore</code> triggers it.</p>
+
+<p>Actually, every call to <code>add()</code> invalidates all cached methods
+in this class, not only <code>size()</code>.</p>
+
+<p>There is also <code>@Cacheable.FlushAfter</code>. The difference is that
+<code>FlushBefore</code> guarantees that cache is already invalidated
+when the method <code>add()</code> starts.
+<code>FlushAfter</code> invalidates cache after method <code>add()</code> finishes. This small difference makes a big one, sometimes.</p>
+
+<p>This article explains <a href="http://aspects.jcabi.com/example-weaving.html">how to add jcabi-aspects to your project</a>.</p>
+
+  </body>
+</html>

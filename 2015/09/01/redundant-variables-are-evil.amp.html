@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>A redundant variable is one that exists exclusively
+to <strong>explain</strong> its value. I strongly believe that such a variable is
+not only pure noise but also <strong>evil</strong>, with a very negative effect
+on code readability. When we introduce a redundant variable, we intend to make our code
+cleaner and easier to read. In reality, though, we make it more verbose
+and difficult to understand. Without exception, any variable used only
+once is redundant and must be replaced with a value.</p>
+
+<!--more-->
+
+
+
+<p>Here, variable <code>fileName</code> is redundant:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="s">&quot;test.txt&quot;</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">fileName</span><span class="o">).</span><span class="na">length</span><span class="o">());</span></code></pre></figure>
+
+<p>This code must look differently:</p>
+
+
+
+<p>This example is very primitive, but I&#39;m sure you&#39;ve seen these
+redundant variables many times. We use them to &quot;explain&quot; the code &mdash;
+it&#39;s not just a string literal <code>&quot;test.txt&quot;</code> anymore but a <code>fileName</code>.
+The code looks easier to understand, right? Not really.</p>
+
+
+
+<p>Let&#39;s dig into what &quot;readability&quot; of code is in the first place. I think this
+quality can be measured by the number of seconds I need to understand the
+code I&#39;m looking at. The longer the timeframe, the lower the readability.
+Ideally, I want to understand any piece of code in a <strong>few seconds</strong>. If I can&#39;t,
+that&#39;s a failure of its <strong>author</strong>.</p>
+
+<p><a href="/2015/06/29/simple-diagrams.html">Remember</a>,
+if I don&#39;t understand you, it&#39;s your fault.</p>
+
+<p>An increasing length of code degrades readability. So the more variable
+names I have to remember while reading through it, the longer
+it takes to digest the code and come to a conclusion about
+its purpose and effects. I think <strong>four</strong> is the maximum number
+of variables I can comfortably keep in my head without thinking
+about quitting the job.</p>
+
+<p>New variables make the code longer because they need extra lines to
+be declared. And they make the code more complex because its reader
+has to remember more names.</p>
+
+<p>Thus, when you want to introduce a new variable to explain what your code is
+doing, stop and think. Your code is too complex and long in the first place!
+Refactor it using new objects or methods but not variables. Make your
+code shorter by moving pieces of it into new classes or private methods.</p>
+
+<p>Moreover, I think that in <a href="/2015/08/18/multiple-return-statements-in-oop.html">perfectly designed methods</a>,
+you won&#39;t need <strong>any</strong> variables aside from method arguments.</p>
+
+  </body>
+</html>

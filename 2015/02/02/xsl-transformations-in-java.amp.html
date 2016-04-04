@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p><a href="http://www.w3.org/TR/xslt20/">XSL transformation</a>
+(XSLT) is a powerful mechanism for converting one
+XML document into another. However, in Java, XML manipulations
+are rather verbose and complex. Even for a simple XSL transformation,
+you have to write a few dozen lines of code &mdash; and maybe even more
+than that if proper exception handling and logging is needed.
+<a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a> is
+a small open source library that makes life much easier by enabling
+XML parsing and XPath traversing with
+<a href="/2014/04/24/java-xml-parsing-and-traversing.html">a few simple methods</a>. Let&#39;s
+see how this library helps in XSL transformations.</p>
+
+<!--more-->
+
+<p>First, take a look at a practical example &mdash; <a href="http://www.rultor.com">rultor.com</a> &mdash;
+a hosted DevOps assistant that
+<a href="/2014/07/24/rultor-automated-merging.html">automates</a>
+release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. &quot;talk&quot;)
+in a DynamoDB record. There are multiple situations to handle
+in each talk; that&#39;s why using multiple columns of a record is not
+really feasible. Instead, we&#39;re keeping only a few parameters of each talk
+in record columns (like ID and name) and putting all the rest in a single
+XML column.</p>
+
+<p>This is approximately how our DynamoDB table looks:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">+----+---------------+--------------------------------------+
+| id | name          | xml                                  |
++----+---------------+--------------------------------------+
+| 12 | jcabi-xml#54  | &lt;?xml version=&#39;1.0&#39;?&gt;                |
+|    |               | &lt;talk public=&quot;true&quot;&gt;                 |
+|    |               |   &lt;request id=&quot;e5f4b3&quot;&gt;...&lt;/request&gt; |
+|    |               | &lt;/talk&gt;                              |
++----+---------------+--------------------------------------+
+| 13 | jcabi-email#2 | &lt;?xml version=&#39;1.0&#39;?&gt;                |
+|    |               | &lt;talk public=&quot;true&quot;&gt;                 |
+|    |               |   &lt;daemon id=&quot;f787fe&quot;&gt;...&lt;/daemon&gt;   |
+|    |               | &lt;/talk&gt;                              |
++----+---------------+--------------------------------------+</code></pre></figure>
+
+<p>Once a user posts <code>@rultor status</code> into a GitHub ticket, Rultor
+has to answer with a full status report about the current talk. In order
+to create such a text answer (a regular user would not appreciate an XML response),
+we have to fetch that <code>xml</code> column from the necessary DynamoDB record and convert
+it to plain English text.</p>
+
+<p>Here is how we&#39;re doing that with the help of
+<a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>
+and its class,
+<a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html"><code>XSLDocument</code></a>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="c1">// comes from DynamoDB</span>
+<span class="kd">final</span> <span class="n">XSL</span> <span class="n">xsl</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">XSLDocument</span><span class="o">(</span>
+  <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">&quot;status.xsl&quot;</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">xsl</span><span class="o">.</span><span class="na">applyTo</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span></code></pre></figure>
+
+<p>That&#39;s it. Now let&#39;s see what&#39;s there in that <code>status.xsl</code> file
+(this is just a skeleton of it; the full version is <a href="https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl">here</a>):</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span> <span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:output</span> <span class="na">method=</span><span class="s">&quot;text&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;/talk&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xsl:text&gt;</span>Hi, here is your status report:<span class="nt">&lt;/xsl:text&gt;</span>
+    ...
+  <span class="nt">&lt;/xsl:template&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;node()|@*&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xsl:copy&gt;</span>
+      <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">&quot;node()|@*&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xsl:copy&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span></code></pre></figure>
+
+<p>It is good practice to create XSL documents only once per application
+run. We have a static utility method <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29"><code>XSLDocument.make()</code></a> for this:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">XSL</span> <span class="n">STYLESHEET</span> <span class="o">=</span> <span class="n">XSLDocument</span><span class="o">.</span><span class="na">make</span><span class="o">(</span>
+    <span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">&quot;stylesheet.xsl&quot;</span><span class="o">)</span>
+  <span class="o">);</span>
+  <span class="kd">public</span> <span class="n">XML</span> <span class="nf">style</span><span class="o">(</span><span class="kd">final</span> <span class="n">XML</span> <span class="n">xml</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Foo</span><span class="o">.</span><span class="na">STYLESHEET</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Pay attention to the fact we&#39;re using XSLT 2.0. Built-in Java implementation of XSLT
+doesn&#39;t support version 2.0, and in order to make it work, we&#39;re using
+these two Maven Saxon dependencies:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>net.sourceforge.saxon<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>saxon<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>9.1.0.8<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>net.sourceforge.saxon<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>saxon<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>9.1.0.8<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;classifier&gt;</span>xpath<span class="nt">&lt;/classifier&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<p>All you need to do to start using <code>jcabi-xml</code> for XSL transformations is
+add this dependency to your <code>pom.xml</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-xml<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<p>If you have any problems or suggestions, don&#39;t hesitate to submit an issue
+to the GitHub <a href="https://github.com/jcabi/jcabi-xml/issues">issue tracker</a>.</p>
+
+  </body>
+</html>

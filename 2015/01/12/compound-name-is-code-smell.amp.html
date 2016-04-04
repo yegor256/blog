@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Do you name variables like <code>textLength</code>, <code>table_name</code>, or <code>current-user-email</code>?
+All three are compound names that consist of more than one word. Even though
+they look more descriptive than <code>name</code>, <code>length</code>, or <code>email</code>, I would strongly
+recommend avoiding them. I believe a variable name that is more complex than a noun
+is a code smell. Why? Because we usually give a variable a compound name when its scope
+is so big and complex that a simple noun would sound ambiguous.
+And a big, complex scope is an obvious code smell.</p>
+
+<!--more-->
+
+
+
+<p>The scope of a variable is the place where it is visible, like a method, for example. Look
+at this Ruby class:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">csvFileName</span><span class="p">)</span>
+    <span class="vi">@fileName</span> <span class="o">=</span> <span class="n">csvFileName</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">readRecords</span><span class="p">()</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">readLines</span><span class="p">(</span><span class="vi">@fileName</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">|</span><span class="n">csvLine</span><span class="o">|</span>
+      <span class="n">csvLine</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>The visible scope of variable <code>csvFileName</code> is method <code>initialize()</code>, which
+is a constructor of the class <code>CSV</code>. Why does it need a compound name
+that consists of three words? Isn&#39;t it already clear that a single-argument
+constructor of class <code>CSV</code> expects the name of a file with
+comma-separated values? I would rename it to <code>file</code>.</p>
+
+<p>Next, the scope of <code>@fileName</code> is the entire <code>CSV</code> class. Renaming a single
+variable in the class to just <code>@file</code> won&#39;t introduce
+any confusion. It&#39;s still clear what file we&#39;re dealing with.
+The same situation exists with the <code>csvLine</code> variable. It is clear that we&#39;re
+dealing with CSV lines here. The <code>csv</code> prefix is just a redundancy.
+Here is how I would refactor the class:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="vi">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">records</span><span class="p">()</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">readLines</span><span class="p">(</span><span class="vi">@file</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Now it looks clear and concise.</p>
+
+<p>If you can&#39;t perform such a refactoring, it means your scope is too
+big and/or too complex. An ideal method should deal with up to five variables,
+and an ideal class should encapsulate up to five properties.</p>
+
+<p>If we have five variables, can&#39;t we find five nouns to name them?</p>
+
+<p>Adam and Eve didn&#39;t have second names. They were unique in Eden,
+as were many other characters in the Old Testament. Second and middle
+names were invented later in order to resolve ambiguity. To keep
+your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
+and methods unique single-word names, just like Adam and Eve were named
+by you know who :)</p>
+
+<p>PS. Also, <a href="/2015/09/01/redundant-variables-are-evil.html">redundant variables</a>
+are evil as well.</p>
+
+  </body>
+</html>

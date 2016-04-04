@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Twenty years ago, the best programmer was the one
+capable of fitting an entire application into a 64Kb
+<code>.COM</code> file. Those who were able to get the most out of
+that poor Intel 80386 were the icons of programming.</p>
+
+<p>That&#39;s because twenty years ago computers were expensive and programmers
+were cheap. That was the time of the &quot;hacker mentality&quot;.
+That time is over. That mentality is not appreciated any more,
+because the market situation is completely opposite.</p>
+
+<p>Today, computers are cheap and programmers are expensive.
+This is the era of the &quot;designer mentality&quot;, when the readability
+of our code is much more important than its performance.</p>
+
+<!--more-->
+
+<h2 id="prices-vs-salaries">Prices vs Salaries</h2>
+
+
+
+<p>Look at this graph. It is a comparison of two trends over the
+last twenty years (1994-2014).
+The first trend falls down and shows how much cheaper
+<a href="http://www.jcmit.com/memoryprice.htm">computer memory</a>
+and <a href="http://ns1758.ca/winch/winchest.html">HDD storage</a>
+have become over the last twenty years.</p>
+
+<iframe class='video video-left' src='https://www.youtube.com/embed/PNSezrlemsY?controls=2' allowfullscreen='true'></iframe>
+
+<p>The second trend demonstrates how much software developers&#39; salaries
+escalated over the same period. More accurately, they tripled. I didn&#39;t find
+an official report about that, but I&#39;m sure it&#39;s no secret to anyone
+that the salaries of programmers keep growing &mdash; $200,000 per year for
+a senior developer is not a dream any more... while twenty years
+ago $60K was the best offer around. I found
+<a href="http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html">this article</a>
+very interesting about this very subject.</p>
+
+
+
+<p>Basically, this means that in order to create a PHP website
+in 1994 we had to spend 1000 times more on hardware and three times
+less on programmers than we do now, in 2014. And we&#39;re talking about the
+same stack of technologies here. The same Linux box with an Apache HTTP Server
+inside.</p>
+
+<p>The difference is that in 1994, if our application had performance problems because of
+hardware limitations, we paid $35,000 per each additional gigabyte of RAM, while
+in 2014 we pay $10.</p>
+
+<p>In 1994 it was much more efficient to hire more programmers and ask
+them to <a href="https://en.wikipedia.org/wiki/Program_optimization">optimize</a>
+the code or even rewrite it, instead of buying new hardware. In 2014 the
+situation is exactly the opposite. It is now much cheaper to double the
+size of the server (especially if the server is a virtual cloud one)
+instead of paying salaries for optimizing the software.</p>
+
+<p>In 1994 the best engineers had that &quot;hacker mentality&quot;, while in 2014 the
+&quot;designer mentality&quot; is much more appreciated.</p>
+
+<h2 id="hacker-mentality">Hacker Mentality</h2>
+
+<p>Someone with a hacker mentality would call this
+<a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a>
+Java method an &quot;elegant code&quot; (would you?):</p>
+
+
+
+<p>I would highlight these qualities of a good
+<a href="https://en.wikipedia.org/wiki/Hacker_%28computer_security%29">hacker</a>:</p>
+
+<ul>
+<li>uses all known (and unknown) features of a programming language</li>
+<li>discriminates others as hackers and newbies and codes for hackers</li>
+<li>gets bored and frustrated by <a href="/2015/10/13/competition-without-rules.html">rules</a> and <a href="/2014/08/13/strict-code-quality-control.html">standards</a></li>
+<li>doesn&#39;t write unit tests &mdash; juniors will write them later</li>
+<li>enjoys fire-fighting &mdash; that&#39;s how his talent manifests</li>
+<li>prefers talks over <a href="/2015/11/10/ten-mistakes-in-specs.html">docs</a>, since they are much more fun</li>
+<li>hates to see his code being modified by someone else</li>
+<li>likes to dedicate himself to one project at a time</li>
+</ul>
+
+<p>A hacker is a talented individual. He wants to express his
+talent in the software he writes. He enjoys coding and does
+it mostly for fun. I would say, he is married to his code and can&#39;t imagine
+its happy life after an eventual divorce. Code ownership is
+what a hacker is about &mdash; he understands himself as an &quot;owner&quot;
+of the code.</p>
+
+
+
+<p>When I ask one of my hacker friends &mdash; &quot;How will someone understand
+what this code does?&quot; I almost always hear the same answer &mdash;
+&quot;They will ask me!&quot; (usually said very proudly, with a sincere smile).</p>
+
+<h2 id="designer-mentality">Designer Mentality</h2>
+
+<p>Someone with a designer mentality would refactor the code above
+to make it easier to read. He would call this Java function an &quot;elegant code&quot;
+(how about you?):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">fibo</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>I think these qualities can be attributed to a good designer:</p>
+
+<ul>
+<li>tends to use traditional programming techniques</li>
+<li>assumes everybody is a newbie and writes accordingly</li>
+<li>enjoys setting rules and following them</li>
+<li>prefers docs over talks and automation over docs</li>
+<li>spends most of his coding time on unit tests</li>
+<li>hates fire-fighting and working over time</li>
+<li>loves to see his code being modified and refactored</li>
+<li>works with a few projects at the same time</li>
+</ul>
+
+<p>A designer is a talented team player. He contributes to the team
+processes, standards, rules, education, and discipline as much as he
+contributes to the source code. He always makes sure that once
+he leaves the project his code and his ideas stay and work.</p>
+
+<p>The highest satisfaction for a good designer
+is to see his code living its own life &mdash; being modified, improved,
+refactored and eventually retired. A designer sees himself as a parent
+of the code &mdash; once it is old enough to walk and talk, it has
+to live its own life.</p>
+
+<h2 id="the-future">The Future</h2>
+
+<p>If you consider yourself a hacker, I believe it&#39;s time to change. The time of
+hackers is fading out.</p>
+
+<p>In the near future we will probably even stop thinking in terms of &quot;hardware&quot; and will
+run our applications in elastic computational platforms with unlimited
+amounts of memory, CPU power and storage space. We will simply pay
+for resource utilization and almost any performance issue will just add a few extra
+dollars to our monthly bills. We won&#39;t care about optimization any more.</p>
+
+
+
+<p>At the same time, good software engineers will become more and more expensive
+and will charge $500+ per hour just to check out software and give
+a diagnosis. Just like good lawyers or dentists.</p>
+
+<p>That&#39;s why, while developing a new software product, those who pay for it will
+care mostly about its maintainability. Project sponsors will
+understand that the best solution they can get for their money is
+the one that is the most readable, maintainable, and automated.</p>
+
+<p>Not the fastest.</p>
+
+  </body>
+</html>

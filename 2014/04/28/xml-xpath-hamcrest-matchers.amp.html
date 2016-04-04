@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p><a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a> is my favorite instrument
+in unit testing. It replaces the JUnit procedural assertions of
+<code>org.junit.Assert</code> with an object-oriented mechanism. However, I will discuss
+that subject in more detail sometime later.</p>
+
+<p>Now, though, I want to demonstrate a new library published today on GitHub and
+Maven Central: <a href="http://matchers.jcabi.com">jcabi-matchers</a>.
+jcabi-matchers is a collection of
+Hamcrest matchers to make XPath assertions in XML and XHTML documents.</p>
+
+<p>Let&#39;s say, for instance, a class that is undergoing  testing produces an XML
+that needs to contain a single <code>&lt;message&gt;</code> element with the content <code>&quot;hello,
+world!&quot;</code></p>
+
+<p>This is how that code would look in a unit test:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hasWelcomeMessage</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">().</span><span class="na">createXml</span><span class="o">(),</span>
+      <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPaths</span><span class="o">(</span>
+        <span class="s">&quot;/document[count(message)=1]&quot;</span><span class="o">,</span>
+        <span class="s">&quot;/document/message[.=&#39;hello, world!&#39;]&quot;</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<!--more-->
+
+<p>There are two alternatives to the above that I&#39;m aware of, which are do almost the same thing:
+<a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> by
+David Ehringer
+and
+<a href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html#hasXPath%28java.lang.String%29"><code>hasXPath()</code></a>
+method in Hamcrest itself.</p>
+
+<p>I have tried them both, but faced a number of problems.</p>
+
+<p>First, Hamcrest <code>hasXPath()</code> works only with an instance of
+<a href="http://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Node.html"><code>Node</code></a>. With
+this method, converting a <code>String</code> into <code>Node</code> becomes a repetitive and routine
+task in every unit test.</p>
+
+<p>The above is a very strange limitation of Hamcrest in contrast to
+<a href="http://matchers.jcabi.com">jcabi-matchers</a>, which works with almost anything, from a
+<code>String</code> to a
+<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html"><code>Reader</code></a> and
+even an <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html"><code>InputStream</code></a>.</p>
+
+<p>Second, <code>XmlMatchers</code> from <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a>
+provides a very inconvenient way for working with namespaces. Before you can
+use an XPath query with a non-default namespace, you should create an instance
+of <code>NamespaceContext</code>.</p>
+
+<p>The library provides
+<a href="https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java">a simple implementation</a> of this interface,
+but, still, it is requires extra code in every unit test.</p>
+
+<p><a href="http://matchers.jcabi.com">jcabi-matchers</a> simplifies namespace handling
+problems even further, as it pre-defines most popular namespaces, including
+<code>xtml</code>, <code>xs</code>, <code>xsl</code>, etc.</p>
+
+<p>The following example works right out-of-the-box &mdash; without any extra configuration:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">getContent</span><span class="o">(),</span>
+  <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">&quot;//xhtml:body&quot;</span><span class="o">)</span>
+<span class="o">);</span></code></pre></figure>
+
+<p>To summarize, my primary objective with the library was its simplicity of usage.</p>
+
+  </body>
+</html>

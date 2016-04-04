@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Temporal coupling happens between sequential method calls
+when they must stay in a particular order. This is inevitable
+in imperative programming, but we can reduce the negative effect
+of it just by turning those static procedures into functions. Take
+a look at this example.</p>
+
+<!--more-->
+
+
+
+<p>Here is the code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">();</span>
+    <span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+    <span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Walter&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">append</span><span class="o">(</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="n">String</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>What do you think about that? I believe it&#39;s clear what <code>names()</code> is doing &mdash;
+creating a list of names. In order to avoid duplication, there is a supplementary
+<em>procedure</em>, <code>append()</code>, which converts an item to lowercase and adds it to the
+list.</p>
+
+<p>This is poor design.</p>
+
+<p>It is a <strong>procedural</strong> design, and there is <strong>temporal coupling</strong> between
+lines in method <code>names()</code>.</p>
+
+<p>Let me first show you a better (though not the best!) design,
+then I will try to explain its benefits:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+      <span class="n">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">(),</span>
+        <span class="s">&quot;Jeff&quot;</span>
+      <span class="o">),</span>
+      <span class="s">&quot;Walter&quot;</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">with</span><span class="o">(</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="n">String</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>An ideal design for method <code>with()</code> would create a new instance of
+<code>List</code>, populate it through <code>addAll(list)</code>, then <code>add(item)</code> to it, and
+finally return. That would be perfectly
+<a href="http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">immutable</a>,
+but slow.</p>
+
+<p>So, what is wrong with this:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">();</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Walter&quot;</span><span class="o">);</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span></code></pre></figure>
+
+<p>It looks perfectly clean, doesn&#39;t it? Instantiate a list, append two items to it, and
+return it. Yes, it is clean &mdash; for now. Because we remember what <code>append()</code> is
+doing. In a few months, we&#39;ll get back to this code, and it will look like this:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">();</span>
+<span class="c1">// 10 more lines here</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Walter&quot;</span><span class="o">);</span>
+<span class="c1">// 10 more lines here</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span></code></pre></figure>
+
+<p>Is it so clear now that <code>append()</code> is actually adding <code>&quot;Jeff&quot;</code> to <code>list</code>? What
+will happen if I remove that line? Will it affect the result being
+returned in the last line? I don&#39;t know. I need to <strong>check</strong> the body of method
+<code>append()</code> to make sure.</p>
+
+<p>Also, how about returning <code>list</code> first and calling <code>append()</code> afterwards? This
+is what possible &quot;refactoring&quot; may do to our code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">();</span>
+<span class="k">if</span> <span class="o">(</span><span class="cm">/* something */</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="c1">// 10 more lines here</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Walter&quot;</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+<span class="c1">// 10 more lines here</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span></code></pre></figure>
+
+<p>First of all, we return <code>list</code> too early, when it is not ready. But did anyone
+tell me that these two calls to <code>append()</code> must happen before <code>return list</code>?
+Second, we changed the order of <code>append()</code> calls. Again, did anyone tell me
+that it&#39;s important to call them in that particular order?</p>
+
+<p>Nobody. Nowhere. This is called <strong>temporal coupling</strong>.</p>
+
+<p>Our lines are <strong>coupled</strong> together. They must stay in this particular order, but the
+knowledge about that order is hidden. It&#39;s easy to destroy
+the order, and our compiler won&#39;t be able to catch us.</p>
+
+<p>To the contrary, this design doesn&#39;t have any &quot;order&quot;:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">return</span> <span class="n">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+  <span class="n">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">(),</span>
+    <span class="s">&quot;Jeff&quot;</span>
+  <span class="o">),</span>
+  <span class="s">&quot;Walter&quot;</span>
+<span class="o">);</span></code></pre></figure>
+
+<p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code>with()</code>
+method. It is a single line instead of four.</p>
+
+<p>As <a href="/2015/08/18/multiple-return-statements-in-oop.html">discussed before</a>,
+an ideal method in OOP must have just a single statement, and this statement is
+<code>return</code>.</p>
+
+<p>The same is true about validation. For example, this code is bad:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">checkIfListStillHasSpace</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;Walter&quot;</span><span class="o">);</span></code></pre></figure>
+
+<p>While this one is much better:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;Jeff&quot;</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">withEnoughSpace</span><span class="o">(</span><span class="n">list</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;Walter&quot;</span><span class="o">);</span></code></pre></figure>
+
+<p>See the difference?</p>
+
+<p>And, of course, an ideal approach would be to use
+<a href="/2015/02/26/composable-decorators.html">composable decorators</a>
+instead of these ugly static methods. But if it&#39;s not possible for
+some reason, just don&#39;t make those static methods look like procedures.
+Make sure they always return results, which become arguments to
+further calls.</p>
+
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>This is what Wikipedia <a href="https://en.wikipedia.org/wiki/Turnover_%28employment%29">says</a> about this:
+&quot;High turnover may be harmful to a company&#39;s
+productivity if skilled workers are often leaving,
+and the worker population contains a high percentage of novices.&quot;
+I agree. However, I believe that low turnover may also
+be very harmful.</p>
+
+<!--more-->
+
+
+
+<p>I&#39;ve found this
+<a href="http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/">good article</a>
+where John Sullivan explains why low turnover could be a troubling
+symptom. It&#39;s a really good read, but rather generic. It is not specifically about software
+teams. My experience is mostly focused on programmers and their
+turnover. I&#39;ve learned that low turnover negatively affects code maintainability
+and encourages <strong>hero-driven development</strong> and <strong>strong code ownership</strong>
+(both of which are bad practices).</p>
+
+
+
+<p>&quot;Turnover&quot; is basically the act of replacing an employee
+with a new employee for any reason, including termination,
+retirement, resignation, or any other. Simply put, the more
+people your team loses every year, the higher your turnover.
+If there are 20 programmers on your team, and five of them
+walk away every year, your turnover is 25 percent.</p>
+
+<p>I can&#39;t pinpoint what number you should aim for, but I strongly believe
+that if you consider <strong>programmers</strong> to be a <strong>valuable long-term asset</strong>,
+and try to retain them at all cost, you&#39;re doing it wrong.</p>
+
+<p>My point is that a healthy software team must
+<strong>replace</strong> programmers <strong>regularly</strong>. I would say having one
+person on board for longer than a year is asking for trouble.</p>
+
+<p>By replacing, I don&#39;t necessarily mean
+<a href="/2015/09/16/how-to-fire-someone-right.html">firing</a>.
+Not at all. I mean moving them
+<strong>away</strong> from the code base. Obviously, if you have a single code
+base, replacing will mean firing.</p>
+
+<p>When programmers stay together for a long time, working on the
+same code base, they inevitably become subject matter <strong>experts</strong>. First of
+all, this leads to strong code ownership. Naturally, each of them
+becomes a specialist in his or her own part of the code, mostly because
+it&#39;s easier to work with something you&#39;re familiar with instead of jumping
+from module to module. Needless to say, strong code ownership is
+a bad practice. Collective code ownership is a much better alternative,
+as <a href="http://martinfowler.com/bliki/CodeOwnership.html">explained</a> by Martin Fowler.</p>
+
+
+
+<p>Then, having strong experts on the team inevitably leads to
+hero-driven development, where firefighting is very much appreciated.
+An expert doesn&#39;t want to lose his or her position, and always tries to demonstrate
+how valuable he or she is for the team. The best way to do this is to
+solve a problem that nobody else can solve. That&#39;s how one gets &quot;job security&quot;.
+And that&#39;s how the team starts to degrade.
+This <a href="http://highlevelbits.com/2014/08/hero-driven-development.html">blog post</a>
+by Fredrik Rubensson is right about this problem.</p>
+
+<p>Thus, to achieve higher maintainability of the source code and
+robustness of the product, we must <strong>rotate</strong> programmers, preventing
+them from becoming subject matter experts.</p>
+
+<p>I realize this idea sounds counter-intuitive, but think about it.
+By keeping people together, working on the same problem for a long time,
+we put a lot of knowledge into their heads, not our source code.
+These people become the <strong>asset</strong>. They become smarter, they know the
+solution very well, and they solve all issues rather quickly.
+But the code base degrades.</p>
+
+<p>When the time comes to change someone (for any reason), the loss will be
+damaging. We may lose significant knowledge, and the code base left
+behind will be unmaintainable. In most cases, we will have to re-write it.
+That&#39;s why in most software teams, management is <strong>afraid</strong> of programmers.
+They are scared to lose key software developers, because the
+consequences may be fatal.</p>
+
+<p>In the end, programmers control management, not the other way around.</p>
+
+<p><a href="/2015/02/16/it-is-not-a-school.html">It&#39;s Not a School!</a> &mdash;
+This earlier post explains how this problem can be solved without
+<a href="/2015/09/16/how-to-fire-someone-right.html">firing</a>
+or rotating programmers, but few teams, especially co-located ones,
+can afford it. If your team can&#39;t, just try to keep your turnover high
+enough to prevent the appearance of <strong>heros</strong> (a.k.a. subject matter experts).</p>
+
+  </body>
+</html>

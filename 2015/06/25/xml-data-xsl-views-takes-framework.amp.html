@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p>A year ago, I <a href="/2014/06/25/xml-and-xslt-in-browser.html">tried to explain</a>
+how effectively data and its presentation can be separated
+in a web application with the help of XML and XSL. In a few words,
+instead of using <a href="https://en.wikipedia.org/wiki/Comparison_of_web_template_engines">templating</a>
+(like JSP, Velocity, FreeMarker, etc.) and injection of data into HTML,
+we compose them in the form of an XML document and then let
+the XSL stylesheet transform them into HTML. Here is a brief example
+of how all this can be used together with the <a href="http://www.takes.org">Takes framework</a>.</p>
+
+<!--more-->
+
+<p>First, let&#39;s agree that templating is a bad idea in the first place. Yes, I mean
+it. The entire design of JSP is wrong, with all due respect to its creators.
+Here is how it works: Let&#39;s say my website has to fetch the current exchange rate of
+the euro from a database and show it on the home page. Here&#39;s how my <code>index.jsp</code>
+would look:</p>
+
+<figure class="highlight"><pre><code class="language-jsp" data-lang="jsp"><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>EUR/USD: <span class="k">&lt;%=</span> <span class="n">rates</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="k">%&gt;</span><span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>In order to create HTML, the JSP engine will have to call <code>get()</code> on object
+<code>rates</code> and render what&#39;s returned through <code>toString()</code>. It&#39;s a terrible
+design for a few reasons. First, the view is tightly coupled with the model.
+Second, the flexibility of rendering is very limited. Third, the result of
+rendering is not reusable, and views are not stackable. There are many other
+reasons ... more about them in one of the next articles.</p>
+
+<p>Let&#39;s see how this should be done right. First, we let our model generate
+the output in XML format, for example:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.1&quot;?&gt;</span>
+<span class="nt">&lt;page&gt;</span>
+  <span class="nt">&lt;rate&gt;</span>1.1324<span class="nt">&lt;/rate&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>This is what the model will produce, having no knowledge of the view. Then,
+we create the view as an XSL stylesheet, which will transform XML into HTML:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span>
+  <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span>
+  <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          <span class="nt">&lt;xsl:text&gt;</span>EUR/USD: <span class="nt">&lt;/xsl:text&gt;</span>
+          <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">&quot;rate&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span></code></pre></figure>
+
+<p>As you see, the view doesn&#39;t know anything about the model in terms of
+implementation. All it knows is the format of XML data output produced
+by the model. Here is how you design it in the <a href="http://www.takes.org">Takes framework</a>.
+Let&#39;s start with a simple example:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.takes.http.Exit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.http.FtCLI</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Entry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtCLI</span><span class="o">(</span><span class="k">new</span> <span class="nf">TkApp</span><span class="o">(),</span> <span class="n">args</span><span class="o">).</span><span class="na">start</span><span class="o">(</span><span class="n">Exit</span><span class="o">.</span><span class="na">NEVER</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>It&#39;s a simple web application that starts a web server
+and never ends (it waits for connections in daemon mode). To make it work,
+we should create a simple &quot;take&quot; named <code>TkApp</code>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.takes.Take</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.tk.TkWrap</span><span class="o">;</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="n">TkWrap</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsText</span><span class="o">(</span>
+        <span class="s">&quot;&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;&quot;</span>
+      <span class="o">),</span>
+      <span class="s">&quot;application/xml&quot;</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This &quot;take&quot; always returns the same XML response, but it doesn&#39;t
+do any XSL transformation yet. We need to add the <code>RsXSLT</code> class to the picture:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">RsXSLT</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsText</span><span class="o">(</span>
+        <span class="s">&quot;&lt;?xml-stylesheet type=&#39;text/xsl&#39; href=&#39;/xsl/index.xsl&#39;?&gt;&quot;</span>
+        <span class="o">+</span> <span class="s">&quot;&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;&quot;</span>
+      <span class="o">),</span>
+      <span class="s">&quot;application/xml&quot;</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Excuse me for using string concatenation, which is a
+<a href="/2014/06/19/avoid-string-concatenation.html">bad practice</a>;
+it&#39;s merely for the simplicity of the example.</p>
+
+<p>As you see, I also added an XML stylesheet processing instruction to
+the XML. <code>RsXSLT</code> will understand it and try to find the <code>/xsl/index.xsl</code>
+resource on classpath. You see the content of that file above.</p>
+
+<p>That&#39;s it.</p>
+
+<p>Well, not really. Building XML from strings is not a good idea. We
+have a better instrument in the Takes framework. We use <a href="http://www.xembly.org">Xembly</a>,
+which is a simple imperative language for building and modifying
+XML documents. More about it here:
+<a href="/2014/04/09/xembly-intro.html">Xembly, an Assembly for XML</a>.</p>
+
+<p>Here is how our <code>TkApp</code> would look:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">RsXSLT</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsXembly</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">XeChain</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">XeStylesheet</span><span class="o">(</span><span class="s">&quot;/xsl/index.xsl&quot;</span><span class="o">),</span>
+          <span class="k">new</span> <span class="nf">XeAppend</span><span class="o">(</span>
+            <span class="s">&quot;page&quot;</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">XeDirectives</span><span class="o">(</span>
+              <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;rate&quot;</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;1.1324&quot;</span><span class="o">)</span>
+            <span class="o">)</span>
+          <span class="o">)</span>
+        <span class="o">)</span>
+      <span class="o">),</span>
+      <span class="s">&quot;application/xml&quot;</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The most important class here is
+<a href="http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/RsXembly.html"><code>RsXembly</code></a>.
+The idea is to let
+model classes expose their data through Xembly &quot;directives,&quot; which
+will later be applied to a DOM structure by <code>RsXembly</code>.</p>
+
+<p><code>XeChain</code>, <code>XeStylesheet</code>, <code>XeAppend</code>, and <code>XeDirectives</code> expose
+directives but with different meanings
+(they are all instances of an <code>XeSource</code> interface).
+Their names describe their
+intentions rather well.
+<a href="http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeChain.html"><code>XeChain</code></a>
+just chains everything that is
+delivered by encapsulated &quot;directive sources.&quot;
+<a href="http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeStylesheet.html"><code>XeStylesheet</code></a>
+returns directives that create a single XML processing instruction.
+<a href="http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeAppend.html"><code>XeAppend</code></a>
+creates an XML node and adds encapsulated directives to it.
+<a href="http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeDirectives.html"><code>XeDirectives</code></a>
+simply returns what&#39;s inside.</p>
+
+<p>In the end, this code will create exactly the same XML document
+as I created above with string concatenation.</p>
+
+<p>The beauty of this approach is in the perfect decoupling of data generation
+and XML building and translation between XML and HTML. It is perfectly reusable
+and &quot;stackable.&quot; We can transform the data in XML format multiple times,
+applying different XSL stylesheets to each one. We can even transform them into
+<a href="/2015/11/16/json-vs-xml.html">JSON</a>
+without changing a line of code in model classes.</p>
+
+<p>Moreover, we can format them differently, using rather powerful XSLT 2.0
+instruments. XSLT by itself is a powerful and purely functional language that
+enables any possible data manipulations. No templating engine is even close
+to it.</p>
+
+<p>Take a look at how it works in the
+<a href="https://github.com/yegor256/rultor/blob/1.55/src/main/java/com/rultor/web/RsPage.java"><code>RsPage</code></a>
+class in Rultor, for example.</p>
+
+  </body>
+</html>

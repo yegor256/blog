@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p>Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
+highly reliable and rather powerful. I&#39;m using it in many web systems.</p>
+
+<p>There is one feature that it lacks, though &mdash; auto-increment attributes.</p>
+
+<p>Say that you have a table with a list of messages:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">+------+----------------------------+
+| id   | Attributes                 |
++------+----------------------------+
+| 205  | author=&quot;jeff&quot;, text=&quot;...&quot;  |
+| 206  | author=&quot;bob&quot;, text=&quot;...&quot;   |
+| 207  | author=&quot;alice&quot;, text=&quot;...&quot; |
++------+----------------------------+</code></pre></figure>
+
+<p>Every time you add a new item to the table, a new value
+of <code>id</code> has to be set. And this has to be done with concurrency in mind.
+SQL databases like PostgreSQL, Oracle, MySQL and others support
+auto-increment features. When you add a new record to the table,
+the value of the primary key is omitted and the server retrieves
+the next one automatically. If a number of <code>INSERT</code> requests
+arrive at the same time the server guarantees that the numbers won&#39;t be duplicated.</p>
+
+<p>However, DynamoDB doesn&#39;t have this feature. Instead,
+DynamoDB has <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.AtomicCounters">Atomic Counters</a>
+and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.ConditionalUpdate">Conditional Updates</a>,
+which are very similar features. Still, they&#39;re not exactly the same.</p>
+
+<p>In case of an atomic counter, you should create a supplementary
+table and keep the latest value of <code>id</code> in it.</p>
+
+<p>In case of conditional updates, you should
+<a href="/2014/08/15/retry-java-method-on-exception.html">retry</a>
+a few times in case of collisions.</p>
+
+
+
+<p>To make life easier in a few of my applications, I created a simple web
+service &mdash; <a href="http://www.stateful.co">stateful.co</a>.
+It provides a simple atomic counter feature through its RESTful API.</p>
+
+<!--more-->
+
+<p>First, you create a counter with a unique name. Then,
+you set its initial value (it is zero by default). And, that&#39;s it.
+Every time you need to obtain a new value for <code>id</code> column in
+DynamoDB table, you make an HTTP request to <a href="http://www.stateful.co">stateful.co</a>
+asking to
+increment your counter by one and return its next value.</p>
+
+<p><a href="http://www.stateful.co">stateful.co</a> guarantees that values
+returned will never duplicate each other &mdash; no matter how many
+clients are using a counter or how fast they request increments simultaneously.</p>
+
+<p>Moreover, I designed a small <a href="https://github.com/sttc/java-sdk">Java SDK</a>
+for <a href="http://www.stateful.co">stateful.co</a>. All you need to do is add
+this <a href="http://repo1.maven.org/maven2/co/stateful/java-sdk/">java-sdk.jar</a>
+Maven dependency to your project:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>co.stateful<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>java-sdk<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.6<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
+<p>And, you can use <a href="http://www.stateful.co">stateful.co</a> counters from Java code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Sttc</span> <span class="n">sttc</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RtSttc</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">URN</span><span class="o">(</span><span class="s">&quot;urn:github:526301&quot;</span><span class="o">),</span>
+  <span class="s">&quot;9FF3-41E0-73FB-F900&quot;</span>
+<span class="o">);</span>
+<span class="n">Counters</span> <span class="n">counters</span> <span class="o">=</span> <span class="n">sttc</span><span class="o">.</span><span class="na">counters</span><span class="o">();</span>
+<span class="n">Counter</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">counters</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;foo&quot;</span><span class="o">);</span>
+<span class="kt">long</span> <span class="n">value</span> <span class="o">=</span> <span class="n">counter</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;new value: &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span></code></pre></figure>
+
+<p>You can review authentication parameters for <code>RtSttc</code>
+constructor at <a href="http://www.stateful.co">stateful.co</a>.</p>
+
+<p>The service is absolutely free of charge.</p>
+
+  </body>
+</html>

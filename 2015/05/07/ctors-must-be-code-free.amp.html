@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>How much work should be done within a constructor? It seems reasonable
+to do some computations inside a constructor and then encapsulate
+results. That way, when the results are required by object methods, we&#39;ll have them
+ready. Sounds like a good approach? No, it&#39;s not. It&#39;s a bad idea
+for one reason: It prevents composition of objects and makes them
+un-extendable.</p>
+
+<!--more-->
+
+
+
+<p>Let&#39;s say we&#39;re making an interface that would represent a name of a person:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="n">String</span> <span class="nf">first</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Pretty easy, right? Now, let&#39;s try to implement it:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">EnglishName</span> <span class="kd">implements</span> <span class="n">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">EnglishName</span><span class="o">(</span><span class="kd">final</span> <span class="n">CharSequence</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">&quot; &quot;</span><span class="o">,</span> <span class="mi">2</span><span class="o">)[</span><span class="mi">0</span><span class="o">];</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>What&#39;s wrong with this? It&#39;s faster, right? It splits the name into
+parts only once and encapsulates them. Then, no matter how many times we
+call the <code>first()</code> method, it will return the same value and won&#39;t need
+to do the splitting again. However, this is flawed thinking! Let me show
+you the right way and explain:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">EnglishName</span> <span class="kd">implements</span> <span class="n">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">CharSequence</span> <span class="n">text</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">EnglishName</span><span class="o">(</span><span class="kd">final</span> <span class="n">CharSequence</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">,</span> <span class="mi">2</span><span class="o">)[</span><span class="mi">0</span><span class="o">];</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This is the right design. I can see you smiling, so let me prove my point.</p>
+
+<p>Before I start proving, though, let me ask you to read this article:
+<a href="/2015/02/26/composable-decorators.html">Composable Decorators vs. Imperative Utility Methods</a>.
+It explains the difference between a static method and composable decorators.
+The first snippet above is very close to an imperative utility method, even
+though it looks like an object. The second example is a true object.</p>
+
+<iframe class='video video-left' src='https://www.youtube.com/embed/9yjtsCK6Wdk?controls=2' allowfullscreen='true'></iframe>
+
+<p>In the first example, we are abusing the <code>new</code> operator and turning it into
+a static method, which does all calculations for us <em>right here and now</em>.
+This is what <em>imperative</em> programming is about. In imperative programming,
+we do all calculations right now and return fully ready results. In declarative
+programming, we are instead trying to delay calculations for
+as long as possible.</p>
+
+<p>Let&#39;s try to use our <code>EnglishName</code> class:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">Name</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">EnglishName</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">NameInPostgreSQL</span><span class="o">(</span><span class="cm">/*...*/</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="cm">/* something goes wrong */</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span>
+    <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">&quot;Hi, %s, we can&#39;t proceed with your application&quot;</span><span class="o">,</span>
+      <span class="n">name</span><span class="o">.</span><span class="na">first</span><span class="o">()</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>In the first line of this snippet, we are just making an instance of an object
+and labeling it <code>name</code>. We don&#39;t want to go to the database yet and fetch
+the full name from there, split it into parts, and encapsulate them
+inside <code>name</code>. We just want to create an instance of an object. Such a parsing
+behavior would be a side effect for us and, in this case,
+will slow down the application.
+As you see, we may only need <code>name.first()</code> if something goes wrong and
+we need to construct an exception object.</p>
+
+<p>My point is that having <strong>any</strong> computations done inside a constructor is a bad
+practice and must be avoided because they are side effects and are not
+requested by the object owner.</p>
+
+<p>What about performance during the re-use of <code>name</code>, you may ask. If we make an
+instance of <code>EnglishName</code> and then call <code>name.first()</code> five times, we&#39;ll
+end up with five calls to the <code>String.split()</code> method.</p>
+
+<p>To solve that, we create another class,
+a <a href="/2015/02/26/composable-decorators.html">composable decorator</a>,
+which will help us solve this &quot;re-use&quot; problem:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CachedName</span> <span class="kd">implements</span> <span class="n">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Name</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">CachedName</span><span class="o">(</span><span class="kd">final</span> <span class="n">Name</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">forever</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">first</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>I&#39;m using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>Cacheable</code></a>
+annotation from <a href="http://aspects.jcabi.com/">jcabi-aspects</a>, but you can use any other
+caching tools available in Java (or other languages), like
+<a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Cache</a>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CachedName</span> <span class="kd">implements</span> <span class="n">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Cache</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">cache</span> <span class="o">=</span>
+    <span class="n">CacheBuilder</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Name</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">CachedName</span><span class="o">(</span><span class="kd">final</span> <span class="n">Name</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">(</span>
+      <span class="mi">1L</span><span class="o">,</span>
+      <span class="k">new</span> <span class="n">Callable</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">call</span><span class="o">()</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="n">CachedName</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">first</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>But please don&#39;t make <code>CachedName</code> mutable and lazily loaded &mdash;
+it&#39;s an anti-pattern, which I&#39;ve discussed before in
+<a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a>.</p>
+
+<p>This is how our code will look now:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">Name</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">CachedName</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">EnglishName</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">NameInPostgreSQL</span><span class="o">(</span><span class="cm">/*...*/</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span></code></pre></figure>
+
+<p>It&#39;s a very primitive example, but I hope you get the idea.</p>
+
+<p>In this design, we&#39;re basically splitting the object into two parts. The first
+one knows how to get the first name from the English name. The second one
+knows how to cache the results of this calculation in memory. And now it&#39;s
+my decision, as a user of these classes, how exactly to use them. I will
+decide whether I need caching or not. This is what object composition is all about.</p>
+
+<p>Let me reiterate that the only allowed statement inside
+a constructor is an assignment. If you need to put something else there,
+start thinking about refactoring &mdash; your class definitely needs a redesign.</p>
+
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>I keep repeating the same mistake again and again. So it&#39;s time to
+stop and make a rule to prevent this from happening anymore. The mistake
+is not fatal, but it&#39;s very annoying. When I look at production logs, I often see
+something like <code>&quot;File doesn&#39;t exist&quot;</code>, and I ask myself:
+What file? Where is it supposed to exist? What did the server try to do with it?
+What was going on a second before it crashed?
+There is no answer in the log, and it&#39;s totally my fault.
+I either 1) don&#39;t re-throw or 2) re-throw without providing context.
+Both are wrong.</p>
+
+<!--more-->
+
+
+
+<p>This is how the code may look:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="s">&quot;File doesn&#39;t exist&quot;</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>It may also look like this:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
+  <span class="n">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Both examples demonstrate an inadequate style of handling situations that
+involve exceptions and reporting them. What&#39;s wrong here? The exception messages
+are not thorough enough. They simply don&#39;t contain any information
+from the place where they originated from.</p>
+
+<p>This is how they should look instead:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">&quot;User profile file %s doesn&#39;t exist&quot;</span><span class="o">,</span>
+      <span class="n">file</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">()</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>And the second example should look like this:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
+  <span class="n">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">&quot;Can&#39;t delete user profile data file %s&quot;</span><span class="o">,</span>
+      <span class="n">file</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">()</span>
+    <span class="o">),</span>
+    <span class="n">ex</span>
+  <span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>See the difference? This may look like redundant code, but it&#39;s not.
+Of course, when I&#39;m writing all this, I don&#39;t really care about
+logs and exceptions. I&#39;m not really expecting this file
+to be absent.</p>
+
+<p>But I should.</p>
+
+<p>There should be a rule: Every time we throw or re-throw, an
+exception message must describe the problem with as much
+detail as possible.</p>
+
+<p>Of course, we can&#39;t forget about security and risk putting any
+sensitive information into the exception message, like passwords,
+credit card numbers, etc. Besides that, as much as possible
+must be exposed to the exception catcher at a higher level.</p>
+
+<p>Throwing an exception is literally an escalation of a problem
+to a higher level of management. Imagine that my boss is asking
+me to install a new server. I come back to him in a few hours
+and say, &quot;I failed; sorry.&quot; That would sound strange. He
+would ask for more details. Why did I fail? What exactly went wrong?
+Is it possible to do it differently? Etc.</p>
+
+<p>Such code is literally a sign of disrespect to the client:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+  <span class="s">&quot;File doesn&#39;t exist&quot;</span>
+<span class="o">);</span></code></pre></figure>
+
+<p>I have to be more verbose and give more details.</p>
+
+<p>And I&#39;m not alone in this mistake. I see it everywhere, and it really
+makes <a href="/2016/02/09/are-you-still-debugging.html">debugging</a>
+difficult, especially in production, where it&#39;s
+almost impossible to reproduce the problem right away.</p>
+
+<p>Thus, please be more verbose in your exception messages. I will do the same
+in my code :)</p>
+
+<p>And one more thing before you go. In most OOP languages, exceptions
+are unchecked, which means that catching them is not a mandatory
+operation, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">unfortunately</a>.
+Nevertheless, I recommend you catch, add context, and
+re-throw them all, <strong>always</strong>. This may seem like pure noise, but it&#39;s not!
+Just make your methods smaller and ensure all exceptions
+sent out of them have enough information about their origins.
+You will do yourself and everybody else a big favor.</p>
+
+  </body>
+</html>

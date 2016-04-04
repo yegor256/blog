@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>A <a href="/2014/10/12/who-is-software-architect.html">software architect</a>
+is a key person in any software project, no matter how big or small it is.
+An architect is personally responsible for the technical outcome of
+the entire team. A good architect knows what needs to be done and how
+it&#39;s going to be done, both architecturally and design-wise. In order to enforce
+this idea in practice, an architect uses two instruments:
+<strong>bugs and reviews</strong>.</p>
+
+<!--more-->
+
+
+
+<p>At <a href="http://www.teamed.io">Teamed.io</a>, we discourage any communication
+between developers unless they are formally attached to the tickets or tasks
+we&#39;re working on. Read more details about this approach in
+<a href="/2014/10/07/stop-chatting-start-coding.html">this post</a>.</p>
+
+<p>The same principle applies to an architect. We don&#39;t use meetings,
+stand-ups, Skype calls, IRC channels, or any other tools where information
+flies in the air and stays in our heads. Instead, we put everything in writing and talk
+only when we&#39;re being explicitly asked to and paid to &mdash; in tickets.</p>
+
+<h2 id="bugs">Bugs</h2>
+
+<p>With this in mind, a reasonable question may be asked: How can
+a software architect enforce his or her technical vision for the team
+if he can&#39;t communicate with the team? Here is our answer:
+the architect must use <strong>bugs</strong>.</p>
+
+
+
+<p>A bug is a ticket that has a reporter, a problem, and a resolver, just
+like <a href="/2014/11/24/principles-of-bug-tracking.html">this post</a> explains.
+Say an architect reviews an existing technical solution and finds
+something that
+<a href="/2015/06/22/valid-reasons-to-reject-bug-fix.html">contradicts</a>
+his vision. When such a contradiction
+is found, it is a good candidate for a bug. Sometimes there is just
+not enough information in the code yet, and this is also a good candidate
+for a bug.</p>
+
+<p>Thus, bugs reported by an architect serve as communication channels
+between him and the team. An architect doesn&#39;t explain what needs to be done
+but asks the team to fix the product in a way he thinks is right.
+If the ticket resolver, a member of the team, disagrees with that approach,
+a discussion starts right in the ticket.</p>
+
+<p>Sometimes an architect has doubts and needs to discuss a few possible solutions
+with the team or simply collect opinions. Again, we use bugs for that.
+But these bugs don&#39;t report problems in the source code; instead, they
+complain about incomplete documentation. For example, say an architect
+doesn&#39;t know which database to use, MongoDB or Cassandra, and needs more
+information about their pros and cons. A bug will sound like &quot;our design documentation
+doesn&#39;t have a detailed comparison of existing NoSQL databases; please fix it&quot;.
+Whoever is assigned to this ticket will perform the comparison
+and update the documentation.</p>
+
+<p>Bugs are a <em>proactive</em> tool for an architect. Through reporting bugs,
+an architect influences the project and &quot;dictates his will&quot;.</p>
+
+<h2 id="reviews">Reviews</h2>
+
+<p>In our projects, every ticket is implemented in its own branch. When
+implementation is done, all tickets pass mandatory code peer review. In other
+words, developers review each others&#39; code. An architect is not involved
+in this process.</p>
+
+
+
+<p>But when peer review is done, each ticket goes to an architect and he
+has to give a final &quot;OK&quot; before the code goes to the <code>master</code> branch through
+Rultor, our <a href="/2014/07/24/rultor-automated-merging.html">merge bot</a>.</p>
+
+<p>This is an architect&#39;s opportunity for control. This is where he can
+prevent his vision from being destroyed. When the code created by a developer
+violates project design principles or any part of the entire technical idea,
+the architect says &quot;No&quot; and the branch is rejected.</p>
+
+<p>Reviews are a <em>reactive</em> instrument for an architect. Through strict and
+non-compromising code reviews, an architect enforces his design and architectural
+principles.</p>
+
+<p>PS. Here is how an architect is supposed to report to the
+<a href="/2015/09/22/micromanagement.html">project manager</a>:
+<a href="/2015/05/11/software-architect-responsibilities.html">Three Things I Expect From a Software Architect</a></p>
+
+  </body>
+</html>

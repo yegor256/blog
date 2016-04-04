@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>This blog is written in <a href="http://jekyllrb.com/">Jekyll</a> and is hosted at
+<a href="https://pages.github.com/">GitHub Pages</a>. It uses half a dozen custom
+plugins, which <a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages">are not allowed there</a>.</p>
+
+<p>Here is how I deploy it:</p>
+
+
+
+<p>That&#39;s it. <a href="http://rubygems.org/gems/jgd">jgd</a> is my
+Ruby gem (stands for &quot;Jekyll GitHub Deploy&quot;), which does
+the trick. Here is
+<a href="https://github.com/yegor256/jekyll-github-deploy/blob/master/bash/deploy.sh">what it does</a>:</p>
+
+<!--more-->
+
+<ol>
+<li><p>It clones your existing repository from the current
+directory to a temporary one (guessing the URL of the repo from <code>.git/config</code> file).</p></li>
+<li><p>Runs <code>jekyll build</code> in that temporary directory,
+which saves the output in another temporary directory.</p></li>
+<li><p>Checks out <code>gh-pages</code> branch or creates one if it doesn&#39;t exist.</p></li>
+<li><p>Copies the content of the site built by <code>jekyll build</code> into the branch, thus overwriting existing files, commits and pushes to GitHub.</p></li>
+<li><p>Cleans up all temporary directories.</p></li>
+</ol>
+
+<p>Using this gem is very easy. Just install it with
+<code>gem install jgd</code> and then run in the root directory of your Jekyll blog.</p>
+
+<p>What is important is that your Jekyll site files be
+located in the root directory of the repository. Just
+as they do on <a href="/2014/04/06/introduction.html">this blog</a>;
+see <a href="https://github.com/yegor256/blog">its sources in GitHub</a>.</p>
+
+<p>You can easily integrate <code>jgd</code> with Travis. See
+<a href="https://github.com/yegor256/blog/blob/master/.travis.yml"><code>.travis.yml</code></a> of this blog.</p>
+
+<p>Full documentation about the gem is located
+<a href="https://github.com/yegor256/jekyll-github-deploy">here</a>.</p>
+
+  </body>
+</html>

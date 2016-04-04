@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    
+
+<p>The purpose of Continuous Integration is to tell us, the developers,
+when the product we&#39;re working on is not &quot;packagable&quot; any more. The
+sooner we get the signal, the better. Why? Because the damage will
+be younger if we find it sooner. The younger the damage, the easier it is
+to fix. There are many modern and high-quality
+<a href="/2014/10/05/ten-hosted-continuous-integration-services.html">hosted continuous integration services</a>,
+but only one of them (to my knowledge) supports Windows as a build
+platform &mdash; <a href="http://www.appveyor.com">appveyor.com</a>. My experience
+tells me that it&#39;s a good practice to continuously integrate on
+different platforms at the same time, especially when developing an
+open source library. That&#39;s why, in <a href="http://www.teamed.io">teamed.io</a>
+we&#39;re using AppVeyor in combination with <a href="http://www.travis-ci.org">Travis</a>.</p>
+
+<!--more-->
+
+<p>This is how I managed to configure AppVeyor to build my Java Maven projects
+(this is <code>appveyor.yml</code> configuration file you&#39;re supposed to place
+in the root directory of your GitHub repository):</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">version: &#39;{build}&#39;
+os: Windows Server 2012
+install:
+  - ps: |
+      Add-Type -AssemblyName System.IO.Compression.FileSystem
+      if (!(Test-Path -Path &quot;C:\maven&quot; )) {
+        (new-object System.Net.WebClient).DownloadFile(
+          &#39;http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip&#39;,
+          &#39;C:\maven-bin.zip&#39;
+        )
+        [System.IO.Compression.ZipFile]::ExtractToDirectory(&quot;C:\maven-bin.zip&quot;, &quot;C:\maven&quot;)
+      }
+  - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%
+  - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
+  - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g
+build_script:
+  - mvn clean package --batch-mode -DskipTest
+test_script:
+  - mvn clean install --batch-mode
+cache:
+  - C:\maven\
+  - C:\Users\appveyor\.m2</code></pre></figure>
+
+<p>It was not that easy at all, so I decided to share. You can see
+how this configuration works in these projects:
+<a href="https://github.com/jcabi/jcabi-aspects">jcabi-aspects</a>,
+<a href="https://github.com/jcabi/jcabi-email">jcabi-email</a>,
+<a href="https://github.com/jcabi/jcabi-dynamo">jcabi-dynamo</a>, and
+<a href="https://github.com/yegor256/rultor">rultor</a>.</p>
+
+  </body>
+</html>

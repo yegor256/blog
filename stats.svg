@@ -285,9 +285,9 @@
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M116.6,230.0 L116.6,160.6 L134.7,160.6 L134.7,230.0 L116.6,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '140.6,230.0 158.8,230.0 158.8,191.5 140.6,191.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '140.6,230.0 158.8,230.0 158.8,191.4 140.6,191.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M140.6,230.0 L140.6,191.6 L158.7,191.6 L158.7,230.0 L140.6,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M140.6,230.0 L140.6,191.5 L158.7,191.5 L158.7,230.0 L140.6,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '164.8,230.0 183.2,230.0 183.2,175.6 164.8,175.6 '/>
 	</g>
@@ -313,13 +313,13 @@
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M285.5,230.0 L285.5,130.7 L303.9,130.7 L303.9,230.0 L285.5,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '310.0,230.0 327.6,230.0 327.6,139.4 310.0,139.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '310.0,230.0 327.6,230.0 327.6,139.3 310.0,139.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M310.0,230.0 L310.0,139.5 L327.5,139.5 L327.5,230.0 L310.0,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M310.0,230.0 L310.0,139.4 L327.5,139.4 L327.5,230.0 L310.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '333.0,230.0 350.6,230.0 350.6,145.2 333.0,145.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '333.0,230.0 350.6,230.0 350.6,145.1 333.0,145.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M333.0,230.0 L333.0,145.3 L350.5,145.3 L350.5,230.0 L333.0,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M333.0,230.0 L333.0,145.2 L350.5,145.2 L350.5,230.0 L333.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '356.6,230.0 374.7,230.0 374.7,182.7 356.6,182.7 '/>
 	</g>

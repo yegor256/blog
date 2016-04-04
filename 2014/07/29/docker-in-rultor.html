@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?ba34d99"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?ba34d99"/>
+    <link rel="shortcut icon" href="/favicon.ico?6fab0c1"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?6fab0c1"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?ba34d99"/>
-    <link rel="stylesheet" href="/css/icons.css?ba34d99"/>
+    <link rel="stylesheet" href="/css/layout.css?6fab0c1"/>
+    <link rel="stylesheet" href="/css/icons.css?6fab0c1"/>
     <link rel="canonical" href="http://www.yegor256.com/2014/07/29/docker-in-rultor.html" />
     <title>Every Build in Its Own Docker Container - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?ba34d99"></script>
+    <script src="/js/global.js?6fab0c1"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -69,8 +69,8 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;173</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;173</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -106,7 +106,20 @@
             <li>
               <a href="https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4">Webinar #13</a>
               will be about the role of a Software Architect;
-              join us on Apr 6, at 11am PST
+              join us on Apr 6, at 11am PST.
+            </li>
+            <li>
+              Meet me at
+              <a href="http://outsource-people.com/en">Outsource People</a> (Minsk/Apr-8),
+              <a href="http://kiev2016.agileee.org/">AgileEE</a> (Kiev/Apr-9),
+              <a href="http://nextbuild.nl/speakers/yegor-bugayenko/">NextBuild</a> (Eindhoven/Apr-16),
+              <a href="http://javapoint.ru/en/">JPoint</a> (Moscow/Apr-22),
+              <a href="http://jetconf.by/#/yegor_bugayenko">JETConf</a> (Minsk/Apr-25),
+              <a href="http://2016.geecon.org/">GeeCON</a> (Krakow/May-11),
+              <a href="http://devitconf.org/">DEVit</a> (Thessaloniki/May-20),
+              <a href="http://jeeconf.com/speaker/yegor-bugayenko/">JEEConf</a> (Kiev/May-21),
+              and later
+              <a href="/talks.html">somewhere else</a>.
             </li>
           </ul>
         </div>
@@ -132,7 +145,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/jul/2014-07-29-docker-in-rultor.md'>modified</a>          on <time itemprop='dateModified' datetime='2015-11-21T06:26:40+0000'>21 November 2015</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/jul/2014-07-29-docker-in-rultor.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-03T21:21:31+0000'>3 April 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -227,17 +240,17 @@ an image out of it and push it to the hub.</p>
 with a pre-installed <code>graphviz</code> package (in order to enable <code>dot</code> command line tool).
 First, I would start a plain vanilla Ubuntu container, and install <code>graphviz</code> inside it:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo docker run -i -t ubuntu /bin/bash
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ sudo docker run -i -t ubuntu /bin/bash
 root@215d2696e8ad:/# sudo apt-get install -y graphviz
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 The following extra packages will be installed:
 ...
-root@215d2696e8ad:/# <span class="nb">exit</span>
-<span class="nv">$ </span>sudo docker ps -a
+root@215d2696e8ad:/# exit
+$ sudo docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                     PORTS               NAMES
-215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">3</span> seconds ago                       high_mccarthy</code></pre></figure>
+215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited (0) 3 seconds ago                       high_mccarthy</code></pre></figure>
 
 <p>I have a container that stopped a few seconds ago. Container&#39;s
 ID is <code>215d2696e8ad</code>. Now, I want to make it reusable for all
@@ -252,10 +265,10 @@ from this image and it will have <code>graphviz</code> installed inside!</p>
 
 <p>Now it&#39;s time to share my image at Docker hub, in order to make it available for Rultor:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo docker push yegor256/beta
-The push refers to a repository <span class="o">[</span>yegor256/beta<span class="o">]</span> <span class="o">(</span>len: 1<span class="o">)</span>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ sudo docker push yegor256/beta
+The push refers to a repository [yegor256/beta] (len: 1)
 Sending image list
-Pushing repository yegor256/beta <span class="o">(</span><span class="m">1</span> tags<span class="o">)</span>
+Pushing repository yegor256/beta (1 tags)
 511136ea3c5a: Image already pushed, skipping
 d7ac5e4f1812: Image already pushed, skipping
 2f4b4d6a4a06: Image already pushed, skipping
@@ -263,7 +276,7 @@ d7ac5e4f1812: Image already pushed, skipping
 6c37f792ddac: Image already pushed, skipping
 e54ca5efa2e9: Image already pushed, skipping
 c5ad7718fc0e: Image successfully pushed
-Pushing tag <span class="k">for</span> rev <span class="o">[</span>c5ad7718fc0e<span class="o">]</span> on <span class="o">{</span>https://registry-1.docker.io/v1/repositories/yegor256/beta/tags/latest<span class="o">}</span></code></pre></figure>
+Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositories/yegor256/beta/tags/latest}</code></pre></figure>
 
 <p>The last step is to configure Rultor to use this image in
 all builds. To do this, I will edit <a href="http://doc.rultor.com/reference.html"><code>.rultor.yml</code></a>
@@ -280,18 +293,18 @@ it&#39;s easy to do. Say, I want to install Ruby into my build image.
 I start a container from the image and install it (pay attention,
 I&#39;m starting a container not from <code>ubuntu</code> image, as I did before, but from <code>yegor256/beta</code>):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo docker run -i -t yegor256/beta /bin/bash
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ sudo docker run -i -t yegor256/beta /bin/bash
 root@7e0fbd9806c9:/# sudo apt-get install -y ruby
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 The following extra packages will be installed:
 ...
-root@7e0fbd9806c9:/# <span class="nb">exit</span>
-<span class="nv">$ </span>sudo docker ps -a
+root@7e0fbd9806c9:/# exit
+$ sudo docker ps -a
 CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS                     PORTS               NAMES
-7e0fbd9806c9        yegor256/beta:latest   /bin/bash           <span class="m">28</span> seconds ago      Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">2</span> seconds ago                       pensive_pare
-215d2696e8ad        ubuntu:14.04           /bin/bash           <span class="m">10</span> minutes ago      Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">8</span> minutes ago                       high_mccarthy</code></pre></figure>
+7e0fbd9806c9        yegor256/beta:latest   /bin/bash           28 seconds ago      Exited (0) 2 seconds ago                       pensive_pare
+215d2696e8ad        ubuntu:14.04           /bin/bash           10 minutes ago      Exited (0) 8 minutes ago                       high_mccarthy</code></pre></figure>
 
 <p>You can now see that I have two containers. The first one is the one
 I am using right now; it contains Ruby. The second one is the one
@@ -362,23 +375,23 @@ destroyed immediately after Maven execution is finished.</p>
     <ul>
       
         <li>
-          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="9.233894415977062">Jare.io, an Instant and Free CDN</a>
+          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="9.490527817904262">Jare.io, an Instant and Free CDN</a>
         </li>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="2.1631925316319562">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="2.164876565775635">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="2.138929244668632">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="2.1389401858814625">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.4723034560459294">How to Set Up a Private Maven Repository in Amazon S3</a>
+          <a href="/2015/09/07/maven-repository-amazon-s3.html" data-score="1.4884854407079589">How to Set Up a Private Maven Repository in Amazon S3</a>
         </li>
       
         <li>
-          <a href="/2015/06/08/deadly-sins-software-project.html" data-score="1.1812796508152463">Seven Deadly Sins of a Software Project</a>
+          <a href="/2015/06/08/deadly-sins-software-project.html" data-score="1.1687435971645208">Seven Deadly Sins of a Software Project</a>
         </li>
       
     </ul>
@@ -412,8 +425,8 @@ destroyed immediately after Maven execution is finished.</p>
 
 </section>
 
-<script src="/js/post.js?ba34d99"></script>
-<script src="//a.disquscdn.com/embed.js?ba34d99"></script>
+<script src="/js/post.js?6fab0c1"></script>
+<script src="//a.disquscdn.com/embed.js?6fab0c1"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
