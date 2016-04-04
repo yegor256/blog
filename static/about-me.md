@@ -25,13 +25,7 @@ I'm Yegor Bugayenko, a programmer, a founder and an investor.
 As a **programmer** I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP and JavaScript.
 I'm a founder and a lead architect of
-[takes.org](http://www.takes.org),
-[jcabi.com](http://www.jcabi.com),
-[rultor.com](http://www.rultor.com),
-[qulice.com](http://www.qulice.com),
-[s3auth.com](http://www.s3auth.com),
-and
-[stateful.co](http://www.stateful.co). I'm using
+[takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com). I'm using
 IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering.
