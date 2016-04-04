@@ -47,7 +47,7 @@ $(function() {
 
 There is a list of all venues I've been talking at with my short
 summary of their quality. Well, not just a summary, but an evaluation.
-No every conference is as good as some others. That's why I decided to
+Not every conference is as good as some others. That's why I decided to
 give them some feedback, at least here, on the blog &mdash;
 [here it is](/venues.html).
 
