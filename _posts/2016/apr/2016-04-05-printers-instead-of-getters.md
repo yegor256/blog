@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Printers Instead of Getters"
-date: 2016-01-31
+date: 2016-04-05
 place: Palo Alto, CA
 tags: java oop
 description:
@@ -23,6 +23,8 @@ The key question is how is it possible at all? We do need to get
 the data out of an object, right? Nope. Wrong.
 
 <!--more-->
+
+{% picture /images/2016/04/amelie.jpg 0 Amélie (2001) by Jean-Pierre Jeunet %}
 
 I'm suggesting to use "printers" instead. Instead of exposing
 data via getters, an object will have a functionality of **printing**
@@ -190,5 +192,7 @@ exactly what printed just now. We need to print the book to XML? We
 create `XmlMedia`, which will print the book to XML. The `Book` class
 stays small, while the complexity of "media" objects is unlimited.
 
-My point here is simple &mdash; no getters, just printers!
+My point here is simple &mdash; no
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+just printers!
 
