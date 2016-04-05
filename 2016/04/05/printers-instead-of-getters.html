@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?a58e30c"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?a58e30c"/>
+    <link rel="shortcut icon" href="/favicon.ico?055b9ab"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?055b9ab"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?a58e30c"/>
-    <link rel="stylesheet" href="/css/icons.css?a58e30c"/>
+    <link rel="stylesheet" href="/css/layout.css?055b9ab"/>
+    <link rel="stylesheet" href="/css/icons.css?055b9ab"/>
     <link rel="canonical" href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" />
     <title>Printers Instead of Getters - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?a58e30c"></script>
+    <script src="/js/global.js?055b9ab"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -92,15 +92,6 @@
             <div class="entries"></div>
           </div>
         </div>
-        
-        <script id="search-results-template" type="text/mustache">
-          {{#entries}}
-            <div>
-              <a href="{{url}}">{{title}}</a>
-            </div>
-          {{/entries}}
-        </script>
-        
         <div class="hot">
           <ul>
             <li>
@@ -147,7 +138,7 @@
         
           <li class="desktop-only">Palo Alto, CA</li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-05-printers-instead-of-getters.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-05T02:06:44+0000'>5 April 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-05-printers-instead-of-getters.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-05T03:51:59+0000'>5 April 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -220,7 +211,8 @@ itself to some media.</p>
 <span class="o">}</span></code></pre></figure>
 
 <p>We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and JAXB:</p>
+or less traditional way to do it is via getters and
+<a href="/2015/03/26/jaxb-vs-xembly.html">JAXB</a>:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
@@ -248,12 +240,15 @@ little self-sufficient solid object and we turned it into a bag of data,
 which anyone can access in many possible ways. We can access it for reading, of course.</p>
 
 <p>It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into JSON, they will be very helpful. If we want
+If we want to convert it into
+<a href="/2015/11/16/json-vs-xml.html">JSON</a>,
+they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.</p>
 
 <p>This is <strong>not</strong> because they are so effective. This is because we&#39;re so
-<strong>procedural</strong> in our way of thinking. We <strong>don&#39;t trust</strong> our objects. We only trust
+<a href="/2015/02/20/utility-classes-vs-functional-programming.html"><strong>procedural</strong></a>
+in our way of thinking. We <strong>don&#39;t trust</strong> our objects. We only trust
 the data they store. We don&#39;t want this <code>Book</code> object to generate the XML. We
 want it to give us the data. We will build the XML. The <code>Book</code> is too stupid
 to do that job. We&#39;re way smarter!</p>
@@ -371,23 +366,23 @@ just printers!</p>
     <ul>
       
         <li>
-          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="1.1881019849905738">JAXB Is Doing It Wrong; Try Xembly</a>
+          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="1.1771292975837218">JAXB Is Doing It Wrong; Try Xembly</a>
         </li>
       
         <li>
-          <a href="/2014/12/09/immutable-object-state-and-behavior.html" data-score="0.6659428797969581">How an Immutable Object Can Have State and Behavior?</a>
+          <a href="/2014/12/09/immutable-object-state-and-behavior.html" data-score="0.6613750331958502">How an Immutable Object Can Have State and Behavior?</a>
         </li>
       
         <li>
-          <a href="/2014/12/15/how-much-your-objects-encapsulate.html" data-score="0.6517889849672556">How Much Your Objects Encapsulate?</a>
+          <a href="/2014/12/15/how-much-your-objects-encapsulate.html" data-score="0.6476298411504395">How Much Your Objects Encapsulate?</a>
         </li>
       
         <li>
-          <a href="/2015/05/28/one-primary-constructor.html" data-score="0.5044806219478623">There Can Be Only One Primary Constructor</a>
+          <a href="/2015/05/28/one-primary-constructor.html" data-score="0.5010871156061358">There Can Be Only One Primary Constructor</a>
         </li>
       
         <li>
-          <a href="/2015/05/07/ctors-must-be-code-free.html" data-score="0.48494326251176956">Constructors Must Be Code-Free</a>
+          <a href="/2015/05/07/ctors-must-be-code-free.html" data-score="0.48237602032349297">Constructors Must Be Code-Free</a>
         </li>
       
     </ul>
@@ -421,8 +416,8 @@ just printers!</p>
 
 </section>
 
-<script src="/js/post.js?a58e30c"></script>
-<script src="//a.disquscdn.com/embed.js?a58e30c"></script>
+<script src="/js/post.js?055b9ab"></script>
+<script src="//a.disquscdn.com/embed.js?055b9ab"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

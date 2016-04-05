@@ -34,7 +34,8 @@ itself to some media.</p>
 <span class="o">}</span></code></pre></figure>
 
 <p>We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and JAXB:</p>
+or less traditional way to do it is via getters and
+<a href="/2015/03/26/jaxb-vs-xembly.html">JAXB</a>:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
@@ -62,12 +63,15 @@ little self-sufficient solid object and we turned it into a bag of data,
 which anyone can access in many possible ways. We can access it for reading, of course.</p>
 
 <p>It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into JSON, they will be very helpful. If we want
+If we want to convert it into
+<a href="/2015/11/16/json-vs-xml.html">JSON</a>,
+they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.</p>
 
 <p>This is <strong>not</strong> because they are so effective. This is because we&#39;re so
-<strong>procedural</strong> in our way of thinking. We <strong>don&#39;t trust</strong> our objects. We only trust
+<a href="/2015/02/20/utility-classes-vs-functional-programming.html"><strong>procedural</strong></a>
+in our way of thinking. We <strong>don&#39;t trust</strong> our objects. We only trust
 the data they store. We don&#39;t want this <code>Book</code> object to generate the XML. We
 want it to give us the data. We will build the XML. The <code>Book</code> is too stupid
 to do that job. We&#39;re way smarter!</p>

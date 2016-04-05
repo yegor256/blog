@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-05T03:43:42+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Printers Instead of Getters</title><link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" rel="alternate" type="text/html" title="Printers Instead of Getters" /><published>2016-04-05T00:00:00+00:00</published><updated>2016-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/05/printers-instead-of-getters</id><content type="html" xml:base="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-05T04:08:34+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Printers Instead of Getters</title><link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" rel="alternate" type="text/html" title="Printers Instead of Getters" /><published>2016-04-05T00:00:00+00:00</published><updated>2016-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/05/printers-instead-of-getters</id><content type="html" xml:base="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
 No need to argue about this, it&amp;#39;s settled. You disagree?
 Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
 The key question is how is it possible at all? We do need to get
@@ -22,7 +22,8 @@ itself to some media.&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and JAXB:&lt;/p&gt;
+or less traditional way to do it is via getters and
+&lt;a href=&quot;/2015/03/26/jaxb-vs-xembly.html&quot;&gt;JAXB&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlRootElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -50,12 +51,15 @@ little self-sufficient solid object and we turned it into a bag of data,
 which anyone can access in many possible ways. We can access it for reading, of course.&lt;/p&gt;
 
 &lt;p&gt;It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into JSON, they will be very helpful. If we want
+If we want to convert it into
+&lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;JSON&lt;/a&gt;,
+they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.&lt;/p&gt;
 
 &lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; because they are so effective. This is because we&amp;#39;re so
-&lt;strong&gt;procedural&lt;/strong&gt; in our way of thinking. We &lt;strong&gt;don&amp;#39;t trust&lt;/strong&gt; our objects. We only trust
+&lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;&lt;strong&gt;procedural&lt;/strong&gt;&lt;/a&gt;
+in our way of thinking. We &lt;strong&gt;don&amp;#39;t trust&lt;/strong&gt; our objects. We only trust
 the data they store. We don&amp;#39;t want this &lt;code&gt;Book&lt;/code&gt; object to generate the XML. We
 want it to give us the data. We will build the XML. The &lt;code&gt;Book&lt;/code&gt; is too stupid
 to do that job. We&amp;#39;re way smarter!&lt;/p&gt;
