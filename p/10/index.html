@@ -28,20 +28,20 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?31d9d9a"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?31d9d9a"/>
+    <link rel="shortcut icon" href="/favicon.ico?a58e30c"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?a58e30c"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?31d9d9a"/>
-    <link rel="stylesheet" href="/css/icons.css?31d9d9a"/>
+    <link rel="stylesheet" href="/css/layout.css?a58e30c"/>
+    <link rel="stylesheet" href="/css/icons.css?a58e30c"/>
     <link rel="canonical" href="http://www.yegor256.com/p/10/" />
     <title>Blog About Computers - Yegor Bugayenko
       
         (page 10)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?31d9d9a"></script>
+    <script src="/js/global.js?a58e30c"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;173</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;174</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -128,6 +128,60 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/12/15/how-much-your-objects-encapsulate.html">
+            How Much Your Objects Encapsulate?
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-12-15T00:00:00+00:00">
+              15 December 2014
+            </time>
+          </li>
+          <li>
+            476 words
+          </li>
+          <li>
+            
+            
+              
+                  two
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>Which line do you like more, the first or the second:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">new</span> <span class="nf">HTTP</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">read</span><span class="o">();</span>
+<span class="k">new</span> <span class="nf">HTTP</span><span class="o">().</span><span class="na">read</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">);</span></code></pre></figure>
+
+<p>What is the difference? The first class <code>HTTP</code> encapsulates a URL,
+while the second one expects it as an argument of method <code>read()</code>. Technically,
+both objects do exactly the same thing: they read the content of the Google home page.
+Which one is the right design? Usually I hate to say this, but in
+this case I have to &mdash; it depends.</p>
+
+      </div>
+      <p>
+        <a href="/2014/12/15/how-much-your-objects-encapsulate.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -641,63 +695,6 @@ I do find them objective and logical, though &mdash; so let me explain.</p>
       </div>
       <p>
         <a href="/2014/10/29/how-much-do-you-cost.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/10/26/hacker-vs-programmer-mentality.html">
-            Are You a Hacker or a Designer?
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-10-26T00:00:00+00:00">
-              26 October 2014
-            </time>
-          </li>
-          <li>
-            1025 words
-          </li>
-          <li>
-            
-            
-              
-                  four
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>Twenty years ago, the best programmer was the one
-capable of fitting an entire application into a 64Kb
-<code>.COM</code> file. Those who were able to get the most out of
-that poor Intel 80386 were the icons of programming.</p>
-
-<p>That&#39;s because twenty years ago computers were expensive and programmers
-were cheap. That was the time of the &quot;hacker mentality&quot;.
-That time is over. That mentality is not appreciated any more,
-because the market situation is completely opposite.</p>
-
-<p>Today, computers are cheap and programmers are expensive.
-This is the era of the &quot;designer mentality&quot;, when the readability
-of our code is much more important than its performance.</p>
-
-      </div>
-      <p>
-        <a href="/2014/10/26/hacker-vs-programmer-mentality.html">
           continue...
         </a>
       </p>
