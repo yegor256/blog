@@ -53,12 +53,6 @@ give them some feedback, at least here, on the blog &mdash;
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
-<img src="/images/2016/agilia-conference-2016.png" class="future-talk" alt="Agilia Conference 2016"/>
-**Meetings Help Us And Kill Our Projects**<br/>
-[Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/)<br/>
-Olomouc, Czech Republic<br/>
-5 April 2016
-
 <img src="/images/2016/outsource-people-2016.png" class="future-talk" alt="Outsource People 2016"/>
 **Software Outsourcing, 10 Years Ahead Prediction**<br/>
 [Outsource People 2016](http://outsource-people.com/en)<br/>
@@ -203,6 +197,15 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<img src="/images/2016/agilia-conference-2016.png" class="past-talk" alt="Agilia Conference 2016"/>
+Meetings Help Us And Kill Our Projects;
+[Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
+Olomouc, Czech Republic;
+5 April 2016
+[slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
+[photos](...),
+[video](...).
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/11080491_10209166061658582_6077232981402936588_o.jpg" class="past-talk" alt="SEDC 2016"/>
 Meetings And Motivation, Friends Or Enemies?;
