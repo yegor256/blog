@@ -1,7 +1,7 @@
 #!/bin/bash
 
 errors=0
-for f in $(find _site -name '*.html'); do
+for f in $(find _site -name '*.html' -not -name '*.amp.html'); do
   echo -n "checking grammar in $f... "
   tidy -i -asxml $f 2>/dev/null | \
     sed "s|>|>\n|g" | \
