@@ -24,7 +24,7 @@ if [ $errors -ne 0 ]; then
 fi
 
 errors=0
-for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html'); do
+for f in $(find . -regex '\./_site/[0-9]\{4\}/.*\.html' -not -name '*.amp.html'); do
   echo -n "checking name of $f... "
   echo $f | sed "s|[^a-zA-Z]| |g" | \
     LC_ALL='C' sort | \
