@@ -24,7 +24,7 @@ the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
-{% picture /images/2016/04/amelie.jpg 0 Amélie (2001) by Jean-Pierre Jeunet %}
+{% picture /images/2016/04/amelie.jpg 0 Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet %}
 
 I'm suggesting to use "printers" instead. Instead of exposing
 data via getters, an object will have a functionality of **printing**
