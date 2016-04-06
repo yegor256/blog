@@ -19,8 +19,22 @@ On the first Wednesday of each month, at 11am PST, find me
 on Google Hangout. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% youtube VzhIpjPdJyM video-left %}
-[April 6, 2016](https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4)
+<form class="unprintable" action="http://formspree.io/webinar@yegor256.com" method="POST"><fieldset id="form">
+  <input type="hidden" name="_next" value="http://www.yegor256.com/webinared.html"/>
+  <input type="hidden" name="_subject" value="I want to attend the next webinar"/>
+  <input type="hidden" name="_format" value="text"/>
+  <label for="email">Your email</label>
+  <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
+  <label for="subscribe">&nbsp;</label>
+  <button id="subscribe" class="field">Attend</button>
+</fieldset></form>
+
+Give me your email and I will notify you about the next webinar, a few days
+before it and then on its day, a few hours in advance. I will send all
+required technical details: how to connect, what software to use.
+Most likely it will be Google Hangout.
+
+April 13, 2016
 **Who is Software Architect?**
 Software architect is responsible for failures. Software is
 powerful enough to make and overrule any decision. But that
