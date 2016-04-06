@@ -207,7 +207,7 @@ Olomouc, Czech Republic;
 5 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
 [photos](...),
-[video](...).
+[video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
 
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/11080491_10209166061658582_6077232981402936588_o.jpg" class="past-talk" alt="SEDC 2016"/>
 Meetings And Motivation, Friends Or Enemies?;
