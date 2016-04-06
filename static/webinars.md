@@ -15,9 +15,11 @@ keywords:
 exclude_from_search: true
 ---
 
-On the first Wednesday of each month, at 11am PST, find me
-on Google Hangout. For about an hour we talk about software
+On the first Wednesday of each month, at 11am PST, I organize
+a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
+Give me your email and you will attend the next one
+(I won't spam you about anything else, just the details of the next webinar):
 
 <form class="unprintable" action="http://formspree.io/webinar@yegor256.com" method="POST"><fieldset id="form">
   <input type="hidden" name="_next" value="http://www.yegor256.com/webinared.html"/>
@@ -28,11 +30,6 @@ development, object-oriented programming and project management.
   <label for="attend">&nbsp;</label>
   <button id="attend" class="field">I would like to attend</button>
 </fieldset></form>
-
-Give me your email and I will notify you about the next webinar, a few days
-before it and then on its day, a few hours in advance. I will send all
-required technical details: how to connect, what software to use.
-Most likely it will be Google Hangout.
 
 April 13, 2016
 **Who is Software Architect?**
