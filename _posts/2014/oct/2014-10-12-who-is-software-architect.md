@@ -22,15 +22,15 @@ Do you have a software architect in your project? Do you need one?
 
 Well, most [agile teams]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
 do not define such a role explicitly and
-work in a democratic mode. Every important technical decision
+work in a **democratic** mode. Every important technical decision
 is discussed with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a "software architect" badge
-on someone's t-shirt, the most reputable programmer gets it.
+on someone's t-shirt, the most **reputable** programmer gets it.
 
 The badge rarely changes his responsibilities, though. After all,
 the team stays the same and enjoys having technical discussions together,
 involving everyone. In the end, a software architect is more of
-a status than a role with explicitly defined responsibilities. It is
+a **status** than a role with explicitly defined responsibilities. It is
 a sign of respect, paid by other team players to the oldest and the
 most authoritative one among them. Right?
 
@@ -48,7 +48,7 @@ one of the smartest guys on the team.
 
 {% quote An architect is the one who takes the blame for the quality %}
 
-This is not, however, what makes him/her an architect.
+This is not, however, **what** makes him/her an architect.
 
 And this is not what the team needs. My definition of a software architect
 is this:
@@ -57,7 +57,7 @@ An **architect** is the one who takes the **blame** for the **quality**.
 
 You can replace "blame" with accountability or responsibility. Although,
 I prefer to use "blame", because it much better emphasizes the fact that
-every quality issue in the product under development is a personal
+every quality issue in the product under development is a **personal**
 fault of the architect. Of course, together with the blame he also
 takes all the credit from happy customers, when the quality is good.
 
@@ -98,7 +98,7 @@ is working on is his personal (!) responsibility.
 Any problems you see are his problems.
 Don't be afraid to blame him and punish him. But, always remember that
 in order to make your punishments productive you should give your
-architect full power in his actions. Let me reiterate: his decisions should be final.
+architect full **power** in his actions. Let me reiterate: his decisions should be final.
 
 If you, as a project manager, are not happy with the quality of the product
 and the architect doesn't improve the situation,
