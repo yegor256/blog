@@ -157,7 +157,7 @@ Vilnius, Lithuania<br/>
 26 May 2016
 
 <img src="/images/2016/item-2016.svg" class="future-talk" alt="ITEM 2016"/>
-**Meetings or Discipline, It's Your Choice**<br/>
+**Your CEO or your programmer is the boss?**<br/>
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
 Dnepropetrovsk, Ukraine<br/>
 2-3 June 2016
