@@ -25,8 +25,8 @@ development, object-oriented programming and project management.
   <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
-  <label for="subscribe">&nbsp;</label>
-  <button id="subscribe" class="field">Attend</button>
+  <label for="attend">&nbsp;</label>
+  <button id="attend" class="field">I would like to attend</button>
 </fieldset></form>
 
 Give me your email and I will notify you about the next webinar, a few days
