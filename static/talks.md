@@ -85,13 +85,6 @@ Sophia, Bulgaria<br/>
 20 April 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/mixit-2016.png" class="future-talk" alt="mix-IT 2016"/>
-**How Stand Up Meetings Kill Motivation**<br/>
-[mix-IT 2016](https://www.mix-it.fr/member/speaker/6392)<br/>
-Lyon, France<br/>
-21 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/jpoint-2016.png" class="future-talk" alt="JPoint 2016"/>
 **ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
@@ -191,14 +184,6 @@ Dnepropetrovsk, Ukraine<br/>
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/)<br/>
 Oslo, Norway<br/>
 8 June 2016
-
-<!--
-<img src="/images/2016/cloudexpo-2016.jpg" class="future-talk" alt="CloudExpo 2016"/>
-**Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
-[18th Cloud Expo](http://soa.sys-con.com/node/3661412)<br/>
-New York, USA<br/>
-7-9 June 2016
--->
 
 <div class="talk-event"/>
 <img src="/images/2016/geekout-2016.png" class="future-talk" alt="GeekOUT 2016"/>
