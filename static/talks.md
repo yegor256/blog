@@ -217,7 +217,7 @@ Meetings Help Us And Kill Our Projects;
 Olomouc, Czech Republic;
 5 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10209204748545730),
 [video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
 
 <div class="talk-event"/>
