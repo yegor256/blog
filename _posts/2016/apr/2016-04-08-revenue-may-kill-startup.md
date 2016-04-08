@@ -26,7 +26,7 @@ growing revenue may kill it even faster.
 
 <!--more-->
 
-{% picture /images/2016/04/blow.png 0 Blow (2001) by Ted Demme %}
+{% picture /images/2016/04/blow.jpg 0 Blow (2001) by Ted Demme %}
 
 I see this rather typical pattern in many startups we interview
 at [SeedRamp](http://www.seedramp.com). The idea is great, the prototype
