@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/outsource-people-2016.png" class="future-talk" alt="Outsource People 2016"/>
-**Software Outsourcing, 10 Years Ahead Prediction**<br/>
-[Outsource People 2016](http://outsource-people.com/en)<br/>
-Minsk, Belarus<br/>
-8 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/agileee-2016.png" class="future-talk" alt="AgileEE 2016"/>
 **Meetings Are a Threat To Code Quality**<br/>
 [AgileEE 2016](http://kiev2016.agileee.org/)<br/>
@@ -210,7 +203,14 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/agilia-conference-2016.png" class="past-talk" alt="Agilia Conference 2016"/>
+<img src="/images/2016/outsource-people-2016.png" class="past-talk" alt="Outsource People 2016"/>
+Software Outsourcing, 10 Years Ahead Prediction;
+[Outsource People 2016](http://outsource-people.com/en);
+Minsk, Belarus;
+8 April 2016
+
+<div class="talk-event"/>
+<img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/12973436_10209204731425302_6365100788713506194_o.jpg" class="past-talk" alt="Agilia Conference 2016"/>
 Meetings Help Us And Kill Our Projects;
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
 Olomouc, Czech Republic;
