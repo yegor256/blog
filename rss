@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-07T11:26:12+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Printers Instead of Getters</title><link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" rel="alternate" type="text/html" title="Printers Instead of Getters" /><published>2016-04-05T00:00:00+00:00</published><updated>2016-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/05/printers-instead-of-getters</id><content type="html" xml:base="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-08T17:46:47+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Growing Revenue May Kill Your Startup</title><link href="http://www.yegor256.com/2016/04/08/revenue-may-kill-startup.html" rel="alternate" type="text/html" title="Growing Revenue May Kill Your Startup" /><published>2016-04-08T00:00:00+00:00</published><updated>2016-04-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/08/revenue-may-kill-startup</id><content type="html" xml:base="http://www.yegor256.com/2016/04/08/revenue-may-kill-startup.html">&lt;p&gt;Revenue means &lt;strong&gt;cash&lt;/strong&gt; that is coming into your bank account every month
+from your customers. Not investors. Customers, those who are buying
+your products or services. You are doing everything you can
+to make sure this number grows, mostly because you use this money
+to pay your rent, buy food, and settle that graphic designer&amp;#39;s invoices.
+Without revenue, your startup will die, right? Yes, maybe. But in my experience,
+growing revenue may kill it even faster.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F04%2Fblow.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Blow (2001) by Ted Demme&#39;/&gt;&lt;figcaption&gt;Blow (2001) by Ted Demme&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I see this rather typical pattern in many startups we interview
+at &lt;a href=&quot;http://www.seedramp.com&quot;&gt;SeedRamp&lt;/a&gt;. The idea is great, the prototype
+works, the first customers are on board, and the first payments are coming in.
+The founders are excited. They spend all their energy to make sure those
+first paying customers are happy by creating new features, fixing bugs, and employing
+new CRMs. They also try to acquire new
+buyers and pay for marketing, promotion, and Google AdWords. The numbers
+grow every month and ... they don&amp;#39;t realize they are
+actually &lt;strong&gt;killing&lt;/strong&gt; their own startup.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.seedramp.com&#39;&gt;&lt;img src=&#39;http://www.seedramp.com/images/logo.svg&#39; style=&#39;width:128px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you&amp;#39;re building a cafe, a bakery, a web development studio,
+or a bicycle repair shop, a growing customer base with stable revenue
+must be your main objective. Because your main source of income is the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Profit_%28accounting%29&quot;&gt;profit&lt;/a&gt;
+you will get from the business, in the form of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Dividend&quot;&gt;dividends&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How rich you will become depends on many factors, but usually such a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Lifestyle_business&quot;&gt;lifestyle business&lt;/a&gt;
+takes years to really take off and start making millions of dollars, which
+you&amp;#39;re obviously looking for.&lt;/p&gt;
+
+&lt;p&gt;In that type of business, almost everything depends on your energy,
+your management skills, and your ability to work non-stop and motivate others
+to do the same. If you have all that in place, you most certainly will
+get what you deserve sooner or later. In most cases, later.
+But you will get it.&lt;/p&gt;
+
+&lt;p&gt;The concept of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Startup_company&quot;&gt;startup company&lt;/a&gt;
+is completely different. A startup is a &lt;strong&gt;wild bet&lt;/strong&gt; you&amp;#39;re making on some
+crazy idea that makes &amp;quot;the world a better place&amp;quot;. You&amp;#39;re building
+a new Facebook, a Google killer, or a Snapchat replacement. Your goal
+is huge, while the investment is very small. Just a few years of work
+and you&amp;#39;ll score hundreds of millions. This money will come not from
+happy customers and steadily growing revenue. Not at all. You will
+become filthy rich only when someone buys your startup.&lt;/p&gt;
+
+&lt;p&gt;These two strategies contradict each other:
+a traditional business vs. a startup.&lt;/p&gt;
+
+&lt;p&gt;Customers and revenue are not the goal of a startup, but rather
+an &lt;strong&gt;instrument&lt;/strong&gt; that helps you achieve the real goal:
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Business_valuation&quot;&gt;valuation&lt;/a&gt;. You are
+supposed to use your revenue to convince investors
+that the prototype works and your valuation is already high enough.
+Your steadily growing cash flow right now must be used as a demonstration of a future
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Customer_acquisition_management&quot;&gt;customer acquisition&lt;/a&gt;
+model. But it is not the result by itself. It is just a tool in your hands.&lt;/p&gt;
+
+&lt;p&gt;Your valuation is what makes you rich, &lt;strong&gt;not&lt;/strong&gt; your revenue or your happy
+customers. Of course, the revenue is important, but only as long as
+it serves the main goal &amp;mdash; increase valuation at an extremely
+fast pace. The revenue is not the goal; it&amp;#39;s the way to achieve it. The valuation
+is the goal.&lt;/p&gt;
+
+&lt;p&gt;Startup valuation must grow fast, ideally doubling itself every few months.
+If that&amp;#39;s not happening, close the business and start something else. The
+valuation must &lt;strong&gt;skyrocket&lt;/strong&gt; or you have to abandon the startup and try your
+hand on another one as soon as possible.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;The revenue is good for you but not really good for investors&lt;/aside&gt;
+
+&lt;p&gt;One of the biggest mistakes a startup founder can make is to forget
+about this &amp;quot;skyrocketing valuation&amp;quot; principle and focus on making
+customers happy and grow revenue. You will most likely kill your
+startup and maybe turn it into a lifestyle business.&lt;/p&gt;
+
+&lt;p&gt;Savvy investors will avoid you, mostly because they
+understand that growing revenue is just one of many other
+&lt;strong&gt;elements&lt;/strong&gt; of a growing valuation. If you&amp;#39;re focused on just one element,
+you most likely won&amp;#39;t multiply your valuation a hundred times over the
+next year. Maybe you will multiply revenue a few times, but who cares?
+The revenue is good for you but not really good for investors.&lt;/p&gt;
+
+&lt;p&gt;What is good for investors? What do they want to see you doing
+to convince them that you&amp;#39;re working hard on making the valuation
+grow? I&amp;#39;ll try to cover that in one of the next articles.&lt;/p&gt;</content><category term="startup" /><summary>Revenue means cash that is coming into your bank account every month
+from your customers. Not investors. Customers, those who are buying
+your products or services. You are doing everything you can
+to make sure this number grows, mostly because you use this money
+to pay your rent, buy food, and settle that graphic designer&amp;#39;s invoices.
+Without revenue, your startup will die, right? Yes, maybe. But in my experience,
+growing revenue may kill it even faster.</summary></entry><entry><title>Printers Instead of Getters</title><link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" rel="alternate" type="text/html" title="Printers Instead of Getters" /><published>2016-04-05T00:00:00+00:00</published><updated>2016-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/05/printers-instead-of-getters</id><content type="html" xml:base="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
 No need to argue about this, it&amp;#39;s settled. You disagree?
 Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
 The key question is how is it possible at all? We do need to get
@@ -1385,171 +1481,4 @@ a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code &amp;mdash; they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
-If debugging is required, the design is bad.</summary></entry><entry><title>Design Patterns and Anti-Patterns, Love and Hate</title><link href="http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html" rel="alternate" type="text/html" title="Design Patterns and Anti-Patterns, Love and Hate" /><published>2016-02-03T00:00:00+00:00</published><updated>2016-02-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns</id><content type="html" xml:base="http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Software_design_pattern&quot;&gt;Design Patterns&lt;/a&gt; are ...
-Come on, you know what they are. They are
-something we &lt;strong&gt;love&lt;/strong&gt; and &lt;strong&gt;hate&lt;/strong&gt;. We love them because they let us
-write code without thinking. We hate them when we see the code
-of someone who is used to writing code without thinking. Am I wrong?
-Now, let me try to go through all of them and show you how much
-I love or hate each one. Follow me, in alphabetic order.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F02%2Fthe-shining.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Shining (1980) by Stanley Kubrick&#39;/&gt;&lt;figcaption&gt;The Shining (1980) by Stanley Kubrick&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Abstract_factory_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Abstract Factory&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s OK.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Adapter_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Adapter&lt;/span&gt;&lt;/a&gt;.
-Good one!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bridge_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Bridge&lt;/span&gt;&lt;/a&gt;.
-Good one!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Builder_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Builder&lt;/span&gt;&lt;/a&gt;.
-Terrible concept, since it encourages us to create and
-use big, complex objects. If you need a builder, there
-is already something wrong in your code. Refactor it so
-any object is easy to create through its constructors.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Chain_of_responsibility_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Chain of Responsibility&lt;/span&gt;&lt;/a&gt;.
-Seems fine.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Command&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s OK.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Composite_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Composite&lt;/span&gt;&lt;/a&gt;.
-Good one; check out &lt;a href=&quot;/2015/10/01/vertical-horizontal-decorating.html&quot;&gt;this&lt;/a&gt; too.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Decorator&lt;/span&gt;&lt;/a&gt;.
-My &lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;favorite&lt;/a&gt; one.
-I highly recommend you use it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Facade_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Facade&lt;/span&gt;&lt;/a&gt;.
-Bad idea. In OOP, we need objects and only objects,
-not facades for them. This design pattern is very procedural
-in its spirit, since a facade is nothing more than a collection
-of &lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;procedures&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Factory_method_pattern&quot;&gt;&lt;span class=&#39;orange&#39;&gt;Factory Method&lt;/span&gt;&lt;/a&gt;.
-This one seems OK.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Flyweight_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Flyweight&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s a workaround, as I see it, so it&amp;#39;s not a good design pattern. I would
-recommend you not use it unless there is a really critical performance
-issue. But calling it a design pattern ... no way. A fix for a
-performance problem in Java? Yes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Front_controller&quot;&gt;&lt;span class=&#39;red&#39;&gt;Front Controller&lt;/span&gt;&lt;/a&gt;.
-Terrible idea, as well as the entire
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;MVC&lt;/a&gt;.
-It&amp;#39;s very &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;procedural&lt;/a&gt;, that&amp;#39;s why.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Interpreter_pattern&quot;&gt;&lt;span class=&#39;orange&#39;&gt;Interpreter&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s OK, but I &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;don&amp;#39;t like&lt;/a&gt;
-the name. &amp;quot;Expression&amp;quot; would be a much better alternative.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Iterator_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Iterator&lt;/span&gt;&lt;/a&gt;.
-Bad idea, since it is mutable. It would be much better
-to have &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable&lt;/a&gt; &amp;quot;cursors&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_initialization&quot;&gt;&lt;span class=&#39;green&#39;&gt;Lazy Initialization&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s OK.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Marker_interface_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Marker&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s a terrible idea, along with reflection and
-&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;type casting&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;&lt;span class=&#39;red&#39;&gt;MVC&lt;/span&gt;&lt;/a&gt;.
-Bad idea, since it&amp;#39;s very procedural. &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;Controllers&lt;/a&gt;
-are the key broken element in this
-concept. We need real objects, not procedural controllers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mediator_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Mediator&lt;/span&gt;&lt;/a&gt;.
-I don&amp;#39;t like it. Even though it sounds like a technique
-for decreasing complexity and coupling, it is not really object-oriented.
-Who is this mediator? Just a &amp;quot;channel&amp;quot; between objects? Why shouldn&amp;#39;t objects
-communicate directly? Because they are too complex? Make
-them smaller and simpler, rather than inventing these mediators.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Memento_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Memento&lt;/span&gt;&lt;/a&gt;.
-This idea implies that objects are &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;,
-which I&amp;#39;m against in general.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Module_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Module&lt;/span&gt;&lt;/a&gt;.
-If Wikipedia is right about this pattern, it&amp;#39;s something
-even more terrible than the Singleton.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Multiton_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Multiton&lt;/span&gt;&lt;/a&gt;.
-Really bad idea. Same as Singleton.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Null_Object_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Null Object&lt;/span&gt;&lt;/a&gt;.
-Good one. By the way, see
-&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;Why NULL Is Bad&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Design_pattern_object_library&quot;&gt;&lt;span class=&#39;green&#39;&gt;Object Library&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s good.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object_pool_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Object Pool&lt;/span&gt;&lt;/a&gt;.
-Good one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Observer_pattern&quot;&gt;&lt;span class=&#39;orange&#39;&gt;Observer&lt;/span&gt;&lt;/a&gt;.
-The idea is good, but the name is bad, since it
-&lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;ends with -ER&lt;/a&gt;.
-A much better one would be &amp;quot;Source&amp;quot; and &amp;quot;Target&amp;quot;. The Source
-generates events and the Target listens to them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-relational_mapping&quot;&gt;&lt;span class=&#39;red&#39;&gt;ORM&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s terrible and &amp;quot;offensive&amp;quot;; check
-&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;this&lt;/a&gt; out.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Prototype_pattern&quot;&gt;&lt;span class=&#39;orange&#39;&gt;Prototype&lt;/span&gt;&lt;/a&gt;.
-Good idea, but what does it have to do with OOP?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Proxy_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Proxy&lt;/span&gt;&lt;/a&gt;.
-Good one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization&quot;&gt;&lt;span class=&#39;green&#39;&gt;RAII&lt;/span&gt;&lt;/a&gt;.
-This is a really good one, and I highly recommend you use it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Design_pattern_Servant&quot;&gt;&lt;span class=&#39;red&#39;&gt;Servant&lt;/span&gt;&lt;/a&gt;.
-A very bad idea, because it&amp;#39;s highly
-&lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;procedural&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Singleton_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Singleton&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s the king of all anti-patterns. Stay away from it at all costs.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Specification_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Specification&lt;/span&gt;&lt;/a&gt;.
-It&amp;#39;s OK.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/State_pattern&quot;&gt;&lt;span class=&#39;orange&#39;&gt;State&lt;/span&gt;&lt;/a&gt;.
-Although it&amp;#39;s not implied, I feel that in most cases
-the use of this pattern results in mutability, a code characteristic that
-I&amp;#39;m generally &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;against&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Strategy_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Strategy&lt;/span&gt;&lt;/a&gt;.
-A good one.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Template_method_pattern&quot;&gt;&lt;span class=&#39;green&#39;&gt;Template Method&lt;/span&gt;&lt;/a&gt;.
-Seems fine, as long as you keep classes
-&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;final&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Visitor_pattern&quot;&gt;&lt;span class=&#39;red&#39;&gt;Visitor&lt;/span&gt;&lt;/a&gt;.
-A rather &lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;procedural&lt;/a&gt;
-concept that treats objects as
-data structures, which we can manipulate.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;I have nothing against &lt;a href=&quot;https://en.wikipedia.org/wiki/Concurrency_pattern&quot;&gt;concurrency patterns&lt;/a&gt; either;
-they are all &lt;span class=&quot;green&quot;&gt;good&lt;/span&gt;, since they
-have almost nothing to do with object-oriented programming.&lt;/p&gt;
-
-&lt;p&gt;If you know some other design (anti-)patterns, let me know
-in the comments below. I&amp;#39;ll add them here.&lt;/p&gt;</content><category term="jcg" /><category term="oop" /><summary>Design Patterns are ...
-Come on, you know what they are. They are
-something we love and hate. We love them because they let us
-write code without thinking. We hate them when we see the code
-of someone who is used to writing code without thinking. Am I wrong?
-Now, let me try to go through all of them and show you how much
-I love or hate each one. Follow me, in alphabetic order.</summary></entry></feed>
+If debugging is required, the design is bad.</summary></entry></feed>

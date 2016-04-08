@@ -28,20 +28,20 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?f89718f"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?f89718f"/>
+    <link rel="shortcut icon" href="/favicon.ico?eef2634"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?eef2634"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?f89718f"/>
-    <link rel="stylesheet" href="/css/icons.css?f89718f"/>
+    <link rel="stylesheet" href="/css/layout.css?eef2634"/>
+    <link rel="stylesheet" href="/css/icons.css?eef2634"/>
     <link rel="canonical" href="http://www.yegor256.com/p/18/" />
     <title>Blog About Computers - Yegor Bugayenko
       
         (page 18)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?f89718f"></script>
+    <script src="/js/global.js?eef2634"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -63,7 +63,7 @@
             <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
+            <li title="I'm NOT on Google+"><i class="icon icon-googleplus notranslate gray" aria-hidden="true"></i></li>
             <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;174</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;175</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -119,6 +119,82 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/04/06/phandom.html">
+            PhantomJS as an HTML Validator
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-04-06T00:00:00+00:00">
+              6 April 2014
+            </time>
+          </li>
+          <li>
+            400 words
+          </li>
+          <li>
+            
+            
+              
+                  two
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/04/06/phandom.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><a href='http://www.phandom.org'><img src='http://img.phandom.org/logo-256x256.png' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
+
+<p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
+but yesterday finally found the time to make some needed changes to it.
+So, now is a good time to
+explain how I&#39;m using Phandom in some of my unit tests.</p>
+
+<p>Before I get started, though, I should say a few words about
+<a href="http://phantomjs.org/"><code>phantomjs</code></a>, which is a
+JavaScript interface for WebKit. WebKit, on the other hand, is a web browser without
+a user interface. WebKit is a C++ library that enables manipulation of
+HTML content, through DOM calls. For example, this is a simple JavaScript
+located code in <code>example.js</code>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpage&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+<span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
+  <span class="s1">&#39;http://google.com&#39;</span><span class="p">,</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;loaded!&#39;</span><span class="p">);</span>
+    <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>We run <code>phantomjs</code> from the command line with the following code:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>phantomjs example.js</code></pre></figure>
+
+<p>PhantomJS creates a <code>page</code> object (provided by
+<a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a> module
+inside <code>phantomjs</code>), and then asks it to <code>open()</code> a Web page. The object
+communicates with WebKit and converts this call into DOM instructions. After
+which, the page loads. The PhantomJS engine then terminates on line 6.</p>
+
+      </div>
+      <p>
+        <a href="/2014/04/06/phandom.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
