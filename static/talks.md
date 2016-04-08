@@ -16,7 +16,6 @@ exclude_from_search: true
 ---
 
 {% youtube qRZYJGYdrwk video-right %}
-
 I'm updating this list very often, but still,
 follow me [on Twitter](https://www.twitter.com/yegor256) and [on Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the most recent news. Also, I can give a lecture in your office,

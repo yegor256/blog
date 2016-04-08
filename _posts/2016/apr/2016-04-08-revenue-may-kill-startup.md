@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Growing Revenue May Kill Your Startup"
-date: 2016-03-14
+date: 2016-04-08
 place: Palo Alto, CA
 tags: startup
 description:
@@ -25,6 +25,8 @@ Without revenue, your startup will die, right? Yes, maybe. But in my experience,
 growing revenue may kill it even faster.
 
 <!--more-->
+
+{% picture /images/2016/04/blow.png 0 Blow (2001) by Ted Demme %}
 
 I see this rather typical pattern in many startups we interview
 at [SeedRamp](http://www.seedramp.com). The idea is great, the prototype
@@ -87,6 +89,8 @@ Startup valuation must grow fast, ideally doubling itself every few months.
 If that's not happening, close the business and start something else. The
 valuation must **skyrocket** or you have to abandon the startup and try your
 hand on another one as soon as possible.
+
+{% quote The revenue is good for you but not really good for investors %}
 
 One of the biggest mistakes a startup founder can make is to forget
 about this "skyrocketing valuation" principle and focus on making
