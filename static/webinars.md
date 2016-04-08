@@ -18,19 +18,8 @@ exclude_from_search: true
 On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
-Give me your email and you will attend the next one
-(I won't spam you about anything else, just the details of the next webinar):
 
-<form class="unprintable" action="http://formspree.io/webinar@yegor256.com" method="POST"><fieldset id="form">
-  <input type="hidden" name="_next" value="http://www.yegor256.com/webinared.html"/>
-  <input type="hidden" name="_subject" value="I want to attend the next webinar"/>
-  <input type="hidden" name="_format" value="text"/>
-  <label for="email">Your email</label>
-  <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
-  <label for="attend">&nbsp;</label>
-  <button id="attend" class="field">I would like to attend</button>
-</fieldset></form>
-
+{% youtube AvVQ5NjS_Nk video-left %}
 April 13, 2016
 **Who is Software Architect?**
 Software architect is responsible for failures. Software is
