@@ -203,11 +203,15 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/outsource-people-2016.png" class="past-talk" alt="Outsource People 2016"/>
+<img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/12916949_10209219893244338_8937507043400548607_o.jpg" class="past-talk" alt="Outsource People 2016"/>
 Software Outsourcing, 10 Years Ahead Prediction;
 [Outsource People 2016](http://outsource-people.com/en);
 Minsk, Belarus;
 8 April 2016
+[slides](http://www.slideshare.net/YegorBugayenko/software-outsourcing-10-years-ahead),
+[photos](https://www.facebook.com/yegor256/posts/10209219903204587),
+[video](https://www.youtube.com/watch?v=9j5pq71BS5U).
+
 
 <div class="talk-event"/>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/12973436_10209204731425302_6365100788713506194_o.jpg" class="past-talk" alt="Agilia Conference 2016"/>
