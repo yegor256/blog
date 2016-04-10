@@ -108,7 +108,7 @@ the best and highly recommended):
   <td class="cnt"><i class="icon-no"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
   </tr>
-<tr><td><a href="http://www.magnum-ci.com">magnum-ci.com</a></td>
+<tr><td><a href="https://magnum-ci.com/pricing">magnum-ci.com</a></td>
   <td class="rht">?</td>
   <td class="cnt"><i class="icon-yes"></i></td>
   <td class="cnt"><i class="icon-no"></i></td>
@@ -226,7 +226,7 @@ Maybe I'll find a way, so far it's not clear...
 
 {% badge /images/2014/10/magnum.png 64 http://www.magnum-ci.com %}
 
-[**magnum-ci.com**](http://www.magnum-ci.com) is a very lightweight
+[**magnum-ci.com**](https://magnum-ci.com/pricing) is a very lightweight
 and young system. It doesn't connect automatically to GitHub,
 so you should do some manual operations of adding a web hook.
 Besides that, works just fine.
