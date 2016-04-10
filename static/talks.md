@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/agileee-2016.png" class="future-talk" alt="AgileEE 2016"/>
-**Meetings Are a Threat To Code Quality**<br/>
-[AgileEE 2016](http://kiev2016.agileee.org/)<br/>
-Kiev, Ukraine<br/>
-9 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/nextbuild-2016.png" class="future-talk" alt="NextBuild 2016"/>
 **Meetings Make Us Less Bug Tolerant, Which Is Bad**<br/>
 [NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
@@ -201,6 +194,15 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/agileee-2016.png" class="past-talk" alt="AgileEE 2016"/>
+Meetings Are a Threat To Code Quality;
+[AgileEE 2016](http://kiev2016.agileee.org/);
+Kiev, Ukraine;
+9 April 2016
+[slides](http://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
+[photos](https://www.facebook.com/yegor256/posts/10209222357985955).
 
 <div class="talk-event"/>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/12916949_10209219893244338_8937507043400548607_o.jpg" class="past-talk" alt="Outsource People 2016"/>
