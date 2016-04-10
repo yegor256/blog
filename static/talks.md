@@ -212,7 +212,6 @@ Minsk, Belarus;
 [photos](https://www.facebook.com/yegor256/posts/10209219903204587),
 [video](https://www.youtube.com/watch?v=9j5pq71BS5U).
 
-
 <div class="talk-event"/>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/12973436_10209204731425302_6365100788713506194_o.jpg" class="past-talk" alt="Agilia Conference 2016"/>
 Meetings Help Us And Kill Our Projects;

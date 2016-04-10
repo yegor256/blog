@@ -54,6 +54,21 @@ interested and engaged. The place was comfortable, equipment was of
 good quality, the focus was right on my talk, since I was the only presenter.
 I've got a number of leads from this event.
 
+<img src="/images/2016/agileee-2016.png" class="venue-log" alt="AgileEE 2016"/>
+<aside class="venue-rate green">B+</aside>
+[AgileEE 2016](http://kiev2016.agileee.org/); 9 April 2016; Kiev, Ukraine<br/>
+Organization, food, location, audience, welcoming and goodbying are very good, but
+the content is rather poor. Most talks were rather boring and poorly prepared.
+Aside from that, everything was good and I liked to be there.
+
+<img src="/images/2016/agilia-conference-2016.png" class="venue-logo" alt="Agilia Conference 2016"/>
+<aside class="venue-rate green">B-</aside>
+[Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/); 5 April 2016; Olomouc, Czech Republic<br/>
+There were over 250 people and just two main tracks &mdash; good setup.
+A comfortable location, careful organization, good food, expenses
+paid. The only problem was the content. Most presentations
+were rather boring and not well prepared. Aside from that, I liked it.
+
 <img src="/images/2016/kyiv-devops-day.png" class="venue-logo" alt="Kyiv DevOps Day"/>
 <aside class="venue-rate green">B-</aside>
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/); 27 February 2016; Kyiv, Ukraine<br/>
@@ -73,6 +88,14 @@ The event was rather big, over 300 people in the room. However, the audience
 was rather passive and presentations were mostly from sponsors. The event was there
 mostly to make money, which is always a downside. The location was rather
 bad &mdash; an old Soviet-time hotel.
+
+<img src="/images/2016/outsource-people-2016.png" class="venue-logo" alt="Outsource People 2016"/>
+<aside class="venue-rate green">C+</aside>
+[Outsource People 2016](http://outsource-people.com/en); 8 April 2016; Minsk, Belarus<br/>
+The conference was rather small, but well focused. The audience was actively
+engaged and asked a lot of questions. About a hundred people at my talk.
+The quality location was average and my expenses
+were not reimbursed. Also, the content was not really prepared or monitored.
 
 <img src="/images/2016/sedc-2016.png" class="venue-logo" alt="SEDC 2016"/>
 <aside class="venue-rate green">C</aside>
