@@ -35,6 +35,14 @@ ISBN: 1519166915.<br/>
 </style>
 
 <div class="book-event"/>
+Mar 17, 2016:
+I'm starting to work on the **second volume** of this book. If you are
+interested to be a reviewer, please send me an [email](mailto:book@yegor256.com)
+with a short description of yourself and your LinkedIn profile. If you were
+reviewing the first volume, please don't bother. I want a new group of
+reviewers.
+
+<div class="book-event"/>
 <div style="float:right;margin-left:1em">
   <a href="http://javapoint.ru/en/">
     <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/></a><br/>
