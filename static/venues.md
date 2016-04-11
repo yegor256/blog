@@ -94,8 +94,8 @@ bad &mdash; an old Soviet-time hotel.
 [Outsource People 2016](http://outsource-people.com/en); 8 April 2016; Minsk, Belarus<br/>
 The conference was rather small, but well focused. The audience was actively
 engaged and asked a lot of questions. About a hundred people at my talk.
-The quality location was average and my expenses
-were not reimbursed. Also, the content was not really prepared or monitored.
+The quality of the location was average and my expenses
+were not reimbursed. Also, the content was not really well-prepared or monitored.
 
 <img src="/images/2016/sedc-2016.png" class="venue-logo" alt="SEDC 2016"/>
 <aside class="venue-rate green">C</aside>
