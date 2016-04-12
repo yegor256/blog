@@ -259,7 +259,7 @@ A much better design would look like this (instead of annotations):
 Foo foo = new FooThatRetries(new Foo());
 {% endhighlight %}
 
-And then, the implemenation of `FooThatRetries`:
+And then, the implementation of `FooThatRetries`:
 
 {% highlight java %}
 class FooThatRetries implements Foo {
