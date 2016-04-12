@@ -24,7 +24,8 @@ and [log4j](http://logging.apache.org/log4j/2.x/)) every execution
 of a method, seeing what arguments it receives, what
 it returns and how much time every execution takes.
 This is how I'm doing it, with help of [AspectJ](http://eclipse.org/aspectj/),
-[jcabi-aspects](http://aspects.jcabi.com) and Java 6 annotations:
+[jcabi-aspects](http://aspects.jcabi.com) and Java 6
+[annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
 {% highlight java %}
 public class Foo {

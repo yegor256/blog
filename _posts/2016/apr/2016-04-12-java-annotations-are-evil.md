@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Java Annotations Are Against OOP"
-date: 2016-03-21
+title: "Java Annotations Are a Big Mistake"
+date: 2016-04-12
 place: Seattle, WA
 tags: java oop
 description:
   Even though Java annotations are very popular and
   convenient, they are making Java code less object-oriented
   and more messy.
+categories: jcg
 keywords:
   - java annotations
   - java annotations example

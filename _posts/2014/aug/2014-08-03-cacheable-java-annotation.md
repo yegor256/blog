@@ -29,7 +29,8 @@ including
 and many others.
 
 [jcabi-aspects](http://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,
-based on AOP aspects and Java6 annotations:
+based on AOP aspects and Java6
+[annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
 {% highlight java %}
 import com.jcabi.aspects.Cacheable;

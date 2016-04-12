@@ -14,6 +14,13 @@ keywords:
   - object thinking
 ---
 
+<style>
+.book-event {
+  clear: both;
+  margin-top: 2em;
+}
+</style>
+
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/5Yfx1i %}
 
 "Elegant Objects" is my first book. It is about object-oriented
@@ -26,13 +33,6 @@ ISBN: 1519166915.<br/>
 <a href="http://goo.gl/5Yfx1i"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
-
-<style>
-.book-event {
-  clear: both;
-  margin-top: 2em;
-}
-</style>
 
 <div class="book-event"/>
 Mar 17, 2016:
