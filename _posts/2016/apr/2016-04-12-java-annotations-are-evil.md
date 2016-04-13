@@ -182,7 +182,8 @@ class XmlBook implements Book{
 }
 {% endhighlight %}
 
-Now, in order to print the book in XML we do the following:
+Now, in order to [print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+the book in XML we do the following:
 
 {% highlight java %}
 String xml = new XmlBook(
@@ -194,7 +195,9 @@ The XML printing functionality is inside `XmlBook`. If you don't like the
 decorator idea, you can move the `toXML()` method to the `DefaultBook` class. It's
 not important. What is important is that the functionality always stays
 where it belongs &mdash; inside the object. Only the object knows how
-to print itself to the XML. Nobody else!
+to
+[print itself]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+to the XML. Nobody else!
 
 ## `@RetryOnFailure`
 
