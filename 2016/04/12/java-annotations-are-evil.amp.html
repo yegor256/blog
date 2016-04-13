@@ -159,7 +159,8 @@ that prints it to the XML:</p>
   <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Now, in order to print the book in XML we do the following:</p>
+<p>Now, in order to <a href="/2016/04/05/printers-instead-of-getters.html">print</a>
+the book in XML we do the following:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">XmlBook</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">DefaultBook</span><span class="o">(</span><span class="s">&quot;Elegant Objects&quot;</span><span class="o">)</span>
@@ -169,7 +170,9 @@ that prints it to the XML:</p>
 decorator idea, you can move the <code>toXML()</code> method to the <code>DefaultBook</code> class. It&#39;s
 not important. What is important is that the functionality always stays
 where it belongs &mdash; inside the object. Only the object knows how
-to print itself to the XML. Nobody else!</p>
+to
+<a href="/2016/04/05/printers-instead-of-getters.html">print itself</a>
+to the XML. Nobody else!</p>
 
 <h2 id="retryonfailure"><code>@RetryOnFailure</code></h2>
 

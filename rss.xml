@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-13T06:33:00+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Java Annotations Are a Big Mistake</title><link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" rel="alternate" type="text/html" title="Java Annotations Are a Big Mistake" /><published>2016-04-12T00:00:00+00:00</published><updated>2016-04-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/12/java-annotations-are-evil</id><content type="html" xml:base="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_annotation&quot;&gt;Annotations&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-13T07:14:15+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Java Annotations Are a Big Mistake</title><link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" rel="alternate" type="text/html" title="Java Annotations Are a Big Mistake" /><published>2016-04-12T00:00:00+00:00</published><updated>2016-04-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/12/java-annotations-are-evil</id><content type="html" xml:base="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_annotation&quot;&gt;Annotations&lt;/a&gt;
 were introduced in Java 6 in 2006, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code where we need them. No more
@@ -147,7 +147,8 @@ that prints it to the XML:&lt;/p&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now, in order to print the book in XML we do the following:&lt;/p&gt;
+&lt;p&gt;Now, in order to &lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;print&lt;/a&gt;
+the book in XML we do the following:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;XmlBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DefaultBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Elegant Objects&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -157,7 +158,9 @@ that prints it to the XML:&lt;/p&gt;
 decorator idea, you can move the &lt;code&gt;toXML()&lt;/code&gt; method to the &lt;code&gt;DefaultBook&lt;/code&gt; class. It&amp;#39;s
 not important. What is important is that the functionality always stays
 where it belongs &amp;mdash; inside the object. Only the object knows how
-to print itself to the XML. Nobody else!&lt;/p&gt;
+to
+&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;print itself&lt;/a&gt;
+to the XML. Nobody else!&lt;/p&gt;
 
 &lt;h2 id=&quot;retryonfailure&quot;&gt;&lt;code&gt;@RetryOnFailure&lt;/code&gt;&lt;/h2&gt;
 

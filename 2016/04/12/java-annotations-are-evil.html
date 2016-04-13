@@ -28,18 +28,18 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?7106afd"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?7106afd"/>
+    <link rel="shortcut icon" href="/favicon.ico?9b69e1e"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?9b69e1e"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?7106afd"/>
-    <link rel="stylesheet" href="/css/icons.css?7106afd"/>
+    <link rel="stylesheet" href="/css/layout.css?9b69e1e"/>
+    <link rel="stylesheet" href="/css/icons.css?9b69e1e"/>
     <link rel="canonical" href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" />
     <title>Java Annotations Are a Big Mistake - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?7106afd"></script>
+    <script src="/js/global.js?9b69e1e"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -136,7 +136,7 @@
         
           <li class="desktop-only">Seattle, WA</li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-12-java-annotations-are-evil.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-13T06:14:44+0000'>13 April 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-12-java-annotations-are-evil.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-13T06:55:43+0000'>13 April 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -334,7 +334,8 @@ that prints it to the XML:</p>
   <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Now, in order to print the book in XML we do the following:</p>
+<p>Now, in order to <a href="/2016/04/05/printers-instead-of-getters.html">print</a>
+the book in XML we do the following:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">XmlBook</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">DefaultBook</span><span class="o">(</span><span class="s">&quot;Elegant Objects&quot;</span><span class="o">)</span>
@@ -344,7 +345,9 @@ that prints it to the XML:</p>
 decorator idea, you can move the <code>toXML()</code> method to the <code>DefaultBook</code> class. It&#39;s
 not important. What is important is that the functionality always stays
 where it belongs &mdash; inside the object. Only the object knows how
-to print itself to the XML. Nobody else!</p>
+to
+<a href="/2016/04/05/printers-instead-of-getters.html">print itself</a>
+to the XML. Nobody else!</p>
 
 <h2 id="retryonfailure"><code>@RetryOnFailure</code></h2>
 
@@ -471,23 +474,23 @@ instrument for an OOP developer. Taking it away from us and giving us
     <ul>
       
         <li>
-          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="2.8965901811699473">JAXB Is Doing It Wrong; Try Xembly</a>
+          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="2.8848568593812267">JAXB Is Doing It Wrong; Try Xembly</a>
         </li>
       
         <li>
-          <a href="/2016/04/05/printers-instead-of-getters.html" data-score="2.1700520528449">Printers Instead of Getters</a>
+          <a href="/2016/04/05/printers-instead-of-getters.html" data-score="2.091801965933277">Printers Instead of Getters</a>
         </li>
       
         <li>
-          <a href="/2014/08/15/retry-java-method-on-exception.html" data-score="1.2548407943952224">How to Retry Java Method Call on Exception</a>
+          <a href="/2014/08/15/retry-java-method-on-exception.html" data-score="1.252313037838406">How to Retry Java Method Call on Exception</a>
         </li>
       
         <li>
-          <a href="/2014/10/03/di-containers-are-evil.html" data-score="1.2178255253592007">Dependency Injection Containers are Code Polluters</a>
+          <a href="/2014/10/03/di-containers-are-evil.html" data-score="1.2150512766025676">Dependency Injection Containers are Code Polluters</a>
         </li>
       
         <li>
-          <a href="/2015/12/08/temporal-coupling-between-method-calls.html" data-score="1.056591738325844">Temporal Coupling Between Method Calls</a>
+          <a href="/2015/12/08/temporal-coupling-between-method-calls.html" data-score="1.0543062026339767">Temporal Coupling Between Method Calls</a>
         </li>
       
     </ul>
@@ -521,8 +524,8 @@ instrument for an OOP developer. Taking it away from us and giving us
 
 </section>
 
-<script src="/js/post.js?7106afd"></script>
-<script src="//a.disquscdn.com/embed.js?7106afd"></script>
+<script src="/js/post.js?9b69e1e"></script>
+<script src="//a.disquscdn.com/embed.js?9b69e1e"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
