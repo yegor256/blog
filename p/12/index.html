@@ -28,20 +28,20 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?02109c4"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?02109c4"/>
+    <link rel="shortcut icon" href="/favicon.ico?7106afd"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?7106afd"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?02109c4"/>
-    <link rel="stylesheet" href="/css/icons.css?02109c4"/>
+    <link rel="stylesheet" href="/css/layout.css?7106afd"/>
+    <link rel="stylesheet" href="/css/icons.css?7106afd"/>
     <link rel="canonical" href="http://www.yegor256.com/p/12/" />
     <title>Blog About Computers - Yegor Bugayenko
       
         (page 12)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?02109c4"></script>
+    <script src="/js/global.js?7106afd"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;175</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;176</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -117,6 +117,184 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/10/05/ten-hosted-continuous-integration-services.html">
+            10 Hosted Continuous Integration Services for a Private Repository
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-10-05T00:00:00+00:00">
+              5 October 2014
+            </time>
+          </li>
+          <li>
+            980 words
+          </li>
+          <li>
+            
+            
+              
+                  four
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>Every project I&#39;m working with starts with a setup of continuous
+integration pipeline. I&#39;m a big fan of cloud services,
+that&#39;s why I was always using <code>travis-ci.org</code>. A few of
+my clients questioned this choice recently, mostly because
+of the price. So I decided to make a brief analysis of the market.</p>
+
+<p>I configured <a href="https://github.com/yegor256/rultor">rultor</a>,
+an open source project, in every CI service I managed to find.
+All of them are free for open source projects.
+All of them are hosted and do not require any server installation
+Here they are, in order of my personal preference (first four are
+the best and highly recommended):</p>
+
+<table>
+<colgroup>
+<col style="width: 6em;"/>
+<col style="width: 4em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+<col style="width: 2em;"/>
+</colgroup>
+<thead>
+<tr style="height:6em">
+  <td><!--name--></td>
+  <td><!--price--></td>
+  <td class="vert"><div><span>Linux</span></div></td>
+  <td class="vert"><div><span>Windows</span></div></td>
+  <td class="vert"><div><span>MacOS</span></div></td>
+  <td class="vert"><div><span>Pull requests</span></div></td>
+  <td class="vert"><div><span>Log compress</span></div></td>
+</tr>
+</thead>
+<tbody>
+<tr><td><a href="http://www.travis-ci.org">travis-ci.com</a></td>
+  <td class="rht"><a href="https://travis-ci.com/plans">$129/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  </tr>
+<tr><td><a href="http://www.appveyor.com">appveyor.com</a></td>
+  <td class="rht"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt">?</td>
+  </tr>
+<tr><td><a href="http://www.wercker.com">wercker.com</a></td>
+  <td class="rht">free!</td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  </tr>
+<tr><td><a href="http://www.shippable.com">shippable.com</a></td>
+  <td class="rht"><a href="http://www.shippable.com/pricing.html">$1/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  </tr>
+<tr><td colspan="7" style="border-top: 1px solid gray;"></td></tr>
+<tr><td><a href="http://www.codeship.io">codeship.io</a></td>
+  <td class="rht"><a href="https://codeship.io/pricing">$49/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt">?</td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  </tr>
+<tr><td><a href="http://www.semaphoreapp.com">semaphoreapp.com</a></td>
+  <td class="rht"><a href="https://semaphoreapp.com/pricing">$29/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  </tr>
+<tr><td><a href="http://www.drone.io">drone.io</a></td>
+  <td class="rht"><a href="https://drone.io/pricing">$25/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  </tr>
+<tr><td><a href="https://magnum-ci.com/pricing">magnum-ci.com</a></td>
+  <td class="rht">?</td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt">?</td>
+  </tr>
+<tr><td><a href="http://www.snap-ci.com">snap-ci.com</a></td>
+  <td class="rht"><a href="https://snap-ci.com/plans">$30/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt">?</td>
+  </tr>
+<tr><td><a href="http://www.circleci.com">circleci.com</a></td>
+  <td class="rht"><a href="https://circleci.com/pricing">$19/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  </tr>
+<tr><td><a href="http://ci.solanolabs.com">sonolabs.com</a></td>
+  <td class="rht"><a href="https://www.solanolabs.com/#pricing">$15/mo</a></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt">?</td>
+  </tr>
+<tr><td><a href="http://www.hosted-ci.com">hosted-ci.com</a></td>
+  <td class="rht"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-no"></i></td>
+  <td class="cnt"><i class="icon-yes"></i></td>
+  <td class="cnt">?</td>
+  <td class="cnt">?</td>
+  </tr>
+</tbody>
+</table>
+
+      </div>
+      <p>
+        <a href="/2014/10/05/ten-hosted-continuous-integration-services.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -617,60 +795,6 @@ the data?</p>
       </div>
       <p>
         <a href="/2014/09/09/restful-web-sites.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/09/02/java-ssh-client.html">
-            Simple Java SSH Client
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-09-02T00:00:00+00:00">
-              2 September 2014
-            </time>
-          </li>
-          <li>
-            258 words
-          </li>
-          <li>
-            
-            
-              a minute
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/09/02/java-ssh-client.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>An execution of a shell command via SSH can be done in
-Java, in just a few lines, using <a href="http://ssh.jcabi.com">jcabi-ssh</a>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">hello</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Shell</span><span class="o">.</span><span class="na">Plain</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">SSH</span><span class="o">(</span>
-    <span class="s">&quot;ssh.example.com&quot;</span><span class="o">,</span> <span class="mi">22</span><span class="o">,</span>
-    <span class="s">&quot;yegor&quot;</span><span class="o">,</span> <span class="s">&quot;-----BEGIN RSA PRIVATE KEY-----...&quot;</span>
-  <span class="o">)</span>
-<span class="o">).</span><span class="na">exec</span><span class="o">(</span><span class="s">&quot;echo &#39;Hello, world!&#39;&quot;</span><span class="o">);</span></code></pre></figure>
-
-<p><a href="http://ssh.jcabi.com">jcabi-ssh</a> is
-a convenient wrapper of <a href="http://www.jcraft.com/jsch/">JSch</a>,
-a well-known pure Java implementation of SSH2.</p>
-
-      </div>
-      <p>
-        <a href="/2014/09/02/java-ssh-client.html">
           continue...
         </a>
       </p>
