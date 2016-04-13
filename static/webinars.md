@@ -23,7 +23,7 @@ development, object-oriented programming and project management.
 Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=bGJvN2FsMHI4bThjbXRvZDE3aTExbnNlcTggeWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)!
 April 13, 2016:
 **Who is Software Architect?**
-Software architect is responsible for failures. Software is
+Software architect is responsible for failures and is
 powerful enough to make and overrule any decision. But that
 is not it. We will also talk about delegation of responsibility and
 micromanagement. Mostly, this webinar will summarize what these articles are talking about:
