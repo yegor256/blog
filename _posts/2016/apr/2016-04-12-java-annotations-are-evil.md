@@ -18,7 +18,7 @@ keywords:
 ---
 
 [Annotations](https://en.wikipedia.org/wiki/Java_annotation)
-were introduced in Java 6 in 2006, and we all got excited. Such a great
+were introduced in Java 5, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code where we need them. No more
 [marker interfaces](https://en.wikipedia.org/wiki/Marker_interface_pattern),
