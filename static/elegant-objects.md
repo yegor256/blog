@@ -34,7 +34,6 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
-<div class="book-event"/>
 Mar 17, 2016:
 I'm starting to work on the **second volume** of this book. If you are
 interested to be a reviewer, please send me an [email](mailto:book@yegor256.com)
