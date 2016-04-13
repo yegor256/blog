@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-13T07:14:15+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Java Annotations Are a Big Mistake</title><link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" rel="alternate" type="text/html" title="Java Annotations Are a Big Mistake" /><published>2016-04-12T00:00:00+00:00</published><updated>2016-04-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/12/java-annotations-are-evil</id><content type="html" xml:base="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_annotation&quot;&gt;Annotations&lt;/a&gt;
-were introduced in Java 6 in 2006, and we all got excited. Such a great
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-13T19:33:52+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Java Annotations Are a Big Mistake</title><link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" rel="alternate" type="text/html" title="Java Annotations Are a Big Mistake" /><published>2016-04-12T00:00:00+00:00</published><updated>2016-04-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/12/java-annotations-are-evil</id><content type="html" xml:base="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_annotation&quot;&gt;Annotations&lt;/a&gt;
+were introduced in Java 5, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code where we need them. No more
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Marker_interface_pattern&quot;&gt;marker interfaces&lt;/a&gt;,
@@ -277,7 +277,7 @@ best method of instantiation is operator &lt;code&gt;new&lt;/code&gt;. This oper
 instrument for an OOP developer. Taking it away from us and giving us
 &amp;quot;configuration mechanisms&amp;quot; is an unforgivable
 &lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;crime&lt;/a&gt;.&lt;/p&gt;</content><category term="java" /><category term="oop" /><summary>Annotations
-were introduced in Java 6 in 2006, and we all got excited. Such a great
+were introduced in Java 5, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code where we need them. No more
 marker interfaces,
