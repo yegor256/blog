@@ -32,6 +32,11 @@ on [Amazon](http://goo.gl/5Yfx1i) (please, don't forget to review it there!),
 ISBN: 1519166915.<br/>
 <a href="http://goo.gl/5Yfx1i"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
+Книгу можно купить в России, Украине, и Беларуссии по цене $35 плюс
+доставка. Оплатить через PayPal, WebMoney или напрямую на мою карту
+MasterCard. Пишите на [shop@yegor256.com](mailto:shop@yegor256.com).
+Вам предложат возможные варианты доставки и вообще помогут.
+
 <!--more-->
 
 Mar 17, 2016:
