@@ -16,16 +16,16 @@ keywords:
   - object configuration
 ---
 
-It's a very common mistake we keep making mostly because our objects
+Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects
 are mutable &mdash; we **configure** them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it's abusive and disrespectful
-from a phylosophical point of view? I can, but let's take a look at
+from a philosophical point of view? I can, but let's take a look at
 it from a practical perspective.
 
 <!--more-->
 
-Let's say, there is a class that is supposed to read a web page and
+Let's say there is a class that is supposed to read a web page and
 return its content:
 
 {% highlight java %}
@@ -51,9 +51,9 @@ front page:
 String html = new Page("http://www.google.com").html();
 {% endhighlight %}
 
-Everything is fine, until we start making this class more powerful.
-Let's say we want to configure the encoding. We don't want to use `"UTF-8"`
-always. We want it to be configurable. Here is what we do:
+Everything is fine until we start making this class more powerful.
+Let's say we want to configure the encoding. We don't always want to use `"UTF-8"`.
+We want it to be configurable. Here is what we do:
 
 {% highlight java %}
 class Page {
@@ -72,7 +72,7 @@ class Page {
 }
 {% endhighlight %}
 
-Done, the encoding is encapsulated and configurable. Now, let's say, we
+Done, the encoding is encapsulated and configurable. Now, let's say we
 want to change the behavior of the class for the situation of an empty
 page. If an empty page is loaded, we want to return `"<html/>"`. But not
 always. We want this to be configurable. Here is what we do:
@@ -104,7 +104,7 @@ class Page {
 The class is getting bigger, huh? It's great, we're good programmers and our
 code must be complex, right? The more complex it is, the better programmers
 we are! I'm being sarcastic. Definitely
-[not]({% pst 2015/jun/2015-06-29-simple-diagrams %})! But let's move on. Now,
+[not]({% pst 2015/jun/2015-06-29-simple-diagrams %})! But let's move on. Now
 we want our class to proceed anyway, even if the encoding is not
 supported on the current platform:
 
@@ -143,7 +143,7 @@ class Page {
 }
 {% endhighlight %}
 
-The class is growing and becoming more and more powerful! Now, it's time
+The class is growing and becoming more and more powerful! Now it's time
 to introduce a new class, which we will call `PageSettings`:
 
 {% highlight java %}
@@ -176,11 +176,11 @@ class Page {
 {% endhighlight %}
 
 Class `PageSettings` is basically a holder of parameters, without any
-behavior. It has getters, which give us access to that parameters:
+behavior. It has getters, which give us access to the parameters:
 `isEncodeAnyway()`, `isAlwaysHtml()`, and `getEncoding()`. If we keep
-going in this direction, there could be a few dozens of configuration settings
+going in this direction, there could be a few dozen configuration settings
 in that class. This may look very convenient and
-this is a very typical pattern in Java world. For example,
+is a very typical pattern in Java world. For example,
 look at
 []
 from Spring or
@@ -199,7 +199,7 @@ String html = new Page(
 ).html();
 {% endhighlight %}
 
-However, no matter how convenient it may look at the first glance,
+However, no matter how convenient it may look at first glance,
 this approach is **very wrong**. Mostly because it encourages us
 to make big and non-cohesive objects. They grow in size and become less
 testable, less maintainable and less readable.
@@ -229,7 +229,7 @@ String html = new AlwaysTextPage(
 ).html();
 {% endhighlight %}
 
-Here is how our `DefaultPage` would look like (yes, I had to change
+Here is how our `DefaultPage` would look (yes, I had to change
 its design a bit):
 
 {% highlight java %}
@@ -248,7 +248,7 @@ class DefaultPage implements Page {
 {% endhighlight %}
 
 As you see, I'm making it implement interface `Page`.
-Now, `TextPage` decorator, which converts an array of bytes to a text, using
+Now `TextPage` decorator, which converts an array of bytes to a text using
 provided encoding:
 
 {% highlight java %}
@@ -268,7 +268,7 @@ class TextPage {
 }
 {% endhighlight %}
 
-Now, the `NeverEmptyPage`:
+Now the `NeverEmptyPage`:
 
 {% highlight java %}
 class NeverEmptyPage implements Page {
@@ -287,7 +287,7 @@ class NeverEmptyPage implements Page {
 }
 {% endhighlight %}
 
-And finally, the `AlwaysTextPage`:
+And finally the `AlwaysTextPage`:
 
 {% highlight java %}
 class AlwaysTextPage {
@@ -312,7 +312,7 @@ class AlwaysTextPage {
 You may say that `AlwaysTextPage` will make two calls to the encapsulated
 `origin`, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That's true and this is by design. We don't want this
-duplicated HTTP roundtrip to happen? Let's introduce one more class,
+duplicated HTTP roundtrip to happen. Let's introduce one more class,
 which will cache the page fetched:
 
 {% highlight java %}
