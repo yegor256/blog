@@ -32,14 +32,15 @@ on [Amazon](http://goo.gl/5Yfx1i) (please, don't forget to review it there!),
 ISBN: 1519166915.<br/>
 <a href="http://goo.gl/5Yfx1i"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
+<!--more-->
+
+Apr 14, 2016:
 Книгу можно купить в России, Украине, и Беларуссии по цене $35 плюс
 доставка. Оплатить через PayPal, WebMoney или напрямую на мою карту
 MasterCard. Пишите на [shop@yegor256.com](mailto:shop@yegor256.com).
 Вам предложат возможные варианты доставки и вообще помогут.
 
-<!--more-->
-
-Mar 17, 2016:
+Apr 10, 2016:
 I'm starting to work on the **second volume** of this book. If you are
 interested to be a reviewer, please send me an [email](mailto:book@yegor256.com)
 with a short description of yourself and your LinkedIn profile. If you were
