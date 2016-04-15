@@ -17,15 +17,15 @@ keywords:
 book: elegant-objects 2.9
 ---
 
-It's not just about `InputSteam`, but this class is a good
+It's not just about `InputSteam`, this class is a good
 example of a bad design. I'm talking about three overloaded
 methods `read()`. I've mentioned this problem in Section 2.9
 of [Elegant Objects](/elegant-objects.html). In a few words,
-I strongly believe that interfaces must be "functionality poor".
+I strongly believe that interfaces must be "functionality poor."
 `InputStream` should have been an interface in the first place
-and it should have had a single method `read(byte[])`. Then, if
+and it should have had a single method `read(byte[])`. Then if
 its authors wanted to give us extra functionality, they should have
-been created supplementary "smart" classes.
+created supplementary "smart" classes.
 
 <!--more-->
 
@@ -39,15 +39,15 @@ abstract class InputStream {
 }
 {% endhighlight %}
 
-What's wrong? It's very convenient to have an ability to read
-a single byte, an array of bytes, or even an array of bytes
+What's wrong? It's very convenient to have the ability to read
+a single byte, an array of bytes or even an array of bytes
 with a direct positioning into a specific place in the buffer!
 
-However, we are still lacking a few methods: for reading that bytes and
+However, we are still lacking a few methods: for reading the bytes and
 immediately saving into a file, converting to a text with a selected
-encoding, sending them by email, and posting on Twitter. Would be
-great to have that features too, right in the poor `InputStream`.
-I hope Oracle Java team is working on them now.
+encoding, sending them by email and posting on Twitter. It would be
+great to have the features too, right in the poor `InputStream`.
+I hope the Oracle Java team is working on them now.
 
 In the mean time, let's see what exactly is wrong with what these
 bright engineers designed for us already. Or maybe let me show
@@ -89,28 +89,28 @@ interface InputStream {
 }
 {% endhighlight %}
 
-Now, we want to read a single byte from the stream? Here is how:
+Now, we want to read a single byte from the stream. Here is how:
 
 {% highlight java %}
 final InputStream input = new FileInputStream("/tmp/a.txt");
 final byte b = new InputStream.Smart(input).read();
 {% endhighlight %}
 
-The functionality of "reading a single" byte is outside of `InputStream`,
+The functionality of reading a single byte is outside of `InputStream`,
 because this is not its business. The stream doesn't need to know
-how to manage the data after they are read. All the stream
+how to manage the data after it is read. All the stream
 is **responsible** for is reading, not parsing or manipulating afterwards.
 
 Interfaces must be small.
 
 Obviously, method overloading in interfaces is a code smell. An interface
-with more that **three methods** is a good candidate for refactoring. If methods
-overload each other &mdash; it's a serious trouble.
+with more than **three methods** is a good candidate for refactoring. If methods
+overload each other &mdash; it's serious trouble.
 
 Interfaces must be small!
 
 You may say that the creators of `InputStream` cared about performance, that's
-why allowed us to implement `read()` in three different forms. Then, I have
-to ask again, why not creating a method for reading and immediately posting
-on Twitter? That will be fantastically fast. Isn't it what we all want?
+why allowed us to implement `read()` in three different forms. Then I have
+to ask again, why not create a method for reading and immediately post it
+on Twitter? That would be fantastically fast. Isn't it what we all want?
 A fast software which nobody has any desire to read or maintain.
