@@ -15,17 +15,19 @@ keywords:
 exclude_from_search: true
 ---
 
-On the first Wednesday of each month, at 11am PST, find me
-on Google Hangout. For about an hour we talk about software
+On the first Wednesday of each month, at 11am PST, I organize
+a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% youtube VzhIpjPdJyM video-left %}
-[April 6, 2016](https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4)
+<!-- Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=bGJvN2FsMHI4bThjbXRvZDE3aTExbnNlcTggeWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)! -->
+
+{% youtube AvVQ5NjS_Nk video-left %}
+April 13, 2016:
 **Who is Software Architect?**
-Software architect is responsible for failures. Software is
+Software architect is responsible for failures and is
 powerful enough to make and overrule any decision. But that
-is not it. We will also talk about delegation of responsibility and
-micromanagement. Mostly, this webinar will summarize what these articles are talking about:
+is not it. We also talked about delegation of responsibility and
+micromanagement. Mostly, this webinar summarized what these articles are talking about:
 [Are You a Micromanager?]({% pst 2015/sep/2015-09-22-micromanagement %})
 and
 [Who Is Software Architect?]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).

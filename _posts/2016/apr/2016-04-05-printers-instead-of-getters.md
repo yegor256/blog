@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Printers Instead of Getters"
-date: 2016-01-31
+date: 2016-04-05
 place: Palo Alto, CA
 tags: java oop
 description:
@@ -24,6 +24,8 @@ the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
+{% picture /images/2016/04/amelie.jpg 0 Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet %}
+
 I'm suggesting to use "printers" instead. Instead of exposing
 data via getters, an object will have a functionality of **printing**
 itself to some media.
@@ -40,7 +42,8 @@ public class Book {
 {% endhighlight %}
 
 We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and JAXB:
+or less traditional way to do it is via getters and
+[JAXB]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
 {% highlight java %}
 import javax.xml.bind.annotation.XmlElement;
@@ -66,16 +69,19 @@ This is a very [offensive]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern
 way of treating the
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}). We're basically
 exposing everything that's inside to the public. It was a nice
-little self-suffient solid object and we turned it into a bag of data,
+little self-sufficient solid object and we turned it into a bag of data,
 which anyone can access in many possible ways. We can access it for reading, of course.
 
 It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into JSON, they will be very helpful. If we want
+If we want to convert it into
+[JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %}),
+they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.
 
 This is **not** because they are so effective. This is because we're so
-**procedural** in our way of thinking. We **don't trust** our objects. We only trust
+[**procedural**]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
+in our way of thinking. We **don't trust** our objects. We only trust
 the data they store. We don't want this `Book` object to generate the XML. We
 want it to give us the data. We will build the XML. The `Book` is too stupid
 to do that job. We're way smarter!
@@ -190,5 +196,7 @@ exactly what printed just now. We need to print the book to XML? We
 create `XmlMedia`, which will print the book to XML. The `Book` class
 stays small, while the complexity of "media" objects is unlimited.
 
-My point here is simple &mdash; no getters, just printers!
+My point here is simple &mdash; no
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+just printers!
 

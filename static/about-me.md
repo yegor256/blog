@@ -25,13 +25,7 @@ I'm Yegor Bugayenko, a programmer, a founder and an investor.
 As a **programmer** I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP and JavaScript.
 I'm a founder and a lead architect of
-[takes.org](http://www.takes.org),
-[jcabi.com](http://www.jcabi.com),
-[rultor.com](http://www.rultor.com),
-[qulice.com](http://www.qulice.com),
-[s3auth.com](http://www.s3auth.com),
-and
-[stateful.co](http://www.stateful.co). I'm using
+[takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com). I'm using
 IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering.
@@ -53,7 +47,7 @@ I'm a certified Project Management Professional
 ([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx)).
 Besides that, I'm a proud holder of
 [RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
-[PRINCE2 Foundation](http://www.prince2.com/),
+[PRINCE2 Foundation](https://www.prince2.com/uk/home),
 [MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf) and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
@@ -74,7 +68,7 @@ subscribers in my list).
   <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you? Why interested?</label>
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
-  <label for="subscribe"></label>
+  <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
   <span class="note">1000+ Happy Subscribers and Counting...</span>
 </fieldset></form>
@@ -83,3 +77,6 @@ You can always [unsubscribe](/unsubscribe.html).
 
 <script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
 <script src="/js/about.js?{{ site.data['hash'] }}"></script>
+
+By the way, this is what some people think about me
+and this blog: [testimonials](/testimonials.html).

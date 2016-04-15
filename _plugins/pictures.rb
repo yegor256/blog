@@ -30,7 +30,7 @@ module Yegor
 
     def render(context)
       html = "<figure class='unprintable'><img src='#{Yegor::Img.new(@src, context)}'" \
-        " style='width:#{@width}px;'" \
+        " style='width:#{@width}px;max-width:100%;'" \
         " alt='figure'/></figure>\n\n"
     end
   end
@@ -48,7 +48,7 @@ module Yegor
 
     def render(context)
       img = "<img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;' alt='badge'/>"
+        " style='width:#{@width}px;max-width:100%;' alt='badge'/>"
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
       end
@@ -76,7 +76,7 @@ module Yegor
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
       html = "<figure><img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;' alt='#{CGI.escapeHTML alt}'/>"
+        " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML alt}'/>"
       if @title != ''
         html += "<figcaption>#{CGI::escapeHTML @title}</figcaption>"
       end

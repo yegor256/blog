@@ -9,7 +9,7 @@ module Yegor
 
     def render(context)
       "<iframe class='video #{@flags unless @flags.nil?}'" \
-      " src='https://www.youtube.com/embed/#{@id}?controls=2' allowfullscreen></iframe>\n\n"
+      " src='https://www.youtube.com/embed/#{@id}?controls=2' allowfullscreen='true'></iframe>\n\n"
     end
   end
 end

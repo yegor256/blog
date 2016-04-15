@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jare.io, an Instant and Free CDN"
-date: 2016-03-09
+date: 2016-03-30
 place: Palo Alto, CA
 tags: cdn
 description:
@@ -149,7 +149,7 @@ instantly (less than 50ms). But then it will be too slow for users in Prague.
 
 This problem has no solutions if the server generates images or pages
 on the fly in some unique way and if we can't install a number of servers
-in different countries and continents. But in most cases, such as our logo example, this is not a problem. 
+in different countries and continents. But in most cases, such as our logo example, this is not a problem.
 This logo doesn't need to be unique for
 each user. It is a very _static_ resource, which needs to be created only once
 and be delivered to everybody, without any changes.
@@ -163,7 +163,7 @@ from the central server. It will return it immediately, from its internal cache.
 
 We need to have many edge servers, preferably in all countries where
 our users may be located. The first request will take longer, but all others
-will be much faster because they will be servered from the closest edge server.
+will be much faster because they will be served from the closest edge server.
 
 Now, the question is how the browser will know which edge server is the closest, right?
 We simply trick the domain name resolution process. Depending on who is asking,

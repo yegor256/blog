@@ -65,15 +65,12 @@ module Jekyll
         stdout.binmode
         stdin.print code
         stdin.close
-
-        err = stderr.read
-        if not (err.nil? || err.strip.empty?)
-          raise "Error from #{DOT_CMD}:\n#{err}"
-        end
-
         svg = stdout.read
         svg.force_encoding 'UTF-8'
-
+        err = stderr.read
+        if !err.nil? && !err.strip.empty?
+          raise "Error from #{DOT_CMD}:\n#{err}"
+        end
         return svg
       end
     end

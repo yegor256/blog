@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Elevator Pitchers"
-date: 2016-03-23
+title: "Unspoken Secrets of an Elevator Pitch"
+date: 2016-03-28
 place: Palo Alto, CA
 tags: startup
+categories: best
 description:
   The quality of your elevator pitch is the key
   success factor for your startup, so listen to this
@@ -37,6 +38,8 @@ with a yoga mat and you're all set. By looking that way, you're telling
 investors that your chances to succeed are way higher than anyone who
 doesn't have an Apple Watch and is a stranger because of that.
 
+{% quote Anyone who doesn't have an Apple Watch is a stranger %}
+
 **Innovate**.
 These are the words you must include in your pitch: innovation, innovative,
 innovate. It's never too many. Put them (or their synonyms) everywhere;
@@ -57,6 +60,8 @@ about, which is exactly what you need. Learn those words and use them whenever
 possible. Here are some of my favorites for you to remember: business model canvas, viral
 mechanics, growth hacking, data-driven mentality, design thinking, and
 game-changing disruption.
+
+{% quote But be careful, don't overact or you may end up in a mental hospital %}
 
 **Smile**.
 You are super excited about this fantastic opportunity! You're extremely
@@ -86,6 +91,8 @@ featuring his face will also help.
 By the way, don't use Steve Jobs; it's not a trend anymore.
 Moreover, he is dead already. Stick to Musk.
 
+{% quote Never compete with them or even try to argue, investors are always right %}
+
 **Respect**.
 Always remember that you and your potential investors are not equal.
 They have money, experience, reputation, and a Tesla. You have nothing.
@@ -104,6 +111,8 @@ and always say "we" instead of "I". Investors, in general, love to have
 a few phone numbers they can call when they realize their money is gone
 and there is nothing left. Also, it's more fun to invest into a group
 of people &mdash; investors look more serious in that case.
+
+{% quote Never admit any mistakes or risks, simply ignore them, stay positive %}
 
 **Radiate**.
 Never say anything bad about anything or anyone. You literally have
@@ -129,8 +138,10 @@ a bit deaf. Be loud. That will prove that you're absolutely
 confident in what you're saying, today and always. The investor
 will be sure you are capable of attracting <del>mates</del> customers and
 other investors, if for no other reason than because you're not afraid of being that ugly loud
-in public. You're 100% extravert &mdash; you must demonstrate it
+in public. You're 100% extrovert &mdash; you must demonstrate it
 shamelessly.
+
+{% quote You must be ready to shine their shoes, with a big smile on your face %}
 
 **Beg**.
 You may mistakenly think that this is a balanced transaction &mdash;

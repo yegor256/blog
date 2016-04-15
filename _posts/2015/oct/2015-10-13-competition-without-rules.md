@@ -23,7 +23,8 @@ When it's necessary to work overtime, how is it decided
 who will stay in the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})?
 I'm expecting you to shrug your shoulders. You're right, these questions never
 have explicit answers in modern organizations. We are used to working
-in a more "democratic" way, where such decisions are made
+in a more "[democratic]({% pst 2014/oct/2014-10-12-who-is-software-architect %})"
+way, where such decisions are made
 **subjectively** by managers or more senior employees.
 Is this how it should be?
 
@@ -65,7 +66,7 @@ are reading the mood of our
 
 Competition is **inevitable** in a group, especially if the group consists
 of creative people. Creativity is all about competition. Each of us
-wants to be better than the others, and this is what drives **innovation**.
+wants to be better than the other s, and this is what drives **innovation**.
 But if the team has no rules, even a minor competition seriously
 and negatively affects their motivation.
 
@@ -79,7 +80,7 @@ straightforward answers at any time to questions like these:
 
   * What do I need to do in order to get a raise?
 
-  * Under what conditions will I be fired?
+  * Under what conditions will I be [fired]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})?
 
 Can you ask these questions in your team and easily
 get explicit answers?

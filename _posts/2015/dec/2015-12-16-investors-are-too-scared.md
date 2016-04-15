@@ -70,7 +70,9 @@ activities instead of business-making ones. Very often, good teams simply
 Have you ever talked to a venture capital firm? To angel investors? To
 any investors, basically? If you have, you'd know they all
 are very **polite**, nodding their heads and smiling while listening
-to your pitch. They usually are "very excited" to meet you and
+to your
+[pitch]({% pst 2016/mar/2016-03-28-unspoken-secrets-of-elevator-pitch %}).
+They usually are "very excited" to meet you and
 "learn more" about your business.
 
 In the end, they don't give you the money.

@@ -217,7 +217,9 @@ mostly because it is more configurable.
         <goal>exec</goal>
       </goals>
       <configuration>
-        <executable>${project.build.directory}/casperjs/bin/casperjs</executable>
+        <executable>
+          ${project.build.directory}/casperjs/bin/casperjs
+        </executable>
         <workingDirectory>${basedir}</workingDirectory>
         <arguments>
           <argument>test</argument>

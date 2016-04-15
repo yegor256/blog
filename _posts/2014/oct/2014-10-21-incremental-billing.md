@@ -39,7 +39,8 @@ development industry, especially in [outsourcing]({% pst 2015/oct/2015-10-27-out
 [Over 80%](http://www.projectsmart.co.uk/docs/chaos-report.pdf) of all
 software projects fail to achieve their objectives and
 [about 30%](http://thenextweb.com/insider/2014/09/25/top-20-reasons-startups-fail-report/)
-of startups fail by running out of cash.
+of startups fail by running out of
+[cash]({% pst 2016/apr/2016-04-08-revenue-may-kill-startup %}).
 However, very few programmers (if any)
 [fail]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
 to get their monthly salaries on time.

@@ -65,7 +65,7 @@
             <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
+            <li title="I'm NOT on Google+"><i class="icon icon-googleplus notranslate gray" aria-hidden="true"></i></li>
             <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
@@ -73,8 +73,8 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;{{ site.posts.size }}</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;{{ site.posts.size }}</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -96,26 +96,25 @@
             <div class="entries"></div>
           </div>
         </div>
-        {% raw %}
-        <script id="search-results-template" type="text/mustache">
-          {{#entries}}
-            <div>
-              <a href="{{url}}">{{title}}</a>
-            </div>
-          {{/entries}}
-        </script>
-        {% endraw %}
         <div class="hot">
           <ul>
+            <!--
             <li>
-              Meet me in Washington DC, on Mar 31, at
-              <a href="http://www.sedcconference.org/">SEDC</a>,
-              I'll be speaking about XDSD and meeting-free work
-            </li>
-            <li>
-              <a href="https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4">Webinar #13</a>
+              <a href="/webinars.html">Webinar #13</a>
               will be about the role of a Software Architect;
-              join us on Apr 6, at 11am PST
+              join us on Apr 13, at 11am PST.
+            </li>
+            -->
+            <li>
+              Meet me at
+              <a href="http://nextbuild.nl/speakers/yegor-bugayenko/">NextBuild</a> (Eindhoven/Apr-16),
+              <a href="http://javapoint.ru/en/">JPoint</a> (Moscow/Apr-22),
+              <a href="http://jetconf.by/#/yegor_bugayenko">JETConf</a> (Minsk/Apr-25),
+              <a href="http://2016.geecon.org/">GeeCON</a> (Krakow/May-11),
+              <a href="http://devitconf.org/">DEVit</a> (Thessaloniki/May-20),
+              <a href="http://jeeconf.com/speaker/yegor-bugayenko/">JEEConf</a> (Kiev/May-21),
+              and later
+              <a href="/talks.html">somewhere else</a>.
             </li>
           </ul>
         </div>

@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Java Annotations Are Against OOP"
-date: 2016-03-21
+title: "Java Annotations Are a Big Mistake"
+date: 2016-04-12
 place: Seattle, WA
 tags: java oop
 description:
   Even though Java annotations are very popular and
   convenient, they are making Java code less object-oriented
   and more messy.
+categories: jcg
 keywords:
   - java annotations
   - java annotations example
@@ -17,7 +18,7 @@ keywords:
 ---
 
 [Annotations](https://en.wikipedia.org/wiki/Java_annotation)
-were introduced in Java 6 in 2006, and we all got excited. Such a great
+were introduced in Java 5, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
 files! Just annotations, right there in the code where we need them. No more
 [marker interfaces](https://en.wikipedia.org/wiki/Marker_interface_pattern),
@@ -181,7 +182,8 @@ class XmlBook implements Book{
 }
 {% endhighlight %}
 
-Now, in order to print the book in XML we do the following:
+Now, in order to [print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+the book in XML we do the following:
 
 {% highlight java %}
 String xml = new XmlBook(
@@ -193,7 +195,9 @@ The XML printing functionality is inside `XmlBook`. If you don't like the
 decorator idea, you can move the `toXML()` method to the `DefaultBook` class. It's
 not important. What is important is that the functionality always stays
 where it belongs &mdash; inside the object. Only the object knows how
-to print itself to the XML. Nobody else!
+to
+[print itself]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+to the XML. Nobody else!
 
 ## `@RetryOnFailure`
 
@@ -258,7 +262,7 @@ A much better design would look like this (instead of annotations):
 Foo foo = new FooThatRetries(new Foo());
 {% endhighlight %}
 
-And then, the implemenation of `FooThatRetries`:
+And then, the implementation of `FooThatRetries`:
 
 {% highlight java %}
 class FooThatRetries implements Foo {
@@ -318,6 +322,6 @@ There should not be any "configurations" in OOP. We can't configure our
 objects if they are real objects. We can only instantiate them. And the
 best method of instantiation is operator `new`. This operator is the key
 instrument for an OOP developer. Taking it away from us and giving us
-"configuration mechanisms" is an unforgiveable
+"configuration mechanisms" is an unforgivable
 [crime]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
 

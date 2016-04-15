@@ -10,10 +10,6 @@
 @import 'wrapper';
 @import 'tables';
 
-.green { color: $green; }
-.red { color: $red; }
-.orange { color: $orange; }
-
 %gray {
   color: $gray;
 
@@ -24,6 +20,11 @@
 }
 
 %light-gray { color: $light-gray; }
+
+.green { color: $green; }
+.red { color: $red; }
+.orange { color: $orange; }
+.gray { @extend %gray; }
 
 %small { font-size: .85 * $em; }
 
@@ -459,4 +460,8 @@ figure {
   pre {
     font-size: 12px !important;
   }
+}
+
+.plantuml {
+  width: 100%;
 }
