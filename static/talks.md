@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/nextbuild-2016.png" class="future-talk" alt="NextBuild 2016"/>
-**Meetings Make Us Less Bug Tolerant, Which Is Bad**<br/>
-[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
-Eindhoven, Netherlands<br/>
-16 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/webit-2016.png" class="future-talk" alt="WEBIT.Festival 2016"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128)<br/>
@@ -194,6 +187,16 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/nextbuild-2016.png" class="past-talk" alt="NextBuild 2016"/>
+Blame the Project;
+[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
+Eindhoven, Netherlands;
+16 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
+[photos](...),
+[video](...).
 
 <div class="talk-event"/>
 <img src="/images/2016/agileee-2016.png" class="past-talk" alt="AgileEE 2016"/>
