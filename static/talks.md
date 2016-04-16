@@ -196,7 +196,7 @@ Eindhoven, Netherlands;
 16 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
 [photos](...),
-[video](...).
+[video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
 
 <div class="talk-event"/>
 <img src="/images/2016/agileee-2016.png" class="past-talk" alt="AgileEE 2016"/>
