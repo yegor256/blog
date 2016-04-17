@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "What To Worry About In Convertible Notes?"
+title: "What to Worry About in Convertible Notes?"
 date: 2015-10-20
 place: Palo Alto, CA
 tags: management startup
 description:
-  ...
+  Convertible notes is a popular instrument of seed
+  investments, used by early-stage investors. Here is what
+  you should pay attention to, as a founder.
 keywords:
   - convertible notes
   - convertible notes examples
@@ -14,7 +16,8 @@ keywords:
   - convertible notes vs safe
 ---
 
-"Convertible Notes" is what you most probably will hear when
+"[Convertible Notes](https://en.wikipedia.org/wiki/Convertible_bond)"
+is what you most probably will hear when
 getting first money for your first startup. They will give you
 cash asking to give them that convertible notes (or SAFE,
 which is very similar). Convertible notes are just a few pages of paper
@@ -82,7 +85,9 @@ _terms and conditions of which my lawyer will discuss with you_."
 
 If we're talking about $500K, you will have no problem meeting that lawyers.
 However, if it's just $25K... To make life easier for smaller investments,
-convertible notes were invented. They are **not equity**. Investors that
+convertible notes were invented (well, there were
+[a few other reasons](http://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
+They are **not equity**. Investors that
 have convertible notes can't vote. They can't sell convertible notes and they
 can't get any profit from the company. So, what they are for then? I'll explain
 in a minute. My goal so far was to show why young companies don't want
@@ -187,5 +192,17 @@ Again, as a founder, you should insist on "no discount" convertible notes. Will
 I agree? Probably not. Especially if there is no cap. Try to negotiate
 a smaller discount. Maybe 10%, just give me a feeling of appreciation.
 
-##
+## Control Rights
+
+## Interest
+
+## Maturity Date
+
+## Pro-rata Rights
+
+<hr/>
+
+There are other less usual elements of convertible notes, which
+you most probably won't ever see, including:
+[Most Favored Nation clause](https://fundersclub.com/learn/convertible-notes/convertible-notes-overview/most-favored-nation-convertible-note/),
 

@@ -27,9 +27,9 @@ before_install:
 install:
   - set -e
   - travis_retry _travis/install_cmake.sh; sudo apt-get install -y libxml2-utils
-  - travis_retry npm install --global phantomjs-prebuilt
-  - travis_retry npm install --global casperjs
-  - travis_retry npm install --global cssshrink
+  - travis_retry npm install --global phantomjs-prebuilt@2.1.7
+  - travis_retry npm install --global casperjs@1.1.0
+  - travis_retry npm install --global cssshrink@0.0.5
   - travis_retry _travis/install_plantuml.sh
   - travis_retry _travis/install_sfnt2woff.sh
   - travis_retry _travis/install_tidy.sh
