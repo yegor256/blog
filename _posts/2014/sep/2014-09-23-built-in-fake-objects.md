@@ -16,14 +16,14 @@ keywords:
   - java mock framework
 categories: jcg
 book: elegant-objects 2.8
+youtube:
+  - l6MpCBzwDbg
 ---
 
 While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
 "mocking is bad" and "mocking is evil".
-
-{% youtube l6MpCBzwDbg video-left %}
 
 The root cause of this complexity is that our objects
 are too big. They have many methods and these methods

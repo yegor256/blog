@@ -16,9 +16,9 @@ keywords:
   - continuous integration problems
   - continuous integration pitfalls
   - alternative to continuous integration
+youtube:
+  - 3IXk5yEJMIs
 ---
-
-{% youtube 3IXk5yEJMIs video-left %}
 
 A few days ago, my article
 ["Why Continuous Integration Doesn’t Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)

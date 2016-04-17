@@ -18,6 +18,8 @@ keywords:
   - scrum standup
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
+youtube:
+  - ibT5oKToMoQ
 ---
 
 A stand-up meeting (or simply "stand-up") is
@@ -48,8 +50,6 @@ angles and compare how good and bad managers would organize their
 work.
 
 ## Information
-
-{% youtube ibT5oKToMoQ video-left %}
 
 **A Bad Manager Asks How Things Are Going**.
 Strolling around the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})

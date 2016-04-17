@@ -13,6 +13,8 @@ keywords:
   - how to reward an employee
   - how to demotivate your employee
   - ways to reward employees
+youtube:
+  - F6NwcQyEY18
 ---
 
 Monetary rewards for employees. Do they work? Should we use them?
@@ -31,8 +33,6 @@ for all modern employees (not just programmers).
 My question is &mdash; why is this so?
 
 <!--more-->
-
-{% youtube F6NwcQyEY18 video-left %}
 
 Why doesn't money work, even when it was invented to be
 a universal instrument to measure our labor? Why can't an American dollar,

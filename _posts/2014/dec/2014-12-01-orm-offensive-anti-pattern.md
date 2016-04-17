@@ -17,6 +17,8 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 book: elegant-objects 3.5
+youtube:
+  - DEqcn4-freM
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
@@ -154,8 +156,6 @@ This is how object-relational mapping works.
 What's wrong with it, you may ask? Everything!
 
 ## What's Wrong With ORM?
-
-{% youtube DEqcn4-freM video-left %}
 
 Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
 for more than 10 years already. Almost every SQL-intensive application in the world

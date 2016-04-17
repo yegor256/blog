@@ -16,6 +16,8 @@ keywords:
   - software architect job description
 translated:
   Japanese: http://tbd.kaitoy.xyz/2016/01/11/who-is-software-architect/
+youtube:
+  - 0fuEgmibJc4
 ---
 
 Do you have a software architect in your project? Do you need one?
@@ -37,8 +39,6 @@ most authoritative one among them. Right?
 Absolutely wrong!
 
 <!--more-->
-
-{% youtube 0fuEgmibJc4 video-left %}
 
 Obviously, an architect is usually someone who
 has the most knowledge, skills, experience, and authority. Of course,

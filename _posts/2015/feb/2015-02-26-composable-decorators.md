@@ -14,9 +14,9 @@ keywords:
   - decorator pattern java
   - decorator pattern example
   - decorator pattern real life example
+youtube:
+  - D0dqC_3Bch8
 ---
-
-{% youtube D0dqC_3Bch8 video-left %}
 
 The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
 is my favorite among all other patterns I'm aware of. It is a very simple

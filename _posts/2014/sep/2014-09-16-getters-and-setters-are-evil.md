@@ -17,6 +17,8 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
 book: elegant-objects 3.5
+youtube:
+  - WSgP85kr6eU
 ---
 
 There is an old debate, started in 2003 by Allen Holub
@@ -168,8 +170,6 @@ methods that demonstrate requests for certain "insides" of an object. But these
 methods are not "getters" and they should never have the "get" prefix. We're
 not "getting" anything from the dog. We're not getting her name. We're asking
 her to tell us her name. See the difference?
-
-{% youtube WSgP85kr6eU video-left %}
 
 We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,

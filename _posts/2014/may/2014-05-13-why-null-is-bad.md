@@ -19,6 +19,8 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 book: elegant-objects 2.6
+youtube:
+  - o3aNJX7AP3M
 ---
 
 A simple example of `NULL` usage in Java:
@@ -36,8 +38,6 @@ public Employee getByName(String name) {
 What is wrong with this method?
 
 <!--more-->
-
-{% youtube o3aNJX7AP3M video-left %}
 
 It may return `NULL` instead of an object &mdash; that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at

@@ -15,6 +15,8 @@ keywords:
   - setter injection
   - constructor injection
   - field injection
+youtube:
+  - oV6Utb5Jows
 ---
 
 While [dependency injection](http://martinfowler.com/articles/injection.html) (aka, "DI")
@@ -28,8 +30,6 @@ is a natural technique of composing objects in OOP
 turn it into an **anti-pattern**.
 
 <!--more-->
-
-{% youtube oV6Utb5Jows video-left %}
 
 I'm not going to discuss obvious arguments against
 "setter injections"

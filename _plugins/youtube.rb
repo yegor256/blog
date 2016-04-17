@@ -12,6 +12,15 @@ module Yegor
       " src='https://www.youtube.com/embed/#{@id}?controls=2' allowfullscreen='true'></iframe>\n\n"
     end
   end
+
+  module Youtube
+    def youtube(list)
+      '<div>Watch this:' +
+      list.each { |id| "<a href='https://www.youtube.com/watch?v=#{id}'>video</a>" }.join(' ') +
+      '</div>'
+    end
+  end
 end
 
+Liquid::Template.register_filter(Yegor::Youtube)
 Liquid::Template.register_tag('youtube', Yegor::YoutubeBlock)
