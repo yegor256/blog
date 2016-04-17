@@ -91,19 +91,23 @@ Minsk, Belarus<br/>
 Gdynia, Poland<br/>
 26 April 2016
 
+<!--
 <div class="talk-event"/>
 <img src="/images/2016/beyond-2016.png" class="future-talk" alt="Beyond20 2016"/>
 **The Potential Pitfalls of Continuous Integration**<br/>
 [Beyond20'16](http://www.beyond20conference.com/sessions/the-potential-pitfalls-of-continuous-integration/)<br/>
 Washington, USA<br/>
 2 May 2016
+-->
 
+<!--
 <div class="talk-event"/>
 <img src="/images/2016/agile-and-beyond-2016.png" class="future-talk" alt="Agile &amp; Beyond 2016"/>
 **How XDSD Achieves Quality Without Meetings and With Incomplete Deliverables**<br/>
 [Agile &amp; Beyond](http://www.agileandbeyond.com/2016/)<br/>
 Ypsilanti, MI, USA<br/>
 5 May 2016
+-->
 
 <div class="talk-event"/>
 <img src="/images/2016/baltic-devops.png" class="future-talk" alt="Baltic DevOps 2016"/>
