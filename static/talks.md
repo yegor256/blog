@@ -189,17 +189,17 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/nextbuild-2016.png" class="past-talk" alt="NextBuild 2016"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/13041098_10209283226707635_7567818544017623094_o.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
 [NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
 Eindhoven, Netherlands;
 16 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10209283233547806),
 [video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
 
 <div class="talk-event"/>
-<img src="/images/2016/agileee-2016.png" class="past-talk" alt="AgileEE 2016"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12987001_10209222308424716_7689199378248269811_n.jpg?oh=c937a25fe62c84ea9ca7d3be522068a0&oe=57BA3C10" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat To Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;
