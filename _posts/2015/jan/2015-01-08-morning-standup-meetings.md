@@ -20,6 +20,7 @@ translated:
   Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
 youtube:
   - ibT5oKToMoQ
+  - dE0_j4Kk6jo
 ---
 
 A stand-up meeting (or simply "stand-up") is

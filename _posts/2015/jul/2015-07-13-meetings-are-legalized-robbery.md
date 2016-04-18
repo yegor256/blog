@@ -17,6 +17,8 @@ keywords:
 og_image: /images/2015/07/heat.jpg
 youtube:
   - ibT5oKToMoQ
+  - LB_YLWhGrco
+  - dE0_j4Kk6jo
 ---
 
 Software development is all about creativity, right? It's an art,

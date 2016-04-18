@@ -15,6 +15,8 @@ keywords:
   - agile planning
   - agile task planning
   - time management agile
+youtube:
+  - b6r2W3P9vgY
 ---
 
 You have a task assigned to you, and you don't like it. You are simply

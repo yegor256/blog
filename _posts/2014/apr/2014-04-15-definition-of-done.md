@@ -14,6 +14,8 @@ keywords:
   - project planning
   - risk management
   - human resource management
+youtube:
+  - qRZYJGYdrwk
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

@@ -19,6 +19,7 @@ translated:
 youtube:
   - 0fuEgmibJc4
   - PNSezrlemsY
+  - AvVQ5NjS_Nk
 ---
 
 Do you have a software architect in your project? Do you need one?

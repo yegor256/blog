@@ -17,6 +17,8 @@ keywords:
   - software maintainability
 translated:
   Russian: https://habrahabr.ru/post/260241/
+youtube:
+  - ZtWmlKi3ivc
 ---
 
 _Maintainability_ is the [most valuable virtue]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})

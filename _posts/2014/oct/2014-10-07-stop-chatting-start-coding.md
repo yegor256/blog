@@ -14,6 +14,10 @@ keywords:
   - chat with programmers
   - formal project communications
 categories: jcg
+youtube:
+  - qRZYJGYdrwk
+  - LB_YLWhGrco
+  - dE0_j4Kk6jo
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

@@ -16,6 +16,7 @@ keywords:
 youtube:
   - 0fuEgmibJc4
   - PNSezrlemsY
+  - AvVQ5NjS_Nk
 ---
 
 A software architect is a key person in a software project, which I
