@@ -14,6 +14,8 @@ keywords:
   - office awards ideas
   - office awards funny
   - startup failure stories
+youtube:
+  - F6NwcQyEY18
 ---
 
 Punishment ... how do you prefer to do it? There are many ways to punish

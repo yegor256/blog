@@ -12,12 +12,13 @@
       border-left: 4px solid #e52d27;
       clear: both;
       color: darken($green, 25);
+      height: 100px;
       margin-bottom: $em;
       padding-left: $em;
 
       img {
         float: left;
-        height: 75px;
+        height: 100%;
         margin-right: 1em;
       }
     }

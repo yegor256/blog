@@ -27,7 +27,7 @@ module Yegor
         "<li><a href='https://www.youtube.com/watch?v=#{id}'>" \
           "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
           "#{snippet['title']}" \
-          " on #{Time.parse(snippet['publishedAt']).strftime('%d %B %Y')}" \
+          " on #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}" \
           "</li>"
       end.join('') +
       '</ul></div>'

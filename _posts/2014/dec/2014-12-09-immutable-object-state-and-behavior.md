@@ -14,6 +14,8 @@ keywords:
   - object behavior model
   - object attributes
   - immutable object state
+youtube:
+  - KwP7Ay9Z-hc
 ---
 
 I often hear this argument against

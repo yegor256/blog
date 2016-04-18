@@ -19,6 +19,7 @@ translated:
 book: elegant-objects 3.5
 youtube:
   - DEqcn4-freM
+  - WSgP85kr6eU
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})

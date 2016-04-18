@@ -17,6 +17,8 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
 book: elegant-objects 2.3
+youtube:
+  - WSgP85kr6eU
 ---
 
 Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):

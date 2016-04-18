@@ -18,6 +18,7 @@ translated:
   Japanese: http://tbd.kaitoy.xyz/2016/01/11/who-is-software-architect/
 youtube:
   - 0fuEgmibJc4
+  - PNSezrlemsY
 ---
 
 Do you have a software architect in your project? Do you need one?

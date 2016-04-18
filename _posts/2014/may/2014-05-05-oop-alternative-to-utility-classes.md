@@ -21,6 +21,7 @@ translated:
 book: elegant-objects 3.2
 youtube:
   - psrp3TtaYYI
+  - D0dqC_3Bch8
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods

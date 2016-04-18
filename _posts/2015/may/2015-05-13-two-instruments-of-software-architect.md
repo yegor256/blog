@@ -12,6 +12,8 @@ keywords:
   - software architect responsibilities
   - software architect vs developer
   - software architect vs engineer
+youtube:
+  - 0fuEgmibJc4
 ---
 
 A [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})

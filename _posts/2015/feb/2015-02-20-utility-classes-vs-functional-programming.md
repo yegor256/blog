@@ -14,6 +14,9 @@ keywords:
   - utility classes vs functional programming
   - utility classes are not functional programming
   - utility classes
+youtube:
+  - D0dqC_3Bch8
+  - psrp3TtaYYI
 ---
 
 I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against
