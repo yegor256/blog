@@ -18,6 +18,7 @@ keywords:
 youtube:
   - WSgP85kr6eU
   - WpP4rIhh5e4
+  - DEqcn4-freM
 ---
 
 [Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern) are ...

@@ -13,6 +13,8 @@ keywords:
   - team morale events
   - team morale booster ideas
   - team morale event ideas
+youtube:
+  - ibT5oKToMoQ
 ---
 
 There are plenty of books, articles, and blog posts about _team morale_. They

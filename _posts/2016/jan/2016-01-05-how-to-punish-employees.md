@@ -16,6 +16,7 @@ keywords:
   - startup failure stories
 youtube:
   - F6NwcQyEY18
+  - ibT5oKToMoQ
 ---
 
 Punishment ... how do you prefer to do it? There are many ways to punish
