@@ -22,7 +22,7 @@ module Yegor
       '<div class="youtube"><ul>' +
       list.map do |id|
         uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{id}&part=snippet&key=#{key}")
-        json = JSON.parse(Net::HTTP.get_print(uri))
+        json = JSON.parse(Net::HTTP.get(uri))
         snippet = json['items'][0]['snippet']
         "<li><a href='https://www.youtube.com/watch?v=#{id}'>" \
           "<img src='#{snippet['thumbnails']['medium']['url']}'/>" \
