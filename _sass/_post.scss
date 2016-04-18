@@ -1,6 +1,5 @@
 .youtube {
   @extend %unprintable;
-  font-family: $code-font;
   margin-bottom: 2 * $em;
   margin-top: 2 * $em;
   text-align: left;
@@ -10,7 +9,7 @@
     padding-left: 0;
 
     li {
-      border-left: 4px solid $green;
+      border-left: 4px solid #e52d27;
       clear: both;
       color: darken($green, 25);
       margin-bottom: $em;
@@ -18,7 +17,7 @@
 
       img {
         float: left;
-        height: 50px;
+        height: 75px;
         margin-right: 1em;
       }
     }

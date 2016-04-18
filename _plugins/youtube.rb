@@ -25,9 +25,10 @@ module Yegor
         json = JSON.parse(Net::HTTP.get(uri))
         snippet = json['items'][0]['snippet']
         "<li><a href='https://www.youtube.com/watch?v=#{id}'>" \
-          "<img src='#{snippet['thumbnails']['medium']['url']}'/>" \
+          "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
           "#{snippet['title']}" \
-          "</a></li>"
+          " on #{Time.parse(snippet['publishedAt']).strftime('%d %B %Y')}" \
+          "</li>"
       end.join('') +
       '</ul></div>'
     end
