@@ -15,8 +15,8 @@ module Yegor
 
   module Youtube
     def youtube(list)
-      '<div>Watch this:' +
-      list.each { |id| "<a href='https://www.youtube.com/watch?v=#{id}'>video</a>" }.join(' ') +
+      '<div>Watch this: ' +
+      list.map { |id| "<a href='https://www.youtube.com/watch?v=#{id}'>video</a>" }.join(' ') +
       '</div>'
     end
   end
