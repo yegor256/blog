@@ -12,8 +12,8 @@
       border-left: 4px solid #e52d27;
       clear: both;
       color: darken($green, 25);
-      height: 100px;
       margin-bottom: $em;
+      min-height: 100px;
       padding-left: $em;
 
       img {

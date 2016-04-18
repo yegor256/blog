@@ -14,6 +14,8 @@ keywords:
   - object constructor
   - object method vs constructor
 book: elegant-objects 2.2
+youtube:
+  - 9yjtsCK6Wdk
 ---
 
 Which line do you like more, the first or the second:
