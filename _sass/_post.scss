@@ -1,3 +1,30 @@
+.youtube {
+  @extend %unprintable;
+  font-family: $code-font;
+  margin-bottom: 2 * $em;
+  margin-top: 2 * $em;
+  text-align: left;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      border-left: 4px solid $green;
+      clear: both;
+      color: darken($green, 25);
+      margin-bottom: $em;
+      padding-left: $em;
+
+      img {
+        float: left;
+        height: 50px;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
 .buttons {
   @extend %unprintable;
 
