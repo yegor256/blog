@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-19T08:29:19+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Object Behavior Must Not Be Configurable</title><link href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" rel="alternate" type="text/html" title="Object Behavior Must Not Be Configurable" /><published>2016-04-19T00:00:00+00:00</published><updated>2016-04-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/19/object-must-not-be-configurable</id><content type="html" xml:base="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html">&lt;p&gt;Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-04-19T09:03:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Object Behavior Must Not Be Configurable</title><link href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" rel="alternate" type="text/html" title="Object Behavior Must Not Be Configurable" /><published>2016-04-19T00:00:00+00:00</published><updated>2016-04-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/19/object-must-not-be-configurable</id><content type="html" xml:base="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html">&lt;p&gt;Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects
 are mutable &amp;mdash; we &lt;strong&gt;configure&lt;/strong&gt; them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it&amp;#39;s abusive and disrespectful
-from a philosophical point of view? I can, but let&amp;#39;s take a look at
+from a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;philosophical&lt;/a&gt;
+point of view? I can, but let&amp;#39;s take a look at
 it from a practical perspective.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -154,9 +155,7 @@ going in this direction, there could be a few dozen configuration settings
 in that class. This may look very convenient and
 is a very typical pattern in Java world. For example,
 look at
-[]
-from Spring or
-[&lt;code&gt;JobConfiguration&lt;/code&gt;]
+&lt;a href=&quot;https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html&quot;&gt;&lt;code&gt;JobConf&lt;/code&gt;&lt;/a&gt;
 from Hadoop.
 This is how we will call our highly configurable &lt;code&gt;Page&lt;/code&gt;
 (I&amp;#39;m assuming &lt;code&gt;PageSettings&lt;/code&gt; is immutable):&lt;/p&gt;
@@ -169,10 +168,12 @@ This is how we will call our highly configurable &lt;code&gt;Page&lt;/code&gt;
     &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withEncodeAnyway&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;However, no matter how convenient it may look at first glance,
+&lt;p&gt;{However, no matter how convenient it may look at first glance,
 this approach is &lt;strong&gt;very wrong&lt;/strong&gt;. Mostly because it encourages us
 to make big and non-cohesive objects. They grow in size and become less
 testable, less maintainable and less readable.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Encapsulated properties must not be used to change the behavior of an object&lt;/aside&gt;
 
 &lt;p&gt;To prevent that from happening,
 I would suggest a simple rule here:
@@ -311,7 +312,8 @@ classes, each of which is rather small, easy to read and easy to reuse.&lt;/p&gt
 are mutable &amp;mdash; we configure them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it&amp;#39;s abusive and disrespectful
-from a philosophical point of view? I can, but let&amp;#39;s take a look at
+from a philosophical
+point of view? I can, but let&amp;#39;s take a look at
 it from a practical perspective.</summary></entry><entry><title>Java Annotations Are a Big Mistake</title><link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html" rel="alternate" type="text/html" title="Java Annotations Are a Big Mistake" /><published>2016-04-12T00:00:00+00:00</published><updated>2016-04-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/12/java-annotations-are-evil</id><content type="html" xml:base="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_annotation&quot;&gt;Annotations&lt;/a&gt;
 were introduced in Java 5, and we all got excited. Such a great
 instrument to make code shorter! No more Hibernate/Spring XML configuration
