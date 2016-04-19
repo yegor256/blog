@@ -165,12 +165,12 @@ class Page {
     try {
       html = new String(bytes, this.settings.getEncoding());
     } catch (UnsupportedEncodingException ex) {
-      if (!this.isEncodeAnyway()) {
+      if (!this.settings.isEncodeAnyway()) {
         throw ex;
       }
       html = new String(bytes, "UTF-8")
     }
-    if (html.isEmpty() && this.isAlwaysHtml()) {
+    if (html.isEmpty() && this.settings.isAlwaysHtml()) {
       html = "<html/>";
     }
     return html;
@@ -316,7 +316,7 @@ You may say that `AlwaysTextPage` will make two calls to the encapsulated
 `origin`, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That's true and this is by design. We don't want this
 duplicated HTTP roundtrip to happen. Let's introduce one more class,
-which will cache the page fetched:
+which will cache the page fetched (not thread-safe, but it's not important now):
 
 {% highlight java %}
 class OncePage implements Page {
