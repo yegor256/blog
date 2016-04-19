@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?91ffb69"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?91ffb69"/>
+    <link rel="shortcut icon" href="/favicon.ico?17e1166"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?17e1166"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?91ffb69"/>
-    <link rel="stylesheet" href="/css/icons.css?91ffb69"/>
+    <link rel="stylesheet" href="/css/layout.css?17e1166"/>
+    <link rel="stylesheet" href="/css/icons.css?17e1166"/>
     <link rel="canonical" href="http://www.yegor256.com/p/11/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/11/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 11)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?91ffb69"></script>
+    <script src="/js/global.js?17e1166"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;176</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;177</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -121,6 +121,65 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/11/07/how-immutability-helps.html">
+            How Immutability Helps
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-11-07T00:00:00+00:00">
+              7 November 2014
+            </time>
+          </li>
+          <li>
+            1609 words
+          </li>
+          <li>
+            
+            
+              
+                  6
+              
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/11/07/how-immutability-helps.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>In a few recent posts, including
+<a href="/2014/09/16/getters-and-setters-are-evil.html">&quot;Getters/Setters. Evil. Period.&quot;</a>,
+<a href="/2014/06/09/objects-should-be-immutable.html">&quot;Objects Should Be Immutable&quot;</a>, and
+<a href="/2014/10/03/di-containers-are-evil.html">&quot;Dependency Injection Containers are Code Polluters&quot;</a>,
+I universally labelled all mutable objects with &quot;setters&quot; (object methods starting with <code>set</code>) evil.
+My argumentation was based mostly on metaphors and abstract examples. Apparently,
+this wasn&#39;t convincing enough for many of you &mdash; I received a few requests
+asking to provide more specific and practical examples.</p>
+
+<p>Thus, in order to illustrate my strongly negative attitude to &quot;mutability via setters&quot;, I took
+an existing <a href="http://commons.apache.org/proper/commons-email/">commons-email</a> Java library from Apache
+and re-designed it my way, without setters and with &quot;object thinking&quot; in mind.
+I released my library as part of the <a href="http://www.jcabi.com">jcabi</a> family
+&mdash; <a href="http://email.jcabi.com">jcabi-email</a>. Let&#39;s see what benefits
+we get from a &quot;pure&quot; object-oriented and immutable approach, without getters.</p>
+
+      </div>
+      <p>
+        <a href="/2014/11/07/how-immutability-helps.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -643,65 +702,6 @@ on activities that don&#39;t produce results.</p>
       </div>
       <p>
         <a href="/2014/10/07/stop-chatting-start-coding.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/10/06/software-project-lifecycle.html">
-            Project Lifecycle in Teamed.io
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-10-06T00:00:00+00:00">
-              6 October 2014
-            </time>
-          </li>
-          <li>
-            1341 words
-          </li>
-          <li>
-            
-            
-              
-                  five
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/10/06/software-project-lifecycle.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>In addition to being a hands-on programmer, I&#39;m also co-founder and CTO of
-<a href="http://www.teamed.io">Teamed.io</a>, a custom software development company.
-I play the role of a technical and management leader in all projects
-we work with.</p>
-
-<figure class='badge'><a href='http://www.teamed.io'><img src='http://img.teamed.io/logo.svg' style='width:120px;max-width:100%;' alt='badge'/></a></figure>
-
-<p>I wrote this article for those who&#39;re interested in hiring me and/or
-my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to <a href="mailto:hire@teamed.io">work with us</a>.</p>
-
-<p>You will see below that our methods of
-software development <a href="/2014/04/17/how-xdsd-is-different.html">seriously differ</a>
-from what many other teams are using. I personally pay a lot of attention to quality
-of code and quality of the internal processes that connect our team.</p>
-
-      </div>
-      <p>
-        <a href="/2014/10/06/software-project-lifecycle.html">
           continue...
         </a>
       </p>

@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?91ffb69"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?91ffb69"/>
+    <link rel="shortcut icon" href="/favicon.ico?17e1166"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?17e1166"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?91ffb69"/>
-    <link rel="stylesheet" href="/css/icons.css?91ffb69"/>
+    <link rel="stylesheet" href="/css/layout.css?17e1166"/>
+    <link rel="stylesheet" href="/css/icons.css?17e1166"/>
     <link rel="canonical" href="http://www.yegor256.com/p/13/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/13/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 13)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?91ffb69"></script>
+    <script src="/js/global.js?17e1166"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;176</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;177</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -121,6 +121,68 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/09/09/restful-web-sites.html">
+            RESTful API and a Web Site in the Same URL
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-09-09T00:00:00+00:00">
+              9 September 2014
+            </time>
+          </li>
+          <li>
+            846 words
+          </li>
+          <li>
+            
+            
+              
+                  four
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/09/09/restful-web-sites.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>Look at GitHub RESTful API, for example. To get information
+about a repository you should make a GET request to
+<a href="https://api.github.com/repos/yegor256/rultor">api.github.com/repos/yegor256/rultor</a>.
+In response, you will get a JSON document with all the details of the
+<code>yegor256/rultor</code> repository. Try it, the URL doesn&#39;t require any authentication.</p>
+
+<p>To open the same repository in a nice HTML+CSS page, you should use
+a different URL: <a href="https://github.com/yegor256/rultor">github.com/yegor256/rultor</a>.
+The URL is different, the server-side is definitely different, but the
+nature of the data is exactly the same. The only thing that changes is
+a representation layer.</p>
+
+<p>In the first case, we get JSON; in the second &mdash; HTML.</p>
+
+<p>How about combining them? How about using the same URL and the same
+server-side processing mechanism for both of them? How about shifting the whole rendering task
+to the client-side (the browser) and letting the server work solely with
+the data?</p>
+
+      </div>
+      <p>
+        <a href="/2014/09/09/restful-web-sites.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -632,74 +694,6 @@ so much on code quality?</p>
       </div>
       <p>
         <a href="/2014/08/13/strict-code-quality-control.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/08/03/cacheable-java-annotation.html">
-            Cache Java Method Results
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-08-03T00:00:00+00:00">
-              3 August 2014
-            </time>
-          </li>
-          <li>
-            309 words
-          </li>
-          <li>
-            
-            
-              
-                  two
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/08/03/cacheable-java-annotation.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <figure class='badge'><a href='http://aspects.jcabi.com'><img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
-
-<p>Say, you have a method that takes time to execute and you want
-its result to be cached. There are <a href="http://www.coderanch.com/how-to/java/CachingStrategies">many solutions</a>,
-including
-<a href="http://commons.apache.org/proper/commons-jcs/">Apache Commons JCS</a>,
-<a href="http://www.ehcache.org">Ehcache</a>,
-<a href="https://jcp.org/en/jsr/detail?id=107">JSR 107</a>,
-<a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Caching</a>
-and many others.</p>
-
-<p><a href="http://aspects.jcabi.com/annotation-cacheable.html">jcabi-aspects</a> offers a very simple one,
-based on AOP aspects and Java6
-<a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.aspects.Cacheable</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">lifetime</span> <span class="o">=</span> <span class="mi">5</span><span class="o">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MINUTES</span><span class="o">)</span>
-  <span class="n">String</span> <span class="nf">load</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">&quot;http://google.com&quot;</span><span class="o">).</span><span class="na">getContent</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>The result of <code>load()</code> method will be cached in memory for five minutes.</p>
-
-      </div>
-      <p>
-        <a href="/2014/08/03/cacheable-java-annotation.html">
           continue...
         </a>
       </p>

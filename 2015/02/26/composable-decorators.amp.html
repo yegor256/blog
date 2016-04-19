@@ -74,7 +74,8 @@ really care where the text is coming from. It <em>delegates</em> text reading to
 the encapsulated instance of <code>Text</code>. How this encapsulated object will
 deal with the text and where it will get it doesn&#39;t concern <code>PrintableText</code>.</p>
 
-<p>Let&#39;s continue and try to create an implementation of <code>Text</code>
+<p>Let&#39;s <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
+and try to create an implementation of <code>Text</code>
 that will capitalize all letters in the text:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">AllCapsText</span> <span class="kd">implements</span> <span class="n">Text</span> <span class="o">{</span>
