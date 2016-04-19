@@ -20,7 +20,8 @@ Using object properties as configuration parameters is a very common mistake we 
 are mutable &mdash; we **configure** them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it's abusive and disrespectful
-from a philosophical point of view? I can, but let's take a look at
+from a [philosophical]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+point of view? I can, but let's take a look at
 it from a practical perspective.
 
 <!--more-->
@@ -184,9 +185,7 @@ going in this direction, there could be a few dozen configuration settings
 in that class. This may look very convenient and
 is a very typical pattern in Java world. For example,
 look at
-[]
-from Spring or
-[`JobConfiguration`]
+[`JobConf`](https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html)
 from Hadoop.
 This is how we will call our highly configurable `Page`
 (I'm assuming `PageSettings` is immutable):
