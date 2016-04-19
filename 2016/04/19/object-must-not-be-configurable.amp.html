@@ -148,12 +148,12 @@ to introduce a new class, which we will call <code>PageSettings</code>:</p>
     <span class="k">try</span> <span class="o">{</span>
       <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">getEncoding</span><span class="o">());</span>
     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">isEncodeAnyway</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isEncodeAnyway</span><span class="o">())</span> <span class="o">{</span>
         <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
       <span class="o">}</span>
       <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
     <span class="o">}</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">isAlwaysHtml</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isAlwaysHtml</span><span class="o">())</span> <span class="o">{</span>
       <span class="n">html</span> <span class="o">=</span> <span class="s">&quot;&lt;html/&gt;&quot;</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
@@ -286,7 +286,7 @@ provided encoding:</p>
 <code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That&#39;s true and this is by design. We don&#39;t want this
 duplicated HTTP roundtrip to happen. Let&#39;s introduce one more class,
-which will cache the page fetched:</p>
+which will cache the page fetched (not thread-safe, but it&#39;s not important now):</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">OncePage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
