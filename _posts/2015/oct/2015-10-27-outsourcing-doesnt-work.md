@@ -14,6 +14,8 @@ keywords:
   - why outsourcing is bad
   - why does outsourcing fail
   - software outsourcing
+youtube:
+  - 9j5pq71BS5U
 ---
 
 I want to create an iPhone app for my web service, but I don't have
