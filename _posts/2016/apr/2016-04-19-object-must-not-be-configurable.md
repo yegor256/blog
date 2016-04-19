@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object Behavior Must Not Be Configurable"
-date: 2016-04-10
+date: 2016-04-19
 place: New York, NY
 tags: java oop
 description:
@@ -24,6 +24,8 @@ from a philosophical point of view? I can, but let's take a look at
 it from a practical perspective.
 
 <!--more-->
+
+{% picture /images/2016/04/the-take.jpg 0 The Take (2009) by David Drury %}
 
 Let's say there is a class that is supposed to read a web page and
 return its content:
