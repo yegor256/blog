@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/webit-2016.png" class="future-talk" alt="WEBIT.Festival 2016"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128)<br/>
-Sophia, Bulgaria<br/>
-20 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/jpoint-2016.png" class="future-talk" alt="JPoint 2016"/>
 **ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
@@ -191,6 +184,15 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/webit-2016.png" class="past-talk" alt="WEBIT.Festival 2016"/>
+Continuous Integration May Have Negative Effects;
+[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
+Sophia, Bulgaria;
+20 April 2016;
+[photos](...),
+[video](...).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/13041098_10209283226707635_7567818544017623094_o.jpg" class="past-talk" alt="NextBuild 2016"/>
