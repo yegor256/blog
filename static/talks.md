@@ -186,13 +186,13 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/webit-2016.png" class="past-talk" alt="WEBIT.Festival 2016"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 Continuous Integration May Have Negative Effects;
 [WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
 Sophia, Bulgaria;
 20 April 2016;
-[photos](...),
-[video](...).
+[photos](https://www.facebook.com/yegor256/posts/10209310350105703),
+[video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/13041098_10209283226707635_7567818544017623094_o.jpg" class="past-talk" alt="NextBuild 2016"/>
