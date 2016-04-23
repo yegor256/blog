@@ -22,7 +22,8 @@ are on the top.
 
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."
-&mdash; anonymous
+&mdash;
+anonymous
 
 "You are great at writing code that is painful to understand, use and explain."
 &mdash;
@@ -42,6 +43,10 @@ bedroom and play with your dick."
 you would be imprisoned for a lifetime by me."
 &mdash;
 [David R.](http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html#comment-2376244941)
+
+"You're a smug, pontificating prick."
+&mdash;
+anonymous
 
 "Are you an idiot?"
 &mdash;
