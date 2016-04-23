@@ -228,7 +228,7 @@ Page page = new NeverEmptyPage(
 )
 String html = new AlwaysTextPage(
   new TextPage(page, "ISO_8859_1")
-  "UTF-8"
+  page
 ).html();
 {% endhighlight %}
 
