@@ -238,7 +238,7 @@ its design a bit):
 {% highlight java %}
 class DefaultPage implements Page {
   private final String uri;
-  Page(final String address) {
+  DefaultPage(final String address) {
     this.uri = address;
   }
   @Override
@@ -258,7 +258,7 @@ provided encoding:
 class TextPage {
   private final Page origin;
   private final String encoding;
-  Page(final Page page, final String enc) {
+  TextPage(final Page page, final String enc) {
     this.origin = page;
     this.encoding = enc;
   }
@@ -276,7 +276,7 @@ Now the `NeverEmptyPage`:
 {% highlight java %}
 class NeverEmptyPage implements Page {
   private final Page origin;
-  Page(final Page page) {
+  NeverEmptyPage(final Page page) {
     this.origin = page;
   }
   @Override
@@ -296,7 +296,7 @@ And finally the `AlwaysTextPage`:
 class AlwaysTextPage {
   private final TextPage origin;
   private final Page source;
-  Page(final TextPage page, final Page src) {
+  AlwaysTextPage(final TextPage page, final Page src) {
     this.origin = page;
     this.source = src;
   }
@@ -323,7 +323,7 @@ class OncePage implements Page {
   private final Page origin;
   private final AtomicReference<byte[]> cache =
     new AtomicReference<>;
-  Page(final Page page) {
+  OncePage(final Page page) {
     this.origin = page;
   }
   @Override
