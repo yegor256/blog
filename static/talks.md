@@ -56,14 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/jpoint-2016.png" class="future-talk" alt="JPoint 2016"/>
-**ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
-[Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
-[JPoint 2016](http://javapoint.ru/en/)<br/>
-Moscow, Russia<br/>
-22-24 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/jet-2016.png" class="future-talk" alt="JET Conference 2016"/>
 **An Immutable Object-Oriented Web Framework**<br/>
 [JET Conference](http://jetconf.by/#/yegor_bugayenko)<br/>
@@ -160,7 +152,25 @@ Swansea, UK<br/>
 
 ### 2016
 
-<!-- http://www.slideshare.net/YegorBugayenko/orm-is-offensive -->
+<div class="talk-event"/>
+<img src="/images/2016/jpoint-2016.png" class="past-talk" alt="JPoint 2016"/>
+ORM - это обидно (ORM is an Offensive Anti-Pattern);
+[JPoint 2016](http://javapoint.ru/en/);
+Moscow, Russia;
+22-24 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
+[photos](...),
+[video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
+
+<div class="talk-event"/>
+<img src="/images/2016/jpoint-2016.png" class="past-talk" alt="JPoint 2016 Students Day"/>
+Объектно-Ориентированное Вранье (Object-Oriented Lies);
+[Student Day](http://students.javapoint.ru/talks/bugaenko/)
+Moscow, Russia;
+22-24 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
+[photos](...),
+[video](...).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
