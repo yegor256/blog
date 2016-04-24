@@ -153,24 +153,24 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/jpoint-2016.png" class="past-talk" alt="JPoint 2016"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13063089_10209338175081310_6035560472282098948_o.jpg" class="past-talk" alt="JPoint 2016"/>
 ORM - это обидно (ORM is an Offensive Anti-Pattern);
 [JPoint 2016](http://javapoint.ru/en/);
 Moscow, Russia;
 22-24 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
 
 <div class="talk-event"/>
-<img src="/images/2016/jpoint-2016.png" class="past-talk" alt="JPoint 2016 Students Day"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpa1/t31.0-8/13040994_10209338175241314_3415805164088235720_o.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
 Объектно-Ориентированное Вранье (Object-Oriented Lies);
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)
 Moscow, Russia;
 22-24 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
-[photos](...),
-[video](...).
+[photos](https://www.facebook.com/yegor256/posts/10209338227802628),
+[video](https://www.youtube.com/watch?v=F4N25kZ2zQU).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
