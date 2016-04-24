@@ -160,6 +160,8 @@ Swansea, UK<br/>
 
 ### 2016
 
+<!-- http://www.slideshare.net/YegorBugayenko/orm-is-offensive -->
+
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 Continuous Integration May Have Negative Effects;
