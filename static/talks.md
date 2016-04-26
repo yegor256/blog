@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/ntpm.jpg" class="future-talk" alt="NTPM 2016"/>
-**Compromise-Free Definition of Done in Distributed Teams**<br/>
-[New Trends in Project Management](http://ntpm.pl/)<br/>
-Gdynia, Poland<br/>
-26 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/baltic-devops.png" class="future-talk" alt="Baltic DevOps 2016"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/)<br/>
@@ -146,11 +139,19 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/jet-2016.png" class="past-talk" alt="JET Conference 2016"/>
+<img src="/images/2016/ntpm.jpg" class="past-talk" alt="NTPM 2016"/>
+Compromise-Free Definition of Done in Distributed Teams;
+[New Trends in Project Management](http://ntpm.pl/);
+Gdynia, Poland;
+26 April 2016
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/13063166_10209351798541888_3660187446615623482_o.jpg" class="past-talk" alt="JET Conference 2016"/>
 An Immutable Object-Oriented Web Framework;
 [JET Conference](http://jetconf.by/#/yegor_bugayenko);
 Minsk, Belarus;
-25 April 2016
+25 April 2016;
+[photos](https://www.facebook.com/yegor256/posts/10209351820262431).
 
 <div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13063089_10209338175081310_6035560472282098948_o.jpg" class="past-talk" alt="JPoint 2016"/>
