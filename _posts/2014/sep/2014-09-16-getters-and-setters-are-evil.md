@@ -19,6 +19,7 @@ translated:
 book: elegant-objects 3.5
 youtube:
   - WSgP85kr6eU
+  - F4N25kZ2zQU
 ---
 
 There is an old debate, started in 2003 by Allen Holub

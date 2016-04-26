@@ -17,6 +17,7 @@ keywords:
   - continuous integration
 youtube:
   - 2a2nWELIk-Y
+  - gL4XwP-EBOg
 ---
 
 Continuous integration is easy. Download Jenkins, install,  create a job, click

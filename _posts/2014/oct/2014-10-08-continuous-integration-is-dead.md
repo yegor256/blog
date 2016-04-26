@@ -18,6 +18,7 @@ keywords:
   - alternative to continuous integration
 youtube:
   - 3IXk5yEJMIs
+  - gL4XwP-EBOg
 ---
 
 A few days ago, my article

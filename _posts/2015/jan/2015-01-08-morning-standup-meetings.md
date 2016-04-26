@@ -21,6 +21,7 @@ translated:
 youtube:
   - ibT5oKToMoQ
   - dE0_j4Kk6jo
+  - pt9uHp35fwM
 ---
 
 A stand-up meeting (or simply "stand-up") is
