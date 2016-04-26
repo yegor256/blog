@@ -143,7 +143,10 @@ Swansea, UK<br/>
 Compromise-Free Definition of Done in Distributed Teams;
 [New Trends in Project Management](http://ntpm.pl/);
 Gdynia, Poland;
-26 April 2016
+26 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
+[photos](...),
+[video](https://www.youtube.com/watch?v=pt9uHp35fwM).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/13063166_10209351798541888_3660187446615623482_o.jpg" class="past-talk" alt="JET Conference 2016"/>
