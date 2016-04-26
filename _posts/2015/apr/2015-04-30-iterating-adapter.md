@@ -16,7 +16,9 @@ keywords:
 ---
 
 [Iterator](http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html)
-is one of the fundamental Java interfaces, introduced in Java 1.2. It is supposed
+is one of the fundamental Java
+[interfaces]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}),
+introduced in Java 1.2. It is supposed
 to be very simple; however, in my experience, many Java developers don't understand
 how to implement a custom one, which should iterate a stream of data
 coming from some other source. In other words, it becomes an **adapter** of

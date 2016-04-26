@@ -176,6 +176,7 @@ final String[] parts = new String.Split(
 
 To conclude, I recommend you think twice every time you add
 a new utility method to the interface/class. Try to avoid utility methods as much
-as possible, and use decorators instead. An ideal interface should contain
+as possible, and use decorators instead. An
+[ideal interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) should contain
 only methods that you absolutely cannot remove. Everything else should be
 done through composable decorators.
