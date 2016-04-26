@@ -207,7 +207,7 @@ Here is how:</p>
 <span class="o">)</span>
 <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AlwaysTextPage</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
-  <span class="s">&quot;UTF-8&quot;</span>
+  <span class="n">page</span>
 <span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
 
 <p>Here is how our <code>DefaultPage</code> would look (yes, I had to change
@@ -215,7 +215,7 @@ its design a bit):</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">DefaultPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">DefaultPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
   <span class="o">}</span>
   <span class="nd">@Override</span>
@@ -233,7 +233,7 @@ provided encoding:</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">TextPage</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">TextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
     <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
   <span class="o">}</span>
@@ -249,7 +249,7 @@ provided encoding:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">NeverEmptyPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">NeverEmptyPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
   <span class="o">}</span>
   <span class="nd">@Override</span>
@@ -267,7 +267,7 @@ provided encoding:</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">AlwaysTextPage</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">TextPage</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">source</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">TextPage</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">AlwaysTextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">TextPage</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
     <span class="k">this</span><span class="o">.</span><span class="na">source</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
   <span class="o">}</span>
@@ -292,7 +292,7 @@ which will cache the page fetched (not thread-safe, but it&#39;s not important n
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="kt">byte</span><span class="o">[]&gt;</span> <span class="n">cache</span> <span class="o">=</span>
     <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">OncePage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
   <span class="o">}</span>
   <span class="nd">@Override</span>

@@ -388,7 +388,8 @@ and decorate him with your own implementation (a.k.a.
   <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>Make sure that this class is implementing the same interface
+<p>Make sure that this class is implementing the same
+<a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
 as the original one: <code>Status</code>. The instance of <code>HTTPStatus</code> will
 be passed into him through the constructor and encapsulated. Then every
 call will be intercepted and implemented in a different way, if necessary.

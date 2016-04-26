@@ -142,7 +142,8 @@ method <code>run()</code> that is not supposed to throw anything. That&#39;s why
 to catch everything inside the method and rethrow checked
 exceptions as unchecked.</p>
 
-<p>If all methods in all Java interfaces would be declared either as
+<p>If all methods in all Java
+<a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a> would be declared either as
 &quot;safe&quot; (<code>throws</code> nothing) or &quot;unsafe&quot; (<code>throws Exception</code>), everything would
 become logical and clear. If you want to stay &quot;safe,&quot; take responsibility
 for failure handling. Otherwise, be &quot;unsafe&quot; and let your users worry about
