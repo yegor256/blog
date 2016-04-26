@@ -56,13 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/jet-2016.png" class="future-talk" alt="JET Conference 2016"/>
-**An Immutable Object-Oriented Web Framework**<br/>
-[JET Conference](http://jetconf.by/#/yegor_bugayenko)<br/>
-Minsk, Belarus<br/>
-25 April 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/ntpm.jpg" class="future-talk" alt="NTPM 2016"/>
 **Compromise-Free Definition of Done in Distributed Teams**<br/>
 [New Trends in Project Management](http://ntpm.pl/)<br/>
@@ -151,6 +144,13 @@ Swansea, UK<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/jet-2016.png" class="past-talk" alt="JET Conference 2016"/>
+An Immutable Object-Oriented Web Framework;
+[JET Conference](http://jetconf.by/#/yegor_bugayenko);
+Minsk, Belarus;
+25 April 2016
 
 <div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13063089_10209338175081310_6035560472282098948_o.jpg" class="past-talk" alt="JPoint 2016"/>

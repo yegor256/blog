@@ -246,7 +246,8 @@ table, and `Post` will represent the row.
 
 As I also mentioned in that [article]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 every object should work by contract
-and implement an interface. Let's start our design with two interfaces.
+and implement an interface. Let's start our design with two
+[interfaces]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}).
 Of course, our objects will be
 [immutable]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}).
 Here is how `Posts` would look:
