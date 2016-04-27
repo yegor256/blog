@@ -19,6 +19,9 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
 book: elegant-objects 3.2
+youtube:
+  - psrp3TtaYYI
+  - D0dqC_3Bch8
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods
@@ -53,8 +56,6 @@ Indeed, this a very convenient technique!?
 
 However, in an object-oriented world, utility classes are considered a very bad
 (some even may say "terrible") practice.
-
-{% youtube psrp3TtaYYI video-left %}
 
 There have been many discussions of this subject; to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,

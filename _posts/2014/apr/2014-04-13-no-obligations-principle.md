@@ -15,6 +15,8 @@ keywords:
   - risk management
   - micro management
   - project responsibility
+youtube:
+  - qRZYJGYdrwk
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

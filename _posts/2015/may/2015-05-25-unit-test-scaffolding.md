@@ -14,6 +14,8 @@ keywords:
   - unit testing mocks
   - unit testing stubs
   - unit testing of static
+youtube:
+  - l6MpCBzwDbg
 ---
 
 When I start to repeat myself in unit test methods by creating

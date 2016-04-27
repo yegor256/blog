@@ -14,6 +14,8 @@ keywords:
   - test planning
   - test plan
   - test script
+youtube:
+  - qRZYJGYdrwk
 ---
 
 The traditional understanding of a software defect (aka "bug") is that it is

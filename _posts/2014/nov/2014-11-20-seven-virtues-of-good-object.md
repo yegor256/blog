@@ -17,6 +17,8 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
 book: elegant-objects 2.3
+youtube:
+  - WSgP85kr6eU
 ---
 
 Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
@@ -413,7 +415,8 @@ final class OnlyValidStatus implements Status {
 }
 {% endhighlight %}
 
-Make sure that this class is implementing the same interface
+Make sure that this class is implementing the same
+[interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 as the original one: `Status`. The instance of `HTTPStatus` will
 be passed into him through the constructor and encapsulated. Then every
 call will be intercepted and implemented in a different way, if necessary.

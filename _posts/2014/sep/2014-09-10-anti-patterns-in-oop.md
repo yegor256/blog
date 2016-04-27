@@ -13,6 +13,10 @@ keywords:
   - anti-patterns and worst practices
   - anti-patterns java
   - anti-patterns in object-oriented design
+youtube:
+  - WSgP85kr6eU
+  - WpP4rIhh5e4
+  - DEqcn4-freM
 ---
 
 Here they come:

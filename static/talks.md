@@ -56,63 +56,6 @@ give them some feedback, at least here, on the blog &mdash;
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/nextbuild-2016.png" class="future-talk" alt="NextBuild 2016"/>
-**Meetings Make Us Less Bug Tolerant, Which Is Bad**<br/>
-[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
-Eindhoven, Netherlands<br/>
-16 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/webit-2016.png" class="future-talk" alt="WEBIT.Festival 2016"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128)<br/>
-Sophia, Bulgaria<br/>
-20 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/jpoint-2016.png" class="future-talk" alt="JPoint 2016"/>
-**ORM is an Offensive Anti-Pattern** and **Объектно-Ориентированное Вранье** in
-[Student Day](http://students.javapoint.ru/talks/bugaenko/)<br/>
-[JPoint 2016](http://javapoint.ru/en/)<br/>
-Moscow, Russia<br/>
-22-24 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/dotw-2016.png" class="future-talk" alt="Delivery of Things World 2016"/>
-**Problems with Continuous Integration**<br/>
-[Delivery of Things World 2016](http://deliveryofthingsworld.com/en/speakers/)<br/>
-Berlin, Germany<br/>
-24 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/jet-2016.png" class="future-talk" alt="JET Conference 2016"/>
-**An Immutable Object-Oriented Web Framework**<br/>
-[JET Conference](http://jetconf.by/#/yegor_bugayenko)<br/>
-Minsk, Belarus<br/>
-25 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/ntpm.jpg" class="future-talk" alt="NTPM 2016"/>
-**Compromise-Free Definition of Done in Distributed Teams**<br/>
-[New Trends in Project Management](http://ntpm.pl/)<br/>
-Gdynia, Poland<br/>
-26 April 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/beyond-2016.png" class="future-talk" alt="Beyond20 2016"/>
-**The Potential Pitfalls of Continuous Integration**<br/>
-[Beyond20'16](http://www.beyond20conference.com/sessions/the-potential-pitfalls-of-continuous-integration/)<br/>
-Washington, USA<br/>
-2 May 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/agile-and-beyond-2016.png" class="future-talk" alt="Agile &amp; Beyond 2016"/>
-**How XDSD Achieves Quality Without Meetings and With Incomplete Deliverables**<br/>
-[Agile &amp; Beyond](http://www.agileandbeyond.com/2016/)<br/>
-Ypsilanti, MI, USA<br/>
-5 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/baltic-devops.png" class="future-talk" alt="Baltic DevOps 2016"/>
 **Continuous Integration May Have Negative Effects**<br/>
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/)<br/>
@@ -196,7 +139,64 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/agileee-2016.png" class="past-talk" alt="AgileEE 2016"/>
+<img src="/images/2016/ntpm.jpg" class="past-talk" alt="NTPM 2016"/>
+Compromise-Free Definition of Done in Distributed Teams;
+[New Trends in Project Management](http://ntpm.pl/);
+Gdynia, Poland;
+26 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
+[photos](...),
+[video](https://www.youtube.com/watch?v=pt9uHp35fwM).
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/13063166_10209351798541888_3660187446615623482_o.jpg" class="past-talk" alt="JET Conference 2016"/>
+An Immutable Object-Oriented Web Framework;
+[JET Conference](http://jetconf.by/#/yegor_bugayenko);
+Minsk, Belarus;
+25 April 2016;
+[photos](https://www.facebook.com/yegor256/posts/10209351820262431).
+
+<div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13063089_10209338175081310_6035560472282098948_o.jpg" class="past-talk" alt="JPoint 2016"/>
+ORM - это обидно (ORM is an Offensive Anti-Pattern);
+[JPoint 2016](http://javapoint.ru/en/);
+Moscow, Russia;
+22-24 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
+[photos](https://www.facebook.com/yegor256/posts/10209338227802628),
+[video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
+
+<div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpa1/t31.0-8/13040994_10209338175241314_3415805164088235720_o.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
+Объектно-Ориентированное Вранье (Object-Oriented Lies);
+[Student Day](http://students.javapoint.ru/talks/bugaenko/)
+Moscow, Russia;
+22-24 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
+[photos](https://www.facebook.com/yegor256/posts/10209338227802628),
+[video](https://www.youtube.com/watch?v=F4N25kZ2zQU).
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
+Continuous Integration May Have Negative Effects;
+[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
+Sophia, Bulgaria;
+20 April 2016;
+[photos](https://www.facebook.com/yegor256/posts/10209310350105703),
+[video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/13041098_10209283226707635_7567818544017623094_o.jpg" class="past-talk" alt="NextBuild 2016"/>
+Blame the Project;
+[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
+Eindhoven, Netherlands;
+16 April 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
+[photos](https://www.facebook.com/yegor256/posts/10209283233547806),
+[video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12987001_10209222308424716_7689199378248269811_n.jpg?oh=c937a25fe62c84ea9ca7d3be522068a0&oe=57BA3C10" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat To Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;

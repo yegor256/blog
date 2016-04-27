@@ -15,6 +15,9 @@ keywords:
   - java annotations runtime
   - java annotations tutorial
   - java annotations list
+youtube:
+  - oV6Utb5Jows
+  - WSgP85kr6eU
 ---
 
 [Annotations](https://en.wikipedia.org/wiki/Java_annotation)

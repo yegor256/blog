@@ -15,6 +15,8 @@ keywords:
   - java close stream in finally
   - java close stream try catch
 book: elegant-objects 2.6
+youtube:
+  - o3aNJX7AP3M
 ---
 
 There is a very typical mistake in pre-Java7 "try/finally" scenario,

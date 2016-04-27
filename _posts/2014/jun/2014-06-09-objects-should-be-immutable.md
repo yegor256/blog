@@ -17,6 +17,8 @@ keywords:
   - java immutable value object
   - java mutable immutable object
 book: elegant-objects 2.6
+youtube:
+  - KwP7Ay9Z-hc
 ---
 
 In object-oriented programming, an object is

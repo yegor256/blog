@@ -1,3 +1,29 @@
+.youtube {
+  @extend %unprintable;
+  margin-bottom: 2 * $em;
+  margin-top: 2 * $em;
+  text-align: left;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      border-left: 4px solid #e52d27;
+      clear: both;
+      margin-bottom: $em;
+      min-height: 80px;
+      padding-left: $em;
+
+      img {
+        float: left;
+        height: 80px;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
 .buttons {
   @extend %unprintable;
 

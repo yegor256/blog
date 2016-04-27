@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object Behavior Must Not Be Configurable"
-date: 2016-04-10
+date: 2016-04-19
 place: New York, NY
 tags: java oop
 description:
@@ -20,10 +20,13 @@ Using object properties as configuration parameters is a very common mistake we 
 are mutable &mdash; we **configure** them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it's abusive and disrespectful
-from a philosophical point of view? I can, but let's take a look at
+from a [philosophical]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+point of view? I can, but let's take a look at
 it from a practical perspective.
 
 <!--more-->
+
+{% picture /images/2016/04/the-take.jpg 0 The Take (2009) by David Drury %}
 
 Let's say there is a class that is supposed to read a web page and
 return its content:
@@ -162,12 +165,12 @@ class Page {
     try {
       html = new String(bytes, this.settings.getEncoding());
     } catch (UnsupportedEncodingException ex) {
-      if (!this.isEncodeAnyway()) {
+      if (!this.settings.isEncodeAnyway()) {
         throw ex;
       }
       html = new String(bytes, "UTF-8")
     }
-    if (html.isEmpty() && this.isAlwaysHtml()) {
+    if (html.isEmpty() && this.settings.isAlwaysHtml()) {
       html = "<html/>";
     }
     return html;
@@ -182,9 +185,7 @@ going in this direction, there could be a few dozen configuration settings
 in that class. This may look very convenient and
 is a very typical pattern in Java world. For example,
 look at
-[]
-from Spring or
-[`JobConfiguration`]
+[`JobConf`](https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html)
 from Hadoop.
 This is how we will call our highly configurable `Page`
 (I'm assuming `PageSettings` is immutable):
@@ -199,10 +200,12 @@ String html = new Page(
 ).html();
 {% endhighlight %}
 
-However, no matter how convenient it may look at first glance,
+{However, no matter how convenient it may look at first glance,
 this approach is **very wrong**. Mostly because it encourages us
 to make big and non-cohesive objects. They grow in size and become less
 testable, less maintainable and less readable.
+
+{% quote Encapsulated properties must not be used to change the behavior of an object %}
 
 To prevent that from happening,
 I would suggest a simple rule here:
@@ -225,7 +228,7 @@ Page page = new NeverEmptyPage(
 )
 String html = new AlwaysTextPage(
   new TextPage(page, "ISO_8859_1")
-  "UTF-8"
+  page
 ).html();
 {% endhighlight %}
 
@@ -235,7 +238,7 @@ its design a bit):
 {% highlight java %}
 class DefaultPage implements Page {
   private final String uri;
-  Page(final String address) {
+  DefaultPage(final String address) {
     this.uri = address;
   }
   @Override
@@ -255,7 +258,7 @@ provided encoding:
 class TextPage {
   private final Page origin;
   private final String encoding;
-  Page(final Page page, final String enc) {
+  TextPage(final Page page, final String enc) {
     this.origin = page;
     this.encoding = enc;
   }
@@ -273,7 +276,7 @@ Now the `NeverEmptyPage`:
 {% highlight java %}
 class NeverEmptyPage implements Page {
   private final Page origin;
-  Page(final Page page) {
+  NeverEmptyPage(final Page page) {
     this.origin = page;
   }
   @Override
@@ -293,7 +296,7 @@ And finally the `AlwaysTextPage`:
 class AlwaysTextPage {
   private final TextPage origin;
   private final Page source;
-  Page(final TextPage page, final Page src) {
+  AlwaysTextPage(final TextPage page, final Page src) {
     this.origin = page;
     this.source = src;
   }
@@ -313,14 +316,14 @@ You may say that `AlwaysTextPage` will make two calls to the encapsulated
 `origin`, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That's true and this is by design. We don't want this
 duplicated HTTP roundtrip to happen. Let's introduce one more class,
-which will cache the page fetched:
+which will cache the page fetched (not thread-safe, but it's not important now):
 
 {% highlight java %}
 class OncePage implements Page {
   private final Page origin;
   private final AtomicReference<byte[]> cache =
     new AtomicReference<>;
-  Page(final Page page) {
+  OncePage(final Page page) {
     this.origin = page;
   }
   @Override

@@ -4,7 +4,7 @@ set -e
 DIR=$(dirname $0)
 cd "${DIR}/.."
 PORT=4000
-jekyll serve --port=$PORT --host=localhost &
+jekyll serve --port=$PORT --host=localhost --trace &
 PID=$!
 trap 'kill -9 $PID; rm -rf _site' EXIT
 

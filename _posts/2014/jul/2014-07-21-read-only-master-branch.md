@@ -15,9 +15,10 @@ keywords:
   - continous deployment
   - continuous delivery preflight builds
   - continuous integration
+youtube:
+  - 2a2nWELIk-Y
+  - gL4XwP-EBOg
 ---
-
-{% youtube 2a2nWELIk-Y video-left %}
 
 Continuous integration is easy. Download Jenkins, install,  create a job, click
 the button, and get a nice email saying that your build is broken (I assume your

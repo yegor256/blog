@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Why InputStream Design Is Wrong"
-date: 2016-04-10
+date: 2016-04-26
 place: Washington, D.C.
 tags: java oop
-description:
+description: |
   Class InputStream in Java has three methods read(),
   this is what I think is very wrong. Not only in
   this class, but in general in OOP.
@@ -28,6 +28,8 @@ its authors wanted to give us extra functionality, they should have
 created supplementary "smart" classes.
 
 <!--more-->
+
+{% picture /images/2016/04/a-serious-man.jpg 0 A Serious Man (2009) by Coen Brothers %}
 
 This is how it looks now:
 

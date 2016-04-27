@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "What To Worry About In Convertible Notes?"
+title: "What to Worry About in Convertible Notes?"
 date: 2015-10-20
 place: Palo Alto, CA
 tags: management startup
 description:
-  ...
+  Convertible notes is a popular instrument of seed
+  investments, used by early-stage investors. Here is what
+  you should pay attention to, as a founder.
 keywords:
   - convertible notes
   - convertible notes examples
@@ -14,7 +16,8 @@ keywords:
   - convertible notes vs safe
 ---
 
-"Convertible Notes" is what you most probably will hear when
+"[Convertible Notes](https://en.wikipedia.org/wiki/Convertible_bond)"
+is what you most probably will hear when
 getting first money for your first startup. They will give you
 cash asking to give them that convertible notes (or SAFE,
 which is very similar). Convertible notes are just a few pages of paper
@@ -82,7 +85,9 @@ _terms and conditions of which my lawyer will discuss with you_."
 
 If we're talking about $500K, you will have no problem meeting that lawyers.
 However, if it's just $25K... To make life easier for smaller investments,
-convertible notes were invented. They are **not equity**. Investors that
+convertible notes were invented (well, there were
+[a few other reasons](http://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
+They are **not equity**. Investors that
 have convertible notes can't vote. They can't sell convertible notes and they
 can't get any profit from the company. So, what they are for then? I'll explain
 in a minute. My goal so far was to show why young companies don't want
@@ -185,7 +190,40 @@ minus, say, 50% **discount**.
 
 Again, as a founder, you should insist on "no discount" convertible notes. Will
 I agree? Probably not. Especially if there is no cap. Try to negotiate
-a smaller discount. Maybe 10%, just give me a feeling of appreciation.
+a smaller discount. Maybe 10%, just to give me a feeling of appreciation.
 
-##
+## The Interest
+
+Remember that by signing convertibles notes and sending you cash, investors
+are basically **lending** you money. You owe that $25K to them. And some
+of them will ask for an interest. And the interest may be payable annually.
+Say, 5% per year. That means that you will have to send them a check
+for $1,250 every year, no matter how your startup will be doing.
+
+It's only logical for them, but is totally against you. Do not agree
+to pay any interest.
+
+## The Maturity Date
+
+Some investors are ready to wait until that "equity financing" moment for
+as much as necessary. Others may demand you to pay them back on so called
+"maturity date". Pay cash, with the interest. This date will usually be somewhere
+far ahead, like "three years from now". But, don't feel too relaxed, this
+day will come faster than you expect.
+
+Try not to give convertible notes with a maturity date to anyone.
+
+[SAFE](https://blog.ycombinator.com/announcing-the-safe-a-replacement-for-convertible-notes)
+is a form of convertible notes, introduced by [YC](http://www.ycombinator.com),
+which doesn't have a maturity date at all. This technically means that
+you don't have to pay them anything back. Well, there is only one situation
+when you have to pay &mdash; in case your startup dies. In that case, you will
+have to pay investors as much as you can, using the cash you still have
+on your bank account. Most likely there will be nothing, so, don't worry.
+
+<hr/>
+
+There are other less usual or less important elements of convertible notes, which
+you most probably won't ever see or should not worry about, like pro-data rights,
+for example. Just focus on the things listed above and you will be good.
 
