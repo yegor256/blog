@@ -139,13 +139,13 @@ Swansea, UK<br/>
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/ntpm.jpg" class="past-talk" alt="NTPM 2016"/>
+<img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13087150_10209365962015966_8903067194885253135_o.jpg" class="past-talk" alt="NTPM 2016"/>
 Compromise-Free Definition of Done in Distributed Teams;
 [New Trends in Project Management](http://ntpm.pl/);
 Gdynia, Poland;
 26 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
-[photos](...),
+[photos](https://www.facebook.com/yegor256/posts/10209365963416001),
 [video](https://www.youtube.com/watch?v=pt9uHp35fwM).
 
 <div class="talk-event"/>
