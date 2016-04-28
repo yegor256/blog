@@ -140,7 +140,7 @@ Swansea, UK<br/>
 
 <div class="talk-event"/>
 <img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13087150_10209365962015966_8903067194885253135_o.jpg" class="past-talk" alt="NTPM 2016"/>
-Compromise-Free Definition of Done in Distributed Teams;
+Meetings or Discipline;
 [New Trends in Project Management](http://ntpm.pl/);
 Gdynia, Poland;
 26 April 2016;
