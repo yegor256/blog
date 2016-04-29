@@ -4,7 +4,7 @@ title: "What to Worry About in Convertible Notes"
 date: 2015-10-20
 place: Palo Alto, CA
 tags: management startup
-description:
+description: |
   Convertible notes is a popular instrument of seed
   investments used by early-stage investors. Here is what
   you should pay attention to as a founder.
