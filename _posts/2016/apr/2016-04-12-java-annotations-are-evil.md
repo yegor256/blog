@@ -314,7 +314,7 @@ didn't understand it two years ago, when I started to work with
 The bottom line is that annotations are bad. Don't use them. What should be used
 instead? Object [composition]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 
-What could be worse than annotations? Configurations.
+What could be worse than annotations? [Configurations]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %}).
 For example, XML configurations. Spring XML configuration mechanisms is a perfect
 example of terrible design. I've said it many times before. Let
 me repeat it again &mdash; Spring Framework is one of the worst
