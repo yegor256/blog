@@ -202,7 +202,8 @@ Meetings Are a Threat To Code Quality;
 Kiev, Ukraine;
 9 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
-[photos](https://www.facebook.com/yegor256/posts/10209222357985955).
+[photos](https://www.facebook.com/yegor256/posts/10209222357985955);
+[video](https://www.youtube.com/watch?v=xbovkm0tTn0).
 
 <div class="talk-event"/>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/12916949_10209219893244338_8937507043400548607_o.jpg" class="past-talk" alt="Outsource People 2016"/>

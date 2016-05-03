@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Test Methods Must Share Nothing"
-date: 2016-03-21
+date: 2016-05-03
 place: Palo Alto, CA
 tags: java oop
 description:

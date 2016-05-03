@@ -288,8 +288,9 @@ class Document {
 ```
 
 Another typical mistake is to use constants in unit tests to avoid duplicate
-string/numeric literals in test methods. Don't do this! Every test method should
-work with its own set of input values.
+string/numeric literals in test methods.
+[Don't do this]({% pst 2016/may/2016-05-03-test-methods-must-share-nothing %})!
+Every test method should work with its own set of input values.
 
 Use new texts and numbers in every new test method. They are independent. So,
 why do they have to share the same input constants?
