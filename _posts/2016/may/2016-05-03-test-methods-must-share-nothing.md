@@ -43,7 +43,7 @@ Let's take a look at one of the classes in our [Takes Framework](http://www.take
 It's a unit test and it has a problem, which I'm trying to tell you about.
 Look at that [`MSG`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L54)
 private literal. It is used for the first time in
-[setUp()](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L77-L80) method
+[`setUp()`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L77-L80) method
 as an argument of an object constructor and then in a few
 test methods to check how that object behaves. Let me simplify that
 code:
