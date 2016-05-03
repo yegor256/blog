@@ -231,8 +231,9 @@ the real world:</p>
 <span class="o">}</span>
 </code></pre></div>
 <p>Another typical mistake is to use constants in unit tests to avoid duplicate
-string/numeric literals in test methods. Don&#39;t do this! Every test method should
-work with its own set of input values.</p>
+string/numeric literals in test methods.
+<a href="/2016/05/03/test-methods-must-share-nothing.html">Don&#39;t do this</a>!
+Every test method should work with its own set of input values.</p>
 
 <p>Use new texts and numbers in every new test method. They are independent. So,
 why do they have to share the same input constants?</p>

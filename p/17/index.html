@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?285765c"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?285765c"/>
+    <link rel="shortcut icon" href="/favicon.ico?14efdf0"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?14efdf0"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?285765c"/>
-    <link rel="stylesheet" href="/css/icons.css?285765c"/>
+    <link rel="stylesheet" href="/css/layout.css?14efdf0"/>
+    <link rel="stylesheet" href="/css/icons.css?14efdf0"/>
     <link rel="canonical" href="http://www.yegor256.com/p/17/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/17/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 17)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?285765c"></script>
+    <script src="/js/global.js?14efdf0"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;178</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;179</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -116,6 +116,66 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/04/24/java-xml-parsing-and-traversing.html">
+            Java XML Parsing Made Easy
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-04-24T00:00:00+00:00">
+              24 April 2014
+            </time>
+          </li>
+          <li>
+            205 words
+          </li>
+          <li>
+            
+            
+              a minute
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><a href='http://xml.jcabi.com'><img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
+
+<p>Unlike with many other modern languages, parsing XML in Java requires  more than
+one line of code. XML traversing using XPath takes even more code,  and I find
+this is unfair and annoying.</p>
+
+<p>I&#39;m a big fan of XML and use it it in almost every Java application. Some time
+ago, I decided to put all of that XML-to-DOM parsing code into a small library
+&mdash; <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>.</p>
+
+<p>Put simply, the library is a convenient wrapper for JDK-native DOM
+manipulations. That&#39;s why it is small and dependency-free. With the following
+example, you can see just how simple XML parsing can be:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.xml.XML</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.jcabi.xml.XMLDocument</span><span class="o">;</span>
+<span class="n">XML</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">XMLDocument</span><span class="o">(</span>
+  <span class="s">&quot;&lt;root&gt;&lt;a&gt;hello&lt;/a&gt;&lt;b&gt;world!&lt;/b&gt;&lt;/root&gt;&quot;</span>
+<span class="o">);</span></code></pre></figure>
+
+      </div>
+      <p>
+        <a href="/2014/04/24/java-xml-parsing-and-traversing.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -637,72 +697,6 @@ projects. Why?</p>
       </div>
       <p>
         <a href="/2014/04/13/bugs-are-welcome.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/04/12/puzzle-driven-development-by-roles.html">
-            PDD by Roles
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-04-12T00:00:00+00:00">
-              12 April 2014
-            </time>
-          </li>
-          <li>
-            1768 words
-          </li>
-          <li>
-            
-            
-              
-                  7
-              
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <figure class='badge'><a href='http://www.xdsd.org'><img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/></a></figure>
-
-<p>In this post, I&#39;ll try to walk you through a project managed
-with the spirit of
-<a href="/2009/03/04/pdd.html">Puzzle Driven Development</a>
-(PDD). As I do this, I will attempt to convey typical points
-of view of various project members.</p>
-
-<p>Basically, there are six key roles in any software team:</p>
-
-<ul>
-<li>Project Manager &mdash; assigns tasks and pays on completion</li>
-<li>System Analyst &mdash; documents the product owner&#39;s ideas</li>
-<li>Architect &mdash; defines how system components interact</li>
-<li>Designer &mdash; implements most complex components</li>
-<li>Programmer &mdash; implements all components</li>
-<li>Tester &mdash; finds and reports bugs</li>
-</ul>
-
-<p>Everybody, except the project manager, affects the project in two
-ways: they fix it and they break it at the same time. Let me explain
-this with a simple example.</p>
-
-      </div>
-      <p>
-        <a href="/2014/04/12/puzzle-driven-development-by-roles.html">
           continue...
         </a>
       </p>

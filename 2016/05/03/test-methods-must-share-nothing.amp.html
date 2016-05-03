@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Constants... I wrote about them
+<a href="/2015/07/06/public-static-literals.html">some time ago</a>, mostly
+saying that they are a bad thing, if being public. They reduce duplication,
+but introduce coupling. A much better way to get rid of duplication is
+by creating new classes or methods &mdash; a traditional OOP method. This seems to make
+sense and in our projects I see less and less public constants. In
+some projects we don&#39;t have them at all. But one thing still bothers me:
+unit tests. Most programmers seem to think that when static analysis says
+that there are too many similar literals in the same file, the best way
+to get rid of them is via a private static literal. This is just wrong.</p>
+
+<!--more-->
+
+<p>Unit tests, naturally, duplicate a lot of code. Test methods contain
+similar or almost identical functionality and this is almost inevitable. Well,
+we can use more of that <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html"><code>@Before</code></a>
+and <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html"><code>@BeforeClass</code></a> features,
+but sometimes it&#39;s just not possible. We may have, say, 20 test methods
+in one <code>FooTest.java</code> file. Preparing all objects in one &quot;before&quot; is not
+possible. So we have to do certain things again and again in our test
+methods.</p>
+
+<p>Let&#39;s take a look at one of the classes in our <a href="http://www.takes.org">Takes Framework</a>:
+<a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>.
+It&#39;s a unit test and it has a problem, which I&#39;m trying to tell you about.
+Look at that <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L54"><code>MSG</code></a>
+private literal. It is used for the first time in
+<a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L77-L80">setUp()</a> method
+as an argument of an object constructor and then in a few
+test methods to check how that object behaves. Let me simplify that
+code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">MSG</span> <span class="o">=</span> <span class="s">&quot;something&quot;</span><span class="o">;</span>
+  <span class="nd">@Before</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="n">foo</span><span class="o">.</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="n">foo</span><span class="o">.</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This is basically what is happening in
+<a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>
+and it&#39;s very wrong. Why? Because this shared literal <code>MSG</code>
+introduced an unnatural coupling between these two test methods.
+They have nothing in common, because they test different behaviors
+of class <code>Foo</code>. But this private constant ties them together. Now they are
+somehow related.</p>
+
+<p>If and when I want to modify one of the test methods, I may need
+to modify the other one too. Say I want to see how <code>doSomethingElse()</code>
+behaves if the encapsulated message is an empty string. What do I do?
+I change the value of the constant <code>FooTest.MSG</code>, which is used by
+another test method. This is called coupling. And it&#39;s a bad thing.</p>
+
+<p>What do we do? Well, we can use that <code>&quot;something&quot;</code> string literal in
+both test methods:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="s">&quot;something&quot;</span><span class="o">).</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="s">&quot;something&quot;</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="s">&quot;something&quot;</span><span class="o">).</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="s">&quot;something&quot;</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>As you see, I got rid of that <code>setUp()</code> method and the private static
+literal <code>MSG</code>. What do we have now? Code duplication. String <code>&quot;something&quot;</code>
+shows up four times in the test class. No static analyzers will tolerate that.
+Moreover, there are seven (!) test methods in
+<a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>,
+which are using <code>MSG</code>. Thus, we will have 14 occurences of <code>&quot;something&quot;</code>, right?
+Yes, that&#39;s right and that&#39;s most likely why one of authors of this
+test case introduced the constant &mdash; to get rid of duplication.
+BTW, <a href="https://github.com/Happy-Neko">@Happy-Neko</a> did that in pull request
+<a href="https://github.com/yegor256/takes/pull/513">#513</a>,
+[@carlosmiranda](<a href="https://github.com/carlosmiranda">https://github.com/carlosmiranda</a>] did reviewed the code and I
+approved the changes. So, three people made/approved that mistake, including myself.</p>
+
+<p>So what is the right approach that will avoid code duplication and
+at the same time won&#39;t introduce coupling? Here it is:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;something&quot;</span><span class="o">;</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">msg</span><span class="o">).</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">msg</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;something else&quot;</span><span class="o">;</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">msg</span><span class="o">).</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">msg</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>These literals must be different. This is what any static analyzer is
+saying when it sees <code>&quot;something&quot;</code> in so many places. It questions us &mdash;
+why are they the same? Is it really so important to use <code>&quot;something&quot;</code> everywhere?
+Why can&#39;t you use different literals? Of course we can. And we should.</p>
+
+<p>The bottom line is that each test method must have its own set of data and objects. They must
+not be shared between test methods ever. Test methods must always be
+independent, having nothing in common.</p>
+
+<p>Having that in mind, we can easily conclude that methods like <code>setUp()</code> or
+any shared variables in test classes are <strong>evil</strong>. They must not be used
+and simply must not exist. I think that their invention in JUnit caused
+a lot of harm to Java code.</p>
+
+  </body>
+</html>
