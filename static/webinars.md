@@ -19,15 +19,15 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=c2IzaWtraDA2M292NGo0NWduZDRtcDM1bmsgeWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)!
+<!-- Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=c2IzaWtraDA2M292NGo0NWduZDRtcDM1bmsgeWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)! -->
 
 {% youtube g1ctRcW214w video-left %}
 May 4, 2016:
 **Java Annotations Are a Big Mistake**
-We will discuss why Java annotations are actually a mistake
-in object-oriented programming and how they motivate us to
+We discussed why Java annotations were actually a mistake
+in object-oriented programming and how they motivated us to
 break object's consistency and turn it into a data bag. The
-discussion will be based on this article:
+discussion was based on this article:
 [Java Annotations Are a Big Mistake]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}).
 
 {% youtube AvVQ5NjS_Nk video-left %}
