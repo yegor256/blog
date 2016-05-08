@@ -3,7 +3,7 @@ layout: post
 title: "How to Be a Good Office Slave"
 date: 2015-10-06
 place: Palo Alto, CA
-tags: management
+tags: management sarcasm
 description:
   Office slavery is what most companies
   practice and what most office workers suffer
