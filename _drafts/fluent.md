@@ -4,7 +4,7 @@ title: "Some Thoughts About Java 8 Stream API"
 date: 2016-04-29
 place: Sofia, Bulgaria
 tags: oop java
-description:
+description: |
   ...
 keywords:
   - fluent interface

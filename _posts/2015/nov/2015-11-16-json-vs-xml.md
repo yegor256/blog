@@ -4,7 +4,7 @@ title: "Stop Comparing JSON and XML"
 date: 2015-11-16
 place: Palo Alto, CA
 tags: xml json
-description:
+description: |
   JSON vs. XML? This comparison makes no sense, because
   the former is a simple data format while the latter is
   a language &mdash; a very powerful one.

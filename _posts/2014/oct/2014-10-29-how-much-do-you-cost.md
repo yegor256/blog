@@ -3,7 +3,7 @@ layout: post
 title: "How Much Do You Cost?"
 date: 2014-10-29
 tags: management career
-description:
+description: |
   How do you know what hourly rate you are worth? What
   factors should be taken into account? Here are my criteria.
 keywords:

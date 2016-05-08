@@ -4,7 +4,7 @@ title: "Hourly Pay Is Modern Slavery"
 date: 2015-07-21
 tags: management
 place: Palo Alto, CA
-description:
+description: |
   Paying by the hour is a modern form of slavery that
   must be replaced by paying for results, which is a much
   more effective and healthy form of management.

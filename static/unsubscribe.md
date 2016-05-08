@@ -3,7 +3,7 @@ layout: static
 title: "Unsubscribe"
 date: 2014-06-11
 permalink: unsubscribe.html
-description:
+description: |
   Opt-out the monthly email update newsletter. I will never
   email you again once you fill this form and send it to me.
 keywords:

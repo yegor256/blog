@@ -3,7 +3,7 @@ layout: post
 title: "Team Morale: Myths and Reality"
 date: 2015-03-02
 tags: management agile
-description:
+description: |
   Team morale is a key performance driver in any group,
   especially a software development team; however, there are
   many myths about it.

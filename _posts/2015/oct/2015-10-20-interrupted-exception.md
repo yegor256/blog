@@ -4,7 +4,7 @@ title: "What Do You Do With InterruptedException?"
 date: 2015-10-20
 place: Palo Alto, CA
 tags: java
-description:
+description: |
   Checked InterruptedException in Java is a constant
   source of pain for many of us; here is my understanding
   of how it should be handled.

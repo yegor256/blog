@@ -3,7 +3,7 @@ layout: post
 title: "Typical Mistakes in Java Code"
 date: 2014-04-27
 tags: quality java
-description:
+description: |
   The article lists the most common programming mistakes
   I catch during code reviews, which can't be caught by static analysis
 keywords:

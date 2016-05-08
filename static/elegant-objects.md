@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "Elegant Objects"
-description:
+description: |
   Elegant Objects is a book about object-oriented
   programming, from an idealistic and a bit futuristic
   point of view.

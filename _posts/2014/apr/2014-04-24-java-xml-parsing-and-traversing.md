@@ -3,7 +3,7 @@ layout: post
 title: "Java XML Parsing Made Easy"
 date: 2014-04-24
 tags: xml java jcabi
-description:
+description: |
   Parsing and traversing of XML documents as a very common
   and verbose operation is made easy with jcabi-xml
 keywords:

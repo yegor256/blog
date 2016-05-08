@@ -4,7 +4,7 @@ title: "Daily Stand-Up Meetings Are a Good Tool for a Bad Manager"
 date: 2015-01-08
 categories: best
 tags: management
-description:
+description: |
   Daily stand-up meetings are a common practice among software
   development teams (especially in Scrum), even though they are a bad
   practice and should not be used by good project managers.

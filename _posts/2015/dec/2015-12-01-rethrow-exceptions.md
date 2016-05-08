@@ -5,7 +5,7 @@ date: 2015-12-01
 place: San Jose, CA
 tags: java
 category: jcg
-description:
+description: |
   One of the most helpful things you can do is add a contextual
   message to an exception on each re-throw &dash; and
   actually, in all other situations.

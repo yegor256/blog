@@ -4,7 +4,7 @@ title: "Public Static Literals ... Are Not a Solution for Data Duplication"
 date: 2015-07-06
 tags: oop java
 place: Palo Alto, CA
-description:
+description: |
   It's a common practice to make constants public
   in order to avoid duplication, but it's a bad
   practice, so use objects instead.

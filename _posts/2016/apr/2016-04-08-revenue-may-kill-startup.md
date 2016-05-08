@@ -4,7 +4,7 @@ title: "Growing Revenue May Kill Your Startup"
 date: 2016-04-08
 place: Palo Alto, CA
 tags: startup
-description:
+description: |
   Growing revenue looks very motivating for
   a startup founder, but it is a very big threat
   at the same time.

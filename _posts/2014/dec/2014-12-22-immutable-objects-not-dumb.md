@@ -3,7 +3,7 @@ layout: post
 title: "Immutable Objects Are Not Dumb"
 date: 2014-12-22
 tags: oop
-description:
+description: |
   Immutable objects are not the same as passive data structures
   without setters, despite a very common misbelief.
 keywords:

@@ -4,7 +4,7 @@ title: "A Compound Name Is a Code Smell"
 date: 2015-01-12
 tags: oop
 categories: jcg
-description:
+description: |
   A variable name that consists of several words is a code
   smell because it indicates a variable scope that's too big.
 keywords:

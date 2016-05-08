@@ -4,7 +4,7 @@ title: "Pimp Up Your Resume"
 date: 2016-03-08
 place: Atlanta, GA
 tags: career
-description:
+description: |
   Here are a few simple hints for making a software
   developer's resume sound bright, convincing, and
   right to the point.

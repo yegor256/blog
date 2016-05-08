@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "Webinars"
-description:
+description: |
   Here is a full list of my webinars, which
   happen every first Wednesday of each month,
   on Google Hangout

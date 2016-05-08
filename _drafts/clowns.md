@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Five Habits of a Successful Outsourcing Client"
-date: 2015-08-11
-tags: management outsourcing
+title: "Clowns"
+date: 2016-05-12
+tags: mood
 place: Kiev, Ukraine
 description: |
   One of important success factors in an outsourcing

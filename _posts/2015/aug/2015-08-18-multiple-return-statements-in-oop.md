@@ -4,7 +4,7 @@ title: "Why Many Return Statements Are a Bad Idea in OOP"
 date: 2015-08-18
 tags: oop java
 place: Kiev, Ukraine
-description:
+description: |
   A properly designed method in object-oriented software
   must have a single return statement &mdash; and nothing
   but a return statement.

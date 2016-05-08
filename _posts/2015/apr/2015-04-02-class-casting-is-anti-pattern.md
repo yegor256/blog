@@ -3,7 +3,7 @@ layout: post
 title: "Class Casting Is a Discriminating Anti-Pattern"
 date: 2015-04-02
 tags: oop
-description:
+description: |
   Type casting and use of the instanceof operator, in particular,
   are terrible anti-patterns that diminish the entire idea
   of object-oriented programming.

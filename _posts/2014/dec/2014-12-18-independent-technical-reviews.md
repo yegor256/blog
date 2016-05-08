@@ -4,7 +4,7 @@ title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-18
 tags: management
 categories: jcg
-description:
+description: |
   Regularly and systematically having your programmers' technical deliverables
   reviewed by an independent engineer will greatly improve your
   quality and team motivation.

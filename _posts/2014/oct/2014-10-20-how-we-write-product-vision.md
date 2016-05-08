@@ -3,7 +3,7 @@ layout: post
 title: "How We Write a Product Vision"
 date: 2014-10-20
 tags: management
-description:
+description: |
   Product Vision is a fundamental document in any software development project
   that explains what the product is about and defines its scope boundaries.
 keywords:

@@ -3,7 +3,7 @@ layout: post
 title: "How Much For This Software?"
 date: 2015-06-02
 tags: management agile outsourcing
-description:
+description: |
   The very attempt to estimate a software project
   has fundamental flaws and can't be done right; instead,
   we should estimate different parameters.

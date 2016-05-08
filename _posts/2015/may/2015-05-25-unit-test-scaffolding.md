@@ -4,7 +4,7 @@ title: "A Few Thoughts on Unit Test Scaffolding"
 date: 2015-05-25
 tags: oop java
 categories: jcg
-description:
+description: |
   Most unit tests require mocks, stubs, and the preparation
   of some other structures before a test can be initiated;
   here is how I recommend you do that.

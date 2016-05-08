@@ -5,7 +5,7 @@ date: 2015-07-28
 categories: jcg
 tags: oop java
 place: Sunnyvale, CA
-description:
+description: |
   While most programmers think checked exceptions in Java
   are a mistake, I'm of the opposite opinion &mdash; unchecked
   ones are a mistake.

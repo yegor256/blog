@@ -3,7 +3,7 @@ layout: post
 title: "Five Principles of Bug Tracking"
 date: 2014-11-24
 tags: management
-description:
+description: |
   Managing work in a ticketing system requires more
   discipline than with a co-located team; this article
   explains which is the most important.

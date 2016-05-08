@@ -4,7 +4,7 @@ title: "Object Behavior Must Not Be Configurable"
 date: 2016-04-19
 place: New York, NY
 tags: java oop
-description:
+description: |
   Using object properties as configuration parameters
   for object behavior is a bad practice that leads to
   bigger and less cohesive objects.

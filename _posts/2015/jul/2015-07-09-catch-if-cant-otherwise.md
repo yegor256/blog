@@ -4,7 +4,7 @@ title: "Catch Me If You ... Can't Do Otherwise"
 date: 2015-07-09
 tags: oop
 place: Dallas, TX
-description:
+description: |
   Catching an exception must be your last resort;
   a properly designed application would catch
   exceptions in one place only.

@@ -3,7 +3,7 @@ layout: post
 title: "Every Build in Its Own Docker Container"
 date: 2014-07-29
 tags: docker rultor devops
-description:
+description: |
   Rultor.com runs every build in its own Docker container,
   perfectly isolating configurations and making them cacheable and reproducible.
 keywords:

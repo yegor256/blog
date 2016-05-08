@@ -4,7 +4,7 @@ title: "Constructors Must Be Code-Free"
 date: 2015-05-07
 tags: java oop
 categories: jcg
-description:
+description: |
   It is a bad idea to put executing statements into class
   constructors because that leads to side effects and
   uncontrollable behavior.

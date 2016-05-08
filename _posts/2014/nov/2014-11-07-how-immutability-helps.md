@@ -4,7 +4,7 @@ title: "How Immutability Helps"
 date: 2014-11-07
 tags: jcabi java oop
 categories: jcg
-description:
+description: |
   This article illustrates by example how immutability
   forces you to design small and cohesive objects, while
   mutability causes scope creep and tight coupling.

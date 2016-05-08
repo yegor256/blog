@@ -3,7 +3,7 @@ layout: post
 title: ""
 date: 2014-11-19
 tags: oop
-description:
+description: |
   It is a good practice to avoid duplicate calculations
   by caching results in memory; here is how we can cache
   by using object decorators

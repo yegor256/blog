@@ -3,7 +3,7 @@ layout: post
 title: Why Static Analysis Is So Annoying
 date: 2014-04-20
 tags: quality
-description:
+description: |
   For most of XDSD newcomers static analysis looks
   too strict and annoying, while we think that it
   is still too loose

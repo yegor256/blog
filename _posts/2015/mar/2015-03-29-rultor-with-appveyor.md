@@ -3,7 +3,7 @@ layout: post
 title: "How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them"
 date: 2015-03-29
 tags: devops rultor
-description:
+description: |
   AppVeyor is a continuous integration platform for Windows
   projects; Rultor is a Docker based DevOps assistant for merge, release and deploy operations;
   they can work together.

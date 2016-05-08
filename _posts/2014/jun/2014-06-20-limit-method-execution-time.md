@@ -3,7 +3,7 @@ layout: post
 title: "Limit Java Method Execution Time"
 date: 2014-06-20
 tags: java aop
-description:
+description: |
   Aspect oriented programming with AspectJ and jcabi-aspects can
   help you to control maximum execution time for any single Java method
 keywords:

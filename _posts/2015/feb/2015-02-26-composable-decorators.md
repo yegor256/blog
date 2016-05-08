@@ -4,7 +4,7 @@ title: "Composable Decorators vs. Imperative Utility Methods"
 date: 2015-02-26
 tags: oop
 categories: jcg
-description:
+description: |
   A decorator pattern, while being the best instrument to keep objects highly cohesive,
   solid, and loosely coupled, is unfortunately not very popular in traditional Java
   programming.

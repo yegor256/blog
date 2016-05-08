@@ -4,7 +4,7 @@ title: "Competition Without Rules Is Destructive"
 date: 2015-10-13
 place: Moscow, Russia
 tags: management
-description:
+description: |
   When your team doesn't have rules of competition, you
   get competition without rules, which ruins team
   motivation.

@@ -4,7 +4,7 @@ title: "Why We Don't Use Skype, Slack, Emails, Phones, or Meetings"
 date: 2015-09-28
 place: Kiev, Ukraine
 tags: java oop
-description:
+description: |
   Issue tracking systems is a modern replacement of
   other old instruments of project communications, like
   Skype, Slack, emails or phone calls.

@@ -4,7 +4,7 @@ title: "Are You Still Debugging?"
 date: 2016-02-09
 tags: tdd
 place: Palo Alto, CA
-description:
+description: |
   The necessity of debugging is an indicator of code problems
   and a great motivator for immediate refactoring
   and unit testing.

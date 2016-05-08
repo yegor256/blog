@@ -4,7 +4,7 @@ title: "A Few Valid Reasons to Reject a Bug Fix"
 date: 2015-06-22
 categories: jcg
 tags: agile management
-description:
+description: |
   A bug fix is supposed to improve the quality of
   the software, but very often the effect of it
   is actually negative; here is why and how to avoid that.

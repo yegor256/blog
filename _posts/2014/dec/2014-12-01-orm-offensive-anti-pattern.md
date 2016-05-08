@@ -4,7 +4,7 @@ title: "ORM Is an Offensive Anti-Pattern"
 date: 2014-12-01
 categories: best
 tags: oop
-description:
+description: |
   Object-relational mapping is a design pattern that
   violates encapsulation, one of the fundamental principles
   of OOP, but what is a possible alternative to it?

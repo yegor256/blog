@@ -4,7 +4,7 @@ title: "Redundant Variables Are Pure Evil"
 date: 2015-09-01
 place: Kiev, Ukraine
 tags: oop java
-description:
+description: |
   Despite good intentions, redundant variables actually
   make your code dirty and difficult to understand.
 keywords:
