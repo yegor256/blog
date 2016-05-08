@@ -142,7 +142,7 @@ Our job is to create an HTTP response using the information we get in the
 request. If our server is very primitive, we can basically ignore all the
 information in the request and just return "Hello, world!" to all requests
 (I'm using
-[`IOUtils`](https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html)
+[`IOUtils`](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html)
 for simplicity):
 
 {% highlight java %}

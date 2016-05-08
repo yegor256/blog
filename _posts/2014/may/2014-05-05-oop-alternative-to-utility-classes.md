@@ -80,7 +80,7 @@ I'll show by example how these creatures can be replaced with proper objects.
 
 Say, for instance, you want to read a text file, split it into lines, trim every
 line and then save the results in another file. This is can be done with
-[`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html)
+[`FileUtils`](http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html)
 from Apache Commons:
 
 {% highlight java %}
