@@ -56,7 +56,7 @@ Besides that, I'm a proud holder of
 As an **investor** at [SeedRamp.com](http://www.seedramp.com) I have
 no results yet :)
 
-Once in a month I send a summary email of my writing activity. If
+Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous
