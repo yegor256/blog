@@ -30,7 +30,7 @@ module Yegor
           "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
           "#{snippet['title']}; " \
           "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}; " \
-          "#{item['statistics']['viewCount']} views, #{item['statistics']['likeCount']} likes" \
+          "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes" \
           "</li>"
       end.join('') +
       '</ul></div>'
