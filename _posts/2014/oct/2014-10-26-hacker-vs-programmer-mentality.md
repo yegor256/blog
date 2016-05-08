@@ -82,7 +82,7 @@ Someone with a hacker mentality would call this
 Java method an "elegant code" (would you?):
 
 {% highlight java %}
-public int f(int n) { return n>2?f(n-1)+f(n-2):1; }
+public int f(int n) { return n>2?f(n-1)+f(n-2):n; }
 {% endhighlight %}
 
 I would highlight these qualities of a good
@@ -122,7 +122,7 @@ public int fibo(final int pos) {
   if (pos > 2) {
     num = fibo(pos - 1) + fibo(pos - 2);
   } else {
-    num = 1;
+    num = pos;
   }
   return num;
 }
