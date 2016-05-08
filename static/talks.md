@@ -130,7 +130,7 @@ Minsk, Belarus<br/>
 <div class="talk-event"/>
 <img src="/images/2016/slcdevopsdays-2016.png" class="future-talk" alt="SLC DevOpsDays 2016"/>
 **Downsides of Continuous Integration**<br/>
-[Salt Lake City DevOpsDays](http://slcdevopsdays.org/)<br/>
+[Salt Lake City DevOpsDays](http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/)<br/>
 Salt Lake City, USA<br/>
 14-15 June 2016
 
