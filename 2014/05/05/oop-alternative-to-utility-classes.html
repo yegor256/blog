@@ -28,19 +28,19 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?ebce0e6"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?ebce0e6"/>
+    <link rel="shortcut icon" href="/favicon.ico?9630fea"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?9630fea"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?ebce0e6"/>
-    <link rel="stylesheet" href="/css/icons.css?ebce0e6"/>
+    <link rel="stylesheet" href="/css/layout.css?9630fea"/>
+    <link rel="stylesheet" href="/css/icons.css?9630fea"/>
     <link rel="canonical" href="http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html" />
     <link rel="amphtml" href="http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.amp.html" />
     <title>OOP Alternative to Utility Classes - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?ebce0e6"></script>
+    <script src="/js/global.js?9630fea"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -48,7 +48,7 @@
         onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
       <header class="header" id="header">
         <div class="face">
-          <a href="/about-me.html" class="sub"><span>subscribe</span></a>
+          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
           <a href="/about-me.html">
             <img src="/images/yegor-bugayenko-192x192.png" class="photo"
               alt="photo of Yegor Bugayenko"/>
@@ -85,8 +85,8 @@
               onfocus="$('#google').css('display', 'inline-block');"
               name="q" placeholder="Search" autocomplete="off"/>
             <span class="desktop-only">
-              <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
-                style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;" alt="search via Google"/>
+              <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google"
+                style="height:2.4em;display:none;position:absolute;margin-left:1em;" alt="search via Google"/>
             </span>
           </form>
           <div id="search-results" style="display: none;">
@@ -95,19 +95,21 @@
         </div>
         <div class="hot">
           <ul>
-            <!--
             <li>
-              <a href="/webinars.html">Webinar #14</a>
-              will be about Java annotations and their negative effects on objects consistency;
-              join us on May 4, at 11am PST.
+              At <a href="/webinars.html">Webinar #15</a>
+              we'll discuss how to cut corners and stay cool and how
+              to turn chaos into discipline,
+              join us on June 1, at 11am PST.
             </li>
-            -->
             <li>
               Meet me at
               <a href="http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/">Baltic DevOps</a> (Tallinn/May-10),
               <a href="http://2016.geecon.org/">GeeCON</a> (Krakow/May-11),
               <a href="http://devitconf.org/">DEVit</a> (Thessaloniki/May-20),
               <a href="http://jeeconf.com/speaker/yegor-bugayenko/">JEEConf</a> (Kiev/May-21),
+              <a href="http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers">ITEM</a> (Dnepropetrovsk/June-2),
+              <a href="http://2016.geekout.ee/speakers/yegor-bugayenko/">GeekOUT</a> (Tallinn/June-9),
+              <a href="http://javaday.by/">JavaDay</a> (Minsk/June-11),
               and later
               <a href="/talks.html">somewhere else</a>.
             </li>
@@ -137,7 +139,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/may/2014-05-05-oop-alternative-to-utility-classes.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-04-18T17:36:02+0000'>18 April 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/may/2014-05-05-oop-alternative-to-utility-classes.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-05-08T06:20:37+0000'>8 May 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -240,7 +242,7 @@ I&#39;ll show by example how these creatures can be replaced with proper objects
 
 <p>Say, for instance, you want to read a text file, split it into lines, trim every
 line and then save the results in another file. This is can be done with
-<a href="http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html"><code>FileUtils</code></a>
+<a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code>FileUtils</code></a>
 from Apache Commons:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="n">File</span> <span class="n">in</span><span class="o">,</span> <span class="n">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
@@ -342,7 +344,7 @@ to data in the first script.</p>
       </article>
     </main>
     
-      <div class="youtube"><ul><li><a href='https://www.youtube.com/watch?v=psrp3TtaYYI'><img src='https://i.ytimg.com/vi/psrp3TtaYYI/mqdefault.jpg'/></a>What's Wrong About Utility Classes? (webinar #6); 2 September 2015; 1133 views, 12 likes</li><li><a href='https://www.youtube.com/watch?v=D0dqC_3Bch8'><img src='https://i.ytimg.com/vi/D0dqC_3Bch8/mqdefault.jpg'/></a>Objects vs. Static Methods (webinar #1); 8 April 2015; 1159 views, 23 likes</li></ul></div>
+      <div class="youtube"><ul><li><a href='https://www.youtube.com/watch?v=psrp3TtaYYI'><img src='https://i.ytimg.com/vi/psrp3TtaYYI/mqdefault.jpg'/></a>What's Wrong About Utility Classes? (webinar #6); 2 September 2015; 1137 views, 12 likes</li><li><a href='https://www.youtube.com/watch?v=D0dqC_3Bch8'><img src='https://i.ytimg.com/vi/D0dqC_3Bch8/mqdefault.jpg'/></a>Objects vs. Static Methods (webinar #1); 8 April 2015; 1161 views, 23 likes</li></ul></div>
     
     
   <div class="unprintable">
@@ -351,23 +353,23 @@ to data in the first script.</p>
     <ul>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="31.597997417601874">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="25.999103119693334">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="8.21717335729986">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="7.757505078779337">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2015/04/22/favorite-software-books.html" data-score="1.4633113026758366">My Favorite Software Books</a>
+          <a href="/2015/04/22/favorite-software-books.html" data-score="1.440374022231588">My Favorite Software Books</a>
         </li>
       
         <li>
-          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.3719390620724952">Jare.io, an Instant and Free CDN</a>
+          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.358549027718591">Jare.io, an Instant and Free CDN</a>
         </li>
       
         <li>
-          <a href="/2015/03/22/takes-java-web-framework.html" data-score="1.324468279844192">Java Web App Architecture In Takes Framework</a>
+          <a href="/2015/03/22/takes-java-web-framework.html" data-score="1.3133964737366275">Java Web App Architecture In Takes Framework</a>
         </li>
       
     </ul>
@@ -401,8 +403,8 @@ to data in the first script.</p>
 
 </section>
 
-<script src="/js/post.js?ebce0e6"></script>
-<script src="//a.disquscdn.com/embed.js?ebce0e6"></script>
+<script src="/js/post.js?9630fea"></script>
+<script src="//a.disquscdn.com/embed.js?9630fea"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
