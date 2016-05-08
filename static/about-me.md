@@ -35,6 +35,8 @@ Besides that, I'm a proud holder of
 [ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
 [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
 [OCUP](http://www.omg.org/uml-certification/).
+I also wrote a book about object-oriented programming,
+called [Elegant Objects](/elegant-objects.html).
 
 As a **founder** and CTO at [Teamed.io](http://www.teamed.io/),
 a software development company with an absolutely unique
