@@ -1,30 +1,93 @@
 ---
 layout: post
-title: "Clowns"
+title: "Keynote Clowns"
 date: 2016-05-12
-tags: mood
+tags: mood sarcasm
 place: Kiev, Ukraine
 description: |
-  One of important success factors in an outsourcing
-  software project is customer readiness to manage
-  the project correctly.
+  Almost all IT conferences are full of professional
+  speakers, who, in reality, are just clowns, which
+  delivery zero value and a lot of jokes.
 keywords:
-  - outsourcing client
-  - outsourcing tricks
-  - outsourcing hints
-  - outsourcing methods
-  - softare outsourcing
+  - agile clowns
+  - java clowns
+  - software clowns
+  - clowns
+  - fake
 ---
 
-Software outsourcing is a territory full of risks, disappointment,
-fakes, fraud, and failures. Vast majority of projects simply fail. Almost
-everyone who tried to outsource a software project has a story that
-ends with "if I would only know" or "I picked the wrong team". Programmers
-and their managers are terrible. It's all because of them! They fail,
-big time... But, you know what, I don't think so. I believe that the root cause of
-all failures in outsourcing is mistakes made by those with the money
-&mdash; the clients. They are guilty in failures, more than everybody else.
+Over the last six months I've attended 18 conferences and heard over 30
+keynote sessions, mostly about software development and management.
+I think I now know all the secrets of a successful keynote speaker.
+It doesn't look so difficult to become one. Here are my thoughts.
 
 <!--more-->
 
-When
+**Be obvious!**
+Don't take a chance by suggesting something new. It's risky and
+some people may disagree with you. That's not good. The goal is to have
+everybody in the room completely agree with what you're saying. That's how
+you make a good speech. They will be comfortable and relaxing, and you
+will have no risk of being questioned afterwards. A few safe headline examples:
+"trust is very important" or "software must be stable".
+Everybody will be nodding their heads &mdash; that's all you need.
+
+**Joke!**
+You must make them laugh. You must open with a joke and continue with many
+of them. Prepare them carefully. Just google for "good keynote jokes" and use
+what smart people recommend. A well-prepared collection of jokes is much
+more valuable than the content you will be talking about. Nobody will remember
+the content, but the jokes will definitely be re-tweeted. When a good speaker
+is talking, the room is laughing every 60 seconds.
+
+**Swear!**
+Don't be too formal and boring, show a slide with a picture of
+a naked butt, once in a while. Everybody will understand that you're not only a
+speaker but also a good friend. Also, your language should be rather loose.
+Pretent you're talking to a friend over a pint of beer. Remember, the goal
+is to be funny.
+
+**Repeat!**
+Always bring the same content with you, to all conferences. It's easier for
+everybody. First, conference organizers will know for sure what will you be
+talking about; they can even watch your 4-year-old video-recorded
+presentation and see exactly what words and slides you're planning to use.
+Second, you won't be nervous, since you'll be saying the same jokes
+over and over again. Everybody wins.
+
+**Kitties!**
+Cute kitties. We all love them! Attach them somehow to your content. It is
+not really important whether they are related or not. You must show love.
+Instead of cats you can use a picture of your 2-y.o. daugther or yourself
+in a primary school. It has to be something sweet and adorable.
+
+**Keep talking!**
+A good keynote speech fills the entire 60 minutes, leaving
+absolutely no time for questions. Actually, a perfect speaker will be interrupted
+after the 145th slide and will say that if anyone wants to know more, there
+is always a place near the restroom, let's go there and continue. Thus, be
+focused on your slides and try to avoid questions in the end &mdash; they may create
+a negative impression of you, if you mess up with answers. They came to
+listen to you, not to ask questions &mdash; keep talking.
+
+<hr/>
+
+On a more serious note, I'm very disappointed by what I've seen
+in almost all conferences so far. These keynote speakers are in most
+cases just making a money, delivering the same "fun" again and again.
+They make $2-3K a speech and we, the listeners, get absolutely
+nothing new out of them.
+
+Conference organizers keep inviting them, just
+because of the names. And we keep attending that conferences also just
+because of the names. But do these names really mean anything? I don't think
+so. These guys are, in most cases, just retired losers,
+with good presentation skills.
+
+Would be much better to spend the money conferences waste on that big-names
+for training practical speakers from the trenches, with really fresh and
+interesting content. As far as I understand, conference organizers are just
+lazy to do that. It's just easier to buy a "proven" clown.
+
+It's sad.
+
