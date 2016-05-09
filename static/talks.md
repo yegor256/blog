@@ -165,6 +165,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13087150_10209365962015966_8903067194885253135_o.jpg" class="past-talk" alt="NTPM 2016"/>
 Meetings or Discipline;
 [New Trends in Project Management](http://ntpm.pl/);
@@ -173,16 +174,28 @@ Gdynia, Poland;
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
 [photos](https://www.facebook.com/yegor256/posts/10209365963416001),
 [video](https://www.youtube.com/watch?v=pt9uHp35fwM).
+It was an interesting event, mostly because the audience was full
+of questions and really interested in project management. The location, the
+food, logistics, etc. were good enough. I didn't really like the content
+other speakers were delivering. I suspect that most of them were invited
+there because of their names.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/13063166_10209351798541888_3660187446615623482_o.jpg" class="past-talk" alt="JET Conference 2016"/>
 An Immutable Object-Oriented Web Framework;
 [JET Conference](http://jetconf.by/#/yegor_bugayenko);
 Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431).
+There were about 250 people. The location was not good at all &mdash;
+it was a cinema. Also, the audience was so serious or so shy that it
+was rather difficult to present. Not just for me. Also, I got an impression
+that speakers were invited just because of their names, not the content they
+deliver. Aside from that, the impression was positive.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A-</aside>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13063089_10209338175081310_6035560472282098948_o.jpg" class="past-talk" alt="JPoint 2016"/>
 ORM - это обидно (ORM is an Offensive Anti-Pattern);
 [JPoint 2016](http://javapoint.ru/en/);
@@ -191,8 +204,16 @@ Moscow, Russia;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
+It was a very big (over 1200 people) and a very well organized
+Java conference. The food, the location, the logistics, everything. My
+presentation was carefully screened beforehand by the organizers and I received a few
+valuable corrections. The content, I would say, was not so perfect. I would
+recommend to look at new names in the industry and invite those who are less
+known but working on something hot and interesting. Besides that, the event
+was perfect.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A</aside>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/hphotos-xpa1/t31.0-8/13040994_10209338175241314_3415805164088235720_o.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
 Объектно-Ориентированное Вранье (Object-Oriented Lies);
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)
@@ -201,8 +222,14 @@ Moscow, Russia;
 [slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=F4N25kZ2zQU).
+It was one of the best conferences I've attended so far. A very well organized,
+carefully planned, in a perfect and rather expensive location. Besides that,
+my speech was screened beforehand. I even had to make it over Skype and some
+corrections were received. What I would suggest to invite new speakers &mdash;
+it seems that there are almost the same faces every year.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xta1/t31.0-8/13063412_10209310339585440_3810198626377780623_o.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 Continuous Integration May Have Negative Effects;
 [WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
@@ -210,8 +237,14 @@ Sophia, Bulgaria;
 20 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
 [video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
+It was a huge event with, I guess, over 1500 attendees. Even on my presentation
+there were over 150 people in the room. The location, the food, the logistics &mdash;
+everything was good. The only negative part is a total disfocus of the
+content. Speakers were talking just about everything. I didn't even understand
+why my presentation was accepted there :)
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/t31.0-8/13041098_10209283226707635_7567818544017623094_o.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
 [NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
@@ -220,6 +253,11 @@ Eindhoven, Netherlands;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
 [photos](https://www.facebook.com/yegor256/posts/10209283233547806),
 [video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
+The event was free-to-enter, but very well organized. The location was
+comfortable, the audience motivated enough and the organizers really
+cared about the event. The only bad thing was a total absence of speakers
+screening. Nobody checked my presentation before and I can only assume
+that the same happened to other speakers.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
