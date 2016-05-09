@@ -4,7 +4,7 @@ title: "Panic Driven Development"
 date: 2016-02-26
 place: Palo Alto, CA
 tags: management
-description:
+description: |
   Panic-driven customers is a big threat to a software
   project, especially when they have enough money
   to dictate their will.

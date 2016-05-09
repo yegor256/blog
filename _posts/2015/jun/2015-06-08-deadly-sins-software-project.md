@@ -4,7 +4,7 @@ title: "Seven Deadly Sins of a Software Project"
 date: 2015-06-08
 tags: management agile
 categories: best
-description:
+description: |
   Here is a list of criteria I apply to software projects
   submitted for the Software Quality Award; they can
   be applied equally to any other projects.

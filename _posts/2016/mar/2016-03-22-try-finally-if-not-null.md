@@ -4,7 +4,7 @@ title: "Try. Finally. If. Not. Null."
 date: 2016-03-22
 place: Palo Alto, CA
 tags: java oop
-description:
+description: |
   Opening a resource inside a try/catch block and then
   finally checking for null is such a typical and
   annoying mistake.

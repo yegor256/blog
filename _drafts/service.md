@@ -4,7 +4,7 @@ title: "Servers Is Past, Services Is Future"
 date: 2015-09-05
 tags: cloud
 place: Kiev, Ukraine
-description:
+description: |
   Hosted, dedicated, virtual and other servers
   is the past. Services is the future. There
   is a big difference, don't get confused.

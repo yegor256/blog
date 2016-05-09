@@ -3,7 +3,7 @@ layout: post
 title: How Hourly Rate Is Calculated
 date: 2014-04-20
 tags: xdsd
-description:
+description: |
   In this article, we discuss a very sensitive and
   important topic &mdash; who should get higher rates
   in extremely distributed projects.

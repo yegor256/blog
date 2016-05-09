@@ -3,7 +3,7 @@ layout: post
 title: "Liquibase with Maven"
 date: 2014-07-20
 tags: liquibase maven java
-description:
+description: |
   Liquibase is a convenient tool for database migration
   management. Here, I explain how to use it with Maven projects.
 keywords:

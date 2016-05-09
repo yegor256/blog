@@ -3,7 +3,7 @@ layout: post
 title: "My Favorite Software Books"
 date: 2015-04-22
 tags: book-review
-description:
+description: |
   I highly recommend you read these books to
   better understand software engineering; there are plenty
   of other good books, but these are my favorites.

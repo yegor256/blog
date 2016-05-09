@@ -4,7 +4,7 @@ title: "OOP Alternative to Utility Classes"
 date: 2014-05-05
 tags: oop
 categories: best jcg
-description:
+description: |
   Utility classes are a very popular design pattern
   in Java and other object-oriented languages. However,
   many consider them a terrible practice to be avoided.
@@ -80,7 +80,7 @@ I'll show by example how these creatures can be replaced with proper objects.
 
 Say, for instance, you want to read a text file, split it into lines, trim every
 line and then save the results in another file. This is can be done with
-[`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html)
+[`FileUtils`](http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html)
 from Apache Commons:
 
 {% highlight java %}

@@ -3,7 +3,7 @@ layout: post
 title: "How an Immutable Object Can Have State and Behavior?"
 date: 2014-12-09
 tags: oop
-description:
+description: |
   Object state and behavior are two very different things,
   and confusing the two often leads to incorrect design.
 keywords:

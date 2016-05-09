@@ -4,7 +4,7 @@ title: "How to Cut Corners and Stay Cool"
 date: 2015-01-15
 tags: management agile
 categories: jcg
-description:
+description: |
   When a task you're working on is too big or you simply
   don't want to do it, you cut corners; here is how you can
   do it professionally.

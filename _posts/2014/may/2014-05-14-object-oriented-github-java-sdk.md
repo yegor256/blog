@@ -3,7 +3,7 @@ layout: post
 title: "Object-Oriented GitHub API"
 date: 2014-05-14
 tags: github jcabi
-description:
+description: |
   Since none of the existing Java API-s are truly object-oriented
   or elegant enough for our quality standards, we
   decided to create a new one with the best principles of OOP in mind.

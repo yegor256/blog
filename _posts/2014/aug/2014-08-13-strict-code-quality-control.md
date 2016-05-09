@@ -3,7 +3,7 @@ layout: post
 title: "Strict Control of Java Code Quality"
 date: 2014-08-13
 tags: java qulice quality
-description:
+description: |
   Qulice.com is a Java Maven plugin that aggregates
   Checkstyle, PMD, FindBugs, Cobertura and a few other
   plugins to strictly check the quality of your code

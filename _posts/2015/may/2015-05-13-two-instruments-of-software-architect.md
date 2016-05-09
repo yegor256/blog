@@ -3,7 +3,7 @@ layout: post
 title: "Two Instruments of a Software Architect"
 date: 2015-05-13
 tags: management agile architect
-description:
+description: |
   A software architect controls a software project through
   two fundamental instruments - bugs and reviews.
 keywords:

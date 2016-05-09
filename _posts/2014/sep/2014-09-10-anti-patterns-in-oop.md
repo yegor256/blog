@@ -3,7 +3,7 @@ layout: post
 title: Anti-Patterns in OOP
 date: 2014-09-10
 tags: oop
-description:
+description: |
   An ideal object-oriented design and architecture doesn't
   have getters and setters, signletons, static methods,
   NULL references and many other anti-patterns

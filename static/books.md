@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "Books"
-description:
+description: |
   I'm planning to write a few books in the nearest
   future, this page will summarize my efforts; all
   books will be available on Amazon.

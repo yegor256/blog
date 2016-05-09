@@ -3,7 +3,7 @@ layout: post
 title: Life and Death of a Bug
 date: 2014-04-20
 tags: xdsd management
-description:
+description: |
   A software defect may be treated as an elemtary component of
   a project scope; the article outlines its life-cycle, from
   creating to closing

@@ -4,7 +4,7 @@ title: "Competition Without Rules Is Destructive"
 date: 2015-10-13
 place: Moscow, Russia
 tags: management
-description:
+description: |
   When your team doesn't have rules of competition, you
   get competition without rules, which ruins team
   motivation.
@@ -66,7 +66,7 @@ are reading the mood of our
 
 Competition is **inevitable** in a group, especially if the group consists
 of creative people. Creativity is all about competition. Each of us
-wants to be better than the other s, and this is what drives **innovation**.
+wants to be better than the others, and this is what drives **innovation**.
 But if the team has no rules, even a minor competition seriously
 and negatively affects their motivation.
 

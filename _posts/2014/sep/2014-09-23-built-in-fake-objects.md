@@ -3,7 +3,7 @@ layout: post
 title: "Built-in Fake Objects"
 date: 2014-09-23
 tags: tdd java
-description:
+description: |
   Mocking frameworks is not a good practice and should be your last resort;
   instead, create and ship fake classes together with your code.
 keywords:

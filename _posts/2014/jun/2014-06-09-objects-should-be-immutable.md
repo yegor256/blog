@@ -4,7 +4,7 @@ title: "Objects Should Be Immutable"
 date: 2014-06-09
 tags: oop
 categories: best jcg
-description:
+description: |
   The article gives arguments about why
   classes/objects in object-oriented programming
   have to be immutable,  i.e. never modify their encapsulated state

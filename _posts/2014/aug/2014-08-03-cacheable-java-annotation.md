@@ -3,7 +3,7 @@ layout: post
 title: "Cache Java Method Results"
 date: 2014-08-03
 tags: java jcabi aop
-description:
+description: |
   Caching Java method results is easy with jcabi-aspects,
   a small library that uses AspectJ and Java annotations
 keywords:

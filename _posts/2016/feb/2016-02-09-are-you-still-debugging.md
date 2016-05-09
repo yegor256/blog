@@ -4,7 +4,7 @@ title: "Are You Still Debugging?"
 date: 2016-02-09
 tags: tdd
 place: Palo Alto, CA
-description:
+description: |
   The necessity of debugging is an indicator of code problems
   and a great motivator for immediate refactoring
   and unit testing.
@@ -86,6 +86,8 @@ We're supposed to create a unit test once, in which the problem is reproduced.
 Then we fix the problem and make sure the test passes. That's how we save
 our investments in problem solving. We won't fix it again, because it won't
 happen again. Our **test** will prevent it from happening.
+
+{% quote If you perceive debugging to be faster and easier, think about the quality of your code %}
 
 However, all this will work only if it's easy to create a unit test. If it's
 difficult, I'll be too lazy to do it. I will just debug and fix the problem.

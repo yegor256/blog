@@ -4,7 +4,7 @@ title: "Holacracy or Autocracy? Both!"
 date: 2016-02-18
 place: Palo Alto, CA
 tags: management
-description:
+description: |
   Within a software team, it is mission critical to
   define explicit vertical lines of subordination
   in order to prevent ... chaos.

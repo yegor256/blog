@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "Webinars"
-description:
+description: |
   Here is a full list of my webinars, which
   happen every first Wednesday of each month,
   on Google Hangout
@@ -19,7 +19,26 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-<!-- Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=bGJvN2FsMHI4bThjbXRvZDE3aTExbnNlcTggeWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)! -->
+Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NW9yMXVoMjM0YWMyZ2tnZG45cmkxNmo5OG8geWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)!
+
+{% youtube YBQoTZ-1X-o video-left %}
+June 1, 2016:
+**How to Cut Corners and Stay Cool**
+we'll discuss how to cut corners and stay cool and how
+to turn chaos into discipline. The discussion will be based
+on these articles:
+[How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
+and
+[It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}).
+
+{% youtube g1ctRcW214w video-left %}
+May 4, 2016:
+**Java Annotations Are a Big Mistake**
+We discussed why Java annotations were actually a mistake
+in object-oriented programming and how they motivated us to
+break object's consistency and turn it into a data bag. The
+discussion was based on this article:
+[Java Annotations Are a Big Mistake]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}).
 
 {% youtube AvVQ5NjS_Nk video-left %}
 April 13, 2016:

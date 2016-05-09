@@ -4,7 +4,7 @@ title: "Defensive Programming via Validating Decorators"
 date: 2016-01-26
 place: Palo Alto, CA
 tags: oop
-description:
+description: |
   Defensive programming is a good idea, but the way
   it gets implemented is, in most cases, very wrong;
   here is what I'm suggesting instead.

@@ -3,7 +3,7 @@ layout: post
 title: "Continuous Delivery by Jezz Humble"
 date: 2014-06-15
 tags: book ci
-description:
+description: |
   I've recently read "Continuous Delivery" by Jezz Humble for the second time,
   and got even more impressed than three years ago, so I decided to
   write up a short review

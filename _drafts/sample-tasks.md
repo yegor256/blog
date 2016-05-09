@@ -6,7 +6,7 @@ tags:
   - tasks
   - process
   - management
-description:
+description: |
   There are a number of XDSD-spirited tasks, where
   project team members communicate between each
   other and the project manager

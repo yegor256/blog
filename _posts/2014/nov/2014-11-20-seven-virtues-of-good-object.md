@@ -4,7 +4,7 @@ title: "Seven Virtues of a Good Object"
 date: 2014-11-20
 tags: oop
 categories: best
-description:
+description: |
   Who is that properly designed object in an object-oriented world? What
   name, behavior, habits, interfaces, and friends does he have? Let's
   look at it from a different perspective.

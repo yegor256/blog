@@ -4,7 +4,7 @@ title: "Five Habits of a Successful Outsourcing Client"
 date: 2015-08-11
 tags: management outsourcing
 place: Kiev, Ukraine
-description:
+description: |
   One of important success factors in an outsourcing
   software project is customer readiness to manage
   the project correctly.

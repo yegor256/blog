@@ -3,8 +3,8 @@ layout: post
 title: "How Do You Punish Your Employees?"
 date: 2016-01-05
 place: Kiev, Ukraine
-tags: management
-description:
+tags: management sarcasm
+description: |
   A sarcastic overview of different types of abusive
   and manipulative behavior a bad manager may
   expose to office employees.

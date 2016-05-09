@@ -3,7 +3,7 @@ layout: static
 title: "About Me"
 date: 2014-04-06
 permalink: about-me.html
-description:
+description: |
   Yegor Bugayenko is a software architect, writer, blogger,
   project manager, CTO, seed investor, and philanthropist.
 keywords:
@@ -35,6 +35,8 @@ Besides that, I'm a proud holder of
 [ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
 [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
 [OCUP](http://www.omg.org/uml-certification/).
+I also wrote a book about object-oriented programming,
+called [Elegant Objects](/elegant-objects.html).
 
 As a **founder** and CTO at [Teamed.io](http://www.teamed.io/),
 a software development company with an absolutely unique
@@ -54,7 +56,7 @@ Besides that, I'm a proud holder of
 As an **investor** at [SeedRamp.com](http://www.seedramp.com) I have
 no results yet :)
 
-Once in a month I send a summary email of my writing activity. If
+Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who are
 you and why you're interested (I'm trying to avoid anonymous

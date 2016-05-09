@@ -4,7 +4,7 @@ title: "Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent"
 date: 2015-02-05
 tags: java maven jcabi
 categories: jcg
-description:
+description: |
   Maven pom.xml files may be repeatedly verbose from project
   to project; jcabi-parent offers a pre-configured solution.
 keywords:

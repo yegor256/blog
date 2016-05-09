@@ -52,6 +52,10 @@ anonymous
 &mdash;
 [Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
+"You're a sociopath."
+&mdash;
+[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
+
 "I quickly lost interest in your blog because you clearly are a dick."
 &mdash;
 [Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)

@@ -19,6 +19,7 @@ module Yegor
   module Youtube
     def youtube(list)
       key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
+      return if key.nil?
       '<div class="youtube"><ul>' +
       list.map do |id|
         uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{id}&part=snippet,statistics&key=#{key}")
@@ -29,7 +30,7 @@ module Yegor
           "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
           "#{snippet['title']}; " \
           "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}; " \
-          "#{item['statistics']['viewCount']} views, #{item['statistics']['likeCount']} likes" \
+          "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes" \
           "</li>"
       end.join('') +
       '</ul></div>'

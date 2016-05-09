@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "12 Best Articles to Read"
-description:
+description: |
   I'm writing mostly about Java, OOP, DevOps, and
   open source projects I'm working with in Teamed.io,
   my software development company

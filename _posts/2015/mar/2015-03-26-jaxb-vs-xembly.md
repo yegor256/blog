@@ -4,7 +4,7 @@ title: "JAXB Is Doing It Wrong; Try Xembly"
 date: 2015-03-26
 tags: java xml
 categories: jcg
-description:
+description: |
   JAXB is a 10-year-old anti-pattern that encourages Java
   developers to turn their objects into dumb, passive
   data structures.

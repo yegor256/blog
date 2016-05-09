@@ -3,7 +3,7 @@ layout: post
 title: "It's Not a School!"
 date: 2015-02-16
 tags: management agile
-description:
+description: |
   A project is not a school, and it shouldn't pay for our education; however,
   we want to learn while working on a project. Here is some simple
   advice on how to align our goals and project objectives.

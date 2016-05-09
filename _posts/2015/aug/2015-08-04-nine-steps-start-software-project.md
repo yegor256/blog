@@ -4,7 +4,7 @@ title: "Nine Steps to Start a Software Project"
 date: 2015-08-04
 tags: architect
 place: Kiev, Ukraine
-description:
+description: |
   A prototype is what a software project starts from;
   this article explains the nine critical steps in the
   process of its creation.

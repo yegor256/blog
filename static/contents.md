@@ -3,7 +3,7 @@ layout: static
 title: "Contents"
 date: 2014-06-24
 permalink: contents.html
-description:
+description: |
   Contents of the entire blog, in chronological order; the page
   is generated automatically and contains a complete list
   of all articles published in this blog

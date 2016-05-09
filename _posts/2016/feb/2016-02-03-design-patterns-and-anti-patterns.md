@@ -4,7 +4,7 @@ title: "Design Patterns and Anti-Patterns, Love and Hate"
 date: 2016-02-03
 place: Palo Alto, CA
 tags: oop
-description:
+description: |
   These are the most popular design patterns in
   object-oriented programming, though some of them
   are actually anti-patterns, in my opinion.

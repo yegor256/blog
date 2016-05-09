@@ -3,7 +3,7 @@ layout: static
 title: "Subscribed"
 date: 2016-03-26
 permalink: subscribed.html
-description:
+description: |
   Thanks for subscribing to the list. I'll send you one
   email per month and you can always unsubscribe.
 keywords:

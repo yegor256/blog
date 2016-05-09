@@ -5,7 +5,7 @@ date: 2015-10-27
 place: Palo Alto, CA
 categories: best
 tags: management outsourcing
-description:
+description: |
   Remote and offshore software outsourcing was a perfect business
   concept ten years ago. Not anymore. Here is why.
 keywords:

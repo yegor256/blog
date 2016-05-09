@@ -5,7 +5,7 @@ date: 2015-07-16
 tags: tdd
 categories: jcg
 place: Palo Alto, CA
-description:
+description: |
   A unit test is a tool, not a product; the absence
   of unit testing can't be excused due to a
   lack of time or budget.

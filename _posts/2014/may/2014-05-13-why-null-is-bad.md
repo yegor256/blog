@@ -4,7 +4,7 @@ title: "Why NULL is Bad?"
 date: 2014-05-13
 tags: oop
 categories: best jcg
-description:
+description: |
   Why NULL is a terrible practice in object-oriented programming?
   Despite the fact that it is used a lot and everywhere,
   this article tries to explain why you should give up this bad habit.

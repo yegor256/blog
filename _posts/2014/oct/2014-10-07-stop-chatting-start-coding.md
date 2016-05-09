@@ -3,7 +3,7 @@ layout: post
 title: "Stop Chatting, Start Coding"
 date: 2014-10-07
 tags: xdsd
-description:
+description: |
   In XDSD everybody is motivated to produce
   tangible and meaningful results. That's why
   we don't use emails, Skype, HipChat or phone calls.

@@ -4,7 +4,7 @@ title: "How We Interview Programmers"
 date: 2016-03-01
 place: Palo Alto, CA
 tags: management
-description:
+description: |
   There are a few simple principles that help us
   better interview the programmers who come to
   us every day.
