@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/baltic-devops.png" class="future-talk" alt="Baltic DevOps 2016"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/)<br/>
-Tallinn, Estonia<br/>
-10 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2016"/>
 **Need Robust Software? Make It Fragile**<br/>
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120)<br/>
@@ -163,6 +156,16 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/baltic-devops.png" class="past-talk" alt="Baltic DevOps 2016"/>
+Continuous Integration May Have Negative Effects;
+[Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
+Tallinn, Estonia;
+10 May 2016.
+[slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
+[photos](...),
+[video](...).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
