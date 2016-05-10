@@ -23,6 +23,8 @@ It doesn't look so difficult to become one. Here are my thoughts.
 
 <!--more-->
 
+{% picture /images/2016/05/bean.jpg 0 Bean (1997) by Mel Smith %}
+
 **Be obvious!**
 Don't take a chance by suggesting something new. It's risky and
 some people may disagree with you. That's not good. The goal is to have
