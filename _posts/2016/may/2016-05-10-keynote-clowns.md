@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Keynote Clowns"
-date: 2016-05-12
+date: 2016-05-10
 tags: mood sarcasm
 place: Kiev, Ukraine
 description: |
