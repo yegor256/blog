@@ -14,6 +14,11 @@ keywords:
   - fire fighting
   - high turnover
   - low turnover
+youtube:
+  - xbovkm0tTn0
+  - pt9uHp35fwM
+  - b6r2W3P9vgY
+  - dE0_j4Kk6jo
 ---
 
 This is what Wikipedia [says](https://en.wikipedia.org/wiki/Turnover_%28employment%29) about this:
