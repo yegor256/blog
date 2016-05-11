@@ -158,14 +158,14 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/baltic-devops.png" class="past-talk" alt="Baltic DevOps 2016"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/p843x403/11259592_10209460571061133_2941646769344634800_o.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
 Continuous Integration May Have Negative Effects;
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 10 May 2016.
 [slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
-[photos](...),
-[video](...).
+[photos](https://www.facebook.com/yegor256/posts/10209460572181161),
+[video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
