@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leadership"
+title: "Slaves Need Leaders, We Need Managers"
 date: 2016-05-18
 place: Kraków, Poland
 tags: management
@@ -14,17 +14,15 @@ keywords:
   - project management skills
 ---
 
-A properly organized and managed project doesn't need a leader. Moreover,
-anyone with so called strong leadership skills will simply kill it
-faster than an insuffient budget or an unrealistic deadline. A strong leadership
-means chaos and lack of discipline. It simply means "do it here and now",
-while project management means "stick to the plan and follow the rules".
-A strong leader is almost a synomym of a micro-manager. I would recommend
-to stay away from leaders and work with project managers. Here is the difference.
+A properly organized and managed project doesn't need a leader. It needs
+a project manager. What is the difference? It's huge. A leader makes
+people do what he wants. A project manager helps them coordinate their
+work. A leader **enslaves** them, while a PM treats them as free and independent
+self-motivated individuals.
 
 <!--more-->
 
-First of all, let's agree that any project
+First of all, any project is a
 
 Basically, the main work instrument of a leader is his or her charisma. He
 
