@@ -104,6 +104,13 @@ Vilnius, Lithuania<br/>
 26 May 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/pmday-2016.png" class="future-talk" alt="PMDay Lviv 2016"/>
+**Micromanagemet is a decease**<br/>
+[PMDay Lviv](http://pmday.com.ua/)<br/>
+Lviv, Ukraine<br/>
+28 May 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/item-2016.svg" class="future-talk" alt="ITEM 2016"/>
 **Your CEO or your programmer is the boss?**,
 **Need Robust Software? Make It Fragile**,
