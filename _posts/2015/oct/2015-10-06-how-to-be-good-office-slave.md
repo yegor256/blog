@@ -73,7 +73,8 @@ something, even if you had no idea about the subject beforehand. Eventually,
 everybody will start thinking they must ask your permission in order
 to make some decision, because you were at that meeting. Important people
 don't write code; they attend
-[meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}). Remember that.
+[meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}).
+Remember that.
 
 **Turn Down Recruiters, Publicly**.
 Loyalty! That's what matters to a real team. When a recruiter calls you,
