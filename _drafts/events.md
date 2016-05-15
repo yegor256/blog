@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "17 Mistakes All Conferences Keep Making"
+title: "11 Mistakes Conferences Keep Making"
 date: 2016-05-18
 place: Milan, Italy
 tags: mood
