@@ -16,29 +16,29 @@ keywords:
   - software conferences tricks
 ---
 
-I've been talking yesterday with a few friends who were software conference
+I was talking yesterday with a few friends who were software conference
 organizers. They were asking about my opinion of the conferences I've recently
-attended. Basically, they were interested to know what I would suggest to
-improve. So, I decided to summarize it in a list of most typical
+attended. Basically, they were interested to know what I would suggest for
+improvement. So, I decided to summarize it in a list of the most typical
 mistakes all conferences keep making and give them some ideas.
-Remember, I'm judging from speaker position.
-The most serious mistakes and advices are at the bottom.
+Remember, I'm judging from a speaker's position.
+The most serious mistakes and pieces of advice are at the bottom.
 
 <!--more-->
 
 **Too formal**.
 Very often all I'm getting from event organizers is a formal email that
 my presentation was accepted and then some travel details: "your hotel is
-here, don't miss this speaker's dinner". That's it. I don't know who is
+here, don't miss this speaker's dinner." That's it. I don't know who is
 behind the conference, what this event is for, etc. At that speaker's
-dinner (if I don't miss it) some details clear up. At some conferences they even communicate
+dinner (if I don't miss it) some details are cleared up. At some conferences, they even communicate
 with me via some online form and I have to answer there through login/logout.
-This is rather annoying and turns me off. Would be much better to feel
+This is rather annoying and turns me off. It would be much better to feel
 that there is a team with real people, who want to see me as a speaker.
 I would be way more dedicated and motivated.
 
 **Short breaks**.
-Too short breaks between presentations give listeners an impression that
+Breaks between presentations that are too short give listeners an impression that
 each particular presentation is not as important as the event as a whole.
 This really de-motivates me as a speaker. I want to feel valuable.
 I came to the conference to be heard. I think my speech is the most important and I don't want people to
@@ -48,11 +48,11 @@ time &mdash; enough to forget the previous talk and focus on the next one.
 Also, four talks per day is an absolute maximum for a serious listener.
 
 **No moderator**.
-There must be someone on the stage, who presents the speaker and asks
+There must be someone on the stage who presents the speaker and asks
 questions if the room is quiet. All academic conferences have that. I don't
 understand why most industry events don't do the same. A speaker must feel
 comfortable on the stage. Being there alone doesn't help at all. Also, the
-moderator will promote me to better engage the audience.
+moderator will promote me to better engage with the audience.
 
 **Boring website**.
 The higher the level of the conference, the more modern and beautiful their
@@ -67,24 +67,24 @@ This means literally what it says &mdash; the place is too cheap and, because
 of that, bad. The impression of such a place ruins the entire conference.
 Don't fool yourself, if it's cheap &mdash; it's bad.
 Into this category I would also place venues that are not designed to be
-conference hosters, like cinemas or offices. They will also be cheaper that
+conference hosters, like cinemas or offices. They will also be cheaper than
 proper venues, but you will get what you pay for.
 
 **No introduction**.
 I believe it's a job of conference organizers to promote me as a speaker
-in front of the audience. Not only there, on the stage, but also online,
+in front of the audience. Not only on the stage, but also online,
 via Twitter, Facebook, etc. Most conferences don't do that at all. I come to
 the stage completely unannounced with almost zero interest from the room. They
 simply don't know who I am and why I'm here. The conference must promote us,
-speakers, very pro-actively.
+the speakers, very pro-actively.
 
 **No networking**.
 Conference organizers know all speakers who are attending and most of the
 listeners. They are at the center of this networking event, but they almost
 never use that position effectively. They should help me network while I'm there
-by introducing to those who I may be interested in. This won't be hard
-at all for them. Just tell me "hey, let me introduce you to this guy, who
-is working and speaking about something similar to you". Just make 5-10
+by introducing me to those who I may be interested in. This won't be hard
+at all for them. Just tell me "hey, let me introduce you to this guy who
+is working and speaking about something similar to you." Just make 5-10
 such short intros and I will busy talking to these guys for the whole day.
 Instead, in most conferences, speakers arrive, speak, drink their coffee and leave.
 That's sad.
@@ -92,11 +92,11 @@ That's sad.
 **No video**.
 Most conferences don't record videos and it's a terrible mistake. They probably
 think that their events are more important then us, their speakers. It's not
-true. I'm speaking in front of 50 people, video record it on my iPhone, publish
+true. I'm speaking in front of 50 people, video recording it on my iPhone, publishing
 it in my [YouTube channel](https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q)
-and get 500 views in the first week. So, who is
+and getting 500 views in the first week. So, who is
 more important, your event which was able to attract just 50 people or my
-YouTube channel that attracted 500? Thus, I would strongly recommend to pay
+YouTube channel that attracted 500? Thus, I would strongly recommend paying
 a lot of attention to video recording and its quality. Preferrably, you should
 record from two cameras (the speaker and the room) and do video editing afterwards.
 It's expensive, but very important.
@@ -107,8 +107,8 @@ According to my experience, only one out of 10-15 people is actually listening
 and understanding. It's an average number. Of course, it depends on the subject,
 but not too much. This means that if there are 30 people in the room, only
 a few of them are my active listeners. It's very difficult to present to just
-a few people. You simply can't afford to lose their attention not even for a second.
-With a hundred people the situation becomes more manageable. There are 8-12 people,
+a few people. You simply can't afford to lose their attention, even for a second.
+With a hundred people, the situation becomes more manageable. There are 8-12 people
 who are actively listening. Even if I lose a few of them, it's not a big deal.
 The best size of the room is 250 people. That's the ideal audience for
 a technical talk.
@@ -135,7 +135,7 @@ conference attendees feel the same. A perfect conference must have one
 track, a room for 250-300 listeners, and a very well selected list of
 speakers. I believe that most conferences are shooting themselves in the
 foot trying to please the audience by inviting too many speakers. Instead,
-do you home work right &mdash; select the best speakers and don't make listeners
+do your homework right &mdash; select the best speakers and don't make listeners
 walk from track to track cursing you for the mediocre speeches.
 Choosing speakers is your job! Don't delegate it to your audience.
 
