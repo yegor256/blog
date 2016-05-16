@@ -18,6 +18,9 @@ youtube:
   - qRZYJGYdrwk
   - LB_YLWhGrco
   - dE0_j4Kk6jo
+  - pt9uHp35fwM
+  - b6r2W3P9vgY
+  - xbovkm0tTn0
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

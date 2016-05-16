@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What to Worry About in Convertible Notes"
-date: 2015-10-20
+date: 2016-05-12
 place: Palo Alto, CA
 tags: management startup
 description: |

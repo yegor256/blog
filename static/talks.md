@@ -69,20 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/baltic-devops.png" class="future-talk" alt="Baltic DevOps 2016"/>
-**Continuous Integration May Have Negative Effects**<br/>
-[Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/)<br/>
-Tallinn, Estonia<br/>
-10 May 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2016"/>
-**Need Robust Software? Make It Fragile**<br/>
-[GeeCON](http://2016.geecon.org/speakers/info.html?id=120)<br/>
-Krakow, Poland<br/>
-13 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/itake-2016.png" class="future-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Chatbots**<br/>
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
@@ -109,6 +95,13 @@ Kiev, Ukraine<br/>
 [DevOps Pro](http://devopspro.lt/)<br/>
 Vilnius, Lithuania<br/>
 26 May 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/pmday-2016.png" class="future-talk" alt="PMDay Lviv 2016"/>
+**Micromanagemet is a decease**<br/>
+[PMDay Lviv](http://pmday.com.ua/)<br/>
+Lviv, Ukraine<br/>
+28 May 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/item-2016.svg" class="future-talk" alt="ITEM 2016"/>
@@ -163,6 +156,27 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
+Fail Fast. Into User's Face;
+[GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
+Krakow, Poland;
+13 May 2016.
+[slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
+[photos](https://www.facebook.com/yegor256/posts/10209494716834756),
+[video](...).
+
+
+<div class="talk-event"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/p843x403/11259592_10209460571061133_2941646769344634800_o.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
+Continuous Integration May Have Negative Effects;
+[Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
+Tallinn, Estonia;
+10 May 2016.
+[slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
+[photos](https://www.facebook.com/yegor256/posts/10209460572181161),
+[video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
