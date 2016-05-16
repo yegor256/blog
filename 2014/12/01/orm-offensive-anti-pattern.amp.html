@@ -309,7 +309,10 @@ inside objects. Let&#39;s start with <code>Posts</code> and implement it in clas
           <span class="k">new</span> <span class="n">ListOutcome</span><span class="o">.</span><span class="na">Mapping</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;()</span> <span class="o">{</span>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="n">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="n">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
-              <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span><span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+              <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                <span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+              <span class="o">);</span>
             <span class="o">}</span>
           <span class="o">}</span>
         <span class="o">)</span>
@@ -418,7 +421,10 @@ the &quot;constant&quot; objects:</p>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="n">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="n">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
               <span class="k">return</span> <span class="k">new</span> <span class="nf">ConstPost</span><span class="o">(</span>
-                <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span><span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)),</span>
+                <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                  <span class="n">ConstPgPosts</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                  <span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+                <span class="o">),</span>
                 <span class="n">Utc</span><span class="o">.</span><span class="na">getTimestamp</span><span class="o">(</span><span class="n">rset</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span>
                 <span class="n">rset</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
               <span class="o">);</span>

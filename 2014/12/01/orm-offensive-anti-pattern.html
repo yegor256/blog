@@ -28,19 +28,19 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?a87f0a8"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?a87f0a8"/>
+    <link rel="shortcut icon" href="/favicon.ico?46e7d5c"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?46e7d5c"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?a87f0a8"/>
-    <link rel="stylesheet" href="/css/icons.css?a87f0a8"/>
+    <link rel="stylesheet" href="/css/layout.css?46e7d5c"/>
+    <link rel="stylesheet" href="/css/icons.css?46e7d5c"/>
     <link rel="canonical" href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html" />
     <link rel="amphtml" href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.amp.html" />
     <title>ORM Is an Offensive Anti-Pattern - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?a87f0a8"></script>
+    <script src="/js/global.js?46e7d5c"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -137,7 +137,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/dec/2014-12-01-orm-offensive-anti-pattern.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-05-08T15:09:56+0000'>8 May 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2014/dec/2014-12-01-orm-offensive-anti-pattern.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-05-16T13:40:52+0000'>16 May 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -456,7 +456,10 @@ inside objects. Let&#39;s start with <code>Posts</code> and implement it in clas
           <span class="k">new</span> <span class="n">ListOutcome</span><span class="o">.</span><span class="na">Mapping</span><span class="o">&lt;</span><span class="n">Post</span><span class="o">&gt;()</span> <span class="o">{</span>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="n">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="n">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
-              <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span><span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+              <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                <span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+              <span class="o">);</span>
             <span class="o">}</span>
           <span class="o">}</span>
         <span class="o">)</span>
@@ -565,7 +568,10 @@ the &quot;constant&quot; objects:</p>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="n">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="n">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
               <span class="k">return</span> <span class="k">new</span> <span class="nf">ConstPost</span><span class="o">(</span>
-                <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span><span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)),</span>
+                <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                  <span class="n">ConstPgPosts</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                  <span class="n">rset</span><span class="o">.</span><span class="na">getInteger</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+                <span class="o">),</span>
                 <span class="n">Utc</span><span class="o">.</span><span class="na">getTimestamp</span><span class="o">(</span><span class="n">rset</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span>
                 <span class="n">rset</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
               <span class="o">);</span>
@@ -635,7 +641,7 @@ skill, perfectly encapsulated inside their borders.</p>
       </article>
     </main>
     
-      <div class="youtube"><ul><li><a href='https://www.youtube.com/watch?v=DEqcn4-freM'><img src='https://i.ytimg.com/vi/DEqcn4-freM/mqdefault.jpg'/></a>Why ORM is an Anti-Pattern? (webinar #10); 6 January 2016; 1640 views; 24 likes</li><li><a href='https://www.youtube.com/watch?v=WSgP85kr6eU'><img src='https://i.ytimg.com/vi/WSgP85kr6eU/mqdefault.jpg'/></a>Why Getters-and-Setters Is An Anti-Pattern? (webinar #4); 1 July 2015; 1965 views; 36 likes</li><li><a href='https://www.youtube.com/watch?v=aER4uwyFbqQ'><img src='https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg'/></a>ORM is offensive (in Russian with English subtitles); 24 April 2016; 804 views; 24 likes</li></ul></div>
+      <div class="youtube"><ul><li><a href='https://www.youtube.com/watch?v=DEqcn4-freM'><img src='https://i.ytimg.com/vi/DEqcn4-freM/mqdefault.jpg'/></a>Why ORM is an Anti-Pattern? (webinar #10); 6 January 2016; 1642 views; 24 likes</li><li><a href='https://www.youtube.com/watch?v=WSgP85kr6eU'><img src='https://i.ytimg.com/vi/WSgP85kr6eU/mqdefault.jpg'/></a>Why Getters-and-Setters Is An Anti-Pattern? (webinar #4); 1 July 2015; 1971 views; 36 likes</li><li><a href='https://www.youtube.com/watch?v=aER4uwyFbqQ'><img src='https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg'/></a>ORM is offensive (in Russian with English subtitles); 24 April 2016; 812 views; 24 likes</li></ul></div>
     
     
   <div class="unprintable">
@@ -644,23 +650,23 @@ skill, perfectly encapsulated inside their borders.</p>
     <ul>
       
         <li>
-          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="4.349320985442101">Design Patterns and Anti-Patterns, Love and Hate</a>
+          <a href="/2016/02/03/design-patterns-and-anti-patterns.html" data-score="4.323538932616726">Design Patterns and Anti-Patterns, Love and Hate</a>
         </li>
       
         <li>
-          <a href="/2015/04/16/award.html" data-score="2.8612288286890575">Software Quality Award, 2015</a>
+          <a href="/2015/04/16/award.html" data-score="2.859058245893575">Software Quality Award, 2015</a>
         </li>
       
         <li>
-          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.1907007704372732">Jare.io, an Instant and Free CDN</a>
+          <a href="/2016/03/30/jare-instant-free-cdn.html" data-score="1.1903238649481456">Jare.io, an Instant and Free CDN</a>
         </li>
       
         <li>
-          <a href="/2015/03/22/takes-java-web-framework.html" data-score="1.1652152274362393">Java Web App Architecture In Takes Framework</a>
+          <a href="/2015/03/22/takes-java-web-framework.html" data-score="1.1609522047941296">Java Web App Architecture In Takes Framework</a>
         </li>
       
         <li>
-          <a href="/2016/03/08/pimp-up-your-resume.html" data-score="1.090272143773092">Pimp Up Your Resume</a>
+          <a href="/2016/03/08/pimp-up-your-resume.html" data-score="1.089034803975848">Pimp Up Your Resume</a>
         </li>
       
     </ul>
@@ -694,8 +700,8 @@ skill, perfectly encapsulated inside their borders.</p>
 
 </section>
 
-<script src="/js/post.js?a87f0a8"></script>
-<script src="//a.disquscdn.com/embed.js?a87f0a8"></script>
+<script src="/js/post.js?46e7d5c"></script>
+<script src="//a.disquscdn.com/embed.js?46e7d5c"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
