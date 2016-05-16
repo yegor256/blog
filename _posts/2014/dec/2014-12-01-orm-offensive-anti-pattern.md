@@ -314,7 +314,10 @@ final class PgPosts implements Posts {
           new ListOutcome.Mapping<Post>() {
             @Override
             public Post map(final ResultSet rset) {
-              return new PgPost(rset.getInteger(1));
+              return new PgPost(
+                this.dbase,
+                rset.getInteger(1)
+              );
             }
           }
         )
@@ -431,7 +434,10 @@ final class ConstPgPosts implements Posts {
             @Override
             public Post map(final ResultSet rset) {
               return new ConstPost(
-                new PgPost(rset.getInteger(1)),
+                new PgPost(
+                  ConstPgPosts.this.dbase,
+                  rset.getInteger(1)
+                ),
                 Utc.getTimestamp(rset, 2),
                 rset.getString(3)
               );
