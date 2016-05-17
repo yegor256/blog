@@ -170,8 +170,9 @@ more month. Of course, we may say no.
 Second, the maximum we can give you is $20,000. Maybe, in the future,
 we will raise this limit. For now, it is $20K.
 
-And one last thing. We will ask you to give us some stock in your
-startup. You decide how much, but it has to be enough to make us
+And one last thing. We will ask you to give us some
+[future equity]({% pst 2016/may/2015-05-17-convertible-notes %})
+in your startup. You decide how much, but it has to be enough to make us
 interested. It all depends on your situation. A few percent, I'd guess.
 
 We're planning to host our first interviews in the middle of January 2016.

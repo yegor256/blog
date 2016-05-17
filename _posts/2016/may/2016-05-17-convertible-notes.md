@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What to Worry About in Convertible Notes"
-date: 2016-05-12
+date: 2016-05-17
 place: Palo Alto, CA
 tags: management startup
 description: |
@@ -27,6 +27,8 @@ Let's see what exactly it says and what you, as a founder,
 should pay attention to.
 
 <!--more-->
+
+{% picture /images/2016/05/the-godfather-iii.jpg 0 The Godfather: Part III (1990) by Francis Ford Coppola %}
 
 ## Why Not Equity?
 
