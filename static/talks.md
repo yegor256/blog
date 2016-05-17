@@ -288,7 +288,7 @@ the content is rather poor. Most talks were rather boring and poorly prepared.
 Aside from that, everything was good and I liked to be there.
 
 <div class="talk-event"/>
-<aside class="venue-rate green">C+</aside>
+<aside class="venue-rate orange">C+</aside>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/12916949_10209219893244338_8937507043400548607_o.jpg" class="past-talk" alt="Outsource People 2016"/>
 Software Outsourcing, 10 Years Ahead Prediction;
 [Outsource People 2016](http://outsource-people.com/en);
@@ -318,7 +318,7 @@ paid. The only problem was the content. Most presentations
 were rather boring and not well prepared. Aside from that, I liked it.
 
 <div class="talk-event"/>
-<aside class="venue-rate green">C</aside>
+<aside class="venue-rate orange">C</aside>
 <img src="https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/11080491_10209166061658582_6077232981402936588_o.jpg" class="past-talk" alt="SEDC 2016"/>
 Meetings And Motivation, Friends Or Enemies?;
 [SEDC 2016](http://www.sedcconference.org/);
@@ -419,7 +419,7 @@ I've got a number of leads from this event.
 ### 2015
 
 <div class="talk-event"/>
-<aside class="venue-rate green">C+</aside>
+<aside class="venue-rate orange">C+</aside>
 <img src="/images/2015/devopsdays-warsaw-2015.jpg" class="past-talk" alt="DevOpsDays Warsaw 2015"/>
 "Continuous Integration May Have Negative Effects";
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
