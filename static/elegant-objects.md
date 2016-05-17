@@ -21,16 +21,16 @@ keywords:
 }
 </style>
 
-{% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/5Yfx1i %}
+{% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is my first book. It is about object-oriented
 programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible. It is available for sale
-on [Amazon](http://goo.gl/5Yfx1i) (please, don't forget to review it there!),
+on [Amazon](http://goo.gl/W2WVMk) (please, don't forget to review it there!),
 ISBN: 1519166915.<br/>
-<a href="http://goo.gl/5Yfx1i"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
 
@@ -63,7 +63,7 @@ reviewers.
 Mar 17, 2016:
 The book just made it into the **top 100 Amazon Best Sellers** in
 [Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
-There are [three reviews](http://goo.gl/5Yfx1i)
+There are [three reviews](http://goo.gl/W2WVMk)
 already. Many thanks to their authors! Would
 be great if you publish yours &mdash; this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
@@ -84,7 +84,7 @@ Over a 100 books sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,
 but I'm sure there will be some. I would like to ask you to post your
 reviews, either negative or positive, directly to
-[Amazon](http://goo.gl/5Yfx1i).
+[Amazon](http://goo.gl/W2WVMk).
 I'm getting many requests about an **electronic version** of the book.
 I'm not planning to turn this into an e-book, at least until the end
 of 2018. Mostly because I'm greedy. I realize that the moment I publish
@@ -97,16 +97,16 @@ send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does this sound?
 
 <div class="book-event"/>
-{% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/5Yfx1i %}
+{% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/W2WVMk %}
 Feb 22, 2016:
 The book is published! It is for sale,
-[on Amazon](http://goo.gl/5Yfx1i).
+[on Amazon](http://goo.gl/W2WVMk).
 The price is $40.96. The size is 229 pages. The paper is creamy.
 The cover is mate. I took into account recommendations and corrections
 of 9 reviewers. Two of them were missed, for technical reasons. I will
 definitely include them in the next edition. If you decide to buy it,
 please leave your feedback
-[on Amazon](http://goo.gl/5Yfx1i).
+[on Amazon](http://goo.gl/W2WVMk).
 It will help me attract more readers. After reading, please shoot me
 an email to [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested to know what you think. Thanks!
@@ -133,7 +133,7 @@ Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 <div class="book-event"/>
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
-You can [pre-order](http://goo.gl/5Yfx1i)
+You can [pre-order](http://goo.gl/W2WVMk)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 

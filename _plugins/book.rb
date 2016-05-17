@@ -2,7 +2,7 @@ module Yegor
   module Filters
     def book(book)
       opts = book.strip.split(/\s+/, 2)
-      link = 'http://goo.gl/5Yfx1i'
+      link = 'http://goo.gl/W2WVMk'
       "<aside class='book'>" \
       "<a href='#{link}'>" \
       "<img src='/images/books/elegant-objects/cover.png' class='book-cover'/>" \
