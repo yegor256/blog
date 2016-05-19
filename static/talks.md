@@ -152,28 +152,28 @@ why shouldn't we rate them, right? The best rate is
 
 <div class="talk-event"/>
 <img src="/images/2016/itake-2016.png" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
-Chatbots;
+Microservices as Chat Bots;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
 Bucharest, Romania;
-19 May 2016.
+19 May 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
+[video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
 
 <div class="talk-event"/>
 <img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
 Fail Fast. Into User's Face;
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
 Krakow, Poland;
-13 May 2016.
+13 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
-[photos](https://www.facebook.com/yegor256/posts/10209494716834756),
-[video](...).
-
+[photos](https://www.facebook.com/yegor256/posts/10209494716834756).
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/p843x403/11259592_10209460571061133_2941646769344634800_o.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
 Continuous Integration May Have Negative Effects;
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
-10 May 2016.
+10 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
 [photos](https://www.facebook.com/yegor256/posts/10209460572181161),
 [video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
