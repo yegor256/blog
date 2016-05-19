@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/itake-2016.png" class="future-talk" alt="I T.A.K.E. Unconference 2016"/>
-**Chatbots**<br/>
-[I T.A.K.E. Unconference 2016](http://itakeunconf.com/)<br/>
-Bucharest, Romania<br/>
-19 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/devit-logo.svg" class="future-talk" alt="DEVit 2016"/>
 **Need Robust Software? Make It Fragile**<br/>
 [DEVit 2016](http://devitconf.org/)<br/>
@@ -156,6 +149,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/itake-2016.png" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
+Chatbots;
+[I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
+Bucharest, Romania;
+19 May 2016.
 
 <div class="talk-event"/>
 <img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
