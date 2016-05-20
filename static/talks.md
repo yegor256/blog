@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/devit-logo.svg" class="future-talk" alt="DEVit 2016"/>
-**Need Robust Software? Make It Fragile**<br/>
-[DEVit 2016](http://devitconf.org/)<br/>
-Thessaloniki, Greece<br/>
-20 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2016"/>
 **How Immutability Helps in OOP** and **ORM is an Offensive Anti-Pattern**<br/>
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/)<br/>
@@ -149,6 +142,14 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/devit-logo.svg" class="past-talk" alt="DEVit 2016"/>
+Need It Robust? Make It Fragile;
+[DEVit 2016](http://devitconf.org/);
+Thessaloniki, Greece;
+20 May 2016;
+[video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
 
 <div class="talk-event"/>
 <img src="/images/2016/itake-2016.png" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
