@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2016"/>
-**How Immutability Helps in OOP** and **ORM is an Offensive Anti-Pattern**<br/>
-[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/)<br/>
-Kiev, Ukraine<br/>
-21 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/devopspro-2016.png" class="future-talk" alt="DevOpsPro 2016"/>
 **Deployment Scripts Are Dead, Meet Rultor**<br/>
 [DevOps Pro](http://devopspro.lt/)<br/>
@@ -144,20 +137,37 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/devit-logo.svg" class="past-talk" alt="DEVit 2016"/>
+<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
+How Immutability Helps in OOP;
+[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
+Kiev, Ukraine;
+21 May 2016.
+
+<div class="talk-event"/>
+<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
+ORM is an Offensive Anti-Pattern;
+[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
+Kiev, Ukraine;
+21 May 2016.
+
+<div class="talk-event"/>
+<img src="https://scontent-fra3-1.xx.fbcdn.net/l/t31.0-8/13235550_10209535249568049_9138080623936446802_o.jpg" class="past-talk" alt="DEVit 2016"/>
 Need It Robust? Make It Fragile;
 [DEVit 2016](http://devitconf.org/);
 Thessaloniki, Greece;
 20 May 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/need-it-robust-make-it-fragile),
+[photos](https://www.facebook.com/yegor256/posts/10209535256568224),
 [video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
 
 <div class="talk-event"/>
-<img src="/images/2016/itake-2016.png" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
+<img src="https://scontent-fra3-1.xx.fbcdn.net/t31.0-8/13254734_10209525000431827_1737927958628044606_o.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
 Microservices as Chat Bots;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
 Bucharest, Romania;
 19 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
+[photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
 
 <div class="talk-event"/>
