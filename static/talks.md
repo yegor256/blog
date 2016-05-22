@@ -179,7 +179,7 @@ How Much Immutability is Enough?;
 [Bucharest JUG Meetup](http://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
 Bucharest, Romania;
 18 May 2016;
-[slides](),
+[slides](http://www.slideshare.net/YegorBugayenko/how-much-immutability-is-enough),
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=p7m7_iiqaHI).
 
