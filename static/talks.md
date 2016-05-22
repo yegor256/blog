@@ -138,17 +138,20 @@ why shouldn't we rate them, right? The best rate is
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
-How Immutability Helps in OOP;
-[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
-Kiev, Ukraine;
-21 May 2016.
-
-<div class="talk-event"/>
-<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
 ORM is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
-21 May 2016.
+21 May 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern).
+
+<div class="talk-event"/>
+<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
+How Immutability Helps in OOP;
+[JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
+Kiev, Ukraine;
+21 May 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/how-immutability-helps-in-oop),
+[video](https://www.youtube.com/watch?v=EnhRgXrHCC4).
 
 <div class="talk-event"/>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/l/t31.0-8/13235550_10209535249568049_9138080623936446802_o.jpg" class="past-talk" alt="DEVit 2016"/>
@@ -161,7 +164,7 @@ Thessaloniki, Greece;
 [video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
 
 <div class="talk-event"/>
-<img src="https://scontent-fra3-1.xx.fbcdn.net/t31.0-8/13254734_10209525000431827_1737927958628044606_o.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
+<img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/s960x960/13235513_10209525003391901_2165146089875305269_o.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
 Microservices as Chat Bots;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
 Bucharest, Romania;
@@ -169,6 +172,16 @@ Bucharest, Romania;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
+
+<div class="talk-event"/>
+<img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13254734_10209525000431827_1737927958628044606_o.jpg" class="past-talk" alt="Bucharest JUG"/>
+How Much Immutability is Enough?;
+[Bucharest JUG Meetup](http://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
+Bucharest, Romania;
+18 May 2016;
+[slides](),
+[photos](https://www.facebook.com/yegor256/posts/10209525009272048),
+[video](https://www.youtube.com/watch?v=p7m7_iiqaHI).
 
 <div class="talk-event"/>
 <img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
