@@ -142,7 +142,8 @@ ORM is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
 21 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern).
+[slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
+[video](https://www.youtube.com/watch?v=63tS3HNmhiE).
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
