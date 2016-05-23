@@ -137,21 +137,23 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/13244230_10209552489359033_2179205206575778566_o.jpg" class="past-talk" alt="JEEConf 2016"/>
 ORM is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
 21 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
+[photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=63tS3HNmhiE).
 
 <div class="talk-event"/>
-<img src="/images/2016/jeeconf-logo.png" class="past-talk" alt="JEEConf 2016"/>
+<img src="https://scontent.xx.fbcdn.net/t31.0-8/13227464_10209552487918997_6745142381734768723_o.jpg" class="past-talk" alt="JEEConf 2016"/>
 How Immutability Helps in OOP;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
 21 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/how-immutability-helps-in-oop),
+[photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=EnhRgXrHCC4).
 
 <div class="talk-event"/>
