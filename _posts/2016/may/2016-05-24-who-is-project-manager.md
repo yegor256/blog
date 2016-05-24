@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who Is a Project Manager?"
-date: 2016-05-23
+date: 2016-05-24
 place: Milan, Italy
 tags: management
 description: |
