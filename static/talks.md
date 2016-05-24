@@ -88,7 +88,7 @@ Lviv, Ukraine<br/>
 **Need Robust Software? Make It Fragile**,
 and **Don't be over excited about Amsterdam**<br/>,
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
-Dnepropetrovsk, Ukraine<br/>
+Dnepr, Ukraine<br/>
 2-3 June 2016
 
 <div class="talk-event"/>
@@ -125,6 +125,12 @@ Salt Lake City, USA<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
 Swansea, UK<br/>
 12 September 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
+[JEEConf 2017](http://www.jeeconf.com/)<br/>
+Kiev, Ukraine<br/>
+26-27 May 2017
 
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
