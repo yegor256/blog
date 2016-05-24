@@ -137,6 +137,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A</aside>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/13244230_10209552489359033_2179205206575778566_o.jpg" class="past-talk" alt="JEEConf 2016"/>
 ORM is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
@@ -145,6 +146,11 @@ Kiev, Ukraine;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=63tS3HNmhiE).
+The venue, the logistics, the food, the organization, the size (over 1000 people),
+and the preliminary screening of my presentation... everything was very good. What I didn't like
+is the amount of tracks (too many) and the list of speakers, which, I believe,
+almost copied JPoint. Would be great to see new faces. Overall impression was
+very positive, definitely will try to attend it next year.
 
 <div class="talk-event"/>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/13227464_10209552487918997_6745142381734768723_o.jpg" class="past-talk" alt="JEEConf 2016"/>
@@ -157,6 +163,7 @@ Kiev, Ukraine;
 [video](https://www.youtube.com/watch?v=EnhRgXrHCC4).
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://scontent-fra3-1.xx.fbcdn.net/l/t31.0-8/13235550_10209535249568049_9138080623936446802_o.jpg" class="past-talk" alt="DEVit 2016"/>
 Need It Robust? Make It Fragile;
 [DEVit 2016](http://devitconf.org/);
@@ -165,8 +172,14 @@ Thessaloniki, Greece;
 [slides](http://www.slideshare.net/YegorBugayenko/need-it-robust-make-it-fragile),
 [photos](https://www.facebook.com/yegor256/posts/10209535256568224),
 [video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
+Surprisingly, the conference was very good. Just two tracks for about 400
+attendees, motivated audience, good equipment, video recording, etc. What I
+obviously didn't like was the venue (not really comfortable), the mess with
+the schedule (my talk was delayed for over 30 minutes), and an absense
+of focus on some specific subject. Aside from that, it was a positive experience.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C</aside>
 <img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/s960x960/13235513_10209525003391901_2165146089875305269_o.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
 Microservices as Chat Bots;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
@@ -175,6 +188,10 @@ Bucharest, Romania;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
+It was a rather small conference (around 150 people) without any specific
+focus. The venue (Radisson) was perfect, but the amount of tracks too big. There
+were less than 30 people in my room. Also, the organization was rather messy
+and my talk was delayed for over 20 minutes.
 
 <div class="talk-event"/>
 <img src="https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13254734_10209525000431827_1737927958628044606_o.jpg" class="past-talk" alt="Bucharest JUG"/>
@@ -187,6 +204,7 @@ Bucharest, Romania;
 [video](https://www.youtube.com/watch?v=p7m7_iiqaHI).
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C</aside>
 <img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
 Fail Fast. Into User's Face;
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
@@ -194,8 +212,18 @@ Krakow, Poland;
 13 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
 [photos](https://www.facebook.com/yegor256/posts/10209494716834756).
+Even though it's a big (over 1000 people) and popular European conference about Java, my
+overall impression is not really positive. The venue was not
+comfortable at all (it was a cinema), there were no tables for food and we
+were eating lunch in cinema chairs :) The amount of talks and tracks was
+too big, the audience was very disfocused. What seriously affected my
+impression is the way listeners were leaving the rooms during the talks,
+check this [tweet](https://twitter.com/yegor256/status/731113702691352576).
+Besides that, the organization was rather formal and messy. There is a lot
+of room for improvement.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C+</aside>
 <img src="https://scontent.xx.fbcdn.net/t31.0-8/p843x403/11259592_10209460571061133_2941646769344634800_o.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
 Continuous Integration May Have Negative Effects;
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
@@ -204,6 +232,11 @@ Tallinn, Estonia;
 [slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
 [photos](https://www.facebook.com/yegor256/posts/10209460572181161),
 [video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
+The conference was rather small (around 150 people), but well organized. What
+I didn't really like was the food and the venue (we even had some other
+conference going in the next room to us). Also, the audience was not really
+engaged and prepared, as it seemed to me. I believe, this event may improve
+and become better, the potential is definitely there.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>

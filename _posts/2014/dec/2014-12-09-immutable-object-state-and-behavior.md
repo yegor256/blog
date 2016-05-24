@@ -16,6 +16,8 @@ keywords:
   - immutable object state
 youtube:
   - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 I often hear this argument against

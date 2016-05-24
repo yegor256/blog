@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who Is a Project Manager?"
-date: 2016-05-18
+date: 2016-05-23
 place: Milan, Italy
 tags: management
 description: |
@@ -23,6 +23,8 @@ project manager is much more valuable for a project than a leader. If a
 leader is valuable at all...
 
 <!--more-->
+
+{% picture /images/2016/05/schindlers-list.jpg 0 Schindler's List (1993) by Steven Spielberg %}
 
 There are three things I want to define: project, project
 management, and project manager. Once they are clear, my previous statement

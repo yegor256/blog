@@ -15,6 +15,8 @@ keywords:
 book: elegant-objects 2.6
 youtube:
   - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 After a few recent posts about immutability, including

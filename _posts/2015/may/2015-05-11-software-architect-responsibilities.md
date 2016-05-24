@@ -89,7 +89,8 @@ should mention the most critical issues there.
 Now, the risks. A risk is something that hasn't happened yet but may happen
 soon, and if it happens, we'll be in trouble. The architect is responsible
 for keeping an eye on all potential risks and regularly reporting the most critical
-ones to the project manager. Here is an example of
+ones to the
+[project manager]({% pst 2016/may-2016-who-is-project-manager %}). Here is an example of
 a brief risk report:
 
 {% highlight text %}

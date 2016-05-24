@@ -90,7 +90,9 @@ and negotiator. He is a diplomat. And he is an expert in the technical domain.
 
 But, even if he doesn't have all these merits, **his decision is always final**.
 
-And this is the job of the project manager, to make sure that every
+And this is the job of the
+[project manager]({% pst 2016/may-2016-who-is-project-manager %}),
+to make sure that every
 technical decision the architect makes is not doubted
 [by anyone]({% pst 2015/oct/2015-10-13-competition-without-rules %}). This is
 what delegation is all about &mdash; responsibility should always come with power.

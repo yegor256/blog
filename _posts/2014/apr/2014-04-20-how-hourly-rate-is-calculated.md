@@ -63,7 +63,9 @@ To increase this metric, you should try to close all tasks as soon as possible
 to reduce your overall completion-time average.
 
 If you see that a specific task is not suitable for you, don't hold on to it.
-Instead, inform your project manager as soon as possible that you do not want to
+Instead, inform your
+[project manager]({% pst 2016/may-2016-who-is-project-manager %})
+as soon as possible that you do not want to
 work on the task. After you inform the project manager, he will try find you
 something else more suitable.
 
