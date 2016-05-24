@@ -227,9 +227,9 @@
 	<a xlink:title="Plot #1">
 <g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '107.8,230.0 123.3,230.0 123.3,25.7 107.8,25.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '107.8,230.0 123.3,230.0 123.3,25.5 107.8,25.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M107.8,230.0 L107.8,25.8 L123.2,25.8 L123.2,230.0 L107.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M107.8,230.0 L107.8,25.6 L123.2,25.6 L123.2,230.0 L107.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '128.3,230.0 144.1,230.0 144.1,172.1 128.3,172.1 '/>
 	</g>
@@ -263,9 +263,9 @@
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M274.9,230.0 L274.9,127.5 L290.6,127.5 L290.6,230.0 L274.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '295.9,230.0 311.9,230.0 311.9,130.7 295.9,130.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '295.9,230.0 311.9,230.0 311.9,130.6 295.9,130.6 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M295.9,230.0 L295.9,130.8 L311.8,130.8 L311.8,230.0 L295.9,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M295.9,230.0 L295.9,130.7 L311.8,130.7 L311.8,230.0 L295.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '317.1,230.0 332.4,230.0 332.4,139.3 317.1,139.3 '/>
 	</g>
@@ -327,9 +327,9 @@
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M608.2,230.0 L608.2,183.7 L623.9,183.7 L623.9,230.0 L608.2,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '629.0,230.0 644.5,230.0 644.5,207.3 629.0,207.3 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '629.0,230.0 644.5,230.0 644.5,178.2 629.0,178.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M629.0,230.0 L629.0,207.4 L644.4,207.4 L644.4,230.0 L629.0,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M629.0,230.0 L629.0,178.3 L644.4,178.3 L644.4,230.0 L629.0,230.0 Z '></path>
 </g>
 	</a>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">

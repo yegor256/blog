@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-05-23T08:55:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What to Worry About in Convertible Notes</title><link href="http://www.yegor256.com/2016/05/17/convertible-notes.html" rel="alternate" type="text/html" title="What to Worry About in Convertible Notes" /><published>2016-05-17T00:00:00+00:00</published><updated>2016-05-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/17/convertible-notes</id><content type="html" xml:base="http://www.yegor256.com/2016/05/17/convertible-notes.html">&lt;p&gt;&amp;quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Convertible_bond&quot;&gt;Convertible Notes&lt;/a&gt;&amp;quot;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-05-24T10:01:02+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Who Is a Project Manager?</title><link href="http://www.yegor256.com/2016/05/24/who-is-project-manager.html" rel="alternate" type="text/html" title="Who Is a Project Manager?" /><published>2016-05-24T00:00:00+00:00</published><updated>2016-05-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/24/who-is-project-manager</id><content type="html" xml:base="http://www.yegor256.com/2016/05/24/who-is-project-manager.html">&lt;p&gt;A project manager is very often confused with a leader. However, they are two
+very different things. A project manager is the one who predicts the future,
+while a leader is the one who builds it. And, in my opinion, a perfect
+project manager is much more valuable for a project than a leader. If a
+leader is valuable at all...&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F05%2Fschindlers-list.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Schindler&amp;amp;apos;s List (1993) by Steven Spielberg&#39;/&gt;&lt;figcaption&gt;Schindler&amp;#39;s List (1993) by Steven Spielberg&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are three things I want to define: project, project
+management, and project manager. Once they are clear, my previous statement
+will become obvious.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; is a vector from &lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; to &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;,
+where &lt;i&gt;W&lt;sub&gt;t&lt;/sub&gt;&lt;/i&gt; is a set of all &lt;em&gt;resources and risks&lt;/em&gt; in the world at
+some defined point in time &lt;i&gt;t&lt;/i&gt;. &lt;i&gt;W&lt;sub&gt;t&lt;/sub&gt;&lt;/i&gt; &lt;em&gt;is the world&lt;/em&gt;,
+at the moment &lt;i&gt;t&lt;/i&gt;. A project transforms the world, moving it from one
+state to another.
+&lt;a href=&quot;http://www.pmi.org/PMBOK-Guide-and-Standards.aspx&quot;&gt;PMBOK&lt;/a&gt; defines projects as
+&amp;quot;temporary endeavors undertaken to create unique products, services, or results,&amp;quot;
+which is just a specific case of my definition. Mine is more abstract, I believe.&lt;/p&gt;
+
+&lt;p&gt;Consider this example. You woke up in the morning and made yourself a cup of coffee.
+That was a project.
+When you woke up, the world was in &lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; state.
+There were some coffee beans in the bag, some water in the tap and
+some electricity in the power station. And there were you standing in front
+of the coffee machine. These were the &lt;em&gt;resources&lt;/em&gt; (including yourself).
+There were also risks. The electricity black out could have happened, right?
+The machine could have broken, right?
+In theory, there was an unlimited amount of risks, including a zombie riot.
+However, the majority of them had very low &lt;em&gt;probabilities&lt;/em&gt;, that&amp;#39;s why you
+managed to make that cup of coffee.&lt;/p&gt;
+
+&lt;p&gt;When the coffee was ready, the world appeared to be in &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt; state.
+There were no coffee beans in the bag any more, the water was
+used, and so was the electricity. However, a cup of coffee was created. We may
+call that project a success, but that&amp;#39;s not really important and is not correct. What&amp;#39;s important
+is that it&amp;#39;s &lt;em&gt;finished&lt;/em&gt;. We successfully transformed the world from state
+&lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; to state &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;. You may be surprised to
+hear that the project was not a success. Indeed, it was not. It was a success
+only for you, one of its &lt;em&gt;stakeholders&lt;/em&gt;. How about your roommate, the
+owner of that bag of coffee beans, who asked you yesterday not to use them
+because he is waiting for a date tonight? How much of a success was your project
+to him?&lt;/p&gt;
+
+&lt;p&gt;So, a project is never a &amp;quot;success&amp;quot; or a &amp;quot;failure.&amp;quot; A project is either
+dead or alive, that&amp;#39;s it. Success is a subjective category and can only
+be measured per stakeholder. And even a small project has many stakeholders.
+Think about that electricity company who sold you a few kW/h and made some
+profit out of it? The project was definitely a success for them. What about
+mother nature? Your project was definitely a failure for it, since you
+produced a few kilograms of CO&lt;sub&gt;2&lt;/sub&gt; while making that damn coffee. As you
+see, success is very subjective.&lt;/p&gt;
+
+&lt;p&gt;And we&amp;#39;re in line with the PMBOK definition. Our coffee making project was indeed
+a temporary endeavor undertaken to create a unique product, which was a cup of
+coffee.&lt;/p&gt;
+
+&lt;p&gt;Did we have a project manager? No. Were we doing any project management? No.
+Well, not explicitly. Obviously, you were the project manager, but you didn&amp;#39;t
+realize that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Project management&lt;/strong&gt; is a set of tools to &lt;em&gt;predict&lt;/em&gt; the outcome
+of a project. Planning is one of those tools. Guessing is another one. Expert
+judgement is yet another one, which you were using while making that coffee.
+You were an expert and knew how to use the machine, the electricity, and the water
+tap. You didn&amp;#39;t need any other tools except your expert judgement. And it
+worked. In bigger projects, we would need more powerful instruments and methods.
+For example, we could use some scheduling software to plan when to put the beans
+into the machine, when to put that cup under the dipping point and when to
+press the button. You might also need a budgeting software to calculate how
+much money you will owe to the roommate. You might use a few risk identification
+and planning algorithms, etc.&lt;/p&gt;
+
+&lt;p&gt;Most of such tools are mentioned and explained in the PMBOK. They are even
+groupped there into so called &amp;quot;knowledge areas:&amp;quot; for predicting
+time, money, risks, people, etc. It&amp;#39;s not important how exactly you predict
+the future, how many tools you&amp;#39;re using or what knowledge areas you break them
+into. What&amp;#39;s important is that you must try to do it with as much accuracy
+and precision as possible. Here comes the definition of the main guy.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;project manager&lt;/strong&gt; (PM) is the one who predicts the future.
+The PM knows in what state &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt; the world will be when
+the project is finished. If the PM doesn&amp;#39;t know or is in doubt &amp;mdash; it&amp;#39;s a bad PM. If
+the PM knows and is certain about it &amp;mdash; it&amp;#39;s a good PM. That&amp;#39;s it.&lt;/p&gt;
+
+&lt;p&gt;And I have to say, in that coffee making project you were a lousy PM. Did you
+know what was the probability of the project being finished without a cup of coffee
+made? A good PM would say that &amp;quot;after an analysis of 230 risks I predict
+the probability of that coffee being tasteful as 87.4%.&amp;quot; Obviously, you didn&amp;#39;t
+have that information. Next, did you know what would be the total monetary value of
+the project after its completion? Did you calculate all incurred costs, including
+the price of environmental damage your coffee machine made? A good PM would
+say that &amp;quot;the total cost of the project is expected to be $1.09.&amp;quot; Were you
+able to predict the duration of the project precisely? Well, maybe that one
+you were rather good at.&lt;/p&gt;
+
+&lt;p&gt;There is only one reason why we want to put a project manager on top of
+the project. I&amp;#39;m sure you will be surprised to hear it: the only purpose of
+a PM in a project is to help its key stakeholders (also known as sponsors) to
+make a decision: to kill the project right now or to let it stay alive for a bit more.
+That&amp;#39;s it.&lt;/p&gt;
+
+&lt;p&gt;You didn&amp;#39;t need a PM in your coffee making project because you, as its key
+stakeholder, were fully committed to finish it only when the coffee is ready.
+But imagine another situation. The coffee machine suddenly breaks, the water
+stops, the electricity is blacked out and some zombies are knocking at your door.
+And you still want that cup of coffee. Well, you&amp;#39;re not entirely sure what&amp;#39;s
+more important now, the coffee or simply finding a way to survive. You will need
+a more or less accurate prediction of how much that coffee will cost you and
+when will it be ready. If it&amp;#39;s just a few minutes and everything will be
+fine again, you will keep waiting for it. However, if the prediction is
+five hours and a risk of failure rate is 93%, you had better terminate this
+project and do something else.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s exactly what is happening in software development projects and all
+other projects. Project sponsors need to know whether the project is worth
+going forward or it&amp;#39;s time to stop it and do something else. That&amp;#39;s what
+they hire project managers for. This is the only reason of that millions
+of PMs existence &amp;mdash; to predict the future so that we were able to
+kill our projects before they kill us (read &amp;quot;eat all our resources&amp;quot;).&lt;/p&gt;
+
+&lt;p&gt;You may ask &amp;mdash; what about the coordinating part? What about
+&lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;morning standups&lt;/a&gt;?
+What about walking around the office and motivating all the
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slaves&lt;/a&gt;
+so that they don&amp;#39;t get lazy? Isn&amp;#39;t it the primary responsibility of a PM?&lt;/p&gt;
+
+&lt;p&gt;Not really. This is what a PM does in order to better understand the situation
+and predict the future. But it&amp;#39;s not what a PM is paid for.
+Indeed, a bad PM goes around the office and calls
+&lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;multiple meetings&lt;/a&gt;
+a day. This is also known as &amp;quot;staying on top of things&amp;quot; &amp;mdash;
+a perfect term to define an amateur PM. A bad PM &lt;em&gt;becomes&lt;/em&gt; the future, instead
+of predicting it. He &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanages&lt;/a&gt;
+the team by telling everybody what to do, since this is the easiest way to
+know what will happen and when, in the short-term. But the long-term future
+stays absolutely unclear. A bad PM mostly relies on expert judgement, just
+like you did while making that coffee.&lt;/p&gt;
+
+&lt;p&gt;A good project manager is a completely different creature. A good PM
+finds a way to &lt;em&gt;organize&lt;/em&gt; resources in such a way that their future
+becomes &lt;em&gt;predictable&lt;/em&gt;. The key word here is &amp;quot;organize.&amp;quot; A good PM organizes
+people, money, time, risks, stakeholders, and many other things. He uses
+planning and budgeting software in order to better see the future. But he
+doesn&amp;#39;t become the future and he doesn&amp;#39;t &lt;em&gt;build&lt;/em&gt; the future. His people do that,
+he just &lt;em&gt;observes&lt;/em&gt;. He only collects information from many possible sources
+and estimates what will happen, how much it will cost and who will
+suffer most and least. At any moment in time, he &lt;em&gt;knows&lt;/em&gt; exactly when the project
+will be finished, how much it will spend, how many results it will produce,
+what the quality will be, and what the accuracy of that prediction is.&lt;/p&gt;
+
+&lt;p&gt;A good PM doesn&amp;#39;t personally give orders to the team and
+doesn&amp;#39;t meet people to tell them what to do. Instead, he makes sure
+that all communication is happening through
+a &lt;strong&gt;project management information system&lt;/strong&gt; (PMIS). Moreover, in a perfectly
+organized project, a PM won&amp;#39;t even need to give any orders to the team. Work
+orders will be created, approved, assigned and verified by the team itself.
+The PM will make sure that the workflow is seamless and disciplined. But he
+won&amp;#39;t be personally responsible for telling people what to do.&lt;/p&gt;
+
+&lt;p&gt;A perfect PM won&amp;#39;t even be visible to the team. Everything will be obvious
+and clear: plans will be available, work orders explicitly defined,
+risks identified and documented, concerns properly reported, stakeholders
+informed in time, etc. This may sound like utopia, but that&amp;#39;s the
+true meaning of a &amp;quot;project manager&amp;quot; role.&lt;/p&gt;
+
+&lt;p&gt;I believe it&amp;#39;s already obvious that project management has very little to do
+with leadership. They are just two &lt;em&gt;orthogonal&lt;/em&gt; skill sets. I would say that
+a perfect PM won&amp;#39;t even need any leadership skills, while a lousy PM will need
+a lot of them. As far as I understand, being a leader means having enough
+inner power (also known as &amp;quot;charisma&amp;quot;) to make people do what you need. But that&amp;#39;s
+totally against what we just discussed. A project manager doesn&amp;#39;t want people
+do what&amp;#39;s needed because of his charisma. Instead, he wants people to be
+leaders of their own tasks. They have to move forward driven by their own
+motivation and selfish interests, according to the plans and rules defined
+by the PM. A charismatic project manager will inevitably replace the rules
+by his or her own personality and the entire idea of project management will
+be ruined.&lt;/p&gt;
+
+&lt;p&gt;This is my understanding of project management.&lt;/p&gt;</content><category term="management" /><summary>A project manager is very often confused with a leader. However, they are two
+very different things. A project manager is the one who predicts the future,
+while a leader is the one who builds it. And, in my opinion, a perfect
+project manager is much more valuable for a project than a leader. If a
+leader is valuable at all...</summary></entry><entry><title>What to Worry About in Convertible Notes</title><link href="http://www.yegor256.com/2016/05/17/convertible-notes.html" rel="alternate" type="text/html" title="What to Worry About in Convertible Notes" /><published>2016-05-17T00:00:00+00:00</published><updated>2016-05-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/17/convertible-notes</id><content type="html" xml:base="http://www.yegor256.com/2016/05/17/convertible-notes.html">&lt;p&gt;&amp;quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Convertible_bond&quot;&gt;Convertible Notes&lt;/a&gt;&amp;quot;
 is what you most likely will hear the first
 time you get money for your first startup. They will give you
 cash asking to give them the convertible notes (or SAFE,
@@ -1659,159 +1845,4 @@ file is always close to the end-user and your website loads much faster
 than without a CDN. Sounds good, but all CDN providers want money
 for their service and usually a rather complex setup and registration
 procedure. My pet project jare.io is a free
-CDN that is simple to configure. It utilizes AWS CloudFront resources.</summary></entry><entry><title>Unspoken Secrets of an Elevator Pitch</title><link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html" rel="alternate" type="text/html" title="Unspoken Secrets of an Elevator Pitch" /><published>2016-03-28T00:00:00+00:00</published><updated>2016-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch</id><content type="html" xml:base="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html">&lt;p&gt;Your success depends on the quality of your &lt;strong&gt;elevator pitch&lt;/strong&gt;. Basically, your
-success doesn&amp;#39;t depend on much of anything else. The pitch is king.
-You have to impress the &lt;del&gt;catcher&lt;/del&gt; investor in just a few seconds while
-the elevator is still moving (that&amp;#39;s where you are supposed to hunt for that
-prey). It&amp;#39;s not rocket science; you can learn a few basic
-principles and become a expert. Here they are, the principles.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fhuevos-de-oro.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Huevos de oro (1993) by Bigas Luna&#39;/&gt;&lt;figcaption&gt;Huevos de oro (1993) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Look&lt;/strong&gt;.
-Rule number 1: You must look right, like Mark Zuckerberg &amp;mdash; the
-same gray T-shirt every day with the same smile. The way you look must demonstrate
-that you&amp;#39;re part of the community. You&amp;#39;re one of us!
-These three things will help: a beard,
-an electric skateboard, and an Apple Watch. If you&amp;#39;re a girl, replace the beard
-with a yoga mat and you&amp;#39;re all set. By looking that way, you&amp;#39;re telling
-investors that your chances to succeed are way higher than anyone who
-doesn&amp;#39;t have an Apple Watch and is a stranger because of that.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Anyone who doesn&amp;#39;t have an Apple Watch is a stranger&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Innovate&lt;/strong&gt;.
-These are the words you must include in your pitch: innovation, innovative,
-innovate. It&amp;#39;s never too many. Put them (or their synonyms) everywhere;
-it&amp;#39;s all for good. How about this: &amp;quot;Our innovative solution
-is an environmental breakthrough&amp;quot;? Nobody knows what it means, but everybody
-understands that you&amp;#39;re a big-time innovator. Even if it&amp;#39;s yet
-another calorie calculator. Investors must understand that you&amp;#39;re not just
-making a software product; you &lt;em&gt;innovate&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Complicate&lt;/strong&gt;.
-Internet of Things in lieu of a thermometer,
-augmented reality instead of goggles with a camera, and
-global health rather than a database of dentists. You get the idea.
-Don&amp;#39;t be specific; it&amp;#39;s dangerous. They may ask you what kind of database
-it is and how it&amp;#39;s different than the other 50 databases on the market. But
-if you say global health, they won&amp;#39;t have any idea what you&amp;#39;re talking
-about, which is exactly what you need. Learn those words and use them whenever
-possible. Here are some of my favorites for you to remember: business model canvas, viral
-mechanics, growth hacking, data-driven mentality, design thinking, and
-game-changing disruption.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;But be careful, don&amp;#39;t overact or you may end up in a mental hospital&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Smile&lt;/strong&gt;.
-You are super excited about this fantastic opportunity! You&amp;#39;re extremely
-motivated to do this project with these absolutely great people! You&amp;#39;re
-passionate about the idea and fully committed to implementing it! You love the
-team, the partners, the investors, and the customers &amp;mdash; they&amp;#39;re all
-very nice people you&amp;#39;re happy to work with! You&amp;#39;re very enthusiastic about
-everything! You love everyone! ... But be careful; don&amp;#39;t overact or you may
-end up in a mental hospital.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Compare&lt;/strong&gt;.
-Compare yourself to Uber; you will never lose. It was Airbnb a few years
-ago and Dropbox before that. Today it&amp;#39;s Uber. Start your pitch with
-&amp;quot;It&amp;#39;s like Uber but ...&amp;quot; No matter what you put after that, it will work.
-All investors are dreaming about getting a new Uber in their portfolio. You
-should help them make this dream come true. There&amp;#39;s no need to be too complicated;
-just say you&amp;#39;re &amp;quot;like Uber but ...&amp;quot; and your chances to score Round A
-will jump higher.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Imitate&lt;/strong&gt;.
-Elon Musk! You have to mention this guy; you absolutely must. Try this:
-&amp;quot;As Elon Musk said in his book, it is very difficult to build a successful
-startup&amp;quot;. You, being aware of wisdom like that, give them the impression
-that you&amp;#39;re related to the Silicon Valley culture, which is what they want to feel.
-Always try to show that Elon Musk is a role model for you. Having a T-shirt
-featuring his face will also help.
-By the way, don&amp;#39;t use Steve Jobs; it&amp;#39;s not a trend anymore.
-Moreover, he is dead already. Stick to Musk.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Never compete with them or even try to argue, investors are always right&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Respect&lt;/strong&gt;.
-Always remember that you and your potential investors are not equal.
-They have money, experience, reputation, and a Tesla. You have nothing.
-You must demonstrate that you always remember that. Always position yourself
-a bit lower, play newbie, ask questions, and imitate interest in everything
-they say. Never compete with them or even try to argue! They are always
-right, and they are simply awesome; you&amp;#39;re just another nobody. Something
-like &amp;quot;I&amp;#39;m honored to be in the same room with you&amp;quot; is a very good opener.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Co-Found&lt;/strong&gt;.
-You absolutely must have a co-founder, or even a few of them. They could
-be anybody. A roommate will work or just a friend of a friend who recently
-quit her full-time job. It doesn&amp;#39;t matter who they are as long as you
-can call them co-founders. Put their pictures and names on your website
-and always say &amp;quot;we&amp;quot; instead of &amp;quot;I&amp;quot;. Investors, in general, love to have
-a few phone numbers they can call when they realize their money is gone
-and there is nothing left. Also, it&amp;#39;s more fun to invest into a group
-of people &amp;mdash; investors look more serious in that case.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Never admit any mistakes or risks, simply ignore them, stay positive&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Radiate&lt;/strong&gt;.
-Never say anything bad about anything or anyone. You literally have
-to be 100% in &lt;em&gt;positive thinking&lt;/em&gt; mode. That competitor who is stealing your customers is
-&amp;quot;such a nice guy&amp;quot;. That cup of coffee made of some dark powder
-is &amp;quot;very delicious&amp;quot;. The programmers from Pakistan you found on
-Upwork for $10 per hour are &amp;quot;absolutely awesome&amp;quot;. The marketing plan you
-invented yesterday is &amp;quot;simply great&amp;quot;. Never admit any mistakes,
-risks, or threats. Simply ignore them. Stay positive. Investors like that.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bluff&lt;/strong&gt;.
-You have to mention that the market is absolutely huge, at least a hundred
-billion dollars. They won&amp;#39;t be able to check anyway. Actually, nobody
-can check that, so don&amp;#39;t worry. But don&amp;#39;t give a round number; that would be a mistake! It
-should sound more like $73.5 billion. That&amp;#39;s very convincing and will give
-them the confidence you need &amp;mdash; the market is huge and you&amp;#39;re not
-just saying it; you actually did some math. How can they not invest
-in such a huge and promising market?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Scream&lt;/strong&gt;.
-Especially if you&amp;#39;re in a public place, you must speak as if you&amp;#39;re
-a bit deaf. Be loud. That will prove that you&amp;#39;re absolutely
-confident in what you&amp;#39;re saying, today and always. The investor
-will be sure you are capable of attracting &lt;del&gt;mates&lt;/del&gt; customers and
-other investors, if for no other reason than because you&amp;#39;re not afraid of being that ugly loud
-in public. You&amp;#39;re 100% extrovert &amp;mdash; you must demonstrate it
-shamelessly.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;You must be ready to shine their shoes, with a big smile on your face&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Beg&lt;/strong&gt;.
-You may mistakenly think that this is a balanced transaction &amp;mdash;
-they give money and you give part of your equity. You may expect that
-both parties are equally interested in this. But don&amp;#39;t make that mistake.
-You&amp;#39;re begging, and they are giving. Out of courtesy. That&amp;#39;s a win position
-for you. By having money, they expect to be on top of others. This is
-what capitalism is about, right? Don&amp;#39;t take this away from them. You
-must be ready to shine their shoes. With a big smile on your face.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Love&lt;/strong&gt;.
-The truth is that investors don&amp;#39;t want to make money. They want to
-make love. You&amp;#39;re a perfect candidate. They are mostly old, rich,
-lonely, and miserable. Their success stories are behind them. All they
-have is money, which they are afraid to spend because they understand
-that they won&amp;#39;t make it again. They are used-to-be successful
-gamblers, but not anymore. Give them what they want: love. Money
-is not so important, so long as you love each other. Remember, first
-they must fall in love with you, then they will send the terms sheet.&lt;/p&gt;
-
-&lt;p&gt;Did I miss anything?&lt;/p&gt;
-
-&lt;p&gt;Rehearse your pitch in front of the mirror in the bathroom three times
-every morning. I guarantee that in fewer than two weeks, you will sound
-like a proper SV startup founder. Well, a co-founder &amp;mdash;
-don&amp;#39;t forget that. Good luck; you will need a lot of it!&lt;/p&gt;</content><category term="startup" /><category term="sarcasm" /><summary>Your success depends on the quality of your elevator pitch. Basically, your
-success doesn&amp;#39;t depend on much of anything else. The pitch is king.
-You have to impress the catcher investor in just a few seconds while
-the elevator is still moving (that&amp;#39;s where you are supposed to hunt for that
-prey). It&amp;#39;s not rocket science; you can learn a few basic
-principles and become a expert. Here they are, the principles.</summary></entry></feed>
+CDN that is simple to configure. It utilizes AWS CloudFront resources.</summary></entry></feed>
