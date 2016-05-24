@@ -71,7 +71,7 @@ he or she has to report to the manager. When something goes wrong, everybody
 knows how such a situation has to be reported: immediately and directly.
 When a backlog task is completed, everybody understands how to inform
 a project manager if he needs this information. A
-[perfect project manager]({% pst 2016/may-2016-who-is-project-manager %})
+[perfect project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 never asks his people. Instead, they tell him when necessary. And when
 someone does stop to tell him something, a good project manager fixes such a broken communication channel.
 But he never uses daily meetings to collect information.

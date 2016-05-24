@@ -80,7 +80,7 @@ Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainabilit
 Remember that your first and most important responsibility as
 a disciplined engineer is to help the project **reveal** maintainability issues.
 Who will fix them and how is the responsibility of a
-[project manager]({% pst 2016/may-2016-who-is-project-manager %}).
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Your job is to reveal, not to hide. By being a hero and trying to fix everything
 in the scope of a single task, you're not doing the project a favor
 &mdash; you're concealing the problem(s).

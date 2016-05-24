@@ -70,7 +70,7 @@ usually end up leaving.
 
 Another traditional management method is
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}). This results when the
-[project manager]({% pst 2016/may-2016-who-is-project-manager %})
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 checks task statuses every few hours and tells people what to do
 and how to handle problems. Needless to say, this management style ruins the
 team and causes good people to leave even faster.
