@@ -83,7 +83,10 @@ My deployment script looked like this before I started to use Rultor:
 {% highlight bash %}
 #!/bin/bash
 phing test
-git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/
 {% endhighlight %}
 
 Just two lines. The first one is a full run of unit tests. The second one
@@ -112,7 +115,10 @@ sudo pear channel-discover pear.phing.info
 sudo pear install phing/phing
 # And now the same script I had before
 phing test
-git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/
 {% endhighlight %}
 
 Obviously, running this script on my MacBook (without virtualization) would
