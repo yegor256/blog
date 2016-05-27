@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/devopspro-2016.png" class="future-talk" alt="DevOpsPro 2016"/>
-**Deployment Scripts Are Dead, Meet Rultor**<br/>
-[DevOps Pro](http://devopspro.lt/)<br/>
-Vilnius, Lithuania<br/>
-26 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/pmday-2016.png" class="future-talk" alt="PMDay Lviv 2016"/>
 **Micromanagemet is a decease**<br/>
 [PMDay Lviv](http://pmday.com.ua/)<br/>
@@ -115,9 +108,9 @@ Minsk, Belarus<br/>
 <div class="talk-event"/>
 <img src="/images/2016/slcdevopsdays-2016.png" class="future-talk" alt="SLC DevOpsDays 2016"/>
 **Downsides of Continuous Integration**<br/>
-[Salt Lake City DevOpsDays](http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/)<br/>
+[Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/)<br/>
 Salt Lake City, USA<br/>
-14-15 June 2016
+15 June 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
@@ -141,6 +134,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="https://scontent-mrs1-1.xx.fbcdn.net/t31.0-8/s960x960/13254913_10209578077198713_469021175016707812_o.jpg" class="past-talk" alt="DevOpsPro 2016"/>
+Deployment Scripts Are Dead, Meet Rultor;
+[DevOps Pro](http://devopspro.lt/);
+Vilnius, Lithuania;
+26 May 2016;
+[photos](https://www.facebook.com/yegor256/posts/10209578080758802),
+[video](https://www.youtube.com/watch?v=NflR7DKwxDY).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
