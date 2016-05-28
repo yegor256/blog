@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/pmday-2016.png" class="future-talk" alt="PMDay Lviv 2016"/>
-**Micromanagemet is a decease**<br/>
-[PMDay Lviv](http://pmday.com.ua/)<br/>
-Lviv, Ukraine<br/>
-28 May 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/item-2016.svg" class="future-talk" alt="ITEM 2016"/>
 **Your CEO or your programmer is the boss?**,
 **Need Robust Software? Make It Fragile**,
@@ -134,6 +127,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/pmday-2016.png" class="past-talk" alt="PMDay Lviv 2016"/>
+Micromanagemet is a decease;
+[PMDay Lviv](http://pmday.com.ua/);
+Lviv, Ukraine;
+28 May 2016.
 
 <div class="talk-event"/>
 <img src="https://scontent-mrs1-1.xx.fbcdn.net/t31.0-8/s960x960/13254913_10209578077198713_469021175016707812_o.jpg" class="past-talk" alt="DevOpsPro 2016"/>
