@@ -77,6 +77,7 @@ and **Don't be over excited about Amsterdam**<br/>,
 Dnepr, Ukraine<br/>
 2-3 June 2016
 
+
 <div class="talk-event"/>
 <img src="/images/2016/ndcoslo-2016.png" class="future-talk" alt="NDC Oslo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
@@ -129,13 +130,21 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="/images/2016/pmday-2016.png" class="past-talk" alt="PMDay Lviv 2016"/>
-Micromanagemet is a decease;
+Micromanagement;
 [PMDay Lviv](http://pmday.com.ua/);
 Lviv, Ukraine;
 28 May 2016.
+There were over 400 people, two days, and four tracks. The venue, the food,
+the transportation were rather good, taking into account ticket price. Besides
+that, the audience was very motivated and engaged. The only downside was a very
+short time slot for each talk (30 minutes), very short breaks (10 minutes) and
+the amount of speakers. It felt too crowded. Asided from that, I would definitely
+try to visit it again.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B+</aside>
 <img src="https://scontent-mrs1-1.xx.fbcdn.net/t31.0-8/s960x960/13254913_10209578077198713_469021175016707812_o.jpg" class="past-talk" alt="DevOpsPro 2016"/>
 Deployment Scripts Are Dead, Meet Rultor;
 [DevOps Pro](http://devopspro.lt/);
@@ -143,6 +152,10 @@ Vilnius, Lithuania;
 26 May 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209578080758802),
 [video](https://www.youtube.com/watch?v=NflR7DKwxDY).
+The organization was very good. Not perfect, but very good. There were about
+300 people and four tracks (I think it's too many). The only problem was
+with the content. It looked like they paid too much attention to logistics
+and forgot about content. Aside from that, definitely a place to see again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
