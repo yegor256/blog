@@ -114,6 +114,12 @@ Swansea, UK<br/>
 12 September 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
+[Oredev 2016](http://www.oredev.org/)<br/>
+Malmö, Sweden<br/>
+7-11 November 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
