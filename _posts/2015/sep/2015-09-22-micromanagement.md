@@ -13,6 +13,8 @@ keywords:
   - micromanagement effects
   - micromanagement quotes
   - micromanagement meaning
+youtube:
+  - ZVn7ufg-tk0
 ---
 
 [Micromanagement](https://en.wikipedia.org/wiki/Micromanagement),

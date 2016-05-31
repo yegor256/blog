@@ -16,6 +16,8 @@ keywords:
   - continuous integration pre-flight builds
   - continuous integration preflight builds
   - continuous delivery pre-flight builds
+youtube:
+  - NflR7DKwxDY
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}

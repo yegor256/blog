@@ -13,6 +13,8 @@ keywords:
   - fully automated deployment
   - how to automate deployment process
 categories: jcg
+youtube:
+  - NflR7DKwxDY
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
