@@ -137,11 +137,13 @@ why shouldn't we rate them, right? The best rate is
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="/images/2016/pmday-2016.png" class="past-talk" alt="PMDay Lviv 2016"/>
+<img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/13266042_10208232510642143_1089325380590131588_n.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
 Micromanagement;
 [PMDay Lviv](http://pmday.com.ua/);
 Lviv, Ukraine;
-28 May 2016.
+28 May 2016;
+[photos](https://www.facebook.com/rostyslav.chayka/posts/10208232510802147),
+[video](https://www.youtube.com/watch?v=ZVn7ufg-tk0).
 There were over 400 people, two days, and four tracks. The venue, the food,
 the transportation were rather good, taking into account ticket price. Besides
 that, the audience was very motivated and engaged. The only downside was a very
