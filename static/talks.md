@@ -69,16 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/item-2016.svg" class="future-talk" alt="ITEM 2016"/>
-**Your CEO or your programmer is the boss?**,
-**Need Robust Software? Make It Fragile**,
-and **Don't be over excited about Amsterdam**<br/>,
-[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers)<br/>
-Dnepr, Ukraine<br/>
-2-3 June 2016
-
-
-<div class="talk-event"/>
 <img src="/images/2016/ndcoslo-2016.png" class="future-talk" alt="NDC Oslo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**<br/>
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/)<br/>
@@ -134,6 +124,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/item-2016.svg" class="past-talk" alt="ITEM 2016"/>
+Your CEO or your programmer is the boss?;
+OOP is Dead? Not Yet!;
+Don't be over excited about Amsterdam;
+[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+Dnepr, Ukraine;
+2-3 June 2016.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
