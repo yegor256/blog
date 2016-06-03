@@ -50,7 +50,8 @@ Pretent you're talking to a friend over a pint of beer. Remember, the goal
 is to be funny.
 
 **Repeat!**
-Always bring the same content with you, to all conferences. It's easier for
+Always bring the same content with you, to all
+[conferences]({% pst 2016/jun/2016-06-03-conference-mistakes %}). It's easier for
 everybody. First, conference organizers will know for sure what will you be
 talking about. They can even watch your 4-year-old video-recorded
 presentation and see exactly what words and slides you're planning to use.

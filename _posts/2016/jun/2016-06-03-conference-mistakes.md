@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "11 Mistakes Conferences Keep Making"
-date: 2016-05-18
+date: 2016-06-03
 place: Milan, Italy
 tags: mood
 description: |
@@ -25,6 +25,8 @@ Remember, I'm judging from a speaker's position.
 The most serious mistakes and pieces of advice are at the bottom.
 
 <!--more-->
+
+{% picture /images/2016/06/mi-gran-noche.jpg 0 Mi gran noche (2015) by Álex de la Iglesia %}
 
 **Too formal**.
 Very often all I'm getting from event organizers is a formal email that
@@ -78,6 +80,9 @@ the stage completely unannounced with almost zero interest from the room. They
 simply don't know who I am and why I'm here. The conference must promote us,
 the speakers, very pro-actively.
 
+**Slow WiFi**.
+It's just very annoying.
+
 **No networking**.
 Conference organizers know all speakers who are attending and most of the
 listeners. They are at the center of this networking event, but they almost
@@ -100,6 +105,10 @@ YouTube channel that attracted 500? Thus, I would strongly recommend paying
 a lot of attention to video recording and its quality. Preferrably, you should
 record from two cameras (the speaker and the room) and do video editing afterwards.
 It's expensive, but very important.
+
+**Bad Equipment**.
+I mean sound, light, projectors, screens, microphones, etc. It's very annoying
+to see how speakers and the audience suffer from all that technical problems.
 
 **Too small**.
 It's very difficult to present when there is less than 100 people in the room.
