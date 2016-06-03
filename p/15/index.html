@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?b848171"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?b848171"/>
+    <link rel="shortcut icon" href="/favicon.ico?7cdf71f"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?7cdf71f"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?b848171"/>
-    <link rel="stylesheet" href="/css/icons.css?b848171"/>
+    <link rel="stylesheet" href="/css/layout.css?7cdf71f"/>
+    <link rel="stylesheet" href="/css/icons.css?7cdf71f"/>
     <link rel="canonical" href="http://www.yegor256.com/p/15/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/15/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 15)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?b848171"></script>
+    <script src="/js/global.js?7cdf71f"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;182</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;183</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -116,6 +116,66 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/07/21/read-only-master-branch.html">
+            Master Branch Must Be Read-Only
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-07-21T00:00:00+00:00">
+              21 July 2014
+            </time>
+          </li>
+          <li>
+            1039 words
+          </li>
+          <li>
+            
+            
+              
+                  four
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/07/21/read-only-master-branch.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>Continuous integration is easy. Download Jenkins, install,  create a job, click
+the button, and get a nice email saying that your build is broken (I assume your
+build is automated). Then, fix broken tests (I assume you have tests), and get a
+much better looking email saying that your build is clean.</p>
+
+<p>Then, tweet about it, claiming that your team is using
+<a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>.</p>
+
+<p>Then, in a few weeks, start filtering out Jenkins alerts, into their own folder,
+so that they don&#39;t bother you anymore. Anyway, your team doesn&#39;t have the time
+or desire to fix all unit tests every time someone breaks them.</p>
+
+<p>After all, we all know that unit testing is not for
+a team working with deadlines, right?</p>
+
+<p>Wrong. Continuous integration can and must work.</p>
+
+      </div>
+      <p>
+        <a href="/2014/07/21/read-only-master-branch.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -627,87 +687,6 @@ but this is not the point here.</p>
       </div>
       <p>
         <a href="/2014/06/19/avoid-string-concatenation.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/06/09/objects-should-be-immutable.html">
-            Objects Should Be Immutable
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-06-09T00:00:00+00:00">
-              9 June 2014
-            </time>
-          </li>
-          <li>
-            1242 words
-          </li>
-          <li>
-            
-            
-              
-                  five
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>In object-oriented programming, an object is
-<a href="http://en.wikipedia.org/wiki/Immutable_object">immutable</a> if its state can&#39;t be
-modified after it is created.</p>
-
-<p>In Java, a good example of an
-immutable object is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code>String</code></a>.
-Once created, we can&#39;t modify its state. We can request that it creates
-new strings, but its own state will never change.</p>
-
-<p>However, there are not so many immutable classes in JDK. Take,
-for example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code>Date</code></a>.
-It is possible to modify its state using <code>setTime()</code>.</p>
-
-<p>I don&#39;t know why the JDK designers decided to make these two
-very similar classes differently. However, I believe that the design
-of a mutable <code>Date</code> has many flaws, while the immutable <code>String</code>
-is much more in the spirit of the object-oriented paradigm.</p>
-
-<p>Moreover, I think that <strong>all classes should be immutable in
-a perfect object-oriented world</strong>. Unfortunately, sometimes,
-it is technically not possible due to limitations in JVM.
-Nevertheless, we should always aim for the best.</p>
-
-<p>This is an incomplete list of arguments in favor of immutability:</p>
-
-<ul>
-<li>immutable objects are simpler to construct, test, and use</li>
-<li>truly immutable objects are always thread-safe</li>
-<li>they help to avoid <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a></li>
-<li>their usage is side-effect free (no defensive copies)</li>
-<li>identity mutability problem is avoided</li>
-<li>they always have failure atomicity</li>
-<li>they are much easier to cache</li>
-<li>they prevent NULL references, <a href="/2014/05/13/why-null-is-bad.html">which are bad</a></li>
-</ul>
-
-<p>Let&#39;s discuss the most important arguments one by one.</p>
-
-      </div>
-      <p>
-        <a href="/2014/06/09/objects-should-be-immutable.html">
           continue...
         </a>
       </p>

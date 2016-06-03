@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-01T19:44:46+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Who Is a Project Manager?</title><link href="http://www.yegor256.com/2016/05/24/who-is-project-manager.html" rel="alternate" type="text/html" title="Who Is a Project Manager?" /><published>2016-05-24T00:00:00+00:00</published><updated>2016-05-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/24/who-is-project-manager</id><content type="html" xml:base="http://www.yegor256.com/2016/05/24/who-is-project-manager.html">&lt;p&gt;A project manager is very often confused with a leader. However, they are two
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-03T11:51:06+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
+organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
+attended. Basically, they were interested to know what I would suggest for
+improvement. So, I decided to summarize it in a list of the most typical
+mistakes all conferences keep making and give them some ideas.
+Remember, I&amp;#39;m judging from a speaker&amp;#39;s position.
+The most serious mistakes and pieces of advice are at the bottom.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F06%2Fmi-gran-noche.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Mi gran noche (2015) by Álex de la Iglesia&#39;/&gt;&lt;figcaption&gt;Mi gran noche (2015) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Too formal&lt;/strong&gt;.
+Very often all I&amp;#39;m getting from event organizers is a formal email that
+my presentation was accepted and then some travel details: &amp;quot;your hotel is
+here, don&amp;#39;t miss this speaker&amp;#39;s dinner.&amp;quot; That&amp;#39;s it. I don&amp;#39;t know who is
+behind the conference, what this event is for, etc. At that speaker&amp;#39;s
+dinner (if I don&amp;#39;t miss it) some details are cleared up. At some conferences, they even communicate
+with me via some online form and I have to answer there through login/logout.
+This is rather annoying and turns me off. It would be much better to feel
+that there is a team with real people, who want to see me as a speaker.
+I would be way more dedicated and motivated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Short breaks&lt;/strong&gt;.
+Breaks between presentations that are too short give listeners an impression that
+each particular presentation is not as important as the event as a whole.
+This really de-motivates me as a speaker. I want to feel valuable.
+I came to the conference to be heard. I think my speech is the most important and I don&amp;#39;t want people to
+jump quickly out of the room, just to have enough time to drink coffee
+and run to the next presentation. 30 minutes between talks is a comfortable
+time &amp;mdash; enough to forget the previous talk and focus on the next one.
+Also, four talks per day is an absolute maximum for a serious listener.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No moderator&lt;/strong&gt;.
+There must be someone on the stage who presents the speaker and asks
+questions if the room is quiet. All academic conferences have that. I don&amp;#39;t
+understand why most industry events don&amp;#39;t do the same. A speaker must feel
+comfortable on the stage. Being there alone doesn&amp;#39;t help at all. Also, the
+moderator will promote me to better engage with the audience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Boring website&lt;/strong&gt;.
+The higher the level of the conference, the more modern and beautiful their
+website has to be. It&amp;#39;s not only your but also my face. I&amp;#39;m not only
+attending your event, but also associating my name with it. I will share your
+website on my Twitter, my Facebook, my blog, etc. That&amp;#39;s why
+I really want it to look cool. Some conferences don&amp;#39;t care about
+that and this attitude seriously demotivates me as a speaker.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cheap venue&lt;/strong&gt;.
+This means literally what it says &amp;mdash; the place is too cheap and, because
+of that, bad. The impression of such a place ruins the entire conference.
+Don&amp;#39;t fool yourself, if it&amp;#39;s cheap &amp;mdash; it&amp;#39;s bad.
+Into this category I would also place venues that are not designed to be
+conference hosters, like cinemas or offices. They will also be cheaper than
+proper venues, but you will get what you pay for.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No introduction&lt;/strong&gt;.
+I believe it&amp;#39;s a job of conference organizers to promote me as a speaker
+in front of the audience. Not only on the stage, but also online,
+via Twitter, Facebook, etc. Most conferences don&amp;#39;t do that at all. I come to
+the stage completely unannounced with almost zero interest from the room. They
+simply don&amp;#39;t know who I am and why I&amp;#39;m here. The conference must promote us,
+the speakers, very pro-actively.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slow WiFi&lt;/strong&gt;.
+It&amp;#39;s just very annoying.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No networking&lt;/strong&gt;.
+Conference organizers know all speakers who are attending and most of the
+listeners. They are at the center of this networking event, but they almost
+never use that position effectively. They should help me network while I&amp;#39;m there
+by introducing me to those who I may be interested in. This won&amp;#39;t be hard
+at all for them. Just tell me &amp;quot;hey, let me introduce you to this guy who
+is working and speaking about something similar to you.&amp;quot; Just make 5-10
+such short intros and I will busy talking to these guys for the whole day.
+Instead, in most conferences, speakers arrive, speak, drink their coffee and leave.
+That&amp;#39;s sad.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No video&lt;/strong&gt;.
+Most conferences don&amp;#39;t record videos and it&amp;#39;s a terrible mistake. They probably
+think that their events are more important then us, their speakers. It&amp;#39;s not
+true. I&amp;#39;m speaking in front of 50 people, video recording it on my iPhone, publishing
+it in my &lt;a href=&quot;https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q&quot;&gt;YouTube channel&lt;/a&gt;
+and getting 500 views in the first week. So, who is
+more important, your event which was able to attract just 50 people or my
+YouTube channel that attracted 500? Thus, I would strongly recommend paying
+a lot of attention to video recording and its quality. Preferrably, you should
+record from two cameras (the speaker and the room) and do video editing afterwards.
+It&amp;#39;s expensive, but very important.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bad Equipment&lt;/strong&gt;.
+I mean sound, light, projectors, screens, microphones, etc. It&amp;#39;s very annoying
+to see how speakers and the audience suffer from all that technical problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Too small&lt;/strong&gt;.
+It&amp;#39;s very difficult to present when there is less than 100 people in the room.
+According to my experience, only one out of 10-15 people is actually listening
+and understanding. It&amp;#39;s an average number. Of course, it depends on the subject,
+but not too much. This means that if there are 30 people in the room, only
+a few of them are my active listeners. It&amp;#39;s very difficult to present to just
+a few people. You simply can&amp;#39;t afford to lose their attention, even for a second.
+With a hundred people, the situation becomes more manageable. There are 8-12 people
+who are actively listening. Even if I lose a few of them, it&amp;#39;s not a big deal.
+The best size of the room is 250 people. That&amp;#39;s the ideal audience for
+a technical talk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Too big&lt;/strong&gt;.
+A very big audience (over 500 people in the room) causes another problem &amp;mdash;
+I completely lose any contact with my listeners. I don&amp;#39;t see their eyes any more.
+I can&amp;#39;t see their reaction, I don&amp;#39;t understand whether they follow me or not.
+I&amp;#39;m not a technical speaker any more, but a rock singer. All I can do is turn
+my presentation into a show and play with their emotions, not their brains.
+This is actually what most &lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;keynote speakers&lt;/a&gt;
+are usually doing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Too many tracks&lt;/strong&gt;.
+Honestly, I think that the very idea of having multiple tracks is very bad.
+I want the entire conference to attend my talk. I don&amp;#39;t want to lose anyone.
+Moreover, I don&amp;#39;t want to compete with some
+&lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;clown&lt;/a&gt; (no offense to clowns)
+just because he is speaking at the same time. It&amp;#39;s a very demotivating competition,
+since I can&amp;#39;t do anything to win.
+I want to feel that I&amp;#39;m speaking here because there is some value in my
+information. I want to know that I&amp;#39;m the chosen one. And I want to feel that
+conference attendees feel the same. A perfect conference must have one
+track, a room for 250-300 listeners, and a very well selected list of
+speakers. I believe that most conferences are shooting themselves in the
+foot trying to please the audience by inviting too many speakers. Instead,
+do your homework right &amp;mdash; select the best speakers and don&amp;#39;t make listeners
+walk from track to track cursing you for the mediocre speeches.
+Choosing speakers is your job! Don&amp;#39;t delegate it to your audience.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Did I forget anything? Please, post below in the comments!&lt;/p&gt;</content><category term="mood" /><summary>I was talking yesterday with a few friends who were software conference
+organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
+attended. Basically, they were interested to know what I would suggest for
+improvement. So, I decided to summarize it in a list of the most typical
+mistakes all conferences keep making and give them some ideas.
+Remember, I&amp;#39;m judging from a speaker&amp;#39;s position.
+The most serious mistakes and pieces of advice are at the bottom.</summary></entry><entry><title>Who Is a Project Manager?</title><link href="http://www.yegor256.com/2016/05/24/who-is-project-manager.html" rel="alternate" type="text/html" title="Who Is a Project Manager?" /><published>2016-05-24T00:00:00+00:00</published><updated>2016-05-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/24/who-is-project-manager</id><content type="html" xml:base="http://www.yegor256.com/2016/05/24/who-is-project-manager.html">&lt;p&gt;A project manager is very often confused with a leader. However, they are two
 very different things. A project manager is the one who predicts the future,
 while a leader is the one who builds it. And, in my opinion, a perfect
 project manager is much more valuable for a project than a leader. If a
@@ -437,7 +577,8 @@ Pretent you&amp;#39;re talking to a friend over a pint of beer. Remember, the go
 is to be funny.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Repeat!&lt;/strong&gt;
-Always bring the same content with you, to all conferences. It&amp;#39;s easier for
+Always bring the same content with you, to all
+&lt;a href=&quot;/2016/06/03/conference-mistakes.html&quot;&gt;conferences&lt;/a&gt;. It&amp;#39;s easier for
 everybody. First, conference organizers will know for sure what will you be
 talking about. They can even watch your 4-year-old video-recorded
 presentation and see exactly what words and slides you&amp;#39;re planning to use.
@@ -1595,254 +1736,4 @@ just printers!&lt;/p&gt;</content><category term="java" /><category term="oop" /
 No need to argue about this, it&amp;#39;s settled. You disagree?
 Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
 The key question is how is it possible at all? We do need to get
-the data out of an object, right? Nope. Wrong.</summary></entry><entry><title>Jare.io, an Instant and Free CDN</title><link href="http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html" rel="alternate" type="text/html" title="Jare.io, an Instant and Free CDN" /><published>2016-03-30T00:00:00+00:00</published><updated>2016-03-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/03/30/jare-instant-free-cdn</id><content type="html" xml:base="http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.jare.io&#39;&gt;&lt;img src=&#39;http://www.jare.io/images/logo.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;CDN stands for a Content Delivery Network. Technically, it is a bunch
-of servers located in different countries and continents. You give them
-your &lt;code&gt;logo.gif&lt;/code&gt; and they give you a URL, which resolves to a different
-server depending on who is trying to resolve it. As a result, the
-file is always close to the end-user and your website loads much faster
-than without a CDN. Sounds good, but all CDN providers want money
-for their service and usually a rather complex setup and registration
-procedure. My pet project &lt;a href=&quot;http://www.jare.io&quot;&gt;jare.io&lt;/a&gt; is a free
-CDN that is simple to configure. It utilizes AWS CloudFront resources.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, let me show how it works and then, if you&amp;#39;re interested in
-the details, I will explain how it&amp;#39;s done internally. Say you have
-this HTML:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.teamed.io/image/logo.svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I want this &lt;code&gt;logo.svg&lt;/code&gt; to be delivered via a CDN. There are two steps.
-First, I register my domain at &lt;a href=&quot;http://www.jare.io&quot;&gt;jare.io&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fjare-1.png&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Second, I change my HTML:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;That&amp;#39;s it.&lt;/p&gt;
-
-&lt;p&gt;Try it with your own resources and you will see how
-much faster they will be loaded.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s absolutely free, but I ask you to be reasonable. If your traffic
-is huge, you need your own account in CloudFront or somewhere else. My
-service is for small projects.&lt;/p&gt;
-
-&lt;p&gt;Now for more technical details, if you want to know how technically
-this solution works. First, let&amp;#39;s discuss what CDN is and how it works.&lt;/p&gt;
-
-&lt;h2 id=&quot;url-dns-tcp-http&quot;&gt;URL, DNS, TCP, HTTP&lt;/h2&gt;
-
-&lt;p&gt;When your browser wants to load an image, it has a &lt;a href=&quot;https://en.wikipedia.org/wiki/Uniform_Resource_Locator&quot;&gt;URL&lt;/a&gt;
-for that, like in the example above. This is the URL: &lt;code&gt;http://www.teamed.io/image/logo.svg&lt;/code&gt;.
-There are three important parts in this address. First is &lt;code&gt;http&lt;/code&gt;, the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Communications_protocol&quot;&gt;protocol&lt;/a&gt;.
-Second is &lt;code&gt;www.teamed.io&lt;/code&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Host_%28network%29&quot;&gt;host&lt;/a&gt; name,
-and the tail &lt;code&gt;/images/logo.svg&lt;/code&gt;, which is the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax&quot;&gt;path&lt;/a&gt;.
-To load the image, the browser has to open a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Network_socket&quot;&gt;socket&lt;/a&gt;,
-connecting your computer and the server, which has the image. To open a
-socket, the browser needs to know the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/IP_address&quot;&gt;IP address&lt;/a&gt; of the server.&lt;/p&gt;
-
-&lt;p&gt;There is no such address in that URL. In order to find the IP address,
-the browser is doing what is called a lookup. It connects to the
-nearest &lt;a href=&quot;https://en.wikipedia.org/wiki/Name_server&quot;&gt;name server&lt;/a&gt;
-and asks &amp;quot;what is the IP address of &lt;a href=&quot;http://www.teamed.io?&quot;&gt;www.teamed.io?&lt;/a&gt;&amp;quot;
-The answer usually contains a single IP address:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup www.teamed.io
-Server:   172.16.0.1
-Address:  172.16.0.1#53
-
-Non-authoritative answer:
-www.teamed.io canonical name = teamed.github.io.
-teamed.github.io  canonical name = github.map.fastly.net.
-Name: github.map.fastly.net
-Address: 199.27.79.133&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;IP address of &lt;code&gt;www.teamed.io&lt;/code&gt; is &lt;code&gt;199.27.79.133&lt;/code&gt;, at the time of writing.&lt;/p&gt;
-
-&lt;p&gt;When the address is known, the browser opens a new socket and sends
-an &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message&quot;&gt;HTTP request&lt;/a&gt;
-through it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;GET /images/logo.svg HTTP/1.1
-Host: www.teamed.io
-Accept: image/*&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The server responds with an
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message&quot;&gt;HTTP response&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;HTTP/1.1 200 OK
-Content-Type: image/svg+xml
-
-[SVG image content goes here, over 1000 bytes]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;That is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Scalable_Vector_Graphics&quot;&gt;SVG&lt;/a&gt;
-image we&amp;#39;re looking for. The browser renders it on the web page
-and that&amp;#39;s it.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-network-of-edge-servers&quot;&gt;The Network of Edge Servers&lt;/h2&gt;
-
-&lt;p&gt;So far so good, but if the distance between your browser and that IP address
-is rather large, loading the image will take a lot of time. Well, hundreds
-of milliseconds. Try to load this image, which is located on a server
-that is hosted in Prague, Czech Republic (I&amp;#39;m using &lt;code&gt;curl&lt;/code&gt; as suggested
-&lt;a href=&quot;https://josephscott.org/archives/2011/10/timing-details-with-curl/&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ curl -w &amp;quot;@f.txt&amp;quot; -o /dev/null -s \
-  http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
-    time_namelookup:  0.005
-       time_connect:  0.376
-   time_pretransfer:  0.377
- time_starttransfer:  0.566
-                    ----------
-         time_total:  0.567&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m trying to do it from Palo Alto, California, which is about half a globe
-away from Prague. As you can see, it takes over 500ms. That&amp;#39;s too much, especially
-if a web page contains many images. Overall, page loading may take seconds,
-just because the server is too far away from me. Well, it will inevitably be
-too far away from some users, no matter where we host it. If we host it here
-in California, it will be close enough to me and the image will be loaded
-instantly (less than 50ms). But then it will be too slow for users in Prague.&lt;/p&gt;
-
-&lt;p&gt;This problem has no solutions if the server generates images or pages
-on the fly in some unique way and if we can&amp;#39;t install a number of servers
-in different countries and continents. But in most cases, such as our logo example, this is not a problem.
-This logo doesn&amp;#39;t need to be unique for
-each user. It is a very &lt;em&gt;static&lt;/em&gt; resource, which needs to be created only once
-and be delivered to everybody, without any changes.&lt;/p&gt;
-
-&lt;p&gt;So, how about we install a server somewhere here in California and let
-Californian users connect to it. When a request for &lt;code&gt;logo.gif&lt;/code&gt; comes
-to one of the &lt;em&gt;edge&lt;/em&gt; servers, it will connect to the central server
-in Prague and load the file. This will happen only once. After that, the
-edge server will not request the file
-from the central server. It will return it immediately, from its internal cache.&lt;/p&gt;
-
-&lt;p&gt;We need to have many edge servers, preferably in all countries where
-our users may be located. The first request will take longer, but all others
-will be much faster because they will be served from the closest edge server.&lt;/p&gt;
-
-&lt;p&gt;Now, the question is how the browser will know which edge server is the closest, right?
-We simply trick the domain name resolution process. Depending on who is asking,
-the DNS will give different answers. Let&amp;#39;s take &lt;code&gt;cf.jare.io&lt;/code&gt;, for example (it
-is the name of all edge servers responsible for delivering our content
-in AWS CloudFront, a CNAME for &lt;code&gt;djk1be5eatcae.cloudfront.net&lt;/code&gt;).
-If I&amp;#39;m looking it up from California, I&amp;#39;m getting the following answer:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup cf.jare.io
-Server:   192.168.1.1
-Address:  192.168.1.1#53
-
-Non-authoritative answer:
-cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
-Name: djk1be5eatcae.cloudfront.net
-Address: 54.230.141.211&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;An edge server with IP address &lt;code&gt;54.230.141.211&lt;/code&gt; is located in
-&lt;a href=&quot;https://db-ip.com/54.230.141.211&quot;&gt;San Francisco&lt;/a&gt;. This
-is rather close to me, less than fifty miles. If I do the same operation
-from a server in Virginia, I get a different response:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nslookup cf.jare.io
-Server:   172.16.0.23
-Address:  172.16.0.23#53
-
-Non-authoritative answer:
-cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
-Name: djk1be5eatcae.cloudfront.net
-Address: 52.85.131.217&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;An edge server with IP address &lt;code&gt;52.85.131.217&lt;/code&gt; is located in
-&lt;a href=&quot;https://db-ip.com/52.85.131.217&quot;&gt;Washington&lt;/a&gt;, which is far away from
-me, but very close to the server I was making the lookup from.&lt;/p&gt;
-
-&lt;p&gt;There are thousands of name servers around the world and all of them
-have different information about where that edge server &lt;code&gt;cf.jare.io&lt;/code&gt;
-is physically located. Depending on who is asking, the answer will be different.&lt;/p&gt;
-
-&lt;h2 id=&quot;aws-cloudfront&quot;&gt;AWS CloudFront&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/&quot;&gt;CloudFront&lt;/a&gt; is one of the simplest
-CDN solutions. All you have to do to start delivering your content
-through their edge nodes is to create a &amp;quot;distribution&amp;quot; and configure it.
-A distribution is basically a connector between content origin and
-edge servers:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#39;/uml/b5d40b6498ca48f6d2efc8671dd6d1e6.svg&#39;
-        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
-
-&lt;p&gt;One of edge servers receives an HTTP request. If it already has that
-&lt;code&gt;logo.svg&lt;/code&gt; in its cache, it immediately returns an HTTP response with its
-content inside. If its cache is empty, the edge server makes an HTTP
-request to the central server. This server knows about the &amp;quot;distribution&amp;quot;
-and its configuration. It makes an HTTP connection to the origin server,
-which is &lt;code&gt;www.teamed.io&lt;/code&gt; and asks it to return &lt;code&gt;logo.svg&lt;/code&gt;. When done,
-the image is returned to the edge server, where it is cached.&lt;/p&gt;
-
-&lt;p&gt;This looks rather simple, but it&amp;#39;s not free and it&amp;#39;s not that quick to configure.
-You have to create an account with CloudFront, register your credit card
-there, and get an approval. Then you have to create a distribution and configure it.
-You should then create that CNAME in your name server. If you&amp;#39;re doing it
-for a single website, it&amp;#39;s not a big deal. If you have a dozen websites,
-it&amp;#39;s a time consuming operation.&lt;/p&gt;
-
-&lt;h2 id=&quot;jare-io-a-middle-man&quot;&gt;Jare.io, a Middle Man&lt;/h2&gt;
-
-&lt;p&gt;Jare.io is an extra component in that diagram, which makes your
-life easier:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#39;/uml/aecf8b3862f82e6d5d8d27e948d45c83.svg&#39;
-        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
-
-&lt;p&gt;Jare.io has a &amp;quot;relay&amp;quot;, which acts as an origin server for CloudFront. All
-requests that arrive to &lt;code&gt;cf.jare.io&lt;/code&gt; are dispatched to the relay. The relay
-decides what to do with them. The decision is based on the information
-from the HTTP request URI. For example, the request from the browser
-has this URI path:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/?u=http://www.teamed.io/images/logo.svg&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Remember, the request is made to &lt;code&gt;cf.jare.io&lt;/code&gt;, which is the address of
-the edge server. This exact URI arrives at &lt;code&gt;relay.jare.io&lt;/code&gt;. The URI contains
-enough information to make a decision about which file has to be returned.
-The relay makes a new HTTP request to &lt;code&gt;www.teamed.io&lt;/code&gt; and retrieves the image.&lt;/p&gt;
-
-&lt;p&gt;The beauty of this solution is that it&amp;#39;s easy. For small websites,
-it is a free and quick CDN.&lt;/p&gt;
-
-&lt;p&gt;By the way, when we query the same image through jare.io (and CloudFront),
-it comes back much faster:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ curl -w &amp;quot;@f.txt&amp;quot; -o /dev/null -s \
-  http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
-    time_namelookup:  0.005
-       time_connect:  0.021
-   time_pretransfer:  0.021
- time_starttransfer:  0.041
-                    ----------
-         time_total:  0.041&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Most of the work is done by AWS CloudFront, while jare.io is just a
-relay that makes its configuration more convenient. Besides, it makes
-it free, because jare.io is sponsored by
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt;. In other words, my company will
-pay for your usage of CloudFront. I would appreciate if you kept that in
-mind and didn&amp;#39;t use jare.io for traffic-intensive resources.&lt;/p&gt;</content><category term="cdn" /><summary>CDN stands for a Content Delivery Network. Technically, it is a bunch
-of servers located in different countries and continents. You give them
-your logo.gif and they give you a URL, which resolves to a different
-server depending on who is trying to resolve it. As a result, the
-file is always close to the end-user and your website loads much faster
-than without a CDN. Sounds good, but all CDN providers want money
-for their service and usually a rather complex setup and registration
-procedure. My pet project jare.io is a free
-CDN that is simple to configure. It utilizes AWS CloudFront resources.</summary></entry></feed>
+the data out of an object, right? Nope. Wrong.</summary></entry></feed>

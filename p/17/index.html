@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?b848171"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?b848171"/>
+    <link rel="shortcut icon" href="/favicon.ico?7cdf71f"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?7cdf71f"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?b848171"/>
-    <link rel="stylesheet" href="/css/icons.css?b848171"/>
+    <link rel="stylesheet" href="/css/layout.css?7cdf71f"/>
+    <link rel="stylesheet" href="/css/icons.css?7cdf71f"/>
     <link rel="canonical" href="http://www.yegor256.com/p/17/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/17/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 17)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?b848171"></script>
+    <script src="/js/global.js?7cdf71f"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;182</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;183</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -116,6 +116,68 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/04/29/w3c-java-validators.html">
+            W3C Java Validators
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-04-29T00:00:00+00:00">
+              29 April 2014
+            </time>
+          </li>
+          <li>
+            191 words
+          </li>
+          <li>
+            
+            
+              a minute
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/04/29/w3c-java-validators.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><a href='http://w3c.jcabi.com'><img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
+
+<p>A few years ago, I created two Java wrappers for W3C validators: (<a href="http://validator.w3.org/">HTML</a> and
+<a href="http://jigsaw.w3.org/css-validator/">CSS</a>).
+Both wrappers seemed to be working fine and were
+even listed by W3C on <a href="http://validator.w3.org/docs/api.html">their website</a>
+in the API section. Until recently, these wrappers have
+always been part of <a href="https://github.com/yegor256/rexsl">ReXSL</a> library.</p>
+
+<p>A few days ago, though, I took the wrappers out of ReXSL
+and published them as a standalone library &mdash;
+<a href="http://w3c.jcabi.com">jcabi-w3c</a>. Consequently, now seems
+to be a good time to write a few words about them.</p>
+
+<p>Below is an example that demonstrates how you can validate
+an HTML document against W3C compliance rules:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.w3c.ValidatorBuilder</span><span class="o">;</span>
+<span class="k">assert</span> <span class="n">ValidatorBuilder</span><span class="o">.</span><span class="na">html</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="s">&quot;&lt;html&gt;hello, world!&lt;/html&gt;&quot;</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">valid</span><span class="o">();</span></code></pre></figure>
+
+      </div>
+      <p>
+        <a href="/2014/04/29/w3c-java-validators.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -669,62 +731,6 @@ that you won&#39;t be paid for time spent above and beyond the allotted time bud
       </div>
       <p>
         <a href="/2014/04/15/github-guidelines.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/04/15/definition-of-done.html">
-            Definition Of Done
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-04-15T00:00:00+00:00">
-              15 April 2014
-            </time>
-          </li>
-          <li>
-            307 words
-          </li>
-          <li>
-            
-            
-              
-                  two
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/04/15/definition-of-done.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <figure class='badge'><a href='http://www.xdsd.org'><img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/></a></figure>
-
-<p><a href="https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done">Definition of Done (DoD)</a> is a
-key definition used in Scrum and the one we also use in <a href="http://www.xdsd.org">XDSD</a>.</p>
-
-<p>DoD is an exit criteria of a simple atomic task and answers the question:&quot;am I
-done with this task?&quot; Moreover, DoD answers the question: &quot;will I be paid for
-the task?&quot;</p>
-
-<p>In <a href="http://www.xdsd.org">XDSD</a>, the definition of &quot;done&quot; is very simple &mdash; the task is done
-<a href="http://en.wikipedia.org/wiki/If_and_only_if">iff</a>
-its author accepts the deliverables.</p>
-
-      </div>
-      <p>
-        <a href="/2014/04/15/definition-of-done.html">
           continue...
         </a>
       </p>
