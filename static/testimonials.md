@@ -29,6 +29,10 @@ anonymous
 &mdash;
 [Ross W.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2401444164)
 
+"That may be the most stupid use of object orientation I have ever seen"
+&mdash;
+[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
+
 "I have still a good opinion of you but some posts are just holy crap"
 &mdash;
 [Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
