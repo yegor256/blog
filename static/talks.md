@@ -69,13 +69,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay 2016"/>
-**Java vs OOP**<br/>
-[JavaDay 2016](http://javaday.by/)<br/>
-Minsk, Belarus<br/>
-11 June 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/slcdevopsdays-2016.png" class="future-talk" alt="SLC DevOpsDays 2016"/>
 **Downsides of Continuous Integration**<br/>
 [Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/)<br/>
@@ -114,11 +107,22 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/geekout-2016.png" class="past-talk" alt="GeekOUT 2016"/>
+<img src="/images/2016/javaday-2016.png" class="past-talk" alt="JavaDay 2016"/>
+Java vs OOP;
+[JavaDay 2016](http://javaday.by/);
+Minsk, Belarus;
+11 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
+[photos](...),
+[video](...).
+
+<div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403312_10209692584141315_1734102393018785002_o.jpg" class="past-talk" alt="GeekOUT 2016"/>
 Chat Bots Architecture;
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
 Tallinn, Estonia;
 9 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
 [photos](https://www.facebook.com/yegor256/posts/10209692585621352),
 [video](https://www.youtube.com/watch?v=7yTIWFZrXpg).
 
@@ -127,19 +131,39 @@ Tallinn, Estonia;
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/);
 Oslo, Norway;
-8 June 2016.
+8 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
+[photos](...),
+[video](https://www.youtube.com/watch?v=vU_x6oK437I).
 
 <div class="talk-event"/>
-<img src="/images/2016/item-2016.svg" class="past-talk" alt="ITEM 2016"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403342_10209654994521598_3187544517100003621_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Your CEO or your programmer is the boss?;
+[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+Dnepr, Ukraine;
+2 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/who-manages-who),
+[video](https://www.youtube.com/watch?v=sZoJ3gO4PSo).
+
+<div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
 OOP is Dead? Not Yet!;
+[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+Dnepr, Ukraine;
+2-3 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
+[video](https://www.youtube.com/watch?v=APCUGQlkO3U).
+
+<div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13411920_10209654994481597_2349449353310463761_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Don't be over excited about Amsterdam;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnepr, Ukraine;
-2-3 June 2016.
+2-3 June 2016;
+[video](https://www.youtube.com/watch?v=4DCrWRuwxos).
 
 <div class="talk-event"/>
-<aside class="venue-rate green">B</aside>
+<aside class="venue-rate green">B-</aside>
 <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/13266042_10208232510642143_1089325380590131588_n.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
 Micromanagement;
 [PMDay Lviv](http://pmday.com.ua/);
