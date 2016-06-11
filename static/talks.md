@@ -118,7 +118,9 @@ why shouldn't we rate them, right? The best rate is
 Chat Bots Architecture;
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
 Tallinn, Estonia;
-9 June 2016.
+9 June 2016;
+[photos](https://www.facebook.com/yegor256/posts/10209692585621352),
+[video](https://www.youtube.com/watch?v=7yTIWFZrXpg).
 
 <div class="talk-event"/>
 <img src="/images/2016/ndcoslo-2016.png" class="past-talk" alt="NDC Oslo 2016"/>
