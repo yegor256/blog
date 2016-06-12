@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
   itemscope="" itemtype="http://schema.org/WebPage">
   <head>
-    <base href="http://www.yegor256.com/talks.html"/>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="Talks" />
     <meta itemprop="author" content="Yegor Bugayenko" />
@@ -28,19 +27,19 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?5c2519f"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?5c2519f"/>
+    <link rel="shortcut icon" href="/favicon.ico?8ecf963"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?8ecf963"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?5c2519f"/>
-    <link rel="stylesheet" href="/css/icons.css?5c2519f"/>
+    <link rel="stylesheet" href="/css/layout.css?8ecf963"/>
+    <link rel="stylesheet" href="/css/icons.css?8ecf963"/>
     <link rel="canonical" href="http://www.yegor256.com/talks.html" />
     <link rel="amphtml" href="http://www.yegor256.com/talks.amp.html" />
     <title>Talks - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?5c2519f"></script>
+    <script src="/js/global.js?8ecf963"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -136,21 +135,22 @@ $(function() {
   display: block;
   height: 50px;
   margin-top: 2em;
+  max-width: 100%;
 }
 .past-talk {
+  display: block;
   float: left;
-  width: 160px;
   height: 90px;
   margin-right: 1em;
   margin-bottom: 1em;
+  max-width: 160px;
 }
 .venue-rate {
   float: right;
   font-size: 2em;
-  font-family: monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: bold;
-  margin-left: .5em;
-  margin-bottom: .5em;
+  margin: .5em;
   border-radius: 50%;
   border: 1px solid gray;
   text-align: center;
@@ -158,6 +158,17 @@ $(function() {
   line-height: 1.6em;
   width: 1.6em;
   height: 1.6em;
+}
+@media all and (max-width: 700px) {
+  .venue-rate {
+    float: none;
+    margin-left: 0;
+  }
+  .past-talk {
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
 </style>
 
@@ -197,6 +208,12 @@ Malmö, Sweden<br/>
 7-11 November 2016</p>
 
 <p><div class="talk-event"/>
+<img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
+<a href="http://www.devternity.com">DevTernity 2016</a><br/>
+Riga, Latvia<br/>
+1 December 2016</p>
+
+<p><div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 <a href="http://www.jeeconf.com/">JEEConf 2017</a><br/>
 Kiev, Ukraine<br/>
@@ -213,6 +230,7 @@ why shouldn&#39;t we rate them, right? The best rate is
 <h3 id="2016">2016</h3>
 
 <p><div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="/images/2016/javaday-2016.png" class="past-talk" alt="JavaDay 2016"/>
 Java vs OOP;
 <a href="http://javaday.by/">JavaDay 2016</a>;
@@ -220,9 +238,16 @@ Minsk, Belarus;
 11 June 2016;
 <a href="http://www.slideshare.net/YegorBugayenko/java-vs-oop">slides</a>,
 <a href="...">photos</a>,
-<a href="...">video</a>.</p>
+<a href="...">video</a>.
+It was a surprisingly well organized one-day event with over 300 attendees,
+two tracks, and inexpensive entry ticket ($75). Even though their budget
+was rather low they paid for travel and hotel and invited speakers mostly
+from abroad. The audience was well prepared for my talk, I&#39;ve got many questions
+right after the presenation and during the rest of the day. However, the
+venue was not really comfortable and the content was mostly outdated.</p>
 
 <p><div class="talk-event"/>
+<aside class="venue-rate green">A+</aside>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403312_10209692584141315_1734102393018785002_o.jpg" class="past-talk" alt="GeekOUT 2016"/>
 Chat Bots Architecture;
 <a href="http://2016.geekout.ee/speakers/yegor-bugayenko/">GeekOUT 2016</a>;
@@ -230,9 +255,16 @@ Tallinn, Estonia;
 9 June 2016;
 <a href="http://www.slideshare.net/YegorBugayenko/chat-bot-architecture">slides</a>,
 <a href="https://www.facebook.com/yegor256/posts/10209692585621352">photos</a>,
-<a href="https://www.youtube.com/watch?v=7yTIWFZrXpg">video</a>.</p>
+<a href="https://www.youtube.com/watch?v=7yTIWFZrXpg">video</a>.
+Almost everything was done perfectly at this event. There were over 500 attendees
+and just two tracks (when I was speaking). The venue was very comfortable,
+modern and located in a walking distance from the center. All the logistics
+were done perfectly, the food was of high quality, the team was personally
+there and in permanent contact with speakers. It&#39;s asolutely a must to be there
+again.</p>
 
 <p><div class="talk-event"/>
+<aside class="venue-rate orange">D</aside>
 <img src="/images/2016/ndcoslo-2016.png" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 <a href="http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/">NDC Oslo</a>;
@@ -240,32 +272,46 @@ Oslo, Norway;
 8 June 2016;
 <a href="http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots">slides</a>,
 <a href="...">photos</a>,
-<a href="https://www.youtube.com/watch?v=vU_x6oK437I">video</a>.</p>
+<a href="https://www.youtube.com/watch?v=vU_x6oK437I">video</a>.
+It was a very big event with, I guess, about 1500 visitors and nine (!) tracks.
+What was good is that they paid for all travel expenses and the venue was
+really modern. Aside from that, everything else was not so good. There was
+no focus in content, the audience wasn&#39;t prepared at all, there were many
+sponsor boothes, but a total lack of attention to the content. Besides that,
+I haven&#39;t even met organizers.</p>
+
+<p><div class="talk-event"/>
+<aside class="venue-rate orange">C+</aside>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
+OOP is Dead? Not Yet!;
+<a href="http://item.com.ua/?utm_source=yegorbugayenko&amp;amp;utm_medium=blog&amp;amp;utm_campaign=item2016#speakers">ITEM 2016</a>;
+Dnipro, Ukraine;
+3 June 2016;
+<a href="http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet">slides</a>,
+<a href="https://www.youtube.com/watch?v=APCUGQlkO3U">video</a>.
+There were about 400 people, 2-3 tracks and a terrible venue. Seriously,
+the place was a total disaster, even though it&#39;s a newly built conference
+center. The sound, the location of rooms, the after-talk areas &mdash; everything
+was uncomfortable. Also, the content was not really well selected. They invited
+a few star speakers just because of their names, which usually is a mistake.
+The after-party was good though. It seemed that organizers tried to do this event
+with love, but the venue and speakers, unfortunately, didn&#39;t play along.</p>
 
 <p><div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403342_10209654994521598_3187544517100003621_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Your CEO or your programmer is the boss?;
 <a href="http://item.com.ua/?utm_source=yegorbugayenko&amp;amp;utm_medium=blog&amp;amp;utm_campaign=item2016#speakers">ITEM 2016</a>;
-Dnepr, Ukraine;
+Dnipro, Ukraine;
 2 June 2016;
 <a href="http://www.slideshare.net/YegorBugayenko/who-manages-who">slides</a>,
 <a href="https://www.youtube.com/watch?v=sZoJ3gO4PSo">video</a>.</p>
 
 <p><div class="talk-event"/>
-<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
-OOP is Dead? Not Yet!;
-<a href="http://item.com.ua/?utm_source=yegorbugayenko&amp;amp;utm_medium=blog&amp;amp;utm_campaign=item2016#speakers">ITEM 2016</a>;
-Dnepr, Ukraine;
-2-3 June 2016;
-<a href="http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet">slides</a>,
-<a href="https://www.youtube.com/watch?v=APCUGQlkO3U">video</a>.</p>
-
-<p><div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13411920_10209654994481597_2349449353310463761_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Don&#39;t be over excited about Amsterdam;
 <a href="http://item.com.ua/?utm_source=yegorbugayenko&amp;amp;utm_medium=blog&amp;amp;utm_campaign=item2016#speakers">ITEM 2016</a>;
-Dnepr, Ukraine;
-2-3 June 2016;
+Dnipro, Ukraine;
+2 June 2016;
 <a href="https://www.youtube.com/watch?v=4DCrWRuwxos">video</a>.</p>
 
 <p><div class="talk-event"/>
@@ -707,7 +753,7 @@ San Francisco, USA;
         This blog is built with <a href="http://jekyllrb.com/">Jekyll</a>
         and hosted on <a href="https://pages.github.com/">GitHub Pages</a>
         <br/>
-        <a href="https://github.com/yegor256/blog/commit/5c2519f"><i class="ico ico-x-github"></i></a>
+        <a href="https://github.com/yegor256/blog/commit/8ecf963"><i class="ico ico-x-github"></i></a>
       </p>
     </footer>
   </div>
