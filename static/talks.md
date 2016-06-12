@@ -53,6 +53,16 @@ $(function() {
   width: 1.6em;
   height: 1.6em;
 }
+@media all and (max-width: 700px) {
+  .venue-rate {
+    clear: both;
+    margin: 0;
+  }
+  .past-talk {
+    clear: both;
+    margin: 0;
+  }
+}
 </style>
 
 {% badge /images/yegor-is-presenting.png 300 %}
@@ -137,29 +147,29 @@ Oslo, Norway;
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
 
 <div class="talk-event"/>
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
+OOP is Dead? Not Yet!;
+[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+Dnipro, Ukraine;
+3 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
+[video](https://www.youtube.com/watch?v=APCUGQlkO3U).
+
+<div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403342_10209654994521598_3187544517100003621_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Your CEO or your programmer is the boss?;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
-Dnepr, Ukraine;
+Dnipro, Ukraine;
 2 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-manages-who),
 [video](https://www.youtube.com/watch?v=sZoJ3gO4PSo).
 
 <div class="talk-event"/>
-<img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
-OOP is Dead? Not Yet!;
-[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
-Dnepr, Ukraine;
-2-3 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
-[video](https://www.youtube.com/watch?v=APCUGQlkO3U).
-
-<div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13411920_10209654994481597_2349449353310463761_o.jpg" class="past-talk" alt="ITEM 2016"/>
 Don't be over excited about Amsterdam;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
-Dnepr, Ukraine;
-2-3 June 2016;
+Dnipro, Ukraine;
+2 June 2016;
 [video](https://www.youtube.com/watch?v=4DCrWRuwxos).
 
 <div class="talk-event"/>
