@@ -35,11 +35,13 @@ personal click
 
 commit to long-term payments
 
-don't discuss money
+delay money discussions
+
+don't negotiate - it's offensive
 
 make him your partner
 
-
+be positive, don't mention problems
 
 <hr/>
 
