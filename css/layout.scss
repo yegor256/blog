@@ -76,6 +76,10 @@ a:visited {
   text-decoration: underline;
 }
 
+del {
+  text-decoration: line-through;
+}
+
 .foreign:before {
   @extend %unprintable;
   @extend %desktop-only;
