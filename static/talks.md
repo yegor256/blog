@@ -30,21 +30,22 @@ $(function() {
   display: block;
   height: 50px;
   margin-top: 2em;
+  max-width: 100%;
 }
 .past-talk {
+  display: block;
   float: left;
-  width: 160px;
   height: 90px;
   margin-right: 1em;
   margin-bottom: 1em;
+  max-width: 160px;
 }
 .venue-rate {
   float: right;
   font-size: 2em;
-  font-family: monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: bold;
-  margin-left: .5em;
-  margin-bottom: .5em;
+  margin: .5em;
   border-radius: 50%;
   border: 1px solid gray;
   text-align: center;
@@ -55,12 +56,13 @@ $(function() {
 }
 @media all and (max-width: 700px) {
   .venue-rate {
-    clear: both;
-    margin: 0;
+    float: none;
+    margin-left: 0;
   }
   .past-talk {
-    clear: both;
-    margin: 0;
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 </style>
@@ -123,6 +125,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="/images/2016/javaday-2016.png" class="past-talk" alt="JavaDay 2016"/>
 Java vs OOP;
 [JavaDay 2016](http://javaday.by/);
@@ -131,8 +134,15 @@ Minsk, Belarus;
 [slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
 [photos](...),
 [video](...).
+It was a surprisingly well organized one-day event with over 300 attendees,
+two tracks, and inexpensive entry ticket ($75). Even though their budget
+was rather low they paid for travel and hotel and invited speakers mostly
+from abroad. The audience was well prepared for my talk, I've got many questions
+right after the presenation and during the rest of the day. However, the
+venue was not really comfortable and the content was mostly outdated.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A+</aside>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403312_10209692584141315_1734102393018785002_o.jpg" class="past-talk" alt="GeekOUT 2016"/>
 Chat Bots Architecture;
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
@@ -141,8 +151,15 @@ Tallinn, Estonia;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
 [photos](https://www.facebook.com/yegor256/posts/10209692585621352),
 [video](https://www.youtube.com/watch?v=7yTIWFZrXpg).
+Almost everything was done perfectly at this event. There were over 500 attendees
+and just two tracks (when I was speaking). The venue was very comfortable,
+modern and located in a walking distance from the center. All the logistics
+were done perfectly, the food was of high quality, the team was personally
+there and in permanent contact with speakers. It's asolutely a must to be there
+again.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">D</aside>
 <img src="/images/2016/ndcoslo-2016.png" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/);
@@ -151,8 +168,15 @@ Oslo, Norway;
 [slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
 [photos](...),
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
+It was a very big event with, I guess, about 1500 visitors and nine (!) tracks.
+What was good is that they paid for all travel expenses and the venue was
+really modern. Aside from that, everything else was not so good. There was
+no focus in content, the audience wasn't prepared at all, there were many
+sponsor boothes, but a total lack of attention to the content. Besides that,
+I haven't even met organizers.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C+</aside>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13350367_10209654995081612_6163931367992388929_o.jpg" class="past-talk" alt="ITEM 2016"/>
 OOP is Dead? Not Yet!;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
@@ -160,6 +184,13 @@ Dnipro, Ukraine;
 3 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
 [video](https://www.youtube.com/watch?v=APCUGQlkO3U).
+There were about 400 people, 2-3 tracks and a terrible venue. Seriously,
+the place was a total disaster, even though it's a newly built conference
+center. The sound, the location of rooms, the after-talk areas &mdash; everything
+was uncomfortable. Also, the content was not really well selected. They invited
+a few star speakers just because of their names, which usually is a mistake.
+The after-party was good though. It seemed that organizers tried to do this event
+with love, but the venue and speakers, unfortunately, didn't play along.
 
 <div class="talk-event"/>
 <img src="https://scontent-arn2-1.xx.fbcdn.net/t31.0-8/13403342_10209654994521598_3187544517100003621_o.jpg" class="past-talk" alt="ITEM 2016"/>
