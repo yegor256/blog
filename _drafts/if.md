@@ -33,7 +33,7 @@ and its method
 In a nutshell, it prevents from saving any data to the DynamoDB if there were no
 modifications of the XML document. It's a valid case and it has to be
 validated, but the way it's implemented is simply wrong. This is
-how it works (over simplified example):
+how it works (an over simplified example):
 
 {% highlight java %}
 class DyTalk {

@@ -101,6 +101,12 @@ Malmö, Sweden<br/>
 7-11 November 2016
 
 <div class="talk-event"/>
+<img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
+[DevTernity 2016](http://www.devternity.com)<br/>
+Riga, Latvia<br/>
+1 December 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
