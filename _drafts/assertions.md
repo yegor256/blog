@@ -5,13 +5,14 @@ date: 2016-06-20
 place: Los Angeles, CA
 tags: java
 description: |
-  ...
+  Assertions are an outdated and wrong feature in Java
+  (and some other languages), which I would not recommend to use.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - assertions or exceptions
+  - assertion or exception
+  - exceptions over assertions
+  - throw exception not assertion
+  - assertions java
 ---
 
 There are basically two ways to validate the situation in Java and complain
