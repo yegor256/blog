@@ -97,7 +97,7 @@ Swansea, UK<br/>
 <div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects** and
-**ORM is an Offensive Anti-Pattern**;
+**ORM is an Offensive Anti-Pattern**;<br/>
 [Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
 Malmö, Sweden<br/>
 7-11 November 2016
