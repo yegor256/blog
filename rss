@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-14T00:58:07+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-15T03:46:06+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
 organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
 attended. Basically, they were interested to know what I would suggest for
 improvement. So, I decided to summarize it in a list of the most typical
@@ -185,6 +185,8 @@ owner of that bag of coffee beans, who asked you yesterday not to use them
 because he is waiting for a date tonight? How much of a success was your project
 to him?&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;A project is either dead or alive, that&amp;#39;s it&lt;/aside&gt;
+
 &lt;p&gt;So, a project is never a &amp;quot;success&amp;quot; or a &amp;quot;failure.&amp;quot; A project is either
 dead or alive, that&amp;#39;s it. Success is a subjective category and can only
 be measured per stakeholder. And even a small project has many stakeholders.
@@ -214,6 +216,8 @@ press the button. You might also need a budgeting software to calculate how
 much money you will owe to the roommate. You might use a few risk identification
 and planning algorithms, etc.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;You must try to predict the future with as much accuracy and precision as possible&lt;/aside&gt;
+
 &lt;p&gt;Most of such tools are mentioned and explained in the PMBOK. They are even
 groupped there into so called &amp;quot;knowledge areas:&amp;quot; for predicting
 time, money, risks, people, etc. It&amp;#39;s not important how exactly you predict
@@ -242,6 +246,8 @@ the project. I&amp;#39;m sure you will be surprised to hear it: the only purpose
 a PM in a project is to help its key stakeholders (also known as sponsors) to
 make a decision: to kill the project right now or to let it stay alive for a bit more.
 That&amp;#39;s it.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Project sponsors need to know whether the project is worth going forward&lt;/aside&gt;
 
 &lt;p&gt;You didn&amp;#39;t need a PM in your coffee making project because you, as its key
 stakeholder, were fully committed to finish it only when the coffee is ready.
@@ -279,6 +285,8 @@ the team by telling everybody what to do, since this is the easiest way to
 know what will happen and when, in the short-term. But the long-term future
 stays absolutely unclear. A bad PM mostly relies on expert judgement, just
 like you did while making that coffee.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;A good PM finds a way to organize resources in such a way that their future becomes predictable&lt;/aside&gt;
 
 &lt;p&gt;A good project manager is a completely different creature. A good PM
 finds a way to &lt;em&gt;organize&lt;/em&gt; resources in such a way that their future
