@@ -133,7 +133,7 @@ Minsk, Belarus;
 11 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
 [photos](...),
-[video](...).
+[video](https://www.youtube.com/watch?v=6hOBfjJ2bpw).
 It was a surprisingly well organized one-day event with over 300 attendees,
 two tracks, and inexpensive entry ticket ($75). Even though their budget
 was rather low they paid for travel and hotel and invited speakers mostly

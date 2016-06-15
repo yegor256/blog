@@ -63,6 +63,8 @@ owner of that bag of coffee beans, who asked you yesterday not to use them
 because he is waiting for a date tonight? How much of a success was your project
 to him?
 
+{% quote A project is either dead or alive, that's it %}
+
 So, a project is never a "success" or a "failure." A project is either
 dead or alive, that's it. Success is a subjective category and can only
 be measured per stakeholder. And even a small project has many stakeholders.
@@ -92,6 +94,8 @@ press the button. You might also need a budgeting software to calculate how
 much money you will owe to the roommate. You might use a few risk identification
 and planning algorithms, etc.
 
+{% quote You must try to predict the future with as much accuracy and precision as possible %}
+
 Most of such tools are mentioned and explained in the PMBOK. They are even
 groupped there into so called "knowledge areas:" for predicting
 time, money, risks, people, etc. It's not important how exactly you predict
@@ -120,6 +124,8 @@ the project. I'm sure you will be surprised to hear it: the only purpose of
 a PM in a project is to help its key stakeholders (also known as sponsors) to
 make a decision: to kill the project right now or to let it stay alive for a bit more.
 That's it.
+
+{% quote Project sponsors need to know whether the project is worth going forward %}
 
 You didn't need a PM in your coffee making project because you, as its key
 stakeholder, were fully committed to finish it only when the coffee is ready.
@@ -157,6 +163,8 @@ the team by telling everybody what to do, since this is the easiest way to
 know what will happen and when, in the short-term. But the long-term future
 stays absolutely unclear. A bad PM mostly relies on expert judgement, just
 like you did while making that coffee.
+
+{% quote A good PM finds a way to organize resources in such a way that their future becomes predictable %}
 
 A good project manager is a completely different creature. A good PM
 finds a way to _organize_ resources in such a way that their future
