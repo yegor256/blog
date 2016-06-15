@@ -81,13 +81,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/slcdevopsdays-2016.png" class="future-talk" alt="SLC DevOpsDays 2016"/>
-**Downsides of Continuous Integration**<br/>
-[Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/)<br/>
-Salt Lake City, USA<br/>
-15 June 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
@@ -123,6 +116,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="https://pbs.twimg.com/media/ClAYuDZUUAAFbVn.jpg:large" class="past-talk" alt="SLC DevOpsDays 2016"/>
+Downsides of Continuous Integration;
+[Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/);
+Salt Lake City, USA;
+15 June 2016.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
