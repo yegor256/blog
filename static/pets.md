@@ -35,14 +35,6 @@ configuring it. More about it here:
 [Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
 Founded 2-Mar-2016.
 
-{% badge http://www.jare.io/images/logo.svg 100 http://www.jare.io %}
-
-[Jare.io](http://www.jare.io) is an instant CDN for small projects. It
-helps webmasters to eliminate the necessity to pay for CDN and spend time
-configuring it. More about it here:
-[Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
-Founded 2-Mar-2016.
-
 {% badge http://img.s3auth.com/logo.png 200 http://www.s3auth.com %}
 
 [s3auth.com](http://www.s3auth.com) is a lightweight Basic authentication
