@@ -52,3 +52,12 @@ service, which is actively used by hundreds buckets up to date.
 More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %})
 Founded 22-Aug-2012.
 
+{% badge http://img.stateful.co/pomegranate.svg 64 http://www.stateful.co %}
+
+[stateful.co](http://www.stateful.co) is a hosted set of micro-services
+that help achieve statefulness in a multi-server/node environments. In other
+words, it provides persistent simple things accessible over the network.
+Still not clear? Check this out:
+[Synchronization Between Nodes]({% pst 2014/dec/2014-12-04-synchronization-between-nodes %}).
+Founded 7-May-2014.
+

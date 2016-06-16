@@ -22,7 +22,7 @@ such synchronization, there will be collisions and conflicts. This
 is especially true when we're talking about "resources" that do
 not support *atomic* transactions.
 
-{% badge http://img.stateful.co/pomegranate.svg 64 %}
+{% badge http://img.stateful.co/pomegranate.svg 64 http://www.stateful.co %}
 
 To solve this issue and prevent conflicts, we have to introduce
 one more element into the picture. All software modules, before
