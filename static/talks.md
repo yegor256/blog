@@ -120,7 +120,7 @@ why shouldn't we rate them, right? The best rate is
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://pbs.twimg.com/media/ClAYuDZUUAAFbVn.jpg:large" class="past-talk" alt="SLC DevOpsDays 2016"/>
-Downsides of Continuous Integration;
+Eight Maturity Levels of Continuous Integration;
 [Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/);
 Salt Lake City, USA;
 15 June 2016;
@@ -134,7 +134,7 @@ the audience. However, the venue was not comfortable at all
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="/images/2016/javaday-2016.png" class="past-talk" alt="JavaDay 2016"/>
+<img src="https://scontent.fsnc1-1.fna.fbcdn.net/t31.0-8/13442667_1060025417396459_4562118692847159679_o.jpg" class="past-talk" alt="JavaDay 2016"/>
 Java vs OOP;
 [JavaDay 2016](http://javaday.by/);
 Minsk, Belarus;
