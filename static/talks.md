@@ -219,7 +219,7 @@ Dnipro, Ukraine;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-0/s600x600/13266042_10208232510642143_1089325380590131588_n.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
+<img src="https://i.ytimg.com/vi/ZVn7ufg-tk0/mqdefault.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
 Micromanagement;
 [PMDay Lviv](http://pmday.com.ua/);
 Lviv, Ukraine;
