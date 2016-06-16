@@ -118,11 +118,19 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://pbs.twimg.com/media/ClAYuDZUUAAFbVn.jpg:large" class="past-talk" alt="SLC DevOpsDays 2016"/>
 Downsides of Continuous Integration;
 [Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/);
 Salt Lake City, USA;
-15 June 2016.
+15 June 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
+[photos](...),
+[video](https://www.youtube.com/watch?v=3dJP_LtUGgg).
+There were about 250 people with just one track and a pretty good
+organization, even though the budget was rather low. I liked the event and
+the audience. However, the venue was not comfortable at all
+(it was literally a church).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
