@@ -171,7 +171,9 @@ String contact(String left, String right);
 
 ## Constructors
 
-Without exceptions, there should be only _one_ constructor that stores data in
+Without
+[exceptions]({% pst 2016/jun/2016-06-17-dont-use-java-assertions %}),
+there should be only _one_ constructor that stores data in
 object variables. All other constructors should call this one with different
 arguments. For example:
 

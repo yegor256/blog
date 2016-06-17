@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Use Java Assertions; Stick With Exceptions Only"
-date: 2016-06-20
+date: 2016-06-17
 place: Los Angeles, CA
 tags: java
 description: |
@@ -22,6 +22,8 @@ small differences. I believe that exceptions are the right way to go
 in all situations and assertions should never be used. Here's why.
 
 <!--more-->
+
+{% picture /images/2016/06/natural-born-killers.png 0 Natural Born Killers (1994) by Oliver Stone %}
 
 Let's see what happens when an assertion is triggered. Say that this
 is our code:
