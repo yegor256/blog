@@ -3,7 +3,7 @@ layout: post
 title: "Limit Java Method Execution Time"
 date: 2014-06-20
 tags: java aop
-description:
+description: |
   Aspect oriented programming with AspectJ and jcabi-aspects can
   help you to control maximum execution time for any single Java method
 keywords:
@@ -41,7 +41,8 @@ compilation, as explained [here](http://aspects.jcabi.com/example-weaving.html).
 
 Let's discuss how this actually works, but first,
 I recommend you read [this post]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}),
-which explains how AOP aspects work together with Java annotations.
+which explains how AOP aspects work together with
+[Java annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}).
 
 Due to [`@Timeable`](http://aspects.jcabi.com/annotation-timeable.html)
 annotation and class weaving, every call to a method `load()`

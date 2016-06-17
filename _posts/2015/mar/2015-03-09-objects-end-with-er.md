@@ -3,7 +3,7 @@ layout: post
 title: "Don't Create Objects That End With -ER"
 date: 2015-03-09
 tags: oop
-description:
+description: |
   Object names that end with -er are indicators of a
   flawed design in terms of object thinking and should be
   avoided.
@@ -14,6 +14,8 @@ keywords:
   - controllers in oop
   - managers in oop
 book: elegant-objects 1.1
+youtube:
+  - WpP4rIhh5e4
 ---
 
 Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.
@@ -43,8 +45,6 @@ it's often a sign that the managed are just plain old data structures
 and that the manager is the smart procedure doing the real work".
 
 I totally agree but would like to add a few words to this.
-
-{% youtube WpP4rIhh5e4 video-left %}
 
 I mentioned already in [Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 that a good object name is not a job title, but I didn't explain why I think so.

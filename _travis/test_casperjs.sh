@@ -4,7 +4,7 @@ set -e
 DIR=$(dirname $0)
 cd "${DIR}/.."
 PORT=4000
-jekyll serve --port=$PORT --host=localhost &
+jekyll serve --port=$PORT --host=localhost --trace &
 PID=$!
 trap 'kill -9 $PID; rm -rf _site' EXIT
 
@@ -19,7 +19,7 @@ while true; do
   echo "waiting for Jekyll to get ready (${COUNT})..."
   sleep 15
   (( COUNT++ ))
-  if [ $COUNT -eq 60 ]; then
+  if [ $COUNT -eq 120 ]; then
     echo "Jekyll takes too long"
     break
   fi

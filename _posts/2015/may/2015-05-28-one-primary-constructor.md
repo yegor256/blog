@@ -3,7 +3,7 @@ layout: post
 title: "There Can Be Only One Primary Constructor"
 date: 2015-05-28
 tags: oop java
-description:
+description: |
   In a properly designed class, there can only be
   one primary constructor and any number of
   secondary ones.
@@ -87,3 +87,6 @@ By strictly following this suggested rule, all classes will have
 a single entry point (point of construction), which is a primary
 constructor, and it will always be easy to find because it stays
 below all secondary constructors.
+
+More about this subject in [Elegant Objects](/elegant-objects.html),
+Section [1.2](/images/books/elegant-objects/contents.pdf).

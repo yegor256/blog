@@ -13,6 +13,8 @@ keywords:
   - project management
   - effective project management
   - xdsd
+youtube:
+  - qRZYJGYdrwk
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

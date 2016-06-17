@@ -3,7 +3,7 @@ layout: post
 title: "Deployment Script vs. Rultor"
 date: 2014-09-11
 tags: rultor devops
-description:
+description: |
   Many of us have our own custom release/deployment scripts
   which work just fine. What value can Rultor add to them?
 keywords:
@@ -13,6 +13,8 @@ keywords:
   - fully automated deployment
   - how to automate deployment process
 categories: jcg
+youtube:
+  - NflR7DKwxDY
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
@@ -83,7 +85,10 @@ My deployment script looked like this before I started to use Rultor:
 {% highlight bash %}
 #!/bin/bash
 phing test
-git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/
 {% endhighlight %}
 
 Just two lines. The first one is a full run of unit tests. The second one
@@ -112,7 +117,10 @@ sudo pear channel-discover pear.phing.info
 sudo pear install phing/phing
 # And now the same script I had before
 phing test
-git ftp push --user ".." --passwd ".." --syncroot php/src ftp://ftp.example.com/
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/
 {% endhighlight %}
 
 Obviously, running this script on my MacBook (without virtualization) would

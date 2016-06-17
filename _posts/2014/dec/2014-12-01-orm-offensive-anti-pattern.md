@@ -4,7 +4,7 @@ title: "ORM Is an Offensive Anti-Pattern"
 date: 2014-12-01
 categories: best
 tags: oop
-description:
+description: |
   Object-relational mapping is a design pattern that
   violates encapsulation, one of the fundamental principles
   of OOP, but what is a possible alternative to it?
@@ -17,6 +17,11 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 book: elegant-objects 3.5
+youtube:
+  - DEqcn4-freM
+  - WSgP85kr6eU
+  - aER4uwyFbqQ
+  - 63tS3HNmhiE
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
@@ -155,8 +160,6 @@ What's wrong with it, you may ask? Everything!
 
 ## What's Wrong With ORM?
 
-{% youtube DEqcn4-freM video-left %}
-
 Seriously, what is wrong? Hibernate has been one of the most popular Java libraries
 for more than 10 years already. Almost every SQL-intensive application in the world
 is using it. Each Java tutorial would mention Hibernate (or maybe
@@ -173,7 +176,7 @@ was maybe the second big mistake in OOP after
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
 this subject has already been published by very respected authors, including
-[OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler,
+[OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
 [Object-Relational Mapping Is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
 [The Vietnam of Computer Science](http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx) by Ted Neward,
 [ORM Is an Anti-Pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
@@ -245,7 +248,8 @@ table, and `Post` will represent the row.
 
 As I also mentioned in that [article]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 every object should work by contract
-and implement an interface. Let's start our design with two interfaces.
+and implement an interface. Let's start our design with two
+[interfaces]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}).
 Of course, our objects will be
 [immutable]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}).
 Here is how `Posts` would look:
@@ -311,7 +315,10 @@ final class PgPosts implements Posts {
           new ListOutcome.Mapping<Post>() {
             @Override
             public Post map(final ResultSet rset) {
-              return new PgPost(rset.getInteger(1));
+              return new PgPost(
+                this.dbase,
+                rset.getInteger(1)
+              );
             }
           }
         )
@@ -428,7 +435,10 @@ final class ConstPgPosts implements Posts {
             @Override
             public Post map(final ResultSet rset) {
               return new ConstPost(
-                new PgPost(rset.getInteger(1)),
+                new PgPost(
+                  ConstPgPosts.this.dbase,
+                  rset.getInteger(1)
+                ),
                 Utc.getTimestamp(rset, 2),
                 rset.getString(3)
               );

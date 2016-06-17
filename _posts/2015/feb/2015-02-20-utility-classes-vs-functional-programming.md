@@ -4,7 +4,7 @@ title: "Utility Classes Have Nothing to Do With Functional Programming"
 date: 2015-02-20
 tags: oop
 categories: jcg
-description:
+description: |
   Utility classes, even though they look like collections of
   functions, have nothing to do with functional programming, mostly
   because they are bags of procedures
@@ -14,6 +14,9 @@ keywords:
   - utility classes vs functional programming
   - utility classes are not functional programming
   - utility classes
+youtube:
+  - D0dqC_3Bch8
+  - psrp3TtaYYI
 ---
 
 I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against

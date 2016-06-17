@@ -3,7 +3,7 @@ layout: post
 title: "Team Morale: Myths and Reality"
 date: 2015-03-02
 tags: management agile
-description:
+description: |
   Team morale is a key performance driver in any group,
   especially a software development team; however, there are
   many myths about it.
@@ -13,6 +13,8 @@ keywords:
   - team morale events
   - team morale booster ideas
   - team morale event ideas
+youtube:
+  - ibT5oKToMoQ
 ---
 
 There are plenty of books, articles, and blog posts about _team morale_. They
@@ -25,25 +27,24 @@ speechless monkeys, programming under the influence of Prozac. Their existence
 and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
 is our big misfortune. Let me present my own
 vision of how team morale can be boosted on a software team &mdash; a team that
-has a strong leader and a
-[good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
+has a good [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <!--more-->
 
 {% picture /images/2015/03/apocalypto.jpg 0 Apocalypto (2006) by Mel Gibson %}
 
 **Fire Fast**.
-The first and most important quality of a good leader is his or her
+The first and most important quality of a good manager is his or her
 ability to separate bad apples from good ones as soon as possible.
 Nothing will earn you more disrespect from your team than tolerance of
 [under-performing]({% pst 2015/oct/2015-10-13-competition-without-rules %})
-team members. Your job as a leader is to help the best players
+team members. Your job as a manager is to help the best players
 play better, and they can't play better if they see that management
 doesn't understand the difference between excellence and mediocrity. It's
 a severe demotivating factor.
 
 **Be Honest About Problems and Risks**.
-Your team is following you and expecting you to be a smart leader. While they
+Your team is following you and expecting you to be a smart manager. While they
 are writing Java, you're talking to investors and customers. They want to
 be sure you know what you're doing. The best way to show them
 you have no idea where the team is going is to tell them that the future
@@ -53,6 +54,8 @@ case, the best people would attempt to quit before it's too late. Thus, to keep
 morale up, regularly inform your people about problems you're facing and
 risks you're trying to prevent. They will appreciate it and respect you.
 A strong, professional manager deals with risks instead of ignoring them.
+
+{% quote A strong manager isn't afraid to look stupid in front of the team %}
 
 **Failures Are Yours; Success Is Theirs**.
 Always remember that when someone on your team makes a mistake,
@@ -65,8 +68,8 @@ you have to admit in front of everyone that it was your personal mistake.
 You didn't control enough, you didn't plan well, or you didn't take preventive actions.
 This is what the team expects from you. Also, your people expect
 you to explain to them how you're going to learn from this mistake in order to prevent
-a similar one from happening in the future. A strong leader isn't afraid to look
-stupid in front of the team. A weak leader does look stupid when he or she
+a similar one from happening in the future. A strong manager isn't afraid to look
+stupid in front of the team. A weak manager does look stupid when he or she
 tries to hide mistakes that have been made.
 
 **Responsibility Is Always Personal**.
@@ -105,6 +108,8 @@ of abstract principles that you should understand and digest. But then,
 after you chew them properly, convert them to specific and
 very unambitious rules of work. Don't talk about Agile; be agile.
 
+{% quote Give everybody an assurance that none of them will be terminated behind a closed door %}
+
 **Don't Close the Door**.
 Responsibility is personal, money is personal, and results are personal. But
 their discussions should be open to everybody. Don't close the door to that
@@ -113,33 +118,42 @@ results. You want your team to work together? Give everybody an assurance
 that none of them will be terminated behind a closed door. These pompous
 speeches about "us working together" usually turn into mush once the team
 sees that someone gets fired after a private conversation with a manager.
-Are we together, or is it you against us? To keep team morale up, you, as a leader,
-have to establish ground rules of work that will define who gets what
-when we succeed and who goes home first when we fail. These rules should
+Are we together, or is it you against us? To keep team morale up, you, as a manager,
+have to establish
+[ground rules]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+of work that will define who gets what
+when we succeed and who
+[goes home]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+first when we fail. These rules should
 be open to everybody. These rules should rule the team, not your personal
 decisions made behind a closed door.
 
 **Celebrate Achievements Instead of Birthdays**.
 Team-building events are a great tool to boost team morale, but only when
 they are built around personal or team achievements instead of calendar events.
-A project team is not a group of friends or family members, even though
+A project team is
+[not a group of friends]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
+or family members, even though
 some teams may feel like that. No matter how it feels, a team is here
 for one reason &mdash; to create the product and make money for its sponsor.
 This is the direction we're going. Our goal is not to build a community and
 live together til the end of our days. Our goal is to achieve the business
 success of the product we're developing, or in other words, complete the project.
 When the only events we're celebrating are our birthdays, that's a sign to
-us that our leaders are trying to lie to us. They are pretending that we're
+us that our managers are trying to lie to us. They are pretending that we're
 here to make a community of friends while in reality they are using us to
 build their business. It's unhealthy and ruins team morale. Instead, celebrate
 achievements on your real path &mdash; to the success of the product under
-development. This will show everybody that you, as a leader, are honest with
+development. This will show everybody that you, as a manager, are honest with
 your people and ready to show them that their true role on the team is
 to develop a product and earn money for its investors. Honesty is the best
 team morale booster.
 
+{% quote Honesty is the best team morale booster %}
+
 **Don't Rule; Make Rules and Plans**.
-Nothing demotivates more than an unpredictable manager. For the team, you are
+Nothing demotivates more than an unpredictable
+[manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}). For the team, you are
 an abstraction of the entire world around the team. They see
 the reality through the prism of your personality. What you tell them about
 the reality is what they perceive. If you are unpredictable, the reality
@@ -153,7 +167,9 @@ first when or if the project goes down. The plan should give a predictable
 and measurable picture of the reality around your office. It should be a map
 of terrain you're going to cross with your team. When it's time to make
 a decision, everybody will understand why it's made and will respect you
-as a leader who predicted the situation and managed it professionally.
+as a manager who predicted the situation and managed it professionally.
+
+{% quote Everybody should know everybody's salaries, bonuses, and benefits %}
 
 **Put Money on the Table**.
 Discuss money openly and freely, right in the office, right in front
@@ -168,4 +184,5 @@ colleague is called "senior developer" while his or her title is still "junior".
 This information should be public and printed on the wall right behind
 your chair. Why don't most managers do this? Because they don't have any
 rationale behind their monetary decisions. Instead of managing the money,
-they let money manage them. That's a subject for another post :)
+they let money manage them.
+

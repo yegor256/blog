@@ -3,8 +3,8 @@ layout: post
 title: "How Do You Punish Your Employees?"
 date: 2016-01-05
 place: Kiev, Ukraine
-tags: management
-description:
+tags: management sarcasm
+description: |
   A sarcastic overview of different types of abusive
   and manipulative behavior a bad manager may
   expose to office employees.
@@ -14,6 +14,9 @@ keywords:
   - office awards ideas
   - office awards funny
   - startup failure stories
+youtube:
+  - F6NwcQyEY18
+  - ibT5oKToMoQ
 ---
 
 Punishment ... how do you prefer to do it? There are many ways to punish
@@ -41,7 +44,7 @@ must be heard, you must **rule** with your voice, and he must physically
 feel your presence in the room. Even if it's just a Skype call,
 your voice must sound stronger than all others.
 Moreover, don't let him speak if he is trying to argue back.
-You're the boss!
+You're the boss! The alpha!
 
 **Play Hard to Get**.
 Is he feeling [guilty](https://en.wikipedia.org/wiki/Guilt_%28emotion%29) for
@@ -99,7 +102,8 @@ results. You discuss his uncle's wedding, his snowboarding weekend, his
 new bicycle, etc. But you don't ask about the migration to PostgreSQL he
 has been working on for the last three weeks. You are **not interested**. This is
 a perfect method for demonstrating that you don't see him as a valuable
-team member anymore. The team doesn't need his results. The team can live
+team member anymore. The [team]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
+doesn't need his results. The team can live
 without them. You will see how soon he realizes who the boss is and
 what it means when the boss is not happy!
 
@@ -136,7 +140,8 @@ a good friend!
 Simply show your annoyance of his poor results, but not to his face. Talk
 about his performance with his coworkers. They must know that you're not
 happy. Furthermore, they must suspect that you're thinking about
-terminating his contract. Don't say it straight away, but don't deny it if they
+[terminating]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+his contract. Don't say it straight away, but don't deny it if they
 ask. I doubt they will ask, though. Very soon, these rumors will
 reach his ear, and he will do whatever it takes just to hear that you're
 not thinking about termination anymore. He will likely be scared to ask you directly,

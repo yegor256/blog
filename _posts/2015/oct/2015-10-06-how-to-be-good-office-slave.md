@@ -3,8 +3,8 @@ layout: post
 title: "How to Be a Good Office Slave"
 date: 2015-10-06
 place: Palo Alto, CA
-tags: management
-description:
+tags: management sarcasm
+description: |
   Office slavery is what most companies
   practice and what most office workers suffer
   from, often unconsciously.
@@ -73,7 +73,8 @@ something, even if you had no idea about the subject beforehand. Eventually,
 everybody will start thinking they must ask your permission in order
 to make some decision, because you were at that meeting. Important people
 don't write code; they attend
-[meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}). Remember that.
+[meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}).
+Remember that.
 
 **Turn Down Recruiters, Publicly**.
 Loyalty! That's what matters to a real team. When a recruiter calls you,

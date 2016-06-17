@@ -4,7 +4,7 @@ title: "How to Fire Someone Right"
 date: 2015-09-16
 tags: management
 place: Kiev, Ukraine
-description:
+description: |
   Firing can be done right &mdash; nicely and gracefully &mdash;
   if you make it professional and not personal.
 keywords:
@@ -38,8 +38,9 @@ eventually to fire someone, you are a
 
 I also explained [some time ago]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 that a perfectly managed team is working for the project, not for you, the boss.
-The team must share the same goal and work towards it. The boss (or CEO,
-CTO, project manager, Scrum master, team lead, etc.) is there in order
+The team must share the same goal and work towards it. The boss (or CEO, CTO,
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
+Scrum master, team lead, etc.) is there in order
 to enforce the **rules** accepted by the team. The team agrees to the rules,
 so the boss is just making sure they are **enforced**.
 

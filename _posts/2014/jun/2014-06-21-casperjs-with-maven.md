@@ -3,7 +3,7 @@ layout: post
 title: "CasperJS Tests in Maven Build"
 date: 2014-06-21
 tags: maven casperjs phantomjs testing
-description:
+description: |
   Practical example of running automated integration tests
   in Maven build using Tomcat, PhantomJS and CasperJS
 keywords:
@@ -217,7 +217,9 @@ mostly because it is more configurable.
         <goal>exec</goal>
       </goals>
       <configuration>
-        <executable>${project.build.directory}/casperjs/bin/casperjs</executable>
+        <executable>
+          ${project.build.directory}/casperjs/bin/casperjs
+        </executable>
         <workingDirectory>${basedir}</workingDirectory>
         <arguments>
           <argument>test</argument>

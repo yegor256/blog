@@ -3,7 +3,7 @@ layout: post
 title: "How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them"
 date: 2015-03-29
 tags: devops rultor
-description:
+description: |
   AppVeyor is a continuous integration platform for Windows
   projects; Rultor is a Docker based DevOps assistant for merge, release and deploy operations;
   they can work together.
@@ -74,12 +74,21 @@ decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
 merge:
   script: |-
-    version=$(curl -K ../curl-appveyor.cfg --data "{accountName: 'yegor256', projectSlug: 'takes', pullRequestId: '${pull_id}'}" https://ci.appveyor.com/api/builds | jq -r '.version')
-    while true
-      do status=$(curl -K ../curl-appveyor.cfg https://ci.appveyor.com/api/projects/yegor256/takes/build/${version} | jq -r '.build.status')
+    ver=$(curl -K ../curl-appveyor.cfg \
+      --data "{accountName: 'yegor256',
+        projectSlug: 'takes',
+        pullRequestId: '${pull_id}'}" \
+      https://ci.appveyor.com/api/builds | jq -r '.version')
+    while true; do
+      status=$(curl -K ../curl-appveyor.cfg \
+        https://ci.appveyor.com/api/projects/yegor256/takes/build/${ver} \
+        | jq -r '.build.status')
       if [ "${status}" == "success" ]; then break; fi
-      if [ "${status}" == "failed" ]; then echo "see https://ci.appveyor.com/project/yegor256/takes/build/${version}"; exit 1; fi
-      echo "waiting for AppVeyor build ${version}: ${status}"
+      if [ "${status}" == "failed" ]; then
+        echo "see https://ci.appveyor.com/project/yegor256/takes/build/${ver}"
+        exit 1
+      fi
+      echo "waiting for AppVeyor build ${ver}: ${status}"
       sleep 5s
     done
     mvn clean install

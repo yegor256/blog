@@ -3,8 +3,8 @@ layout: post
 title: "You're Just the Mayonnaise in a Bad Sandwich"
 date: 2015-09-29
 place: Moscow, Russia
-tags: management
-description:
+tags: management mood
+description: |
   We spend tons of money on people who basically
   produce nothing, deliver nothing, and contribute nothing.
   How about we stop doing that?

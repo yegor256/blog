@@ -3,7 +3,7 @@ layout: post
 title: "My Favorite Software Books"
 date: 2015-04-22
 tags: book-review
-description:
+description: |
   I highly recommend you read these books to
   better understand software engineering; there are plenty
   of other good books, but these are my favorites.
@@ -153,3 +153,4 @@ CSS is not just about colors and shadows, and it's not only for graphic designer
 CSS is a key language of the modern Web. Every developer must know it, whether
 you're working with a back-end, front-end, or desktop application in C++.
 
+Also, check my [GoodReads profile](https://www.goodreads.com/user/show/54072702-yegor-bugayenko).

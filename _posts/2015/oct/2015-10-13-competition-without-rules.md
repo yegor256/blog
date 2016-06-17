@@ -4,7 +4,7 @@ title: "Competition Without Rules Is Destructive"
 date: 2015-10-13
 place: Moscow, Russia
 tags: management
-description:
+description: |
   When your team doesn't have rules of competition, you
   get competition without rules, which ruins team
   motivation.
@@ -23,7 +23,8 @@ When it's necessary to work overtime, how is it decided
 who will stay in the [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})?
 I'm expecting you to shrug your shoulders. You're right, these questions never
 have explicit answers in modern organizations. We are used to working
-in a more "democratic" way, where such decisions are made
+in a more "[democratic]({% pst 2014/oct/2014-10-12-who-is-software-architect %})"
+way, where such decisions are made
 **subjectively** by managers or more senior employees.
 Is this how it should be?
 
@@ -79,7 +80,7 @@ straightforward answers at any time to questions like these:
 
   * What do I need to do in order to get a raise?
 
-  * Under what conditions will I be fired?
+  * Under what conditions will I be [fired]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})?
 
 Can you ask these questions in your team and easily
 get explicit answers?

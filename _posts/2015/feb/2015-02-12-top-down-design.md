@@ -4,7 +4,7 @@ title: "Code For the User, Not for Yourself"
 date: 2015-02-12
 tags: management agile
 categories: jcg
-description:
+description: |
   Each change we make to our software has to provide some value
   to our users and customers; our technical objectives should
   take a back seat.

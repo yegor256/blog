@@ -78,6 +78,9 @@ layout: default
         {{ content }}
       </article>
     </main>
+    {% if page.youtube %}
+      {{ page.youtube | youtube }}
+    {% endif %}
     <related-posts />
     <div class="teamed-banner">
       <a href="http://www.teamed.io">

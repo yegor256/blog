@@ -3,7 +3,7 @@ layout: post
 title: "How Much For This Software?"
 date: 2015-06-02
 tags: management agile outsourcing
-description:
+description: |
   The very attempt to estimate a software project
   has fundamental flaws and can't be done right; instead,
   we should estimate different parameters.
@@ -86,6 +86,8 @@ asking for an estimate. I'm telling you that your software will be ready
 for $40K, and you sleep well. Until the moment you realize you've been
 fooled. By your own self.
 
+{% quote The development will take forever and will consume all your money %}
+
 Your concern is perfectly valid. You want to spend no more than $40K, and you want
 to get a product that will help you achieve your business goals. For example,
 you want to get into the market and acquire your first few thousand users. In other words,
@@ -96,7 +98,8 @@ Any software team can consume your $40K, but each team will produce a different
 _amount_ of software with different _quality_.
 
 My point is that instead of asking how much a software project will cost, you should
-ask how much software we can create for each dollar you give us and what
+ask [how much software]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %})
+we can create for each dollar you give us and what
 quality will it be.
 
 Basically, don't ask us to estimate how much gas it will take to get
@@ -116,10 +119,10 @@ you can control these numbers during the course of the project. That's the
 guarantee you're looking for. Now you know what you're buying and how
 much you're paying for it. In other words, like I said above, having these
 numbers in front of you will assure you that your money is producing
-the maximum amount of software it can produce, at the highest quality.
+the maximum **amount** of software it can produce, at the highest **quality**.
 
 The only question left is how you can know you're buying
-the right software. In other words, you know how much
+the **right** software. In other words, you know how much
 we charge per gallon and how many gallons we use per mile, but
 how do you know we're driving in the right direction and not making
 too many circles or detours?

@@ -4,7 +4,7 @@ title: "JAXB Is Doing It Wrong; Try Xembly"
 date: 2015-03-26
 tags: java xml
 categories: jcg
-description:
+description: |
   JAXB is a 10-year-old anti-pattern that encourages Java
   developers to turn their objects into dumb, passive
   data structures.
@@ -148,7 +148,8 @@ class will convert Xembly directives into an XML document.
 The beauty of this solution is that the internals of the object are
 not exposed via getters and the object is fully in charge of the XML
 marshalling process. In addition, the complexity of these directives
-may be very high &mdash; much higher than the rather cumbersome annotations of JAXB.
+may be very high &mdash; much higher than the rather cumbersome
+[annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}) of JAXB.
 
 Xembly is an open-source project, so feel free to submit your questions
 or corrections to [GitHub](https://github.com/yegor256/xembly).

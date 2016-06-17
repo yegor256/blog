@@ -4,7 +4,7 @@ title: "Java Web App Architecture In Takes Framework"
 date: 2015-03-22
 tags: java takes
 categories: jcg
-description:
+description: |
   Takes is a pure object-oriented and immutable
   Java web framework that turns the design and development
   of web applications into a pleasant and fun process.
@@ -14,6 +14,8 @@ keywords:
   - best java web framework
   - object-oriented java web framework
   - java web app framework
+youtube:
+  - nheD2LNYrpk
 ---
 
 I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
@@ -21,9 +23,13 @@ JSF with Facelets, and a bit of Spark Framework. All of these solutions,
 in my humble opinion, are very far from being object-oriented and elegant.
 They all are full of static methods, un-testable data structures, and
 dirty hacks. So about a month ago, I decided to create my own Java web
-framework. I put a few basic principles into its foundation: 1) No NULLs,
-2) no public static methods, 3) no mutable classes, and 4) no class casting, reflection,
-and `instanceof` operators. These four basic principles should guarantee
+framework. I put a few basic principles into its foundation: 1) No
+[NULLs]({% pst 2014/may/2014-05-13-why-null-is-bad %}),
+2) no public [static]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) methods, 3) no
+[mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+classes, and 4) no class casting, reflection,
+and [`instanceof`]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
+operators. These four basic principles should guarantee
 clean code and transparent architecture. That's how the
 [Takes](http://www.takes.org) framework was born.
 Let's see what was created and how it works.
@@ -136,7 +142,7 @@ Our job is to create an HTTP response using the information we get in the
 request. If our server is very primitive, we can basically ignore all the
 information in the request and just return "Hello, world!" to all requests
 (I'm using
-[`IOUtils`](https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html)
+[`IOUtils`](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html)
 for simplicity):
 
 {% highlight java %}
@@ -329,11 +335,12 @@ We'll discuss this `TkFork` class in a minute.
 
 If you're using Maven, this is the `pom.xml` you should start with:
 
-{% highlight java %}
+{% highlight xml %}
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>foo</groupId>
   <artifactId>foo</artifactId>
@@ -372,7 +379,8 @@ can run the app from the command line:
 
 {% highlight bash %}
 $ mvn clean package
-$ java -Dfile.encoding=UTF-8 -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
+$ java -Dfile.encoding=UTF-8 \
+  -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
 {% endhighlight %}
 
 The application is ready, and you can deploy it to, say, Heroku. Just
@@ -380,7 +388,9 @@ create a `Procfile` file in the root of the repository and push the repo
 to Heroku. This is what `Procfile` should look like:
 
 {% highlight text %}
-web: java -Dfile.encoding=UTF-8 -cp target/foo.jar:target/deps/* foo.Entry --port=${PORT}
+web: java -Dfile.encoding=UTF-8 \
+  -cp target/foo.jar:target/deps/* \
+  foo.Entry --port=${PORT}
 {% endhighlight %}
 
 ## `TkFork`
@@ -685,3 +695,10 @@ user in the form of a `Response`.
 
 PS. There are a few words about authentication:
 [How Cookie-Based Authentication Works in the Takes Framework]({% pst 2015/may/2015-05-18-cookie-based-authentication %}).
+
+PPS. There are a few real web systems, which you may
+be interested to take a look at. They all are using
+Takes Framework and their code is open:
+[rultor.com](https://github.com/yegor256/rultor),
+[jare.io]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}),
+[wring.io]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %}).

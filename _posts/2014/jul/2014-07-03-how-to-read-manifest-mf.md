@@ -3,7 +3,7 @@ layout: post
 title: "How to Read MANIFEST.MF Files"
 date: 2014-07-03
 tags: java jcabi
-description:
+description: |
   When there are many of them, then reading of MANIFEST.MF
   files can be a complex task, and their attributes may overlap;
   jcabi-manifests  library makes this process easier.

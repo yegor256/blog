@@ -3,7 +3,7 @@ layout: post
 title: "Two Instruments of a Software Architect"
 date: 2015-05-13
 tags: management agile architect
-description:
+description: |
   A software architect controls a software project through
   two fundamental instruments - bugs and reviews.
 keywords:
@@ -12,6 +12,9 @@ keywords:
   - software architect responsibilities
   - software architect vs developer
   - software architect vs engineer
+youtube:
+  - 0fuEgmibJc4
+  - AvVQ5NjS_Nk
 ---
 
 A [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})

@@ -4,7 +4,7 @@ title: "How to Set Up a Private Maven Repository in Amazon S3"
 date: 2015-09-07
 place: Kiev, Ukraine
 tags: java maven
-description:
+description: |
   Amazon S3 is a perfect place for keeping private Maven
   artifacts, automatically deploying them there, and making
   them available through s3auth.com.

@@ -4,7 +4,7 @@ title: "Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent"
 date: 2015-02-05
 tags: java maven jcabi
 categories: jcg
-description:
+description: |
   Maven pom.xml files may be repeatedly verbose from project
   to project; jcabi-parent offers a pre-configured solution.
 keywords:
@@ -47,7 +47,8 @@ all in your project is define `com.jcabi:parent` as your parent POM:
 {% highlight xml %}
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.jcabi</groupId>

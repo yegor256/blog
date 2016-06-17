@@ -3,7 +3,7 @@ layout: post
 title: "Typical Mistakes in Java Code"
 date: 2014-04-27
 tags: quality java
-description:
+description: |
   The article lists the most common programming mistakes
   I catch during code reviews, which can't be caught by static analysis
 keywords:
@@ -15,6 +15,8 @@ keywords:
   - good practices in programming
   - bad practices in java
 categories: jcg
+youtube:
+  - 9yjtsCK6Wdk
 ---
 
 This page contains most typical mistakes I see in the Java code of people
@@ -42,8 +44,8 @@ Also, this post explains this idea in more details:
 [Don't Create Objects That End With -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
 
 And, of course, utility classes are anti-patterns, like [`StringUtils`](http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html),
-[`FileUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html), and
-[`IOUtils`](http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html) from Apache.
+[`FileUtils`](http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html), and
+[`IOUtils`](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html) from Apache.
 The above are perfect examples of terrible designs. Read this follow up post:
 [OOP Alternative to Utility Classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 
@@ -80,6 +82,9 @@ void process(Work work);
 void append(File file, String line);
 ```
 
+You can read more about this idea in
+[Elegant Objects](/elegant-objects.html) book,
+section [2.4](/images/books/elegant-objects/contents.pdf).
 There is only one exception to the rule just mentioned
 &mdash; test methods for JUnit. They are explained below.
 
@@ -283,8 +288,9 @@ class Document {
 ```
 
 Another typical mistake is to use constants in unit tests to avoid duplicate
-string/numeric literals in test methods. Don't do this! Every test method should
-work with its own set of input values.
+string/numeric literals in test methods.
+[Don't do this]({% pst 2016/may/2016-05-03-test-methods-must-share-nothing %})!
+Every test method should work with its own set of input values.
 
 Use new texts and numbers in every new test method. They are independent. So,
 why do they have to share the same input constants?
@@ -305,3 +311,5 @@ line, he/she has to spend extra time finding where else `"Jeff"` is used in the
 same method.
 
 To avoid this data coupling, you should introduce a variable.
+More about it here:
+[A Few Thoughts on Unit Test Scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %}).

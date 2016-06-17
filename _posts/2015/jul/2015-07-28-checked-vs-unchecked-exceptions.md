@@ -5,7 +5,7 @@ date: 2015-07-28
 categories: jcg
 tags: oop java
 place: Sunnyvale, CA
-description:
+description: |
   While most programmers think checked exceptions in Java
   are a mistake, I'm of the opposite opinion &mdash; unchecked
   ones are a mistake.
@@ -156,7 +156,8 @@ method `run()` that is not supposed to throw anything. That's why we always have
 to catch everything inside the method and rethrow checked
 exceptions as unchecked.
 
-If all methods in all Java interfaces would be declared either as
+If all methods in all Java
+[interfaces]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) would be declared either as
 "safe" (`throws` nothing) or "unsafe" (`throws Exception`), everything would
 become logical and clear. If you want to stay "safe," take responsibility
 for failure handling. Otherwise, be "unsafe" and let your users worry about

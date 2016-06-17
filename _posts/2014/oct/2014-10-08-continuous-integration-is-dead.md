@@ -4,7 +4,7 @@ title: "Continuous Integration is Dead"
 date: 2014-10-08
 tags: management devops
 categories: jcg best
-description:
+description: |
   Continuous integration is an awesome idea that
   doesn't work and can't work because of its
   natural conflict with business and technical objectives.
@@ -16,9 +16,11 @@ keywords:
   - continuous integration problems
   - continuous integration pitfalls
   - alternative to continuous integration
+youtube:
+  - 3IXk5yEJMIs
+  - gL4XwP-EBOg
+  - Ht0JI41kA4I
 ---
-
-{% youtube 3IXk5yEJMIs video-left %}
 
 A few days ago, my article
 ["Why Continuous Integration Doesn’t Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)

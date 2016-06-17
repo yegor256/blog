@@ -3,7 +3,7 @@ layout: post
 title: "Immutable Objects Are Not Dumb"
 date: 2014-12-22
 tags: oop
-description:
+description: |
   Immutable objects are not the same as passive data structures
   without setters, despite a very common misbelief.
 keywords:
@@ -13,6 +13,10 @@ keywords:
   - immutable objects in java example
   - immutable objects are thread safe
 book: elegant-objects 2.6
+youtube:
+  - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 After a few recent posts about immutability, including
@@ -92,8 +96,6 @@ It does encapsulate some data, which helps to locate the entity in the real worl
 data is the **coordinates** of the entity being represented. In the case
 of `String` or `URL`, the coordinates are the same as the
 entity itself, but this is just an isolated incident, not a generic rule.
-
-{% youtube KwP7Ay9Z-hc video-left %}
 
 An immutable object is not a data structure that doesn't change, even
 though `String`, `BigInteger`, and `URL` look like one. An object is immutable

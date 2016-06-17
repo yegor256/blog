@@ -4,7 +4,7 @@ title: "Employee Turnover Is Good for the Maintainability of Your Code Base"
 date: 2015-12-29
 place: Kiev, Ukraine
 tags: management
-description:
+description: |
   Low turnover is a symptom of trouble, while a reasonable
   amount of it will lead to higher maintainability
   and greater robustness of your software.
@@ -14,6 +14,11 @@ keywords:
   - fire fighting
   - high turnover
   - low turnover
+youtube:
+  - xbovkm0tTn0
+  - pt9uHp35fwM
+  - b6r2W3P9vgY
+  - dE0_j4Kk6jo
 ---
 
 This is what Wikipedia [says](https://en.wikipedia.org/wiki/Turnover_%28employment%29) about this:

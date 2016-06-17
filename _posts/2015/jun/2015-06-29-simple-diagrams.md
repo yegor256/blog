@@ -4,7 +4,7 @@ title: "The Better Architect You Are, The Simpler Your Diagrams"
 date: 2015-06-29
 tags: architect
 place: Palo Alto, CA
-description:
+description: |
   Complex diagrams are the first and foremost
   sign of a bad architect who is not able to properly
   scope a problem.

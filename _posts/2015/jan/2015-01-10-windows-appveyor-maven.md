@@ -36,7 +36,7 @@ This is how I managed to configure AppVeyor to build my Java Maven projects
 (this is `appveyor.yml` configuration file you're supposed to place
 in the root directory of your GitHub repository):
 
-{% highlight yaml %}
+{% highlight text %}
 version: '{build}'
 os: Windows Server 2012
 install:

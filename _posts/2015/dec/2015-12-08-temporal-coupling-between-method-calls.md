@@ -4,7 +4,7 @@ title: "Temporal Coupling Between Method Calls"
 date: 2015-12-08
 place: Kyiv, Ukraine
 tags: java oop
-description:
+description: |
   Sequential method calls inevitably mean
   temporal coupling, which is a bottleneck for
   effective refactoring; avoid them.

@@ -3,7 +3,7 @@ layout: post
 title: "Fluent JDBC Decorator"
 date: 2014-08-18
 tags: java jcabi
-description:
+description: |
   jcabi-jdbc is a fluent wrapper of JDBC, making
   interaction with relational databases easier and
   much less verbose

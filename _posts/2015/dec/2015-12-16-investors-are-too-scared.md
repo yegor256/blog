@@ -4,7 +4,7 @@ title: "Investors Are Too Scared"
 date: 2015-12-16
 place: Palo Alto, CA
 tags: startup
-description:
+description: |
   Angel seed investors are usually afraid of too
   many things. Good startups are in trouble because
   of that, but we have a solution.
@@ -70,7 +70,9 @@ activities instead of business-making ones. Very often, good teams simply
 Have you ever talked to a venture capital firm? To angel investors? To
 any investors, basically? If you have, you'd know they all
 are very **polite**, nodding their heads and smiling while listening
-to your pitch. They usually are "very excited" to meet you and
+to your
+[pitch]({% pst 2016/mar/2016-03-28-unspoken-secrets-of-elevator-pitch %}).
+They usually are "very excited" to meet you and
 "learn more" about your business.
 
 In the end, they don't give you the money.
@@ -168,8 +170,9 @@ more month. Of course, we may say no.
 Second, the maximum we can give you is $20,000. Maybe, in the future,
 we will raise this limit. For now, it is $20K.
 
-And one last thing. We will ask you to give us some stock in your
-startup. You decide how much, but it has to be enough to make us
+And one last thing. We will ask you to give us some
+[future equity]({% pst 2016/may/2016-05-17-convertible-notes %})
+in your startup. You decide how much, but it has to be enough to make us
 interested. It all depends on your situation. A few percent, I'd guess.
 
 We're planning to host our first interviews in the middle of January 2016.

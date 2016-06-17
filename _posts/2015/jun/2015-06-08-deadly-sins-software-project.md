@@ -4,7 +4,7 @@ title: "Seven Deadly Sins of a Software Project"
 date: 2015-06-08
 tags: management agile
 categories: best
-description:
+description: |
   Here is a list of criteria I apply to software projects
   submitted for the Software Quality Award; they can
   be applied equally to any other projects.
@@ -17,6 +17,8 @@ keywords:
   - software maintainability
 translated:
   Russian: https://habrahabr.ru/post/260241/
+youtube:
+  - ZtWmlKi3ivc
 ---
 
 _Maintainability_ is the [most valuable virtue]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
@@ -63,7 +65,8 @@ I also consider [these few things]({% pst 2014/sep/2014-09-10-anti-patterns-in-o
 as rather bad coding approaches.
 
 My only practical suggestion here is to read and learn. Maybe
-[these books]({% pst 2015/apr/2015-04-22-favorite-software-books %}) will help you.
+[these books]({% pst 2015/apr/2015-04-22-favorite-software-books %}) will help you
+or my book "[Elegant Objects](/elegant-objects.html)".
 Always try to be skeptical about the quality of your software, and don't relax
 when it "just works". Like with cancer, the earlier you diagnose it, greater is
 the chance to survive.

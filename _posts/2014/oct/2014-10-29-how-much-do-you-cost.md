@@ -2,8 +2,8 @@
 layout: post
 title: "How Much Do You Cost?"
 date: 2014-10-29
-tags: management carreer
-description:
+tags: management career
+description: |
   How do you know what hourly rate you are worth? What
   factors should be taken into account? Here are my criteria.
 keywords:
@@ -251,7 +251,9 @@ I realize that you know very little about databases.
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
-occasional speaker at conferences or meetups. When it is a blog, I
+occasional
+[speaker]({% pst 2016/may/2016-05-10-keynote-clowns %})
+at conferences or meetups. When it is a blog, I
 pay attention to the amount of comments people leave for your articles.
 If it is a conference, the most important criteria is how difficult it
 was to get to the list of speakers.

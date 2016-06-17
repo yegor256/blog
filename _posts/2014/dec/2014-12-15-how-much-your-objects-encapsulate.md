@@ -3,7 +3,7 @@ layout: post
 title: "How Much Your Objects Encapsulate?"
 date: 2014-12-15
 tags: oop
-description:
+description: |
   How much should an object encapsulate and how much should
   it receive through its methods? If you encapsulate too little, your
   level of abstraction it too high.
@@ -14,6 +14,8 @@ keywords:
   - object constructor
   - object method vs constructor
 book: elegant-objects 2.2
+youtube:
+  - 9yjtsCK6Wdk
 ---
 
 Which line do you like more, the first or the second:

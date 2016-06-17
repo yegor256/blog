@@ -4,7 +4,7 @@ title: "Are You a Micromanager?"
 date: 2015-09-22
 place: Moscow, Russia
 tags: management
-description:
+description: |
   Everyone knows micromanagement is evil, but very few
   understand what exactly it is and what's a better alternative.
 keywords:
@@ -13,6 +13,8 @@ keywords:
   - micromanagement effects
   - micromanagement quotes
   - micromanagement meaning
+youtube:
+  - ZVn7ufg-tk0
 ---
 
 [Micromanagement](https://en.wikipedia.org/wiki/Micromanagement),

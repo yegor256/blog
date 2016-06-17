@@ -10,10 +10,6 @@
 @import 'wrapper';
 @import 'tables';
 
-.green { color: $green; }
-.red { color: $red; }
-.orange { color: $orange; }
-
 %gray {
   color: $gray;
 
@@ -24,6 +20,11 @@
 }
 
 %light-gray { color: $light-gray; }
+
+.green { color: $green; }
+.red { color: $red; }
+.orange { color: $orange; }
+.gray { @extend %gray; }
 
 %small { font-size: .85 * $em; }
 
@@ -73,6 +74,10 @@ a,
 a:visited {
   color: inherit;
   text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
 }
 
 .foreign:before {
@@ -200,7 +205,7 @@ a:visited {
 
   &.video-left {
     float: left;
-    height: 160px;
+    height: 180px;
     margin-bottom: 1em;
     margin-right: 1em;
     width: 320px;
@@ -208,7 +213,7 @@ a:visited {
 
   &.video-right {
     float: right;
-    height: 160px;
+    height: 180px;
     margin-bottom: 1em;
     margin-left: 1em;
     width: 320px;
@@ -378,6 +383,7 @@ blockquote {
     float: left;
     height: 160px;
     margin-right: .6 * $em;
+    width: 108px;
   }
 
   .amazon-button {
@@ -458,4 +464,8 @@ figure {
   pre {
     font-size: 12px !important;
   }
+}
+
+.plantuml {
+  width: 100%;
 }

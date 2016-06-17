@@ -3,7 +3,7 @@ layout: post
 title: "An Empty Line is a Code Smell"
 date: 2014-11-03
 tags: design
-description:
+description: |
   An empty line inside your method body is an indicator
   of a lack of cohesion in its design and a good motivator
   for immediate refactoring.
@@ -35,7 +35,8 @@ final class TextFile {
   }
   public int grep(Pattern regex) throws IOException {
     Collection<String> lines = new LinkedList<>();
-    try (BufferedReader reader = new BufferedReader(new FileReader(this.file))) {
+    try (BufferedReader reader =
+      new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {
@@ -85,7 +86,8 @@ final class TextFile {
   }
   private Iterable<String> lines() throws IOException {
     Collection<String> lines = new LinkedList<>();
-    try (BufferedReader reader = new BufferedReader(new FileReader(this.file))) {
+    try (BufferedReader reader =
+      new BufferedReader(new FileReader(this.file))) {
       while (true) {
         String line = reader.readLine();
         if (line == null) {

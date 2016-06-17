@@ -4,7 +4,7 @@ title: "How to Cut Corners and Stay Cool"
 date: 2015-01-15
 tags: management agile
 categories: jcg
-description:
+description: |
   When a task you're working on is too big or you simply
   don't want to do it, you cut corners; here is how you can
   do it professionally.
@@ -15,6 +15,8 @@ keywords:
   - agile planning
   - agile task planning
   - time management agile
+youtube:
+  - b6r2W3P9vgY
 ---
 
 You have a task assigned to you, and you don't like it. You are simply
@@ -77,7 +79,8 @@ Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainabilit
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Remember that your first and most important responsibility as
 a disciplined engineer is to help the project **reveal** maintainability issues.
-Who will fix them and how is the responsibility of a project manager.
+Who will fix them and how is the responsibility of a
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Your job is to reveal, not to hide. By being a hero and trying to fix everything
 in the scope of a single task, you're not doing the project a favor
 &mdash; you're concealing the problem(s).

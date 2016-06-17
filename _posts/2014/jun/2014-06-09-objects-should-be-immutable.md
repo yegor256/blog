@@ -4,7 +4,7 @@ title: "Objects Should Be Immutable"
 date: 2014-06-09
 tags: oop
 categories: best jcg
-description:
+description: |
   The article gives arguments about why
   classes/objects in object-oriented programming
   have to be immutable,  i.e. never modify their encapsulated state
@@ -17,6 +17,10 @@ keywords:
   - java immutable value object
   - java mutable immutable object
 book: elegant-objects 2.6
+youtube:
+  - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 In object-oriented programming, an object is

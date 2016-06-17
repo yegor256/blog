@@ -3,7 +3,7 @@ layout: post
 title: "Are You a Hacker or a Designer?"
 date: 2014-10-26
 tags: management programming
-description:
+description: |
   Twenty years ago we worried about performance. Now
   it is time to worry about maintainability, even though
   it often compromises performance.
@@ -13,6 +13,8 @@ keywords:
   - scalability
   - maintainability
   - readability
+youtube:
+  - PNSezrlemsY
 ---
 
 Twenty years ago, the best programmer was the one
@@ -41,8 +43,6 @@ The first trend falls down and shows how much cheaper
 [computer memory](http://www.jcmit.com/memoryprice.htm)
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
-
-{% youtube PNSezrlemsY video-left %}
 
 The second trend demonstrates how much software developers' salaries
 escalated over the same period. More accurately, they tripled. I didn't find
@@ -82,7 +82,7 @@ Someone with a hacker mentality would call this
 Java method an "elegant code" (would you?):
 
 {% highlight java %}
-public int f(int n) { return n>2?f(n-1)+f(n-2):1; }
+public int f(int n) { return n>2?f(n-1)+f(n-2):n; }
 {% endhighlight %}
 
 I would highlight these qualities of a good
@@ -122,7 +122,7 @@ public int fibo(final int pos) {
   if (pos > 2) {
     num = fibo(pos - 1) + fibo(pos - 2);
   } else {
-    num = 1;
+    num = pos;
   }
   return num;
 }

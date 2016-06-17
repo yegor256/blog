@@ -3,7 +3,7 @@ layout: post
 title: "MySQL Maven Plugin"
 date: 2014-05-21
 tags: mysql maven java
-description:
+description: |
   jcabi-mysql-maven-plugin starts a fresh instance of MySQL
   server before integration tests and shuts it down
   when tests are finished.
@@ -74,7 +74,9 @@ This is how you configure it in `pom.xml`
                   <classifier>${mysql.classifier}</classifier>
                   <type>zip</type>
                   <overWrite>false</overWrite>
-                  <outputDirectory>${project.build.directory}/mysql-dist</outputDirectory>
+                  <outputDirectory>
+                    ${project.build.directory}/mysql-dist
+                  </outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>

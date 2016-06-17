@@ -4,7 +4,7 @@ title: "Design Patterns and Anti-Patterns, Love and Hate"
 date: 2016-02-03
 place: Palo Alto, CA
 tags: oop
-description:
+description: |
   These are the most popular design patterns in
   object-oriented programming, though some of them
   are actually anti-patterns, in my opinion.
@@ -15,6 +15,10 @@ keywords:
   - java design pattern
   - anti patterns
   - clean code
+youtube:
+  - WSgP85kr6eU
+  - WpP4rIhh5e4
+  - DEqcn4-freM
 ---
 
 [Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern) are ...

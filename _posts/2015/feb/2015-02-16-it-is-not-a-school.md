@@ -3,7 +3,7 @@ layout: post
 title: "It's Not a School!"
 date: 2015-02-16
 tags: management agile
-description:
+description: |
   A project is not a school, and it shouldn't pay for our education; however,
   we want to learn while working on a project. Here is some simple
   advice on how to align our goals and project objectives.
@@ -31,8 +31,9 @@ the programmers and the project.
 
 Disclaimer: I'm talking about software **projects** here, which PMBOK defines
 as "_temporary_ endeavors undertaken to create unique
-products, services, or results". If your team is engaged in continuous
-development or maintenance of software, this concept may not be relevant.
+products, services, or results". If your team is engaged in
+[continuous development]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
+or maintenance of software, this concept may not be relevant.
 
 <!--more-->
 
@@ -45,7 +46,7 @@ to build a house, which is also a business activity. No matter how much we think
 about ourselves as a family having fun together and writing code because
 we enjoy it, each business looks at it completely differently.
 
-The project needs us to produce classes, lines of code, methods, functions,
+The project needs us to **produce** classes, lines of code, methods, functions,
 files, and features. Then, the project can convert them into happy customers,
 which will give us something back &mdash; usually cash. Finally, the project will
 share that cash among us,
@@ -54,7 +55,7 @@ and the government.
 
 A properly planned and managed project acquires the best resources its
 budget can afford and then relies on their quality. A programmer who doesn't
-have adequate skills or knowledge is an unreliable resource. Obviously,
+have adequate skills or knowledge is an **unreliable resource**. Obviously,
 no project would acquire such a resource from the start. However,
 this weakness may be revealed in the middle of the project.
 
@@ -64,14 +65,15 @@ that he's never worked with it and doesn't know how to install it.
 It was a risk, and it occurred. A good
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %})
 always has a fallback plan
-or even a few of them. Obviously, the best option would be to contract another
+or even a few of them. Obviously, the best option would be to contract **another**
 plumber. The worst option would be to train the original one on the spot.
 
 {% quote The goal of the project is to build a house, not to train a plumber %}
 
 Wait, why is that so obvious? The plumber is a great guy. Yes, he doesn't know
 how to work with this equipment, but that doesn't mean we should
-fire him immediately. Let's pay for his training, send him to some
+[fire]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+him immediately. Let's pay for his training, send him to some
 courses, buy him some books, let him experiment with the equipment for some
 time, and then he will be able to install it in our house. Great plan, isn't it?
 The plumber will be happy.
@@ -120,9 +122,9 @@ could think of it as your problem and ask your project manager to teach you, but
 you he's not running a school and get rid of you. That's a bad scenario for both of you. Instead, blame the
 project manager. He hired you. He put you into this situation. He planned
 all project activities, so he probably knows what he is doing. This means
-that the project documentation should be detailed enough for a Java
+that the project **documentation** should be detailed enough for a Java
 developer to create that Python module. However, it is not detailed enough. So report
-this issue and wait for its resolution. Explain in your bug report that you
+this **issue** and wait for its **resolution**. Explain in your bug report that you
 honestly started to work with the module and realized that its documentation
 is not complete enough for a Java developer to understand. Ask the project manager
 to fix this. If the project decides to invest its money into the documentation, you
@@ -135,8 +137,8 @@ You could blame yourself for not reading
 [Knuth](http://www.amazon.com/gp/product/0321751043/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321751043&linkCode=as2&tag=yegor256com-20&linkId=FVM7INLX6KAHZV66)
 in school and ask the project to train you on it. A good and strong project manager should tell you that it's not a school
 and get rid of you. Again, a bad scenario for both of you. Instead,
-blame the project. The code is not self-descriptive and is difficult to
-understand. The algorithm implementation is not obvious and is poorly documented.
+blame the project. The code is **not self-descriptive** and is difficult to
+understand. The algorithm implementation is **not obvious** and is poorly documented.
 Ask for better documentation. If the project invests its money into
 the documentation, you will learn the algorithm from it. The source
 code will be improved, and you will have improved your skills. Win-win.
@@ -150,7 +152,7 @@ and how it can be extended with features like this one. A project manager
 should tell you that you're not in school and are supposed to understand the
 software if the project is paying you a software developer salary. And he will
 be right. But it's a bad scenario for both of you. Instead, blame the project
-for incomplete design documentation. Good software should properly document
+for **incomplete** design documentation. Good software should properly document
 its architecture and design. Ask for the project to provide such documentation.
 If it invests its time and money into better documentation, you
 will learn from it and find all the necessary answers. Another win-win.
@@ -159,7 +161,7 @@ There are a few other examples in my
 [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}) post.
 
 In conclusion, I would recommend you remember that software projects are,
-first and foremost, business activities where we, the developers, are resources.
+first and foremost, business activities where we, the developers, are **resources**.
 In order to obtain something for ourselves in terms of education and training,
 we should align our goals with project objectives. Instead of asking for
 help and information, we should blame the project for its lack of

@@ -3,8 +3,7 @@ layout: post
 title: "Master Branch Must Be Read-Only"
 date: 2014-07-21
 tags: rultor devops management
-categories: best
-description:
+description: |
   Continuous integration doesn't work while programmers
   are able to commit into the master branch. This article
   explains why and proposes a solution.
@@ -16,9 +15,11 @@ keywords:
   - continous deployment
   - continuous delivery preflight builds
   - continuous integration
+youtube:
+  - 2a2nWELIk-Y
+  - gL4XwP-EBOg
+  - Ht0JI41kA4I
 ---
-
-{% youtube 2a2nWELIk-Y video-left %}
 
 Continuous integration is easy. Download Jenkins, install,  create a job, click
 the button, and get a nice email saying that your build is broken (I assume your

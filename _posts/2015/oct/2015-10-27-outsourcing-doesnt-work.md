@@ -5,7 +5,7 @@ date: 2015-10-27
 place: Palo Alto, CA
 categories: best
 tags: management outsourcing
-description:
+description: |
   Remote and offshore software outsourcing was a perfect business
   concept ten years ago. Not anymore. Here is why.
 keywords:
@@ -14,6 +14,8 @@ keywords:
   - why outsourcing is bad
   - why does outsourcing fail
   - software outsourcing
+youtube:
+  - 9j5pq71BS5U
 ---
 
 I want to create an iPhone app for my web service, but I don't have

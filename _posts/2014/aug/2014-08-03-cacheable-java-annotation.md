@@ -3,7 +3,7 @@ layout: post
 title: "Cache Java Method Results"
 date: 2014-08-03
 tags: java jcabi aop
-description:
+description: |
   Caching Java method results is easy with jcabi-aspects,
   a small library that uses AspectJ and Java annotations
 keywords:
@@ -29,7 +29,8 @@ including
 and many others.
 
 [jcabi-aspects](http://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,
-based on AOP aspects and Java6 annotations:
+based on AOP aspects and Java6
+[annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
 {% highlight java %}
 import com.jcabi.aspects.Cacheable;

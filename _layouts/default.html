@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
   itemscope="" itemtype="http://schema.org/WebPage">
   <head>
-    <base href="{{ site.url }}{{ page.url }}"/>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
     <meta itemprop="author" content="{{ site.author.name }}" />
@@ -13,6 +12,7 @@
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="twitter:creator" content="@yegor256"/>
+    <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     {% if page.og_image %}
@@ -38,11 +38,12 @@
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="/css/icons.css?{{ site.data['hash'] }}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="amphtml" href="{{ site.url }}{{ page.url | replace_first:'.html','.amp.html' }}" />
     <title>{{ page.title }} - {{ site.author.name }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="/js/global.js?{{ site.data['hash'] }}"></script>
   </head>
   <body>
@@ -51,12 +52,11 @@
         onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
       <header class="header" id="header">
         <div class="face">
-          <a href="/about-me.html" class="sub"><span>subscribe</span></a>
+          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
           <a href="/about-me.html">
             <img src="/images/yegor-bugayenko-192x192.png" class="photo"
               alt="photo of Yegor Bugayenko"/>
           </a>
-          <a href="/about-me.html" class="hire"><span>hire me</span></a>
         </div>
         <nav>
           <ul class="menu social notranslate">
@@ -65,7 +65,7 @@
             <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://plus.google.com/+YegorBugayenko/posts" title="follow me in Google+"><i class="icon icon-googleplus notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com/yegor256" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
@@ -73,11 +73,12 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&nbsp;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&nbsp;{{ site.posts.size }}</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;{{ site.posts.size }}</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
+            <li><a href="/pets.html" title="pets">pets</a></li>
             <li><a href="/award.html" title="software quality award">award</a></li>
           </ul>
         </nav>
@@ -88,53 +89,29 @@
               onfocus="$('#google').css('display', 'inline-block');"
               name="q" placeholder="Search" autocomplete="off"/>
             <span class="desktop-only">
-              <input type="image" src="/images/google-search-icon.png" id="google" title="search via Google"
-                style="width:3em;height:3em;display:none;position:absolute;margin-left:1em;" alt="search via Google"/>
+              <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google"
+                style="height:2.4em;display:none;position:absolute;top:.3em;margin-left:1em;" alt="search via Google"/>
             </span>
           </form>
           <div id="search-results" style="display: none;">
             <div class="entries"></div>
           </div>
         </div>
-        {% raw %}
-        <script id="search-results-template" type="text/mustache">
-          {{#entries}}
-            <div>
-              <a href="{{url}}">{{title}}</a>
-            </div>
-          {{/entries}}
-        </script>
-        {% endraw %}
         <div class="hot">
-          <a href="http://goo.gl/5Yfx1i">
-            <img src="/images/books/elegant-objects/cover.png"
-              alt="Elegant Objects"
-              style="width:100px;float:right;margin-left:1em;"/>
-          </a>
           <ul>
             <li>
-              <strong>Elegant Objects</strong>, my book about
-              object-oriented programming, is published! Buy it
-              <a href="http://goo.gl/5Yfx1i">on Amazon</a>
-              and give me your feedback, please.
+              At <a href="/webinars.html">Webinar #16</a>
+              we'll discuss why interfaces in OOP must be small and functionality-poor,
+              join us on July 6, at 11am PST.
             </li>
             <!--
             <li>
-              Meet me in Seattle, on Mar 12, at
-              <a href="http://casitconf.org/casitconf16/talks/">CascadiaIT</a>,
-              I'll be speaking about chat bots
+              Meet me at
+              <a href="http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/">SLC DevOpsDays</a> (Salt Lake City/June-14),
+              and later
+              <a href="/talks.html">somewhere else</a>.
             </li>
             -->
-            <li>
-              Meet me in Washington DC, on Mar 31, at
-              <a href="http://www.sedcconference.org/">SEDC</a>,
-              I'll be speaking about XDSD and meeting-free work
-            </li>
-            <li>
-              <a href="https://plus.google.com/events/cn2nne1qnm8t475bt461igccrg4">Webinar #13</a>
-              will be about the role of a Software Architect;
-              join us on Apr 6, at 11am PST
-            </li>
           </ul>
         </div>
       </header>

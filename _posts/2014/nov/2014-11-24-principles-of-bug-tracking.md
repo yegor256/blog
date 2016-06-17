@@ -3,7 +3,7 @@ layout: post
 title: "Five Principles of Bug Tracking"
 date: 2014-11-24
 tags: management
-description:
+description: |
   Managing work in a ticketing system requires more
   discipline than with a co-located team; this article
   explains which is the most important.
@@ -110,7 +110,8 @@ Be explicit in your intention to close the ticket and move on. Try this:
 
 Every time you raise a bug and create a new ticket, you consume project
 resources. Every bug report means money spent on the project: 1) money for your time
-spent finding the problem and reporting it; 2) for the time of the project manager
+spent finding the problem and reporting it; 2) for the time of the
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 who is working with the ticket and finding who will fix it; 3) for the time
 of the ticket solver, who is trying to understand your report and provide
 a solution; and also 4) for the time of everybody else who will participate

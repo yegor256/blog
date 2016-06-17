@@ -4,7 +4,7 @@ title: "Composable Decorators vs. Imperative Utility Methods"
 date: 2015-02-26
 tags: oop
 categories: jcg
-description:
+description: |
   A decorator pattern, while being the best instrument to keep objects highly cohesive,
   solid, and loosely coupled, is unfortunately not very popular in traditional Java
   programming.
@@ -14,9 +14,9 @@ keywords:
   - decorator pattern java
   - decorator pattern example
   - decorator pattern real life example
+youtube:
+  - D0dqC_3Bch8
 ---
-
-{% youtube D0dqC_3Bch8 video-left %}
 
 The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
 is my favorite among all other patterns I'm aware of. It is a very simple
@@ -90,7 +90,8 @@ really care where the text is coming from. It _delegates_ text reading to
 the encapsulated instance of `Text`. How this encapsulated object will
 deal with the text and where it will get it doesn't concern `PrintableText`.
 
-Let's continue and try to create an implementation of `Text`
+Let's [continue]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %})
+and try to create an implementation of `Text`
 that will capitalize all letters in the text:
 
 {% highlight java %}
@@ -175,6 +176,7 @@ final String[] parts = new String.Split(
 
 To conclude, I recommend you think twice every time you add
 a new utility method to the interface/class. Try to avoid utility methods as much
-as possible, and use decorators instead. An ideal interface should contain
+as possible, and use decorators instead. An
+[ideal interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) should contain
 only methods that you absolutely cannot remove. Everything else should be
 done through composable decorators.

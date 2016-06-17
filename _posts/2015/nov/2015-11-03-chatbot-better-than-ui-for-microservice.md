@@ -4,7 +4,7 @@ title: "A Chatbot Is Better Than a UI for a Microservice"
 date: 2015-11-03
 place: Seattle, WA
 tags: java architecture
-description:
+description: |
   Chatbot is a perfect alternative to a traditional
   user interface when dealing with a microservice
   and professional users.
@@ -14,6 +14,13 @@ keywords:
   - chatbot java
   - chatbot architecture
   - chatbot user interface
+youtube:
+  - mHCwlZSlZeU
+  - jUil-aTImgU
+  - Xj226o2xI9Y
+  - vOMqDcSXnT0
+  - vU_x6oK437I
+  - 7yTIWFZrXpg
 ---
 
 A chatbot (or [chatterbot](https://en.wikipedia.org/wiki/Chatterbot), as Wikipedia says)
@@ -266,8 +273,6 @@ Thus, the traceability of a **chronological** chat is unbeatable.
 Yes, think about the future of this approach. If there is a centralized
 message board where users talk to a chatbot, why can't other chatbots
 talk to each other too?
-
-{% youtube mHCwlZSlZeU video-left %}
 
 Forget about RESTful APIs. Just a message board where chatbots post
 their requests and collect responses. They are perfectly decoupled, replaceable,

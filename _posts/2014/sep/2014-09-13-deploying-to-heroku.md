@@ -3,7 +3,7 @@ layout: post
 title: "Deploying to Heroku, in One Click"
 date: 2014-09-13
 tags: rultor devops heroku java
-description:
+description: |
   This tutorial explains how a Java project can be
   deployed to Heroku in just one click and
   zero maintenance efforts, using Rultor.com, DevOps assistant
@@ -87,7 +87,9 @@ release:
     mkdir ~/.ssh
     mv ../id_rsa ../id_rsa.pub ~/.ssh
     chmod -R 600 ~/.ssh/*
-    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
+    echo -e \
+      "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" \
+      > ~/.ssh/config
     git push -f heroku $(git symbolic-ref --short HEAD):master
 {% endhighlight %}
 

@@ -4,7 +4,7 @@ title: "Meetings Are Legalized Robbery"
 date: 2015-07-13
 tags: management
 place: Washington, D.C.
-description:
+description: |
   Meetings are very popular but very ineffective
   instruments of managing work time and creativity;
   here's why.
@@ -15,6 +15,11 @@ keywords:
   - meetings in software team
   - how to organize meetings
 og_image: /images/2015/07/heat.jpg
+youtube:
+  - ibT5oKToMoQ
+  - LB_YLWhGrco
+  - dE0_j4Kk6jo
+  - pt9uHp35fwM
 ---
 
 Software development is all about creativity, right? It's an art,

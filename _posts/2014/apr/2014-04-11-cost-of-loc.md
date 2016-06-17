@@ -14,6 +14,8 @@ keywords:
   - cost of line of code
   - cost of software development
   - price per line of code
+youtube:
+  - qRZYJGYdrwk
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

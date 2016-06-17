@@ -4,7 +4,7 @@ title: "Method Names for Builders and Manipulators"
 date: 2015-10-08
 tags: oop java
 place: Palo Alto, CA
-description:
+description: |
   Giving good names to methods in object-oriented programming
   is a tough job, which can be done right if you follow this
   simple principle.

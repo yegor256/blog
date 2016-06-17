@@ -1,7 +1,7 @@
 ---
 layout: static
 title: "My Articles On JavaCodeGeeks"
-description:
+description: |
   These articles are re-published by JavaCodeGeeks with my permission,
   it is a great resource for Java developers, I highly recommend to read me there
 permalink: jcg.html

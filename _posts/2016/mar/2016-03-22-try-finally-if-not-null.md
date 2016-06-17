@@ -4,7 +4,7 @@ title: "Try. Finally. If. Not. Null."
 date: 2016-03-22
 place: Palo Alto, CA
 tags: java oop
-description:
+description: |
   Opening a resource inside a try/catch block and then
   finally checking for null is such a typical and
   annoying mistake.
@@ -15,6 +15,8 @@ keywords:
   - java close stream in finally
   - java close stream try catch
 book: elegant-objects 2.6
+youtube:
+  - o3aNJX7AP3M
 ---
 
 There is a very typical mistake in pre-Java7 "try/finally" scenario,

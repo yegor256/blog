@@ -4,7 +4,7 @@ title: "Why Don't You Contribute to Open Source?"
 date: 2015-12-22
 place: Kiev, Ukraine
 tags: programming
-description:
+description: |
   An active open-source contribution is a good
   habit for a software developer who is passionate about
   his or her job.

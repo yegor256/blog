@@ -4,7 +4,7 @@ title: "10 Typical Mistakes in Specs"
 date: 2015-11-10
 place: Palo Alto, CA
 tags: requirements management
-description:
+description: |
   We make the most expensive mistakes in our specifications
   for requirements, because they are very difficult to correct.
 keywords:

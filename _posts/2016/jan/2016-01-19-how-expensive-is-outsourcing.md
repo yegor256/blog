@@ -4,7 +4,7 @@ title: "How Expensive Is Your Outsourcing Team?"
 date: 2016-01-19
 place: Palo Alto, CA
 tags: outsourcing
-description:
+description: |
   Hourly rate is a misleading metric that doesn't help
   calculate the costs of outsourcing. Use results per dollar
   instead.

@@ -3,7 +3,7 @@ layout: post
 title: "How an Immutable Object Can Have State and Behavior?"
 date: 2014-12-09
 tags: oop
-description:
+description: |
   Object state and behavior are two very different things,
   and confusing the two often leads to incorrect design.
 keywords:
@@ -14,6 +14,10 @@ keywords:
   - object behavior model
   - object attributes
   - immutable object state
+youtube:
+  - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 I often hear this argument against
@@ -200,7 +204,7 @@ Conceptually speaking, this document is acting as a proxy of a real-life
 document that has a title stored somewhere &mdash; in a file, for example. This is
 what a good object should do &mdash; be a proxy of a real-life entity.
 The document exposes two features: reading the title and saving the title. Here is
-how its interface would look like:
+how its [interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) would look like:
 
 {% highlight java %}
 @Immutable

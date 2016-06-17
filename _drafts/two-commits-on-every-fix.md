@@ -3,7 +3,7 @@ layout: post
 title: "Two Commits for Every Fix"
 date: 2014-04-12
 tags: cloud
-description:
+description: |
   I think that every bug fix should be done in two commits, if you're doing
   test driven development; this article explains why
 keywords:

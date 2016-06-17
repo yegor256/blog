@@ -4,7 +4,7 @@ title: "Getters/Setters. Evil. Period."
 date: 2014-09-16
 tags: oop
 categories: best jcg
-description:
+description: |
   Getters and setters is a terrible anti-pattern in
   object-oriented programming and should be avoided.
   This article explains why.
@@ -17,6 +17,9 @@ keywords:
 translated:
   Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
 book: elegant-objects 3.5
+youtube:
+  - WSgP85kr6eU
+  - F4N25kZ2zQU
 ---
 
 There is an old debate, started in 2003 by Allen Holub
@@ -169,8 +172,6 @@ methods are not "getters" and they should never have the "get" prefix. We're
 not "getting" anything from the dog. We're not getting her name. We're asking
 her to tell us her name. See the difference?
 
-{% youtube WSgP85kr6eU video-left %}
-
 We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,
 we're working with data, manipulating them, getting, setting,
@@ -203,3 +204,6 @@ truly understand and appreciate the beautiful world of true objects.
 PPS. Forgot to say, yes, dependency injection via setters is also
 a terrible anti-pattern. About it, in
 [one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}) :)
+
+PPPS. Here is what I'm suggesting to use instead of getters:
+[printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).

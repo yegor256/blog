@@ -4,7 +4,7 @@ title: "How Immutability Helps"
 date: 2014-11-07
 tags: jcabi java oop
 categories: jcg
-description:
+description: |
   This article illustrates by example how immutability
   forces you to design small and cohesive objects, while
   mutability causes scope creep and tight coupling.
@@ -17,6 +17,10 @@ keywords:
   - java email api
   - java email send sdk
 book: elegant-objects 2.6
+youtube:
+  - KwP7Ay9Z-hc
+  - EnhRgXrHCC4
+  - p7m7_iiqaHI
 ---
 
 In a few recent posts, including
@@ -180,7 +184,8 @@ When I was designing [jcabi-email](https://github.com/jcabi/jcabi-email)
 I started with a small and simple class:
 [`Postman`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java).
 Well, it is an interface,
-since I never make interface-less classes. So, `Postman` is... a post man.
+since I never make [interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})-less
+classes. So, `Postman` is... a post man.
 He is delivering messages to other people. First, I created a default
 version of it (I omit the ctor, for the sake of brevity):
 

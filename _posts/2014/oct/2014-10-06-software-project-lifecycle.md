@@ -3,7 +3,7 @@ layout: post
 title: Project Lifecycle in Teamed.io
 date: 2014-10-06
 tags: management
-description:
+description: |
   There are four standard phases in
   a software development lifecycle for all projects
   developed by Teamed.io.

@@ -35,7 +35,7 @@ cat _temp/unique-links.txt | xargs -P 10 -n 1 /bin/bash -c 'ping_uri "$0" >> _te
 
 cat _temp/pings.txt | grep -v '^200 ' > _temp/broken.txt
 broken=$(cat _temp/broken.txt | wc -l | cut -f1 -d ' ')
-if [ "$broken" -gt "20" ]; then
+if [ "$broken" -gt "40" ]; then
   echo "${broken} link(s) broken (out of ${total}):"
   cat _temp/broken.txt
   exit -1

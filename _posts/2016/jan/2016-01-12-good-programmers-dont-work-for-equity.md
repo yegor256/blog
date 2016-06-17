@@ -4,7 +4,7 @@ title: "Good Programmers Don't Work for Equity"
 date: 2016-01-12
 place: Los Angeles, CA
 tags: startup
-description:
+description: |
   Equity or cash? These days, it seems that working for
   equity is the way to become a millionaire.
   I don't think it's true.

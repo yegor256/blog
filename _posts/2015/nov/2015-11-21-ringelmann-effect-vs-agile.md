@@ -4,7 +4,7 @@ title: "Ringelmann Effect vs. Agile"
 date: 2015-11-21
 place: Berlin, Germany
 tags: agile management
-description:
+description: |
   Agile development promotes group vs. individual responsibility,
   while the Ringelmann Effect proves its ineffectiveness.
   Here is a practical experiment.

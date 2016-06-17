@@ -3,7 +3,7 @@ layout: post
 title: "Remote Programming in Teamed.io"
 date: 2014-09-22
 tags: management
-description:
+description: |
   Here is an interview taken by Lisette Sutherland, where
   we discussed Teamed.io and our unique approach to
   remote team management

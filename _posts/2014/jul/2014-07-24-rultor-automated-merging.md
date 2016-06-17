@@ -3,7 +3,7 @@ layout: post
 title: "Rultor.com, a Merging Bot"
 date: 2014-07-24
 tags: rultor devops
-description:
+description: |
   Rultor.com is a bot that talks to you via GitHub
   issue tracking and helps you merge pull requests by
   passing them through a full testing cycle
@@ -16,6 +16,8 @@ keywords:
   - continuous integration pre-flight builds
   - continuous integration preflight builds
   - continuous delivery pre-flight builds
+youtube:
+  - NflR7DKwxDY
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}

@@ -3,7 +3,7 @@ layout: post
 title: "Stop Chatting, Start Coding"
 date: 2014-10-07
 tags: xdsd
-description:
+description: |
   In XDSD everybody is motivated to produce
   tangible and meaningful results. That's why
   we don't use emails, Skype, HipChat or phone calls.
@@ -14,6 +14,13 @@ keywords:
   - chat with programmers
   - formal project communications
 categories: jcg
+youtube:
+  - qRZYJGYdrwk
+  - LB_YLWhGrco
+  - dE0_j4Kk6jo
+  - pt9uHp35fwM
+  - b6r2W3P9vgY
+  - xbovkm0tTn0
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

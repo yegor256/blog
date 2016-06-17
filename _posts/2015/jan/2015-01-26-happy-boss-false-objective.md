@@ -4,7 +4,7 @@ title: "Making Your Boss Happy Is a False Objective"
 date: 2015-01-26
 tags: management
 categories: jcg
-description:
+description: |
   It is very important to understand who you work for,
   the boss/customer who pays you or the project, and the difference between them.
 keywords:
@@ -44,7 +44,8 @@ This is what the project works for. This is what all of us are here for.
 Our personal needs may be fully satisfied
 while we're all working toward this goal, or some of them may
 be sacrificed. I mean all of us, including the boss, whoever he or she is,
-either a CTO, a co-founder, a project manager, or a team lead.
+either a CTO, a co-founder, a
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}), or a team lead.
 
 The project is the source of our checks. Not the CFO.
 
