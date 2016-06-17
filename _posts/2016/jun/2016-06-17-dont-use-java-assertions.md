@@ -62,8 +62,11 @@ Exception in thread "main" java.lang.AssertionError: There is a problem
 This is the first difference between exceptions and assertions. Exceptions
 will always be thrown, while assertions are not enabled by default. They are
 supposed to be turned on during testing and turned off in production.
-The assertion caused the runtime exception `AssertionError`. But hold on; it's
-not a `RuntimeException`. It extends `Error` class, which extends `Throwable`.
+The assertion caused the runtime exception
+[`AssertionError`](https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html). But hold on; it's
+not a [`RuntimeException`](https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html). It extends
+[`Error`](https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html) class,
+which extends [`Throwable`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html).
 This is the second difference. I don't know of any other differences.
 
 I would recommend **not** to use assertions ... ever. Simply because I strongly
