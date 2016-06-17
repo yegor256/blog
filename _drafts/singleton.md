@@ -5,8 +5,8 @@ date: 2016-06-20
 place: Los Angeles, CA
 tags: oop
 description: |
-  Singleton is a well-known anti-pattern, but very
-  often it is not clear what could be used instead,
+  A singleton is a well-known anti-pattern, though it's
+  often not clear what could be used instead
   to access global things.
 keywords:
   - singleton
@@ -16,19 +16,19 @@ keywords:
   - singleton is bad
 ---
 
-I think it would be too obvious to say that Singleton is an anti-pattern.
-There are tons of articles about it. However, very often the question
-is how to define global things without a Singleton and the answer is not
-so obvious to many of us. There are many examples: a database connection
-pool, a repository, a configuration map, etc. They all seem naturally to
+I think it would be too obvious to say that a singleton is an anti-pattern.
+There are tons of articles about that. However, very often the question
+is how to define global things without a singleton, and that answer is not
+so obvious for many of us. There are many examples: a database connection
+pool, a repository, a configuration map, etc. They all naturally seem to
 be "global". What do we do with them?
 
 <!--more-->
 
-I assume you know what a Singleton is and why it's an anti-pattern.
+I assume you know what a singleton is and why it's an anti-pattern.
 If not, I recommend these articles:
 
-So, we agree that it's a bad thing. But what do we do if we need, let's say,
+So we agree that it's a bad deal. But what do we do if we need, let's say,
 to have an access to a database connection pool in many places of the
 application. We simply need something like this:
 
