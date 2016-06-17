@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't Use Java Assertions; Stick With Exceptions Only"
+title: "Don't Use Java Assertions"
 date: 2016-06-17
 place: Los Angeles, CA
 tags: java
