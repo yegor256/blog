@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="http://www.yegor256.com" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": ""
+        },
+        "headline": "",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "",
+        "dateModified": "",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "description": "",
+        "keywords": [""]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <p>There are basically two ways to validate a situation in Java and complain
+when something unexpected happens. It&#39;s either an exception
+or an assertion. Technically, they are almost the same, but there are some
+small differences. I believe that exceptions are the right way to go
+in all situations and assertions should never be used. Here&#39;s why.</p>
+
+<!--more-->
+
+
+
+<p>Let&#39;s see what happens when an assertion is triggered. Say that this
+is our code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">assert</span> <span class="kc">true</span> <span class="o">==</span> <span class="kc">false</span> <span class="o">:</span> <span class="s">&quot;There is a problem&quot;</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Save this code to <code>Main.java</code> and compile:</p>
+
+
+
+<p>Then run it:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java Main
+Hello, world!</code></pre></figure>
+
+<p>The assertion wasn&#39;t triggered. It was ignored. Now run it with an
+<code>-enableassertions</code> flag:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java -enableassertions Main
+Exception in thread <span class="s2">&quot;main&quot;</span> java.lang.AssertionError: There is a problem
+  at Main.main<span class="o">(</span>Main.java:3<span class="o">)</span></code></pre></figure>
+
+<p>This is the first difference between exceptions and assertions. Exceptions
+will always be thrown, while assertions are not enabled by default. They are
+supposed to be turned on during testing and turned off in production.
+The assertion caused the runtime exception
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code>AssertionError</code></a>. But hold on; it&#39;s
+not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a>. It extends
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code>Error</code></a> class,
+which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code>Throwable</code></a>.
+This is the second difference. I don&#39;t know of any other differences.</p>
+
+<p>I would recommend <strong>not</strong> to use assertions ... ever. Simply because I strongly
+believe in the <a href="/2015/08/25/fail-fast.html">Fail Fast</a>
+approach. I think bugs must be visible not only
+during testing but also in production. Moreover, I believe making
+bugs visible in production is very important if you want to achieve a high-quality product.</p>
+
+<p>Thus, no assertions. They are simply a flawed and outdated feature in Java
+(and some other languages).</p>
+
+  </body>
+</html>

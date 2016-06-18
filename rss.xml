@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-17T22:12:02+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-06-18T01:38:11+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Don&amp;#39;t Use Java Assertions</title><link href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html" rel="alternate" type="text/html" title="Don&#39;t Use Java Assertions" /><published>2016-06-17T00:00:00+00:00</published><updated>2016-06-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/17/dont-use-java-assertions</id><content type="html" xml:base="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html">&lt;p&gt;There are basically two ways to validate a situation in Java and complain
+when something unexpected happens. It&amp;#39;s either an exception
+or an assertion. Technically, they are almost the same, but there are some
+small differences. I believe that exceptions are the right way to go
+in all situations and assertions should never be used. Here&amp;#39;s why.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F06%2Fnatural-born-killers.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Natural Born Killers (1994) by Oliver Stone&#39;/&gt;&lt;figcaption&gt;Natural Born Killers (1994) by Oliver Stone&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s see what happens when an assertion is triggered. Say that this
+is our code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;There is a problem&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Save this code to &lt;code&gt;Main.java&lt;/code&gt; and compile:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;javac Main.java&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then run it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;java Main
+Hello, world!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The assertion wasn&amp;#39;t triggered. It was ignored. Now run it with an
+&lt;code&gt;-enableassertions&lt;/code&gt; flag:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;java -enableassertions Main
+Exception in thread &lt;span class=&quot;s2&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt; java.lang.AssertionError: There is a problem
+  at Main.main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Main.java:3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is the first difference between exceptions and assertions. Exceptions
+will always be thrown, while assertions are not enabled by default. They are
+supposed to be turned on during testing and turned off in production.
+The assertion caused the runtime exception
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html&quot;&gt;&lt;code&gt;AssertionError&lt;/code&gt;&lt;/a&gt;. But hold on; it&amp;#39;s
+not a &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html&quot;&gt;&lt;code&gt;RuntimeException&lt;/code&gt;&lt;/a&gt;. It extends
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html&quot;&gt;&lt;code&gt;Error&lt;/code&gt;&lt;/a&gt; class,
+which extends &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html&quot;&gt;&lt;code&gt;Throwable&lt;/code&gt;&lt;/a&gt;.
+This is the second difference. I don&amp;#39;t know of any other differences.&lt;/p&gt;
+
+&lt;p&gt;I would recommend &lt;strong&gt;not&lt;/strong&gt; to use assertions ... ever. Simply because I strongly
+believe in the &lt;a href=&quot;/2015/08/25/fail-fast.html&quot;&gt;Fail Fast&lt;/a&gt;
+approach. I think bugs must be visible not only
+during testing but also in production. Moreover, I believe making
+bugs visible in production is very important if you want to achieve a high-quality product.&lt;/p&gt;
+
+&lt;p&gt;Thus, no assertions. They are simply a flawed and outdated feature in Java
+(and some other languages).&lt;/p&gt;</content><category term="java" /><summary>There are basically two ways to validate a situation in Java and complain
+when something unexpected happens. It&amp;#39;s either an exception
+or an assertion. Technically, they are almost the same, but there are some
+small differences. I believe that exceptions are the right way to go
+in all situations and assertions should never be used. Here&amp;#39;s why.</summary></entry><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
 organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
 attended. Basically, they were interested to know what I would suggest for
 improvement. So, I decided to summarize it in a list of the most typical
@@ -1572,176 +1629,4 @@ your products or services. You are doing everything you can
 to make sure this number grows, mostly because you use this money
 to pay your rent, buy food, and settle that graphic designer&amp;#39;s invoices.
 Without revenue, your startup will die, right? Yes, maybe. But in my experience,
-growing revenue may kill it even faster.</summary></entry><entry><title>Printers Instead of Getters</title><link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" rel="alternate" type="text/html" title="Printers Instead of Getters" /><published>2016-04-05T00:00:00+00:00</published><updated>2016-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/05/printers-instead-of-getters</id><content type="html" xml:base="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
-No need to argue about this, it&amp;#39;s settled. You disagree?
-Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
-The key question is how is it possible at all? We do need to get
-the data out of an object, right? Nope. Wrong.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F04%2Famelie.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Le fabuleux destin d&amp;amp;apos;Amélie Poulain (2001) by Jean-Pierre Jeunet&#39;/&gt;&lt;figcaption&gt;Le fabuleux destin d&amp;#39;Amélie Poulain (2001) by Jean-Pierre Jeunet&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m suggesting to use &amp;quot;printers&amp;quot; instead. Instead of exposing
-data via getters, an object will have a functionality of &lt;strong&gt;printing&lt;/strong&gt;
-itself to some media.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say this is our class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;0735619654&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and
-&lt;a href=&quot;/2015/03/26/jaxb-vs-xembly.html&quot;&gt;JAXB&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.xml.bind.annotation.XmlRootElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@XmlRootElement&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;0735619654&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getIsbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@XmlElement&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is a very &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;offensive&lt;/a&gt;
-way of treating the
-&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;object&lt;/a&gt;. We&amp;#39;re basically
-exposing everything that&amp;#39;s inside to the public. It was a nice
-little self-sufficient solid object and we turned it into a bag of data,
-which anyone can access in many possible ways. We can access it for reading, of course.&lt;/p&gt;
-
-&lt;p&gt;It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into
-&lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;JSON&lt;/a&gt;,
-they will be very helpful. If we want
-to use this poor object as a data object in JSP, getters will help us. There
-are many examples in Java, where getters are being actively used.&lt;/p&gt;
-
-&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; because they are so effective. This is because we&amp;#39;re so
-&lt;a href=&quot;/2015/02/20/utility-classes-vs-functional-programming.html&quot;&gt;&lt;strong&gt;procedural&lt;/strong&gt;&lt;/a&gt;
-in our way of thinking. We &lt;strong&gt;don&amp;#39;t trust&lt;/strong&gt; our objects. We only trust
-the data they store. We don&amp;#39;t want this &lt;code&gt;Book&lt;/code&gt; object to generate the XML. We
-want it to give us the data. We will build the XML. The &lt;code&gt;Book&lt;/code&gt; is too stupid
-to do that job. We&amp;#39;re way smarter!&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m suggesting to stop thinking this way. Instead, let&amp;#39;s try to give
-this poor &lt;code&gt;Book&lt;/code&gt; a chance, and equip it with a &amp;quot;printer&amp;quot;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;0735619654&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toXML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;book&amp;gt;&amp;lt;isbn&amp;gt;%s&amp;lt;/isbn&amp;gt;&amp;lt;title&amp;gt;%s&amp;lt;/title&amp;gt;&amp;lt;/book&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This isn&amp;#39;t the &lt;a href=&quot;/2015/03/26/jaxb-vs-xembly.html&quot;&gt;best&lt;/a&gt;
-implementation, but you got the idea. The object is not
-exposing its internals any more. We can&amp;#39;t get its ISBN and its title. We
-can only ask it to print itself in XML format.&lt;/p&gt;
-
-&lt;p&gt;We can add an additional printer, if another format is required:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;0735619654&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toJSON&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;{\&amp;quot;isbn\&amp;quot;:\&amp;quot;%s\&amp;quot;, \&amp;quot;title\&amp;quot;:\&amp;quot;%s\&amp;quot;}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Again, not the best implementation, but you see what I&amp;#39;m trying to show.
-Each time we need a new format, we create a new printer.&lt;/p&gt;
-
-&lt;p&gt;You may say that the object will be rather big if there will be many formats.
-That&amp;#39;s true, but a big object is a bad design in the first place. I would
-say that if there is more than one printer &amp;mdash; it&amp;#39;s a problem.&lt;/p&gt;
-
-&lt;p&gt;So, what to do if we need multiple formats? Use &amp;quot;media&amp;quot;, where that printers
-will be able to print to. Say, we have an object that represents a
-record in MySQL. We want it to be printable to XML, HTML, JSON, some binary
-format and God knows what else. We can add that many printers to it, but
-the object will be big and ugly. To avoid that, introduce a new object,
-that represents the media where the data will be printed to:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;0735619654&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Again, it&amp;#39;s a very primitive design of that
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable&lt;/a&gt;
-&lt;code&gt;Media&lt;/code&gt; class, but you got
-the idea &amp;mdash; the &lt;code&gt;media&lt;/code&gt; accepts the data.
-Now, we want to print our object to JSON
-(this design is not really perfect, since &lt;code&gt;JsonObjectBuilder&lt;/code&gt; is not immutable,
-even though it looks like one...):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JsonMedia&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JsonObjectBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;JsonMedia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createObjectBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;JsonMedia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;JsonObjectBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bdr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;builder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bdr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JsonMedia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we make an instance of &lt;code&gt;JsonMedia&lt;/code&gt; and ask our book to print
-itself there:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;JsonMedia&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JsonMedia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Voilà! The JSON object is ready and the book has no idea about what
-exactly what printed just now. We need to print the book to XML? We
-create &lt;code&gt;XmlMedia&lt;/code&gt;, which will print the book to XML. The &lt;code&gt;Book&lt;/code&gt; class
-stays small, while the complexity of &amp;quot;media&amp;quot; objects is unlimited.&lt;/p&gt;
-
-&lt;p&gt;My point here is simple &amp;mdash; no
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt;,
-just printers!&lt;/p&gt;</content><category term="java" /><category term="oop" /><summary>Getters and setters are evil.
-No need to argue about this, it&amp;#39;s settled. You disagree?
-Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
-The key question is how is it possible at all? We do need to get
-the data out of an object, right? Nope. Wrong.</summary></entry></feed>
+growing revenue may kill it even faster.</summary></entry></feed>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
+  itemscope="" itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8"/>
+    <meta itemprop="name" content="Don't Use Java Assertions" />
+    <meta itemprop="author" content="Yegor Bugayenko" />
+    <meta itemprop="breadcrumb" content="http://www.yegor256.com" />
+    <meta itemprop="keywords" content="assertion or exception, assertions java, assertions or exceptions, exceptions over assertions, throw exception not assertion" />
+    <meta itemprop="description" content="Assertions are an outdated and flawed feature in Java (and some other languages) that I would not recommend you use. " />
+    <meta name="description" content="Assertions are an outdated and flawed feature in Java (and some other languages) that I would not recommend you use. " />
+    <meta name="keywords" content="assertion or exception, assertions java, assertions or exceptions, exceptions over assertions, throw exception not assertion" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <meta name="twitter:creator" content="@yegor256"/>
+    <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
+    <meta property="twitter:account_id" content="4503599630178231" />
+    <meta property="og:url" content="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"/>
+    
+    <meta property="og:site_name" content="yegor256"/>
+    <meta property="og:title" content="Don't Use Java Assertions"/>
+    <meta property="og:description" content="Assertions are an outdated and flawed feature in Java (and some other languages) that I would not recommend you use. "/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="fb:admins" content="10203747823006002"/>
+    <meta name="twitter:site" content="@yegor256"/>
+    <meta name="twitter:creator" content="@yegor256"/>
+    <meta name="twitter:url" content="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"/>
+    <meta property="article:author" content="https://www.facebook.com/yegor256"/>
+    <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
+    <link rel="shortcut icon" href="/favicon.ico?377c9e8"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?377c9e8"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
+    <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
+    <link rel="stylesheet" href="/css/layout.css?377c9e8"/>
+    <link rel="stylesheet" href="/css/icons.css?377c9e8"/>
+    <link rel="canonical" href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html" />
+    <link rel="amphtml" href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.amp.html" />
+    <title>Don't Use Java Assertions - Yegor Bugayenko
+      </title>
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="/js/global.js?377c9e8"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="header-toggle unprintable" id="header-toggle" title="show head menu"
+        onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
+      <header class="header" id="header">
+        <div class="face">
+          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
+          <a href="/about-me.html">
+            <img src="/images/yegor-bugayenko-192x192.png" class="photo"
+              alt="photo of Yegor Bugayenko"/>
+          </a>
+        </div>
+        <nav>
+          <ul class="menu social notranslate">
+            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com/yegor256" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:yegor@teamed.io" title="yegor@teamed.io"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="/" title="home page">home</a></li>
+            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;184</a></li>
+            <li><a href="/webinars.html" title="webinars">webinars</a></li>
+            <li><a href="/talks.html" title="talks">talks</a></li>
+            <li><a href="/books.html" title="books">books</a></li>
+            <li><a href="/pets.html" title="pets">pets</a></li>
+            <li><a href="/award.html" title="software quality award">award</a></li>
+          </ul>
+        </nav>
+        <div id="search">
+          <form method="get" action="https://www.google.com/search" style="position:relative">
+            <input name="sitesearch" value="yegor256.com" type="hidden"/>
+            <input id="search-query" class="field field-text"
+              onfocus="$('#google').css('display', 'inline-block');"
+              name="q" placeholder="Search" autocomplete="off"/>
+            <span class="desktop-only">
+              <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google"
+                style="height:2.4em;display:none;position:absolute;top:.3em;margin-left:1em;" alt="search via Google"/>
+            </span>
+          </form>
+          <div id="search-results" style="display: none;">
+            <div class="entries"></div>
+          </div>
+        </div>
+        <div class="hot">
+          <ul>
+            <li>
+              Join my new chatroom on Gitter to discuss
+              object-oriented programming in real time:
+              <a href="https://gitter.im/yegor256/elegantobjects">yegor256/elegantobjects</a>!
+            </li>
+            <li>
+              At <a href="/webinars.html">Webinar #16</a>
+              we'll discuss why interfaces in OOP must be small and functionality-poor,
+              join us on July 6, at 11am PST.
+            </li>
+            <!--
+            <li>
+              Meet me at
+              <a href="http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/">SLC DevOpsDays</a> (Salt Lake City/June-14),
+              and later
+              <a href="/talks.html">somewhere else</a>.
+            </li>
+            -->
+          </ul>
+        </div>
+      </header>
+    </div>
+    <section itemscope="" itemtype="http://schema.org/BlogPosting">
+
+  <div class="wrapper">
+    <header>
+      <p class="printable">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html&amp;format=svg"
+          style="width:125px;height:125px;" alt="QR code"/>
+      </p>
+      <p class="printable">
+        <code>http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html</code>
+      </p>
+      <h1 itemprop="name">Don't Use Java Assertions</h1>
+      
+      <ul class="subline">
+        <li>
+          <time itemprop="datePublished" datetime="2016-06-17T00:00:00+00:00">
+            17 June 2016
+          </time>
+        </li>
+        
+          <li class="desktop-only">Los Angeles, CA</li>
+        
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/jun/2016-06-17-dont-use-java-assertions.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-06-18T00:44:49+0000'>18 June 2016</time></li>
+        <li class="printable">Yegor Bugayenko</li>
+        <li class="unprintable">
+          <i class="icon icon-comments"></i>
+          <a href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html#disqus_thread">comments</a>
+        </li>
+      </ul>
+      <p class="unprintable"><a href='/tag/java.html' class='tag notranslate'>java</a></p>
+      <div class="buttons notranslate desktop-only">
+        <nav class="share" role="navigation">
+          <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"
+            title="Share on Facebook" class="button">
+            <span class="count count-facebook">0</span>
+            <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/share?url=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html&amp;text=Don%27t+Use+Java+Assertions"
+            title="Share on Twitter" class="button">
+            <span class="count count-twitter">0</span>
+            <i class="icon icon-twitter notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://plus.google.com/share?url=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"
+            title="Share on Google+" class="button">
+            <span class="count count-googleplus">0</span>
+            <i class="icon icon-googleplus notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"
+            title="Share on LinkedIn" class="button">
+            <span class="count count-linkedin">0</span>
+            <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="http://www.stumbleupon.com/submit?url=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html&amp;title=Don%27t+Use+Java+Assertions"
+            title="Share on StumbleUpon" class="button">
+            <span class="count count-stumbleupon">0</span>
+            <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="http://reddit.com/submit?url=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html%3F2016-24&amp;title=Don%27t+Use+Java+Assertions"
+            title="Share on Reddit" class="button">
+            <span class="count count-reddit">0</span>
+            <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
+          </a>
+          <a href="http://news.ycombinator.com/submitlink?u=http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html%3F2016-24&amp;t=Don%27t+Use+Java+Assertions"
+            title="Share on Hacker News" class="button">
+            <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article class="main" itemprop="articleBody">
+        <p>There are basically two ways to validate a situation in Java and complain
+when something unexpected happens. It&#39;s either an exception
+or an assertion. Technically, they are almost the same, but there are some
+small differences. I believe that exceptions are the right way to go
+in all situations and assertions should never be used. Here&#39;s why.</p>
+
+<!--more-->
+
+<figure><img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F06%2Fnatural-born-killers.jpg' style='width:600px;max-width:100%;' alt='Natural Born Killers (1994) by Oliver Stone'/><figcaption>Natural Born Killers (1994) by Oliver Stone</figcaption></figure>
+
+<p>Let&#39;s see what happens when an assertion is triggered. Say that this
+is our code:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">assert</span> <span class="kc">true</span> <span class="o">==</span> <span class="kc">false</span> <span class="o">:</span> <span class="s">&quot;There is a problem&quot;</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Save this code to <code>Main.java</code> and compile:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>javac Main.java</code></pre></figure>
+
+<p>Then run it:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java Main
+Hello, world!</code></pre></figure>
+
+<p>The assertion wasn&#39;t triggered. It was ignored. Now run it with an
+<code>-enableassertions</code> flag:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java -enableassertions Main
+Exception in thread <span class="s2">&quot;main&quot;</span> java.lang.AssertionError: There is a problem
+  at Main.main<span class="o">(</span>Main.java:3<span class="o">)</span></code></pre></figure>
+
+<p>This is the first difference between exceptions and assertions. Exceptions
+will always be thrown, while assertions are not enabled by default. They are
+supposed to be turned on during testing and turned off in production.
+The assertion caused the runtime exception
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code>AssertionError</code></a>. But hold on; it&#39;s
+not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a>. It extends
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code>Error</code></a> class,
+which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code>Throwable</code></a>.
+This is the second difference. I don&#39;t know of any other differences.</p>
+
+<p>I would recommend <strong>not</strong> to use assertions ... ever. Simply because I strongly
+believe in the <a href="/2015/08/25/fail-fast.html">Fail Fast</a>
+approach. I think bugs must be visible not only
+during testing but also in production. Moreover, I believe making
+bugs visible in production is very important if you want to achieve a high-quality product.</p>
+
+<p>Thus, no assertions. They are simply a flawed and outdated feature in Java
+(and some other languages).</p>
+
+      </article>
+    </main>
+    
+    
+  <div class="unprintable">
+    <h2>Related Posts</h2>
+    <p>You may also find these posts interesting:</p>
+    <ul>
+      
+        <li>
+          <a href="/2015/10/20/interrupted-exception.html" data-score="0.3978786034935189">What Do You Do With InterruptedException?</a>
+        </li>
+      
+        <li>
+          <a href="/2014/04/18/jcabi-http-server-mocking.html" data-score="0.3887358008180988">Mocking of HTTP Server in Java</a>
+        </li>
+      
+        <li>
+          <a href="/2014/04/28/xml-xpath-hamcrest-matchers.html" data-score="0.3807974793379724">XML/XPath Matchers for Hamcrest</a>
+        </li>
+      
+        <li>
+          <a href="/2015/06/11/wikipedia-bug-definition.html" data-score="0.3547407083981536">Wikipedia's Definition of a Software Bug Is Wrong</a>
+        </li>
+      
+        <li>
+          <a href="/2014/06/20/limit-method-execution-time.html" data-score="0.34222583125198924">Limit Java Method Execution Time</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    <div class="teamed-banner">
+      <a href="http://www.teamed.io">
+        <img src="/images/teamed-banner.jpg" alt="teamed banner"/>
+      </a>
+    </div>
+  </div>
+
+  <div class="disqus" role="complementary">
+    <div id="disqus_thread" class="disqus-thread"></div>
+    <a href="http://disqus.com" class="dsq-brlink">
+      comments powered by
+      <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+
+  <div class="wrapper">
+    <footer class="footer">
+      <p>
+        &copy;
+        <span itemprop="author">Yegor Bugayenko</span>,
+        2014-2016
+      </p>
+    </footer>
+  </div>
+
+</section>
+
+<script src="/js/post.js?377c9e8"></script>
+<script src="//a.disquscdn.com/embed.js?377c9e8"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1963507-32', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

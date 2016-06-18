@@ -167,7 +167,9 @@ its class name. Just write it with a small letter, and you should be good:</p>
 </code></pre></div>
 <h2 id="constructors">Constructors</h2>
 
-<p>Without exceptions, there should be only <em>one</em> constructor that stores data in
+<p>Without
+<a href="/2016/06/17/dont-use-java-assertions.html">exceptions</a>,
+there should be only <em>one</em> constructor that stores data in
 object variables. All other constructors should call this one with different
 arguments. For example:</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Server</span> <span class="o">{</span>
