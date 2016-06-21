@@ -301,6 +301,8 @@ operations on the operating system level.
 Having such a class would allow us to make all Java classes immutable,
 including <code>StringBuffer</code>, <code>ByteArrayOutputStream</code>, etc.</p>
 
+
+
 <p>The <code>Memory</code> class would explicitly emphasize the mission of an object
 in a software program, which is to be a <em>data animator</em>. An object is not
 holding data; it is animating it. The data exists somewhere, and it is
@@ -335,6 +337,8 @@ it can be modified while being declared as <code>final</code>. You can use
 an array of bytes as a mutable data structure inside an immutable object.
 It&#39;s a surrogate solution that conceptually resembles the <code>Memory</code> class
 but is much more primitive.</p>
+
+
 
 <p><strong>Avoid In-Memory Data</strong>.
 Try to avoid in-memory data as much as possible. In some domains, it is
