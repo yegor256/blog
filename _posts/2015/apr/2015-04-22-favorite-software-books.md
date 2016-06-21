@@ -23,8 +23,8 @@ just update this post in the future when I stumble upon something else that's de
 
 Note that I tried to put the most important books at the top of the list.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z %}
-[**Object Thinking**](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=T5AHAWGQIY5ZZK2Z)
+{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+[**Object Thinking**](http://amzn.to/266oJr4)
 by David West.
 This is the best book I've read about object-oriented
 programming, and it totally changed my understanding of it. I would
@@ -32,8 +32,8 @@ recommend you read it a few times. But before reading, try to forget everything
 you've heard about programming in the past. Try to start from scratch. Maybe it will
 work for you too :)
 
-{% badge /images/2015/04/book-pmp-rita.jpg 96 http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1932735658&linkCode=as2&tag=yegor256com-20&linkId=C6OZC5OD2W2IPLCM %}
-[**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](http://www.amazon.com/gp/product/1932735658/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1932735658&linkCode=as2&tag=yegor256com-20&linkId=C6OZC5OD2W2IPLCM)
+{% badge /images/2015/04/book-pmp-rita.jpg 96 http://amzn.to/266pAYB %}
+[**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](http://amzn.to/266pAYB)
 by Rita Mulcahy.
 This book is my favorite for project management. Even though it's about the
 PMI approach and PMBOK in particular, it is a must-read for everyone who
@@ -41,8 +41,8 @@ is interested in management. Ignore the PMBOK specifics and focus on
 the philosophy of project management and the role of
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) in it.
 
-{% badge /images/2015/04/book-art-of-testing.jpg 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ %}
-[**The Art of Software Testing**](http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=ZSPUL4X4IBFT6ZVJ)
+{% badge /images/2015/04/book-art-of-testing.jpg 96 http://amzn.to/1Y3qAbN %}
+[**The Art of Software Testing**](http://amzn.to/1Y3qAbN)
 by Glenford J. Myers et al.
 You can read my short review of this book [here]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 The book perfectly explains the philosophy of testing and destroys
@@ -51,18 +51,18 @@ if you're working in the software industry, you should understand testing
 and its fundamental principles. This is the only book you need in order to
 get that understanding.
 
-{% badge /images/2015/04/book-goos.jpg 96 http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=D5KJ4KQEDPXZVQMQ %}
-[**Growing Object-Oriented Software, Guided by Tests**](http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=D5KJ4KQEDPXZVQMQ)
+{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
+[**Growing Object-Oriented Software, Guided by Tests**](http://amzn.to/1PBpoDT)
 by Steve Freeman and Nat Pryce.
 All you need to know about your unit testing is in this book. I'm fully aware
 that I didn't include famous software engineer
-[Kent Beck's book](http://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321146530&linkCode=as2&tag=yegor256com-20&linkId=S63Z5BJDORBGMZ2Z)
+[Kent Beck's book](http://amzn.to/1Y3pE7g)
 in this list because I don't like it at all. You definitely should read
 it, just to know what's going on, but it won't help you write good tests.
 Read this one instead, and read it many times.
 
-{% badge /images/2015/04/book-legacy.jpg 96 http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=D2WNVUW64RHDRGSC %}
-[**Working Effectively With Legacy Code**](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=D2WNVUW64RHDRGSC)
+{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
+[**Working Effectively With Legacy Code**](http://amzn.to/1SdcZ8M)
 by Michael Feathers.
 This is awesome reading about modern software development, its pitfalls, and
 typical failures. Most of the code we're working on now is legacy

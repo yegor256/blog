@@ -36,13 +36,13 @@ No. I'm saying that you should **never** have them near your code.
 
 <!--more-->
 
-{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT %}
+{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://amzn.to/266oJr4 %}
 
 Arrogant enough to catch your attention? You've been using
 that get/set pattern for 15 years and you're a respected Java architect?
 And you don't want to hear that nonsense from a stranger? Well, I understand
 your feelings. I felt almost the same when I stumbled upon
-[Object Thinking](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT)
+[Object Thinking](http://amzn.to/266oJr4)
 by David West, the best book about object-oriented programming I've read so far.
 So please. Calm down and try to understand while I try to explain.
 
@@ -134,7 +134,7 @@ David West has to say about it, on page 30 of his book:
 into a successful object developer is a lobotomy.
 
 Do you need a lobotomy? Well, I definitely needed one and received it, while
-reading West's [Object Thinking](http://www.amazon.com/gp/product/0735619654/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619654&linkCode=as2&tag=yegor256com-20&linkId=NQQHJZPHOKM6BTCT).
+reading West's [Object Thinking](http://amzn.to/266oJr4).
 
 ## Object Thinking
 

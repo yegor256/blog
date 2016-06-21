@@ -47,7 +47,7 @@ product when under pressure.
 Obviously, there are situations when the unit tests are wrong and
 we have to delete them. In those cases, don't forget to create new ones.
 
-{% badge /images/2015/04/book-legacy.jpg 96 http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=D2WNVUW64RHDRGSC %}
+{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
 
 There are also situations when the bug must be fixed in a few minutes
 to put the system back online and fixing all unit tests will take an hour.
@@ -56,7 +56,7 @@ situation with test coverage in the product. There's no doubt that we have to ma
 a fix and ask our tests to shut up for some time. But in this case, make sure
 the next task your team is working on after the bug fix is released is
 correcting those disabled unit tests. I would recommend reading
-[Working Effectively With Legacy Code](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=D2WNVUW64RHDRGSC)
+[Working Effectively With Legacy Code](http://amzn.to/1SdcZ8M)
 by Michael Feathers, which tackles this very subject.
 
 ## It Doesn't Reproduce the Issue

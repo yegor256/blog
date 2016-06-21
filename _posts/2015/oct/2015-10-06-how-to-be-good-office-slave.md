@@ -120,6 +120,7 @@ colleagues, let yourself go. Tell them who you think is the weakest part
 of the team and what you would do with him or her if you were the boss.
 Don't restrict yourself, but always make sure there are only a few people who can hear you.
 
+Added 8-Oct-2015:<br/>
 **Never Ask for Vacation**.
 When the time is right, your boss will inform you that you can go on vacation.
 He is the one who knows when it is suitable for the company to have you away
