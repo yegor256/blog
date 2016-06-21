@@ -85,13 +85,26 @@ book.save(database);
 This is what happens in `bookById()`:
 
 {% highlight java %}
-Book loadBookById(int id) {
-  JsonObject json = /* load it from RESTful API */
-  Book book = new Book();
-  book.setISBN(json.getString("isbn"));
-  book.setTitle(json.getString("title"));
-  book.setAuthor(json.getString("author"));
-  return book;
+Book bookById(int id) {
+  return new JsonBook(
+    /* RESTful API access point */
+  );
+}
+{% endhighlight %}
+
+This is what happens in `Book.save()`:
+
+{% highlight java %}
+void save(Database db) {
+  db.createBook(this.isbn, this.title, this.author);
+}
+{% endhighlight %}
+
+What happens if there are many more parameters of the book? How about this:
+
+{% highlight java %}
+void save(Database db) {
+  db.createBook(this.isbn, this.title, this.author);
 }
 {% endhighlight %}
 
