@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Hire a Programmer"
-date: 2016-06-20
+date: 2016-06-21
 place: Los Angeles, CA
 tags: management sarcasm
 description: |
@@ -17,11 +17,13 @@ keywords:
 ---
 
 I get asked this question very often: Where and how do you find
-and hire a good programmer? Since I'm a programmer and I manage
+and hire a good programmer? Since I'm a programmer and I [manage](http://www.teamed.io)
 software projects, I'm supposed to know the tricks. I do, of course; there
 are many of them, but the list below succinctly summarizes the most important ones.
 
 <!--more-->
+
+{% picture /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg 0 Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996) by Paris Barclay %}
 
 I'll be referring to "him", but these recommendations apply equally to both female and male
 <del>slaves</del> software developers.
@@ -37,11 +39,15 @@ friend let you down with a bad recommendation. Win-win.
 
 **Hire Only Locals**.
 Don't even think about a remote programmer &mdash; remote projects always fail.
-Always. He will work in a different time zone, you will always have cultural
+[Always]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}).
+He will work in a different time zone, you will always have cultural
 clashes, and his Russian accent will be annoying. You simply won't
-be able to meet him every second day and whine about your project being
+be able to meet him every second day and
+[whine]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+about your project being
 too expensive, too slow, and too frustrating. Hire only locals &mdash; they
-are much easier to manage and punish.
+are much easier to manage and
+[punish]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 
 **Don't Offend With a Lack of Trust**.
 A talented professional programmer will be offended if you ask him
@@ -63,10 +69,11 @@ the quality of the product he is creating.
 **Don't Specify Too Much**.
 That's what Agile recommends, and I second that &mdash; face-to-face communication is more
 valuable than documentation. Don't write any documentation, don't specify
-what exactly you need to develop, and don't think too much about your users.
+what exactly you need to develop, and don't think too much about your "user stories".
 It's all in the past. Modern software engineers figure everything out
 by themselves. Just let him be creative and communicative. If something
-isn't clear, just call him. Remember, a Skype call is always better
+isn't clear, just call him. Remember, a Skype call is
+[always better]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 than those boring documents that nobody knows how to write.
 
 **Motivate by Value**.
@@ -111,16 +118,21 @@ who is interested in something else.
 
 **Make Him a Partner**.
 First of all, making him a partner will save you a lot of money. Ideally,
-you should convince him to work for free. Good programmers are good
+you should convince him to work
+[for free]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
+Good programmers are good
 entrepreneurs and like to take risks. A good programmer knows that
 in order to become the next Mark Zuckerberg, he must start at a
-job with no salary. Give him some equity and keep those motivational speeches
+job with no salary. Give him some
+[equity]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
+and keep those motivational speeches
 coming. It's a perfect money-saving technique.
 
 **Be Positive**.
 Simply don't tell him about your risks and concerns. The future of your
-project is bright, and he doesn't need to know more. You're going to be
-his leader, and a good leader is never too honest with subordinates. Always
+project is bright, and he doesn't need to know more. You're going to be his
+[leader]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
+and a good leader is never too honest with subordinates. Always
 be positive about the plan &mdash; he needs to get that from you.
 
 <hr/>

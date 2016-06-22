@@ -88,6 +88,14 @@ Swansea, UK<br/>
 12 September 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
+**Practical Example of AOP with AspectJ** and
+**Qulice, a Java Quality Police**<br/>
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/)<br/>
+Kyiv, Ukraine<br/>
+14-15 October 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects** and
 **ORM is an Offensive Anti-Pattern**;<br/>

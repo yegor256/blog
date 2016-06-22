@@ -10,7 +10,19 @@ exclude_from_search: true
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="wrapper">
     <header itemprop="name">
-      <h1>{{ page.title }}</h1>
+      {% if page.title == 'oop' %}
+        <h1>Object Oriented Programming (OOP)</h1>
+        <p>
+          You can learn more about OOP from my recently published
+          book <a href="/elegant-objects.html">Elegant Objects</a> too.
+          Also, join my <a href="https://gitter.im/yegor256/elegantobjects">Gitter chat</a>,
+          where we discuss things urgently and frequently.
+        </p>
+      {% elsif page.title == 'unknown' %}
+        <h1>unknown</h1>
+      {% else %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
     </header>
     <main>
       <article itemprop="articleBody">

@@ -138,14 +138,14 @@ to create a test that reproduces the bug. Basically, this is what you should sta
 every ticket with, be it a bug or a feature. Catch the bug with a unit test!
 Prove that the bug exists by failing the build with a new test.
 
-{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=7SI6P3M636MLCO5E %}
+{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 http://amzn.to/1SdcZ8M %}
 
 This may be rather difficult to achieve, especially when the software you're
 trying to fix or modify was written by <span class="strike">idiots</span>
 someone who had no idea about unit testing. There are plenty of techniques
 that may help you find a way to make such software more testable. I would
 highly recommend you read
-[Working Effectively with Legacy Code](http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=yegor256com-20&linkId=7SI6P3M636MLCO5E)
+[Working Effectively with Legacy Code](http://amzn.to/1SdcZ8M)
 by Michael Feathers. There are many different patterns, and most of them work.
 
 {% quote Catching a bug with a unit test is, in most cases, more than 80% of success %}

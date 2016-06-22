@@ -120,7 +120,8 @@ Say you have a module to work with, and it has to be written in Python. You have
 no experience in Python; you're a Java developer. Who is at fault here? You
 could think of it as your problem and ask your project manager to teach you, but he should tell
 you he's not running a school and get rid of you. That's a bad scenario for both of you. Instead, blame the
-project manager. He hired you. He put you into this situation. He planned
+project manager. He [hired]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
+you. He put you into this situation. He planned
 all project activities, so he probably knows what he is doing. This means
 that the project **documentation** should be detailed enough for a Java
 developer to create that Python module. However, it is not detailed enough. So report

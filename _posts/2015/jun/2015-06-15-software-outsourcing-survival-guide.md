@@ -74,7 +74,8 @@ to overrate. In software outsourcing, they are especially crucial.
 Actually, this is the best and likely only way of collecting
 objective information about the software you're getting from the outsourcer.
 Don't rely on reports, promises, guarantees, and extensive documentation.
-Instead, hire someone else on an hourly basis and ask that person
+Instead, [hire]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
+someone else on an hourly basis and ask that person
 to review what your outsourcing partner is developing. Do such reviews
 regularly and systematically. Don't be afraid to offend your programmers.
 Honestly explain the reviewer's concerns to them. If they are professionals, they

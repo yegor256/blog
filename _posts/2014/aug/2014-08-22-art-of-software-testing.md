@@ -15,9 +15,9 @@ keywords:
   - quotes about software testing
 ---
 
-{% badge /images/2014/08/art-of-software-testing.png 96 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
+{% badge /images/2014/08/art-of-software-testing.png 96 http://amzn.to/1Y3qAbN %}
 
-["The Art of Software Testing"](http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO)
+["The Art of Software Testing"](http://amzn.to/1Y3qAbN)
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
 my favorite books concerning testing and software engineering in
 general. In this article, I will provide an overview of the book, as well as
@@ -49,7 +49,8 @@ Chapter 5 discusses basic principles and strategies of unit testing.
 However, the discussion is not abstract enough for a short 25-page summary,
 and is not specific enough for a detailed discussion. Again, twenty
 years ago this information may have had some value. Nowadays,
-["Growing Object-Oriented Softare, Guided by Tests"](http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=yegor256com-20&linkId=OW3LHYHVBT2G7ZWF) by Steven Freeman and Nat Pryce
+["Growing Object-Oriented Softare, Guided by Tests"](http://amzn.to/1PBpoDT)
+by Steven Freeman and Nat Pryce
 is a much better source for this subject.
 
 There are also articles about usability testing,
@@ -67,7 +68,7 @@ full of priceless quotes that can also be very practical. For example, on page 6
 
 > Testing is a destructive, even sadistic, process, which explains why most people find it difficult
 
-{% badge /images/2014/08/glenford-myers.png 200 http://www.amazon.com/gp/product/1118031962/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1118031962&linkCode=as2&tag=yegor256com-20&linkId=RFPKLHVYE6E27XYO %}
+{% badge /images/2014/08/glenford-myers.png 200 http://amzn.to/1Y3qAbN %}
 
 In Chapter 2, Dr. Myers discusses the psychology of testing and a very common and crucial
 misunderstanding of testing objectives. He claims that it is commonly accepted that
