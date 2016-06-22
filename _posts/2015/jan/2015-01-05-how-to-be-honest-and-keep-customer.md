@@ -141,7 +141,8 @@ by someone with some cash. It's a very
 wrong direction; don't even think about going there.
 
 The second choice is to tell the client to mind his own business and let
-us do ours. He hired us because we're professional enough to develop the
+us do ours. He [hired]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
+us because we're professional enough to develop the
 software according to his requirements. If he questions our capabilities,
 he is free to **change** the contractor. But until then, he has
 to trust our decisions. Will this work? I doubt it. It's the same as
