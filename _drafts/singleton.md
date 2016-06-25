@@ -26,7 +26,8 @@ be "global"; but what do we do with them?
 <!--more-->
 
 I assume you already know what a singleton is and why it's an anti-pattern.
-If not, I recommend you read these articles:
+If not, I recommend you read this StackOverflow thread:
+[What is so bad about singletons?](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)
 
 Now that we agree it's a bad deal, what do we do if we need to, let's say,
 have access to a database connection pool in many different places within the
@@ -76,11 +77,11 @@ is the answer.
 
 We need to make this database connection pool dependency of the controller
 and ensure it's provided through a constructor. However, in this particular
-case, for JAX-RS, we can't do it through a constructor thanks to its 
+case, for JAX-RS, we can't do it through a constructor thanks to its
 ugly architecture. But we can create a `ServletContextListener`,
 instantiate a `Database` in its `contextInitialized()` method,
 and add that instance as an attribute of `servletContext`. Then, inside
-the controller, we retrieve the servlet context by adding the 
+the controller, we retrieve the servlet context by adding the
 `javax.ws.rs.core.Context` annotation to a setter and using `getAttribute()`
 on it. This is absolutely terrible and procedural, but it's better
 than a singleton.
