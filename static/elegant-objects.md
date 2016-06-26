@@ -34,6 +34,13 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
+Jun 17, 2016:
+I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),
+where we will discuss object-oriented
+programming and find out what would be appropriate to write about,
+on this blog and in the next volume of the book. Join the chat and stay
+up to date.
+
 Apr 14, 2016:
 Книгу можно купить в России, Украине, и Беларуссии по цене $35 плюс
 доставка. Оплатить через PayPal, WebMoney или напрямую на мою карту

@@ -17,7 +17,7 @@ keywords:
   - null is bad
   - null is evil
 translated:
-  Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
+  - Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 book: elegant-objects 2.6
 youtube:
   - o3aNJX7AP3M
