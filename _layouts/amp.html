@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
+    <!-- <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "{{ page.canonical_url }}"
+          "@id": "{{ page.path }}"
         },
         "headline": "{{ page.title }}",
         "image": {
@@ -28,7 +28,13 @@
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
         "description": "{{ page.description }}",
         "keywords": ["{{ page.keywords | join:'", "' }}"]
