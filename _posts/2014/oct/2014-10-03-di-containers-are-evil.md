@@ -169,7 +169,8 @@ use an instance of class `Postgres`, which we instantiated in the injector.
 
 This is the right and recommended way to use Guice. There are
 a few even darker patterns, though, which are possible but not recommended. For example,
-you can make your injector a singleton and use it right inside the `Budget` class.
+you can make your injector a
+[singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}) and use it right inside the `Budget` class.
 These mechanisms are considered wrong even by DI container makers, however, so let's ignore
 them and focus on the recommended scenario.
 
@@ -184,7 +185,7 @@ injection containers:
 
  * Passing injector as a dependency
 
- * Making injector a global singleton
+ * Making injector a global [singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %})
 
 If we put all of them aside, all we have left is the constructor
 injection explained above. And how does that help us? Why do we need it?

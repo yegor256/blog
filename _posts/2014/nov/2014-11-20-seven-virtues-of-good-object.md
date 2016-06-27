@@ -329,7 +329,8 @@ possible to draw as a small picture. Even a regular expression can be drawn.
 
 In the opposite, here is an example of names that tell us what their owners do:
 a file reader, a text parser, a URL validator, an XML printer,
-a service locator, a singleton, a script runner, or a Java programmer. Can you draw
+a service locator, a [singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}),
+a script runner, or a Java programmer. Can you draw
 any of them? No, you can't. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.
 

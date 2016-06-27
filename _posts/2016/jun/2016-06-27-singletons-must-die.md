@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Singletons Must Die"
-date: 2016-06-20
+date: 2016-06-27
 place: Los Angeles, CA
 tags: oop
 description: |
@@ -17,13 +17,16 @@ keywords:
 ---
 
 I think it's too obvious to say that a singleton is an anti-pattern as
-there are tons of articles about that (singleton bein an anti-pattern). However, more often than not, the question
+there are tons of articles about that (singleton being an anti-pattern).
+However, more often than not, the question
 is how to define global things without a singleton; and the answer to that is not
 obvious for many of us. There are several examples: a database connection
 pool, a repository, a configuration map, etc. They all naturally seem to
 be "global"; but what do we do with them?
 
 <!--more-->
+
+{% picture /images/2016/06/perdita-durango.jpg 0 Perdita Durango (1997) by Álex de la Iglesia %}
 
 I assume you already know what a singleton is and why it's an anti-pattern.
 If not, I recommend you read this StackOverflow thread:
@@ -64,7 +67,8 @@ class Index {
 {% endhighlight %}
 
 In case you're not familiar with JAX-RS, it's a simple MVC architecture,
-and this `text()` method is a "controller". Additionally, I'm using `SqlSession`,
+and this `text()` method is a "controller". Additionally, I'm using
+[`SqlSession`](http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html),
 a simple JDBC wrapper from [jcabi-jdbc](http://jdbc.jcabi.com).
 
 We need that `Database.INSTANCE` to be a singleton, right? We need it to
@@ -78,11 +82,14 @@ is the answer.
 We need to make this database connection pool dependency of the controller
 and ensure it's provided through a constructor. However, in this particular
 case, for JAX-RS, we can't do it through a constructor thanks to its
-ugly architecture. But we can create a `ServletContextListener`,
-instantiate a `Database` in its `contextInitialized()` method,
-and add that instance as an attribute of `servletContext`. Then, inside
+ugly architecture. But we can create a [`ServletContextListener`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html),
+instantiate a `Database` in its [`contextInitialized()`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html#contextInitialized-javax.servlet.ServletContextEvent-) method,
+and add that instance as an attribute of
+[`servletContext`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html). Then, inside
 the controller, we retrieve the servlet context by adding the
-`javax.ws.rs.core.Context` annotation to a setter and using `getAttribute()`
+[`javax.ws.rs.core.Context`](http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Context.html)
+annotation to a setter and using
+[`getAttribute()`](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html#getAttribute-java.lang.String-)
 on it. This is absolutely terrible and procedural, but it's better
 than a singleton.
 
