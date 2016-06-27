@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?0b16950"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?0b16950"/>
+    <link rel="shortcut icon" href="/favicon.ico?4a95cb6"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?4a95cb6"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?0b16950"/>
-    <link rel="stylesheet" href="/css/icons.css?0b16950"/>
+    <link rel="stylesheet" href="/css/layout.css?4a95cb6"/>
+    <link rel="stylesheet" href="/css/icons.css?4a95cb6"/>
     <link rel="canonical" href="http://www.yegor256.com/p/9/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/9/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 9)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?0b16950"></script>
+    <script src="/js/global.js?4a95cb6"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;185</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;186</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -120,6 +120,61 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2015/03/26/jaxb-vs-xembly.html">
+            JAXB Is Doing It Wrong; Try Xembly
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2015-03-26T00:00:00+00:00">
+              26 March 2015
+            </time>
+          </li>
+          <li>
+            417 words
+          </li>
+          <li>
+            
+            
+              
+                  two
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <figure class='badge'><a href='http://www.xembly.org'><img src='http://img.xembly.org/logo-256x256.png' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
+
+<p><a href="http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding">JAXB</a>
+is a 10-year-old Java technology that allows us to
+convert a Java object into an XML document (marshalling) and
+back (unmarshalling). This technology is based on
+<a href="/2014/09/16/getters-and-setters-are-evil.html">setters and getters</a>
+and, in my opinion, violates key principles of object-oriented
+programming by turning objects into <strong>passive data structures</strong>. I would
+recommend you use <a href="http://www.xembly.org">Xembly</a>
+instead for marshalling Java objects into XML documents.</p>
+
+      </div>
+      <p>
+        <a href="/2015/03/26/jaxb-vs-xembly.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -623,68 +678,6 @@ why you always work <strong>top down</strong>. Let&#39;s see what I mean through
       </div>
       <p>
         <a href="/2015/02/12/top-down-design.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2015/02/09/serious-code-reviewer.html">
-            Four NOs of a Serious Code Reviewer
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2015-02-09T00:00:00+00:00">
-              9 February 2015
-            </time>
-          </li>
-          <li>
-            1809 words
-          </li>
-          <li>
-            
-            
-              
-                  7
-              
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p><a href="http://en.wikipedia.org/wiki/Code_review">Code reviews</a>
-(a.k.a. peer reviews) must be a mandatory practice for every
-serious software development team. I hope there is no debate about this. Some
-do pre-merge code reviews, protecting their master/development branch from
-accidental mistakes. Others do post-merge
-<a href="/2014/12/18/independent-technical-reviews.html">regular reviews</a>
-to discover bugs and inconsistencies after they are introduced by their
-authors. Some even do both, reviewing before merges and regularly after. Code reviews
-are very similar to a <a href="http://en.wikipedia.org/wiki/White-box_testing">white-box testing</a>
-technique where a tester looks for defects with full access to the sources of the software.
-In either case, a code review is a great instrument to increase quality and
-boost team motivation.</p>
-
-<p>However, it&#39;s not so simple to do them right. I would even say it&#39;s
-very easy and comfortable to do them wrong. Most code reviews
-and reviewers I&#39;ve seen make similar mistakes. That&#39;s why I decided
-to summarize the four basic principles of a good reviewer as I see them.
-Hopefully you find them helpful.</p>
-
-      </div>
-      <p>
-        <a href="/2015/02/09/serious-code-reviewer.html">
           continue...
         </a>
       </p>
