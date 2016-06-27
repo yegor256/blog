@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>Typical Mistakes in Java Code</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/apr/2014-04-27-typical-mistakes-in-java-code" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,42 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2014/apr/2014-04-27-typical-mistakes-in-java-code.md"
         },
-        "headline": "",
+        "headline": "Typical Mistakes in Java Code",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2014-04-27",
+        "dateModified": "2014-04-27",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "The article lists the most common programming mistakes
+I catch during code reviews, which can't be caught by static analysis
+",
+        "keywords": ["java programming good practices", "object oriented typical mistakes", "mistakes in OOP", "bad practices", "bad practices in programming", "good practices in programming", "bad practices in java"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>Typical Mistakes in Java Code</h1>
     <p>This page contains most typical mistakes I see in the Java code of people
 working with me. Static analysis (we&#39;re using <a href="http://www.qulice.com">qulice</a>
 can&#39;t catch all of the mistakes for obvious reasons, and that&#39;s why I decided to

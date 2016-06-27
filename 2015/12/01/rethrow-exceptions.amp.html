@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>Throwing an Exception Without Proper Context Is a Bad Habit</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2015/dec/2015-12-01-rethrow-exceptions" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,43 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2015/dec/2015-12-01-rethrow-exceptions.md"
         },
-        "headline": "",
+        "headline": "Throwing an Exception Without Proper Context Is a Bad Habit",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2015-12-01",
+        "dateModified": "2015-12-01",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "One of the most helpful things you can do is add a contextual
+message to an exception on each re-throw &dash; and
+actually, in all other situations.
+",
+        "keywords": ["rethrow exception", "rethrow exception java", "rethrow exception c++", "rethrow exception scala", "rethrow exception with new message"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>Throwing an Exception Without Proper Context Is a Bad Habit</h1>
     <p>I keep repeating the same mistake again and again. So it&#39;s time to
 stop and make a rule to prevent this from happening anymore. The mistake
 is not fatal, but it&#39;s very annoying. When I look at production logs, I often see

@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>Class Casting Is a Discriminating Anti-Pattern</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2015/apr/2015-04-02-class-casting-is-anti-pattern" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,43 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2015/apr/2015-04-02-class-casting-is-anti-pattern.md"
         },
-        "headline": "",
+        "headline": "Class Casting Is a Discriminating Anti-Pattern",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2015-04-02",
+        "dateModified": "2015-04-02",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "Type casting and use of the instanceof operator, in particular,
+are terrible anti-patterns that diminish the entire idea
+of object-oriented programming.
+",
+        "keywords": ["class casting", "class casting in java", "instanceof", "type casting in java", "class casting is evil"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>Class Casting Is a Discriminating Anti-Pattern</h1>
     <p>Type casting is a very useful technique when there is no time
 or desire to think and design objects properly. Type casting (or
 class casting) helps us work with provided objects differently,

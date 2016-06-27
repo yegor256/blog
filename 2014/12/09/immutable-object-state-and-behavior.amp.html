@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>How an Immutable Object Can Have State and Behavior?</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/dec/2014-12-09-immutable-object-state-and-behavior" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,42 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2014/dec/2014-12-09-immutable-object-state-and-behavior.md"
         },
-        "headline": "",
+        "headline": "How an Immutable Object Can Have State and Behavior?",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2014-12-09",
+        "dateModified": "2014-12-09",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "Object state and behavior are two very different things,
+and confusing the two often leads to incorrect design.
+",
+        "keywords": ["object state", "object state behavior", "object state behavior identity", "object state behavior and methods", "object behavior model", "object attributes", "immutable object state"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>How an Immutable Object Can Have State and Behavior?</h1>
     <p>I often hear this argument against
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable objects</a>:
 &quot;Yes, they are useful when the state doesn&#39;t change. However, in

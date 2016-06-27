@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>Why InputStream Design Is Wrong</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2016/apr/2016-04-26-why-inputstream-design-is-wrong" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,43 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2016/apr/2016-04-26-why-inputstream-design-is-wrong.md"
         },
-        "headline": "",
+        "headline": "Why InputStream Design Is Wrong",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2016-04-26",
+        "dateModified": "2016-04-26",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "Class InputStream in Java has three methods read(),
+this is what I think is very wrong. Not only in
+this class, but in general in OOP.
+",
+        "keywords": ["why InputStream is a class", "InputStream", "InputStream java", "method overloading", "method overloading java"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>Why InputStream Design Is Wrong</h1>
     <p>It&#39;s not just about <code>InputSteam</code>, this class is a good
 example of a bad design. I&#39;m talking about three overloaded
 methods <code>read()</code>. I&#39;ve mentioned this problem in Section 2.9

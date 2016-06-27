@@ -2,8 +2,8 @@
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="canonical" href="http://www.yegor256.com" />
+    <title>Java Method Logging with AOP and Annotations</title>
+    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/jun/2014-06-01-aop-aspectj-java-method-logging" /> -->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,34 +11,44 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": ""
+          "@id": "_posts/2014/jun/2014-06-01-aop-aspectj-java-method-logging.md"
         },
-        "headline": "",
+        "headline": "Java Method Logging with AOP and Annotations",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
-        "datePublished": "",
-        "dateModified": "",
+        "datePublished": "2014-06-01",
+        "dateModified": "2014-06-01",
         "author": {
           "@type": "Person",
           "name": "Yegor Bugayenko"
         },
         "publisher": {
           "@type": "Person",
-          "name": "Yegor Bugayenko"
+          "name": "Yegor Bugayenko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-1400x1400.jpg",
+            "width": 1400,
+            "height": 1400
+          }
         },
-        "description": "",
-        "keywords": [""]
+        "description": "For traceability and debugging purposes, it can be very
+convenient to log execution details of every method.
+This article explains how this can be done with AspectJ
+and Java annotations.
+",
+        "keywords": ["aop annotations", "aop java logging", "aop logging annotations", "aop logging java", "aspect oriented programming java", "aspectj logging", "aspectj weaving annotations"]
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <h1>Java Method Logging with AOP and Annotations</h1>
     <p>Sometimes, I want to log (through <a href="http://www.slf4j.org">slf4j</a>
 and <a href="http://logging.apache.org/log4j/2.x/">log4j</a>) every execution
 of a method, seeing what arguments it receives, what
