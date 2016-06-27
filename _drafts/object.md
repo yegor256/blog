@@ -124,7 +124,7 @@ and try to access that data as soon as possible.
 
 {% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
 
-If we would think of an object as a representative of data, instead of
+If we would think of an object as a **representative** of data, instead of
 a container of them, we would not want to get ahold of data as soon as
 possible. We will understand that the data is far away and we can't
 just easily touch them. We should communicate with an object and how
