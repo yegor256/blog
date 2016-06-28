@@ -98,10 +98,17 @@ Kyiv, Ukraine<br/>
 <div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects** and
-**ORM is an Offensive Anti-Pattern**;<br/>
+**ORM is an Offensive Anti-Pattern**<br/>
 [Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
 Malmö, Sweden<br/>
 7-11 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
+**Seven Deadly Sins of a Software Project**<br>
+[TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
+Tallinn, Estonia<br/>
+15-18 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
