@@ -85,7 +85,6 @@ ask the most interesting questions after my presentations. Don't miss your
 chance to say hello and get a free book.
 
 <div class="book-event"/>
-{% badge https://scontent.xx.fbcdn.net/v/t1.0-9/12801113_10208796415097649_1701756533801979010_n.jpg 180 https://scontent.xx.fbcdn.net/v/t1.0-9/12801113_10208796415097649_1701756533801979010_n.jpg %}
 Feb 28, 2016:
 Over a 100 books sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,
