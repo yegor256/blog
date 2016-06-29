@@ -83,7 +83,7 @@ give them some feedback, at least here (see below).
 <div class="talk-event"/>
 <img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
 _Something about SeedRamp_<br/>
-[Startup Olé 2016](http://startupole.eu/2016/)<br/>
+[Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
 Salamanca, Spain<br/>
 7-8 September 2016
 
