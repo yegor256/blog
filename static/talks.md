@@ -124,7 +124,7 @@ Riga, Latvia<br/>
 1 December 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/live360-logo.png" class="future-talk" alt="AppDevTrends 2016"/>
+<img src="/images/2016/live360-2016.png" class="future-talk" alt="AppDevTrends 2016"/>
 [AppDevTrends 2016](https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx)<br/>
 Orlando, Florida<br/>
 5-9 December 2016
