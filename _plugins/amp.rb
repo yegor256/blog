@@ -32,6 +32,7 @@ module Jekyll
         page = AmpPage.new(site, doc)
         payload = site.site_payload
         payload['page'] = page
+        payload['doc'] = doc
         page.render(
           { 'post' => Layout.new(site, site.source, '_layouts/amp.html') },
           payload
