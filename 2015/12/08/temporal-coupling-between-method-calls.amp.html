@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Temporal Coupling Between Method Calls</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2015/dec/2015-12-08-temporal-coupling-between-method-calls" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2015/dec/2015-12-08-temporal-coupling-between-method-calls.md"
+          "@id": "http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html"
         },
         "headline": "Temporal Coupling Between Method Calls",
         "image": {
@@ -44,11 +44,16 @@ effective refactoring; avoid them.
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Temporal Coupling Between Method Calls</h1>
-    <p>Temporal coupling happens between sequential method calls
+    <article>
+      <h1>Temporal Coupling Between Method Calls</h1>
+      <p>Temporal coupling happens between sequential method calls
 when they must stay in a particular order. This is inevitable
 in imperative programming, but we can reduce the negative effect
 of it just by turning those static procedures into functions. Take
@@ -193,5 +198,6 @@ some reason, just don&#39;t make those static methods look like procedures.
 Make sure they always return results, which become arguments to
 further calls.</p>
 
+    </article>
   </body>
 </html>

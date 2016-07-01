@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>ORM Is an Offensive Anti-Pattern</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/dec/2014-12-01-orm-offensive-anti-pattern" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2014/dec/2014-12-01-orm-offensive-anti-pattern.md"
+          "@id": "http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"
         },
         "headline": "ORM Is an Offensive Anti-Pattern",
         "image": {
@@ -44,11 +44,16 @@ of OOP, but what is a possible alternative to it?
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>ORM Is an Offensive Anti-Pattern</h1>
-    <p>TL;DR ORM is a terrible <a href="/2016/02/03/design-patterns-and-anti-patterns.html">anti-pattern</a>
+    <article>
+      <h1>ORM Is an Offensive Anti-Pattern</h1>
+      <p>TL;DR ORM is a terrible <a href="/2016/02/03/design-patterns-and-anti-patterns.html">anti-pattern</a>
 that violates all principles of
 object-oriented programming, tearing objects apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
@@ -500,5 +505,6 @@ of the calls fail, the entire transaction will be rolled back.</p>
 because they know how to speak SQL with the database server. It&#39;s their
 skill, perfectly encapsulated inside their borders.</p>
 
+    </article>
   </body>
 </html>

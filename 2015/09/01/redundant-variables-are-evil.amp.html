@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Redundant Variables Are Pure Evil</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2015/sep/2015-09-01-redundant-variables-are-evil" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2015/sep/2015-09-01-redundant-variables-are-evil.md"
+          "@id": "http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html"
         },
         "headline": "Redundant Variables Are Pure Evil",
         "image": {
@@ -43,11 +43,16 @@ make your code dirty and difficult to understand.
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Redundant Variables Are Pure Evil</h1>
-    <p>A redundant variable is one that exists exclusively
+    <article>
+      <h1>Redundant Variables Are Pure Evil</h1>
+      <p>A redundant variable is one that exists exclusively
 to <strong>explain</strong> its value. I strongly believe that such a variable is
 not only pure noise but also <strong>evil</strong>, with a very negative effect
 on code readability. When we introduce a redundant variable, we intend to make our code
@@ -103,5 +108,6 @@ code shorter by moving pieces of it into new classes or private methods.</p>
 <p>Moreover, I think that in <a href="/2015/08/18/multiple-return-statements-in-oop.html">perfectly designed methods</a>,
 you won&#39;t need <strong>any</strong> variables aside from method arguments.</p>
 
+    </article>
   </body>
 </html>

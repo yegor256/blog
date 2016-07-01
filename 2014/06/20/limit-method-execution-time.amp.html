@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Limit Java Method Execution Time</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/jun/2014-06-20-limit-method-execution-time" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2014/06/20/limit-method-execution-time.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2014/jun/2014-06-20-limit-method-execution-time.md"
+          "@id": "http://www.yegor256.com/2014/06/20/limit-method-execution-time.html"
         },
         "headline": "Limit Java Method Execution Time",
         "image": {
@@ -43,11 +43,16 @@ help you to control maximum execution time for any single Java method
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Limit Java Method Execution Time</h1>
-    
+    <article>
+      <h1>Limit Java Method Execution Time</h1>
+      
 
 <p>Say, you want to allow a Java method to work for
 a maximum of five seconds and want an exception
@@ -128,5 +133,6 @@ interruption status of their threads while waiting for I/O resources.</p>
 <p>Thus, use <code>@Timeable</code> annotation, but keep in mind that there could
 be situations when a thread can&#39;t be interrupted.</p>
 
+    </article>
   </body>
 </html>

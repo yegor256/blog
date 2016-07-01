@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Avoid String Concatenation</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/jun/2014-06-19-avoid-string-concatenation" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2014/06/19/avoid-string-concatenation.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2014/jun/2014-06-19-avoid-string-concatenation.md"
+          "@id": "http://www.yegor256.com/2014/06/19/avoid-string-concatenation.html"
         },
         "headline": "Avoid String Concatenation",
         "image": {
@@ -43,11 +43,16 @@ this article explains why and how to avoid it to create cleaner code
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Avoid String Concatenation</h1>
-    <p>This is &quot;string concatenation&quot;, and it is a bad practice:</p>
+    <article>
+      <h1>Avoid String Concatenation</h1>
+      <p>This is &quot;string concatenation&quot;, and it is a bad practice:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// bad practice, don&#39;t reuse!</span>
 <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;!&quot;</span><span class="o">;</span></code></pre></figure>
@@ -182,5 +187,6 @@ that will make beautifully written code work faster.</p>
 <p>If you know any other methods of avoiding string concatenation,
 please comment below.</p>
 
+    </article>
   </body>
 </html>

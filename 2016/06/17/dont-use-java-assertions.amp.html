@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Don't Use Java Assertions</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2016/jun/2016-06-17-dont-use-java-assertions" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2016/jun/2016-06-17-dont-use-java-assertions.md"
+          "@id": "http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"
         },
         "headline": "Don't Use Java Assertions",
         "image": {
@@ -43,11 +43,16 @@
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Don't Use Java Assertions</h1>
-    <p>There are basically two ways to validate a situation in Java and complain
+    <article>
+      <h1>Don't Use Java Assertions</h1>
+      <p>There are basically two ways to validate a situation in Java and complain
 when something unexpected happens. It&#39;s either an exception
 or an assertion. Technically, they are almost the same, but there are some
 small differences. I believe that exceptions are the right way to go
@@ -102,5 +107,6 @@ bugs visible in production is very important if you want to achieve a high-quali
 <p>Thus, no assertions. They are simply a flawed and outdated feature in Java
 (and some other languages).</p>
 
+    </article>
   </body>
 </html>

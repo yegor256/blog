@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Constructors Must Be Code-Free</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2015/may/2015-05-07-ctors-must-be-code-free" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2015/may/2015-05-07-ctors-must-be-code-free.md"
+          "@id": "http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html"
         },
         "headline": "Constructors Must Be Code-Free",
         "image": {
@@ -44,11 +44,16 @@ uncontrollable behavior.
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Constructors Must Be Code-Free</h1>
-    <p>How much work should be done within a constructor? It seems reasonable
+    <article>
+      <h1>Constructors Must Be Code-Free</h1>
+      <p>How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
 results. That way, when the results are required by object methods, we&#39;ll have them
 ready. Sounds like a good approach? No, it&#39;s not. It&#39;s a bad idea
@@ -207,5 +212,6 @@ decide whether I need caching or not. This is what object composition is all abo
 a constructor is an assignment. If you need to put something else there,
 start thinking about refactoring &mdash; your class definitely needs a redesign.</p>
 
+    </article>
   </body>
 </html>

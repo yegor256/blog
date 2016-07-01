@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Why InputStream Design Is Wrong</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2016/apr/2016-04-26-why-inputstream-design-is-wrong" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2016/apr/2016-04-26-why-inputstream-design-is-wrong.md"
+          "@id": "http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html"
         },
         "headline": "Why InputStream Design Is Wrong",
         "image": {
@@ -44,11 +44,16 @@ this class, but in general in OOP.
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Why InputStream Design Is Wrong</h1>
-    <p>It&#39;s not just about <code>InputSteam</code>, this class is a good
+    <article>
+      <h1>Why InputStream Design Is Wrong</h1>
+      <p>It&#39;s not just about <code>InputSteam</code>, this class is a good
 example of a bad design. I&#39;m talking about three overloaded
 methods <code>read()</code>. I&#39;ve mentioned this problem in Section 2.9
 of <a href="/elegant-objects.html">Elegant Objects</a>. In a few words,
@@ -140,5 +145,6 @@ to ask again, why not create a method for reading and immediately post it
 on Twitter? That would be fantastically fast. Isn&#39;t it what we all want?
 A fast software which nobody has any desire to read or maintain.</p>
 
+    </article>
   </body>
 </html>

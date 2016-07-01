@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Get Rid of Java Static Loggers</title>
-    <!-- <link rel="canonical" href="http://www.yegor256.com/_posts/2014/may/2014-05-23-avoid-java-static-logger" /> -->
+    <link rel="canonical" href="http://www.yegor256.com/2014/05/23/avoid-java-static-logger.html" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type='application/ld+json'>
       {
@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "_posts/2014/may/2014-05-23-avoid-java-static-logger.md"
+          "@id": "http://www.yegor256.com/2014/05/23/avoid-java-static-logger.html"
         },
         "headline": "Get Rid of Java Static Loggers",
         "image": {
@@ -44,11 +44,16 @@ easily be eliminated by using jcabi-log
       }
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
-    <h1>Get Rid of Java Static Loggers</h1>
-    <p>This is a very common practice in Java
+    <article>
+      <h1>Get Rid of Java Static Loggers</h1>
+      <p>This is a very common practice in Java
 (using <a href="http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code>LoggerFactory</code></a>
 from <a href="http://www.slf4j.org/">slf4j</a>):</p>
 
@@ -106,5 +111,6 @@ implemented in the library.</p>
   <span class="nt">&lt;artifactId&gt;</span>jcabi-log<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
+    </article>
   </body>
 </html>
