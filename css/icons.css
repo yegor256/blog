@@ -23,6 +23,7 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-angellist:before,
 .icon-coderanch:before,
 .icon-comments:before,
 .icon-delicious:before,
@@ -62,28 +63,29 @@
   font-smoothing: antialiased;
 }
 
-.icon-coderanch:before { content: "\f100"; }
-.icon-comments:before { content: "\f101"; }
-.icon-delicious:before { content: "\f102"; }
-.icon-digg:before { content: "\f103"; }
-.icon-exit:before { content: "\f104"; }
-.icon-facebook:before { content: "\f105"; }
-.icon-fast-backward:before { content: "\f106"; }
-.icon-fast-forward:before { content: "\f107"; }
-.icon-github:before { content: "\f108"; }
-.icon-googleplus:before { content: "\f109"; }
-.icon-hackernews:before { content: "\f10a"; }
-.icon-instagram:before { content: "\f10b"; }
-.icon-link:before { content: "\f10c"; }
-.icon-linkedin:before { content: "\f10d"; }
-.icon-mail:before { content: "\f10e"; }
-.icon-no:before { content: "\f10f"; }
-.icon-pdf:before { content: "\f110"; }
-.icon-pinterest:before { content: "\f111"; }
-.icon-reddit:before { content: "\f112"; }
-.icon-rss:before { content: "\f113"; }
-.icon-stackoverflow:before { content: "\f114"; }
-.icon-stumbleupon:before { content: "\f115"; }
-.icon-twitter:before { content: "\f116"; }
-.icon-yes:before { content: "\f117"; }
-.icon-youtube:before { content: "\f118"; }
+.icon-angellist:before { content: "\f100"; }
+.icon-coderanch:before { content: "\f101"; }
+.icon-comments:before { content: "\f102"; }
+.icon-delicious:before { content: "\f103"; }
+.icon-digg:before { content: "\f104"; }
+.icon-exit:before { content: "\f105"; }
+.icon-facebook:before { content: "\f106"; }
+.icon-fast-backward:before { content: "\f107"; }
+.icon-fast-forward:before { content: "\f108"; }
+.icon-github:before { content: "\f109"; }
+.icon-googleplus:before { content: "\f10a"; }
+.icon-hackernews:before { content: "\f10b"; }
+.icon-instagram:before { content: "\f10c"; }
+.icon-link:before { content: "\f10d"; }
+.icon-linkedin:before { content: "\f10e"; }
+.icon-mail:before { content: "\f10f"; }
+.icon-no:before { content: "\f110"; }
+.icon-pdf:before { content: "\f111"; }
+.icon-pinterest:before { content: "\f112"; }
+.icon-reddit:before { content: "\f113"; }
+.icon-rss:before { content: "\f114"; }
+.icon-stackoverflow:before { content: "\f115"; }
+.icon-stumbleupon:before { content: "\f116"; }
+.icon-twitter:before { content: "\f117"; }
+.icon-yes:before { content: "\f118"; }
+.icon-youtube:before { content: "\f119"; }
