@@ -11,7 +11,7 @@
         "@type": "BlogPosting",
         "mainEntityOfPage":{
           "@type": "WebPage",
-          "@id": "{{ page.path }}"
+          "@id": "{{ doc.url | prepend: site.baseurl | prepend: site.url }}"
         },
         "headline": "{{ page.title }}",
         "image": {
