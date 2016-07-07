@@ -148,7 +148,9 @@ session.save(post);
 {% endhighlight %}
 
 This is how almost every ORM works. The basic principle is always the same &mdash;
-ORM objects are anemic envelopes with data. We are talking with the ORM
+ORM objects are
+[anemic envelopes]({% pst 2016/jul/2016-07-06-data-transfer-object %})
+with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
 us send our requests to the ORM framework and understand its response.
 Besides getters and setters, objects have no other methods. They don't even know

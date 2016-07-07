@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Data Transfer Object Is a Shame"
-date: 2016-06-20
+title: "Data Transfer Object Is a Shame"
+date: 2016-07-06
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -23,6 +23,8 @@ But let's skip to the point: DTO is just a shame, and the man who invented
 it is just wrong. There is no excuse for what he has done.
 
 <!--more-->
+
+{% picture /images/2016/07/before-the-devil-knows-you-are-dead.jpg 0 Before the Devil Knows You're Dead (2007) by Sidney Lumet %}
 
 By the way, his name, to my knowledge, was
 [Martin Fowler](http://martinfowler.com/bliki/LocalDTO.html). Maybe he
