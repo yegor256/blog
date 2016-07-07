@@ -165,7 +165,9 @@ of class <code>Post</code>, stuff it with the data, and ask Hibernate to save it
 <span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">post</span><span class="o">);</span></code></pre></figure>
 
 <p>This is how almost every ORM works. The basic principle is always the same &mdash;
-ORM objects are anemic envelopes with data. We are talking with the ORM
+ORM objects are
+<a href="/2016/07/06/data-transfer-object.html">anemic envelopes</a>
+with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
 us send our requests to the ORM framework and understand its response.
 Besides getters and setters, objects have no other methods. They don&#39;t even know

@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?1eea2ff"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?1eea2ff"/>
+    <link rel="shortcut icon" href="/favicon.ico?7507188"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?7507188"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?1eea2ff"/>
-    <link rel="stylesheet" href="/css/icons.css?1eea2ff"/>
+    <link rel="stylesheet" href="/css/layout.css?7507188"/>
+    <link rel="stylesheet" href="/css/icons.css?7507188"/>
     <link rel="canonical" href="http://www.yegor256.com/p/10/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/10/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 10)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?1eea2ff"></script>
+    <script src="/js/global.js?7507188"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;186</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;187</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -128,6 +128,59 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2015/02/12/top-down-design.html">
+            Code For the User, Not for Yourself
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2015-02-12T00:00:00+00:00">
+              12 February 2015
+            </time>
+          </li>
+          <li>
+            659 words
+          </li>
+          <li>
+            
+            
+              
+                  three
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2015/02/12/top-down-design.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>First, no matter what the methodology is, we all write software for our
+users (a.k.a. customers, project sponsors, end users, or
+<a href="/2015/01/26/happy-boss-false-objective.html">clients</a>). Second,
+no matter what the methodology is, we write incrementally, releasing
+features and bug fixes one by one. Maybe I&#39;m saying something absolutely obvious here,
+but it&#39;s important to remember that each new version should first of all satisfy
+the needs of the user, not of us programmers. In other words, the way
+we decompose a big task into smaller pieces should be user-targeted, and that&#39;s
+why you always work <strong>top down</strong>. Let&#39;s see what I mean through a practical example.</p>
+
+      </div>
+      <p>
+        <a href="/2015/02/12/top-down-design.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -637,69 +690,6 @@ key management instrument.</p>
       </div>
       <p>
         <a href="/2015/01/08/morning-standup-meetings.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2015/01/05/how-to-be-honest-and-keep-customer.html">
-            How to Be Honest and Keep a Customer
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2015-01-05T00:00:00+00:00">
-              5 January 2015
-            </time>
-          </li>
-          <li>
-            1886 words
-          </li>
-          <li>
-            
-            
-              
-                  7
-              
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>Most of our
-<a href="/2015/01/26/happy-boss-false-objective.html">clients</a>
-are rather surprised when we explain to them that
-they will have full access to the source code from the first day
-of the project. We let them see everything that is happening in
-the project, including the Git repository, bug reports, discussions
-between programmers,
-<a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> fails, etc.
-They often tell me that other software development
-<a href="/2015/10/27/outsourcing-doesnt-work.html">outsourcing teams</a>
-keep this information in-house and deliver only final releases,
-rarely together with the source code.</p>
-
-<p>I understand why other developers are trying to hide as much as possible.
-Giving a project sponsor full access to the development environment
-is <a href="/2015/05/21/avoid-software-outsourcing-disaster.html">not easy</a>
-at all. Here is a summary
-of problems we&#39;ve been having and our solutions. I hope they help you
-honestly show your clients all project internals and still keep them on board.</p>
-
-      </div>
-      <p>
-        <a href="/2015/01/05/how-to-be-honest-and-keep-customer.html">
           continue...
         </a>
       </p>
