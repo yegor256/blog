@@ -12,8 +12,7 @@ module Jekyll
       super(site, site.dest, '', path)
       @path = path
       @html = html
-        .gsub(/<figure ?.*>.*<\/figure>/, "<p>[figure removed]</p>")
-        .gsub(/<img ?.*\/>/, "<p>[image removed]</p>")
+        .gsub(/<img (?.*)\/>/, "<amp-img \1>")
         .gsub(/<svg ?.*>.*<\/svg>/, "<p>[graph removed]</p>")
         .gsub(/<aside ?.*>.*<\/aside>/, '')
       write(site.dest)
