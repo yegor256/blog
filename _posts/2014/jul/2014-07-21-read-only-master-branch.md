@@ -97,7 +97,7 @@ fix our build later. And [it's only logical]({% pst 2014/oct/2014-10-08-continuo
 
 ## What Is a Solution?
 
-<a href="/pdf/2014/guard-article.pdf" class="2em"
+<a href="/pdf/2014/guard-article.pdf" class="em2"
   title="Prevent Conflicts in Distributed Agile PHP Projects"><i class="icon icon-pdf"></i></a>
 
 Four years ago, in 2010, I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
