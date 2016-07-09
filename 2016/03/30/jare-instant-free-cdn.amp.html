@@ -53,7 +53,7 @@ and free service.
   <body>
     <article>
       <h1>Jare.io, an Instant and Free CDN</h1>
-      
+      <figure class='badge'><a href='http://www.jare.io'><amp-img src='http://www.jare.io/images/logo.svg' style='width:92px;max-width:100%;' alt='badge'></a></figure>
 
 <p>CDN stands for a Content Delivery Network. Technically, it is a bunch
 of servers located in different countries and continents. You give them
@@ -71,16 +71,16 @@ CDN that is simple to configure. It utilizes AWS CloudFront resources.</p>
 the details, I will explain how it&#39;s done internally. Say you have
 this HTML:</p>
 
-
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://www.teamed.io/image/logo.svg&quot;</span><span class="nt">/&gt;</span></code></pre></figure>
 
 <p>I want this <code>logo.svg</code> to be delivered via a CDN. There are two steps.
 First, I register my domain at <a href="http://www.jare.io">jare.io</a>:</p>
 
-
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fjare-1.png' style='width:600px;max-width:100%;' alt='figure'></figure>
 
 <p>Second, I change my HTML:</p>
 
-
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg&quot;</span><span class="nt">/&gt;</span></code></pre></figure>
 
 <p>That&#39;s it.</p>
 
@@ -268,7 +268,7 @@ decides what to do with them. The decision is based on the information
 from the HTTP request URI. For example, the request from the browser
 has this URI path:</p>
 
-
+<figure class="highlight"><pre><code class="language-text" data-lang="text">/?u=http://www.teamed.io/images/logo.svg</code></pre></figure>
 
 <p>Remember, the request is made to <code>cf.jare.io</code>, which is the address of
 the edge server. This exact URI arrives at <code>relay.jare.io</code>. The URI contains

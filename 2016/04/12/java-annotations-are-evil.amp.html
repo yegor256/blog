@@ -103,7 +103,7 @@ see in a few examples.</p>
 
 <p>Now we&#39;re making an instance of class <code>Books</code> via the container:</p>
 
-
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">Books</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
 
 <p>The class <code>Books</code> has no idea how and who will inject an instance
 of class <code>DB</code> into it. This will happen behind the scenes and outside
@@ -272,7 +272,7 @@ must see the entire composition process.</p>
 
 <p>A much better design would look like this (instead of annotations):</p>
 
-
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FooThatRetries</span><span class="o">(</span><span class="k">new</span> <span class="nf">Foo</span><span class="o">());</span></code></pre></figure>
 
 <p>And then, the implementation of <code>FooThatRetries</code>:</p>
 

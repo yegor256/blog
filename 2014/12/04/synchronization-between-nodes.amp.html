@@ -59,7 +59,7 @@ such synchronization, there will be collisions and conflicts. This
 is especially true when we&#39;re talking about &quot;resources&quot; that do
 not support <em>atomic</em> transactions.</p>
 
-
+<figure class='badge'><a href='http://www.stateful.co'><amp-img src='http://img.stateful.co/pomegranate.svg' style='width:64px;max-width:100%;' alt='badge'></a></figure>
 
 <p>To solve this issue and prevent conflicts, we have to introduce
 one more element into the picture. All software modules, before
@@ -73,7 +73,7 @@ So I decided to create one &mdash; <a href="http://www.stateful.co">stateful.co<
 
 <!--more-->
 
-
+<figure><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F12%2Fvan-damme-split.png' style='width:600px;max-width:100%;' alt='No Retreat, No Surrender (1986) by Corey Yuen'><figcaption>No Retreat, No Surrender (1986) by Corey Yuen</figcaption></figure>
 
 <p>Here is a practical example. I have a Java web app that is hosted
 at Heroku. There are three servers (a.k.a. &quot;dynos&quot;) running the same <code>.war</code>

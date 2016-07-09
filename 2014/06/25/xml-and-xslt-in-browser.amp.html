@@ -125,14 +125,14 @@ It&#39;s up to the requester on how to render the data or to not render it at al
 the document with the XSL stylesheet <code>/xsl/index.xsl</code> that
 is loaded by the browser separately:</p>
 
-
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml-stylesheet type=&#39;text/xsl&#39; href=&#39;/xsl/index.xsl&#39;?&gt;</span></code></pre></figure>
 
 <p>Open developer tools in Chrome and you will see that right
 after the page is loaded, the browser loads the XSL stylesheet
 and then all other resources including a few CSS stylesheets,
 jQuery and an SVG logo:</p>
 
-
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F06%2Fxslt-loading-order-in-chrome.png' style='width:600px;max-width:100%;' alt='figure'></figure>
 
 <p><code>index.xsl</code> includes <code>layout.xsl</code>, that&#39;s why it is loaded right after.</p>
 

@@ -62,7 +62,7 @@ once is redundant and must be replaced with a value.</p>
 
 <!--more-->
 
-
+<figure><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2015%2F09%2Fy-tu-mama-tambien.jpg' style='width:600px;max-width:100%;' alt='Y Tu Mamá También (2001) by Alfonso Cuarón'><figcaption>Y Tu Mamá También (2001) by Alfonso Cuarón</figcaption></figure>
 
 <p>Here, variable <code>fileName</code> is redundant:</p>
 
@@ -71,7 +71,7 @@ once is redundant and must be replaced with a value.</p>
 
 <p>This code must look differently:</p>
 
-
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">print</span><span class="o">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">&quot;test.txt&quot;</span><span class="o">).</span><span class="na">length</span><span class="o">());</span></code></pre></figure>
 
 <p>This example is very primitive, but I&#39;m sure you&#39;ve seen these
 redundant variables many times. We use them to &quot;explain&quot; the code &mdash;

@@ -99,7 +99,7 @@ and modify. It is a static utility method that mirrors
 <a href="http://www.cplusplus.com/reference/cstdio/sprintf/"><code>sprintf()</code></a> from C.
 It allows you to build a string using a pattern and substitutors:</p>
 
-
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;Hello, %s!&quot;</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span></code></pre></figure>
 
 <p>When the text is longer, the advantages of the formatter become
 much more obvious. Look at this ugly code:</p>
@@ -120,7 +120,7 @@ much more obvious. Look at this ugly code:</p>
 the pattern even more localizable. Let&#39;s say, I want
 to translate it to Greek. This is how will it look:</p>
 
-
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!</code></pre></figure>
 
 <p>I&#39;m changing the order of substitutions in the pattern,
 but not in the actual list of methods arguments.</p>

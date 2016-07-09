@@ -247,9 +247,9 @@
 	<a xlink:title="Plot #1">
 <g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '102.8,230.0 116.9,230.0 116.9,24.0 102.8,24.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '102.8,230.0 116.9,230.0 116.9,23.9 102.8,23.9 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M102.8,230.0 L102.8,24.1 L116.8,24.1 L116.8,230.0 L102.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M102.8,230.0 L102.8,24.0 L116.8,24.0 L116.8,230.0 L102.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '121.5,230.0 135.8,230.0 135.8,152.3 121.5,152.3 '/>
 	</g>
