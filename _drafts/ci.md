@@ -77,5 +77,5 @@ build. If the quality is lower then the threshold, the build fails.
 This idea is explained
 [here]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}).
 
-By the way, at the [presentation]
+By the way, at the [presentation](https://www.youtube.com/watch?v=3dJP_LtUGgg)
 I also mentioned what problems you may have at each maturity level.
