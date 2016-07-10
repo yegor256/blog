@@ -163,7 +163,6 @@ Eight Maturity Levels of Continuous Integration;
 Salt Lake City, USA;
 15 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
-[photos](...),
 [video](https://www.youtube.com/watch?v=3dJP_LtUGgg).
 There were about 250 people with just one track and a pretty good
 organization, even though the budget was rather low. I liked the event and
