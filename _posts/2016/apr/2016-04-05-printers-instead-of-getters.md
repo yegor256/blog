@@ -166,7 +166,10 @@ even though it looks like one...):
 class JsonMedia implements Media {
   private final JsonObjectBuilder builder;
   JsonMedia() {
-    this(Json.createObjectBuilder());
+    this("book");
+  }
+  JsonMedia(String head) {
+    this(Json.createObjectBuilder().add(head));
   }
   JsonMedia(JsonObjectBuilder bdr) {
     this.builder = bdr;
@@ -188,7 +191,8 @@ itself there:
 
 {% highlight java %}
 JsonMedia media = new JsonMedia("book");
-JsonObject json = book.print(media).json();
+book.print(media);
+JsonObject json = media.json();
 {% endhighlight %}
 
 Voilà! The JSON object is ready and the book has no idea about what
