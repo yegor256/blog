@@ -34,7 +34,8 @@ Basically, there are six key roles in any software team:
  * Tester &mdash; finds and reports bugs
 
 Everybody, except the
-[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}), affects the project in two
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
+affects the project in two
 ways: they fix it and they break it at the same time. Let me explain
 this with a simple example.
 
