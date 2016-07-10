@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Key Roles of a Software Project"
+title: "Key Roles in a Software Project"
 date: 2016-07-10
 place: Palo Alto, CA
 tags: management
