@@ -28,19 +28,19 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?88d1f89"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?88d1f89"/>
+    <link rel="shortcut icon" href="/favicon.ico?3d39491"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?3d39491"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?88d1f89"/>
-    <link rel="stylesheet" href="/css/icons.css?88d1f89"/>
+    <link rel="stylesheet" href="/css/layout.css?3d39491"/>
+    <link rel="stylesheet" href="/css/icons.css?3d39491"/>
     <link rel="canonical" href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html" />
     <link rel="amphtml" href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.amp.html" />
     <title>Printers Instead of Getters - Yegor Bugayenko
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?88d1f89"></script>
+    <script src="/js/global.js?3d39491"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -149,7 +149,7 @@
         
           <li class="desktop-only">Palo Alto, CA</li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-05-printers-instead-of-getters.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-05-08T15:09:56+0000'>8 May 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-05-printers-instead-of-getters.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-07-10T18:13:03+0000'>10 July 2016</time></li>
         <li class="printable">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -338,7 +338,10 @@ even though it looks like one...):</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">JsonMedia</span> <span class="kd">implements</span> <span class="n">Media</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">JsonObjectBuilder</span> <span class="n">builder</span><span class="o">;</span>
   <span class="n">JsonMedia</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">createObjectBuilder</span><span class="o">());</span>
+    <span class="k">this</span><span class="o">(</span><span class="s">&quot;book&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="n">JsonMedia</span><span class="o">(</span><span class="n">String</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">createObjectBuilder</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">head</span><span class="o">));</span>
   <span class="o">}</span>
   <span class="n">JsonMedia</span><span class="o">(</span><span class="n">JsonObjectBuilder</span> <span class="n">bdr</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">builder</span> <span class="o">=</span> <span class="n">bdr</span><span class="o">;</span>
@@ -358,7 +361,8 @@ even though it looks like one...):</p>
 itself there:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JsonMedia</span> <span class="n">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JsonMedia</span><span class="o">(</span><span class="s">&quot;book&quot;</span><span class="o">);</span>
-<span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">).</span><span class="na">json</span><span class="o">();</span></code></pre></figure>
+<span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">);</span>
+<span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">media</span><span class="o">.</span><span class="na">json</span><span class="o">();</span></code></pre></figure>
 
 <p>Voilà! The JSON object is ready and the book has no idea about what
 exactly what printed just now. We need to print the book to XML? We
@@ -379,23 +383,23 @@ just printers!</p>
     <ul>
       
         <li>
-          <a href="/2016/04/12/java-annotations-are-evil.html" data-score="1.9691804352810038">Java Annotations Are a Big Mistake</a>
+          <a href="/2016/04/12/java-annotations-are-evil.html" data-score="1.760397307400681">Java Annotations Are a Big Mistake</a>
         </li>
       
         <li>
-          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="1.1132812014524387">JAXB Is Doing It Wrong; Try Xembly</a>
+          <a href="/2015/03/26/jaxb-vs-xembly.html" data-score="1.2021752981890237">JAXB Is Doing It Wrong; Try Xembly</a>
         </li>
       
         <li>
-          <a href="/2016/07/06/data-transfer-object.html" data-score="0.9360289180496544">Data Transfer Object Is a Shame</a>
+          <a href="/2016/07/06/data-transfer-object.html" data-score="0.8455807849416109">Data Transfer Object Is a Shame</a>
         </li>
       
         <li>
-          <a href="/2014/12/09/immutable-object-state-and-behavior.html" data-score="0.6311890156110471">How an Immutable Object Can Have State and Behavior?</a>
+          <a href="/2014/12/09/immutable-object-state-and-behavior.html" data-score="0.6861047832254447">How an Immutable Object Can Have State and Behavior?</a>
         </li>
       
         <li>
-          <a href="/2016/05/03/test-methods-must-share-nothing.html" data-score="0.6121379459749371">Test Methods Must Share Nothing</a>
+          <a href="/2014/12/15/how-much-your-objects-encapsulate.html" data-score="0.6472904280645272">How Much Your Objects Encapsulate?</a>
         </li>
       
     </ul>
@@ -429,8 +433,8 @@ just printers!</p>
 
 </section>
 
-<script src="/js/post.js?88d1f89"></script>
-<script src="//a.disquscdn.com/embed.js?88d1f89"></script>
+<script src="/js/post.js?3d39491"></script>
+<script src="//a.disquscdn.com/embed.js?3d39491"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

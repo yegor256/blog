@@ -192,7 +192,10 @@ even though it looks like one...):</p>
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">JsonMedia</span> <span class="kd">implements</span> <span class="n">Media</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">JsonObjectBuilder</span> <span class="n">builder</span><span class="o">;</span>
   <span class="n">JsonMedia</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">createObjectBuilder</span><span class="o">());</span>
+    <span class="k">this</span><span class="o">(</span><span class="s">&quot;book&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="n">JsonMedia</span><span class="o">(</span><span class="n">String</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">Json</span><span class="o">.</span><span class="na">createObjectBuilder</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">head</span><span class="o">));</span>
   <span class="o">}</span>
   <span class="n">JsonMedia</span><span class="o">(</span><span class="n">JsonObjectBuilder</span> <span class="n">bdr</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">builder</span> <span class="o">=</span> <span class="n">bdr</span><span class="o">;</span>
@@ -212,7 +215,8 @@ even though it looks like one...):</p>
 itself there:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JsonMedia</span> <span class="n">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JsonMedia</span><span class="o">(</span><span class="s">&quot;book&quot;</span><span class="o">);</span>
-<span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">).</span><span class="na">json</span><span class="o">();</span></code></pre></figure>
+<span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">);</span>
+<span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">media</span><span class="o">.</span><span class="na">json</span><span class="o">();</span></code></pre></figure>
 
 <p>Voilà! The JSON object is ready and the book has no idea about what
 exactly what printed just now. We need to print the book to XML? We
