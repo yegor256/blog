@@ -98,13 +98,14 @@ that's what the document says.
 
 Second, if he is not entirely sure that Gradle is the right choice
 and just wants me to be more serious about my decisions, he should
-complain (by submitting a bug) about the quality of my architecture
-document. He should say that the choice of Maven is not explained
-there properly. I will re-think my decision and will either change
+complain (by submitting a bug) about the quality of my
+[architecture document]({% pst 2015/aug/2015-08-04-nine-steps-start-software-project %}).
+He should say that the choice of Maven is not explained
+properly. I will re-think my decision and will either change
 it or expain better. But, again, I will do it not in order to please
-Chris, but in order to fix a bug.
+Chris, but in order to fix a reported bug.
 
-So, to summarize, an architect must be an absolute technical dictator
+To summarize, an architect must be an absolute technical **dictator**
 in the project and must not convince anyone. If that's not the case,
-your entire project is at at big risk. Simply because the responsibility
-will be "leaking".
+the entire project is at a big risk. Simply because the responsibility
+will is "leaking".
