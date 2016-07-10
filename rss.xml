@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-10T18:41:12+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Data Transfer Object Is a Shame</title><link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html" rel="alternate" type="text/html" title="Data Transfer Object Is a Shame" /><published>2016-07-06T00:00:00+00:00</published><updated>2016-07-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/06/data-transfer-object</id><content type="html" xml:base="http://www.yegor256.com/2016/07/06/data-transfer-object.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Data_transfer_object&quot;&gt;DTO&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-10T20:21:25+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Key Roles of a Software Project</title><link href="http://www.yegor256.com/2016/07/10/software-project-roles.html" rel="alternate" type="text/html" title="Key Roles of a Software Project" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/10/software-project-roles</id><content type="html" xml:base="http://www.yegor256.com/2016/07/10/software-project-roles.html">&lt;p&gt;I believe that several roles should be present in a majority of
+software projects. Managed by
+&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; according to the principles of
+&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;, we&amp;#39;ve got all of them in our projects. However, beware that in other management
+methodologies, these roles may have different meanings. This blog post
+is mostly for people who work with us, either as clients or freelancers.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2F12-angry-men.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;12 Angry Men (1957) by Sidney Lumet&#39;/&gt;&lt;figcaption&gt;12 Angry Men (1957) by Sidney Lumet&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are just a few roles:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Project Manager&lt;/strong&gt; (&lt;code&gt;PM&lt;/code&gt;)
+is responsible for keeping the project &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;under control&lt;/a&gt;.
+The PM reports to the head of our &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_management_office&quot;&gt;PMO&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Product Owner&lt;/strong&gt; (&lt;code&gt;PO&lt;/code&gt;)
+is a representative of the sponsor.
+The PO provides product requirements.
+The PO submits bugs and expresses any concerns or questions relating to them.
+Usually, the PO is a very technical person
+who knows how the product works and is capable of understanding the source code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Software Architect&lt;/strong&gt; (&lt;code&gt;ARC&lt;/code&gt;)
+is responsible for the entire technical solution.
+The ARC is &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;blamed&lt;/a&gt; for all technical problems.
+The ARC approves all pull requests before we &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;can merge&lt;/a&gt; them.
+The ARC is the main point of contact in the project for the PO.
+The ARC makes all technical &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;decisions&lt;/a&gt;.
+The ARC &lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;reports&lt;/a&gt; to the PM.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Developer&lt;/strong&gt; (&lt;code&gt;DEV&lt;/code&gt;)
+is a programmer and is &lt;a href=&quot;/2014/04/13/no-obligations-principle.html&quot;&gt;responsible&lt;/a&gt;
+for &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;closing bugs&lt;/a&gt;.
+The DEV reports to the PM.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Requirements Analyst&lt;/strong&gt; (&lt;code&gt;REQ&lt;/code&gt;)
+is responsible for the validation of the product.
+The REQ solicits &lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;requirements&lt;/a&gt; from the PO.
+The REQ demonstrates the product to the PO.
+The REQ submits new bugs when validation fails and the product needs changes.
+The REQ reports to the PM.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Quality Assurance&lt;/strong&gt; (&lt;code&gt;QA&lt;/code&gt;)
+oversees the correctness of our process.
+The QA approves each closed task before it&amp;#39;s officially closed by the PM.
+The QA ensures that our process complies to &lt;a href=&quot;http://at.teamed.io/policy.html&quot;&gt;our policy&lt;/a&gt;.
+The QA reports to the PM.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Besides all that, any role is &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;encouraged&lt;/a&gt;
+to submit bugs when they find them.&lt;/p&gt;</content><category term="management" /><summary>I believe that several roles should be present in a majority of
+software projects. Managed by
+Teamed.io according to the principles of
+XDSD, we&amp;#39;ve got all of them in our projects. However, beware that in other management
+methodologies, these roles may have different meanings. This blog post
+is mostly for people who work with us, either as clients or freelancers.</summary></entry><entry><title>Data Transfer Object Is a Shame</title><link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html" rel="alternate" type="text/html" title="Data Transfer Object Is a Shame" /><published>2016-07-06T00:00:00+00:00</published><updated>2016-07-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/06/data-transfer-object</id><content type="html" xml:base="http://www.yegor256.com/2016/07/06/data-transfer-object.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Data_transfer_object&quot;&gt;DTO&lt;/a&gt;,
 as far as I understand it, is a cornerstone of the ORM design pattern,
 which I &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;simply adore&lt;/a&gt;.
 But let&amp;#39;s skip to the point: DTO is just a shame, and the man who invented
@@ -1159,102 +1212,4 @@ sense and in our projects I see less and less public constants. In
 some projects we don&amp;#39;t have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
 that there are too many similar literals in the same file, the best way
-to get rid of them is via a private static literal. This is just wrong.</summary></entry><entry><title>Why InputStream Design Is Wrong</title><link href="http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html" rel="alternate" type="text/html" title="Why InputStream Design Is Wrong" /><published>2016-04-26T00:00:00+00:00</published><updated>2016-04-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong</id><content type="html" xml:base="http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html">&lt;p&gt;It&amp;#39;s not just about &lt;code&gt;InputSteam&lt;/code&gt;, this class is a good
-example of a bad design. I&amp;#39;m talking about three overloaded
-methods &lt;code&gt;read()&lt;/code&gt;. I&amp;#39;ve mentioned this problem in Section 2.9
-of &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt;. In a few words,
-I strongly believe that interfaces must be &amp;quot;functionality poor.&amp;quot;
-&lt;code&gt;InputStream&lt;/code&gt; should have been an interface in the first place
-and it should have had a single method &lt;code&gt;read(byte[])&lt;/code&gt;. Then if
-its authors wanted to give us extra functionality, they should have
-created supplementary &amp;quot;smart&amp;quot; classes.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F04%2Fa-serious-man.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;A Serious Man (2009) by Coen Brothers&#39;/&gt;&lt;figcaption&gt;A Serious Man (2009) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is how it looks now:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What&amp;#39;s wrong? It&amp;#39;s very convenient to have the ability to read
-a single byte, an array of bytes or even an array of bytes
-with a direct positioning into a specific place in the buffer!&lt;/p&gt;
-
-&lt;p&gt;However, we are still lacking a few methods: for reading the bytes and
-immediately saving into a file, converting to a text with a selected
-encoding, sending them by email and posting on Twitter. It would be
-great to have the features too, right in the poor &lt;code&gt;InputStream&lt;/code&gt;.
-I hope the Oracle Java team is working on them now.&lt;/p&gt;
-
-&lt;p&gt;In the mean time, let&amp;#39;s see what exactly is wrong with what these
-bright engineers designed for us already. Or maybe let me show
-how I would design &lt;code&gt;InputStream&lt;/code&gt; and we&amp;#39;ll compare:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is my design. The &lt;code&gt;InputStream&lt;/code&gt; is responsible for reading
-bytes from the stream. There is one single method for this
-feature. Is it convenient for everybody? Does it read and post
-on Twitter? Not yet. Do we need that functionality? Of course we do,
-but it doesn&amp;#39;t mean that we will add it to the interface. Instead,
-we will create supplementary &amp;quot;smart&amp;quot; class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Smart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Smart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we want to read a single byte from the stream. Here is how:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/a.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Smart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The functionality of reading a single byte is outside of &lt;code&gt;InputStream&lt;/code&gt;,
-because this is not its business. The stream doesn&amp;#39;t need to know
-how to manage the data after it is read. All the stream
-is &lt;strong&gt;responsible&lt;/strong&gt; for is reading, not parsing or manipulating afterwards.&lt;/p&gt;
-
-&lt;p&gt;Interfaces must be small.&lt;/p&gt;
-
-&lt;p&gt;Obviously, method overloading in interfaces is a code smell. An interface
-with more than &lt;strong&gt;three methods&lt;/strong&gt; is a good candidate for refactoring. If methods
-overload each other &amp;mdash; it&amp;#39;s serious trouble.&lt;/p&gt;
-
-&lt;p&gt;Interfaces must be small!&lt;/p&gt;
-
-&lt;p&gt;You may say that the creators of &lt;code&gt;InputStream&lt;/code&gt; cared about performance, that&amp;#39;s
-why allowed us to implement &lt;code&gt;read()&lt;/code&gt; in three different forms. Then I have
-to ask again, why not create a method for reading and immediately post it
-on Twitter? That would be fantastically fast. Isn&amp;#39;t it what we all want?
-A fast software which nobody has any desire to read or maintain.&lt;/p&gt;</content><category term="java" /><category term="oop" /><summary>It&amp;#39;s not just about InputSteam, this class is a good
-example of a bad design. I&amp;#39;m talking about three overloaded
-methods read(). I&amp;#39;ve mentioned this problem in Section 2.9
-of Elegant Objects. In a few words,
-I strongly believe that interfaces must be &amp;quot;functionality poor.&amp;quot;
-InputStream should have been an interface in the first place
-and it should have had a single method read(byte[]). Then if
-its authors wanted to give us extra functionality, they should have
-created supplementary &amp;quot;smart&amp;quot; classes.</summary></entry></feed>
+to get rid of them is via a private static literal. This is just wrong.</summary></entry></feed>
