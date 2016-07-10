@@ -29,7 +29,7 @@ interpretation of each principle.
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."
 
-By focusing on "satisfy the customer", Agile adepts totally forgets about
+By focusing on "satisfy the customer", Agile adepts totally forget about
 the "through" part. They think that a [happy customer]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 is their true objective, while "continuous delivery" is something that obviously
 helps, though not crucially. However, this is quite the opposite &mdash; the customer
@@ -44,7 +44,7 @@ the primary objective.
 {% quote If the customer is not satisfied, we find another customer %}
 
 **Principle #2**:
-"Welcome change requirements, even late in development. Agile processes harness change for the customer's competitive advantage."
+"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage."
 
 Most Agile teams understand the word "welcome" here as a permission to forget
 about any [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
@@ -57,7 +57,7 @@ means! This principle means that our requirements management process is so
 achieve, if requirements are actually documented.
 
 **Principle #3**:
-"Frequently deliver working software, from a couple of weeks to a couple of months, with a preference to the shorter timescale."
+"Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale."
 
 This terrific rule is usually understood as an order for the entire team. The
 team has to frequently deliver, while programmers are free to deliver almost
@@ -190,7 +190,7 @@ Not with the lack of all that.
 "At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly."
 
 That's a great principle which is translated into so-called retrospective
-meetings. They work just fine s long as decisions 
+meetings. They work just fine as long as decisions
 make the team better. Unfortunately, in most cases, programmers in Agile teams are
 trying to [survive]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
 instead of making their teams more effective. Even though the
