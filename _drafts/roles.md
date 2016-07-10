@@ -16,11 +16,11 @@ keywords:
   - roles in software
 ---
 
-There are a number of roles, I believe, must be present in most
-software projects. We've got all of them in our projects, managed by
+I believe that several roles should be present in a majority of
+software projects. Managed by
 [Teamed.io](http://www.teamed.io) according to the principles of
-[XDSD](http://www.xdsd.org). Beware that in other management
-methodologies the same roles may have different meanings. This blog post
+[XDSD](http://www.xdsd.org), we've got all of them in our projects. However, beware that in other management
+methodologies, these roles may have different meanings. This blog post
 is mostly for people who work with us, either as clients or freelancers.
 
 <!--more-->
@@ -32,10 +32,10 @@ There are just a few roles:
     The PM reports to the head of our [PMO](https://en.wikipedia.org/wiki/Project_management_office).
 
   * **Product Owner** (`PO`)
-    is a representative of a sponsor.
+    is a representative of the sponsor.
     The PO provides product requirements.
-    The PO submits bugs when desires to express concerns or questions.
-    Usually, the PO is a very technical person,
+    The PO submits bugs and expresses any concerns or questions relating to them.
+    Usually, the PO is a very technical person
     who knows how the product works and is capable of understanding the source code.
 
   * **Software Architect** (`ARC`)
@@ -64,5 +64,5 @@ There are just a few roles:
     The QA ensures that our process complies to [our policy](http://at.teamed.io/policy.html).
     The QA reports to the PM.
 
-Besides that, any role is [encouraged]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
-to submit bugs, when they find them.
+Besides all that, any role is [encouraged]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
+to submit bugs when they find them.
