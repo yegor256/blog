@@ -24,7 +24,8 @@ with the spirit of
 (PDD). As I do this, I will attempt to convey typical points
 of view of various project members.
 
-Basically, there are six key roles in any software team:
+Basically, there are a few key
+[roles]({% pst 2016/jul/2016-07-10-software-project-roles %}) in any software team:
 
  * Project Manager &mdash; assigns tasks and pays on completion
  * System Analyst &mdash; documents the product owner's ideas

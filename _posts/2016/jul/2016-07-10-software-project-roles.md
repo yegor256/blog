@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Key Roles of a Software Project"
-date: 2016-07-20
+date: 2016-07-10
 place: Palo Alto, CA
 tags: management
 description: |
@@ -24,6 +24,8 @@ methodologies, these roles may have different meanings. This blog post
 is mostly for people who work with us, either as clients or freelancers.
 
 <!--more-->
+
+{% picture /images/2016/07/12-angry-men.jpg 0 12 Angry Men (1957) by Sidney Lumet %}
 
 There are just a few roles:
 
