@@ -1,24 +1,85 @@
 ---
 layout: post
-title: "ActiveRecord"
+title: "ActiveRecord Is Even Worse Than ORM"
 date: 2016-07-20
 place: Palo Alto, CA
 tags: oop
 description: |
   ActiveRecord is a popular design pattern that seemed
-  to be better than ORM, while in reality it has no
-  differences.
+  to be better than ORM, while from object thinking standpoint
+  it is even worse.
 keywords:
   - ActiveRecord
   - ActiveRecord ORM
   - ActiveRecord design pattern
   - ActiveRecord java
-  - ActiveRecord rails
+  - ActiveRecord anti-pattern
 ---
 
 You probably remember what [I think]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
-about ORM, a very popular design pattern. In a nutshell, I believe that
-it encourages us to tear our objects apart
+about ORM, a very popular design pattern. In a nutshell,
+it encourages us to turn objects into
+[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), which are
+anemic, passive, and not objects at all. The consequences are usually dramatic &mdash;
+the entire programming paradigm shifts from object-oriented to procedural.
+I've tried to explain that at a [JPoint](https://www.youtube.com/watch?v=aER4uwyFbqQ) and
+[JEEConf](https://www.youtube.com/watch?v=63tS3HNmhiE) this year. After
+each talk a few people told me that what I'm suggesting is called
+[ActiveRecord](https://en.wikipedia.org/wiki/Active_record_pattern) or
+[Repository](https://msdn.microsoft.com/en-us/library/ff649690.aspx) patterns.
 
 <!--more-->
 
+Moreover, they claimed that ActiveRecord actually solve the problem
+I find in the ORM. They said that I should explain in my talks that
+what I'm offering (SQL-speaking objects) already exists and has a name &mdash;
+ActiveRecord.
+
+I disagree. Moreover, I think that ActiveRecord is even worse that ORM.
+
+The ORM consists of two parts: the session and
+[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities".
+The entities have no functionality, they are just primitive containers for the
+data transfered from and to the session. And that is what the problem is &mdash;
+objects don't encapsulate, but expose data. Why this is wrong and why that's
+against the object paradigm you can read
+[here]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+[here]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
+[here]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) and
+[here]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
+Now, let's just agree that it's very wrong and move on.
+
+What solution ActiveRecord is proposing? How is it solving the problem?
+It moves the engine into the **parent class**, which all our entities inherit from.
+This is how we were supposed to save our entity to the database in the ORM
+scenario (pseudo-code):
+
+{% highlight java %}
+book.setTitle("Java in a Nutshell");
+session.update(book);
+{% endhighlight %}
+
+And this is what we do with an ActiveRecord:
+
+{% highlight java %}
+book.setTitle("Java in a Nutshell");
+book.update();
+{% endhighlight %}
+
+That method `update()` is defined in book's parent class and is using
+book as a **data container**. When being called, it fetches data
+from the container (the book) and updates the database. How is it
+different from the ORM? There is absolutely no difference. The book
+is still a container that knows nothing about SQL and any persistence
+mechanisms.
+
+What's even worse in ActiveRecord, comparing to ORM, is that it **hides**
+the fact that objects are data containers. A book, in the second snippet,
+**pretends** to be a [proper object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
+while in reality it's just a dumb data bag.
+
+I believe, this is what misguided those who were saying
+that my SQL-speaking objects concept is exactly the same as ActiveRecord
+design pattern (or Repository, which is almost exactly the same).
+
+No, it's not.
