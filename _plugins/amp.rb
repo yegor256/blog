@@ -13,6 +13,8 @@ module Jekyll
       @path = path
       @html = html
         .gsub(/<script ?.*\/>/, '')
+        .gsub(/<figure>(.*)<\/figure>/, "\\1")
+        .gsub(/<figcaption>(.*)<\/figcaption>/, "\\1")
         .gsub(/<img ?(.*)\/>/, "<amp-img \\1>")
         .gsub(/<svg ?.*>.*<\/svg>/, "<p>[graph removed]</p>")
         .gsub(/<aside ?.*>.*<\/aside>/, '')
