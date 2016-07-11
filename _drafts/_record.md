@@ -44,6 +44,7 @@ data transfered from and to the session. And that is what the problem is &mdash;
 objects don't encapsulate, but expose data. Why this is wrong and why that's
 against the object paradigm you can read
 [here]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+[here]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
 [here]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
 [here]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}) and
 [here]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
