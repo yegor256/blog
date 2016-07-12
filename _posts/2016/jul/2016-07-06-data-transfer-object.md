@@ -32,7 +32,9 @@ was not the sole inventor of DTO, but he made it legal and recommended
 its use. With all due respect, he was just wrong.
 
 The key idea of object-oriented programming is to hide data
-behind objects. This idea has a name: encapsulation. In OOP, data
+behind objects. This idea has a name:
+[encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29).
+In OOP, data
 must not be visible. [Objects]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 must only have access to the data they
 encapsulate and never to the data encapsulated by other objects. There
