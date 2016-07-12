@@ -31,6 +31,8 @@ interpretation of each principle.
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."
 
+{% quote If the customer is not satisfied, we find another customer %}
+
 By focusing on "satisfy the customer", Agile adepts totally forget about
 the "through" part. They think that a [happy customer]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 is their true objective, while "continuous delivery" is something that obviously
@@ -42,8 +44,6 @@ true spirit a professional software team should adhere to. I believe that's what
 "early and continuous", which will result to customer satisfaction. We focus on improving
 our process, not satisfying the customer. Satisfaction is the consequence, not
 the primary objective.
-
-{% quote If the customer is not satisfied, we find another customer %}
 
 **Principle #2**:
 "Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage."
@@ -72,6 +72,8 @@ times a day.
 **Principle #4**:
 "Business people and developers must work together daily throughout the project."
 
+{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilites %}
+
 Working together doesn't mean working without clearly defined
 rules and processes. However, most teams understand this principle as
 a legalization of chaos. They think that since we work together, we don't need to define roles
@@ -83,6 +85,8 @@ shorter response cycles. It definitely doesn't mean lack of roles and responsibi
 
 **Principle #5**:
 "Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done."
+
+{% quote Trust doesn't mean lack of control %}
 
 Trust is a great word and concept, but it doesn't replace another equally great
 word &mdash; control. Most Agile teams think that trust means
@@ -99,6 +103,8 @@ of completing assigned tasks on their own.
 
 **Principle #6**:
 "The most efficient and effective method of conveying information to and within a development team is face-to-face conversation."
+
+{% quote Face-to-face doesn't mean at the same office, especially now %}
 
 Face-to-face doesn't mean sitting in the same office. The Manifesto doesn't say
 anything about co-located or distributed teams. It's obvious that in modern software projects,
@@ -125,6 +131,8 @@ is suggesting to do though.
 
 **Principle #8**:
 "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
+
+{% quote We must remember that any project is first of all a money burning machine %}
 
 This doesn't mean that we should indefinitely [burn]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 customers' money. Yes, we
@@ -171,6 +179,8 @@ and doable work order.
 **Principle #11**:
 "The best architectures, requirements, and designs emerge from self-organizing teams."
 
+{% quote Self-organized doesn't mean un-organized %}
+
 Self-organized doesn't mean un-organized. This rule is often translated
 as a legalization of **anarchy**. We don't need any project managers,
 processes, discipline, rules, or policies &mdash; we've got
@@ -185,8 +195,6 @@ a team that has clearly defined roles from the inside;
 a team with a perfect inner discipline;
 a team with professional [management]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Not with the lack of all that.
-
-{% quote Self-organized doesn't mean un-organized %}
 
 **Principle #12**:
 "At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly."
