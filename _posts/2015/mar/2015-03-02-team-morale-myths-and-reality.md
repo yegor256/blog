@@ -74,7 +74,8 @@ tries to hide mistakes that have been made.
 
 **Responsibility Is Always Personal**.
 The most demotivating word used in task descriptions is "together". Don't use it.
-Each task has to be personally and individually assigned (no matter what the Agile Manifesto says).
+Each task has to be personally and individually assigned (no matter what the
+[Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) says).
 Everybody is responsible for his or her own success or failure. How their results
 join together and lead to a mutual success or failure &mdash; that's _your_ business.
 Whether you succeed or fail, we all will see. Once you say we all have to succeed together,
@@ -97,7 +98,8 @@ how small and down-to-earth they are, will give you much more respect than
 many-hour-long speeches about our fantastic future.
 
 **Don't Say a Word About Agile**.
-Even though Agile is a great attitude-changing and mind-shifting concept,
+Even though [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+is a great attitude-changing and mind-shifting concept,
 it is absolutely inapplicable in practice, mostly because it is too
 abstract. When you're proclaiming in the office that we should value
 "working software over comprehensive documentation", it sounds like

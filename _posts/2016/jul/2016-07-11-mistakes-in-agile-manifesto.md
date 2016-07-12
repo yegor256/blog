@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Agile Manifesto: Twelve Mistakes in Twelve Principles"
-date: 2016-06-20
+title: "12 Mistakes in Agile Manifesto"
+date: 2016-07-11
 place: Palo Alto, CA
 tags: management agile
 description: |
-  Agile Manifesto is a great document, which is wrongly
+  Agile Manifesto is a great document, which very often is wrongly
   understood by most Agile managers and programmers.
 keywords:
   - agile
@@ -25,6 +25,8 @@ misunderstand them. Consequently, here is a summary of what's going on and my
 interpretation of each principle.
 
 <!--more-->
+
+{% picture /images/2016/07/hail-caesar.jpg 0 Hail, Caesar! (2016) by Coen Brothers %}
 
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."

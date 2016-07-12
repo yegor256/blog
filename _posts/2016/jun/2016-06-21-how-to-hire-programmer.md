@@ -67,7 +67,8 @@ introduce him to your wife. All of this will seriously affect
 the quality of the product he is creating.
 
 **Don't Specify Too Much**.
-That's what Agile recommends, and I second that &mdash; face-to-face communication is more
+That's what [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+recommends, and I second that &mdash; face-to-face communication is more
 valuable than documentation. Don't write any documentation, don't specify
 what exactly you need to develop, and don't think too much about your "user stories".
 It's all in the past. Modern software engineers figure everything out

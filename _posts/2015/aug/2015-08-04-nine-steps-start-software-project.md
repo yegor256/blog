@@ -16,7 +16,8 @@ keywords:
   - software prototyping steps
 ---
 
-Agile or not, a software project starts with a requirements analysis
+[Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+or not, a software project starts with a requirements analysis
 and definition. We basically define what needs to be done somehow, be it on a
 piece of napkin or a 100-page Word document. The next step is to
 turn this into a working piece of software as fast as possible and by spending as
