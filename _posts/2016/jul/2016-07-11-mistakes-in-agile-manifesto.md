@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "12 Mistakes in Agile Manifesto"
+title: "Twelve Mistakes in Agile Manifesto"
 date: 2016-07-11
 place: Palo Alto, CA
 tags: management agile
