@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?a8ec9f4"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?a8ec9f4"/>
+    <link rel="shortcut icon" href="/favicon.ico?d99629c"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?d99629c"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?a8ec9f4"/>
-    <link rel="stylesheet" href="/css/icons.css?a8ec9f4"/>
+    <link rel="stylesheet" href="/css/layout.css?d99629c"/>
+    <link rel="stylesheet" href="/css/icons.css?d99629c"/>
     <link rel="canonical" href="http://www.yegor256.com/p/16/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/16/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 16)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?a8ec9f4"></script>
+    <script src="/js/global.js?d99629c"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;188</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;189</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -130,6 +130,74 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2014/06/26/sass-in-java-webapp.html">
+            SASS in Java Webapp
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2014-06-26T00:00:00+00:00">
+              26 June 2014
+            </time>
+          </li>
+          <li>
+            111 words
+          </li>
+          <li>
+            
+            
+              a minute
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2014/06/26/sass-in-java-webapp.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p><a href="http://sass-lang.com/">SASS</a> is a powerful and very popular
+language for writing <a href="http://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
+style sheets. This is how I&#39;m using SASS in my Maven projects.</p>
+
+<p>First, I change the extensions of <code>.css</code> files to
+<code>.scss</code> and move them from <code>src/main/webapp/css</code> to <code>src/main/scss</code>.</p>
+
+<p>Then, I configure the <a href="https://github.com/Jasig/sass-maven-plugin">sass-maven-plugin</a>
+(get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>nl.geodienstencentrum.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>sass-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>generate-css<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>update-stylesheets<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;sassSourceDirectory&gt;</span>${basedir}/src/main/scss<span class="nt">&lt;/sassSourceDirectory&gt;</span>
+        <span class="nt">&lt;destination&gt;</span>${project.build.directory}/css<span class="nt">&lt;/destination&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+      </div>
+      <p>
+        <a href="/2014/06/26/sass-in-java-webapp.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -697,64 +765,6 @@ from <a href="http://www.slf4j.org/">slf4j</a>):</p>
       </div>
       <p>
         <a href="/2014/05/23/avoid-java-static-logger.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2014/05/21/mysql-maven-plugin.html">
-            MySQL Maven Plugin
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2014-05-21T00:00:00+00:00">
-              21 May 2014
-            </time>
-          </li>
-          <li>
-            591 words
-          </li>
-          <li>
-            
-            
-              
-                  three
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2014/05/21/mysql-maven-plugin.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>I was using MySQL in a few Java web projects and
-found out there was no Maven plugin that would help me to
-test my DAO classes against a real MySQL server. There are plenty
-of mechanisms to mock a database persistence layer both in
-memory and on disc. However, it is always good to make sure
-that your classes are tested against a database identical
-to the one you have in production environment.</p>
-
-<figure class='badge'><a href='http://mysql.jcabi.com'><img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/></a></figure>
-
-<p>I&#39;ve created my own Maven plugin, <a href="http://mysql.jcabi.com">jcabi-mysql-maven-plugin</a>,
-that does exactly two things: starts a MySQL server on
-<code>pre-integration-test</code> phase and shuts it down on
-<code>post-integration-test</code>.</p>
-
-      </div>
-      <p>
-        <a href="/2014/05/21/mysql-maven-plugin.html">
           continue...
         </a>
       </p>

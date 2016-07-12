@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?a8ec9f4"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?a8ec9f4"/>
+    <link rel="shortcut icon" href="/favicon.ico?d99629c"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?d99629c"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?a8ec9f4"/>
-    <link rel="stylesheet" href="/css/icons.css?a8ec9f4"/>
+    <link rel="stylesheet" href="/css/layout.css?d99629c"/>
+    <link rel="stylesheet" href="/css/icons.css?d99629c"/>
     <link rel="canonical" href="http://www.yegor256.com/p/7/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/7/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 7)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?a8ec9f4"></script>
+    <script src="/js/global.js?d99629c"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;188</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;189</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -130,6 +130,60 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2015/07/06/public-static-literals.html">
+            Public Static Literals ... Are Not a Solution for Data Duplication
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2015-07-06T00:00:00+00:00">
+              6 July 2015
+            </time>
+          </li>
+          <li>
+            557 words
+          </li>
+          <li>
+            
+            
+              
+                  three
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2015/07/06/public-static-literals.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>I have a <code>new String(array,&quot;UTF-8&quot;)</code> in one place and exactly
+the same code in another place in my app. Actually, I may have
+it in many places. And every time, I have to use that <code>&quot;UTF-8&quot;</code> constant
+in order to create a <code>String</code> from a byte array. It would be very
+convenient to define it once somewhere and reuse it, just like Apache Commons
+is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code>CharEncoding.UTF_8</code></a>
+(There are many other static literals there).
+These guys are setting a bad example! <code>public</code> <code>static</code>
+&quot;properties&quot; are as bad as
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>.</p>
+
+      </div>
+      <p>
+        <a href="/2015/07/06/public-static-literals.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -608,58 +662,6 @@ constructing mechanism.</p>
       </div>
       <p>
         <a href="/2015/05/28/one-primary-constructor.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2015/05/25/unit-test-scaffolding.html">
-            A Few Thoughts on Unit Test Scaffolding
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2015-05-25T00:00:00+00:00">
-              25 May 2015
-            </time>
-          </li>
-          <li>
-            475 words
-          </li>
-          <li>
-            
-            
-              
-                  two
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>When I start to repeat myself in unit test methods by creating
-the same objects and preparing the data to run the test,
-I feel disappointed in my design. Long test methods with a lot of code
-duplication just don&#39;t look right. To simplify and shorten them,
-there are basically two options, at least in Java: 1) private properties
-initialized through <code>@Before</code> and <code>@BeforeClass</code>, and 2) private static
-methods. They both look anti-OOP to me, and I think there is an
-alternative. Let me explain.</p>
-
-      </div>
-      <p>
-        <a href="/2015/05/25/unit-test-scaffolding.html">
           continue...
         </a>
       </p>
