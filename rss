@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-12T03:03:50+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>12 Mistakes in Agile Manifesto</title><link href="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html" rel="alternate" type="text/html" title="12 Mistakes in Agile Manifesto" /><published>2016-07-11T00:00:00+00:00</published><updated>2016-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto</id><content type="html" xml:base="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html">&lt;p&gt;Nowadays, &lt;a href=&quot;http://www.agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; is a Bible of
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-12T03:38:04+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Twelve Mistakes in Agile Manifesto</title><link href="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html" rel="alternate" type="text/html" title="Twelve Mistakes in Agile Manifesto" /><published>2016-07-11T00:00:00+00:00</published><updated>2016-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto</id><content type="html" xml:base="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html">&lt;p&gt;Nowadays, &lt;a href=&quot;http://www.agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; is a Bible of
 numerous software teams. It contains
 &lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;12 principles&lt;/a&gt; which
  show us how software development should be organized.
@@ -14,6 +14,8 @@ interpretation of each principle.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Principle #1&lt;/strong&gt;:
 &amp;quot;Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&amp;quot;&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;If the customer is not satisfied, we find another customer&lt;/aside&gt;
+
 &lt;p&gt;By focusing on &amp;quot;satisfy the customer&amp;quot;, Agile adepts totally forget about
 the &amp;quot;through&amp;quot; part. They think that a &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;happy customer&lt;/a&gt;
 is their true objective, while &amp;quot;continuous delivery&amp;quot; is something that obviously
@@ -25,8 +27,6 @@ true spirit a professional software team should adhere to. I believe that&amp;#3
 &amp;quot;early and continuous&amp;quot;, which will result to customer satisfaction. We focus on improving
 our process, not satisfying the customer. Satisfaction is the consequence, not
 the primary objective.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If the customer is not satisfied, we find another customer&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Principle #2&lt;/strong&gt;:
 &amp;quot;Welcome changing requirements, even late in development. Agile processes harness change for the customer&amp;#39;s competitive advantage.&amp;quot;&lt;/p&gt;
@@ -55,6 +55,8 @@ times a day.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Principle #4&lt;/strong&gt;:
 &amp;quot;Business people and developers must work together daily throughout the project.&amp;quot;&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Working together means quicker turnarounds in communication not lack or roles and responsibilites&lt;/aside&gt;
+
 &lt;p&gt;Working together doesn&amp;#39;t mean working without clearly defined
 rules and processes. However, most teams understand this principle as
 a legalization of chaos. They think that since we work together, we don&amp;#39;t need to define roles
@@ -66,6 +68,8 @@ shorter response cycles. It definitely doesn&amp;#39;t mean lack of roles and re
 
 &lt;p&gt;&lt;strong&gt;Principle #5&lt;/strong&gt;:
 &amp;quot;Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.&amp;quot;&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Trust doesn&amp;#39;t mean lack of control&lt;/aside&gt;
 
 &lt;p&gt;Trust is a great word and concept, but it doesn&amp;#39;t replace another equally great
 word &amp;mdash; control. Most Agile teams think that trust means
@@ -82,6 +86,8 @@ of completing assigned tasks on their own.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Principle #6&lt;/strong&gt;:
 &amp;quot;The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.&amp;quot;&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Face-to-face doesn&amp;#39;t mean at the same office, especially now&lt;/aside&gt;
 
 &lt;p&gt;Face-to-face doesn&amp;#39;t mean sitting in the same office. The Manifesto doesn&amp;#39;t say
 anything about co-located or distributed teams. It&amp;#39;s obvious that in modern software projects,
@@ -108,6 +114,8 @@ is suggesting to do though.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Principle #8&lt;/strong&gt;:
 &amp;quot;Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.&amp;quot;&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;We must remember that any project is first of all a money burning machine&lt;/aside&gt;
 
 &lt;p&gt;This doesn&amp;#39;t mean that we should indefinitely &lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;burn&lt;/a&gt;
 customers&amp;#39; money. Yes, we
@@ -154,6 +162,8 @@ and doable work order.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Principle #11&lt;/strong&gt;:
 &amp;quot;The best architectures, requirements, and designs emerge from self-organizing teams.&amp;quot;&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Self-organized doesn&amp;#39;t mean un-organized&lt;/aside&gt;
+
 &lt;p&gt;Self-organized doesn&amp;#39;t mean un-organized. This rule is often translated
 as a legalization of &lt;strong&gt;anarchy&lt;/strong&gt;. We don&amp;#39;t need any project managers,
 processes, discipline, rules, or policies &amp;mdash; we&amp;#39;ve got
@@ -168,8 +178,6 @@ a team that has clearly defined roles from the inside;
 a team with a perfect inner discipline;
 a team with professional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;management&lt;/a&gt;.
 Not with the lack of all that.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Self-organized doesn&amp;#39;t mean un-organized&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Principle #12&lt;/strong&gt;:
 &amp;quot;At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.&amp;quot;&lt;/p&gt;
