@@ -53,9 +53,9 @@ releasing and deploying operations
   <body>
     <article>
       <h1>Rultor + Travis</h1>
-      <figure class='badge'><a href='http://www.travis-ci.org'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Ftravis-logo.png' style='width:100px;max-width:100%;' alt='badge'/></a></figure>
+      <figure class='badge'><a href='http://www.travis-ci.org'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Ftravis-logo.png' style='width:100px;max-width:100%;' alt='badge' layout='responsive'/></a></figure>
 
-<figure class='badge'><a href='http://www.rultor.com'><amp-img src='http://doc.rultor.com/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/></a></figure>
+<figure class='badge'><a href='http://www.rultor.com'><amp-img src='http://doc.rultor.com/images/logo.svg' style='width:100px;max-width:100%;' alt='badge' layout='responsive'/></a></figure>
 
 <p><a href="http://www.rultor.com">Rultor</a> is a coding team assistant.
 <a href="http://travis-ci.org">Travis</a> is a hosted
@@ -75,7 +75,7 @@ is a Maven plugin for <a href="/2014/05/21/mysql-maven-plugin.html">MySQL integr
 <a href="https://github.com/jcabi/jcabi-mysql-maven-plugin/pull/35">#35</a> with a new feature.
 I reviewed the request and asked Rultor to merge it into <code>master</code>:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-mysql-35.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-mysql-35.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>As you can see, an actual merge operation was made by Rultor.
 I gave him access to the project by adding his GitHub account to
@@ -84,7 +84,7 @@ the list of project collaborators.</p>
 <p>Before giving a &quot;go ahead&quot; to Rultor I checked the status
 of the pre-build reported by Travis:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-mysql-35-2.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-mysql-35-2.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>Travis found a new commit in the pull request and immediately
 (without any interaction from my side) triggered a build in that branch.
@@ -105,7 +105,7 @@ of the project in Travis: either &quot;failing&quot; or &quot;passing&quot;.</p>
 <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP AspectJ aspects</a>.
 We configured Travis to build it continuously. This is the badge it produces (the left one):</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-aspects.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-aspects.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>Again, let me stress that even through
 <a href="/2014/07/21/read-only-master-branch.html">read-only master</a>
@@ -134,7 +134,7 @@ with a new feature. The request was merged successfully into <code>master</code>
 <p>Then, Rultor was instructed by myself that <code>master</code> branch should be
 released to RubyGems and a new version to set is 1.5:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-jekyll-4.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-jekyll-4.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>Rultor executed a simple script, <a href="http://doc.rultor.com/basics.html#release">pre-configured</a> in its
 <a href="https://github.com/yegor256/jekyll-github-deploy/blob/master/.rultor.yml"><code>.rultor.yml</code></a>:</p>
@@ -193,7 +193,7 @@ and ran <code>mvn clean deploy</code> in it.</p>
 
 <p>Maven deployed the application to <a href="http://www.cloudbees.com">CloudBees</a>:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-s3auth-195.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F07%2Frultor-s3auth-195.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>The overall procedure took 21 minutes, as you see the in the report generated by Rultor.</p>
 

@@ -52,7 +52,7 @@ a free hosted dispatcher of incoming notification traffic.
   <body>
     <article>
       <h1>Wring.io, a Dispatcher of GitHub Notifications</h1>
-      <figure class='badge'><a href='http://www.wring.io'><amp-img src='http://www.wring.io/images/logo.svg' style='width:92px;max-width:100%;' alt='badge'/></a></figure>
+      <figure class='badge'><a href='http://www.wring.io'><amp-img src='http://www.wring.io/images/logo.svg' style='width:92px;max-width:100%;' alt='badge' layout='responsive'/></a></figure>
 
 <p>I&#39;m taking participation in over 50 repositories in GitHub. <a href="http://www.teamed.io">We</a>
 manage all of our projects there. GitHub is sending me hundreds of emails
@@ -78,7 +78,7 @@ That&#39;s it.</p>
 
 <p>Let&#39;s see an example. First I&#39;m creating a new pipe:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-1.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-1.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>It&#39;s a JSON object. Property <code>class</code> must be set to
 <code>io.wring.agents.github.AgGithub</code>. This is the name of the Java
@@ -90,7 +90,7 @@ open source, so you can see how the class actually works:
 that I should create first in GitHub. The server will connect to GitHub
 on my behalf and under my credentials:</p>
 
-<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-2.png' style='width:600px;max-width:100%;' alt='figure'/></figure>
+<figure class='unprintable'><amp-img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F03%2Fwring-2.png' style='width:600px;max-width:100%;' alt='figure' layout='responsive'/></figure>
 
 <p>Property <code>ignore</code> must have an array of strings. Each item is a matching
 pattern. I can use a text or a regular expression. By default, it&#39;s
