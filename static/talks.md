@@ -81,13 +81,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/object-thinking.png" class="future-talk" alt="Object Thinking 2016"/>
-**How Anemic Objects Kill OOP**<br/>
-[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1)<br/>
-Palo Alto, CA<br/>
-12 July 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
 _Something about SeedRamp_<br/>
 [Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
@@ -154,6 +147,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking 2016"/>
+How Anemic Objects Kill OOP;
+[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
+Palo Alto, CA;
+12 July 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/how-anemic-objects-kill-oop),
+[video](https://www.youtube.com/watch?v=pynZF10U880).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
