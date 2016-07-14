@@ -15,7 +15,7 @@ module Jekyll
         .gsub(/<script ?.*\/>/, '')
         .gsub(/<figure>(.*)<\/figure>/, "\\1")
         .gsub(/<figcaption>(.*)<\/figcaption>/, "\\1")
-        .gsub(/<img ?(.*)\/>/, "<amp-img \\1 layout='responsive'/>")
+        .gsub(/<img ?(.*)\/>/, '') #"<amp-img \\1 layout='responsive'/>"
         .gsub(/<svg ?.*>.*<\/svg>/, "<p>[graph removed]</p>")
         .gsub(/<aside ?.*>.*<\/aside>/, '')
       write(site.dest)
