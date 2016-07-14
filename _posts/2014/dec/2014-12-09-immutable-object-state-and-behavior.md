@@ -37,7 +37,8 @@ even when its title is changed frequently. Let me explain how.
 
 ## Identity, State, and Behavior
 
-Basically, there are three elements in every object:
+Basically, there are three elements in every
+[object]({% pst 2016/jul/2016-07-14-what-is-object %}):
 identity, state, and behavior. *Identity* is what distinguishes our `document`
 from other objects, *state* is what a document
 knows about itself (a.k.a. "encapsulated knowledge"), and

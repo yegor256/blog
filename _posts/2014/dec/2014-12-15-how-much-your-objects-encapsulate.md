@@ -37,7 +37,8 @@ this case I have to &mdash; it depends.
 
 As [we discussed before]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 a good object is a representative of a real-life entity. Such an entity
-exists outside of the object's living environment. The object knows
+exists outside of the object's living environment. The
+[object]({% pst 2016/jul/2016-07-14-what-is-object %}) knows
 how to access it and how to communicate with it.
 
 What is that real-life entity in the example above? Each class

@@ -43,7 +43,8 @@ Here is my list of qualities of a good object.
 
 {% badge /images/2014/11/good-object-1.png 250 %}
 
-Before we start talking about objects, let's define what a *class* is. It
+Before we start talking about [objects]({% pst 2016/jul/2016-07-14-what-is-object %}),
+let's define what a *class* is. It
 is a place where objects are being born (a.k.a. *instantiated*). The main responsibility
 of a class is to *construct* new objects on demand and *destruct* them when
 they are not used anymore. A class knows how its children should look

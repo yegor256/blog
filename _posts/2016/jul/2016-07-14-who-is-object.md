@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who Is an Object?"
-date: 2016-06-26
+date: 2016-07-14
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -19,12 +19,14 @@ keywords:
 There are thousands of books about object-oriented programming and
 hundreds of object-oriented languages, and I believe most (read "all") of them
 give us an incorrect definition of an "object". That's why the entire
-OOP world is so full of misconceptions and simple mistakes. Their
+OOP world is so full of misconceptions and mistakes. Their
 definition of an object is limited by the hardware architecture they
-are working with. The definition is very primitive and mechanical.
+are working with and that's why is very primitive and mechanical.
 I'd like to introduce a better one.
 
 <!--more-->
+
+{% picture /images/2016/07/jackass-the-movie.jpg 0 Jackass: The Movie (2002) by Jeff Tremaine %}
 
 What is an object? I've done a little research, and this is what I've found:
 
@@ -111,7 +113,7 @@ x86 architecture. It just _knows_ somehow what attributes belong to an object.
 
 Thus, in our language, objects are no longer boxes with data both technically
 and conceptually. They know where the data is, but they don't
-contain the data. They _represent_ the data, as well as other objects and entities.
+_contain_ the data. They _represent_ the data, as well as other objects and entities.
 Indeed, the object `c` in our imaginary language represents two other objects:
 a VIN and an engine.
 
@@ -120,7 +122,7 @@ definition of an object is correct in most programming languages on the
 market at the moment, it is very incorrect conceptually because it
 treats an object as a box with data that are too visible to
 the outside world. That visibility provokes us to think _procedurally_
-and try to access that data as soon as possible.
+and try to access that data as much as possible.
 
 {% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
 

@@ -74,7 +74,8 @@ inherited from **procedural** programming, mostly because we were used to a
 functional decomposition paradigm back then.
 
 Assuming you agree with the arguments and want to stop using utility classes,
-I'll show by example how these creatures can be replaced with proper objects.
+I'll show by example how these creatures can be replaced with proper
+[objects]({% pst 2016/jul/2016-07-14-what-is-object %}).
 
 ## Procedural Example
 
