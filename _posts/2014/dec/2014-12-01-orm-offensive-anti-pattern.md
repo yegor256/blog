@@ -27,7 +27,7 @@ youtube:
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 that violates all principles of
 object-oriented programming, tearing
-[objects]({% pst 2016/jul/2016-07-14-what-is-object %})
+[objects]({% pst 2016/jul/2016-07-14-who-is-object %})
 apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
