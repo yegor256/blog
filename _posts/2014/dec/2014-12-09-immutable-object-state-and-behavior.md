@@ -37,7 +37,8 @@ even when its title is changed frequently. Let me explain how.
 
 ## Identity, State, and Behavior
 
-Basically, there are three elements in every object:
+Basically, there are three elements in every
+[object]({% pst 2016/jul/2016-07-14-what-is-object %}):
 identity, state, and behavior. *Identity* is what distinguishes our `document`
 from other objects, *state* is what a document
 knows about itself (a.k.a. "encapsulated knowledge"), and
@@ -305,7 +306,8 @@ including `StringBuffer`, `ByteArrayOutputStream`, etc.
 The `Memory` class would explicitly emphasize the mission of an object
 in a software program, which is to be a *data animator*. An object is not
 holding data; it is animating it. The data exists somewhere, and it is
-anemic, static, motionless, stationary, etc. The data is **dead**
+[anemic]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
+static, motionless, stationary, etc. The data is **dead**
 while the object is **alive**. The role of an object is to make a piece of data
 alive, to *animate* it but not to become a piece of data. An object needs some
 knowledge in order to gain access to that dead piece of data. An object

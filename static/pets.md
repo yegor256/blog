@@ -17,6 +17,11 @@ exclude_from_search: true
 
 It's a full list of my pet projects (which are still alive). If interested
 in helping any of them, don't hesitate to [email](mailto:pets@yegor256.com).
+Also, there are a number of projects, which I haven't fully started yet,
+because I don't have enough time. If you're a Java or Ruby programmer, I'd be
+interested to discuss a co-founding opportunity for you: I will pay for
+all project expenses and you will write software. We will be co-founders.
+[Email me](mailto:cofounder@yegor256.com).
 
 {% badge http://doc.rultor.com/images/logo.svg 70 http://www.rultor.com %}
 

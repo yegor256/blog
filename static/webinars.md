@@ -22,11 +22,11 @@ development, object-oriented programming and project management.
 <!-- Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NW9yMXVoMjM0YWMyZ2tnZG45cmkxNmo5OG8geWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)! -->
 
 {% youtube Xk9tIqwca3k video-left %}
-July 6, 2016:
+July 7, 2016:
 **Smart Classes and Functionality-Poor Interfaces**
-We will discuss why java.io.InputStream design is wrong,
+We discussed why java.io.InputStream design was wrong,
 what Smart-Classes are for and why interfaces must be functionality poor.
-The discussion will be based on this blog post:
+The discussion was based on this blog post:
 [Why InputStream Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 
 {% youtube YBQoTZ-1X-o video-left %}

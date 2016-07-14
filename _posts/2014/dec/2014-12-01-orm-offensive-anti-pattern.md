@@ -15,7 +15,7 @@ keywords:
   - orm is an anti-pattern
   - orm is antipattern
 translated:
-  Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
+  - Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 book: elegant-objects 3.5
 youtube:
   - DEqcn4-freM
@@ -26,7 +26,9 @@ youtube:
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 that violates all principles of
-object-oriented programming, tearing objects apart and turning them into dumb and passive
+object-oriented programming, tearing
+[objects]({% pst 2016/jul/2016-07-14-what-is-object %})
+apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
 manipulations on them. What is the alternative? **SQL-speaking objects**.
@@ -148,7 +150,9 @@ session.save(post);
 {% endhighlight %}
 
 This is how almost every ORM works. The basic principle is always the same &mdash;
-ORM objects are anemic envelopes with data. We are talking with the ORM
+ORM objects are
+[anemic envelopes]({% pst 2016/jul/2016-07-06-data-transfer-object %})
+with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
 us send our requests to the ORM framework and understand its response.
 Besides getters and setters, objects have no other methods. They don't even know

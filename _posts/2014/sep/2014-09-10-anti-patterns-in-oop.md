@@ -29,6 +29,8 @@ Here they come:
 
  * [Getters and Setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 
+ * [Data Transfer Object (DTO)]({% pst 2016/jul/2016-07-06-data-transfer-object %})
+
  * [Object-Relational Mapping (ORM)]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 
  * Singletons

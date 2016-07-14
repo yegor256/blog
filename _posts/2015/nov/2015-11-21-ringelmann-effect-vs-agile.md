@@ -64,6 +64,7 @@ You can try to repeat this (or a similar experiment) in your team and check
 the results. Post them below in the comments; it would be interesting to see whether
 it does or doesn't work in your case.
 
-Now, my main question. If I understand it right, Agile promotes group
+Now, my main question. If I understand it right,
+[Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) promotes group
 responsibility and discourages **individualism**. How does it go along
 with the Ringelmann Effect? Any thoughts?

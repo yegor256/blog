@@ -103,13 +103,13 @@ months, 170 working hours per month) &mdash; which equates to about $350k. There
 the project
 [cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) a whopping
 
-<p style="color:red;text-align:center;font-size:2em;">$3.98 per line</p>
+<p class="red center em2">$3.98 per line</p>
 
 The second project, in the same three month period, produced 45k new lines and
 removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
 (approximately 350 working hours in 650 tasks). Thus, the project cost merely:
 
-<p style="color:green;text-align:center;font-size:2em;">&cent;13 per line</p>
+<p class="green center em2">&cent;13 per line</p>
 
 This also means that programmers were writing approximately 150 lines per hour
 or over a thousand per day.

@@ -57,6 +57,9 @@ It's OK.
 [<span class='green'>Composite</span>](https://en.wikipedia.org/wiki/Composite_pattern).
 Good one; check out [this]({% pst 2015/oct/2015-10-01-vertical-horizontal-decorating %}) too.
 
+[<span class='red'>Data Transfer Object</span>](https://en.wikipedia.org/wiki/Data_transfer_object).
+It's just [a shame]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
+
 [<span class='green'>Decorator</span>](https://en.wikipedia.org/wiki/Decorator_pattern).
 My [favorite]({% pst 2015/feb/2015-02-26-composable-decorators %}) one.
 I highly recommend you use it.

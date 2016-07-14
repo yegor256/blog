@@ -15,7 +15,7 @@ keywords:
   - object oriented principles
   - object oriented programming concepts
 translated:
-  Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
+  - Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
 book: elegant-objects 2.3
 youtube:
   - WSgP85kr6eU
@@ -43,7 +43,8 @@ Here is my list of qualities of a good object.
 
 {% badge /images/2014/11/good-object-1.png 250 %}
 
-Before we start talking about objects, let's define what a *class* is. It
+Before we start talking about [objects]({% pst 2016/jul/2016-07-14-what-is-object %}),
+let's define what a *class* is. It
 is a place where objects are being born (a.k.a. *instantiated*). The main responsibility
 of a class is to *construct* new objects on demand and *destruct* them when
 they are not used anymore. A class knows how its children should look
@@ -329,7 +330,8 @@ possible to draw as a small picture. Even a regular expression can be drawn.
 
 In the opposite, here is an example of names that tell us what their owners do:
 a file reader, a text parser, a URL validator, an XML printer,
-a service locator, a singleton, a script runner, or a Java programmer. Can you draw
+a service locator, a [singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}),
+a script runner, or a Java programmer. Can you draw
 any of them? No, you can't. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.
 

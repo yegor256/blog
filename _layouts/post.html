@@ -33,6 +33,17 @@ layout: default
           <a href="{{ site.url }}{{ page.url }}#disqus_thread">comments</a>
         </li>
       </ul>
+      {% if page.translated %}
+        <ul class="unprintable subline">
+          <li>translated:</li>
+          {% for hash in page.translated %}
+            {% for link in hash %}
+              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          {% endfor %}
+          <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
+        </ul>
+      {% endif %}
       <p class="unprintable">{{ page | tags }}</p>
       <div class="buttons notranslate desktop-only">
         <nav class="share" role="navigation">

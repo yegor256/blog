@@ -17,7 +17,7 @@ keywords:
   - null is bad
   - null is evil
 translated:
-  Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
+  - Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 book: elegant-objects 2.6
 youtube:
   - o3aNJX7AP3M
@@ -68,7 +68,8 @@ public Employee getByName(String name) {
 {% endhighlight %}
 
 The second possible alternative is to [fail fast]({% pst 2015/aug/2015-08-25-fail-fast %})
-by throwing an **Exception** when you can't return an object:
+by throwing an **Exception** when you can't return an
+[object]({% pst 2016/jul/2016-07-14-what-is-object %}):
 
 {% highlight java %}
 public Employee getByName(String name) {

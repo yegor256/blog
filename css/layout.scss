@@ -21,6 +21,8 @@
 
 %light-gray { color: $light-gray; }
 
+.em2 { font-size: 2em; }
+.center { text-align: center; }
 .green { color: $green; }
 .red { color: $red; }
 .orange { color: $orange; }
@@ -406,6 +408,7 @@ figure {
     font-size: .8em;
     left: .5em;
     line-height: 1em;
+    max-width: 90%;
     position: absolute;
   }
 

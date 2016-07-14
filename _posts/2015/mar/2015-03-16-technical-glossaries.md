@@ -74,7 +74,8 @@ A glossary is not a formality; it's a key instrument of a software architect
 and all other team members.
 
 **We Prefer Working Software Over Comprehensive Documentation**.
-This is what the Agile Manifesto says, and it's true. But the key word here is
+This is what the [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+says, and it's true. But the key word here is
 "comprehensive". We don't need comprehensive documentation, but we need
 a glossary. It's a key element in any project, and it simply can't
 be replaced by working software. No working software can help us

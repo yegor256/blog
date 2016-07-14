@@ -81,6 +81,13 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
+_Something about SeedRamp_<br/>
+[Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
+Salamanca, Spain<br/>
+7-8 September 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
@@ -89,7 +96,7 @@ Swansea, UK<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
-**Practical Example of AOP with AspectJ** and
+**Practical Example of AOP with AspectJ**<br/>
 **Qulice, a Java Quality Police**<br/>
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/)<br/>
 Kyiv, Ukraine<br/>
@@ -97,17 +104,33 @@ Kyiv, Ukraine<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
-**Built-in Fake Objects** and
-**ORM is an Offensive Anti-Pattern**;<br/>
+**Built-in Fake Objects**<br/>
+**ORM is an Offensive Anti-Pattern**<br/>
 [Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
 Malmö, Sweden<br/>
 7-11 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
+**Seven Deadly Sins of a Software Project**<br>
+[TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
+Tallinn, Estonia<br/>
+15-18 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
 [DevTernity 2016](http://www.devternity.com)<br/>
 Riga, Latvia<br/>
 1 December 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/live360-2016.png" class="future-talk" alt="AppDevTrends 2016"/>
+**Meeting-Free Software Development in Distributed Teams**<br>
+**Microservices as Chat Bots Are the Future**<br>
+**Continuous Integration May Have Negative Effects**<br>
+[AppDevTrends 2016](https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx)<br/>
+Orlando, Florida<br/>
+7-8 December 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
@@ -126,6 +149,15 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking 2016"/>
+How Anemic Objects Kill OOP;
+[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
+Palo Alto, CA;
+12 July 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/how-anemic-objects-kill-oop),
+[video](https://www.youtube.com/watch?v=pynZF10U880).
+
+<div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://pbs.twimg.com/media/ClAYuDZUUAAFbVn.jpg:large" class="past-talk" alt="SLC DevOpsDays 2016"/>
 Eight Maturity Levels of Continuous Integration;
@@ -133,7 +165,6 @@ Eight Maturity Levels of Continuous Integration;
 Salt Lake City, USA;
 15 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
-[photos](...),
 [video](https://www.youtube.com/watch?v=3dJP_LtUGgg).
 There were about 250 people with just one track and a pretty good
 organization, even though the budget was rather low. I liked the event and

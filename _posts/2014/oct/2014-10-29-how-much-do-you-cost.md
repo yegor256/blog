@@ -13,7 +13,7 @@ keywords:
   - hourly rate of programmer
   - software developer hourly rate
 translated:
-  Japanese: http://postd.cc/how-much-do-you-cost/
+  - Japanese: http://postd.cc/how-much-do-you-cost/
 ---
 
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
