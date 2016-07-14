@@ -28,13 +28,13 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?9c1c1a9"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?9c1c1a9"/>
+    <link rel="shortcut icon" href="/favicon.ico?6b96bf9"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?6b96bf9"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
     <link rel="author" href="http://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="publisher" href="http://plus.google.com/u/0/114792568016408327418" />
-    <link rel="stylesheet" href="/css/layout.css?9c1c1a9"/>
-    <link rel="stylesheet" href="/css/icons.css?9c1c1a9"/>
+    <link rel="stylesheet" href="/css/layout.css?6b96bf9"/>
+    <link rel="stylesheet" href="/css/icons.css?6b96bf9"/>
     <link rel="canonical" href="http://www.yegor256.com/p/6/" />
     <link rel="amphtml" href="http://www.yegor256.com/p/6/" />
     <title>Blog About Computers - Yegor Bugayenko
@@ -42,7 +42,7 @@
         (page 6)
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?9c1c1a9"></script>
+    <script src="/js/global.js?6b96bf9"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -73,7 +73,7 @@
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
             <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;189</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;190</a></li>
             <li><a href="/webinars.html" title="webinars">webinars</a></li>
             <li><a href="/talks.html" title="talks">talks</a></li>
             <li><a href="/books.html" title="books">books</a></li>
@@ -139,6 +139,59 @@
       </header>
     </div>
     
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2015/09/10/testing-exit-criteria.html">
+            When Do You Stop Testing?
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2015-09-10T00:00:00+00:00">
+              10 September 2015
+            </time>
+          </li>
+          <li>
+            682 words
+          </li>
+          <li>
+            
+            
+              
+                  three
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://www.yegor256.com/2015/09/10/testing-exit-criteria.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>There is a software to be tested. There is a team of testers. There is
+some money in the budget. There is some time in the schedule. We start
+right now. Testers are trying to break the product, finding bugs,
+reporting bugs, communicating with programmers when necessary, doing
+their best to find what&#39;s wrong. Eventually they stop and say
+&quot;we&#39;re done&quot;. How do they know when to stop? When there is enough
+testing? It&#39;s obvious &mdash; when there are <strong>no more bugs left</strong> and the
+product can be shipped! If you think like this, I have bad news for you.
+You&#39;re <strong>fundamentally wrong</strong>.</p>
+
+      </div>
+      <p>
+        <a href="/2015/09/10/testing-exit-criteria.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
   <div class="wrapper">
     <section class="front">
       <header>
@@ -604,61 +657,6 @@ software design discipline ... and it&#39;s very <em>sad</em> to see it.</p>
       </div>
       <p>
         <a href="/2015/07/13/meetings-are-legalized-robbery.html">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
-
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="/2015/07/09/catch-if-cant-otherwise.html">
-            Catch Me If You ... Can't Do Otherwise
-          </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="2015-07-09T00:00:00+00:00">
-              9 July 2015
-            </time>
-          </li>
-          <li>
-            612 words
-          </li>
-          <li>
-            
-            
-              
-                  three
-                
-              minutes
-            
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="http://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        <p>I don&#39;t know whether it&#39;s an anti-pattern or just a common and very popular
-mistake, but I see it everywhere and simply must write about it. I&#39;m talking
-about <strong>exception catching without
-<a href="/2015/12/01/rethrow-exceptions.html">re-throwing</a></strong>. I&#39;m talking about something like
-this Java code:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
-  <span class="n">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
-
-      </div>
-      <p>
-        <a href="/2015/07/09/catch-if-cant-otherwise.html">
           continue...
         </a>
       </p>

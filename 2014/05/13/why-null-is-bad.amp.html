@@ -94,7 +94,8 @@ design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
 <span class="o">}</span></code></pre></figure>
 
 <p>The second possible alternative is to <a href="/2015/08/25/fail-fast.html">fail fast</a>
-by throwing an <strong>Exception</strong> when you can&#39;t return an object:</p>
+by throwing an <strong>Exception</strong> when you can&#39;t return an
+<a href="/2016/07/14/who-is-object.html">object</a>:</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
