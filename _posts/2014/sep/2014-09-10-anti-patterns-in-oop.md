@@ -33,7 +33,7 @@ Here they come:
 
  * [Object-Relational Mapping (ORM)]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 
- * Singletons
+ * [Singletons]({% pst 2016/jun/2016-06-27-singletons-must-die %})
 
  * [Controllers, Managers, Validators]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
 
