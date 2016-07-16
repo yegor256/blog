@@ -105,3 +105,5 @@ Alan Kay:
 "Java and C++ make you think that the new ideas are like the old ones.
 Java is the most distressing thing to happen to computing since MS-DOS."
 
+
+ OOP tends to be bloated, containing a lot of useless boilerplate code, so for the exact same amount of functionality, software written in a different style would be smaller and easier to think about.

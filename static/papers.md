@@ -2,9 +2,9 @@
 layout: static
 title: "Papers"
 description: |
-  Here is a full list of all my academic papers,
-  including conference proceedings, journals,
-  etc.
+  Here is a full list of all my writings that are
+  not here on the blog, including conference proceedings,
+  journal articles, patents, etc.
 permalink: papers.html
 keywords:
   - publications
