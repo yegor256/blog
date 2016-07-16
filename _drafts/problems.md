@@ -68,6 +68,21 @@ idiotic "object model" crap."
 at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey), JVM Languages Summit 2009 Keynote:
 "..."
 
+<!-- 2010 -->
+[Rich Hickey](https://github.com/richhickey)
+at [SE Radio](http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/), Episode 158:
+"I think that large objected-oriented programs struggle
+with increasing complexity as you build this large object graph of
+mutable objects. You know, trying to understand and keep in your mind
+what will happen when you call a method and what will the side-effects be."
+
+<!-- 2011 -->
+[Joe Armstrong](http://joearms.github.io/)
+in [Why OO Sucks](http://harmful.cat-v.org/software/OO_programming/why_oo_sucks):
+"Objects bind functions and data structures together in
+indivisible units. I think this is a fundamental error since functions and
+data structures belong in totally different worlds."
+
 <!-- 2012 -->
 [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike)
 [here](https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb):
