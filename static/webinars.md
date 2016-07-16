@@ -19,7 +19,15 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-<!-- Add it to your [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NW9yMXVoMjM0YWMyZ2tnZG45cmkxNmo5OG8geWVnb3IyNTZAbQ&tmsrc=yegor256%40gmail.com)! -->
+{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20160803T180000Z%2f20160803T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7DYr8GYzJ6Q&text=The%20Philosophy%20of%20Bugs%20(webinar)&location=YouTube&details=Webinar%20%2317%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7DYr8GYzJ6Q %}
+{% youtube 7DYr8GYzJ6Q video-left %}
+August 3, 2016:
+**The Philosophy of Bugs**
+We will discuss what bugs are for, how they must be understood by the management,
+how many of them we should expect to find and
+what is in general the right philosophy of bug tracking.
+These articles will be mentioned:
+[Why InputStream Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 
 {% youtube Xk9tIqwca3k video-left %}
 July 7, 2016:
