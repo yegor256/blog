@@ -28,7 +28,7 @@ So, I googled a bit and this is what I found (in chronological order).
 
 <!-- 1989 -->
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
-in TUG LINES journal, Issue 32, August 1989:
+in "TUG LINES", Issue 32, August 1989:
 "Object oriented programs are offered as alternatives to correct ones"
 and
 "Object-oriented programming is an exceptionally bad idea
@@ -52,6 +52,7 @@ I did not have C++ in mind."
 in [The Hundred-Year Language](http://www.paulgraham.com/hundred.html):
 "Object-oriented programming offers a sustainable way to write spaghetti code."
 
+<!-- 2007 -->
 [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)
 in [this email](http://article.gmane.org/gmane.comp.version-control.git/57918/):
 "C++ is a horrible language...
@@ -67,6 +68,13 @@ idiotic "object model" crap."
 [Rich Hickey](https://github.com/richhickey)
 at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey), JVM Languages Summit 2009 Keynote:
 "..."
+
+<!-- 2010 -->
+[Oscar Nierstrasz](https://en.wikipedia.org/wiki/Oscar_Nierstrasz)
+in [Ten Things I Hate About Object-Oriented Programming](http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming):
+"OOP is about taming complexity through modeling, but we have not
+mastered this yet, possibly because we have difficulty distinguishing
+real and accidental complexity."
 
 <!-- 2010 -->
 [Rich Hickey](https://github.com/richhickey)
@@ -97,6 +105,13 @@ in [All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs
 "What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways it is still essentially procedural code."
 
+<!-- 2014 -->
+[Lawrence Krubner](https://www.linkedin.com/in/krubner)
+in [Object Oriented Programming is an expensive disaster which must end](http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end):
+"We now know that OOP is an experiment that failed.
+It is time to move on. It is time that we, as a community, admit that
+this idea has failed us, and we must give up on it."
+
 <hr/>
 
 I can't prove these quotes (maybe you can help?):
@@ -105,5 +120,3 @@ Alan Kay:
 "Java and C++ make you think that the new ideas are like the old ones.
 Java is the most distressing thing to happen to computing since MS-DOS."
 
-
- OOP tends to be bloated, containing a lot of useless boilerplate code, so for the exact same amount of functionality, software written in a different style would be smaller and easier to think about.
