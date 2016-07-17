@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>An Empty Line is a Code Smell</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/11/03/empty-line-code-smell.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/11/03/empty-line-code-smell.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ for immediate refactoring.
         "keywords": ["empty line in method body", "empty line is evil", "empty line in function body", "empty line is bad", "avoid empty lines in method body"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -56,114 +58,42 @@ for immediate refactoring.
       <p>The subject may sound like a joke, but it is not. An empty line,
 used as a separator of instructions in an object method, is a
 <a href="https://en.wikipedia.org/wiki/Code_smell">code smell</a>.
-Why? In short, because a method should <strong>not</strong> contain &quot;parts&quot;. A method
+Why? In short, because a method should <strong>not</strong> contain "parts". A method
 should always <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">do one thing</a>
 and its functional decomposition should be done by language constructs
 (for example, new methods), and <strong>never</strong> by empty lines.</p>
 
-<!--more-->
 
-<p>Look at this Java class (it does smell, doesn&#39;t it?):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextFile</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">File</span> <span class="n">file</span><span class="o">;</span>
-  <span class="n">TextFile</span><span class="o">(</span><span class="n">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">grep</span><span class="o">(</span><span class="n">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
-    <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span>
-      <span class="k">new</span> <span class="nf">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)))</span> <span class="o">{</span>
-      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">line</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-          <span class="k">break</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
+<p>Look at this Java class (it does smell, doesn't it?):</p>
 
-    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
-        <span class="o">++</span><span class="n">total</span><span class="o">;</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">total</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
-method <code>grep</code> smell? Because it does two things instead of one &mdash;
+method <code>grep</code> smell? Because it does two things instead of one —
 it loads and it greps.</p>
 
 <p>If we make a rule, to avoid empty lines in method bodies, the method
-will have to be refactored in order to preserve the &quot;separation of concerns&quot;
+will have to be refactored in order to preserve the "separation of concerns"
 introduced by that empty line:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextFile</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">File</span> <span class="n">file</span><span class="o">;</span>
-  <span class="n">TextFile</span><span class="o">(</span><span class="n">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">grep</span><span class="o">(</span><span class="n">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">count</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lines</span><span class="o">(),</span> <span class="n">regex</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="kd">private</span> <span class="kt">int</span> <span class="nf">count</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lines</span><span class="o">,</span> <span class="n">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
-        <span class="o">++</span><span class="n">total</span><span class="o">;</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">total</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">private</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">lines</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
-    <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span>
-      <span class="k">new</span> <span class="nf">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)))</span> <span class="o">{</span>
-      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">line</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-          <span class="k">break</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
-      <span class="o">}</span>
-      <span class="k">return</span> <span class="n">lines</span><span class="o">;</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I believe it is obvious that this new class has methods that are
 much more cohesive and readable. Now every method is doing exactly
-one thing, and it&#39;s easy to understand which thing it is.</p>
+one thing, and it's easy to understand which thing it is.</p>
 
 <p>This idea about avoiding empty lines is also applicable to other languages,
 not just Java/C++/Ruby, etc. For example, this CSS code is
 definitely begging for refactoring:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.container</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">80%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
 
-  <span class="k">font-size</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span>
-  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
 
 <p>The empty line here is telling us (screaming at us, actually) that this <code>.container</code>
 class is too complex and has to be decomposed into two classes:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wide</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">80%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.important</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span>
-  <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+
 
 <p>Unfortunately, using empty lines to separate blocks of code is a very common habit.
 Moreover, very often I see empty blocks of two or even three lines, which are all
@@ -175,7 +105,7 @@ methods and a properly designed method must have up to ten instructions
 Empty lines inside methods encourage us to break this awesome rule and
 turn them into multi-page poems.</p>
 
-<p>Of course, it&#39;s easier to just click <code>enter</code> a few times and continue to
+<p>Of course, it's easier to just click <code>enter</code> a few times and continue to
 code right in the same method, instead of thinking and refactoring first.
 This laziness will eventually lead to code that is hardly maintainable
 at all.</p>
@@ -183,7 +113,7 @@ at all.</p>
 <p>To prevent this from happening in your projects, stop using empty
 lines inside methods, completely. Ideally, prohibit them in your automated build.
 In <a href="/2014/08/13/strict-code-quality-control.html">qulice.com</a>,
-a static analysis tool we&#39;re using in all Java projects,
+a static analysis tool we're using in all Java projects,
 we created a custom Checkstyle check that prohibits empty lines in every
 method.</p>
 

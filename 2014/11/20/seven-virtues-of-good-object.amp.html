@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Seven Virtues of a Good Object</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ look at it from a different perspective.
         "keywords": ["object in java", "object oriented programming", "object oriented methodology", "object oriented principles", "object oriented programming concepts"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -64,47 +66,47 @@ these days usually organized into classes.</p>
 is a very common misconception of a class in object-oriented programming. Classes
 are not organizers of functions. And objects are not data structures.</p>
 
-<p>So what is a &quot;proper&quot; object? Which one is not a proper one?
+<p>So what is a "proper" object? Which one is not a proper one?
 What is the difference? Even though it is a very polemic subject, it is very important.
 Unless we understand what an object is, how can we write object-oriented software?
 Well, thanks to Java, Ruby, and others, we can. But how good will it be?
 Unfortunately, this is not an exact science, and there are many opinions.
 Here is my list of qualities of a good object.</p>
 
-<!--more-->
+
 
 <h2 id="class-vs-object">Class vs. Object</h2>
 
-<figure class='badge'></figure>
+
 
 <p>Before we start talking about <a href="/2016/07/14/who-is-object.html">objects</a>,
-let&#39;s define what a <em>class</em> is. It
+let's define what a <em>class</em> is. It
 is a place where objects are being born (a.k.a. <em>instantiated</em>). The main responsibility
 of a class is to <em>construct</em> new objects on demand and <em>destruct</em> them when
 they are not used anymore. A class knows how its children should look
 and how they should behave. In other words, it knows what <em>contracts</em> they should obey.</p>
 
-<p>Sometimes I hear classes being called &quot;object templates&quot;
+<p>Sometimes I hear classes being called "object templates"
 (for example, <a href="https://en.wikipedia.org/wiki/Class_%28computer_programming%29">Wikipedia says so</a>).
 This definition is not correct because it places classes into a passive position. This definition
 assumes that someone will get a template and build an object by using it.
-This may be true, technically speaking, but conceptually it&#39;s wrong. Nobody else
-should be involved &mdash; there are only a class and its children. An
-object asks a class to create another object, and the class constructs it; that&#39;s it.
+This may be true, technically speaking, but conceptually it's wrong. Nobody else
+should be involved — there are only a class and its children. An
+object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">photo</span> <span class="o">=</span> <span class="n">File</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">&#39;</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">photo</span><span class="o">.</span><span class="na">png</span><span class="err">&#39;</span><span class="o">)</span></code></pre></figure>
+
 
 <p>The object <code>photo</code> is constructed by the class <code>File</code> (<code>new</code> is an entry point to the class).
-Once constructed, the object is acting on its own. It shouldn&#39;t know who constructed it
+Once constructed, the object is acting on its own. It shouldn't know who constructed it
 and how many more brothers and sisters it has in the class. Yes, I mean
 that <a href="https://en.wikipedia.org/wiki/Reflection_%28computer_programming%29">reflection</a>
-is a terrible idea, but I&#39;ll write more about it in one of the next posts :)
-Now, let&#39;s talk about objects and their best and worst sides.</p>
+is a terrible idea, but I'll write more about it in one of the next posts :)
+Now, let's talk about objects and their best and worst sides.</p>
 
 <h2 id="1-he-exists-in-real-life">1. He Exists in Real Life</h2>
 
-<figure class='badge'></figure>
+
 
 <p>First of all, an object is a <strong>living organism</strong>. Moreover, an object
 should be <a href="https://en.wikipedia.org/wiki/Anthropomorphism">anthropomorphized</a>, i.e.
@@ -114,69 +116,66 @@ of functions. Instead, it is an independent entity with its own life cycle,
 its own behavior, and its own habits.</p>
 
 <p>An employee, a department, an HTTP request, a table in MySQL,
-a line in a file, or a file itself are proper objects &mdash; because they exist in
+a line in a file, or a file itself are proper objects — because they exist in
 real life, even when our software is turned off. To be more precise, an object is a
 <em>representative</em> of a real-life creature. It is a <em>proxy</em> of that
 real-life creature in front of all other objects. Without
-such a creature, there is &mdash; obviously &mdash; no object.</p>
+such a creature, there is — obviously — no object.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">photo</span> <span class="o">=</span> <span class="n">File</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">&#39;</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">photo</span><span class="o">.</span><span class="na">png</span><span class="err">&#39;</span><span class="o">)</span>
-<span class="n">puts</span> <span class="n">photo</span><span class="o">.</span><span class="na">width</span><span class="o">()</span></code></pre></figure>
 
-<p>In this example, I&#39;m asking <code>File</code> to construct a new object <code>photo</code>, which will
+
+<p>In this example, I'm asking <code>File</code> to construct a new object <code>photo</code>, which will
 be a representative of a real file on disk. You may say that a file
 is also something virtual and exists only when the computer is turned on.
-I would agree and refine the definition of &quot;real life&quot; as follows: It is
+I would agree and refine the definition of "real life" as follows: It is
 everything that exists aside from the scope of the program the object
-lives in. The disk file is outside the scope of our program; that&#39;s why
+lives in. The disk file is outside the scope of our program; that's why
 it is perfectly correct to create its representative inside the program.</p>
 
 <p>A controller, a parser, a filter, a validator, a service locator,
 a singleton, or a factory are <strong>not</strong> good objects
 (yes, most GoF patterns are
 <a href="/2016/02/03/design-patterns-and-anti-patterns.html">anti-patterns</a>!).
-They don&#39;t exist apart from your software, in real life. They
+They don't exist apart from your software, in real life. They
 are invented just to tie other objects together. They are artificial
-and fake creatures. They don&#39;t represent anyone. Seriously, an XML parser
-&mdash; who does it represent? Nobody.</p>
+and fake creatures. They don't represent anyone. Seriously, an XML parser
+— who does it represent? Nobody.</p>
 
 <p>Some of them may become good if they change their names;
 others can never excuse their existence. For example, that XML parser can be
-renamed to &quot;parseable XML&quot; and start to represent an XML document
+renamed to "parseable XML" and start to represent an XML document
 that exists outside of our scope.</p>
 
-<p>Always ask yourself, &quot;What is
-the real-life entity behind my object?&quot; If you can&#39;t find an answer,
+<p>Always ask yourself, "What is
+the real-life entity behind my object?" If you can't find an answer,
 start thinking about refactoring.</p>
 
 <h2 id="2-he-works-by-contracts">2. He Works by Contracts</h2>
 
-<figure class='badge'></figure>
+
 
 <p>A good object always works by contracts. He expects to be hired not
 because of his personal merits but because he obeys the contracts. On the
-other hand, when we hire an object, we shouldn&#39;t discriminate and expect some specific
+other hand, when we hire an object, we shouldn't discriminate and expect some specific
 object from a specific class to do the work for us. We should expect <em>any</em>
 object to do what our contract says. As long as the object does what
 we need, we should not be interested in his class of origin, his sex, or his religion.</p>
 
 <p>For example, I need to show a photo on the screen.
-I want that photo to be read from a file in PNG format. I&#39;m
+I want that photo to be read from a file in PNG format. I'm
 contracting an object from class <code>DataFile</code> and asking him to give me
 the binary content of that image.</p>
 
-<p>But wait, do I care where exactly the content will come from &mdash; the file on disk, or
-an HTTP request, or maybe a document in Dropbox? Actually, I don&#39;t. All I care about
+<p>But wait, do I care where exactly the content will come from — the file on disk, or
+an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care about
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Binary</span> <span class="o">{</span>
-  <span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Now, any object from any class (not just <code>DataFile</code>) can work for me.
 All he has to do, in order to be eligible, is to obey the contract
-&mdash; by implementing the interface <code>Binary</code>.</p>
+— by implementing the interface <code>Binary</code>.</p>
 
 <p>The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has
@@ -195,27 +194,17 @@ to be unique. If there is nothing to encapsulate, an object may
 have identical clones, which I believe is bad. Here is an example
 of a bad object, which may have clones:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">HTTPStatus</span> <span class="kd">implements</span> <span class="n">Status</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="n">URL</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">);</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">HttpURLConnection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">page</span><span class="o">.</span><span class="na">openConnection</span><span class="o">()</span>
-    <span class="o">).</span><span class="na">getResponseCode</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I can create a few instances of class <code>HTTPStatus</code>, and all of them will be
 equal to each other:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HTTPStatus</span><span class="o">();</span>
-<span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HTTPStatus</span><span class="o">();</span>
-<span class="k">assert</span> <span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">);</span></code></pre></figure>
+
 
 <p>Obviously utility classes, which have only static methods,
-can&#39;t instantiate good objects. More generally, utility classes
-don&#39;t have any of the merits mentioned in this article and can&#39;t
-even be called &quot;classes&quot;. They are simply terrible abusers of an object paradigm
+can't instantiate good objects. More generally, utility classes
+don't have any of the merits mentioned in this article and can't
+even be called "classes". They are simply terrible abusers of an object paradigm
 and exist in modern object-oriented languages only because their
 inventors enabled static methods.</p>
 
@@ -227,23 +216,11 @@ entity should stay the same through the entire life of the object. In other
 words, an object should never betray those whom he represents. He should
 never change owners. :)</p>
 
-<p>Be aware that immutability doesn&#39;t mean that all methods always return the same values.
+<p>Be aware that immutability doesn't mean that all methods always return the same values.
 Instead, a good immutable object is very dynamic.
 However, he never changes his internal state. For example:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Immutable</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="nc">HTTPStatus</span> <span class="kd">implements</span> <span class="n">Status</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="n">URL</span> <span class="n">page</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">HTTPStatus</span><span class="o">(</span><span class="n">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">page</span> <span class="o">=</span> <span class="n">url</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">HttpURLConnection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">page</span><span class="o">.</span><span class="na">openConnection</span><span class="o">()</span>
-    <span class="o">).</span><span class="na">getResponseCode</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Even though the method <code>read()</code> may return different values, the
 object is immutable. He points to a certain web page and will
@@ -264,7 +241,7 @@ In a nutshell, immutable objects are better because:</p>
 <li>They prevent <a href="/2014/05/13/why-null-is-bad.html">NULL references</a>.</li>
 </ul>
 
-<p>Of course, a good object doesn&#39;t have
+<p>Of course, a good object doesn't have
 <a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>, which
 may change his state and force him to betray the URL. In other words,
 introducing a <code>setURL()</code> method would be a terrible mistake in class <code>HTTPStatus</code>.</p>
@@ -273,17 +250,12 @@ introducing a <code>setURL()</code> method would be a terrible mistake in class 
 more cohesive, solid, and understandable designs, as this article
 explains: <a href="/2014/11/07/how-immutability-helps.html">How Immutability Helps</a>.</p>
 
-<h2 id="5-his-class-doesn-39-t-have-anything-static">5. His Class Doesn&#39;t Have Anything Static</h2>
+<h2 id="5-his-class-doesn-39-t-have-anything-static">5. His Class Doesn't Have Anything Static</h2>
 
-<p>A static method implements a behavior of a class, not an object. Let&#39;s say
+<p>A static method implements a behavior of a class, not an object. Let's say
 we have class <code>File</code>, and his children have method <code>size()</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">File</span> <span class="kd">implements</span> <span class="n">Measurable</span> <span class="o">{</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span>
-    <span class="c1">// calculate the size of the file and return</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>So far, so good; the method <code>size()</code> is there because of the contract <code>Measurable</code>,
 and every object of class <code>File</code> will be able to measure his size. A terrible
@@ -292,34 +264,29 @@ mistake would be to design this class with a static method instead
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">a utility class</a>
 and is very popular in Java, Ruby, and almost every OOP language):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// TERRIBLE DESIGN, DON&#39;T USE!</span>
-<span class="kd">class</span> <span class="nc">File</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">(</span><span class="n">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// calculate the size of the file and return</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This design runs completely against the object-oriented paradigm. Why?
-Because static methods turn object-oriented programming into &quot;class-oriented&quot; programming.
-This method, <code>size()</code>, exposes the behavior of the class, not of his objects. What&#39;s
-wrong with this, you may ask? Why can&#39;t we have both objects and classes
-as first-class citizens in our code? Why can&#39;t both of them have methods and properties?</p>
+Because static methods turn object-oriented programming into "class-oriented" programming.
+This method, <code>size()</code>, exposes the behavior of the class, not of his objects. What's
+wrong with this, you may ask? Why can't we have both objects and classes
+as first-class citizens in our code? Why can't both of them have methods and properties?</p>
 
 <p>The problem is that with class-oriented programming,
-decomposition doesn&#39;t work anymore. We can&#39;t break down a complex problem
+decomposition doesn't work anymore. We can't break down a complex problem
 into parts, because only a single instance of a class exists in the entire
 program. The power of OOP is that it allows us to use objects as an instrument
 for scope decomposition. When I instantiate an object inside a method, he
 is dedicated to my specific task. He is perfectly isolated from
 all other objects around the method. This object is a <em>local variable</em>
 in the scope of the method. A class, with his static methods, is always
-a <em>global variable</em> no matter where I use him. Because of that, I can&#39;t
+a <em>global variable</em> no matter where I use him. Because of that, I can't
 isolate my interaction with this variable from others.</p>
 
 <p>Besides being conceptually against object-oriented principles, public static
 methods have a few practical drawbacks:</p>
 
-<p>First, it&#39;s <strong>impossible to mock</strong> them
+<p>First, it's <strong>impossible to mock</strong> them
 (Well, you can use <a href="https://code.google.com/p/powermock/">PowerMock</a>,
 but this will then be the most terrible decision
 you could make in a Java project ... I made it once, a few years ago).</p>
@@ -329,19 +296,19 @@ work with static variables, which are accessible from all threads. You can
 make them thread-safe, but this will always require explicit
 synchronization.</p>
 
-<p>Every time you see a public static method, start rewriting immediately. I don&#39;t
+<p>Every time you see a public static method, start rewriting immediately. I don't
 even want to mention how terrible static (or global) variables are. I think
 it is just obvious.</p>
 
 <h2 id="6-his-name-is-not-a-job-title">6. His Name Is Not a Job Title</h2>
 
-<figure class='badge'></figure>
+
 
 <p>The name of an object should tell us what this object <strong>is</strong>, not what
 it <strong>does</strong>, just like we name objects in real life: book instead of
 page aggregator, cup instead of water holder, T-shirt instead of body dresser.
 There are exceptions, of course, like printer or computer, but
-they were invented just recently and by those who didn&#39;t read this article. :)</p>
+they were invented just recently and by those who didn't read this article. :)</p>
 
 <p>For example, these names tell us who their owners are:
 an apple, a file, a series of HTTP requests, a socket, an XML document, a list of users, a regular
@@ -352,15 +319,15 @@ possible to draw as a small picture. Even a regular expression can be drawn.</p>
 a file reader, a text parser, a URL validator, an XML printer,
 a service locator, a <a href="/2016/06/27/singletons-must-die.html">singleton</a>,
 a script runner, or a Java programmer. Can you draw
-any of them? No, you can&#39;t. These names are not suitable for good objects.
+any of them? No, you can't. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.</p>
 
-<p>In general, avoid names that end with &quot;-er&quot; &mdash; most of them are bad.</p>
+<p>In general, avoid names that end with "-er" — most of them are bad.</p>
 
-<p>&quot;What is the alternative of a <code>FileReader</code>?&quot; I hear you asking. What would
-be a better name? Let&#39;s see. We already have <code>File</code>, which is a representative
+<p>"What is the alternative of a <code>FileReader</code>?" I hear you asking. What would
+be a better name? Let's see. We already have <code>File</code>, which is a representative
 of a real-world file on disk. This representative is not powerful enough for us,
-because he doesn&#39;t know how to read the content of the file. We want to create
+because he doesn't know how to read the content of the file. We want to create
 a more powerful one that will have that ability. What would we call him?
 Remember, the name should say what he is, not what he does. What is he? He
 is a file that has data; not just a file, like <code>File</code>, but a more sophisticated
@@ -370,68 +337,43 @@ one, with data. So how about <code>FileWithData</code> or simply <code>DataFile<
 Always think about <strong>what it is</strong> rather than what it does. Give your
 objects real, meaningful names instead of job titles.</p>
 
-<p>More about this in <a href="/2015/03/09/objects-end-with-er.html">Don&#39;t Create Objects That End With -ER</a>.</p>
+<p>More about this in <a href="/2015/03/09/objects-end-with-er.html">Don't Create Objects That End With -ER</a>.</p>
 
 <h2 id="7-his-class-is-either-final-or-abstract">7. His Class Is Either Final or Abstract</h2>
 
-<figure class='badge'></figure>
+
 
 <p>A good object comes from either a final or abstract class. A <code>final</code> class is one that
-can&#39;t be extended via inheritance. An <code>abstract</code> class is one that
-can&#39;t have children. Simply put, a class should either say, &quot;You can never break
-me; I&#39;m a black box for you&quot; or &quot;I&#39;m broken already; fix me first and then use&quot;.</p>
+can't be extended via inheritance. An <code>abstract</code> class is one that
+can't have children. Simply put, a class should either say, "You can never break
+me; I'm a black box for you" or "I'm broken already; fix me first and then use".</p>
 
-<p>There is nothing in between. A final class is a black box that you can&#39;t modify
-by any means. He works as he works, and you either use him or throw him away. You can&#39;t
+<p>There is nothing in between. A final class is a black box that you can't modify
+by any means. He works as he works, and you either use him or throw him away. You can't
 create another class that will inherit his properties. This is not allowed
 because of that <code>final</code> modifier. The only way to extend such a final class
-is through decoration of his children. Let&#39;s say I have the class <code>HTTPStatus</code> (see
-above), and I don&#39;t like him. Well, I like him, but he&#39;s not powerful enough
+is through decoration of his children. Let's say I have the class <code>HTTPStatus</code> (see
+above), and I don't like him. Well, I like him, but he's not powerful enough
 for me. I want him to
 <a href="/2015/12/01/rethrow-exceptions.html">throw</a>
 an exception if HTTP status is over 400. I want
 his method, <code>read()</code>, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">OnlyValidStatus</span> <span class="kd">extends</span> <span class="n">HTTPStatus</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="nf">OnlyValidStatus</span><span class="o">(</span><span class="n">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="kd">super</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">code</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimException</span><span class="o">(</span><span class="s">&quot;unsuccessful HTTP code&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
 once we override the method <code>read()</code> in the child class, all methods from the
-parent class start to use his new version. We&#39;re literally injecting
-a new &quot;piece of implementation&quot; right into the class. Philosophically
+parent class start to use his new version. We're literally injecting
+a new "piece of implementation" right into the class. Philosophically
 speaking, this is an offense.</p>
 
 <p>On the other hand, to extend a final class, you have to treat him like a black box
 and decorate him with your own implementation (a.k.a.
 <a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator Pattern</a>):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">OnlyValidStatus</span> <span class="kd">implements</span> <span class="n">Status</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Status</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">OnlyValidStatus</span><span class="o">(</span><span class="n">Status</span> <span class="n">status</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">status</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">code</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimException</span><span class="o">(</span><span class="s">&quot;unsuccessful HTTP code&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Make sure that this class is implementing the same
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
@@ -441,36 +383,26 @@ call will be intercepted and implemented in a different way, if necessary.
 In this design, we treat the original object as a black box and never
 touch his internal logic.</p>
 
-<p>If you don&#39;t use that <code>final</code> keyword, anyone (including yourself) will
+<p>If you don't use that <code>final</code> keyword, anyone (including yourself) will
 be able to extend the class and ... offend him :( So a class without <code>final</code>
 is a bad design.</p>
 
-<p>An abstract class is the exact opposite case &mdash; he tells us that
-he is incomplete and we can&#39;t use him &quot;as is&quot;. We have to inject
+<p>An abstract class is the exact opposite case — he tells us that
+he is incomplete and we can't use him "as is". We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as <code>abstract</code> methods.
 For example, our <code>HTTPStatus</code> may look like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ValidatedHTTPStatus</span> <span class="kd">implements</span> <span class="n">Status</span> <span class="o">{</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
-    <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">isValid</span><span class="o">())</span> <span class="o">{</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimException</span><span class="o">(</span><span class="s">&quot;unsuccessful HTTP code&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>As you see, the class doesn&#39;t know how exactly to validate the HTTP
+
+<p>As you see, the class doesn't know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through
-overloading the method <code>isValid()</code>. We&#39;re not going to offend him with
+overloading the method <code>isValid()</code>. We're not going to offend him with
 this inheritance, since he defended all other methods with <code>final</code> (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.</p>
 
-<p>To summarize, your class should either be <code>final</code> or <code>abstract</code> &mdash;
+<p>To summarize, your class should either be <code>final</code> or <code>abstract</code> —
 nothing in between.</p>
 
     </article>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Object Behavior Must Not Be Configurable</title>
-    <link rel="canonical" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ bigger and less cohesive objects.
         "keywords": ["settings object", "parameters object", "decorator pattern", "decorator pattern java", "object configuration"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -54,154 +56,54 @@ bigger and less cohesive objects.
     <article>
       <h1>Object Behavior Must Not Be Configurable</h1>
       <p>Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects
-are mutable &mdash; we <strong>configure</strong> them. We change their behavior by
+are mutable — we <strong>configure</strong> them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
-into them. Do I have to say that it&#39;s abusive and disrespectful
+into them. Do I have to say that it's abusive and disrespectful
 from a <a href="/2014/11/20/seven-virtues-of-good-object.html">philosophical</a>
-point of view? I can, but let&#39;s take a look at
+point of view? I can, but let's take a look at
 it from a practical perspective.</p>
 
-<!--more-->
 
-The Take (2009) by David Drury
 
-<p>Let&#39;s say there is a class that is supposed to read a web page and
+
+
+<p>Let's say there is a class that is supposed to read a web page and
 return its content:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
-      <span class="s">&quot;UTF-8&quot;</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Looks simple and straight-forward, right? Yes, it&#39;s a rather cohesive
+
+<p>Looks simple and straight-forward, right? Yes, it's a rather cohesive
 and solid class. Here is how we use it to read the content of Google
 front page:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
+
 
 <p>Everything is fine until we start making this class more powerful.
-Let&#39;s say we want to configure the encoding. We don&#39;t always want to use <code>&quot;UTF-8&quot;</code>.
+Let's say we want to configure the encoding. We don't always want to use <code>"UTF-8"</code>.
 We want it to be configurable. Here is what we do:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Done, the encoding is encapsulated and configurable. Now, let&#39;s say we
+
+<p>Done, the encoding is encapsulated and configurable. Now, let's say we
 want to change the behavior of the class for the situation of an empty
-page. If an empty page is loaded, we want to return <code>&quot;&lt;html/&gt;&quot;</code>. But not
+page. If an empty page is loaded, we want to return <code>"&lt;html/&gt;"</code>. But not
 always. We want this to be configurable. Here is what we do:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">,</span>
-    <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">always</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span> <span class="o">=</span> <span class="n">always</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
-    <span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="s">&quot;&lt;html/&gt;&quot;</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>The class is getting bigger, huh? It&#39;s great, we&#39;re good programmers and our
+
+<p>The class is getting bigger, huh? It's great, we're good programmers and our
 code must be complex, right? The more complex it is, the better programmers
-we are! I&#39;m being sarcastic. Definitely
-<a href="/2015/06/29/simple-diagrams.html">not</a>! But let&#39;s move on. Now
+we are! I'm being sarcastic. Definitely
+<a href="/2015/06/29/simple-diagrams.html">not</a>! But let's move on. Now
 we want our class to proceed anyway, even if the encoding is not
 supported on the current platform:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">encodeAnyway</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">,</span>
-    <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">always</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">encode</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span> <span class="o">=</span> <span class="n">always</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">encodeAnyway</span> <span class="o">=</span> <span class="n">encode</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span>
-  <span class="n">UnsupportedEncodingException</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
-    <span class="o">);</span>
-    <span class="n">String</span> <span class="n">html</span><span class="o">;</span>
-    <span class="k">try</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">encoding</span><span class="o">);</span>
-    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">encodeAnyway</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
-      <span class="o">}</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-    <span class="o">}</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="s">&quot;&lt;html/&gt;&quot;</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>The class is growing and becoming more and more powerful! Now it&#39;s time
+
+<p>The class is growing and becoming more and more powerful! Now it's time
 to introduce a new class, which we will call <code>PageSettings</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">PageSettings</span> <span class="n">settings</span><span class="o">;</span>
-  <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">PageSettings</span> <span class="n">stts</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">settings</span> <span class="o">=</span> <span class="n">stts</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
-    <span class="o">);</span>
-    <span class="n">String</span> <span class="n">html</span><span class="o">;</span>
-    <span class="k">try</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">getEncoding</span><span class="o">());</span>
-    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isEncodeAnyway</span><span class="o">())</span> <span class="o">{</span>
-        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
-      <span class="o">}</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">)</span>
-    <span class="o">}</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isAlwaysHtml</span><span class="o">())</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="s">&quot;&lt;html/&gt;&quot;</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Class <code>PageSettings</code> is basically a holder of parameters, without any
 behavior. It has getters, which give us access to the parameters:
@@ -213,15 +115,9 @@ look at
 <a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code>JobConf</code></a>
 from Hadoop.
 This is how we will call our highly configurable <code>Page</code>
-(I&#39;m assuming <code>PageSettings</code> is immutable):</p>
+(I'm assuming <code>PageSettings</code> is immutable):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span>
-  <span class="s">&quot;http://www.google.com&quot;</span><span class="o">,</span>
-  <span class="k">new</span> <span class="nf">PageSettings</span><span class="o">()</span>
-    <span class="o">.</span><span class="na">withEncoding</span><span class="o">(</span><span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">withAlwaysHtml</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">withEncodeAnyway</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
+
 
 <p>{However, no matter how convenient it may look at first glance,
 this approach is <strong>very wrong</strong>. Mostly because it encourages us
@@ -245,122 +141,41 @@ trigger. See the difference?</p>
 use <a href="/2015/02/26/composable-decorators.html">composable decorators</a>.
 Here is how:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">)</span>
-<span class="o">)</span>
-<span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AlwaysTextPage</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
-  <span class="n">page</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
+
 
 <p>Here is how our <code>DefaultPage</code> would look (yes, I had to change
 its design a bit):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">DefaultPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
-  <span class="n">DefaultPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>As you see, I&#39;m making it implement interface <code>Page</code>.
+
+<p>As you see, I'm making it implement interface <code>Page</code>.
 Now <code>TextPage</code> decorator, which converts an array of bytes to a text using
 provided encoding:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">TextPage</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
-  <span class="n">TextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">(),</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Now the <code>NeverEmptyPage</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">NeverEmptyPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="n">NeverEmptyPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">bytes</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">bytes</span> <span class="o">=</span> <span class="s">&quot;&lt;html/&gt;&quot;</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">bytes</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>And finally the <code>AlwaysTextPage</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">AlwaysTextPage</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">TextPage</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">source</span><span class="o">;</span>
-  <span class="n">AlwaysTextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">TextPage</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">source</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="n">String</span> <span class="n">html</span><span class="o">;</span>
-    <span class="k">try</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
-    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">source</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">).</span><span class="na">html</span><span class="o">();</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>You may say that <code>AlwaysTextPage</code> will make two calls to the encapsulated
 <code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
-HTTP request. That&#39;s true and this is by design. We don&#39;t want this
-duplicated HTTP roundtrip to happen. Let&#39;s introduce one more class,
-which will cache the page fetched (not thread-safe, but it&#39;s not important now):</p>
+HTTP request. That's true and this is by design. We don't want this
+duplicated HTTP roundtrip to happen. Let's introduce one more class,
+which will cache the page fetched (not thread-safe, but it's not important now):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">OncePage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="kt">byte</span><span class="o">[]&gt;</span> <span class="n">cache</span> <span class="o">=</span>
-    <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;;</span>
-  <span class="n">OncePage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">());</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Now, our code should look like this (pay attention, I&#39;m now using <code>OncePage</code>):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">OncePage</span><span class="o">(</span>
-    <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">)</span>
-  <span class="o">)</span>
-<span class="o">)</span>
-<span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AlwaysTextPage</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
-  <span class="s">&quot;UTF-8&quot;</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
+<p>Now, our code should look like this (pay attention, I'm now using <code>OncePage</code>):</p>
+
+
 
 <p>This is probably the most code-intensive post on this site so far, but I
-hope it&#39;s readable and I managed to convey the idea. Now we have five
+hope it's readable and I managed to convey the idea. Now we have five
 classes, each of which is rather small, easy to read and easy to reuse.</p>
 
 <p>Just follow the rule: never make classes configurable!</p>

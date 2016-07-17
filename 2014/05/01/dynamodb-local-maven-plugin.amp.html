@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>DynamoDB Local Maven Plugin</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/05/01/dynamodb-local-maven-plugin.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/05/01/dynamodb-local-maven-plugin.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ which is very useful for integration testing
         "keywords": ["dynamodb", "maven plugin", "dynamodb maven plugin", "amazon dynamodb maven plugin", "aws dynamodb maven", "maven plugin for dynamodb local", "dynamodblocal"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,7 +55,7 @@ which is very useful for integration testing
   <body>
     <article>
       <h1>DynamoDB Local Maven Plugin</h1>
-      <figure class='badge'><a href='http://aws.amazon.com/dynamodb'></a></figure>
+      
 
 <p><a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html">DynamoDB Local</a>
 is a locally running copy of Amazon DynamoDB server. Amazon developed
@@ -61,7 +63,7 @@ the tool and based it on SQLite. It acts as a real DynamoDB
 service through the RESTful API.</p>
 
 <p>I guess, DynamoDB Local is meant to be used in
-integration testing and this is how we&#39;re going to use it below.</p>
+integration testing and this is how we're going to use it below.</p>
 
 <p>I use Maven to run all of my Java integration
 testing using <a href="http://maven.apache.org/surefire/maven-failsafe-plugin/">maven-failsafe-plugin</a>.
@@ -70,63 +72,32 @@ that you start all your supplementary test stubs during
 the <code>pre-integration-test</code> phase, run your tests in the <code>integration-test</code>
 phase and then shutdown all stubs during the <code>post-integration-test</code>.</p>
 
-<figure class='badge'><a href='http://dynamodb.jcabi.com'></a></figure>
+
 
 <p>It would be great if it were possible to use DynamoDB Local
-that way. I didn&#39;t find any Maven plugins for that purpose,
-so I decided to create my own &mdash;<a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin">jcabi-dynamodb-maven-plugin</a>.</p>
+that way. I didn't find any Maven plugins for that purpose,
+so I decided to create my own —<a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin">jcabi-dynamodb-maven-plugin</a>.</p>
 
-<!--more-->
+
 
 <p>Full usage details for the plugin are explained
 on <a href="http://dynamodb.jcabi.com">its website</a>. However, here is a simple example
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>jcabi-dynamodb-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>start<span class="nt">&lt;/goal&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>stop<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;port&gt;</span>10500<span class="nt">&lt;/port&gt;</span>
-        <span class="nt">&lt;dist&gt;</span>${project.build.directory}/dynamodb-dist<span class="nt">&lt;/dist&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>The above configuration will start DynamoDB Local
 right before running integration tests, and then stop it
 immediately afterwards. The server will listen at TCP port 10500.
-While the number is used in the example, you&#39;re supposed
+While the number is used in the example, you're supposed
 to use a <a href="http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html">randomly allocated port</a> instead.</p>
 
 <p>When the DynamoDB Local server is up and running,
 we can create an integration test for it:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.amazonaws.auth.BasicAWSCredentials</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.amazonaws.services.dynamodbv2.AmazonDynamoDB</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.amazonaws.services.dynamodbv2.model.ListTablesResult</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooITCase</span> <span class="o">{</span>
-  <span class="nd">@Test</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">worksWithAwsDynamoDb</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">AmazonDynamoDB</span> <span class="n">aws</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AmazonDynamoDBClient</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">BasicAWSCredentials</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">)</span>
-    <span class="o">);</span>
-    <span class="n">aws</span><span class="o">.</span><span class="na">setEndpoint</span><span class="o">(</span><span class="s">&quot;http://localhost:10500&quot;</span><span class="o">);</span>
-    <span class="n">ListTablesResult</span> <span class="n">list</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="na">listTables</span><span class="o">();</span>
-    <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">name</span> <span class="o">:</span> <span class="n">list</span><span class="o">.</span><span class="na">getTableNames</span><span class="o">())</span> <span class="o">{</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;table found: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Of course, there won&#39;t be any output because the server
+
+<p>Of course, there won't be any output because the server
 starts without any tables. Since the server is empty,
 you should create tables before every integration test, using
 <code>createTable()</code> from <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/dynamodbv2/package-summary.html">DynamoDB SDK</a>.</p>
@@ -136,76 +107,21 @@ you should create tables before every integration test, using
 <a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin/issues/16">we introduced</a>
 a new goal <a href="http://dynamodb.jcabi.com/example-create-tables.html"><code>create-tables</code></a>:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>jcabi-dynamodb-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>create-tables<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;tables&gt;</span>
-          <span class="nt">&lt;table&gt;</span>${basedir}/src/test/dynamodb/foo.json<span class="nt">&lt;/table&gt;</span>
-        <span class="nt">&lt;/tables&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>The <code>foo.json</code> file used above should contain a JSON request
 that is sent to DynamoDB Local right after it is up and running.
 The request should comply with the specification
 of <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html">CreateTable</a> request. For example:</p>
 
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&quot;AttributeDefinitions&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;AttributeType&quot;</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;KeySchema&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;AttributeName&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;KeyType&quot;</span><span class="p">:</span> <span class="s2">&quot;HASH&quot;</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;ProvisionedThroughput&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;ReadCapacityUnits&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;WriteCapacityUnits&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;TableName&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span>
-<span class="p">}</span></code></pre></figure>
+
 
 <p>The table will be created during the
 <code>pre-integration-test</code> phase and dropped at the
 <code>post-integration-test</code> phase. Now, we can make our
 integration test much more meaningful with the help of <a href="http://dynamo.jcabi.com">jcabi-dynamo</a>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.dynamo.Attributes</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.jcabi.dynamo.Conditions</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.jcabi.dynamo.Credentials</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.jcabi.dynamo.Region</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">com.jcabi.dynamo.Table</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.hamcrest.Matchers</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooITCase</span> <span class="o">{</span>
-  <span class="nd">@Test</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">worksWithAwsDynamoDb</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Region</span><span class="o">.</span><span class="na">Simple</span><span class="o">(</span><span class="k">new</span> <span class="n">Credentials</span><span class="o">.</span><span class="na">Simple</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">));</span>
-    <span class="n">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">&quot;foo&quot;</span><span class="o">);</span>
-    <span class="n">table</span><span class="o">.</span><span class="na">put</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">Attributes</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="mi">123</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">,</span> <span class="s">&quot;Robert DeNiro&quot;</span><span class="o">)</span>
-    <span class="o">);</span>
-    <span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
-      <span class="n">table</span><span class="o">.</span><span class="na">frame</span><span class="o">().</span><span class="na">where</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="n">Conditions</span><span class="o">.</span><span class="na">equalTo</span><span class="o">(</span><span class="mi">123</span><span class="o">)),</span>
-      <span class="n">Matchers</span><span class="o">.</span><span class="na">notEmpty</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>The above test will put a new item into the table
 and then assert that the item is there.</p>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>OOP Alternative to Utility Classes</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ many consider them a terrible practice to be avoided.
         "keywords": ["static methods is evil", "static is evil", "utility class is evil", "utility class is bad", "utility classes are evil", "utility classes are bad", "utility classes is a bad practice"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,7 +55,7 @@ many consider them a terrible practice to be avoided.
   <body>
     <article>
       <h1>OOP Alternative to Utility Classes</h1>
-      <p>A utility class (aka helper class) is a &quot;structure&quot; that has only static methods
+      <p>A utility class (aka helper class) is a "structure" that has only static methods
 and encapsulates no state. <code>StringUtils</code>, <code>IOUtils</code>, <code>FileUtils</code> from
 <a href="http://commons.apache.org/">Apache Commons</a>; <code>Iterables</code> and <code>Iterators</code> from
 <a href="https://code.google.com/p/guava-libraries/">Guava</a>, and
@@ -68,21 +70,16 @@ because utility classes provide common functionality used everywhere.</p>
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// This is a terrible design, don&#39;t reuse</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NumberUtils</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Indeed, this a very convenient technique!?</p>
 
-<!--more-->
+
 
 <h2 id="utility-classes-are-evil">Utility Classes Are Evil</h2>
 
 <p>However, in an object-oriented world, utility classes are considered a very bad
-(some even may say &quot;terrible&quot;) practice.</p>
+(some even may say "terrible") practice.</p>
 
 <p>There have been many discussions of this subject; to name a few:
 <a href="http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx">Are Helper Classes Evil?</a> by Nick Malik,
@@ -96,12 +93,12 @@ reuse them when necessary:</p>
 <a href="http://stackoverflow.com/questions/3340032/utility-classes-are-evil">Utility Classes are Evil</a>.</p>
 
 <p>A dry summary of all their arguments is that utility classes are not proper
-<strong>objects</strong>; therefore, they don&#39;t fit into object-oriented world. They were
+<strong>objects</strong>; therefore, they don't fit into object-oriented world. They were
 inherited from <strong>procedural</strong> programming, mostly because we were used to a
 functional decomposition paradigm back then.</p>
 
 <p>Assuming you agree with the arguments and want to stop using utility classes,
-I&#39;ll show by example how these creatures can be replaced with proper
+I'll show by example how these creatures can be replaced with proper
 <a href="/2016/07/14/who-is-object.html">objects</a>.</p>
 
 <h2 id="procedural-example">Procedural Example</h2>
@@ -111,19 +108,12 @@ line and then save the results in another file. This is can be done with
 <a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code>FileUtils</code></a>
 from Apache Commons:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="n">File</span> <span class="n">in</span><span class="o">,</span> <span class="n">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="n">FileUtils</span><span class="o">.</span><span class="na">readLines</span><span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">);</span>
-  <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">dest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">src</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">dest</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
-  <span class="o">}</span>
-  <span class="n">FileUtils</span><span class="o">.</span><span class="na">writeLines</span><span class="o">(</span><span class="n">out</span><span class="o">,</span> <span class="n">dest</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>The above code may look clean; however, this is procedural programming, not
 object-oriented. We are manipulating data (bytes and bits) and explicitly
 instructing the computer from where to retrieve them and then where to put them
-on every single line of code. We&#39;re defining <em>a procedure of execution</em>.</p>
+on every single line of code. We're defining <em>a procedure of execution</em>.</p>
 
 <h2 id="object-oriented-alternative">Object-Oriented Alternative</h2>
 
@@ -132,26 +122,15 @@ letting them manage data when and how <em>they</em> desire. Instead of calling
 supplementary static functions, we should create objects that are capable of
 exposing the behavior we are seeking:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Max</span> <span class="kd">implements</span> <span class="n">Number</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">a</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">Max</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">intValue</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">&gt;</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">?</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This procedural call:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">NumberUtils</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span></code></pre></figure>
+
 
 <p>Will become object-oriented:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">).</span><span class="na">intValue</span><span class="o">();</span></code></pre></figure>
+
 
 <p>Potato, potato? Not really; just read on...</p>
 
@@ -160,20 +139,12 @@ exposing the behavior we are seeking:</p>
 <p>This is how I would design the same file-transforming functionality as above but
 in an object-oriented manner:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="n">File</span> <span class="n">in</span><span class="o">,</span> <span class="n">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Trimmed</span><span class="o">(</span>
-    <span class="k">new</span> <span class="nf">FileLines</span><span class="o">(</span><span class="k">new</span> <span class="nf">UnicodeFile</span><span class="o">(</span><span class="n">in</span><span class="o">))</span>
-  <span class="o">);</span>
-  <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">dest</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileLines</span><span class="o">(</span>
-    <span class="k">new</span> <span class="nf">UnicodeFile</span><span class="o">(</span><span class="n">out</span><span class="o">)</span>
-  <span class="o">);</span>
-  <span class="n">dest</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">src</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p><code>FileLines</code> implements <code>Collection&lt;String&gt;</code> and encapsulates  all file reading
 and writing operations. An instance of <code>FileLines</code> behaves exactly as a
-collection of strings and hides all I/O operations. When we iterate it &mdash; a
-file is being read. When we <code>addAll()</code> to it &mdash; a file is being written.</p>
+collection of strings and hides all I/O operations. When we iterate it — a
+file is being read. When we <code>addAll()</code> to it — a file is being written.</p>
 
 <p><code>Trimmed</code> also implements <code>Collection&lt;String&gt;</code> and encapsulates a collection of
 strings (<a href="http://en.wikipedia.org/wiki/Decorator_pattern">Decorator pattern</a>).
@@ -195,11 +166,11 @@ than using a <code>readLines()</code> method in a 80+ methods and 3000 lines uti
 
 <p>An object-oriented approach enables lazy execution. The <code>in</code> file is not read
 until its data is required. If we fail to open <code>out</code> due to some I/O error, the
-first file won&#39;t even be touched. The whole show starts only after we call <code>addAll()</code>.</p>
+first file won't even be touched. The whole show starts only after we call <code>addAll()</code>.</p>
 
 <p>All lines in the second snippet, except the last one, instantiate and compose
 smaller objects into bigger ones. This object composition is rather cheap for
-the CPU since it doesn&#39;t cause any data transformations.</p>
+the CPU since it doesn't cause any data transformations.</p>
 
 <p>Besides that, it is obvious that the second script runs in O(1) space, while the
 first one executes in O(n). This is the consequence of our procedural approach

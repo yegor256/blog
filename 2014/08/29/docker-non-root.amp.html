@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>How We Run as a Non-Root Inside Docker Container</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/08/29/docker-non-root.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/08/29/docker-non-root.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ user, read how
         "keywords": ["docker non-root", "docker without sudo", "docker non-root user", "running app inside Docker as non-root user", "running docker entirely as non-root"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,31 +55,27 @@ user, read how
   <body>
     <article>
       <h1>How We Run as a Non-Root Inside Docker Container</h1>
-      <p>Docker starts a process inside its container as a &quot;root&quot; user. In some
-cases, this is not convenient though. For example, <code>initdb</code> from PostgreSQL doesn&#39;t like to
+      <p>Docker starts a process inside its container as a "root" user. In some
+cases, this is not convenient though. For example, <code>initdb</code> from PostgreSQL doesn't like to
 be started as root and will fail. In <a href="http://www.rultor.com">rultor.com</a>,
 a DevOps team assistant,
-<a href="/2014/07/29/docker-in-rultor.html">we&#39;re using Docker</a>
+<a href="/2014/07/29/docker-in-rultor.html">we're using Docker</a>
 as a virtualization technology for every build we run.</p>
 
 <p>Here is how we change the user inside a running container, right
 after it is started.</p>
 
-<!--more-->
+
 
 <p>First, this is how we start a new Docker container:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo docker run -i -t --rm -v <span class="s2">&quot;$(pwd):/main&quot;</span> yegor256/rultor /main/entry.sh</code></pre></figure>
+
 
 <p>There are two files in the current directory: <code>entry.sh</code> and <code>script.sh</code>.
 <code>entry.sh</code> is the file being executed by Docker on start,
 and it contains the following:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
-adduser --disabled-password --gecos <span class="s1">&#39;&#39;</span> r
-adduser r sudo
-<span class="nb">echo</span> <span class="s1">&#39;%sudo ALL=(ALL) NOPASSWD:ALL&#39;</span> &gt;&gt; /etc/sudoers
-su -m r -c /home/r/script.sh</code></pre></figure>
+
 
 <p><code>script.sh</code> will be executed as a user <code>r</code> inside the container. And this
 <code>r</code> user will have <code>sudo</code> permissions. This is exactly what all projects,

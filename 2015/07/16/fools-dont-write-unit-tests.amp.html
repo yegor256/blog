@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Fools Don't Write Unit Tests</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ lack of time or budget.
         "keywords": ["unit testing", "unit testing best practices", "unit testing tools", "unit testing definition", "unit testing cost benefit analysis"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,40 +55,40 @@ lack of time or budget.
   <body>
     <article>
       <h1>Fools Don't Write Unit Tests</h1>
-      <p>&quot;We don&#39;t have time to write unit tests&quot; or &quot;We don&#39;t have the
-budget for unit testing&quot; are complaints I hear very often. Sometimes it
-may sound like, &quot;We don&#39;t use TDD, so that&#39;s why there are no unit tests,&quot; or even
-&quot;TDD is too expensive for us now.&quot; I&#39;m sure you&#39;ve heard this or even
-said it yourself. It doesn&#39;t make any sense to me. I don&#39;t get the
+      <p>"We don't have time to write unit tests" or "We don't have the
+budget for unit testing" are complaints I hear very often. Sometimes it
+may sound like, "We don't use TDD, so that's why there are no unit tests," or even
+"TDD is too expensive for us now." I'm sure you've heard this or even
+said it yourself. It doesn't make any sense to me. I don't get the
 logic. In my understanding, unit testing is not
-a product; it&#39;s a <strong>tool</strong>. You use tests to develop a product
-faster and better. How can you say you don&#39;t have time to use
+a product; it's a <strong>tool</strong>. You use tests to develop a product
+faster and better. How can you say you don't have time to use
 the tool that makes your work faster? Let me show you how.</p>
 
-<!--more-->
 
-Ex Machina (2015) by Alex Garland
+
+
 
 <p>TDD or not, a unit test is a unit test. Either you create it before
 the main piece of code or after it.</p>
 
 <p>A unit test is a <strong>tool</strong> that helps you, a developer of software,
-&quot;run&quot; your stuff and see how it works. How else can you check if it works?
-When I hear, &quot;I don&#39;t have time for unit tests,&quot; my next question is:
-&quot;How did you test your code?&quot;</p>
+"run" your stuff and see how it works. How else can you check if it works?
+When I hear, "I don't have time for unit tests," my next question is:
+"How did you test your code?"</p>
 
-<p>I seriously can&#39;t understand how it is possible to write something
-and then not test it. Well, unless you&#39;re
+<p>I seriously can't understand how it is possible to write something
+and then not test it. Well, unless you're
 <a href="/2015/07/21/hourly-pay-modern-slavery.html">paid monthly</a>
 and nobody really cares about your deliverables. If you do care about the software
-you produce, you&#39;re interested in seeing it in action, right?</p>
+you produce, you're interested in seeing it in action, right?</p>
 
 <p>So, how do you do this?</p>
 
-<p>If it&#39;s a one-page PHP website, you can probably run it locally on Apache,
+<p>If it's a one-page PHP website, you can probably run it locally on Apache,
 modify it on disk, and then <code>Cmd</code>+<code>R</code> many times. That will work for a primitive
 piece of code and only for you, a single developer of it. But I hear
-this &quot;I don&#39;t have time&quot; argument from programmers working on <strong>enterprise</strong>
+this "I don't have time" argument from programmers working on <strong>enterprise</strong>
 systems. How do you guys test your code?</p>
 
 
@@ -94,22 +96,22 @@ systems. How do you guys test your code?</p>
 <p>I would compare unit tests with OOP classes. You can design the entire application
 in a single class with a few thousand methods. You will save time on creating
 other classes, structuring them, thinking about connections between them, etc.
-It will be a single 20,000-line <code>.java</code> file. And you&#39;ll say that &quot;you didn&#39;t
-have time to create classes,&quot; right? What would we say about such a product and the
-author of it? Right, we&#39;d say he or she is just <strong>stupid</strong>. And it has nothing
-to do with time or budget. Such a programmer just doesn&#39;t know how to use
+It will be a single 20,000-line <code>.java</code> file. And you'll say that "you didn't
+have time to create classes," right? What would we say about such a product and the
+author of it? Right, we'd say he or she is just <strong>stupid</strong>. And it has nothing
+to do with time or budget. Such a programmer just doesn't know how to use
 object-oriented programming tools, like encapsulation, inheritance, polymorphism,
-interfaces, method overloading, etc. It&#39;s not about time or budget; it&#39;s about
+interfaces, method overloading, etc. It's not about time or budget; it's about
 skills and discipline.</p>
 
 <p>The same is true for unit tests. If you create code without unit tests,
 it may work, just like that monster class with 20,000 lines, but the quality
-of your product will be very low. And not because you didn&#39;t have time to
-write unit tests, but because you <strong>didn&#39;t know</strong> how to do it.</p>
+of your product will be very low. And not because you didn't have time to
+write unit tests, but because you <strong>didn't know</strong> how to do it.</p>
 
-<p>So every time I hear, &quot;I didn&#39;t have time for unit testing,&quot; I understand
-that you just didn&#39;t know how and are trying to conceal that fact behind
-false excuses. It&#39;s not professional, to say the least.</p>
+<p>So every time I hear, "I didn't have time for unit testing," I understand
+that you just didn't know how and are trying to conceal that fact behind
+false excuses. It's not professional, to say the least.</p>
 
     </article>
   </body>

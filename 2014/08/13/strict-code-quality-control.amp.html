@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Strict Control of Java Code Quality</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/08/13/strict-code-quality-control.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/08/13/strict-code-quality-control.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ plugins to strictly check the quality of your code
         "keywords": ["java static analysis", "java checkstyle config", "java pmd config", "java findbugs config", "java strict quality", "quality of java code"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -63,7 +65,7 @@ some fancy reports. Very often, those reports are published
 by <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>
 servers, like Jenkins.</p>
 
-<figure class='badge'><a href='http://www.qulice.com'></a></figure>
+
 
 <p><a href="http://www.qulice.com">Qulice</a> takes things one step further. It
 aggregates a few quality checkers, configures them to a maximum
@@ -73,15 +75,15 @@ strict mode, and breaks your build if any of them fail.</p>
 <a href="http://checkstyle.sourceforge.net/checks.html">over 130 checks</a> in Checkstyle,
 <a href="http://pmd.sourceforge.net/pmd-5.1.2/rules/index.html">over 400 rules</a> in PMD, and
 <a href="http://findbugs.sourceforge.net/bugDescriptions.html">over 400 bugs</a> in FindBugs.
-All of them should say: &quot;Yes, we like your code&quot;.
-Otherwise, your build shouldn&#39;t pass.</p>
+All of them should say: "Yes, we like your code".
+Otherwise, your build shouldn't pass.</p>
 
-<p>What do you think? Would it be convenient for you &mdash; to have your
+<p>What do you think? Would it be convenient for you — to have your
 code rejected every time it breaks just one of 900 checks? Would it
-be productive for the team &mdash; to force developers to focus
+be productive for the team — to force developers to focus
 so much on code quality?</p>
 
-<!--more-->
+
 
 <h2 id="first-reaction">First Reaction</h2>
 
@@ -89,28 +91,28 @@ so much on code quality?</p>
 develop your code <a href="/2014/07/21/read-only-master-branch.html">in branches</a>
 and, then, <a href="/2014/07/24/rultor-automated-merging.html">Rultor will merge</a>
 your changes into <code>master</code>. Before actually merging, though, <a href="http://www.rultor.com">Rultor</a> will run an
-automated build script to make sure that your branch doesn&#39;t break it.</p>
+automated build script to make sure that your branch doesn't break it.</p>
 
 
 
 <p>As a static analysis tool, Qulice is just one of the steps in the automated
 build script. It is actually a Maven plugin and we automate Java builds
-with Maven 3x. Thus, if your changes break any of Qulice&#39;s rules,
+with Maven 3x. Thus, if your changes break any of Qulice's rules,
 your entire branch gets rejected.</p>
 
-<p>Your first reaction &mdash; I&#39;ve seen it hundreds of times &mdash; will be negative.
+<p>Your first reaction — I've seen it hundreds of times — will be negative.
 You may actually become frustrated enough to leave the project immediately.
-You may say something like this (I&#39;m quoting real life stories):</p>
+You may say something like this (I'm quoting real life stories):</p>
 
 <ul>
-<li><p>&quot;These quality rules entirely ruin my creativity!&quot;</p></li>
-<li><p>&quot;Instead of wasting time on these misplaced commas and braces, we&#39;d be better
-off developing new features!&quot;</p></li>
-<li><p>&quot;I&#39;ve done many successful projects in my life, never heard about this
-ridiculous quality checking...&quot;</p></li>
+<li><p>"These quality rules entirely ruin my creativity!"</p></li>
+<li><p>"Instead of wasting time on these misplaced commas and braces, we'd be better
+off developing new features!"</p></li>
+<li><p>"I've done many successful projects in my life, never heard about this
+ridiculous quality checking..."</p></li>
 </ul>
 
-<p>This first reaction is only logical. I&#39;ve seen many people say things like this,
+<p>This first reaction is only logical. I've seen many people say things like this,
 in both
 <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source</a>
 and commercial projects. Not only in Java, but also
@@ -133,21 +135,17 @@ be patient and try to get used to this new approach to quality.
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.</p>
 
-Ratatouille (2007) by Brad Bird and Jan Pinkava
+
 
 <p>Why is it good? Read on.</p>
 
 <h2 id="what-do-projects-get-from-qulice">What Do Projects Get From Qulice?</h2>
 
-<p>Let&#39;s take one simple rule as an example. Here is a piece of Java
+<p>Let's take one simple rule as an example. Here is a piece of Java
 code that Qulice would complain about
 (due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code>DesignForExtension</code></a> rule from Checkstyle):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="s">&quot;Jeff&quot;</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>What is wrong with this code? Method <code>name()</code> is not final and can be overridden
 by a class that extends <code>Employee</code>. Design-wise this is wrong, since a child
@@ -155,39 +153,35 @@ class is allowed to break a super class, overriding its method.</p>
 
 <p>What is the right design? This one:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="s">&quot;Jeff&quot;</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Now, the method is final and can&#39;t be overridden by child classes. It is
+
+<p>Now, the method is final and can't be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).</p>
 
-<p>So, let&#39;s say we make this rule mandatory for all classes in the project.
+<p>So, let's say we make this rule mandatory for all classes in the project.
 What does the project gain from this?
 It can promise its members (programmers) a <strong>higher quality</strong> of work,
-compared to other projects that don&#39;t have this restriction, mostly
+compared to other projects that don't have this restriction, mostly
 because of:</p>
 
 <ul>
-<li><p><strong>Predictability of Design</strong> &mdash;
-I don&#39;t have to scroll through
-the entire class to make sure it doesn&#39;t have methods that can
-be accidentally overridden. I know for sure that this can&#39;t happen
+<li><p><strong>Predictability of Design</strong> —
+I don't have to scroll through
+the entire class to make sure it doesn't have methods that can
+be accidentally overridden. I know for sure that this can't happen
 in this project. In other words, I know what to expect.</p></li>
-<li><p><strong>Less Hidden Tricks</strong> &mdash;
+<li><p><strong>Less Hidden Tricks</strong> —
 Higher predictability of design leads
 to better visibility of mistakes and tricks. Standardization of source
-code makes it uniform. This means that it&#39;s easier to read and
+code makes it uniform. This means that it's easier to read and
 spot problems.</p></li>
-<li><p><strong>Industry Standards</strong> &mdash;
+<li><p><strong>Industry Standards</strong> —
 The decision to use this design is
 made by Checkstyle, not by a project architect. For me, as a project
-developer, this means that I&#39;m following industry standards. That makes
+developer, this means that I'm following industry standards. That makes
 the project (and its leaders) more respectable.</p></li>
-<li><p><strong>Learning</strong> &mdash;
-I&#39;ll bet that most of you who read this post didn&#39;t know about the
+<li><p><strong>Learning</strong> —
+I'll bet that most of you who read this post didn't know about the
 design rule explained above. Just by reading this article, you learned
 something new. Imagine how much you could learn after making your
 code compliant to all 900 rules of Qulice (Checkstyle + PMD + FindBugs).</p></li>
@@ -200,7 +194,7 @@ to discuss.</p>
 
 <p>As a programmer, I hope you already realize what you get from working
 in a project that raises its quality bar as high as Qulice asks. Yes,
-you&#39;ll learn <a href="/2015/01/21/if-then-throw-else.html">a lot</a> of
+you'll learn <a href="/2015/01/21/if-then-throw-else.html">a lot</a> of
 <a href="/2014/11/03/empty-line-code-smell.html">new things</a>
 about writing quality Java code.</p>
 
@@ -213,8 +207,8 @@ integrates those software tools together. Truthfully, it is the developers who a
 real authors of quality checks and rules.</p>
 
 <p>So, what do I tell those who complain about quality rules being too strict?
-I say this: &quot;Do you want to learn and improve, or do you just want to get paid
-and get away with it?&quot;</p>
+I say this: "Do you want to learn and improve, or do you just want to get paid
+and get away with it?"</p>
 
 <p>ps. You can use my <a href="http://img.teamed.io/settings.jar">settings.jar</a>
 for IntelliJ, they are rather strict and will help you clean your

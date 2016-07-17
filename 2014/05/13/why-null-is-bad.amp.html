@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Why NULL is Bad?</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/05/13/why-null-is-bad.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/05/13/why-null-is-bad.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ this article tries to explain why you should give up this bad habit.
         "keywords": ["", "null java", "null c++", "null reference", "null pointer", "null is bad", "null is evil"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -55,19 +57,13 @@ this article tries to explain why you should give up this bad habit.
       <h1>Why NULL is Bad?</h1>
       <p>A simple example of <code>NULL</code> usage in Java:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>What is wrong with this method?</p>
 
-<!--more-->
 
-<p>It may return <code>NULL</code> instead of an object &mdash; that&#39;s what is wrong.
+
+<p>It may return <code>NULL</code> instead of an object — that's what is wrong.
 <code>NULL</code> is a terrible practice in an object-oriented paradigm and should be avoided at
 <a href="/2016/03/22/try-finally-if-not-null.html">all costs</a>.
 There have been a number of opinions about this published already, including
@@ -76,7 +72,7 @@ presentation by Tony Hoare and the entire
 <a href="http://amzn.to/266oJr4">Object Thinking</a>
 book by David West.</p>
 
-<p>Here, I&#39;ll try to summarize all the arguments and show examples of
+<p>Here, I'll try to summarize all the arguments and show examples of
 how <code>NULL</code> usage can be avoided and replaced with proper object-oriented constructs.</p>
 
 <p>Basically, there are two possible alternatives to <code>NULL</code>.</p>
@@ -85,33 +81,21 @@ how <code>NULL</code> usage can be avoided and replaced with proper object-orien
 design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
 (the best way is to make it a constant):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">Employee</span><span class="o">.</span><span class="na">NOBODY</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>The second possible alternative is to <a href="/2015/08/25/fail-fast.html">fail fast</a>
-by throwing an <strong>Exception</strong> when you can&#39;t return an
+by throwing an <strong>Exception</strong> when you can't return an
 <a href="/2016/07/14/who-is-object.html">object</a>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Now, let&#39;s see the arguments against <code>NULL</code>.</p>
 
-<p>Besides Tony Hoare&#39;s presentation and David West&#39;s book
+<p>Now, let's see the arguments against <code>NULL</code>.</p>
+
+<p>Besides Tony Hoare's presentation and David West's book
 mentioned above, I read these publications before writing this post:
 <a href="http://www.amazon.com/dp/0132350882/">Clean Code</a> by Robert Martin,
 <a href="http://www.amazon.com/dp/0735619670/">Code Complete</a> by Steve McConnell,
-<a href="http://elegantcode.com/2010/05/01/say-no-to-null/">Say &quot;No&quot; to &quot;Null&quot;</a> by John Sonmez,
+<a href="http://elegantcode.com/2010/05/01/say-no-to-null/">Say "No" to "Null"</a> by John Sonmez,
 <a href="http://stackoverflow.com/questions/1274792/is-returning-null-bad-design">Is returning null bad design?</a> discussion at StackOverflow.</p>
 
 <h2 id="ad-hoc-error-handling">Ad-hoc Error Handling</h2>
@@ -122,14 +106,7 @@ If you forget to check, a <a href="http://docs.oracle.com/javase/7/docs/api/java
 may break execution in runtime. Thus, your logic becomes
 polluted with multiple checks and if/then/else forks:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// this is a terrible design, don&#39;t reuse</span>
-<span class="n">Employee</span> <span class="n">employee</span> <span class="o">=</span> <span class="n">dept</span><span class="o">.</span><span class="na">getByName</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">);</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">employee</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;can&#39;t find an employee&quot;</span><span class="o">);</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(-</span><span class="mi">1</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-  <span class="n">employee</span><span class="o">.</span><span class="na">transferTo</span><span class="o">(</span><span class="n">dept2</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This is how exceptional situations are supposed to be handled in
 <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> and
@@ -139,7 +116,7 @@ primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">dept</span><span class="o">.</span><span class="na">getByName</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">).</span><span class="na">transferTo</span><span class="o">(</span><span class="n">dept2</span><span class="o">);</span></code></pre></figure>
+
 
 <p>Consider <code>NULL</code> references an inheritance of procedural programming,
 and use 1) Null Objects or 2) Exceptions instead.</p>
@@ -161,20 +138,13 @@ for the sake of performance. For example, method <code>get()</code> of
 interface <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html"><code>Map</code></a>
 in Java returns <code>NULL</code> when there is no such item in the map:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Employee</span> <span class="n">employee</span> <span class="o">=</span> <span class="n">employees</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">);</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">employee</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
-<span class="o">}</span>
-<span class="k">return</span> <span class="n">employee</span><span class="o">;</span></code></pre></figure>
+
 
 <p>This code searches the map only once due to the usage of <code>NULL</code> in <code>Map</code>.
 If we would refactor <code>Map</code> so that its method <code>get()</code> will throw
 an exception if nothing is found, our code will look like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(!</span><span class="n">employees</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// first search</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
-<span class="o">}</span>
-<span class="k">return</span> <span class="n">employees</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">);</span> <span class="c1">// second search</span></code></pre></figure>
+
 
 <p>Obviously, this is method is twice as slow as the first one. What to do?</p>
 
@@ -183,11 +153,7 @@ Its method <code>get()</code> should have been returning an
 <a href="/2015/04/30/iterating-adapter.html"><code>Iterator</code></a>
 so that our code would look like:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Iterator</span> <span class="n">found</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="na">search</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">);</span>
-<span class="k">if</span> <span class="o">(!</span><span class="n">found</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
-<span class="o">}</span>
-<span class="k">return</span> <span class="n">found</span><span class="o">.</span><span class="na">next</span><span class="o">();</span></code></pre></figure>
+
 
 <p>BTW, that is exactly how C++ STL
 <a href="http://en.cppreference.com/w/cpp/container/map/find">map::find()</a> method is designed.</p>
@@ -201,23 +167,18 @@ that <code>NULL</code> is a pointer to nothing (<code>0x00000000</code>, in Inte
 <p>However, if you start thinking as an object, this statement
 makes much less sense. This is how our code looks from an object point of view:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">- Hello, is it a software department?
-- Yes.
-- Let me talk to your employee &quot;Jeffrey&quot; please.
-- Hold the line please...
-- Hello.
-- Are you NULL?</code></pre></figure>
 
-<p>The last question in this conversation sounds weird, doesn&#39;t it?</p>
+
+<p>The last question in this conversation sounds weird, doesn't it?</p>
 
 <p>Instead, if they hang up the phone after our request to speak
 to Jeffrey, that causes a problem for us (Exception).
 At that point, we try to call again or inform our supervisor
-that we can&#39;t reach Jeffrey and complete a bigger transaction.</p>
+that we can't reach Jeffrey and complete a bigger transaction.</p>
 
 <p>Alternatively, they may let us speak to another person,
 who is not Jeffrey, but who can help with most of our questions
-or refuse to help if we need something &quot;Jeffrey specific&quot; (Null Object).</p>
+or refuse to help if we need something "Jeffrey specific" (Null Object).</p>
 
 <h2 id="slow-failing">Slow Failing</h2>
 
@@ -226,7 +187,7 @@ the code above attempts to die slowly, killing others on its way.
 Instead of letting everyone know that something went wrong and that an
 exception handling should start immediately, it is hiding this failure from its client.</p>
 
-<p>This argument is close to the &quot;ad-hoc error handling&quot; discussed above.</p>
+<p>This argument is close to the "ad-hoc error handling" discussed above.</p>
 
 <p>It is a good practice to make your code as fragile as possible,
 letting it break when necessary.</p>
@@ -234,32 +195,12 @@ letting it break when necessary.</p>
 <p>Make your methods extremely demanding as to the data
 they manipulate. Let them complain by throwing exceptions,
 if the provided data provided is not sufficient or simply
-doesn&#39;t fit with the main usage scenario of the method.</p>
+doesn't fit with the main usage scenario of the method.</p>
 
 <p>Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-  <span class="n">Employee</span> <span class="n">employee</span><span class="o">;</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">employee</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">()</span> <span class="o">{</span>
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="n">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="s">&quot;anonymous&quot;</span><span class="o">;</span>
-      <span class="o">}</span>
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">transferTo</span><span class="o">(</span><span class="n">Department</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nf">AnonymousEmployeeException</span><span class="o">(</span>
-          <span class="s">&quot;I can&#39;t be transferred, I&#39;m anonymous&quot;</span>
-        <span class="o">);</span>
-      <span class="o">}</span>
-    <span class="o">};</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-    <span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="n">employee</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <h2 id="mutable-and-incomplete-objects">Mutable and Incomplete Objects</h2>
 
@@ -272,15 +213,7 @@ changes its state during the entire life-cycle.</p>
 <p>Very often, <code>NULL</code> values are used in <a href="http://en.wikipedia.org/wiki/Lazy_loading">lazy loading</a>,
 to make objects incomplete and mutable. For example:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Department</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="n">Employee</span> <span class="n">found</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="kd">synchronized</span> <span class="n">Employee</span> <span class="nf">manager</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">found</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">found</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="s">&quot;Jeffrey&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">found</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This technology, although widely used, is an anti-pattern in OOP.
 Mostly because it makes an object responsible for performance problems
@@ -288,11 +221,11 @@ of the computational platform, which is something an <code>Employee</code> objec
 
 <p>Instead of managing a state and exposing its business-relevant behavior,
 an object has to take care of the caching of its own results
-&mdash; this is what lazy loading is about.</p>
+— this is what lazy loading is about.</p>
 
 <p>Caching is not something an employee does in the office, does he?</p>
 
-<p>The solution? Don&#39;t use lazy loading in such a primitive way,
+<p>The solution? Don't use lazy loading in such a primitive way,
 as in the example above. Instead, move this caching problem to
 another layer of your application.</p>
 
@@ -301,13 +234,7 @@ For example, <a href="http://aspects.jcabi.com">jcabi-aspects</a> has
 <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>@Cacheable</code></a>
 annotation that caches the value returned by a method:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.aspects.Cacheable</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Department</span> <span class="o">{</span>
-  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">forever</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
-  <span class="kd">public</span> <span class="n">Employee</span> <span class="nf">manager</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="s">&quot;Jacky Brown&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I hope this analysis was convincing enough that you will
 stop <code>NULL</code>-ing your code :)</p>

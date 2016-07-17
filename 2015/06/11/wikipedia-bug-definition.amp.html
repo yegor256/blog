@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ reusability issues, which are very important too.
         "keywords": ["software bug", "software defect", "what is software bug", "bugs in software", "software defects"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -63,10 +65,10 @@ to produce an incorrect or unexpected result or
 to behave in unintended ways.</p>
 </blockquote>
 
-<p>I think that&#39;s incomplete. The definition entirely excludes &quot;non-behavioral&quot;
+<p>I think that's incomplete. The definition entirely excludes "non-behavioral"
 defects related to, for example, <strong>maintainability</strong> and <strong>reusability</strong>.</p>
 
-<!--more-->
+
 
 <p>As you know, every piece of software has <a href="https://en.wikipedia.org/wiki/Functional_requirement">functional</a>
 and <a href="https://en.wikipedia.org/wiki/Non-functional_requirement">non-functional</a>
@@ -75,57 +77,55 @@ Functional requirements tell us <em>what</em> the software has to do, and non-fu
 requirements document <em>how</em> it has to do it. For example, here is a functional
 requirement:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">The user can generate a PDF report.</code></pre></figure>
 
-<p>If our software doesn&#39;t generate a PDF report and crashes instead,
-that&#39;s a functional bug. If instead of a PDF report, it generates an empty
-page or a plain text document, that&#39;s a functional bug. If there
-is no &quot;generate PDF report&quot; button at all and the user simply can&#39;t start
-the PDF generation process, that&#39;s a functional bug.</p>
+
+<p>If our software doesn't generate a PDF report and crashes instead,
+that's a functional bug. If instead of a PDF report, it generates an empty
+page or a plain text document, that's a functional bug. If there
+is no "generate PDF report" button at all and the user simply can't start
+the PDF generation process, that's a functional bug.</p>
 
 <p>Here is an example of a non-functional requirement:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">PDF report generation must take less than 100ms.</code></pre></figure>
+
 
 <p>If our software generates a perfectly correct PDF report but it
-takes a minute, that&#39;s a non-functional bug.</p>
+takes a minute, that's a non-functional bug.</p>
 
 <p>So far so good, since the bug definition given by Wikipedia perfectly
-covers both of them &mdash; if they happen, they will cause our software
-&quot;to <em>produce</em> an incorrect or unexpected result or to <em>behave</em> in an unintended way.&quot;
-The emphasis here is on the words &quot;produce&quot; and &quot;behave.&quot; They presume
-the software is doing something and we&#39;re observing its behavior.</p>
+covers both of them — if they happen, they will cause our software
+"to <em>produce</em> an incorrect or unexpected result or to <em>behave</em> in an unintended way."
+The emphasis here is on the words "produce" and "behave." They presume
+the software is doing something and we're observing its behavior.</p>
 
-<p>However, that&#39;s not all of it.</p>
+<p>However, that's not all of it.</p>
 
 <p>What about maintainability? I may have this kind of non-functional requirement:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">The source code of the PDF generator must be
-easy to maintain and extend for an average
-Java programmer.</code></pre></figure>
 
-<p>It&#39;s a rather vague requirement, but you get the idea.</p>
+
+<p>It's a rather vague requirement, but you get the idea.</p>
 
 <p>Maintainability and reusability are very critical non-functional components
 of any modern software program, especially taking into account a very high
-cost of labor in the market. Very often, it&#39;s more important to make sure
-the software is maintainable than fast. If it&#39;s maintainable and slow, we
+cost of labor in the market. Very often, it's more important to make sure
+the software is maintainable than fast. If it's maintainable and slow, we
 can find new programmers to <em>improve</em> the code. If it is fast
-but unmaintainable, we won&#39;t be able to do anything with it later and will
+but unmaintainable, we won't be able to do anything with it later and will
 have to <em>rewrite</em> it from scratch if some new feature is required.
 Read more about this in
 <a href="/2014/10/26/hacker-vs-programmer-mentality.html">Are You a Hacker or a Designer?</a>.</p>
 
-<p>The definition of a software bug given by Wikipedia doesn&#39;t cover
+<p>The definition of a software bug given by Wikipedia doesn't cover
 maintainability and reusability flaws at all.
-That makes for a common source of confusion &mdash;
+That makes for a common source of confusion —
 an inconsistent code style is not a bug (see the discussion under
 <a href="/2014/08/13/strict-code-quality-control.html">this post</a>).</p>
 
 <p>That is wrong.</p>
 
 <p>An inconsistent code style <strong>is</strong> a software bug, as is incomplete documentation,
-lack of documentation, code that&#39;s too complex, the lack of a coding style guide,
+lack of documentation, code that's too complex, the lack of a coding style guide,
 etc.</p>
 
 <p>I would rewrite the software bug definition paragraph in Wikipedia like this:</p>

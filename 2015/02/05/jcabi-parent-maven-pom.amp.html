@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ to project; jcabi-parent offers a pre-configured solution.
         "keywords": ["maven parent pom", "maven pom settings", "pom reference", "maven pom", "parent pom maven"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -52,54 +54,42 @@ to project; jcabi-parent offers a pre-configured solution.
   <body>
     <article>
       <h1>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</h1>
-      <figure class='badge'><a href='http://http.jcabi.com'></a></figure>
+      
 
-<p>Maven is a build automation tool mostly for Java projects. It&#39;s a great
+<p>Maven is a build automation tool mostly for Java projects. It's a great
 tool, but it has one important drawback that has motivated the creation
 of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
 Maven gets all project build parameters from <code>pom.xml</code>, an XML
-file that can get very long. I&#39;ve seen POM files of 3,000-plus lines.
-Taking into account 1) recent DSL buzz and 2) fear of XML, it&#39;s
-only logical that many people don&#39;t like Maven because of its <code>pom.xml</code> verbosity.</p>
+file that can get very long. I've seen POM files of 3,000-plus lines.
+Taking into account 1) recent DSL buzz and 2) fear of XML, it's
+only logical that many people don't like Maven because of its <code>pom.xml</code> verbosity.</p>
 
-<p>But even if you&#39;re an XML fan who enjoys its strictness and elegance
-(like myself), you won&#39;t like the necessity to repeat yourself in <code>pom.xml</code>
-for every project. If you&#39;re working on multiple projects, code duplication
+<p>But even if you're an XML fan who enjoys its strictness and elegance
+(like myself), you won't like the necessity to repeat yourself in <code>pom.xml</code>
+for every project. If you're working on multiple projects, code duplication
 will be enormous. An average Java web app uses a few dozen standard Maven plugins
 and almost the same number of pretty common dependencies, like
 JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
 and configurations, which have to be specified if you want to keep
 the project stable and avoid Maven warnings. Thus, once a new version
 of a plugin is released, you have to go through all <code>pom.xml</code> files in
-the projects you&#39;re working on and update it there. You obviously understand
-what code duplication means. It&#39;s a disaster. However, there is a solution.</p>
+the projects you're working on and update it there. You obviously understand
+what code duplication means. It's a disaster. However, there is a solution.</p>
 
-<!--more-->
+
 
 <p><a href="http://parent.jcabi.com">jcabi-parent</a> is a very simple Maven dependency
 with nothing inside it except a large <code>pom.xml</code> with multiple pre-configured
 dependencies, profiles, and plugins. All you need to do in order to reuse them
 all in your project is define <code>com.jcabi:parent</code> as your parent POM:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
-  <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0</span>
-<span class="s">    http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-  <span class="nt">&lt;parent&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>parent<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="c">&lt;!-- check the latest version at http://parent.jcabi.com --&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.32.1<span class="nt">&lt;/version&gt;</span>
-  <span class="nt">&lt;/parent&gt;</span>
-  [...]
-<span class="nt">&lt;/project&gt;</span></code></pre></figure>
 
-<p>That&#39;s all you need. Now you can remove most of your custom configurations
+
+<p>That's all you need. Now you can remove most of your custom configurations
 from <code>pom.xml</code> and rely on defaults provided by jcabi-parent. Its
 <a href="https://github.com/jcabi/jcabi-parent/blob/master/pom.xml"><code>pom.xml</code></a>
 is rather large and properly configured. Multiple projects depend on it, so you
-can be confident that you&#39;re using the best possible configuration of
+can be confident that you're using the best possible configuration of
 all standard plugins.</p>
 
 <p>Here are a few examples of <code>pom.xml</code> from projects that are using

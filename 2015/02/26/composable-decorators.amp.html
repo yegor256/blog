@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Composable Decorators vs. Imperative Utility Methods</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/02/26/composable-decorators.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/02/26/composable-decorators.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ programming.
         "keywords": ["composable decorators", "decorator design pattern", "decorator pattern java", "decorator pattern example", "decorator pattern real life example"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -54,113 +56,62 @@ programming.
     <article>
       <h1>Composable Decorators vs. Imperative Utility Methods</h1>
       <p>The <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>
-is my favorite among all other patterns I&#39;m aware of. It is a very simple
+is my favorite among all other patterns I'm aware of. It is a very simple
 and yet very powerful mechanism to make your code
 <a href="http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">highly cohesive</a> and
 <a href="http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">loosely coupled</a>.
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
-is that they make our code <em>composable</em>. That&#39;s why the title of this
+is that they make our code <em>composable</em>. That's why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.</p>
 
-<!--more-->
 
-Матрёшка
+
+
 
 <p>First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Text</span> <span class="o">{</span>
-  <span class="n">String</span> <span class="nf">read</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Here is an implementation that reads the text from a file:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextInFile</span> <span class="kd">implements</span> <span class="n">Text</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">File</span> <span class="n">file</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="kd">final</span> <span class="n">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
-      <span class="n">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(),</span> <span class="s">&quot;UTF-8&quot;</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>And now the decorator, which is another implementation of <code>Text</code> that
 removes all unprintable characters from the text:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">PrintableText</span> <span class="kd">implements</span> <span class="n">Text</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Text</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">PrintableText</span><span class="o">(</span><span class="kd">final</span> <span class="n">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">()</span>
-      <span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">&quot;[^\p{Print}]&quot;</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Here is how I&#39;m using it:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">PrintableText</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">&quot;/tmp/a.txt&quot;</span><span class="o">))</span>
-<span class="o">);</span>
-<span class="n">String</span> <span class="n">content</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">read</span><span class="o">();</span></code></pre></figure>
+<p>Here is how I'm using it:</p>
 
-<p>As you can see, the <code>PrintableText</code> doesn&#39;t read the text from the file. It doesn&#39;t
+
+
+<p>As you can see, the <code>PrintableText</code> doesn't read the text from the file. It doesn't
 really care where the text is coming from. It <em>delegates</em> text reading to
 the encapsulated instance of <code>Text</code>. How this encapsulated object will
-deal with the text and where it will get it doesn&#39;t concern <code>PrintableText</code>.</p>
+deal with the text and where it will get it doesn't concern <code>PrintableText</code>.</p>
 
-<p>Let&#39;s <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
+<p>Let's <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
 and try to create an implementation of <code>Text</code>
 that will capitalize all letters in the text:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">AllCapsText</span> <span class="kd">implements</span> <span class="n">Text</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Text</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">AllCapsText</span><span class="o">(</span><span class="kd">final</span> <span class="n">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">().</span><span class="na">toUpperCase</span><span class="o">(</span><span class="n">Locale</span><span class="o">.</span><span class="na">ENGLISH</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>How about a <code>Text</code> that trims the input:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TrimmedText</span> <span class="kd">implements</span> <span class="n">Text</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Text</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">TrimmedText</span><span class="o">(</span><span class="kd">final</span> <span class="n">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I can go on and on with these
 <a href="/2015/10/01/vertical-horizontal-decorating.html">decorators</a>.
 I can create many of them,
-suitable for their own individual use cases. But let&#39;s see how they all
-can play together. Let&#39;s say I want to read the text from the file,
+suitable for their own individual use cases. But let's see how they all
+can play together. Let's say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want
 to be <em>declarative</em>. Here is what I do:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AllCapsText</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">TrimmedText</span><span class="o">(</span>
-    <span class="k">new</span> <span class="nf">PrintableText</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">&quot;/tmp/a.txt&quot;</span><span class="o">))</span>
-    <span class="o">)</span>
-  <span class="o">)</span>
-<span class="o">);</span>
-<span class="n">String</span> <span class="n">content</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">read</span><span class="o">();</span></code></pre></figure>
+
 
 <p>First, I create an instance of <code>Text</code>, <em>composing</em> multiple decorators into
 a single object. I declaratively define the behavior of <code>text</code> without
@@ -178,18 +129,13 @@ more than 20 <em>utility methods</em> that should have been provided as decorato
 When I want to trim my string, uppercase it, and then split it into pieces,
 here is what my code will look like:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="s">&quot;hello, world!&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">toUpperCase</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">&quot; &quot;</span><span class="o">);</span></code></pre></figure>
+
 
 <p>This is imperative and procedural programming. Composable decorators,
 on the other hand, would make this code object-oriented and declarative. Something
 like this would be great to have in Java instead (pseudo-code):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">.</span><span class="na">Split</span><span class="o">(</span>
-  <span class="k">new</span> <span class="n">String</span><span class="o">.</span><span class="na">UpperCased</span><span class="o">(</span>
-    <span class="k">new</span> <span class="n">String</span><span class="o">.</span><span class="na">Trimmed</span><span class="o">(</span><span class="s">&quot;hello, world!&quot;</span><span class="o">)</span>
-  <span class="o">)</span>
-<span class="o">);</span></code></pre></figure>
+
 
 <p>To conclude, I recommend you think twice every time you add
 a new utility method to the interface/class. Try to avoid utility methods as much

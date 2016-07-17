@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Are You a Hacker or a Designer?</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ it often compromises performance.
         "keywords": ["performance vs maintainability", "software performance", "scalability", "maintainability", "readability"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -58,20 +60,20 @@ capable of fitting an entire application into a 64Kb
 <code>.COM</code> file. Those who were able to get the most out of
 that poor Intel 80386 were the icons of programming.</p>
 
-<p>That&#39;s because twenty years ago computers were expensive and programmers
-were cheap. That was the time of the &quot;hacker mentality&quot;.
+<p>That's because twenty years ago computers were expensive and programmers
+were cheap. That was the time of the "hacker mentality".
 That time is over. That mentality is not appreciated any more,
 because the market situation is completely opposite.</p>
 
 <p>Today, computers are cheap and programmers are expensive.
-This is the era of the &quot;designer mentality&quot;, when the readability
+This is the era of the "designer mentality", when the readability
 of our code is much more important than its performance.</p>
 
-<!--more-->
+
 
 <h2 id="prices-vs-salaries">Prices vs Salaries</h2>
 
-<figure class='badge'></figure>
+
 
 <p>Look at this graph. It is a comparison of two trends over the
 last twenty years (1994-2014).
@@ -80,10 +82,10 @@ The first trend falls down and shows how much cheaper
 and <a href="http://ns1758.ca/winch/winchest.html">HDD storage</a>
 have become over the last twenty years.</p>
 
-<p>The second trend demonstrates how much software developers&#39; salaries
-escalated over the same period. More accurately, they tripled. I didn&#39;t find
-an official report about that, but I&#39;m sure it&#39;s no secret to anyone
-that the salaries of programmers keep growing &mdash; $200,000 per year for
+<p>The second trend demonstrates how much software developers' salaries
+escalated over the same period. More accurately, they tripled. I didn't find
+an official report about that, but I'm sure it's no secret to anyone
+that the salaries of programmers keep growing — $200,000 per year for
 a senior developer is not a dream any more... while twenty years
 ago $60K was the best offer around. I found
 <a href="http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html">this article</a>
@@ -93,7 +95,7 @@ very interesting about this very subject.</p>
 
 <p>Basically, this means that in order to create a PHP website
 in 1994 we had to spend 1000 times more on hardware and three times
-less on programmers than we do now, in 2014. And we&#39;re talking about the
+less on programmers than we do now, in 2014. And we're talking about the
 same stack of technologies here. The same Linux box with an Apache HTTP Server
 inside.</p>
 
@@ -108,16 +110,16 @@ situation is exactly the opposite. It is now much cheaper to double the
 size of the server (especially if the server is a virtual cloud one)
 instead of paying salaries for optimizing the software.</p>
 
-<p>In 1994 the best engineers had that &quot;hacker mentality&quot;, while in 2014 the
-&quot;designer mentality&quot; is much more appreciated.</p>
+<p>In 1994 the best engineers had that "hacker mentality", while in 2014 the
+"designer mentality" is much more appreciated.</p>
 
 <h2 id="hacker-mentality">Hacker Mentality</h2>
 
 <p>Someone with a hacker mentality would call this
 <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a>
-Java method an &quot;elegant code&quot; (would you?):</p>
+Java method an "elegant code" (would you?):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">?</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)+</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">):</span><span class="n">n</span><span class="o">;</span> <span class="o">}</span></code></pre></figure>
+
 
 <p>I would highlight these qualities of a good
 <a href="https://en.wikipedia.org/wiki/Hacker_%28computer_security%29">hacker</a>:</p>
@@ -125,9 +127,10 @@ Java method an &quot;elegant code&quot; (would you?):</p>
 <ul>
 <li>uses all known (and unknown) features of a programming language</li>
 <li>discriminates others as hackers and newbies and codes for hackers</li>
-<li>gets bored and frustrated by <a href="/2015/10/13/competition-without-rules.html">rules</a> and <a href="/2014/08/13/strict-code-quality-control.html">standards</a></li>
-<li>doesn&#39;t write unit tests &mdash; juniors will write them later</li>
-<li>enjoys fire-fighting &mdash; that&#39;s how his talent manifests</li>
+<li>gets bored and frustrated by <a href="/2015/10/13/competition-without-rules.html">rules</a> and <a href="/2014/08/13/strict-code-quality-control.html">standards</a>
+</li>
+<li>doesn't write unit tests — juniors will write them later</li>
+<li>enjoys fire-fighting — that's how his talent manifests</li>
 <li>prefers talks over <a href="/2015/11/10/ten-mistakes-in-specs.html">docs</a>, since they are much more fun</li>
 <li>hates to see his code being modified by someone else</li>
 <li>likes to dedicate himself to one project at a time</li>
@@ -135,32 +138,24 @@ Java method an &quot;elegant code&quot; (would you?):</p>
 
 <p>A hacker is a talented individual. He wants to express his
 talent in the software he writes. He enjoys coding and does
-it mostly for fun. I would say, he is married to his code and can&#39;t imagine
+it mostly for fun. I would say, he is married to his code and can't imagine
 its happy life after an eventual divorce. Code ownership is
-what a hacker is about &mdash; he understands himself as an &quot;owner&quot;
+what a hacker is about — he understands himself as an "owner"
 of the code.</p>
 
 
 
-<p>When I ask one of my hacker friends &mdash; &quot;How will someone understand
-what this code does?&quot; I almost always hear the same answer &mdash;
-&quot;They will ask me!&quot; (usually said very proudly, with a sincere smile).</p>
+<p>When I ask one of my hacker friends — "How will someone understand
+what this code does?" I almost always hear the same answer —
+"They will ask me!" (usually said very proudly, with a sincere smile).</p>
 
 <h2 id="designer-mentality">Designer Mentality</h2>
 
 <p>Someone with a designer mentality would refactor the code above
-to make it easier to read. He would call this Java function an &quot;elegant code&quot;
+to make it easier to read. He would call this Java function an "elegant code"
 (how about you?):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">fibo</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kd">final</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="n">pos</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="n">num</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I think these qualities can be attributed to a good designer:</p>
 
@@ -181,21 +176,21 @@ contributes to the source code. He always makes sure that once
 he leaves the project his code and his ideas stay and work.</p>
 
 <p>The highest satisfaction for a good designer
-is to see his code living its own life &mdash; being modified, improved,
+is to see his code living its own life — being modified, improved,
 refactored and eventually retired. A designer sees himself as a parent
-of the code &mdash; once it is old enough to walk and talk, it has
+of the code — once it is old enough to walk and talk, it has
 to live its own life.</p>
 
 <h2 id="the-future">The Future</h2>
 
-<p>If you consider yourself a hacker, I believe it&#39;s time to change. The time of
+<p>If you consider yourself a hacker, I believe it's time to change. The time of
 hackers is fading out.</p>
 
-<p>In the near future we will probably even stop thinking in terms of &quot;hardware&quot; and will
+<p>In the near future we will probably even stop thinking in terms of "hardware" and will
 run our applications in elastic computational platforms with unlimited
 amounts of memory, CPU power and storage space. We will simply pay
 for resource utilization and almost any performance issue will just add a few extra
-dollars to our monthly bills. We won&#39;t care about optimization any more.</p>
+dollars to our monthly bills. We won't care about optimization any more.</p>
 
 
 
@@ -203,7 +198,7 @@ dollars to our monthly bills. We won&#39;t care about optimization any more.</p>
 and will charge $500+ per hour just to check out software and give
 a diagnosis. Just like good lawyers or dentists.</p>
 
-<p>That&#39;s why, while developing a new software product, those who pay for it will
+<p>That's why, while developing a new software product, those who pay for it will
 care mostly about its maintainability. Project sponsors will
 understand that the best solution they can get for their money is
 the one that is the most readable, maintainable, and automated.</p>

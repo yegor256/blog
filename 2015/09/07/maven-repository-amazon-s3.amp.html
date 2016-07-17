@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>How to Set Up a Private Maven Repository in Amazon S3</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ them available through s3auth.com.
         "keywords": ["private maven repository", "maven repository s3", "maven repository s3auth", "amazon s3 maven", "amazon s3 maven repository"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -58,12 +60,12 @@ is a perfect place for keeping private <a href="https://maven.apache.org/">Maven
 I assume you keep public artifacts in
 <a href="/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a> because
 you want them to be available to everybody. Private artifacts
-are those you don&#39;t want visible to anyone except members
+are those you don't want visible to anyone except members
 of your team. Thus, you want to deploy your <code>.jar</code> files there
 and make sure they are visible only by your team. Here is how we do
 this in all <a href="http://www.teamed.io">our</a> Java projects.</p>
 
-<!--more-->
+
 
 <h2 id="create-an-s3-bucket">Create an S3 Bucket</h2>
 
@@ -71,7 +73,7 @@ this in all <a href="http://www.teamed.io">our</a> Java projects.</p>
 your project domain and a prefix. For example, with <code>repo.teamed.io</code>,
 <code>repo</code> is a prefix and <code>teamed.io</code> is the domain.</p>
 
-<p>There&#39;s no need to configure any permissions for this bucket. Just create it
+<p>There's no need to configure any permissions for this bucket. Just create it
 through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 console</a>.</p>
 
 <h2 id="create-an-iam-user">Create an IAM User</h2>
@@ -79,94 +81,46 @@ through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 cons
 <p>Create a new IAM user. I recommend you name it like <code>teamed-maven</code>
 if your project name is <code>teamed</code>.</p>
 
-<p>Add a new &quot;inline policy&quot; to the user:</p>
+<p>Add a new "inline policy" to the user:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">{
-  &quot;Statement&quot;: [
-    {
-      &quot;Effect&quot;: &quot;Allow&quot;,
-      &quot;Action&quot;: &quot;s3:*&quot;,
-      &quot;Resource&quot;: [
-        &quot;arn:aws:s3:::repo.teamed.io&quot;,
-        &quot;arn:aws:s3:::repo.teamed.io/*&quot;
-      ]
-    }
-  ]
-}</code></pre></figure>
+
 
 <p>Here, <code>repo.teamed.io</code> is the name of the S3 bucket you
 created a minute ago.</p>
 
-<p>Make sure you have an &quot;access key&quot; for this new user. It must look similar
+<p>Make sure you have an "access key" for this new user. It must look similar
 to this:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">key: AKIAI9NNNJD5D7X4TUVA
-secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</code></pre></figure>
+
 
 <p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
 
-<h2 id="extend-settings-xml">Extend <code>settings.xml</code></h2>
+<h2 id="extend-settings-xml">Extend <code>settings.xml</code>
+</h2>
 
 <p>Add this configuration to your <code>~/.m2/settings.xml</code> file:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;settings&gt;</span>
-  <span class="nt">&lt;servers&gt;</span>
-    <span class="nt">&lt;server&gt;</span>
-      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;username&gt;</span>AKIAI9NNNJD5D7X4TUVA<span class="nt">&lt;/username&gt;</span>
-      <span class="nt">&lt;password&gt;</span>t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av<span class="nt">&lt;/password&gt;</span>
-    <span class="nt">&lt;/server&gt;</span>
-    [...]
-  <span class="nt">&lt;/servers&gt;</span>
-  [...]
-<span class="nt">&lt;/settings&gt;</span></code></pre></figure>
 
-<h2 id="configure-pom-xml">Configure <code>pom.xml</code></h2>
+
+<h2 id="configure-pom-xml">Configure <code>pom.xml</code>
+</h2>
 
 <p>Add this configuration to <code>pom.xml</code>:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
-  <span class="nt">&lt;distributionManagement&gt;</span>
-    <span class="nt">&lt;snapshotRepository&gt;</span>
-      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/snapshot<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;/snapshotRepository&gt;</span>
-    <span class="nt">&lt;repository&gt;</span>
-      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/release<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;/repository&gt;</span>
-  <span class="nt">&lt;/distributionManagement&gt;</span>
-  <span class="nt">&lt;repositories&gt;</span>
-    <span class="nt">&lt;repository&gt;</span>
-      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/release<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;/repository&gt;</span>
-  <span class="nt">&lt;/repositories&gt;</span>
-  [...]
-<span class="nt">&lt;/project&gt;</span></code></pre></figure>
+
 
 <p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>,
 also in <code>pom.xml</code>:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project&gt;</span>
-  <span class="nt">&lt;build&gt;</span>
-    <span class="nt">&lt;extensions&gt;</span>
-      <span class="nt">&lt;extension&gt;</span>
-        <span class="nt">&lt;groupId&gt;</span>org.kuali.maven.wagons<span class="nt">&lt;/groupId&gt;</span>
-        <span class="nt">&lt;artifactId&gt;</span>maven-s3-wagon<span class="nt">&lt;/artifactId&gt;</span>
-        <span class="nt">&lt;version&gt;</span>1.2.1<span class="nt">&lt;/version&gt;</span>
-      <span class="nt">&lt;/extension&gt;</span>
-    <span class="nt">&lt;/extensions&gt;</span>
-    [...]
-  <span class="nt">&lt;/build&gt;</span>
-<span class="nt">&lt;/project&gt;</span></code></pre></figure>
 
-<p>You&#39;re ready to go. You can deploy your artifacts just by running
+
+<p>You're ready to go. You can deploy your artifacts just by running
 Maven from the command line:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">$ mvn clean deploy</code></pre></figure>
 
-<h2 id="configure-s3auth-com">Configure <code>s3auth.com</code></h2>
+
+<h2 id="configure-s3auth-com">Configure <code>s3auth.com</code>
+</h2>
 
 <p>Now you want to see these artifacts in your browser, in a secure mode, by
 providing secure credentials. I recommend you use
@@ -175,7 +129,7 @@ providing secure credentials. I recommend you use
 
 <h2 id="configure-rultor">Configure Rultor</h2>
 
-<figure class='badge'><a href='http://www.rultor.com'></a></figure>
+
 
 <p>Another recommendation is to configure rultor.com for deployment of your
 artifacts to S3 automatically.</p>
@@ -183,8 +137,7 @@ artifacts to S3 automatically.</p>
 <p>First, encrypt your <code>settings.xml</code> with this
 <a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml">$ gem install rultor
-$ rultor encrypt -p me/test settings.xml</code></pre></figure>
+
 
 <p>Instead of <code>me/test</code>, you should use the name of your GitHub project.</p>
 
@@ -196,21 +149,17 @@ but only the Rultor server can decrypt it.</p>
 (The Rultor <a href="http://doc.rultor.com/reference.html">reference page</a>
 explains this format in greater detail):</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">decrypt</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">settings.xml</span><span class="p-Indicator">:</span> <span class="s">&quot;repo/settings.xml.asc&quot;</span>
-<span class="l-Scalar-Plain">deploy</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
-    <span class="no">mvn clean deploy --settings ../settings.xml</span></code></pre></figure>
 
-<p>Now it&#39;s time to see how it all works together. Create a new ticket in the
+
+<p>Now it's time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">@rultor deploy</code></pre></figure>
+
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 
-<p>That&#39;s it.</p>
+<p>That's it.</p>
 
     </article>
   </body>

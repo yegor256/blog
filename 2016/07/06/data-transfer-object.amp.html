@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Data Transfer Object Is a Shame</title>
-    <link rel="canonical" href="http://www.yegor256.com/2016/07/06/data-transfer-object.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2016/07/06/data-transfer-object.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ that has no right to exist.
         "keywords": ["DTO", "data transfer object", "DTO design pattern", "ORM DTO", "DTO in java"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -56,12 +58,12 @@ that has no right to exist.
       <p><a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>,
 as far as I understand it, is a cornerstone of the ORM design pattern,
 which I <a href="/2014/12/01/orm-offensive-anti-pattern.html">simply adore</a>.
-But let&#39;s skip to the point: DTO is just a shame, and the man who invented
+But let's skip to the point: DTO is just a shame, and the man who invented
 it is just wrong. There is no excuse for what he has done.</p>
 
-<!--more-->
 
-Before the Devil Knows You&#39;re Dead (2007) by Sidney Lumet
+
+
 
 <p>By the way, his name, to my knowledge, was
 <a href="http://martinfowler.com/bliki/LocalDTO.html">Martin Fowler</a>. Maybe he
@@ -75,83 +77,49 @@ In OOP, data
 must not be visible. <a href="/2014/11/20/seven-virtues-of-good-object.html">Objects</a>
 must only have access to the data they
 encapsulate and never to the data encapsulated by other objects. There
-can be no arguing about this principle &mdash; it is what OOP is all about.</p>
+can be no arguing about this principle — it is what OOP is all about.</p>
 
 <p>However, DTO runs completely against that principle.</p>
 
-<p>Let&#39;s see a practical example. Say that this is a service that fetches
+<p>Let's see a practical example. Say that this is a service that fetches
 a JSON document from some RESTful API and returns a DTO, which we can then
 store in the database:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">loadBookById</span><span class="o">(</span><span class="mi">123</span><span class="o">);</span>
-<span class="n">database</span><span class="o">.</span><span class="na">saveNewBook</span><span class="o">(</span><span class="n">book</span><span class="o">);</span></code></pre></figure>
+
 
 <p>I guess this is what will happen inside the <code>loadBookById()</code> method:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Book</span> <span class="nf">loadBookById</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="cm">/* Load it from RESTful API */</span>
-  <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Book</span><span class="o">();</span>
-  <span class="n">book</span><span class="o">.</span><span class="na">setISBN</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;isbn&quot;</span><span class="o">));</span>
-  <span class="n">book</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">));</span>
-  <span class="n">book</span><span class="o">.</span><span class="na">setAuthor</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;author&quot;</span><span class="o">));</span>
-  <span class="k">return</span> <span class="n">book</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let&#39;s
+
+<p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let's
 continue. This is what will most likely happen in the <code>saveNewBook()</code> method
-(I&#39;m using pure JDBC):</p>
+(I'm using pure JDBC):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">saveNewBook</span><span class="o">(</span><span class="n">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span>
-    <span class="s">&quot;INSERT INTO book VALUES (?, ?, ?)&quot;</span>
-  <span class="o">);</span>
-  <span class="n">stmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getISBN</span><span class="o">());</span>
-  <span class="n">stmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getTitle</span><span class="o">());</span>
-  <span class="n">stmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">book</span><span class="o">.</span><span class="na">getAuthor</span><span class="o">());</span>
-  <span class="n">stmt</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This <code>Book</code> is a classic example of a data transfer object design pattern.
 All it does is transfer
 data between two pieces of code, two procedures. The object <code>book</code> is pretty
-dumb. All it knows how to do is ... nothing. It doesn&#39;t do anything. It is
+dumb. All it knows how to do is ... nothing. It doesn't do anything. It is
 actually not an object at all but rather a passive and anemic data structure.</p>
 
 <p>What is the right design? There are a few. For example, this one looks
 good to me:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">bookById</span><span class="o">(</span><span class="mi">123</span><span class="o">);</span>
-<span class="n">book</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">database</span><span class="o">);</span></code></pre></figure>
+
 
 <p>This is what happens in <code>bookById()</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Book</span> <span class="nf">bookById</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonBook</span><span class="o">(</span>
-    <span class="cm">/* RESTful API access point */</span>
-  <span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>This is what happens in <code>Book.save()</code>:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">Database</span> <span class="n">db</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="cm">/* Load it from RESTful API */</span>
-  <span class="n">db</span><span class="o">.</span><span class="na">createBook</span><span class="o">(</span>
-    <span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;isbn&quot;</span><span class="o">),</span>
-    <span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">),</span>
-    <span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;author&quot;</span><span class="o">)</span>
-  <span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>What happens if there are many more parameters of the book in JSON that won&#39;t
+
+<p>What happens if there are many more parameters of the book in JSON that won't
 fit nicely as parameters into a single <code>createBook()</code> method? How about this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">Database</span> <span class="n">db</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">db</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
-    <span class="o">.</span><span class="na">withISBN</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;isbn&quot;</span><span class="o">))</span>
-    <span class="o">.</span><span class="na">withTitle</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;title&quot;</span><span class="o">))</span>
-    <span class="o">.</span><span class="na">withAuthor</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;author&quot;</span><span class="o">))</span>
-    <span class="o">.</span><span class="na">deploy</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>There are many other options. But the main point is that the data
 <strong>never</strong> escapes the object <code>book</code>. Once the object is instantiated, the
@@ -164,7 +132,7 @@ any data from it.</p>
 
 <p>The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
-a box for that data. Don&#39;t think that way, and don&#39;t do that.</p>
+a box for that data. Don't think that way, and don't do that.</p>
 
     </article>
   </body>

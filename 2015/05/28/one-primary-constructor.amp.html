@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>There Can Be Only One Primary Constructor</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/05/28/one-primary-constructor.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/05/28/one-primary-constructor.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ secondary ones.
         "keywords": ["primary constructor", "oop constructor", "java constructor", "class constructor", "object constructor"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -60,31 +62,17 @@ one is simply a preparation step before calling a primary constructor and is not
 really a constructor but rather an introductory layer in front of a real
 constructing mechanism.</p>
 
-<!--more-->
 
-The Matrix (1999) by The Wachowski Brothers
+
+
 
 <p>Here is what I mean:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Cash</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">cents</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">currency</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// secondary</span>
-    <span class="k">this</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// secondary</span>
-    <span class="k">this</span><span class="o">(</span><span class="n">cts</span><span class="o">,</span> <span class="s">&quot;USD&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">,</span> <span class="n">String</span> <span class="n">crn</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="n">crn</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="c1">// methods here</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>There are three constructors in the class &mdash; only one is
+
+<p>There are three constructors in the class — only one is
 <em>primary</em> and the other two are <em>secondary</em>. My definition of a
-secondary constructor is simple: It doesn&#39;t do anything besides
+secondary constructor is simple: It doesn't do anything besides
 calling a primary constructor, through <code>this(..)</code>.</p>
 
 <p>My point here is that a
@@ -95,25 +83,9 @@ behind this rule: It helps eliminate code duplication.</p>
 
 <p>Without such a rule, we may have this design for our class:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Cash</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">cents</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">currency</span><span class="o">;</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// primary</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="s">&quot;USD&quot;</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="s">&quot;USD&quot;</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">,</span> <span class="n">String</span> <span class="n">crn</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="n">crn</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="c1">// methods here</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>There&#39;s not a lot of code here, but the duplication is massive and ugly;
+
+<p>There's not a lot of code here, but the duplication is massive and ugly;
 I hope you see it for yourself.</p>
 
 <p>By strictly following this suggested rule, all classes will have

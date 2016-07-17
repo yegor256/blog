@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>XML/XPath Matchers for Hamcrest</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ how to use the in Java projects
         "keywords": ["xml hamcrest", "xpath matchers", "junit hamcrest xml matchers", "xml matchers junit", "xml matchers hamcrest", "hamcrest xpath example", "hamcrest xpath library", "hamcrest xpath example code"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,7 +55,7 @@ how to use the in Java projects
   <body>
     <article>
       <h1>XML/XPath Matchers for Hamcrest</h1>
-      <figure class='badge'><a href='http://matchers.jcabi.com'></a></figure>
+      
 
 <p><a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a> is my favorite instrument
 in unit testing. It replaces the JUnit procedural assertions of
@@ -65,31 +67,17 @@ Maven Central: <a href="http://matchers.jcabi.com">jcabi-matchers</a>.
 jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.</p>
 
-<p>Let&#39;s say, for instance, a class that is undergoing  testing produces an XML
-that needs to contain a single <code>&lt;message&gt;</code> element with the content <code>&quot;hello,
-world!&quot;</code></p>
+<p>Let's say, for instance, a class that is undergoing  testing produces an XML
+that needs to contain a single <code>&lt;message&gt;</code> element with the content <code>"hello,
+world!"</code></p>
 
 <p>This is how that code would look in a unit test:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
-  <span class="nd">@Test</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hasWelcomeMessage</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">Foo</span><span class="o">().</span><span class="na">createXml</span><span class="o">(),</span>
-      <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPaths</span><span class="o">(</span>
-        <span class="s">&quot;/document[count(message)=1]&quot;</span><span class="o">,</span>
-        <span class="s">&quot;/document/message[.=&#39;hello, world!&#39;]&quot;</span>
-      <span class="o">)</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
 
-<!--more-->
 
-<p>There are two alternatives to the above that I&#39;m aware of, which are do almost the same thing:
+
+
+<p>There are two alternatives to the above that I'm aware of, which are do almost the same thing:
 <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> by
 David Ehringer
 and
@@ -122,12 +110,9 @@ but, still, it is requires extra code in every unit test.</p>
 problems even further, as it pre-defines most popular namespaces, including
 <code>xtml</code>, <code>xs</code>, <code>xsl</code>, etc.</p>
 
-<p>The following example works right out-of-the-box &mdash; without any extra configuration:</p>
+<p>The following example works right out-of-the-box — without any extra configuration:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">getContent</span><span class="o">(),</span>
-  <span class="n">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">&quot;//xhtml:body&quot;</span><span class="o">)</span>
-<span class="o">);</span></code></pre></figure>
+
 
 <p>To summarize, my primary objective with the library was its simplicity of usage.</p>
 

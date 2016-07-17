@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Checked vs. Unchecked Exceptions: The Debate Is Not Over</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ ones are a mistake.
         "keywords": ["checked vs unchecked exceptions", "checked vs unchecked exceptions java", "checked vs unchecked exceptions example", "checked vs unchecked exceptions c#", "checked vs unchecked exceptions debate"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -55,26 +57,23 @@ ones are a mistake.
       <h1>Checked vs. Unchecked Exceptions: The Debate Is Not Over</h1>
       <p>Do we need checked exceptions at all? The
 <a href="http://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation">debate</a>
-is over, isn&#39;t it?
-Not for me. While most object-oriented languages don&#39;t have them, and most programmers
+is over, isn't it?
+Not for me. While most object-oriented languages don't have them, and most programmers
 think checked exceptions are a Java mistake, I believe in the
-opposite &mdash; unchecked exceptions are the <strong>mistake</strong>. Moreover, I believe
+opposite — unchecked exceptions are the <strong>mistake</strong>. Moreover, I believe
 multiple exception types are a bad idea too.</p>
 
-<!--more-->
 
-True Romance (1993) by Tony Scott
+
+
 
 <p>Let me first explain how I understand exceptions in object-oriented programming.
-Then I&#39;ll compare my understanding with a &quot;traditional&quot; approach, and
-we&#39;ll discuss the differences. So, my understanding first.</p>
+Then I'll compare my understanding with a "traditional" approach, and
+we'll discuss the differences. So, my understanding first.</p>
 
 <p>Say there is a method that saves some binary data to a file:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">data</span><span class="o">)</span>
-  <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-  <span class="c1">// save data to the file</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>When everything goes right, the method just saves the data and returns control.
 When something is wrong, it
@@ -82,37 +81,33 @@ When something is wrong, it
 <code>Exception</code> and we have to do something
 about it:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
-  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sorry, we can&#39;t save right now.&quot;</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>When a method says it <code>throws</code> an exception, I understand that the
-method is not <strong>safe</strong>. It may fail sometimes, and it&#39;s my responsibility to
+method is not <strong>safe</strong>. It may fail sometimes, and it's my responsibility to
 either 1) handle this failure or 2) declare myself as <strong>unsafe</strong> too.</p>
 
 <p>I know each method is designed with a
 <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>
 in mind. This is a guarantee to me that if method <code>save()</code> fails, it means
-the entire saving operation can&#39;t be completed. If I need to know what
+the entire saving operation can't be completed. If I need to know what
 the cause of this failure was, I will <a href="https://en.wikipedia.org/wiki/Exception_chaining">un-chain</a>
-the exception &mdash; traverse the stack of chained exceptions and stack traces
+the exception — traverse the stack of chained exceptions and stack traces
 encapsulated in <code>ex</code>.</p>
 
 <p>I never use exceptions for flow control, which means I <strong>never recover</strong>
 situations where exceptions are thrown. When an exception occurs, I let it float up to the
 highest level of the application. Sometimes I
 <a href="/2015/12/01/rethrow-exceptions.html">rethrow</a>
-it in order to add more semantic information to the chain. That&#39;s why it doesn&#39;t matter
+it in order to add more semantic information to the chain. That's why it doesn't matter
 to me what the cause of the exception thrown by <code>save()</code> was. I just know
-the method failed. That&#39;s enough for me. Always.</p>
+the method failed. That's enough for me. Always.</p>
 
-<p>For the same reason, I don&#39;t need to differentiate between different exception
-types. I just don&#39;t need that type of hierarchy. <code>Exception</code> is enough for me.
-Again, that&#39;s because I don&#39;t use exceptions for flow control.</p>
+<p>For the same reason, I don't need to differentiate between different exception
+types. I just don't need that type of hierarchy. <code>Exception</code> is enough for me.
+Again, that's because I don't use exceptions for flow control.</p>
 
-<p>That&#39;s how I understand exceptions.</p>
+<p>That's how I understand exceptions.</p>
 
 <p>According to this paradigm, I would say we must:</p>
 
@@ -124,8 +119,8 @@ Again, that&#39;s because I don&#39;t use exceptions for flow control.</p>
 <li><p>never catch without rethrowing; read <a href="/2015/07/09/catch-if-cant-otherwise.html">more about that here</a>.</p></li>
 </ul>
 
-<p>This paradigm diverges from many other articles I&#39;ve found on this subject.
-Let&#39;s compare and discuss.</p>
+<p>This paradigm diverges from many other articles I've found on this subject.
+Let's compare and discuss.</p>
 
 <h2 id="runtime-vs-api-exceptions">Runtime vs. API Exceptions</h2>
 
@@ -134,31 +129,31 @@ some exceptions should be part of API (checked ones) while some are
 runtime exceptions and should not be part of it (unchecked). They will be documented
 in JavaDoc but not in the method signature.</p>
 
-<p>I don&#39;t understand the logic here, and I&#39;m sure Java designers don&#39;t
+<p>I don't understand the logic here, and I'm sure Java designers don't
 understand it either. How and why are some exceptions important while
 others are not? Why do some of them deserve a proper API position
-in the <code>throws</code> block of the method signature while others don&#39;t? What is the criteria?</p>
+in the <code>throws</code> block of the method signature while others don't? What is the criteria?</p>
 
 <p>I have an answer here, though. By introducing checked and unchecked exceptions, Java
 developers tried to solve the problem of methods that are too complex and messy. When
 a method is too big and does too many things at the same time (violates
-the single responsibility principle), it&#39;s definitely better to let us
-keep some exceptions &quot;hidden&quot; (a.k.a. unchecked).
-But it&#39;s not a real solution. It is only
-a temporary patch that does all of us more harm than good &mdash; methods keep
+the single responsibility principle), it's definitely better to let us
+keep some exceptions "hidden" (a.k.a. unchecked).
+But it's not a real solution. It is only
+a temporary patch that does all of us more harm than good — methods keep
 growing in size and complexity.</p>
 
 <p>Unchecked exceptions are a mistake in Java design, not
 <a href="/2015/10/20/interrupted-exception.html">checked</a> ones.</p>
 
-<p>Hiding the fact that a method may fail at some point is a mistake. That&#39;s
+<p>Hiding the fact that a method may fail at some point is a mistake. That's
 exactly what unchecked exceptions do.</p>
 
 <p>Instead, we should make this fact visible. When a method does too many
 things, there will be too many points of failure, and the author of the
-method will realize that something is wrong &mdash; a method should
+method will realize that something is wrong — a method should
 not throw exceptions in so many situations. This will lead to refactoring. The existence of
-unchecked exceptions leads to a mess. By the way, checked exceptions don&#39;t exist
+unchecked exceptions leads to a mess. By the way, checked exceptions don't exist
 at all in Ruby, C#, Python, PHP, etc. This means that creators of these
 languages understand OOP even less than Java authors.</p>
 
@@ -170,26 +165,26 @@ staying focused on the main logic. Bozhidar Bozhanov even
 <a href="http://techblog.bozho.net/checked-and-unchecked-exceptions-in-java/">suggests</a>
 a technical solution for this verbosity problem.</p>
 
-<p>Again, I don&#39;t understand this logic. If I want to do something when method
+<p>Again, I don't understand this logic. If I want to do something when method
 <code>save()</code> fails, I catch the exception and handle the situation somehow.
-If I don&#39;t want to do that, I just say my method also <code>throws</code> and pay no
+If I don't want to do that, I just say my method also <code>throws</code> and pay no
 attention to exception handling. What is the problem? Where is the verbosity
 coming from?</p>
 
-<p>I have an answer here, too. It&#39;s coming from the existence of unchecked
-exceptions. We simply can&#39;t always ignore failure, because the interfaces
-we&#39;re using don&#39;t allow us to do this. That&#39;s all. For example, class
+<p>I have an answer here, too. It's coming from the existence of unchecked
+exceptions. We simply can't always ignore failure, because the interfaces
+we're using don't allow us to do this. That's all. For example, class
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html"><code>Runnable</code></a>,
 which is widely used for multi-thread programming, has
-method <code>run()</code> that is not supposed to throw anything. That&#39;s why we always have
+method <code>run()</code> that is not supposed to throw anything. That's why we always have
 to catch everything inside the method and rethrow checked
 exceptions as unchecked.</p>
 
 <p>If all methods in all Java
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a> would be declared either as
-&quot;safe&quot; (<code>throws</code> nothing) or &quot;unsafe&quot; (<code>throws Exception</code>), everything would
-become logical and clear. If you want to stay &quot;safe,&quot; take responsibility
-for failure handling. Otherwise, be &quot;unsafe&quot; and let your users worry about
+"safe" (<code>throws</code> nothing) or "unsafe" (<code>throws Exception</code>), everything would
+become logical and clear. If you want to stay "safe," take responsibility
+for failure handling. Otherwise, be "unsafe" and let your users worry about
 safety.</p>
 
 <p>No noise, very clean code, and obvious logic.</p>
@@ -205,11 +200,11 @@ may throw <code>OutOfMemoryException</code>, even though it seems to have
 nothing to do with memory allocation. But it does allocate some memory, right?
 So such a memory overflow may happen during a file saving operation.</p>
 
-<p>Yet again, I don&#39;t get the logic of this argument.
-If all exceptions are checked, and we don&#39;t have multiple exception types,
-we just throw <code>Exception</code> everywhere, and that&#39;s it. Why do we need to care
-about the exception type in the first place? If we don&#39;t use exceptions to control
-flow, we won&#39;t do this.</p>
+<p>Yet again, I don't get the logic of this argument.
+If all exceptions are checked, and we don't have multiple exception types,
+we just throw <code>Exception</code> everywhere, and that's it. Why do we need to care
+about the exception type in the first place? If we don't use exceptions to control
+flow, we won't do this.</p>
 
 <p>If we really want to make our application memory overflow-resistant, we will
 introduce some memory manager, which will have something like the <code>bigEnough()</code>
@@ -220,34 +215,26 @@ to exception management in OOP.</p>
 <h2 id="recoverable-exceptions">Recoverable Exceptions</h2>
 
 <p>Joshua Bloch, in <a href="http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0321356683&amp;linkCode=as2&amp;tag=yegor256com-20&amp;linkId=QPTA6QN63DE364IM">Effective Java</a>,
-says to &quot;use checked exceptions for recoverable conditions and runtime exceptions
-for programming errors.&quot; He means something like this:</p>
+says to "use checked exceptions for recoverable conditions and runtime exceptions
+for programming errors." He means something like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
-  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="c1">// We can&#39;t save the file, but it&#39;s OK</span>
-  <span class="c1">// Let&#39;s move on and do something else</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>How is that any different from a famous anti-pattern called
-<a href="http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl">Don&#39;t Use Exceptions for Flow Control</a>?
-Joshua, with all due respect, you&#39;re wrong. There are no such things
+<a href="http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl">Don't Use Exceptions for Flow Control</a>?
+Joshua, with all due respect, you're wrong. There are no such things
 as recoverable conditions in OOP. An exception indicates that the execution of a
-chain of calls from method to method is broken, and it&#39;s time to go up
+chain of calls from method to method is broken, and it's time to go up
 through the chain and stop somewhere. But we never go back again
 after the exception:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">App#run()
-  Data#update()
-    Data#write()
-      File#save() &lt;-- Boom, there&#39;s a failure here, so we go up</code></pre></figure>
 
-<p>We can start this chain again, but we don&#39;t go back after <code>throw</code>. In other
-words, we don&#39;t <strong>do</strong> anything in the <code>catch</code> block. We only report the problem
-and wrap up execution. We never &quot;recover&quot;!</p>
 
-<hr/>
+<p>We can start this chain again, but we don't go back after <code>throw</code>. In other
+words, we don't <strong>do</strong> anything in the <code>catch</code> block. We only report the problem
+and wrap up execution. We never "recover"!</p>
+
+<hr>
 
 <p>All arguments against checked exceptions demonstrate nothing but
 a serious misunderstanding of object-oriented programming by their authors.

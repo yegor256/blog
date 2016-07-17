@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>CasperJS Tests in Maven Build</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ in Maven build using Tomcat, PhantomJS and CasperJS
         "keywords": ["maven casperjs", "maven phantomjs", "maven tomcat casperjs", "maven phantomjs tomcat", "integration tests with casperjs", "maven tests with casperjs", "phantomjs maven plugin"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -52,7 +54,7 @@ in Maven build using Tomcat, PhantomJS and CasperJS
   <body>
     <article>
       <h1>CasperJS Tests in Maven Build</h1>
-      <p>I&#39;m a big fan of automated testing in general and integration
+      <p>I'm a big fan of automated testing in general and integration
 testing in particular. I strongly believe that effort spent on
 writing tests are direct investments into quality and stability
 of the product under development.</p>
@@ -62,31 +64,16 @@ of the product under development.</p>
 CasperJS, we can ensure that our application responds correctly
 to requests sent by a regular web browser.</p>
 
-<!--more-->
+
 
 <p>This is a sample CasperJS test, which makes an HTTP request to a home page
 of a running WAR application and asserts that the response has
 <code>200</code> HTTP status code:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span>
-  <span class="s1">&#39;home page can be rendered&#39;</span><span class="p">,</span>
-  <span class="kd">function</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span>
-      <span class="nx">casper</span><span class="p">.</span><span class="nx">cli</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">),</span> <span class="c1">// URL of home page</span>
-      <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">test</span><span class="p">.</span><span class="nx">assertHttpStatus</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">);</span>
-    <span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span>
-      <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">test</span><span class="p">.</span><span class="nx">done</span><span class="p">();</span>
-      <span class="p">}</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">);</span></code></pre></figure>
+
 
 <p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file.
-Let&#39;s see how CasperJS can be executed automatically on every Maven build.</p>
+Let's see how CasperJS can be executed automatically on every Maven build.</p>
 
 <p>Here is the test scenario, implemented with a combination of Maven plugins:</p>
 
@@ -99,9 +86,9 @@ Let&#39;s see how CasperJS can be executed automatically on every Maven build.</
 <li><p>Shutdown Tomcat</p></li>
 </ol>
 
-<p>I&#39;m using a combination of plugins. Let&#39;s go through the steps one by one.</p>
+<p>I'm using a combination of plugins. Let's go through the steps one by one.</p>
 
-<p>BTW, I&#39;m not showing plugin versions in the examples below, primarily
+<p>BTW, I'm not showing plugin versions in the examples below, primarily
 because most of them are in active development. Check their versions
 at <a href="http://search.maven.org/">Maven Central</a> (yes, all of them are available there).</p>
 
@@ -114,20 +101,7 @@ we have an off-the-shelf Maven plugin:
 that understands what the current platform is and downloads the appropriate
 binary automatically, placing it into the <code>target</code> directory.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>com.github.klieber<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>phantomjs-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>install<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-  <span class="nt">&lt;configuration&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.9.2<span class="nt">&lt;/version&gt;</span>
-  <span class="nt">&lt;/configuration&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>The exact name of the downloaded binary is stored in the
 <code>${phantomjs.binary}</code> Maven property.</p>
@@ -135,129 +109,44 @@ binary automatically, placing it into the <code>target</code> directory.</p>
 <h2 id="2-install-casperjs">2. Install CasperJS</h2>
 
 <p>Unfortunately, there is no similar plugin for the CasperJS installation
-(at least I haven&#39;t found any as of yet). That&#39;s why I&#39;m using plain
+(at least I haven't found any as of yet). That's why I'm using plain
 old <code>git</code> (you should have it installed on your build machine).</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;id&gt;</span>casperjs-install<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;phase&gt;</span>pre-integration-test<span class="nt">&lt;/phase&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>exec<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;executable&gt;</span>git<span class="nt">&lt;/executable&gt;</span>
-        <span class="nt">&lt;arguments&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>clone<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>--depth=1<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>https://github.com/n1k0/casperjs.git<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>${project.build.directory}/casperjs<span class="nt">&lt;/argument&gt;</span>
-        <span class="nt">&lt;/arguments&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <h2 id="3-reserve-tcp-port">3. Reserve TCP Port</h2>
 
 <p>I need to obtain a random TCP port where Tomcat will be started.
 The port has to be available on the build machine. I want to be able
-to run multiple Maven builds in parallel, so that&#39;s why I get a random port on every build.</p>
+to run multiple Maven builds in parallel, so that's why I get a random port on every build.</p>
 
 <p>In other examples, you may see people using fixed port numbers,
 like <code>5555</code> or something similar. This is a very bad practice.
 Always reserve a new random port when you need it.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>build-helper-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;id&gt;</span>tomcat-port<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>reserve-network-port<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;portNames&gt;</span>
-          <span class="nt">&lt;portName&gt;</span>tomcat.port<span class="nt">&lt;/portName&gt;</span>
-        <span class="nt">&lt;/portNames&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>The plugin reserves a port and sets it value to the <code>${tomcat.port}</code> Maven property.</p>
 
 <h2 id="4-start-tomcat">4. Start Tomcat</h2>
 
-<p>Now, it&#39;s time to start Tomcat with the WAR package inside.
-I&#39;m using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
+<p>Now, it's time to start Tomcat with the WAR package inside.
+I'm using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
 that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;configuration&gt;</span>
-    <span class="nt">&lt;path&gt;</span>/<span class="nt">&lt;/path&gt;</span>
-  <span class="nt">&lt;/configuration&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;id&gt;</span>start-tomcat<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;phase&gt;</span>pre-integration-test<span class="nt">&lt;/phase&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>run-war-only<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;port&gt;</span>${tomcat.port}<span class="nt">&lt;/port&gt;</span>
-        <span class="nt">&lt;fork&gt;</span>true<span class="nt">&lt;/fork&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues
-to run when the plugin execution finishes. That&#39;s exactly what I need.</p>
+to run when the plugin execution finishes. That's exactly what I need.</p>
 
 <h2 id="5-run-casperjs">5. Run CasperJS</h2>
 
-<p>Now, it&#39;s time to run CasperJS. Even though there are some
-plugins exist for this, I&#39;m using plain old
+<p>Now, it's time to run CasperJS. Even though there are some
+plugins exist for this, I'm using plain old
 <a href="http://mojo.codehaus.org/exec-maven-plugin/">exec-maven-plugin</a>,
 mostly because it is more configurable.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;id&gt;</span>casperjs-test<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;phase&gt;</span>integration-test<span class="nt">&lt;/phase&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>exec<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-      <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;executable&gt;</span>
-          ${project.build.directory}/casperjs/bin/casperjs
-        <span class="nt">&lt;/executable&gt;</span>
-        <span class="nt">&lt;workingDirectory&gt;</span>${basedir}<span class="nt">&lt;/workingDirectory&gt;</span>
-        <span class="nt">&lt;arguments&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>test<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>--verbose<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>--no-colors<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>--concise<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>--home=http://localhost:${tomcat.port}<span class="nt">&lt;/argument&gt;</span>
-          <span class="nt">&lt;argument&gt;</span>${basedir}/src/test/casperjs<span class="nt">&lt;/argument&gt;</span>
-        <span class="nt">&lt;/arguments&gt;</span>
-        <span class="nt">&lt;environmentVariables&gt;</span>
-          <span class="nt">&lt;PHANTOMJS_EXECUTABLE&gt;</span>${phantomjs.binary}<span class="nt">&lt;/PHANTOMJS_EXECUTABLE&gt;</span>
-        <span class="nt">&lt;/environmentVariables&gt;</span>
-      <span class="nt">&lt;/configuration&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <p>The environment variable <code>PHANTOMJS_EXECUTABLE</code> is the undocumented
 feature that makes this whole scenario possible. It configures
@@ -267,19 +156,7 @@ the location of the PhantomJS executable, which was downloaded a few steps above
 
 <p>In the last step, I shut down the Tomcat server.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;executions&gt;</span>
-    <span class="nt">&lt;execution&gt;</span>
-      <span class="nt">&lt;id&gt;</span>stop-tomcat<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;phase&gt;</span>post-integration-test<span class="nt">&lt;/phase&gt;</span>
-      <span class="nt">&lt;goals&gt;</span>
-        <span class="nt">&lt;goal&gt;</span>shutdown<span class="nt">&lt;/goal&gt;</span>
-      <span class="nt">&lt;/goals&gt;</span>
-    <span class="nt">&lt;/execution&gt;</span>
-  <span class="nt">&lt;/executions&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
 
 <h2 id="real-example">Real Example</h2>
 
@@ -291,7 +168,7 @@ Its source code is open and available in <a href="https://github.com/sttc/statef
 <p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code>pom.xml</code></a>
 contains exactly the same configurations explained above, but joined together.</p>
 
-<p>If you have any questions, please don&#39;t hesitate to ask below.</p>
+<p>If you have any questions, please don't hesitate to ask below.</p>
 
 <p>PS. Also, check this:
 <a href="/2014/04/06/phandom.html">PhantomJS as an HTML Validator</a></p>

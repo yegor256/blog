@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>How to Implement an Iterating Adapter</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/04/30/iterating-adapter.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/04/30/iterating-adapter.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ an iterating adapter in Java; this article should give a practical example.
         "keywords": ["java iterator", "iterator in java example", "iterator in java adapter", "java iterator example", "implement java iterator"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -56,61 +58,32 @@ an iterating adapter in Java; this article should give a practical example.
 is one of the fundamental Java
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a>,
 introduced in Java 1.2. It is supposed
-to be very simple; however, in my experience, many Java developers don&#39;t understand
+to be very simple; however, in my experience, many Java developers don't understand
 how to implement a custom one, which should iterate a stream of data
 coming from some other source. In other words, it becomes an <strong>adapter</strong> of
 another source of data, in the form of an iterator. I hope this example will help.</p>
 
-<!--more-->
 
-<p>Let&#39;s say we have an object of this class:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Data</span> <span class="o">{</span>
-  <span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+<p>Let's say we have an object of this class:</p>
+
+
 
 <p>When we call <code>read()</code>, it returns a new array of bytes that were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
 we want to create an <em>adapter</em> that would consume the bytes and let
 us iterate them:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
-  <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
-  <span class="n">Byte</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
-  <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span>  <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>Here is how it should look (it is not thread-safe!):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Data</span> <span class="n">data</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
-  <span class="kd">public</span> <span class="nf">FluentData</span><span class="o">(</span><span class="kd">final</span> <span class="n">Data</span> <span class="n">dat</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">dat</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
-      <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="kt">byte</span> <span class="n">item</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="o">!</span><span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="n">Byte</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-      <span class="k">throw</span> <span class="k">new</span> <span class="nf">NoSuchElementException</span><span class="o">(</span><span class="s">&quot;Nothing left&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">UnsupportedOperationException</span><span class="o">(</span><span class="s">&quot;It is read-only&quot;</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>There is no way to make it thread-safe because the iterating process
 is outside the scope of the iterator. Even if we declare our methods
-as <code>synchronized</code>, this won&#39;t guarantee that two threads won&#39;t conflict
-when they both call <code>hasNext()</code> and <code>next()</code>. So don&#39;t bother with it and
+as <code>synchronized</code>, this won't guarantee that two threads won't conflict
+when they both call <code>hasNext()</code> and <code>next()</code>. So don't bother with it and
 just document the iterator as not thread-safe, then let its users
 synchronize one level higher when necessary.</p>
 

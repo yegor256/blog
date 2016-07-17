@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Try. Finally. If. Not. Null.</title>
-    <link rel="canonical" href="http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ annoying mistake.
         "keywords": ["close stream java", "java try catch", "java finally", "java close stream in finally", "java close stream try catch"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,71 +55,42 @@ annoying mistake.
   <body>
     <article>
       <h1>Try. Finally. If. Not. Null.</h1>
-      <p>There is a very typical mistake in pre-Java7 &quot;try/finally&quot; scenario,
+      <p>There is a very typical mistake in pre-Java7 "try/finally" scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
-Java7 introduced a solution, but it doesn&#39;t cover all situations.
-Sometimes we need to deal with non-<code>AutoCloseable</code> resources. Let&#39;s
+Java7 introduced a solution, but it doesn't cover all situations.
+Sometimes we need to deal with non-<code>AutoCloseable</code> resources. Let's
 open and close them correctly, please.</p>
 
-<!--more-->
 
-Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie
+
+
 
 <p>This is how it looks (assuming we are in Java 6):</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="k">try</span> <span class="o">{</span>
-  <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
-  <span class="c1">// reads the stream, throws IOException</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code>null</code></a>
 and its evil nature. Here it comes again. If you just follow the rule
-of &quot;not using NULL anywhere ever,&quot; this code would need an immediate
+of "not using NULL anywhere ever," this code would need an immediate
 refactoring. Its correct version will look like this:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
-<span class="k">try</span> <span class="o">{</span>
-  <span class="c1">// reads the stream, throws IOException</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-  <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
 
-<p>There is no <code>null</code> anymore and it&#39;s very clean. Isn&#39;t it?</p>
+
+<p>There is no <code>null</code> anymore and it's very clean. Isn't it?</p>
 
 <p>There are situations when opening the resource itself throws <code>IOException</code>
-and we can&#39;t put it outside of <code>try/catch</code>. In that case, we have to have
+and we can't put it outside of <code>try/catch</code>. In that case, we have to have
 <strong>two</strong> <code>try/catch</code> blocks:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">InputStream</span> <span class="n">input</span><span class="o">;</span>
-<span class="k">try</span> <span class="o">{</span>
-  <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="k">try</span> <span class="o">{</span>
-  <span class="c1">// reads the stream, throws IOException</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-  <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="o">}</span></code></pre></figure>
+
 
 <p>But there should be no <code>null</code>, never!</p>
 
 <p>The presence of <code>null</code> in Java code is a clear indicator of code smell. Something
 is not right if you have to use <code>null</code>. The only place where the presence of <code>null</code>
-is justified is where we&#39;re using third-party APIs or JDK. They may return
+is justified is where we're using third-party APIs or JDK. They may return
 <code>null</code> sometimes because... well, their design is bad. We have
-no other option but to do <code>if(x==null)</code>. But that&#39;s it. No other places
+no other option but to do <code>if(x==null)</code>. But that's it. No other places
 are good for <code>null</code>.</p>
 
     </article>

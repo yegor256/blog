@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Project Lifecycle in Teamed.io</title>
-    <link rel="canonical" href="http://www.yegor256.com/2014/10/06/software-project-lifecycle.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2014/10/06/software-project-lifecycle.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,7 +44,8 @@ developed by Teamed.io.
         "keywords": ["project lifecycle", "agile project steps", "how to schedule an agile project", "project milestones", "project phases"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -53,14 +55,14 @@ developed by Teamed.io.
   <body>
     <article>
       <h1>Project Lifecycle in Teamed.io</h1>
-      <p>In addition to being a hands-on programmer, I&#39;m also co-founder and CTO of
+      <p>In addition to being a hands-on programmer, I'm also co-founder and CTO of
 <a href="http://www.teamed.io">Teamed.io</a>, a custom software development company.
 I play the role of a technical and management leader in all projects
 we work with.</p>
 
-<figure class='badge'><a href='http://www.teamed.io'></a></figure>
 
-<p>I wrote this article for those who&#39;re interested in hiring me and/or
+
+<p>I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
 the end of the project, when you choose to <a href="mailto:hire@teamed.io">work with us</a>.</p>
 
@@ -69,15 +71,15 @@ software development <a href="/2014/04/17/how-xdsd-is-different.html">seriously 
 from what many other teams are using. I personally pay a lot of attention to quality
 of code and quality of the internal processes that connect our team.</p>
 
-<!--more-->
+
 
 <p>There are four phases in every project I work with in
 <a href="http://www.teamed.io">Teamed.io</a>:</p>
 
 <ul>
 <li><p><strong>Thinking</strong>.
-Here we&#39;re trying to understand: What is the problem that the product
-is going to solve? We&#39;re also investigating the product&#39;s boundaries &mdash;
+Here we're trying to understand: What is the problem that the product
+is going to solve? We're also investigating the product's boundaries —
 who will work with the software (actors) and how will they work with it (user stories).
 Deliverables: <a href="/2015/11/10/ten-mistakes-in-specs.html">specification</a>.
 Duration: from 2 days up to 3 weeks.
@@ -120,13 +122,13 @@ Participants: programmer(s), code reviewer(s), project manager.</p></li>
 
 <p>The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
 usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &mdash; Thinking. A mistake made during Thinking will
+and risky phase is the first one — Thinking. A mistake made during Thinking will
 <a href="/2015/06/02/how-to-estimate-software-cost.html">cost</a>
 much more than a mistake made later.</p>
 
 <h2 id="thinking">Thinking</h2>
 
-<figure class='badge'></figure>
+
 
 <p>Thinking is the first and the most important phase.</p>
 
@@ -137,16 +139,16 @@ Mostly because the platform is very popular, very powerful, and really cheap
 We also keep all communication in the GitHub issue tracker.</p>
 
 <p>Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
-this is done right inside the source code, but sometimes in the GitHub <code>README.md</code> file. What&#39;s important
+this is done right inside the source code, but sometimes in the GitHub <code>README.md</code> file. What's important
 is that the document should be under version control. We will modify it
 during the course of the project, very intensively. The <code>README.md</code> should
 <a href="/2014/10/20/how-we-write-product-vision.html">briefly</a>
-identify main &quot;actors&quot; of the system and define the product scope.</p>
+identify main "actors" of the system and define the product scope.</p>
 
 <p>Even though it is only half a page, the creation of this initial SRS document
 is the most important and the most expensive task in the entire project.
 We pay a lot of attention to this step. Usually this document is written
-by one of our system analysts in direct communication with the project sponsor. We can&#39;t afford
+by one of our system analysts in direct communication with the project sponsor. We can't afford
 a mistake at this step.</p>
 
 <p>Then, we invite a few new system analysts to the project. These guys
@@ -155,7 +157,7 @@ are responsible for turning our initial <code>README</code> into a more complete
 They start by asking questions, submitting them one by one
 as GitHub issues. Every question is addressed to the product owner. Using
 his/her answers, system analysts modify the <code>README</code> document.
-Sometimes we&#39;re using <a href="/2014/04/26/incremental-requirements-with-requs.html">Requs</a>.</p>
+Sometimes we're using <a href="/2014/04/26/incremental-requirements-with-requs.html">Requs</a>.</p>
 
 <p>At the end of the Thinking phase we estimate the size of the project,
 in <a href="/2014/11/14/hits-of-code.html">Hits of Code</a>.
@@ -164,7 +166,7 @@ Using this HoC metric, we can roughly
 
 <h2 id="building">Building</h2>
 
-<figure class='badge'></figure>
+
 
 <p>This is a one-man job for
 <a href="/2014/10/12/who-is-software-architect.html">an architect</a>.
@@ -195,10 +197,10 @@ are also defined at this phase.</p>
 
 <h2 id="fixing">Fixing</h2>
 
-<figure class='badge'></figure>
 
-<p>Now it&#39;s time to build a distributed team of programmers. First, we
-invite those who&#39;ve worked on other projects and have already
+
+<p>Now it's time to build a distributed team of programmers. First, we
+invite those who've worked on other projects and have already
 have proven their quality. Very often we invite new people,
 finding them through StackOverflow, GitHub, Upwork, and other sources.
 An average team size of an average project is 15-25 programmers.</p>
@@ -206,7 +208,7 @@ An average team size of an average project is 15-25 programmers.</p>
 <p>At this phase, we understand <a href="/2014/11/24/principles-of-bug-tracking.html">any inconsistency</a>
 as a bug. If something is not clear
 in the documentation, or if something can be refactored for better
-readability, or if a function can be improved for higher performance &mdash;
+readability, or if a function can be improved for higher performance —
 it is a bug to us.
 And <a href="/2014/04/13/bugs-are-welcome.html">bugs are welcome</a> in our projects.
 We encourage everybody to report as many bugs as possible. This is how
@@ -220,7 +222,7 @@ we re-deploy the entire product to the production platform.</p>
 
 <p>Every bug is reported, classified, discussed, and fixed in its
 own GitHub ticket and its own Git branch. We never allow anyone
-to just commit to the <code>master</code> branch &mdash; all changes must pass through
+to just commit to the <code>master</code> branch — all changes must pass through
 our <a href="/2014/08/13/strict-code-quality-control.html">quality controls</a>
 and be merged into <code>master</code> by <a href="http://www.rultor.com">rultor.com</a>,
 our <a href="/2014/07/24/rultor-automated-merging.html">merging bot</a>.</p>
@@ -235,7 +237,7 @@ in GitHub.</p>
 
 <h2 id="using">Using</h2>
 
-<figure class='badge'></figure>
+
 
 <p>This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive bug reports

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Redundant Variables Are Pure Evil</title>
-    <link rel="canonical" href="http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html" />
+    <link rel="canonical" href="http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ make your code dirty and difficult to understand.
         "keywords": ["redundant variables", "too many variables", "variables in oop", "variables in java", "java variables"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -60,34 +62,33 @@ cleaner and easier to read. In reality, though, we make it more verbose
 and difficult to understand. Without exception, any variable used only
 once is redundant and must be replaced with a value.</p>
 
-<!--more-->
 
-Y Tu Mamá También (2001) by Alfonso Cuarón
+
+
 
 <p>Here, variable <code>fileName</code> is redundant:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="s">&quot;test.txt&quot;</span><span class="o">;</span>
-<span class="n">print</span><span class="o">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">fileName</span><span class="o">).</span><span class="na">length</span><span class="o">());</span></code></pre></figure>
+
 
 <p>This code must look differently:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">print</span><span class="o">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">&quot;test.txt&quot;</span><span class="o">).</span><span class="na">length</span><span class="o">());</span></code></pre></figure>
 
-<p>This example is very primitive, but I&#39;m sure you&#39;ve seen these
-redundant variables many times. We use them to &quot;explain&quot; the code &mdash;
-it&#39;s not just a string literal <code>&quot;test.txt&quot;</code> anymore but a <code>fileName</code>.
+
+<p>This example is very primitive, but I'm sure you've seen these
+redundant variables many times. We use them to "explain" the code —
+it's not just a string literal <code>"test.txt"</code> anymore but a <code>fileName</code>.
 The code looks easier to understand, right? Not really.</p>
 
 
 
-<p>Let&#39;s dig into what &quot;readability&quot; of code is in the first place. I think this
+<p>Let's dig into what "readability" of code is in the first place. I think this
 quality can be measured by the number of seconds I need to understand the
-code I&#39;m looking at. The longer the timeframe, the lower the readability.
-Ideally, I want to understand any piece of code in a <strong>few seconds</strong>. If I can&#39;t,
-that&#39;s a failure of its <strong>author</strong>.</p>
+code I'm looking at. The longer the timeframe, the lower the readability.
+Ideally, I want to understand any piece of code in a <strong>few seconds</strong>. If I can't,
+that's a failure of its <strong>author</strong>.</p>
 
 <p><a href="/2015/06/29/simple-diagrams.html">Remember</a>,
-if I don&#39;t understand you, it&#39;s your fault.</p>
+if I don't understand you, it's your fault.</p>
 
 <p>An increasing length of code degrades readability. So the more variable
 names I have to remember while reading through it, the longer
@@ -106,7 +107,7 @@ Refactor it using new objects or methods but not variables. Make your
 code shorter by moving pieces of it into new classes or private methods.</p>
 
 <p>Moreover, I think that in <a href="/2015/08/18/multiple-return-statements-in-oop.html">perfectly designed methods</a>,
-you won&#39;t need <strong>any</strong> variables aside from method arguments.</p>
+you won't need <strong>any</strong> variables aside from method arguments.</p>
 
     </article>
   </body>
