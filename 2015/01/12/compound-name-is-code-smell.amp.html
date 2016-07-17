@@ -48,11 +48,17 @@ smell because it indicates a variable scope that's too big.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html">here</a>.
+      </p>
       <h1>A Compound Name Is a Code Smell</h1>
       <p>Do you name variables like <code>textLength</code>, <code>table_name</code>, or <code>current-user-email</code>?
 All three are compound names that consist of more than one word. Even though

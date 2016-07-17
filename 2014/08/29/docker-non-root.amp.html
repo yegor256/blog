@@ -49,11 +49,17 @@ user, read how
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2014/08/29/docker-non-root.html">here</a>.
+      </p>
       <h1>How We Run as a Non-Root Inside Docker Container</h1>
       <p>Docker starts a process inside its container as a "root" user. In some
 cases, this is not convenient though. For example, <code>initdb</code> from PostgreSQL doesn't like to

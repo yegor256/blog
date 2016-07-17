@@ -49,11 +49,17 @@ is actually negative; here is why and how to avoid that.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html">here</a>.
+      </p>
       <h1>A Few Valid Reasons to Reject a Bug Fix</h1>
       <p>A bug exists when something doesn't work as expected. A <em>bug
 fix</em> is basically a patch (a pull request) to the existing code base that

@@ -49,11 +49,17 @@ here is what I'm suggesting instead.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/01/26/defensive-programming.html">here</a>.
+      </p>
       <h1>Defensive Programming via Validating Decorators</h1>
       <p>Do you check the input parameters of your methods for validity?
 I don't. I used to, but not anymore.

@@ -48,11 +48,17 @@ I catch during code reviews, which can't be caught by static analysis
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html">here</a>.
+      </p>
       <h1>Typical Mistakes in Java Code</h1>
       <p>This page contains most typical mistakes I see in the Java code of people
 working with me. Static analysis (we're using <a href="http://www.qulice.com">qulice</a>

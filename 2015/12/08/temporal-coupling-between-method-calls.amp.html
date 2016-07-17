@@ -49,11 +49,17 @@ effective refactoring; avoid them.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html">here</a>.
+      </p>
       <h1>Temporal Coupling Between Method Calls</h1>
       <p>Temporal coupling happens between sequential method calls
 when they must stay in a particular order. This is inevitable

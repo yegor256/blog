@@ -49,11 +49,17 @@ mutability causes scope creep and tight coupling.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2014/11/07/how-immutability-helps.html">here</a>.
+      </p>
       <h1>How Immutability Helps</h1>
       <p>In a few recent posts, including
 <a href="/2014/09/16/getters-and-setters-are-evil.html">"Getters/Setters. Evil. Period."</a>,

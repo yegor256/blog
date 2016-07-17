@@ -49,11 +49,17 @@ annoying mistake.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html">here</a>.
+      </p>
       <h1>Try. Finally. If. Not. Null.</h1>
       <p>There is a very typical mistake in pre-Java7 "try/finally" scenario,
 which I keep seeing in so many code reviews. I just have to write about it.

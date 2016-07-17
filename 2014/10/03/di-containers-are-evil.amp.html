@@ -48,11 +48,17 @@ mechanism, DI frameworks turn it into an anti-pattern.
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2014/10/03/di-containers-are-evil.html">here</a>.
+      </p>
       <h1>Dependency Injection Containers are Code Polluters</h1>
       <p>While <a href="http://martinfowler.com/articles/injection.html">dependency injection</a> (aka, "DI")
 is a natural technique of composing objects in OOP
