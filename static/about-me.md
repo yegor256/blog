@@ -20,7 +20,9 @@ exclude_from_search: true
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
-I'm Yegor Bugayenko, a programmer, a founder and an investor.
+I'm Yegor Bugayenko (Russian:
+<span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
+a programmer, a founder and an investor.
 
 As a **programmer** I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP and JavaScript.
