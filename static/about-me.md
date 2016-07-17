@@ -7,14 +7,11 @@ description: |
   Yegor Bugayenko is a software architect, writer, blogger,
   project manager, CTO, seed investor, and philanthropist.
 keywords:
-  - java
-  - programming
+  - java blog
+  - blog about programming
   - yegor bugayenko
-  - quality of software
-  - software blog
-  - high quality programming
-  - static analysis
-  - software testing
+  - егор бугаенко
+  - project management blog
 exclude_from_search: true
 ---
 
