@@ -16,8 +16,8 @@ exclude_from_search: true
 
 {% badge /images/angry-testimonials.png 220 %}
 
-This is what my readers think about me. The list is
-sorted by my personal preference: the most interesting comments
+This is what _some_ of my readers think about me. The list is
+sorted by my personal preference, the most interesting comments
 are on the top.
 
 "You're a self opinionated asshole and I hope you suffocate
