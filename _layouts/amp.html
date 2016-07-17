@@ -44,12 +44,13 @@
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
-      <p>
+      <p class="intro">
         This is an AMP version of the article,
         its original content can be found
         <a href="{{ doc.url | prepend: site.baseurl | prepend: site.url }}">here</a>.
