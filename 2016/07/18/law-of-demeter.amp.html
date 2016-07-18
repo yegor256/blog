@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Law of Demeter Doesn't Mean One Dot</title>
+    <link rel="canonical" href="http://www.yegor256.com/2016/07/18/law-of-demeter.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2016/07/18/law-of-demeter.html"
+        },
+        "headline": "The Law of Demeter Doesn't Mean One Dot",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-07-18",
+        "dateModified": "2016-07-18",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The well-known Law of Demeter is seriously misunderstood
+by object-oriented programmers &mdash; it isn't equal
+to the law of one dot.
+",
+        "keywords": ["law of demeter", "law of demeter java", "law of demeter violation", "law of demeter example", "law of demeter c#"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/07/18/law-of-demeter.html">here</a>.
+      </p>
+      <h1>The Law of Demeter Doesn't Mean One Dot</h1>
+      <p>You've probably heard about that 30-year-old
+<a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a> (LoD). Someone
+asked me recently what I think about it. And not just what I think, but
+how it is possible to keep objects small and obey the LoD. According to the
+law, we're not allowed to do something like <code>book.pages().last().text()</code>.
+Instead, we're supposed to go with <code>book.textOfLastPage()</code>.
+It puzzled me, because I strongly disagree. I believe the first construct
+is perfectly valid in OOP. So I've done some research to find out
+whether this law is really a law. What I found out is that the law is
+perfect, but its common understanding in the OOP world is simply wrong
+(not surprisingly).</p>
+
+
+
+
+
+<p><a href="http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf">Object-Oriented Programming: An Objective Sense of Style</a>
+K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.</p>
+
+<p>This is where it was introduced. Let's see what it literally says (look for
+Section 3 in that PDF document). Say it's a Java class:</p>
+
+
+
+<p>All four calls to four different <code>hello()</code> methods are legal, according
+to the LoD. So what would be illegal, I ask myself? No surprise;
+the answer is this: <code>a.x.hello()</code>. That would be illegal. Directly
+accessing the attribute from another object and then talking to it
+is not allowed by the law.</p>
+
+<p>But we don't do that anyway. We're talking about <code>book.pages().last().next()</code>.
+In this chain of method calls, we're not accessing any attributes. We're
+asking our objects to build new objects for us. What does the law say about
+that? Let me read it and quote:</p>
+
+<blockquote>
+<p>Objects created by m(), or by functions or methods that m() calls, are considered as arguments of m()</p>
+</blockquote>
+
+<p>In other words, the object <code>Pages</code> that method call <code>book.pages()</code> returns
+is a perfectly valid object that can be used. Then, we can call method
+<code>last()</code> on it and get an object <code>Page</code>, and then call method <code>text()</code>, etc. This
+is a perfectly valid scenario that doesn't violate the law at all, just
+as I expected.</p>
+
+<p>So where does this common understanding of the law come from? Why does
+<a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Wikipedia</a>
+call it a rule of "one dot" and say that
+"an object should avoid invoking methods of a member object returned by another method"?
+This is absolutely to the contrary of what the original paper says!
+What's going on?</p>
+
+<p>The answer is simple: <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>.</p>
+
+<p>The majority of OOP developers think most object methods that
+return anything are getters. And getters, indeed, are no different than
+direct access to object attributes. That's why Wikipedia actually says
+"no direct access to attributes and, since most of your methods are getters,
+don't touch them either, silly."</p>
+
+<p>That's just sad to see.</p>
+
+<p>So the bottom line is that the Law of Demeter is not against
+method chaining at all. Of course, it's against getters and direct attribute
+access. But who isn't, right?</p>
+
+    </article>
+  </body>
+</html>
