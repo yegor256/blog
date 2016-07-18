@@ -115,7 +115,7 @@ Malmö, Sweden<br/>
 **Seven Deadly Sins of a Software Project**<br>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
-15-18 November 2016
+16 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
