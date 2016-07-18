@@ -20,7 +20,8 @@ module Jekyll
       xml.search('//body//img').remove
       xml.search('//body//svg').remove
       xml.search('//body//aside').remove
-      @html = xml.to_s
+      @html = xml.to_html
+        .gsub(/<meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">/, '')
       write(site.dest)
     end
     def write(dest)
