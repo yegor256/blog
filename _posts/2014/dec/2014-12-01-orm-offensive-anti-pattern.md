@@ -155,7 +155,8 @@ ORM objects are
 with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
 us send our requests to the ORM framework and understand its response.
-Besides getters and setters, objects have no other methods. They don't even know
+Besides [getters and setters]({% pst 2016/jul/2016-07-18-law-of-demeter %}),
+objects have no other methods. They don't even know
 which database they came from.
 
 This is how object-relational mapping works.

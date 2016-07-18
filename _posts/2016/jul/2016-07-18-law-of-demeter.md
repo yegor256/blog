@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Law of Demeter Doesn't Mean One Dot"
-date: 2016-07-20
+date: 2016-07-18
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -29,6 +29,8 @@ perfect, but its common understanding in the OOP world is simply wrong
 (not surprisingly).
 
 <!--more-->
+
+{% picture /images/2016/07/spartacus.jpg 0 Spartacus (1960) by Stanley Kubrick %}
 
 [Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.
