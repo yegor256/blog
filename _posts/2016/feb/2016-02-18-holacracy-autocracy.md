@@ -19,7 +19,8 @@ keywords:
 I strongly believe that while it is very effective to structure
 an organization in a democratic and sociocratic way, a project
 should be managed completely different.
-A project should resemble a dictatorship, authoritarian or military hierarchy
+A project should resemble a
+[dictatorship]({% pst 2016/jul/2016-07-21-convince-me %}), authoritarian or military hierarchy
 with a single strong, result-oriented leader who gives explicit orders
 that are never doubted by subordinates and an explicitly defined hierarchy.
 

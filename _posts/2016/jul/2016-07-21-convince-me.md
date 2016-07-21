@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Convince Me!"
-date: 2016-07-20
+date: 2016-07-21
 place: Palo Alto, CA
-tags: management
+tags: management architect
 description: |
   During a project, a software architect must be a technical dictator
   who doesn't convince anyone but rather
@@ -27,6 +27,8 @@ something in a certain way, and the sponsor (or its representative) says
 that it's not exactly how things should work. What's next?
 
 <!--more-->
+
+{% picture /images/2016/07/beasts-of-no-nation.jpg 0 Beasts of No Nation (2015) by Cary Joji Fukunaga %}
 
 In our projects, a product owner (PO) is usually a representative of
 a project sponsor (the paying customer). Since all our projects are rather

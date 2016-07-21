@@ -155,7 +155,8 @@ requirements or simply don't know what to write exactly.
 
 ## Architect
 
-Now, I'm the architect, and my task is to implement a requirement, which has been formally specified
+Now, I'm the [architect]({% pst 2016/jul/2016-07-21-convince-me %}),
+and my task is to implement a requirement, which has been formally specified
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear and classes have been designed and implemented.
 
