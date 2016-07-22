@@ -12,16 +12,3 @@ $(
     );
   }
 );
-
-var disqus_shortname = 'yegor256';
-var disqus_url = document.location.href.split('?')[0].split('#')[0];
-$(
-  function() {
-    'use strict';
-    $('<script>')
-      .attr('src', '//a.disquscdn.com/count.js')
-      .attr('async', 'async')
-      .attr('defer', 'defer')
-      .appendTo('head');
-  }
-);

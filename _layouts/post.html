@@ -102,6 +102,18 @@ layout: default
 
   <div class="disqus" role="complementary">
     <div id="disqus_thread" class="disqus-thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = document.location.href.split('?')[0].split('#')[0];
+        this.page.identifier = document.location.href.split('?')[0].split('#')[0];
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//yegor256.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
     <a href="http://disqus.com" class="dsq-brlink">
       comments powered by
       <span class="logo-disqus">Disqus</span>
