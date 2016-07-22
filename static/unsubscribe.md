@@ -10,7 +10,7 @@ keywords:
   - unsubscribe
 ---
 
-<script>
+<script async="async">
 $('#email').ready(
   function() {
     var query = window.location.search,

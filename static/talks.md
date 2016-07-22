@@ -15,7 +15,7 @@ keywords:
 exclude_from_search: true
 ---
 
-<script>
+<script async="async">
 $(function() {
   $('#future-talks-total').text($('img.future-talk').length);
   $('#past-talks-total').text($('img.past-talk').length);
