@@ -16,6 +16,7 @@ keywords:
   - object oriented programming concepts
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
+  - Spanish: https://ixmanuel.gitbooks.io/pensando-en-objectos/content/
 book: elegant-objects 2.3
 youtube:
   - WSgP85kr6eU
