@@ -33,6 +33,10 @@ anonymous
 &mdash;
 [Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
+"... insightless nonsense"
+&mdash;
+[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
+
 "I have still a good opinion of you but some posts are just holy crap"
 &mdash;
 [Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
