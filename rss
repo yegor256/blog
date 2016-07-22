@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-21T07:32:38+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>The Law of Demeter Doesn&amp;#39;t Mean One Dot</title><link href="http://www.yegor256.com/2016/07/18/law-of-demeter.html" rel="alternate" type="text/html" title="The Law of Demeter Doesn&#39;t Mean One Dot" /><published>2016-07-18T00:00:00+00:00</published><updated>2016-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/18/law-of-demeter</id><content type="html" xml:base="http://www.yegor256.com/2016/07/18/law-of-demeter.html">&lt;p&gt;You&amp;#39;ve probably heard about that 30-year-old
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-22T00:18:56+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Convince Me!</title><link href="http://www.yegor256.com/2016/07/21/convince-me.html" rel="alternate" type="text/html" title="Convince Me!" /><published>2016-07-21T00:00:00+00:00</published><updated>2016-07-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/21/convince-me</id><content type="html" xml:base="http://www.yegor256.com/2016/07/21/convince-me.html">&lt;p&gt;I&amp;#39;ve already explained how I understand
+the &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;role&lt;/a&gt;
+and &lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;responsibilities&lt;/a&gt;
+of a software architect.
+But one question still remains unanswered, and it often turns into a problem
+in our projects: What does a software architect do when the project
+sponsor doesn&amp;#39;t like his technical decisions? The architect implements
+something in a certain way, and the sponsor (or its representative) says
+that it&amp;#39;s not exactly how things should work. What&amp;#39;s next?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2Fbeasts-of-no-nation.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Beasts of No Nation (2015) by Cary Joji Fukunaga&#39;/&gt;&lt;figcaption&gt;Beasts of No Nation (2015) by Cary Joji Fukunaga&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In our projects, a product owner (PO) is usually a representative of
+a project sponsor (the paying customer). Since all our projects are rather
+complex Java software packages, POs are very technical people. They
+are programmers or used to be programmers. They understand the code
+we write, and they want their opinion to be taken into account and
+respected.&lt;/p&gt;
+
+&lt;p&gt;And I&amp;#39;m not talking about &lt;a href=&quot;/2015/01/05/how-to-be-honest-and-keep-customer.html&quot;&gt;stupid&lt;/a&gt;
+product owners &amp;mdash; those guys are a separate story. I&amp;#39;m talking about a pretty
+reasonable PO with his own technical opinion that needs to be heard.&lt;/p&gt;
+
+&lt;p&gt;Here is a practical example. Last week, I was
+&lt;a href=&quot;/2015/08/04/nine-steps-start-software-project.html&quot;&gt;starting&lt;/a&gt; a project.
+I was an architect. It was a Java server-side module. I decided to use
+Maven as a build automation system.&lt;/p&gt;
+
+&lt;p&gt;I created some initial files, configured &lt;code&gt;pom.xml&lt;/code&gt;, briefly explained the
+project structure in &lt;code&gt;README.md&lt;/code&gt;, and submitted a pull request. Chris, the product
+owner, reviewed it and asked, &amp;quot;Why not Gradle?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;It was a reasonable question, right? Gradle is another popular build
+automation system that I could have used, but I didn&amp;#39;t. The question
+is why. It was a pretty innocent question, and I explained the answer right there
+in my comment to the pull request. I said Maven was more suitable in
+this project because ... blah blah blah.&lt;/p&gt;
+
+&lt;p&gt;But Chris argued back. He was still thinking Gradle was the better choice.
+He had his reasons. Meanwhile, I tried to &lt;strong&gt;convince&lt;/strong&gt; him of mine. I tried a few times
+and then realized I was doing something wrong. It shouldn&amp;#39;t work like that.&lt;/p&gt;
+
+&lt;p&gt;A software architect should not convince a product owner, a customer, or anybody
+else. Instead, an architect must make his decisions and be responsible for the
+entire success or failure of the product, just like I
+&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;explained before&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a simple reason for that. Any attempt to convince anyone
+causes a possibility of &amp;quot;responsibility leakage&amp;quot;. What if I fail to convince?
+I will have to change my plan and use Gradle, right? What if the product
+has problems because of that decision? I will try to blame Chris for that,
+right? I can&amp;#39;t be &lt;strong&gt;fully&lt;/strong&gt; responsible for the product anymore, because I was
+&amp;quot;forced&amp;quot; to make at least one decision.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t get me wrong; a good architect must collect different opinions before
+making his own decision. But collecting Chris&amp;#39;s opinion would look very
+different. I would ask him first what he thinks about Maven and Gradle.
+He would tell me that he doesn&amp;#39;t like Maven because of this and that. And I
+would take that into account. Or maybe not. But my decision would still be
+mine, made by myself, under no compulsion by anybody. And Chris would still
+be able to blame me for any negative consequences of that decision.&lt;/p&gt;
+
+&lt;p&gt;But what should Chris do if he really doesn&amp;#39;t like my decision? It&amp;#39;s his
+money and his product, right? He does care. And he doesn&amp;#39;t want to have
+Maven in &lt;strong&gt;his&lt;/strong&gt; product. What does he do? How can he influence my
+decision-making process?&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s easy. There are two documents in each software project. The first one is
+&lt;strong&gt;requirements&lt;/strong&gt;, and the second one is &lt;strong&gt;architecture&lt;/strong&gt;. Chris should use them both
+to correct me and point me in the right direction. Here&amp;#39;s how.&lt;/p&gt;
+
+&lt;p&gt;First, if he really doesn&amp;#39;t want to have Maven,
+he should make changes to the requirements document. He should
+add something like &amp;quot;the build system must be Gradle, because ...&amp;quot;
+Or maybe even without the &amp;quot;because&amp;quot; part. It&amp;#39;s up to him.
+In that case, I will have to take that into account, and I will.
+I know my design decisions are dictated by the requirements.
+And not because Chris convinced me or I failed to convince him, but because
+that&amp;#39;s what the document says.&lt;/p&gt;
+
+&lt;p&gt;Second, if he is not entirely sure that Gradle is the right choice
+and just wants me to be more serious about my decisions, he should
+complain (by submitting a bug) about the quality of my
+&lt;a href=&quot;/2015/08/04/nine-steps-start-software-project.html&quot;&gt;architecture document&lt;/a&gt;.
+He should say the choice to go with Maven is not explained
+properly. I will then rethink my decision and will either change
+it or expain it better. But again, I will do it not to please
+Chris but to fix a reported bug.&lt;/p&gt;
+
+&lt;p&gt;To summarize, an architect must be an absolute technical &lt;strong&gt;dictator&lt;/strong&gt;
+during the project and must not have to convince anyone. If that&amp;#39;s not the case,
+the entire project faces big risks, simply because the responsibility
+will be &amp;quot;leaking&amp;quot;.&lt;/p&gt;</content><category term="management" /><category term="architect" /><summary>I&amp;#39;ve already explained how I understand
+the role
+and responsibilities
+of a software architect.
+But one question still remains unanswered, and it often turns into a problem
+in our projects: What does a software architect do when the project
+sponsor doesn&amp;#39;t like his technical decisions? The architect implements
+something in a certain way, and the sponsor (or its representative) says
+that it&amp;#39;s not exactly how things should work. What&amp;#39;s next?</summary></entry><entry><title>The Law of Demeter Doesn&amp;#39;t Mean One Dot</title><link href="http://www.yegor256.com/2016/07/18/law-of-demeter.html" rel="alternate" type="text/html" title="The Law of Demeter Doesn&#39;t Mean One Dot" /><published>2016-07-18T00:00:00+00:00</published><updated>2016-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/18/law-of-demeter</id><content type="html" xml:base="http://www.yegor256.com/2016/07/18/law-of-demeter.html">&lt;p&gt;You&amp;#39;ve probably heard about that 30-year-old
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_Demeter&quot;&gt;Law of Demeter&lt;/a&gt; (LoD). Someone
 asked me recently what I think about it. And not just what I think, but
 how it is possible to keep objects small and obey the LoD. According to the
@@ -994,198 +1096,4 @@ attended. Basically, they were interested to know what I would suggest for
 improvement. So, I decided to summarize it in a list of the most typical
 mistakes all conferences keep making and give them some ideas.
 Remember, I&amp;#39;m judging from a speaker&amp;#39;s position.
-The most serious mistakes and pieces of advice are at the bottom.</summary></entry><entry><title>Who Is a Project Manager?</title><link href="http://www.yegor256.com/2016/05/24/who-is-project-manager.html" rel="alternate" type="text/html" title="Who Is a Project Manager?" /><published>2016-05-24T00:00:00+00:00</published><updated>2016-05-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/05/24/who-is-project-manager</id><content type="html" xml:base="http://www.yegor256.com/2016/05/24/who-is-project-manager.html">&lt;p&gt;A project manager is very often confused with a leader. However, they are two
-very different things. A project manager is the one who predicts the future,
-while a leader is the one who builds it. And, in my opinion, a perfect
-project manager is much more valuable for a project than a leader. If a
-leader is valuable at all...&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F05%2Fschindlers-list.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Schindler&amp;amp;apos;s List (1993) by Steven Spielberg&#39;/&gt;&lt;figcaption&gt;Schindler&amp;#39;s List (1993) by Steven Spielberg&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are three things I want to define: project, project
-management, and project manager. Once they are clear, my previous statement
-will become obvious.&lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;project&lt;/strong&gt; is a vector from &lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; to &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;,
-where &lt;i&gt;W&lt;sub&gt;t&lt;/sub&gt;&lt;/i&gt; is a set of all &lt;em&gt;resources and risks&lt;/em&gt; in the world at
-some defined point in time &lt;i&gt;t&lt;/i&gt;. &lt;i&gt;W&lt;sub&gt;t&lt;/sub&gt;&lt;/i&gt; &lt;em&gt;is the world&lt;/em&gt;,
-at the moment &lt;i&gt;t&lt;/i&gt;. A project transforms the world, moving it from one
-state to another.
-&lt;a href=&quot;http://www.pmi.org/PMBOK-Guide-and-Standards.aspx&quot;&gt;PMBOK&lt;/a&gt; defines projects as
-&amp;quot;temporary endeavors undertaken to create unique products, services, or results,&amp;quot;
-which is just a specific case of my definition. Mine is more abstract, I believe.&lt;/p&gt;
-
-&lt;p&gt;Consider this example. You woke up in the morning and made yourself a cup of coffee.
-That was a project.
-When you woke up, the world was in &lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; state.
-There were some coffee beans in the bag, some water in the tap and
-some electricity in the power station. And there were you standing in front
-of the coffee machine. These were the &lt;em&gt;resources&lt;/em&gt; (including yourself).
-There were also risks. The electricity black out could have happened, right?
-The machine could have broken, right?
-In theory, there was an unlimited amount of risks, including a zombie riot.
-However, the majority of them had very low &lt;em&gt;probabilities&lt;/em&gt;, that&amp;#39;s why you
-managed to make that cup of coffee.&lt;/p&gt;
-
-&lt;p&gt;When the coffee was ready, the world appeared to be in &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt; state.
-There were no coffee beans in the bag any more, the water was
-used, and so was the electricity. However, a cup of coffee was created. We may
-call that project a success, but that&amp;#39;s not really important and is not correct. What&amp;#39;s important
-is that it&amp;#39;s &lt;em&gt;finished&lt;/em&gt;. We successfully transformed the world from state
-&lt;i&gt;W&lt;sub&gt;1&lt;/sub&gt;&lt;/i&gt; to state &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt;. You may be surprised to
-hear that the project was not a success. Indeed, it was not. It was a success
-only for you, one of its &lt;em&gt;stakeholders&lt;/em&gt;. How about your roommate, the
-owner of that bag of coffee beans, who asked you yesterday not to use them
-because he is waiting for a date tonight? How much of a success was your project
-to him?&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;A project is either dead or alive, that&amp;#39;s it&lt;/aside&gt;
-
-&lt;p&gt;So, a project is never a &amp;quot;success&amp;quot; or a &amp;quot;failure.&amp;quot; A project is either
-dead or alive, that&amp;#39;s it. Success is a subjective category and can only
-be measured per stakeholder. And even a small project has many stakeholders.
-Think about that electricity company who sold you a few kW/h and made some
-profit out of it? The project was definitely a success for them. What about
-mother nature? Your project was definitely a failure for it, since you
-produced a few kilograms of CO&lt;sub&gt;2&lt;/sub&gt; while making that damn coffee. As you
-see, success is very subjective.&lt;/p&gt;
-
-&lt;p&gt;And we&amp;#39;re in line with the PMBOK definition. Our coffee making project was indeed
-a temporary endeavor undertaken to create a unique product, which was a cup of
-coffee.&lt;/p&gt;
-
-&lt;p&gt;Did we have a project manager? No. Were we doing any project management? No.
-Well, not explicitly. Obviously, you were the project manager, but you didn&amp;#39;t
-realize that.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Project management&lt;/strong&gt; is a set of tools to &lt;em&gt;predict&lt;/em&gt; the outcome
-of a project. Planning is one of those tools. Guessing is another one. Expert
-judgement is yet another one, which you were using while making that coffee.
-You were an expert and knew how to use the machine, the electricity, and the water
-tap. You didn&amp;#39;t need any other tools except your expert judgement. And it
-worked. In bigger projects, we would need more powerful instruments and methods.
-For example, we could use some scheduling software to plan when to put the beans
-into the machine, when to put that cup under the dipping point and when to
-press the button. You might also need a budgeting software to calculate how
-much money you will owe to the roommate. You might use a few risk identification
-and planning algorithms, etc.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;You must try to predict the future with as much accuracy and precision as possible&lt;/aside&gt;
-
-&lt;p&gt;Most of such tools are mentioned and explained in the PMBOK. They are even
-groupped there into so called &amp;quot;knowledge areas:&amp;quot; for predicting
-time, money, risks, people, etc. It&amp;#39;s not important how exactly you predict
-the future, how many tools you&amp;#39;re using or what knowledge areas you break them
-into. What&amp;#39;s important is that you must try to do it with as much accuracy
-and precision as possible. Here comes the definition of the main guy.&lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;project manager&lt;/strong&gt; (PM) is the one who predicts the future.
-The PM knows in what state &lt;i&gt;W&lt;sub&gt;2&lt;/sub&gt;&lt;/i&gt; the world will be when
-the project is finished. If the PM doesn&amp;#39;t know or is in doubt &amp;mdash; it&amp;#39;s a bad PM. If
-the PM knows and is certain about it &amp;mdash; it&amp;#39;s a good PM. That&amp;#39;s it.&lt;/p&gt;
-
-&lt;p&gt;And I have to say, in that coffee making project you were a lousy PM. Did you
-know what was the probability of the project being finished without a cup of coffee
-made? A good PM would say that &amp;quot;after an analysis of 230 risks I predict
-the probability of that coffee being tasteful as 87.4%.&amp;quot; Obviously, you didn&amp;#39;t
-have that information. Next, did you know what would be the total monetary value of
-the project after its completion? Did you calculate all incurred costs, including
-the price of environmental damage your coffee machine made? A good PM would
-say that &amp;quot;the total cost of the project is expected to be $1.09.&amp;quot; Were you
-able to predict the duration of the project precisely? Well, maybe that one
-you were rather good at.&lt;/p&gt;
-
-&lt;p&gt;There is only one reason why we want to put a project manager on top of
-the project. I&amp;#39;m sure you will be surprised to hear it: the only purpose of
-a PM in a project is to help its key stakeholders (also known as sponsors) to
-make a decision: to kill the project right now or to let it stay alive for a bit more.
-That&amp;#39;s it.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Project sponsors need to know whether the project is worth going forward&lt;/aside&gt;
-
-&lt;p&gt;You didn&amp;#39;t need a PM in your coffee making project because you, as its key
-stakeholder, were fully committed to finish it only when the coffee is ready.
-But imagine another situation. The coffee machine suddenly breaks, the water
-stops, the electricity is blacked out and some zombies are knocking at your door.
-And you still want that cup of coffee. Well, you&amp;#39;re not entirely sure what&amp;#39;s
-more important now, the coffee or simply finding a way to survive. You will need
-a more or less accurate prediction of how much that coffee will cost you and
-when will it be ready. If it&amp;#39;s just a few minutes and everything will be
-fine again, you will keep waiting for it. However, if the prediction is
-five hours and a risk of failure rate is 93%, you had better terminate this
-project and do something else.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s exactly what is happening in software development projects and all
-other projects. Project sponsors need to know whether the project is worth
-going forward or it&amp;#39;s time to stop it and do something else. That&amp;#39;s what
-they hire project managers for. This is the only reason of that millions
-of PMs existence &amp;mdash; to predict the future so that we were able to
-kill our projects before they kill us (read &amp;quot;eat all our resources&amp;quot;).&lt;/p&gt;
-
-&lt;p&gt;You may ask &amp;mdash; what about the coordinating part? What about
-&lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;morning standups&lt;/a&gt;?
-What about walking around the office and motivating all the
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slaves&lt;/a&gt;
-so that they don&amp;#39;t get lazy? Isn&amp;#39;t it the primary responsibility of a PM?&lt;/p&gt;
-
-&lt;p&gt;Not really. This is what a PM does in order to better understand the situation
-and predict the future. But it&amp;#39;s not what a PM is paid for.
-Indeed, a bad PM goes around the office and calls
-&lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;multiple meetings&lt;/a&gt;
-a day. This is also known as &amp;quot;staying on top of things&amp;quot; &amp;mdash;
-a perfect term to define an amateur PM. A bad PM &lt;em&gt;becomes&lt;/em&gt; the future, instead
-of predicting it. He &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanages&lt;/a&gt;
-the team by telling everybody what to do, since this is the easiest way to
-know what will happen and when, in the short-term. But the long-term future
-stays absolutely unclear. A bad PM mostly relies on expert judgement, just
-like you did while making that coffee.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;A good PM finds a way to organize resources in such a way that their future becomes predictable&lt;/aside&gt;
-
-&lt;p&gt;A good project manager is a completely different creature. A good PM
-finds a way to &lt;em&gt;organize&lt;/em&gt; resources in such a way that their future
-becomes &lt;em&gt;predictable&lt;/em&gt;. The key word here is &amp;quot;organize.&amp;quot; A good PM organizes
-people, money, time, risks, stakeholders, and many other things. He uses
-planning and budgeting software in order to better see the future. But he
-doesn&amp;#39;t become the future and he doesn&amp;#39;t &lt;em&gt;build&lt;/em&gt; the future. His people do that,
-he just &lt;em&gt;observes&lt;/em&gt;. He only collects information from many possible sources
-and estimates what will happen, how much it will cost and who will
-suffer most and least. At any moment in time, he &lt;em&gt;knows&lt;/em&gt; exactly when the project
-will be finished, how much it will spend, how many results it will produce,
-what the quality will be, and what the accuracy of that prediction is.&lt;/p&gt;
-
-&lt;p&gt;A good PM doesn&amp;#39;t personally give orders to the team and
-doesn&amp;#39;t meet people to tell them what to do. Instead, he makes sure
-that all communication is happening through
-a &lt;strong&gt;project management information system&lt;/strong&gt; (PMIS). Moreover, in a perfectly
-organized project, a PM won&amp;#39;t even need to give any orders to the team. Work
-orders will be created, approved, assigned and verified by the team itself.
-The PM will make sure that the workflow is seamless and disciplined. But he
-won&amp;#39;t be personally responsible for telling people what to do.&lt;/p&gt;
-
-&lt;p&gt;A perfect PM won&amp;#39;t even be visible to the team. Everything will be obvious
-and clear: plans will be available, work orders explicitly defined,
-risks identified and documented, concerns properly reported, stakeholders
-informed in time, etc. This may sound like utopia, but that&amp;#39;s the
-true meaning of a &amp;quot;project manager&amp;quot; role.&lt;/p&gt;
-
-&lt;p&gt;I believe it&amp;#39;s already obvious that project management has very little to do
-with leadership. They are just two &lt;em&gt;orthogonal&lt;/em&gt; skill sets. I would say that
-a perfect PM won&amp;#39;t even need any leadership skills, while a lousy PM will need
-a lot of them. As far as I understand, being a leader means having enough
-inner power (also known as &amp;quot;charisma&amp;quot;) to make people do what you need. But that&amp;#39;s
-totally against what we just discussed. A project manager doesn&amp;#39;t want people
-do what&amp;#39;s needed because of his charisma. Instead, he wants people to be
-leaders of their own tasks. They have to move forward driven by their own
-motivation and selfish interests, according to the plans and rules defined
-by the PM. A charismatic project manager will inevitably replace the rules
-by his or her own personality and the entire idea of project management will
-be ruined.&lt;/p&gt;
-
-&lt;p&gt;This is my understanding of project management.&lt;/p&gt;</content><category term="management" /><summary>A project manager is very often confused with a leader. However, they are two
-very different things. A project manager is the one who predicts the future,
-while a leader is the one who builds it. And, in my opinion, a perfect
-project manager is much more valuable for a project than a leader. If a
-leader is valuable at all...</summary></entry></feed>
+The most serious mistakes and pieces of advice are at the bottom.</summary></entry></feed>
