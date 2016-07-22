@@ -76,8 +76,5 @@ subscribers in my list).
 
 You can always [unsubscribe](/unsubscribe.html).
 
-<script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
-<script src="/js/about.js?{{ site.data['hash'] }}"></script>
-
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html).
