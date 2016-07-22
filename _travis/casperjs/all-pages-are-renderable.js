@@ -9,7 +9,7 @@
   '/css/layout.css',
   '/css/icons.css',
   '/robots.txt',
-  '/js/global.js'
+  '/js/all.js'
 ].forEach(
   function (page) {
     casper.test.begin(
