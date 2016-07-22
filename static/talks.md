@@ -179,7 +179,7 @@ Java vs OOP;
 Minsk, Belarus;
 11 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
-[photos](...),
+[photos](https://www.facebook.com/javadayby/photos/?tab=album&amp;album_id=1060019404063727),
 [video](https://www.youtube.com/watch?v=6hOBfjJ2bpw).
 It was a surprisingly well organized one-day event with over 300 attendees,
 two tracks, and inexpensive entry ticket ($75). Even though their budget
@@ -207,13 +207,12 @@ again.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>
-<img src="/images/2016/ndcoslo-2016.png" class="past-talk" alt="NDC Oslo 2016"/>
+<img src="http://img.youtube.com/vi/vU_x6oK437I/0.jpg" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/);
 Oslo, Norway;
 8 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
-[photos](...),
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
 It was a very big event with, I guess, about 1500 visitors and nine (!) tracks.
 What was good is that they paid for all travel expenses and the venue was
