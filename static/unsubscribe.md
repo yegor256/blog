@@ -32,4 +32,4 @@ I'm sorry to see you leaving :(
   <button id="unsubscribe" class="field">Unsubscribe</button>
 </fieldset></form>
 
-You can always [subscribe](/about-me.html) again.
+You can always [subscribe](/about-me.html#form) again.
