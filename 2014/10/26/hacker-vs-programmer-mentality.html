@@ -28,11 +28,11 @@
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?1125e73"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?1125e73"/>
+    <link rel="shortcut icon" href="/favicon.ico?5019912"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?5019912"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
-    <link rel="stylesheet" href="/css/layout.css?1125e73"/>
-    <link rel="stylesheet" href="/css/icons.css?1125e73"/>
+    <link rel="stylesheet" href="/css/layout.css?5019912"/>
+    <link rel="stylesheet" href="/css/icons.css?5019912"/>
     <link rel="canonical" href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html" />
     <link rel="amphtml" href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.amp.html" />
     <title>Are You a Hacker or a Designer? - Yegor Bugayenko
@@ -406,20 +406,27 @@ the one that is the most readable, maintainable, and automated.</p>
 
   <div class="disqus" role="complementary">
     <div id="disqus_thread" class="disqus-thread"></div>
-    <a href="http://disqus.com" class="dsq-brlink">
-      comments powered by
-      <span class="logo-disqus">Disqus</span>
-    </a>
+    <script>
+      var disqus_config = function () {
+        this.page.url = document.location.href.split('?')[0].split('#')[0];
+        this.page.identifier = this.page.url;
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//yegor256.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      <div>
+        <p class="red">
+          JavaScript is disabled in your browser,
+          that's why you can't see comments under this post.
+        </p>
+      </div>
+    </noscript>
   </div>
-
-  <noscript>
-    <div>
-      <p class="red">
-        JavaScript is disabled in your browser,
-        that's why you can't see comments under this post.
-      </p>
-    </div>
-  </noscript>
 
   <div class="wrapper">
     <footer class="footer">
@@ -434,10 +441,8 @@ the one that is the most readable, maintainable, and automated.</p>
 </section>
 
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="//a.disquscdn.com/embed.js?1125e73"></script>
-    <script src="/js/global.js?1125e73"></script>
-    <script src="/js/post.js?1125e73"></script>
-    <script src="/js/about.js?1125e73"></script>
+    <script src="/js/all.js?5019912"></script>
+    <script src="//yegor256.disqus.com/count.js" async="async"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -446,5 +451,6 @@ the one that is the most readable, maintainable, and automated.</p>
       ga('create', 'UA-1963507-32', 'auto');
       ga('send', 'pageview');
     </script>
+    
   </body>
 </html>
