@@ -108,7 +108,7 @@ complain (by submitting a bug) about the quality of my
 [architecture document]({% pst 2015/aug/2015-08-04-nine-steps-start-software-project %}).
 He should say the choice to go with Maven is not explained
 properly. I will then rethink my decision and will either change
-it or expain it better. But again, I will do it not to please
+it or explain it better. But again, I will do it not to please
 Chris but to fix a reported bug.
 
 To summarize, an architect must be an absolute technical **dictator**
