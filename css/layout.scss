@@ -317,6 +317,14 @@ h2 {
   @extend %unprintable;
   text-align: center;
 
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
   .mute {
     @extend %gray;
   }
