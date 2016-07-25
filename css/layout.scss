@@ -153,6 +153,20 @@ del {
     }
   }
 
+  .search {
+    form {
+      position: relative;
+    }
+
+    #google {
+      display: none;
+      height: 2.4em;
+      margin-left: 1em;
+      position: absolute;
+      top: .3em;
+    }
+  }
+
   .social {
     a {
       text-decoration: none;

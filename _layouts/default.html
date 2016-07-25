@@ -81,20 +81,15 @@
             <li><a href="/testimonials.html" title="what people say about me">testimonials</a></li>
           </ul>
         </nav>
-        <div id="search">
-          <form method="get" action="https://www.google.com/search" style="position:relative">
+        <div class="search">
+          <form method="get" action="https://www.google.com/search">
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input type="text" id="search-query" class="field field-text"
               onfocus="$('#google').css('display', 'inline-block');"
               name="q" placeholder="Search" autocomplete="off"/>
-            <span class="desktop-only">
-              <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google"
-                style="height:2.4em;display:none;position:absolute;top:.3em;margin-left:1em;" alt="search via Google"/>
-            </span>
+            <input type="image" src="/images/google-search-icon.svg" class="desktop-only"
+              id="google" title="search via Google" alt="search via Google"/>
           </form>
-          <div id="search-results" style="display: none;">
-            <div class="entries"></div>
-          </div>
         </div>
         <div class="hot">
           <ul>
