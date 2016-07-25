@@ -46,7 +46,7 @@ order):
   Porto, Portugal, September 20-25, 2009
 
   * [Competitive Risk Identification Method for Distributed Teams](http://seafood.ethz.ch/2009/Files/flyer09.pdf),
-  3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development,
+  3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development (SEAFOOD 2009),
   ETH Zurich, Switzerland, July 2-3, 2009
 
   * [Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510),

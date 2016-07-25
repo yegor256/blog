@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Some Thoughts About Java 8 Stream API"
+title: "Some Thoughts About Stream API"
 date: 2016-04-29
 place: Sofia, Bulgaria
 tags: oop java
