@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-26T02:29:24+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Convince Me!</title><link href="http://www.yegor256.com/2016/07/21/convince-me.html" rel="alternate" type="text/html" title="Convince Me!" /><published>2016-07-21T00:00:00+00:00</published><updated>2016-07-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/21/convince-me</id><content type="html" xml:base="http://www.yegor256.com/2016/07/21/convince-me.html">&lt;p&gt;I&amp;#39;ve already explained how I understand
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-07-26T17:46:06+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>ActiveRecord Is Even Worse Than ORM</title><link href="http://www.yegor256.com/2016/07/26/active-record.html" rel="alternate" type="text/html" title="ActiveRecord Is Even Worse Than ORM" /><published>2016-07-26T00:00:00+00:00</published><updated>2016-07-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/26/active-record</id><content type="html" xml:base="http://www.yegor256.com/2016/07/26/active-record.html">&lt;p&gt;You probably remember what &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;I think&lt;/a&gt;
+about ORM, a very popular design pattern. In a nutshell,
+it encourages us to turn objects into
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;, which are
+anemic, passive, and not objects at all. The consequences are usually dramatic &amp;mdash;
+the entire programming paradigm shifts from object-oriented to procedural.
+I&amp;#39;ve tried to explain this at a &lt;a href=&quot;https://www.youtube.com/watch?v=aER4uwyFbqQ&quot;&gt;JPoint&lt;/a&gt; and
+&lt;a href=&quot;https://www.youtube.com/watch?v=63tS3HNmhiE&quot;&gt;JEEConf&lt;/a&gt; this year. After
+each talk, a few people told me that what I&amp;#39;m suggesting is called
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Active_record_pattern&quot;&gt;ActiveRecord&lt;/a&gt; or
+&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/ff649690.aspx&quot;&gt;Repository&lt;/a&gt; patterns.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2Fen-duva-satt-pa-engren.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson&#39;/&gt;&lt;figcaption&gt;En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Moreover, they claimed that ActiveRecord actually solves the problem
+I&amp;#39;ve found in ORM. They said I should explain in my talks that
+what I&amp;#39;m offering (SQL-speaking objects) already exists and has a name:
+ActiveRecord.&lt;/p&gt;
+
+&lt;p&gt;I disagree. Moreover, I think that ActiveRecord is even worse than ORM.&lt;/p&gt;
+
+&lt;p&gt;ORM consists of two parts: the session and
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;, also known as &amp;quot;entities&amp;quot;.
+The entities have no functionality; they are just primitive containers for the
+data transferred from and to the session. And that is what the problem is &amp;mdash;
+objects don&amp;#39;t encapsulate but rather expose data. To read why this is wrong and why it&amp;#39;s
+against the object paradigm, you can read
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;here&lt;/a&gt;,
+&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;here&lt;/a&gt;,
+&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;here&lt;/a&gt;,
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;here&lt;/a&gt;, and
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;here&lt;/a&gt;.
+Now, let&amp;#39;s just agree that it&amp;#39;s very wrong and move on.&lt;/p&gt;
+
+&lt;p&gt;What solution is ActiveRecord proposing? How is it solving the problem?
+It moves the engine into the &lt;strong&gt;parent class&lt;/strong&gt;, which all our entities inherit from.
+This is how we were supposed to save our entity to the database in the ORM
+scenario (pseudo-code):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Java in a Nutshell&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And this is what we do with an ActiveRecord:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Java in a Nutshell&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The method &lt;code&gt;update()&lt;/code&gt; is defined in book&amp;#39;s parent class and uses
+book as a &lt;strong&gt;data container&lt;/strong&gt;. When called, it fetches data
+from the container (the book) and updates the database. How is it
+different than ORM? There is absolutely no difference. The book
+is still a container that knows nothing about SQL and any persistence
+mechanisms.&lt;/p&gt;
+
+&lt;p&gt;What&amp;#39;s even worse in ActiveRecord, compared to ORM, is that it &lt;strong&gt;hides&lt;/strong&gt;
+the fact that objects are data containers. A book, in the second snippet,
+&lt;strong&gt;pretends&lt;/strong&gt; to be a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;proper object&lt;/a&gt;,
+while in reality it&amp;#39;s just a dumb data bag.&lt;/p&gt;
+
+&lt;p&gt;I believe this is what misguided those who were saying
+that my SQL-speaking objects concept is exactly the same as the ActiveRecord
+design pattern (or Repository, which is almost exactly the same).&lt;/p&gt;
+
+&lt;p&gt;No, it&amp;#39;s not.&lt;/p&gt;</content><category term="oop" /><summary>You probably remember what I think
+about ORM, a very popular design pattern. In a nutshell,
+it encourages us to turn objects into
+DTOs, which are
+anemic, passive, and not objects at all. The consequences are usually dramatic &amp;mdash;
+the entire programming paradigm shifts from object-oriented to procedural.
+I&amp;#39;ve tried to explain this at a JPoint and
+JEEConf this year. After
+each talk, a few people told me that what I&amp;#39;m suggesting is called
+ActiveRecord or
+Repository patterns.</summary></entry><entry><title>Convince Me!</title><link href="http://www.yegor256.com/2016/07/21/convince-me.html" rel="alternate" type="text/html" title="Convince Me!" /><published>2016-07-21T00:00:00+00:00</published><updated>2016-07-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/21/convince-me</id><content type="html" xml:base="http://www.yegor256.com/2016/07/21/convince-me.html">&lt;p&gt;I&amp;#39;ve already explained how I understand
 the &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;role&lt;/a&gt;
 and &lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;responsibilities&lt;/a&gt;
 of a software architect.
@@ -960,144 +1035,4 @@ bugs visible in production is very important if you want to achieve a high-quali
 when something unexpected happens. It&amp;#39;s either an exception
 or an assertion. Technically, they are almost the same, but there are some
 small differences. I believe that exceptions are the right way to go
-in all situations and assertions should never be used. Here&amp;#39;s why.</summary></entry><entry><title>11 Mistakes Conferences Keep Making</title><link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html" rel="alternate" type="text/html" title="11 Mistakes Conferences Keep Making" /><published>2016-06-03T00:00:00+00:00</published><updated>2016-06-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/03/conference-mistakes</id><content type="html" xml:base="http://www.yegor256.com/2016/06/03/conference-mistakes.html">&lt;p&gt;I was talking yesterday with a few friends who were software conference
-organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
-attended. Basically, they were interested to know what I would suggest for
-improvement. So, I decided to summarize it in a list of the most typical
-mistakes all conferences keep making and give them some ideas.
-Remember, I&amp;#39;m judging from a speaker&amp;#39;s position.
-The most serious mistakes and pieces of advice are at the bottom.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F06%2Fmi-gran-noche.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Mi gran noche (2015) by Álex de la Iglesia&#39;/&gt;&lt;figcaption&gt;Mi gran noche (2015) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Too formal&lt;/strong&gt;.
-Very often all I&amp;#39;m getting from event organizers is a formal email that
-my presentation was accepted and then some travel details: &amp;quot;your hotel is
-here, don&amp;#39;t miss this speaker&amp;#39;s dinner.&amp;quot; That&amp;#39;s it. I don&amp;#39;t know who is
-behind the conference, what this event is for, etc. At that speaker&amp;#39;s
-dinner (if I don&amp;#39;t miss it) some details are cleared up. At some conferences, they even communicate
-with me via some online form and I have to answer there through login/logout.
-This is rather annoying and turns me off. It would be much better to feel
-that there is a team with real people, who want to see me as a speaker.
-I would be way more dedicated and motivated.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Short breaks&lt;/strong&gt;.
-Breaks between presentations that are too short give listeners an impression that
-each particular presentation is not as important as the event as a whole.
-This really de-motivates me as a speaker. I want to feel valuable.
-I came to the conference to be heard. I think my speech is the most important and I don&amp;#39;t want people to
-jump quickly out of the room, just to have enough time to drink coffee
-and run to the next presentation. 30 minutes between talks is a comfortable
-time &amp;mdash; enough to forget the previous talk and focus on the next one.
-Also, four talks per day is an absolute maximum for a serious listener.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;No moderator&lt;/strong&gt;.
-There must be someone on the stage who presents the speaker and asks
-questions if the room is quiet. All academic conferences have that. I don&amp;#39;t
-understand why most industry events don&amp;#39;t do the same. A speaker must feel
-comfortable on the stage. Being there alone doesn&amp;#39;t help at all. Also, the
-moderator will promote me to better engage with the audience.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Boring website&lt;/strong&gt;.
-The higher the level of the conference, the more modern and beautiful their
-website has to be. It&amp;#39;s not only your but also my face. I&amp;#39;m not only
-attending your event, but also associating my name with it. I will share your
-website on my Twitter, my Facebook, my blog, etc. That&amp;#39;s why
-I really want it to look cool. Some conferences don&amp;#39;t care about
-that and this attitude seriously demotivates me as a speaker.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cheap venue&lt;/strong&gt;.
-This means literally what it says &amp;mdash; the place is too cheap and, because
-of that, bad. The impression of such a place ruins the entire conference.
-Don&amp;#39;t fool yourself, if it&amp;#39;s cheap &amp;mdash; it&amp;#39;s bad.
-Into this category I would also place venues that are not designed to be
-conference hosters, like cinemas or offices. They will also be cheaper than
-proper venues, but you will get what you pay for.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;No introduction&lt;/strong&gt;.
-I believe it&amp;#39;s a job of conference organizers to promote me as a speaker
-in front of the audience. Not only on the stage, but also online,
-via Twitter, Facebook, etc. Most conferences don&amp;#39;t do that at all. I come to
-the stage completely unannounced with almost zero interest from the room. They
-simply don&amp;#39;t know who I am and why I&amp;#39;m here. The conference must promote us,
-the speakers, very pro-actively.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Slow WiFi&lt;/strong&gt;.
-It&amp;#39;s just very annoying.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;No networking&lt;/strong&gt;.
-Conference organizers know all speakers who are attending and most of the
-listeners. They are at the center of this networking event, but they almost
-never use that position effectively. They should help me network while I&amp;#39;m there
-by introducing me to those who I may be interested in. This won&amp;#39;t be hard
-at all for them. Just tell me &amp;quot;hey, let me introduce you to this guy who
-is working and speaking about something similar to you.&amp;quot; Just make 5-10
-such short intros and I will busy talking to these guys for the whole day.
-Instead, in most conferences, speakers arrive, speak, drink their coffee and leave.
-That&amp;#39;s sad.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;No video&lt;/strong&gt;.
-Most conferences don&amp;#39;t record videos and it&amp;#39;s a terrible mistake. They probably
-think that their events are more important then us, their speakers. It&amp;#39;s not
-true. I&amp;#39;m speaking in front of 50 people, video recording it on my iPhone, publishing
-it in my &lt;a href=&quot;https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q&quot;&gt;YouTube channel&lt;/a&gt;
-and getting 500 views in the first week. So, who is
-more important, your event which was able to attract just 50 people or my
-YouTube channel that attracted 500? Thus, I would strongly recommend paying
-a lot of attention to video recording and its quality. Preferrably, you should
-record from two cameras (the speaker and the room) and do video editing afterwards.
-It&amp;#39;s expensive, but very important.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bad Equipment&lt;/strong&gt;.
-I mean sound, light, projectors, screens, microphones, etc. It&amp;#39;s very annoying
-to see how speakers and the audience suffer from all that technical problems.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Too small&lt;/strong&gt;.
-It&amp;#39;s very difficult to present when there is less than 100 people in the room.
-According to my experience, only one out of 10-15 people is actually listening
-and understanding. It&amp;#39;s an average number. Of course, it depends on the subject,
-but not too much. This means that if there are 30 people in the room, only
-a few of them are my active listeners. It&amp;#39;s very difficult to present to just
-a few people. You simply can&amp;#39;t afford to lose their attention, even for a second.
-With a hundred people, the situation becomes more manageable. There are 8-12 people
-who are actively listening. Even if I lose a few of them, it&amp;#39;s not a big deal.
-The best size of the room is 250 people. That&amp;#39;s the ideal audience for
-a technical talk.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Too big&lt;/strong&gt;.
-A very big audience (over 500 people in the room) causes another problem &amp;mdash;
-I completely lose any contact with my listeners. I don&amp;#39;t see their eyes any more.
-I can&amp;#39;t see their reaction, I don&amp;#39;t understand whether they follow me or not.
-I&amp;#39;m not a technical speaker any more, but a rock singer. All I can do is turn
-my presentation into a show and play with their emotions, not their brains.
-This is actually what most &lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;keynote speakers&lt;/a&gt;
-are usually doing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Too many tracks&lt;/strong&gt;.
-Honestly, I think that the very idea of having multiple tracks is very bad.
-I want the entire conference to attend my talk. I don&amp;#39;t want to lose anyone.
-Moreover, I don&amp;#39;t want to compete with some
-&lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;clown&lt;/a&gt; (no offense to clowns)
-just because he is speaking at the same time. It&amp;#39;s a very demotivating competition,
-since I can&amp;#39;t do anything to win.
-I want to feel that I&amp;#39;m speaking here because there is some value in my
-information. I want to know that I&amp;#39;m the chosen one. And I want to feel that
-conference attendees feel the same. A perfect conference must have one
-track, a room for 250-300 listeners, and a very well selected list of
-speakers. I believe that most conferences are shooting themselves in the
-foot trying to please the audience by inviting too many speakers. Instead,
-do your homework right &amp;mdash; select the best speakers and don&amp;#39;t make listeners
-walk from track to track cursing you for the mediocre speeches.
-Choosing speakers is your job! Don&amp;#39;t delegate it to your audience.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;Did I forget anything? Please, post below in the comments!&lt;/p&gt;</content><category term="mood" /><summary>I was talking yesterday with a few friends who were software conference
-organizers. They were asking about my opinion of the conferences I&amp;#39;ve recently
-attended. Basically, they were interested to know what I would suggest for
-improvement. So, I decided to summarize it in a list of the most typical
-mistakes all conferences keep making and give them some ideas.
-Remember, I&amp;#39;m judging from a speaker&amp;#39;s position.
-The most serious mistakes and pieces of advice are at the bottom.</summary></entry></feed>
+in all situations and assertions should never be used. Here&amp;#39;s why.</summary></entry></feed>
