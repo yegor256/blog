@@ -1,217 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
-  itemscope="" itemtype="http://schema.org/WebPage">
-  <head>
-    <meta charset="utf-8"/>
-    <meta itemprop="name" content="Object Behavior Must Not Be Configurable" />
-    <meta itemprop="author" content="Yegor Bugayenko" />
-    <meta itemprop="breadcrumb" content="http://www.yegor256.com" />
-    <meta itemprop="keywords" content="decorator pattern, decorator pattern java, object configuration, parameters object, settings object" />
-    <meta itemprop="description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. " />
-    <meta name="description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. " />
-    <meta name="keywords" content="decorator pattern, decorator pattern java, object configuration, parameters object, settings object" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <meta name="twitter:creator" content="@yegor256"/>
-    <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
-    <meta property="twitter:account_id" content="4503599630178231" />
-    <meta property="og:url" content="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"/>
-    
-    <meta property="og:site_name" content="yegor256"/>
-    <meta property="og:title" content="Object Behavior Must Not Be Configurable"/>
-    <meta property="og:description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. "/>
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="fb:admins" content="10203747823006002"/>
-    <meta name="twitter:site" content="@yegor256"/>
-    <meta name="twitter:creator" content="@yegor256"/>
-    <meta name="twitter:url" content="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"/>
-    <meta property="article:author" content="https://www.facebook.com/yegor256"/>
-    <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
-    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
-    <link rel="shortcut icon" href="/favicon.ico?166ca11"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?166ca11"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/>
-    <link rel="stylesheet" href="/css/layout.css?166ca11"/>
-    <link rel="stylesheet" href="/css/icons.css?166ca11"/>
-    <link rel="canonical" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" />
-    <link rel="amphtml" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.amp.html" />
-    <title>Object Behavior Must Not Be Configurable - Yegor Bugayenko
-      </title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <aside class="header-toggle unprintable" id="header-toggle" title="show head menu"
-        onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
-      <header class="header" id="header">
-        <div class="face">
-          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
-          <a href="/about-me.html">
-            <img src="/images/yegor-bugayenko-192x192.png" class="photo"
-              alt="photo of Yegor Bugayenko"/>
-          </a>
-        </div>
-        <nav>
-          <ul class="menu social notranslate">
-            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://instagram.com/yegor256" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://angel.co/yegor256" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="mailto:blog@yegor256.com" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
-          </ul>
-          <ul class="menu">
-            <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;192</a></li>
-            <li><a href="/webinars.html" title="webinars">webinars</a></li>
-            <li><a href="/talks.html" title="talks">talks</a></li>
-            <li><a href="/books.html" title="books">books</a></li>
-            <li><a href="/papers.html" title="papers">papers</a></li>
-            <li><a href="/pets.html" title="pets">pets</a></li>
-            <li><a href="/award.html" title="software quality award">award</a></li>
-            <li><a href="/testimonials.html" title="what people say about me">testimonials</a></li>
-          </ul>
-        </nav>
-        <div class="search">
-          <form method="get" action="https://www.google.com/search">
-            <input name="sitesearch" value="yegor256.com" type="hidden"/>
-            <input type="text" id="search-query" class="field field-text"
-              onfocus="$('.google').css('display', 'inline-block');"
-              name="q" placeholder="Search" autocomplete="off"/>
-            <input type="image" src="/images/google-search-icon.svg" class="google desktop-only"
-              title="search via Google" alt="search via Google"/>
-          </form>
-        </div>
-        <div class="hot">
-          <ul>
-            <li>
-              I'm looking for a <strong>co-founder</strong> in one of my pet projects.
-              It's a small Ruby media platform for blogs.
-              It works already, but needs fixes and refactoring. I will
-              invest into marketing and development and you will write Ruby code.
-              <a href="mailto:pet@yegor256.com">Email me</a> if interested
-              and if you're a <strong>Ruby expert</strong>.
-            </li>
-            <!--
-            <li>
-              Don't miss my first
-              <a href="http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/">Object Thinking in Silicon Valley</a>
-              meetup in Stanford (Palo Alto, CA)
-              on the 12th of July, at 6:30pm!
-              We will discuss anemic objects in OOP and their negative effects.
-            </li>
-            -->
-            <li>
-              At <a href="/webinars.html">Webinar #17</a>
-              we'll discuss the role of <strong>bugs</strong> in software development and
-              I will try to convince you that they are actually a very good thing,
-              join us on <b>August 3</b>, at 11am PST.
-            </li>
-            <!--
-            <li>
-              Meet me at
-              <a href="http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/">SLC DevOpsDays</a> (Salt Lake City/June-14),
-              and later
-              <a href="/talks.html">somewhere else</a>.
-            </li>
-            -->
-          </ul>
-        </div>
-      </header>
-    </div>
-    <section itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="wrapper">
-    <header>
-      <p class="printable">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;format=svg"
-          style="width:125px;height:125px;" alt="QR code"/>
-      </p>
-      <p class="printable">
-        <code>http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</code>
-      </p>
-      <h1 itemprop="name">Object Behavior Must Not Be Configurable</h1>
-      
-      <ul class="subline">
-        <li>
-          <time itemprop="datePublished" datetime="2016-04-19T00:00:00+00:00">
-            19 April 2016
-          </time>
-        </li>
-        
-          <li class="desktop-only">New York, NY</li>
-        
-        <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-19-object-must-not-be-configurable.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-05-08T18:09:56+0300'>8 May 2016</time></li>
-        <li class="printable">Yegor Bugayenko</li>
-        <li class="unprintable">
-          <i class="icon icon-comments"></i>
-          <a href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html#disqus_thread">comments</a>
-        </li>
-      </ul>
-      
-      <p class="unprintable"><a href='/tag/java.html' class='tag notranslate'>java</a> <a href='/tag/oop.html' class='tag notranslate'><img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>oop</a></p>
-      <div class="buttons notranslate desktop-only">
-        <nav class="share" role="navigation">
-          <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"
-            title="Share on Facebook" class="button">
-            <span class="count count-facebook">0</span>
-            <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitter.com/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;text=Object+Behavior+Must+Not+Be+Configurable"
-            title="Share on Twitter" class="button">
-            <span class="count count-twitter">0</span>
-            <i class="icon icon-twitter notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://plus.google.com/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"
-            title="Share on Google+" class="button">
-            <span class="count count-googleplus">0</span>
-            <i class="icon icon-googleplus notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"
-            title="Share on LinkedIn" class="button">
-            <span class="count count-linkedin">0</span>
-            <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://www.stumbleupon.com/submit?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;title=Object+Behavior+Must+Not+Be+Configurable"
-            title="Share on StumbleUpon" class="button">
-            <span class="count count-stumbleupon">0</span>
-            <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://reddit.com/submit?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html%3F2016-16&amp;title=Object+Behavior+Must+Not+Be+Configurable"
-            title="Share on Reddit" class="button">
-            <span class="count count-reddit">0</span>
-            <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://news.ycombinator.com/submitlink?u=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html%3F2016-16&amp;t=Object+Behavior+Must+Not+Be+Configurable"
-            title="Share on Hacker News" class="button">
-            <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
-          </a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <article class="main" itemprop="articleBody">
-        <p>Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects
-are mutable &mdash; we <strong>configure</strong> them. We change their behavior by
-injecting parameters or even entire settings/configuration objects
-into them. Do I have to say that it&#39;s abusive and disrespectful
-from a <a href="/2014/11/20/seven-virtues-of-good-object.html">philosophical</a>
-point of view? I can, but let&#39;s take a look at
-it from a practical perspective.</p>
-
-<!--more-->
-
-<figure><img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F04%2Fthe-take.jpg' style='width:600px;max-width:100%;' alt='The Take (2009) by David Drury'/><figcaption>The Take (2009) by David Drury</figcaption></figure>
-
-<p>Let&#39;s say there is a class that is supposed to read a web page and
-return its content:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebPage"> <head> <meta charset="utf-8"/> <meta itemprop="name" content="Object Behavior Must Not Be Configurable" /> <meta itemprop="author" content="Yegor Bugayenko" /> <meta itemprop="breadcrumb" content="http://www.yegor256.com" /> <meta itemprop="keywords" content="decorator pattern, decorator pattern java, object configuration, parameters object, settings object" /> <meta itemprop="description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. " /> <meta name="description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. " /> <meta name="keywords" content="decorator pattern, decorator pattern java, object configuration, parameters object, settings object" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="twitter:creator" content="@yegor256"/> <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" /> <meta property="twitter:account_id" content="4503599630178231" /> <meta property="og:url" content="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"/> <meta property="og:site_name" content="yegor256"/> <meta property="og:title" content="Object Behavior Must Not Be Configurable"/> <meta property="og:description" content="Using object properties as configuration parameters for object behavior is a bad practice that leads to bigger and less cohesive objects. "/> <meta property="og:type" content="article" /> <meta property="og:locale" content="en_US" /> <meta property="fb:admins" content="10203747823006002"/> <meta name="twitter:site" content="@yegor256"/> <meta name="twitter:creator" content="@yegor256"/> <meta name="twitter:url" content="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"/> <meta property="article:author" content="https://www.facebook.com/yegor256"/> <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/> <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" /> <link rel="shortcut icon" href="/favicon.ico?bd66eec"/> <link rel="apple-touch-icon" href="/favicon.ico?bd66eec"/> <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="http://www.yegor256.com/rss.xml"/> <link rel="stylesheet" href="/css/layout.css?bd66eec"/> <link rel="stylesheet" href="/css/icons.css?bd66eec"/> <link rel="canonical" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" /> <link rel="amphtml" href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.amp.html" /> <title>Object Behavior Must Not Be Configurable - Yegor Bugayenko </title> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="show head menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub"><span>subscribe</span></a> <a href="/about-me.html"> <img src="/images/yegor-bugayenko-192x192.png" class="photo" alt="photo of Yegor Bugayenko"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a> <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a> <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a> <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a> <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a> <li><a href="https://instagram.com/yegor256" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a> <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a> <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a> <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a> <li><a href="https://angel.co/yegor256" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a> <li><a href="mailto:blog@yegor256.com" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></ul><ul class="menu"> <li><a href="/" title="home page">home</a> <li><a href="/best.html" title="best articles to read">12&#160;best</a> <li><a href="/contents.html" title="blog contents">all&#160;192</a> <li><a href="/webinars.html" title="webinars">webinars</a> <li><a href="/talks.html" title="talks">talks</a> <li><a href="/books.html" title="books">books</a> <li><a href="/papers.html" title="papers">papers</a> <li><a href="/pets.html" title="pets">pets</a> <li><a href="/award.html" title="software quality award">award</a> <li><a href="/testimonials.html" title="what people say about me">testimonials</a></ul></nav><div class="search"> <form method="get" action="https://www.google.com/search"> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input type="text" id="search-query" class="field field-text" onfocus="$('.google').css('display', 'inline-block');" name="q" placeholder="Search" autocomplete="off"/> <input type="image" src="/images/google-search-icon.svg" class="google desktop-only" title="search via Google" alt="search via Google"/> </form></div><div class="hot"><ul> <li> I'm looking for a <strong>co-founder</strong> in one of my pet projects. It's a small Ruby media platform for blogs. It works already, but needs fixes and refactoring. I will invest into marketing and development and you will write Ruby code. <a href="mailto:pet@yegor256.com">Email me</a> if interested and if you're a <strong>Ruby expert</strong>. <li> At <a href="/webinars.html">Webinar #17</a> we'll discuss the role of <strong>bugs</strong> in software development and I will try to convince you that they are actually a very good thing, join us on <b>August 3</b>, at 11am PST.</ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><p class="printable"> <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;format=svg" style="width:125px;height:125px;" alt="QR code"/><p class="printable"> <code>http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</code><h1 itemprop="name">Object Behavior Must Not Be Configurable</h1><ul class="subline"> <li> <time itemprop="datePublished" datetime="2016-04-19T00:00:00+00:00"> 19 April 2016 </time> <li class="desktop-only">New York, NY <li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/_posts/2016/apr/2016-04-19-object-must-not-be-configurable.md'>modified</a> on <time itemprop='dateModified' datetime='2016-05-08T18:09:56+0300'>8 May 2016</time> <li class="printable">Yegor Bugayenko <li class="unprintable"> <i class="icon icon-comments"></i> <a href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html#disqus_thread">comments</a></ul><p class="unprintable"><a href='/tag/java.html' class='tag notranslate'>java</a> <a href='/tag/oop.html' class='tag notranslate'><img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>oop</a><div class="buttons notranslate desktop-only"> <nav class="share" role="navigation"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" title="Share on Facebook" class="button"> <span class="count count-facebook">0</span> <i class="icon icon-facebook notranslate" aria-hidden="true"></i> </a> <a href="https://twitter.com/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;text=Object+Behavior+Must+Not+Be+Configurable" title="Share on Twitter" class="button"> <span class="count count-twitter">0</span> <i class="icon icon-twitter notranslate" aria-hidden="true"></i> </a> <a href="https://plus.google.com/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" title="Share on Google+" class="button"> <span class="count count-googleplus">0</span> <i class="icon icon-googleplus notranslate" aria-hidden="true"></i> </a> <a href="https://www.linkedin.com/cws/share?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html" title="Share on LinkedIn" class="button"> <span class="count count-linkedin">0</span> <i class="icon icon-linkedin notranslate" aria-hidden="true"></i> </a> <a href="http://www.stumbleupon.com/submit?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html&amp;title=Object+Behavior+Must+Not+Be+Configurable" title="Share on StumbleUpon" class="button"> <span class="count count-stumbleupon">0</span> <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i> </a> <a href="http://reddit.com/submit?url=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html%3F2016-16&amp;title=Object+Behavior+Must+Not+Be+Configurable" title="Share on Reddit" class="button"> <span class="count count-reddit">0</span> <i class="icon icon-reddit notranslate" aria-hidden="true"></i> </a> <a href="http://news.ycombinator.com/submitlink?u=http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html%3F2016-16&amp;t=Object+Behavior+Must+Not+Be+Configurable" title="Share on Hacker News" class="button"> <i class="icon icon-hackernews notranslate" aria-hidden="true"></i> </a> </nav></div></header> <main> <article class="main" itemprop="articleBody"><p>Using object properties as configuration parameters is a very common mistake we keep making mostly because our objects are mutable &mdash; we <strong>configure</strong> them. We change their behavior by injecting parameters or even entire settings/configuration objects into them. Do I have to say that it&#39;s abusive and disrespectful from a <a href="/2014/11/20/seven-virtues-of-good-object.html">philosophical</a> point of view? I can, but let&#39;s take a look at it from a practical perspective. <figure><img src='http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F04%2Fthe-take.jpg' style='width:600px;max-width:100%;' alt='The Take (2009) by David Drury'/><figcaption>The Take (2009) by David Drury</figcaption></figure><p>Let&#39;s say there is a class that is supposed to read a web page and return its content: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
@@ -222,19 +9,7 @@ return its content:</p>
       <span class="s">&quot;UTF-8&quot;</span>
     <span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Looks simple and straight-forward, right? Yes, it&#39;s a rather cohesive
-and solid class. Here is how we use it to read the content of Google
-front page:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
-
-<p>Everything is fine until we start making this class more powerful.
-Let&#39;s say we want to configure the encoding. We don&#39;t always want to use <code>&quot;UTF-8&quot;</code>.
-We want it to be configurable. Here is what we do:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>Looks simple and straight-forward, right? Yes, it&#39;s a rather cohesive and solid class. Here is how we use it to read the content of Google front page: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure><p>Everything is fine until we start making this class more powerful. Let&#39;s say we want to configure the encoding. We don&#39;t always want to use <code>&quot;UTF-8&quot;</code>. We want it to be configurable. Here is what we do: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
   <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
@@ -247,14 +22,7 @@ We want it to be configurable. Here is what we do:</p>
       <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
     <span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Done, the encoding is encapsulated and configurable. Now, let&#39;s say we
-want to change the behavior of the class for the situation of an empty
-page. If an empty page is loaded, we want to return <code>&quot;&lt;html/&gt;&quot;</code>. But not
-always. We want this to be configurable. Here is what we do:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>Done, the encoding is encapsulated and configurable. Now, let&#39;s say we want to change the behavior of the class for the situation of an empty page. If an empty page is loaded, we want to return <code>&quot;&lt;html/&gt;&quot;</code>. But not always. We want this to be configurable. Here is what we do: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
@@ -274,16 +42,7 @@ always. We want this to be configurable. Here is what we do:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>The class is getting bigger, huh? It&#39;s great, we&#39;re good programmers and our
-code must be complex, right? The more complex it is, the better programmers
-we are! I&#39;m being sarcastic. Definitely
-<a href="/2015/06/29/simple-diagrams.html">not</a>! But let&#39;s move on. Now
-we want our class to proceed anyway, even if the encoding is not
-supported on the current platform:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>The class is getting bigger, huh? It&#39;s great, we&#39;re good programmers and our code must be complex, right? The more complex it is, the better programmers we are! I&#39;m being sarcastic. Definitely <a href="/2015/06/29/simple-diagrams.html">not</a>! But let&#39;s move on. Now we want our class to proceed anyway, even if the encoding is not supported on the current platform: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
@@ -314,12 +73,7 @@ supported on the current platform:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>The class is growing and becoming more and more powerful! Now it&#39;s time
-to introduce a new class, which we will call <code>PageSettings</code>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>The class is growing and becoming more and more powerful! Now it&#39;s time to introduce a new class, which we will call <code>PageSettings</code>: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">PageSettings</span> <span class="n">settings</span><span class="o">;</span>
   <span class="n">Page</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="n">PageSettings</span> <span class="n">stts</span><span class="o">)</span> <span class="o">{</span>
@@ -344,62 +98,19 @@ to introduce a new class, which we will call <code>PageSettings</code>:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Class <code>PageSettings</code> is basically a holder of parameters, without any
-behavior. It has getters, which give us access to the parameters:
-<code>isEncodeAnyway()</code>, <code>isAlwaysHtml()</code>, and <code>getEncoding()</code>. If we keep
-going in this direction, there could be a few dozen configuration settings
-in that class. This may look very convenient and
-is a very typical pattern in Java world. For example,
-look at
-<a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code>JobConf</code></a>
-from Hadoop.
-This is how we will call our highly configurable <code>Page</code>
-(I&#39;m assuming <code>PageSettings</code> is immutable):</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span>
+<span class="o">}</span></code></pre></figure><p>Class <code>PageSettings</code> is basically a holder of parameters, without any behavior. It has getters, which give us access to the parameters: <code>isEncodeAnyway()</code>, <code>isAlwaysHtml()</code>, and <code>getEncoding()</code>. If we keep going in this direction, there could be a few dozen configuration settings in that class. This may look very convenient and is a very typical pattern in Java world. For example, look at <a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code>JobConf</code></a> from Hadoop. This is how we will call our highly configurable <code>Page</code> (I&#39;m assuming <code>PageSettings</code> is immutable): <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Page</span><span class="o">(</span>
   <span class="s">&quot;http://www.google.com&quot;</span><span class="o">,</span>
   <span class="k">new</span> <span class="nf">PageSettings</span><span class="o">()</span>
     <span class="o">.</span><span class="na">withEncoding</span><span class="o">(</span><span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
     <span class="o">.</span><span class="na">withAlwaysHtml</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
     <span class="o">.</span><span class="na">withEncodeAnyway</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
-
-<p>{However, no matter how convenient it may look at first glance,
-this approach is <strong>very wrong</strong>. Mostly because it encourages us
-to make big and non-cohesive objects. They grow in size and become less
-testable, less maintainable and less readable.</p>
-
-<aside class='quote'>Encapsulated properties must not be used to change the behavior of an object</aside>
-
-<p>To prevent that from happening,
-I would suggest a simple rule here:
-object behaviour should not be configurable.
-Or, more technically, encapsulated properties must not be used to
-change the behavior of an object.</p>
-
-<p>Object properties are there only to coordinate the location
-of a real-world entity, which the object is representing. The <code>uri</code> is the
-coordinate, while the <code>alwaysHtml</code> boolean property is a behavior changing
-trigger. See the difference?</p>
-
-<p>So, what should we do instead? What is the right design? We must
-use <a href="/2015/02/26/composable-decorators.html">composable decorators</a>.
-Here is how:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
+<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure><p>{However, no matter how convenient it may look at first glance, this approach is <strong>very wrong</strong>. Mostly because it encourages us to make big and non-cohesive objects. They grow in size and become less testable, less maintainable and less readable. <aside class='quote'>Encapsulated properties must not be used to change the behavior of an object</aside><p>To prevent that from happening, I would suggest a simple rule here: object behaviour should not be configurable. Or, more technically, encapsulated properties must not be used to change the behavior of an object.<p>Object properties are there only to coordinate the location of a real-world entity, which the object is representing. The <code>uri</code> is the coordinate, while the <code>alwaysHtml</code> boolean property is a behavior changing trigger. See the difference?<p>So, what should we do instead? What is the right design? We must use <a href="/2015/02/26/composable-decorators.html">composable decorators</a>. Here is how: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">)</span>
 <span class="o">)</span>
 <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AlwaysTextPage</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
   <span class="n">page</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
-
-<p>Here is how our <code>DefaultPage</code> would look (yes, I had to change
-its design a bit):</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">DefaultPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
+<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure><p>Here is how our <code>DefaultPage</code> would look (yes, I had to change its design a bit): <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">DefaultPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">uri</span><span class="o">;</span>
   <span class="n">DefaultPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
@@ -410,13 +121,7 @@ its design a bit):</p>
       <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
     <span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>As you see, I&#39;m making it implement interface <code>Page</code>.
-Now <code>TextPage</code> decorator, which converts an array of bytes to a text using
-provided encoding:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">TextPage</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>As you see, I&#39;m making it implement interface <code>Page</code>. Now <code>TextPage</code> decorator, which converts an array of bytes to a text using provided encoding: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">TextPage</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">encoding</span><span class="o">;</span>
   <span class="n">TextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
@@ -429,11 +134,7 @@ provided encoding:</p>
       <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
     <span class="o">);</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Now the <code>NeverEmptyPage</code>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">NeverEmptyPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>Now the <code>NeverEmptyPage</code>: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">NeverEmptyPage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
   <span class="n">NeverEmptyPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
@@ -446,11 +147,7 @@ provided encoding:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">bytes</span><span class="o">;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>And finally the <code>AlwaysTextPage</code>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">AlwaysTextPage</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>And finally the <code>AlwaysTextPage</code>: <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">AlwaysTextPage</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">TextPage</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">source</span><span class="o">;</span>
   <span class="n">AlwaysTextPage</span><span class="o">(</span><span class="kd">final</span> <span class="n">TextPage</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
@@ -466,15 +163,7 @@ provided encoding:</p>
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>You may say that <code>AlwaysTextPage</code> will make two calls to the encapsulated
-<code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
-HTTP request. That&#39;s true and this is by design. We don&#39;t want this
-duplicated HTTP roundtrip to happen. Let&#39;s introduce one more class,
-which will cache the page fetched (not thread-safe, but it&#39;s not important now):</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">OncePage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></figure><p>You may say that <code>AlwaysTextPage</code> will make two calls to the encapsulated <code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated HTTP request. That&#39;s true and this is by design. We don&#39;t want this duplicated HTTP roundtrip to happen. Let&#39;s introduce one more class, which will cache the page fetched (not thread-safe, but it&#39;s not important now): <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">OncePage</span> <span class="kd">implements</span> <span class="n">Page</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">Page</span> <span class="n">origin</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="kt">byte</span><span class="o">[]&gt;</span> <span class="n">cache</span> <span class="o">=</span>
     <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;;</span>
@@ -488,11 +177,7 @@ which will cache the page fetched (not thread-safe, but it&#39;s not important n
     <span class="o">}</span>
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Now, our code should look like this (pay attention, I&#39;m now using <code>OncePage</code>):</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
+<span class="o">}</span></code></pre></figure><p>Now, our code should look like this (pay attention, I&#39;m now using <code>OncePage</code>): <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NeverEmptyPage</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">OncePage</span><span class="o">(</span>
     <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="o">)</span>
   <span class="o">)</span>
@@ -500,18 +185,7 @@ which will cache the page fetched (not thread-safe, but it&#39;s not important n
 <span class="n">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">AlwaysTextPage</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">&quot;ISO_8859_1&quot;</span><span class="o">)</span>
   <span class="s">&quot;UTF-8&quot;</span>
-<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure>
-
-<p>This is probably the most code-intensive post on this site so far, but I
-hope it&#39;s readable and I managed to convey the idea. Now we have five
-classes, each of which is rather small, easy to read and easy to reuse.</p>
-
-<p>Just follow the rule: never make classes configurable!</p>
-
-      </article>
-    </main>
-    
-    
+<span class="o">).</span><span class="na">html</span><span class="o">();</span></code></pre></figure><p>This is probably the most code-intensive post on this site so far, but I hope it&#39;s readable and I managed to convey the idea. Now we have five classes, each of which is rather small, easy to read and easy to reuse.<p>Just follow the rule: never make classes configurable! </article> </main> 
   <div class="unprintable">
     <h2>Related Posts</h2>
     <p>You may also find these posts interesting:</p>
@@ -540,62 +214,4 @@ classes, each of which is rather small, easy to read and easy to reuse.</p>
     </ul>
   </div>
 
-
-    <div class="teamed-banner">
-      <a href="http://www.teamed.io">
-        <img src="/images/teamed-banner.jpg" alt="teamed banner"/>
-      </a>
-    </div>
-  </div>
-
-  <div class="disqus" role="complementary">
-    <div id="disqus_thread" class="disqus-thread"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = document.location.href.split('?')[0].split('#')[0];
-        this.page.identifier = this.page.url;
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//yegor256.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>
-      <div>
-        <p class="red">
-          JavaScript is disabled in your browser,
-          that's why you can't see comments under this post.
-        </p>
-      </div>
-    </noscript>
-  </div>
-
-  <div class="wrapper">
-    <footer class="footer">
-      <p>
-        &copy;
-        <span itemprop="author">Yegor Bugayenko</span>,
-        2014-2016
-      </p>
-    </footer>
-  </div>
-
-</section>
-
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/all.js?166ca11"></script>
-    <script>var disqus_shortname = 'yegor256';</script>
-    <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-1963507-32', 'auto');
-      ga('send', 'pageview');
-    </script>
-    
-  </body>
-</html>
+<div class="teamed-banner"> <a href="http://www.teamed.io"> <img src="/images/teamed-banner.jpg" alt="teamed banner"/> </a></div></div><div class="disqus" role="complementary"><div id="disqus_thread" class="disqus-thread"></div><script> var disqus_config = function () { this.page.url = document.location.href.split('?')[0].split('#')[0]; this.page.identifier = this.page.url; }; (function() { var d = document, s = d.createElement('script'); s.src = '//yegor256.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript><div><p class="red"> JavaScript is disabled in your browser, that's why you can't see comments under this post.</div></noscript></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemprop="author">Yegor Bugayenko</span>, 2014-2016 </footer></div></section> <script src="//code.jquery.com/jquery-2.1.0.min.js"></script> <script src="/js/all.js?bd66eec"></script> <script>var disqus_shortname = 'yegor256';</script> <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-1963507-32', 'auto'); ga('send', 'pageview'); </script>
