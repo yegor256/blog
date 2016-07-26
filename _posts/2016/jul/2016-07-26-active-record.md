@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ActiveRecord Is Even Worse Than ORM"
-date: 2016-07-20
+date: 2016-07-26
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -29,6 +29,8 @@ each talk, a few people told me that what I'm suggesting is called
 [Repository](https://msdn.microsoft.com/en-us/library/ff649690.aspx) patterns.
 
 <!--more-->
+
+{% picture /images/2016/07/en-duva-satt-pa-engren.jpg 0 En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson %}
 
 Moreover, they claimed that ActiveRecord actually solves the problem
 I've found in ORM. They said I should explain in my talks that

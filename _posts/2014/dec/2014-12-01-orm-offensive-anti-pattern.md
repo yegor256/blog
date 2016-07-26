@@ -45,7 +45,7 @@ accessing a relational database from an object-oriented language
 (Java, for example). There are multiple implementations of ORM
 in almost every language; for example:
 [Hibernate](http://hibernate.org/orm/) for Java,
-[ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) for Ruby on Rails,
+[ActiveRecord]({% pst 2016/jul/2016-07-26-active-record %}) for Ruby on Rails,
 [Doctrine](http://www.doctrine-project.org/) for PHP, and
 [SQLAlchemy](http://www.sqlalchemy.org/) for Python.
 In Java, the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
