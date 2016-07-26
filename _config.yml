@@ -54,4 +54,4 @@ tag_page_dir: tag
 compress_html:
   clippings: [div, p, ul, td, h1, h2]
   comments: all
-  endings: all
+  # endings: all
