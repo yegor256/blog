@@ -49,3 +49,9 @@ sass:
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
 tag_page_dir: tag
+
+# http://jch.penibelst.de/
+compress_html:
+  clippings: [div, p, ul, td, h1, h2]
+  comments: all
+  endings: all
