@@ -43,7 +43,7 @@ ORM consists of two parts: the session and
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities".
 The entities have no functionality; they are just primitive containers for the
 data transferred from and to the session. And that is what the problem is &mdash;
-objects don't encapsulate but rather expose data. To read why this is wrong and why it's
+objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
 against the object paradigm, you can read
 [here]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 [here]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),

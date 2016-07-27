@@ -79,6 +79,13 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2016/object-thinking.png" class="future-talk" alt="Object Thinking Meetup"/>
+**Why Static Methods Are Evil?**<br/>
+[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/)<br/>
+Stanford, Palo Alto, CA<br/>
+9 August 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
 [Pirate Summit](http://www.piratesummit.com/agenda-speaker/)<br/>
 Cologne, Germany<br/>
