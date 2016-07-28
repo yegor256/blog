@@ -498,14 +498,14 @@ figure {
 
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
-  background-color: #ffb800;
+  background-color: $white;
   border-radius: 50%;
   color: lighten($orange, 25);
   display: inline-block;
   font-size: .8em;
   font-weight: bold;
-  line-height: 1em;
   height: 1em;
+  line-height: 1em;
   padding: .2em;
   text-align: center;
   vertical-align: middle;
