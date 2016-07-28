@@ -31,16 +31,16 @@ the best and highly recommended):
 
 <table>
 <colgroup>
-<col style="width: 6em;"/>
-<col style="width: 4em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
+<col width="6em"/>
+<col width="4em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
 </colgroup>
 <thead>
-<tr style="height:6em">
+<tr height="6em">
   <td><!--name--></td>
   <td><!--price--></td>
   <td class="vert"><div><span>Linux</span></div></td>
