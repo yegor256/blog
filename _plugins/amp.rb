@@ -15,6 +15,7 @@ module Jekyll
       xml = Nokogiri::HTML(html)
       xml.xpath('//comment()').remove
       xml.search('//body//script').remove
+      xml.search('//body//form').remove
       xml.search('//body//figure').remove
       xml.search('//body//figcaption').remove
       xml.search('//body//img').remove
