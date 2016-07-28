@@ -40,23 +40,6 @@ GitHub ticket:
 
 {% figure /images/2015/10/chatbot-1.png 600 %}
 
-<style>
-.bullet {
-  display: inline-block;
-  border-radius: 50%;
-  color: #c22e12;
-  font-size: 0.8em;
-  background-color: #ffb800;
-  padding: .2em;
-  font-weight: bold;
-  width: 1em;
-  height: 1em;
-  line-height: 1em;
-  text-align: center;
-  vertical-align: middle;
-}
-</style>
-
 Let's see what's going on here, and then we'll discuss
 how it's designed inside. Essentially, I'm **talking** to a chatbot here.
 The name of the chatbot is `@rultor` (I wrote about it
