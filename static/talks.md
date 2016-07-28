@@ -105,6 +105,13 @@ Swansea, UK<br/>
 12 September 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/codemotion.png" class="future-talk" alt="codemotion Warsaw"/>
+**Deployment Scripts Are Dead, Meet Rultor**<br/>
+[{codemotion}](http://warsaw2016.codemotionworld.com/speaker/1934/)<br/>
+Warsaw, Poland<br/>
+15-16 September 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
 **Practical Example of AOP with AspectJ**<br/>
 **Qulice, a Java Quality Police**<br/>
