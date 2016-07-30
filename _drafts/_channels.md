@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Eight Levels of Communication to Kill a Project"
+title: "Eight Levels of Communication Maturity"
 date: 2016-05-08
 tags: management
 place: Tallinn, Estonia
 description: |
-  ...
+  Chats, emails, phone calls, mailing lists, issue
+  tracking systems, face-to-face meetings and other
+  communication instruments for a software project.
 keywords:
   - meetings
   - slack project management
@@ -15,9 +17,9 @@ keywords:
 ---
 
 Each software team organizes its communications in its own
-specific way. Some use Slack, JIRA or GitHub; others just sit together
+specific way. Some use Slack, Trello, or GitHub; others just sit together
 in the same room. There are many methods and tools. I believe that
-it's possible to rank them by the amount of damage they cause
+it's possible to rank them by the amount of **damage** they cause
 to your project. This is the list of all of them I'm aware at the moment.
 
 <!--more-->
@@ -26,6 +28,10 @@ The damage is caused mostly by the distance between these communication
 channels and project artifacts. The further away people stay from documents,
 the bigger the risk of losing information. And lost information is the first
 source of trouble in any project.
+
+Here is the list, it starts with the most damaging communication means
+and goes down to the most **mature** and professional ones, which cause the
+least amount of trouble:
 
   * **Coffee Breaks**.
     This is the most dangerous thing &mdash; you can never
@@ -51,7 +57,7 @@ source of trouble in any project.
     If you can put some formality into emails and discipline all participants,
     your email history may be considered a project artifact by itself. How
     organized and easily browseable will that artifact be? That's a question.
-    In most cases it will just a mess.
+    In most cases it will just be a mess.
 
   **Mailing Lists**.
     They are better than emails, since some software is archiving them,
@@ -67,14 +73,17 @@ source of trouble in any project.
     if you really want to find something there, it's possible. But the quality
     of such a "document" is very low.
 
-  **JIRA**.
+  **Trello**.
     I mean any task/ticket tracking system &mdash; they are great instruments
     to immediately turn conversations and discussions into project artifacts.
-    You don't need to document anything, it's already there.
+    You don't need to document anything, it's already there. The problem is
+    that they are still rather far away from the main project artifact &mdash;
+    the source code, with its commits, merge conflicts, build logs, etc..
 
   **GitHub**.
     This is the best instrument you can use. It integrates communications
     with the product itself. The code you write and the discussions you
     have around it are literally in the same place.
 
-Which one your project is using right now?
+Which one of them your project is using right now? I would strongly recommend
+to stay away from communication channels from the top of this list.

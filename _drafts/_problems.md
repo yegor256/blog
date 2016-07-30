@@ -22,7 +22,7 @@ in OOP would help us solve many problems in existing pseudo-object-oriented lang
 Then, suddenly, the question came up: "**what problems?**"
 I was puzzled. I thought it was obvious that vast majority of modern software
 written in modern OO-languages is unmaintainable and simply a mess.
-So, I googled a bit and this is what I found (in chronological order).
+So, I googled a bit and this is what I found (in their chronological order).
 
 <!--more-->
 
@@ -65,9 +65,11 @@ do actually understand low-level issues and don't screw things up with any
 idiotic "object model" crap."
 
 <!-- 2009 -->
+<!--
 [Rich Hickey](https://github.com/richhickey)
 at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey), JVM Languages Summit 2009 Keynote:
 "..."
+-->
 
 <!-- 2010 -->
 [Oscar Nierstrasz](https://en.wikipedia.org/wiki/Oscar_Nierstrasz)
@@ -120,3 +122,4 @@ Alan Kay:
 "Java and C++ make you think that the new ideas are like the old ones.
 Java is the most distressing thing to happen to computing since MS-DOS."
 
+If you have something to add to this list, please post a comment below.
