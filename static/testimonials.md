@@ -16,8 +16,8 @@ exclude_from_search: true
 
 {% badge /images/angry-testimonials.png 220 %}
 
-This is what my readers think about me. The list is
-sorted by my personal preference: the most interesting comments
+This is what _some_ of my readers think about me. The list is
+sorted by my personal preference, the most interesting comments
 are on the top.
 
 "You're a self opinionated asshole and I hope you suffocate
@@ -32,6 +32,10 @@ anonymous
 "That may be the most stupid use of object orientation I have ever seen"
 &mdash;
 [Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
+
+"... insightless nonsense"
+&mdash;
+[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
 
 "I have still a good opinion of you but some posts are just holy crap"
 &mdash;

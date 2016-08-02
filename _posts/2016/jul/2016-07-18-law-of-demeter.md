@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Law of Demeter Doesn't Mean One Dot"
-date: 2016-07-20
+date: 2016-07-18
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -30,6 +30,8 @@ perfect, but its common understanding in the OOP world is simply wrong
 
 <!--more-->
 
+{% picture /images/2016/07/spartacus.jpg 0 Spartacus (1960) by Stanley Kubrick %}
+
 [Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.
 
@@ -54,7 +56,7 @@ the answer is this: `a.x.hello()`. That would be illegal. Directly
 accessing the attribute from another object and then talking to it
 is not allowed by the law.
 
-But we don't do that anyway. We're talking about `book.pages().last().next()`.
+But we don't do that anyway. We're talking about `book.pages().last().text()`.
 In this chain of method calls, we're not accessing any attributes. We're
 asking our objects to build new objects for us. What does the law say about
 that? Let me read it and quote:

@@ -76,7 +76,7 @@ keywords:
 <div class="wrapper">
   <footer>
     <div class="pagination">
-      <div style="float: left;">
+      <div class="left">
         {% if paginator.previous_page %}
           {% if paginator.previous_page == 1 %}
             <a href="/"><i class="icon icon-fast-backward"></i></a>
@@ -88,7 +88,7 @@ keywords:
         {% endif %}
       </div>
       page {{ paginator.page }} of {{ paginator.total_pages }}
-      <div style="float: right;">
+      <div class="right">
         {% if paginator.next_page %}
           <a href="/p/{{ paginator.next_page }}"><i class="icon icon-fast-forward"></i></a>
         {% else %}

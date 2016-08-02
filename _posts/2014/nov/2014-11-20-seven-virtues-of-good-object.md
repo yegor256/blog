@@ -16,6 +16,7 @@ keywords:
   - object oriented programming concepts
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
+  - Spanish: https://ixmanuel.gitbooks.io/pensando-en-objectos/content/
 book: elegant-objects 2.3
 youtube:
   - WSgP85kr6eU
@@ -43,7 +44,7 @@ Here is my list of qualities of a good object.
 
 {% badge /images/2014/11/good-object-1.png 250 %}
 
-Before we start talking about [objects]({% pst 2016/jul/2016-07-14-what-is-object %}),
+Before we start talking about [objects]({% pst 2016/jul/2016-07-14-who-is-object %}),
 let's define what a *class* is. It
 is a place where objects are being born (a.k.a. *instantiated*). The main responsibility
 of a class is to *construct* new objects on demand and *destruct* them when

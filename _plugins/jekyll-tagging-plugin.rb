@@ -23,7 +23,8 @@ module Jekyll
           name = yield data if block_given?
           site.pages << TagPage.new(
             site, site.source, site.config["tag_#{type}_dir"],
-            "#{name || tag}#{site.layouts[data['layout']].ext}", data
+            "#{name || tag}#{site.layouts[data['layout']].ext}",
+            data
           )
         end
       }

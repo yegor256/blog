@@ -1,5 +1,6 @@
 require 'liquid'
 require 'redcarpet'
+require 'nokogiri'
 
 module Jekyll
   class AmpPage < Page
@@ -11,13 +12,19 @@ module Jekyll
     def initialize(site, path, html)
       super(site, site.dest, '', path)
       @path = path
-      @html = html
-        .gsub(/<script ?.*\/>/, '')
-        .gsub(/<figure>(.*)<\/figure>/, "\\1")
-        .gsub(/<figcaption>(.*)<\/figcaption>/, "\\1")
-        .gsub(/<img ?(.*)\/>/, '') #"<amp-img \\1 layout='responsive'/>"
-        .gsub(/<svg ?.*>.*<\/svg>/, "<p>[graph removed]</p>")
-        .gsub(/<aside ?.*>.*<\/aside>/, '')
+      xml = Nokogiri::HTML(html)
+      xml.xpath('//comment()').remove
+      xml.xpath('//@style').remove
+      xml.search('//body//iframe').remove
+      xml.search('//body//script').remove
+      xml.search('//body//form').remove
+      xml.search('//body//figure').remove
+      xml.search('//body//figcaption').remove
+      xml.search('//body//img').remove
+      xml.search('//body//svg').remove
+      xml.search('//body//aside').remove
+      @html = xml.to_html
+        .gsub(/<meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">/, '')
       write(site.dest)
     end
     def write(dest)

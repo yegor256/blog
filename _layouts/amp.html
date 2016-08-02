@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html amp lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title>{{ page.title }}</title>
     <link rel="canonical" href="{{ doc.url | prepend: site.baseurl | prepend: site.url }}" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <script type='application/ld+json'>
       {
         "@context": "http://schema.org",
@@ -44,11 +44,17 @@
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="{{ doc.url | prepend: site.baseurl | prepend: site.url }}">here</a>.
+      </p>
       <h1>{{ page.title }}</h1>
       {{ content }}
     </article>

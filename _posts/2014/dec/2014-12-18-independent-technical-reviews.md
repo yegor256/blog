@@ -205,7 +205,8 @@ issues immediately get into your team's backlog. Then, make sure they are
 addressed and closed. That doesn't mean you should fix them all and listen
 to everything said by the reviewer. Definitely not! Your
 [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
-runs the show, not the reviewer. Your architect should decide what is right
+runs the show, not the reviewer. Your
+[architect]({% pst 2016/jul/2016-07-21-convince-me %}) should decide what is right
 and what is wrong in the technical implementation of the product. But it's
 important to make him resolve all concerns raised by the reviewer. Very often
 you will get answers like these from him: "We don't care about it now", "we won't

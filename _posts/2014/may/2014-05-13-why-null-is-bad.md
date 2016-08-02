@@ -69,7 +69,7 @@ public Employee getByName(String name) {
 
 The second possible alternative is to [fail fast]({% pst 2015/aug/2015-08-25-fail-fast %})
 by throwing an **Exception** when you can't return an
-[object]({% pst 2016/jul/2016-07-14-what-is-object %}):
+[object]({% pst 2016/jul/2016-07-14-who-is-object %}):
 
 {% highlight java %}
 public Employee getByName(String name) {

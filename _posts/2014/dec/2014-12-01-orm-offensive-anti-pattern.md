@@ -27,7 +27,7 @@ youtube:
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 that violates all principles of
 object-oriented programming, tearing
-[objects]({% pst 2016/jul/2016-07-14-what-is-object %})
+[objects]({% pst 2016/jul/2016-07-14-who-is-object %})
 apart and turning them into dumb and passive
 data bags. There is no excuse for ORM existence in any application, be it
 a small web app or an enterprise-size system with thousands of tables and CRUD
@@ -45,7 +45,7 @@ accessing a relational database from an object-oriented language
 (Java, for example). There are multiple implementations of ORM
 in almost every language; for example:
 [Hibernate](http://hibernate.org/orm/) for Java,
-[ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) for Ruby on Rails,
+[ActiveRecord]({% pst 2016/jul/2016-07-26-active-record %}) for Ruby on Rails,
 [Doctrine](http://www.doctrine-project.org/) for PHP, and
 [SQLAlchemy](http://www.sqlalchemy.org/) for Python.
 In Java, the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
@@ -155,7 +155,8 @@ ORM objects are
 with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
 us send our requests to the ORM framework and understand its response.
-Besides getters and setters, objects have no other methods. They don't even know
+Besides [getters and setters]({% pst 2016/jul/2016-07-18-law-of-demeter %}),
+objects have no other methods. They don't even know
 which database they came from.
 
 This is how object-relational mapping works.

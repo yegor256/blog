@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Convince Me!"
-date: 2016-07-20
+date: 2016-07-21
 place: Palo Alto, CA
-tags: management
+tags: management architect
 description: |
   During a project, a software architect must be a technical dictator
   who doesn't convince anyone but rather
@@ -27,6 +27,8 @@ something in a certain way, and the sponsor (or its representative) says
 that it's not exactly how things should work. What's next?
 
 <!--more-->
+
+{% picture /images/2016/07/beasts-of-no-nation.jpg 0 Beasts of No Nation (2015) by Cary Joji Fukunaga %}
 
 In our projects, a product owner (PO) is usually a representative of
 a project sponsor (the paying customer). Since all our projects are rather
@@ -63,6 +65,8 @@ else. Instead, an architect must make his decisions and be responsible for the
 entire success or failure of the product, just like I
 [explained before]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 
+{% quote A good architect must collect different opinions before making his own decision %}
+
 There is a simple reason for that. Any attempt to convince anyone
 causes a possibility of "responsibility leakage". What if I fail to convince?
 I will have to change my plan and use Gradle, right? What if the product
@@ -96,13 +100,15 @@ I know my design decisions are dictated by the requirements.
 And not because Chris convinced me or I failed to convince him, but because
 that's what the document says.
 
+{% quote An architect must be an absolute technical dictator during the project and must not have to convince anyone %}
+
 Second, if he is not entirely sure that Gradle is the right choice
 and just wants me to be more serious about my decisions, he should
 complain (by submitting a bug) about the quality of my
 [architecture document]({% pst 2015/aug/2015-08-04-nine-steps-start-software-project %}).
 He should say the choice to go with Maven is not explained
 properly. I will then rethink my decision and will either change
-it or expain it better. But again, I will do it not to please
+it or explain it better. But again, I will do it not to please
 Chris but to fix a reported bug.
 
 To summarize, an architect must be an absolute technical **dictator**

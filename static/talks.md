@@ -13,14 +13,12 @@ keywords:
   - conferences about programming
   - software engineers conferences
 exclude_from_search: true
+script: |
+  $(function() {
+    $('#future-talks-total').text($('img.future-talk').length);
+    $('#past-talks-total').text($('img.past-talk').length);
+  });
 ---
-
-<script>
-$(function() {
-  $('#future-talks-total').text($('img.future-talk').length);
-  $('#past-talks-total').text($('img.past-talk').length);
-});
-</script>
 
 <style>
 .talk-event {
@@ -81,8 +79,20 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2016/object-thinking.png" class="future-talk" alt="Object Thinking Meetup"/>
+**Why Static Methods Are Evil?**<br/>
+[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/)<br/>
+Stanford, Palo Alto, CA<br/>
+9 August 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
+[Pirate Summit](http://www.piratesummit.com/agenda-speaker/)<br/>
+Cologne, Germany<br/>
+6 September 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
-_Something about SeedRamp_<br/>
 [Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
 Salamanca, Spain<br/>
 7-8 September 2016
@@ -93,6 +103,13 @@ Salamanca, Spain<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
 Swansea, UK<br/>
 12 September 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/codemotion.png" class="future-talk" alt="codemotion Warsaw"/>
+**Deployment Scripts Are Dead, Meet Rultor**<br/>
+[{codemotion}](http://warsaw2016.codemotionworld.com/speaker/1934/)<br/>
+Warsaw, Poland<br/>
+15-16 September 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
@@ -115,7 +132,7 @@ Malmö, Sweden<br/>
 **Seven Deadly Sins of a Software Project**<br>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
-15-18 November 2016
+16 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
@@ -179,7 +196,7 @@ Java vs OOP;
 Minsk, Belarus;
 11 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
-[photos](...),
+[photos](https://www.facebook.com/javadayby/photos/?tab=album&amp;album_id=1060019404063727),
 [video](https://www.youtube.com/watch?v=6hOBfjJ2bpw).
 It was a surprisingly well organized one-day event with over 300 attendees,
 two tracks, and inexpensive entry ticket ($75). Even though their budget
@@ -207,13 +224,12 @@ again.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>
-<img src="/images/2016/ndcoslo-2016.png" class="past-talk" alt="NDC Oslo 2016"/>
+<img src="http://img.youtube.com/vi/vU_x6oK437I/0.jpg" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/);
 Oslo, Norway;
 8 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
-[photos](...),
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
 It was a very big event with, I guess, about 1500 visitors and nine (!) tracks.
 What was good is that they paid for all travel expenses and the venue was

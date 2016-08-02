@@ -52,9 +52,28 @@ to this object &mdash; that's what's wrong. Modifying the XML document
 and saving it to the database is _its functionality_, while
 not saving anything if the modification instructions set is empty is not
 (very similar to the [defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %})).
+Instead, there should be a decorator, which would look like this:
 
-...
+{% highlight java %}
+class QuickTalk implements Talk {
+  private final Tralk origin;
+  void modify(Collection<Directive> dirs) {
+    if (!dirs.isEmpty()) {
+      this.origin.modify(dirs);
+    }
+  }
+}
+{% endhighlight %}
 
-Every time there is If-Then-Else in your code &mdash; it's a code smell,
-begging for refactoring. Break your object to smaller ones.
+Now, if and when we need our talk to be more clever in situations where
+the list of that directives is empty, we decorate it with `QuickTalk`.
+Benefits are obvious &mdash; `DyTalk` class is smaller and that's why
+more cohesive.
 
+But question is bigger. Can we make a rule out of it? Can we say that
+**each and every forking** is bad and should be moved out of a class? What about
+forking that happens inside a method and can't be converted to a decorator?
+
+I'm suggesting this simple rule: if it's possible to convert if-then-else forking
+to a decorator, it has to be done. If it's not done, it's a code smell.
+Make sense?

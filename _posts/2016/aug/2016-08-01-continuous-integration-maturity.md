@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "8 Maturity Levels of Continuous Integration"
-date: 2016-07-20
+date: 2016-08-01
 place: Palo Alto, CA
 tags: devops
 description: |
@@ -25,6 +25,8 @@ Now it's time to write them down and ask
 you &mdash; Which level are you at? Post your answer below.
 
 <!--more-->
+
+{% picture /images/2016/08/twins.jpg 0 Twins (1988) by Ivan Reitman %}
 
 1. **Source Code**.
 Here you just write source code on your computers and maybe somewhere on

@@ -7,20 +7,19 @@ description: |
   Yegor Bugayenko is a software architect, writer, blogger,
   project manager, CTO, seed investor, and philanthropist.
 keywords:
-  - java
-  - programming
+  - java blog
+  - blog about programming
   - yegor bugayenko
-  - quality of software
-  - software blog
-  - high quality programming
-  - static analysis
-  - software testing
+  - егор бугаенко
+  - project management blog
 exclude_from_search: true
 ---
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
-I'm Yegor Bugayenko, a programmer, a founder and an investor.
+I'm Yegor Bugayenko (Russian:
+<span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
+a programmer, a founder and an investor.
 
 As a **programmer** I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP and JavaScript.
@@ -72,13 +71,10 @@ subscribers in my list).
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span class="note">1000+ Happy Subscribers and Counting...</span>
+  <span class="note">1323+ Happy Subscribers and Counting...</span>
 </fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).
-
-<script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
-<script src="/js/about.js?{{ site.data['hash'] }}"></script>
 
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html).

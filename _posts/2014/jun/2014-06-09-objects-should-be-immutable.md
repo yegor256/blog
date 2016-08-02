@@ -28,7 +28,7 @@ In object-oriented programming, an object is
 modified after it is created.
 
 In Java, a good example of an
-immutable [object]({% pst 2016/jul/2016-07-14-what-is-object %})
+immutable [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is [`String`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html).
 Once created, we can't modify its state. We can request that it creates
 new strings, but its own state will never change.

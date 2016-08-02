@@ -16,8 +16,9 @@ keywords:
 categories: jcg
 ---
 
-Every project I'm working with starts with a setup of continuous
-integration pipeline. I'm a big fan of cloud services,
+Every project I'm working with starts with a setup of
+[continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %})
+pipeline. I'm a big fan of cloud services,
 that's why I was always using `travis-ci.org`. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.
@@ -31,16 +32,16 @@ the best and highly recommended):
 
 <table>
 <colgroup>
-<col style="width: 6em;"/>
-<col style="width: 4em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
-<col style="width: 2em;"/>
+<col width="6em"/>
+<col width="4em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
+<col width="2em"/>
 </colgroup>
 <thead>
-<tr style="height:6em">
+<tr height="6em">
   <td><!--name--></td>
   <td><!--price--></td>
   <td class="vert"><div><span>Linux</span></div></td>

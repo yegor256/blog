@@ -8,19 +8,17 @@ description: |
   email you again once you fill this form and send it to me.
 keywords:
   - unsubscribe
----
-
-<script>
-$('#email').ready(
-  function() {
-    var query = window.location.search,
-      matches = query.match(/email=([^&]+)/);
-    if (matches !== null) {
-      $('#email').val(matches[1]);
+script: |
+  $('#email').ready(
+    function() {
+      var query = window.location.search,
+        matches = query.match(/email=([^&]+)/);
+      if (matches !== null) {
+        $('#email').val(matches[1]);
+      }
     }
-  }
-);
-</script>
+  );
+---
 
 I'm sorry to see you leaving :(
 
@@ -34,4 +32,4 @@ I'm sorry to see you leaving :(
   <button id="unsubscribe" class="field">Unsubscribe</button>
 </fieldset></form>
 
-You can always [subscribe](/about-me.html) again.
+You can always [subscribe](/about-me.html#form) again.

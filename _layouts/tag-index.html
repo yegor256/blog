@@ -11,8 +11,10 @@ exclude_from_search: true
   <div class="wrapper">
     <header itemprop="name">
       {% if page.title == 'oop' %}
-        <h1>Object Oriented Programming (OOP)</h1>
+        <h1>Object-Oriented Programming (OOP) - {{ page.posts.size }} posts</h1>
         <p>
+          <a href="https://gitter.im/yegor256/elegantobjects"><img alt="gitter logo"
+            src="/images/gitter-icon.jpg" style="width:75px;height:75px;float:right;margin-left:1em"/></a>
           You can learn more about OOP from my recently published
           book <a href="/elegant-objects.html">Elegant Objects</a> too.
           Also, join my <a href="https://gitter.im/yegor256/elegantobjects">Gitter chat</a>,
@@ -21,7 +23,7 @@ exclude_from_search: true
       {% elsif page.title == 'unknown' %}
         <h1>unknown</h1>
       {% else %}
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.title }} - {{ page.posts.size }} posts</h1>
       {% endif %}
     </header>
     <main>

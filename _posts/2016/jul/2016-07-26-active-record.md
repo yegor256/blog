@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ActiveRecord Is Even Worse Than ORM"
-date: 2016-07-20
+date: 2016-07-26
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -30,6 +30,8 @@ each talk, a few people told me that what I'm suggesting is called
 
 <!--more-->
 
+{% picture /images/2016/07/en-duva-satt-pa-engren.jpg 0 En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson %}
+
 Moreover, they claimed that ActiveRecord actually solves the problem
 I've found in ORM. They said I should explain in my talks that
 what I'm offering (SQL-speaking objects) already exists and has a name:
@@ -41,7 +43,7 @@ ORM consists of two parts: the session and
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities".
 The entities have no functionality; they are just primitive containers for the
 data transferred from and to the session. And that is what the problem is &mdash;
-objects don't encapsulate but rather expose data. To read why this is wrong and why it's
+objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
 against the object paradigm, you can read
 [here]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 [here]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),

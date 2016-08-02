@@ -102,10 +102,26 @@ layout: default
 
   <div class="disqus" role="complementary">
     <div id="disqus_thread" class="disqus-thread"></div>
-    <a href="http://disqus.com" class="dsq-brlink">
-      comments powered by
-      <span class="logo-disqus">Disqus</span>
-    </a>
+    <script>
+      var disqus_config = function () {
+        this.page.url = document.location.href.split('?')[0].split('#')[0];
+        this.page.identifier = this.page.url;
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//yegor256.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      <div>
+        <p class="red">
+          JavaScript is disabled in your browser,
+          that's why you can't see comments under this post.
+        </p>
+      </div>
+    </noscript>
   </div>
 
   <div class="wrapper">
@@ -119,6 +135,3 @@ layout: default
   </div>
 
 </section>
-
-<script src="/js/post.js?{{ site.data['hash'] }}"></script>
-<script src="//a.disquscdn.com/embed.js?{{ site.data['hash'] }}"></script>

@@ -158,7 +158,7 @@ can process them inside, isn't it?
 
 This is the root cause of the problem! The root cause is our ability to **insert**
 data into mutable objects via configuration methods, also known as "setters".
-When an [object]({% pst 2016/jul/2016-07-14-what-is-object %})
+When an [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.
 
