@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-02T18:24:01+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>8 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-02T19:03:19+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>8 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
 them and presented my findings at &lt;a href=&quot;http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/&quot;&gt;DevOpsDays&lt;/a&gt;
 in Salt Lake City a few weeks ago
@@ -57,7 +57,7 @@ This idea is explained
 &lt;/ol&gt;
 
 &lt;p&gt;By the way, at the &lt;a href=&quot;https://www.youtube.com/watch?v=3dJP_LtUGgg&quot;&gt;presentation&lt;/a&gt;,
-I also mentioned what problems you may encounter at each maturity level.&lt;/p&gt;</content><category term="devops" /><summary>There are a number of levels you have to go through before your
+I also mentioned what problems you may encounter at each maturity level.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="devops" /><summary>There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
 them and presented my findings at DevOpsDays
 in Salt Lake City a few weeks ago
@@ -128,7 +128,7 @@ while in reality it&amp;#39;s just a dumb data bag.&lt;/p&gt;
 that my SQL-speaking objects concept is exactly the same as the ActiveRecord
 design pattern (or Repository, which is almost exactly the same).&lt;/p&gt;
 
-&lt;p&gt;No, it&amp;#39;s not.&lt;/p&gt;</content><category term="oop" /><summary>You probably remember what I think
+&lt;p&gt;No, it&amp;#39;s not.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>You probably remember what I think
 about ORM, a very popular design pattern. In a nutshell,
 it encourages us to turn objects into
 DTOs, which are
@@ -236,7 +236,7 @@ Chris but to fix a reported bug.&lt;/p&gt;
 &lt;p&gt;To summarize, an architect must be an absolute technical &lt;strong&gt;dictator&lt;/strong&gt;
 during the project and must not have to convince anyone. If that&amp;#39;s not the case,
 the entire project faces big risks, simply because the responsibility
-will be &amp;quot;leaking&amp;quot;.&lt;/p&gt;</content><category term="management" /><category term="architect" /><summary>I&amp;#39;ve already explained how I understand
+will be &amp;quot;leaking&amp;quot;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><category term="architect" /><summary>I&amp;#39;ve already explained how I understand
 the role
 and responsibilities
 of a software architect.
@@ -244,7 +244,7 @@ But one question still remains unanswered, and it often turns into a problem
 in our projects: What does a software architect do when the project
 sponsor doesn&amp;#39;t like his technical decisions? The architect implements
 something in a certain way, and the sponsor (or its representative) says
-that it&amp;#39;s not exactly how things should work. What&amp;#39;s next?</summary></entry><entry><title>The Law of Demeter Doesn&amp;#39;t Mean One Dot</title><link href="http://www.yegor256.com/2016/07/18/law-of-demeter.html" rel="alternate" type="text/html" title="The Law of Demeter Doesn&#39;t Mean One Dot" /><published>2016-07-18T00:00:00+00:00</published><updated>2016-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/18/law-of-demeter</id><content type="html" xml:base="http://www.yegor256.com/2016/07/18/law-of-demeter.html">&lt;p&gt;You&amp;#39;ve probably heard about that 30-year-old
+that it&amp;#39;s not exactly how things should work. What&amp;#39;s next?</summary></entry><entry><title>The Law of Demeter Doesn’t Mean One Dot</title><link href="http://www.yegor256.com/2016/07/18/law-of-demeter.html" rel="alternate" type="text/html" title="The Law of Demeter Doesn&#39;t Mean One Dot" /><published>2016-07-18T00:00:00+00:00</published><updated>2016-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/18/law-of-demeter</id><content type="html" xml:base="http://www.yegor256.com/2016/07/18/law-of-demeter.html">&lt;p&gt;You&amp;#39;ve probably heard about that 30-year-old
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_Demeter&quot;&gt;Law of Demeter&lt;/a&gt; (LoD). Someone
 asked me recently what I think about it. And not just what I think, but
 how it is possible to keep objects small and obey the LoD. According to the
@@ -316,7 +316,7 @@ don&amp;#39;t touch them either, silly.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;So the bottom line is that the Law of Demeter is not against
 method chaining at all. Of course, it&amp;#39;s against getters and direct attribute
-access. But who isn&amp;#39;t, right?&lt;/p&gt;</content><category term="oop" /><summary>You&amp;#39;ve probably heard about that 30-year-old
+access. But who isn&amp;#39;t, right?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>You&amp;#39;ve probably heard about that 30-year-old
 Law of Demeter (LoD). Someone
 asked me recently what I think about it. And not just what I think, but
 how it is possible to keep objects small and obey the LoD. According to the
@@ -447,7 +447,7 @@ technically.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;What do you think? Is it close to the &amp;quot;representative&amp;quot; definition I just
-proposed?&lt;/p&gt;</content><category term="oop" /><summary>There are thousands of books about object-oriented programming and
+proposed?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>There are thousands of books about object-oriented programming and
 hundreds of object-oriented languages, and I believe most (read &amp;quot;all&amp;quot;) of them
 give us an incorrect definition of an &amp;quot;object&amp;quot;. That&amp;#39;s why the entire
 OOP world is so full of misconceptions and mistakes. Their
@@ -652,7 +652,7 @@ Do retrospective meetings help in that? I doubt it. Therefore, I believe that
 what the Manifesto means here is not the meetings. It means that the team must have
 an effective mechanism of self-regulation and self-improvement. Additionally, retrospective
 meetings simply can&amp;#39;t be that mechanism because they prevent the team from making
-difficult disciplinary decisions.&lt;/p&gt;</content><category term="management" /><category term="agile" /><summary>Nowadays, Agile Manifesto is a Bible of
+difficult disciplinary decisions.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><category term="agile" /><summary>Nowadays, Agile Manifesto is a Bible of
 numerous software teams. It contains
 12 principles which
  show us how software development should be organized.
@@ -707,7 +707,7 @@ The QA reports to the PM.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Besides all that, any role is &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;encouraged&lt;/a&gt;
-to submit bugs when they find them.&lt;/p&gt;</content><category term="management" /><summary>I believe that several roles should be present in a majority of
+to submit bugs when they find them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>I believe that several roles should be present in a majority of
 software projects. Managed by
 Teamed.io according to the principles of
 XDSD, we&amp;#39;ve got all of them in our projects. However, beware that in other management
@@ -823,7 +823,7 @@ any data from it.&lt;/p&gt;
 
 &lt;p&gt;The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
-a box for that data. Don&amp;#39;t think that way, and don&amp;#39;t do that.&lt;/p&gt;</content><category term="oop" /><summary>DTO,
+a box for that data. Don&amp;#39;t think that way, and don&amp;#39;t do that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>DTO,
 as far as I understand it, is a cornerstone of the ORM design pattern,
 which I simply adore.
 But let&amp;#39;s skip to the point: DTO is just a shame, and the man who invented
@@ -908,7 +908,7 @@ constructor? No, we don&amp;#39;t. If our objects really need 10 dependencies to
 their work, we need to break them down into smaller ones.&lt;/p&gt;
 
 &lt;p&gt;That&amp;#39;s it. Forget about singletons; never use them. Turn them into dependencies
-and pass them from object to object through the operator &lt;code&gt;new&lt;/code&gt;.&lt;/p&gt;</content><category term="oop" /><summary>I think it&amp;#39;s too obvious to say that a singleton is an anti-pattern as
+and pass them from object to object through the operator &lt;code&gt;new&lt;/code&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>I think it&amp;#39;s too obvious to say that a singleton is an anti-pattern as
 there are tons of articles about that (singleton being an anti-pattern).
 However, more often than not, the question
 is how to define global things without a singleton; and the answer to that is not
@@ -1040,7 +1040,7 @@ be positive about the plan &amp;mdash; he needs to get that from you.&lt;/p&gt;
 I just re-read this text one last time and it looks to me like
 a &amp;quot;how to find a wife&amp;quot; tutorial. Don&amp;#39;t you think?
 Anyway, did I forget anything? Don&amp;#39;t hesitate to post some extra wisdom below in
-the comments section.&lt;/p&gt;</content><category term="management" /><category term="sarcasm" /><summary>I get asked this question very often: Where and how do you find
+the comments section.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><category term="sarcasm" /><summary>I get asked this question very often: Where and how do you find
 and hire a good programmer? Since I&amp;#39;m a programmer and I manage
 software projects, I&amp;#39;m supposed to know the tricks. I do, of course; there
 are many of them, but the list below succinctly summarizes the most important ones.</summary></entry></feed>
