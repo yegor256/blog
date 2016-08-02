@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>8 Maturity Levels of Continuous Integration</title>
+    <link rel="canonical" href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html"
+        },
+        "headline": "8 Maturity Levels of Continuous Integration",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-08-01",
+        "dateModified": "2016-08-01",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "There are a number of levels a continuous integration
+pipeline can go through until it reaches its greatest
+maturity.
+",
+        "keywords": ["continuous integration", "continuous integration levels", "continuous integration maturity", "continuous integration definition", "continuous integration example"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">here</a>.
+      </p>
+      <h1>8 Maturity Levels of Continuous Integration</h1>
+      <p>There are a number of levels you have to go through before your
+continuous integration pipeline becomes perfect. I found eight of
+them and presented my findings at <a href="http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/">DevOpsDays</a>
+in Salt Lake City a few weeks ago
+(watch the <a href="https://www.youtube.com/watch?v=3dJP_LtUGgg">video</a>).
+Now it's time to write them down and ask
+you — Which level are you at? Post your answer below.</p>
+
+
+
+
+
+<ol>
+<li><p><strong>Source Code</strong>.
+Here you just write source code on your computers and maybe somewhere on
+the server. The best you can do here is to build it manually, say,
+every day. Is it continuous integration? Well, to some extent, provided
+you don't forget to compile and package everything regularly.</p></li>
+<li><p><strong>Automated Build</strong>.
+At this level, your build is automated, which means you can compile,
+test, and package the entire product with just one line at the command line.
+Pay attention; one line. You must be able to hit one button and either
+get an error or a successful build.</p></li>
+<li><p><strong>Git</strong>.
+At this level, you keep your source code in Git. You can keep it in some
+other source control system, but that would be strange — Git is the
+<em>status quo</em> at the moment. You should be able to get a new computer,
+with nothing in it, check out the source code from a Git repository, and
+run a full build.</p></li>
+<li><p><strong>Pull Requests</strong>.
+Each and every change to your source code must be submitted through
+a pull request, which means that you host your repository on GitHub. You
+may host it somewhere else, but again, that would be strange because
+GitHub is the <em>status quo</em> at the moment. Again, nobody should be able to commit
+anything directly to the
+<a href="/2014/07/21/read-only-master-branch.html">master branch</a>
+except through forks and pull requests.</p></li>
+<li><p><strong>Code Reviews</strong>.
+Every pull request must pass a mandatory
+<a href="/2015/02/09/serious-code-reviewer.html">code review</a>
+before it gets merged.
+You must have some code review policy that explains who does reviews,
+what happens if the author doesn't agree with the reviewer, etc. But no
+pull request may be merged unless it has been reviewed.</p></li>
+<li><p><strong>Tests</strong>.
+At this level, your code is covered by unit tests (and integration tests), and every change
+comes with a new test. Your automated build runs all tests together and fails
+if any of them fail.</p></li>
+<li><p><strong>Static Analysis</strong>.
+Checking the <a href="/2014/08/13/strict-code-quality-control.html">quality</a>
+of your code without running it is what static analysis
+is about. At this level, the quality of your code is checked by the automated
+build. If the quality is lower than the threshold, the build fails.</p></li>
+<li><p><strong>Pre-Flight Builds</strong>.
+This idea is explained
+<a href="/2014/10/08/continuous-integration-is-dead.html">here</a>.</p></li>
+</ol>
+
+<p>By the way, at the <a href="https://www.youtube.com/watch?v=3dJP_LtUGgg">presentation</a>,
+I also mentioned what problems you may encounter at each maturity level.</p>
+
+    </article>
+  </body>
+</html>
