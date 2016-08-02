@@ -16,8 +16,9 @@ keywords:
 categories: jcg
 ---
 
-Every project I'm working with starts with a setup of continuous
-integration pipeline. I'm a big fan of cloud services,
+Every project I'm working with starts with a setup of
+[continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %})
+pipeline. I'm a big fan of cloud services,
 that's why I was always using `travis-ci.org`. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.

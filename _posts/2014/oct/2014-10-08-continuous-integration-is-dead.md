@@ -39,7 +39,8 @@ I'll try to rely only on logic instead.
 BTW, my experience includes five years of using
 Apache Continuum, Hudson, CruiseControl, and Jenkins in over 50 open
 source and commercial projects. Besides that,
-a few years ago I created a hosted continuous integration service called
+a few years ago I created a hosted
+[continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %}) service called
 [fazend.com](http://www.fazend.com),
 renamed to [rultor.com](http://www.rultor.com) in 2013.
 Currently, I'm also an active user of [Travis](http://www.travis-ci.org)
