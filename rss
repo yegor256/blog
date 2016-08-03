@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-03T19:51:13+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>8 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-03T21:11:11+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>8 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
 them and presented my findings at &lt;a href=&quot;http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/&quot;&gt;DevOpsDays&lt;/a&gt;
 in Salt Lake City a few weeks ago
@@ -85,6 +85,8 @@ what I&amp;#39;m offering (SQL-speaking objects) already exists and has a name:
 ActiveRecord.&lt;/p&gt;
 
 &lt;p&gt;I disagree. Moreover, I think that ActiveRecord is even worse than ORM.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;What&amp;#39;s even worse in ActiveRecord is that it hides the fact that objects are data containers&lt;/aside&gt;
 
 &lt;p&gt;ORM consists of two parts: the session and
 &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;, also known as &amp;quot;entities&amp;quot;.
@@ -296,6 +298,8 @@ is a perfectly valid object that can be used. Then, we can call method
 &lt;code&gt;last()&lt;/code&gt; on it and get an object &lt;code&gt;Page&lt;/code&gt;, and then call method &lt;code&gt;text()&lt;/code&gt;, etc. This
 is a perfectly valid scenario that doesn&amp;#39;t violate the law at all, just
 as I expected.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;So the bottom line is that the Law of Demeter is not against method chaining at all&lt;/aside&gt;
 
 &lt;p&gt;So where does this common understanding of the law come from? Why does
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_Demeter&quot;&gt;Wikipedia&lt;/a&gt;
@@ -886,6 +890,8 @@ thing, what do we replace it with?&lt;/p&gt;
 &lt;p&gt;A &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;dependency injection&lt;/a&gt;
 is the answer.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Forget about singletons; never use them; turn them into dependencies&lt;/aside&gt;
+
 &lt;p&gt;We need to make this database connection pool dependency of the controller
 and ensure it&amp;#39;s provided through a constructor. However, in this particular
 case, for JAX-RS, we can&amp;#39;t do it through a constructor thanks to its
@@ -934,6 +940,8 @@ Recommendations are the most effective way of finding contractors. First,
 you don&amp;#39;t need to worry about screening and testing. Second, you&amp;#39;ll have
 a very good explanation for why your project failed &amp;mdash; because your
 friend let you down with a bad recommendation. Win-win.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Hire only locals &amp;amp;mdash; they are much easier to manage and punish&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Hire Only Locals&lt;/strong&gt;.
 Don&amp;#39;t even think about a remote programmer &amp;mdash; remote projects always fail.
@@ -992,6 +1000,8 @@ forever. That&amp;#39;s the type of programmer you need. You don&amp;#39;t want 
 greedy freelancers who always jumps from project to project. You need a long-term
 commitment. That&amp;#39;s why you have to pretend you&amp;#39;re rich enough.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Programmers in general are not really good in financial negotiations; use that to exploit them&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;Delay Money Talks&lt;/strong&gt;.
 Don&amp;#39;t mention money for as long as you can. Ideally, ask him to create
 a prototype first and &amp;quot;then we&amp;#39;ll discuss your salary&amp;quot;. A good programmer
@@ -1014,6 +1024,8 @@ any other projects or even any personal life at all. He must promise to be 100 p
 you and your idea. If he is planning on doing something else, demonstrate that it
 will offend you. Act jealous, like a loving wife. You don&amp;#39;t need a programmer
 who is interested in something else.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;You&amp;#39;re going to be his leader, and a good leader is never too honest with subordinates&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Make Him a Partner&lt;/strong&gt;.
 First of all, making him a partner will save you a lot of money. Ideally,
