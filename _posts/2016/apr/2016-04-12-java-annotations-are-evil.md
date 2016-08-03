@@ -141,8 +141,8 @@ Then, you create a marshaller and ask it to convert an instance of class
 
 {% highlight java %}
 final Book book = new Book("0132350882", "Clean Code");
-final JAXBContext context = JAXBContext.newInstance(Book.class);
-final Marshaller marshaller = jaxbContext.createMarshaller();
+final JAXBContext ctx = JAXBContext.newInstance(Book.class);
+final Marshaller marshaller = ctx.createMarshaller();
 marshaller.marshal(book, System.out);
 {% endhighlight %}
 
