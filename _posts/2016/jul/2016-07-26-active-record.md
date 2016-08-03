@@ -39,6 +39,8 @@ ActiveRecord.
 
 I disagree. Moreover, I think that ActiveRecord is even worse than ORM.
 
+{% quote What's even worse in ActiveRecord is that it hides the fact that objects are data containers %}
+
 ORM consists of two parts: the session and
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities".
 The entities have no functionality; they are just primitive containers for the

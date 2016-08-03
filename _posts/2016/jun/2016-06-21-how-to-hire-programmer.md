@@ -37,6 +37,8 @@ you don't need to worry about screening and testing. Second, you'll have
 a very good explanation for why your project failed &mdash; because your
 friend let you down with a bad recommendation. Win-win.
 
+{% quote Hire only locals &mdash; they are much easier to manage and punish %}
+
 **Hire Only Locals**.
 Don't even think about a remote programmer &mdash; remote projects always fail.
 [Always]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}).
@@ -94,6 +96,8 @@ forever. That's the type of programmer you need. You don't want one of those
 greedy freelancers who always jumps from project to project. You need a long-term
 commitment. That's why you have to pretend you're rich enough.
 
+{% quote Programmers in general are not really good in financial negotiations; use that to exploit them %}
+
 **Delay Money Talks**.
 Don't mention money for as long as you can. Ideally, ask him to create
 a prototype first and "then we'll discuss your salary". A good programmer
@@ -116,6 +120,8 @@ any other projects or even any personal life at all. He must promise to be 100 p
 you and your idea. If he is planning on doing something else, demonstrate that it
 will offend you. Act jealous, like a loving wife. You don't need a programmer
 who is interested in something else.
+
+{% quote You're going to be his leader, and a good leader is never too honest with subordinates %}
 
 **Make Him a Partner**.
 First of all, making him a partner will save you a lot of money. Ideally,
