@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Distributed Team Delivers Code of Higher Quality"
-date: 2016-07-20
+date: 2016-08-05
 place: Las Vegas, NV
 tags: management
 description: |
@@ -26,6 +26,8 @@ achieve if co-located. What I'm going to show you is that working in a
 remote mode, if done right, **guarantees** higher quality of code. Surprised?
 
 <!--more-->
+
+{% picture /images/2016/08/oceans-twelve.jpg 0 Ocean's Twelve (2004) by Steven Soderbergh %}
 
 There are basically four simple ingredients to success ... you know what, there is
 actually _one_ main ingredient, and its name is **control**. If we want quality
@@ -58,7 +60,7 @@ we practice in our projects:
     to compromise the quality of our code, everyone has to go through a
     pull request, pre-flight build, and automated merge procedure.
 
-  * **Chats Are Prohibited**. Any modification to our codebase, even a very small one, 
+  * **Chats Are Prohibited**. Any modification to our codebase, even a very small one,
     must be submitted in a pull request. A code review
     must also occur in the pull request. We strictly disallow any
     informal communications between programmers, including chats, phone
