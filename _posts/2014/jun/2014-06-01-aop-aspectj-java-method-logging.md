@@ -131,8 +131,7 @@ This is an **aspect** with a single **around advice**
 `around()` inside. The aspect is annotated with `@Aspect`
 and advice is annotated with `@Around`. As discussed above,
 these annotations are just markers in `.class` files. They don't do
-anything except provide some meta-information to those w
-ho are interested in runtime.
+anything except provide some meta-information to those who are interested in runtime.
 
 Annotation `@Around` has one parameter, which &mdash; in this case &mdash;
 says that the advice should be applied to a method if:
