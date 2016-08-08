@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-08T02:35:00+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>A Distributed Team Delivers Code of Higher Quality</title><link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html" rel="alternate" type="text/html" title="A Distributed Team Delivers Code of Higher Quality" /><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality</id><content type="html" xml:base="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html">&lt;p&gt;OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-08T17:40:37+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>A Distributed Team Delivers Code of Higher Quality</title><link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html" rel="alternate" type="text/html" title="A Distributed Team Delivers Code of Higher Quality" /><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality</id><content type="html" xml:base="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html">&lt;p&gt;OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
 team &lt;strong&gt;can&lt;/strong&gt; deliver code of much higher quality than a co-located one,
 and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
 Most of them can&amp;#39;t even deliver code that works, let alone quality code.
@@ -15,6 +15,8 @@ remote mode, if done right, &lt;strong&gt;guarantees&lt;/strong&gt; higher quali
 actually &lt;em&gt;one&lt;/em&gt; main ingredient, and its name is &lt;strong&gt;control&lt;/strong&gt;. If we want quality
 to be at some level, we have to &lt;strong&gt;enforce&lt;/strong&gt; it. We can&amp;#39;t just declare it; we
 need to &lt;strong&gt;make&lt;/strong&gt; it high.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Quality can be achieved only if it is controlled and enforced&lt;/aside&gt;
 
 &lt;p&gt;How do software teams make high-quality code? Oh, there are many proven methods.
 First, you need a very modern office where &lt;del&gt;programmers&lt;/del&gt; developers
@@ -76,6 +78,8 @@ you won&amp;#39;t be able to prohibit informal communications. No matter how man
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It&amp;#39;s inevitable.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;People are people; nobody likes to hit that quality bar multiple times a day&lt;/aside&gt;
+
 &lt;p&gt;Second, you won&amp;#39;t be able to pay for results only, because programmers will
 complain that they are doing a lot of communication in the office that
 has to be paid somehow. In reality, they will spend two to three hours per day on
@@ -98,7 +102,7 @@ Most of them can&amp;#39;t even deliver code that works, let alone quality code.
 But if a team &amp;mdash; a distributed one &amp;mdash; is managed according to the principles
 I&amp;#39;ll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I&amp;#39;m going to show you is that working in a
-remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry><entry><title>8 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
+remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry><entry><title>8+2 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8+2 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
 them and presented my findings at &lt;a href=&quot;http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/&quot;&gt;DevOpsDays&lt;/a&gt;
 in Salt Lake City a few weeks ago
@@ -154,6 +158,10 @@ build. If the quality is lower than the threshold, the build fails.&lt;/p&gt;&lt
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Pre-Flight Builds&lt;/strong&gt;.
 This idea is explained
 &lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Production Simulation&lt;/strong&gt;. The build is run in a container, which
+simulates production environment and data.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Stress Tests&lt;/strong&gt;. Performance and stress tests are automated and executed
+on every build.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;By the way, at the &lt;a href=&quot;https://www.youtube.com/watch?v=3dJP_LtUGgg&quot;&gt;presentation&lt;/a&gt;,

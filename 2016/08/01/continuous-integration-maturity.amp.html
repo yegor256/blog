@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>8 Maturity Levels of Continuous Integration</title>
+    <title>8+2 Maturity Levels of Continuous Integration</title>
     <link rel="canonical" href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
@@ -14,7 +14,7 @@
           "@type": "WebPage",
           "@id": "http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html"
         },
-        "headline": "8 Maturity Levels of Continuous Integration",
+        "headline": "8+2 Maturity Levels of Continuous Integration",
         "image": {
           "@type": "ImageObject",
           "url": "http://img.teamed.io/face-1400x1400.jpg",
@@ -60,7 +60,7 @@ maturity.
         its original content can be found
         <a href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">here</a>.
       </p>
-      <h1>8 Maturity Levels of Continuous Integration</h1>
+      <h1>8+2 Maturity Levels of Continuous Integration</h1>
       <p>There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
 them and presented my findings at <a href="http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/">DevOpsDays</a>
@@ -117,6 +117,10 @@ build. If the quality is lower than the threshold, the build fails.</p></li>
 <li><p><strong>Pre-Flight Builds</strong>.
 This idea is explained
 <a href="/2014/10/08/continuous-integration-is-dead.html">here</a>.</p></li>
+<li><p><strong>Production Simulation</strong>. The build is run in a container, which
+simulates production environment and data.</p></li>
+<li><p><strong>Stress Tests</strong>. Performance and stress tests are automated and executed
+on every build.</p></li>
 </ol>
 
 <p>By the way, at the <a href="https://www.youtube.com/watch?v=3dJP_LtUGgg">presentation</a>,
