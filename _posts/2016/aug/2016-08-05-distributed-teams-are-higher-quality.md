@@ -34,6 +34,8 @@ actually _one_ main ingredient, and its name is **control**. If we want quality
 to be at some level, we have to **enforce** it. We can't just declare it; we
 need to **make** it high.
 
+{% quote Quality can be achieved only if it is controlled and enforced %}
+
 How do software teams make high-quality code? Oh, there are many proven methods.
 First, you need a very modern office where <del>programmers</del> developers
 sit on cushioned chairs, play table tennis, drink smoothies, and write
@@ -94,6 +96,8 @@ to build all that in a co-located team? I don't think so. First of all,
 you won't be able to prohibit informal communications. No matter how many
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It's inevitable.
+
+{% quote People are people; nobody likes to hit that quality bar multiple times a day %}
 
 Second, you won't be able to pay for results only, because programmers will
 complain that they are doing a lot of communication in the office that
