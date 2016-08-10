@@ -93,7 +93,8 @@ classes, this may and will happen.</p>
 
 <p>The second problem is an inevitably <strong>growing complexity</strong> of method <code>sizeOf()</code>. The
 more special types it has to treat differently, the more complex it will become.
-This if/then forking is inevitable, since it has to check all possible
+This if/then <a href="/2016/08/10/if-then-else-code-smell.html">forking</a>
+is inevitable, since it has to check all possible
 types and give them special treatment. Such complexity is a result
 of a violation of the single responsibility principle. The method is not
 only calculating the size of <code>Iterable</code> but is also performing type

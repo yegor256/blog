@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-10T06:05:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>A Distributed Team Delivers Code of Higher Quality</title><link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html" rel="alternate" type="text/html" title="A Distributed Team Delivers Code of Higher Quality" /><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality</id><content type="html" xml:base="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html">&lt;p&gt;OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-10T20:19:09+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>If-Then-Else Is a Code Smell</title><link href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html" rel="alternate" type="text/html" title="If-Then-Else Is a Code Smell" /><published>2016-08-10T00:00:00+00:00</published><updated>2016-08-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/10/if-then-else-code-smell</id><content type="html" xml:base="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html">&lt;p&gt;In most cases (maybe even in all of them), if-then-else can and must
+be replaced by a decorator or simply another object.
+I&amp;#39;ve been planning to write about this for almost a year but only today found
+a real case in my own code that perfectly
+illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Ffargo.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Fargo (1996) by Coen Brothers&#39;/&gt;&lt;figcaption&gt;Fargo (1996) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Take a look at the class
+&lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java&quot;&gt;&lt;code&gt;DyTalk&lt;/code&gt;&lt;/a&gt;
+from
+&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;yegor256/rultor&lt;/a&gt;
+and its method
+&lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java#L127-L169&quot;&gt;&lt;code&gt;modify()&lt;/code&gt;&lt;/a&gt;.
+In a nutshell, it prevents you from saving any data to the DynamoDB if there were no
+modifications of the XML document. It&amp;#39;s a valid case, and it has to be
+validated, but the way it&amp;#39;s implemented is simply wrong. This is
+how it works (an oversimplified example):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DyTalk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Apply the modification&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// and save the new XML document&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// to the DynamoDB table.&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What&amp;#39;s wrong, you wonder? This if-then-else forking functionality doesn&amp;#39;t really belong
+to this object &amp;mdash; that&amp;#39;s what&amp;#39;s wrong. Modifying the XML document
+and saving it to the database is &lt;em&gt;its functionality&lt;/em&gt;, while
+not saving anything if the modification instructions set is empty is not
+(it&amp;#39;s very similar to &lt;a href=&quot;/2016/01/26/defensive-programming.html&quot;&gt;defensive programming&lt;/a&gt;).
+Instead, there should be a decorator, which would look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;QuickTalk&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Talk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Talk&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, if and when we need our talk to be more clever in situations where
+the list of directives is empty, we decorate it with &lt;code&gt;QuickTalk&lt;/code&gt;.
+The benefits are obvious: the &lt;code&gt;DyTalk&lt;/code&gt; class is smaller and therefore
+more cohesive.&lt;/p&gt;
+
+&lt;p&gt;But the question is bigger than just that. Can we make a rule out of it? Can we say that
+&lt;strong&gt;each and every forking&lt;/strong&gt; is bad and should be moved out of a class? What about
+forking that happens inside a method and can&amp;#39;t be converted to a decorator?&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m suggesting this simple rule: If it&amp;#39;s possible to convert if-then-else forking
+to a decorator, it has to be done. If it&amp;#39;s not done, it&amp;#39;s a code smell.
+Make sense?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>In most cases (maybe even in all of them), if-then-else can and must
+be replaced by a decorator or simply another object.
+I&amp;#39;ve been planning to write about this for almost a year but only today found
+a real case in my own code that perfectly
+illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.</summary></entry><entry><title>A Distributed Team Delivers Code of Higher Quality</title><link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html" rel="alternate" type="text/html" title="A Distributed Team Delivers Code of Higher Quality" /><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality</id><content type="html" xml:base="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html">&lt;p&gt;OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
 team &lt;strong&gt;can&lt;/strong&gt; deliver code of much higher quality than a co-located one,
 and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
 Most of them can&amp;#39;t even deliver code that works, let alone quality code.
@@ -939,93 +1001,4 @@ a box for that data. Don&amp;#39;t think that way, and don&amp;#39;t do that.&lt
 as far as I understand it, is a cornerstone of the ORM design pattern,
 which I simply adore.
 But let&amp;#39;s skip to the point: DTO is just a shame, and the man who invented
-it is just wrong. There is no excuse for what he has done.</summary></entry><entry><title>Singletons Must Die</title><link href="http://www.yegor256.com/2016/06/27/singletons-must-die.html" rel="alternate" type="text/html" title="Singletons Must Die" /><published>2016-06-27T00:00:00+00:00</published><updated>2016-06-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/06/27/singletons-must-die</id><content type="html" xml:base="http://www.yegor256.com/2016/06/27/singletons-must-die.html">&lt;p&gt;I think it&amp;#39;s too obvious to say that a singleton is an anti-pattern as
-there are tons of articles about that (singleton being an anti-pattern).
-However, more often than not, the question
-is how to define global things without a singleton; and the answer to that is not
-obvious for many of us. There are several examples: a database connection
-pool, a repository, a configuration map, etc. They all naturally seem to
-be &amp;quot;global&amp;quot;; but what do we do with them?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F06%2Fperdita-durango.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Perdita Durango (1997) by Álex de la Iglesia&#39;/&gt;&lt;figcaption&gt;Perdita Durango (1997) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I assume you already know what a singleton is and why it&amp;#39;s an anti-pattern.
-If not, I recommend you read this StackOverflow thread:
-&lt;a href=&quot;http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons&quot;&gt;What is so bad about singletons?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that we agree it&amp;#39;s a bad deal, what do we do if we need to, let&amp;#39;s say,
-have access to a database connection pool in many different places within the
-application? We simply need something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Database&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Database&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INSTANCE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// create a connection pool&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Connection&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Get new connection from the pool&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// and return&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Later in at, say, the JAX-RS REST method, we need to retrieve something
-from the database:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@GET&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Connection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;Database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;INSTANCE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JdbcSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;SELECT text FROM table&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SingleOutcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In case you&amp;#39;re not familiar with JAX-RS, it&amp;#39;s a simple MVC architecture,
-and this &lt;code&gt;text()&lt;/code&gt; method is a &amp;quot;controller&amp;quot;. Additionally, I&amp;#39;m using
-&lt;a href=&quot;http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html&quot;&gt;&lt;code&gt;SqlSession&lt;/code&gt;&lt;/a&gt;,
-a simple JDBC wrapper from &lt;a href=&quot;http://jdbc.jcabi.com&quot;&gt;jcabi-jdbc&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We need that &lt;code&gt;Database.INSTANCE&lt;/code&gt; to be a singleton, right? We need it to
-be globally available so that &lt;em&gt;any&lt;/em&gt; MVC controller can have direct
-access to it. Since we all understand and agree that a singleton is an evil
-thing, what do we replace it with?&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;dependency injection&lt;/a&gt;
-is the answer.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Forget about singletons; never use them; turn them into dependencies&lt;/aside&gt;
-
-&lt;p&gt;We need to make this database connection pool dependency of the controller
-and ensure it&amp;#39;s provided through a constructor. However, in this particular
-case, for JAX-RS, we can&amp;#39;t do it through a constructor thanks to its
-ugly architecture. But we can create a &lt;a href=&quot;https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html&quot;&gt;&lt;code&gt;ServletContextListener&lt;/code&gt;&lt;/a&gt;,
-instantiate a &lt;code&gt;Database&lt;/code&gt; in its &lt;a href=&quot;https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html#contextInitialized-javax.servlet.ServletContextEvent-&quot;&gt;&lt;code&gt;contextInitialized()&lt;/code&gt;&lt;/a&gt; method,
-and add that instance as an attribute of
-&lt;a href=&quot;https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html&quot;&gt;&lt;code&gt;servletContext&lt;/code&gt;&lt;/a&gt;. Then, inside
-the controller, we retrieve the servlet context by adding the
-&lt;a href=&quot;http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Context.html&quot;&gt;&lt;code&gt;javax.ws.rs.core.Context&lt;/code&gt;&lt;/a&gt;
-annotation to a setter and using
-&lt;a href=&quot;https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html#getAttribute-java.lang.String-&quot;&gt;&lt;code&gt;getAttribute()&lt;/code&gt;&lt;/a&gt;
-on it. This is absolutely terrible and procedural, but it&amp;#39;s better
-than a singleton.&lt;/p&gt;
-
-&lt;p&gt;A proper object-oriented design would pass an instance of &lt;code&gt;Database&lt;/code&gt;
-to &lt;em&gt;all&lt;/em&gt; objects that may need it through their constructors.&lt;/p&gt;
-
-&lt;p&gt;Nonetheless, what do we do if there are many dependencies? Do we make a 10-argument
-constructor? No, we don&amp;#39;t. If our objects really need 10 dependencies to do
-their work, we need to break them down into smaller ones.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s it. Forget about singletons; never use them. Turn them into dependencies
-and pass them from object to object through the operator &lt;code&gt;new&lt;/code&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>I think it&amp;#39;s too obvious to say that a singleton is an anti-pattern as
-there are tons of articles about that (singleton being an anti-pattern).
-However, more often than not, the question
-is how to define global things without a singleton; and the answer to that is not
-obvious for many of us. There are several examples: a database connection
-pool, a repository, a configuration map, etc. They all naturally seem to
-be &amp;quot;global&amp;quot;; but what do we do with them?</summary></entry></feed>
+it is just wrong. There is no excuse for what he has done.</summary></entry></feed>
