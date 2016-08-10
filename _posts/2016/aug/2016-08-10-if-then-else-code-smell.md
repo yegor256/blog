@@ -38,7 +38,7 @@ validated, but the way it's implemented is simply wrong. This is
 how it works (an oversimplified example):
 
 {% highlight java %}
-class DyTalk {
+class DyTalk implements Talk {
   void modify(Collection<Directive> dirs) {
     if (!dirs.isEmpty()) {
       // Apply the modification
