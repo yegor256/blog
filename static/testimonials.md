@@ -23,7 +23,18 @@ are on the top.
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."
 &mdash;
-anonymous
+anonymous (by email)
+
+"Yegor you are a professional name-dropper, a talker, not a doer,
+so please stop pretending your own dumb mantras, certs, "methodologies" like
+"puzzle-driven-development" (seriously?) mean jack-shit because you SUCK
+and are constipated with your own opinions. You are the epitome of
+what Dijkstra (a doer, unlike you) said was wrong with software development
+so go fuck yourself. I understand that you have to promote your business
+but goddamn you would probably choke any programmer who worked under
+you by dictating what angle they held a bloody pencil at you dip. Please stop"
+&mdash;
+anonymous (by email)
 
 "You are great at writing code that is painful to understand, use and explain."
 &mdash;
