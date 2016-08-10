@@ -31,7 +31,8 @@ Today I finally found it.
 
 <!--more-->
 
-If-then-else is a forking mechanism of procedural programming. The CPU
+If-then-else is a [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
+mechanism of procedural programming. The CPU
 either goes to the left and **then** does something or goes to the right and
 does something **else**. Imagine yourself driving a car and seeing this sign:
 

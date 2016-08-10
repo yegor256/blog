@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "If-Then-Else Is a Code Smell"
-date: 2016-06-12
+date: 2016-08-10
 place: Tallinn, Estonia
 tags: oop
 description: |
@@ -23,6 +23,8 @@ a real case in my own code that perfectly
 illustrates the problem. So it's time to demonstrate it and explain.
 
 <!--more-->
+
+{% picture /images/2016/08/fargo.jpg 0 Fargo (1996) by Coen Brothers %}
 
 Take a look at the class
 [`DyTalk`](https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java)
