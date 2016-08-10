@@ -72,6 +72,8 @@ the list of directives is empty, we decorate it with `QuickTalk`.
 The benefits are obvious: the `DyTalk` class is smaller and therefore
 more cohesive.
 
+{% quote If it's possible to convert if-then-else forking to a decorator, it has to be done %}
+
 But the question is bigger than just that. Can we make a rule out of it? Can we say that
 **each and every forking** is bad and should be moved out of a class? What about
 forking that happens inside a method and can't be converted to a decorator?
