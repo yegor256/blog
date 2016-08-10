@@ -22,7 +22,7 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
-Intensity of writing:
+Intensity of writing ({% wordcount %} words in the entire blog):
 
 {% figure /stats.svg 700 %}
 
