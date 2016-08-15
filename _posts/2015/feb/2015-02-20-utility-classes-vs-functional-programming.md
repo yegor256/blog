@@ -77,7 +77,7 @@ is focused on describing **how** a program operates
 in terms of statements that change a program state. We just saw an example
 of imperative programming above. Here is another (this is pure imperative/procedural
 programming that has nothing to do with
-[OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %})):
+[OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})):
 
 {% highlight java %}
 public class MyMath {
@@ -210,7 +210,7 @@ functional programming, they work very fast, and they are very easy to
 use. Why not use them? Why aim for perfection when 20 years of Java history
 proves that utility classes are the main instrument of each Java developer?"
 
-Besides [OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %})
+Besides [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
 fundamentalism, which I'm very often accused of, there are
 a few very practical reasons (BTW, I am an OOP fundamentalist):
 

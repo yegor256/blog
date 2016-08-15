@@ -83,4 +83,4 @@ Actually, you will have only two operators in the entire
 software &mdash; `new` and `return`. That's it.
 
 Until we're there, let's stick with just one `return` and at least try to look
-like pure [OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %}).
+like pure [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}).

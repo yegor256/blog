@@ -132,7 +132,7 @@ not throw exceptions in so many situations. This will lead to refactoring. The e
 unchecked exceptions leads to a mess. By the way, checked exceptions don't exist
 at all in Ruby, C#, Python, PHP, etc. This means that creators of these
 languages understand
-[OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %}) even less than Java authors.
+[OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}) even less than Java authors.
 
 ## Checked Exceptions Are Too Noisy
 

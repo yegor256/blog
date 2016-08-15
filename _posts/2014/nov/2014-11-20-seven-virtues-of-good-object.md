@@ -289,7 +289,7 @@ as first-class citizens in our code? Why can't both of them have methods and pro
 The problem is that with class-oriented programming,
 decomposition doesn't work anymore. We can't break down a complex problem
 into parts, because only a single instance of a class exists in the entire
-program. The power of [OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %})
+program. The power of [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
 is that it allows us to use objects as an instrument
 for scope decomposition. When I instantiate an object inside a method, he
 is dedicated to my specific task. He is perfectly isolated from
