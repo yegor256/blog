@@ -28,6 +28,8 @@
 .orange { color: $orange; }
 .gray { @extend %gray; }
 
+%clear { clear: both; }
+
 %small { font-size: .85 * $em; }
 
 %strike { text-decoration: line-through; }
@@ -55,6 +57,8 @@
     display: none !important;
   }
 }
+
+.clear { @extend %clear; }
 
 .printable { @extend %printable; }
 
@@ -261,7 +265,7 @@ fieldset {
 }
 
 h1 {
-  clear: both;
+  @extend %clear;
   font-size: 2 * $em;
   font-weight: 600;
   line-height: 2 * $em;
@@ -274,7 +278,7 @@ h1 {
 
 h2,
 h3 {
-  clear: both;
+  @extend %clear;
   position: relative;
 }
 

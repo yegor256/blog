@@ -29,6 +29,7 @@ So I Googled a bit, and this is what I found (in chronological order).
 {% picture /images/2016/08/swingers.jpg 0 Swingers (1996) by Doug Liman %}
 
 <!-- 1989 -->
+<div class="clear"></div>
 {% badge /images/2016/08/edsger-dijkstra.jpg 200 %}
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 in "TUG LINES", Issue 32, August 1989:
@@ -47,6 +48,7 @@ provides a structured way to write spaghetti code."
 -->
 
 <!-- 1997 -->
+<div class="clear"></div>
 {% badge /images/2016/08/alan-kay.jpg 200 %}
 [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay)
 in [The Computer Revolution hasn't happened yet](https://www.youtube.com/watch?v=oKg1hTOQXoY), OOPSLA'97 Keynote:
@@ -54,12 +56,14 @@ in [The Computer Revolution hasn't happened yet](https://www.youtube.com/watch?v
 I did not have C++ in mind."
 
 <!-- 2003 -->
+<div class="clear"></div>
 {% badge /images/2016/08/paul-graham.jpg 200 %}
 [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29)
 in [The Hundred-Year Language](http://www.paulgraham.com/hundred.html):
 "Object-oriented programming offers a sustainable way to write spaghetti code."
 
 <!-- 2007 -->
+<div class="clear"></div>
 {% badge /images/2016/08/linus-torvalds.jpg 200 %}
 [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)
 in [this email](http://article.gmane.org/gmane.comp.version-control.git/57918/):
@@ -80,6 +84,7 @@ at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich
 -->
 
 <!-- 2010 -->
+<div class="clear"></div>
 {% badge /images/2016/08/oscar-nierstrasz.jpg 200 %}
 [Oscar Nierstrasz](https://en.wikipedia.org/wiki/Oscar_Nierstrasz)
 in [Ten Things I Hate About Object-Oriented Programming](http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming):
@@ -88,6 +93,7 @@ mastered this yet, possibly because we have difficulty distinguishing
 real and accidental complexity."
 
 <!-- 2010 -->
+<div class="clear"></div>
 {% badge /images/2016/08/rich-hickey.jpg 200 %}
 [Rich Hickey](https://github.com/richhickey)
 at [SE Radio](http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/), Episode 158:
@@ -97,6 +103,7 @@ mutable objects. You know, trying to understand and keep in your mind
 what will happen when you call a method and what will the side effects be."
 
 <!-- 2011 -->
+<div class="clear"></div>
 {% badge /images/2016/08/joe-armstrong.jpg 200 %}
 [Joe Armstrong](http://joearms.github.io/)
 in [Why OO Sucks](http://harmful.cat-v.org/software/OO_programming/why_oo_sucks):
@@ -105,6 +112,7 @@ indivisible units. I think this is a fundamental error since functions and
 data structures belong in totally different worlds."
 
 <!-- 2012 -->
+<div class="clear"></div>
 {% badge /images/2016/08/rob-pike.jpg 200 %}
 [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike)
 [here](https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb):
@@ -114,6 +122,7 @@ It truly is. But it's not always the best idea. ...
 Sometimes data is just data and functions are just functions."
 
 <!-- 2013 -->
+<div class="clear"></div>
 {% badge /images/2016/08/john-barker.jpg 200 %}
 [John Barker](https://www.linkedin.com/in/johnebgood)
 in [All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit):
@@ -121,6 +130,7 @@ in [All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs
 sharing and security. In many ways, it is still essentially procedural code."
 
 <!-- 2014 -->
+<div class="clear"></div>
 {% badge /images/2016/08/lawrence-krubner.jpg 200 %}
 [Lawrence Krubner](https://www.linkedin.com/in/krubner)
 in [Object Oriented Programming is an expensive disaster which must end](http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end):

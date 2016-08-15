@@ -24,5 +24,5 @@ more solid and architecture more visible.
 Published: 22 Feb 2016. I'm writing the **second volume** now,
 which is going to be published before the end of 2016.
 
-<div style="clear:both;"></div>
+<div class="clear"></div>
 To be continued...
