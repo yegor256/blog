@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What's Wrong With Object-Oriented Programming?"
-date: 2016-07-20
+date: 2016-08-15
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -25,6 +25,8 @@ written in modern OO languages is unmaintainable and simply a mess.
 So I Googled a bit, and this is what I found (in chronological order).
 
 <!--more-->
+
+{% picture /images/2016/08/swingers.jpg 0 Swingers (1996) by Doug Liman %}
 
 <!-- 1989 -->
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)

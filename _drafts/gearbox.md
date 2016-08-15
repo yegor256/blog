@@ -6,7 +6,7 @@ place: Palo Alto, CA
 tags: oop
 description: |
   There are a few levels of immutability in OOP, which
-  all can be used when them seem appropriate.
+  all can be used when they seem appropriate.
 keywords:
   - immutability
   - immutability java
@@ -23,11 +23,12 @@ application with just immutable objects. I've tried to explain it
 [here]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}),
 but now it's time to make another attempt. Moreover, I gave this problem
 a second thought and realized that immutability is not black or white. There
-are six shades, let's take a look.
+are a few more shades, let's take a look.
 
 <!--more-->
 
-As we agreed [here](...), an object is a representative of someone else
+As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
+an object is a representative of someone else
 (an entity, another object, data, etc.) Now, let's agree that we can
 communicate with that someone else in two modes: read and write. Or, in a more
 object way: ask and tell. We can either tell that entity to do something

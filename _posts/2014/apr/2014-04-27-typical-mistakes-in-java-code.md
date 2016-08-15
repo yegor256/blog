@@ -279,7 +279,8 @@ Class constants should be used when you want to share information between class
 methods, and this information is a characteristic (!) of your class. Don't use
 constants as a replacement of string or numeric literals &mdash; very bad
 practice that leads to code pollution. Constants (as with any
-[object]({% pst 2016/jul/2016-07-14-who-is-object %}) in OOP)
+[object]({% pst 2016/jul/2016-07-14-who-is-object %}) in
+[OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %}))
 should have a meaning in a real world. What meaning do these constants have in
 the real world:
 

@@ -322,7 +322,8 @@ me repeat it again &mdash; Spring Framework is one of the worst
 software products in the Java world. If you can stay away from it, you will
 do yourself a big favor.
 
-There should not be any "configurations" in OOP. We can't configure our
+There should not be any "configurations" in [OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %}).
+We can't configure our
 objects if they are real objects. We can only instantiate them. And the
 best method of instantiation is operator `new`. This operator is the key
 instrument for an OOP developer. Taking it away from us and giving us

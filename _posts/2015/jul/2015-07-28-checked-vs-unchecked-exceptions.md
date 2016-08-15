@@ -131,7 +131,8 @@ method will realize that something is wrong &mdash; a method should
 not throw exceptions in so many situations. This will lead to refactoring. The existence of
 unchecked exceptions leads to a mess. By the way, checked exceptions don't exist
 at all in Ruby, C#, Python, PHP, etc. This means that creators of these
-languages understand OOP even less than Java authors.
+languages understand
+[OOP]({% pst 2016/aug/2016=08-15-what-is-wrong-object-oriented-programming %}) even less than Java authors.
 
 ## Checked Exceptions Are Too Noisy
 
