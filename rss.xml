@@ -1,4 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-15T03:37:51+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>If-Then-Else Is a Code Smell</title><link href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html" rel="alternate" type="text/html" title="If-Then-Else Is a Code Smell" /><published>2016-08-10T00:00:00+00:00</published><updated>2016-08-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/10/if-then-else-code-smell</id><content type="html" xml:base="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html">&lt;p&gt;In most cases (maybe even in all of them), if-then-else can and must
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-15T18:04:44+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
+&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;a better understanding of an object&lt;/a&gt;
+in OOP would help us solve many problems in existing pseudo-object-oriented languages.
+Then, suddenly, the question came up: &amp;quot;&lt;strong&gt;What problems?&lt;/strong&gt;&amp;quot;
+I was puzzled. I thought it was obvious that the vast majority of modern software
+written in modern OO languages is unmaintainable and simply a mess.
+So I Googled a bit, and this is what I found (in chronological order).&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fswingers.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Swingers (1996) by Doug Liman&#39;/&gt;&lt;figcaption&gt;Swingers (1996) by Doug Liman&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;!-- 1989 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Edsger_W._Dijkstra&quot;&gt;Edsger W. Dijkstra&lt;/a&gt;
+in &amp;quot;TUG LINES&amp;quot;, Issue 32, August 1989:
+&amp;quot;Object oriented programs are offered as alternatives to correct ones&amp;quot;
+and
+&amp;quot;Object-oriented programming is an exceptionally bad idea
+which could only have originated in California.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 1995 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;Paul Graham&lt;/a&gt;
+in &lt;a href=&quot;http://amzn.to/29JwmOz&quot;&gt;Ansi Common Lisp&lt;/a&gt;, page 408:
+&amp;quot;The object-oriented model makes it easy to build up programs
+by accretion. What this often means, in practice, is that it
+provides a structured way to write spaghetti code.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 1997 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan Kay&lt;/a&gt;
+in &lt;a href=&quot;https://www.youtube.com/watch?v=oKg1hTOQXoY&quot;&gt;The Computer Revolution hasn&amp;#39;t happened yet&lt;/a&gt;, OOPSLA&amp;#39;97 Keynote:
+&amp;quot;I invented the term object-oriented, and I can tell you
+I did not have C++ in mind.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2003 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;Paul Graham&lt;/a&gt;
+in &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;The Hundred-Year Language&lt;/a&gt;:
+&amp;quot;Object-oriented programming offers a sustainable way to write spaghetti code.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2007 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linus_Torvalds&quot;&gt;Linus Torvalds&lt;/a&gt;
+in &lt;a href=&quot;http://article.gmane.org/gmane.comp.version-control.git/57918/&quot;&gt;this email&lt;/a&gt;:
+&amp;quot;C++ is a horrible language. ...
+C++ leads to really, really bad design choices. ...
+In other words, the only way to do good, efficient, and system-level and
+portable C++ ends up to limit yourself to all the things that are
+basically available in C. And limiting your project to C means that people
+don&amp;#39;t screw that up, and also means that you get a lot of programmers that
+do actually understand low-level issues and don&amp;#39;t screw things up with any
+idiotic &amp;#39;object model&amp;#39; crap.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2009 --&gt;
+
+&lt;!--
+[Rich Hickey](https://github.com/richhickey)
+at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey), JVM Languages Summit 2009 Keynote:
+&quot;...&quot;
+--&gt;
+
+&lt;!-- 2010 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Oscar_Nierstrasz&quot;&gt;Oscar Nierstrasz&lt;/a&gt;
+in &lt;a href=&quot;http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming&quot;&gt;Ten Things I Hate About Object-Oriented Programming&lt;/a&gt;:
+&amp;quot;OOP is about taming complexity through modeling, but we have not
+mastered this yet, possibly because we have difficulty distinguishing
+real and accidental complexity.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2010 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/richhickey&quot;&gt;Rich Hickey&lt;/a&gt;
+at &lt;a href=&quot;http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/&quot;&gt;SE Radio&lt;/a&gt;, Episode 158:
+&amp;quot;I think that large objected-oriented programs struggle
+with increasing complexity as you build this large object graph of
+mutable objects. You know, trying to understand and keep in your mind
+what will happen when you call a method and what will the side effects be.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2011 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joearms.github.io/&quot;&gt;Joe Armstrong&lt;/a&gt;
+in &lt;a href=&quot;http://harmful.cat-v.org/software/OO_programming/why_oo_sucks&quot;&gt;Why OO Sucks&lt;/a&gt;:
+&amp;quot;Objects bind functions and data structures together in
+indivisible units. I think this is a fundamental error since functions and
+data structures belong in totally different worlds.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2012 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Pike&quot;&gt;Rob Pike&lt;/a&gt;
+&lt;a href=&quot;https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb&quot;&gt;here&lt;/a&gt;:
+&amp;quot;Object-oriented programming, whose essence is nothing more than
+programming using data with associated behaviors, is a powerful idea.
+It truly is. But it&amp;#39;s not always the best idea. ...
+Sometimes data is just data and functions are just functions.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2013 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/johnebgood&quot;&gt;John Barker&lt;/a&gt;
+in &lt;a href=&quot;https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit&quot;&gt;All evidence points to OOP being bullshit&lt;/a&gt;:
+&amp;quot;What OOP introduces are abstractions that attempt to improve code
+sharing and security. In many ways, it is still essentially procedural code.&amp;quot;&lt;/p&gt;
+
+&lt;!-- 2014 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/krubner&quot;&gt;Lawrence Krubner&lt;/a&gt;
+in &lt;a href=&quot;http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end&quot;&gt;Object Oriented Programming is an expensive disaster which must end&lt;/a&gt;:
+&amp;quot;We now know that OOP is an experiment that failed.
+It is time to move on. It is time that we, as a community, admit that
+this idea has failed us, and we must give up on it.&amp;quot;&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;I can&amp;#39;t prove this quote (maybe you can help?):&lt;/p&gt;
+
+&lt;p&gt;Alan Kay:
+&amp;quot;Java and C++ make you think that the new ideas are like the old ones.
+Java is the most distressing thing to happen to computing since MS-DOS.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;If you have something to add to this list, please post a comment below.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>Recently, I was trying to convince a few of my readers that
+a better understanding of an object
+in OOP would help us solve many problems in existing pseudo-object-oriented languages.
+Then, suddenly, the question came up: &amp;quot;What problems?&amp;quot;
+I was puzzled. I thought it was obvious that the vast majority of modern software
+written in modern OO languages is unmaintainable and simply a mess.
+So I Googled a bit, and this is what I found (in chronological order).</summary></entry><entry><title>If-Then-Else Is a Code Smell</title><link href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html" rel="alternate" type="text/html" title="If-Then-Else Is a Code Smell" /><published>2016-08-10T00:00:00+00:00</published><updated>2016-08-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/10/if-then-else-code-smell</id><content type="html" xml:base="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html">&lt;p&gt;In most cases (maybe even in all of them), if-then-else can and must
 be replaced by a decorator or simply another object.
 I&amp;#39;ve been planning to write about this for almost a year but only today found
 a real case in my own code that perfectly
@@ -888,119 +1014,4 @@ software projects. Managed by
 Teamed.io according to the principles of
 XDSD, we&amp;#39;ve got all of them in our projects. However, beware that in other management
 methodologies, these roles may have different meanings. This blog post
-is mostly for people who work with us, either as clients or freelancers.</summary></entry><entry><title>Data Transfer Object Is a Shame</title><link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html" rel="alternate" type="text/html" title="Data Transfer Object Is a Shame" /><published>2016-07-06T00:00:00+00:00</published><updated>2016-07-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/06/data-transfer-object</id><content type="html" xml:base="http://www.yegor256.com/2016/07/06/data-transfer-object.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Data_transfer_object&quot;&gt;DTO&lt;/a&gt;,
-as far as I understand it, is a cornerstone of the ORM design pattern,
-which I &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;simply adore&lt;/a&gt;.
-But let&amp;#39;s skip to the point: DTO is just a shame, and the man who invented
-it is just wrong. There is no excuse for what he has done.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2Fbefore-the-devil-knows-you-are-dead.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Before the Devil Knows You&amp;amp;apos;re Dead (2007) by Sidney Lumet&#39;/&gt;&lt;figcaption&gt;Before the Devil Knows You&amp;#39;re Dead (2007) by Sidney Lumet&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;By the way, his name, to my knowledge, was
-&lt;a href=&quot;http://martinfowler.com/bliki/LocalDTO.html&quot;&gt;Martin Fowler&lt;/a&gt;. Maybe he
-was not the sole inventor of DTO, but he made it legal and recommended
-its use. With all due respect, he was just wrong.&lt;/p&gt;
-
-&lt;p&gt;The key idea of object-oriented programming is to hide data
-behind objects. This idea has a name:
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29&quot;&gt;encapsulation&lt;/a&gt;.
-In OOP, data
-must not be visible. &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Objects&lt;/a&gt;
-must only have access to the data they
-encapsulate and never to the data encapsulated by other objects. There
-can be no arguing about this principle &amp;mdash; it is what OOP is all about.&lt;/p&gt;
-
-&lt;p&gt;However, DTO runs completely against that principle.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s see a practical example. Say that this is a service that fetches
-a JSON document from some RESTful API and returns a DTO, which we can then
-store in the database:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;loadBookById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;saveNewBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I guess this is what will happen inside the &lt;code&gt;loadBookById()&lt;/code&gt; method:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loadBookById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Load it from RESTful API */&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setISBN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAuthor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Am I right? I bet I am. It already looks disgusting to me. Anyway, let&amp;#39;s
-continue. This is what will most likely happen in the &lt;code&gt;saveNewBook()&lt;/code&gt; method
-(I&amp;#39;m using pure JDBC):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;saveNewBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prepareStatement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;INSERT INTO book VALUES (?, ?, ?)&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getISBN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAuthor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;stmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This &lt;code&gt;Book&lt;/code&gt; is a classic example of a data transfer object design pattern.
-All it does is transfer
-data between two pieces of code, two procedures. The object &lt;code&gt;book&lt;/code&gt; is pretty
-dumb. All it knows how to do is ... nothing. It doesn&amp;#39;t do anything. It is
-actually not an object at all but rather a passive and anemic data structure.&lt;/p&gt;
-
-&lt;p&gt;What is the right design? There are a few. For example, this one looks
-good to me:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bookById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is what happens in &lt;code&gt;bookById()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bookById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/* RESTful API access point */&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is what happens in &lt;code&gt;Book.save()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Database&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Load it from RESTful API */&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What happens if there are many more parameters of the book in JSON that won&amp;#39;t
-fit nicely as parameters into a single &lt;code&gt;createBook()&lt;/code&gt; method? How about this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Database&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withISBN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;withAuthor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are many other options. But the main point is that the data
-&lt;strong&gt;never&lt;/strong&gt; escapes the object &lt;code&gt;book&lt;/code&gt;. Once the object is instantiated, the
-data is not visible or accessible by anyone else. We may only
-ask our object to save itself or to
-&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;print&lt;/a&gt;
-itself to some media, but we
-will never &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;get&lt;/a&gt;
-any data from it.&lt;/p&gt;
-
-&lt;p&gt;The very idea of DTO is wrong because it turns object-oriented code
-into procedural code. We have procedures that manipulate data, and DTO is just
-a box for that data. Don&amp;#39;t think that way, and don&amp;#39;t do that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>DTO,
-as far as I understand it, is a cornerstone of the ORM design pattern,
-which I simply adore.
-But let&amp;#39;s skip to the point: DTO is just a shame, and the man who invented
-it is just wrong. There is no excuse for what he has done.</summary></entry></feed>
+is mostly for people who work with us, either as clients or freelancers.</summary></entry></feed>

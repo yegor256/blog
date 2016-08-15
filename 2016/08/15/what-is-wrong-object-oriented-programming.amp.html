@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>What's Wrong With Object-Oriented Programming?</title>
+    <link rel="canonical" href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html"
+        },
+        "headline": "What's Wrong With Object-Oriented Programming?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-08-15",
+        "dateModified": "2016-08-15",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "This is my collection of arguments against object-oriented
+programming in general, and its elements in particular,
+expressed by different people at different times.
+",
+        "keywords": ["oop criticism", "arguments against oop", "criticism of object-oriented programming", "why oop is bad", "oop vs functional programming"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">here</a>.
+      </p>
+      <h1>What's Wrong With Object-Oriented Programming?</h1>
+      <p>Recently, I was trying to convince a few of my readers that
+<a href="/2016/07/14/who-is-object.html">a better understanding of an object</a>
+in OOP would help us solve many problems in existing pseudo-object-oriented languages.
+Then, suddenly, the question came up: "<strong>What problems?</strong>"
+I was puzzled. I thought it was obvious that the vast majority of modern software
+written in modern OO languages is unmaintainable and simply a mess.
+So I Googled a bit, and this is what I found (in chronological order).</p>
+
+
+
+
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>
+in "TUG LINES", Issue 32, August 1989:
+"Object oriented programs are offered as alternatives to correct ones"
+and
+"Object-oriented programming is an exceptionally bad idea
+which could only have originated in California."</p>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul Graham</a>
+in <a href="http://amzn.to/29JwmOz">Ansi Common Lisp</a>, page 408:
+"The object-oriented model makes it easy to build up programs
+by accretion. What this often means, in practice, is that it
+provides a structured way to write spaghetti code."</p>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>
+in <a href="https://www.youtube.com/watch?v=oKg1hTOQXoY">The Computer Revolution hasn't happened yet</a>, OOPSLA'97 Keynote:
+"I invented the term object-oriented, and I can tell you
+I did not have C++ in mind."</p>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29">Paul Graham</a>
+in <a href="http://www.paulgraham.com/hundred.html">The Hundred-Year Language</a>:
+"Object-oriented programming offers a sustainable way to write spaghetti code."</p>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>
+in <a href="http://article.gmane.org/gmane.comp.version-control.git/57918/">this email</a>:
+"C++ is a horrible language. ...
+C++ leads to really, really bad design choices. ...
+In other words, the only way to do good, efficient, and system-level and
+portable C++ ends up to limit yourself to all the things that are
+basically available in C. And limiting your project to C means that people
+don't screw that up, and also means that you get a lot of programmers that
+do actually understand low-level issues and don't screw things up with any
+idiotic 'object model' crap."</p>
+
+
+
+
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Oscar_Nierstrasz">Oscar Nierstrasz</a>
+in <a href="http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming">Ten Things I Hate About Object-Oriented Programming</a>:
+"OOP is about taming complexity through modeling, but we have not
+mastered this yet, possibly because we have difficulty distinguishing
+real and accidental complexity."</p>
+
+
+
+<p><a href="https://github.com/richhickey">Rich Hickey</a>
+at <a href="http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/">SE Radio</a>, Episode 158:
+"I think that large objected-oriented programs struggle
+with increasing complexity as you build this large object graph of
+mutable objects. You know, trying to understand and keep in your mind
+what will happen when you call a method and what will the side effects be."</p>
+
+
+
+<p><a href="http://joearms.github.io/">Joe Armstrong</a>
+in <a href="http://harmful.cat-v.org/software/OO_programming/why_oo_sucks">Why OO Sucks</a>:
+"Objects bind functions and data structures together in
+indivisible units. I think this is a fundamental error since functions and
+data structures belong in totally different worlds."</p>
+
+
+
+<p><a href="https://en.wikipedia.org/wiki/Rob_Pike">Rob Pike</a>
+<a href="https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb">here</a>:
+"Object-oriented programming, whose essence is nothing more than
+programming using data with associated behaviors, is a powerful idea.
+It truly is. But it's not always the best idea. ...
+Sometimes data is just data and functions are just functions."</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/johnebgood">John Barker</a>
+in <a href="https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit">All evidence points to OOP being bullshit</a>:
+"What OOP introduces are abstractions that attempt to improve code
+sharing and security. In many ways, it is still essentially procedural code."</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/krubner">Lawrence Krubner</a>
+in <a href="http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end">Object Oriented Programming is an expensive disaster which must end</a>:
+"We now know that OOP is an experiment that failed.
+It is time to move on. It is time that we, as a community, admit that
+this idea has failed us, and we must give up on it."</p>
+
+<hr>
+
+<p>I can't prove this quote (maybe you can help?):</p>
+
+<p>Alan Kay:
+"Java and C++ make you think that the new ideas are like the old ones.
+Java is the most distressing thing to happen to computing since MS-DOS."</p>
+
+<p>If you have something to add to this list, please post a comment below.</p>
+
+    </article>
+  </body>
+</html>
