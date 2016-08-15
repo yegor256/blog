@@ -79,13 +79,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/object-thinking.png" class="future-talk" alt="Object Thinking Meetup"/>
-**Why Static Methods Are Evil?**<br/>
-[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/)<br/>
-Stanford, Palo Alto, CA<br/>
-9 August 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
 [Pirate Summit](http://www.piratesummit.com/agenda-speaker/)<br/>
 Cologne, Germany<br/>
@@ -166,7 +159,15 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking 2016"/>
+<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="future-talk" alt="Object Thinking #2"/>
+Why Static Methods Are Evil?;
+[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
+Stanford, Palo Alto, CA;
+9 August 2016;
+[video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
+
+<div class="talk-event"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking #1"/>
 How Anemic Objects Kill OOP;
 [Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
 Palo Alto, CA;
