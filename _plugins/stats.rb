@@ -18,8 +18,9 @@ module Jekyll
       context['site'].posts.each do |doc|
         words += doc.content.split(/\s+/).length
       end
-      puts "#{words} words in the entire blog"
-      words
+      count = words.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
+      puts "#{count} words in the entire blog"
+      count
     end
   end
   class StatsGenerator < Generator

@@ -9,7 +9,7 @@
     padding-left: 0;
 
     li {
-      @extend: %clear;
+      @extend %clear;
       border-left: 4px solid #e52d27;
       margin-bottom: $em;
       min-height: 80px;
