@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-15T18:04:44+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-16T02:10:22+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;a better understanding of an object&lt;/a&gt;
 in OOP would help us solve many problems in existing pseudo-object-oriented languages.
 Then, suddenly, the question came up: &amp;quot;&lt;strong&gt;What problems?&lt;/strong&gt;&amp;quot;
@@ -12,6 +12,10 @@ So I Googled a bit, and this is what I found (in chronological order).&lt;/p&gt;
 
 &lt;!-- 1989 --&gt;
 
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fedsger-dijkstra.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Edsger_W._Dijkstra&quot;&gt;Edsger W. Dijkstra&lt;/a&gt;
 in &amp;quot;TUG LINES&amp;quot;, Issue 32, August 1989:
 &amp;quot;Object oriented programs are offered as alternatives to correct ones&amp;quot;
@@ -21,13 +25,19 @@ which could only have originated in California.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 1995 --&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;Paul Graham&lt;/a&gt;
-in &lt;a href=&quot;http://amzn.to/29JwmOz&quot;&gt;Ansi Common Lisp&lt;/a&gt;, page 408:
-&amp;quot;The object-oriented model makes it easy to build up programs
+&lt;!--
+[Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29)
+in [Ansi Common Lisp](http://amzn.to/29JwmOz), page 408:
+&quot;The object-oriented model makes it easy to build up programs
 by accretion. What this often means, in practice, is that it
-provides a structured way to write spaghetti code.&amp;quot;&lt;/p&gt;
+provides a structured way to write spaghetti code.&quot;
+--&gt;
 
 &lt;!-- 1997 --&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Falan-kay.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan Kay&lt;/a&gt;
 in &lt;a href=&quot;https://www.youtube.com/watch?v=oKg1hTOQXoY&quot;&gt;The Computer Revolution hasn&amp;#39;t happened yet&lt;/a&gt;, OOPSLA&amp;#39;97 Keynote:
@@ -36,11 +46,19 @@ I did not have C++ in mind.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2003 --&gt;
 
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fpaul-graham.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;Paul Graham&lt;/a&gt;
 in &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;The Hundred-Year Language&lt;/a&gt;:
 &amp;quot;Object-oriented programming offers a sustainable way to write spaghetti code.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2007 --&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Flinus-torvalds.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linus_Torvalds&quot;&gt;Linus Torvalds&lt;/a&gt;
 in &lt;a href=&quot;http://article.gmane.org/gmane.comp.version-control.git/57918/&quot;&gt;this email&lt;/a&gt;:
@@ -63,6 +81,10 @@ at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich
 
 &lt;!-- 2010 --&gt;
 
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Foscar-nierstrasz.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Oscar_Nierstrasz&quot;&gt;Oscar Nierstrasz&lt;/a&gt;
 in &lt;a href=&quot;http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming&quot;&gt;Ten Things I Hate About Object-Oriented Programming&lt;/a&gt;:
 &amp;quot;OOP is about taming complexity through modeling, but we have not
@@ -70,6 +92,10 @@ mastered this yet, possibly because we have difficulty distinguishing
 real and accidental complexity.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2010 --&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Frich-hickey.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/richhickey&quot;&gt;Rich Hickey&lt;/a&gt;
 at &lt;a href=&quot;http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/&quot;&gt;SE Radio&lt;/a&gt;, Episode 158:
@@ -80,6 +106,10 @@ what will happen when you call a method and what will the side effects be.&amp;q
 
 &lt;!-- 2011 --&gt;
 
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fjoe-armstrong.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;http://joearms.github.io/&quot;&gt;Joe Armstrong&lt;/a&gt;
 in &lt;a href=&quot;http://harmful.cat-v.org/software/OO_programming/why_oo_sucks&quot;&gt;Why OO Sucks&lt;/a&gt;:
 &amp;quot;Objects bind functions and data structures together in
@@ -87,6 +117,10 @@ indivisible units. I think this is a fundamental error since functions and
 data structures belong in totally different worlds.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2012 --&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Frob-pike.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Pike&quot;&gt;Rob Pike&lt;/a&gt;
 &lt;a href=&quot;https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb&quot;&gt;here&lt;/a&gt;:
@@ -97,12 +131,20 @@ Sometimes data is just data and functions are just functions.&amp;quot;&lt;/p&gt
 
 &lt;!-- 2013 --&gt;
 
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fjohn-barker.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/johnebgood&quot;&gt;John Barker&lt;/a&gt;
 in &lt;a href=&quot;https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit&quot;&gt;All evidence points to OOP being bullshit&lt;/a&gt;:
 &amp;quot;What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways, it is still essentially procedural code.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2014 --&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Flawrence-krubner.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/krubner&quot;&gt;Lawrence Krubner&lt;/a&gt;
 in &lt;a href=&quot;http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end&quot;&gt;Object Oriented Programming is an expensive disaster which must end&lt;/a&gt;:
