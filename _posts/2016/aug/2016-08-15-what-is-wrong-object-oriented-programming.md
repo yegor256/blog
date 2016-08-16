@@ -28,6 +28,9 @@ So I Googled a bit, and this is what I found (in chronological order).
 
 {% picture /images/2016/08/swingers.jpg 0 Swingers (1996) by Doug Liman %}
 
+The list of quotes is sorted in chronological order, with the oldest on
+the top:
+
 <!-- 1989 -->
 <div class="clear"></div>
 {% badge /images/2016/08/edsger-dijkstra.jpg 100 %}
