@@ -19,7 +19,7 @@ keywords:
 "Code Ahead" will be my second book. It will be about software engineering. It
 will contain a number of best practices, which help software live longer.
 All of that principles I've learned from my practical experience. It will
-be published before the end of 2016.
+be published in February, 2017.
 
 <!--more-->
 
