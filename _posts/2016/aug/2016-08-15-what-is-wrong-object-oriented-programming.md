@@ -157,6 +157,15 @@ in [Object Oriented Programming is an expensive disaster which must end](http://
 It is time to move on. It is time that we, as a community, admit that
 this idea has failed us, and we must give up on it."
 
+<!-- 2015 -->
+<div class="clear"></div>
+{% badge /images/2016/08/asaf-shelly.jpg 100 %}
+[Asaf Shelly](https://www.linkedin.com/in/asafshelly)
+in [Flaws of Object Oriented Modeling](https://software.intel.com/en-us/blogs/2008/08/22/flaws-of-object-oriented-modeling/):
+"Reading an object oriented code you can't see the big picture and
+it is often impossible to review all the small functions that
+call the one function that you modified."
+
 <hr/>
 
 I can't prove this quote (maybe you can help?):
