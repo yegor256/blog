@@ -65,11 +65,21 @@ I did not have C++ in mind."
 in [The Hundred-Year Language](http://www.paulgraham.com/hundred.html):
 "Object-oriented programming offers a sustainable way to write spaghetti code."
 
+<!-- 2005 -->
+<div class="clear"></div>
+{% badge /images/2016/08/richard-mansfield.jpg 100 %}
+Richard Mansfield
+in [Has OOP Failed?](http://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf)
+"With OOP-inflected programming languages, computer software becomes more
+verbose, less readable, less descriptive, and harder to modify and maintain."
+
+<!-- 2007 -->
 <div class="clear"></div>
 {% badge /images/2016/08/jeff-atwood.jpg 100 %}
 [Jeff Atwood](https://blog.codinghorror.com/)
 in [Your Code: OOP or POO?](https://blog.codinghorror.com/your-code-oop-or-poo/):
 "OO seems to bring at least as many problems to the table as it solves."
+
 
 <!-- 2007 -->
 <div class="clear"></div>
