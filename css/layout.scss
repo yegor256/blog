@@ -163,6 +163,7 @@ del {
     }
 
     .google {
+      @extend %desktop-only;
       display: none;
       height: 2.4em;
       margin-left: 1em;
