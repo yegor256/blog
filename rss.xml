@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-17T05:34:37+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-17T18:03:00+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;a better understanding of an object&lt;/a&gt;
 in OOP would help us solve many problems in existing pseudo-object-oriented languages.
 Then, suddenly, the question came up: &amp;quot;&lt;strong&gt;What problems?&lt;/strong&gt;&amp;quot;
@@ -56,6 +56,14 @@ I did not have C++ in mind.&amp;quot;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;Paul Graham&lt;/a&gt;
 in &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;The Hundred-Year Language&lt;/a&gt;:
 &amp;quot;Object-oriented programming offers a sustainable way to write spaghetti code.&amp;quot;&lt;/p&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fjeff-atwood.jpg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.codinghorror.com/&quot;&gt;Jeff Atwood&lt;/a&gt;
+in &lt;a href=&quot;https://blog.codinghorror.com/your-code-oop-or-poo/&quot;&gt;Your Code: OOP or POO?&lt;/a&gt;:
+&amp;quot;OO seems to bring at least as many problems to the table as it solves.&amp;quot;&lt;/p&gt;
 
 &lt;!-- 2007 --&gt;
 
