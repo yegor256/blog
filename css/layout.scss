@@ -39,6 +39,7 @@
 %desktop-only {
   @media all and (max-width: $width) {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -47,6 +48,7 @@
 %unprintable {
   @media print {
     display: none !important;
+    visibility: hidden;
   }
 }
 
@@ -55,6 +57,7 @@
 %printable {
   @media not print  {
     display: none !important;
+    visibility: hidden;
   }
 }
 
