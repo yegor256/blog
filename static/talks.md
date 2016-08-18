@@ -98,6 +98,13 @@ Swansea, UK<br/>
 12 September 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.io Copenhagen"/>
+**Java Annotations Are a Bad Idea**<br/>
+[JDK.io](http://jdk.io/speakers/80-yego-bugayenko)<br/>
+Copenhagen, Denmark<br/>
+13 September 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/codemotion.png" class="future-talk" alt="codemotion Warsaw"/>
 **Deployment Scripts Are Dead, Meet Rultor**<br/>
 [{codemotion}](http://warsaw2016.codemotionworld.com/speaker/1934/)<br/>
@@ -123,6 +130,7 @@ Malmö, Sweden<br/>
 <div class="talk-event"/>
 <img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
 **Seven Deadly Sins of a Software Project**<br>
+**Keep Your Servers In GitHub**<br/>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
 16 November 2016
