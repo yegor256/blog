@@ -18,7 +18,7 @@ keywords:
 
 <style>
   .quote-author {
-    width: 100px;
+    width: 125px;
     height: 150px;
   }
 </style>
