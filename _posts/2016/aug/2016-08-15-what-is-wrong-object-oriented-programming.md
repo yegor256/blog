@@ -19,7 +19,7 @@ keywords:
 <style>
   .quote-author {
     width: 100px;
-    height: 175px;
+    height: 150px;
   }
 </style>
 
