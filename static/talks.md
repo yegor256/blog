@@ -137,7 +137,8 @@ Tallinn, Estonia<br/>
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
-[DevTernity 2016](http://www.devternity.com)<br/>
+**XDSD: Meetings-Free Software Development Methodology**<br/>
+[DevTernity 2016](http://devternity.com/#/11)<br/>
 Riga, Latvia<br/>
 1 December 2016
 
