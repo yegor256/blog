@@ -38,9 +38,8 @@ So I Googled a bit, and this is what I found (in chronological order).
 The list of quotes is sorted in chronological order, with the oldest on
 the top:
 
-<!-- 1989 -->
 <img src="/images/2016/08/edsger-dijkstra.jpg" class="quote-author"/><br/>
-[**Edsger W. Dijkstra**](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)<br/>
+[**Edsger W. Dijkstra**](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) (1989)<br/>
 "TUG LINES", Issue 32, August 1989<br/>
 "Object oriented programs are offered as alternatives to correct ones"
 and
@@ -56,44 +55,38 @@ by accretion. What this often means, in practice, is that it
 provides a structured way to write spaghetti code."
 -->
 
-<!-- 1997 -->
 <img src="/images/2016/08/alan-kay.jpg" class="quote-author"/><br/>
-[**Alan Kay**](https://en.wikipedia.org/wiki/Alan_Kay)<br/>
+[**Alan Kay**](https://en.wikipedia.org/wiki/Alan_Kay) (1997)<br/>
 [The Computer Revolution hasn't happened yet](https://www.youtube.com/watch?v=oKg1hTOQXoY)<br/>
 "I invented the term object-oriented, and I can tell you
 I did not have C++ in mind."
 
-<!-- 2003 -->
 <img src="/images/2016/08/paul-graham.jpg" class="quote-author"/><br/>
-[**Paul Graham**](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29)<br/>
+[**Paul Graham**](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29) (2003)<br/>
 [The Hundred-Year Language](http://www.paulgraham.com/hundred.html)<br/>
 "Object-oriented programming offers a sustainable way to write spaghetti code."
 
-<!-- 2005 -->
 <img src="/images/2016/08/richard-mansfield.jpg" class="quote-author"/><br/>
-**Richard Mansfield**<br/>
+**Richard Mansfield** (2005)<br/>
 [Has OOP Failed?](http://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf)<br/>
 "With OOP-inflected programming languages, computer software becomes more
 verbose, less readable, less descriptive, and harder to modify and maintain."
 
-<!-- 2005 -->
 <img src="/images/2016/08/eric-raymond.jpg" class="quote-author"/><br/>
-[**Eric Raymond**](http://www.catb.org/esr/)<br/>
+[**Eric Raymond**](http://www.catb.org/esr/) (2005)<br/>
 [The Art of UNIX Programming](http://catb.org/esr/writings/taoup/html/unix_and_oo.html)<br/>
 "The OO design concept initially proved valuable in the design of graphics
 systems, graphical user interfaces, and certain kinds of simulation.
 To the surprise and gradual disillusionment of many, it has proven
 difficult to demonstrate significant benefits of OO outside those areas."
 
-<!-- 2007 -->
 <img src="/images/2016/08/jeff-atwood.jpg" class="quote-author"/><br/>
-[**Jeff Atwood**](https://blog.codinghorror.com/)<br/>
+[**Jeff Atwood**](https://blog.codinghorror.com/) (2007)<br/>
 [Your Code: OOP or POO?](https://blog.codinghorror.com/your-code-oop-or-poo/)<br/>
 "OO seems to bring at least as many problems to the table as it solves."
 
-<!-- 2007 -->
 <img src="/images/2016/08/linus-torvalds.jpg" class="quote-author"/><br/>
-[**Linus Torvalds**](https://en.wikipedia.org/wiki/Linus_Torvalds)<br/>
+[**Linus Torvalds**](https://en.wikipedia.org/wiki/Linus_Torvalds) (2007)<br/>
 [this email](http://article.gmane.org/gmane.comp.version-control.git/57918/)<br/>
 "C++ is a horrible language. ...
 C++ leads to really, really bad design choices. ...
@@ -111,58 +104,51 @@ at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich
 "..."
 -->
 
-<!-- 2010 -->
 <img src="/images/2016/08/oscar-nierstrasz.jpg" class="quote-author"/><br/>
-[**Oscar Nierstrasz**](https://en.wikipedia.org/wiki/Oscar_Nierstrasz)<br/>
+[**Oscar Nierstrasz**](https://en.wikipedia.org/wiki/Oscar_Nierstrasz) (2010)<br/>
 [Ten Things I Hate About Object-Oriented Programming](http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming)<br/>
 "OOP is about taming complexity through modeling, but we have not
 mastered this yet, possibly because we have difficulty distinguishing
 real and accidental complexity."
 
-<!-- 2010 -->
 <img src="/images/2016/08/rich-hickey.jpg" class="quote-author"/><br/>
-[**Rich Hickey**](https://github.com/richhickey)<br/>
+[**Rich Hickey**](https://github.com/richhickey) (2010)<br/>
 [SE Radio, Episode 158](http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/)<br/>
 "I think that large objected-oriented programs struggle
 with increasing complexity as you build this large object graph of
 mutable objects. You know, trying to understand and keep in your mind
 what will happen when you call a method and what will the side effects be."
 
-<!-- 2011 -->
 <img src="/images/2016/08/joe-armstrong.jpg" class="quote-author"/><br/>
-[**Joe Armstrong**](http://joearms.github.io/)<br/>
+[**Joe Armstrong**](http://joearms.github.io/) (2011)<br/>
 [Why OO Sucks](http://harmful.cat-v.org/software/OO_programming/why_oo_sucks)<br/>
 "Objects bind functions and data structures together in
 indivisible units. I think this is a fundamental error since functions and
 data structures belong in totally different worlds."
 
-<!-- 2012 -->
 <img src="/images/2016/08/rob-pike.jpg" class="quote-author"/><br/>
-[**Rob Pike**](https://en.wikipedia.org/wiki/Rob_Pike)<br/>
+[**Rob Pike**](https://en.wikipedia.org/wiki/Rob_Pike) (2012)<br/>
 [here](https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb)<br/>
 "Object-oriented programming, whose essence is nothing more than
 programming using data with associated behaviors, is a powerful idea.
 It truly is. But it's not always the best idea. ...
 Sometimes data is just data and functions are just functions."
 
-<!-- 2013 -->
 <img src="/images/2016/08/john-barker.jpg" class="quote-author"/><br/>
-[**John Barker**](https://www.linkedin.com/in/johnebgood)<br/>
+[**John Barker**](https://www.linkedin.com/in/johnebgood) (2013)<br/>
 [All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit)<br/>
 "What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways, it is still essentially procedural code."
 
-<!-- 2014 -->
 <img src="/images/2016/08/lawrence-krubner.jpg" class="quote-author"/><br/>
-[**Lawrence Krubner**](https://www.linkedin.com/in/krubner)<br/>
+[**Lawrence Krubner**](https://www.linkedin.com/in/krubner) (2014)<br/>
 [Object Oriented Programming is an expensive disaster which must end](http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end)<br/>
 "We now know that OOP is an experiment that failed.
 It is time to move on. It is time that we, as a community, admit that
 this idea has failed us, and we must give up on it."
 
-<!-- 2015 -->
 <img src="/images/2016/08/asaf-shelly.jpg" class="quote-author"/><br/>
-[**Asaf Shelly**](https://www.linkedin.com/in/asafshelly)<br/>
+[**Asaf Shelly**](https://www.linkedin.com/in/asafshelly) (2015)<br/>
 [Flaws of Object Oriented Modeling](https://software.intel.com/en-us/blogs/2008/08/22/flaws-of-object-oriented-modeling/)<br/>
 "Reading an object oriented code you can't see the big picture and
 it is often impossible to review all the small functions that
