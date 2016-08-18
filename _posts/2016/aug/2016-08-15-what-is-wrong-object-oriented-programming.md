@@ -76,12 +76,20 @@ I did not have C++ in mind."
 "With OOP-inflected programming languages, computer software becomes more
 verbose, less readable, less descriptive, and harder to modify and maintain."
 
+<!-- 2005 -->
+<img src="/images/2016/08/eric-raymond.jpg" class="quote-author"/><br/>
+[**Eric Raymond**](http://www.catb.org/esr/)<br/>
+[The Art of UNIX Programming](http://catb.org/esr/writings/taoup/html/unix_and_oo.html)<br/>
+"The OO design concept initially proved valuable in the design of graphics
+systems, graphical user interfaces, and certain kinds of simulation.
+To the surprise and gradual disillusionment of many, it has proven
+difficult to demonstrate significant benefits of OO outside those areas."
+
 <!-- 2007 -->
 <img src="/images/2016/08/jeff-atwood.jpg" class="quote-author"/><br/>
 [**Jeff Atwood**](https://blog.codinghorror.com/)<br/>
 [Your Code: OOP or POO?](https://blog.codinghorror.com/your-code-oop-or-poo/)<br/>
 "OO seems to bring at least as many problems to the table as it solves."
-
 
 <!-- 2007 -->
 <img src="/images/2016/08/linus-torvalds.jpg" class="quote-author"/><br/>
