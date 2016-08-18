@@ -39,7 +39,6 @@
 %desktop-only {
   @media all and (max-width: $width) {
     display: none;
-    visibility: hidden;
   }
 }
 
