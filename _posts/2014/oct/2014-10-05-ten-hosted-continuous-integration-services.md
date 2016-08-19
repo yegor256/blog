@@ -14,6 +14,10 @@ keywords:
   - continuous integration in cloud
   - continuous integration service
 categories: jcg
+style: |
+  col.col1 { width: 6em; }
+  col.col2 { width: 4em; }
+  col.colX { width: 2em; }
 ---
 
 Every project I'm working with starts with a setup of
@@ -29,12 +33,6 @@ All of them are free for open source projects.
 All of them are hosted and do not require any server installation
 Here they are, in order of my personal preference (first four are
 the best and highly recommended):
-
-<style>
-  col.col1 { width: 6em; }
-  col.col2 { width: 4em; }
-  col.colX { width: 2em; }
-</style>
 
 <table>
 <colgroup>

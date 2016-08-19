@@ -44,6 +44,11 @@ layout: compress
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
+    {% if page.style %}
+      <style>
+        {{ page.style }}
+      </style>
+    {% endif %}
   </head>
   <body>
     <div class="wrapper">

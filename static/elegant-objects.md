@@ -12,14 +12,12 @@ keywords:
   - object-oriented programming book
   - object-oriented programming
   - object thinking
+style:
+  .book-event {
+    clear: both;
+    margin-top: 2em;
+  }
 ---
-
-<style>
-.book-event {
-  clear: both;
-  margin-top: 2em;
-}
-</style>
 
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
 

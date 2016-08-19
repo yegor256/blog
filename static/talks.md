@@ -13,57 +13,55 @@ keywords:
   - conferences about programming
   - software engineers conferences
 exclude_from_search: true
+style: |
+  .talk-event {
+    clear: both;
+  }
+  .future-talk {
+    display: block;
+    height: 50px;
+    margin-top: 2em;
+    max-width: 100%;
+  }
+  .past-talk {
+    display: block;
+    float: left;
+    height: 90px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    max-width: 160px;
+  }
+  .venue-rate {
+    float: right;
+    font-size: 2em;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    margin: .5em;
+    border-radius: 50%;
+    border: 1px solid gray;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.6em;
+    width: 1.6em;
+    height: 1.6em;
+  }
+  @media all and (max-width: 700px) {
+    .venue-rate {
+      float: none;
+      margin-left: 0;
+    }
+    .past-talk {
+      float: none;
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
 script: |
   $(function() {
     $('#future-talks-total').text($('img.future-talk').length);
     $('#past-talks-total').text($('img.past-talk').length);
   });
 ---
-
-<style>
-.talk-event {
-  clear: both;
-}
-.future-talk {
-  display: block;
-  height: 50px;
-  margin-top: 2em;
-  max-width: 100%;
-}
-.past-talk {
-  display: block;
-  float: left;
-  height: 90px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  max-width: 160px;
-}
-.venue-rate {
-  float: right;
-  font-size: 2em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: bold;
-  margin: .5em;
-  border-radius: 50%;
-  border: 1px solid gray;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1.6em;
-  width: 1.6em;
-  height: 1.6em;
-}
-@media all and (max-width: 700px) {
-  .venue-rate {
-    float: none;
-    margin-left: 0;
-  }
-  .past-talk {
-    float: none;
-    margin-left: 0;
-    max-width: 100%;
-  }
-}
-</style>
 
 {% badge /images/yegor-is-presenting.png 300 %}
 

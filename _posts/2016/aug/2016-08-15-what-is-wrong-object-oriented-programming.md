@@ -14,14 +14,12 @@ keywords:
   - criticism of object-oriented programming
   - why oop is bad
   - oop vs functional programming
----
-
-<style>
+style: |
   .quote-author {
     width: 125px;
     height: 150px;
   }
-</style>
+---
 
 Recently, I was trying to convince a few of my readers that
 [a better understanding of an object]({% pst 2016/jul/2016-07-14-who-is-object %})
