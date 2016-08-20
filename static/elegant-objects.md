@@ -12,7 +12,7 @@ keywords:
   - object-oriented programming book
   - object-oriented programming
   - object thinking
-style:
+style: |
   .book-event {
     clear: both;
     margin-top: 2em;
