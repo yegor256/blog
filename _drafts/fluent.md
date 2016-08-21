@@ -5,7 +5,7 @@ date: 2016-04-29
 place: Sofia, Bulgaria
 tags: oop java
 description: |
-  ...
+  Fluent interface
 keywords:
   - fluent interface
   - fluent interface java
