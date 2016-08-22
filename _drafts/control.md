@@ -82,7 +82,13 @@ just like that guys who built the Colosseum. Just like them
 we need motivation and punishment in order to produce
 something for someone.
 
-What management is doing now is absolutely evil and unethical.
+What about creativity and inspiration? Just like the architects of
+the Colosseum we need them today to create iPads and Facebooks,
+but management and coordination are what really make projects happen.
+And command and control is the only working mechanism for coordinating
+humans.
+
+However, what management is doing now is absolutely evil and unethical.
 They command and control, pretending that they inspire and trust. They
 use carrots and sticks, calling them appreciation and
 [peer pressure](https://en.wikipedia.org/wiki/Peer_pressure).
