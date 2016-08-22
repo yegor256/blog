@@ -32,6 +32,15 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
+Aug 22, 2016:
+I will collect all reviews of the book written by its readers on their
+blogs, to help you better understand what the book is about, why it's
+good and how it could be better:
+
+  * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
+  * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
+  * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
+
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),
 where we will discuss object-oriented
