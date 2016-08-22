@@ -126,6 +126,13 @@ Malmö, Sweden<br/>
 7-11 November 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/xpdays.svg" class="future-talk" alt="XP Days Ukraine 2016"/>
+**XDSD: How Extreme Is Your Team?**<br/>
+[XP Days Ukraine](http://xpdays.com.ua/)<br/>
+Kiev, Ukraine<br/>
+11-12 November 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
 **Seven Deadly Sins of a Software Project**<br>
 **Keep Your Servers In GitHub**<br/>
