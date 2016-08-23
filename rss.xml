@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-23T19:15:55+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-23T23:24:58+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
+specific way. Some use Slack, Trello, or GitHub; others just sit together
+in the same room. There are many methods and tools. I believe
+it&amp;#39;s possible to rank them by the amount of &lt;strong&gt;damage&lt;/strong&gt; they cause
+to your project. This is the list of all of them I&amp;#39;m aware of at the moment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fschizopolis.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Schizopolis (1996) by Steven Soderbergh&#39;/&gt;&lt;figcaption&gt;Schizopolis (1996) by Steven Soderbergh&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The damage I&amp;#39;m talking about is caused mostly by the distance between these communication
+channels and project artifacts. The farther away people stay from documents,
+the bigger the risk of &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;losing information&lt;/a&gt;.
+And lost information is the first source of trouble in any project.&lt;/p&gt;
+
+&lt;p&gt;Here is the list; it starts with the most damaging communication means
+and goes down to the most &lt;strong&gt;mature&lt;/strong&gt; and professional ones, which cause the
+least amount of trouble:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Coffee Breaks&lt;/strong&gt;.
+This is the most dangerous thing &amp;mdash; you can never
+keep track of them, you won&amp;#39;t know what they were about, and there
+is no &amp;quot;search&amp;quot; button anywhere. Everything you say standing next
+to that coffee machine will be lost. Nothing will be converted
+to project artifacts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Phone Calls&lt;/strong&gt;.
+A bit better than coffee breaks but still a big issue. Phone calls
+are completely untraceable. Information you
+exchange on those calls is gone forever. Well, you can record them,
+but searching through phone call records is a tough task that nobody will
+do, ever.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Meetings&lt;/strong&gt;.
+This is the next step after coffee breaks, because there is some structure
+and minutes. Meetings can be recorded (both on and offline), with their results filed somewhere
+and decisions documented. In reality, none of that will actually happen.
+Meetings will just kill your time and your sponsor&amp;#39;s money.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Emails&lt;/strong&gt;.
+    If you can put some formality into emails and discipline all participants,
+    your email history may be considered a project artifact in itself. How
+    organized and easily browseable will that artifact be? That&amp;#39;s a good question.
+    In most cases, it will just be a mess.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mailing Lists&lt;/strong&gt;.
+    They are better than emails, because some software is archiving them and
+    making them available and browseable. But it will be difficult to find where
+    exactly what topic was discussed, where decisions were made and why,
+    who suggested what, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;.
+    There are many similar alternatives that are basically online chats.
+    The main problem with all of them is that it&amp;#39;s difficult to categorize
+    such a chat, group messages together, or find something later. It&amp;#39;s merely a flow
+    of information that becomes useless just a few days after. Of course,
+    if you really want to find something there, it&amp;#39;s possible. But the quality
+    of such a &amp;quot;document&amp;quot; is very low.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Trello&lt;/strong&gt;.
+    By Trello I mean any task/ticket tracking system &amp;mdash; they are great instruments
+    to immediately turn conversations and discussions into project artifacts.
+    You don&amp;#39;t need to document anything; it&amp;#39;s already there. The problem is
+    that they are still rather far away from the main project artifact:
+    the source code with its commits, merge conflicts, build logs, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;.
+    This is the best instrument you can use. It integrates communications
+    with the product itself. The code you write and the discussions you
+    have around it are literally in the same place.&lt;/p&gt;
+
+&lt;p&gt;Which one of these is your project using right now? I would strongly recommend
+you stay away from communication channels at the top of this list.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>Each software team organizes its communications in its own
+specific way. Some use Slack, Trello, or GitHub; others just sit together
+in the same room. There are many methods and tools. I believe
+it&amp;#39;s possible to rank them by the amount of damage they cause
+to your project. This is the list of all of them I&amp;#39;m aware of at the moment.</summary></entry><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;a better understanding of an object&lt;/a&gt;
 in OOP would help us solve many problems in existing pseudo-object-oriented languages.
 Then, suddenly, the question came up: &amp;quot;&lt;strong&gt;What problems?&lt;/strong&gt;&amp;quot;
@@ -266,7 +342,8 @@ pull request, pre-flight build, and automated merge procedure.&lt;/p&gt;&lt;/li&
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Chats Are Prohibited&lt;/strong&gt;. Any modification to our codebase, even a very small one,
 must be submitted in a pull request. A code review
 must also occur in the pull request. We strictly disallow any
-informal communications between programmers, including chats, phone
+&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;informal communications&lt;/a&gt;
+between programmers, including chats, phone
 calls, emails, or face-to-face discussions. This means that the chances
 of quality compromises due to friendship, informal agreements, and trade-offs
 are very low.&lt;/p&gt;&lt;/li&gt;
@@ -293,7 +370,8 @@ and get paid. Well-paid.&lt;/p&gt;
 
 &lt;p&gt;And now, to the main point of this blog post &amp;mdash; do you think it&amp;#39;s possible
 to build all that in a co-located team? I don&amp;#39;t think so. First of all,
-you won&amp;#39;t be able to prohibit informal communications. No matter how many
+you won&amp;#39;t be able to prohibit
+&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;informal communications&lt;/a&gt;. No matter how many
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It&amp;#39;s inevitable.&lt;/p&gt;
 
@@ -992,57 +1070,4 @@ numerous software teams. It contains
 These principles were invented in 2001.
 Generally, I like and agree with all of them. However, in practice, most software teams
 misunderstand them. Consequently, here is a summary of what&amp;#39;s going on and my
-interpretation of each principle.</summary></entry><entry><title>Key Roles in a Software Project</title><link href="http://www.yegor256.com/2016/07/10/software-project-roles.html" rel="alternate" type="text/html" title="Key Roles in a Software Project" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/10/software-project-roles</id><content type="html" xml:base="http://www.yegor256.com/2016/07/10/software-project-roles.html">&lt;p&gt;I believe that several roles should be present in a majority of
-software projects. Managed by
-&lt;a href=&quot;http://www.teamed.io&quot;&gt;Teamed.io&lt;/a&gt; according to the principles of
-&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;, we&amp;#39;ve got all of them in our projects. However, beware that in other management
-methodologies, these roles may have different meanings. This blog post
-is mostly for people who work with us, either as clients or freelancers.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2F12-angry-men.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;12 Angry Men (1957) by Sidney Lumet&#39;/&gt;&lt;figcaption&gt;12 Angry Men (1957) by Sidney Lumet&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are just a few roles:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Project Manager&lt;/strong&gt; (&lt;code&gt;PM&lt;/code&gt;)
-is responsible for keeping the project &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;under control&lt;/a&gt;.
-The PM reports to the head of our &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_management_office&quot;&gt;PMO&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Product Owner&lt;/strong&gt; (&lt;code&gt;PO&lt;/code&gt;)
-is a representative of the sponsor.
-The PO provides product requirements.
-The PO submits bugs and expresses any concerns or questions relating to them.
-Usually, the PO is a very technical person
-who knows how the product works and is capable of understanding the source code.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Software Architect&lt;/strong&gt; (&lt;code&gt;ARC&lt;/code&gt;)
-is responsible for the entire technical solution.
-The ARC is &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;blamed&lt;/a&gt; for all technical problems.
-The ARC approves all pull requests before we &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;can merge&lt;/a&gt; them.
-The ARC is the main point of contact in the project for the PO.
-The ARC makes all technical &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;decisions&lt;/a&gt;.
-The ARC &lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;reports&lt;/a&gt; to the PM.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Developer&lt;/strong&gt; (&lt;code&gt;DEV&lt;/code&gt;)
-is a programmer and is &lt;a href=&quot;/2014/04/13/no-obligations-principle.html&quot;&gt;responsible&lt;/a&gt;
-for &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;closing bugs&lt;/a&gt;.
-The DEV reports to the PM.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Requirements Analyst&lt;/strong&gt; (&lt;code&gt;REQ&lt;/code&gt;)
-is responsible for the validation of the product.
-The REQ solicits &lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;requirements&lt;/a&gt; from the PO.
-The REQ demonstrates the product to the PO.
-The REQ submits new bugs when validation fails and the product needs changes.
-The REQ reports to the PM.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Quality Assurance&lt;/strong&gt; (&lt;code&gt;QA&lt;/code&gt;)
-oversees the correctness of our process.
-The QA approves each closed task before it&amp;#39;s officially closed by the PM.
-The QA ensures that our process complies to &lt;a href=&quot;http://at.teamed.io/policy.html&quot;&gt;our policy&lt;/a&gt;.
-The QA reports to the PM.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Besides all that, any role is &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;encouraged&lt;/a&gt;
-to submit bugs when they find them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>I believe that several roles should be present in a majority of
-software projects. Managed by
-Teamed.io according to the principles of
-XDSD, we&amp;#39;ve got all of them in our projects. However, beware that in other management
-methodologies, these roles may have different meanings. This blog post
-is mostly for people who work with us, either as clients or freelancers.</summary></entry></feed>
+interpretation of each principle.</summary></entry></feed>
