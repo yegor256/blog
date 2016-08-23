@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Eight Levels of Communication Maturity"
-date: 2016-05-08
+date: 2016-08-23
 tags: management
 place: Tallinn, Estonia
 description: |
