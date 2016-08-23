@@ -24,10 +24,12 @@ to your project. This is the list of all of them I'm aware of at the moment.
 
 <!--more-->
 
+{% picture /images/2016/08/schizopolis.jpg 0 Schizopolis (1996) by Steven Soderbergh %}
+
 The damage I'm talking about is caused mostly by the distance between these communication
 channels and project artifacts. The farther away people stay from documents,
-the bigger the risk of losing information. And lost information is the first
-source of trouble in any project.
+the bigger the risk of [losing information]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
+And lost information is the first source of trouble in any project.
 
 Here is the list; it starts with the most damaging communication means
 and goes down to the most **mature** and professional ones, which cause the
@@ -60,7 +62,7 @@ least amount of trouble:
     In most cases, it will just be a mess.
 
   **Mailing Lists**.
-    They are better than emails, because some software is archiving them and 
+    They are better than emails, because some software is archiving them and
     making them available and browseable. But it will be difficult to find where
     exactly what topic was discussed, where decisions were made and why,
     who suggested what, etc.
