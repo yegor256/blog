@@ -117,6 +117,14 @@ with increasing complexity as you build this large object graph of
 mutable objects. You know, trying to understand and keep in your mind
 what will happen when you call a method and what will the side effects be."
 
+<img src="/images/2016/08/eric-allman.jpg" class="quote-author"/><br/>
+[**Eric Allman**](https://en.wikipedia.org/wiki/Eric_Allman) (2011)<br/>
+[Programming Isn't Fun Any More](http://queue.acm.org/blogposting.cfm?id=34658)<br/>
+"I used to be enamored of object-oriented programming. I'm now finding myself
+leaning toward believing that it is a plot designed to destroy joy. The
+methodology looks clean and elegant at first, but when you actually get
+into real programs they rapidly turn into horrid messes."
+
 <img src="/images/2016/08/joe-armstrong.jpg" class="quote-author"/><br/>
 [**Joe Armstrong**](http://joearms.github.io/) (2011)<br/>
 [Why OO Sucks](http://harmful.cat-v.org/software/OO_programming/why_oo_sucks)<br/>
