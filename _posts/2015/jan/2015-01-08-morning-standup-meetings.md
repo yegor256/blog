@@ -109,7 +109,8 @@ as a replacement for a correct communication model. These morning meetings
 give the impression that the manager is working hard and well deserves his
 overblown salary. To the contrary, a good manager would never have any
 regular status update meetings, because he knows how to use effective
-communication instruments, like issue tracking tools, emails, code reviews,
+[communication instruments]({% pst 2016/aug/2016-08-23-communication-maturity %}),
+like issue tracking tools, emails, code reviews,
 decision-making meetings, pair programming, etc.
 
 ## Responsibility

@@ -88,8 +88,9 @@ analyst can provoke creative thinking in a product owner by asking the right
 questions.
 
 OK, now I that know the identity of the product owner, I need to talk to him. In
-XDSD, we don't do any meetings, phone calls, or any other type of informal
-communications. Therefore, my only mechanism for receiving the information I
+XDSD, we don't do any meetings, phone calls, or any other type of
+[informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
+Therefore, my only mechanism for receiving the information I
 need is with is &mdash; tickets.
 
 I will submit **new** tickets, addressing them to the product owner. As there

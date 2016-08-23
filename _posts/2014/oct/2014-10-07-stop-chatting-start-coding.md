@@ -62,7 +62,7 @@ this activity. That's why none of our programmers do this.
 More about this philosophy here:
 [It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 
-We don't use **any** (I mean it!) informal communication channels in
+We don't use **any** (I mean it!) [informal communication channels]({% pst 2016/aug/2016-08-23-communication-maturity %}) in
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
 

@@ -98,7 +98,8 @@ First, we give a name to the project and create a [GitHub](https://github.com) r
 try to keep all our projects (both open source and commercial) in GitHub.
 Mostly because the platform is very popular, very powerful, and really cheap
 ([$7/mo](https://github.com/pricing) for a set of 5 private projects).
-We also keep all communication in the GitHub issue tracker.
+We also keep [all]({% pst 2016/aug/2016-08-23-communication-maturity %})
+communication in the GitHub issue tracker.
 
 Then, we create a simple half-page SRS document (Software Requirements Specification). Usually
 this is done right inside the source code, but sometimes in the GitHub `README.md` file. What's important

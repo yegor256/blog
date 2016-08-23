@@ -65,7 +65,8 @@ we practice in our projects:
   * **Chats Are Prohibited**. Any modification to our codebase, even a very small one,
     must be submitted in a pull request. A code review
     must also occur in the pull request. We strictly disallow any
-    informal communications between programmers, including chats, phone
+    [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
+    between programmers, including chats, phone
     calls, emails, or face-to-face discussions. This means that the chances
     of quality compromises due to friendship, informal agreements, and trade-offs
     are very low.
@@ -93,7 +94,8 @@ and get paid. Well-paid.
 
 And now, to the main point of this blog post &mdash; do you think it's possible
 to build all that in a co-located team? I don't think so. First of all,
-you won't be able to prohibit informal communications. No matter how many
+you won't be able to prohibit
+[informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}). No matter how many
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It's inevitable.
 

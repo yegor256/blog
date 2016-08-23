@@ -29,7 +29,8 @@ this idea in practice, an architect uses two instruments:
 
 {% picture /images/2015/05/rear-window.jpg 0 Rear Window (1954) by Alfred Hitchcock %}
 
-At [Teamed.io](http://www.teamed.io), we discourage any communication
+At [Teamed.io](http://www.teamed.io), we discourage any
+[communication]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between developers unless they are formally attached to the tickets or tasks
 we're working on. Read more details about this approach in
 [this post]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
@@ -58,7 +59,8 @@ is found, it is a good candidate for a bug. Sometimes there is just
 not enough information in the code yet, and this is also a good candidate
 for a bug.
 
-Thus, bugs reported by an architect serve as communication channels
+Thus, bugs reported by an architect serve as
+[communication channels]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between him and the team. An architect doesn't explain what needs to be done
 but asks the team to fix the product in a way he thinks is right.
 If the ticket resolver, a member of the team, disagrees with that approach,
