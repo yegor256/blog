@@ -55,19 +55,19 @@ least amount of trouble:
     and decisions documented. In reality, none of that will actually happen.
     Meetings will just kill your time and your sponsor's money.
 
-  **Emails**.
+  * **Emails**.
     If you can put some formality into emails and discipline all participants,
     your email history may be considered a project artifact in itself. How
     organized and easily browseable will that artifact be? That's a good question.
     In most cases, it will just be a mess.
 
-  **Mailing Lists**.
+  * **Mailing Lists**.
     They are better than emails, because some software is archiving them and
     making them available and browseable. But it will be difficult to find where
     exactly what topic was discussed, where decisions were made and why,
     who suggested what, etc.
 
-  **Slack**.
+  * **Slack**.
     There are many similar alternatives that are basically online chats.
     The main problem with all of them is that it's difficult to categorize
     such a chat, group messages together, or find something later. It's merely a flow
@@ -75,14 +75,14 @@ least amount of trouble:
     if you really want to find something there, it's possible. But the quality
     of such a "document" is very low.
 
-  **Trello**.
+  * **Trello**.
     By Trello I mean any task/ticket tracking system &mdash; they are great instruments
     to immediately turn conversations and discussions into project artifacts.
     You don't need to document anything; it's already there. The problem is
     that they are still rather far away from the main project artifact:
     the source code with its commits, merge conflicts, build logs, etc.
 
-  **GitHub**.
+  * **GitHub**.
     This is the best instrument you can use. It integrates communications
     with the product itself. The code you write and the discussions you
     have around it are literally in the same place.
