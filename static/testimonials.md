@@ -67,6 +67,10 @@ you would be imprisoned for a lifetime by me."
 &mdash;
 anonymous
 
+"You are a moron that probably does not work in any real application ever, and I hope you won't"
+&mdash;
+[Peter V.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
+
 "Are you an idiot?"
 &mdash;
 [Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
