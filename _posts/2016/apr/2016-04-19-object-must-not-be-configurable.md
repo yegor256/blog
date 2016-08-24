@@ -201,7 +201,7 @@ String html = new Page(
 ).html();
 {% endhighlight %}
 
-{However, no matter how convenient it may look at first glance,
+However, no matter how convenient it may look at first glance,
 this approach is **very wrong**. Mostly because it encourages us
 to make big and non-cohesive objects. They grow in size and become less
 testable, less maintainable and less readable.

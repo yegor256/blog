@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "8 Maturity Levels of Continuous Integration"
+title: "8+2 Maturity Levels of Continuous Integration"
 date: 2016-08-01
 place: Palo Alto, CA
 tags: devops
@@ -78,6 +78,12 @@ build. If the quality is lower than the threshold, the build fails.
 8. **Pre-Flight Builds**.
 This idea is explained
 [here]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}).
+
+9. **Production Simulation**. The build is run in a container, which
+simulates production environment and data.
+
+10. **Stress Tests**. Performance and stress tests are automated and executed
+on every build.
 
 By the way, at the [presentation](https://www.youtube.com/watch?v=3dJP_LtUGgg),
 I also mentioned what problems you may encounter at each maturity level.

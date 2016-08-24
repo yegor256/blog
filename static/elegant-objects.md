@@ -12,14 +12,12 @@ keywords:
   - object-oriented programming book
   - object-oriented programming
   - object thinking
+style: |
+  .book-event {
+    clear: both;
+    margin-top: 2em;
+  }
 ---
-
-<style>
-.book-event {
-  clear: both;
-  margin-top: 2em;
-}
-</style>
 
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
 
@@ -33,6 +31,15 @@ ISBN: 1519166915.<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
+
+Aug 22, 2016:
+I will collect all reviews of the book written by its readers on their
+blogs, to help you better understand what the book is about, why it's
+good and how it could be better:
+
+  * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
+  * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
+  * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),

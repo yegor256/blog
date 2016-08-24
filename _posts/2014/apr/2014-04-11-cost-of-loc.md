@@ -50,7 +50,8 @@ The team was co-located in one
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 in Europe where everybody was working
 "from nine 'til five". We had meetings, lunches, desk-to-desk chats and lots of
-other informal communications. All tasks were tracked in JIRA.
+other [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
+All tasks were tracked in JIRA.
 
 ## Project #2: Extremely Distributed
 
@@ -129,7 +130,8 @@ You can validate the numbers for the second project here on GitHub:
 ## Conclusion
 
 What I'm trying to express with these numbers is that distributed programming is
-much more effective, money-wise, than a co-located team. Again, I can hear you
+[much more effective]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %}),
+money-wise, than a co-located team. Again, I can hear you
 saying that "line of code" is not a proper metric. But, come on, $0.13 vs.
 $3.98? Thirty times more expensive?
 

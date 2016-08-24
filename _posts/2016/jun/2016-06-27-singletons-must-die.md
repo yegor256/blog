@@ -68,7 +68,7 @@ class Index {
 
 In case you're not familiar with JAX-RS, it's a simple MVC architecture,
 and this `text()` method is a "controller". Additionally, I'm using
-[`SqlSession`](http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html),
+[`JdbcSession`](http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html),
 a simple JDBC wrapper from [jcabi-jdbc](http://jdbc.jcabi.com).
 
 We need that `Database.INSTANCE` to be a singleton, right? We need it to
@@ -78,6 +78,8 @@ thing, what do we replace it with?
 
 A [dependency injection]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 is the answer.
+
+{% quote Forget about singletons; never use them; turn them into dependencies %}
 
 We need to make this database connection pool dependency of the controller
 and ensure it's provided through a constructor. However, in this particular

@@ -58,7 +58,8 @@ and the "tumor" will only grow.
 
 This is especially true for object-oriented languages (Java, C++, Ruby, and Python),
 mostly because they inherit so much from procedural languages (C, Fortran, and COBOL).
-And because OOP developers tend to think in a procedural and imperative way.
+And because [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
+developers tend to think in a procedural and imperative way.
 Unfortunately.
 
 By the way, in addition to an existing [list of well-known anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern),

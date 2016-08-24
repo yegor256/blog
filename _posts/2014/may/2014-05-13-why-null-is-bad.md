@@ -274,7 +274,8 @@ public class Department {
 }
 {% endhighlight %}
 
-This technology, although widely used, is an anti-pattern in OOP.
+This technology, although widely used, is an anti-pattern in
+[OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}).
 Mostly because it makes an object responsible for performance problems
 of the computational platform, which is something an `Employee` object should not be aware of.
 

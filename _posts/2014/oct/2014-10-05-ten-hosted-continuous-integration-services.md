@@ -14,6 +14,10 @@ keywords:
   - continuous integration in cloud
   - continuous integration service
 categories: jcg
+style: |
+  col.col1 { width: 6em; }
+  col.col2 { width: 4em; }
+  col.colX { width: 2em; }
 ---
 
 Every project I'm working with starts with a setup of
@@ -32,13 +36,13 @@ the best and highly recommended):
 
 <table>
 <colgroup>
-<col width="6em"/>
-<col width="4em"/>
-<col width="2em"/>
-<col width="2em"/>
-<col width="2em"/>
-<col width="2em"/>
-<col width="2em"/>
+<col class="col1"/>
+<col class="col2"/>
+<col class="colX"/>
+<col class="colX"/>
+<col class="colX"/>
+<col class="colX"/>
+<col class="colX"/>
 </colgroup>
 <thead>
 <tr height="6em">

@@ -12,6 +12,17 @@ module Jekyll
       true
     end
   end
+  class WordCountBlock < Liquid::Tag
+    def render(context)
+      words = 0
+      context['site'].posts.each do |doc|
+        words += doc.content.split(/\s+/).length
+      end
+      count = words.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
+      puts "#{count} words in the entire blog"
+      count
+    end
+  end
   class StatsGenerator < Generator
     priority :low
     safe true
@@ -46,3 +57,5 @@ module Jekyll
     end
   end
 end
+
+Liquid::Template.register_tag('wordcount', Jekyll::WordCountBlock)

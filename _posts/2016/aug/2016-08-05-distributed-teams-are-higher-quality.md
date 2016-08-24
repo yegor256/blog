@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Distributed Team Delivers Code of Higher Quality"
-date: 2016-07-20
+date: 2016-08-05
 place: Las Vegas, NV
 tags: management
 description: |
@@ -27,10 +27,14 @@ remote mode, if done right, **guarantees** higher quality of code. Surprised?
 
 <!--more-->
 
+{% picture /images/2016/08/oceans-twelve.jpg 0 Ocean's Twelve (2004) by Steven Soderbergh %}
+
 There are basically four simple ingredients to success ... you know what, there is
 actually _one_ main ingredient, and its name is **control**. If we want quality
 to be at some level, we have to **enforce** it. We can't just declare it; we
 need to **make** it high.
+
+{% quote Quality can be achieved only if it is controlled and enforced %}
 
 How do software teams make high-quality code? Oh, there are many proven methods.
 First, you need a very modern office where <del>programmers</del> developers
@@ -58,10 +62,11 @@ we practice in our projects:
     to compromise the quality of our code, everyone has to go through a
     pull request, pre-flight build, and automated merge procedure.
 
-  * **Chats Are Prohibited**. Any modification to our codebase, even a very small one, 
+  * **Chats Are Prohibited**. Any modification to our codebase, even a very small one,
     must be submitted in a pull request. A code review
     must also occur in the pull request. We strictly disallow any
-    informal communications between programmers, including chats, phone
+    [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
+    between programmers, including chats, phone
     calls, emails, or face-to-face discussions. This means that the chances
     of quality compromises due to friendship, informal agreements, and trade-offs
     are very low.
@@ -89,9 +94,12 @@ and get paid. Well-paid.
 
 And now, to the main point of this blog post &mdash; do you think it's possible
 to build all that in a co-located team? I don't think so. First of all,
-you won't be able to prohibit informal communications. No matter how many
+you won't be able to prohibit
+[informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}). No matter how many
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It's inevitable.
+
+{% quote People are people; nobody likes to hit that quality bar multiple times a day %}
 
 Second, you won't be able to pay for results only, because programmers will
 complain that they are doing a lot of communication in the office that

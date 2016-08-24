@@ -62,7 +62,8 @@ classes, this may and will happen.
 
 The second problem is an inevitably **growing complexity** of method `sizeOf()`. The
 more special types it has to treat differently, the more complex it will become.
-This if/then forking is inevitable, since it has to check all possible
+This if/then [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
+is inevitable, since it has to check all possible
 types and give them special treatment. Such complexity is a result
 of a violation of the single responsibility principle. The method is not
 only calculating the size of `Iterable` but is also performing type

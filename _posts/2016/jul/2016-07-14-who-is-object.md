@@ -106,6 +106,8 @@ _pointer_ to another object. If our object would only have an
 `engine` attribute, it would take just 8 bytes in memory, with none of them
 actually occupied by "data".
 
+{% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
+
 Now, let's get back to our new pseudo language. Let's imagine it treats
 objects very differently than C++ &mdash; it doesn't keep object attributes
 in memory _at all_. It doesn't have pointers, and it doesn't know anything about

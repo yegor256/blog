@@ -131,8 +131,7 @@ This is an **aspect** with a single **around advice**
 `around()` inside. The aspect is annotated with `@Aspect`
 and advice is annotated with `@Around`. As discussed above,
 these annotations are just markers in `.class` files. They don't do
-anything except provide some meta-information to those w
-ho are interested in runtime.
+anything except provide some meta-information to those who are interested in runtime.
 
 Annotation `@Around` has one parameter, which &mdash; in this case &mdash;
 says that the advice should be applied to a method if:
@@ -166,6 +165,8 @@ Aspect weaver modifies original code by injecting calls to aspects.
 AspectJ does exactly that. We give it two binary Java classes `Foo.class`
 and `MethodLogger.class`; it gives back three &mdash; modified
 `Foo.class`, `Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
+
+{% quote Without weaving, both classes and aspects are just compiled Java binaries with attached annotations %}
 
 In order to understand which advice should be applied to which methods,
 AspectJ weaver is using annotations from `.class` files.

@@ -28,6 +28,8 @@
 .orange { color: $orange; }
 .gray { @extend %gray; }
 
+%clear { clear: both; }
+
 %small { font-size: .85 * $em; }
 
 %strike { text-decoration: line-through; }
@@ -45,6 +47,7 @@
 %unprintable {
   @media print {
     display: none !important;
+    visibility: hidden;
   }
 }
 
@@ -53,8 +56,11 @@
 %printable {
   @media not print  {
     display: none !important;
+    visibility: hidden;
   }
 }
+
+.clear { @extend %clear; }
 
 .printable { @extend %printable; }
 
@@ -159,6 +165,7 @@ del {
     }
 
     .google {
+      @extend %desktop-only;
       display: none;
       height: 2.4em;
       margin-left: 1em;
@@ -261,7 +268,7 @@ fieldset {
 }
 
 h1 {
-  clear: both;
+  @extend %clear;
   font-size: 2 * $em;
   font-weight: 600;
   line-height: 2 * $em;
@@ -274,7 +281,7 @@ h1 {
 
 h2,
 h3 {
-  clear: both;
+  @extend %clear;
   position: relative;
 }
 
@@ -335,6 +342,7 @@ h2 {
 }
 
 hr {
+  @extend %clear;
   border: 0;
   border-top: 1px solid $light-gray;
   height: 0;

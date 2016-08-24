@@ -13,57 +13,55 @@ keywords:
   - conferences about programming
   - software engineers conferences
 exclude_from_search: true
+style: |
+  .talk-event {
+    clear: both;
+  }
+  .future-talk {
+    display: block;
+    height: 50px;
+    margin-top: 2em;
+    max-width: 100%;
+  }
+  .past-talk {
+    display: block;
+    float: left;
+    height: 90px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    max-width: 160px;
+  }
+  .venue-rate {
+    float: right;
+    font-size: 2em;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    margin: .5em;
+    border-radius: 50%;
+    border: 1px solid gray;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.6em;
+    width: 1.6em;
+    height: 1.6em;
+  }
+  @media all and (max-width: 700px) {
+    .venue-rate {
+      float: none;
+      margin-left: 0;
+    }
+    .past-talk {
+      float: none;
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
 script: |
   $(function() {
     $('#future-talks-total').text($('img.future-talk').length);
     $('#past-talks-total').text($('img.past-talk').length);
   });
 ---
-
-<style>
-.talk-event {
-  clear: both;
-}
-.future-talk {
-  display: block;
-  height: 50px;
-  margin-top: 2em;
-  max-width: 100%;
-}
-.past-talk {
-  display: block;
-  float: left;
-  height: 90px;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  max-width: 160px;
-}
-.venue-rate {
-  float: right;
-  font-size: 2em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: bold;
-  margin: .5em;
-  border-radius: 50%;
-  border: 1px solid gray;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1.6em;
-  width: 1.6em;
-  height: 1.6em;
-}
-@media all and (max-width: 700px) {
-  .venue-rate {
-    float: none;
-    margin-left: 0;
-  }
-  .past-talk {
-    float: none;
-    margin-left: 0;
-    max-width: 100%;
-  }
-}
-</style>
 
 {% badge /images/yegor-is-presenting.png 300 %}
 
@@ -77,13 +75,6 @@ Not every conference is as good as some others. That's why I decided to
 give them some feedback, at least here (see below).
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
-
-<div class="talk-event"/>
-<img src="/images/2016/object-thinking.png" class="future-talk" alt="Object Thinking Meetup"/>
-**Why Static Methods Are Evil?**<br/>
-[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/)<br/>
-Stanford, Palo Alto, CA<br/>
-9 August 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
@@ -103,6 +94,13 @@ Salamanca, Spain<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
 Swansea, UK<br/>
 12 September 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.io Copenhagen"/>
+**Java Annotations Are a Bad Idea**<br/>
+[JDK.io](http://jdk.io/speakers/80-yego-bugayenko)<br/>
+Copenhagen, Denmark<br/>
+13 September 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/codemotion.png" class="future-talk" alt="codemotion Warsaw"/>
@@ -128,15 +126,24 @@ Malmö, Sweden<br/>
 7-11 November 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/xpdays.svg" class="future-talk" alt="XP Days Ukraine 2016"/>
+**XDSD: How Extreme Is Your Team?**<br/>
+[XP Days Ukraine](http://xpdays.com.ua/)<br/>
+Kiev, Ukraine<br/>
+11-12 November 2016
+
+<div class="talk-event"/>
 <img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
 **Seven Deadly Sins of a Software Project**<br>
+**Keep Your Servers In GitHub**<br/>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
 16 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
-[DevTernity 2016](http://www.devternity.com)<br/>
+**XDSD: Meetings-Free Software Development Methodology**<br/>
+[DevTernity 2016](http://devternity.com/#/11)<br/>
 Riga, Latvia<br/>
 1 December 2016
 
@@ -166,7 +173,15 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking 2016"/>
+<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="future-talk" alt="Object Thinking Meetup #2"/>
+Why Static Methods Are Evil?;
+[Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
+Stanford, Palo Alto, CA;
+9 August 2016;
+[video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
+
+<div class="talk-event"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking Meetup #1"/>
 How Anemic Objects Kill OOP;
 [Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
 Palo Alto, CA;

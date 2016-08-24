@@ -44,6 +44,11 @@ layout: compress
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
+    {% if page.style %}
+      <style>
+        {{ page.style }}
+      </style>
+    {% endif %}
   </head>
   <body>
     <div class="wrapper">
@@ -59,7 +64,7 @@ layout: compress
         </div>
         <nav>
           <ul class="menu social notranslate">
-            <li><a href="http://www.twitter.com/yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
@@ -69,6 +74,7 @@ layout: compress
             <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://angel.co/yegor256" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://gitter.im/yegor256/elegantobjects" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="mailto:blog@yegor256.com" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
           </ul>
           <ul class="menu">
@@ -88,8 +94,7 @@ layout: compress
           <form method="get" action="https://www.google.com/search">
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input type="text" id="search-query" class="field field-text"
-              onfocus="$('.google').css('display', 'inline-block');"
-              name="q" placeholder="Search" autocomplete="off"/>
+              onfocus="$('.google').show();" name="q" placeholder="Search" autocomplete="off"/>
             <input type="image" src="/images/google-search-icon.svg" class="google desktop-only"
               title="search via Google" alt="search via Google"/>
           </form>
@@ -97,12 +102,20 @@ layout: compress
         <div class="hot">
           <ul>
             <li>
+              Don't forget to submit your open source project to the
+              <a href="http://www.yegor256.com/2015/10/17/award-2016.html">Quality Award</a>
+              before the <strong>1st of September</strong>.
+              The prize is <strong>$4096</strong>.
+            </li>
+            <!--
+            <li>
               Don't miss our second
               <a href="https://www.meetup.com/Object-Thinking/events/232602670/">Object Thinking</a>
               meetup in Stanford (Palo Alto, CA)
               on the 9th of August, at 6:30pm!
               We will discuss static methods and why they are evil.
             </li>
+            -->
             <li>
               I'm looking for a <strong>co-founder</strong> in one of my pet projects.
               It's a small Ruby media platform for blogs.
@@ -112,10 +125,9 @@ layout: compress
               and if you're a <strong>Ruby expert</strong>.
             </li>
             <li>
-              At <a href="/webinars.html">Webinar #17</a>
-              we'll discuss the role of <strong>bugs</strong> in software development and
-              I will try to convince you that they are actually a very good thing,
-              join us on <b>August 3</b>, at 11am PST.
+              At <a href="/webinars.html">Webinar #18</a>
+              we'll discuss <strong>getters</strong> and <strong>printers</strong> in OOP,
+              join us on <b>September 7</b>, at 11am PST.
             </li>
             <!--
             <li>

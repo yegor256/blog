@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "If-Then-Else Is a Code Smell"
-date: 2016-06-12
+date: 2016-08-10
 place: Tallinn, Estonia
 tags: oop
 description: |
@@ -24,6 +24,8 @@ illustrates the problem. So it's time to demonstrate it and explain.
 
 <!--more-->
 
+{% picture /images/2016/08/fargo.jpg 0 Fargo (1996) by Coen Brothers %}
+
 Take a look at the class
 [`DyTalk`](https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java)
 from
@@ -36,7 +38,7 @@ validated, but the way it's implemented is simply wrong. This is
 how it works (an oversimplified example):
 
 {% highlight java %}
-class DyTalk {
+class DyTalk implements Talk {
   void modify(Collection<Directive> dirs) {
     if (!dirs.isEmpty()) {
       // Apply the modification
@@ -69,6 +71,8 @@ Now, if and when we need our talk to be more clever in situations where
 the list of directives is empty, we decorate it with `QuickTalk`.
 The benefits are obvious: the `DyTalk` class is smaller and therefore
 more cohesive.
+
+{% quote If it's possible to convert if-then-else forking to a decorator, it has to be done %}
 
 But the question is bigger than just that. Can we make a rule out of it? Can we say that
 **each and every forking** is bad and should be moved out of a class? What about
