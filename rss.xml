@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-23T23:24:58+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-24T00:01:39+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
 specific way. Some use Slack, Trello, or GitHub; others just sit together
 in the same room. There are many methods and tools. I believe
 it&amp;#39;s possible to rank them by the amount of &lt;strong&gt;damage&lt;/strong&gt; they cause
@@ -35,39 +35,34 @@ This is the next step after coffee breaks, because there is some structure
 and minutes. Meetings can be recorded (both on and offline), with their results filed somewhere
 and decisions documented. In reality, none of that will actually happen.
 Meetings will just kill your time and your sponsor&amp;#39;s money.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Emails&lt;/strong&gt;.
+If you can put some formality into emails and discipline all participants,
+your email history may be considered a project artifact in itself. How
+organized and easily browseable will that artifact be? That&amp;#39;s a good question.
+In most cases, it will just be a mess.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mailing Lists&lt;/strong&gt;.
+They are better than emails, because some software is archiving them and
+making them available and browseable. But it will be difficult to find where
+exactly what topic was discussed, where decisions were made and why,
+who suggested what, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;.
+There are many similar alternatives that are basically online chats.
+The main problem with all of them is that it&amp;#39;s difficult to categorize
+such a chat, group messages together, or find something later. It&amp;#39;s merely a flow
+of information that becomes useless just a few days after. Of course,
+if you really want to find something there, it&amp;#39;s possible. But the quality
+of such a &amp;quot;document&amp;quot; is very low.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Trello&lt;/strong&gt;.
+By Trello I mean any task/ticket tracking system &amp;mdash; they are great instruments
+to immediately turn conversations and discussions into project artifacts.
+You don&amp;#39;t need to document anything; it&amp;#39;s already there. The problem is
+that they are still rather far away from the main project artifact:
+the source code with its commits, merge conflicts, build logs, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;.
+This is the best instrument you can use. It integrates communications
+with the product itself. The code you write and the discussions you
+have around it are literally in the same place.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Emails&lt;/strong&gt;.
-    If you can put some formality into emails and discipline all participants,
-    your email history may be considered a project artifact in itself. How
-    organized and easily browseable will that artifact be? That&amp;#39;s a good question.
-    In most cases, it will just be a mess.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mailing Lists&lt;/strong&gt;.
-    They are better than emails, because some software is archiving them and
-    making them available and browseable. But it will be difficult to find where
-    exactly what topic was discussed, where decisions were made and why,
-    who suggested what, etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;.
-    There are many similar alternatives that are basically online chats.
-    The main problem with all of them is that it&amp;#39;s difficult to categorize
-    such a chat, group messages together, or find something later. It&amp;#39;s merely a flow
-    of information that becomes useless just a few days after. Of course,
-    if you really want to find something there, it&amp;#39;s possible. But the quality
-    of such a &amp;quot;document&amp;quot; is very low.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Trello&lt;/strong&gt;.
-    By Trello I mean any task/ticket tracking system &amp;mdash; they are great instruments
-    to immediately turn conversations and discussions into project artifacts.
-    You don&amp;#39;t need to document anything; it&amp;#39;s already there. The problem is
-    that they are still rather far away from the main project artifact:
-    the source code with its commits, merge conflicts, build logs, etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;.
-    This is the best instrument you can use. It integrates communications
-    with the product itself. The code you write and the discussions you
-    have around it are literally in the same place.&lt;/p&gt;
 
 &lt;p&gt;Which one of these is your project using right now? I would strongly recommend
 you stay away from communication channels at the top of this list.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>Each software team organizes its communications in its own
