@@ -522,7 +522,7 @@ that the same happened to other speakers.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12987001_10209222308424716_7689199378248269811_n.jpg?oh=c937a25fe62c84ea9ca7d3be522068a0&oe=57BA3C10" class="past-talk" alt="AgileEE 2016"/>
+<img src="http://img.youtube.com/vi/xbovkm0tTn0/0.jpg" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat To Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;
