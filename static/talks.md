@@ -179,7 +179,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="future-talk" alt="Object Thinking Meetup #2"/>
+<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
 Why Static Methods Are Evil?;
 [Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
 Stanford, Palo Alto, CA;
@@ -187,7 +187,7 @@ Stanford, Palo Alto, CA;
 [video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking Meetup #1"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
 How Anemic Objects Kill OOP;
 [Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
 Palo Alto, CA;
