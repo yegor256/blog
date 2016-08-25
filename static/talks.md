@@ -157,6 +157,12 @@ Orlando, Florida<br/>
 7-8 December 2016
 
 <div class="talk-event"/>
+<img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
+[MagmaConf 2017](http://www.magmaconf.com/)<br/>
+Manzanillo, Colima, Mexico<br/>
+29-31 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
