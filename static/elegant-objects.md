@@ -172,7 +172,7 @@ By the way, their names are (in alphabetic order):
 and [Xiasong Pan](http://www.linkedin.com/in/xipan).
 I hope to receive their reviews by the end of January. Then, will
 spend another 2-3 weeks to take their recommendations into account
-and they book will go out at the end of February.
+and the book will go out at the end of February.
 
 <div class="book-event"/>
 Dec 6, 2015:
