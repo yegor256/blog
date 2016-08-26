@@ -14,6 +14,8 @@ keywords:
   - controllers in oop
   - managers in oop
 book: elegant-objects 1.1
+translated:
+  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52317370
 youtube:
   - WpP4rIhh5e4
 ---
