@@ -166,7 +166,7 @@ del {
 
     .google {
       @extend %desktop-only;
-      display: none;
+      visibility: hidden;
       height: 2.4em;
       margin-left: 1em;
       position: absolute;

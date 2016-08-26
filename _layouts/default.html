@@ -94,8 +94,8 @@ layout: compress
           <form method="get" action="https://www.google.com/search">
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input type="text" id="search-query" class="field field-text"
-              onfocus="$('.google').show();" name="q" placeholder="Search" autocomplete="off"/>
-            <input type="image" src="/images/google-search-icon.svg" class="google desktop-only"
+              onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search" autocomplete="off"/>
+            <input type="image" src="/images/google-search-icon.svg" class="google"
               title="search via Google" alt="search via Google"/>
           </form>
         </div>
