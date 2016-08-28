@@ -14,21 +14,36 @@ keywords:
   - continuous integration in cloud
   - continuous integration service
 categories: jcg
-style: |
+style: |-
   .x-col1 { width: 6em; }
   .x-col2 { width: 4em; }
   .x-colX { width: 2em; }
   .x-head { height: 6em; }
+  .x-hr { border-top: 1px solid gray; }
+  .x-right { text-align: right; }
+  .x-bottom { vertical-align: bottom; }
+  .x-vertical {
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+  .x-vertical div {
+    text-align: left;
+    transform: translate(0, -.5em) rotate(270deg);
+    width: 2em;
+  }
+  .x-build {
+    height: 18px;
+  }
 ---
 
 Every project I'm working with starts with a setup of
 [continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %})
 pipeline. I'm a big fan of cloud services,
-that's why I was always using `travis-ci.org`. A few of
+that's why I was always using [Travis](http://www.travis-ci.org). A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.
 
-I configured [rultor](https://github.com/yegor256/rultor),
+I configured [Rultor](https://github.com/yegor256/rultor),
 an open source project, in every CI service I managed to find.
 All of them are free for open source projects.
 All of them are hosted and do not require any server installation
@@ -48,111 +63,133 @@ the best and highly recommended):
 <thead>
 <tr class="x-head">
   <td><!--name--></td>
-  <td><!--price--></td>
-  <td class="vert"><div><span>Linux</span></div></td>
-  <td class="vert"><div><span>Windows</span></div></td>
-  <td class="vert"><div><span>MacOS</span></div></td>
-  <td class="vert"><div><span>Pull requests</span></div></td>
-  <td class="vert"><div><span>Log compress</span></div></td>
+  <td class="x-bottom x-right">Price</td>
+  <td class="x-vertical"><div><span>Linux<sup>1</sup></span></div></td>
+  <td class="x-vertical"><div><span>Windows<sup>2</sup></span></div></td>
+  <td class="x-vertical"><div><span>MacOS<sup>3</sup></span></div></td>
+  <td class="x-vertical"><div><span>Pull requests<sup>4</sup></span></div></td>
+  <td class="x-vertical"><div><span>Log compress<sup>5</sup></span></div></td>
+  <td class="x-vertical"><div><span>Docker<sup>6</sup></span></div></td>
+  <td class="x-bottom">Build</td>
 </tr>
 </thead>
 <tbody>
-<tr><td><a href="http://www.travis-ci.org">travis-ci.com</a></td>
-  <td class="rht"><a href="https://travis-ci.com/plans">$129/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
+<tr><td><a href="http://www.travis-ci.org">Travis</a></td>
+  <td class="x-right"><a href="https://travis-ci.com/plans">$129/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td><a href="https://travis-ci.org/yegor256/rultor">
+    <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build"/></a></td>
   </tr>
-<tr><td><a href="http://www.appveyor.com">appveyor.com</a></td>
-  <td class="rht"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt">?</td>
+<tr><td><a href="http://www.shippable.com">Shippable</a></td>
+  <td class="x-right"><a href="http://www.shippable.com/pricing.html">free</a> (!)</td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
+    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build"/></a></td>
   </tr>
-<tr><td><a href="http://www.wercker.com">wercker.com</a></td>
-  <td class="rht">free!</td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
+<tr><td><a href="http://www.appveyor.com">AppVeyor</a></td>
+  <td class="x-right"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center">&mdash;</td>
+  <td><a href="https://ci.appveyor.com/project/yegor256/rultor/branch/master">
+    <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build"/></a></td>
   </tr>
-<tr><td><a href="http://www.shippable.com">shippable.com</a></td>
-  <td class="rht"><a href="http://www.shippable.com/pricing.html">$1/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
+<tr><td><a href="http://www.wercker.com">Wercker</a></td>
+  <td class="x-right">$350/mo</td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td><a href="https://app.wercker.com/project/bykey/0e6506c69e078b7692e50b240c034524">
+    <img src="https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status" class="x-build"/></a></td>
   </tr>
-<tr><td colspan="7" style="border-top: 1px solid gray;"></td></tr>
-<tr><td><a href="http://www.codeship.io">codeship.io</a></td>
-  <td class="rht"><a href="https://codeship.io/pricing">$49/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt">?</td>
-  <td class="cnt"><i class="icon-yes"></i></td>
+<tr><td colspan="9" class="x-hr"></td></tr>
+<tr><td><a href="http://www.semaphoreapp.com">SemaphoreApp</a></td>
+  <td class="x-right"><a href="https://semaphoreapp.com/pricing">$29/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.semaphoreapp.com">semaphoreapp.com</a></td>
-  <td class="rht"><a href="https://semaphoreapp.com/pricing">$29/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
+<tr><td><a href="http://www.drone.io">Drone</a></td>
+  <td class="x-right"><a href="https://drone.io/pricing">$25/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.drone.io">drone.io</a></td>
-  <td class="rht"><a href="https://drone.io/pricing">$25/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
+<tr><td><a href="https://magnum-ci.com/pricing">Magnum-CI</a></td>
+  <td class="x-right">?</td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="https://magnum-ci.com/pricing">magnum-ci.com</a></td>
-  <td class="rht">?</td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt">?</td>
+<tr><td><a href="http://www.snap-ci.com">Snap-CI</a></td>
+  <td class="x-right"><a href="https://snap-ci.com/plans">$30/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.snap-ci.com">snap-ci.com</a></td>
-  <td class="rht"><a href="https://snap-ci.com/plans">$30/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt">?</td>
+<tr><td><a href="http://www.codeship.io">CodeShip</a></td>
+  <td class="x-right"><a href="https://codeship.io/pricing">$49/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
   </tr>
-<tr><td><a href="http://www.circleci.com">circleci.com</a></td>
-  <td class="rht"><a href="https://circleci.com/pricing">$19/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
+<tr><td><a href="http://www.circleci.com">CircleCI</a></td>
+  <td class="x-right"><a href="https://circleci.com/pricing">$19/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://ci.solanolabs.com">sonolabs.com</a></td>
-  <td class="rht"><a href="https://www.solanolabs.com/#pricing">$15/mo</a></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt">?</td>
+<tr><td><a href="http://ci.solanolabs.com">SonoLabs</a></td>
+  <td class="x-right"><a href="https://www.solanolabs.com/#pricing">$15/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.hosted-ci.com">hosted-ci.com</a></td>
-  <td class="rht"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-no"></i></td>
-  <td class="cnt"><i class="icon-yes"></i></td>
-  <td class="cnt">?</td>
-  <td class="cnt">?</td>
+<tr><td><a href="http://www.hosted-ci.com">Hosted-CI</a></td>
+  <td class="x-right"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center">?</td>
+  <td class="center">?</td>
+  <td class="center">&mdash;</td>
   </tr>
 </tbody>
 </table>
@@ -165,9 +202,11 @@ If you know any other good
 BTW, here is a ["full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
 of continuous integration software and services.
 
-{% badge /images/2014/10/travis.png 64 http://www.travis-ci.org %}
+## Best Four
 
-[**travis-ci.org**](http://www.travis-ci.org) is
+{% badge /images/2014/10/travis.png 92 http://www.travis-ci.org %}
+
+[**Travis**](http://www.travis-ci.org) is
 the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
@@ -178,21 +217,20 @@ say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 
-{% badge /images/2014/10/appveyor.png 64 http://www.appveyor.com %}
+{% badge /images/2014/10/shippable.png 92 http://www.shippable.com %}
 
-[**appveyor.com**](http://www.appveyor.com) is the only one
-that runs Windows builds. Even though I'm working mostly with
-Java and Ruby, which are expected to be platform independent, they
-very often appear to be exactly the opposite. When your build
-succeeds on Linux, there is almost no guarantee it will pass on
-Windows or Mac. I'm planning to use AppVeyor in every project,
-in combination with some other CI service. I'm still
-[testing]({% pst 2015/jan/2015-01-10-windows-appveyor-maven %})
-it though...
+[**Shippable**](http://www.shippable.com) was easy to configure
+since it understands `.travis.yml` out of the box.
+The user interface is easy to navigate since it doesn't
+have "settings" page at all (or I didn't find it). Everything is
+configured via `shippable.yml` file in the repository. The service
+looks stable and robust, no complains so far. As soon as they make
+Docker containers available for all builds I will put them to the
+first position and will migrate all my projects there.
 
-{% badge /images/2014/10/wercker.png 64 http://www.wercker.com %}
+{% badge /images/2014/10/wercker.png 92 http://www.wercker.com %}
 
-[**wercker.com**](http://www.wercker.com) is a European product
+[**Wercker**](http://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
@@ -201,18 +239,23 @@ They also have an interesting concept of build "boxes", which
 can be pre-configured similar to Docker containers.
 It works rather stable for the last few months, no complains so far.
 
-{% badge /images/2014/10/shippable.png 64 http://www.shippable.com %}
+{% badge /images/2014/10/appveyor.png 92 http://www.appveyor.com %}
 
-[**shippable.com**](http://www.shippable.com) was easy to configure
-since it understands `.travis.yml` out of the box.
-The user interface is easy to navigate since it doesn't
-have "settings" page at all (or I didn't find it). Everything is
-configured via `shippable.yml` file in the repository. The service
-looks stable and robust, no complains so far.
+[**AppVeyor**](http://www.appveyor.com) is the only one
+that runs Windows builds. Even though I'm working mostly with
+Java and Ruby, which are expected to be platform independent, they
+very often appear to be exactly the opposite. When your build
+succeeds on Linux, there is almost no guarantee it will pass on
+Windows or Mac. I'm planning to use AppVeyor in every project,
+in combination with some other CI service. Here is how I integrate
+[Maven builds]({% pst 2015/jan/2015-01-10-windows-appveyor-maven %})
+with AppVeyor.
+
+## Others
 
 {% badge /images/2014/10/semaphoreapp.png 64 http://www.semaphoreapp.com %}
 
-[**semaphoreapp.com**](http://www.semaphoreapp.com) is easy to
+[**SemaphoreApp**](http://www.semaphoreapp.com) is easy to
 configure and work with. It makes an impression of a light-weight
 system, which I generally appreciate. As a downside, they
 <span class="strike">don't have any Maven pre-installed</span>
@@ -222,24 +265,16 @@ that they are not configurable through a file (like `.travis.yml`) &mdash;
 you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
-{% badge /images/2014/10/codeship.png 64 http://www.codeship.io %}
-
-[**codeship.io**](http://www.codeship.io) works fine, but their web UI
-looks a bit out-dated. Besides that, they promise to work with pull
-requests, but I didn't manage to configure them. They simply
-don't notify our pull requests in GitHub, even though they build them.
-Maybe I'll find a way, so far it's not clear...
-
 {% badge /images/2014/10/magnum.png 64 http://www.magnum-ci.com %}
 
-[**magnum-ci.com**](https://magnum-ci.com/pricing) is a very lightweight
+[**Magnum-CI**](https://magnum-ci.com/pricing) is a very lightweight
 and young system. It doesn't connect automatically to GitHub,
 so you should do some manual operations of adding a web hook.
 Besides that, works just fine.
 
 {% badge /images/2014/10/snap.png 64 http://www.snap-ci.com %}
 
-[**snap-ci.com**](http://www.snap-ci.com) is a product of
+[**Snap-CI**](http://www.snap-ci.com) is a product of
 ThoughtWorks, an author of [Go](http://www.go.cd/),
 an open source continuous integration server. It looks a bit more
 complicated than others, giving you an ability to define "stages"
@@ -252,44 +287,53 @@ we can't modify anything in `/etc` &mdash; it is a show-stopper for us.
 
 {% badge /images/2014/10/drone.png 64 http://www.drone.io %}
 
-[**drone.io**](http://www.drone.io) works fine, but their support
+[**Drone.io**](http://www.drone.io) works fine, but their support
 didn't reply to me when I asked for a Maven version update
 (they have an old version pre-installed). Besides
 that, their badge is not updated correctly in GitHub README.md &mdash;
 when the build is broken, the badge stays green... very annoying.
 
+{% badge /images/2014/10/codeship.png 64 http://www.codeship.io %}
+
+[**CodeShip**](http://www.codeship.io) works fine, but their web UI
+looks a bit out-dated. Besides that, they promise to work with pull
+requests, but I didn't manage to configure them. They simply
+don't notify our pull requests in GitHub, even though they build them.
+Maybe I'll find a way, so far it's not clear.
+
 {% badge /images/2014/10/circleci.png 64 http://www.circleci.com %}
 
-[**circleci.com**](http://www.circleci.com) I still don't know why my build
+[**CircleCI**](http://www.circleci.com) I still don't know why my build
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
-[**zeroci.com**](http://www.zeroci.com) looks like a one-man project, which
-definitely needs usability testing. It was rather difficult to configure
-a project via its web interface. The good thing is that it's free, but its
-quality is not high enough to recommend it.
+{% badge /images/2014/10/solanolabs.png 64 http://www.solanolabs.com %}
 
-[**solanolabs.com**](http://www.solanolabs.com) looks rather immature and
+[**solanolabs**](http://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively :)
 
-[**hosted-ci.com**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
+[**Hosted-ci**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
-[**cloudbees.com**](http://www.cloudbees.com) testing now...
+[**CloudBees**](http://www.cloudbees.com) testing now...
 
-[**dploy.io**](http://dploy.io/) testing now...
+[**DeployBot**](https://deploybot.com/) doesn't even allow me to login
+via GitHub, huh?
 
-[**vexor.io**](http://vexor.io/) looks nice and offers a rather unique
+[**Vexor**](http://vexor.io/) looks nice and offers a rather unique
 billing model &mdash; they charge per build, not per month. I would definitely
 recommend to give it a try.
 
-[**greenhouseci.com**](http://greenhouseci.com/) testing now...
+[**GreenHouseCI**](http://greenhouseci.com/) testing now...
 
-**ship.io** is
-[dead](https://ship.io/ship-io-is-shutting-down/).
+**Ship.io** is [dead](https://ship.io/ship-io-is-shutting-down/).
+
+[**ZeroCI**](http://www.zeroci.com) is dead (as of 28-Aug-2016).
+
+<hr/>
 
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
@@ -304,3 +348,20 @@ continuous integration service is, it
 [won't help you]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 unless you make your
 [master branch read-only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
+
+<hr/>
+
+<sup>1</sup> This means that the platform can build your repo
+in Linux environment. Almost all of them do that by default, unless
+you configure them otherwise.<br/>
+<sup>2</sup> Some of them can build on Windows platform.<br/>
+<sup>3</sup> MacOS support means that an Objective-C/Swift product can be
+built there.<br/>
+<sup>4</sup> I mean GitHub pull request support here. Some of them can be
+integrated with GitHub and will build pull requests before they are merged.
+Build status will be visible in GitHub. A pretty convenient feature.<br/>
+<sup>5</sup> Logs compression is a critical feature, at least for me. Most
+of my logs are from Maven and without `col -b` they look too long and unreadable.<br/>
+<sup>6</sup> Looks like Docker containers must be supported by all of them,
+but unfortunately it's not the case. Ideally, all builds should run
+in containers.
