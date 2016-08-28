@@ -191,6 +191,15 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center">&mdash;</td>
   </tr>
+<tr><td><a href="http://www.deploybot.com">DeployBot</a></td>
+  <td class="x-right"><a href="https://signup.deploybot.com/signup/new">$15/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
+  </tr>
 </tbody>
 </table>
 
@@ -323,14 +332,19 @@ to test them yet.
 [**CloudBees**](http://www.cloudbees.com) is basically a hosted Jenkins.
 I don't really like Jenkins, that's why can't recommend this platform.
 
+{% badge /images/2014/10/deploybot.png 64 http://www.deploybot.com %}
+
 [**DeployBot**](https://deploybot.com/) doesn't even allow me to login
-via GitHub, huh?
+via GitHub, huh? They seem to be more "deployment" oriented, not just
+continuous integration.
 
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
 billing model &mdash; they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
 [**GreenHouseCI**](http://greenhouseci.com/) testing now...
+
+<hr/>
 
 **Ship.io** is [dead](https://ship.io/ship-io-is-shutting-down/).
 
