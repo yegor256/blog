@@ -200,6 +200,15 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
+<tr><td><a href="http://www.greenhouseci.com">GreenHouseCI</a></td>
+  <td class="x-right"><a href="https://greenhouseci.com/pricing.html">$49/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center">?</td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
+  </tr>
 </tbody>
 </table>
 
@@ -329,7 +338,7 @@ difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively :)
 
-[**Hosted-ci**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
+[**Hosted-CI**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
@@ -348,7 +357,11 @@ continuous integration.
 billing model &mdash; they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
-[**GreenHouseCI**](http://greenhouseci.com/) testing now...
+{% badge /images/2014/10/greenhouseci.png 64 http://www.greenhouseci.com %}
+
+[**GreenHouseCI**](http://greenhouseci.com/) is a CI platform for
+mobile apps (iOS, Android, etc.) Seems to be interesting, I just don't have
+a full scale mobile app to test it against.
 
 <hr/>
 
