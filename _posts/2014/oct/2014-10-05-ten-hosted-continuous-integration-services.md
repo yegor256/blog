@@ -200,6 +200,15 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
+<tr><td><a href="http://www.vexor.io">Vexor</a></td>
+  <td class="x-right"><a href="http://vexor.io/">&cent;90/hr</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center">?</td>
+  <td class="center">?</td>
+  <td class="center"><i class="icon-no red"></i></td>
+  </tr>
 <tr><td><a href="http://www.greenhouseci.com">GreenHouseCI</a></td>
   <td class="x-right"><a href="https://greenhouseci.com/pricing.html">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
