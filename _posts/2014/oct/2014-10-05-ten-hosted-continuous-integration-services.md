@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10 Hosted Continuous Integration Services for a Private Repository"
+title: "Best Hosted Continuous Integration Services for a Private Repository"
 date: 2014-10-05
 tags: devops
 description: |
