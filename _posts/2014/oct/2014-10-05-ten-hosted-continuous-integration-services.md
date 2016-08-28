@@ -355,6 +355,8 @@ I don't really like Jenkins, that's why can't recommend this platform.
 via GitHub, huh? They seem to be more "deployment" oriented, not just
 continuous integration.
 
+{% badge /images/2014/10/vexor.png 64 http://www.vexor.com %}
+
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
 billing model &mdash; they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
