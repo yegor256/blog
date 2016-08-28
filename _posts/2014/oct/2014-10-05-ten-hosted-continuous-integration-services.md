@@ -338,6 +338,8 @@ difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively :)
 
+{% badge /images/2014/10/hostedci.png 64 http://www.hosted-ci.com %}
+
 [**Hosted-CI**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
