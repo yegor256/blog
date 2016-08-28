@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Fifty Shades of Object Immutability"
+title: "Fifty Shades of Immutability"
 date: 2016-06-20
 place: Palo Alto, CA
 tags: oop
 description: |
-  There are a few levels of immutability in OOP, which
+  There are a few levels and forms of immutability in
+  object-oriented programming, which
   all can be used when they seem appropriate.
 keywords:
   - immutability
@@ -29,69 +30,127 @@ As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
 an object is a **representative** of someone else
 (some entit(ies), other object(s), data, memory, files, etc.)
 Let's see a number of objects, which look exactly the same
-for us, but represent different things. And all of that things
-will be a "gearbox"
+for us, but **represent** different things, and analyze how
+immutable they are and why.
+
+## Constant
+
+This is **constant**, which doesn't allow any modifications
+to the encapsulated entity and always return the same text back
+(I skip constructors for the sake of brevity):
 
 {% highlight java %}
-class Gearbox {
-  private final int port;
-  Gearbox switchTo(int gear) {
-    // return a new gearbox that
-    // is switched to the required gear
+class Book {
+  private final String ttl;
+  Book rename(String title) {
+    return new Book(title);
   }
-  int gear() {
-    // return current gear
+  String title() {
+    return this.ttl;
   }
 }
 {% endhighlight %}
 
+This is what we usually have in mind when talking about immutable
+objects. Such a class is very close to a
+[pure function](https://en.wikipedia.org/wiki/Pure_function),
+which means that no matter how many times we instantiate it with
+the same initial values, the result of `title()` will be the same.
 
-Now, there is basically a matrix that shows how our object can communicate
-with that entity:
+## Not a Constant
 
-{% highlight java %}
-Ask    | Tell   |
--------------------------
-any    | any    |
-any    | once   |
-any    | never  |
-once   | any    |
-once   | once   |
-once   | never  |
-never  | any    |
-never  | once   |
-never  | never  |
-{% endhighlight %}
-
-1. stays loyal
-read allowed/once/never
-write allowed/once/never
-2. doesn't allow changes
-4. caches all responses
-3. doesn't allow any communications
+Check this one:
 
 {% highlight java %}
-class Gearbox {
-  Gearbox switchTo(int gear) {
-    // return a new gearbox that
-    // is switched to the required gear
+class Book {
+  private final String ttl;
+  Book rename(String title) {
+    return new Book(title);
   }
-  int gear() {
-    // return current gear
+  String title() {
+    return String.format(
+      "%s (as of %tR)", this.ttl, new Date()
+    );
   }
 }
 {% endhighlight %}
 
-And now take a look
+The object is still immutable, but it is not a pure
+function any more, because of the method `title()` &mdash;
+it returns different values if we call it
+multiple times with at least a one-minute interval. The object
+is immutable, it is just not a constant any more.
+
+## Represented Mutability
+
+How about this one:
 
 {% highlight java %}
-class Gearbox {
-  void switchTo(int gear) {
-    // switch it to the required gear
+class Book {
+  private final Path path;
+  Book rename(String title) {
+    Files.write(
+      this.path,
+      title.getBytes(),
+      StandardOpenOption.CREATE
+    );
+    return this;
   }
-  int gear() {
-    // return current gear
+  String title() {
+    return new String(
+      Files.readAllBytes(this.path)
+    );
   }
 }
 {% endhighlight %}
+
+This _immutable_ object keeps book title in a file. It's not a constant,
+because its method `title()` may return different values on every
+second call. Moreover, the represented entity (the file) is not a constant.
+We can't say whether it's mutable or immutable, we don't know how `Files.write()`
+is implemented. But we know for sure that it's not a constant, since it
+accepts change requests.
+
+## Encapsulated Mutability
+
+An immutable object may not only represent but even
+encapsulate a mutable one. Just like in the
+previous example, a mutable file was encapsulated. Even though it
+was represented by an immutable class `Path`, the real file on disc
+was mutable. We can do the same, but in memory:
+
+{% highlight java %}
+class Book {
+  private final StringBuffer buffer;
+  Book rename(String title) {
+    this.buffer.setLength(0);
+    this.buffer.append(title);
+    return this;
+  }
+  String title() {
+    return this.buffer.toString();
+  }
+}
+{% endhighlight %}
+
+The object is still _immutable_. Is it thread-safe? No. Is it a constant?
+No. Is it immutable? Yes. Confused? You bet.
+
+<hr/>
+
+My point is that immutability is not _binary_, there are many
+forms of it. The most simple one is, of course, a
+constant. Constants are almost the same as pure functions in functional
+programming. But object-oriented programming allows us to make
+a few steps forward and give immutable objects more permissions
+and flexibility. In OOP we may have many more forms of immutability.
+
+What is common for all these examples is that our objects are
+**loyal** to the entities they encapsulate. There are no
+[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+that could change them. All encapsulated objects are `final`.
+
+This is the only quality that differentiates mutable objects from
+immutable ones. The latter are always loyal to the entities they
+encapsulate and represent. All the rest... depends.
 
