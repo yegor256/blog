@@ -85,7 +85,7 @@ the best and highly recommended):
   <td><a href="https://travis-ci.org/yegor256/rultor">
     <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build"/></a></td>
   </tr>
-<tr><td><a href="http://www.shippable.com">Shippable</a></td>
+<tr><td><a href="http://www.shippable.com">Shippable</a>&#x263A;</td>
   <td class="x-right"><a href="http://www.shippable.com/pricing.html">free</a> (!)</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -155,7 +155,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.codeship.io">CodeShip</a></td>
+<tr><td><a href="http://www.codeship.io">CodeShip</a>&#x263A;</td>
   <td class="x-right"><a href="https://codeship.io/pricing">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -164,7 +164,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   </tr>
-<tr><td><a href="http://www.circleci.com">CircleCI</a></td>
+<tr><td><a href="http://www.circleci.com">CircleCI</a>&#x263A;</td>
   <td class="x-right"><a href="https://circleci.com/pricing">$19/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -210,6 +210,12 @@ If you know any other good
 [email me](/about-me.html), I'll review and add them to this list.
 BTW, here is a ["full" list](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)
 of continuous integration software and services.
+
+By the way, a few platforms from this list contacted me and asked
+to review them again. Some even offered me money to put them higher
+in the list (kidding). Anyway, it's up to you to decide whether it's a
+good sign or not (I think it's good, they care about their PR). I marked
+them in the list with &#x263A; emoji.
 
 ## Best Four
 
