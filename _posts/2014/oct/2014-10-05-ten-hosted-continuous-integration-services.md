@@ -309,7 +309,7 @@ what's going on. Trying to figure it out...
 
 {% badge /images/2014/10/solanolabs.png 64 http://www.solanolabs.com %}
 
-[**solanolabs**](http://www.solanolabs.com) looks rather immature and
+[**SolanoLabs**](http://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively :)
@@ -318,14 +318,17 @@ rather aggressively :)
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
-[**CloudBees**](http://www.cloudbees.com) testing now...
+{% badge /images/2014/10/cloudbees.png 64 http://www.cloudbees.com %}
+
+[**CloudBees**](http://www.cloudbees.com) is basically a hosted Jenkins.
+I don't really like Jenkins, that's why can't recommend this platform.
 
 [**DeployBot**](https://deploybot.com/) doesn't even allow me to login
 via GitHub, huh?
 
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
 billing model &mdash; they charge per build, not per month. I would definitely
-recommend to give it a try.
+recommend to give it a try. I couldn't make it work though...
 
 [**GreenHouseCI**](http://greenhouseci.com/) testing now...
 
