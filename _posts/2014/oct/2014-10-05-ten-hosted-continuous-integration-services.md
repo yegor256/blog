@@ -15,9 +15,10 @@ keywords:
   - continuous integration service
 categories: jcg
 style: |
-  col.col1 { width: 6em; }
-  col.col2 { width: 4em; }
-  col.colX { width: 2em; }
+  .x-col1 { width: 6em; }
+  .x-col2 { width: 4em; }
+  .x-colX { width: 2em; }
+  .x-head { height: 6em; }
 ---
 
 Every project I'm working with starts with a setup of
@@ -36,16 +37,16 @@ the best and highly recommended):
 
 <table>
 <colgroup>
-<col class="col1"/>
-<col class="col2"/>
-<col class="colX"/>
-<col class="colX"/>
-<col class="colX"/>
-<col class="colX"/>
-<col class="colX"/>
+<col class="x-col1"/>
+<col class="x-col2"/>
+<col class="x-colX"/>
+<col class="x-colX"/>
+<col class="x-colX"/>
+<col class="x-colX"/>
+<col class="x-colX"/>
 </colgroup>
 <thead>
-<tr height="6em">
+<tr class="x-head">
   <td><!--name--></td>
   <td><!--price--></td>
   <td class="vert"><div><span>Linux</span></div></td>
