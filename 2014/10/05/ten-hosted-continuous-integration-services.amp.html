@@ -88,7 +88,7 @@ the best and highly recommended):</p>
 <thead>
 <tr class="x-head">
   <td></td>
-  <td class="x-bottom x-right">Price</td>
+  <td class="x-bottom x-right">Minimum price</td>
   <td class="x-vertical"><div><span>Linux<sup>1</sup></span></div></td>
   <td class="x-vertical"><div><span>Windows<sup>2</sup></span></div></td>
   <td class="x-vertical"><div><span>MacOS<sup>3</sup></span></div></td>
@@ -100,18 +100,6 @@ the best and highly recommended):</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="http://www.travis-ci.org">Travis</a></td>
-  <td class="x-right"><a href="https://travis-ci.com/plans">$129/mo</a></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td><a href="https://travis-ci.org/yegor256/rultor">
-    </a></td>
-  </tr>
-<tr>
 <td>
 <a href="http://www.shippable.com">Shippable</a>☺</td>
   <td class="x-right">
@@ -121,8 +109,20 @@ the best and highly recommended):</p>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
   <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
+    </a></td>
+  </tr>
+<tr>
+<td><a href="http://www.travis-ci.org">Travis</a></td>
+  <td class="x-right"><a href="https://travis-ci.com/plans">$129/mo</a></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td><a href="https://travis-ci.org/yegor256/rultor">
     </a></td>
   </tr>
 <tr>
@@ -284,6 +284,16 @@ them in the list with ☺ emoji.</p>
 
 
 
+<p><a href="http://www.shippable.com"><strong>Shippable</strong></a> was easy to configure
+since it understands <code>.travis.yml</code> out of the box.
+The user interface is easy to navigate since it doesn't
+have "settings" page at all (or I didn't find it). Everything is
+configured via <code>shippable.yml</code> file in the repository. The service
+looks stable and robust, no complains so far. What is especially
+cool about them is that they allow you to build in a Docker container.</p>
+
+
+
 <p><a href="http://www.travis-ci.org"><strong>Travis</strong></a> is
 the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
@@ -294,17 +304,6 @@ some of my <a href="/2015/01/26/happy-boss-false-objective.html">clients</a>
 say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.</p>
-
-
-
-<p><a href="http://www.shippable.com"><strong>Shippable</strong></a> was easy to configure
-since it understands <code>.travis.yml</code> out of the box.
-The user interface is easy to navigate since it doesn't
-have "settings" page at all (or I didn't find it). Everything is
-configured via <code>shippable.yml</code> file in the repository. The service
-looks stable and robust, no complains so far. As soon as they make
-Docker containers available for all builds I will put them to the
-first position and will migrate all my projects there.</p>
 
 
 
