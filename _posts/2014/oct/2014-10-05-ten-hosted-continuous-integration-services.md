@@ -74,6 +74,17 @@ the best and highly recommended):
 </tr>
 </thead>
 <tbody>
+<tr><td><a href="http://www.shippable.com">Shippable</a>&#x263A;</td>
+  <td class="x-right"><a href="http://www.shippable.com/pricing.html">free</a> (!)</td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-no red"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td class="center"><i class="icon-yes green"></i></td>
+  <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
+    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build"/></a></td>
+  </tr>
 <tr><td><a href="http://www.travis-ci.org">Travis</a></td>
   <td class="x-right"><a href="https://travis-ci.com/plans">$129/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
@@ -84,17 +95,6 @@ the best and highly recommended):
   <td class="center"><i class="icon-no red"></i></td>
   <td><a href="https://travis-ci.org/yegor256/rultor">
     <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build"/></a></td>
-  </tr>
-<tr><td><a href="http://www.shippable.com">Shippable</a>&#x263A;</td>
-  <td class="x-right"><a href="http://www.shippable.com/pricing.html">free</a> (!)</td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
-    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build"/></a></td>
   </tr>
 <tr><td><a href="http://www.appveyor.com">AppVeyor</a></td>
   <td class="x-right"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
@@ -237,6 +237,16 @@ them in the list with &#x263A; emoji.
 
 ## Best Four
 
+{% badge /images/2014/10/shippable.png 92 http://www.shippable.com %}
+
+[**Shippable**](http://www.shippable.com) was easy to configure
+since it understands `.travis.yml` out of the box.
+The user interface is easy to navigate since it doesn't
+have "settings" page at all (or I didn't find it). Everything is
+configured via `shippable.yml` file in the repository. The service
+looks stable and robust, no complains so far. What is especially
+cool about them is that they allow you to build in a Docker container.
+
 {% badge /images/2014/10/travis.png 92 http://www.travis-ci.org %}
 
 [**Travis**](http://www.travis-ci.org) is
@@ -249,17 +259,6 @@ some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
-
-{% badge /images/2014/10/shippable.png 92 http://www.shippable.com %}
-
-[**Shippable**](http://www.shippable.com) was easy to configure
-since it understands `.travis.yml` out of the box.
-The user interface is easy to navigate since it doesn't
-have "settings" page at all (or I didn't find it). Everything is
-configured via `shippable.yml` file in the repository. The service
-looks stable and robust, no complains so far. As soon as they make
-Docker containers available for all builds I will put them to the
-first position and will migrate all my projects there.
 
 {% badge /images/2014/10/wercker.png 92 http://www.wercker.com %}
 
