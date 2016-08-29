@@ -102,7 +102,7 @@ $(
     'use strict';
     $('.main p a, .main ul a, .main ol a').each(
       function (idx, a) {
-        if (a.href.hostname && a.href.hostname !== window.location.hostname) {
+        if (a.hostname && a.hostname !== window.location.hostname) {
           $(this).append('<i class="icon icon-exit foreign"></i>');
         }
       }
