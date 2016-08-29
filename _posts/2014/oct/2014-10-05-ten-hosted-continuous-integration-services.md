@@ -146,7 +146,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.snap-ci.com">Snap-CI</a></td>
+<tr><td><a href="http://www.snap-ci.com">Snap-CI</a>&#x263A;</td>
   <td class="x-right"><a href="https://snap-ci.com/plans">$30/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
