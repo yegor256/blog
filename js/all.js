@@ -66,15 +66,15 @@ $(
           }
         }
       );
-      $.getJSON(
-        'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
-        function(json) {
-          var count = json.result.views;
-          if (count > 0) {
-            $('.count-stumbleupon').html(number(count)).fadeIn();
-          }
-        }
-      );
+      // $.getJSON(
+      //   'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
+      //   function(json) {
+      //     var count = json.result.views;
+      //     if (count > 0) {
+      //       $('.count-stumbleupon').html(number(count)).fadeIn();
+      //     }
+      //   }
+      // );
     }
   }
 );
