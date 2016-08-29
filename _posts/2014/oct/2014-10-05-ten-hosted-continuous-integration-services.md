@@ -237,7 +237,7 @@ them in the list with &#x263A; emoji.
 
 ## Best Four
 
-{% badge /images/2014/10/shippable.png 92 http://www.shippable.com %}
+{% badge /images/2014/10/shippable.svg 92 http://www.shippable.com %}
 
 [**Shippable**](http://www.shippable.com) was easy to configure
 since it understands `.travis.yml` out of the box.
