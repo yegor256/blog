@@ -101,10 +101,9 @@ $(
   function() {
     'use strict';
     $('.main p a, .main ul a, .main ol a').each(
-      function () {
-        var $this = $(this), domain = new URL(this.href).hostname;
-        if (domain && domain !== window.location.hostname) {
-          $this.append('<i class="icon icon-exit foreign"></i>');
+      function (idx, a) {
+        if (a.hostname && a.hostname !== window.location.hostname) {
+          $(this).append('<i class="icon icon-exit foreign"></i>');
         }
       }
     );
