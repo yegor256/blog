@@ -76,12 +76,6 @@ $(
       //   }
       // );
     }
-  }
-);
-
-$(
-  function() {
-    'use strict';
     $('h2').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
@@ -94,12 +88,6 @@ $(
         }
       }
     );
-  }
-);
-
-$(
-  function() {
-    'use strict';
     $('.main p a, .main ul a, .main ol a').each(
       function (idx, a) {
         if (a.hostname && a.hostname !== window.location.hostname) {
