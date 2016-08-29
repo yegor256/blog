@@ -39,15 +39,15 @@ $(
       //     }
       //   }
       // );
-      $.getJSON(
-        'https://api.facebook.com/method/links.getStats?format=json&urls=' + url,
-        function(json) {
-          var count = json[0].total_count;
-          if (count > 0) {
-            $('.count-facebook').html(number(count)).fadeIn();
-          }
-        }
-      );
+      // $.getJSON(
+      //   'https://api.facebook.com/method/links.getStats?format=json&urls=' + url,
+      //   function(json) {
+      //     var count = json[0].total_count;
+      //     if (count > 0) {
+      //       $('.count-facebook').html(number(count)).fadeIn();
+      //     }
+      //   }
+      // );
       $.getJSON(
         'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
         function(json) {
@@ -66,15 +66,15 @@ $(
           }
         }
       );
-      $.getJSON(
-        'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
-        function(json) {
-          var count = json.result.views;
-          if (count > 0) {
-            $('.count-stumbleupon').html(number(count)).fadeIn();
-          }
-        }
-      );
+      // $.getJSON(
+      //   'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
+      //   function(json) {
+      //     var count = json.result.views;
+      //     if (count > 0) {
+      //       $('.count-stumbleupon').html(number(count)).fadeIn();
+      //     }
+      //   }
+      // );
     }
   }
 );
