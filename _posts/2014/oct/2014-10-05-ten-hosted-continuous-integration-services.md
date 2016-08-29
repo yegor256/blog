@@ -63,7 +63,7 @@ the best and highly recommended):
 <thead>
 <tr class="x-head">
   <td><!--name--></td>
-  <td class="x-bottom x-right">Price</td>
+  <td class="x-bottom x-right">Minimum price</td>
   <td class="x-vertical"><div><span>Linux<sup>1</sup></span></div></td>
   <td class="x-vertical"><div><span>Windows<sup>2</sup></span></div></td>
   <td class="x-vertical"><div><span>MacOS<sup>3</sup></span></div></td>
