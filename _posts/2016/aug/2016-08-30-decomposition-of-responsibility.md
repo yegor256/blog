@@ -131,7 +131,7 @@ The responsibility is decomposed vertically. We still have one entry point
 into the `log` object, but the object "consists" of two objects, one wrapped
 into another:
 
-{% plantuml width="50%" %}
+{% plantuml width="35%" %}
 [script] -down- [TimedLog]
 [TimedLog] -down- [Log]
 {% endplantuml %}
