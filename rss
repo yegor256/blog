@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-30T18:06:56+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-30T20:13:42+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
 &lt;strong&gt;Decomposition of responsibility&lt;/strong&gt; is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
@@ -69,7 +69,7 @@ to communicate with both of them when we want to log a line. Both
 objects of &lt;code&gt;Log&lt;/code&gt; and &lt;code&gt;Line&lt;/code&gt; are in front of us. We have to deal with
 two classes in order to log a line:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#39;/uml/3d57602798e3f97e3e8465e5ff171cf7.svg&#39; style=&quot;width:30%&quot;
+&lt;p&gt;&lt;img src=&#39;/uml/653125b6c32d12b7325dba52054c09ca.svg&#39; style=&quot;width:30%&quot;
         alt=&#39;PlantUML SVG diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
 
 &lt;p&gt;To the contrary, this decomposition of responsibility is &lt;strong&gt;vertical&lt;/strong&gt;:&lt;/p&gt;
@@ -95,7 +95,7 @@ two classes in order to log a line:&lt;/p&gt;
 into the &lt;code&gt;log&lt;/code&gt; object, but the object &amp;quot;consists&amp;quot; of two objects, one wrapped
 into another:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#39;/uml/6da7cbbc7d659eff5dd38390fe3bdd43.svg&#39; style=&quot;width:30%&quot;
+&lt;p&gt;&lt;img src=&#39;/uml/cad4de541e1ab10d3d9d751c661fe63f.svg&#39; style=&quot;width:20%&quot;
         alt=&#39;PlantUML SVG diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
 
 &lt;p&gt;In general, I think horizontal decomposition of responsibility is a bad idea,
