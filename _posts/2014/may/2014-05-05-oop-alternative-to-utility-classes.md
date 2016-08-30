@@ -166,8 +166,7 @@ All classes taking
 participation in the snippet are rather small: `Trimmed`, `FileLines`, and
 `UnicodeFile`.
 Each of them is responsible for its own single feature, thus following perfectly
-the [single responsibility
-principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
+the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 On our side, as users of the library, this may be not so important, but for
 their developers it is an imperative.

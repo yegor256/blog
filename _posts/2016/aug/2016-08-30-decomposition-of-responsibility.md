@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vertical vs. Horizontal Decomposition of Responsibility"
-date: 2016-08-23
+date: 2016-08-30
 tags: oop
 place: Palo Alto, CA
 description: |
@@ -24,6 +24,8 @@ refactoring operation: vertical and horizontal. And I believe
 the former is better than the latter.
 
 <!--more-->
+
+{% picture /images/2016/08/once-upon-a-time-in-america.jpg 0 Once Upon a Time in America (1984) by Sergio Leone %}
 
 Let's say this is our code (it is Ruby):
 
