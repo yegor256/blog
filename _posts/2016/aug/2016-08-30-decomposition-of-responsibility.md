@@ -97,7 +97,7 @@ to communicate with both of them when we want to log a line. Both
 objects of `Log` and `Line` are in front of us. We have to deal with
 two classes in order to log a line:
 
-{% plantuml width="50%" %}
+{% plantuml style="width:30%" %}
 [script] -down- [log]
 [script] -down- [Line]
 {% endplantuml %}
@@ -131,7 +131,7 @@ The responsibility is decomposed vertically. We still have one entry point
 into the `log` object, but the object "consists" of two objects, one wrapped
 into another:
 
-{% plantuml width="35%" %}
+{% plantuml style="width:30%" %}
 [script] -down- [TimedLog]
 [TimedLog] -down- [Log]
 {% endplantuml %}

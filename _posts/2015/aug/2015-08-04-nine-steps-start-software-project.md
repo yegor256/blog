@@ -107,7 +107,7 @@ Three modules make up the app: UI, scraper,
 
 Then, I attach a simple diagram to illustrate my decision:
 
-{% plantuml width="75%" %}
+{% plantuml style="width:75%" %}
 [Lucene] -down- [UI]
 [Lucene] - [Scraper]
 [Analyzer] - [Lucene]
