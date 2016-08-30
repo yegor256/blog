@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-30T08:11:52+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-30T16:06:56+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
 &lt;strong&gt;Decomposition of responsibility&lt;/strong&gt; is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
@@ -23,7 +23,7 @@ the former is better than the latter.&lt;/p&gt;
 
 &lt;p&gt;Obviously, objects of this class are doing too much.
 They save log lines to the
-file and also forwat them &amp;mdash; an obvious violation of
+file and also format them &amp;mdash; an obvious violation of
 a famous
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;.
 An object of this class would be &lt;strong&gt;responsible&lt;/strong&gt; for too many things.
@@ -36,7 +36,7 @@ No matter where we put it, this is how the
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -69,7 +69,7 @@ to communicate with both of them when we want to log a line. Both
 objects of &lt;code&gt;Log&lt;/code&gt; and &lt;code&gt;Line&lt;/code&gt; are in front of us. We have to deal with
 two classes in order to log a line:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#39;/uml/9cce7549bc1ca5082ec171143c283be9.svg&#39;
+&lt;p&gt;&lt;img src=&#39;/uml/3d57602798e3f97e3e8465e5ff171cf7.svg&#39;
         alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
 
 &lt;p&gt;To the contrary, this decomposition of responsibility is &lt;strong&gt;vertical&lt;/strong&gt;:&lt;/p&gt;
