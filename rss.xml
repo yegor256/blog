@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-29T06:15:12+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-08-30T08:11:52+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
+complexity is high, they are difficult to maintain and extend.
+&lt;strong&gt;Decomposition of responsibility&lt;/strong&gt; is what we do in order to break
+these overly complex objects into smaller ones. I see two types of this
+refactoring operation: vertical and horizontal. And I believe
+the former is better than the latter.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fonce-upon-a-time-in-america.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Once Upon a Time in America (1984) by Sergio Leone&#39;/&gt;&lt;figcaption&gt;Once Upon a Time in America (1984) by Sergio Leone&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s say this is our code (it is Ruby):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Log&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%d/%m/%Y %H:%M &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Obviously, objects of this class are doing too much.
+They save log lines to the
+file and also forwat them &amp;mdash; an obvious violation of
+a famous
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;.
+An object of this class would be &lt;strong&gt;responsible&lt;/strong&gt; for too many things.
+We have to extract some functionality out of it and put that
+into another object(s). We have to &lt;strong&gt;decompose&lt;/strong&gt; its responsibility.
+No matter where we put it, this is how the
+&lt;code&gt;Log&lt;/code&gt; class will look after the extraction:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Log&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now it only saves lines to the file, which is perfect. The class
+is cohesive and small. Let&amp;#39;s make an instance of it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/tmp/log.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next, where do we put the lines with formatting functionality that were just extracted?
+There are two approaches to decompose responsibility: horizontal and
+vertical. This one is &lt;strong&gt;horizontal&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Line&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%d/%m/%Y %H:%M &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In order to use &lt;code&gt;Log&lt;/code&gt; and &lt;code&gt;Line&lt;/code&gt; together, we have to do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;See why it&amp;#39;s horizontal? Because this script sees them
+both. They both are on the same level of visibility. We will always have
+to communicate with both of them when we want to log a line. Both
+objects of &lt;code&gt;Log&lt;/code&gt; and &lt;code&gt;Line&lt;/code&gt; are in front of us. We have to deal with
+two classes in order to log a line:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/uml/9cce7549bc1ca5082ec171143c283be9.svg&#39;
+        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
+
+&lt;p&gt;To the contrary, this decomposition of responsibility is &lt;strong&gt;vertical&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TimedLog&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%d/%m/%Y %H:%M &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Class &lt;code&gt;TimedLog&lt;/code&gt; is a decorator, and this is how we use them together:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TimeLog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, we just put a line in the log:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The responsibility is decomposed vertically. We still have one entry point
+into the &lt;code&gt;log&lt;/code&gt; object, but the object &amp;quot;consists&amp;quot; of two objects, one wrapped
+into another:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/uml/6da7cbbc7d659eff5dd38390fe3bdd43.svg&#39;
+        alt=&#39;PlantUML diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
+
+&lt;p&gt;In general, I think horizontal decomposition of responsibility is a bad idea,
+while vertical is a much better one. That&amp;#39;s because a vertically
+decomposed object decreases complexity, while a horizontally decomposed
+one actually makes things more complex because its clients have to deal with
+more dependencies and more points of contact.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>Objects responsible for too many things are a problem. Because their
+complexity is high, they are difficult to maintain and extend.
+Decomposition of responsibility is what we do in order to break
+these overly complex objects into smaller ones. I see two types of this
+refactoring operation: vertical and horizontal. And I believe
+the former is better than the latter.</summary></entry><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
 specific way. Some use Slack, Trello, or GitHub; others just sit together
 in the same room. There are many methods and tools. I believe
 it&amp;#39;s possible to rank them by the amount of &lt;strong&gt;damage&lt;/strong&gt; they cause
@@ -859,210 +968,4 @@ give us an incorrect definition of an &amp;quot;object&amp;quot;. That&amp;#39;s
 OOP world is so full of misconceptions and mistakes. Their
 definition of an object is limited by the hardware architecture they
 are working with and that&amp;#39;s why is very primitive and mechanical.
-I&amp;#39;d like to introduce a better one.</summary></entry><entry><title>Twelve Mistakes in Agile Manifesto</title><link href="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html" rel="alternate" type="text/html" title="Twelve Mistakes in Agile Manifesto" /><published>2016-07-11T00:00:00+00:00</published><updated>2016-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto</id><content type="html" xml:base="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html">&lt;p&gt;Nowadays, &lt;a href=&quot;http://www.agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; is a Bible of
-numerous software teams. It contains
-&lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;12 principles&lt;/a&gt; which
- show us how software development should be organized.
-These principles were invented in 2001.
-Generally, I like and agree with all of them. However, in practice, most software teams
-misunderstand them. Consequently, here is a summary of what&amp;#39;s going on and my
-interpretation of each principle.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2Fhail-caesar.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Hail, Caesar! (2016) by Coen Brothers&#39;/&gt;&lt;figcaption&gt;Hail, Caesar! (2016) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #1&lt;/strong&gt;:
-&amp;quot;Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If the customer is not satisfied, we find another customer&lt;/aside&gt;
-
-&lt;p&gt;By focusing on &amp;quot;satisfy the customer&amp;quot;, Agile adepts totally forget about
-the &amp;quot;through&amp;quot; part. They think that a &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;happy customer&lt;/a&gt;
-is their true objective, while &amp;quot;continuous delivery&amp;quot; is something that obviously
-helps, though not crucially. However, this is quite the opposite &amp;mdash; the customer
-will be satisfied &lt;strong&gt;if&lt;/strong&gt; the software is perfectly created and delivered. If the
-customer is not satisfied, we find another customer &amp;mdash; that&amp;#39;s the
-true spirit a professional software team should adhere to. I believe that&amp;#39;s what
- the Manifesto means. We make sure that our process is
-&amp;quot;early and continuous&amp;quot;, which will result to customer satisfaction. We focus on improving
-our process, not satisfying the customer. Satisfaction is the consequence, not
-the primary objective.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #2&lt;/strong&gt;:
-&amp;quot;Welcome changing requirements, even late in development. Agile processes harness change for the customer&amp;#39;s competitive advantage.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Most Agile teams understand the word &amp;quot;welcome&amp;quot; here as a permission to forget
-about any &lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;requirements&lt;/a&gt;
-management at all. What is the easiest way to welcome
-change? Obviously, just get rid of any requirement documents!
-In this case, any change will be welcome, since it won&amp;#39;t affect anything.
-There simply won&amp;#39;t be anything to affect. But this is not what the Manifesto
-means! This principle means that our requirements management process is so
-&lt;strong&gt;powerful&lt;/strong&gt; that it can accept change at any moment. However, it&amp;#39;s rather difficult to
-achieve, if requirements are actually documented.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #3&lt;/strong&gt;:
-&amp;quot;Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;This terrific rule is usually understood as an order for the entire team. The
-team has to frequently deliver, while programmers are free to deliver almost
-nothing and who knows when. I think the Manifesto here is emphasizing on
-both individual and group responsibilities to frequently deliver. I also think
-that this frequency should be way higher than just a &amp;quot;couple of weeks&amp;quot;. Today, with
-modern technologies and instruments, we can deliver way faster &amp;mdash; several
-times a day.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #4&lt;/strong&gt;:
-&amp;quot;Business people and developers must work together daily throughout the project.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Working together means quicker turnarounds in communication not lack or roles and responsibilites&lt;/aside&gt;
-
-&lt;p&gt;Working together doesn&amp;#39;t mean working without clearly defined
-rules and processes. However, most teams understand this principle as
-a legalization of chaos. They think that since we work together, we don&amp;#39;t need to define roles
-any more, we should not document &lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;requirements&lt;/a&gt;,
-we shouldn&amp;#39;t care about responsibilities. Ultimately in the end, we neither know who is
-doing what nor the team&amp;#39;s structure. That&amp;#39;s not what the Manifesto
-is talking about! &amp;quot;Working together&amp;quot; means quicker turnarounds in communication and
-shorter response cycles. It definitely doesn&amp;#39;t mean lack of roles and responsibilities.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #5&lt;/strong&gt;:
-&amp;quot;Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Trust doesn&amp;#39;t mean lack of control&lt;/aside&gt;
-
-&lt;p&gt;Trust is a great word and concept, but it doesn&amp;#39;t replace another equally great
-word &amp;mdash; control. Most Agile teams think that trust means
-exactly that &amp;mdash; complete lack of any validation, verification, responsibility,
-and control. &amp;quot;We trust our programmers to write perfect codes&amp;quot; &amp;mdash;
-I&amp;#39;ve heard that countless times which is simply wrong. This principle means something completely different.
-It means that when clearly defined tasks are assigned to their
-performers, we fully delegate responsibilities to them. We
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;motivate&lt;/a&gt;
-them to be fully responsible for the end result. However, we
-&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;don&amp;#39;t help&lt;/a&gt; them.
-Instead, we trust them as self-sufficient individuals, capable
-of completing assigned tasks on their own.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #6&lt;/strong&gt;:
-&amp;quot;The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Face-to-face doesn&amp;#39;t mean at the same office, especially now&lt;/aside&gt;
-
-&lt;p&gt;Face-to-face doesn&amp;#39;t mean sitting in the same office. The Manifesto doesn&amp;#39;t say
-anything about co-located or distributed teams. It&amp;#39;s obvious that in modern software projects,
-virtual communications (over video calls) are way more effective than
-staying together in the same country, same city, same office, and same room.
-Therefore, most Agile adepts still promote on-site development style, using
-Agile Manifesto as proof. That&amp;#39;s a mistake; face-to-face means something
-totally different from what it meant 15 years ago, when the Manifesto was written.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #7&lt;/strong&gt;:
-&amp;quot;Working software is the primary measure of progress.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;This doesn&amp;#39;t mean that we should not measure anything else. Of course, the
-working software is the &lt;strong&gt;primary&lt;/strong&gt; measure, but there are many other
-measures, which we can and must use. For example, the amount of features
-documented, implemented and delivered;
-or the amount of lines of code added to the project (don&amp;#39;t smile, &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;read&lt;/a&gt;);
-or the amount of &lt;a href=&quot;/2015/09/10/testing-exit-criteria.html&quot;&gt;bugs found&lt;/a&gt;;
-or the amounts of &lt;a href=&quot;/2016/01/19/how-expensive-is-outsourcing.html&quot;&gt;dollars spent&lt;/a&gt;.
-There are many other metrics. We can use many of them. However, a typical
-mistake many Agile teams are doing is just ignoring them all. They say
-&amp;quot;we measure only the end result&amp;quot;. That&amp;#39;s not what the Manifesto
-is suggesting to do though.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #8&lt;/strong&gt;:
-&amp;quot;Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;We must remember that any project is first of all a money burning machine&lt;/aside&gt;
-
-&lt;p&gt;This doesn&amp;#39;t mean that we should indefinitely &lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;burn&lt;/a&gt;
-customers&amp;#39; money. Yes, we
-should be developing at some given speed, but we should always remember
-whose money we&amp;#39;re spending &amp;mdash; customers&amp;#39; money. The Manifesto doesn&amp;#39;t say anything
-about the cost of development and that&amp;#39;s probably because it was written by
-those who make money (programmers), not those who spend it (customers). We must therefore
-remember that any project is first of all a money burning machine. That&amp;#39;s why
-the team must always measure its
-&lt;a href=&quot;/2016/01/19/how-expensive-is-outsourcing.html&quot;&gt;burn rate&lt;/a&gt;
-and make sure it&amp;#39;s aligned with
-the amount of business value the team delivers. Just being a
-&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;happy team&lt;/a&gt;
-is not what the Manifesto suggests, but that&amp;#39;s exactly how many understand this principle.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #9&lt;/strong&gt;:
-&amp;quot;Continuous attention to technical excellence and good design enhances agility.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s a perfect principle that says so much and doesn&amp;#39;t say anything at
-the same time. What exactly is &amp;quot;attention&amp;quot;? I can explain. It means
-&lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;rules and policies&lt;/a&gt;.
-First of all, any policy means &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punishment&lt;/a&gt; to those
-who violate rules. Thus, if an Agile team really means continuous
-attention to technical excellence, it must have a &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality policy&lt;/a&gt;.
-That policy must clearly define which design is good and which is bad, which piece
-of Java code is excellent, which is ugly, etc. Additionally, the policy must say
-what happens to those who &lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;violate&lt;/a&gt;
-the principles of excellence. However, most Agile
-teams understand &amp;quot;quality&amp;quot; as a great flag to hang on the wall, but
-get scared when I ask, &amp;quot;what happens if someone delivers low quality?&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #10&lt;/strong&gt;:
-&amp;quot;Simplicity &amp;mdash; the art of maximizing the amount of work not done &amp;mdash; is essential.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s a great rule which most Agile teams don&amp;#39;t follow at all. This principle
-means that our tasks are small and simple enough to make sure they are either
-doable or cancellable. Huge tasks are the biggest threat to manageability of
-any team, be it Agile or not. This principle encourages us to give programmers
-small tasks, which they can easily be completed. However, most of Agile adepts
-simplicity being equal to stupidity. They are not equal. A simple task doesn&amp;#39;t
-mean a stupid or non-important tasks. A simple task is a clearly defined, small,
-and doable work order.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #11&lt;/strong&gt;:
-&amp;quot;The best architectures, requirements, and designs emerge from self-organizing teams.&amp;quot;&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Self-organized doesn&amp;#39;t mean un-organized&lt;/aside&gt;
-
-&lt;p&gt;Self-organized doesn&amp;#39;t mean un-organized. This rule is often translated
-as a legalization of &lt;strong&gt;anarchy&lt;/strong&gt;. We don&amp;#39;t need any project managers,
-processes, discipline, rules, or policies &amp;mdash; we&amp;#39;ve got
-&lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;holacracy&lt;/a&gt; instead!
-We also don&amp;#39;t need a software architect &amp;mdash; our programmers can make
-all technical decisions at regular &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meetings&lt;/a&gt;!
-Furthermore, we don&amp;#39;t want our programmers
-to be individually responsible for anything &amp;mdash; they are always together
-in all risks and issues. Stop that nonsense! This is not what the Manifesto means.
-A self-organizing team is a team that doesn&amp;#39;t need any supervision from the outside;
-a team that has clearly defined roles from the inside;
-a team with a perfect inner discipline;
-a team with professional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;management&lt;/a&gt;.
-Not with the lack of all that.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principle #12&lt;/strong&gt;:
-&amp;quot;At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s a great principle which is translated into so-called retrospective
-meetings. They work just fine as long as decisions
-make the team better. Unfortunately, in most cases, programmers in Agile teams are
-trying to &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;survive&lt;/a&gt;,
-instead of making their teams more effective. Even though the
-principle says that the team has to become more effective, those retrospective
-meetings help programmers to become more effective (read &amp;quot;more secure&amp;quot;) in
-the team. That&amp;#39;s only natural for people, but leads to the overall degradation
-of the team. It&amp;#39;s well known that the best team is the one that is capable of
-quickly and inevitably &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;rejecting&lt;/a&gt;
-bad elements. Does your team do that effectively?
-Do retrospective meetings help in that? I doubt it. Therefore, I believe that
-what the Manifesto means here is not the meetings. It means that the team must have
-an effective mechanism of self-regulation and self-improvement. Additionally, retrospective
-meetings simply can&amp;#39;t be that mechanism because they prevent the team from making
-difficult disciplinary decisions.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><category term="agile" /><summary>Nowadays, Agile Manifesto is a Bible of
-numerous software teams. It contains
-12 principles which
- show us how software development should be organized.
-These principles were invented in 2001.
-Generally, I like and agree with all of them. However, in practice, most software teams
-misunderstand them. Consequently, here is a summary of what&amp;#39;s going on and my
-interpretation of each principle.</summary></entry></feed>
+I&amp;#39;d like to introduce a better one.</summary></entry></feed>
