@@ -57,7 +57,7 @@ class Log
   def initialize(path)
     @file = IO.new(path, 'a')
   end
-  def put(text)
+  def put(line)
     @file.puts line
   end
 end
