@@ -99,7 +99,7 @@ two classes in order to log a line:
 
 {% plantuml %}
 [script] -down- [log]
-[script] -down- [Line.new()]
+[script] -down- [Line]
 {% endplantuml %}
 
 To the contrary, this decomposition of responsibility is **vertical**:
