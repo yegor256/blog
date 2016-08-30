@@ -118,7 +118,7 @@ end
 Class `TimedLog` is a decorator, and this is how we use them together:
 
 {% highlight ruby %}
-log = TimeLog.new(log)
+log = TimedLog.new(log)
 {% endhighlight %}
 
 Now, we just put a line in the log:
