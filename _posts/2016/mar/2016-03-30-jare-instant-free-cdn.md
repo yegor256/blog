@@ -215,7 +215,7 @@ through their edge nodes is to create a "distribution" and configure it.
 A distribution is basically a connector between content origin and
 edge servers:
 
-{% plantuml %}
+{% plantuml width="75%" %}
 skinparam componentStyle uml2
 Browser -right-> [Edge]
 [Edge] -right-> [Central]
@@ -242,7 +242,7 @@ it's a time consuming operation.
 Jare.io is an extra component in that diagram, which makes your
 life easier:
 
-{% plantuml %}
+{% plantuml width="75%" %}
 skinparam componentStyle uml2
 Browser -right-> [Edge]
 [Edge] -right-> [Central]
