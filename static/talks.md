@@ -77,18 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
-[Pirate Summit](http://www.piratesummit.com/agenda-speaker/)<br/>
-Cologne, Germany<br/>
-6 September 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
-[Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
-Salamanca, Spain<br/>
-7-8 September 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
 **Meetings or Discipline, It's Your Choice**<br/>
 [SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
