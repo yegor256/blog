@@ -44,7 +44,7 @@ skip = File.readlines('/code/home/leads/skip.txt').map(&:strip)
 if opts[:dry]
   emails = ['Yegor Bugayenko,test@yegor256.com']
 else
-  emails = File.readlines(opts[:file]).collect(&:strip).reject(&:blank?).uniq
+  emails = File.readlines(opts[:file]).collect(&:strip).reject(&:empty?).uniq
 end
 
 total = 0
