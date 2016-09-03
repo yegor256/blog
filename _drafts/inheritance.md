@@ -32,28 +32,32 @@ I've been interviewing [David West](http://davewest.us/)
 (the author of [Object Thinking](http://amzn.to/266oJr4), my favorite book about OOP)
 a few weeks ago and he said that inheritance should not exist in
 object-oriented programming at all ([full video](https://www.youtube.com/watch?v=s-hdZZzMCac)).
-Maybe David is right and we should totally forget `extends` keyword in Java?
+Maybe David is right and we should totally forget `extends` keyword in Java,
+for example?
 
 <!--more-->
 
 I think we should. And I think I know the reason why.
 
-And it's not because we lose flexibility and introduce coupling, as Allen Holub
-said in his JavaWorld blog
-[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html),
+And it's not because we lose flexibility and introduce unnecessary coupling,
+as Allen Holub
+said in his
+[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) blog at JavaWorld,
 even though he is definitely right.
 
 We [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
-it in our Gitter chat a week ago and found out that inheritance,
+this problem in our
+[Gitter chat](https://gitter.im/yegor256/elegantobjects)
+a week ago and found out that "inheritance",
 as a term, doesn't really make sense if you think more about it.
+
 Don't get me wrong, but [inheritance](https://en.wikipedia.org/wiki/Inheritance)
 literally is "the practice of passing on property, titles, debts, rights, and obligations
 upon the death of an individual."
-
-When class `Cat` inherits class `Animal` who exactly is dying and what properties,
+When class `Cat` inherits class `Animal` who exactly is _dying_ and what _properties_,
 titles or debts are being passed? You may say that I'm being silly and inheritance
 doesn't really mean exactly that in OOP, but let me show you that someone
-is dead and some properties are passed, indeed.
+is _dead_ indeed and some properties and titles are really passed.
 
 Here is the `Animal`:
 
