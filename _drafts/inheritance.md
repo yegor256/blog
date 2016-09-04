@@ -32,7 +32,7 @@ I've been interviewing [David West](http://davewest.us/)
 (the author of [Object Thinking](http://amzn.to/266oJr4), my favorite book about OOP)
 a few weeks ago and he said that inheritance should not exist in
 object-oriented programming at all ([full video](https://www.youtube.com/watch?v=s-hdZZzMCac)).
-Maybe David is right and we should totally forget `extends` keyword in Java,
+Maybe Dr. West is right and we should totally forget `extends` keyword in Java,
 for example?
 
 <!--more-->
@@ -40,57 +40,87 @@ for example?
 I think we should. And I think I know the reason why.
 
 And it's not because we introduce unnecessary coupling, as Allen Holub said in his
-[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article,
-even though he is definitely right.
+[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
+He was definitely right, but it's not the root cause of the problem, I think.
 
-I think it's because inheritance is a _procedural_ technique
-of _code reuse_, which, no surprise, introduces all that problems
-in OOP people are writing about for years, because it is procedural.
+"Inherit", as an English verb, has a number of meanings.
+[This one](http://www.oxforddictionaries.com/us/definition/american_english/inherit)
+is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
+"derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors".
 
-Either prototypal or class-based inheritance
+Deriving a characteristic from another object is a perfect idea and it's called
+[subtyping](https://en.wikipedia.org/wiki/Subtyping).
+It perfectly fits into OOP and actually enables
+[polymorphism](https://en.wikipedia.org/wiki/Polymorphism_%28computer_science%29):
+an object of class `Article` inherits all characteristics of objects of class `Manuscript`
+and adds its own. For example, it _inherits_ an ability to print itself
+and _adds_ an ability to submit itself to a conference:
 
-We [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
+{% highlight java %}
+interface Manuscript {
+  void print(Console console);
+}
+interface Article extends Manuscript {
+  void submit(Conference cnf);
+}
+{% endhighlight %}
+
+This is _subtyping_ and it's a perfect technique: whenever a
+manuscript is required we can provide an article and nobody will
+notice anything, because type `Article` is a subtype of type `Manuscript`
+([Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)).
+
+But what _copying_ of methods and attributes from parent class to a child
+one has to do with "deriving characteristics"? Implementation inheritance
+is exactly that copying and it has nothing to do with the meaning
+of word "inherit" I quoted above.
+
+Implementation inheritance is much closer to a different
+[meaning](http://www.oxforddictionaries.com/us/definition/american_english/inherit):
+"receive (money, property, or a title) as an heir at the death of the previous holder".
+Who is dead, you ask? An object is dead if it allows other objects
+_inherit_ its encapsulated code and data. This is implementation
+inheritance:
+
+{% highlight java %}
+class Manuscript {
+  protected String body;
+  void print(Console console) {
+    System.out.println(this.body);
+  }
+}
+class Article extends Manuscript {
+  void submit(Conference cnf) {
+    cnf.send(this.body);
+  }
+}
+{% endhighlight %}
+
+Class `Article` **copies** method `print()` and attribute `body`
+from class `Manuscript`, as if it's not a
+[living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}), but a dead
+one and we can inherit its parts, "money, properties or a title."
+
+Implementation inheritance was created as a mechanism of
+[code reuse](https://en.wikipedia.org/wiki/Code_reuse)
+and it doesn't fit into OOP at all. Yes, it may look convenient in the
+beginning, but it is absolutely wrong in terms of "object thinking".
+Just like [getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+implementation inheritance turns
+objects into _containers_ with data and procedures. Of course, it's
+convenient to copy some of that data and procedures to a new object,
+in order to avoid code duplication. But this is not what objects are about. They
+are not dead, they are alive!
+
+Don't kill them with inheritance :)
+
+Thus, I think inheritance is bad because it is a _procedural_ technique of _code reuse_.
+No surprise it introduces all that problems people have been talking about for years.
+Because it is procedural!
+That's why it doesn't fit into object-oriented programming.
+
+By the way, we [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
 this problem in our
 [Gitter chat](https://gitter.im/yegor256/elegantobjects)
-a week ago and found out that "inheritance",
-as a term, doesn't really make sense if you think more about it.
-
-Don't get me wrong, but [inheritance](https://en.wikipedia.org/wiki/Inheritance)
-literally is "the practice of passing on property, titles, debts, rights, and obligations
-upon the death of an individual."
-When class `Cat` inherits class `Animal` who exactly is _dying_ and what _properties_,
-titles or debts are being passed? You may say that I'm being silly and inheritance
-doesn't really mean exactly that in OOP, but let me show you that someone
-is _dead_ indeed and some properties and titles are really passed.
-
-Here is `Animal` class:
-
-{% highlight java %}
-class Animal {
-  protected String name;
-  public void move() {
-    System.out.println("left, right...");
-  }
-}
-{% endhighlight %}
-
-And this is `Cat` class:
-
-{% highlight java %}
-class Cat extends Animal {
-  public void meow() {
-    System.out.println("meow!");
-  }
-}
-{% endhighlight %}
-
-
-
-The main issue, I believe is that the term inheritance makes sense
-only if objects are containers of data attributes. In that case,
-a `Cat` inherits them from an `Animal`. But if an object is a black box
-with exposed behavior then how an ability to
-
-
-
-
+a week ago and that's when it became obvious to me what exactly is
+wrong with inheritance. Take a look at our discussion there.
