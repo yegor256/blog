@@ -59,7 +59,7 @@ titles or debts are being passed? You may say that I'm being silly and inheritan
 doesn't really mean exactly that in OOP, but let me show you that someone
 is _dead_ indeed and some properties and titles are really passed.
 
-Here is the `Animal`:
+Here is `Animal` class:
 
 {% highlight java %}
 class Animal {
@@ -70,7 +70,7 @@ class Animal {
 }
 {% endhighlight %}
 
-And this is the `Cat`:
+And this is `Cat` class:
 
 {% highlight java %}
 class Cat extends Animal {
@@ -86,6 +86,7 @@ The main issue, I believe is that the term inheritance makes sense
 only if objects are containers of data attributes. In that case,
 a `Cat` inherits them from an `Animal`. But if an object is a black box
 with exposed behavior then how an ability to
+
 
 
 
