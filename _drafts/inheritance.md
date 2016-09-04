@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Inheritance is Bad?"
+title: "Inheritance is a Procedural Technique of Code Reuse"
 date: 2016-09-04
 tags: oop
 place: Palo Alto, CA
@@ -39,11 +39,15 @@ for example?
 
 I think we should. And I think I know the reason why.
 
-And it's not because we lose flexibility and introduce unnecessary coupling,
-as Allen Holub
-said in his
-[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) blog at JavaWorld,
+And it's not because we introduce unnecessary coupling, as Allen Holub said in his
+[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article,
 even though he is definitely right.
+
+I think it's because inheritance is a _procedural_ technique
+of _code reuse_, which, no surprise, introduces all that problems
+in OOP people are writing about for years, because it is procedural.
+
+Either prototypal or class-based inheritance
 
 We [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
 this problem in our

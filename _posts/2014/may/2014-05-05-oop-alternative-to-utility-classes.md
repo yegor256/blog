@@ -173,7 +173,7 @@ their developers it is an imperative.
 It is much easier to develop, maintain and unit-test class `FileLines` rather
 than using a `readLines()` method in a 80+ methods and 3000 lines utility class
 `FileUtils`. Seriously, look at
-[its source code](http://svn.apache.org/viewvc/commons/proper/io/trunk/src/main/java/org/apache/commons/io/FileUtils.java?view=co).
+[its source code](https://github.com/apache/commons-io/blob/commons-io-2.5/src/main/java/org/apache/commons/io/FileUtils.java).
 
 An object-oriented approach enables lazy execution. The `in` file is not read
 until its data is required. If we fail to open `out` due to some I/O error, the

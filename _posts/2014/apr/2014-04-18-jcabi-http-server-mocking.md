@@ -103,8 +103,7 @@ clarity, I would recommend you stop the container in the `finally` block.
 
 On line 12, I ask the stopped container to give me the first request it
 received. This mechanism is similar conceptually to the "verify" technology of
-mocking frameworks. For example,
-[Mockito](http://docs.mockito.googlecode.com/hg/org/mockito/Mockito.html#4).
+mocking frameworks. For example, [Mockito](http://mockito.org/).
 
 {% highlight java %}
 MkQuery query = container.take();
