@@ -20,14 +20,18 @@ $(function() {
       }
     );
     var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]);
-    $.getJSON(
-      'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
-      function (data) {
+    $.ajax({
+      dataType: 'json',
+      url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
+      success: function (data) {
         if (data.GooglePlusOne !== 0) {
           $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-googleplus').css('border', '1px solid red');
       }
-    );
+    });
     // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
     // $.getJSON(
     //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + url,
@@ -47,29 +51,39 @@ $(function() {
     //     }
     //   }
     // );
-    $.getJSON(
-      'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
-      function(json) {
+    $.ajax({
+      dataType: 'json',
+      url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
+      success: function(json) {
         var count = json.count;
         if (count > 0) {
           $('.count-linkedin').html(number(count)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-linkedin').css('border', '1px solid red');
       }
-    );
-    $.getJSON(
-      'http://www.reddit.com/api/info.json?jsonp=?&url=' + url,
-      function(json) {
+    });
+    $.ajax({
+      dataType: 'json',
+      url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + url,
+      success: function(json) {
         var count = json.data.children.length;
         if (count > 0) {
           $('.count-reddit').html(number(count)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-reddit').css('border', '1px solid red');
       }
-    );
+    });
     // https://jsonp.afeld.me/
     $.ajax({
       url: 'http://jsonp.afeld.me/?url=' +
         'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
         + encodeURI(url),
+      async: true,
+      timeout: 2000, // 2 sec
       dataType: 'jsonp',
       jsonp: 'callback',
       jsonpCallback: 'x',
@@ -78,17 +92,25 @@ $(function() {
         if (count > 0) {
           $('.count-stumbleupon').html(number(count)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-stumbleupon').css('border', '1px solid red');
       }
     });
-    $.getJSON(
-      'http://hn.algolia.com/api/v1/search?tags=story&restrictSearchableAttributes=url&query=' + url,
-      function(json) {
+    $.ajax({
+      dataType: 'json',
+      url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query='
+        + url.replace('http://www.yegor256.com', ''),
+      success: function(json) {
         var count = json.nbHits;
         if (count > 0) {
           $('.count-hackernews').html(number(count)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-hackernews').css('border', '1px solid red');
       }
-    );
+    });
   }
   $('h2').each(
     function (idx, element) {
