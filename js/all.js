@@ -70,6 +70,8 @@ $(function() {
       url: 'http://jsonp.afeld.me/?url=' +
         'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
         + encodeURI(url),
+      async: true,
+      timeout: 5000, // 5 sec
       dataType: 'jsonp',
       jsonp: 'callback',
       jsonpCallback: 'x',
