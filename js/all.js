@@ -71,7 +71,7 @@ $(function() {
         'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
         + encodeURI(url),
       async: true,
-      timeout: 5000, // 5 sec
+      timeout: 2000, // 2 sec
       dataType: 'jsonp',
       jsonp: 'callback',
       jsonpCallback: 'x',
