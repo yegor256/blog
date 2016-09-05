@@ -69,53 +69,53 @@ typical failures. Most of the code we're working on now is legacy
 (a.k.a. [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})).
 I read this book as a novel.
 
-{% badge /images/2015/04/book-continuous-delivery.jpg 96 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=MPZUCBXBGNOIHDDI %}
-[**Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation**](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=MPZUCBXBGNOIHDDI)
+{% badge /images/2015/04/book-continuous-delivery.jpg 96 http://amzn.to/2c7sR4V %}
+[**Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation**](http://amzn.to/2c7sR4V)
 by Jez Humble and David Farley.
 This is a perfect book about software delivery,
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
 testing, packaging, versioning, and many other techniques involved in programming.
 It's definitely a must-read for anyone who is serious about software engineering.
 
-{% badge /images/2015/04/book-xml-nutshell.jpg 96 http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0596007647&linkCode=as2&tag=yegor256com-20&linkId=MWLP356M3CQZSBS7 %}
-[**XML in a Nutshell, Third Edition**](http://www.amazon.com/gp/product/0596007647/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0596007647&linkCode=as2&tag=yegor256com-20&linkId=MWLP356M3CQZSBS7)
+{% badge /images/2015/04/book-xml-nutshell.jpg 96 http://amzn.to/2bNiHWD %}
+[**XML in a Nutshell, Third Edition**](http://amzn.to/2bNiHWD)
 by Elliotte Rusty Harold and W. Scott Means.
 XML is my favorite standard. And I hated it before I read this book. I didn't
 understand all the strange prefixes, namespaces, XPath expressions, and
 schemes. Just this one book changed everything, and ever since reading it, I've used XML
 everywhere. It is very well written and easy to read. It's a must for everybody.
 
-{% badge /images/2015/04/book-java-concurrency.jpg 96 http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=AN4H5FISUMRSU3XD %}
-[**Java Concurrency in Practice**](http://www.amazon.com/gp/product/0321349601/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321349601&linkCode=as2&tag=yegor256com-20&linkId=AN4H5FISUMRSU3XD)
+{% badge /images/2015/04/book-java-concurrency.jpg 96 http://amzn.to/2cs3KZR %}
+[**Java Concurrency in Practice**](http://amzn.to/2cs3KZR)
 by Brian Goetz et al.
 This is a very practical book about Java multi-threading, and at the same time,
 it provides a lot of theoretical knowledge about concurrency in general. I highly
 recommend you read it at least once.
 
-{% badge /images/2015/04/book-c++.jpg 96 http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1491903996&linkCode=as2&tag=yegor256com-20&linkId=PUWBN5SFCGEQH3YH %}
-[**Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14**](http://www.amazon.com/gp/product/1491903996/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1491903996&linkCode=as2&tag=yegor256com-20&linkId=PUWBN5SFCGEQH3YH)
+{% badge /images/2015/04/book-c++.jpg 96 http://amzn.to/2bQV0uE %}
+[**Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14**](http://amzn.to/2bQV0uE)
 by Scott Meyers.
 No matter what language you're using, this book is very interesting and
 very useful. It makes many important suggestions about better C++ coding. If
 you understand most of them, your Java/Ruby/Python/Scala coding skills will
 improve significantly.
 
-{% badge /images/2015/04/book-code-complete.jpg 96 http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619670&linkCode=as2&tag=yegor256com-20&linkId=KWY7Y3BVH5URNCK3 %}
-[**Code Complete: A Practical Handbook of Software Construction, Second Edition**](http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619670&linkCode=as2&tag=yegor256com-20&linkId=KWY7Y3BVH5URNCK3)
+{% badge /images/2015/04/book-code-complete.jpg 96 http://amzn.to/2cs4cXW %}
+[**Code Complete: A Practical Handbook of Software Construction, Second Edition**](http://amzn.to/2cs4cXW)
 by Steve McConnell.
 Consider this the bible of clean coding. Read it a few times and use it as a reference
 manual in debates with your colleagues. It mentions the most terrible anti-patterns
 and worst practices you'll see in modern programming. To be a good programmer,
 you must know all of them.
 
-{% badge /images/2015/04/book-estimation.jpg 96 http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00JDMPOVQ&linkCode=as2&tag=yegor256com-20&linkId=HDYS46EBUPXYSNDD %}
-[**Software Estimation: Demystifying the Black Art**](http://www.amazon.com/gp/product/B00JDMPOVQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00JDMPOVQ&linkCode=as2&tag=yegor256com-20&linkId=HDYS46EBUPXYSNDD)
+{% badge /images/2015/04/book-estimation.jpg 96 http://amzn.to/2bNiZws %}
+[**Software Estimation: Demystifying the Black Art**](http://amzn.to/2bNiZws)
 by Steve McConnell.
 This one's an interesting read about software engineering and its most tricky part &mdash; estimations.
 At the least, read it to be aware of the problem and possible solutions.
 
-{% badge /images/2015/04/book-use-cases.jpg 96 http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0201702258&linkCode=as2&tag=yegor256com-20&linkId=VGRW6G3LUVKEB72C %}
-[**Writing Effective Use Cases**](http://www.amazon.com/gp/product/0201702258/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0201702258&linkCode=as2&tag=yegor256com-20&linkId=VGRW6G3LUVKEB72C)
+{% badge /images/2015/04/book-use-cases.jpg 96 http://amzn.to/2c5n0eK %}
+[**Writing Effective Use Cases**](http://amzn.to/2c5n0eK)
 by Alistair Cockburn.
 An old and very good book, you won't actually use anything from this in your
 real projects, but you will pick up the philosophy of use cases, which will
@@ -123,31 +123,31 @@ redirect your mind in the right direction. Don't take this book as something
 practical; these use cases are hardly used anywhere today, but the idea of
 scoping functionality this way is absolutely right.
 
-{% badge /images/2015/04/book-requirements.jpg 96 http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00JDMPMOA&linkCode=as2&tag=yegor256com-20&linkId=PRSWJK34HNP355LK %}
-[**Software Requirements, Third Edition**](http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00JDMPMOA&linkCode=as2&tag=yegor256com-20&linkId=PRSWJK34HNP355LK)
+{% badge /images/2015/04/book-requirements.jpg 96 http://amzn.to/2cgyB9t %}
+[**Software Requirements, Third Edition**](http://amzn.to/2cgyB9t)
 by Karl Wiegers (author) and Joy Beatty.
 A superb book about requirements analysis, the first and most important
 activity in any software project. Even if you're not an analyst, this book
 is a must-read.
 
-{% badge /images/2015/04/book-git.jpg 96 http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449316387&linkCode=as2&tag=yegor256com-20&linkId=LTNZ7XPLDEG4MEJO %}
-[**Version Control With Git: Powerful Tools and Techniques for Collaborative Software Development**](http://www.amazon.com/gp/product/1449316387/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449316387&linkCode=as2&tag=yegor256com-20&linkId=LTNZ7XPLDEG4MEJO)
+{% badge /images/2015/04/book-git.jpg 96 http://amzn.to/2crIfoY %}
+[**Version Control With Git: Powerful Tools and Techniques for Collaborative Software Development**](http://amzn.to/2crIfoY)
 by Jon Loeliger and Matthew McCullough.
 This title serves as a practical guide for Git, a version control system. Read it from
 cover to cover and you will save many hours of your time in the future.
 Git is a de-facto standard in version control, and every programmer must
 know its fundamental principles &mdash; not from a cheat sheet but from an original source.
 
-{% badge /images/2015/04/book-javascript.jpg 96 http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004XQX4K0&linkCode=as2&tag=yegor256com-20&linkId=U37POLMQHPZMXXAP %}
-[**JavaScript: The Definitive Guide: Activate Your Web Pages**](http://www.amazon.com/gp/product/B004XQX4K0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004XQX4K0&linkCode=as2&tag=yegor256com-20&linkId=U37POLMQHPZMXXAP)
+{% badge /images/2015/04/book-javascript.jpg 96 http://amzn.to/2cgyfQj %}
+[**JavaScript: The Definitive Guide: Activate Your Web Pages**](http://amzn.to/2cgyfQj)
 by David Flanagan.
 JavaScript is a language of the modern Web, and this book explains it very well.
 No matter what kind of software you develop, you must know JavaScript. Don't read
 it as a practical guide (even though it's called a guide) but rather as
 food for thought. JavaScript offers a lot to learn for Java/Ruby/Python developers.
 
-{% badge /images/2015/04/book-css.jpg 96 http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00457X7L8&linkCode=as2&tag=yegor256com-20&linkId=PSW6X7D2VCCBS6OL %}
-[**CSS: The Definitive Guide**](http://www.amazon.com/gp/product/B00457X7L8/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00457X7L8&linkCode=as2&tag=yegor256com-20&linkId=PSW6X7D2VCCBS6OL)
+{% badge /images/2015/04/book-css.jpg 96 http://amzn.to/2cs55ju %}
+[**CSS: The Definitive Guide**](http://amzn.to/2cs55ju)
 by Eric A. Meyer.
 CSS is not just about colors and shadows, and it's not only for graphic designers.
 CSS is a key language of the modern Web. Every developer must know it, whether

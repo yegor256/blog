@@ -42,7 +42,7 @@ with a more robust level of detail or on a much higher level of abstraction.
 For example, Chapter 3 contains an eleven-page checklist to be used
 by a code reviewer in order to find programming mistakes.
 This list is definitely not comprehensive and it can't compete with, say,
-["Code Complete"](http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0735619670&linkCode=as2&tag=yegor256com-20&linkId=2H4TSJALESCE7Z7I) by Steve McConnell.
+["Code Complete"](http://amzn.to/2bNjO8C) by Steve McConnell.
 I believe, this checklist had significant value twenty years ago, but now it is out of date.
 
 Chapter 5 discusses basic principles and strategies of unit testing.

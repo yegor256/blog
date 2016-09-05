@@ -59,9 +59,9 @@ a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) server.
 
-{% badge /images/2014/07/continuous-delivery-book.png 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
+{% badge /images/2014/07/continuous-delivery-book.png 100 http://amzn.to/2bQVmlb %}
 
-[Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
+[Continuous Delivery by Jez Humble et. al.](http://amzn.to/2bQVmlb)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 
 There are a few good tools on the market, which automate DevOps procedures.

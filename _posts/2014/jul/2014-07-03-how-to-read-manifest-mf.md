@@ -105,7 +105,7 @@ retrieved from `MANIFEST.MF` of the deployed WAR package, on every page click.
 ## Credentials
 
 Although this may be considered as a bad practice
-(see [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
+(see [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://amzn.to/2bQVmlb)
 by Jez Humble and David Farley), sometimes it is convenient to package production
 credentials right into the JAR/WAR archive during the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})/delivery cycle.
