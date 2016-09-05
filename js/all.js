@@ -109,8 +109,9 @@ $(function() {
       dataType: 'json',
       async: true,
       timeout: timeout,
-      url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query='
-        + url.replace('http://www.yegor256.com', ''),
+      url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
+        + url.replace('http://www.yegor256.com', '')
+        + '"',
       success: function(json) {
         var count = json.nbHits;
         if (count > 0) {
