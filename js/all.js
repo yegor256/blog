@@ -83,7 +83,7 @@ $(function() {
       }
     });
     $.getJSON(
-      'http://hn.algolia.com/api/v1/search?tags=story&restrictSearchableAttributes=url&query=' + url,
+      'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query=' + url.replace('http://www.yegor256.com', ''),
       function(json) {
         var count = json.nbHits;
         if (count > 0) {
