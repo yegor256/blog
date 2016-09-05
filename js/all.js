@@ -80,6 +80,15 @@ $(function() {
         }
       }
     });
+    $.getJSON(
+      'http://hn.algolia.com/api/v1/search?tags=story&restrictSearchableAttributes=url&query=' + url,
+      function(json) {
+        var count = json.nbHits;
+        if (count > 0) {
+          $('.count-hackernews').html(number(count)).fadeIn();
+        }
+      }
+    );
   }
   $('h2').each(
     function (idx, element) {
