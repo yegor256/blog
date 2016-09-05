@@ -83,6 +83,8 @@ get broken. And, the longer it takes to fix them. I've seen many examples where
 a hard working team starts to ignore red flags, raised by Jenkins, after a few
 weeks or trying to keep up.
 
+{% quote Product owners do not understand the importance of a "clean build" and devs can't buy time for fixing unit tests %}
+
 The team simply becomes incapable of fixing all errors in time. Mostly because
 the business has other priorities. Product owners do not understand the
 importance of a "clean build" and technical leaders can't buy time for fixing
