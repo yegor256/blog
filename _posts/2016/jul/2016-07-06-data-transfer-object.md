@@ -146,4 +146,6 @@ a box for that data. Don't think that way, and don't do that.
 
 PS. There are a few another names of DTO:
 [business objects](https://en.wikipedia.org/wiki/Business_object),
-domain objects (not in [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)).
+domain objects (not in [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)),
+[entity objects](https://docs.oracle.com/cd/A97335_02/apps.102/bc4j/developing_bc_projects/bc_awhatisaneo.htm),
+[JavaBeans](https://en.wikipedia.org/wiki/JavaBeans).
