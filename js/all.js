@@ -65,16 +65,21 @@ $(function() {
         }
       }
     );
-    // http://stackoverflow.com/questions/8402941/jsonp-requests-from-linkedin-and-stumbleupon
-    // $.getJSON(
-    //   'http://www.stumbleupon.com/services/1.01/badge.getinfo?url=' + url,
-    //   function(json) {
-    //     var count = json.result.views;
-    //     if (count > 0) {
-    //       $('.count-stumbleupon').html(number(count)).fadeIn();
-    //     }
-    //   }
-    // );
+    // https://jsonp.afeld.me/
+    $.ajax({
+      url: 'http://jsonp.afeld.me/?url=' +
+        'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
+        + encodeURI(url),
+      dataType: 'jsonp',
+      jsonp: 'callback',
+      jsonpCallback: 'x',
+      success: function(json) {
+        var count = json.result.views;
+        if (count > 0) {
+          $('.count-stumbleupon').html(number(count)).fadeIn();
+        }
+      }
+    });
   }
   $('h2').each(
     function (idx, element) {
