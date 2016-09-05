@@ -57,7 +57,11 @@ provides a structured way to write spaghetti code."
 [**Alan Kay**](https://en.wikipedia.org/wiki/Alan_Kay) (1997)<br/>
 [The Computer Revolution hasn't happened yet](https://www.youtube.com/watch?v=oKg1hTOQXoY)<br/>
 "I invented the term object-oriented, and I can tell you
-I did not have C++ in mind."
+I did not have C++ in mind." and
+"Java and C++ make you think that the new ideas are like the old ones.
+Java is the most distressing thing to happen to computing since MS-DOS."
+([proof](http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html))
+
 
 <img src="/images/2016/08/paul-graham.jpg" class="quote-author"/><br/>
 [**Paul Graham**](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29) (2003)<br/>
@@ -161,11 +165,5 @@ it is often impossible to review all the small functions that
 call the one function that you modified."
 
 <hr/>
-
-I can't prove this quote (maybe you can help?):
-
-Alan Kay:
-"Java and C++ make you think that the new ideas are like the old ones.
-Java is the most distressing thing to happen to computing since MS-DOS."
 
 If you have something to add to this list, please post a comment below.
