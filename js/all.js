@@ -19,9 +19,13 @@ $(function() {
         );
       }
     );
-    var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]);
+    var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]),
+      border = '1px solid #ffa094',
+      timeout = 2000;
     $.ajax({
       dataType: 'json',
+      async: true,
+      timeout: timeout,
       url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
       success: function (data) {
         if (data.GooglePlusOne !== 0) {
@@ -29,7 +33,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-googleplus').css('border', '1px solid red');
+        $('.icon-googleplus').css('border', border);
       }
     });
     // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
@@ -53,6 +57,8 @@ $(function() {
     // );
     $.ajax({
       dataType: 'json',
+      async: true,
+      timeout: timeout,
       url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
       success: function(json) {
         var count = json.count;
@@ -61,11 +67,13 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-linkedin').css('border', '1px solid red');
+        $('.icon-linkedin').css('border', border);
       }
     });
     $.ajax({
       dataType: 'json',
+      async: true,
+      timeout: timeout,
       url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + url,
       success: function(json) {
         var count = json.data.children.length;
@@ -74,17 +82,17 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-reddit').css('border', '1px solid red');
+        $('.icon-reddit').css('border', border);
       }
     });
     // https://jsonp.afeld.me/
     $.ajax({
+      dataType: 'jsonp',
+      async: true,
+      timeout: timeout,
       url: 'http://jsonp.afeld.me/?url=' +
         'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
         + encodeURI(url),
-      async: true,
-      timeout: 2000, // 2 sec
-      dataType: 'jsonp',
       jsonp: 'callback',
       jsonpCallback: 'x',
       success: function(json) {
@@ -94,11 +102,13 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-stumbleupon').css('border', '1px solid red');
+        $('.icon-stumbleupon').css('border', border);
       }
     });
     $.ajax({
       dataType: 'json',
+      async: true,
+      timeout: timeout,
       url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query='
         + url.replace('http://www.yegor256.com', ''),
       success: function(json) {
@@ -108,7 +118,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-hackernews').css('border', '1px solid red');
+        $('.icon-hackernews').css('border', border);
       }
     });
   }
