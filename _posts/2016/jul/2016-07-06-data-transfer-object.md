@@ -144,5 +144,6 @@ The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
 a box for that data. Don't think that way, and don't do that.
 
-PS. Yet another name of DTO is
-[business object](https://en.wikipedia.org/wiki/Business_object).
+PS. There are a few another names of DTO:
+[business objects](https://en.wikipedia.org/wiki/Business_object),
+domain objects (not in [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)).

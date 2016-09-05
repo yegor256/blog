@@ -72,8 +72,9 @@ and install them on your own servers. For example:
 [CruiseControl](http://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
 [Travis](http://www.travis-ci.org),
-[Drone](http://www.drone.io),
-[Wercker](http://wercker.com/), and many others.
+[Shippable](http://www.shippable.com),
+[Wercker](http://wercker.com/), and
+[many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?
 
