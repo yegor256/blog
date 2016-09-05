@@ -14,7 +14,7 @@ keywords:
 exclude_from_search: true
 ---
 
-Submission to 2016 is [open]({% pst 2015/oct/2015-10-17-award-2016 %}).
+Submission to 2016 is [closed]({% pst 2015/oct/2015-10-17-award-2016 %}).
 
 <img src="http://img.teamed.io/award/2015/winner.png"
   style="width:203px;height:45px;"/>
