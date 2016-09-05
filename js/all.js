@@ -80,6 +80,9 @@ $(function() {
         if (count > 0) {
           $('.count-stumbleupon').html(number(count)).fadeIn();
         }
+      },
+      error: function() {
+        $('.icon-stumbleupon').css('border', '1px solid red');
       }
     });
     $.getJSON(
