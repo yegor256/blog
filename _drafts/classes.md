@@ -38,9 +38,9 @@ type Book {
 Then, we _create_ an object (pay attention, not "instantiate"):
 
 {% highlight text %}
-Book ot = new Book(t: "Object Thinking") {
+Book ot = new Book(title: "Object Thinking") {
   public void print() {
-    print("my title: " + this.t);
+    print("my title: " + this.title);
   }
 }
 {% endhighlight %}
@@ -50,7 +50,7 @@ to the one we already have, but with different constructor arguments.
 We _copy_ an existing one:
 
 {% highlight text %}
-Book eo = copy ot(t: "Elegant Objects");
+Book eo = copy ot(title: "Elegant Objects");
 {% endhighlight %}
 
 Libraries will deliver us objects, which we can copy.
