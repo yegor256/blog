@@ -39,7 +39,7 @@ Then, we _create_ an object (pay attention, not "instantiate"):
 
 {% highlight text %}
 Book b1 = new Book("Object Thinking") {
-  private String title;
+  String title;
   Book(String t) {
     this.title = t;
   }
