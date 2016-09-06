@@ -1,0 +1,66 @@
+---
+layout: post
+title: "OOP without Classes?"
+date: 2016-09-08
+place: Palo Alto, CA
+tags: oop
+description: |
+  Do we really need classes in OOP? Maybe it's
+  possible to have just objects, methods and types?
+keywords:
+  - class in oop
+  - what is class in oop
+  - object-oriented programming
+  - role of class in oop
+  - classes in oop
+---
+
+I've been [interviewing](https://www.youtube.com/watch?v=s-hdZZzMCac)
+David West, the author of [Object Thinking](http://amzn.to/266oJr4) book,
+a few weeks ago and he said that classes are not meant to be in
+object-oriented programming at all. He actually said that
+[earlier](https://www.youtube.com/watch?v=RdE-d_EhzmA), I just didn't
+understand him then. The more I'm thinking about this the more it looks
+obvious that we don't need classes indeed.
+
+<!--more-->
+
+Here is a prototype. Let's say, we have only _types_ and _objects_.
+First, we define a type:
+
+{% highlight text %}
+type Book {
+  String title();
+  void print();
+}
+{% endhighlight %}
+
+Then, we _create_ an object (pay attention, not "instantiate"):
+
+{% highlight text %}
+Book ot = new Book(t: "Object Thinking") {
+  public String title() {
+    return this.t;
+  }
+  public void print() {
+    print("my title: " + this.t);
+  }
+}
+{% endhighlight %}
+
+Then, we want to create another one, which would be the same as
+the one we already have, but with different constructor arguments, by
+_copying_ an existing one:
+
+{% highlight text %}
+Book eo = copy ot(t: "Elegant Objects");
+{% endhighlight %}
+
+Libraries will deliver us objects, which we can copy.
+
+That's it.
+
+No implemetation inheritance, of course.
+Only [subtyping](https://en.wikipedia.org/wiki/Subtyping).
+
+Why not?
