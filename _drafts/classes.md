@@ -45,9 +45,9 @@ Book ot = new Book(t: "Object Thinking") {
 }
 {% endhighlight %}
 
-Then, we want to create another one, which would be the same as
-the one we already have, but with different constructor arguments, by
-_copying_ an existing one:
+Then, we want to create another object, which will behave similar
+to the one we already have, but with different constructor arguments.
+We _copy_ an existing one:
 
 {% highlight text %}
 Book eo = copy ot(t: "Elegant Objects");
