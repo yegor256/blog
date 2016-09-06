@@ -30,7 +30,6 @@ First, we define a type:
 
 {% highlight text %}
 type Book {
-  String title();
   void print();
 }
 {% endhighlight %}
@@ -39,9 +38,6 @@ Then, we _create_ an object (pay attention, not "instantiate"):
 
 {% highlight text %}
 Book ot = new Book(t: "Object Thinking") {
-  public String title() {
-    return this.t;
-  }
   public void print() {
     print("my title: " + this.t);
   }
