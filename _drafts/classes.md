@@ -61,7 +61,7 @@ Libraries will deliver us objects, which we can copy.
 
 That's it.
 
-No implemetation inheritance, of course.
+No implemetation inheritance and no static methods, of course.
 Only [subtyping](https://en.wikipedia.org/wiki/Subtyping).
 
 Why not?
