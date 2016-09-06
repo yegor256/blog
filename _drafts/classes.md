@@ -25,8 +25,9 @@ obvious that we don't need classes indeed.
 
 <!--more-->
 
-Here is a prototype. Let's say, we have only _types_ and _objects_.
-First, we define a type:
+Here is a prototype.
+
+Let's say, we have only _types_ and _objects_. First, we define a type:
 
 {% highlight text %}
 type Book {
