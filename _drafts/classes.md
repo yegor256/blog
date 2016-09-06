@@ -38,7 +38,7 @@ type Book {
 Then, we _create_ an object (pay attention, not "instantiate"):
 
 {% highlight text %}
-Book ot = new Book("Object Thinking") {
+Book b1 = new Book("Object Thinking") {
   private String title;
   Book(String t) {
     this.title = t;
@@ -54,7 +54,7 @@ to the one we already have, but with different constructor arguments.
 We _copy_ an existing one:
 
 {% highlight text %}
-Book eo = copy ot("Elegant Objects");
+Book b2 = copy b1("Elegant Objects");
 {% endhighlight %}
 
 Libraries will deliver us objects, which we can copy.
