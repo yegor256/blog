@@ -38,7 +38,7 @@ type Book {
 Then, we _create_ an object (pay attention, not "instantiate"):
 
 {% highlight text %}
-Book b1 = new Book("Object Thinking") {
+Book b1 = create Book("Object Thinking") {
   String title;
   Book(String t) {
     this.title = t;
