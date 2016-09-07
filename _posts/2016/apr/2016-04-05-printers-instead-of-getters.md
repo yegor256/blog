@@ -14,6 +14,8 @@ keywords:
   - alternative to getters
   - getters java
   - getters and setters java
+youtube:
+  - _Q0cNykXB04
 ---
 
 Getters and setters [are evil]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
