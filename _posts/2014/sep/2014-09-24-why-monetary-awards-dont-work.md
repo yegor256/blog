@@ -34,6 +34,8 @@ My question is &mdash; why is this so?
 
 <!--more-->
 
+{% quote Why doesn't money work, even when it was invented to be a universal instrument to measure our labor? %}
+
 Why doesn't money work, even when it was invented to be
 a universal instrument to measure our labor? Why can't an American dollar,
 which has been used for centuries as a trading tool between working

@@ -126,9 +126,6 @@ Really bad idea. Same as Singleton.
 Good one. By the way, see
 [Why NULL Is Bad]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 
-[<span class='green'>Object Library</span>](https://en.wikipedia.org/wiki/Design_pattern_object_library).
-It's good.
-
 [<span class='green'>Object Pool</span>](https://en.wikipedia.org/wiki/Object_pool_pattern).
 Good one.
 

@@ -171,7 +171,8 @@ methods and technologies. Don't hesitate to
 share them below in the comments. As I said above, I believe this is
 an art, not a science.
 
-{% badge /images/2016/01/management-stripped-bare.jpg 96 http://www.amazon.com/gp/product/0749464763/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0749464763&linkCode=as2&tag=yegor256com-20&linkId=JVXRPNAEJBMNGINR %}
+{% badge /images/2016/01/management-stripped-bare.jpg 96 http://amzn.to/2bNjruM %}
+
 PS. If you like this article, you will certainly enjoy this
-[Management Stripped Bare: What They Don't Teach You at Business School](http://www.amazon.com/gp/product/0749464763/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0749464763&linkCode=as2&tag=yegor256com-20&linkId=JVXRPNAEJBMNGINR)
+[Management Stripped Bare: What They Don't Teach You at Business School](http://amzn.to/2bNjruM)
 book by Jo Owen. I actually borrowed some ideas from that book.

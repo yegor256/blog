@@ -75,6 +75,10 @@ anonymous
 &mdash;
 [Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
+"Probably the biggest pile of stinky cow shit I have ever read"
+&mdash;
+[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
+
 "You're a sociopath."
 &mdash;
 [Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)

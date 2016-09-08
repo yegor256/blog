@@ -59,9 +59,9 @@ a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) server.
 
-{% badge /images/2014/07/continuous-delivery-book.png 100 http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE %}
+{% badge /images/2014/07/continuous-delivery-book.png 100 http://amzn.to/2bQVmlb %}
 
-[Continuous Delivery by Jez Humble et. al.](http://www.amazon.com/gp/product/0321601912/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321601912&linkCode=as2&tag=yegor256com-20&linkId=GKWBKGZUJGJLFMHE)
+[Continuous Delivery by Jez Humble et. al.](http://amzn.to/2bQVmlb)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 
 There are a few good tools on the market, which automate DevOps procedures.
@@ -72,8 +72,9 @@ and install them on your own servers. For example:
 [CruiseControl](http://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
 [Travis](http://www.travis-ci.org),
-[Drone](http://www.drone.io),
-[Wercker](http://wercker.com/), and many others.
+[Shippable](http://www.shippable.com),
+[Wercker](http://wercker.com/), and
+[many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?
 
@@ -81,6 +82,8 @@ CI is great, but the bigger the team (and the code base), the more often builds
 get broken. And, the longer it takes to fix them. I've seen many examples where
 a hard working team starts to ignore red flags, raised by Jenkins, after a few
 weeks or trying to keep up.
+
+{% quote Product owners do not understand the importance of a "clean build" and devs can't buy time for fixing unit tests %}
 
 The team simply becomes incapable of fixing all errors in time. Mostly because
 the business has other priorities. Product owners do not understand the

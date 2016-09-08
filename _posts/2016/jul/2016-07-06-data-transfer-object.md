@@ -18,7 +18,7 @@ keywords:
 
 [DTO](https://en.wikipedia.org/wiki/Data_transfer_object),
 as far as I understand it, is a cornerstone of the ORM design pattern,
-which I [simply adore]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
+which I [simply "adore"]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
 But let's skip to the point: DTO is just a shame, and the man who invented
 it is just wrong. There is no excuse for what he has done.
 
@@ -143,3 +143,9 @@ any data from it.
 The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
 a box for that data. Don't think that way, and don't do that.
+
+PS. There are a few another names of DTO:
+[business objects](https://en.wikipedia.org/wiki/Business_object),
+domain objects (not in [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)),
+[entity objects](https://docs.oracle.com/cd/A97335_02/apps.102/bc4j/developing_bc_projects/bc_awhatisaneo.htm),
+[JavaBeans](https://en.wikipedia.org/wiki/JavaBeans).

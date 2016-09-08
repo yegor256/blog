@@ -14,6 +14,8 @@ keywords:
   - class constructor
   - object constructor
 book: elegant-objects 1.2
+translated:
+  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52390622
 ---
 
 I suggest classifying class constructors in OOP as **primary**

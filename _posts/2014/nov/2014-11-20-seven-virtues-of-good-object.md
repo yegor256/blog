@@ -46,7 +46,8 @@ Here is my list of qualities of a good object.
 
 Before we start talking about [objects]({% pst 2016/jul/2016-07-14-who-is-object %}),
 let's define what a *class* is. It
-is a place where objects are being born (a.k.a. *instantiated*). The main responsibility
+is a place where objects are being born (a.k.a. *instantiated*). The main
+[responsibility]({% pst 2016/aug/2016-08-30-decomposition-of-responsibility %})
 of a class is to *construct* new objects on demand and *destruct* them when
 they are not used anymore. A class knows how its children should look
 and how they should behave. In other words, it knows what *contracts* they should obey.

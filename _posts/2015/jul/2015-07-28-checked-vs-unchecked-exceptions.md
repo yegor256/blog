@@ -191,7 +191,7 @@ to exception management in OOP.
 
 ## Recoverable Exceptions
 
-Joshua Bloch, in [Effective Java](http://www.amazon.com/gp/product/0321356683/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321356683&linkCode=as2&tag=yegor256com-20&linkId=QPTA6QN63DE364IM),
+Joshua Bloch, in [Effective Java](http://amzn.to/2crH5tW),
 says to "use checked exceptions for recoverable conditions and runtime exceptions
 for programming errors." He means something like this:
 

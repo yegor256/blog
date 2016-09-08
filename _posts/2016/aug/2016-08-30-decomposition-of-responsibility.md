@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vertical vs. Horizontal Decomposition of Responsibility"
-date: 2016-08-23
+date: 2016-08-30
 tags: oop
 place: Palo Alto, CA
 description: |
@@ -25,6 +25,8 @@ the former is better than the latter.
 
 <!--more-->
 
+{% picture /images/2016/08/once-upon-a-time-in-america.jpg 0 Once Upon a Time in America (1984) by Sergio Leone %}
+
 Let's say this is our code (it is Ruby):
 
 {% highlight ruby %}
@@ -41,7 +43,7 @@ end
 
 Obviously, objects of this class are doing too much.
 They save log lines to the
-file and also forwat them &mdash; an obvious violation of
+file and also format them &mdash; an obvious violation of
 a famous
 [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 An object of this class would be **responsible** for too many things.
@@ -55,7 +57,7 @@ class Log
   def initialize(path)
     @file = IO.new(path, 'a')
   end
-  def put(text)
+  def put(line)
     @file.puts line
   end
 end
@@ -95,9 +97,9 @@ to communicate with both of them when we want to log a line. Both
 objects of `Log` and `Line` are in front of us. We have to deal with
 two classes in order to log a line:
 
-{% plantuml %}
-[script] -down- [log]
-[script] -down- [Line.new()]
+{% plantuml style="width:30%" %}
+[script] -down-> [log]
+[script] -down-> [Line]
 {% endplantuml %}
 
 To the contrary, this decomposition of responsibility is **vertical**:
@@ -116,7 +118,7 @@ end
 Class `TimedLog` is a decorator, and this is how we use them together:
 
 {% highlight ruby %}
-log = TimeLog.new(log)
+log = TimedLog.new(log)
 {% endhighlight %}
 
 Now, we just put a line in the log:
@@ -129,9 +131,9 @@ The responsibility is decomposed vertically. We still have one entry point
 into the `log` object, but the object "consists" of two objects, one wrapped
 into another:
 
-{% plantuml %}
-[script] -down- [TimedLog]
-[TimedLog] -down- [Log]
+{% plantuml style="width:20%" %}
+[script] -down-> [TimedLog]
+[TimedLog] -down-> [Log]
 {% endplantuml %}
 
 In general, I think horizontal decomposition of responsibility is a bad idea,

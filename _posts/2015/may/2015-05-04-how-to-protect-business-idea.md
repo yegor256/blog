@@ -147,12 +147,12 @@ It's very similar to what gangsters do when they "protect" you,
 but here we're dealing with intellectual property and there is only one
 "gangster" per country :) The concept is pretty much the same.
 
-{% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 http://www.amazon.com/gp/product/1413320449/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1413320449&linkCode=as2&tag=yegor256com-20&linkId=46F452ALSAXMPSW7 %}
+{% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 http://amzn.to/2c5oky8 %}
 
 First, you describe your idea in the format that patents are written. It is
 not difficult at all, but it would help if you read one of those "how to file
 a patent" books. I recommend
-[Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office](http://www.amazon.com/gp/product/1413320449/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1413320449&linkCode=as2&tag=yegor256com-20&linkId=46F452ALSAXMPSW7)
+[Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office](http://amzn.to/2c5oky8)
 by David Pressman and Thomas J. Tuytschaevers.
 
 Your application will likely amount to about 10 pages and should take a few days

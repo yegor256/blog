@@ -16,7 +16,7 @@ keywords:
 ---
 
 There is a great book called
-[Software Requirements](http://www.amazon.com/gp/product/B00JDMPMOA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00JDMPMOA&linkCode=as2&tag=yegor256com-20&linkId=PRSWJK34HNP355LK)
+[Software Requirements](http://amzn.to/2c5n12h)
 written by Karl Wiegers about, well, software requirements.
 It's a must read for every software engineer, in my opinion. There's
 no need for me to repeat what it says, but there are a few very

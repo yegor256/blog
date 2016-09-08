@@ -13,6 +13,8 @@ keywords:
   - naming convention
   - composite variable name
   - long variable name
+translated:
+  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52349054
 ---
 
 Do you name variables like `textLength`, `table_name`, or `current-user-email`?

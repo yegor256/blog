@@ -132,7 +132,7 @@ to your classpath may be considered a downside with this method
 ## Guava Joiner
 
 Similar functionality is provided by
-[`Joiner`](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Joiner.html)
+[`Joiner`](http://google.github.io/guava/releases/16.0/api/docs/com/google/common/base/Joiner.html)
 from Google [Guava](https://code.google.com/p/guava-libraries/):
 
 {% highlight java %}

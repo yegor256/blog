@@ -77,45 +77,19 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/piratesummit-2016.png" class="future-talk" alt="Pirate Summit 2016"/>
-[Pirate Summit](http://www.piratesummit.com/agenda-speaker/)<br/>
-Cologne, Germany<br/>
-6 September 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/startupole-2016.png" class="future-talk" alt="Startup Olé 2016"/>
-[Startup Olé 2016](http://startupole.eu/2016/yegor-bugayenko/)<br/>
-Salamanca, Spain<br/>
-7-8 September 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/swanseacon-2016.png" class="future-talk" alt="SwanseaCon 2016"/>
-**Meetings or Discipline, It's Your Choice**<br/>
-[SwanseaCon 2016](http://swanseacon.co.uk/schedule/#session-32)<br/>
-Swansea, UK<br/>
-12 September 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.io Copenhagen"/>
-**Java Annotations Are a Bad Idea**<br/>
-[JDK.io](http://jdk.io/speakers/80-yego-bugayenko)<br/>
-Copenhagen, Denmark<br/>
-13 September 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/codemotion.png" class="future-talk" alt="codemotion Warsaw"/>
-**Deployment Scripts Are Dead, Meet Rultor**<br/>
-[{codemotion}](http://warsaw2016.codemotionworld.com/speaker/1934/)<br/>
-Warsaw, Poland<br/>
-15-16 September 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
 **Practical Example of AOP with AspectJ**<br/>
 **Qulice, a Java Quality Police**<br/>
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/)<br/>
 Kyiv, Ukraine<br/>
 14-15 October 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/secr.png" class="future-talk" alt="SECR 2016"/>
+**Why professional programmers hate Agile?**<br/>
+[SECR 2016](http://2016.secr.ru/)<br/>
+Moscow, Russia<br/>
+28-29 October 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
@@ -131,6 +105,13 @@ Malmö, Sweden<br/>
 [XP Days Ukraine](http://xpdays.com.ua/)<br/>
 Kiev, Ukraine<br/>
 11-12 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/devopspro.png" class="future-talk" alt="DevOpsPro Moscow 2016"/>
+**Keep Your Servers In GitHub**<br/>
+[DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/)<br/>
+Moscow, Russia<br/>
+15 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
@@ -157,6 +138,12 @@ Orlando, Florida<br/>
 7-8 December 2016
 
 <div class="talk-event"/>
+<img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
+[MagmaConf 2017](http://www.magmaconf.com/)<br/>
+Manzanillo, Colima, Mexico<br/>
+29-31 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
@@ -173,7 +160,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="future-talk" alt="Object Thinking Meetup #2"/>
+<img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
 Why Static Methods Are Evil?;
 [Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
 Stanford, Palo Alto, CA;
@@ -181,7 +168,7 @@ Stanford, Palo Alto, CA;
 [video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
 
 <div class="talk-event"/>
-<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="future-talk" alt="Object Thinking Meetup #1"/>
+<img src="http://img.youtube.com/vi/pynZF10U880/0.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
 How Anemic Objects Kill OOP;
 [Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
 Palo Alto, CA;
@@ -516,7 +503,7 @@ that the same happened to other speakers.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://scontent.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12987001_10209222308424716_7689199378248269811_n.jpg?oh=c937a25fe62c84ea9ca7d3be522068a0&oe=57BA3C10" class="past-talk" alt="AgileEE 2016"/>
+<img src="http://img.youtube.com/vi/xbovkm0tTn0/0.jpg" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat To Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;

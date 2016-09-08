@@ -5,6 +5,13 @@ layout: compress
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
   itemscope="" itemtype="http://schema.org/WebPage">
   <head>
+    <script>
+      (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+      c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+      c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+      _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+      (window,document,"script","57c3846b0929bf2b09000494");
+    </script>
     <meta charset="utf-8"/>
     <meta itemprop="name" content="{{ page.title }}" />
     <meta itemprop="author" content="{{ site.author.name }}" />
@@ -64,18 +71,19 @@ layout: compress
         </div>
         <nav>
           <ul class="menu social notranslate">
-            <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/yegor256" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="http://stackoverflow.com/users/187141/yegor256" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/yegor256" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://instagram.com/yegor256" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/yegor256" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.pinterest.com/yegor256/" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://angel.co/yegor256" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://gitter.im/yegor256/elegantobjects" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="mailto:blog@yegor256.com" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/yegor256" rel="nofollow" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/yegor256" rel="nofollow" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com/yegor256" rel="nofollow" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/yegor256/" rel="nofollow" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://angel.co/yegor256" rel="nofollow" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="Podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
           </ul>
           <ul class="menu">
             <li><a href="/" title="home page">home</a></li>
@@ -94,19 +102,21 @@ layout: compress
           <form method="get" action="https://www.google.com/search">
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input type="text" id="search-query" class="field field-text"
-              onfocus="$('.google').show();" name="q" placeholder="Search" autocomplete="off"/>
-            <input type="image" src="/images/google-search-icon.svg" class="google desktop-only"
+              onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search" autocomplete="off"/>
+            <input type="image" src="/images/google-search-icon.svg" class="google"
               title="search via Google" alt="search via Google"/>
           </form>
         </div>
         <div class="hot">
           <ul>
+            <!--
             <li>
               Don't forget to submit your open source project to the
               <a href="http://www.yegor256.com/2015/10/17/award-2016.html">Quality Award</a>
               before the <strong>1st of September</strong>.
               The prize is <strong>$4096</strong>.
             </li>
+            -->
             <!--
             <li>
               Don't miss our second
@@ -116,6 +126,7 @@ layout: compress
               We will discuss static methods and why they are evil.
             </li>
             -->
+            <!--
             <li>
               I'm looking for a <strong>co-founder</strong> in one of my pet projects.
               It's a small Ruby media platform for blogs.
@@ -124,25 +135,34 @@ layout: compress
               <a href="mailto:pet@yegor256.com">Email me</a> if interested
               and if you're a <strong>Ruby expert</strong>.
             </li>
+            -->
+            <!--
             <li>
               At <a href="/webinars.html">Webinar #18</a>
               we'll discuss <strong>getters</strong> and <strong>printers</strong> in OOP,
               join us on <b>September 7</b>, at 11am PST.
             </li>
-            <!--
+            -->
             <li>
               Meet me at
-              <a href="http://slcdevopsdays.org/2016-speaker-proposals-continuous-integration-may-have-negative-effects/">SLC DevOpsDays</a> (Salt Lake City/June-14),
+              <a href="http://javaday.org.ua/kyiv/">JavaDay</a> (Kyiv/Oct-14),
+              <a href="http://2016.secr.ru/">SECR</a> (Moscow/Oct-28),
+              <a href="http://www.oredev.org/2016/speakers/yegor-bugayenko">Oredev</a> (Malmö/Nov-7),
+              <a href="http://xpdays.com.ua/">XP Days</a> (Kiev/Nov-11),
+              <a href="http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/">TopConf</a> (Tallinn/Nov-16),
+              <a href="http://devternity.com/#/11">DevTernity</a> (Riga/Dec-1),
+              <a href="https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx">AppDevTrends</a> (Orlando/Dec-7),
               and later
               <a href="/talks.html">somewhere else</a>.
             </li>
-            -->
           </ul>
         </div>
       </header>
     </div>
     {{ content }}
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+      crossorigin="anonymous"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <script>var disqus_shortname = 'yegor256';</script>
     <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>

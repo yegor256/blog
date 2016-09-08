@@ -15,6 +15,8 @@ keywords:
   - good practices in programming
   - bad practices in java
 categories: jcg
+translated:
+  - Chinese: http://blog.csdn.net/lvshuilantian/article/details/52303290
 youtube:
   - 9yjtsCK6Wdk
 ---
