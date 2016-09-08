@@ -6,8 +6,8 @@ place: Palo Alto, CA
 tags: oop
 description: |
   There are a few levels and forms of immutability in
-  object-oriented programming, which
-  all can be used when they seem appropriate.
+  object-oriented programming, all of which
+  can be used when they seem appropriate.
 keywords:
   - immutability
   - immutability java
@@ -18,26 +18,26 @@ keywords:
 
 Good objects are immutable, but not necessarily constants.
 I tried to explain it [here]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}),
-[here]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}) and
+[here]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}), and
 [here]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}),
-but now it's time to make another attempt. Actually, the more I think about it
+but now it's time to make another attempt. Actually, the more I think about it,
 the more I realize that immutability is not black or white &mdash; there
-are a few more shades, let's take a look.
+are a few more shades; let's take a look.
 
 <!--more-->
 
 As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
 an object is a **representative** of someone else
-(some entit(ies), other object(s), data, memory, files, etc.)
-Let's see a number of objects, which look exactly the same
-for us, but **represent** different things, and analyze how
+(some entity or entities, other object(s), data, memory, files, etc.).
+Let's examine a number of objects that look exactly the same
+to us but **represent** different things, then analyze how
 immutable they are and why.
 
 ## Constant
 
-This is **constant**, which doesn't allow any modifications
-to the encapsulated entity and always return the same text back
-(I skip constructors for the sake of brevity):
+This is **constant**; it doesn't allow any modifications
+to the encapsulated entity and always returns the same text
+(I've skipped constructors for the sake of brevity):
 
 {% highlight java %}
 class Book {
@@ -59,7 +59,7 @@ the same initial values, the result of `title()` will be the same.
 
 ## Not a Constant
 
-Check this one:
+Check out this one:
 
 {% highlight java %}
 class Book {
@@ -76,10 +76,10 @@ class Book {
 {% endhighlight %}
 
 The object is still immutable, but it is not a pure
-function any more, because of the method `title()` &mdash;
+function anymore because of the method `title()` &mdash;
 it returns different values if we call it
 multiple times with at least a one-minute interval. The object
-is immutable, it is just not a constant any more.
+is immutable; it's just not a constant anymore.
 
 ## Represented Mutability
 
@@ -104,11 +104,11 @@ class Book {
 }
 {% endhighlight %}
 
-This _immutable_ object keeps book title in a file. It's not a constant,
+This _immutable_ object keeps the book title in a file. It's not a constant,
 because its method `title()` may return different values on every
 second call. Moreover, the represented entity (the file) is not a constant.
-We can't say whether it's mutable or immutable, we don't know how `Files.write()`
-is implemented. But we know for sure that it's not a constant, since it
+We can't say whether it's mutable or immutable, as we don't know how `Files.write()`
+is implemented. But we know for sure that it's not a constant, because it
 accepts change requests.
 
 ## Encapsulated Mutability
@@ -116,7 +116,7 @@ accepts change requests.
 An immutable object may not only represent but even
 encapsulate a mutable one. Just like in the
 previous example, a mutable file was encapsulated. Even though it
-was represented by an immutable class `Path`, the real file on disc
+was represented by the immutable class `Path`, the real file on disk
 was mutable. We can do the same, but in memory:
 
 {% highlight java %}
@@ -138,19 +138,18 @@ No. Is it immutable? Yes. Confused? You bet.
 
 <hr/>
 
-My point is that immutability is not _binary_, there are many
+My point is that immutability is not _binary_; there are many
 forms of it. The most simple one is, of course, a
 constant. Constants are almost the same as pure functions in functional
-programming. But object-oriented programming allows us to make
+programming. But object-oriented programming allows us to take
 a few steps forward and give immutable objects more permissions
-and flexibility. In OOP we may have many more forms of immutability.
+and flexibility. In OOP, we may have many more forms of immutability.
 
-What is common for all these examples is that our objects are
+What is common among all these examples is that our objects are
 **loyal** to the entities they encapsulate. There are no
 [setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 that could change them. All encapsulated objects are `final`.
 
 This is the only quality that differentiates mutable objects from
 immutable ones. The latter are always loyal to the entities they
-encapsulate and represent. All the rest... depends.
-
+encapsulate and represent. For all the rest ... it depends.
