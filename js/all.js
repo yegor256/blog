@@ -106,7 +106,6 @@ $(function() {
         $('.icon-stumbleupon').css('border', border);
       }
     });
-    console.log("URL: " + url.replace('http://www.yegor256.com', ''));
     $.ajax({
       dataType: 'json',
       async: true,
