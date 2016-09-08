@@ -19,14 +19,15 @@ $(function() {
         );
       }
     );
-    var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]),
+    var url = document.location.href.split('?')[0].split('#')[0],
+      eurl = encodeURIComponent(url),
       border = '1px solid #ffa094',
       timeout = 2000;
     $.ajax({
       dataType: 'json',
       async: true,
       timeout: timeout,
-      url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
+      url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + eurl,
       success: function (data) {
         if (data.GooglePlusOne !== 0) {
           $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
@@ -38,7 +39,7 @@ $(function() {
     });
     // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
     // $.getJSON(
-    //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + url,
+    //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + eurl,
     //   function(json) {
     //     var count = json.count;
     //     if (count > 0) {
@@ -47,7 +48,7 @@ $(function() {
     //   }
     // );
     // $.getJSON(
-    //   'https://api.facebook.com/method/links.getStats?format=json&urls=' + url,
+    //   'https://api.facebook.com/method/links.getStats?format=json&urls=' + eurl,
     //   function(json) {
     //     var count = json[0].total_count;
     //     if (count > 0) {
@@ -59,7 +60,7 @@ $(function() {
       dataType: 'json',
       async: true,
       timeout: timeout,
-      url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + url,
+      url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + eurl,
       success: function(json) {
         var count = json.count;
         if (count > 0) {
@@ -74,7 +75,7 @@ $(function() {
       dataType: 'json',
       async: true,
       timeout: timeout,
-      url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + url,
+      url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
       success: function(json) {
         var count = json.data.children.length;
         if (count > 0) {
@@ -92,7 +93,7 @@ $(function() {
       timeout: timeout,
       url: 'http://jsonp.afeld.me/?url=' +
         'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
-        + encodeURI(url),
+        + eurl,
       jsonp: 'callback',
       jsonpCallback: 'x',
       success: function(json) {
@@ -110,7 +111,7 @@ $(function() {
       async: true,
       timeout: timeout,
       url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
-        + url.replace('http://www.yegor256.com', '')
+        + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
         + '"',
       success: function(json) {
         var count = json.nbHits;
