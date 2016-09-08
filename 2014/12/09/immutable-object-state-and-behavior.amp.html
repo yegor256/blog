@@ -67,7 +67,8 @@ our case, we deal with frequently changing objects. We simply
 can't afford to create a new <code>document</code> every time we just
 need to change its <code>title</code>." Here is where I disagree: object
 title is <strong>not a state</strong> of a document, if you need to change it frequently.
-Instead, it is a document's <strong>behavior</strong>. A <code>document</code> can and must be immutable,
+Instead, it is a document's <strong>behavior</strong>. A <code>document</code> can and must be
+<a href="/2016/09/07/gradients-of-immutability.html">immutable</a>,
 if it is a <a href="/2014/11/20/seven-virtues-of-good-object.html">good object</a>,
 even when its title is changed frequently. Let me explain how.</p>
 

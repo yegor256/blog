@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-08T04:48:52+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-08T06:44:47+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Gradients of Immutability</title><link href="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html" rel="alternate" type="text/html" title="Gradients of Immutability" /><published>2016-09-07T00:00:00+00:00</published><updated>2016-09-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/07/gradients-of-immutability</id><content type="html" xml:base="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html">&lt;p&gt;Good objects are immutable, but not necessarily constants.
+I tried to explain it &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;here&lt;/a&gt;,
+&lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;here&lt;/a&gt;, and
+&lt;a href=&quot;/2014/12/22/immutable-objects-not-dumb.html&quot;&gt;here&lt;/a&gt;,
+but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
+the more I realize that immutability is not black or white &amp;mdash; there
+are a few more gradients; let&amp;#39;s take a look.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F09%2Ftwelve-monkeys.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Twelve Monkeys (1995) by Terry Gilliam&#39;/&gt;&lt;figcaption&gt;Twelve Monkeys (1995) by Terry Gilliam&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As we agreed &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;here&lt;/a&gt;,
+an object is a &lt;strong&gt;representative&lt;/strong&gt; of someone else
+(some entity or entities, other object(s), data, memory, files, etc.).
+Let&amp;#39;s examine a number of objects that look exactly the same
+to us but &lt;strong&gt;represent&lt;/strong&gt; different things, then analyze how
+immutable they are and why.&lt;/p&gt;
+
+&lt;h2 id=&quot;constant&quot;&gt;Constant&lt;/h2&gt;
+
+&lt;p&gt;This is &lt;strong&gt;constant&lt;/strong&gt;; it doesn&amp;#39;t allow any modifications
+to the encapsulated entity and always returns the same text
+(I&amp;#39;ve skipped constructors for the sake of brevity):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is what we usually have in mind when talking about immutable
+objects. Such a class is very close to a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Pure_function&quot;&gt;pure function&lt;/a&gt;,
+which means that no matter how many times we instantiate it with
+the same initial values, the result of &lt;code&gt;title()&lt;/code&gt; will be the same.&lt;/p&gt;
+
+&lt;h2 id=&quot;not-a-constant&quot;&gt;Not a Constant&lt;/h2&gt;
+
+&lt;p&gt;Check out this one:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;%s (as of %tR)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The object is still immutable, but it is not a pure
+function anymore because of the method &lt;code&gt;title()&lt;/code&gt; &amp;mdash;
+it returns different values if we call it
+multiple times with at least a one-minute interval. The object
+is immutable; it&amp;#39;s just not a constant anymore.&lt;/p&gt;
+
+&lt;h2 id=&quot;represented-mutability&quot;&gt;Represented Mutability&lt;/h2&gt;
+
+&lt;p&gt;How about this one:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;StandardOpenOption&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CREATE&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readAllBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This &lt;em&gt;immutable&lt;/em&gt; object keeps the book title in a file. It&amp;#39;s not a constant,
+because its method &lt;code&gt;title()&lt;/code&gt; may return different values on every
+second call. Moreover, the represented entity (the file) is not a constant.
+We can&amp;#39;t say whether it&amp;#39;s mutable or immutable, as we don&amp;#39;t know how &lt;code&gt;Files.write()&lt;/code&gt;
+is implemented. But we know for sure that it&amp;#39;s not a constant, because it
+accepts change requests.&lt;/p&gt;
+
+&lt;h2 id=&quot;encapsulated-mutability&quot;&gt;Encapsulated Mutability&lt;/h2&gt;
+
+&lt;p&gt;An immutable object may not only represent but even
+encapsulate a mutable one. Just like in the
+previous example, a mutable file was encapsulated. Even though it
+was represented by the immutable class &lt;code&gt;Path&lt;/code&gt;, the real file on disk
+was mutable. We can do the same, but in memory:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The object is still &lt;em&gt;immutable&lt;/em&gt;. Is it thread-safe? No. Is it a constant?
+No. Is it immutable? Yes. Confused? You bet.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;My point is that immutability is not &lt;em&gt;binary&lt;/em&gt;; there are many
+forms of it. The most simple one is, of course, a
+constant. Constants are almost the same as pure functions in functional
+programming. But object-oriented programming allows us to take
+a few steps forward and give immutable objects more permissions
+and flexibility. In OOP, we may have many more forms of immutability.&lt;/p&gt;
+
+&lt;p&gt;What is common among all these examples is that our objects are
+&lt;strong&gt;loyal&lt;/strong&gt; to the entities they encapsulate. There are no
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters&lt;/a&gt;
+that could change them. All encapsulated objects are &lt;code&gt;final&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is the only quality that differentiates mutable objects from
+immutable ones. The latter are always loyal to the entities they
+encapsulate and represent. For all the rest ... it depends.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>Good objects are immutable, but not necessarily constants.
+I tried to explain it here,
+here, and
+here,
+but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
+the more I realize that immutability is not black or white &amp;mdash; there
+are a few more gradients; let&amp;#39;s take a look.</summary></entry><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
 &lt;strong&gt;Decomposition of responsibility&lt;/strong&gt; is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
@@ -836,133 +972,4 @@ It puzzled me, because I strongly disagree. I believe the first construct
 is perfectly valid in OOP. So I&amp;#39;ve done some research to find out
 whether this law is really a law. What I found out is that the law is
 perfect, but its common understanding in the OOP world is simply wrong
-(not surprisingly).</summary></entry><entry><title>Who Is an Object?</title><link href="http://www.yegor256.com/2016/07/14/who-is-object.html" rel="alternate" type="text/html" title="Who Is an Object?" /><published>2016-07-14T00:00:00+00:00</published><updated>2016-07-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/14/who-is-object</id><content type="html" xml:base="http://www.yegor256.com/2016/07/14/who-is-object.html">&lt;p&gt;There are thousands of books about object-oriented programming and
-hundreds of object-oriented languages, and I believe most (read &amp;quot;all&amp;quot;) of them
-give us an incorrect definition of an &amp;quot;object&amp;quot;. That&amp;#39;s why the entire
-OOP world is so full of misconceptions and mistakes. Their
-definition of an object is limited by the hardware architecture they
-are working with and that&amp;#39;s why is very primitive and mechanical.
-I&amp;#39;d like to introduce a better one.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F07%2Fjackass-the-movie.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Jackass: The Movie (2002) by Jeff Tremaine&#39;/&gt;&lt;figcaption&gt;Jackass: The Movie (2002) by Jeff Tremaine&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;What is an object? I&amp;#39;ve done a little research, and this is what I&amp;#39;ve found:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;Objects may contain data, in the form of fields, often known as attributes;
-and code, in the form of procedures, often known as methods&amp;quot;
-&amp;mdash; &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;Wikipedia&lt;/a&gt; at the time of writing.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;An object stores its state in fields and exposes its behavior through methods&amp;quot;
-&amp;mdash; &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/concepts/object.html&quot;&gt;What Is an Object?&lt;/a&gt; by Oracle.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;Each object looks quite a bit like a little computer &amp;mdash;
-it has a state, and it has operations that you can ask it to perform&amp;quot;
-&amp;mdash; &lt;a href=&quot;http://amzn.to/1PBmQpm&quot;&gt;Thinking in Java&lt;/a&gt;, 4th Ed., Bruce Eckel, p. 16.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;A class is a collection of data fields that hold values
-and methods that operate on those values&amp;quot;
-&amp;mdash; &lt;a href=&quot;http://amzn.to/28PEqSi&quot;&gt;Java in a Nutshell&lt;/a&gt;, 6th Ed., Evans and Flanagan, p. 98.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;An object is some memory that holds a value of some type&amp;quot;
-&amp;mdash; &lt;a href=&quot;http://amzn.to/1XyGCtk&quot;&gt;The C++ Programming Language&lt;/a&gt;, 4th Ed., Bjarne Stroustrup, p. 40.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;quot;An object consists of some private memory and a set of operations&amp;quot;
-&amp;mdash; &lt;a href=&quot;http://amzn.to/1UhYinp&quot;&gt;Smalltalk-80&lt;/a&gt;, Goldberg and Robson, p. 6.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What is common throughout all these definitions is the word &amp;quot;contains&amp;quot; (or &amp;quot;holds&amp;quot;,
-&amp;quot;consists&amp;quot;, &amp;quot;has&amp;quot;, etc.). They all think that an object is a &lt;em&gt;box with data&lt;/em&gt;.
-And this perspective is exactly what I&amp;#39;m strongly against.&lt;/p&gt;
-
-&lt;p&gt;If we look at how C++ or Java are implemented, such a definition of an
-object will sound &lt;em&gt;technically&lt;/em&gt; correct. Indeed, for each object, Java Virtual
-Machine allocates a few bytes in memory in order to store object
-attributes there. Thus, we can technically say, in that language,
-that an object is an in-memory box with data.&lt;/p&gt;
-
-&lt;p&gt;Right, but this is just a corner case!&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s try to imagine another object-oriented language that doesn&amp;#39;t
-store object attributes in memory. Confused? Bear with me for a minute.
-Let&amp;#39;s say that in that language we define an object:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;c {
-  vin: v,
-  engine: e
-}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, &lt;code&gt;vin&lt;/code&gt; and &lt;code&gt;engine&lt;/code&gt; are attributes of object &lt;code&gt;c&lt;/code&gt; (it&amp;#39;s a car; let&amp;#39;s
-forget about classes for now to focus strictly on objects). Thus, there is
-a simple object that has two attributes. The first one is car&amp;#39;s VIN, and the
-second one is its engine. The VIN is an object &lt;code&gt;v&lt;/code&gt;, while the engine is &lt;code&gt;e&lt;/code&gt;.
-To make it easier to understand, this is how a similar object would
-look in Java:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;W&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;H&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,...&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;7&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 17 chars&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Engine&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Engine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I&amp;#39;m not entirely sure about JVM, but in C++ such an object will take
-exactly 25 bytes in memory (assuming it&amp;#39;s 64-bit x86 architecture). The
-first 17 bytes will be taken by the array of chars and another 8 bytes
-by a pointer to the block in memory with object &lt;code&gt;e&lt;/code&gt;.
-That&amp;#39;s how the C++ compiler understands objects and translates them to
-the x86 architecture. In C++, objects are just data structures with
-clearly defined allocation of data attributes.&lt;/p&gt;
-
-&lt;p&gt;In that example, attributes &lt;code&gt;vin&lt;/code&gt; and &lt;code&gt;engine&lt;/code&gt; are not equal:
-&lt;code&gt;vin&lt;/code&gt; is &amp;quot;data&amp;quot;, while &lt;code&gt;engine&lt;/code&gt; is a &amp;quot;pointer&amp;quot; to another object.
-I intentionally made it this way in order to demonstrate that calling
-an object a box with data is possible only with &lt;code&gt;vin&lt;/code&gt;. Only when
-the data are located right &amp;quot;inside&amp;quot; the object can we say that the
-object is actually a box for the data. With &lt;code&gt;engine&lt;/code&gt;, it isn&amp;#39;t
-really true because there is no data technically &lt;em&gt;inside&lt;/em&gt; the object. Instead, there is a
-&lt;em&gt;pointer&lt;/em&gt; to another object. If our object would only have an
-&lt;code&gt;engine&lt;/code&gt; attribute, it would take just 8 bytes in memory, with none of them
-actually occupied by &amp;quot;data&amp;quot;.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Objects are no longer boxes with data; they know where the data is, but they don&amp;#39;t contain the data&lt;/aside&gt;
-
-&lt;p&gt;Now, let&amp;#39;s get back to our new pseudo language. Let&amp;#39;s imagine it treats
-objects very differently than C++ &amp;mdash; it doesn&amp;#39;t keep object attributes
-in memory &lt;em&gt;at all&lt;/em&gt;. It doesn&amp;#39;t have pointers, and it doesn&amp;#39;t know anything about
-x86 architecture. It just &lt;em&gt;knows&lt;/em&gt; somehow what attributes belong to an object.&lt;/p&gt;
-
-&lt;p&gt;Thus, in our language, objects are no longer boxes with data both technically
-and conceptually. They know where the data is, but they don&amp;#39;t
-&lt;em&gt;contain&lt;/em&gt; the data. They &lt;em&gt;represent&lt;/em&gt; the data, as well as other objects and entities.
-Indeed, the object &lt;code&gt;c&lt;/code&gt; in our imaginary language represents two other objects:
-a VIN and an engine.&lt;/p&gt;
-
-&lt;p&gt;To summarize, we have to understand that even though a mechanical
-definition of an object is correct in most programming languages on the
-market at the moment, it is very incorrect conceptually because it
-treats an object as a box with data that are too visible to
-the outside world. That visibility provokes us to think &lt;em&gt;procedurally&lt;/em&gt;
-and try to access that data as much as possible.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/266oJr4&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2015%2F04%2Fbook-object-thinking.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;If we would think of an object as a &lt;strong&gt;representative&lt;/strong&gt; of data instead of
-a container of them, we would not want to get ahold of data as soon as
-possible. We would understand that the data are far away and we can&amp;#39;t
-just easily touch them. We should communicate with an object &amp;mdash; and how
-exactly it communicates with the data is not our concern.&lt;/p&gt;
-
-&lt;p&gt;I hope that in the near future, the market will introduce new object-oriented
-languages that won&amp;#39;t store objects as in-memory data structures, even
-technically.&lt;/p&gt;
-
-&lt;p&gt;By the way, here is the definition of an object from my favorite book,
-&lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;Object Thinking&lt;/a&gt; by David West, p. 66:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;An object is the equivalent of the quanta from which the universe is constructed&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What do you think? Is it close to the &amp;quot;representative&amp;quot; definition I just
-proposed?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>There are thousands of books about object-oriented programming and
-hundreds of object-oriented languages, and I believe most (read &amp;quot;all&amp;quot;) of them
-give us an incorrect definition of an &amp;quot;object&amp;quot;. That&amp;#39;s why the entire
-OOP world is so full of misconceptions and mistakes. Their
-definition of an object is limited by the hardware architecture they
-are working with and that&amp;#39;s why is very primitive and mechanical.
-I&amp;#39;d like to introduce a better one.</summary></entry></feed>
+(not surprisingly).</summary></entry></feed>

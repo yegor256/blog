@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Gradients of Immutability</title>
+    <link rel="canonical" href="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2016/09/07/gradients-of-immutability.html"
+        },
+        "headline": "Gradients of Immutability",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-09-07",
+        "dateModified": "2016-09-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "There are a few levels and forms of immutability in
+object-oriented programming, all of which
+can be used when they seem appropriate.
+",
+        "keywords": ["immutability", "immutability java", "immutable list", "immutable object", "immutable object java"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html">here</a>.
+      </p>
+      <h1>Gradients of Immutability</h1>
+      <p>Good objects are immutable, but not necessarily constants.
+I tried to explain it <a href="/2014/06/09/objects-should-be-immutable.html">here</a>,
+<a href="/2014/12/09/immutable-object-state-and-behavior.html">here</a>, and
+<a href="/2014/12/22/immutable-objects-not-dumb.html">here</a>,
+but now it's time to make another attempt. Actually, the more I think about it,
+the more I realize that immutability is not black or white — there
+are a few more gradients; let's take a look.</p>
+
+
+
+
+
+<p>As we agreed <a href="/2016/07/14/who-is-object.html">here</a>,
+an object is a <strong>representative</strong> of someone else
+(some entity or entities, other object(s), data, memory, files, etc.).
+Let's examine a number of objects that look exactly the same
+to us but <strong>represent</strong> different things, then analyze how
+immutable they are and why.</p>
+
+<h2 id="constant">Constant</h2>
+
+<p>This is <strong>constant</strong>; it doesn't allow any modifications
+to the encapsulated entity and always returns the same text
+(I've skipped constructors for the sake of brevity):</p>
+
+
+
+<p>This is what we usually have in mind when talking about immutable
+objects. Such a class is very close to a
+<a href="https://en.wikipedia.org/wiki/Pure_function">pure function</a>,
+which means that no matter how many times we instantiate it with
+the same initial values, the result of <code>title()</code> will be the same.</p>
+
+<h2 id="not-a-constant">Not a Constant</h2>
+
+<p>Check out this one:</p>
+
+
+
+<p>The object is still immutable, but it is not a pure
+function anymore because of the method <code>title()</code> —
+it returns different values if we call it
+multiple times with at least a one-minute interval. The object
+is immutable; it's just not a constant anymore.</p>
+
+<h2 id="represented-mutability">Represented Mutability</h2>
+
+<p>How about this one:</p>
+
+
+
+<p>This <em>immutable</em> object keeps the book title in a file. It's not a constant,
+because its method <code>title()</code> may return different values on every
+second call. Moreover, the represented entity (the file) is not a constant.
+We can't say whether it's mutable or immutable, as we don't know how <code>Files.write()</code>
+is implemented. But we know for sure that it's not a constant, because it
+accepts change requests.</p>
+
+<h2 id="encapsulated-mutability">Encapsulated Mutability</h2>
+
+<p>An immutable object may not only represent but even
+encapsulate a mutable one. Just like in the
+previous example, a mutable file was encapsulated. Even though it
+was represented by the immutable class <code>Path</code>, the real file on disk
+was mutable. We can do the same, but in memory:</p>
+
+
+
+<p>The object is still <em>immutable</em>. Is it thread-safe? No. Is it a constant?
+No. Is it immutable? Yes. Confused? You bet.</p>
+
+<hr>
+
+<p>My point is that immutability is not <em>binary</em>; there are many
+forms of it. The most simple one is, of course, a
+constant. Constants are almost the same as pure functions in functional
+programming. But object-oriented programming allows us to take
+a few steps forward and give immutable objects more permissions
+and flexibility. In OOP, we may have many more forms of immutability.</p>
+
+<p>What is common among all these examples is that our objects are
+<strong>loyal</strong> to the entities they encapsulate. There are no
+<a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>
+that could change them. All encapsulated objects are <code>final</code>.</p>
+
+<p>This is the only quality that differentiates mutable objects from
+immutable ones. The latter are always loyal to the entities they
+encapsulate and represent. For all the rest ... it depends.</p>
+
+    </article>
+  </body>
+</html>
