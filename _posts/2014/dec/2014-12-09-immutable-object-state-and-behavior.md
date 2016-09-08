@@ -27,7 +27,8 @@ our case, we deal with frequently changing objects. We simply
 can't afford to create a new `document` every time we just
 need to change its `title`." Here is where I disagree: object
 title is **not a state** of a document, if you need to change it frequently.
-Instead, it is a document's **behavior**. A `document` can and must be immutable,
+Instead, it is a document's **behavior**. A `document` can and must be
+[immutable]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}),
 if it is a [good object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 even when its title is changed frequently. Let me explain how.
 
