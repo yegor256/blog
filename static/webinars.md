@@ -20,7 +20,7 @@ a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
 <!--
-{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20160907T180000Z%2f20160907T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04&text=Printers%20Instead%20of%20Getters%20(webinar)&location=YouTube&details=Webinar%20%2318%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04 %}
+{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20161005T180000Z%2f20161005T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04&text=Printers%20Instead%20of%20Getters%20(webinar)&location=YouTube&details=Webinar%20%2318%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04 %}
 -->
 
 {% youtube _Q0cNykXB04 video-left %}
