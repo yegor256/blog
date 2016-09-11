@@ -23,7 +23,7 @@ development, object-oriented programming and project management.
 
 {% youtube zaKTNK8g2-M video-left %}
 October 5, 2016:
-**Who Is a Project Manager? **
+**Who Is a Project Manager?**
 We will discuss what is the role of a project manager in a software project and how it
 is different from other roles. The discussion will be based on this article:
 [Who Is a Project Manager?]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
