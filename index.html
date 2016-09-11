@@ -27,11 +27,11 @@ keywords:
         </h1>
         <ul class="subline">
           <li>
-            <time datetime="{{ post.date | date_to_xmlschema }}">
+            <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
               {{ post.date | date: "%-d %B %Y" }}
             </time>
           </li>
-          <li>
+          <li itemprop="wordCount">
             {{ post.content | count_words }} words
           </li>
           <li>

@@ -24,13 +24,13 @@ layout: default
           </time>
         </li>
         {% if page.place %}
-          <li class="desktop-only">{{ page.place }}</li>
+          <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
         {% endif %}
         {{ page | modified }}
-        <li class="printable">Yegor Bugayenko</li>
+        <li class="printable" itemprop="author">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread">comments</a>
+          <a href="{{ site.url }}{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
         </li>
       </ul>
       {% if page.translated %}
@@ -129,8 +129,8 @@ layout: default
     <footer class="footer">
       <p>
         &copy;
-        <span itemprop="author">Yegor Bugayenko</span>,
-        2014-2016
+        <span itemprop="copyrightHolder">Yegor Bugayenko</span>,
+        2014-<span itemprop="copyrightYear">2016</span>
       </p>
     </footer>
   </div>
