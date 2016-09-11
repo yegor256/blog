@@ -16,13 +16,14 @@ keywords:
   - high quality programming
 ---
 
+<div itemscope="" itemtype="http://schema.org/Blog">
 {% for post in paginator.posts %}
   <div class="wrapper">
-    <section class="front">
+    <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
       <header>
         <h1>
           <a href="{{ post.url }}">
-            {{ post.title }}
+            <span itemprop="name">{{ post.title }}</span>
           </a>
         </h1>
         <ul class="subline">
@@ -57,21 +58,22 @@ keywords:
           </li>
           <li>
             <i class="icon icon-comments"></i>
-            <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+            <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
           </li>
         </ul>
       </header>
-      <div class="main">
+      <div class="main" itemprop="description">
         {{ post.excerpt }}
       </div>
       <p>
-        <a href="{{ post.url }}">
+        <a href="{{ post.url }}" itemprop="url">
           continue...
         </a>
       </p>
     </section>
   </div>
 {% endfor %}
+<div>
 
 <div class="wrapper">
   <footer>
