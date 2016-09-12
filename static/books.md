@@ -24,6 +24,14 @@ more solid and architecture more visible.
 Published: 22 Feb 2016. I'm writing the **second volume** now,
 which is going to be published before the end of 2016.
 
+{% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
+[256 Bloghacks](/256-bloghacks.html) will be the book about blogging,
+disclosing all techniques, secrets and tactics I'm using at this blog.
+It contains a big amount (close to 256) small and big recommendations,
+which I would be glad to hear when I started blogging. Unfortunately,
+I didn't have that book back then. You have a chance to learn everything
+in just one go. To be published very soon, in September 2016.
+
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
 [Code Ahead](/code-ahead.html) will be the book about software engineering. I will
 propose a number of best practices for organizing software development
