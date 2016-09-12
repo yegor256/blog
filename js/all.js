@@ -22,7 +22,7 @@ $(function() {
     var url = document.location.href.split('?')[0].split('#')[0],
       eurl = encodeURIComponent(url),
       border = '1px solid #ffa094',
-      timeout = 2000;
+      timeout = 5000;
     $.ajax({
       dataType: 'json',
       async: true,
@@ -34,7 +34,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-googleplus').css('border', border);
+        $('.share .icon-googleplus').css('border', border);
       }
     });
     // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
@@ -68,7 +68,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-linkedin').css('border', border);
+        $('.share .icon-linkedin').css('border', border);
       }
     });
     $.ajax({
@@ -83,7 +83,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-reddit').css('border', border);
+        $('.share .icon-reddit').css('border', border);
       }
     });
     // https://jsonp.afeld.me/
@@ -103,7 +103,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-stumbleupon').css('border', border);
+        $('.share .icon-stumbleupon').css('border', border);
       }
     });
     $.ajax({
@@ -120,7 +120,7 @@ $(function() {
         }
       },
       error: function() {
-        $('.icon-hackernews').css('border', border);
+        $('.share .icon-hackernews').css('border', border);
       }
     });
   }
