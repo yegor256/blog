@@ -46,7 +46,7 @@ is talking, the room is laughing every 60 seconds.
 Don't be too formal and boring, show a slide with a picture of
 a naked butt every once in a while. Everybody will understand that you're not only a
 speaker but also a good friend. Also, your language should be rather loose.
-Pretent you're talking to a friend over a pint of beer. Remember, the goal
+Pretend you're talking to a friend over a pint of beer. Remember, the goal
 is to be funny.
 
 **Repeat!**
@@ -61,7 +61,7 @@ over and over again. Everybody wins.
 **Kitties!**
 Cute kitties. We all love them! Attach them somehow to your content. It is
 not really important whether they are related or not. You must show love.
-Instead of cats you can use a picture of your 2-y.o. daugther or yourself
+Instead of cats you can use a picture of your 2-y.o. daughter or yourself
 in a primary school. It has to be something sweet and adorable.
 
 **Keep talking!**

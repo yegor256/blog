@@ -139,7 +139,7 @@ Added 30-Jun-2016:<br/>
 Add your boss in a CC for as many emails as possible. The more emails
 that come from you, the more valuable you are. Your boss
 must see that you're actively involved in many communications and that
-it's simply impossible to replace you. Besides that, CCing the boss
+it's simply impossible to replace you. Besides that, CC-ing the boss
 is a sign of respect. She or he will never forget that.
 
 **Sigh, Don't Laugh**.

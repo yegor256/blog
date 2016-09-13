@@ -113,7 +113,7 @@ literal `MSG`. What do we have now? Code duplication. String `"something"`
 shows up four times in the test class. No static analyzers will tolerate that.
 Moreover, there are seven (!) test methods in
 [`VerboseListTest`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java),
-which are using `MSG`. Thus, we will have 14 occurences of `"something"`, right?
+which are using `MSG`. Thus, we will have 14 occurrences of `"something"`, right?
 Yes, that's right and that's most likely why one of authors of this
 test case introduced the constant &mdash; to get rid of duplication.
 BTW, [@Happy-Neko](https://github.com/Happy-Neko) did that in pull request

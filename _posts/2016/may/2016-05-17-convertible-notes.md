@@ -125,7 +125,7 @@ You will have to give me 6,250 shares and I'll return you the notes.
 Thus, in the end, there will be 1,106,250 shares total and your company's post-money
 valuation will be $4,425,000. Got the math?
 
-My shares will have exacty the same
+My shares will have exactly the same
 "rights, privileges, preferences and restrictions" as the shares you
 gave to the investor. And I won't have an option to negotiate. I will just
 receive them and accept.

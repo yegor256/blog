@@ -152,7 +152,7 @@ Kiev, Ukraine<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences,
-which I attented recently, as a speaker. They rate us speakers,
+which I attended recently, as a speaker. They rate us speakers,
 why shouldn't we rate them, right? The best rate is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.

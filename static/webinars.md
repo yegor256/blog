@@ -47,10 +47,10 @@ This article were mentioned:
 {% youtube Xk9tIqwca3k video-left %}
 July 7, 2016:
 **Smart Classes and Functionality-Poor Interfaces**
-We discussed why java.io.InputStream design was wrong,
+We discussed why `java.io.InputStream` design was wrong,
 what Smart-Classes are for and why interfaces must be functionality poor.
 The discussion was based on this blog post:
-[Why InputStream Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
+[Why `InputStream` Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 
 {% youtube YBQoTZ-1X-o video-left %}
 June 1, 2016:

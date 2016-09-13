@@ -210,7 +210,7 @@ testable, less maintainable and less readable.
 
 To prevent that from happening,
 I would suggest a simple rule here:
-object behaviour should not be configurable.
+object behavior should not be configurable.
 Or, more technically, encapsulated properties must not be used to
 change the behavior of an object.
 

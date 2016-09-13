@@ -84,9 +84,9 @@ realize that.
 
 **Project management** is a set of tools to _predict_ the outcome
 of a project. Planning is one of those tools. Guessing is another one. Expert
-judgement is yet another one, which you were using while making that coffee.
+judgment is yet another one, which you were using while making that coffee.
 You were an expert and knew how to use the machine, the electricity, and the water
-tap. You didn't need any other tools except your **expert judgement**. And it
+tap. You didn't need any other tools except your **expert judgment**. And it
 worked. In bigger projects, we would need more powerful instruments and methods.
 For example, we could use some scheduling software to plan when to put the beans
 into the machine, when to put that cup under the dipping point and when to
@@ -161,7 +161,7 @@ a perfect term to define an amateur PM. A bad PM _becomes_ the future, instead
 of predicting it. He [micromanages]({% pst 2015/sep/2015-09-22-micromanagement %})
 the team by telling everybody what to do, since this is the easiest way to
 know what will happen and when, in the short-term. But the long-term future
-stays absolutely unclear. A bad PM mostly relies on expert judgement, just
+stays absolutely unclear. A bad PM mostly relies on expert judgment, just
 like you did while making that coffee.
 
 {% quote A good PM finds a way to organize resources in such a way that their future becomes predictable %}

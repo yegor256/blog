@@ -62,7 +62,7 @@ we practice in our projects:
     to compromise the quality of our code, everyone has to go through a
     pull request, pre-flight build, and automated merge procedure.
 
-  * **Chats Are Prohibited**. Any modification to our codebase, even a very small one,
+  * **Chats Are Prohibited**. Any modification to our code base, even a very small one,
     must be submitted in a pull request. A code review
     must also occur in the pull request. We strictly disallow any
     [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
