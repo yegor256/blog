@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Inheritance Is a Procedural Technique for Code Reuse"
-date: 2016-09-04
+date: 2016-09-13
 tags: oop
 place: Palo Alto, CA
 description: |
