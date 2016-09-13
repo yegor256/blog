@@ -37,6 +37,8 @@ for example.
 
 <!--more-->
 
+{% picture /images/2016/09/death-at-a-funeral.jpg 0 Death at a Funeral (2007) by Frank Oz %}
+
 I think we should. And I think I know the reason why.
 
 It's not because we introduce unnecessary coupling, as Allen Holub said in his
@@ -101,10 +103,12 @@ from class `Manuscript`, as if it's not a
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}), but rather a dead
 one from which we can inherit its parts, "money, properties, or a title."
 
+{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+
 Implementation inheritance was created as a mechanism for
 [code reuse](https://en.wikipedia.org/wiki/Code_reuse),
 and it doesn't fit into OOP at all. Yes, it may look convenient in the
-beginning, but it is absolutely wrong in terms of "object thinking".
+beginning, but it is absolutely wrong in terms of [object thinking](http://amzn.to/266oJr4).
 Just like [getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 implementation inheritance turns
 objects into _containers_ with data and procedures. Of course, it's
@@ -112,7 +116,7 @@ convenient to copy some of those data and procedures to a new object
 in order to avoid code duplication. But this is not what objects are about. They
 are not dead; they are alive!
 
-Don't kill them with inheritance :)
+Don't **kill** them with inheritance :)
 
 Thus, I think inheritance is bad because it is a _procedural_ technique for _code reuse_.
 It comes as no surprise that it introduces all the problems people have been talking about for years.
