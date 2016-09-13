@@ -36,7 +36,7 @@ Everybody will be nodding their heads &mdash; that's all you need.
 
 **Joke!**
 You must make them laugh. You must open with a joke and continue with many
-of them. Prepare them carefully. Just google "good keynote jokes" and use
+of them. Prepare them carefully. Just Google "good keynote jokes" and use
 what smart people recommend. A well-prepared collection of jokes is much
 more valuable than the content you will be talking about. Nobody will remember
 the content, but the jokes will definitely be re-tweeted. When a good speaker

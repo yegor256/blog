@@ -109,7 +109,7 @@ as you can.
 
 **Don't Negotiate**.
 Eventually you will have to discuss money. Make sure there will be no
-negotation involved. It'll be an offensive process, and most programmers
+negotiation involved. It'll be an offensive process, and most programmers
 are very sensitive. Just tell him how much you will pay, and if he doesn't
 feel that is enough, get back to the value/excitement/market conversation.
 Do it again and again until he agrees.

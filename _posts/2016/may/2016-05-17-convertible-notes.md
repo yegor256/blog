@@ -155,7 +155,7 @@ There is also a post-money valuation, which, as you can imagine, is calculated
 by multiplying total amount of shares after the investment, by their price. In
 this case, it's $4.4M (1,100,000 by $4).
 
-Let's see what happeed in our example with my $25K. I gave them to you when
+Let's see what happened in our example with my $25K. I gave them to you when
 your company was very young. Your valuation was rather low, because you
 barely had any results. You needed small cash to pay your bills and fill
 your car with gas. The valuation was definitely lower than $4M. So why are

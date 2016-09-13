@@ -97,7 +97,7 @@ and planning algorithms, etc.
 {% quote You must try to predict the future with as much accuracy and precision as possible %}
 
 Most of such tools are mentioned and explained in the PMBOK. They are even
-groupped there into so called "knowledge areas:" for predicting
+grouped there into so called "knowledge areas:" for predicting
 time, money, risks, people, etc. It's not important how exactly you predict
 the future, how many tools you're using or what knowledge areas you break them
 into. What's important is that you must try to do it with as much _accuracy_

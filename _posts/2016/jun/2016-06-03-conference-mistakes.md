@@ -102,7 +102,7 @@ it in my [YouTube channel](https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_
 and getting 500 views in the first week. So, who is
 more important, your event which was able to attract just 50 people or my
 YouTube channel that attracted 500? Thus, I would strongly recommend paying
-a lot of attention to video recording and its quality. Preferrably, you should
+a lot of attention to video recording and its quality. Preferably, you should
 record from two cameras (the speaker and the room) and do video editing afterwards.
 It's expensive, but very important.
 
