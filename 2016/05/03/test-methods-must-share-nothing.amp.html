@@ -119,7 +119,7 @@ literal <code>MSG</code>. What do we have now? Code duplication. String <code>"s
 shows up four times in the test class. No static analyzers will tolerate that.
 Moreover, there are seven (!) test methods in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>,
-which are using <code>MSG</code>. Thus, we will have 14 occurences of <code>"something"</code>, right?
+which are using <code>MSG</code>. Thus, we will have 14 occurrences of <code>"something"</code>, right?
 Yes, that's right and that's most likely why one of authors of this
 test case introduced the constant — to get rid of duplication.
 BTW, <a href="https://github.com/Happy-Neko">@Happy-Neko</a> did that in pull request
