@@ -69,7 +69,7 @@ This means literally what it says &mdash; the place is too cheap and, because
 of that, bad. The impression of such a place ruins the entire conference.
 Don't fool yourself, if it's cheap &mdash; it's bad.
 Into this category I would also place venues that are not designed to be
-conference hosters, like cinemas or offices. They will also be cheaper than
+conference hosts, like cinemas or offices. They will also be cheaper than
 proper venues, but you will get what you pay for.
 
 **No introduction**.
