@@ -22,6 +22,7 @@ for f in $(find . -regex '.*_site/.*\.html'); do
 done
 
 cat _temp/links.txt | \
+  sort | \
   uniq | \
   sed '/^[ \t]*$/d' | \
   grep -v 'http://www.yegor256.com' | \
