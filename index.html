@@ -20,7 +20,9 @@ keywords:
 {% for post in paginator.posts %}
   <div class="wrapper">
     <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
-      <meta itemprop="image" content="/images/yegor-bugayenko-192x192.png"/>
+      <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+        <meta itemprop="url" content="/images/yegor-bugayenko-192x192.png"/>
+      </div>
       <div itemscope="" itemprop="author" itemtype="http://schema.org/Person"/>
         <meta itemprop="name" content="Yegor Bugayenko"/>
       </div>
