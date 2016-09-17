@@ -20,15 +20,23 @@ keywords:
 {% for post in paginator.posts %}
   <div class="wrapper">
     <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <meta itemprop="image" content="/images/yegor-bugayenko-192x192.png"/>
+      <div itemscope="" itemprop="author" itemtype="http://schema.org/Person"/>
+        <meta itemprop="name" content="Yegor Bugayenko"/>
+      </div>
+      <div itemscope="" itemprop="publisher" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="yegor256.com"/>
+        <meta itemprop="logo" content="/images/yegor-bugayenko-192x192.png"/>
+      </div>
       <header>
         <h1>
           <a href="{{ post.url }}">
-            <span itemprop="name">{{ post.title }}</span>
+            <span itemprop="name headline">{{ post.title }}</span>
           </a>
         </h1>
         <ul class="subline">
           <li>
-            <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+            <time itemprop="datePublished dateModified mainEntityOfPage" datetime="{{ post.date | date_to_xmlschema }}">
               {{ post.date | date: "%-d %B %Y" }}
             </time>
           </li>
