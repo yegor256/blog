@@ -1,5 +1,5 @@
-/*globals $:false, window:false, document:false */
-$(function() {
+/*globals window:false, document:false */
+jQuery(document).ready(function($) {
   'use strict';
   function number(num) {
     if (num > 1000) {
