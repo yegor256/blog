@@ -4,7 +4,7 @@ title: "First Post"
 date: 2014-04-06
 description: |
   First post in my awesome blog :) The post doesn't contain
-  any valueable information and is just an anchor.
+  any valuable information and is just an anchor.
 keywords:
   - yegor bugayenko
   - bugayenko

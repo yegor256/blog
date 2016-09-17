@@ -13,7 +13,7 @@ layout: default
       <p class="printable">
         <code itemprop="url">{{ site.url }}{{ page.url }}</code>
       </p>
-      <h1 itemprop="name">{{ page.title }}</h1>
+      <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
       {% if page.book %}
         {{ page.book | book }}
       {% endif %}
@@ -27,7 +27,7 @@ layout: default
           <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
         {% endif %}
         {{ page | modified }}
-        <li class="printable" itemprop="author">Yegor Bugayenko</li>
+        <li class="printable" itemprop="author publisher">Yegor Bugayenko</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
           <a href="{{ site.url }}{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
