@@ -21,6 +21,14 @@ permalink: :year/:month/:day/:title.html
 paginate: 10
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
+exclude:
+  - README.md
+  - Gemfile.lock
+  - Gemfile
+  - httpd.conf
+  - id_rsa.enc
+  - s3cfg.enc
+  - uml
 
 gems:
   - jekyll-feed
