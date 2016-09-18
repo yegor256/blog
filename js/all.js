@@ -1,4 +1,4 @@
-/*globals window:false, document:false */
+/*globals $:false, window:false, document:false */
 if (typeof($) != 'undefined') {
   $(function() {
     'use strict';
