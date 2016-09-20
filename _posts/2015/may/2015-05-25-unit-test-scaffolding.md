@@ -199,7 +199,7 @@ public final class MetricsTest {
 {% endhighlight %}
 
 What do you think? Isn't it better than what JUnit offers?
-Isn't it more reusable and extendable than utility methods?
+Isn't it more reusable and extensible than utility methods?
 
 To summarize, I believe scaffolding in unit testing must be
 done through
