@@ -163,9 +163,13 @@ task ping: [:build] do
   tmp << links.join("\n")
   tmp.flush
   tmp.close
+  out = Tempfile.new(['yegor256-', '.txt'])
+  out.close
   puts "#{links.size} links found, testing them..."
-  errors = `./_rake/ping.sh #{tmp.path}`.split("\n").reduce(0) do |cnt, p|
+  system("./_rake/ping.sh #{tmp.path} #{out.path}")
+  errors = File.read(out).split("\n").reduce(0) do |cnt, p|
     code, link = p.split(' ')
+    next if link.nil?
     if code != '200'
       puts "#{link}: #{code}"
       cnt + 1

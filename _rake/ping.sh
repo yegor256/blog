@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+set -x
 
 function ping_uri {
   curl --location --silent --output /dev/null --fail \
@@ -11,4 +13,5 @@ function ping_uri {
 }
 export -f ping_uri
 
-cat $1 | xargs -P 10 -n 1 /bin/bash -c 'ping_uri "$0";'
+cmd="ping_uri \"\$0\" >> ${2}; echo \"\$0\";"
+cat $1 | xargs -P 10 -n 1 /bin/bash -c "${cmd}"
