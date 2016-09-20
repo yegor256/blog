@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OOP Without Classes?"
-date: 2016-09-08
+date: 2016-09-20
 place: Palo Alto, CA
 tags: oop
 description: |
@@ -24,6 +24,8 @@ understand him then. The more I've thought about this, the more it appears
 obvious that we indeed do not need classes.
 
 <!--more-->
+
+{% picture /images/2016/09/battleship-potemkin.jpg 0 Battleship Potemkin (1925) by Sergei M. Eisenstein %}
 
 Here is a prototype.
 
