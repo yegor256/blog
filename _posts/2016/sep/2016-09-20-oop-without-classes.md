@@ -6,7 +6,8 @@ place: Palo Alto, CA
 tags: oop
 description: |
   Do we really need classes in OOP? Maybe it's
-  possible to just have objects, methods, and types.
+  possible to just have objects, and types. And,
+  of course, no implementation inheritance.
 keywords:
   - class in oop
   - what is class in oop
