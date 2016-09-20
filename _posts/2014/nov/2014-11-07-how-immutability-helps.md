@@ -27,7 +27,7 @@ In a few recent posts, including
 ["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), and
 ["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}),
-I universally labelled all mutable objects with "setters" (object methods starting with `set`) evil.
+I universally labeled all mutable objects with "setters" (object methods starting with `set`) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn't convincing enough for many of you &mdash; I received a few requests
 asking to provide more specific and practical examples.

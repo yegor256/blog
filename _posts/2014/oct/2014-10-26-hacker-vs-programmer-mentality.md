@@ -97,14 +97,14 @@ I would highlight these qualities of a good
  * hates to see his code being modified by someone else
  * likes to dedicate himself to one project at a time
 
+{% quote In 1994 it was much more efficient to hire more programmers and ask them to optimize the code or even rewrite it, instead of buying new hardware %}
+
 A hacker is a talented individual. He wants to express his
 talent in the software he writes. He enjoys coding and does
 it mostly for fun. I would say, he is married to his code and can't imagine
 its happy life after an eventual divorce. Code ownership is
 what a hacker is about &mdash; he understands himself as an "owner"
 of the code.
-
-{% quote In 1994 it was much more efficient to hire more programmers and ask them to optimize the code or even rewrite it, instead of buying new hardware %}
 
 When I ask one of my hacker friends &mdash; "How will someone understand
 what this code does?" I almost always hear the same answer &mdash;

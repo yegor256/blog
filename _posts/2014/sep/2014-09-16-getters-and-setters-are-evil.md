@@ -73,7 +73,7 @@ we have to change our code as well.
 
 All these justifications are reasonable, but they are missing the main point.
 
-## Fundamental Misbelief
+## Fundamental Disbelief
 
 Most programmers believe that an object is a data structure with methods.
 I'm quoting [Getters and Setters Are Not Evil](http://java.dzone.com/articles/getters-and-setters-are-not),

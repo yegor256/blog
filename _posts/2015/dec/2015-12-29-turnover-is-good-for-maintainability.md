@@ -109,5 +109,5 @@ This earlier post explains how this problem can be solved without
 [firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
 or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can't, just try to keep your turnover high
-enough to prevent the appearance of **heros** (a.k.a. subject matter experts).
+enough to prevent the appearance of **heroes** (a.k.a. subject matter experts).
 

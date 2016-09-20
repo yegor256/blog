@@ -25,6 +25,7 @@ exclude:
   - README.md
   - Gemfile.lock
   - Gemfile
+  - Rakefile
   - httpd.conf
   - id_rsa.enc
   - s3cfg.enc

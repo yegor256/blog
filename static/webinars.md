@@ -92,7 +92,7 @@ We used this blog post as a guidance:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
 
 {% youtube ibT5oKToMoQ video-left %}
-[Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
+[February 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
 **Daily Stand-Up Meetings Are Evil**
 We talked about famous daily meetings and why they were
 actually a bad idea in a properly managed

@@ -46,7 +46,7 @@ anonymous (by email)
 
 "... insightless nonsense"
 &mdash;
-[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
+[`@andreasdotorg`](https://twitter.com/andreasdotorg/status/756138631325061120)
 
 "I have still a good opinion of you but some posts are just holy crap"
 &mdash;
@@ -77,7 +77,7 @@ anonymous
 
 "Probably the biggest pile of stinky cow shit I have ever read"
 &mdash;
-[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
+[`@migrrrr`](https://twitter.com/migrrrr/status/771689354913873920)
 
 "You're a sociopath."
 &mdash;

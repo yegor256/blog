@@ -194,7 +194,7 @@ pay for shipping. You will read it (200 pages), and make your corrections
 right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
 Your name will be in the book, on the 9th page,
-in the list of **acknowledgements**!
+in the list of **acknowledgments**!
 I'm interested in your negative feedback mostly.
 Tell me what is not clear, what is missing, what needs a more detailed
 explanation. But, please, **don't argue** with my ideas. I won't change

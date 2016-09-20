@@ -28,7 +28,7 @@ I guess, DynamoDB Local is meant to be used in
 integration testing and this is how we're going to use it below.
 
 I use Maven to run all of my Java integration
-testing using [maven-failsafe-plugin](http://maven.apache.org/surefire/maven-failsafe-plugin/).
+testing using [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/).
 The philosophy of integration testing with Maven is
 that you start all your supplementary test stubs during
 the `pre-integration-test` phase, run your tests in the `integration-test`
@@ -126,7 +126,7 @@ a new goal [`create-tables`](http://dynamodb.jcabi.com/example-create-tables.htm
 The `foo.json` file used above should contain a JSON request
 that is sent to DynamoDB Local right after it is up and running.
 The request should comply with the specification
-of [CreateTable](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) request. For example:
+of [`CreateTable`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) request. For example:
 
 {% highlight json %}
 {

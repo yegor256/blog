@@ -205,7 +205,7 @@ on the neck of the team.
 
 ## Motivation
 
-**A Bad Manager De-Motivates by Public Embarassment**.
+**A Bad Manager De-Motivates by Public Embarrassment**.
 He doesn't know how to organize a proper motivational system within the team;
 that's why he relies on a natural fear of public embarrassment. It's only
 logical that no one would feel comfortable saying, "_I forgot it_"

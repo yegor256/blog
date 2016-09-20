@@ -49,7 +49,7 @@ Chapter 5 discusses basic principles and strategies of unit testing.
 However, the discussion is not abstract enough for a short 25-page summary,
 and is not specific enough for a detailed discussion. Again, twenty
 years ago this information may have had some value. Nowadays,
-["Growing Object-Oriented Softare, Guided by Tests"](http://amzn.to/1PBpoDT)
+["Growing Object-Oriented Software, Guided by Tests"](http://amzn.to/1PBpoDT)
 by Steven Freeman and Nat Pryce
 is a much better source for this subject.
 

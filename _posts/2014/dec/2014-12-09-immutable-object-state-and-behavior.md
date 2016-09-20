@@ -297,7 +297,7 @@ class Document {
 That `Memory` class would be implemented by JDK natively, and all other
 classes would be immutable. The class `Memory` would have direct access
 to the memory heap and would be responsible for
-[malloc and free](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation)
+[`malloc` and `free`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation)
 operations on the operating system level.
 Having such a class would allow us to make all Java classes immutable,
 including `StringBuffer`, `ByteArrayOutputStream`, etc.

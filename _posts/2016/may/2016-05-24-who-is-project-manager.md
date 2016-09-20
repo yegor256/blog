@@ -147,7 +147,7 @@ of PMs existence &mdash; to _predict_ the future so that we were able to
 kill our projects before they kill us (read "eat all our resources").
 
 You may ask &mdash; what about the **coordinating** part? What about
-[morning standups]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})?
+[morning stand-ups]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})?
 What about walking around the office and motivating all the
 [office slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 so that they don't get lazy? Isn't it the primary responsibility of a PM?

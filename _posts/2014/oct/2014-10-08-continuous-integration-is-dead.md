@@ -23,7 +23,7 @@ youtube:
 ---
 
 A few days ago, my article
-["Why Continuous Integration Doesn’t Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)
+["Why Continuous Integration Doesn't Work"](http://devops.com/blogs/continuous-integration-doesnt-work/)
 was published at [DevOps.com](http://www.devops.com). Almost the same
 day I received a few strongly negative critiques on Twitter.
 

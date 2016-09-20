@@ -95,4 +95,4 @@ not when it is known to be correct, but when the rate of discovering
 errors slows down to one that management considers acceptable" (page 13).
 
 Thus, the only valid criteria for exiting a testing process is the
-discovery of a **forecasted** amount of bugs.
+discovery of a **forecast** amount of bugs.

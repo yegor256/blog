@@ -1,0 +1,11 @@
+CNAME
+robots.txt
+about-me.html
+books.html
+404.html
+favicon.ico
+rss.xml
+sitemap.xml
+css/layout.css
+images/yegor-bugayenko-192x192.png
+2014/04/06/introduction.html

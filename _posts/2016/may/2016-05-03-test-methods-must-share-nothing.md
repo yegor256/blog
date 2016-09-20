@@ -118,7 +118,7 @@ Yes, that's right and that's most likely why one of authors of this
 test case introduced the constant &mdash; to get rid of duplication.
 BTW, [@Happy-Neko](https://github.com/Happy-Neko) did that in pull request
 [#513](https://github.com/yegor256/takes/pull/513),
-[@carlosmiranda](https://github.com/carlosmiranda] reviewed the code and I
+[`@carlosmiranda`](https://github.com/carlosmiranda] reviewed the code and I
 approved the changes. So, three people made/approved that mistake, including myself.
 
 So what is the right approach that will avoid code duplication and
