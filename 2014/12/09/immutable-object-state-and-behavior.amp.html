@@ -225,7 +225,7 @@ direct access was possible:</p>
 <p>That <code>Memory</code> class would be implemented by JDK natively, and all other
 classes would be immutable. The class <code>Memory</code> would have direct access
 to the memory heap and would be responsible for
-<a href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation">malloc and free</a>
+<a href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation"><code>malloc</code> and <code>free</code></a>
 operations on the operating system level.
 Having such a class would allow us to make all Java classes immutable,
 including <code>StringBuffer</code>, <code>ByteArrayOutputStream</code>, etc.</p>

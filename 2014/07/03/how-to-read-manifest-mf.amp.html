@@ -89,13 +89,13 @@ files, and how it works on a low level.</p>
 <p>When you package a library or even a web application,
 it is a good practice to add an attribute to its <code>MANIFEST.MF</code>
 with the package version name and build number. In Maven,
-<a href="http://maven.apache.org/plugins/maven-jar-plugin/">maven-jar-plugin</a>
+<a href="http://maven.apache.org/plugins/maven-jar-plugin/"><code>maven-jar-plugin</code></a>
 can help you (almost the same configuration for
-<a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a>):</p>
+<a href="http://maven.apache.org/plugins/maven-war-plugin/"><code>maven-war-plugin</code></a>):</p>
 
 
 
-<p><a href="http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html">buildnumber-maven-plugin</a>
+<p><a href="http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html"><code>buildnumber-maven-plugin</code></a>
 will help you to get <code>${buildNumber}</code> from Git, SVN or Mercurial:</p>
 
 
@@ -126,7 +126,7 @@ details right into <code>MANIFEST.MF</code>:</p>
 
 
 <p>Afterwards, you can retrieve them in
-runtime using <a href="http://manifests.jcabi.com">jcabi-manifests</a>:</p>
+runtime using <a href="http://manifests.jcabi.com"><code>jcabi-manifests</code></a>:</p>
 
 
 

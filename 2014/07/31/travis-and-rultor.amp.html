@@ -77,9 +77,9 @@ using them in tandem to achieve seamless continuous delivery.</p>
 
 <h2 id="scenario-1-merge-pull-request">Scenario #1: Merge Pull Request</h2>
 
-<p><a href="https://github.com/jcabi/jcabi-mysql-maven-plugin">jcabi-mysql-maven-plugin</a>
+<p><a href="https://github.com/jcabi/jcabi-mysql-maven-plugin"><code>jcabi-mysql-maven-plugin</code></a>
 is a Maven plugin for <a href="/2014/05/21/mysql-maven-plugin.html">MySQL integration testing</a>.
-<a href="https://github.com/ChristianRedl">@ChristianRedl</a> submitted pull request
+<a href="https://github.com/ChristianRedl"><code>@ChristianRedl</code></a> submitted pull request
 <a href="https://github.com/jcabi/jcabi-mysql-maven-plugin/pull/35">#35</a> with a new feature.
 I reviewed the request and asked Rultor to merge it into <code>master</code>:</p>
 
@@ -109,7 +109,7 @@ continuously integrate it. Every commit made to <code>master</code> triggers
 a new build in Travis. The result of the build changes the status
 of the project in Travis: either "failing" or "passing".</p>
 
-<p><a href="http://aspects.jcabi.com">jcabi-aspects</a> is a collection of
+<p><a href="http://aspects.jcabi.com"><code>jcabi-aspects</code></a> is a collection of
 <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP AspectJ aspects</a>.
 We configured Travis to build it continuously. This is the badge it produces (the left one):</p>
 
@@ -133,9 +133,9 @@ with Travis gives us higher stability.</p>
 
 <h2 id="scenario-3-release-to-rubygems">Scenario #3: Release to RubyGems</h2>
 
-<p><a href="https://github.com/yegor256/jekyll-github-deploy">jekyll-github-deploy</a>
+<p><a href="https://github.com/yegor256/jekyll-github-deploy"><code>jekyll-github-deploy</code></a>
 is a Ruby gem that <a href="/2014/06/24/jekyll-github-deploy.html">automates deployment of Jekyll sites to GitHub Pages</a>.
-<a href="https://github.com/leucos">@leucos</a> submitted a pull request
+<a href="https://github.com/leucos"><code>@leucos</code></a> submitted a pull request
 <a href="https://github.com/yegor256/jekyll-github-deploy/pull/4">#4</a>
 with a new feature. The request was merged successfully into <code>master</code> branch.</p>
 
@@ -181,10 +181,10 @@ Rultor reports to GitHub. This is exactly what happened in
 <a href="/2014/04/21/s3-http-basic-auth.html">Basic HTTP authentication gateway for Amazon S3 Buckets</a>.
 It is a Java web app.
 In its pull request <a href="https://github.com/yegor256/s3auth/pull/195">#195</a>, a resource
-leakage problem was fixed by <a href="https://github.com/carlosmiranda">@carlosmiranda</a>
+leakage problem was fixed by <a href="https://github.com/carlosmiranda"><code>@carlosmiranda</code></a>
 and the pull request was merged by Rultor.</p>
 
-<p>Then, <a href="https://github.com/davvd">@davvd</a> instructed Rultor to deploy
+<p>Then, <a href="https://github.com/davvd"><code>@davvd</code></a> instructed Rultor to deploy
 <code>master</code> branch to production environment. Rultor created
 <a href="/2014/07/29/docker-in-rultor.html">a new Docker container</a>
 and ran <code>mvn clean deploy</code> in it.</p>
@@ -225,8 +225,8 @@ explains this process even better.</p>
 projects are open source and hosted at GitHub.</p>
 
 <p>Other good examples of Rultor+Travis usage can be seen in these GitHub issues:
-<a href="https://github.com/jcabi/jcabi-http/issues/47">jcabi/jcabi-http#47</a>,
-<a href="https://github.com/jcabi/jcabi-http/pull/48">jcabi/jcabi-http#48</a></p>
+<a href="https://github.com/jcabi/jcabi-http/issues/47"><code>jcabi/jcabi-http#47</code></a>,
+<a href="https://github.com/jcabi/jcabi-http/pull/48"><code>jcabi/jcabi-http#48</code></a></p>
 
 <p>PS. You can do something similar with AppVeyor, for Windows platform:
 <a href="/2015/03/29/rultor-with-appveyor.html">How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</a></p>

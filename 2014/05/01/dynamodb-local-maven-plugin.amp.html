@@ -72,7 +72,7 @@ service through the RESTful API.</p>
 integration testing and this is how we're going to use it below.</p>
 
 <p>I use Maven to run all of my Java integration
-testing using <a href="http://maven.apache.org/surefire/maven-failsafe-plugin/">maven-failsafe-plugin</a>.
+testing using <a href="http://maven.apache.org/surefire/maven-failsafe-plugin/"><code>maven-failsafe-plugin</code></a>.
 The philosophy of integration testing with Maven is
 that you start all your supplementary test stubs during
 the <code>pre-integration-test</code> phase, run your tests in the <code>integration-test</code>
@@ -118,7 +118,7 @@ a new goal <a href="http://dynamodb.jcabi.com/example-create-tables.html"><code>
 <p>The <code>foo.json</code> file used above should contain a JSON request
 that is sent to DynamoDB Local right after it is up and running.
 The request should comply with the specification
-of <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html">CreateTable</a> request. For example:</p>
+of <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html"><code>CreateTable</code></a> request. For example:</p>
 
 
 
