@@ -19,6 +19,7 @@ task default: [
   :garbage,
   :scss_lint,
   :spell,
+  :excerpts,
   :ping,
   # :jslint,
   # :proofer,
@@ -196,12 +197,19 @@ task :jslint do
   done 'JSLint says JavaScript files are clean'
 end
 
+desc 'Make sure all pages have excerpts'
+task :excerpts do
+  Dir['_posts/**/*.md'].each do |f|
+    fail "No excerpt in #{f}" unless File.read(f).include? '<!--more-->'
+  end
+  done 'All articles have excerpts'
+end
+
 desc 'Other tests'
 task others: [:build] do
   [
     'test_snippets.sh',
-    'test_orphans.sh',
-    'test_excerps.sh'
+    'test_orphans.sh'
   ].each do |s|
     system("_rake/#{s}")
     fail "#{s} failed" unless $CHILD_STATUS.success?
