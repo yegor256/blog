@@ -64,7 +64,9 @@ Libraries will deliver us objects, which we can copy.
 
 That's it.
 
-No implementation inheritance and no static methods, of course.
+No [implementation inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
+and no [static methods]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+of course.
 Only [subtyping](https://en.wikipedia.org/wiki/Subtyping).
 
 Why not?
