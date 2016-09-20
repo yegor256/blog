@@ -4,9 +4,9 @@ set -x
 
 function ping_uri {
   curl --location --silent --output /dev/null --fail \
-    -A 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2194.2 Safari/537.36' \
-    -H 'Accept:*/*' \
-    -H 'Accept-Encoding:gzip,deflate,sdch' \
+    -A 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)' \
+    -H 'Accept:text/html,*/*' \
+    -H 'Accept-Encoding:gzip,deflate' \
     -H 'Cache-Control:max-age=0' \
     --retry 8 \
     --write-out '%{http_code} %{url_effective}\n' $1

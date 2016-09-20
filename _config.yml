@@ -30,6 +30,7 @@ exclude:
   - id_rsa.enc
   - s3cfg.enc
   - uml
+  - node_modules
 
 gems:
   - jekyll-feed
