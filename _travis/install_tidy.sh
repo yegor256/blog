@@ -6,6 +6,6 @@ cd tidy-html5/build/cmake
 git checkout 5.1.25
 cmake ../..
 make
-sudo make install
+make install
 cd ../../..
 rm -rf tidy-html5

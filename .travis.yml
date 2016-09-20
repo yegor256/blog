@@ -15,17 +15,17 @@ env:
 addons:
   apt:
     packages:
-    - aspell
-    - aspell-en
-    - build-essential
-    - graphviz
-    - gnuplot
-    - s3cmd
-    - fontforge
-    - liblapack-dev
+      - aspell
+      - aspell-en
+      - build-essential
+      - graphviz
+      - gnuplot
+      - s3cmd
+      - fontforge
+      - liblapack-dev
 before_install:
   - set -e
-  - git config --global user.email "travis@teamed.io"
+  - git config --global user.email "travis@yegor256.com"
   - git config --global user.name "travis"
   - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
   - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
@@ -33,13 +33,11 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
 install:
   - set -e
-  - travis_retry _travis/install_cmake.sh; sudo apt-get install -y libxml2-utils
-  - travis_retry npm install phantomjs-prebuilt@2.1.7
-  - travis_retry npm install casperjs@1.1.0
+  - travis_retry sudo _travis/install_cmake.sh; sudo apt-get install -y libxml2-utils
   - travis_retry npm install cssshrink@0.0.5
-  - travis_retry _travis/install_plantuml.sh
-  - travis_retry _travis/install_sfnt2woff.sh
-  - travis_retry _travis/install_tidy.sh
+  - travis_retry sudo _travis/install_plantuml.sh
+  - travis_retry sudo _travis/install_sfnt2woff.sh
+  - travis_retry sudo _travis/install_tidy.sh
   - travis_retry bundle install
   - travis_retry gem install fontcustom -v 1.3.8
   - fontcustom --version
