@@ -302,7 +302,8 @@ a new one. Implementation details are perfectly hidden inside. Now let's
 see how we can implement these two classes.
 
 I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
-but you can use something else or just plain JDBC if you like. It doesn't
+but you can use something else like [jOOQ](http://www.jooq.org),
+or just plain JDBC if you like. It doesn't
 really matter. What matters is that your database interactions are hidden
 inside objects. Let's start with `Posts` and implement it in class
 `PgPosts` ("pg" stands for PostgreSQL):

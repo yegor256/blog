@@ -223,7 +223,7 @@ I'm kidding.
 About the JavaOne part, anyway. But the "every year" part is very true. You must
 regularly make some speeches somewhere, preferably at JavaOne. But until
 you get there, speak where you can. Well, where they accept you. Create
-a profile at [lanyrd](http://www.lanyrd.com) (or something similar) and
+a profile at [lanyrd](http://lanyrd.com) (or something similar) and
 regularly check which conferences are looking for speakers. Submit there
 and you will be surprised to see that a few of them will actually accept
 some of your ideas.
