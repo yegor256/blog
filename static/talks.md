@@ -85,9 +85,9 @@ Kyiv, Ukraine<br/>
 14-15 October 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCon Prague 2016"/>
+<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON Prague 2016"/>
 **Java Annotations are a Big Mistake**<br/>
-[GeeCon Prague 2016](http://2016.geecon.cz/)<br/>
+[GeeCON Prague 2016](http://2016.geecon.cz/)<br/>
 Prague, Czech Republic<br/>
 20-21 October 2016
 

@@ -21,15 +21,27 @@ task default: [
   :spell,
   :excerpts,
   :snippets,
+  :orphans,
   :ping,
   # :jslint,
   # :proofer,
   # :rubocop,
-  :others
 ]
 
 def done(msg)
   puts msg + "\n\n"
+end
+
+def all_html()
+  Dir['_site/**/*.html'].reject{ |f| f.end_with? '.amp.html' }
+end
+
+def all_links()
+  all_html().reduce([]) do |array, f|
+    array + Nokogiri::HTML(File.read(f)).xpath(
+      '//article//a/@href'
+    ).to_a.map(&:to_s)
+  end.sort.map{ |a| a.gsub(/^\//, 'http://www.yegor256.com/') }
 end
 
 desc 'Delete _site directory'
@@ -114,7 +126,7 @@ end
 
 desc 'Check spelling in all HTML pages'
 task spell: [:build] do
-  typos = Dir['_site/**/*.html'].reject{ |f| f['.amp.html'] }.reduce(0) do |total, f|
+  typos = all_html().reduce(0) do |total, f|
     html = Nokogiri::HTML(File.read(f))
     html.search('//code').remove
     html.search('//script').remove
@@ -153,14 +165,7 @@ end
 
 desc 'Ping all foreign links'
 task ping: [:build] do
-  links = Dir['_site/**/*.html'].reduce([]) do |array, f|
-    array + Nokogiri::HTML(File.read(f)).xpath(
-      '//article//a/@href[starts-with(.,"http://") or starts-with(.,"https://")]'
-    ).to_a.map(&:to_s)
-  end
-    .sort
-    .uniq
-    .reject{ |a| a['http://www.yegor256.com/'] }
+  links = all_links().uniq.reject{ |a| a.start_with? 'http://www.yegor256.com/' }
   tmp = Tempfile.new(['yegor256-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
@@ -208,7 +213,7 @@ end
 
 desc 'Make sure all snippets are compact enough'
 task :snippets do
-  Dir['_site/**/*.html'].each do |f|
+  all_html().each do |f|
     lines = Nokogiri::HTML(File.read(f)).xpath(
       '//article//figure[@class="highlight"]/pre/code[not(contains(@class,"text"))]'
     ).to_a.map(&:to_s)
@@ -227,15 +232,27 @@ task :snippets do
   done 'All snippets are compact enough'
 end
 
-desc 'Other tests'
-task others: [:build] do
-  [
-    'test_snippets.sh',
-    'test_orphans.sh'
-  ].each do |s|
-    system("_rake/#{s}")
-    fail "#{s} failed" unless $CHILD_STATUS.success?
-    done "#{s} passed without issues"
+desc 'Make sure there are no orphan articles'
+task orphans: [:build] do
+  links = all_links()
+    .reject{ |a| !a.start_with? 'http://www.yegor256.com/' }
+    .map{ |a| a.gsub(/#.*/, '') }
+  links += all_html().map { |f| f.gsub(/_site/, 'http://www.yegor256.com') }
+  counts = {}
+  links
+    .reject{ |a| !a.match /.*\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*/ }
+    .reject{ |a| a.end_with? '.amp.html' }
+    .group_by(&:itself).each { |k,v| counts[k] = v.length }
+  orphans = 0
+  counts.each do |k,v|
+    if v < 4
+      puts "#{k} is an orphan (#{v})"
+      orphans += 1
+    else
+      puts "#{k}: #{v}"
+    end
   end
+  fail "There are #{orphans} orphans" unless orphans == 0
+  done "There are no orphans in #{links.size} links"
 end
 
