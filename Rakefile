@@ -163,7 +163,9 @@ end
 
 desc 'Ping all foreign links'
 task ping: [:build] do
-  links = all_links().uniq.reject{ |a| a.start_with? 'http://www.yegor256.com/' }
+  links = all_links().uniq
+    .reject{ |a| a.start_with? 'http://www.yegor256.com/' }
+    .reject{ |a| a.include? 'linkedin.com' }
   tmp = Tempfile.new(['yegor256-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
