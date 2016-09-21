@@ -142,14 +142,12 @@ task spell: [:build] do
       .gsub(/'ll/, ' will')
       .gsub(/'ve/, ' have')
       .gsub(/'s/, ' ')
-      .gsub(/á|à/, 'a')
-      .gsub(/Š/, 'S')
       .gsub(/[,:;<>?!-#$%^&@]+/, ' ')
     tmp << text
     tmp.flush
     tmp.close
     stdout = `cat "#{tmp.path}" \
-      | aspell -a --lang=en_US -W 3 --ignore-case -p ./_rake/aspell.en.pws \
+      | aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws \
       | grep ^\\&`
     if stdout.empty?
       puts "#{f}: OK (#{text.split(' ').size} words)"
