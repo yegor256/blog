@@ -242,7 +242,7 @@ class Foo {
 {% endhighlight %}
 
 I simplified the actual algorithm of retrying a method call on failure, but I'm
-sure you get the idea. [AspectJ](http://www.aspectj.org),
+sure you get the idea. [AspectJ](http://www.eclipse.org/aspectj/),
 the [AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)
 engine, uses
 [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html)

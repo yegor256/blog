@@ -155,8 +155,8 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.codeship.io">CodeShip</a>&#x263A;</td>
-  <td class="x-right"><a href="https://codeship.io/pricing">$49/mo</a></td>
+<tr><td><a href="https://codeship.com">CodeShip</a>&#x263A;</td>
+  <td class="x-right"><a href="https://codeship.com/pricing">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -200,7 +200,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.vexor.io">Vexor</a></td>
+<tr><td><a href="http://vexor.io">Vexor</a></td>
   <td class="x-right"><a href="http://vexor.io/">&cent;90/hr</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -325,9 +325,9 @@ didn't reply to me when I asked for a Maven version update
 that, their badge is not updated correctly in GitHub README.md &mdash;
 when the build is broken, the badge stays green... very annoying.
 
-{% badge /images/2014/10/codeship.png 64 http://www.codeship.io %}
+{% badge /images/2014/10/codeship.png 64 https://www.codeship.com %}
 
-[**CodeShip**](http://www.codeship.io) works fine, but their web UI
+[**CodeShip**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
@@ -363,7 +363,7 @@ I don't really like Jenkins, that's why can't recommend this platform.
 via GitHub, huh? They seem to be more "deployment" oriented, not just
 continuous integration.
 
-{% badge /images/2014/10/vexor.png 64 http://www.vexor.com %}
+{% badge /images/2014/10/vexor.png 64 http://vexor.io %}
 
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
 billing model &mdash; they charge per build, not per month. I would definitely
@@ -377,9 +377,9 @@ a full scale mobile app to test it against.
 
 <hr/>
 
-**Ship.io** is [dead](https://ship.io/ship-io-is-shutting-down/).
+**Ship.io** is dead (as of 20-Sep-2016).
 
-[**ZeroCI**](http://www.zeroci.com) is dead (as of 28-Aug-2016).
+**ZeroCI.com** is dead (as of 28-Aug-2016).
 
 <hr/>
 
