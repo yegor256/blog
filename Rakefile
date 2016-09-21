@@ -20,6 +20,7 @@ task default: [
   :scss_lint,
   :spell,
   :excerpts,
+  :snippets,
   :ping,
   # :jslint,
   # :proofer,
@@ -203,6 +204,27 @@ task :excerpts do
     fail "No excerpt in #{f}" unless File.read(f).include? '<!--more-->'
   end
   done 'All articles have excerpts'
+end
+
+desc 'Make sure all snippets are compact enough'
+task :snippets do
+  Dir['_site/**/*.html'].each do |f|
+    lines = Nokogiri::HTML(File.read(f)).xpath(
+      '//article//figure[@class="highlight"]/pre/code[not(contains(@class,"text"))]'
+    ).to_a.map(&:to_s)
+      .join("\n")
+      .gsub(/<code [^>]+>/, '')
+      .gsub(/<span class="[A-Za-z0-9-]+">/, '')
+      .gsub(/<\/code>/, "\n")
+      .gsub(/<\/span>/, '')
+      .gsub(/&lt;/, '<')
+      .gsub(/&gt;/, '>')
+      .split("\n")
+    long = lines.reject{ |s| s.length < 81 }
+    fail "Too wide snippet in #{f}: #{long}" unless long.empty?
+    puts "#{f}: OK (#{lines.size} lines)"
+  end
+  done 'All snippets are compact enough'
 end
 
 desc 'Other tests'
