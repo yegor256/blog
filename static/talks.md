@@ -96,7 +96,7 @@ Prague, Czech Republic<br/>
 **Why professional programmers hate Agile?**<br/>
 [SECR 2016](http://2016.secr.ru/)<br/>
 Moscow, Russia<br/>
-28-29 October 2016
+28 October 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>

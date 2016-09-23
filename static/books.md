@@ -30,7 +30,7 @@ disclosing all techniques, secrets and tactics I'm using at this blog.
 It contains a big amount (close to 256) small and big recommendations,
 which I would be glad to hear when I started blogging. Unfortunately,
 I didn't have that book back then. You have a chance to learn everything
-in just one go. To be published very soon, in September 2016.
+in just one go. To be published very soon, in October 2016.
 
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
 [Code Ahead](/code-ahead.html) will be the book about software engineering. I will

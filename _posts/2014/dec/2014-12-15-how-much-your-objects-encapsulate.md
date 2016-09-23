@@ -49,6 +49,8 @@ that the object of this class, after being constructed, will represent
 a web page. The second class accepts no arguments, which tells us
 that the object of it will represent ... the Universe.
 
+{% quote In order to understand what real-life entity an object represents, look at its constructor %}
+
 I think this principle is applicable to all classes in
 object-oriented programming &mdash; in order to understand what
 real-life entity an object represents, look at its constructor. All

@@ -31,6 +31,8 @@ By the way, his name, to my knowledge, was
 was not the sole inventor of DTO, but he made it legal and recommended
 its use. With all due respect, he was just wrong.
 
+{% quote Objects must only have access to the data they encapsulate and never to the data encapsulated by other objects  %}
+
 The key idea of object-oriented programming is to hide data
 behind objects. This idea has a name:
 [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29).
