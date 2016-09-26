@@ -54,7 +54,7 @@ if (typeof($) != 'undefined') {
         timeout: timeout,
         url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
         success: function(json) {
-          var count = json.count;
+          var count = json[url].share.share_count;
           if (count > 0) {
             $('.count-facebook').html(number(count)).fadeIn();
           }
