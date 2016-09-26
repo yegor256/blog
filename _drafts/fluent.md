@@ -35,4 +35,32 @@ an object-oriented language? I think it's a bad idea.
 
 <!--more-->
 
-This
+Say, we have a list of short texts:
+
+{% highlight java %}
+List<String> list = Arrays.asList(
+  "one", "two", "three"
+);
+{% endhighlight %}
+
+This is how we would trim and print only long ones in Java 7:
+
+{% highlight java %}
+for (String item : list) {
+  String trimmed = item.trim();
+  if (trimmed.length() > 3) {
+    System.out.println(trimmed);
+  }
+}
+{% endhighlight %}
+
+This is what we do in Java 8:
+
+{% highlight java %}
+list.stream()
+  .map(t -> t.trim())
+  .filter(t -> t.length() > 3)
+  .forEach(t -> System.out.println(t))
+{% endhighlight %}
+
+
