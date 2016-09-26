@@ -52,7 +52,7 @@ if (typeof($) != 'undefined') {
         dataType: 'jsonp',
         async: true,
         timeout: timeout,
-        url: 'https://graph.facebook.com/?ids=' + eurl,
+        url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
         success: function(json) {
           var count = json.count;
           if (count > 0) {
