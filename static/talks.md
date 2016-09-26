@@ -115,7 +115,7 @@ Kiev, Ukraine<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/devopspro.png" class="future-talk" alt="DevOpsPro Moscow 2016"/>
-**Keep Your Servers In GitHub**<br/>
+**Practical Example of a One-Click Release**<br/>
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/)<br/>
 Moscow, Russia<br/>
 15 November 2016
