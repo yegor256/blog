@@ -48,15 +48,21 @@ if (typeof($) != 'undefined') {
       //     }
       //   }
       // );
-      // $.getJSON(
-      //   'https://api.facebook.com/method/links.getStats?format=json&urls=' + eurl,
-      //   function(json) {
-      //     var count = json[0].total_count;
-      //     if (count > 0) {
-      //       $('.count-facebook').html(number(count)).fadeIn();
-      //     }
-      //   }
-      // );
+      $.ajax({
+        dataType: 'jsonp',
+        async: true,
+        timeout: timeout,
+        url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
+        success: function(json) {
+          var count = json.count;
+          if (count > 0) {
+            $('.count-facebook').html(number(count)).fadeIn();
+          }
+        },
+        error: function() {
+          $('.share .icon-facebook').css('border', border);
+        }
+      });
       $.ajax({
         dataType: 'json',
         async: true,
