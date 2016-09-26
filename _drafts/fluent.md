@@ -43,7 +43,7 @@ List<String> list = Arrays.asList(
 );
 {% endhighlight %}
 
-This is how we would trim and print only long ones in Java 7:
+This is how we would trim them and print only long ones, in Java 7:
 
 {% highlight java %}
 for (String item : list) {
@@ -62,5 +62,8 @@ list.stream()
   .filter(t -> t.length() > 3)
   .forEach(t -> System.out.println(t))
 {% endhighlight %}
+
+The first approach is procedural. The second one is functional. Where
+is the object-oriented one?
 
 

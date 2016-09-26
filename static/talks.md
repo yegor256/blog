@@ -129,6 +129,18 @@ Tallinn, Estonia<br/>
 16 November 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
+[BuildStuff 2016](http://www.buildstuff.lt/)<br/>
+Vilnius, Lithuania<br/>
+16-18 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
+[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
+Kiev, Ukraine<br/>
+21-22 November 2016
+
+<div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
 **XDSD: Meetings-Free Software Development Methodology**<br/>
 [DevTernity 2016](http://devternity.com/#/11)<br/>
