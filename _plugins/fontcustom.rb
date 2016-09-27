@@ -19,7 +19,7 @@ module Jekyll
         #{site.config['source']}/_glyphs/compile.sh #{site.config['source']}/_temp/icons
         mkdir -p #{site.config['source']}/_site/css
       ]
-      raise 'failed to build icon files' if !$?.exitstatus
+      raise 'failed to build icon files' unless $? == 0
       ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, 'css', "icons.#{ext}")
       end
