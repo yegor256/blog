@@ -93,7 +93,7 @@ These guys are setting a bad example! <code>public</code> <code>static</code>
 in the Java world). I encourage you to think differently.
 I can't tell you to stop using Apache Commons, because we just don't have
 a better alternative (yet!). But in your own code, don't use public
-static properties — ever. Even if this code may look convenient to you,
+static properties—ever. Even if this code may look convenient to you,
 it's a very bad design.</p>
 
 
@@ -101,10 +101,10 @@ it's a very bad design.</p>
 <p>The reason why is very similar to
 <a href="/2015/02/26/composable-decorators.html">utility classes</a>
 with public static
-methods — they are unbreakable hard-coded dependencies. Once you
+methods—they are unbreakable hard-coded dependencies. Once you
 use that <code>CharEncoding.UTF_8</code>, your object starts to depend on this
 data, and its user (the user of your object) can't break this dependency. You may say that
-this is your intention, in the case of a <code>"UTF-8"</code> constant — to make
+this is your intention, in the case of a <code>"UTF-8"</code> constant—to make
 sure that Unicode is specifically and exclusively being used. In this particular
 example, this may be true, but look at it from a more global perspective.</p>
 
@@ -125,8 +125,7 @@ world, this would look like this:</p>
 conversion is happening.</p>
 
 <p>By introducing <code>UTF8String</code>, we solved the problem of "UTF-8"
-literal duplication. But we did it in a proper object-oriented way —
-we encapsulated the functionality inside a class and let everybody
+literal duplication. But we did it in a proper object-oriented way—we encapsulated the functionality inside a class and let everybody
 instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.</p>
 

@@ -111,7 +111,7 @@ are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.</p>
 
 <p>If no object methods can modify its state, no matter how many
-of them and how often are being called parallel — they
+of them and how often are being called parallel—they
 will work in their own memory space in stack.</p>
 
 
@@ -138,7 +138,7 @@ from the compiler:</p>
 
 <p>Now, the script is broken although it compiled without errors. This is
 what <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
-is about — there is always some hidden
+is about—there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.</p>
@@ -173,12 +173,12 @@ because it doesn't have
 
 
 
-<p>Let's try to make two requests — the first
+<p>Let's try to make two requests—the first
 with GET method and the second with POST:</p>
 
 
 
-<p>Method <code>post()</code> has a "side effect" — it makes changes
+<p>Method <code>post()</code> has a "side effect"—it makes changes
 to the mutable object <code>request</code>. These changes are not really
 expected in this case. We expect it to make a POST request and
 return its body. We don't want to read its documentation just

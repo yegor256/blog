@@ -98,7 +98,7 @@ and how they should behave. In other words, it knows what <em>contracts</em> the
 This definition is not correct because it places classes into a passive position. This definition
 assumes that someone will get a template and build an object by using it.
 This may be true, technically speaking, but conceptually it's wrong. Nobody else
-should be involved — there are only a class and its children. An
+should be involved—there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:</p>
 
@@ -123,11 +123,11 @@ of functions. Instead, it is an independent entity with its own life cycle,
 its own behavior, and its own habits.</p>
 
 <p>An employee, a department, an HTTP request, a table in MySQL,
-a line in a file, or a file itself are proper objects — because they exist in
+a line in a file, or a file itself are proper objects—because they exist in
 real life, even when our software is turned off. To be more precise, an object is a
 <em>representative</em> of a real-life creature. It is a <em>proxy</em> of that
 real-life creature in front of all other objects. Without
-such a creature, there is — obviously — no object.</p>
+such a creature, there is—obviously—no object.</p>
 
 
 
@@ -145,8 +145,7 @@ a singleton, or a factory are <strong>not</strong> good objects
 <a href="/2016/02/03/design-patterns-and-anti-patterns.html">anti-patterns</a>!).
 They don't exist apart from your software, in real life. They
 are invented just to tie other objects together. They are artificial
-and fake creatures. They don't represent anyone. Seriously, an XML parser
-— who does it represent? Nobody.</p>
+and fake creatures. They don't represent anyone. Seriously, an XML parser—who does it represent? Nobody.</p>
 
 <p>Some of them may become good if they change their names;
 others can never excuse their existence. For example, that XML parser can be
@@ -173,7 +172,7 @@ I want that photo to be read from a file in PNG format. I'm
 contracting an object from class <code>DataFile</code> and asking him to give me
 the binary content of that image.</p>
 
-<p>But wait, do I care where exactly the content will come from — the file on disk, or
+<p>But wait, do I care where exactly the content will come from—the file on disk, or
 an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care about
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:</p>
@@ -181,8 +180,7 @@ would look like this:</p>
 
 
 <p>Now, any object from any class (not just <code>DataFile</code>) can work for me.
-All he has to do, in order to be eligible, is to obey the contract
-— by implementing the interface <code>Binary</code>.</p>
+All he has to do, in order to be eligible, is to obey the contract—by implementing the interface <code>Binary</code>.</p>
 
 <p>The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has
@@ -330,7 +328,7 @@ a script runner, or a Java programmer. Can you draw
 any of them? No, you can't. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.</p>
 
-<p>In general, avoid names that end with "-er" — most of them are bad.</p>
+<p>In general, avoid names that end with "-er"—most of them are bad.</p>
 
 <p>"What is the alternative of a <code>FileReader</code>?" I hear you asking. What would
 be a better name? Let's see. We already have <code>File</code>, which is a representative
@@ -396,7 +394,7 @@ touch his internal logic.</p>
 be able to extend the class and ... offend him :( So a class without <code>final</code>
 is a bad design.</p>
 
-<p>An abstract class is the exact opposite case — he tells us that
+<p>An abstract class is the exact opposite case—he tells us that
 he is incomplete and we can't use him "as is". We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as <code>abstract</code> methods.
@@ -411,8 +409,7 @@ this inheritance, since he defended all other methods with <code>final</code> (p
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.</p>
 
-<p>To summarize, your class should either be <code>final</code> or <code>abstract</code> —
-nothing in between.</p>
+<p>To summarize, your class should either be <code>final</code> or <code>abstract</code>—nothing in between.</p>
 
     </article>
   </body>

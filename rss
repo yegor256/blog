@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-26T17:41:48+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>OOP Without Classes?</title><link href="http://www.yegor256.com/2016/09/20/oop-without-classes.html" rel="alternate" type="text/html" title="OOP Without Classes?" /><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/20/oop-without-classes</id><content type="html" xml:base="http://www.yegor256.com/2016/09/20/oop-without-classes.html">&lt;p&gt;I &lt;a href=&quot;https://www.youtube.com/watch?v=s-hdZZzMCac&quot;&gt;interviewed&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-27T02:37:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>OOP Without Classes?</title><link href="http://www.yegor256.com/2016/09/20/oop-without-classes.html" rel="alternate" type="text/html" title="OOP Without Classes?" /><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/20/oop-without-classes</id><content type="html" xml:base="http://www.yegor256.com/2016/09/20/oop-without-classes.html">&lt;p&gt;I &lt;a href=&quot;https://www.youtube.com/watch?v=s-hdZZzMCac&quot;&gt;interviewed&lt;/a&gt;
 David West, the author of the &lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;Object Thinking&lt;/a&gt; book,
 a few weeks ago, and he said that classes were not meant to be in
 object-oriented programming at all. He actually said that
@@ -107,7 +107,7 @@ notice anything, because type &lt;code&gt;Article&lt;/code&gt; is a subtype of t
 
 &lt;p&gt;But what does &lt;em&gt;copying&lt;/em&gt; methods and attributes from a parent class to a child
 one have to do with &amp;quot;deriving characteristics&amp;quot;? Implementation inheritance
-is exactly that &amp;mdash; copying &amp;mdash; and it has nothing to do with the meaning
+is exactly that&amp;mdash;copying&amp;mdash;and it has nothing to do with the meaning
 of the word &amp;quot;inherit&amp;quot; I quoted above.&lt;/p&gt;
 
 &lt;p&gt;Implementation inheritance is much closer to a different
@@ -180,7 +180,7 @@ I tried to explain it &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.h
 &lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;here&lt;/a&gt;, and
 &lt;a href=&quot;/2014/12/22/immutable-objects-not-dumb.html&quot;&gt;here&lt;/a&gt;,
 but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white &amp;mdash; there
+the more I realize that immutability is not black or white&amp;mdash;there
 are a few more gradients; let&amp;#39;s take a look.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -233,8 +233,7 @@ the same initial values, the result of &lt;code&gt;title()&lt;/code&gt; will be 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The object is still immutable, but it is not a pure
-function anymore because of the method &lt;code&gt;title()&lt;/code&gt; &amp;mdash;
-it returns different values if we call it
+function anymore because of the method &lt;code&gt;title()&lt;/code&gt;&amp;mdash;it returns different values if we call it
 multiple times with at least a one-minute interval. The object
 is immutable; it&amp;#39;s just not a constant anymore.&lt;/p&gt;
 
@@ -310,7 +309,7 @@ I tried to explain it here,
 here, and
 here,
 but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white &amp;mdash; there
+the more I realize that immutability is not black or white&amp;mdash;there
 are a few more gradients; let&amp;#39;s take a look.</summary></entry><entry><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html" rel="alternate" type="text/html" title="Vertical vs. Horizontal Decomposition of Responsibility" /><published>2016-08-30T00:00:00+00:00</published><updated>2016-08-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/30/decomposition-of-responsibility</id><content type="html" xml:base="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">&lt;p&gt;Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
 &lt;strong&gt;Decomposition of responsibility&lt;/strong&gt; is what we do in order to break
@@ -336,7 +335,7 @@ the former is better than the latter.&lt;/p&gt;
 
 &lt;p&gt;Obviously, objects of this class are doing too much.
 They save log lines to the
-file and also format them &amp;mdash; an obvious violation of
+file and also format them&amp;mdash;an obvious violation of
 a famous
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;.
 An object of this class would be &lt;strong&gt;responsible&lt;/strong&gt; for too many things.
@@ -441,7 +440,7 @@ least amount of trouble:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Coffee Breaks&lt;/strong&gt;.
-This is the most dangerous thing &amp;mdash; you can never
+This is the most dangerous thing&amp;mdash;you can never
 keep track of them, you won&amp;#39;t know what they were about, and there
 is no &amp;quot;search&amp;quot; button anywhere. Everything you say standing next
 to that coffee machine will be lost. Nothing will be converted
@@ -475,7 +474,7 @@ of information that becomes useless just a few days after. Of course,
 if you really want to find something there, it&amp;#39;s possible. But the quality
 of such a &amp;quot;document&amp;quot; is very low.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Trello&lt;/strong&gt;.
-By Trello I mean any task/ticket tracking system &amp;mdash; they are great instruments
+By Trello I mean any task/ticket tracking system&amp;mdash;they are great instruments
 to immediately turn conversations and discussions into project artifacts.
 You don&amp;#39;t need to document anything; it&amp;#39;s already there. The problem is
 that they are still rather far away from the main project artifact:
@@ -675,7 +674,7 @@ how it works (an oversimplified example):&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;What&amp;#39;s wrong, you wonder? This if-then-else forking functionality doesn&amp;#39;t really belong
-to this object &amp;mdash; that&amp;#39;s what&amp;#39;s wrong. Modifying the XML document
+to this object&amp;mdash;that&amp;#39;s what&amp;#39;s wrong. Modifying the XML document
 and saving it to the database is &lt;em&gt;its functionality&lt;/em&gt;, while
 not saving anything if the modification instructions set is empty is not
 (it&amp;#39;s very similar to &lt;a href=&quot;/2016/01/26/defensive-programming.html&quot;&gt;defensive programming&lt;/a&gt;).
@@ -711,7 +710,7 @@ illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.</su
 team &lt;strong&gt;can&lt;/strong&gt; deliver code of much higher quality than a co-located one,
 and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
 Most of them can&amp;#39;t even deliver code that works, let alone quality code.
-But if a team &amp;mdash; a distributed one &amp;mdash; is managed according to the principles
+But if a team&amp;mdash;a distributed one&amp;mdash;is managed according to the principles
 I&amp;#39;ll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I&amp;#39;m going to show you is that working in a
 remote mode, if done right, &lt;strong&gt;guarantees&lt;/strong&gt; higher quality of code. Surprised?&lt;/p&gt;
@@ -739,7 +738,7 @@ more expensive the developer is, the higher the quality he or she writes.&lt;/p&
 &lt;p&gt;I&amp;#39;m sure you understand that I&amp;#39;m joking. None of these &amp;quot;proven methods&amp;quot; will either
 guarantee quality or motivate serious software engineers. Quality can
 be achieved only if it is &lt;strong&gt;controlled and enforced&lt;/strong&gt;. And this is also what
-motivates programmers best of all &amp;mdash; the fact that the quality
+motivates programmers best of all&amp;mdash;the fact that the quality
 is so important for management that they find mechanisms of
 control and enforcement, and they invest in them. Table tennis and lean
 startup books are not even close to those mechanisms.&lt;/p&gt;
@@ -771,7 +770,7 @@ This means that bad code won&amp;#39;t reach the repo, ever.&lt;/p&gt;&lt;/li&gt
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Micro Payments for Deliverables&lt;/strong&gt;. We pay only for closed tickets, and
 they are each very small (up to two hours). We don&amp;#39;t pay for time spent
 in the office or in front of the computer. We pay only when tickets
-are closed &amp;mdash; no close, no pay. This means that programmers are motivated
+are closed&amp;mdash;no close, no pay. This means that programmers are motivated
 to &lt;strong&gt;close&lt;/strong&gt; them, nothing else.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -782,7 +781,7 @@ no room to make compromises, and there is no technical possibility to
 go around an issue. Good programmers survive in this conflict and manage to deliver
 and get paid. Well-paid.&lt;/p&gt;
 
-&lt;p&gt;And now, to the main point of this blog post &amp;mdash; do you think it&amp;#39;s possible
+&lt;p&gt;And now, to the main point of this blog post&amp;mdash;do you think it&amp;#39;s possible
 to build all that in a co-located team? I don&amp;#39;t think so. First of all,
 you won&amp;#39;t be able to prohibit
 &lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;informal communications&lt;/a&gt;. No matter how many
@@ -805,12 +804,12 @@ then to a few senior developers, then to a few good friends who you
 absolutely trust. Then to everybody, just in case. It&amp;#39;s inevitable.&lt;/p&gt;
 
 &lt;p&gt;To summarize, I believe that co-located teams are just not made for
-quality programming. For fun &amp;mdash; yes. For creativity &amp;mdash; maybe.
-For burning investors&amp;#39; money &amp;mdash; absolutely. For quality &amp;mdash; not really.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
+quality programming. For fun&amp;mdash;yes. For creativity&amp;mdash;maybe.
+For burning investors&amp;#39; money&amp;mdash;absolutely. For quality&amp;mdash;not really.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
 team can deliver code of much higher quality than a co-located one,
 and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
 Most of them can&amp;#39;t even deliver code that works, let alone quality code.
-But if a team &amp;mdash; a distributed one &amp;mdash; is managed according to the principles
+But if a team&amp;mdash;a distributed one&amp;mdash;is managed according to the principles
 I&amp;#39;ll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I&amp;#39;m going to show you is that working in a
 remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry><entry><title>8+2 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8+2 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
@@ -819,7 +818,7 @@ them and presented my findings at &lt;a href=&quot;http://slcdevopsdays.org/cr3a
 in Salt Lake City a few weeks ago
 (watch the &lt;a href=&quot;https://www.youtube.com/watch?v=3dJP_LtUGgg&quot;&gt;video&lt;/a&gt;).
 Now it&amp;#39;s time to write them down and ask
-you &amp;mdash; Which level are you at? Post your answer below.&lt;/p&gt;
+you&amp;mdash;Which level are you at? Post your answer below.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -838,7 +837,7 @@ Pay attention; one line. You must be able to hit one button and either
 get an error or a successful build.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;.
 At this level, you keep your source code in Git. You can keep it in some
-other source control system, but that would be strange &amp;mdash; Git is the
+other source control system, but that would be strange&amp;mdash;Git is the
 &lt;em&gt;status quo&lt;/em&gt; at the moment. You should be able to get a new computer,
 with nothing in it, check out the source code from a Git repository, and
 run a full build.&lt;/p&gt;&lt;/li&gt;
@@ -882,12 +881,11 @@ them and presented my findings at DevOpsDays
 in Salt Lake City a few weeks ago
 (watch the video).
 Now it&amp;#39;s time to write them down and ask
-you &amp;mdash; Which level are you at? Post your answer below.</summary></entry><entry><title>ActiveRecord Is Even Worse Than ORM</title><link href="http://www.yegor256.com/2016/07/26/active-record.html" rel="alternate" type="text/html" title="ActiveRecord Is Even Worse Than ORM" /><published>2016-07-26T00:00:00+00:00</published><updated>2016-07-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/26/active-record</id><content type="html" xml:base="http://www.yegor256.com/2016/07/26/active-record.html">&lt;p&gt;You probably remember what &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;I think&lt;/a&gt;
+you&amp;mdash;Which level are you at? Post your answer below.</summary></entry><entry><title>ActiveRecord Is Even Worse Than ORM</title><link href="http://www.yegor256.com/2016/07/26/active-record.html" rel="alternate" type="text/html" title="ActiveRecord Is Even Worse Than ORM" /><published>2016-07-26T00:00:00+00:00</published><updated>2016-07-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/07/26/active-record</id><content type="html" xml:base="http://www.yegor256.com/2016/07/26/active-record.html">&lt;p&gt;You probably remember what &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;I think&lt;/a&gt;
 about ORM, a very popular design pattern. In a nutshell,
 it encourages us to turn objects into
 &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;, which are
-anemic, passive, and not objects at all. The consequences are usually dramatic &amp;mdash;
-the entire programming paradigm shifts from object-oriented to procedural.
+anemic, passive, and not objects at all. The consequences are usually dramatic&amp;mdash;the entire programming paradigm shifts from object-oriented to procedural.
 I&amp;#39;ve tried to explain this at a &lt;a href=&quot;https://www.youtube.com/watch?v=aER4uwyFbqQ&quot;&gt;JPoint&lt;/a&gt; and
 &lt;a href=&quot;https://www.youtube.com/watch?v=63tS3HNmhiE&quot;&gt;JEEConf&lt;/a&gt; this year. After
 each talk, a few people told me that what I&amp;#39;m suggesting is called
@@ -910,8 +908,7 @@ ActiveRecord.&lt;/p&gt;
 &lt;p&gt;ORM consists of two parts: the session and
 &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;, also known as &amp;quot;entities&amp;quot;.
 The entities have no functionality; they are just primitive containers for the
-data transferred from and to the session. And that is what the problem is &amp;mdash;
-objects don&amp;#39;t encapsulate but rather expose data. To understand why this is wrong and why it&amp;#39;s
+data transferred from and to the session. And that is what the problem is&amp;mdash;objects don&amp;#39;t encapsulate but rather expose data. To understand why this is wrong and why it&amp;#39;s
 against the object paradigm, you can read
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;here&lt;/a&gt;,
 &lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;here&lt;/a&gt;,
@@ -953,8 +950,7 @@ design pattern (or Repository, which is almost exactly the same).&lt;/p&gt;
 about ORM, a very popular design pattern. In a nutshell,
 it encourages us to turn objects into
 DTOs, which are
-anemic, passive, and not objects at all. The consequences are usually dramatic &amp;mdash;
-the entire programming paradigm shifts from object-oriented to procedural.
+anemic, passive, and not objects at all. The consequences are usually dramatic&amp;mdash;the entire programming paradigm shifts from object-oriented to procedural.
 I&amp;#39;ve tried to explain this at a JPoint and
 JEEConf this year. After
 each talk, a few people told me that what I&amp;#39;m suggesting is called

@@ -86,8 +86,8 @@ normally.</p>
 <p>When using Amazon S3, though, it is not possible to protect your website because
 the content is purely static. This means you can't have a login page on the
 front end. With the service, you can either make your objects either absolutely
-public — so that anyone can see them online — or assign access
-rights to them — but only for users connected through RESTful API.</p>
+public—so that anyone can see them online—or assign access
+rights to them—but only for users connected through RESTful API.</p>
 
 
 
@@ -140,7 +140,7 @@ HTTP responses.</p>
 <p>The server implements authentication and authorization using a special file
 <code>.htpasswd</code> in the root of my bucket. The format of the <code>.htpasswd</code> file is
 identical to the one used by
-<a href="http://httpd.apache.org/docs/2.2/programs/htpasswd.html">Apache HTTP Server</a> — one user
+<a href="http://httpd.apache.org/docs/2.2/programs/htpasswd.html">Apache HTTP Server</a>—one user
 per line. Every line has the name of a user and a hash version of his password.</p>
 
 <h2 id="implementation">Implementation</h2>
@@ -163,9 +163,7 @@ days, the server seems to work properly and is stable.</p>
 <h2 id="extra-features">Extra Features</h2>
 
 <p>Besides authentication and authorization, the
-<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages —
-just like Apache HTTP Server. If you have a collection of objects in your bucket
-— but the <code>index.html</code> file is missing — Amazon S3 delivers a "page
+<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages—just like Apache HTTP Server. If you have a collection of objects in your bucket—but the <code>index.html</code> file is missing—Amazon S3 delivers a "page
 not found" result. Conversely, my server displays a list of objects in the
 bucket, when no <code>index.html</code> is present, and makes it possible to navigate up or
 down one folder.</p>

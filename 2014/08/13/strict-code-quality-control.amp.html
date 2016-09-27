@@ -84,9 +84,9 @@ strict mode, and breaks your build if any of them fail.</p>
 All of them should say: "Yes, we like your code".
 Otherwise, your build shouldn't pass.</p>
 
-<p>What do you think? Would it be convenient for you — to have your
+<p>What do you think? Would it be convenient for you—to have your
 code rejected every time it breaks just one of 900 checks? Would it
-be productive for the team — to force developers to focus
+be productive for the team—to force developers to focus
 so much on code quality?</p>
 
 
@@ -106,7 +106,7 @@ build script. It is actually a Maven plugin and we automate Java builds
 with Maven 3x. Thus, if your changes break any of Qulice's rules,
 your entire branch gets rejected.</p>
 
-<p>Your first reaction — I've seen it hundreds of times — will be negative.
+<p>Your first reaction—I've seen it hundreds of times—will be negative.
 You may actually become frustrated enough to leave the project immediately.
 You may say something like this (I'm quoting real life stories):</p>
 
@@ -171,23 +171,19 @@ compared to other projects that don't have this restriction, mostly
 because of:</p>
 
 <ul>
-<li><p><strong>Predictability of Design</strong> —
-I don't have to scroll through
+<li><p><strong>Predictability of Design</strong>—I don't have to scroll through
 the entire class to make sure it doesn't have methods that can
 be accidentally overridden. I know for sure that this can't happen
 in this project. In other words, I know what to expect.</p></li>
-<li><p><strong>Less Hidden Tricks</strong> —
-Higher predictability of design leads
+<li><p><strong>Less Hidden Tricks</strong>—Higher predictability of design leads
 to better visibility of mistakes and tricks. Standardization of source
 code makes it uniform. This means that it's easier to read and
 spot problems.</p></li>
-<li><p><strong>Industry Standards</strong> —
-The decision to use this design is
+<li><p><strong>Industry Standards</strong>—The decision to use this design is
 made by Checkstyle, not by a project architect. For me, as a project
 developer, this means that I'm following industry standards. That makes
 the project (and its leaders) more respectable.</p></li>
-<li><p><strong>Learning</strong> —
-I'll bet that most of you who read this post didn't know about the
+<li><p><strong>Learning</strong>—I'll bet that most of you who read this post didn't know about the
 design rule explained above. Just by reading this article, you learned
 something new. Imagine how much you could learn after making your
 code compliant to all 900 rules of Qulice (Checkstyle + PMD + FindBugs).</p></li>

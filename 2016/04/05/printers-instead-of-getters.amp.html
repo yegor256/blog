@@ -125,7 +125,7 @@ Each time we need a new format, we create a new printer.</p>
 
 <p>You may say that the object will be rather big if there will be many formats.
 That's true, but a big object is a bad design in the first place. I would
-say that if there is more than one printer — it's a problem.</p>
+say that if there is more than one printer—it's a problem.</p>
 
 <p>So, what to do if we need multiple formats? Use "media", where that printers
 will be able to print to. Say, we have an object that represents a
@@ -139,7 +139,7 @@ that represents the media where the data will be printed to:</p>
 <p>Again, it's a very primitive design of that
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
 <code>Media</code> class, but you got
-the idea — the <code>media</code> accepts the data.
+the idea—the <code>media</code> accepts the data.
 Now, we want to print our object to JSON
 (this design is not really perfect, since <code>JsonObjectBuilder</code> is not immutable,
 even though it looks like one...):</p>
@@ -156,7 +156,7 @@ exactly what printed just now. We need to print the book to XML? We
 create <code>XmlMedia</code>, which will print the book to XML. The <code>Book</code> class
 stays small, while the complexity of "media" objects is unlimited.</p>
 
-<p>My point here is simple — no
+<p>My point here is simple—no
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
 just printers!</p>
 

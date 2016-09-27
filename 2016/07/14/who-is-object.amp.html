@@ -77,20 +77,13 @@ I'd like to introduce a better one.</p>
 
 <ul>
 <li><p>"Objects may contain data, in the form of fields, often known as attributes;
-and code, in the form of procedures, often known as methods"
-— <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Wikipedia</a> at the time of writing.</p></li>
-<li><p>"An object stores its state in fields and exposes its behavior through methods"
-— <a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">What Is an Object?</a> by Oracle.</p></li>
-<li><p>"Each object looks quite a bit like a little computer —
-it has a state, and it has operations that you can ask it to perform"
-— <a href="http://amzn.to/1PBmQpm">Thinking in Java</a>, 4th Ed., Bruce Eckel, p. 16.</p></li>
+and code, in the form of procedures, often known as methods"—<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Wikipedia</a> at the time of writing.</p></li>
+<li><p>"An object stores its state in fields and exposes its behavior through methods"—<a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">What Is an Object?</a> by Oracle.</p></li>
+<li><p>"Each object looks quite a bit like a little computer—it has a state, and it has operations that you can ask it to perform"—<a href="http://amzn.to/1PBmQpm">Thinking in Java</a>, 4th Ed., Bruce Eckel, p. 16.</p></li>
 <li><p>"A class is a collection of data fields that hold values
-and methods that operate on those values"
-— <a href="http://amzn.to/28PEqSi">Java in a Nutshell</a>, 6th Ed., Evans and Flanagan, p. 98.</p></li>
-<li><p>"An object is some memory that holds a value of some type"
-— <a href="http://amzn.to/1XyGCtk">The C++ Programming Language</a>, 4th Ed., Bjarne Stroustrup, p. 40.</p></li>
-<li><p>"An object consists of some private memory and a set of operations"
-— <a href="http://amzn.to/1UhYinp">Smalltalk-80</a>, Goldberg and Robson, p. 6.</p></li>
+and methods that operate on those values"—<a href="http://amzn.to/28PEqSi">Java in a Nutshell</a>, 6th Ed., Evans and Flanagan, p. 98.</p></li>
+<li><p>"An object is some memory that holds a value of some type"—<a href="http://amzn.to/1XyGCtk">The C++ Programming Language</a>, 4th Ed., Bjarne Stroustrup, p. 40.</p></li>
+<li><p>"An object consists of some private memory and a set of operations"—<a href="http://amzn.to/1UhYinp">Smalltalk-80</a>, Goldberg and Robson, p. 6.</p></li>
 </ul>
 
 <p>What is common throughout all these definitions is the word "contains" (or "holds",
@@ -144,7 +137,7 @@ actually occupied by "data".</p>
 
 
 <p>Now, let's get back to our new pseudo language. Let's imagine it treats
-objects very differently than C++ — it doesn't keep object attributes
+objects very differently than C++—it doesn't keep object attributes
 in memory <em>at all</em>. It doesn't have pointers, and it doesn't know anything about
 x86 architecture. It just <em>knows</em> somehow what attributes belong to an object.</p>
 
@@ -166,7 +159,7 @@ and try to access that data as much as possible.</p>
 <p>If we would think of an object as a <strong>representative</strong> of data instead of
 a container of them, we would not want to get a hold of data as soon as
 possible. We would understand that the data are far away and we can't
-just easily touch them. We should communicate with an object — and how
+just easily touch them. We should communicate with an object—and how
 exactly it communicates with the data is not our concern.</p>
 
 <p>I hope that in the near future, the market will introduce new object-oriented

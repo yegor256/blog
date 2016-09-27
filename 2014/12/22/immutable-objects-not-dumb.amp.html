@@ -65,7 +65,7 @@ without setters, despite a very common misbelief.
 <a href="/2014/12/09/immutable-object-state-and-behavior.html">"How an Immutable Object Can Have State and Behavior?"</a>,
 I was surprised by the number of comments saying that I badly misunderstood
 the idea. Most of those comments stated that an immutable object must always behave
-the same way — that is what immutability is about. What kind of immutability
+the same way—that is what immutability is about. What kind of immutability
 is it, if a method returns different results each time we call it?
 This is not how well-known immutable classes behave. Take, for example, <code>String</code>, <code>BigInteger</code>,
 <code>Locale</code>, <code>URI</code>, <code>URL</code>, <code>Inet4Address</code>, <code>UUID</code>, or wrapper classes for primitives, like <code>Double</code> and
@@ -109,11 +109,11 @@ while the web page it represents is mutable.</p>
 
 <p>Why do most programmers I have talked to believe that
 if an underlying entity is mutable, an object is mutable too? I think the
-answer is simple — they think that objects are
+answer is simple—they think that objects are
 data structures with methods. That's why, from this point of view,
 an immutable object is a data structure that never changes.</p>
 
-<p>This is where the fallacy is coming from — an object is
+<p>This is where the fallacy is coming from—an object is
 <strong>not a data structure</strong>. It is a living organism representing
 a real-world entity inside the object's living environment (a computer program).
 It does encapsulate some data, which helps to locate the entity in the real world. The encapsulated
@@ -131,7 +131,7 @@ always point to the same web page, no matter what.</p>
 <p>And the object doesn't guarantee anything about the behavior of that web page. The page
 is a dynamic creature of a real world, living its own life. Our object
 can't promise anything about the page. The only thing it promises is that
-it will always stay loyal to that page — it will never forget or change
+it will always stay loyal to that page—it will never forget or change
 its coordinates.</p>
 
 <p>Conceptually speaking, immutability means loyalty, that's all.</p>
