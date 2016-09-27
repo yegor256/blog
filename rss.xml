@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-27T02:37:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>OOP Without Classes?</title><link href="http://www.yegor256.com/2016/09/20/oop-without-classes.html" rel="alternate" type="text/html" title="OOP Without Classes?" /><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/20/oop-without-classes</id><content type="html" xml:base="http://www.yegor256.com/2016/09/20/oop-without-classes.html">&lt;p&gt;I &lt;a href=&quot;https://www.youtube.com/watch?v=s-hdZZzMCac&quot;&gt;interviewed&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-09-27T03:14:25+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>OOP Without Classes?</title><link href="http://www.yegor256.com/2016/09/20/oop-without-classes.html" rel="alternate" type="text/html" title="OOP Without Classes?" /><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/20/oop-without-classes</id><content type="html" xml:base="http://www.yegor256.com/2016/09/20/oop-without-classes.html">&lt;p&gt;I &lt;a href=&quot;https://www.youtube.com/watch?v=s-hdZZzMCac&quot;&gt;interviewed&lt;/a&gt;
 David West, the author of the &lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;Object Thinking&lt;/a&gt; book,
 a few weeks ago, and he said that classes were not meant to be in
 object-oriented programming at all. He actually said that
@@ -505,7 +505,7 @@ So I Googled a bit, and this is what I found (in chronological order).&lt;/p&gt;
 &lt;p&gt;The list of quotes is sorted in chronological order, with the oldest on
 the top:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/edsger-dijkstra.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/edsger-dijkstra.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Edsger W. Dijkstra&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Edsger_W._Dijkstra&quot;&gt;&lt;strong&gt;Edsger W. Dijkstra&lt;/strong&gt;&lt;/a&gt; (1989)&lt;br/&gt;
 &amp;quot;TUG LINES&amp;quot;, Issue 32, August 1989&lt;br/&gt;
 &amp;quot;Object oriented programs are offered as alternatives to correct ones&amp;quot;
@@ -523,7 +523,7 @@ by accretion. What this often means, in practice, is that it
 provides a structured way to write spaghetti code.&quot;
 --&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/alan-kay.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/alan-kay.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Alan Kay&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;&lt;strong&gt;Alan Kay&lt;/strong&gt;&lt;/a&gt; (1997)&lt;br/&gt;
 &lt;a href=&quot;https://www.youtube.com/watch?v=oKg1hTOQXoY&quot;&gt;The Computer Revolution hasn&amp;#39;t happened yet&lt;/a&gt;&lt;br/&gt;
 &amp;quot;I invented the term object-oriented, and I can tell you
@@ -532,18 +532,18 @@ I did not have C++ in mind.&amp;quot; and
 Java is the most distressing thing to happen to computing since MS-DOS.&amp;quot;
 (&lt;a href=&quot;http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html&quot;&gt;proof&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/paul-graham.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/paul-graham.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Paul Graham&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;&lt;strong&gt;Paul Graham&lt;/strong&gt;&lt;/a&gt; (2003)&lt;br/&gt;
 &lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;The Hundred-Year Language&lt;/a&gt;&lt;br/&gt;
 &amp;quot;Object-oriented programming offers a sustainable way to write spaghetti code.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/richard-mansfield.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/richard-mansfield.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Richard Mansfield&quot;/&gt;&lt;br/&gt;
 &lt;strong&gt;Richard Mansfield&lt;/strong&gt; (2005)&lt;br/&gt;
 &lt;a href=&quot;http://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf&quot;&gt;Has OOP Failed?&lt;/a&gt;&lt;br/&gt;
 &amp;quot;With OOP-inflected programming languages, computer software becomes more
 verbose, less readable, less descriptive, and harder to modify and maintain.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-raymond.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-raymond.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Eric Raymond&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;http://www.catb.org/esr/&quot;&gt;&lt;strong&gt;Eric Raymond&lt;/strong&gt;&lt;/a&gt; (2005)&lt;br/&gt;
 &lt;a href=&quot;http://catb.org/esr/writings/taoup/html/unix_and_oo.html&quot;&gt;The Art of UNIX Programming&lt;/a&gt;&lt;br/&gt;
 &amp;quot;The OO design concept initially proved valuable in the design of graphics
@@ -551,12 +551,12 @@ systems, graphical user interfaces, and certain kinds of simulation.
 To the surprise and gradual disillusionment of many, it has proven
 difficult to demonstrate significant benefits of OO outside those areas.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/jeff-atwood.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/jeff-atwood.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Jeff Atwood&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://blog.codinghorror.com/&quot;&gt;&lt;strong&gt;Jeff Atwood&lt;/strong&gt;&lt;/a&gt; (2007)&lt;br/&gt;
 &lt;a href=&quot;https://blog.codinghorror.com/your-code-oop-or-poo/&quot;&gt;Your Code: OOP or POO?&lt;/a&gt;&lt;br/&gt;
 &amp;quot;OO seems to bring at least as many problems to the table as it solves.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/linus-torvalds.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/linus-torvalds.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Linus Torvalds&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Linus_Torvalds&quot;&gt;&lt;strong&gt;Linus Torvalds&lt;/strong&gt;&lt;/a&gt; (2007)&lt;br/&gt;
 &lt;a href=&quot;http://article.gmane.org/gmane.comp.version-control.git/57918/&quot;&gt;this email&lt;/a&gt;&lt;br/&gt;
 &amp;quot;C++ is a horrible language. ...
@@ -576,14 +576,14 @@ at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich
 &quot;...&quot;
 --&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/oscar-nierstrasz.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/oscar-nierstrasz.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Oscar Nierstrasz&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Oscar_Nierstrasz&quot;&gt;&lt;strong&gt;Oscar Nierstrasz&lt;/strong&gt;&lt;/a&gt; (2010)&lt;br/&gt;
 &lt;a href=&quot;http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming&quot;&gt;Ten Things I Hate About Object-Oriented Programming&lt;/a&gt;&lt;br/&gt;
 &amp;quot;OOP is about taming complexity through modeling, but we have not
 mastered this yet, possibly because we have difficulty distinguishing
 real and accidental complexity.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/rich-hickey.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/rich-hickey.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Rich Hickey&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://github.com/richhickey&quot;&gt;&lt;strong&gt;Rich Hickey&lt;/strong&gt;&lt;/a&gt; (2010)&lt;br/&gt;
 &lt;a href=&quot;http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/&quot;&gt;SE Radio, Episode 158&lt;/a&gt;&lt;br/&gt;
 &amp;quot;I think that large objected-oriented programs struggle
@@ -591,7 +591,7 @@ with increasing complexity as you build this large object graph of
 mutable objects. You know, trying to understand and keep in your mind
 what will happen when you call a method and what will the side effects be.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-allman.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-allman.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Eric Allman&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Eric_Allman&quot;&gt;&lt;strong&gt;Eric Allman&lt;/strong&gt;&lt;/a&gt; (2011)&lt;br/&gt;
 &lt;a href=&quot;http://queue.acm.org/blogposting.cfm?id=34658&quot;&gt;Programming Isn&amp;#39;t Fun Any More&lt;/a&gt;&lt;br/&gt;
 &amp;quot;I used to be enamored of object-oriented programming. I&amp;#39;m now finding myself
@@ -599,14 +599,14 @@ leaning toward believing that it is a plot designed to destroy joy. The
 methodology looks clean and elegant at first, but when you actually get
 into real programs they rapidly turn into horrid messes.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/joe-armstrong.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/joe-armstrong.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Joe Armstrong&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;http://joearms.github.io/&quot;&gt;&lt;strong&gt;Joe Armstrong&lt;/strong&gt;&lt;/a&gt; (2011)&lt;br/&gt;
 &lt;a href=&quot;http://harmful.cat-v.org/software/OO_programming/why_oo_sucks&quot;&gt;Why OO Sucks&lt;/a&gt;&lt;br/&gt;
 &amp;quot;Objects bind functions and data structures together in
 indivisible units. I think this is a fundamental error since functions and
 data structures belong in totally different worlds.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/rob-pike.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/rob-pike.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Rob Pike&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Pike&quot;&gt;&lt;strong&gt;Rob Pike&lt;/strong&gt;&lt;/a&gt; (2012)&lt;br/&gt;
 &lt;a href=&quot;https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb&quot;&gt;here&lt;/a&gt;&lt;br/&gt;
 &amp;quot;Object-oriented programming, whose essence is nothing more than
@@ -614,20 +614,20 @@ programming using data with associated behaviors, is a powerful idea.
 It truly is. But it&amp;#39;s not always the best idea. ...
 Sometimes data is just data and functions are just functions.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/john-barker.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/john-barker.jpg&quot; class=&quot;quote-author&quot; alt=&quot;John Barker&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://www.linkedin.com/in/johnebgood&quot;&gt;&lt;strong&gt;John Barker&lt;/strong&gt;&lt;/a&gt; (2013)&lt;br/&gt;
 &lt;a href=&quot;https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit&quot;&gt;All evidence points to OOP being bullshit&lt;/a&gt;&lt;br/&gt;
 &amp;quot;What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways, it is still essentially procedural code.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/lawrence-krubner.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/lawrence-krubner.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Lawrence Krubner&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://www.linkedin.com/in/krubner&quot;&gt;&lt;strong&gt;Lawrence Krubner&lt;/strong&gt;&lt;/a&gt; (2014)&lt;br/&gt;
 &lt;a href=&quot;http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end&quot;&gt;Object Oriented Programming is an expensive disaster which must end&lt;/a&gt;&lt;br/&gt;
 &amp;quot;We now know that OOP is an experiment that failed.
 It is time to move on. It is time that we, as a community, admit that
 this idea has failed us, and we must give up on it.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/asaf-shelly.jpg&quot; class=&quot;quote-author&quot;/&gt;&lt;br/&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016/08/asaf-shelly.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Asaf Shelly&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://www.linkedin.com/in/asafshelly&quot;&gt;&lt;strong&gt;Asaf Shelly&lt;/strong&gt;&lt;/a&gt; (2015)&lt;br/&gt;
 &lt;a href=&quot;https://software.intel.com/en-us/blogs/2008/08/22/flaws-of-object-oriented-modeling/&quot;&gt;Flaws of Object Oriented Modeling&lt;/a&gt;&lt;br/&gt;
 &amp;quot;Reading an object oriented code you can&amp;#39;t see the big picture and
