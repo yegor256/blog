@@ -34,7 +34,7 @@ any software development to anyone. Is it just me? Not really.
 This preamble is just a joke, but it's not so far from
 [the truth]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}). Of course,
 in bigger companies and bigger projects, the story will be different. But the
-outcome is almost always the same &mdash; it is
+outcome is almost always the same&mdash;it is
 [a disaster]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %}).
 
 {% quote All these reasons merely explain the consequences but never even touch the real problem %}
@@ -100,7 +100,7 @@ very different. Read on.
 [specifications]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) for most projects, and a
 poorly designed spec is a recipe for failure." Yes, that's very true,
 but what does this have to do with outsourcing? Ah, right, they are so far
-away in Argentina and we're here in New York City &mdash; how can we make
+away in Argentina and we're here in New York City&mdash;how can we make
 [a good spec]({% pst 2014/oct/2014-10-20-how-we-write-product-vision %})?
 I don't buy it. An inability to clearly and explicitly
 specify technical requirements is a flaw of the
@@ -191,7 +191,7 @@ can't afford to keep your programmers "on the **bench**" for too long.
 
 Thus, your lone motivation is to keep that
 cash flow coming. No matter what. The longer the project, the better.
-The lower the quality of code, the better &mdash; more money for maintenance.
+The lower the quality of code, the better&mdash;more money for maintenance.
 The more phone calls, meetings and other time-wasting events, the better.
 The more mess in specs, the better. Just do whatever it takes to suck
 money from the customer.

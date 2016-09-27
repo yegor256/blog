@@ -97,7 +97,7 @@ Pay special attention to the difference between the `sorter` and `sorted` names.
 Let's get back to class names. When you add the "-er" suffix to your class name,
 you're immediately turning it into a dumb imperative executor of _your_ will.
 You do not allow it to think and improvise. You expect it to do exactly
-what you want &mdash; sort, manage, control, print, write, combine, concatenate, etc.
+what you want&mdash;sort, manage, control, print, write, combine, concatenate, etc.
 
 An object is a [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 that doesn't want to be told what to do. It wants to be an equal partner with

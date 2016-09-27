@@ -74,7 +74,7 @@ notice anything, because type `Article` is a subtype of type `Manuscript`
 
 But what does _copying_ methods and attributes from a parent class to a child
 one have to do with "deriving characteristics"? Implementation inheritance
-is exactly that &mdash; copying &mdash; and it has nothing to do with the meaning
+is exactly that&mdash;copying&mdash;and it has nothing to do with the meaning
 of the word "inherit" I quoted above.
 
 Implementation inheritance is much closer to a different

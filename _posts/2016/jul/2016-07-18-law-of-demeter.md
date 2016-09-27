@@ -6,7 +6,7 @@ place: Palo Alto, CA
 tags: oop
 description: |
   The well-known Law of Demeter is seriously misunderstood
-  by object-oriented programmers &mdash; it isn't equal
+  by object-oriented programmers&mdash;it isn't equal
   to the law of one dot.
 keywords:
   - law of demeter

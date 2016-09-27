@@ -42,8 +42,7 @@ It is very convenient to use when you don't need a full-scale
 a few rows in a relational database.
 
 Every instance of `JdbcSession` is a "transaction" in a database.
-You start it by instantiating the class with a single parameter
-&mdash; data source.
+You start it by instantiating the class with a single parameter&mdash;data source.
 
 You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use

@@ -21,7 +21,7 @@ I tried to explain it [here]({% pst 2014/jun/2014-06-09-objects-should-be-immuta
 [here]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}), and
 [here]({% pst 2014/dec/2014-12-22-immutable-objects-not-dumb %}),
 but now it's time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white &mdash; there
+the more I realize that immutability is not black or white&mdash;there
 are a few more gradients; let's take a look.
 
 <!--more-->
@@ -78,8 +78,7 @@ class Book {
 {% endhighlight %}
 
 The object is still immutable, but it is not a pure
-function anymore because of the method `title()` &mdash;
-it returns different values if we call it
+function anymore because of the method `title()`&mdash;it returns different values if we call it
 multiple times with at least a one-minute interval. The object
 is immutable; it's just not a constant anymore.
 

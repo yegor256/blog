@@ -59,7 +59,7 @@ often, our clients are not that bad. What is it, then? Why can't they follow
 the process and abide by the rules? There are a few possible reasons.
 
 Maybe the **rules are not explained well**.
-This is the most popular root cause &mdash; the rules of work are not clear
+This is the most popular root cause&mdash;the rules of work are not clear
 enough for the client. He just doesn't know what he is supposed to do in order
 to submit a request and get it implemented. To prevent this, we try to educate
 our clients at the beginning of a new project. We even write guidance
@@ -104,7 +104,7 @@ manage it. First of all, we make all his requests formal. We ask
 a client to create a new ticket for each request, properly explaining
 what is not clear and how much detail is expected in the explanation.
 
-Second, we look at such requests positively &mdash; they
+Second, we look at such requests positively&mdash;they
 are good indicators of certain inconsistencies in the software. If it's
 not clear for the client why PostgreSQL is used and not MySQL, it's a fault
 of [our architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).

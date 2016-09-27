@@ -80,7 +80,7 @@ The book just made it into the **top 100 Amazon Best Sellers** in
 [Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/W2WVMk)
 already. Many thanks to their authors! Would
-be great if you publish yours &mdash; this will greatly help
+be great if you publish yours&mdash;this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
 book at the following conferences in the next few months:
 [JPoint](http://javapoint.ru/en/) in Moscow, April 22;
@@ -155,7 +155,7 @@ As promised, the book will be published on **Feb 22**.
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
-in the book &mdash; [**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
+in the book&mdash;[**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
 covers the subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book. This is the
 text my selected **11 reviewers** received this week from me by mail.

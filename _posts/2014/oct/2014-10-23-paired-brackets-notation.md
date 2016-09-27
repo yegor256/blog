@@ -59,7 +59,7 @@ As you see, those light vertical lines at the left side
 of the code help you to navigate, if you follow the notation.
 
 Those multiple closing brackets may look strange to you
-at the beginning &mdash; but give yourself some time and you will
+at the beginning&mdash;but give yourself some time and you will
 get used to them :)
 
 ## Fluent

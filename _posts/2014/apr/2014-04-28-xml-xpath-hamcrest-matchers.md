@@ -89,7 +89,7 @@ but, still, it is requires extra code in every unit test.
 problems even further, as it pre-defines most popular namespaces, including
 `xtml`, `xs`, `xsl`, etc.
 
-The following example works right out-of-the-box &mdash; without any extra configuration:
+The following example works right out-of-the-box&mdash;without any extra configuration:
 
 {% highlight java %}
 MatcherAssert.assertThat(

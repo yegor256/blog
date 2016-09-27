@@ -49,7 +49,7 @@ and is a perfectly valid construct.
 
 So what is wrong with catching an exception and logging it? Let's try to
 look at the bigger picture first. We're talking about object-oriented
-programming &mdash; this means we're dealing with objects. Here is
+programming&mdash;this means we're dealing with objects. Here is
 how an object (its class, to be exact) would look:
 
 {% highlight java %}
@@ -83,7 +83,7 @@ from languages without exceptions, like C.
 
 Exceptions were invented to simplify our design by moving the entire
 error handling code away from the main logic. Moreover, we're not just moving it away but
-also concentrating it in one place &mdash; in the `main()` method, the entry
+also concentrating it in one place&mdash;in the `main()` method, the entry
 point of the entire app.
 
 The primary purpose of an exception is to collect as much information as possible
@@ -118,7 +118,7 @@ Unfortunately, the design of Java goes against this principle in many places.
 For example, Java has checked and un-checked exceptions, while there should only
 be checked ones in my opinion (the ones you must catch or declare
 as throwable). Also, Java allows multiple exception types to be declared
-as throwable in a single method &mdash; yet another mistake; stick to declaring just
+as throwable in a single method&mdash;yet another mistake; stick to declaring just
 one type. Also, there is a generic `Exception` class at the top of the hierarchy,
 which is also wrong in my opinion. Besides that, some built-in classes don't
 allow any checked exceptions to be thrown, like `Runnable.run()`. There

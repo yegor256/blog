@@ -37,7 +37,7 @@ but faced a number of issues:
 {% badge http://img.jcabi.com/logo-square.svg 64 %}
 
 Keeping in mind all those drawbacks, I created my
-own library &mdash; [jcabi-github](http://github.jcabi.com).
+own library&mdash;[jcabi-github](http://github.jcabi.com).
 Let's look at its most important advantages.
 
 <!--more-->

@@ -35,7 +35,7 @@ Find the stupidest newbies and help them. Regardless of what exactly
 you help them with, they should rely on you. Show them where the restroom is,
 recommend a good restaurant nearby, assist in an IDE installation,
 explain how the project works, and make standard jokes about the worst
-class in it. They must become your best friends &mdash; and not only them. Be
+class in it. They must become your best friends&mdash;and not only them. Be
 helpful to everybody. No matter what is happening, everyone must know
 that you're ready to help. Ideally, they all must depend on your
 kindness and readiness to save them from the
@@ -56,7 +56,7 @@ is a clear sign of your loyalty to our mutual results.
 **Don't Nag**.
 No matter what is happening, you should never criticize your direct manager. The
 boss is [always right]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
-Everything else may be wrong &mdash; the situation,
+Everything else may be wrong&mdash;the situation,
 colleagues, suppliers, computers, the CEO, investors, the market, or the weather,
 but not the boss you directly report to.
 The word of this person is the law. The boss is the god. Ideally, you should
@@ -102,7 +102,7 @@ work for [the big idea]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality
 Period.
 
 **Attend All Social Events**.
-Birthdays, corporate parties, Halloween, Friday beers &mdash; you must be
+Birthdays, corporate parties, Halloween, Friday beers&mdash;you must be
 there, always. Don't worry about wasting your life; you will like
 them eventually. It is very important to demonstrate that you truly live in the
 office. You are not just writing code, taking money, and going home to your family.
@@ -114,8 +114,7 @@ you demonstrate your loyalty, which is the best quality of a
 **Point Fingers Privately**.
 Don't say anything bad about anyone in public. No matter who is doing what,
 we're always a team; we're together. Together! This should be your main
-keyword when talking about results, problems, and risks. Never blame anyone &mdash;
-publicly. However, when you're talking in the kitchen with a few of your most trusted
+keyword when talking about results, problems, and risks. Never blame anyone&mdash;publicly. However, when you're talking in the kitchen with a few of your most trusted
 colleagues, let yourself go. Tell them who you think is the weakest part
 of the team and what you would do with him or her if you were the boss.
 Don't restrict yourself, but always make sure there are only a few people who can hear you.
@@ -130,8 +129,7 @@ matched with popular vacation periods in a year (e.g. Christmas, New Year).
 That might be a bit more expensive for you, but reward of not betraying
 the company is priceless. If you do make a mistake of asking for a vacation,
 try to make it short. The worst thing you can do while trying to extend
-vacation days is to mention that you could "still work while out of the office" &mdash;
-that will immediately get you in a position where you don't need the office,
+vacation days is to mention that you could "still work while out of the office"&mdash;that will immediately get you in a position where you don't need the office,
 hence the office doesn't need you.
 
 Added 30-Jun-2016:<br/>
@@ -156,14 +154,14 @@ is nothing involving the team that doesn't bother you. You must show that you
 feel responsible for every problem and each task. Also, when there
 is a discussion in the office and someone is doing his own thing, paying
 no attention to the subject, you should ask, "Doesn't this concern you at all?"
-Make him feel guilty for not being careful enough &mdash; that will
+Make him feel guilty for not being careful enough&mdash;that will
 give you a lot of points for "being on top of all things."
 
 **Look Tired**.
 Always look a bit tired, as if you were working all night and barely got
 a few hours of sleep. Also, try to make it obvious that you were fixing
 some old bug in the system that nobody except you really cares about. You must not
-look too energetic &mdash; this disrespects your boss. He didn't give you
+look too energetic&mdash;this disrespects your boss. He didn't give you
 enough work to wear you out completely? That means he is a bad manager. Instead,
 you should even joke that "our boss knows how to keep us busy." That flattery
 will definitely please even a smart person.

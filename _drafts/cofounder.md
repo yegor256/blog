@@ -18,9 +18,9 @@ keywords:
 
 Finding a good co-founder is a difficult task. Motivating him or her
 to join your startup is even a more difficult one. But there is another
-question I want to discuss &mdash; do you really **need** one? Do you really
+question I want to discuss&mdash;do you really **need** one? Do you really
 need a co-founder or maybe you can just hire someone to work for you?
-There is a big difference between these two things &mdash; a **co-founder**
+There is a big difference between these two things&mdash;a **co-founder**
 and a **worker**.
 
 <!--more-->

@@ -31,7 +31,7 @@ in C# as [delegates](https://msdn.microsoft.com/en-us/library/ms173171.aspx),
 in PHP as [anonymous functions](http://php.net/manual/en/functions.anonymous.php),
 and in JavaScript as [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions).
 Java 8 is just catching up. The question is whether it is a good
-or a bad idea &mdash; to have these functional programming elements in
+or a bad idea&mdash;to have these functional programming elements in
 an object-oriented language? I think it's a bad idea, especially how Java 8
 implemented it.
 
@@ -73,7 +73,7 @@ I'll show it in a minute.
 First, let's discuss what is wrong with the second "functional" approach. We don't
 need to discuss what is wrong with the procedural one, right? It's
 obvious that, even though it's very intuitive, testability, reusability,
-and maintainability of it are very low &mdash; it is just a script that is written
+and maintainability of it are very low&mdash;it is just a script that is written
 once and either works or we have to re-write it.
 
 Objects, as well as functions, were invented to make software elements

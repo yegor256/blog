@@ -63,7 +63,7 @@ every quality issue in the product under development is a **personal**
 fault of the architect. Of course, together with the blame he also
 takes all the credit from happy customers, when the quality is good.
 
-This is what the team needs &mdash; someone personally responsible
+This is what the team needs&mdash;someone personally responsible
 for the quality of the software being developed.
 
 {% quote The job of the PM is to make sure that every technical decision the architect makes is not doubted by anyone %}
@@ -72,8 +72,7 @@ How this guy will delegate this responsibility to others is his job. Whether
 he will use his knowledge and skills, or quality control
 [tools]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}), or
 unit testing frameworks, or authority, or coaching, or
-[corporal punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
-&mdash; it's his business.
+[corporal punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})&mdash;it's his business.
 A project
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}) delegates quality control to the software architect,
 and [it is up to]({% pst 2015/feb/2015-02-23-haircut %})
@@ -95,7 +94,7 @@ And this is the job of the
 to make sure that every
 technical decision the architect makes is not doubted
 [by anyone]({% pst 2015/oct/2015-10-13-competition-without-rules %}). This is
-what delegation is all about &mdash; responsibility should always come with power.
+what delegation is all about&mdash;responsibility should always come with power.
 
 As a project manager, you should regularly evaluate
 [the results]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})

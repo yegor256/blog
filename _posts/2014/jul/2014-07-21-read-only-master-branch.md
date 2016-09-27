@@ -114,7 +114,7 @@ projects and a few commercial ones with PHP, Java, Ruby and JavaScript, Git and
 Subversion. In all cases, my experience was only positive, and that's why
 [rultor.com](http://www.rultor.com) was born (later about that though).
 
-So, the solution is simple &mdash; prohibit anyone from merging anything
+So, the solution is simple&mdash;prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch is breaking at even one unit test, the entire branch will be rejected.
@@ -129,7 +129,7 @@ my changes into `master`. Git simply rejects my `push`, because I don't have the
 appropriate permissions. All I can do is call a magic script, asking it to merge
 my branch. The script will try to merge, but before pushing into `master`, it
 will run all tests. And if any of them break, my branch will be rejected. My
-changes won't be merged. Now it's my responsibility &mdash; to fix them and call
+changes won't be merged. Now it's my responsibility&mdash;to fix them and call
 the script again.
 
 In the beginning, this approach slows down the development, because everybody

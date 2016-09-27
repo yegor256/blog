@@ -21,7 +21,7 @@ keywords:
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code &mdash; and maybe even more
+you have to write a few dozen lines of code&mdash;and maybe even more
 than that if proper exception handling and logging is needed.
 [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}) is
 a small open source library that makes life much easier by enabling
@@ -31,8 +31,7 @@ see how this library helps in XSL transformations.
 
 <!--more-->
 
-First, take a look at a practical example &mdash; [rultor.com](http://www.rultor.com) &mdash;
-a hosted DevOps assistant that
+First, take a look at a practical example&mdash;[rultor.com](http://www.rultor.com)&mdash;a hosted DevOps assistant that
 [automates]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. "talk")
 in a DynamoDB record. There are multiple situations to handle

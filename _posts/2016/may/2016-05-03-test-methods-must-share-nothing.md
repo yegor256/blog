@@ -20,7 +20,7 @@ Constants... I wrote about them
 [some time ago]({% pst 2015/jul/2015-07-06-public-static-literals %}), mostly
 saying that they are a bad thing, if being public. They reduce duplication,
 but introduce coupling. A much better way to get rid of duplication is
-by creating new classes or methods &mdash; a traditional OOP method. This seems to make
+by creating new classes or methods&mdash;a traditional OOP method. This seems to make
 sense and in our projects I see less and less public constants. In
 some projects we don't have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
@@ -115,7 +115,7 @@ Moreover, there are seven (!) test methods in
 [`VerboseListTest`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java),
 which are using `MSG`. Thus, we will have 14 occurrences of `"something"`, right?
 Yes, that's right and that's most likely why one of authors of this
-test case introduced the constant &mdash; to get rid of duplication.
+test case introduced the constant&mdash;to get rid of duplication.
 BTW, [@Happy-Neko](https://github.com/Happy-Neko) did that in pull request
 [#513](https://github.com/yegor256/takes/pull/513),
 [`@carlosmiranda`](https://github.com/carlosmiranda] reviewed the code and I
@@ -146,8 +146,7 @@ class FooTest {
 {% endhighlight %}
 
 These literals must be different. This is what any static analyzer is
-saying when it sees `"something"` in so many places. It questions us &mdash;
-why are they the same? Is it really so important to use `"something"` everywhere?
+saying when it sees `"something"` in so many places. It questions us&mdash;why are they the same? Is it really so important to use `"something"` everywhere?
 Why can't you use different literals? Of course we can. And we should.
 
 The bottom line is that each test method must have its own set of data and objects. They must

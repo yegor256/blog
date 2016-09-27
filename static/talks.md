@@ -270,7 +270,7 @@ Dnipro, Ukraine;
 [video](https://www.youtube.com/watch?v=APCUGQlkO3U).
 There were about 400 people, 2-3 tracks and a terrible venue. Seriously,
 the place was a total disaster, even though it's a newly built conference
-center. The sound, the location of rooms, the after-talk areas &mdash; everything
+center. The sound, the location of rooms, the after-talk areas&mdash;everything
 was uncomfortable. Also, the content was not really well selected. They invited
 a few star speakers just because of their names, which usually is a mistake.
 The after-party was good though. It seemed that organizers tried to do this event
@@ -449,8 +449,7 @@ An Immutable Object-Oriented Web Framework;
 Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431).
-There were about 250 people. The location was not good at all &mdash;
-it was a cinema. Also, the audience was so serious or so shy that it
+There were about 250 people. The location was not good at all&mdash;it was a cinema. Also, the audience was so serious or so shy that it
 was rather difficult to present. Not just for me. Also, I got an impression
 that speakers were invited just because of their names, not the content they
 deliver. Aside from that, the impression was positive.
@@ -486,8 +485,7 @@ Moscow, Russia;
 It was one of the best conferences I've attended so far. A very well organized,
 carefully planned, in a perfect and rather expensive location. Besides that,
 my speech was screened beforehand. I even had to make it over Skype and some
-corrections were received. What I would suggest to invite new speakers &mdash;
-it seems that there are almost the same faces every year.
+corrections were received. What I would suggest to invite new speakers&mdash;it seems that there are almost the same faces every year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -499,8 +497,7 @@ Sophia, Bulgaria;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
 [video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
 It was a huge event with, I guess, over 1500 attendees. Even on my presentation
-there were over 150 people in the room. The location, the food, the logistics &mdash;
-everything was good. The only negative part is a total disfocus of the
+there were over 150 people in the room. The location, the food, the logistics&mdash;everything was good. The only negative part is a total disfocus of the
 content. Speakers were talking just about everything. I didn't even understand
 why my presentation was accepted there :)
 
@@ -559,7 +556,7 @@ Olomouc, Czech Republic;
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
 [photos](https://www.facebook.com/yegor256/posts/10209204748545730),
 [video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
-There were over 250 people and just two main tracks &mdash; good setup.
+There were over 250 people and just two main tracks&mdash;good setup.
 A comfortable location, careful organization, good food, expenses
 paid. The only problem was the content. Most presentations
 were rather boring and not well prepared. Aside from that, I liked it.
@@ -593,7 +590,7 @@ It's a very small conference, with barely ten (!) people in the room. The
 talks were separated in six rooms, with no specific focus on subjects. Moreover,
 I don't think they did any prepareation of speakers or even selection of them.
 Clearly, the event was there only to make money. The only thing I enjoyed
-was the city, one of my favorites, &mdash; Seattle. Aside from that, it was
+was the city, one of my favorites,&mdash;Seattle. Aside from that, it was
 a time wasting event for me.
 
 <div class="talk-event"/>
@@ -625,9 +622,9 @@ San Francisco, USA;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-are-the-new-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
-This was a shame for the entire industry &mdash; money making event with
+This was a shame for the entire industry&mdash;money making event with
 zero attention to quality. Just random speakers, random attendees, random
-subjects &mdash; just anything that will help them make money on selling
+subjects&mdash;just anything that will help them make money on selling
 tickets.
 
 <div class="talk-event"/>
@@ -678,7 +675,7 @@ Warsaw, Poland;
 The event was rather big, over 300 people in the room. However, the audience
 was rather passive and presentations were mostly from sponsors. The event was there
 mostly to make money, which is always a downside. The location was rather
-bad &mdash; an old Soviet-time hotel.
+bad&mdash;an old Soviet-time hotel.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>

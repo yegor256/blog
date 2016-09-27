@@ -40,7 +40,7 @@ In OOP, data
 must not be visible. [Objects]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 must only have access to the data they
 encapsulate and never to the data encapsulated by other objects. There
-can be no arguing about this principle &mdash; it is what
+can be no arguing about this principle&mdash;it is what
 [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}) is all about.
 
 However, DTO runs completely against that principle.

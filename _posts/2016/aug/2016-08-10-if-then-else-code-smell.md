@@ -50,7 +50,7 @@ class DyTalk implements Talk {
 {% endhighlight %}
 
 What's wrong, you wonder? This if-then-else forking functionality doesn't really belong
-to this object &mdash; that's what's wrong. Modifying the XML document
+to this object&mdash;that's what's wrong. Modifying the XML document
 and saving it to the database is _its functionality_, while
 not saving anything if the modification instructions set is empty is not
 (it's very similar to [defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %})).

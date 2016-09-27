@@ -27,12 +27,12 @@ of view of various project members.
 Basically, there are a few key
 [roles]({% pst 2016/jul/2016-07-10-software-project-roles %}) in any software team:
 
- * Project Manager &mdash; assigns tasks and pays on completion
- * System Analyst &mdash; documents the product owner's ideas
- * Architect &mdash; defines how system components interact
- * Designer &mdash; implements most complex components
- * Programmer &mdash; implements all components
- * Tester &mdash; finds and reports bugs
+ * Project Manager&mdash;assigns tasks and pays on completion
+ * System Analyst&mdash;documents the product owner's ideas
+ * Architect&mdash;defines how system components interact
+ * Designer&mdash;implements most complex components
+ * Programmer&mdash;implements all components
+ * Tester&mdash;finds and reports bugs
 
 Everybody, except the
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
@@ -226,7 +226,7 @@ Puzzle driven development helps me break my task into smaller sub-tasks.
 I always start with a unit test. In the unit test, I'm trying to
 reproduce a bug or model the feature. When my test fails, I commit
 it and determine the amount of time I have left. If I still have time to make it
-pass &mdash; I do it, commit the changes and report to the project manager.
+pass&mdash;I do it, commit the changes and report to the project manager.
 
 If I don't have time to implement the fix, I mark pieces of code that
 don't already have `@todo` markers, commit them and report to the

@@ -73,14 +73,14 @@ User -> [Service]
 {% endplantuml %}
 
 A user gives instructions to a service and receives responses.
-This communication happens through a **user interface** (UI) &mdash; a bunch
+This communication happens through a **user interface** (UI)&mdash;a bunch
 of HTTP entry points that receive requests from a browser and return
 HTML+CSS responses. Or, if a user is on another service, requests may
 contain some data, and responses will be in
 [XML or JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %}). You get the idea;
 a user is a client, and the service is a server.
 
-Like in a restaurant &mdash; you say what you want, and a **server** goes
+Like in a restaurant&mdash;you say what you want, and a **server** goes
 to the kitchen, waits there, and in a few minutes, comes back with
 spaghetti carbonara. You're a client, and that cute lady is a server.
 
@@ -115,7 +115,7 @@ You hear an announcement that order number 15 is ready. You go there,
 collect the food, return to your table, and enjoy.
 
 The point is that there is **no cute lady** involved anymore. There is no
-server. There are two parties communicating with the board &mdash; you and
+server. There are two parties communicating with the board&mdash;you and
 the kitchen. The kitchen is our microservice, but it's not a server anymore.
 
 These two parties are perfectly **decoupled** now. They never talk to each other. And

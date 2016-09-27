@@ -14,7 +14,7 @@ keywords:
 ---
 
 This is the first post on my new blog.
-Therefore, it's not about anything in particular &mdash; just
+Therefore, it's not about anything in particular&mdash;just
 an introduction and my way of saying hello. This blog will
 be primarily about software development
 ideas. As my [About Me](/about-me.html) page says,

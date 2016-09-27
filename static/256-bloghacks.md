@@ -34,7 +34,7 @@ email me to [book@yegor256.com](mailto:book@yegor256.com) if you are
 interested in becoming the first reader and helping me review it. I will
 send you the entire book in PDF, you will make your comments and questions
 and email them back to me. I'm mostly interested to know what else you
-would want me to say there &mdash; what did I forget.
+would want me to say there&mdash;what did I forget.
 
 Sep 9, 2016:
 I started to write it.

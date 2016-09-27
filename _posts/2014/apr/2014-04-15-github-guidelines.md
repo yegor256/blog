@@ -92,7 +92,7 @@ shared between all other developers.
 Read this article: [Bugs Are Welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
 Don't expect anyone to help you. Your only source of help is the source code
-itself. If the code doesn't explain everything  you need to know &mdash; it is a
+itself. If the code doesn't explain everything  you need to know&mdash;it is a
 bug, which must be reported.
 
 ## 4. Commit and Push

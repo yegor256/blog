@@ -39,9 +39,9 @@ Seriously. There are
 All of them should say: "Yes, we like your code".
 Otherwise, your build shouldn't pass.
 
-What do you think? Would it be convenient for you &mdash; to have your
+What do you think? Would it be convenient for you&mdash;to have your
 code rejected every time it breaks just one of 900 checks? Would it
-be productive for the team &mdash; to force developers to focus
+be productive for the team&mdash;to force developers to focus
 so much on code quality?
 
 <!--more-->
@@ -61,7 +61,7 @@ build script. It is actually a Maven plugin and we automate Java builds
 with Maven 3x. Thus, if your changes break any of Qulice's rules,
 your entire branch gets rejected.
 
-Your first reaction &mdash; I've seen it hundreds of times &mdash; will be negative.
+Your first reaction&mdash;I've seen it hundreds of times&mdash;will be negative.
 You may actually become frustrated enough to leave the project immediately.
 You may say something like this (I'm quoting real life stories):
 
@@ -137,26 +137,22 @@ It can promise its members (programmers) a **higher quality** of work,
 compared to other projects that don't have this restriction, mostly
 because of:
 
- * **Predictability of Design** &mdash;
-   I don't have to scroll through
+ * **Predictability of Design**&mdash;I don't have to scroll through
    the entire class to make sure it doesn't have methods that can
    be accidentally overridden. I know for sure that this can't happen
    in this project. In other words, I know what to expect.
 
- * **Less Hidden Tricks** &mdash;
-   Higher predictability of design leads
+ * **Less Hidden Tricks**&mdash;Higher predictability of design leads
    to better visibility of mistakes and tricks. Standardization of source
    code makes it uniform. This means that it's easier to read and
    spot problems.
 
- * **Industry Standards** &mdash;
-   The decision to use this design is
+ * **Industry Standards**&mdash;The decision to use this design is
    made by Checkstyle, not by a project architect. For me, as a project
    developer, this means that I'm following industry standards. That makes
    the project (and its leaders) more respectable.
 
- * **Learning** &mdash;
-   I'll bet that most of you who read this post didn't know about the
+ * **Learning**&mdash;I'll bet that most of you who read this post didn't know about the
    design rule explained above. Just by reading this article, you learned
    something new. Imagine how much you could learn after making your
    code compliant to all 900 rules of Qulice (Checkstyle + PMD + FindBugs).

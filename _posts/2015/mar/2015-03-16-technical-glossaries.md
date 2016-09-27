@@ -26,7 +26,7 @@ and digest. Even when they do have glossaries, their definitions
 of terms are very vague and ambiguous. Why is this happening? Don't we
 understand the importance of a common vocabulary for any software project?
 I'm not sure what the causes are, but this is what a software
-architect should do when he or she starts a project &mdash; create
+architect should do when he or she starts a project&mdash;create
 a glossary.
 
 <!--more-->

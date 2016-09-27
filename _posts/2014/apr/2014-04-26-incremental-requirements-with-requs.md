@@ -91,7 +91,7 @@ OK, now I that know the identity of the product owner, I need to talk to him. In
 XDSD, we don't do any meetings, phone calls, or any other type of
 [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
 Therefore, my only mechanism for receiving the information I
-need is with is &mdash; tickets.
+need is with is&mdash;tickets.
 
 I will submit **new** tickets, addressing them to the product owner. As there
 can be many product owners in a project, I must submit tickets that clearly
@@ -128,7 +128,7 @@ submit a pull request for review.
 
 It doesn't really matter which files I edit because Requs automatically composes
 together all files with the `req` extension. I can even add new files to the
-directory &mdash; they will be picked up. Likewise, I can also add sub-
+directory&mdash;they will be picked up. Likewise, I can also add sub-
 directories with files.
 
 ## Local Build
@@ -180,7 +180,7 @@ the `master` branch.
 
 Finally, my pull request is merged and I get back to the task owner. I tell him
 that the SRS was fixed and request that he review it. His original problem
-should be fixed by now &mdash; the SRS should provide the information required.
+should be fixed by now&mdash;the SRS should provide the information required.
 
 He then closes the task and the project manager pays me within a few hours.
 

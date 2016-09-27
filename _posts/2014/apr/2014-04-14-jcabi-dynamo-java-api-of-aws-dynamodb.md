@@ -86,7 +86,7 @@ try {
 }
 {% endhighlight %}
 
-The above script works fine, but there is one major drawback &mdash; it is not
+The above script works fine, but there is one major drawback&mdash;it is not
 object oriented. It is a perfect example of an imperative [procedural
 programming](http://en.wikipedia.org/wiki/Procedural_programming).
 

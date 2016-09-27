@@ -54,7 +54,7 @@ When a group doesn't have explicitly defined principles of
 survival and growth, it starts to create them **naturally**. When
 people don't know what exactly needs to be done in order to get
 a 15 percent raise, they find a way to get this information anyway. And guess what
-this information will end up being? Right &mdash; you have
+this information will end up being? Right&mdash;you have
 [to make your boss happy]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %});
 that's how your chances for a raise improve.
 
