@@ -19,6 +19,7 @@ task default: [
   :garbage,
   :scss_lint,
   :spell,
+  :regex,
   :excerpts,
   :snippets,
   :orphans,
@@ -211,6 +212,20 @@ task :excerpts do
   done 'All articles have excerpts'
 end
 
+desc 'Make sure there are no prohibited RegEx-es'
+task :regex do
+  ptns = [
+    /\s&mdash;/,
+    /&mdash;\s/
+  ]
+  all_html().each do |f|
+    html = File.read(f)
+    ptns.each do |re|
+      fail "#{f}: #{re}" if re.match html
+    end
+  end
+  done 'Not prohibited regular expressions'
+end
 desc 'Make sure all snippets are compact enough'
 task :snippets do
   all_html().each do |f|
