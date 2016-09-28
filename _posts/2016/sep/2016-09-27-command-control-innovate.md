@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Command, Control, and Innovate"
-date: 2016-08-25
+date: 2016-09-27
 place: Palo Alto, CA
 tags: management
 description: |
@@ -27,6 +27,8 @@ else is going on.
 
 <!--more-->
 
+{% picture /images/2016/09/andrei-rublev.jpg 0 Andrei Rublev (1966) by Andrei Tarkovsky %}
+
 We are lazy and greedy animals. To work and produce something
 for someone, we need two things: motivation and punishment. The
 [carrot and stick](https://en.wikipedia.org/wiki/Carrot_and_stick)
@@ -50,7 +52,7 @@ of command and control was the best management paradigm.
 
 Besides that, the armies of all time have always been built as hierarchies
 with very strict and deterministic definitions of responsibilities
-and authorities. Since the time of Sun Tzu, the external
+and authorities. Since the time of [Sun Tzu](https://en.wikipedia.org/wiki/Sun_Tzu), the external
 strength of any army was ensured by its internal discipline, which
 was always about a clear and explicit chain of commands, rewards, and
 punishments.

@@ -280,7 +280,8 @@ is "CTO of Twitter"&mdash;it doesn't mean anything to me.
 My experience tells me that the bigger the company and the higher the position
 in it&mdash;the further away you stay from the source code and from
 real technical decisions. VPs and CTOs spend most of their time on
-management meetings and internal politics.
+management meetings and internal
+[politics]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 I'm much more interested in **what** you've done over the last few years than
 in **where** you've done it and what they called you while you were

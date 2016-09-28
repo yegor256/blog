@@ -48,8 +48,8 @@ List<String> list = Arrays.asList(
 This is how we would trim them and print only long ones, in Java 7:
 
 {% highlight java %}
-for (String item : list) {
-  String t = item.trim();
+for (String i : list) {
+  String t = i.trim();
   if (t.length() > 3) {
     System.out.println(t);
   }
@@ -60,7 +60,7 @@ This is what we do in Java 8, with lambdas and streams:
 
 {% highlight java %}
 list.stream()
-  .map(item -> item.trim())
+  .map(i -> i.trim())
   .filter(t -> t.length() > 3)
   .forEach(t -> System.out.println(t))
 {% endhighlight %}
@@ -77,13 +77,80 @@ and maintainability of it are very low&mdash;it is just a script that is written
 once and either works or we have to re-write it.
 
 Objects, as well as functions, were invented to make software elements
-less coupled and more cohesive, in order to give us an ability to test
-them separately, to re-use them, and to maintain them easily. Then,
+[less coupled](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29)
+and [more cohesive](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29),
+in order to give us an ability to test
+them separately, to re-use them, and to easily maintain. Then,
 using [object composition](https://en.wikipedia.org/wiki/Object_composition) in OOP or
 [function composition](https://en.wikipedia.org/wiki/Function_composition_%28computer_science%29) in FP
-we _compose_ them together, in order to achieve the final result.
+we _compose_ them together, in order to create the result.
 
-Java streams, as I understand, is a good old procedural approach with functions
+Java streams, as I understand, is a good old procedural approach, where
+implementations of so called _functional interfaces_ can be inlined by
+lambda expressions, for brevity and readability. However, the way we
+interact with the list is still very imperative: we tell it what to do,
+by calling that methods of `Stream` class. No matter what is happening
+inside that methods (you may say that they are not actually filtering
+and mapping, but only decorating the list), for the user of class `List`
+they look like explicit _directives_.
+
+And this is exactly what makes this approach neither functional nor
+object-oriented: lack of _composition_. Nothing is really composed. Instead,
+instructions are given, one by one, in a
+[fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) style.
+Every next method call returns a new _modified_ object. It could be the
+same object, if it's mutable, but the manipulation is done already, when
+we move on to the next step of the ladder.
+
+A composition works and looks differently. In functional programming
+it would look like (pseudo-code, close to Lisp):
+
+{% highlight clojure %}
+(defun result (list)
+  (forEach (lambda (t) (print t))
+    (filter (lambda (t) (> (length t) 3))
+      (map (lambda (i) (trim i))
+        list))))
+{% endhighlight %}
+
+Functions get composed one into another, creating a bigger and a more
+complex one, up to the function of the highest level: `result`. Yes, the
+`result` is also a function, which will be calculated eventually. Or maybe not.
+What we do in functional programming is composing functions.
+
+This is not what is happening with Java streams, on the surface level. No
+matter how `Stream` is implemented in every particular collection, it looks
+absolutely imperative to those who is going to use it.
+
+There is a second reason, why `Stream` doesn't really fit into either
+functional or object composition paradigm: it makes collections aware of
+their manipulators. Indeed, the collection has to implement method `filter`,
+for example, in order to let its clients actually filter. This is not
+what we have in Lisp&mdash;the collection doesn't know anything about those
+who filters it. And it must not know anything about them!
+
+It must be a collection&mdash;a rock solid object, which encapsulates
+everything, exposing only certain behavior. Injecting an executable
+
+I believe, what `Stream` is doing it's a serious violation of encapsulation.
+
+The same happens here, but with injectable
+
+In a true functional programming, for example in Closure, we would
+do the same manipulations with the list through a composition of
+functions:
+
+{% highlight clojure %}
+(
+(filter #(> (:length %) 3)
+  )
+list.stream()
+  .map(item -> item.trim())
+  .filter(t -> t.length() > 3)
+  .forEach(t -> System.out.println(t))
+{% endhighlight %}
+
+
 on top of it, without even function composition. It's neither functional
 programming, since there is no composition of functions, nor object-oriented
 one, since there is no composition of objects.
@@ -111,4 +178,11 @@ String text = new Join(
 System.out.println(text);
 {% endhighlight %}
 
+
+decorate List {
+  List(list),
+  iterator() {
+
+  }
+}
 
