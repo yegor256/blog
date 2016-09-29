@@ -5,6 +5,7 @@ node_modules
 .gitignore
 .gitattributes
 .DS_Store
+.sass-cache
 _config.yml
 s3cfg.enc
 id_rsa.enc

@@ -167,6 +167,7 @@ task ping: [:build] do
   links = all_links().uniq
     .reject{ |a| a.start_with? 'http://www.yegor256.com/' }
     .reject{ |a| a.include? 'linkedin.com' }
+    .reject{ |a| !(a =~ /^https?:\/\/.*/) }
   tmp = Tempfile.new(['yegor256-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
@@ -186,7 +187,7 @@ task ping: [:build] do
     end
   end
   fail "#{errors} broken link(s)" unless errors < 20
-  done "All #{links.size} links are valid"
+  done "#{links.size} links are valid, #{errors} are broken"
 end
 
 desc 'Run RuboCop on all Ruby files'
