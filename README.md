@@ -5,6 +5,8 @@
 
 This is my blog: [www.yegor256.com](http://www.yegor256.com)
 
+This book explains how it's built and maintained: [256 Bloghacks](http://www.yegor256.com/256-bloghacks.html)
+
 ## License
 
 Copyright (c) 2014-2016 Yegor Bugayenko
