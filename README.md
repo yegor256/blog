@@ -1,3 +1,5 @@
+<img src="http://www.yegor256.com/favicon.ico" width="64px" height="64px" />
+
 [![Build Status](https://travis-ci.org/yegor256/blog.svg)](https://travis-ci.org/yegor256/blog)
 [![Dependency Status](https://gemnasium.com/yegor256/blog.svg)](https://gemnasium.com/yegor256/blog)
 
