@@ -163,6 +163,18 @@ Manzanillo, Colima, Mexico<br/>
 29-31 March 2017
 
 <div class="talk-event"/>
+<img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
+[JBreak 2017](http://2017.jbreak.ru/)<br/>
+Novosibirsk, Russia<br/>
+4 April 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
+[JPoint 2017](http://jpoint.ru/en/)<br/>
+Moscow, Russia<br/>
+7-8 April 2017
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
