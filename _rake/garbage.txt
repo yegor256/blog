@@ -1,6 +1,7 @@
 Rakefile
 Gemfile
 README.md
+LICENSE.txt
 node_modules
 .gitignore
 .gitattributes

@@ -1,5 +1,3 @@
-# -*- coding:utf-8; mode:ruby; -*-
-
 ['open3', 'win32/open3'].each do |lib|
   begin
     require lib

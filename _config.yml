@@ -23,6 +23,7 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 exclude:
   - README.md
+  - LICENSE.txt
   - Gemfile.lock
   - Gemfile
   - Rakefile

@@ -1,10 +1,3 @@
-[![Build Status](https://travis-ci.org/yegor256/blog.svg)](https://travis-ci.org/yegor256/blog)
-[![Dependency Status](https://gemnasium.com/yegor256/blog.svg)](https://gemnasium.com/yegor256/blog)
-
-This is my blog: [www.yegor256.com](http://www.yegor256.com)
-
-## License
-
 Copyright (c) 2014-2016 Yegor Bugayenko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
