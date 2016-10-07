@@ -41,6 +41,7 @@ good and how it could be better:
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
   * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
+  * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),
