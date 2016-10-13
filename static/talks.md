@@ -85,20 +85,6 @@ Kyiv, Ukraine<br/>
 14-15 October 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON Prague 2016"/>
-**Java Annotations are a Big Mistake**<br/>
-[GeeCON Prague 2016](http://2016.geecon.cz/)<br/>
-Prague, Czech Republic<br/>
-20-21 October 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/secr.png" class="future-talk" alt="SECR 2016"/>
-**Why professional programmers hate Agile?**<br/>
-[SECR 2016](http://2016.secr.ru/)<br/>
-Moscow, Russia<br/>
-28 October 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects**<br/>
 **ORM is an Offensive Anti-Pattern**<br/>
