@@ -14,7 +14,7 @@ comments by Yegor:
 - there are 17.7K lines of Objective-C/Swift
 - some files are rather long: https://github.com/hackiftekhar/IQKeyboardManager/blob/master/IQKeyboardManager/IQKeyboardManager.m (2100 LoC)
 - there are setters and getters everywhere (probably due to the iOS nature, but still…)
-- I didn’t find any static analysis there (code formatting looks messy very often)    
+- I didn’t find any static analysis there (code formatting looks messy very often)
 - I didn’t understand what landscape.io badge is doing there (it’s for Python projects, AFAIK)
 - coveralls badge doesn’t really work - I didn’t find the coverage report
 - maybe I’m wrong, but I didn’t find any unit tests in the project (except for the Demo)
@@ -52,7 +52,7 @@ Lot's of custom annotation with lack of code :(
 
 - there are 18.7K lines of Java code
 - I found many utility classes in test/ directories
-+ this project looks good, goes to the list of finalists 
++ this project looks good, goes to the list of finalists
 
 
 
@@ -68,7 +68,7 @@ Code coverage (jacoco)
 public static methods in abstract class (com.codeborne.selenide.Condition)
 mutability (com.codeborne.selenide.WebDriverRunner)
 mutable non private fields! (RequestSizeWatchdog)
-protected and package private fields/methods missuse 
+protected and package private fields/methods missuse
 
 - there are 11.1K lines of Java code and 19.6K of JavaScript
 - I don’t really see OOP here. it looks like a nice procedural code
@@ -85,7 +85,7 @@ God classes"
 
 
 
-AdamsLair/duality (C#) 
+AdamsLair/duality (C#)
 exactly the same thing as with previous repo:
 Project files commited into repo
 Releases are not tracked
@@ -297,7 +297,7 @@ SORRY, PLEASE, CHECK IT BY YOURSELF
 + static analysis is there (PHPCS)
 + unit testing is there (phpunit)
 - I didn’t find code coverage analysis
-- just one GitHub release 
+- just one GitHub release
 - main development is not done through pull request (commits go to master)
 - overall the project looks clean, but it’s not OOP: there’re DTOs, ORM, getters/setters, etc.
 
@@ -513,7 +513,7 @@ SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
 
 
 kwhat/jnativehook 	(Java)
-+ 
++
 Github issue tracking
 Github release management
 -
@@ -595,7 +595,7 @@ nikolamilosevic86/owasp-seraphimdroid   (Android)
 +
 Github issue tracking
 Github release management
-- 
+-
 No visible CI
 No code quality control at all
 No test coverage control
@@ -708,7 +708,7 @@ Initial commit was on Jul 31  < 1 year
 
 Cyan4973/zstd (facebook/zstd)  (C)
 SORRY, PLEASE, CHECK IT BY YOURSELF
- 
+
 + CI is here
 + GitHub releases are here
 - I didn’t find coverage control
@@ -729,7 +729,7 @@ flatten-maven-plugin usage
 -
 No PMD
 Test inheritance (AbstractCoreTest)
-It's all about static ... 
+It's all about static ...
 
 - exception swallowing, long classes (Tokenizer for example)
 - helpers, loggers, formatters, other -ERs
@@ -739,6 +739,14 @@ It's all about static ...
 yi-editor/yi  (Haskell)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
+I'm not an expert in Haskell at all, that's why I asked a friend
+of mine to help me. Here is what I got:
+- there is very small amount of tests
+- code complexity is very high, for example Core.hs
+- operators overloading is a messy feature, and it's used
+- in many places nesting is too deep
+From me:
+- GitHub releases are not documented
 
 
 
