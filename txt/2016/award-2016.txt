@@ -1,0 +1,792 @@
+http://www.yegor256.com/2015/10/17/award-2016.html
+
+
+hackiftekhar/IQKeyboardManager	(Objective-C)
++
+Github issue tracking
+Github release management
+Travis CI
+Code coverage (with coveralls)
+-
+It seem like it's less than 10k LoC
+
+comments by Yegor:
+- there are 17.7K lines of Objective-C/Swift
+- some files are rather long: https://github.com/hackiftekhar/IQKeyboardManager/blob/master/IQKeyboardManager/IQKeyboardManager.m (2100 LoC)
+- there are setters and getters everywhere (probably due to the iOS nature, but still…)
+- I didn’t find any static analysis there (code formatting looks messy very often)
+- I didn’t understand what landscape.io badge is doing there (it’s for Python projects, AFAIK)
+- coveralls badge doesn’t really work - I didn’t find the coverage report
+- maybe I’m wrong, but I didn’t find any unit tests in the project (except for the Demo)
+
+
+
+
+artem-zinnatullin/qualitymatters (Android)
++
+Github issue tracking
+Travis CI
+Circle CI
+-
+It seem like it's less than 10k LoC
+DTO usage (com.artemzin.qualitymatters.api.entities.Item)
+* ers
+In general - not enough code to say something certain
+
+- there are 3.8K lines of Java code: the project is too small for us
+
+
+
+
+pholser/junit-quickcheck (Java)
++
+Github issue tracking
+Github release management
+Travis CI
+Checkstyle, PMD, Findbugs
+Code coverage (jacoco)
+-
+It seem like it's less than 10k LoC
+Heavy inheritance usage (com.pholser.junit.quickcheck.generator.Fields, *.Ctor ...)
+Lot's of custom annotation with lack of code :(
+
+- there are 18.7K lines of Java code
+- I found many utility classes in test/ directories
++ this project looks good, goes to the list of finalists
+
+
+
+
+codeborne/selenide (Java)
++
+Github issue tracking
+Github release management
+Travis CI
+Checkstyle, Findbugs
+Code coverage (jacoco)
+-
+public static methods in abstract class (com.codeborne.selenide.Condition)
+mutability (com.codeborne.selenide.WebDriverRunner)
+mutable non private fields! (RequestSizeWatchdog)
+protected and package private fields/methods missuse
+
+- there are 11.1K lines of Java code and 19.6K of JavaScript
+- I don’t really see OOP here. it looks like a nice procedural code
+
+
+
+
+raphw/byte-buddy (Java)
+I saw this repo last year - nothing has changed :(
+" All was fine before I've found a class with 6000 lines, and it's not the only one :(
+Utility classes
+God classes"
+
+
+
+
+AdamsLair/duality (C#)
+exactly the same thing as with previous repo:
+Project files commited into repo
+Releases are not tracked
+Anemic model
+Getters and setters
+And crazy long classes (e.g. DualityEditorApp)
+
+
+
+
+thothbot/parallax (Java)
++
+Github issue tracking
+Github release management
+Travis CI
+-
+No code quality control at all
+Utility classes (StreamUtils)
+Heavy usage on public static methods, get/set
+Long classes (> 1k lines, org.parallax3d.parallax.graphics.core.Geometry)
+
+
+
+
+vmi/selenese-runner-java (Java)
++
+Github issue tracking
+Github release management
+Travis CI
+Checkstyle, PMD, Findbugs
+Code coverage (cobertura)
+Mostly small compact classes
+-
+Tons of utility classes (jp.vmi.selenium.selenese.utils)
+Inheritance over composition (AbstractCommand hierarhy)
+*ers
+
+- JAXB with setters (not really OOP)
+- interfaces are labeled as I* (a very bad practice)
+- doesn’t look like OOP to me
+
+
+
+
+scd4j/gradle-plugins (Java)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+Anemic model, get/set (TemplateEngineConfig)
+Inheritance over composition (TemplateEngine hierarhy)
+
+
+
+
+wseemann/FFmpegMediaMetadataRetriever (Java)
+less than 10K LoC
+
+- there are just 800 lines of Java code
+
+
+
+bladecoder/bladecoder-adventure-engine	(Java)
++
+Github issue tracking
+Github release management
+Travis CI
+-
+No code quality control at all
+No test coverage control
+Many utility classes
+Committed commented code
+Nulls are everywhere (e.g. com.bladecoder.engine.actions.SceneActorRef)
+Inheritance over composition (WalkTween -> SpritePosTween)
+
+
+
+
+Flipkart/phantom	(Java)
++
+Github release management
+-
+No visible CI
+No code quality control at all
+No Github issue tracking (google groups ...)
+Inheritance over composition (SimpleChannelUpstreamHandler, AbstractExecutorRepository hierarhy)
+Nothing special at all ...
+
+
+
+
+NullVoxPopuli/aeonvera  (Ruby)
++
+Travis CI, Gitlab-CI
+Test coverage (codeclimate)
+Code quality (rubocop)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- looks like a good project, but it’s Ruby on Rails, which is not OOP at all
++ it’s a finalist
+
+
+
+
+mangstadt/ez-vcard	 (Java)
++
+Travis CI
+Test coverage (jacoco + codecov)
+Code quality (PMD, Findbugs)
+Github issue tracking
+Github release management
+-
+No checkstyle
+Enum is used for a singleton implementation (ezvcard.Massages)
+Null driven development (ezvcard.Massages)
+Utility classes (ezvcard.util)
+Inheritance over composition (SimpleProperty, ChainingParser hierarhy)
+Get/Set (e.g. StructuredName)
+
+
+
+
+axet/desktop   (Java/Go)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+No test coverage control
+Inheritance over composition (DesktopPower, DesktopSysTray ...)
+Package private fields! (LinuxFolders ...)
+Tons of static
+Single char variables ...
+
+
+
+
+DakaraOnline/dakara-server	(C++)
++
+Travis CI, Appveyor
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- no static analysis: code formatting is messy
+- so many SWITCH statements: this is not really OOP
+- global variables and functions: not OOP at all
+- maybe I’m wrong, but I didn’t find any classes/objects here
+- also, I didn’t find any unit tests
+
+
+
+
+ppareit/swiftp		 (Android)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+Public static methods (FsApp)
+Enum as a singleton implementation (MediaUpdater)
+Huge methods (FsPreferenceActivity.onCreate)
+Inheritance over composition (FtpCmd hierarhy ...)
+Mutable objects (LocalDataSocket)
+
+
+
+
+DSteve595/Put.io 	(Android)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+No test coverage control
+Unformatted crappy code, less than 10k :(
+
+
+
+
+jaredsburrows/android-gradle-java-app-template  	(Android)
+Template project ! Only stub code
+
+
+
+
+Belphemur/SoundSwitch  (C#)
++
+Appveyor
+Github issue tracking
+Github release management
+-
+No code quality control at all
+No test coverage control
+Build procedure is a bat file :(
+Visual Studio metainfo is committed to repo
+Utils
+Looks like less than 10k
+
+
+
+
+inklabs/kommerce-core  (PHP)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
++ static analysis is there (PHPCS)
++ unit testing is there (phpunit)
+- I didn’t find code coverage analysis
+- just one GitHub release
+- main development is not done through pull request (commits go to master)
+- overall the project looks clean, but it’s not OOP: there’re DTOs, ORM, getters/setters, etc.
+
+
+
+
+sniffy/sniffy (Java)
++
+Github issue tracking
+Github release management
+Travis CI
+Code quality and test coverage control with codacy.com (not embedded into the build procedure)
+-
+Utils
+Lots of public static methods (io.sniffy.socket.TcpConnections ...)
+Long methods (SnifferServlet.service())
+Null driven development (SniffyRequestProcessor)
+
+
+
+
+RobinJ1995/DistroHopper	 (Android)
++
+Github issue tracking
+Github release management
+-
+No code quality control at all
+No test coverage control
+No visible CI
+Null driven development, long methods, mutable state (AsyncLoadApps)
+Lots of commented code committed
+
+
+
+
+DSH105/EchoPet/tree/3.x 	(Java)
++
+Travis CI
+Github issue tracking
+Github release management
+-
+No code quality control at all
+No test coverage control
+Utils
+Mutability is everywhere
+
+
+
+
+SimonKagstrom/kcov  (C++)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- there is no static analysis (or I didn’t find it), but code looks clean (
++ GitHub releases are in place
++ CI is in place
++ GitHub issues and pull requests are there
++ commit comments trace back to issues
++ the project looks interesting, definitely a finalist
+
+
+
+
+pedja1/SMC-Android  (Android)
++
+
+-
+No visible CI
+No Github issue tracking (maybe, due to low popularity)
+No Github release management
+No code quality control at all
+No test coverage control
+Mutability is everywhere (`final` word usage = 44)
+God classes (GameScreen ...)
+
+
+
+
+HeinrichReimer/material-intro  (Android)
++
+Travis CI
+Github issue tracking
+Github release management
+jitpack.io to build a distribution (nice tool)
+Proguard to release apk
+-
+No code quality control at all
+No test coverage control
+Code is less than 10k
+
+
+
+
+skinny-framework/skinny-framework  (Scala)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- I didn’t find static analysis
+- code coverage seems to be out of control
++ releases are in GitHub
++ there are many unit tests
+- I found some utility classes and -ER classes
++ it’s a finalist
+
+
+
+Omertron/api-themoviedb
++
+Github release management
+!! Despite drawbacks decribed below the code looks rather clean
+-
+No visible CI
+No Github issue tracking (maybe, due to low popularity)
+No code quality control at all
+No test coverage control
+God class (com.omertron.themoviedbapi.TheMovieDbApi 1893 lines)
+Inheritance over composition (AbstractMethod hierarhy)
+
+
+
+
+gerc99/SawimNE 		(Android)
++
+Travis CI
+Github issue tracking
+-
+No Github release management (maybe, due to low popularity)
+No code quality control at all
+No test coverage control
+Lots of ignored exceptions
+Lots of commented code committed
+Mutability is everywhere
+
+
+
+
+orfjackal/jumi   (Java)
++
+-
+No visible CI
+No Github issue tracking (TODO list commited to the root, as well as roadmap :) )
+No code quality control at all
+No test coverage control
+Inheritance over inheritance (fi.jumi.api.drivers.Driver) without any sense
+Idea files committed into repo :/
+Public static methods (fi.jumi.core.ipc.channel.IpcChannel)
+
+
+
+
+wbotelhos/raty   (JS)
+SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
+
+- the project is a bit smaller than our threshold: 8.7K lines of JavaScript code
+- the majority of code is unit tests
+
+
+
+
+GautamGupta/Simple-Android-OCR (Java)
+Less than 10k of code
+
+
+
+
+tananaev/traccar  (Java)
++
+Travis CI
+Github issue tracking
+Github release management
+Checkstyle, PMD, Findbugs
+-
+Null driven development (org.traccar.BasePipelineFactory)
+Not thread-safe sigleton (org.traccar.GlobalTimer)
+*ers (ServerManager, *Handler ...)
+Utility classes (org.traccar.reports.ReportUtils, org.traccar.reports.Summary)
+Anemic model (org.traccar.reports.model.BaseReport)
+
+
+
+
+paypal/squbs  (Scala)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- I found many -ER classes, getters, setters
+- I didn’t find static analysis
++ there are many tests, high code coverage
++ overall it looks interesting, definitely a finalist
+
+
+
+
+clun/ff4j 	(java)
++
+Travis CI
+Github issue tracking
+Github release management
+PMD, Findbugs
+-
+No checkstyle
+Null driven development (org.ff4j.utils.json.PropertyJsonParser, org.ff4j.cache.InMemoryCacheManager)
+Mutabile objects (EventRepositoryCassandra)
+Abstarction over inheritance (AbstractEventRepository hierarhy)
+God interface (org.ff4j.core.FeatureStore)
+
+
+
+
+datavis-tech/reactive-model 	(JS)
+SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
+
+- there are just 800 lines of JavaScript code
+
+
+
+
+kwhat/jnativehook 	(Java)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+Ant :/
+No code quality control at all
+No test coverage control
+Huge code duplication (AbstractDispatchService)
+Abstarction over inheritance (AbstractDispatchService)
+Non thread-safe implementations (org.jnativehook.dispatcher.MouseWheelEventTask, *Task)
+
+
+
+
+javaslang/javaslang  (Java)
++
+Travis CI
+Test coverage with jacoco and codecov
+Github issue tracking
+Github release management
+-
+No code quality control at all
+God classes (javaslang.collection.CharSeq)
+In general, not so bad ... but no OOP, mostly functional stuff :)
+
++ indeed looks interesting, it’s a finalist
+
+
+
+
+lukeFalsina/Grab-n-Run  (Android)
++
+Github release management
+-
+No visible CI
+No Github issue tracking
+No code quality control at all
+No test coverage control
+Don't see the code - only tests :/
+
+
+
+
+bxbxbai/ZhuanLan  (Java)
++
+Travis CI
+Github issue tracking
+-
+No Github release management
+No code quality control at all
+No test coverage control
+Commented code committed into repo (io.bxbxbai.zhuanlan.ZhuanlanApplication)
+Non thread-safe singleton (io.bxbxbai.zhuanlan.core.DataCenter)
+Non-final fields (io.bxbxbai.zhuanlan.core.ZhuanLanWebChromeClient)
+Inheritance over composition (SimpleCallback hierarhy)
+Utility classes (io.bxbxbai.zhuanlan.utils package)
+
+
+
+
+apache/wicket  (Java)
++
+Travis CI
+Github release management
+Test coverage control (jacoco)
+-
+No Github issue tracking
+No code quality control at all
+Null-driven development (org.apache.wicket.Session)
+Interfeces with "I" prefix
+Mutable core abstractions (org.apache.wicket.ComponentEvent)
+Null-driven development (org.apache.wicket.ComponentQueue)
+Utils (org.apache.wicket.model.util package)
+
+
+
+
+nikolamilosevic86/owasp-seraphimdroid   (Android)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+No test coverage control
+PermissionGetter - what a name ... small but shitty
+God class (EducateFragment, GeoFencingFragment ...)
+Commened code committed (ArticleAdapter)
+
+
+
+
+uniVocity/univocity-parsers  (Java)
++
+Github issue tracking
+Github release management
+-
+No visible CI
+No code quality control at all
+No test coverage control
+Mutability is everywhere, even exceptions are mutable !!!
+Funny thing - there is a folder, where tests named by the name of Github issues :)
+
+
+
+
+ben-manes/caffeine   (Java)
++
+Travis CI
+Github issue tracking
+Github release management
+PMD, Findbugs, checkstyle
+Test coverage control (jacoco)
+Nice meaningful javadocs
+More/less good decomposition
+Nice granular, self-contained tests
+-
+Huge use of default methods (CacheLoader, Node ...)
+Utility (com.github.benmanes.caffeine.base.UnsafeAccess, com.github.benmanes.caffeine.cache.Async)
+
+It could be less than 10k LoC
+(!) consider this repo
+
++ there are 45.9K lines of Java code
++ it’s interesting, it’s a finalist
+
+
+
+
+chrisvest/stormpot  (Java)
++
+Travis CI
+PMD, Findbugs, checkstyle
+Github issue tracking
+Github release management
+Test coverage control (jacoco)
+pitest for mutative tests
+-
+Not sure if it's > 10k LoC
+Inheritance over composition (ReallocatingAdaptor, AbstractPoll hierarhy)
+Null driven development (BAllocThread)
+Package private field access (QSlot)
+
+- there are 6.9K lines of Java code
+
+
+
+js-cookie/js-cookie  (JS)
+SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
+
+- it’s too small, just 1.4K lines of JavaScript code
+
+
+
+
+coala/coala	 (Python)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
++ interesting, it’s a finalist
+
+
+
+arzzen/altcoin-bitcoin-explorer  (PHP)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- just 300 lines of PHP code
+
+
+
+
+allure-framework/allure-core	(Java)
++
+Travis CI
+Github issue tracking
+Github release management
+Test coverage control (cobertura)
+-
+No code quality control at all
+Heavy Util usage (AllureModelUtils, AllureNamingUtils ...)
+Inheritance over composition (ReportCommand hierarchy)
+Construction based init without finals (AllureGuiceModule)
+DI usage (Guice)
+
+
+
+
+kailash09dabhi/OmRecorder  (Android)
+Initial commit was on Jul 31  < 1 year
+
+
+
+
+Cyan4973/zstd (facebook/zstd)  (C)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
++ CI is here
++ GitHub releases are here
+- I didn’t find coverage control
+- didn’t find static analysis
+- it’s C, not really OOP
+
+
+
+
+pmwmedia/tinylog  (Java)
++
+Travis CI
+Github issue tracking
+Github release management
+Findbugs, checkstyle
+Test coverage control (jacoco)
+flatten-maven-plugin usage
+-
+No PMD
+Test inheritance (AbstractCoreTest)
+It's all about static ...
+
+- exception swallowing, long classes (Tokenizer for example)
+- helpers, loggers, formatters, other -ERs
+
+
+
+yi-editor/yi  (Haskell)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+I'm not an expert in Haskell at all, that's why I asked a friend
+of mine to help me. Here is what I got:
+- there is very small amount of tests
+- code complexity is very high, for example Core.hs
+- operators overloading is a messy feature, and it's used
+- in many places nesting is too deep
+From me:
+- GitHub releases are not documented
+
+
+
+reinterpretcat/utymap  (C#, C++)  the link to the repo is broken on the page (http://www.yegor256.com/2015/10/17/award-2016.html)
++
+Travis CI
+Github issue tracking
+Github release management
+-
+No code quality control at all
+No test coverage control
+Utils (core/src/utils)
+Providers, Downloaders, Loaders, Services
+Lot's of mutable classes
+
+
+
+
+EventStore/EventStore 	(C#)   the link to the repo is broken on the page
++
+Travis CI
+Github issue tracking
+Github release management
+-
+No code quality control at all
+No test coverage control
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- static methods are there
+- classes are rather big (sometimes thousands of lines and dozens of methods)
+
+
+
+
+srdja/Collections-C   (C)
+SORRY, PLEASE, CHECK IT BY YOURSELF
+
+- there are 9.5K lines of C code
+- it’s not really OOP
+- even though the code is rather clean I didn’t find static analysis
+- test code coverage is not under control
+- there are no GitHub releases
+
