@@ -77,14 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
-**Practical Example of AOP with AspectJ**<br/>
-**Qulice, a Java Quality Police**<br/>
-[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/)<br/>
-Kyiv, Ukraine<br/>
-14-15 October 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects**<br/>
 **ORM is an Offensive Anti-Pattern**<br/>
@@ -175,6 +167,16 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="https://scontent-ams3-1.xx.fbcdn.net/t31.0-8/14753345_10210826978380462_1967682863010822796_o.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Practical Example of AOP with Aspect (in Russian);
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+14-15 October 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
+[video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
+[photos](https://www.facebook.com/yegor256/posts/10210826984460614).
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
