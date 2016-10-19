@@ -220,6 +220,32 @@ Based on his opinion and a preliminary analysis I picked these few finalists:</p
 and decide which one gets the prize. I will announce the winner on 21st of October,
 in six days. I will email everybody and publish my decision here.</p>
 
+<p>18 Oct 2016:
+This is my analysis of that seven finalists. I tried to pay as much attention
+to each project as possible (they all are rather good).</p>
+
+<p><a href="https://github.com/pholser/junit-quickcheck"><code>pholser/junit-quickcheck</code></a> (19K LoC, 80K HoC)</p>
+
+<ul>
+<li>changes are not really traceable, for example
+<a href="https://github.com/pholser/junit-quickcheck/commit/a9f7527a05381c4a9c8e71c03e13d0ffb100626f">this commit</a>
+has no link to any GitHub issue, why was it made?</li>
+<li>GitHub releases are <a href="https://github.com/pholser/junit-quickcheck/releases">there</a>,
+but I didn't find how exactly they are made, where is the release procedure? Also,
+they are not documented anyhow, there is not relase notes.</li>
+<li>There are some utility classes, for example
+<a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/Lists.java"><code>Lists</code></a>,
+<a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/Items.java"><code>Items</code></a>,
+and <a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/Sequences.java"><code>Sequences</code></a>.</li>
+<li>There are some -ER classes, for example
+<a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/runner/Shrinker.java"><code>Shrinker</code></a>
+and <a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/SampleSizer.java"><code>SampleSizer</code></a>
+(which has code-rich constructor).</li>
+<li>The design of "generators" is not really object-oriented, I guess. They
+all are providers of procedures, not really "objects" in terms of OOP.</li>
+<li>Score: 5</li>
+</ul>
+
     </article>
   </body>
 </html>
