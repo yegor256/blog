@@ -224,7 +224,7 @@ in six days. I will email everybody and publish my decision here.</p>
 This is my analysis of that seven finalists. I tried to pay as much attention
 to each project as possible (they all are rather good).</p>
 
-<p><a href="https://github.com/pholser/junit-quickcheck"><code>pholser/junit-quickcheck</code></a> (19K LoC, 80K HoC)</p>
+<p><a href="https://github.com/pholser/junit-quickcheck"><code>pholser/junit-quickcheck</code></a> (19K LoC, 80K <a href="/2014/11/14/hits-of-code.html">HoC</a>)</p>
 
 <ul>
 <li>changes are not really traceable, for example
@@ -260,6 +260,27 @@ is not automated (or the script is not in the repo). It's a serious problem
 for a web app.</li>
 <li>Aside from that, the app is definitely cleaner than many other
 similar RoR web apps. Good job.</li>
+<li>Score: 4</li>
+</ul>
+
+<p><a href="https://github.com/SimonKagstrom/kcov"><code>SimonKagstrom/kcov</code></a> (15K LoC, 50K HoC)</p>
+
+<ul>
+<li>I didn't find any static analysis, although there are
+<a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis#C.2C_C.2B.2B">many</a>
+open source tools for C/C++.</li>
+<li>Some pieces of code are too complex methods, for example at
+<a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/engines/ptrace.cc"><code>ptrace.cc</code></a>,
+<a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/parsers/elf-parser.cc"><code>elf-parser.cc</code></a>,
+or <a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/writers/html-writer.cc"><code>html-writer.cc</code></a>.</li>
+<li>There are some -ER classes, like
+"writers", "verifiers", and "parsers", for example:
+<a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/parsers/dummy-address-verifier.cc"><code>AddressVerifier</code></a>
+or <a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/parsers/dwarf.cc"><code>DwarfParser</code></a>.</li>
+<li>Interfaces are prefixed with <code>I</code>, which is a bad practice in OOP, see
+<a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/include/reporter.hh"><code>reporter.hh</code></a>.</li>
+<li>There are some "utils", which I would replace with classes (most of them):
+<a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/include/utils.hh"><code>utils.hh</code></a>.</li>
 <li>Score: 4</li>
 </ul>
 
