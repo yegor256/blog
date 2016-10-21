@@ -151,7 +151,9 @@ your marketing position; quality is all.</p></li>
 <li><a href="https://github.com/SimonKagstrom/kcov/">SimonKagstrom/kcov</a></li>
 <li><a href="https://github.com/pedja1/SMC-Android">pedja1/SMC-Android</a></li>
 <li><a href="https://github.com/HeinrichReimer/material-intro">HeinrichReimer/material-intro</a></li>
-<li><a href="https://github.com/skinny-framework/skinny-framework">skinny-framework/skinny-framework</a></li>
+<li>
+<a href="https://github.com/skinny-framework/skinny-framework">skinny-framework/skinny-framework</a> by <a href="https://github.com/seartch">@seratch</a>
+</li>
 <li><a href="https://github.com/hsz/idea-gitignore">hsz/idea-gitignore</a></li>
 <li><a href="https://github.com/doanduyhai/Achilles">doanduyhai/Achilles</a></li>
 <li><a href="https://github.com/Omertron/api-themoviedb">Omertron/api-themoviedb</a></li>
@@ -160,7 +162,9 @@ your marketing position; quality is all.</p></li>
 <li><a href="https://github.com/wbotelhos/raty">wbotelhos/raty</a></li>
 <li><a href="https://github.com/GautamGupta/Simple-Android-OCR">GautamGupta/Simple-Android-OCR</a></li>
 <li><a href="https://github.com/tananaev/traccar">tananaev/traccar</a></li>
-<li><a href="https://github.com/paypal/squbs">paypal/squbs</a></li>
+<li>
+<a href="https://github.com/paypal/squbs">paypal/squbs</a> by <a href="https://github.com/akara">@akara</a>
+</li>
 <li><a href="https://github.com/clun/ff4j">clun/ff4j</a></li>
 <li><a href="https://github.com/datavis-tech/reactive-model">datavis-tech/reactive-model</a></li>
 <li><a href="https://github.com/kwhat/jnativehook">kwhat/jnativehook</a></li>
@@ -173,7 +177,9 @@ your marketing position; quality is all.</p></li>
 <li><a href="https://github.com/ben-manes/caffeine/">ben-manes/caffeine</a></li>
 <li><a href="https://github.com/chrisvest/stormpot">chrisvest/stormpot</a></li>
 <li><a href="https://github.com/js-cookie/js-cookie">js-cookie/js-cookie</a></li>
-<li><a href="https://github.com/coala-analyzer/coala">coala-analyzer/coala</a></li>
+<li>
+<a href="https://github.com/coala/coala">coala/coala</a> by <a href="https://github.com/sils">@sils</a>
+</li>
 <li><a href="https://github.com/arzzen/altcoin-bitcoin-explorer">arzzen/altcoin-bitcoin-explorer</a></li>
 <li><a href="https://github.com/allure-framework/allure-core">allure-framework/allure-core</a></li>
 <li><a href="https://github.com/kailash09dabhi/OmRecorder">kailash09dabhi/OmRecorder</a></li>
@@ -232,7 +238,7 @@ to each project as possible (they all are rather good).</p>
 has no link to any GitHub issue, why was it made?</li>
 <li>GitHub releases are <a href="https://github.com/pholser/junit-quickcheck/releases">there</a>,
 but I didn't find how exactly they are made, where is the release procedure? Also,
-they are not documented anyhow, there is not relase notes.</li>
+they are not documented anyhow, there are no relase notes.</li>
 <li>There are some utility classes, for example
 <a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/Lists.java"><code>Lists</code></a>,
 <a href="https://github.com/pholser/junit-quickcheck/blob/junit-quickcheck-0.6.1/core/src/main/java/com/pholser/junit/quickcheck/internal/Items.java"><code>Items</code></a>,
@@ -283,6 +289,77 @@ or <a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/parsers/dwarf.cc"
 <a href="https://github.com/SimonKagstrom/kcov/blob/v31/src/include/utils.hh"><code>utils.hh</code></a>.</li>
 <li>Score: 4</li>
 </ul>
+
+<p><a href="https://github.com/skinny-framework/skinny-framework"><code>skinny-framework/skinny-framework</code></a> (44K LoC, 191K HoC)</p>
+
+<ul>
+<li>It seems that the owner of the repo is making commits directly
+to the master branch, without any issues/pull requests, for
+<a href="https://github.com/skinny-framework/skinny-framework/commit/4282b2fdcb0cf3fdcd79a2b16d6fac46f89887f4">example</a>.</li>
+<li>I didn't find any static analysis.</li>
+<li>I didn't find code coverage control, although there are many unit tests.</li>
+<li>There are utility classes, for example
+<a href="https://github.com/skinny-framework/skinny-framework/blob/2.2.0/common/src/main/scala/skinny/util/StringUtil.scala"><code>StringUtil</code></a>,
+<a href="https://github.com/skinny-framework/skinny-framework/blob/2.2.0/common/src/main/scala/skinny/util/DateTimeUtil.scala"><code>DateTimeUtil</code></a>.</li>
+<li>It's MVC, which is an anti-pattern in OOP.</li>
+<li>There is ORM, which also is an anti-pattern.</li>
+<li>The complexity of the code sometimes is very high, for
+example this file:
+<a href="https://github.com/skinny-framework/skinny-framework/blob/2.2.0/orm/src/main/scala/skinny/orm/feature/AssociationsFeature.scala"><code>AssociationsFeature.scala</code></a>
+</li>
+<li>Score: 2</li>
+</ul>
+
+<p><a href="https://github.com/paypal/squbs"><code>paypal/squbs</code></a> (28K LoC, 163K HoC)</p>
+
+<ul>
+<li>Where is static analysis?</li>
+<li>Exception swallowing seems to be a common practice here, for example:
+<a href="https://github.com/paypal/squbs/blob/master/squbs-zkcluster/src/main/scala/org/squbs/cluster/ZkCluster.scala#L119">here</a>,
+<a href="https://github.com/paypal/squbs/blob/master/squbs-admin/src/main/scala/org/squbs/admin/MBeanUtil.scala#L101">here</a>,
+<a href="https://github.com/paypal/squbs/blob/master/squbs-pattern/src/main/scala/org/squbs/pattern/util/ConfigUtil.scala#L83">here</a>, etc.</li>
+<li>There are utility classes, for example
+<a href="https://github.com/paypal/squbs/blob/master/squbs-unicomplex/src/main/scala/org/squbs/unicomplex/ConfigUtil.scala"><code>ConfigUtil</code></a>.</li>
+<li>Overall impression is that the complexity is rather high, for example
+these files are really hard to understand:
+<a href="https://github.com/paypal/squbs/blob/master/squbs-unicomplex/src/main/scala/org/squbs/unicomplex/streaming/ServiceRegistry.scala"><code>ServiceRegistry.scala</code></a>
+or <a href="https://github.com/paypal/squbs/blob/master/squbs-unicomplex/src/main/scala/org/squbs/unicomplex/UnicomplexBoot.scala"><code>UnicomplexBoot.scala</code></a>.</li>
+<li>Score: 3 (mostly due to complexity)</li>
+</ul>
+
+<p><a href="https://github.com/ben-manes/caffeine"><code>ben-manes/caffeine</code></a> (47K LoC, 191K HoC)</p>
+
+<ul>
+<li>Some files are very long, for example
+<a href="https://github.com/ben-manes/caffeine/blob/v2.3.3/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java"><code>BoundedLocalCache.java</code></a>
+(3300 LoC!). Aside from a few super long files, there are many <code>.java</code> files
+with 300+ LoC; it's too much and complexity is high because
+of that. The code looks clean, but very complex.</li>
+<li>There are some -ER classes, for example
+<a href="https://github.com/ben-manes/caffeine/blob/v2.3.3/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Weigher.java"><code>Weigher</code></a>
+can easily be renamed to <code>Weight</code>. Same for "loaders" and "writers".</li>
+<li>Score: 4</li>
+</ul>
+
+<p><a href="https://github.com/coala/coala"><code>coala/coala</code></a> (15K LoC, 274K HoC)</p>
+
+<ul>
+<li>This project was a finalist last year.</li>
+<li>There are some -ER classes, like "parsers", "collectors", "importers".</li>
+<li>I still don't see a consistent code formatting, it's really strange
+to see so many spaces in front of some lines, placed there without
+any logic (at least I can't see that logic, for
+<a href="https://github.com/coala/coala/blob/master/coalib/collecting/Collectors.py#L216-L226">example</a>).</li>
+<li>Some code is pure global, without any classes, like
+in <a href="https://github.com/coala/coala/blob/master/coalib/processes/Processing.py"><code>Processing.py</code></a>
+and in
+<a href="https://github.com/coala/coala/blob/master/coalib/collecting/Collectors.py"><code>Collectors.py</code></a>
+(maybe it's inevitable, but still looks strange).</li>
+<li>Some files are rather long, like <code>Lynter.py</code> or <code>ConsoleInteraction.py</code>.</li>
+<li>Score: 5</li>
+</ul>
+
+<p>I can't find a strong single leader... Let me think about it.</p>
 
     </article>
   </body>
