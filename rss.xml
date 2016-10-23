@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-10-22T22:23:51+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Command, Control, and Innovate</title><link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html" rel="alternate" type="text/html" title="Command, Control, and Innovate" /><published>2016-09-27T00:00:00+00:00</published><updated>2016-09-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/27/command-control-innovate</id><content type="html" xml:base="http://www.yegor256.com/2016/09/27/command-control-innovate.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_and_control&quot;&gt;Command and control&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-10-23T07:38:54+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
+is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules are still the same. Read on.
+Previous years are here:
+&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;.&lt;/p&gt;
+
+&lt;form class=&quot;unprintable&quot; action=&quot;http://formspree.io/award@yegor256.com&quot; method=&quot;POST&quot;&gt;&lt;fieldset id=&quot;form&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_next&quot; value=&quot;http://www.yegor256.com/submitted.html&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_subject&quot; value=&quot;new project for the quality award&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_format&quot; value=&quot;text&quot;/&gt;
+  &lt;label for=&quot;email&quot;&gt;Your email&lt;/label&gt;
+  &lt;input id=&quot;email&quot; class=&quot;field field-text&quot; name=&quot;email&quot; size=&quot;25&quot; maxlength=&quot;255&quot; type=&quot;email&quot; required=&quot;required&quot;/&gt;
+  &lt;label for=&quot;url&quot;&gt;GitHub URL of the project&lt;/label&gt;
+  &lt;input id=&quot;url&quot; class=&quot;field field-text&quot; name=&quot;url&quot; size=&quot;50&quot; maxlength=&quot;255&quot; type=&quot;url&quot; required=&quot;required&quot;/&gt;
+  &lt;label for=&quot;submit&quot;&gt;&amp;nbsp;&lt;/label&gt;
+  &lt;button id=&quot;submit&quot; class=&quot;field&quot;&gt;Submit&lt;/button&gt;
+&lt;/fieldset&gt;&lt;/form&gt;
+
+&lt;p&gt;Registration is open!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;One person can submit &lt;strong&gt;only one&lt;/strong&gt; project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions are accepted until the &lt;strong&gt;September 1, 2017&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I will check the commit history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15, 2017&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least 10,000 lines of code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don&amp;#39;t care about
+popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
+your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="quality" /><summary>This is the third year of the
+Software Quality Award. The prize
+is still the same&amp;mdash;$4,096.
+The rules are still the same. Read on.
+Previous years are here:
+2015,
+2016.
+
+
+  
+  
+  
+  Your email
+  
+  GitHub URL of the project
+  
+  &amp;nbsp;
+  Submit
+
+
+Registration is open!</summary></entry><entry><title>Command, Control, and Innovate</title><link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html" rel="alternate" type="text/html" title="Command, Control, and Innovate" /><published>2016-09-27T00:00:00+00:00</published><updated>2016-09-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/27/command-control-innovate</id><content type="html" xml:base="http://www.yegor256.com/2016/09/27/command-control-innovate.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_and_control&quot;&gt;Command and control&lt;/a&gt;
 has worked effectively in military units across the world
 for thousands of years. But apparently we&amp;#39;ve just discovered
 that the best companies are built on different verbs, which
@@ -905,73 +989,4 @@ Most of them can&amp;#39;t even deliver code that works, let alone quality code.
 But if a team&amp;mdash;a distributed one&amp;mdash;is managed according to the principles
 I&amp;#39;ll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I&amp;#39;m going to show you is that working in a
-remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry><entry><title>8+2 Maturity Levels of Continuous Integration</title><link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html" rel="alternate" type="text/html" title="8+2 Maturity Levels of Continuous Integration" /><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/01/continuous-integration-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html">&lt;p&gt;There are a number of levels you have to go through before your
-continuous integration pipeline becomes perfect. I found eight of
-them and presented my findings at &lt;a href=&quot;http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/&quot;&gt;DevOpsDays&lt;/a&gt;
-in Salt Lake City a few weeks ago
-(watch the &lt;a href=&quot;https://www.youtube.com/watch?v=3dJP_LtUGgg&quot;&gt;video&lt;/a&gt;).
-Now it&amp;#39;s time to write them down and ask
-you&amp;mdash;Which level are you at? Post your answer below.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Ftwins.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Twins (1988) by Ivan Reitman&#39;/&gt;&lt;figcaption&gt;Twins (1988) by Ivan Reitman&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Source Code&lt;/strong&gt;.
-Here you just write source code on your computers and maybe somewhere on
-the server. The best you can do here is to build it manually, say,
-every day. Is it continuous integration? Well, to some extent, provided
-you don&amp;#39;t forget to compile and package everything regularly.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Automated Build&lt;/strong&gt;.
-At this level, your build is automated, which means you can compile,
-test, and package the entire product with just one line at the command line.
-Pay attention; one line. You must be able to hit one button and either
-get an error or a successful build.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;.
-At this level, you keep your source code in Git. You can keep it in some
-other source control system, but that would be strange&amp;mdash;Git is the
-&lt;em&gt;status quo&lt;/em&gt; at the moment. You should be able to get a new computer,
-with nothing in it, check out the source code from a Git repository, and
-run a full build.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Pull Requests&lt;/strong&gt;.
-Each and every change to your source code must be submitted through
-a pull request, which means that you host your repository on GitHub. You
-may host it somewhere else, but again, that would be strange because
-GitHub is the &lt;em&gt;status quo&lt;/em&gt; at the moment. Again, nobody should be able to commit
-anything directly to the
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;master branch&lt;/a&gt;
-except through forks and pull requests.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Code Reviews&lt;/strong&gt;.
-Every pull request must pass a mandatory
-&lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;code review&lt;/a&gt;
-before it gets merged.
-You must have some code review policy that explains who does reviews,
-what happens if the author doesn&amp;#39;t agree with the reviewer, etc. But no
-pull request may be merged unless it has been reviewed.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Tests&lt;/strong&gt;.
-At this level, your code is covered by unit tests (and integration tests), and every change
-comes with a new test. Your automated build runs all tests together and fails
-if any of them fail.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Static Analysis&lt;/strong&gt;.
-Checking the &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;quality&lt;/a&gt;
-of your code without running it is what static analysis
-is about. At this level, the quality of your code is checked by the automated
-build. If the quality is lower than the threshold, the build fails.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Pre-Flight Builds&lt;/strong&gt;.
-This idea is explained
-&lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Production Simulation&lt;/strong&gt;. The build is run in a container, which
-simulates production environment and data.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Stress Tests&lt;/strong&gt;. Performance and stress tests are automated and executed
-on every build.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;By the way, at the &lt;a href=&quot;https://www.youtube.com/watch?v=3dJP_LtUGgg&quot;&gt;presentation&lt;/a&gt;,
-I also mentioned what problems you may encounter at each maturity level.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="devops" /><summary>There are a number of levels you have to go through before your
-continuous integration pipeline becomes perfect. I found eight of
-them and presented my findings at DevOpsDays
-in Salt Lake City a few weeks ago
-(watch the video).
-Now it&amp;#39;s time to write them down and ask
-you&amp;mdash;Which level are you at? Post your answer below.</summary></entry></feed>
+remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry></feed>
