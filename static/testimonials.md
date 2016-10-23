@@ -18,7 +18,7 @@ exclude_from_search: true
 
 This is what _some_ of my readers think about me. The list is
 sorted by my personal preference, the most interesting comments
-are on the top.
+are at the top.
 
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."&mdash;anonymous (by email)
