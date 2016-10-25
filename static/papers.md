@@ -63,6 +63,7 @@ order):
 
   * [The Interactive Databases Approach to the User Interface Modeling](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98),
     KRDB, Seattle, May 1998
+    [PDF](/pdf/1998/KRDB98-article.pdf)
 
 I published something ever earlier, but I can't
 find links... Maybe later.
