@@ -82,14 +82,14 @@ give them some feedback, at least here (see below).
 **ORM is an Offensive Anti-Pattern**<br/>
 [Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
 Malmö, Sweden<br/>
-7-11 November 2016
+9-10 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/xpdays.svg" class="future-talk" alt="XP Days Ukraine 2016"/>
 **XDSD: How Extreme Is Your Team?**<br/>
 [XP Days Ukraine](http://xpdays.com.ua/)<br/>
 Kiev, Ukraine<br/>
-11-12 November 2016
+12 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/devopspro.png" class="future-talk" alt="DevOpsPro Moscow 2016"/>
@@ -104,13 +104,13 @@ Moscow, Russia<br/>
 **Keep Your Servers In GitHub**<br/>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
-16 November 2016
+16-17 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
 [BuildStuff 2016](http://www.buildstuff.lt/)<br/>
 Vilnius, Lithuania<br/>
-16-18 November 2016
+17-18 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
