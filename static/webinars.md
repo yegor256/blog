@@ -19,10 +19,10 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20161206T180000Z%2f20161206T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M&text=Who%20Is%20a%20Project%20Manager%20(webinar)&location=YouTube&details=Webinar%20%2319%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M %}
+{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20161207T180000Z%2f20161207T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M&text=Who%20Is%20a%20Project%20Manager%20(webinar)&location=YouTube&details=Webinar%20%2319%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M %}
 
 {% youtube zaKTNK8g2-M video-left %}
-December 6, 2016:
+December 7, 2016:
 **Who Is a Project Manager?**
 We will discuss what is the role of a project manager in a software project and how it
 is different from other roles. The discussion will be based on this article:
