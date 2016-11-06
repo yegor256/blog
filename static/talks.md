@@ -169,6 +169,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://scontent-ams3-1.xx.fbcdn.net/t31.0-8/14753345_10210826978380462_1967682863010822796_o.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 Practical Example of AOP with Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
@@ -177,6 +178,12 @@ Kyiv, Ukraine;
 [slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
 [photos](https://www.facebook.com/yegor256/posts/10210826984460614).
+The venue was great, the size average (about 500 ppl), organizers were
+very friendly and motivated. I liked the event. A few things definitely
+need to be improved: food and the amount of tracks. There too many tracks,
+I guess, for the amount of people attended. Would be better to lower the
+amount of speakers and focus the audience on best of them. And spend
+the available money on better food.
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
