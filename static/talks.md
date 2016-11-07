@@ -126,15 +126,6 @@ Riga, Latvia<br/>
 1 December 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/live360-2016.png" class="future-talk" alt="AppDevTrends 2016"/>
-**Meeting-Free Software Development in Distributed Teams**<br>
-**Microservices as Chat Bots Are the Future**<br>
-**Continuous Integration May Have Negative Effects**<br>
-[AppDevTrends 2016](https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx)<br/>
-Orlando, Florida<br/>
-7-8 December 2016
-
-<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
