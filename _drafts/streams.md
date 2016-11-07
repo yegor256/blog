@@ -17,8 +17,8 @@ keywords:
 ---
 
 Let's talk about [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
-and [Stream API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
-in Java&nbsp;8.
+(and [Stream API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html))
+introduced in Java&nbsp;8.
 According to [Oracle](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
 they "_enable you to treat functionality as a method argument_"
 and "_support functional-style operations_" respectively. In other words, they are
@@ -30,192 +30,216 @@ in Ruby as [blocks](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_containers
 in C# as [delegates](https://msdn.microsoft.com/en-us/library/ms173171.aspx),
 in PHP as [anonymous functions](http://php.net/manual/en/functions.anonymous.php),
 and in JavaScript as [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions).
-Java 8 is just catching up. The question is whether it is a good
+Java&nbsp;8 is just catching up. The question is whether it is a good
 or a bad idea&mdash;to have these functional programming elements in
 an object-oriented language? I think it's a bad idea, especially how Java&nbsp;8
 implemented it.
 
 <!--more-->
 
-Let's start with an example. Say, we have a list of short texts:
+The problem lambda expressions are solving in Java and all other OO languages
+is obvious&mdash;verbosity of code. Very often we need small objects to
+serve a single isolated and one-time purpose. We don't need them to exist
+or be visible for the entire application. Instead, we just need them
+right here and for once.
+
+For example, let's say we have a simple list of strings:
 
 {% highlight java %}
 Iterable<String> list = Arrays.asList(
-  "one", "two", "three", "four"
+  "one", "two", "", "three", "four", ""
 );
 {% endhighlight %}
 
-This is how we would trim them and print only long ones, in Java&nbsp;7:
+Now, we want to have another list that doesn't have empty strings.
+We want to exclude them. A good old procedural
+way to do that would be to create a new list and move acceptable
+items into it using a `for` loop:
 
 {% highlight java %}
-for (String i : list) {
-  String t = i.trim();
-  if (t.length() > 3) {
-    System.out.println(t);
+List<String> target = new LinkedList<>();
+for (String item : list) {
+  if (!item.empty()) {
+    target.add(item);
   }
 }
 {% endhighlight %}
 
-This approach is procedural. It's
-obvious that, even though it's rather intuitive, testability, reusability,
-and maintainability of it are very low&mdash;it is just a script that is written
-once and either works or we have to re-write it. The algorithm is visible,
-but almost impossible to decompose, since there are no _blocks_ that it can be
-broken down to, but only operators and statements.
+Needless to say that this approach is imperative and not object-oriented
+at all. It's difficult to reuse, test, and maintain. Moreover, it's not
+lazy at all: it goes through the entire list even if we don't really
+need all items to be filtered immediately.
 
-This is how we can implement the same algorithm in Java&nbsp;8, with lambdas
-and streams:
-
-{% highlight java %}
-list.stream()
-  .map(i -> i.trim())
-  .filter(t -> t.length() > 3)
-  .forEach(t -> System.out.println(t))
-{% endhighlight %}
-
-It looks like a functional approach, since _lambda expressions_ (functions) are
-parameters of methods `map()`, `filter()` and `forEach()`. Since it's
-functional it is supposed to make Java code less procedural, more abstract,
-and more readable. However, I disagree. I don't think lambdas
-and streams actually achieve any of these goals. Moreover, I believe they
-only turn Java into a bigger mess. Here are my arguments.
-
-  * **
-
-
-
-Objects, as well as functions, were invented to make software elements
-[less coupled](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29)
-and [more cohesive](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29),
-in order to give us an ability to test
-them separately, to re-use them, and to easily maintain. Then,
-using [object composition](https://en.wikipedia.org/wiki/Object_composition) in OOP or
-[function composition](https://en.wikipedia.org/wiki/Function_composition_%28computer_science%29) in FP
-we _compose_ them together, in order to create the result.
-
-Java streams, as I understand, is a good old procedural approach, where
-implementations of so called _functional interfaces_ can be inlined by
-lambda expressions, for brevity and readability. However, the way we
-interact with the list is still very imperative: we tell it what to do,
-by calling that methods of `Stream` class. No matter what is happening
-inside that methods (you may say that they are not actually filtering
-and mapping, but only decorating the list), for the user of class `List`
-they look like explicit _directives_.
-
-And this is exactly what makes this approach neither functional nor
-object-oriented: lack of _composition_. Nothing is really composed. Instead,
-instructions are given, one by one, in a
-[fluent](https://en.wikipedia.org/wiki/Fluent_interface) style.
-Every next method call returns a new _modified_ object. It could be the
-same object, if it's mutable, but the manipulation is done already, when
-we move on to the next step of the "ladder."
-
-A _composition_ works and looks differently. In functional programming
-it would look like this (pseudo-code, close to Lisp):
-
-{% highlight lisp %}
-(defun result (list)
-  (forEach (lambda (t) (print t))
-    (filter (lambda (t) (> (length t) 3))
-      (map (lambda (i) (trim i))
-        list))))
-{% endhighlight %}
-
-Functions get composed one into another, creating a bigger and a more
-complex one, up to the function of the highest level: `result`. Yes, the
-`result` is also a function, which will be calculated eventually. Or maybe not.
-What we do in functional programming is _composing_ functions.
-
-This is not what is happening with Java streams, on the surface level. No
-matter how `Stream` is implemented in every particular collection, it looks
-absolutely imperative to those who is going to use it.
-
-There is a second reason, why `Stream` doesn't really fit into either
-functional or object composition paradigm: it makes collections aware of
-their manipulators. Indeed, the collection has to implement method `filter()`,
-for example, in order to let its clients actually filter. This is not
-what we have in Lisp&mdash;the collection doesn't know anything about those
-who filters it. And it must not know anything about them!
-
-It must be a collection&mdash;a rock solid object, which encapsulates
-everything, exposing only _certain_ behavior. Injecting an executable
-
-
-
-
-I believe, what `Stream` is doing it's a serious violation of encapsulation.
-
-The same happens here, but with injectable
-
-In a true functional programming, for example in Closure, we would
-do the same manipulations with the list through a composition of
-functions:
-
-{% highlight clojure %}
-(
-(filter #(> (:length %) 3)
-  )
-list.stream()
-  .map(item -> item.trim())
-  .filter(t -> t.length() > 3)
-  .forEach(t -> System.out.println(t))
-{% endhighlight %}
-
-
-on top of it, without even function composition. It's neither functional
-programming, since there is no composition of functions, nor object-oriented
-one, since there is no composition of objects.
-
-Why there is no composition of functions
-
-First, let's see what is so wrong about
-OOP and FP combination.
-
+A better and a much more object-oriented way to do that would be a decorator that _encapsulates_
+the original list adding the filtering behavior to it. Here is how
+we would do it in Java&nbsp;7;
 
 {% highlight java %}
-String text = new Join(
-  new Mapped(
-    new Filtered(
-      new Mapped(
-        list,
-        new Mapping() { item -> item.trim() }
-      ),
-      new Predicate() { t -> t.length() > 3 }
-    ),
-    new Mapping() { t -> t.toString() }
-  ),
-  "\n"
-);
-System.out.println(text);
-{% endhighlight %}
-
-
-decorate List {
-  List(list),
-  iterator() {
-
+class CleanIterable implements Iterable<String> {
+  private final Iterable<String> origin;
+  CleanIterable(Iterable<String> list) {
+    this.origin = list;
+  }
+  @Override
+  public Iterator<String> iterator() {
+    final Iterator<String> iterator = this.origin.iterator();
+    return new Iterator<String>() {
+      private Queue<String> buf = new LinkedList<>();
+      @Override
+      public String next() {
+        if (!this.hasNext()) {
+          throw new NoSuchElementException();
+        }
+        return this.buf.poll();
+      }
+      @Override
+      public boolean hasNext() {
+        while (this.buf.isEmpty() && iterator.hasNext()) {
+          String item = iterator.next();
+          if (!item.isEmpty()) { // here!
+            this.buf.add(item);
+          }
+        }
+        return !this.buf.isEmpty();
+      }
+      @Override
+      public void remove() {
+        throw new UnsupportedOperationException();
+      }
+    };
   }
 }
+{% endhighlight %}
 
-
-
-
+Now, to have a list that doesn't have empty strings we just decorate
+an original one with `CleanIterable`:
 
 {% highlight java %}
-List<String> trimmed = new List<>() {
-
-};
-  new Mapped(
-    new Filtered(
-      new Mapped(
-        list,
-        new Mapping() { item -> item.trim() }
-      ),
-      new Predicate() { t -> t.length() > 3 }
-    ),
-    new Mapping() { t -> t.toString() }
-  ),
-  "\n"
-);
-System.out.println(text);
+Iterable<String> list = new CleanIterable(list);
 {% endhighlight %}
+
+Works great, but what will happen if we need another decorator, which
+will, for example, capitalize all strings? Or filter out strings that
+are longer than three characters? Or retain only strings without
+leading or trailing spaces. Or how about a decorator that will
+work with integers instead of strings and will filter out negative
+numbers? There are many other possible use cases, where we will have
+to create many filtering decorators, which will look very similar to each other.
+There will be tons of classes that will look like twins, except just
+a few lines. Actually, just a single line will be different. This one:
+
+{% highlight java %}
+if (!item.isEmpty()) {
+{% endhighlight %}
+
+An obvious solution is a so called [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern):
+we create a _general purpose_ decorator that encapsulates a "predicate" object. That
+predicate will have a single method accepting `String` and returning `boolean`:
+
+{% highlight java %}
+interface Predicate<T> {
+  boolean allow(T item);
+}
+{% endhighlight %}
+
+Then, our filtering decorator will look like this (pay attention,
+it's generic now):
+
+{% highlight java %}
+class CleanIterable<T> implements Iterable<T> {
+  private final Iterable<T> origin;
+  private final Predicate<T> predicate;
+  CleanIterable(Iterable<T> list, Predicate<T> pred) {
+    this.origin = list;
+    this.predicate = pred;
+  }
+  @Override
+  public Iterator<T> iterator() {
+    final Iterator<T> iterator = this.origin.iterator();
+    return new Iterator<T>() {
+      private Queue<T> buf = new LinkedList<>();
+      @Override
+      public T next() {
+        if (!this.hasNext()) {
+          throw new NoSuchElementException();
+        }
+        return this.buf.poll();
+      }
+      @Override
+      public boolean hasNext() {
+        while (this.buf.isEmpty() && iterator.hasNext()) {
+          String item = iterator.next();
+          if (CleanIterable.this.predicate.allow(item)) {
+            this.buf.add(item);
+          }
+        }
+        return !this.buf.isEmpty();
+      }
+      @Override
+      public void remove() {
+        throw new UnsupportedOperationException();
+      }
+    };
+  }
+}
+{% endhighlight %}
+
+Now, we can use it like this (with the help of an anonymous inner class):
+
+{% highlight java %}
+Iterable<String> list = new CleanIterable<String>(
+  list,
+  new Predicate<String>() {
+    @Override
+    public boolean allow(String item) {
+      return !item.isEmpty();
+    }
+  }
+);
+{% endhighlight %}
+
+This is how it worked in Java for years. You definitely know [Guava](https://github.com/google/guava),
+a very popular Java library from Google, that implements exactly that
+design.
+
+Java&nbsp;8 simplified that syntax by allowing us making instances
+of that "predicates" (they are called "functional interfaces")
+in much less lines of code. Here is how our code will look in Java&nbsp;8:
+
+{% highlight java %}
+Iterable<String> list = new CleanIterable<String>(
+  list,
+  item -> !item.isEmpty()
+);
+{% endhighlight %}
+
+This definitely is a great optimization comparing to the code we
+had in Java before. Instead of six lines of code we have to write
+just one!
+
+However, the question is whether we are optimizing the right thing?
+Whether the Strategy Pattern we've been using for years in Guava and
+many other places was actually a good object-oriented design? Whether
+it was a good idea to solve code duplication problem with
+similar filtering decorators?
+
+I believe that the very idea of that Strategy Pattern is wrong. Well,
+it is not object-oriented, that's why I call it wrong. It doesn't really
+help objects stay solid and cohesive. Instead, by injecting foreign behavior
+into objects we open them up and violate the very principle of
+encapsulation.
+
+This is very similar to the
+[configurable objects]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %})
+problem discussed earlier: injecting configurational parameters into
+objects seriously violate encapsulation principle. Here, with injectable
+functionality we make even a bigger mistake: the `CleanIterable` doesn't
+really know what exactly it is doing any more, either filtering empty
+strings or negative numbers. It is not an object, but a template of
+an object, a surrogate, a cripple.
+
+What is a better alternative? What would be the right object-oriented
+design? This is how I would do it, in a pseudo-language, similar to Java:
+
+
+

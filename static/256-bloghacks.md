@@ -24,8 +24,27 @@ young bloggers to achieve some success, at least initially. My blog
 is not really big, but it gets 60,000 unique monthly visitors now
 and keeps growing. You will definitely learn something new from this
 book.
+Buy it on [Amazon](https://goo.gl/DUcXm9) (please, don't forget to review it there!),
+ISBN: 1537688669.<br/>
+<a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
+
+Nov 6, 2016:
+It's available [on Amazon](http://amzn.to/2eexQBl) for $40.96! Thanks
+to all reviewers who helped me fine tune it before publishing (in
+order of importance of their contribution):
+Wojciech Adam Koszek,
+Raul Estrada,
+Andriy Kryvtsun,
+Mariana Lutsiuk,
+Marcos Douglas,
+Matheus Gontijo,
+Alexey Semenyuk,
+Kevin Sahin,
+Danny Derakhshan. There are 214 pages, 46,441 words, and
+exactly 256 hints for blogging. I really hope to get your Amazon reviews.
+Honest ones, of course.
 
 Sep 22, 2016:
 It's finished. There are 181 pages, 38K words, and I still feel like I

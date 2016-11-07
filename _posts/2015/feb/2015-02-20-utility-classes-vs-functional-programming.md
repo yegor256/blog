@@ -33,7 +33,8 @@ are not functions in this sense. I'll decode these statements in a minute.
 In Java, there are basically two valid alternatives to these ugly utility
 classes aggressively promoted by [Guava](https://code.google.com/p/guava-libraries/),
 [Apache Commons](http://commons.apache.org/), and others. The first one
-is the use of traditional classes, and the second one is [Java 8 lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
+is the use of traditional classes, and the second one is
+[Java&nbsp;8 lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
 Now let's see why utility classes are not even close to functional programming
 and where this misconception is coming from.
 

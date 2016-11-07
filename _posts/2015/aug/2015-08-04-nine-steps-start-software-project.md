@@ -93,7 +93,7 @@ my choice. If someone questions my decisions in the future, they may
 say that the alternatives were not analyzed properly. It will be clear whose
 [fault]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 it was&mdash;mine. So I'm taking full responsibility for these two
-choices I've made: Lucene and Java 8.
+choices I've made: Lucene and Java&nbsp;8.
 
 Yet another item to the list:
 
