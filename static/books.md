@@ -23,6 +23,7 @@ a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible.
 Published: 22 Feb 2016. I'm writing the **second volume** now,
 which is going to be published before the end of 2016.
+<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 {% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
@@ -32,6 +33,7 @@ It contains many small and big recommendations,
 which I would be glad to hear when I started blogging. Unfortunately,
 I didn't have that book back then. You have a chance to learn everything
 in just one go. Published: 6 Nov 2016.
+<br/>
 <a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
