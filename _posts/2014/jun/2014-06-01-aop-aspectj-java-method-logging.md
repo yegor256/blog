@@ -17,6 +17,8 @@ keywords:
   - aspect oriented programming java
   - aspectj logging
   - aspectj weaving annotations
+youtube:
+  - 4SRoLYxvIQ8
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)
