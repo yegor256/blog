@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-09T15:18:35+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-09T20:52:44+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
+I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
+EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
+to summarize them all and explain why dead trees are the only way
+to go if you want to read my content.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F11%2Faddams-family.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The Addams Family (1991) by Barry Sonnenfeld&#39;/&gt;&lt;figcaption&gt;The Addams Family (1991) by Barry Sonnenfeld&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First of all, there is a simple technical reason:&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/2fBsTPn&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F11%2Fctan-lion.jpg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;I don&amp;#39;t know how to format them&lt;/strong&gt;.
+I type all my books in &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;.
+To my knowledge, it&amp;#39;s the best and
+most powerful typesetting software. If you don&amp;#39;t use it yet, you
+absolutely must read
+&lt;a href=&quot;http://amzn.to/2fBsTPn&quot;&gt;The TeX Book&lt;/a&gt; by Donald Knuth. Even if you&amp;#39;re not
+going to become a book writer or publisher, you must read the book.
+You will enjoy reading and will simply fall in love with TeX. The only
+problem with TeX is that it formats texts for a fixed page size, unlike
+HTML and many other digital formats. When I write my books, I know exactly
+the size of their pages, and everything is formatted to look perfect
+on paper. I simply don&amp;#39;t know how to do the same for all digital formats.
+I&amp;#39;m sure it&amp;#39;s possible, but I don&amp;#39;t know how.&lt;/p&gt;
+
+&lt;p&gt;Second, there is an emotional reason:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I don&amp;#39;t like digital books&lt;/strong&gt;.
+Call me old school, but I don&amp;#39;t like to read on screen. I like how
+books feel, how they smell, and how they become &amp;quot;friends&amp;quot;. I like
+to make notes, bookmarks, fold pages, etc. I believe what&amp;#39;s very important is
+not just the content, but the way you &amp;quot;feel&amp;quot; it. With a digital book,
+this emotional aspect of reading is gone; all books are the same. You don&amp;#39;t
+feel a book at all, because it&amp;#39;s just a Kindle in your hands. You may say
+that not everybody is like me. Well, yes, but I want the world to be
+the way I like it. Not the way it is.&lt;/p&gt;
+
+&lt;p&gt;All other reasons are derived from the fact that a digital book will
+inevitably be stolen and posted on torrents or somewhere
+else, for free download. A digital book will become a &lt;em&gt;free&lt;/em&gt; book very quickly.&lt;/p&gt;
+
+&lt;p&gt;Let me tell you a funny story. I received an email a few months ago from a &amp;quot;Korean
+book publisher&amp;quot;. The email said it was very interested in translating
+&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; into Korean and publishing in its
+local market. To start the process, the email said, the company needed my book in PDF.
+I replied that I was ready to send a printed copy, which was
+definitely enough for a translator to work on. The sender disappeared. I&amp;#39;ve checked
+its website and found no real evidence of previously published books. It
+was just a scam, an attempt to get a digital copy of the book. Funny, huh?&lt;/p&gt;
+
+&lt;p&gt;Thus, let&amp;#39;s just agree that a digital book means a free book at the moment
+of writing, in this world. And here is why I don&amp;#39;t want my books to be free:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I want to earn&lt;/strong&gt;.
+Not only because I need to pay my bills, but mostly because I want
+to stay motivated. I&amp;#39;ve made almost $12,000 by selling the first volume of
+&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; over the last 10 months. Do you
+think I&amp;#39;m motivated enough to write the second volume. Of course I am!
+Would I be as motivated as I am now if I would have made $500 instead? I don&amp;#39;t think
+so. Most probably, you would never see any more books from me.
+And it&amp;#39;s not just about dollars.
+It&amp;#39;s mostly about the appreciation I feel from you. Every payment
+I get from Amazon tells me that I definitely deliver something valuable.
+With a free book, I will get no appreciation and no cash.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I want you to pay&lt;/strong&gt;.
+Not only because I&amp;#39;m greedy, but mostly because I want you to take my
+books seriously. As a reader myself, I pay almost no attention to
+books that cost $1.99 or nothing. I understand that their authors themselves
+were not serious about them. Why are they cheap or free? They were so easy to write?
+Their authors don&amp;#39;t believe that anyone would pay any decent money for them?
+Their authors are afraid of refunds? Probably a combination of all that.
+I strongly believe that good products must cost good money. If it&amp;#39;s free,
+it&amp;#39;s bad (or there are some hidden costs or concealed promotion of something else).&lt;/p&gt;
+
+&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>Very often readers of my books ask me why
+I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
+EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
+to summarize them all and explain why dead trees are the only way
+to go if you want to read my content.</summary></entry><entry><title>Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
 is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
 The rules are still the same. Read on.
@@ -893,110 +975,4 @@ Make sense?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@
 be replaced by a decorator or simply another object.
 I&amp;#39;ve been planning to write about this for almost a year but only today found
 a real case in my own code that perfectly
-illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.</summary></entry><entry><title>A Distributed Team Delivers Code of Higher Quality</title><link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html" rel="alternate" type="text/html" title="A Distributed Team Delivers Code of Higher Quality" /><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality</id><content type="html" xml:base="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html">&lt;p&gt;OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
-team &lt;strong&gt;can&lt;/strong&gt; deliver code of much higher quality than a co-located one,
-and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
-Most of them can&amp;#39;t even deliver code that works, let alone quality code.
-But if a team&amp;mdash;a distributed one&amp;mdash;is managed according to the principles
-I&amp;#39;ll explain now, the quality will be much higher than the same team can
-achieve if co-located. What I&amp;#39;m going to show you is that working in a
-remote mode, if done right, &lt;strong&gt;guarantees&lt;/strong&gt; higher quality of code. Surprised?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Foceans-twelve.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Ocean&amp;amp;apos;s Twelve (2004) by Steven Soderbergh&#39;/&gt;&lt;figcaption&gt;Ocean&amp;#39;s Twelve (2004) by Steven Soderbergh&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are basically four simple ingredients to success ... you know what, there is
-actually &lt;em&gt;one&lt;/em&gt; main ingredient, and its name is &lt;strong&gt;control&lt;/strong&gt;. If we want quality
-to be at some level, we have to &lt;strong&gt;enforce&lt;/strong&gt; it. We can&amp;#39;t just declare it; we
-need to &lt;strong&gt;make&lt;/strong&gt; it high.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Quality can be achieved only if it is controlled and enforced&lt;/aside&gt;
-
-&lt;p&gt;How do software teams make high-quality code? Oh, there are many proven methods.
-First, you need a very modern office where &lt;del&gt;programmers&lt;/del&gt; developers
-sit on cushioned chairs, play table tennis, drink smoothies, and write
-diagrams on walls. Second, you should buy them many books. Books have to be
-everywhere in the office, and they have to be about everything from Python
-and Haskell to Docker, Agile, and lean startups. The more books, the higher
-the quality of the code they write. And third, you have to pay them well. The
-more expensive the developer is, the higher the quality he or she writes.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m sure you understand that I&amp;#39;m joking. None of these &amp;quot;proven methods&amp;quot; will either
-guarantee quality or motivate serious software engineers. Quality can
-be achieved only if it is &lt;strong&gt;controlled and enforced&lt;/strong&gt;. And this is also what
-motivates programmers best of all&amp;mdash;the fact that the quality
-is so important for management that they find mechanisms of
-control and enforcement, and they invest in them. Table tennis and lean
-startup books are not even close to those mechanisms.&lt;/p&gt;
-
-&lt;p&gt;So, now let&amp;#39;s discuss those four ingredients of quality enforcement, which
-we practice in our projects:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Read-Only Master Branch&lt;/strong&gt;. Nobody can make changes directly to
-the master branch; neither the architect nor the project sponsor. The
-master branch is technically read-only. This means that in order
-to compromise the quality of our code, everyone has to go through a
-pull request, pre-flight build, and automated merge procedure.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Chats Are Prohibited&lt;/strong&gt;. Any modification to our code base, even a very small one,
-must be submitted in a pull request. A code review
-must also occur in the pull request. We strictly disallow any
-&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;informal communications&lt;/a&gt;
-between programmers, including chats, phone
-calls, emails, or face-to-face discussions. This means that the chances
-of quality compromises due to friendship, informal agreements, and trade-offs
-are very low.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Build Is Fragile&lt;/strong&gt;. We believe that the higher the quality bar, the more
-difficult it is to modify any piece of code without breaking the build.
-We put a lot of quality checks right into the build to make the lives
-of programmers more difficult. Well, this is not our goal, but it
-happens. The code has to pass all static analysis
-checks, a test coverage threshold, mutability threshold, and many others.
-This means that bad code won&amp;#39;t reach the repo, ever.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Micro Payments for Deliverables&lt;/strong&gt;. We pay only for closed tickets, and
-they are each very small (up to two hours). We don&amp;#39;t pay for time spent
-in the office or in front of the computer. We pay only when tickets
-are closed&amp;mdash;no close, no pay. This means that programmers are motivated
-to &lt;strong&gt;close&lt;/strong&gt; them, nothing else.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus, as you can see, there is an intentionally created conflict. On one hand,
-programmers have to close tickets and deliver working code. On the other
-hand, it&amp;#39;s rather difficult to do; because the quality bar is high, there is
-no room to make compromises, and there is no technical possibility to
-go around an issue. Good programmers survive in this conflict and manage to deliver
-and get paid. Well-paid.&lt;/p&gt;
-
-&lt;p&gt;And now, to the main point of this blog post&amp;mdash;do you think it&amp;#39;s possible
-to build all that in a co-located team? I don&amp;#39;t think so. First of all,
-you won&amp;#39;t be able to prohibit
-&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;informal communications&lt;/a&gt;. No matter how many
-times you ask developers to communicate in tickets, they will resolve
-most of their technical questions face-to-face. It&amp;#39;s inevitable.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;People are people; nobody likes to hit that quality bar multiple times a day&lt;/aside&gt;
-
-&lt;p&gt;Second, you won&amp;#39;t be able to pay for results only, because programmers will
-complain that they are doing a lot of communication in the office that
-has to be paid somehow. In reality, they will spend two to three hours per day on
-actually writing code, and the rest of the time will be spent on
-coffee breaks, Trump talks, and Facebook scrolling. Again, it&amp;#39;s
-inevitable.&lt;/p&gt;
-
-&lt;p&gt;And third, people are people. Nobody likes to hit that quality bar
-multiple times a day. They will complain, and eventually you will give them
-direct access to the master branch. First, you will give it to the architect,
-then to a few senior developers, then to a few good friends who you
-absolutely trust. Then to everybody, just in case. It&amp;#39;s inevitable.&lt;/p&gt;
-
-&lt;p&gt;To summarize, I believe that co-located teams are just not made for
-quality programming. For fun&amp;mdash;yes. For creativity&amp;mdash;maybe.
-For burning investors&amp;#39; money&amp;mdash;absolutely. For quality&amp;mdash;not really.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>OK, the title is not exactly accurate. I&amp;#39;ve missed the &amp;quot;can&amp;quot; word. A distributed
-team can deliver code of much higher quality than a co-located one,
-and now I&amp;#39;ll explain why. Of course, not every distributed team can do that.
-Most of them can&amp;#39;t even deliver code that works, let alone quality code.
-But if a team&amp;mdash;a distributed one&amp;mdash;is managed according to the principles
-I&amp;#39;ll explain now, the quality will be much higher than the same team can
-achieve if co-located. What I&amp;#39;m going to show you is that working in a
-remote mode, if done right, guarantees higher quality of code. Surprised?</summary></entry></feed>
+illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.</summary></entry></feed>
