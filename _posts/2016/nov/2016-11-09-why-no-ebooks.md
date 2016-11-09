@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Don't Publish E-Books"
-date: 2016-05-15
+date: 2016-11-09
 tags: oop java
 place: Copenhagen, Sweden
 description: |
@@ -23,6 +23,8 @@ to summarize them all and explain why dead trees are the only way
 to go if you want to read my content.
 
 <!--more-->
+
+{% picture /images/2016/11/addams-family.jpg 0 The Addams Family (1991) by Barry Sonnenfeld %}
 
 First of all, there is a simple technical reason:
 
