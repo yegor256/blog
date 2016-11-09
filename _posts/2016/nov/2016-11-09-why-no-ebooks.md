@@ -28,7 +28,7 @@ to go if you want to read my content.
 
 First of all, there is a simple technical reason:
 
-{% badge /images/2016/11/ctag-lion.jpg 92 http://amzn.to/2fBsTPn %}
+{% badge /images/2016/11/ctan-lion.jpg 92 http://amzn.to/2fBsTPn %}
 
 **I don't know how to format them**.
 I type all my books in [LaTeX](https://www.latex-project.org/).
