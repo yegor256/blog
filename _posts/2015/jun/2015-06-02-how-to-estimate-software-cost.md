@@ -34,7 +34,7 @@ the cost?" I can, but I won't. Here is why.
 {% picture /images/2015/06/interstate-60.jpg 0 Interstate 60: Episodes of the Road (2002) by Bob Gale %}
 
 Let me ask you something else: **Why do you need an estimate?**
-Yes, I mean it &mdash; why do you ask me how much it will cost
+Yes, I mean it&mdash;why do you ask me how much it will cost
 to develop the software for you? I can tell you why.
 
 Because you don't trust me.
@@ -72,7 +72,7 @@ partner, and you need to know what to expect and when, but ...
 You're asking the **wrong question**!
 
 This question has only one valid answer, and it's the answer nobody
-will ever give you &mdash; the development will take forever and will
+will ever give you&mdash;the development will take forever and will
 consume all your money. All other answers are simply a lie.
 
 I'm sorry if I've delivered bad news to you.

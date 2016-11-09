@@ -69,7 +69,7 @@ Well, there are a few possible solutions:
  * apply a parametrized XSL stylesheet;
  * apply XQuery small script to make changes
 
-All of these methods have their own drawbacks. However, all of them have one particular problem in common &mdash; they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.
+All of these methods have their own drawbacks. However, all of them have one particular problem in common&mdash;they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.
 
 Simply put, XML lacks a tool for primitive data manipulations within
 a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
@@ -114,8 +114,7 @@ calculates it beforehand using the provided XPath expression `. + 500`.
 Xembly performs all manipulations through DOM. Consequently, Xembly can be
 implemented inside any language that has a built-in DOM implementation.
 
-In the meantime, there is only one implementation of Xembly language
-&mdash; in Java. Here is how
+In the meantime, there is only one implementation of Xembly language&mdash;in Java. Here is how
 [it works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
 {% highlight java %}

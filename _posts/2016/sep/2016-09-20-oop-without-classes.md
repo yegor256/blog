@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "OOP Without Classes?"
-date: 2016-09-08
+date: 2016-09-20
 place: Palo Alto, CA
 tags: oop
 description: |
   Do we really need classes in OOP? Maybe it's
-  possible to just have objects, methods, and types.
+  possible to just have objects, and types. And,
+  of course, no implementation inheritance.
 keywords:
   - class in oop
   - what is class in oop
@@ -24,6 +25,8 @@ understand him then. The more I've thought about this, the more it appears
 obvious that we indeed do not need classes.
 
 <!--more-->
+
+{% picture /images/2016/09/battleship-potemkin.jpg 0 Battleship Potemkin (1925) by Sergei M. Eisenstein %}
 
 Here is a prototype.
 
@@ -61,7 +64,9 @@ Libraries will deliver us objects, which we can copy.
 
 That's it.
 
-No implementation inheritance and no static methods, of course.
+No [implementation inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
+and no [static methods]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+of course.
 Only [subtyping](https://en.wikipedia.org/wiki/Subtyping).
 
 Why not?

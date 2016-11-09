@@ -16,62 +16,83 @@ keywords:
   - high quality programming
 ---
 
+<div itemscope="" itemtype="http://schema.org/Blog">
 {% for post in paginator.posts %}
-  <div class="wrapper">
-    <section class="front">
-      <header>
-        <h1>
-          <a href="{{ post.url }}">
-            {{ post.title }}
+  {% if post.noindex %}
+  {% else %}
+    <div class="wrapper">
+      <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" content="{{ site.url }}/images/yegor-bugayenko-192x192.png"/>
+          <meta itemprop="height" content="192"/>
+          <meta itemprop="width" content="192"/>
+        </div>
+        <div itemscope="" itemprop="author" itemtype="http://schema.org/Person"/>
+          <meta itemprop="name" content="Yegor Bugayenko"/>
+        </div>
+        <div itemscope="" itemprop="publisher" itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="yegor256.com"/>
+          <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}/images/yegor-bugayenko-192x192.png"/>
+            <meta itemprop="height" content="192"/>
+            <meta itemprop="width" content="192"/>
+          </div>
+        </div>
+        <header>
+          <h1>
+            <a href="{{ post.url }}">
+              <span itemprop="name headline mainEntityOfPage">{{ post.title }}</span>
+            </a>
+          </h1>
+          <ul class="subline">
+            <li>
+              <time itemprop="datePublished dateModified" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%-d %B %Y" }}
+              </time>
+            </li>
+            <li itemprop="wordCount">
+              {{ post.content | count_words }} words
+            </li>
+            <li>
+              {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+              {% if time == '1' %}
+                a minute
+              {% else %}
+                {% case time %}
+                  {% when '2' %}
+                    two
+                  {% when '3' %}
+                    three
+                  {% when '4' %}
+                    four
+                  {% when '5' %}
+                    five
+                  {% else %}
+                    {{ time }}
+                {% endcase %}
+                minutes
+              {% endif %}
+              to read
+            </li>
+            <li>
+              <i class="icon icon-comments"></i>
+              <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
+            </li>
+          </ul>
+        </header>
+        <div class="main" itemprop="description">
+          {{ post.excerpt }}
+        </div>
+        <p>
+          <a href="{{ post.url }}" itemprop="url">
+            continue...
           </a>
-        </h1>
-        <ul class="subline">
-          <li>
-            <time datetime="{{ post.date | date_to_xmlschema }}">
-              {{ post.date | date: "%-d %B %Y" }}
-            </time>
-          </li>
-          <li>
-            {{ post.content | count_words }} words
-          </li>
-          <li>
-            {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-            {% if time == '1' %}
-              a minute
-            {% else %}
-              {% case time %}
-                {% when '2' %}
-                  two
-                {% when '3' %}
-                  three
-                {% when '4' %}
-                  four
-                {% when '5' %}
-                  five
-                {% else %}
-                  {{ time }}
-              {% endcase %}
-              minutes
-            {% endif %}
-            to read
-          </li>
-          <li>
-            <i class="icon icon-comments"></i>
-            <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-          </li>
-        </ul>
-      </header>
-      <div class="main">
-        {{ post.excerpt }}
-      </div>
-      <p>
-        <a href="{{ post.url }}">
-          continue...
-        </a>
-      </p>
-    </section>
-  </div>
+        </p>
+      </section>
+    </div>
+  {% endif %}
 {% endfor %}
+<div>
 
 <div class="wrapper">
   <footer>

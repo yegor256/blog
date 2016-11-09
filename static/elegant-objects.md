@@ -40,6 +40,9 @@ good and how it could be better:
   * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
   * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
+  * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
+  * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
+  * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),
@@ -79,7 +82,7 @@ The book just made it into the **top 100 Amazon Best Sellers** in
 [Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/W2WVMk)
 already. Many thanks to their authors! Would
-be great if you publish yours &mdash; this will greatly help
+be great if you publish yours&mdash;this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
 book at the following conferences in the next few months:
 [JPoint](http://javapoint.ru/en/) in Moscow, April 22;
@@ -154,7 +157,7 @@ As promised, the book will be published on **Feb 22**.
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
-in the book &mdash; [**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
+in the book&mdash;[**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
 covers the subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book. This is the
 text my selected **11 reviewers** received this week from me by mail.
@@ -193,7 +196,7 @@ pay for shipping. You will read it (200 pages), and make your corrections
 right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
 Your name will be in the book, on the 9th page,
-in the list of **acknowledgements**!
+in the list of **acknowledgments**!
 I'm interested in your negative feedback mostly.
 Tell me what is not clear, what is missing, what needs a more detailed
 explanation. But, please, **don't argue** with my ideas. I won't change

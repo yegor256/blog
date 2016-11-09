@@ -153,7 +153,7 @@ public class EmployeeTest {
         .with("salary", new AttributeValue().withN(50000))
     );
     Employee emp = new Employee("Jeff", region);
-    assertThat(emp.salary(), equalTo(50000))
+    assertThat(emp.salary(), equalTo(50000));
   }
 }
 {% endhighlight %}

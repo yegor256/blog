@@ -24,7 +24,7 @@ After a few recent posts about immutability, including
 ["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
 I was surprised by the number of comments saying that I badly misunderstood
 the idea. Most of those comments stated that an immutable object must always behave
-the same way &mdash; that is what immutability is about. What kind of immutability
+the same way&mdash;that is what immutability is about. What kind of immutability
 is it, if a method returns different results each time we call it?
 This is not how well-known immutable classes behave. Take, for example, `String`, `BigInteger`,
 `Locale`, `URI`, `URL`, `Inet4Address`, `UUID`, or wrapper classes for primitives, like `Double` and
@@ -86,11 +86,11 @@ while the web page it represents is mutable.
 
 Why do most programmers I have talked to believe that
 if an underlying entity is mutable, an object is mutable too? I think the
-answer is simple &mdash; they think that objects are
+answer is simple&mdash;they think that objects are
 data structures with methods. That's why, from this point of view,
 an immutable object is a data structure that never changes.
 
-This is where the fallacy is coming from &mdash; an object is
+This is where the fallacy is coming from&mdash;an object is
 **not a data structure**. It is a living organism representing
 a real-world entity inside the object's living environment (a computer program).
 It does encapsulate some data, which helps to locate the entity in the real world. The encapsulated
@@ -108,7 +108,7 @@ always point to the same web page, no matter what.
 And the object doesn't guarantee anything about the behavior of that web page. The page
 is a dynamic creature of a real world, living its own life. Our object
 can't promise anything about the page. The only thing it promises is that
-it will always stay loyal to that page &mdash; it will never forget or change
+it will always stay loyal to that page&mdash;it will never forget or change
 its coordinates.
 
 Conceptually speaking, immutability means loyalty, that's all.

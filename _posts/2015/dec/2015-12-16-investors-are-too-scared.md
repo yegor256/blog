@@ -22,7 +22,7 @@ an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
 is made right there. It's something similar to angel investment, but the
-amount is smaller &mdash; less than **$20K**, and decisions are faster.
+amount is smaller&mdash;less than **$20K**, and decisions are faster.
 
 <!--more-->
 

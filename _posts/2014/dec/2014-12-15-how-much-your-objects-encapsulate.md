@@ -29,7 +29,7 @@ What is the difference? The first class `HTTP` encapsulates a URL,
 while the second one expects it as an argument of method `read()`. Technically,
 both objects do exactly the same thing: they read the content of the Google home page.
 Which one is the right design? Usually I hate to say this, but in
-this case I have to &mdash; it depends.
+this case I have to&mdash;it depends.
 
 <!--more-->
 
@@ -49,8 +49,10 @@ that the object of this class, after being constructed, will represent
 a web page. The second class accepts no arguments, which tells us
 that the object of it will represent ... the Universe.
 
+{% quote In order to understand what real-life entity an object represents, look at its constructor %}
+
 I think this principle is applicable to all classes in
-object-oriented programming &mdash; in order to understand what
+object-oriented programming&mdash;in order to understand what
 real-life entity an object represents, look at its constructor. All
 arguments passed into the constructor and encapsulated by the object identify
 a real-life entity accessed and managed by the object.

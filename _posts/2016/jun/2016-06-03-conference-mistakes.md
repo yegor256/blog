@@ -39,6 +39,8 @@ This is rather annoying and turns me off. It would be much better to feel
 that there is a team with real people, who want to see me as a speaker.
 I would be way more dedicated and motivated.
 
+{% quote Four talks per day is an absolute maximum for a serious listener %}
+
 **Short breaks**.
 Breaks between presentations that are too short give listeners an impression that
 each particular presentation is not as important as the event as a whole.
@@ -46,7 +48,7 @@ This really de-motivates me as a speaker. I want to feel valuable.
 I came to the conference to be heard. I think my speech is the most important and I don't want people to
 jump quickly out of the room, just to have enough time to drink coffee
 and run to the next presentation. 30 minutes between talks is a comfortable
-time &mdash; enough to forget the previous talk and focus on the next one.
+time&mdash;enough to forget the previous talk and focus on the next one.
 Also, four talks per day is an absolute maximum for a serious listener.
 
 **No moderator**.
@@ -55,6 +57,8 @@ questions if the room is quiet. All academic conferences have that. I don't
 understand why most industry events don't do the same. A speaker must feel
 comfortable on the stage. Being there alone doesn't help at all. Also, the
 moderator will promote me to better engage with the audience.
+
+{% quote I'm not only attending your event, but also associating my name with it %}
 
 **Boring website**.
 The higher the level of the conference, the more modern and beautiful their
@@ -65,11 +69,11 @@ I really want it to look cool. Some conferences don't care about
 that and this attitude seriously demotivates me as a speaker.
 
 **Cheap venue**.
-This means literally what it says &mdash; the place is too cheap and, because
+This means literally what it says&mdash;the place is too cheap and, because
 of that, bad. The impression of such a place ruins the entire conference.
-Don't fool yourself, if it's cheap &mdash; it's bad.
+Don't fool yourself, if it's cheap&mdash;it's bad.
 Into this category I would also place venues that are not designed to be
-conference hosters, like cinemas or offices. They will also be cheaper than
+conference hosts, like cinemas or offices. They will also be cheaper than
 proper venues, but you will get what you pay for.
 
 **No introduction**.
@@ -82,6 +86,8 @@ the speakers, very pro-actively.
 
 **Slow WiFi**.
 It's just very annoying.
+
+{% quote Just make 5-10 such short intros and I will busy talking to these guys for the whole day %}
 
 **No networking**.
 Conference organizers know all speakers who are attending and most of the
@@ -102,7 +108,7 @@ it in my [YouTube channel](https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_
 and getting 500 views in the first week. So, who is
 more important, your event which was able to attract just 50 people or my
 YouTube channel that attracted 500? Thus, I would strongly recommend paying
-a lot of attention to video recording and its quality. Preferrably, you should
+a lot of attention to video recording and its quality. Preferably, you should
 record from two cameras (the speaker and the room) and do video editing afterwards.
 It's expensive, but very important.
 
@@ -123,13 +129,14 @@ The best size of the room is 250 people. That's the ideal audience for
 a technical talk.
 
 **Too big**.
-A very big audience (over 500 people in the room) causes another problem &mdash;
-I completely lose any contact with my listeners. I don't see their eyes any more.
+A very big audience (over 500 people in the room) causes another problem&mdash;I completely lose any contact with my listeners. I don't see their eyes any more.
 I can't see their reaction, I don't understand whether they follow me or not.
 I'm not a technical speaker any more, but a rock singer. All I can do is turn
 my presentation into a show and play with their emotions, not their brains.
 This is actually what most [keynote speakers]({% pst 2016/may/2016-05-10-keynote-clowns %})
 are usually doing.
+
+{% quote A perfect conference must have one track, a room for 250-300 listeners, and a very well selected list of speakers %}
 
 **Too many tracks**.
 Honestly, I think that the very idea of having multiple tracks is very bad.
@@ -144,7 +151,7 @@ conference attendees feel the same. A perfect conference must have one
 track, a room for 250-300 listeners, and a very well selected list of
 speakers. I believe that most conferences are shooting themselves in the
 foot trying to please the audience by inviting too many speakers. Instead,
-do your homework right &mdash; select the best speakers and don't make listeners
+do your homework right&mdash;select the best speakers and don't make listeners
 walk from track to track cursing you for the mediocre speeches.
 Choosing speakers is your job! Don't delegate it to your audience.
 

@@ -201,7 +201,7 @@ to authenticate the user and create an `Identity` object.
 
 ## How Is It Composable?
 
-This mechanism is indeed very extendable and "composable". Let's say we
+This mechanism is indeed very extensible and "composable". Let's say we
 want to skip authentication during integration testing. Here is how:
 
 {% highlight java %}

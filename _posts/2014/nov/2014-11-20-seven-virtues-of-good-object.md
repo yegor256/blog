@@ -57,7 +57,7 @@ Sometimes I hear classes being called "object templates"
 This definition is not correct because it places classes into a passive position. This definition
 assumes that someone will get a template and build an object by using it.
 This may be true, technically speaking, but conceptually it's wrong. Nobody else
-should be involved &mdash; there are only a class and its children. An
+should be involved&mdash;there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:
 
@@ -84,11 +84,11 @@ of functions. Instead, it is an independent entity with its own life cycle,
 its own behavior, and its own habits.
 
 An employee, a department, an HTTP request, a table in MySQL,
-a line in a file, or a file itself are proper objects &mdash; because they exist in
+a line in a file, or a file itself are proper objects&mdash;because they exist in
 real life, even when our software is turned off. To be more precise, an object is a
 *representative* of a real-life creature. It is a *proxy* of that
 real-life creature in front of all other objects. Without
-such a creature, there is &mdash; obviously &mdash; no object.
+such a creature, there is&mdash;obviously&mdash;no object.
 
 {% highlight java %}
 photo = File.new('/tmp/photo.png')
@@ -109,8 +109,7 @@ a singleton, or a factory are **not** good objects
 [anti-patterns]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})!).
 They don't exist apart from your software, in real life. They
 are invented just to tie other objects together. They are artificial
-and fake creatures. They don't represent anyone. Seriously, an XML parser
-&mdash; who does it represent? Nobody.
+and fake creatures. They don't represent anyone. Seriously, an XML parser&mdash;who does it represent? Nobody.
 
 Some of them may become good if they change their names;
 others can never excuse their existence. For example, that XML parser can be
@@ -137,7 +136,7 @@ I want that photo to be read from a file in PNG format. I'm
 contracting an object from class `DataFile` and asking him to give me
 the binary content of that image.
 
-But wait, do I care where exactly the content will come from &mdash; the file on disk, or
+But wait, do I care where exactly the content will come from&mdash;the file on disk, or
 an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care about
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:
@@ -149,8 +148,7 @@ interface Binary {
 {% endhighlight %}
 
 Now, any object from any class (not just `DataFile`) can work for me.
-All he has to do, in order to be eligible, is to obey the contract
-&mdash; by implementing the interface `Binary`.
+All he has to do, in order to be eligible, is to obey the contract&mdash;by implementing the interface `Binary`.
 
 The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has
@@ -338,7 +336,7 @@ a script runner, or a Java programmer. Can you draw
 any of them? No, you can't. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.
 
-In general, avoid names that end with "-er" &mdash; most of them are bad.
+In general, avoid names that end with "-er"&mdash;most of them are bad.
 
 "What is the alternative of a `FileReader`?" I hear you asking. What would
 be a better name? Let's see. We already have `File`, which is a representative
@@ -360,7 +358,8 @@ More about this in [Don't Create Objects That End With -ER]({% pst 2015/mar/2015
 {% badge /images/2014/11/good-object-5.png 250 %}
 
 A good object comes from either a final or abstract class. A `final` class is one that
-can't be extended via inheritance. An `abstract` class is one that
+can't be extended via [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
+An `abstract` class is one that
 can't have children. Simply put, a class should either say, "You can never break
 me; I'm a black box for you" or "I'm broken already; fix me first and then use".
 
@@ -432,7 +431,7 @@ If you don't use that `final` keyword, anyone (including yourself) will
 be able to extend the class and ... offend him :( So a class without `final`
 is a bad design.
 
-An abstract class is the exact opposite case &mdash; he tells us that
+An abstract class is the exact opposite case&mdash;he tells us that
 he is incomplete and we can't use him "as is". We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as `abstract` methods.
@@ -459,5 +458,4 @@ this inheritance, since he defended all other methods with `final` (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.
 
-To summarize, your class should either be `final` or `abstract` &mdash;
-nothing in between.
+To summarize, your class should either be `final` or `abstract`&mdash;nothing in between.

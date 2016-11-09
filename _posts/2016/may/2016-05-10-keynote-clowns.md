@@ -32,11 +32,11 @@ everybody in the room completely agree with what you're saying. That's how
 you make a good speech. The audience will be comfortable and relaxed, and you
 will have no risk of being questioned afterwards. A few safe headline examples:
 "trust is very important" or "software must be stable."
-Everybody will be nodding their heads &mdash; that's all you need.
+Everybody will be nodding their heads&mdash;that's all you need.
 
 **Joke!**
 You must make them laugh. You must open with a joke and continue with many
-of them. Prepare them carefully. Just google "good keynote jokes" and use
+of them. Prepare them carefully. Just Google "good keynote jokes" and use
 what smart people recommend. A well-prepared collection of jokes is much
 more valuable than the content you will be talking about. Nobody will remember
 the content, but the jokes will definitely be re-tweeted. When a good speaker
@@ -46,7 +46,7 @@ is talking, the room is laughing every 60 seconds.
 Don't be too formal and boring, show a slide with a picture of
 a naked butt every once in a while. Everybody will understand that you're not only a
 speaker but also a good friend. Also, your language should be rather loose.
-Pretent you're talking to a friend over a pint of beer. Remember, the goal
+Pretend you're talking to a friend over a pint of beer. Remember, the goal
 is to be funny.
 
 **Repeat!**
@@ -61,7 +61,7 @@ over and over again. Everybody wins.
 **Kitties!**
 Cute kitties. We all love them! Attach them somehow to your content. It is
 not really important whether they are related or not. You must show love.
-Instead of cats you can use a picture of your 2-y.o. daugther or yourself
+Instead of cats you can use a picture of your 2-y.o. daughter or yourself
 in a primary school. It has to be something sweet and adorable.
 
 **Keep talking!**
@@ -69,9 +69,9 @@ A good keynote speech fills the entire 60 minutes, leaving
 absolutely no time for questions. Actually, a perfect speaker will be interrupted
 after the 145th slide and will say that if anyone wants to know more, there
 is always a place near the restroom, let's go there and continue. Thus, be
-focused on your slides and try to avoid questions at the end &mdash; they may create
+focused on your slides and try to avoid questions at the end&mdash;they may create
 a negative impression of you if you mess up answering their questions. They came to
-listen to you, not to ask questions &mdash; keep talking.
+listen to you, not to ask questions&mdash;keep talking.
 
 <hr/>
 

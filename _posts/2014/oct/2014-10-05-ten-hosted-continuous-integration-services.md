@@ -155,8 +155,8 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.codeship.io">CodeShip</a>&#x263A;</td>
-  <td class="x-right"><a href="https://codeship.io/pricing">$49/mo</a></td>
+<tr><td><a href="https://codeship.com">CodeShip</a>&#x263A;</td>
+  <td class="x-right"><a href="https://codeship.com/pricing">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -200,7 +200,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.vexor.io">Vexor</a></td>
+<tr><td><a href="http://vexor.io">Vexor</a></td>
   <td class="x-right"><a href="http://vexor.io/">&cent;90/hr</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -254,8 +254,7 @@ the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
 downside is the price of $129 per month. "With this money
-you can get a dedicated EC2 instance and install Jenkins there" &mdash;
-some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+you can get a dedicated EC2 instance and install Jenkins there"&mdash;some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
@@ -293,8 +292,7 @@ system, which I generally appreciate. As a downside, they
 <span class="strike">don't have any Maven pre-installed</span>
 have an old version of Maven, but this was solved easily with a short
 custom script that downloads and unpacks the latest Maven. Another downside is
-that they are not configurable through a file (like `.travis.yml`) &mdash;
-you should do everything through a UI. They also support
+that they are not configurable through a file (like `.travis.yml`)&mdash;you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
 {% badge /images/2014/10/magnum.png 64 http://www.magnum-ci.com %}
@@ -313,21 +311,20 @@ complicated than others, giving you an ability to define "stages"
 and combine them into pipelines. I'm not sure yet how these mechanisms
 may help in small and medium size projects we're mostly working with,
 but they look "cool". There is also a very unfortunate limitation of
-2Gb RAM per build &mdash; some of my Java projects fail because of that.
+2Gb RAM per build&mdash;some of my Java projects fail because of that.
 Besides that, they don't give full access to the build server, for example
-we can't modify anything in `/etc` &mdash; it is a show-stopper for us.
+we can't modify anything in `/etc`&mdash;it is a show-stopper for us.
 
 {% badge /images/2014/10/drone.png 64 http://www.drone.io %}
 
 [**Drone.io**](http://www.drone.io) works fine, but their support
 didn't reply to me when I asked for a Maven version update
 (they have an old version pre-installed). Besides
-that, their badge is not updated correctly in GitHub README.md &mdash;
-when the build is broken, the badge stays green... very annoying.
+that, their badge is not updated correctly in GitHub README.md&mdash;when the build is broken, the badge stays green... very annoying.
 
-{% badge /images/2014/10/codeship.png 64 http://www.codeship.io %}
+{% badge /images/2014/10/codeship.png 64 https://www.codeship.com %}
 
-[**CodeShip**](http://www.codeship.io) works fine, but their web UI
+[**CodeShip**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
@@ -363,10 +360,10 @@ I don't really like Jenkins, that's why can't recommend this platform.
 via GitHub, huh? They seem to be more "deployment" oriented, not just
 continuous integration.
 
-{% badge /images/2014/10/vexor.png 64 http://www.vexor.com %}
+{% badge /images/2014/10/vexor.png 64 http://vexor.io %}
 
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
-billing model &mdash; they charge per build, not per month. I would definitely
+billing model&mdash;they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
 {% badge /images/2014/10/greenhouseci.png 64 http://www.greenhouseci.com %}
@@ -377,9 +374,11 @@ a full scale mobile app to test it against.
 
 <hr/>
 
-**Ship.io** is [dead](https://ship.io/ship-io-is-shutting-down/).
+[coverity.com](https://scan.coverity.com): will review it soon and add to the list.
 
-[**ZeroCI**](http://www.zeroci.com) is dead (as of 28-Aug-2016).
+**Ship.io** is dead (as of 20-Sep-2016).
+
+**ZeroCI.com** is dead (as of 28-Aug-2016).
 
 <hr/>
 

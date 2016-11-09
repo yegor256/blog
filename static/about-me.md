@@ -48,7 +48,7 @@ I'm a certified Project Management Professional
 ([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx)).
 Besides that, I'm a proud holder of
 [RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
-[PRINCE2 Foundation](https://www.prince2.com/uk),
+[PRINCE2 Foundation](https://www.prince2.com/usa),
 [MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf) and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 

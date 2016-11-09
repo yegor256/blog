@@ -61,7 +61,7 @@ public class Foo {
 {% endhighlight %}
 
 This looks much cleaner to me and does exactly
-the same &mdash; sends a single log line to the SLF4J
+the same&mdash;sends a single log line to the SLF4J
 logging facility. Besides, it check automatically whether a given logging
 level is enabled (for performance optimization) and formats the
 given string using [`Formatter`](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html)

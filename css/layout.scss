@@ -340,6 +340,21 @@ h2 {
   }
 }
 
+sup,
+sub {
+  font-size: .6em;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.3em;
+}
+
+sub {
+  top: .3em;
+}
+
 hr {
   @extend %clear;
   border: 0;

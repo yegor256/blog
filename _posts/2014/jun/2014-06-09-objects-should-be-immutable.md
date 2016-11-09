@@ -69,7 +69,7 @@ are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.
 
 If no object methods can modify its state, no matter how many
-of them and how often are being called parallel &mdash; they
+of them and how often are being called parallel&mdash;they
 will work in their own memory space in stack.
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2bQVqBr %}
@@ -108,7 +108,7 @@ String second = request.fetch();
 
 Now, the script is broken although it compiled without errors. This is
 what [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
-is about &mdash; there is always some hidden
+is about&mdash;there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.
@@ -157,7 +157,7 @@ public String post(Request request) {
 }
 {% endhighlight %}
 
-Let's try to make two requests &mdash; the first
+Let's try to make two requests&mdash;the first
 with GET method and the second with POST:
 
 {% highlight java %}
@@ -167,7 +167,7 @@ String first = this.post(request);
 String second = request.fetch();
 {% endhighlight %}
 
-Method `post()` has a "side effect" &mdash; it makes changes
+Method `post()` has a "side effect"&mdash;it makes changes
 to the mutable object `request`. These changes are not really
 expected in this case. We expect it to make a POST request and
 return its body. We don't want to read its documentation just
@@ -295,15 +295,15 @@ Very often, I hear people say that immutability is a
 fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
-[jcabi-http](http://http.jcabi.com),
-[jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}),
-[jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
-[jcabi-s3]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
-[jcabi-dynamo]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),
-[jcabi-w3c]({% pst 2014/apr/2014-04-29-w3c-java-validators %}),
-[jcabi-jdbc]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}),
-[jcabi-simpledb](http://simpledb.jcabi.com),
-[jcabi-ssh]({% pst 2014/sep/2014-09-02-java-ssh-client %}).
+[`jcabi-http`](http://http.jcabi.com),
+[`jcabi-xml`]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}),
+[`jcabi-github`]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
+[`jcabi-s3`]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
+[`jcabi-dynamo`]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),
+[`jcabi-w3c`]({% pst 2014/apr/2014-04-29-w3c-java-validators %}),
+[`jcabi-jdbc`]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}),
+[`jcabi-simpledb`](http://simpledb.jcabi.com),
+[`jcabi-ssh`]({% pst 2014/sep/2014-09-02-java-ssh-client %}).
 The above are all Java libraries that work solely with immutable
 classes/objects. [netbout.com](https://github.com/netbout/netbout)
 and [stateful.co]({% pst 2014/dec/2014-12-04-synchronization-between-nodes %}) are

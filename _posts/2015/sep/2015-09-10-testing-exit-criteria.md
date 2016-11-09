@@ -23,7 +23,7 @@ right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what's wrong. Eventually they stop and say
 "we're done". How do they know when to stop? When there is enough
-testing? It's obvious &mdash; when there are **no more bugs left** and the
+testing? It's obvious&mdash;when there are **no more bugs left** and the
 product can be shipped! If you think like this, I have bad news for you.
 You're **fundamentally wrong**.
 
@@ -95,4 +95,4 @@ not when it is known to be correct, but when the rate of discovering
 errors slows down to one that management considers acceptable" (page 13).
 
 Thus, the only valid criteria for exiting a testing process is the
-discovery of a **forecasted** amount of bugs.
+discovery of a **forecast** amount of bugs.

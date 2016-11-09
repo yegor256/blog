@@ -35,8 +35,7 @@ It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_S
 was in power, the [Soviet Union](https://en.wikipedia.org/wiki/Soviet_Union)
 was literally broke, and [WWII](https://en.wikipedia.org/wiki/World_War_II)
 brought people to the point of **starvation**.
-However, the film showed something completely opposite &mdash;
-wealthy villages, rich peasants, and tables full of food.
+However, the film showed something completely opposite&mdash;wealthy villages, rich peasants, and tables full of food.
 
 It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
 
@@ -122,9 +121,8 @@ lying to the German people?
 Because that's what we like to hear, **unfortunately**.
 
 It is sad, but we don't want to know the truth. We didn't want to know about
-Nazi war crimes &mdash; so Joseph Goebbels built a **fake** reality for us.
-We don't want to know about the true principles of management &mdash;
-so Ridley Scott built fake ones for us.
+Nazi war crimes&mdash;so Joseph Goebbels built a **fake** reality for us.
+We don't want to know about the true principles of management&mdash;so Ridley Scott built fake ones for us.
 
 Think about it.
 

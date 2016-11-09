@@ -39,8 +39,7 @@ There are four phases in every project I work with in
 
  * **Thinking**.
    Here we're trying to understand: What is the problem that the product
-   is going to solve? We're also investigating the product's boundaries &mdash;
-   who will work with the software (actors) and how will they work with it (user stories).
+   is going to solve? We're also investigating the product's boundaries&mdash;who will work with the software (actors) and how will they work with it (user stories).
    Deliverables: [specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
    Duration: from 2 days up to 3 weeks.
    Participants: product owner, analyst(s), architect,
@@ -84,7 +83,7 @@ There are four phases in every project I work with in
 
 The biggest (i.e., longest and most expensive) phase is, of course, Fixing. It
 usually takes the majority of time (over 70%). However, the most important
-and risky phase is the first one &mdash; Thinking. A mistake made during Thinking will
+and risky phase is the first one&mdash;Thinking. A mistake made during Thinking will
 [cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 much more than a mistake made later.
 
@@ -171,8 +170,7 @@ An average team size of an average project is 15-25 programmers.
 At this phase, we understand [any inconsistency]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
 as a bug. If something is not clear
 in the documentation, or if something can be refactored for better
-readability, or if a function can be improved for higher performance &mdash;
-it is a bug to us.
+readability, or if a function can be improved for higher performance&mdash;it is a bug to us.
 And [bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) in our projects.
 We encourage everybody to report as many bugs as possible. This is how
 we achieve high quality.
@@ -185,7 +183,7 @@ we re-deploy the entire product to the production platform.
 
 Every bug is reported, classified, discussed, and fixed in its
 own GitHub ticket and its own Git branch. We never allow anyone
-to just commit to the `master` branch &mdash; all changes must pass through
+to just commit to the `master` branch&mdash;all changes must pass through
 our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 and be merged into `master` by [rultor.com](http://www.rultor.com),
 our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).

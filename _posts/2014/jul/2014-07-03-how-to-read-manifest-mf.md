@@ -52,9 +52,9 @@ files, and how it works on a low level.
 When you package a library or even a web application,
 it is a good practice to add an attribute to its `MANIFEST.MF`
 with the package version name and build number. In Maven,
-[maven-jar-plugin](http://maven.apache.org/plugins/maven-jar-plugin/)
+[`maven-jar-plugin`](http://maven.apache.org/plugins/maven-jar-plugin/)
 can help you (almost the same configuration for
-[maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)):
+[`maven-war-plugin`](http://maven.apache.org/plugins/maven-war-plugin/)):
 
 {% highlight xml %}
 <plugin>
@@ -70,7 +70,7 @@ can help you (almost the same configuration for
 </plugin>
 {% endhighlight %}
 
-[buildnumber-maven-plugin](http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html)
+[`buildnumber-maven-plugin`](http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html)
 will help you to get `${buildNumber}` from Git, SVN or Mercurial:
 
 {% highlight xml %}
@@ -127,7 +127,7 @@ details right into `MANIFEST.MF`:
 {% endhighlight %}
 
 Afterwards, you can retrieve them in
-runtime using [jcabi-manifests](http://manifests.jcabi.com):
+runtime using [`jcabi-manifests`](http://manifests.jcabi.com):
 
 {% highlight java %}
 String url = Manifests.read("Pgsql");

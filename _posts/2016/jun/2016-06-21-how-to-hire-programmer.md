@@ -34,20 +34,20 @@ market better than your high school classmate who bought a WordPress website
 last year, right? He will definitely recommend a good programmer to you.
 Recommendations are the most effective way of finding contractors. First,
 you don't need to worry about screening and testing. Second, you'll have
-a very good explanation for why your project failed &mdash; because your
+a very good explanation for why your project failed&mdash;because your
 friend let you down with a bad recommendation. Win-win.
 
-{% quote Hire only locals &mdash; they are much easier to manage and punish %}
+{% quote Hire only locals -- they are much easier to manage and punish %}
 
 **Hire Only Locals**.
-Don't even think about a remote programmer &mdash; remote projects always fail.
+Don't even think about a remote programmer&mdash;remote projects always fail.
 [Always]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}).
 He will work in a different time zone, you will always have cultural
 clashes, and his Russian accent will be annoying. You simply won't
 be able to meet him every second day and
 [whine]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
 about your project being
-too expensive, too slow, and too frustrating. Hire only locals &mdash; they
+too expensive, too slow, and too frustrating. Hire only locals&mdash;they
 are much easier to manage and
 [punish]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 
@@ -70,7 +70,7 @@ the quality of the product he is creating.
 
 **Don't Specify Too Much**.
 That's what [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
-recommends, and I second that &mdash; face-to-face communication is more
+recommends, and I second that&mdash;face-to-face communication is more
 valuable than documentation. Don't write any documentation, don't specify
 what exactly you need to develop, and don't think too much about your "user stories".
 It's all in the past. Modern software engineers figure everything out
@@ -109,7 +109,7 @@ as you can.
 
 **Don't Negotiate**.
 Eventually you will have to discuss money. Make sure there will be no
-negotation involved. It'll be an offensive process, and most programmers
+negotiation involved. It'll be an offensive process, and most programmers
 are very sensitive. Just tell him how much you will pay, and if he doesn't
 feel that is enough, get back to the value/excitement/market conversation.
 Do it again and again until he agrees.
@@ -140,7 +140,7 @@ Simply don't tell him about your risks and concerns. The future of your
 project is bright, and he doesn't need to know more. You're going to be his
 [leader]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
 and a good leader is never too honest with subordinates. Always
-be positive about the plan &mdash; he needs to get that from you.
+be positive about the plan&mdash;he needs to get that from you.
 
 <hr/>
 

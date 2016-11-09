@@ -21,7 +21,6 @@ layout: compress
     <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <meta name="twitter:creator" content="@yegor256"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
@@ -34,12 +33,12 @@ layout: compress
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
     <meta property="fb:admins" content="10203747823006002"/>
-    <meta name="twitter:site" content="@yegor256"/>
+    <meta name="twitter:site" content="www.yegor256.com"/>
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
     <meta property="article:author" content="https://www.facebook.com/yegor256"/>
     <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
-    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="yegor256" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
@@ -65,7 +64,7 @@ layout: compress
         <div class="face">
           <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
           <a href="/about-me.html">
-            <img src="/images/yegor-bugayenko-192x192.png" class="photo"
+            <img src="//cf.jare.io/?u={{ site.url }}/images/yegor-bugayenko-192x192.png" class="photo"
               alt="photo of Yegor Bugayenko"/>
           </a>
         </div>
@@ -78,7 +77,7 @@ layout: compress
             <li><a href="https://www.facebook.com/yegor256" rel="nofollow" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://instagram.com/yegor256" rel="nofollow" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/c/yegor256" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://www.pinterest.com/yegor256/" rel="nofollow" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://angel.co/yegor256" rel="nofollow" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
@@ -109,6 +108,12 @@ layout: compress
         </div>
         <div class="hot">
           <ul>
+            <li>
+              <strong>256 Bloghacks</strong>, my book about blogging, is finally on
+              <a href="https://goo.gl/DUcXm9">Amazon</a>! It reveals all my tricks
+              and secrets of growing this blog from zero to 60,000 unique
+              visitors per month in two years.
+            </li>
             <!--
             <li>
               Don't forget to submit your open source project to the
@@ -136,22 +141,19 @@ layout: compress
               and if you're a <strong>Ruby expert</strong>.
             </li>
             -->
-            <!--
             <li>
-              At <a href="/webinars.html">Webinar #18</a>
-              we'll discuss <strong>getters</strong> and <strong>printers</strong> in OOP,
-              join us on <b>September 7</b>, at 11am PST.
+              At <a href="/webinars.html">Webinar #19</a>
+              we'll discuss the role of a <strong>project manager</strong>
+              in a software project,
+              join us on <b>December 7</b>, at 11am PST.
             </li>
-            -->
             <li>
               Meet me at
-              <a href="http://javaday.org.ua/kyiv/">JavaDay</a> (Kyiv/Oct-14),
-              <a href="http://2016.secr.ru/">SECR</a> (Moscow/Oct-28),
-              <a href="http://www.oredev.org/2016/speakers/yegor-bugayenko">Oredev</a> (Malmö/Nov-7),
-              <a href="http://xpdays.com.ua/">XP Days</a> (Kiev/Nov-11),
+              <a href="http://www.oredev.org/2016/speakers/yegor-bugayenko">Oredev</a> (Malmö/Nov-9),
+              <a href="http://xpdays.com.ua/">XP Days</a> (Kiev/Nov-12),
               <a href="http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/">TopConf</a> (Tallinn/Nov-16),
+              <a href="http://www.buildstuff.lt/">BuildStuff</a> (Vilnius/Nov-18),
               <a href="http://devternity.com/#/11">DevTernity</a> (Riga/Dec-1),
-              <a href="https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx">AppDevTrends</a> (Orlando/Dec-7),
               and later
               <a href="/talks.html">somewhere else</a>.
             </li>
@@ -160,9 +162,7 @@ layout: compress
       </header>
     </div>
     {{ content }}
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
-      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-      crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <script>var disqus_shortname = 'yegor256';</script>
     <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>

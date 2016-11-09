@@ -44,8 +44,7 @@ Say we're planning to <del>rob a bank</del> create a Facebook killer. There are 
 of us. We print three papers, each of which says: "whoever holds this paper
 has one vote and will get an equal part of the profit." How does that sound? Each of us
 has the same paper. When it's time to decide whether we use Java or PHP,
-we sit together, show our papers and vote. One vote for Java, two for PHP &mdash;
-the decision is made, we will use PHP. When our startup finally dies
+we sit together, show our papers and vote. One vote for Java, two for PHP&mdash;the decision is made, we will use PHP. When our startup finally dies
 and it's time to decide what to do with the domain name, we sell it for
 $300 and give $100 to each holder of that paper, since there are just three
 papers and they have equal rights.
@@ -56,8 +55,7 @@ profit. The company (our startup) is making us a promise.
 
 By the way, I can sell my share of stock to my friend. When it's time to
 decide whether it's Java or PHP, he will show up and vote. You may not like
-that, since you are seeing this dude for the first time, but you will have to obey &mdash;
-he's got that paper in his hands. That's why shares of stock are also
+that, since you are seeing this dude for the first time, but you will have to obey&mdash;he's got that paper in his hands. That's why shares of stock are also
 called **equity**. I can sell them just like I can sell my car. No matter who
 owns them, he or she has exactly the same rights as the original or the
 previous owner. They are assets.
@@ -93,7 +91,7 @@ They are **not equity**. Investors that
 have convertible notes can't vote. They can't sell convertible notes and they
 can't get any profit from the company. So, what they are for then? I'll explain
 in a minute. My goal so far was to show why young companies don't want
-to deal with shares of stock &mdash; because of greedy lawyers and, of
+to deal with shares of stock&mdash;because of greedy lawyers and, of
 course, the complexity of terms and conditions.
 
 ## What are Convertible Notes?
@@ -125,7 +123,7 @@ You will have to give me 6,250 shares and I'll return you the notes.
 Thus, in the end, there will be 1,106,250 shares total and your company's post-money
 valuation will be $4,425,000. Got the math?
 
-My shares will have exacty the same
+My shares will have exactly the same
 "rights, privileges, preferences and restrictions" as the shares you
 gave to the investor. And I won't have an option to negotiate. I will just
 receive them and accept.
@@ -155,7 +153,7 @@ There is also a post-money valuation, which, as you can imagine, is calculated
 by multiplying total amount of shares after the investment, by their price. In
 this case, it's $4.4M (1,100,000 by $4).
 
-Let's see what happeed in our example with my $25K. I gave them to you when
+Let's see what happened in our example with my $25K. I gave them to you when
 your company was very young. Your valuation was rather low, because you
 barely had any results. You needed small cash to pay your bills and fill
 your car with gas. The valuation was definitely lower than $4M. So why are
@@ -219,7 +217,7 @@ Try not to give convertible notes with a maturity date to anyone.
 is a form of convertible notes, introduced by [YC](http://www.ycombinator.com),
 which doesn't have a maturity date at all. This technically means that
 you don't have to pay them anything back. Well, there is only one situation
-when you have to pay &mdash; in case your startup dies. In that case, you will
+when you have to pay&mdash;in case your startup dies. In that case, you will
 have to pay investors as much as you can, using the cash you still have
 in your bank account. Most likely there will be nothing, so don't worry.
 

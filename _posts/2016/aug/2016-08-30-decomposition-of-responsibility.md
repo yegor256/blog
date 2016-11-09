@@ -43,7 +43,7 @@ end
 
 Obviously, objects of this class are doing too much.
 They save log lines to the
-file and also format them &mdash; an obvious violation of
+file and also format them&mdash;an obvious violation of
 a famous
 [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 An object of this class would be **responsible** for too many things.

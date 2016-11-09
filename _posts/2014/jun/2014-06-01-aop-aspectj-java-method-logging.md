@@ -17,6 +17,8 @@ keywords:
   - aspect oriented programming java
   - aspectj logging
   - aspectj weaving annotations
+youtube:
+  - 4SRoLYxvIQ8
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)
@@ -55,15 +57,14 @@ instrument that doesn't change the way code works, but gives
 marks to certain elements (methods, classes or variables).
 In other words, annotations are just markers attached to the code
 that can be seen and read. Some annotations are designed to be
-seen at compile time only &mdash; they don't exist in `.class` files after
+seen at compile time only&mdash;they don't exist in `.class` files after
 compilation. Others remain visible after compilation and can
 be accessed in runtime.
 
 For example,
 [`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html) is of
 the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)), while [`@Test`](http://junit.sourceforge.net/javadoc/org/junit/Test.html) from JUnit is of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
-[`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html) &mdash;
-the one I'm using in the script above &mdash; is an annotation of the second type,
+[`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)&mdash;the one I'm using in the script above&mdash;is an annotation of the second type,
 from [jcabi-aspects](http://aspects.jcabi.com).
 It stays with the byte-code in the `.class` file after compilation.
 
@@ -86,8 +87,7 @@ and log every call to that specific method `power()`. And, of course,
 the same interceptor should be used for other methods where
 we'll place the same annotation in the future.
 
-This case perfectly fits the original intent of AOP &mdash;
-to avoid re-implementation of some common behavior in multiple classes.
+This case perfectly fits the original intent of AOP&mdash;to avoid re-implementation of some common behavior in multiple classes.
 
 Logging is a supplementary feature to our main functionality,
 and we don't want to pollute our code with multiple logging
@@ -133,8 +133,7 @@ and advice is annotated with `@Around`. As discussed above,
 these annotations are just markers in `.class` files. They don't do
 anything except provide some meta-information to those who are interested in runtime.
 
-Annotation `@Around` has one parameter, which &mdash; in this case &mdash;
-says that the advice should be applied to a method if:
+Annotation `@Around` has one parameter, which&mdash;in this case&mdash;says that the advice should be applied to a method if:
 
  1. its visibility modifier is `*` (`public`, `protected` or `private`);
 
@@ -156,14 +155,14 @@ to call `proceed()` of the **join point** object.
 We compile this aspect and make it available in classpath
 together with our main file `Foo.class`. So far so good,
 but we need to take one last step in order to put
-our aspect into action &mdash; we should **apply** our advice.
+our aspect into action&mdash;we should **apply** our advice.
 
 ## Binary Aspect Weaving
 
 Aspect weaving is the name of the advice applying process.
 Aspect weaver modifies original code by injecting calls to aspects.
 AspectJ does exactly that. We give it two binary Java classes `Foo.class`
-and `MethodLogger.class`; it gives back three &mdash; modified
+and `MethodLogger.class`; it gives back three&mdash;modified
 `Foo.class`, `Foo$AjcClosure1.class` and unmodified `MethodLogger.class`.
 
 {% quote Without weaving, both classes and aspects are just compiled Java binaries with attached annotations %}

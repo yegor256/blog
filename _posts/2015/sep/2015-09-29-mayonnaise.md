@@ -20,14 +20,13 @@ That's what a character played by actor Bruce Willis said to Robert DeNiro's
 movie producer character in Barry Levinson's brilliant film
 [What Just Happened](http://www.imdb.com/title/tt0486674/). I second that.
 Producers, recruiters, managers, real estate agents,
-sales agents, lawyers, and [outstaffers](http://english.stackexchange.com/questions/103448/is-outstaffing-a-real-word)
-&mdash; what do they all have in common?
+sales agents, lawyers, and [outstaffers](http://english.stackexchange.com/questions/103448/is-outstaffing-a-real-word)&mdash;what do they all have in common?
 They are middlemen standing between money and the
 [proletariat](https://en.wikipedia.org/wiki/Proletariat), taking a huge percentage
 for themselves but **adding no value**. Their very existence is our mutual
 misfortune. We are too weak to get rid of them now, but sooner
 or later every supply chain will be **mayonnaise-free**. Look at
-Uber &mdash; taxi companies are dead already, and we now have only drivers
+Uber&mdash;taxi companies are dead already, and we now have only drivers
 and passengers with a computer system in between. The same will happen
 everywhere else.
 
@@ -40,8 +39,7 @@ about $30K (in Silicon Valley, if a programmer's salary is, say, $120K a year)
 to a recruiter. $30,000! What will this money be spent on? Or let me put it this way:
 How much software will I get for this money? Let me put it even better:
 Why don't I give this money to the programmer directly as a bonus for
-switching companies? Why do **we** need this recruiter between us &mdash;
-me and the programmer I'm going to hire? Can't we use this $30,000 more effectively?
+switching companies? Why do **we** need this recruiter between us&mdash;me and the programmer I'm going to hire? Can't we use this $30,000 more effectively?
 
 Because software systems are not powerful enough yet? Because I can't
 find a programmer with a few clicks and I have to delegate this
@@ -62,8 +60,7 @@ There are professional certifications that show how strong
 a candidate's skills are. And there are plenty of other avenues.
 
 On the other hand, these tools are not actively used by
-the majority of programmers and software companies &mdash;
-mostly because IT recruiters stay between us, **stealing** our money
+the majority of programmers and software companies&mdash;mostly because IT recruiters stay between us, **stealing** our money
 and protecting that position for themselves.
 Just like taxi companies remain between passengers and drivers,
 or real estate agents get in between house owners and house buyers,
@@ -152,8 +149,8 @@ money and people** who add value. There should be no one in
 between except computer systems.
 
 Sometimes I hear the comment that people love to work with people, not computers. That's
-why we need all that mayonnaise &mdash; to make our life **happier**? It's true that
-people love to deal with people &mdash; people we really need, people who
+why we need all that mayonnaise&mdash;to make our life **happier**? It's true that
+people love to deal with people&mdash;people we really need, people who
 speak the same language, and people who deliver **real value**. Not with
 producers, recruiters, real estate agents, sales agents, outstaffers, lawyers,
 travel agents, investment brokers, executive officers, or taxi dispatchers.

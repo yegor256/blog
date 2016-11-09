@@ -30,7 +30,7 @@ is a very demotivating approach. For example, Ian Larkin
 I believe this is completely true. Money may become a terrible de-motivator
 for all modern employees (not just programmers).
 
-My question is &mdash; why is this so?
+My question is&mdash;why is this so?
 
 <!--more-->
 
@@ -47,8 +47,7 @@ do we try to hide
 motivation and replace it with
 [everything else](http://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,
-paid vacations, etc. Why don't we just say
- &mdash; "Jeff completed his task faster than
+paid vacations, etc. Why don't we just say&mdash;"Jeff completed his task faster than
 everybody else. This is his $500 check. Whoever completes the
 next task gets $300," out loud in the office?... Sounds uncomfortable, doesn't it?
 
@@ -59,7 +58,7 @@ I have an answer.
 Money doesn't work when there are no ground rules.
 
 When we say that Jeff will get a $500 bonus if he finishes his task on time, but
-don't say what he should do when someone distracts him &mdash; Jeff
+don't say what he should do when someone distracts him&mdash;Jeff
 gets frustrated. He also doesn't understand who his boss is anymore. Does
 he just work for the bonus, or should he also satisfy a CTO who comes to his
 desk asking him to do something else urgently? Is Jeff allowed to tell the CTO "to get lost"

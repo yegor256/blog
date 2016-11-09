@@ -77,38 +77,23 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Kyiv 2016"/>
-**Practical Example of AOP with AspectJ**<br/>
-**Qulice, a Java Quality Police**<br/>
-[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/)<br/>
-Kyiv, Ukraine<br/>
-14-15 October 2016
-
-<div class="talk-event"/>
-<img src="/images/2016/secr.png" class="future-talk" alt="SECR 2016"/>
-**Why professional programmers hate Agile?**<br/>
-[SECR 2016](http://2016.secr.ru/)<br/>
-Moscow, Russia<br/>
-28-29 October 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
 **Built-in Fake Objects**<br/>
 **ORM is an Offensive Anti-Pattern**<br/>
 [Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
 Malmö, Sweden<br/>
-7-11 November 2016
+9-10 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/xpdays.svg" class="future-talk" alt="XP Days Ukraine 2016"/>
 **XDSD: How Extreme Is Your Team?**<br/>
 [XP Days Ukraine](http://xpdays.com.ua/)<br/>
 Kiev, Ukraine<br/>
-11-12 November 2016
+12 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/devopspro.png" class="future-talk" alt="DevOpsPro Moscow 2016"/>
-**Keep Your Servers In GitHub**<br/>
+**Practical Example of a One-Click Release**<br/>
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/)<br/>
 Moscow, Russia<br/>
 15 November 2016
@@ -119,7 +104,19 @@ Moscow, Russia<br/>
 **Keep Your Servers In GitHub**<br/>
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
 Tallinn, Estonia<br/>
-16 November 2016
+16-17 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
+[BuildStuff 2016](http://www.buildstuff.lt/)<br/>
+Vilnius, Lithuania<br/>
+17-18 November 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
+[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
+Kiev, Ukraine<br/>
+21-22 November 2016
 
 <div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
@@ -129,19 +126,22 @@ Riga, Latvia<br/>
 1 December 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/live360-2016.png" class="future-talk" alt="AppDevTrends 2016"/>
-**Meeting-Free Software Development in Distributed Teams**<br>
-**Microservices as Chat Bots Are the Future**<br>
-**Continuous Integration May Have Negative Effects**<br>
-[AppDevTrends 2016](https://appdevtrends.com/ECG/live360events/Events/Orlando-2016/Information/AppDevTrends.aspx)<br/>
-Orlando, Florida<br/>
-7-8 December 2016
-
-<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
 29-31 March 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
+[JBreak 2017](http://2017.jbreak.ru/)<br/>
+Novosibirsk, Russia<br/>
+4 April 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
+[JPoint 2017](http://jpoint.ru/en/)<br/>
+Moscow, Russia<br/>
+7-8 April 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
@@ -152,12 +152,29 @@ Kiev, Ukraine<br/>
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences,
-which I attented recently, as a speaker. They rate us speakers,
+which I attended recently, as a speaker. They rate us speakers,
 why shouldn't we rate them, right? The best rate is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
+<img src="https://scontent-ams3-1.xx.fbcdn.net/t31.0-8/14753345_10210826978380462_1967682863010822796_o.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Practical Example of AOP with Aspect (in Russian);
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+14-15 October 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
+[video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
+[photos](https://www.facebook.com/yegor256/posts/10210826984460614).
+The venue was great, the size average (about 500 ppl), organizers were
+very friendly and motivated. I liked the event. A few things definitely
+need to be improved: food and the amount of tracks. There too many tracks,
+I guess, for the amount of people attended. Would be better to lower the
+amount of speakers and focus the audience on best of them. And spend
+the available money on better food.
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/A-9FjaOIsw8/0.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
@@ -251,7 +268,7 @@ Dnipro, Ukraine;
 [video](https://www.youtube.com/watch?v=APCUGQlkO3U).
 There were about 400 people, 2-3 tracks and a terrible venue. Seriously,
 the place was a total disaster, even though it's a newly built conference
-center. The sound, the location of rooms, the after-talk areas &mdash; everything
+center. The sound, the location of rooms, the after-talk areas&mdash;everything
 was uncomfortable. Also, the content was not really well selected. They invited
 a few star speakers just because of their names, which usually is a mistake.
 The after-party was good though. It seemed that organizers tried to do this event
@@ -430,8 +447,7 @@ An Immutable Object-Oriented Web Framework;
 Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431).
-There were about 250 people. The location was not good at all &mdash;
-it was a cinema. Also, the audience was so serious or so shy that it
+There were about 250 people. The location was not good at all&mdash;it was a cinema. Also, the audience was so serious or so shy that it
 was rather difficult to present. Not just for me. Also, I got an impression
 that speakers were invited just because of their names, not the content they
 deliver. Aside from that, the impression was positive.
@@ -467,8 +483,7 @@ Moscow, Russia;
 It was one of the best conferences I've attended so far. A very well organized,
 carefully planned, in a perfect and rather expensive location. Besides that,
 my speech was screened beforehand. I even had to make it over Skype and some
-corrections were received. What I would suggest to invite new speakers &mdash;
-it seems that there are almost the same faces every year.
+corrections were received. What I would suggest to invite new speakers&mdash;it seems that there are almost the same faces every year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -480,8 +495,7 @@ Sophia, Bulgaria;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
 [video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
 It was a huge event with, I guess, over 1500 attendees. Even on my presentation
-there were over 150 people in the room. The location, the food, the logistics &mdash;
-everything was good. The only negative part is a total disfocus of the
+there were over 150 people in the room. The location, the food, the logistics&mdash;everything was good. The only negative part is a total disfocus of the
 content. Speakers were talking just about everything. I didn't even understand
 why my presentation was accepted there :)
 
@@ -540,7 +554,7 @@ Olomouc, Czech Republic;
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
 [photos](https://www.facebook.com/yegor256/posts/10209204748545730),
 [video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
-There were over 250 people and just two main tracks &mdash; good setup.
+There were over 250 people and just two main tracks&mdash;good setup.
 A comfortable location, careful organization, good food, expenses
 paid. The only problem was the content. Most presentations
 were rather boring and not well prepared. Aside from that, I liked it.
@@ -574,7 +588,7 @@ It's a very small conference, with barely ten (!) people in the room. The
 talks were separated in six rooms, with no specific focus on subjects. Moreover,
 I don't think they did any prepareation of speakers or even selection of them.
 Clearly, the event was there only to make money. The only thing I enjoyed
-was the city, one of my favorites, &mdash; Seattle. Aside from that, it was
+was the city, one of my favorites,&mdash;Seattle. Aside from that, it was
 a time wasting event for me.
 
 <div class="talk-event"/>
@@ -606,9 +620,9 @@ San Francisco, USA;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-are-the-new-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
-This was a shame for the entire industry &mdash; money making event with
+This was a shame for the entire industry&mdash;money making event with
 zero attention to quality. Just random speakers, random attendees, random
-subjects &mdash; just anything that will help them make money on selling
+subjects&mdash;just anything that will help them make money on selling
 tickets.
 
 <div class="talk-event"/>
@@ -659,7 +673,7 @@ Warsaw, Poland;
 The event was rather big, over 300 people in the room. However, the audience
 was rather passive and presentations were mostly from sponsors. The event was there
 mostly to make money, which is always a downside. The location was rather
-bad &mdash; an old Soviet-time hotel.
+bad&mdash;an old Soviet-time hotel.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>

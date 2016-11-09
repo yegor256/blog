@@ -65,10 +65,10 @@ interface](http://martinfowler.com/bliki/FluentInterface.html) is the most
 compact and expressive way to perform multiple imperative calls. To my
 knowledge, none of the existing libraries enable this type of fluency.
 
-## Testable and Extendable
+## Testable and Extensible
 
 I'm a big fan of interfaces, mostly because they make your designs both cleaner
-and highly extendable at the same time. In [jcabi-http](http://http.jcabi.com/),
+and highly extensible at the same time. In [jcabi-http](http://http.jcabi.com/),
 there are five interfaces extended by 20 classes.
 
 [`Request`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Request.html)
@@ -79,7 +79,7 @@ and
 [`RequestBody`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestBody.html)
 exposed by it.
 
-Use of interfaces makes the library highly extendable. For example, we have
+Use of interfaces makes the library highly extensible. For example, we have
 [`JdkRequest`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html)
 and
 [`ApacheRequest`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html),

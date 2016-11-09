@@ -7,5 +7,5 @@ tar xf cmake-3.5.1.tar.gz
 cd cmake-3.5.1
 ./configure
 make
-sudo make install
+make install
 cd ..; rm -rf cmake-3.5.1

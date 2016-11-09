@@ -1,4 +1,22 @@
 #!/usr/bin/env ruby
+# Copyright (c) 2014-2016 Yegor Bugayenko
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the 'Software'), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so. The Software doesn't include files with .md extension.
+# That files you are not allowed to copy, distribute, modify, publish, or sell.
+#
+# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 STDOUT.sync = true
 
 require 'trollop'
@@ -13,12 +31,15 @@ Send newsletter to all blog subscribers
 
 Usage: send.rb [options]
   EOS
+  opt :sender, 'Sender', :type=>String, :default=>'Yegor Bugayenko <yegor@teamed.io>'
+  opt :domain, 'Sending domain', :type=>String, :default=>'yegor256.com'
   opt :host, 'SMTP host/server', :type=>String, :default=>'email-smtp.us-east-1.amazonaws.com'
   opt :port, 'SMTP port', :default=>587
   opt :user, 'SMTP user name', :type=>String, :default=>'AKIAIPMIS45U6UG2TZCQ'
   opt :password, 'SMTP password', :type=>String, :required=>true
   opt :letter, 'Newsletter name, e.g. "2014/june"', :type=>String, :required=>true
   opt :subject, 'Email subject', :type=>String, :required=>true
+  opt :skip, 'List of emails to skip, absolute file path', :type=>String, :default=>'/code/home/leads/skip.txt'
   opt :file, 'List of emails, absolute file path', :type=>String, :default=>'/code/home/subscribers.txt'
   opt :dry, 'Dry run (always email to test@yegor256.com)'
   opt :from, 'Start from this email', :type=>String
@@ -39,7 +60,7 @@ Mail.defaults do
   }
 end
 
-skip = File.readlines('/code/home/leads/skip.txt').map(&:strip)
+skip = File.readlines(opts[:skip]).map(&:strip)
 
 if opts[:dry]
   emails = ['Yegor Bugayenko,test@yegor256.com']
@@ -86,10 +107,10 @@ emails.each do |line|
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
   print "  sending to #{address}..."
   mail = Mail.new do
-    from 'Yegor Bugayenko <yegor@teamed.io>'
+    from opts[:sender]
     to address
-    subject 'yegor256.com: ' + opts[:subject]
-    message_id "<#{UUIDTools::UUID.random_create}@yegor256.com>"
+    subject "#{opts[:domain]}: #{opts[:subject]}"
+    message_id "<#{UUIDTools::UUID.random_create}@#{opts[:domain]}>"
     text_part do
       content_type 'text/plain; charset=UTF-8'
       body markdown

@@ -129,7 +129,7 @@ the CTO and the CTO should control the offshore team. Very often,
 business owners try to become software savvy and control the software
 team directly, learning their software jargon, principles of DevOps,
 and even Java syntax (I've seen that). This is a route to failure.
-Be smart &mdash; you do the business development, the CTO reports to you,
+Be smart&mdash;you do the business development, the CTO reports to you,
 and the software team reports to the CTO.
 
 **Define Rewards and Punishments**.

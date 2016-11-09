@@ -54,8 +54,7 @@ team members before making a final decision. So I call a meeting? No!
 ## A Good Architect
 
 I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don't
-actually talk to him about it. I value and respect his time &mdash;
-there's no need to bother him with this organizational noise, so I just create
+actually talk to him about it. I value and respect his time&mdash;there's no need to bother him with this organizational noise, so I just create
 a ticket and assign it to Jeff. When he has time, he creates a draft
 and returns a pull request. I review it and make some comments before he updates
 the branch, and finally
@@ -97,8 +96,7 @@ in the form of a text document.
 Now I have a draft and I'm taking the next step. I ask
 Monica to take a look at it and suggest changes. Again, it's another
 hour and I've got back a pull request with changes, corrections,
-new assumptions, new risks, and new concerns. I'm not talking to Monica &mdash;
-there is no need for that. She has all the information she needs
+new assumptions, new risks, and new concerns. I'm not talking to Monica&mdash;there is no need for that. She has all the information she needs
 to work with the DB schema. She is a good engineer, and I trust
 her ability to formulate her opinion in a written format.
 
@@ -180,7 +178,7 @@ I'm talking about meetings that are intended to collect or distribute informatio
 discuss or propose something, or find a solution in a _technical_ domain.
 The only _valid purpose_ of meetings is to read **body language** of the people
 you are dealing with. Politicians, businessmen, poker players,
-shrinks, physicians, etc. &mdash; they need meetings because they must
+shrinks, physicians, etc.&mdash;they need meetings because they must
 read our bodies, not just our thoughts.
 
 Do we really care about Monica's body while we're designing a DB schema?
@@ -221,12 +219,12 @@ same time, and in the same room. This argument makes sense, but I'll address tha
 
 I think it's obvious. For the first few minutes of the meeting, you're concentrated;
 then you start checking your Twitter feed and doodling. Everybody is doing
-the same &mdash; not because we're lazy but because there is _no demand_
+the same&mdash;not because we're lazy but because there is _no demand_
 for our full focus at the meeting.
 
 While Monica is working with the document, making comments and suggestions, she is
 [fully concentrated]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
-on the result &mdash; mostly because there is nobody
+on the result&mdash;mostly because there is nobody
 else to
 [help]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 her. She has to deliver that pull request, and I'm waiting for her.

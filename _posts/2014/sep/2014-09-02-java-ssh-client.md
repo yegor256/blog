@@ -19,7 +19,7 @@ categories: jcg
 ---
 
 An execution of a shell command via SSH can be done in
-Java, in just a few lines, using [jcabi-ssh](http://ssh.jcabi.com):
+Java, in just a few lines, using [`jcabi-ssh`](http://ssh.jcabi.com):
 
 {% highlight java %}
 String hello = new Shell.Plain(
@@ -30,8 +30,8 @@ String hello = new Shell.Plain(
 ).exec("echo 'Hello, world!'");
 {% endhighlight %}
 
-[jcabi-ssh](http://ssh.jcabi.com) is
-a convenient wrapper of [JSch](http://www.jcraft.com/jsch/),
+[`jcabi-ssh`](http://ssh.jcabi.com) is
+a convenient wrapper of [`JSch`](http://www.jcraft.com/jsch/),
 a well-known pure Java implementation of SSH2.
 
 <!--more-->
@@ -91,7 +91,7 @@ Shell ssh = new Shell.Safe(
 
 `Shell.Verbose` decorates an instance of `Shell` and copies
 `stdout` and `stderr` to the slf4j logging facility (using
-[jcabi-log](http://log.jcabi.com)). Of course, you can combine
+[`jcabi-log`](http://log.jcabi.com)). Of course, you can combine
 decorators, for example:
 
 {% highlight xml %}

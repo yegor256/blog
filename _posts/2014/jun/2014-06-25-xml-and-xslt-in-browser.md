@@ -38,7 +38,7 @@ any formatting inside XML.
 The latest versions of Chrome, Safari, Firefox and IE all support
 this mechanism. When a browser retrieves an XML document from a server,
 and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
-with it &mdash; the browser transforms XML into HTML on-fly.
+with it&mdash;the browser transforms XML into HTML on-fly.
 
 <!--more-->
 
@@ -50,7 +50,7 @@ that makes this mechanism possible. In the next post, I'll explain
 how ReXSL works. For now, though, let's focus on the idea of delivering
 bare data in XML and formatting it with an XSL stylesheet.
 
-Open [http://www.stateful.co](http://www.stateful.co) &mdash; it is
+Open [http://www.stateful.co](http://www.stateful.co)&mdash;it is
 a collection of stateful web primitives, explained in the
 [Atomic Counters at Stateful.co]({% pst 2014/may/2014-05-18-cloud-autoincrement-counters %}) article.
 
@@ -147,8 +147,7 @@ Now, why is this approach better than all that widely use Java templating engine
 Well, I see a number of reasons. But, the most important are:
 
   1. **Web UI and API are same pages**.
-    There is no need to develop separate pages for RESTful API &mdash;
-    Web user interface, being accessed by a computer, is an API.
+    There is no need to develop separate pages for RESTful API&mdash;Web user interface, being accessed by a computer, is an API.
     In my experience, this leads to massive avoidance of code duplication.
 
   2. **XSL is testable by itself without a server**.
@@ -164,17 +163,14 @@ Well, I see a number of reasons. But, the most important are:
     Writing XSL (after you get used to its syntax and programming concepts)
     is a pleasure in itself. You're not injecting instructions into
     a HTML document (like in JSP and all others). Instead, you are
-    programming transformation of data into presentation &mdash;
-    a different mindset and much better feeling.
+    programming transformation of data into presentation&mdash;a different mindset and much better feeling.
 
   4. **XML output is perfectly testable**.
     A controller in MVC that generates an XML document with all data
     required for the XSL stylesheet can easily be tested in a single unit
     test using simple XPath expressions. Testing of a controller that injects
-    data into a templating engine is a much more complex operation
-    &mdash; even impossible sometimes.
-    I'm also writing in PHP and Ruby. They have exactly the same problems
-    &mdash; even though their templating engines are much more powerful
+    data into a templating engine is a much more complex operation&mdash;even impossible sometimes.
+    I'm also writing in PHP and Ruby. They have exactly the same problems&mdash;even though their templating engines are much more powerful
     due to the interpretation nature of the languages.
 
 ## Is It Fully Supported?
@@ -188,7 +184,7 @@ done by Julian Reschke. Besides that, XSLT 2.0 is
 There is a workaround, though. We can understand which browser
 is making a request (via its [`User-Agent`](http://en.wikipedia.org/wiki/User_agent) HTTP header)
 and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
-we will deliver XML and for all others &mdash; HTML.
+we will deliver XML and for all others&mdash;HTML.
 
 This is exactly how [ReXSL framework](https://github.com/yegor256/rexsl) works.
 Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer

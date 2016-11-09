@@ -62,7 +62,8 @@ It will be a single 20,000-line `.java` file. And you'll say that "you didn't
 have time to create classes," right? What would we say about such a product and the
 author of it? Right, we'd say he or she is just **stupid**. And it has nothing
 to do with time or budget. Such a programmer just doesn't know how to use
-object-oriented programming tools, like encapsulation, inheritance, polymorphism,
+object-oriented programming tools, like encapsulation,
+[inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}), polymorphism,
 interfaces, method overloading, etc. It's not about time or budget; it's about
 skills and discipline.
 

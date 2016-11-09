@@ -111,7 +111,7 @@ you must know all of them.
 {% badge /images/2015/04/book-estimation.jpg 96 http://amzn.to/2bNiZws %}
 [**Software Estimation: Demystifying the Black Art**](http://amzn.to/2bNiZws)
 by Steve McConnell.
-This one's an interesting read about software engineering and its most tricky part &mdash; estimations.
+This one's an interesting read about software engineering and its most tricky part&mdash;estimations.
 At the least, read it to be aware of the problem and possible solutions.
 
 {% badge /images/2015/04/book-use-cases.jpg 96 http://amzn.to/2c5n0eK %}
@@ -136,7 +136,7 @@ by Jon Loeliger and Matthew McCullough.
 This title serves as a practical guide for Git, a version control system. Read it from
 cover to cover and you will save many hours of your time in the future.
 Git is a de-facto standard in version control, and every programmer must
-know its fundamental principles &mdash; not from a cheat sheet but from an original source.
+know its fundamental principles&mdash;not from a cheat sheet but from an original source.
 
 {% badge /images/2015/04/book-javascript.jpg 96 http://amzn.to/2cgyfQj %}
 [**JavaScript: The Definitive Guide: Activate Your Web Pages**](http://amzn.to/2cgyfQj)

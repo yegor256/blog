@@ -63,7 +63,7 @@ undertaken to create a unique product, service, or result", according to
 A project is something that starts and ends. The key objective of a project
 is to **end**, while an organization's objective is to **survive**. See the
 difference? A new mobile app, a conference, a new release, a round of
-investments &mdash; these are examples of projects. They start, and they end. We
+investments&mdash;these are examples of projects. They start, and they end. We
 don't want any of them to live forever; we want them to finish as soon as
 possible, and obviously with a positive outcome.
 

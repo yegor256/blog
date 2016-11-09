@@ -28,7 +28,7 @@ The URL is different, the server-side is definitely different, but the
 nature of the data is exactly the same. The only thing that changes is
 a representation layer.
 
-In the first case, we get JSON; in the second &mdash; HTML.
+In the first case, we get JSON; in the second&mdash;HTML.
 
 How about combining them? How about using the same URL and the same
 server-side processing mechanism for both of them? How about shifting the whole rendering task
@@ -105,7 +105,7 @@ also use `OPTIONS` and `HEAD`), but it will work.
 
 ## What Do We Gain?
 
-OK, here is the question &mdash; why do we need this? What's wrong with
+OK, here is the question&mdash;why do we need this? What's wrong with
 the way most people work now? Why can't we make a web site separate from the API?
 What benefits do we get if we combine them?
 

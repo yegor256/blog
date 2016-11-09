@@ -39,7 +39,7 @@ same exact rules apply to both males and females.
 **Use Your Voice**.
 This, of course, is your best instrument of
 [punishment](https://en.wikipedia.org/wiki/Punishment). Make sure he is scared
-of you. He must know who he works for &mdash; you, his boss. The rule
+of you. He must know who he works for&mdash;you, his boss. The rule
 of thumb is that the one with the strongest voice is the boss. Thus, you
 must be heard, you must **rule** with your voice, and he must physically
 feel your presence in the room. Even if it's just a Skype call,
@@ -118,21 +118,21 @@ obey your orders and don't argue with you. They are your core team. They
 support you as a leader, and they help you rise to power. Others must
 sit closer to the door, and their monitors must be seen by everybody.
 As with all other techniques, [conceal](https://en.wikipedia.org/wiki/Psychological_manipulation)
-your intentions &mdash; you
+your intentions&mdash;you
 locate people in the office due to their job descriptions in order to help
 them communicate effectively. Everybody will understand what's really going on,
 but you must look like a
 [laissez-faire leader](https://en.wikipedia.org/wiki/Leadership_style#Laissez-faire).
 
 **Easy Tasks Are Rewards**.
-You decide who does what, and you distribute tasks and projects &mdash; that's your
+You decide who does what, and you distribute tasks and projects&mdash;that's your
 instrument of power. Easy-to-do tasks are how you reward those who are loyal
 and supportive. They complete such tasks, hardly expending any effort. Complex
 and risky projects, on the other hand, are assigned to the under-performing employee. He will most likely
-fail, and there won't be anyone to blame &mdash; it's just a project, like
+fail, and there won't be anyone to blame&mdash;it's just a project, like
 all others. Boring, ambiguous, unfocused, unnecessary, under-funded, and routine
 tasks all go to the employee who deserves punishment. Of course,
-you must look unbiased &mdash; be very polite and supportive, acting as if you're
+you must look unbiased&mdash;be very polite and supportive, acting as if you're
 a good friend!
 
 {% quote Leaving the office at 5 p.m. is a privilege; only the best employees can afford it %}

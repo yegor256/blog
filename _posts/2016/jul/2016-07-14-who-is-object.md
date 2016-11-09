@@ -31,29 +31,24 @@ I'd like to introduce a better one.
 What is an object? I've done a little research, and this is what I've found:
 
   * "Objects may contain data, in the form of fields, often known as attributes;
-    and code, in the form of procedures, often known as methods"
-    &mdash; [Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming) at the time of writing.
+    and code, in the form of procedures, often known as methods"&mdash;[Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming) at the time of writing.
 
-  * "An object stores its state in fields and exposes its behavior through methods"
-    &mdash; [What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html) by Oracle.
+  * "An object stores its state in fields and exposes its behavior through methods"&mdash;[What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html) by Oracle.
 
-  * "Each object looks quite a bit like a little computer &mdash;
-    it has a state, and it has operations that you can ask it to perform"
-    &mdash; [Thinking in Java](http://amzn.to/1PBmQpm), 4th Ed., Bruce Eckel, p. 16.
+  * "Each object looks quite a bit like a little computer&mdash;it has a state, and it has operations that you can ask it to perform"&mdash;[Thinking in Java](http://amzn.to/1PBmQpm), 4th Ed., Bruce Eckel, p. 16.
 
   * "A class is a collection of data fields that hold values
-    and methods that operate on those values"
-    &mdash; [Java in a Nutshell](http://amzn.to/28PEqSi), 6th Ed., Evans and Flanagan, p. 98.
+    and methods that operate on those values"&mdash;[Java in a Nutshell](http://amzn.to/28PEqSi), 6th Ed., Evans and Flanagan, p. 98.
 
-  * "An object is some memory that holds a value of some type"
-    &mdash; [The C++ Programming Language](http://amzn.to/1XyGCtk), 4th Ed., Bjarne Stroustrup, p. 40.
+  * "An object is some memory that holds a value of some type"&mdash;[The C++ Programming Language](http://amzn.to/1XyGCtk), 4th Ed., Bjarne Stroustrup, p. 40.
 
-  * "An object consists of some private memory and a set of operations"
-    &mdash; [Smalltalk-80](http://amzn.to/1UhYinp), Goldberg and Robson, p. 6.
+  * "An object consists of some private memory and a set of operations"&mdash;[Smalltalk-80](http://amzn.to/1UhYinp), Goldberg and Robson, p. 6.
 
 What is common throughout all these definitions is the word "contains" (or "holds",
 "consists", "has", etc.). They all think that an object is a _box with data_.
 And this perspective is exactly what I'm strongly against.
+
+{% quote They all think that an object is a box with data -- this perspective is exactly what I'm strongly against %}
 
 If we look at how C++ or Java are implemented, such a definition of an
 object will sound _technically_ correct. Indeed, for each object, Java Virtual
@@ -109,7 +104,7 @@ actually occupied by "data".
 {% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
 
 Now, let's get back to our new pseudo language. Let's imagine it treats
-objects very differently than C++ &mdash; it doesn't keep object attributes
+objects very differently than C++&mdash;it doesn't keep object attributes
 in memory _at all_. It doesn't have pointers, and it doesn't know anything about
 x86 architecture. It just _knows_ somehow what attributes belong to an object.
 
@@ -129,9 +124,9 @@ and try to access that data as much as possible.
 {% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
 
 If we would think of an object as a **representative** of data instead of
-a container of them, we would not want to get ahold of data as soon as
+a container of them, we would not want to get a hold of data as soon as
 possible. We would understand that the data are far away and we can't
-just easily touch them. We should communicate with an object &mdash; and how
+just easily touch them. We should communicate with an object&mdash;and how
 exactly it communicates with the data is not our concern.
 
 I hope that in the near future, the market will introduce new object-oriented

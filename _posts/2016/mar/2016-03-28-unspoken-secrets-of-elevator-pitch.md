@@ -28,7 +28,7 @@ principles and become a expert. Here they are, the principles.
 {% picture /images/2016/03/huevos-de-oro.jpg 0 Huevos de oro (1993) by Bigas Luna %}
 
 **Look**.
-Rule number 1: You must look right, like Mark Zuckerberg &mdash; the
+Rule number 1: You must look right, like Mark Zuckerberg&mdash;the
 same gray T-shirt every day with the same smile. The way you look must demonstrate
 that you're part of the community. You're one of us!
 These three things will help: a beard,
@@ -66,7 +66,7 @@ game-changing disruption.
 You are super excited about this fantastic opportunity! You're extremely
 motivated to do this project with these absolutely great people! You're
 passionate about the idea and fully committed to implementing it! You love the
-team, the partners, the investors, and the customers &mdash; they're all
+team, the partners, the investors, and the customers&mdash;they're all
 very nice people you're happy to work with! You're very enthusiastic about
 everything! You love everyone! ... But be careful; don't overact or you may
 end up in a mental hospital.
@@ -109,7 +109,7 @@ can call them co-founders. Put their pictures and names on your website
 and always say "we" instead of "I". Investors, in general, love to have
 a few phone numbers they can call when they realize their money is gone
 and there is nothing left. Also, it's more fun to invest into a group
-of people &mdash; investors look more serious in that case.
+of people&mdash;investors look more serious in that case.
 
 {% quote Never admit any mistakes or risks, simply ignore them, stay positive %}
 
@@ -127,7 +127,7 @@ You have to mention that the market is absolutely huge, at least a hundred
 billion dollars. They won't be able to check anyway. Actually, nobody
 can check that, so don't worry. But don't give a round number; that would be a mistake! It
 should sound more like $73.5 billion. That's very convincing and will give
-them the confidence you need &mdash; the market is huge and you're not
+them the confidence you need&mdash;the market is huge and you're not
 just saying it; you actually did some math. How can they not invest
 in such a huge and promising market?
 
@@ -137,14 +137,13 @@ a bit deaf. Be loud. That will prove that you're absolutely
 confident in what you're saying, today and always. The investor
 will be sure you are capable of attracting <del>mates</del> customers and
 other investors, if for no other reason than because you're not afraid of being that ugly loud
-in public. You're 100% extrovert &mdash; you must demonstrate it
+in public. You're 100% extrovert&mdash;you must demonstrate it
 shamelessly.
 
 {% quote You must be ready to shine their shoes, with a big smile on your face %}
 
 **Beg**.
-You may mistakenly think that this is a balanced transaction &mdash;
-they give money and you give part of your equity. You may expect that
+You may mistakenly think that this is a balanced transaction&mdash;they give money and you give part of your equity. You may expect that
 both parties are equally interested in this. But don't make that mistake.
 You're begging, and they are giving. Out of courtesy. That's a win position
 for you. By having money, they expect to be on top of others. This is
@@ -165,5 +164,4 @@ Did I miss anything?
 
 Rehearse your pitch in front of the mirror in the bathroom three times
 every morning. I guarantee that in fewer than two weeks, you will sound
-like a proper SV startup founder. Well, a co-founder &mdash;
-don't forget that. Good luck; you will need a lot of it!
+like a proper SV startup founder. Well, a co-founder&mdash;don't forget that. Good luck; you will need a lot of it!

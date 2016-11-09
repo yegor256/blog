@@ -19,9 +19,14 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-<!--
-{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20160907T180000Z%2f20160907T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04&text=Printers%20Instead%20of%20Getters%20(webinar)&location=YouTube&details=Webinar%20%2318%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_Q0cNykXB04 %}
--->
+{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20161207T180000Z%2f20161207T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M&text=Who%20Is%20a%20Project%20Manager%20(webinar)&location=YouTube&details=Webinar%20%2319%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M %}
+
+{% youtube zaKTNK8g2-M video-left %}
+December 7, 2016:
+**Who Is a Project Manager?**
+We will discuss what is the role of a project manager in a software project and how it
+is different from other roles. The discussion will be based on this article:
+[Who Is a Project Manager?]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 
 {% youtube _Q0cNykXB04 video-left %}
 September 7, 2016:
@@ -42,10 +47,10 @@ This article were mentioned:
 {% youtube Xk9tIqwca3k video-left %}
 July 7, 2016:
 **Smart Classes and Functionality-Poor Interfaces**
-We discussed why java.io.InputStream design was wrong,
+We discussed why `java.io.InputStream` design was wrong,
 what Smart-Classes are for and why interfaces must be functionality poor.
 The discussion was based on this blog post:
-[Why InputStream Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
+[Why `InputStream` Design Is Wrong]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 
 {% youtube YBQoTZ-1X-o video-left %}
 June 1, 2016:
@@ -87,7 +92,7 @@ We used this blog post as a guidance:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
 
 {% youtube ibT5oKToMoQ video-left %}
-[Feburary 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
+[February 3, 2016](https://plus.google.com/events/csfss5361pqvfkm8ot47d699cu0)
 **Daily Stand-Up Meetings Are Evil**
 We talked about famous daily meetings and why they were
 actually a bad idea in a properly managed

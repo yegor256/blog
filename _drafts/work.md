@@ -21,7 +21,7 @@ almost every day in blog comments: why do we need all that OOP
 principles, if our code works just fine without them? What is the
 point of introducing a new way, which is supposed to be better,
 if the existing traditional semi-object semi-procedural not-so-perfect
-approach just works? And now I'm thinking &mdash; what's the point?
+approach just works? And now I'm thinking&mdash;what's the point?
 Let's think together.
 
 <!--more-->

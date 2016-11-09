@@ -26,8 +26,7 @@ highlight the ideas and quotes that I found to be the most interesting.
 <!--more-->
 
 There were three editions of the book. The first one was published
-in 1979, when I was just too young to appreciate it. The second one was published in 2004 &mdash;
-I read it first in 2007. The third one was published just two years ago, in 2012. I bought
+in 1979, when I was just too young to appreciate it. The second one was published in 2004&mdash;I read it first in 2007. The third one was published just two years ago, in 2012. I bought
 this edition also, and read it like it was my first time. This book is still one of the top
 books in the software testing domain, despite its age and some content that is rather out-dated.
 
@@ -49,14 +48,14 @@ Chapter 5 discusses basic principles and strategies of unit testing.
 However, the discussion is not abstract enough for a short 25-page summary,
 and is not specific enough for a detailed discussion. Again, twenty
 years ago this information may have had some value. Nowadays,
-["Growing Object-Oriented Softare, Guided by Tests"](http://amzn.to/1PBpoDT)
+["Growing Object-Oriented Software, Guided by Tests"](http://amzn.to/1PBpoDT)
 by Steven Freeman and Nat Pryce
 is a much better source for this subject.
 
 There are also articles about usability testing,
 [debugging]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}),
 web application testing, and mobile testing. Here we have the same
-issue &mdash; they are not abstract enough and they are much too
+issue&mdash;they are not abstract enough and they are much too
 outdated to be relevant to the current issues in software testing.
 I would recommend readers to briefly skim those subjects for background
 information, but to not read too much into it.

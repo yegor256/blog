@@ -126,7 +126,7 @@ This is how you configure it in `pom.xml`
 There are two plugins configured above. Let's take a look
 at what each does.
 
-1. [**build-helper-maven-plugin**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
+1. [**`build-helper-maven-plugin`**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
 is reserving a temporary random TCP port, which will be used by MySQL server.
 We don't want to start a server on its default 3306 port,
 because there could be another server already running there.
@@ -136,20 +136,20 @@ you're developing locally, but in
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 environment this can be a problem. That's why we're reserving a TCP port first.
 
-2. [**maven-dependency-plugin**](http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
+2. [**`maven-dependency-plugin`**](http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
 is downloading a MySQL distribution in a zip archive (rather big file, over 300Mb for Linux), and unpacks it.
 This archive contains exactly the same files as you would use
 for a traditional MySQL installation. When the archive is unpacked,
 it is ready to start serving SQL requests as a normal MySQL server.
 
-3. [**jcabi-mysql-maven-plugin**](http://mysql.jcabi.com)
+3. [**`jcabi-mysql-maven-plugin`**](http://mysql.jcabi.com)
 starts a server, binding it to a TCP port reserved randomly.
 The main responsibility of my Maven plugin is to make sure
 that MySQL server starts correctly on every platform (Mac OS, Linux, Windows)
 and stops when it's not needed any more. All the rest is done by
 the MySQL distribution itself.
 
-4. [**maven-failsafe-plugin**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
+4. [**`maven-failsafe-plugin`**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
 is running unit tests on `integration-test` phase. Its main difference from
 maven-surefire-plugin is that it doesn't fail a build when some tests fail.
 Instead, it saves all failures into supplementary files in `target`

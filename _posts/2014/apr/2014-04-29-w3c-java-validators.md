@@ -28,8 +28,7 @@ in the API section. Until recently, these wrappers have
 always been part of [ReXSL](https://github.com/yegor256/rexsl) library.
 
 A few days ago, though, I took the wrappers out of ReXSL
-and published them as a standalone library &mdash;
-[jcabi-w3c](http://w3c.jcabi.com). Consequently, now seems
+and published them as a standalone library&mdash;[jcabi-w3c](http://w3c.jcabi.com). Consequently, now seems
 to be a good time to write a few words about them.
 
 Below is an example that demonstrates how you can validate

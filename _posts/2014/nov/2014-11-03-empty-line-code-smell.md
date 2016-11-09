@@ -59,8 +59,7 @@ final class TextFile {
 
 This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
-method `grep` smell? Because it does two things instead of one &mdash;
-it loads and it greps.
+method `grep` smell? Because it does two things instead of one&mdash;it loads and it greps.
 
 If we make a rule, to avoid empty lines in method bodies, the method
 will have to be refactored in order to preserve the "separation of concerns"

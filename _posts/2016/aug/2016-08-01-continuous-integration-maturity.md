@@ -22,7 +22,7 @@ them and presented my findings at [DevOpsDays](http://slcdevopsdays.org/cr3ativc
 in Salt Lake City a few weeks ago
 (watch the [video](https://www.youtube.com/watch?v=3dJP_LtUGgg)).
 Now it's time to write them down and ask
-you &mdash; Which level are you at? Post your answer below.
+you&mdash;Which level are you at? Post your answer below.
 
 <!--more-->
 
@@ -42,7 +42,7 @@ get an error or a successful build.
 
 3. **Git**.
 At this level, you keep your source code in Git. You can keep it in some
-other source control system, but that would be strange &mdash; Git is the
+other source control system, but that would be strange&mdash;Git is the
 _status quo_ at the moment. You should be able to get a new computer,
 with nothing in it, check out the source code from a Git repository, and
 run a full build.

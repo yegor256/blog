@@ -69,7 +69,7 @@ that would catch the typo at the deployment phase.
 
 The real problem is the lack of test code coverage in this particular
 section of the code. By removing the typo, we're not helping the project
-in any way. Moreover, we're doing it a disservice &mdash; we're _concealing_
+in any way. Moreover, we're doing it a disservice&mdash;we're _concealing_
 the real problem.
 
 Thus, no matter how small or cosmetic the issue is, its bug fix
@@ -110,7 +110,7 @@ than good intentions.
 
 ## It Solves More Than One Issue
 
-Always fix one issue at a time &mdash; simple as that. No exceptions. When
+Always fix one issue at a time&mdash;simple as that. No exceptions. When
 a bug fix patch contains code changes that fix multiple issues, it is
 very difficult to understand which issue is tested, which one is reproduced,
 and how they relate to each other. Combining several bug fixes into a single

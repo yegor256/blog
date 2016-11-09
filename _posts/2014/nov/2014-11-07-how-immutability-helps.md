@@ -27,16 +27,15 @@ In a few recent posts, including
 ["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), and
 ["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}),
-I universally labelled all mutable objects with "setters" (object methods starting with `set`) evil.
+I universally labeled all mutable objects with "setters" (object methods starting with `set`) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
-this wasn't convincing enough for many of you &mdash; I received a few requests
+this wasn't convincing enough for many of you&mdash;I received a few requests
 asking to provide more specific and practical examples.
 
 Thus, in order to illustrate my strongly negative attitude to "mutability via setters", I took
 an existing [commons-email](http://commons.apache.org/proper/commons-email/) Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
-I released my library as part of the [jcabi](http://www.jcabi.com) family
-&mdash; [jcabi-email](http://email.jcabi.com). Let's see what benefits
+I released my library as part of the [jcabi](http://www.jcabi.com) family&mdash;[jcabi-email](http://email.jcabi.com). Let's see what benefits
 we get from a "pure" object-oriented and immutable approach, without getters.
 
 <!--more-->
@@ -77,11 +76,12 @@ postman.send(envelope);
 I think the difference is obvious.
 
 In the first example, you're
-dealing with a monster class that can do everything for you, including
+dealing with a monster
+[class]({% pst 2016/sep/2016-09-20-oop-without-classes %}) that can do everything for you, including
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
 [`Email`](http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&view=co)
-class from commons-email is really a huge class &mdash; 33 private properties, over
+class from commons-email is really a huge class&mdash;33 private properties, over
 a hundred methods, about two thousands lines of code. First, you configure
 the class through a bunch of setters and then you ask it to `send()`
 an email for you.
@@ -98,24 +98,23 @@ the envelope for us.
 ## What's Wrong With a Mutable Email?
 
 From a user perspective, there is almost nothing wrong. `Email` is a powerful
-class with multiple controls &mdash; just hit the right one and the job
+class with multiple controls&mdash;just hit the right one and the job
 gets done. However, from a developer perspective `Email` class is a nightmare. Mostly
 because the class is very big and difficult to maintain.
 
 *Because the class is so big*,
 every time you want to extend it by introducing a new method, you're facing the fact that you're
-making the class even worse &mdash; longer, less cohesive, less readable,
+making the class even worse&mdash;longer, less cohesive, less readable,
 less maintainable, etc. You have a feeling that you're digging into something
 dirty and that there is no hope to make it cleaner, ever. I'm sure, you're
-familiar with this feeling &mdash; most legacy applications look that way.
+familiar with this feeling&mdash;most legacy applications look that way.
 They have huge multi-line "classes" (in reality, COBOL programs written in Java)
 that were inherited from a few generations of programmers before you. When
 you start, you're full of energy, but after a few minutes of scrolling
-such a "class" you say &mdash; "screw it, it's almost Saturday".
+such a "class" you say&mdash;"screw it, it's almost Saturday".
 
 *Because the class is so big*,
-there is no data hiding or encapsulation any more
-&mdash; 33 variables are accessible by over 100 methods. What is hidden?
+there is no data hiding or encapsulation any more&mdash;33 variables are accessible by over 100 methods. What is hidden?
 This `Email.java` file in reality is a big, procedural 2000-line script, called
 a "class" by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
@@ -162,8 +161,7 @@ When an [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.
 
-Let me put it this way &mdash;
-**mutable classes tend to grow in size and lose cohesiveness**.
+Let me put it this way&mdash;**mutable classes tend to grow in size and lose cohesiveness**.
 
 If commons-email authors made this `Email` class immutable
 in the beginning, they wouldn't have been able to add so many methods into it
@@ -298,7 +296,7 @@ the constructor will have too many arguments, and nobody will be able to use it.
 So, what do I do?
 
 Well, I started to think: how can we break the concept of an "envelope"
-into smaller concepts &mdash; and this what I invented. Like a real-life envelope,
+into smaller concepts&mdash;and this what I invented. Like a real-life envelope,
 my `MIME` object will have stamps. Stamps will be responsible
 for configuring an object `Message` (again,
 [`Stamp`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java) is immutable,
@@ -336,14 +334,13 @@ class Envelope.MIME implements Envelope {
 
 Now, I will create stamps for the subject, for `To:`, for `From:`,
 for `CC:`, for `BCC:`, etc. As many stamps as I like. The class `MIME`
-will stay the same &mdash; small, cohesive, readable, solid, etc.
+will stay the same&mdash;small, cohesive, readable, solid, etc.
 
 What is important here is why I made the decision to refactor while
 the class was relatively small. Indeed, I started to worry about these
 stamp classes when my `MIME` class was just 25 lines in size.
 
-That is exactly the point of this article &mdash;
-**immutability forces you to design small and cohesive objects**.
+That is exactly the point of this article&mdash;**immutability forces you to design small and cohesive objects**.
 
 Without immutability, I would have gone the same direction as commons-email. My
 `MIME` class would grow in size and sooner or later would become
@@ -352,7 +349,7 @@ was the necessity to refactor it, because I wasn't able to pass all
 arguments through a constructor.
 
 Without immutability, I wouldn't have had that motivator and I would
-have done what Apache developers did with commons-email &mdash; bloat the
+have done what Apache developers did with commons-email&mdash;bloat the
 class and turn it into an unmaintainable monster.
 
 That's [jcabi-email](http://email.jcabi.com). I hope

@@ -29,7 +29,7 @@ I hear very different numbers, from $5 to $500 per hour. I never
 say no, but usually come up with my own hourly rate estimate. This article
 explains what factors I do and don't take into account. These are
 my personal criteria; don't take them as an industry standard.
-I do find them objective and logical, though &mdash; so let me explain.
+I do find them objective and logical, though&mdash;so let me explain.
 
 <!--more-->
 
@@ -64,8 +64,7 @@ you work from nine till five, for food, **without passion**. Actually,
 nobody manifests it that way. Instead, I often hear something like
 "my company doesn't pay me for open source contribution and
 at home I want to spend time with my family". In modern software
-development, most of the code we're working with is open source &mdash;
-libraries, frameworks, tools, instruments, etc. Almost everything you're using
+development, most of the code we're working with is open source&mdash;libraries, frameworks, tools, instruments, etc. Almost everything you're using
 in your commercial projects is open source. By paying your salary your
 employer does already invest in open source products,
 because you're an active user of them. The problem is that *you* are not
@@ -95,8 +94,7 @@ GitHub account, I get excited and ready to offer a higher rate.
 It is a common practice to pay higher rates to those who live in more
 expensive countries. When I'm getting resumes from San Francisco programmers,
 their rates are $70+ per hour. The same skills and experience cost
-$15-20 in Karachi. The reason here is the cost of living &mdash;
-it is much higher in the US than in Pakistan.
+$15-20 in Karachi. The reason here is the cost of living&mdash;it is much higher in the US than in Pakistan.
 
 {% quote We prefer to work with people whose expenses are lower %}
 
@@ -105,7 +103,7 @@ expensive car, we have to pay you a higher salary? The same with the
 place to stay. You've chosen the country that
 you live in. You're using all the benefits of a well-developed country
 and you're paying for them. It's your choice. You decided to spend more money
-for the quality of your life &mdash; what does it have to do with me?
+for the quality of your life&mdash;what does it have to do with me?
 
 Want to pay $30 for a lunch? Become a better engineer. Until then,
 buy a hot dog for a few bucks. Just saying that
@@ -143,8 +141,7 @@ by asking their colleagues sitting next to them in the
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). They say
 they simply don't need StackOverflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
-That's good for the team and bad for you. Why? You don't have a very important skill &mdash;
-finding an answer in a public Internet. In our projects we
+That's good for the team and bad for you. Why? You don't have a very important skill&mdash;finding an answer in a public Internet. In our projects we
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any horizontal [communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between programmers, and you won't be
@@ -162,8 +159,8 @@ It is a very important skill.
 
 {% badge /images/2014/11/rate-years-of-experience.png 350 %}
 
-"I've written Java for 10 years!" &mdash; so what? This number means only
-one thing to me &mdash; you managed to survive in some office for ten years.
+"I've written Java for 10 years!"&mdash;so what? This number means only
+one thing to me&mdash;you managed to survive in some office for ten years.
 Or maybe in a few offices. You managed to convince someone that he
 has to pay you for ten years of sitting in his building. Does it mean
 that you were writing something useful?
@@ -172,10 +169,10 @@ Does it mean that your code was perfect? It doesn't mean any of that.
 Years of experience is a false indicator. It actually may play against you,
 in combination with other indicators mentioned above. If your CV says that
 you just started to program two years ago and your GitHub
-and StackOverflow accounts are empty &mdash; there is still a chance
+and StackOverflow accounts are empty&mdash;there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-year seasoned architect" with zero
-open source contribution &mdash; this means that you're either lying about
+open source contribution&mdash;this means that you're either lying about
 that ten years or you're
 [absolutely useless]({% pst 2015/sep/2015-09-29-mayonnaise %})
 as an architect.
@@ -187,8 +184,7 @@ Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 {% badge /images/2014/11/rate-certifications.png 350 %}
 
-Oracle, Zend, Amazon, IBM, MySQL, etc. &mdash;
-I'm talking about these certifications. In order to get them you should
+Oracle, Zend, Amazon, IBM, MySQL, etc.&mdash;I'm talking about these certifications. In order to get them you should
 pass an exam. Not an easy one and not online. It is a real exam taken in
 a certification center, where you're sitting in front of a computer for a few
 hours, without any books or Internet access, answering questions. Rather
@@ -208,9 +204,8 @@ will need to be solved.
 
 Second, you **don't invest** in your profile. This most probably means that you don't
 want to change companies and prefer to find a peaceful office, where you
-can stay forever. I remember I once said to a friend of mine &mdash;
-"you will greatly improve your CV if you pass this certification". He
-answered with a smile &mdash; "I hope I won't need a CV any more, I like
+can stay forever. I remember I once said to a friend of mine&mdash;"you will greatly improve your CV if you pass this certification". He
+answered with a smile&mdash;"I hope I won't need a CV any more, I like
 this company". This attitude is
 [very beneficial]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 for the company you're
@@ -221,17 +216,13 @@ In my experience, the best
 [team players]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
 are those who work for themselves.
 Healthy **individualism** is a key success factor. If your primary objective
-is to earn for yourself (money, reputation, skills, or knowledge) &mdash;
-you will be very effective in our projects. Certifications in your
+is to earn for yourself (money, reputation, skills, or knowledge)&mdash;you will be very effective in our projects. Certifications in your
 profile is an indicator of that healthy individualism we're looking for.
 
 ## Skills Variety
 
 The more technologies or programming languages you know, the less you cost.
-I'm not saying that it's not possible to be an expert in many things at the same time
-&mdash; that's entirely possible. But let me give you a pragmatic reason why you shouldn't &mdash;
-competition. There are thousands of "Java7 programmers" on the market &mdash;
-we can easily choose whoever we need. But there are not so many
+I'm not saying that it's not possible to be an expert in many things at the same time&mdash;that's entirely possible. But let me give you a pragmatic reason why you shouldn't&mdash;competition. There are thousands of "Java7 programmers" on the market&mdash;we can easily choose whoever we need. But there are not so many
 "Hadoop programmers" or "XSLT designers".
 
 {% quote We end up paying more to narrow-skilled specialists because we have no choice %}
@@ -266,7 +257,7 @@ a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
 Besides that, if you write and present regularly, you have a very important
-skill/talent &mdash; you can present your ideas in a "digestible" way.
+skill/talent&mdash;you can present your ideas in a "digestible" way.
 In our projects we
 [discourage informal communications]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 and use ticketing systems instead. In those tickets you will have
@@ -274,7 +265,7 @@ to explain your ideas, questions or concerns so that everybody can
 understand you. Without enough presentation skills, you won't survive
 in your projects.
 
-BTW, some software developers even file patents in their names &mdash; why
+BTW, some software developers even file patents in their names&mdash;why
 can't you do this? Or maybe even publish a book. Why not?
 
 ## Previous Employment
@@ -284,12 +275,13 @@ model is [so different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from anything you can see anywhere else that it doesn't really matter
 how many times you were fired before and how senior of a
 position you have/had with your full-time employer. Even if your title
-is "CTO of Twitter" &mdash; it doesn't mean anything to me.
+is "CTO of Twitter"&mdash;it doesn't mean anything to me.
 
 My experience tells me that the bigger the company and the higher the position
-in it &mdash; the further away you stay from the source code and from
+in it&mdash;the further away you stay from the source code and from
 real technical decisions. VPs and CTOs spend most of their time on
-management meetings and internal politics.
+management meetings and internal
+[politics]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 I'm much more interested in **what** you've done over the last few years than
 in **where** you've done it and what they called you while you were

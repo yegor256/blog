@@ -16,8 +16,7 @@ keywords:
   - rates of outsourcing
 ---
 
-Let me put it this way: $15 per hour for a senior Java developer &mdash;
-is that cheap or expensive? It's cheap, right? Right. What would you
+Let me put it this way: $15 per hour for a senior Java developer&mdash;is that cheap or expensive? It's cheap, right? Right. What would you
 say if I told you this cheap Java developer hardly writes two
 primitive lines of code per day? You're paying $600 every week but
 rarely getting anything back. How cheap is this Java guy now?
@@ -48,7 +47,7 @@ He seemed to understand the advantages of our approach, compared to the
 [hourly salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 being paid by <del>almost</del> everybody else in the market.
 
-Still, the question remained &mdash; how much?
+Still, the question remained&mdash;how much?
 
 What could I do? I had to give him an answer.
 

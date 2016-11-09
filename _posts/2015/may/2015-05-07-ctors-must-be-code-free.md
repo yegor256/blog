@@ -24,7 +24,7 @@ to do some computations inside a constructor and then encapsulate
 results. That way, when the results are required by object methods, we'll have them
 ready. Sounds like a good approach? No, it's not. It's a bad idea
 for one reason: It prevents composition of objects and makes them
-un-extendable.
+un-extensible.
 
 <!--more-->
 
@@ -166,8 +166,7 @@ public final class CachedName implements Name {
 }
 {% endhighlight %}
 
-But please don't make `CachedName` mutable and lazily loaded &mdash;
-it's an anti-pattern, which I've discussed before in
+But please don't make `CachedName` mutable and lazily loaded&mdash;it's an anti-pattern, which I've discussed before in
 [Objects Should Be Immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
 
 This is how our code will look now:
@@ -190,4 +189,4 @@ decide whether I need caching or not. This is what object composition is all abo
 
 Let me reiterate that the only allowed statement inside
 a constructor is an assignment. If you need to put something else there,
-start thinking about refactoring &mdash; your class definitely needs a redesign.
+start thinking about refactoring&mdash;your class definitely needs a redesign.

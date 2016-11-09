@@ -42,8 +42,7 @@ Hopefully you find them helpful.
 
 There are a few different fears a serious code reviewer should renounce.
 The first and most popular is the fear of offending an author of the code.
-"_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore my mistakes_" &mdash;
-This is the kind of attitude this fear produces. Needless to say, it's
+"_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore my mistakes_"&mdash;This is the kind of attitude this fear produces. Needless to say, it's
 counterproductive and degrades code quality and team morale. Here is my advice:
 be direct, honest, and straight-forward. If you don't like the code, you don't like it.
 You shouldn't care how your opinion will be taken by the author of the code.
@@ -122,7 +121,7 @@ over a piece of code:
  * "_You're right; I take my comments back!_" This may happen, and it should
  happen very often. You should be ready to admit your mistakes. You didn't like
  the code, but its author explained to you its benefits, and you accepted
- the logic &mdash; not because you want to stop fighting with him but because
+ the logic&mdash;not because you want to stop fighting with him but because
  you really understood the logic and accepted it. Willingness to say, "I'm wrong",
  is the first sign of a mature and serious developer.
 
@@ -163,7 +162,7 @@ Be ready to show links, articles, books, reports, examples, etc. Just
 "_I know this because I've been writing Java for 15 years_" is not enough. Moreover,
 this type of argument only makes you less convincing.
 
-If you don't have enough convincing proof, think again &mdash; maybe you are wrong.
+If you don't have enough convincing proof, think again&mdash;maybe you are wrong.
 
 Also, remember that it's your job to prove that the code you're reviewing
 is bad. The author of the code should not prove anything. His code is great

@@ -48,7 +48,7 @@ The result of `load()` method will be cached in memory for five minutes.
 
 ## How It Works?
 
-This post about [AOP, AspectJ and method loging]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
+This post about [AOP, AspectJ and method logging]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
 explains how "aspect weaving" works (I highly recommend that you read it first).
 
 Here I'll explain how caching works.

@@ -227,14 +227,14 @@ to understand what it does and try to use it myself.
 
 I'm talking here about documentation for users, not for developers. In
 general, I'm against documentation inside the software. Here I totally agree with
-the [Agile Manifesto](http://agilemanifesto.org/) &mdash; working software is
+the [Agile Manifesto](http://agilemanifesto.org/)&mdash;working software is
 much more important than comprehensive documentation. But that's not referring to
 "external" documentation, which is supposed to be read by users, not developers.
 
 So end-user interaction with the software must be clearly documented.
 
 If your software is a library, then its end users are software developers
-who are going to use it &mdash; not contribute to it but simply use it as a
+who are going to use it&mdash;not contribute to it but simply use it as a
 "black box."
 
 <hr/>

@@ -28,5 +28,5 @@ The best example to discuss is a database. Say, you need to store
 data in tables and you want to query them using some declarative
 language, like SQL.
 
-The first option &mdash; I give you a **server**, with MySQL installed.
+The first option&mdash;I give you a **server**, with MySQL installed.
 I give you

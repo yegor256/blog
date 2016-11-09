@@ -3,6 +3,19 @@ layout: default
 ---
 
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+    <meta itemprop="url" content="{{ site.url }}/images/yegor-bugayenko-192x192.png"/>
+    <meta itemprop="height" content="192"/>
+    <meta itemprop="width" content="192"/>
+  </div>
+  <div itemscope="" itemprop="publisher" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yegor256.com"/>
+    <div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <meta itemprop="url" content="{{ site.url }}/images/yegor-bugayenko-192x192.png"/>
+      <meta itemprop="height" content="192"/>
+      <meta itemprop="width" content="192"/>
+    </div>
+  </div>
 
   <div class="wrapper">
     <header>
@@ -11,9 +24,9 @@ layout: default
           style="width:125px;height:125px;" alt="QR code"/>
       </p>
       <p class="printable">
-        <code>{{ site.url }}{{ page.url }}</code>
+        <code itemprop="url">{{ site.url }}{{ page.url }}</code>
       </p>
-      <h1 itemprop="name">{{ page.title }}</h1>
+      <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
       {% if page.book %}
         {{ page.book | book }}
       {% endif %}
@@ -24,13 +37,15 @@ layout: default
           </time>
         </li>
         {% if page.place %}
-          <li class="desktop-only">{{ page.place }}</li>
+          <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
         {% endif %}
         {{ page | modified }}
-        <li class="printable">Yegor Bugayenko</li>
+        <li class="printable" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+          <span itemprop="name">Yegor Bugayenko</span>
+        </li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread">comments</a>
+          <a href="{{ site.url }}{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
         </li>
       </ul>
       {% if page.translated %}
@@ -46,7 +61,7 @@ layout: default
       {% endif %}
       <p class="unprintable">{{ page | tags }}</p>
       <div class="buttons notranslate desktop-only">
-        <nav class="share" role="navigation">
+        <nav class="share">
           <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
             title="Share on Facebook" class="button" rel="nofollow">
             <span class="count count-facebook">0</span>
@@ -94,11 +109,6 @@ layout: default
       {{ page.youtube | youtube }}
     {% endif %}
     <related-posts />
-    <div class="teamed-banner">
-      <a href="http://www.teamed.io" rel="nofollow">
-        <img src="/images/teamed-banner.jpg" alt="teamed banner"/>
-      </a>
-    </div>
   </div>
 
   <div class="disqus" role="complementary">
@@ -129,8 +139,10 @@ layout: default
     <footer class="footer">
       <p>
         &copy;
-        <span itemprop="author">Yegor Bugayenko</span>,
-        2014-2016
+        <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
+          <span itemprop="name">Yegor Bugayenko</span>
+        </span>,
+        2014-<span itemprop="copyrightYear">2016</span>
       </p>
     </footer>
   </div>

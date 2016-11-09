@@ -37,7 +37,7 @@ but faced a number of issues:
 {% badge http://img.jcabi.com/logo-square.svg 64 %}
 
 Keeping in mind all those drawbacks, I created my
-own library &mdash; [jcabi-github](http://github.jcabi.com).
+own library&mdash;[jcabi-github](http://github.jcabi.com).
 Let's look at its most important advantages.
 
 <!--more-->
@@ -89,10 +89,10 @@ public class FooTest {
 This is much more convenient and compact than traditional
 mocking via [Mockito](https://code.google.com/p/mockito/) or a similar framework.
 
-## Extendable
+## Extensible
 
 It is based on JSR-353 and uses `jcabi-http` for HTTP request
-processing. This combination makes it highly customizable and extendable,
+processing. This combination makes it highly customizable and extensible,
 when some GitHub feature is not covered by the library (and there are many of them).
 
 For example, you want to get the value of `hireable` attribute of a `User`.

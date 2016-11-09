@@ -24,7 +24,7 @@ be younger if we find it sooner. The younger the damage, the easier it is
 to fix. There are many modern and high-quality
 [hosted continuous integration services]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}),
 but only one of them (to my knowledge) supports Windows as a build
-platform &mdash; [appveyor.com](http://www.appveyor.com). My experience
+platform&mdash;[appveyor.com](http://www.appveyor.com). My experience
 tells me that it's a good practice to continuously integrate on
 different platforms at the same time, especially when developing an
 open source library. That's why, in [teamed.io](http://www.teamed.io)
