@@ -77,14 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/oredev-logo.jpg" class="future-talk" alt="Oredev 2016"/>
-**Built-in Fake Objects**<br/>
-**ORM is an Offensive Anti-Pattern**<br/>
-[Oredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko)<br/>
-Malmö, Sweden<br/>
-9-10 November 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/xpdays.svg" class="future-talk" alt="XP Days Ukraine 2016"/>
 **XDSD: How Extreme Is Your Team?**<br/>
 [XP Days Ukraine](http://xpdays.com.ua/)<br/>
@@ -158,6 +150,34 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
+<img src="http://img.youtube.com/vi/03PXmPc7Q3g/0.jpg" class="past-talk" alt="Øredev 2016"/>
+ORM is an Offensive Anti-Pattern;
+[Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
+Malmö, Sweden;
+9-10 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/orm-is-an-offensive-antipattern),
+[video](https://www.youtube.com/watch?v=03PXmPc7Q3g),
+[photos](https://www.facebook.com/yegor256/posts/10211092077247768).
+The event was <del>pretty</del> too big. I would say about 800 attendees, about 60 speakers, 6 tracks, three
+full days plus workshops. For that size of a conference organizers would need
+to do way more "social" work for speakers and everybody. I didn't make almost
+any connections there and most people I've met had the same problem. It's a typical
+issue in big conferences&mdash;you simply get lost. At this one they had all
+chances to make a great event, but... Aside from that, the venue was great,
+food was good, travel and accomodation was perfect. I will definitely try
+to attend next year.
+
+<div class="talk-event"/>
+<img src="http://img.youtube.com/vi/EDKbYVEInMU/0.jpg" class="past-talk" alt="Øredev 2016"/>
+Built-in Fake Objects;
+[Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
+Malmö, Sweden;
+9-10 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/builtin-fake-objects),
+[video](https://www.youtube.com/watch?v=EDKbYVEInMU).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
