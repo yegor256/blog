@@ -71,4 +71,4 @@ Founded 8-Jan-2015.
 <!-- thindeck -->
 <!-- wring -->
 <!-- h12 -->
-<!-- takes, tacit, qulice,  -->
+<!-- tacit, qulice,  -->
