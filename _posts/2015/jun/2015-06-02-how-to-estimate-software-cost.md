@@ -24,7 +24,7 @@ and prospects that are planning to become our clients and
 [outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) the software
 development to us. My best answer is "_I don't know; it depends._"
 Sounds like a strange response for someone who claims
-he knows what he is doing, isn't it? "Here is the 20-page
+he knows what he is doing, doesn't it? "Here is the 20-page
 [specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 that explains all the features of the product; how come you can't estimate
 the cost?" I can, but I won't. Here is why.
