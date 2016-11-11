@@ -25,7 +25,7 @@ all project expenses and you will write software. We will be co-founders.
 
 {% badge http://doc.rultor.com/images/logo.svg 70 http://www.rultor.com %}
 
-[Rultor.com](http://www.jare.io) is a chat bot that helps GitHub projects automate
+[rultor.com](http://www.jare.io) is a chat bot that helps GitHub projects automate
 their basic DevOps procedures, including merging, deploying, and
 releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
@@ -34,7 +34,7 @@ Founded 5-Jun-13.
 
 {% badge http://www.jare.io/images/logo.svg 70 http://www.jare.io %}
 
-[Jare.io](http://www.jare.io) is an instant CDN for small projects. It
+[jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
 configuring it. More about it here:
 [Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
@@ -57,6 +57,15 @@ words, it provides persistent simple things accessible over the network.
 Still not clear? Check this out:
 [Synchronization Between Nodes]({% pst 2014/dec/2014-12-04-synchronization-between-nodes %}).
 Founded 7-May-2014.
+
+{% badge http://www.takes.org/logo.png 70 http://www.takes.org %}
+
+[takes.org](http://www.takes.org) is an open source Java web framework,
+which adheres to almost all principles of object-oriented programming
+explained in my [Elegant Objects](/elegant-objects.html) book.
+More about it in this article:
+[Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %}).
+Founded 8-Jan-2015.
 
 <!-- netbout -->
 <!-- thindeck -->
