@@ -93,12 +93,14 @@ Tallinn, Estonia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
+**How Do You Know When Your Product is Ready to be Shipped?**<br/>
 [BuildStuff 2016](http://www.buildstuff.lt/)<br/>
 Vilnius, Lithuania<br/>
 17-18 November 2016
 
 <div class="talk-event"/>
 <img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
+**Who is a Software Architect?**<br/>
 [BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
 Kiev, Ukraine<br/>
 21-22 November 2016
