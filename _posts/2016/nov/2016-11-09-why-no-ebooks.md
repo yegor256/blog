@@ -2,7 +2,7 @@
 layout: post
 title: "Why I Don't Publish E-Books"
 date: 2016-11-09
-tags: oop java
+tags: mood
 place: Copenhagen, Sweden
 description: |
   There are a number of reasons why I don't publish
