@@ -77,13 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/devopspro.png" class="future-talk" alt="DevOpsPro Moscow 2016"/>
-**Practical Example of a One-Click Release**<br/>
-[DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/)<br/>
-Moscow, Russia<br/>
-15 November 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
 **Seven Deadly Sins of a Software Project**<br>
 **Keep Your Servers In GitHub**<br/>
@@ -145,6 +138,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="http://img.youtube.com/vi/_61CuGhyv-o/0.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
+Practical Example of a One-Click Release;
+[DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
+Moscow, Russia;
+15 November 2016.
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/tCr9dtGdi2c/0.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
