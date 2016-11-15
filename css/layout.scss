@@ -91,6 +91,7 @@ del {
   @extend %unprintable;
   @extend %desktop-only;
   font-size: .4 * $em;
+  margin-left: -.2 * $em;
   margin-right: -.3 * $em;
   vertical-align: top;
 }
