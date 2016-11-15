@@ -91,8 +91,8 @@ del {
   @extend %unprintable;
   @extend %desktop-only;
   font-size: .4 * $em;
-  vertical-align: top;
   margin-right: -.2 * $em;
+  vertical-align: top;
 }
 
 .teamed-banner {
