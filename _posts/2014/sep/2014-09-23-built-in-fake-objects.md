@@ -18,6 +18,7 @@ categories: jcg
 book: elegant-objects 2.8
 youtube:
   - l6MpCBzwDbg
+  - EDKbYVEInMU
 ---
 
 While mock objects are perfect instruments for unit testing,
