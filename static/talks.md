@@ -77,14 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/topconf.png" class="future-talk" alt="TopConf Tallinn 2016"/>
-**Seven Deadly Sins of a Software Project**<br>
-**Keep Your Servers In GitHub**<br/>
-[TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/)<br/>
-Tallinn, Estonia<br/>
-16-17 November 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
 **How Do You Know When Your Product is Ready to be Shipped?**<br/>
 [BuildStuff 2016](http://www.buildstuff.lt/)<br/>
@@ -140,18 +132,36 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<img src="/images/2016/topconf.png" class="past-talk" alt="TopConf Tallinn 2016"/>
+Seven Sins of a Software Project;
+[TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
+Tallinn, Estonia;
+17 November 2016;
+[video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
+
+<div class="talk-event"/>
+<img src="/images/2016/topconf.png" class="past-talk" alt="TopConf Tallinn 2016"/>
+Keep Your Servers In GitHub;
+[TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
+Tallinn, Estonia;
+16 November 2016.
+
+<div class="talk-event"/>
 <img src="http://img.youtube.com/vi/_61CuGhyv-o/0.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 Practical Example of a One-Click Release;
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
 Moscow, Russia;
-15 November 2016.
+15 November 2016;
+[video](https://www.youtube.com/watch?v=_61CuGhyv-o).
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/tCr9dtGdi2c/0.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
 [XP Days Ukraine](http://xpdays.com.ua/);
 Kiev, Ukraine;
-12 November 2016.
+12 November 2016;
+[video](https://www.youtube.com/watch?v=tCr9dtGdi2c),
+[photos](https://www.facebook.com/yegor256/posts/10211115240946846).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
