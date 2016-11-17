@@ -132,7 +132,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/topconf.png" class="past-talk" alt="TopConf Tallinn 2016"/>
+<img src="http://img.youtube.com/vi/hkXLOxZ6Fs4/0.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 Seven Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
@@ -140,7 +140,7 @@ Tallinn, Estonia;
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
 
 <div class="talk-event"/>
-<img src="/images/2016/topconf.png" class="past-talk" alt="TopConf Tallinn 2016"/>
+<img src="http://img.youtube.com/vi/mq4bsnKK0qs/0.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 Keep Your Servers In GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;

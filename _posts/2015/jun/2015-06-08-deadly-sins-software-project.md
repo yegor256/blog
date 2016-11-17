@@ -20,6 +20,7 @@ translated:
   - Japanese: http://tbd.kaitoy.xyz/2016/06/25/seven-deadly-sins-of-a-software-project/
 youtube:
   - ZtWmlKi3ivc
+  - hkXLOxZ6Fs4
 ---
 
 _Maintainability_ is the [most valuable virtue]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
