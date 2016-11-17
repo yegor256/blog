@@ -144,7 +144,8 @@ Tallinn, Estonia;
 Keep Your Servers In GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
-16 November 2016.
+16 November 2016;
+[video](https://www.youtube.com/watch?v=mq4bsnKK0qs).
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/_61CuGhyv-o/0.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
