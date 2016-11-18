@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-18T10:42:19+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-18T12:37:14+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
+as a speaker and a listener; with a focus on Java and project management.
+I will try to update this list regularly, mostly not to forget where
+I have to submit my talks. Hopefully the list will help you too,
+to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;table&gt;
+&lt;colgroup&gt;
+  &lt;col class=&quot;x-name&quot;/&gt;
+  &lt;col class=&quot;x-place&quot;/&gt;
+  &lt;col class=&quot;x-when&quot;/&gt;
+  &lt;col class=&quot;x-cfp&quot;/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+  &lt;td&gt;Name&lt;/td&gt;
+  &lt;td&gt;Place&lt;/td&gt;
+  &lt;td&gt;Time&lt;/td&gt;
+  &lt;td&gt;Submit in...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td colspan=&quot;4&quot; class=&quot;x-hr&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://jeeconf.com/&quot;&gt;JEEConf&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Kiev&lt;/td&gt;
+  &lt;td&gt;May&lt;/td&gt;
+  &lt;td&gt;Jan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://geekout.ee/&quot;&gt;GeekOUT&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Tallinn&lt;/td&gt;
+  &lt;td&gt;Jun&lt;/td&gt;
+  &lt;td&gt;Feb&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.oracle.com/javaone/index.html&quot;&gt;JavaOne&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;San Francisco&lt;/td&gt;
+  &lt;td&gt;Sep&lt;/td&gt;
+  &lt;td&gt;Mar&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.devoxx.com/&quot;&gt;Devoxx&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Antwerp&lt;/td&gt;
+  &lt;td&gt;Nov&lt;/td&gt;
+  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://javazone.no/&quot;&gt;JavaZone&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Oslo&lt;/td&gt;
+  &lt;td&gt;Sep&lt;/td&gt;
+  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.oredev.org/&quot;&gt;Øredev&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Malmö&lt;/td&gt;
+  &lt;td&gt;Nov&lt;/td&gt;
+  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://qconsf.com/&quot;&gt;QCon&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;San Francisco&lt;/td&gt;
+  &lt;td&gt;Nov&lt;/td&gt;
+  &lt;td&gt;May&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.jfokus.se/&quot;&gt;JFokus&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Stockholm&lt;/td&gt;
+  &lt;td&gt;Feb&lt;/td&gt;
+  &lt;td&gt;Jun&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://jpoint.ru/en/&quot;&gt;JPoint&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Moscow&lt;/td&gt;
+  &lt;td&gt;Apr&lt;/td&gt;
+  &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://geecon.org/&quot;&gt;GeeCON&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Krakow&lt;/td&gt;
+  &lt;td&gt;May&lt;/td&gt;
+  &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="conferences" /><summary>This is my list of software conferences that are worth attending,
+as a speaker and a listener; with a focus on Java and project management.
+I will try to update this list regularly, mostly not to forget where
+I have to submit my talks. Hopefully the list will help you too,
+to make the right choice and never miss their CFP deadlines.</summary></entry><entry><title>Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
 I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
 EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
 to summarize them all and explain why dead trees are the only way
@@ -911,68 +982,4 @@ in OOP would help us solve many problems in existing pseudo-object-oriented lang
 Then, suddenly, the question came up: &amp;quot;What problems?&amp;quot;
 I was puzzled. I thought it was obvious that the vast majority of modern software
 written in modern OO languages is unmaintainable and simply a mess.
-So I Googled a bit, and this is what I found (in chronological order).</summary></entry><entry><title>If-Then-Else Is a Code Smell</title><link href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html" rel="alternate" type="text/html" title="If-Then-Else Is a Code Smell" /><published>2016-08-10T00:00:00+00:00</published><updated>2016-08-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/10/if-then-else-code-smell</id><content type="html" xml:base="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html">&lt;p&gt;In most cases (maybe even in all of them), if-then-else can and must
-be replaced by a decorator or simply another object.
-I&amp;#39;ve been planning to write about this for almost a year but only today found
-a real case in my own code that perfectly
-illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Ffargo.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Fargo (1996) by Coen Brothers&#39;/&gt;&lt;figcaption&gt;Fargo (1996) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Take a look at the class
-&lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java&quot;&gt;&lt;code&gt;DyTalk&lt;/code&gt;&lt;/a&gt;
-from
-&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;yegor256/rultor&lt;/a&gt;
-and its method
-&lt;a href=&quot;https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java#L127-L169&quot;&gt;&lt;code&gt;modify()&lt;/code&gt;&lt;/a&gt;.
-In a nutshell, it prevents you from saving any data to the DynamoDB if there were no
-modifications of the XML document. It&amp;#39;s a valid case, and it has to be
-validated, but the way it&amp;#39;s implemented is simply wrong. This is
-how it works (an oversimplified example):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DyTalk&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Talk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// Apply the modification&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// and save the new XML document&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// to the DynamoDB table.&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What&amp;#39;s wrong, you wonder? This if-then-else forking functionality doesn&amp;#39;t really belong
-to this object&amp;mdash;that&amp;#39;s what&amp;#39;s wrong. Modifying the XML document
-and saving it to the database is &lt;em&gt;its functionality&lt;/em&gt;, while
-not saving anything if the modification instructions set is empty is not
-(it&amp;#39;s very similar to &lt;a href=&quot;/2016/01/26/defensive-programming.html&quot;&gt;defensive programming&lt;/a&gt;).
-Instead, there should be a decorator, which would look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;QuickTalk&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Talk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Talk&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Directive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, if and when we need our talk to be more clever in situations where
-the list of directives is empty, we decorate it with &lt;code&gt;QuickTalk&lt;/code&gt;.
-The benefits are obvious: the &lt;code&gt;DyTalk&lt;/code&gt; class is smaller and therefore
-more cohesive.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If it&amp;#39;s possible to convert if-then-else forking to a decorator, it has to be done&lt;/aside&gt;
-
-&lt;p&gt;But the question is bigger than just that. Can we make a rule out of it? Can we say that
-&lt;strong&gt;each and every forking&lt;/strong&gt; is bad and should be moved out of a class? What about
-forking that happens inside a method and can&amp;#39;t be converted to a decorator?&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m suggesting this simple rule: If it&amp;#39;s possible to convert if-then-else forking
-to a decorator, it has to be done. If it&amp;#39;s not done, it&amp;#39;s a code smell.
-Make sense?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>In most cases (maybe even in all of them), if-then-else can and must
-be replaced by a decorator or simply another object.
-I&amp;#39;ve been planning to write about this for almost a year but only today found
-a real case in my own code that perfectly
-illustrates the problem. So it&amp;#39;s time to demonstrate it and explain.</summary></entry></feed>
+So I Googled a bit, and this is what I found (in chronological order).</summary></entry></feed>
