@@ -22,7 +22,7 @@ style: |-
   .x-hr { border-top: 1px solid gray; }
 ---
 
-This is _my_ list of software conferences that are worth attenting,
+This is _my_ list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
