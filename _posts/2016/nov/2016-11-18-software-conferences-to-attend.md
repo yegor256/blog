@@ -16,7 +16,7 @@ keywords:
   - coolest software conferences
 style: |-
   .x-name { width: 8em; }
-  .x-place { width: 6em; }
+  .x-place { width: 8em; }
   .x-when { width: 4em; }
   .x-cfp { width: 4em; }
   .x-hr { border-top: 1px solid gray; }
@@ -43,8 +43,8 @@ to make the right choice and never miss their CFP deadlines.
 <tr>
   <td>Name</td>
   <td>Place</td>
-  <td>Time</td>
-  <td>Submit in...</td>
+  <td>When</td>
+  <td>CFP</td>
 </tr>
 </thead>
 <tbody>
