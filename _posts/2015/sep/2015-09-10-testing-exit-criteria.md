@@ -15,6 +15,8 @@ keywords:
   - entry and exit criteria
   - software testing
   - test planning
+youtube:
+  - wd-SA1HVmLg
 ---
 
 There is a software to be tested. There is a team of testers. There is

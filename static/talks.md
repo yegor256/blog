@@ -125,11 +125,12 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/buildstuff-lithuania.png" class="past-talk" alt="BuildStuff 2016"/>
+<img src="http://img.youtube.com/vi/wd-SA1HVmLg/0.jpg" class="past-talk" alt="BuildStuff 2016"/>
 How Do You Know When Your Product is Ready to be Shipped?;
 [BuildStuff 2016](http://www.buildstuff.lt/);
 Vilnius, Lithuania;
-18 November 2016
+18 November 2016;
+[video](https://www.youtube.com/watch?v=wd-SA1HVmLg).
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/hkXLOxZ6Fs4/0.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
