@@ -22,6 +22,7 @@ youtube:
   - WSgP85kr6eU
   - aER4uwyFbqQ
   - 63tS3HNmhiE
+  - 03PXmPc7Q3g
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})

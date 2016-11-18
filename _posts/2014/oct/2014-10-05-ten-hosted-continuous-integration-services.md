@@ -376,6 +376,8 @@ a full scale mobile app to test it against.
 
 [coverity.com](https://scan.coverity.com): will review it soon and add to the list.
 
+[buddy.works](https://buddy.works/): will review soon.
+
 **Ship.io** is dead (as of 20-Sep-2016).
 
 **ZeroCI.com** is dead (as of 28-Aug-2016).

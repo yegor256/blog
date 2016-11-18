@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Why I Don't Publish E-Books"
-date: 2016-05-15
-tags: oop java
+date: 2016-11-09
+tags: mood
 place: Copenhagen, Sweden
 description: |
   There are a number of reasons why I don't publish
@@ -24,9 +24,11 @@ to go if you want to read my content.
 
 <!--more-->
 
+{% picture /images/2016/11/addams-family.jpg 0 The Addams Family (1991) by Barry Sonnenfeld %}
+
 First of all, there is a simple technical reason:
 
-{% badge /images/2016/11/ctag-lion.jpg 92 http://amzn.to/2fBsTPn %}
+{% badge /images/2016/11/ctan-lion.jpg 92 http://amzn.to/2fBsTPn %}
 
 **I don't know how to format them**.
 I type all my books in [LaTeX](https://www.latex-project.org/).
@@ -64,7 +66,7 @@ book publisher". The email said it was very interested in translating
 local market. To start the process, the email said, the company needed my book in PDF.
 I replied that I was ready to send a printed copy, which was
 definitely enough for a translator to work on. The sender disappeared. I've checked
-its website and found no real evidence of previously published books. It
+its website and found no real evidence of previously published books. I guess it
 was just a scam, an attempt to get a digital copy of the book. Funny, huh?
 
 Thus, let's just agree that a digital book means a free book at the moment

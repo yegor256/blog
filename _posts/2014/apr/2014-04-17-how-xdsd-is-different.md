@@ -15,6 +15,7 @@ keywords:
   - xdsd
 youtube:
   - qRZYJGYdrwk
+  - tCr9dtGdi2c
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}

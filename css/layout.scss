@@ -88,9 +88,12 @@ del {
 }
 
 .foreign:before {
+  @extend %gray;
   @extend %unprintable;
   @extend %desktop-only;
   font-size: .4 * $em;
+  margin-left: -.2 * $em;
+  margin-right: -.2 * $em;
   vertical-align: top;
 }
 

@@ -103,7 +103,8 @@ reviews, either negative or positive, directly to
 [Amazon](http://goo.gl/W2WVMk).
 I'm getting many requests about an **electronic version** of the book.
 I'm not planning to turn this into an e-book, at least until the end
-of 2018. Mostly because I'm greedy. I realize that the moment I publish
+of 2018. Mostly [because]({% pst 2016/nov/2016-11-09-why-no-ebooks %})
+I'm greedy. I realize that the moment I publish
 a Kindle version, it will be available for a free download somewhere.
 Although, some of you are saying that the "dead tree" format is not
 convenient, since it takes too much space, etc. Here is the the offer.
