@@ -77,13 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/buildstuff-lithuania.png" class="future-talk" alt="BuildStuff 2016"/>
-**How Do You Know When Your Product is Ready to be Shipped?**<br/>
-[BuildStuff 2016](http://www.buildstuff.lt/)<br/>
-Vilnius, Lithuania<br/>
-17-18 November 2016
-
-<div class="talk-event"/>
 <img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
 **Who is a Software Architect?**<br/>
 [BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
@@ -130,6 +123,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/buildstuff-lithuania.png" class="past-talk" alt="BuildStuff 2016"/>
+How Do You Know When Your Product is Ready to be Shipped?;
+[BuildStuff 2016](http://www.buildstuff.lt/);
+Vilnius, Lithuania;
+18 November 2016
 
 <div class="talk-event"/>
 <img src="http://img.youtube.com/vi/hkXLOxZ6Fs4/0.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
