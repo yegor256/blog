@@ -20,6 +20,7 @@ style: |-
   .x-when { width: 4em; }
   .x-cfp { width: 4em; }
   .x-hr { border-top: 1px solid gray; }
+noindex: true
 ---
 
 This is _my_ list of software conferences that are worth attending,
