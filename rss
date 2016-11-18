@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-18T12:37:14+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-18T14:02:31+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
@@ -17,8 +17,8 @@ to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
 &lt;tr&gt;
   &lt;td&gt;Name&lt;/td&gt;
   &lt;td&gt;Place&lt;/td&gt;
-  &lt;td&gt;Time&lt;/td&gt;
-  &lt;td&gt;Submit in...&lt;/td&gt;
+  &lt;td&gt;When&lt;/td&gt;
+  &lt;td&gt;CFP&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
