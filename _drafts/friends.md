@@ -5,8 +5,8 @@ date: 2016-11-14
 tags: oop java
 place: Moscow, Russia
 description: |
-  Does encapsulation means no naked data, only objects;
-  the question is how can objects interact without data?
+  Can you have encapsulation with only objects and no naked data?
+  The question boils down to how objects can interact without data.
   They can be friends!
 keywords:
   - encapsulation
@@ -16,16 +16,16 @@ keywords:
   - encapsulation violation
 ---
 
-As discussed before, proper encapsulation means complete absence
+As discussed before, proper encapsulation leads to a complete absence
 of naked data. However, the question remains: How can objects
 interact if they can't exchange data? Eventually we have to expose
-some data, in order to let other objects use them. Right? Yes, true.
+some data in order to let other objects use it, right? Yes, that's true.
 However, I guess I have a solution that keeps encapsulation in place
-and allows objects to interact.
+while allowing objects to interact.
 
 <!--more-->
 
-Say, this is our object:
+Say that this is our object:
 
 {% highlight java %}
 class Temperature {
@@ -37,15 +37,15 @@ class Temperature {
 {% endhighlight %}
 
 It represents a temperature. The only behavior it exposes is printing
-the temperature, in celsius. We don't want to expose `t`, because
-that will lead to the "naked data" problem discussed earlier. We want
-to keep `t` secret. And it's a good desire.
+the temperature in Celsius. We don't want to expose `t`, because
+that will lead to the "naked data" problem we discussed earlier. We want
+to keep `t` secret, and that's a good desire.
 
-Now, we want to have an ability to print temperature in fahrenheit. The most
-obvious approach would be to introduce another method `toFahrenheitString()`
-or add a boolean flag to the object, which will change the behavior
+Now, we want to have the ability to print temperature in Fahrenheit. The most
+obvious approach would be to introduce another method, `toFahrenheitString()`,
+or add a Boolean flag to the object, which will change the behavior
 or method `toString()`, right? Either one of these solutions is better than adding
-a method `getT()`, but they are both not perfect.
+a method `getT()`, but neither one is perfect.
 
 What if we create this decorator:
 
@@ -60,7 +60,7 @@ class TempFahrenheit implements Temperature {
 }
 {% endhighlight %}
 
-Should work just great:
+It should work just great:
 
 {% highlight java %}
 Temperature t = new TempFahrenheit(
@@ -68,13 +68,13 @@ Temperature t = new TempFahrenheit(
 );
 {% endhighlight %}
 
-The only problem is that it won't compile in Java. Because class
+The only problem is that it won't compile in Java, because class
 `TempFahrenheit` is not allowed to access `t` in class `TempCelsius`. If
-we make `t` public, everybody will be able to read it directly and we'll have
-that "naked data" problem&mdash;a severe violation of encapsulation.
+we make `t` public, everybody will be able to read it directly, and we'll have
+that "naked data" problem &mdash; a severe violation of encapsulation.
 
 However, if we allow that access _only_ to one class, everything will be fine.
-Something like that (won't work in Java, just a concept):
+Something like this: (It won't work in Java; it's just a concept.)
 
 {% highlight java %}
 class TempCelsius {
@@ -87,8 +87,8 @@ class TempCelsius {
 {% endhighlight %}
 
 Since this `trust` keyword is placed into the class that allows access,
-we won't have the "naked data" problem&mdash;we always know exactly who
-are that objects that posess the knowledge about `t`. When we change
-something about `t` we know exactly where to update the code.
+we won't have the "naked data" problem &mdash; we will always know exactly which
+objects posess knowledge about `t`. When we change
+something about `t`, we know exactly where to update the code.
 
 What do you think?

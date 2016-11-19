@@ -5,8 +5,8 @@ date: 2016-05-15
 tags: oop java
 place: Kiev, Ukraine
 description: |
-  MVC is a very popular architectural design pattern,
-  which is absolutely against the spirit of object-oriented
+  MVC is a very popular architectural design pattern
+  that goes absolutely against the spirit of object-oriented
   programming.
 keywords:
   - mvc
@@ -18,32 +18,32 @@ keywords:
 
 [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 (MVC) is an architectural pattern we all are well aware of.
-It's a de-facto standard of almost all UI and
+It's a de-facto standard for almost all UI and
 [Web frameworks](https://en.wikipedia.org/wiki/Web_framework). It is convenient
-and easy to use. It is simple and effective. It is a great concept...
-for a procedural programmer. If your software is object-oriented you
+and easy to use. It is simple and effective. It is a great concept ...
+for a procedural programmer. If your software is object-oriented, you
 should dislike MVC as much as I do. Here is why.
 
 <!--more-->
 
-This is how MVC architecture looks like:
+This is how MVC architecture looks:
 
 {% plantuml style="width:75%" %}
 [Controller] -down- [Model]
 [Controller] -down- [View]
 {% endplantuml %}
 
-The Controller is _in charge_, taking care of the data received from the Model
-and injected into the View&mdash;and this exactly is the problem. The data escapes
-the Model and becomes "naked," which is a big problem, as we agreed earlier.
-OOP is all about encapsulation&mdash;data hiding.
+Controller is _in charge_, taking care of the data received from Model
+and injecting it into View &mdash; and this is exactly the problem. The data escapes
+the Model and becomes "naked", which is a big problem, as we agreed earlier.
+OOP is all about encapsulation &mdash; data hiding.
 
 MVC architecture does exactly the opposite by _exposing_ the data and hiding
 behavior. The controller deals with the data directly, making decisions about
-their purpose and semantic, while the objects, which are supposed to know
-everything about the data and hide it, stay [anemic]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
-That is exactly the principle any procedural architecture is built upon: the
-code is in charge of the data. Take this C++ code for example:
+its purpose and properties, while the objects, which are supposed to know
+everything about the data and hide it, remain [anemic]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
+That is exactly the principle any procedural architecture is built upon; the
+code is in charge of the data. Take this C++ code, for example:
 
 {% highlight c %}
 void print_speed() { // controller
@@ -53,12 +53,12 @@ void print_speed() { // controller
 {% endhighlight %}
 
 The function `print_speed()` is the controller. It gets the data `s` from
-the model `load_from_engine()` and renders via the view `printf()`. Only
-the controller knows that the data is in miles-per-hour. The engine
-returns `int` without any semantic. The controller simply assumed that
+the model `load_from_engine()` and renders it via the view `printf()`. Only
+the controller knows that the data is in miles per hour. The engine
+returns `int` without any properties. The controller simply assumed that
 that data is in mph. If we want to create a similar controller somewhere
-else we will have to make a similar assumption again and again. That's what the
-"naked data" problem is about and it leads to serious maintainability issues.
+else, we will have to make a similar assumption again and again. That's what the
+"naked data" problem is about, and it leads to serious maintainability issues.
 
 This is an object-oriented alternative to the code above (pseudo-C++):
 
@@ -74,17 +74,17 @@ printf(
 
 Here, `SpeedFromEngine.speed()`
 returns speed in mph, as an integer; `FormattedSpeed.speed()` returns
-`"%d mph"`; and finally `PrintedSpeed.to_str()` returns the full text of the
+`"%d mph"`; and finally, `PrintedSpeed.to_str()` returns the full text of the
 message. We can call them "model, view, and controller", but in reality they
-are just objects decorating each other. It's still the same entity&mdash;the speed.
-But it gets more and more complex and smarter by being decorated.
+are just objects decorating each other. It's still the same entity &mdash; the speed.
+But it gets more complex and intelligent by being decorated.
 
 We don't tear the concept of speed apart. The speed is the speed, no matter
 who works with it and where it is presented. It just gets new behavior
 from decorators. It grows, but never falls apart.
 
-To summarize, the Controller is a pure _procedural_ component in the MVC trio,
-which turns the Model into a passive data holder and the View into
+To summarize, Controller is a pure _procedural_ component in the MVC trio,
+which turns Model into a passive data holder and View into
 a passive data renderer. The controll<b>er</b>, the hold<b>er</b>,
-the render<b>er</b>...
+the render<b>er</b> ...
 Is it [really OOP]({% pst 2015/mar/2015-03-09-objects-end-with-er %})?
