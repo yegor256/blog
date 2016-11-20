@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-20T19:45:58+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-20T20:26:09+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
@@ -159,19 +159,9 @@ Previous years are here:
 &lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
 &lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;.&lt;/p&gt;
 
-&lt;form class=&quot;unprintable&quot; action=&quot;http://formspree.io/award@yegor256.com&quot; method=&quot;POST&quot;&gt;&lt;fieldset id=&quot;form&quot;&gt;
-  &lt;input type=&quot;hidden&quot; name=&quot;_next&quot; value=&quot;http://www.yegor256.com/submitted.html&quot;/&gt;
-  &lt;input type=&quot;hidden&quot; name=&quot;_subject&quot; value=&quot;new project for the quality award&quot;/&gt;
-  &lt;input type=&quot;hidden&quot; name=&quot;_format&quot; value=&quot;text&quot;/&gt;
-  &lt;label for=&quot;email&quot;&gt;Your email&lt;/label&gt;
-  &lt;input id=&quot;email&quot; class=&quot;field field-text&quot; name=&quot;email&quot; size=&quot;25&quot; maxlength=&quot;255&quot; type=&quot;email&quot; required=&quot;required&quot;/&gt;
-  &lt;label for=&quot;url&quot;&gt;GitHub URL of the project&lt;/label&gt;
-  &lt;input id=&quot;url&quot; class=&quot;field field-text&quot; name=&quot;url&quot; size=&quot;50&quot; maxlength=&quot;255&quot; type=&quot;url&quot; required=&quot;required&quot;/&gt;
-  &lt;label for=&quot;submit&quot;&gt;&amp;nbsp;&lt;/label&gt;
-  &lt;button id=&quot;submit&quot; class=&quot;field&quot;&gt;Submit&lt;/button&gt;
-&lt;/fieldset&gt;&lt;/form&gt;
-
-&lt;p&gt;Registration is open!&lt;/p&gt;
+&lt;p&gt;Registration is open! Fill
+&lt;a href=&quot;https://docs.google.com/forms/d/1QCRWPAyqnuecBSWAexDcVklNhclI4R6ckhNY5CzE9x4&quot;&gt;this form&lt;/a&gt;
+to submit.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -222,9 +212,10 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;These projects submitted so far (in order of submission):&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/SimonKagstrom/kcov&quot;&gt;&lt;code&gt;SimonKagstrom/kcov&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/JnRouvignac/AutoRefactor&quot;&gt;&lt;code&gt;JnRouvignac/AutoRefactor&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/javaslang/javaslang&quot;&gt;&lt;code&gt;javaslang/javaslang&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/SimonKagstrom/kcov&quot;&gt;SimonKagstrom/kcov&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JnRouvignac/AutoRefactor&quot;&gt;JnRouvignac/AutoRefactor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/javaslang/javaslang&quot;&gt;javaslang/javaslang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/HDouss/jeometry&quot;&gt;HDouss/jeometry&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="quality" /><summary>This is the third year of the
 Software Quality Award. The prize
 is still the same&amp;mdash;$4,096.
@@ -233,19 +224,9 @@ Previous years are here:
 2015,
 2016.
 
-
-  
-  
-  
-  Your email
-  
-  GitHub URL of the project
-  
-  &amp;nbsp;
-  Submit
-
-
-Registration is open!</summary></entry><entry><title>Command, Control, and Innovate</title><link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html" rel="alternate" type="text/html" title="Command, Control, and Innovate" /><published>2016-09-27T00:00:00+00:00</published><updated>2016-09-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/27/command-control-innovate</id><content type="html" xml:base="http://www.yegor256.com/2016/09/27/command-control-innovate.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_and_control&quot;&gt;Command and control&lt;/a&gt;
+Registration is open! Fill
+this form
+to submit.</summary></entry><entry><title>Command, Control, and Innovate</title><link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html" rel="alternate" type="text/html" title="Command, Control, and Innovate" /><published>2016-09-27T00:00:00+00:00</published><updated>2016-09-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/27/command-control-innovate</id><content type="html" xml:base="http://www.yegor256.com/2016/09/27/command-control-innovate.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_and_control&quot;&gt;Command and control&lt;/a&gt;
 has worked effectively in military units across the world
 for thousands of years. But apparently we&amp;#39;ve just discovered
 that the best companies are built on different verbs, which
