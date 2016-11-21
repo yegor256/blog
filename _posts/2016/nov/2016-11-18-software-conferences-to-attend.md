@@ -53,6 +53,10 @@ to make the right choice and never miss their CFP deadlines.
   <td>Kiev</td>
   <td>May</td>
   <td>Jan</td></tr>
+<tr><td><a href="https://www.agileee.org/">AgileEE</a></td>
+  <td>Kiev</td>
+  <td>Apr</td>
+  <td>Jan</td></tr>
 <tr><td><a href="https://geekout.ee/">GeekOUT</a></td>
   <td>Tallinn</td>
   <td>Jun</td>
@@ -73,10 +77,6 @@ to make the right choice and never miss their CFP deadlines.
   <td>Malmö</td>
   <td>Nov</td>
   <td>Apr</td></tr>
-<tr><td><a href="https://www.agileee.org/">AgileEE</a></td>
-  <td>Kiev</td>
-  <td>Apr</td>
-  <td>Jan</td></tr>
 <tr><td><a href="https://qconsf.com/">QCon</a></td>
   <td>San Francisco</td>
   <td>Nov</td>
