@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Encapsulation Covers Up Naked Data</title>
+    <link rel="canonical" href="http://www.yegor256.com/2016/11/21/naked-data.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2016/11/21/naked-data.html"
+        },
+        "headline": "Encapsulation Covers Up Naked Data",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-11-21",
+        "dateModified": "2016-11-21",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Encapsulation is what makes OOP objects solid,
+cohesive, and trustworthy; publicly accessible data
+is what breaks encapsulation.
+",
+        "keywords": ["encapsulation", "encapsulation data", "encapsulation trusted objects", "encapsulation meaning", "encapsulation violation"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is an AMP version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2016/11/21/naked-data.html">here</a>.
+      </p>
+      <h1>Encapsulation Covers Up Naked Data</h1>
+      <p>Encapsulation is the core principle of object-oriented programming
+that makes objects solid, cohesive, trustworthy, etc. But
+what exactly is encapsulation? Does it only protect against access
+to private attributes from outside an object? I think it's much more.
+Encapsulation leads to the absence of <em>naked</em> data on all levels and in all forms.</p>
+
+
+
+
+
+<p>This is what naked data is (C code):</p>
+
+
+
+<p>Here <code>t</code> is the data, which is publicly accessible by the code around it.
+Anyone can modify it or read it.</p>
+
+<p>Why is that bad? For one reason: tight and hidden coupling.</p>
+
+<p>The code around <code>t</code> inevitably makes a lot of assumptions about the data. For
+example, both lines after <code>int t</code> decided that the temperature is in Fahrenheit.
+At the moment of writing, this may be true, but this assumption couples the
+code with the data. If tomorrow we change <code>t</code> to Celsius, the code won't know
+about this change. That's why I call this coupling <em>hidden</em>.</p>
+
+<p>If we change the type of <code>t</code> from <code>int</code> to, say, <code>double</code>, the <code>printf</code>
+line won't print anything after the decimal point. Again, the coupling is
+there, but it's hidden. Later on, we simply won't be able to find all the places in our
+code where we made these or other assumptions about <code>t</code>.</p>
+
+<p>This will seriously affect maintainability.</p>
+
+<p>And this is not a solution, as you can imagine (Java now):</p>
+
+
+
+<p>It looks like an object, but the data is still naked. Anyone can retrieve
+<code>t</code> from the object and decide whether it's Fahrenheit or Celsius, whether
+it has digits after the dot or not, etc. This is not encapsulation yet!</p>
+
+<p>The only way to encapsulate <code>t</code> is to make sure nobody can touch
+it either directly or by retrieving it from an object. How do we do that?
+Just stop exposing data and start exposing functionality. Here is how,
+for example:</p>
+
+
+
+<p>We don't allow anyone to retrieve <code>t</code> anymore. All they can do is
+convert temperature to text. If and when we decide to change <code>t</code> to Celsius,
+we will do it just once and in one place: in the class <code>Temperature</code>.</p>
+
+<p>If we need other functions in the future, like math operations or conversion
+to Celsius, we add more methods to class <code>Temperature</code>. But we never
+let anyone touch or know about <code>t</code>.</p>
+
+<p>This idea is close to
+<a href="/2016/04/05/printers-instead-of-getters.html">"printers instead of getters"</a>,
+which we discussed earlier, though from a much wider perspective.
+Here I'm saying that any data elements that escape objects are <em>naked</em>
+and lead to maintainability problems.</p>
+
+<p>The question is how we can work entirely without naked data, right? Eventually
+we have to let objects exchange data, don't we? Yes, that's true. But not entirely.
+I'll explain that in my next post.</p>
+
+    </article>
+  </body>
+</html>

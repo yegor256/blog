@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-20T20:26:09+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-21T11:23:09+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Encapsulation Covers Up Naked Data</title><link href="http://www.yegor256.com/2016/11/21/naked-data.html" rel="alternate" type="text/html" title="Encapsulation Covers Up Naked Data" /><published>2016-11-21T00:00:00+00:00</published><updated>2016-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/21/naked-data</id><content type="html" xml:base="http://www.yegor256.com/2016/11/21/naked-data.html">&lt;p&gt;Encapsulation is the core principle of object-oriented programming
+that makes objects solid, cohesive, trustworthy, etc. But
+what exactly is encapsulation? Does it only protect against access
+to private attributes from outside an object? I think it&amp;#39;s much more.
+Encapsulation leads to the absence of &lt;em&gt;naked&lt;/em&gt; data on all levels and in all forms.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F11%2Fborat.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles&#39;/&gt;&lt;figcaption&gt;Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is what naked data is (C code):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The temperature is %d F&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here &lt;code&gt;t&lt;/code&gt; is the data, which is publicly accessible by the code around it.
+Anyone can modify it or read it.&lt;/p&gt;
+
+&lt;p&gt;Why is that bad? For one reason: tight and hidden coupling.&lt;/p&gt;
+
+&lt;p&gt;The code around &lt;code&gt;t&lt;/code&gt; inevitably makes a lot of assumptions about the data. For
+example, both lines after &lt;code&gt;int t&lt;/code&gt; decided that the temperature is in Fahrenheit.
+At the moment of writing, this may be true, but this assumption couples the
+code with the data. If tomorrow we change &lt;code&gt;t&lt;/code&gt; to Celsius, the code won&amp;#39;t know
+about this change. That&amp;#39;s why I call this coupling &lt;em&gt;hidden&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we change the type of &lt;code&gt;t&lt;/code&gt; from &lt;code&gt;int&lt;/code&gt; to, say, &lt;code&gt;double&lt;/code&gt;, the &lt;code&gt;printf&lt;/code&gt;
+line won&amp;#39;t print anything after the decimal point. Again, the coupling is
+there, but it&amp;#39;s hidden. Later on, we simply won&amp;#39;t be able to find all the places in our
+code where we made these or other assumptions about &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This will seriously affect maintainability.&lt;/p&gt;
+
+&lt;p&gt;And this is not a solution, as you can imagine (Java now):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It looks like an object, but the data is still naked. Anyone can retrieve
+&lt;code&gt;t&lt;/code&gt; from the object and decide whether it&amp;#39;s Fahrenheit or Celsius, whether
+it has digits after the dot or not, etc. This is not encapsulation yet!&lt;/p&gt;
+
+&lt;p&gt;The only way to encapsulate &lt;code&gt;t&lt;/code&gt; is to make sure nobody can touch
+it either directly or by retrieving it from an object. How do we do that?
+Just stop exposing data and start exposing functionality. Here is how,
+for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d F&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We don&amp;#39;t allow anyone to retrieve &lt;code&gt;t&lt;/code&gt; anymore. All they can do is
+convert temperature to text. If and when we decide to change &lt;code&gt;t&lt;/code&gt; to Celsius,
+we will do it just once and in one place: in the class &lt;code&gt;Temperature&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we need other functions in the future, like math operations or conversion
+to Celsius, we add more methods to class &lt;code&gt;Temperature&lt;/code&gt;. But we never
+let anyone touch or know about &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This idea is close to
+&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;&amp;quot;printers instead of getters&amp;quot;&lt;/a&gt;,
+which we discussed earlier, though from a much wider perspective.
+Here I&amp;#39;m saying that any data elements that escape objects are &lt;em&gt;naked&lt;/em&gt;
+and lead to maintainability problems.&lt;/p&gt;
+
+&lt;p&gt;The question is how we can work entirely without naked data, right? Eventually
+we have to let objects exchange data, don&amp;#39;t we? Yes, that&amp;#39;s true. But not entirely.
+I&amp;#39;ll explain that in my next post.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>Encapsulation is the core principle of object-oriented programming
+that makes objects solid, cohesive, trustworthy, etc. But
+what exactly is encapsulation? Does it only protect against access
+to private attributes from outside an object? I think it&amp;#39;s much more.
+Encapsulation leads to the absence of naked data on all levels and in all forms.</summary></entry><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
@@ -47,6 +125,10 @@ to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
   &lt;td&gt;Malmö&lt;/td&gt;
   &lt;td&gt;Nov&lt;/td&gt;
   &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.agileee.org/&quot;&gt;AgileEE&lt;/a&gt;&lt;/td&gt;
+  &lt;td&gt;Kiev&lt;/td&gt;
+  &lt;td&gt;Apr&lt;/td&gt;
+  &lt;td&gt;Jan&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://qconsf.com/&quot;&gt;QCon&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;San Francisco&lt;/td&gt;
   &lt;td&gt;Nov&lt;/td&gt;
@@ -811,156 +893,4 @@ you stay away from communication channels at the top of this list.&lt;/p&gt;</co
 specific way. Some use Slack, Trello, or GitHub; others just sit together
 in the same room. There are many methods and tools. I believe
 it&amp;#39;s possible to rank them by the amount of damage they cause
-to your project. This is the list of all of them I&amp;#39;m aware of at the moment.</summary></entry><entry><title>What’s Wrong With Object-Oriented Programming?</title><link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Object-Oriented Programming?" /><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming</id><content type="html" xml:base="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html">&lt;p&gt;Recently, I was trying to convince a few of my readers that
-&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;a better understanding of an object&lt;/a&gt;
-in OOP would help us solve many problems in existing pseudo-object-oriented languages.
-Then, suddenly, the question came up: &amp;quot;&lt;strong&gt;What problems?&lt;/strong&gt;&amp;quot;
-I was puzzled. I thought it was obvious that the vast majority of modern software
-written in modern OO languages is unmaintainable and simply a mess.
-So I Googled a bit, and this is what I found (in chronological order).&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fswingers.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Swingers (1996) by Doug Liman&#39;/&gt;&lt;figcaption&gt;Swingers (1996) by Doug Liman&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The list of quotes is sorted in chronological order, with the oldest on
-the top:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/edsger-dijkstra.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Edsger W. Dijkstra&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Edsger_W._Dijkstra&quot;&gt;&lt;strong&gt;Edsger W. Dijkstra&lt;/strong&gt;&lt;/a&gt; (1989)&lt;br/&gt;
-&amp;quot;TUG LINES&amp;quot;, Issue 32, August 1989&lt;br/&gt;
-&amp;quot;Object oriented programs are offered as alternatives to correct ones&amp;quot;
-and
-&amp;quot;Object-oriented programming is an exceptionally bad idea
-which could only have originated in California.&amp;quot;&lt;/p&gt;
-
-&lt;!-- 1995 --&gt;
-
-&lt;!--
-[Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29)
-in [Ansi Common Lisp](http://amzn.to/29JwmOz), page 408:
-&quot;The object-oriented model makes it easy to build up programs
-by accretion. What this often means, in practice, is that it
-provides a structured way to write spaghetti code.&quot;
---&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/alan-kay.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Alan Kay&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;&lt;strong&gt;Alan Kay&lt;/strong&gt;&lt;/a&gt; (1997)&lt;br/&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=oKg1hTOQXoY&quot;&gt;The Computer Revolution hasn&amp;#39;t happened yet&lt;/a&gt;&lt;br/&gt;
-&amp;quot;I invented the term object-oriented, and I can tell you
-I did not have C++ in mind.&amp;quot; and
-&amp;quot;Java and C++ make you think that the new ideas are like the old ones.
-Java is the most distressing thing to happen to computing since MS-DOS.&amp;quot;
-(&lt;a href=&quot;http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html&quot;&gt;proof&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/paul-graham.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Paul Graham&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29&quot;&gt;&lt;strong&gt;Paul Graham&lt;/strong&gt;&lt;/a&gt; (2003)&lt;br/&gt;
-&lt;a href=&quot;http://www.paulgraham.com/hundred.html&quot;&gt;The Hundred-Year Language&lt;/a&gt;&lt;br/&gt;
-&amp;quot;Object-oriented programming offers a sustainable way to write spaghetti code.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/richard-mansfield.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Richard Mansfield&quot;/&gt;&lt;br/&gt;
-&lt;strong&gt;Richard Mansfield&lt;/strong&gt; (2005)&lt;br/&gt;
-&lt;a href=&quot;http://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf&quot;&gt;Has OOP Failed?&lt;/a&gt;&lt;br/&gt;
-&amp;quot;With OOP-inflected programming languages, computer software becomes more
-verbose, less readable, less descriptive, and harder to modify and maintain.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-raymond.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Eric Raymond&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.catb.org/esr/&quot;&gt;&lt;strong&gt;Eric Raymond&lt;/strong&gt;&lt;/a&gt; (2005)&lt;br/&gt;
-&lt;a href=&quot;http://catb.org/esr/writings/taoup/html/unix_and_oo.html&quot;&gt;The Art of UNIX Programming&lt;/a&gt;&lt;br/&gt;
-&amp;quot;The OO design concept initially proved valuable in the design of graphics
-systems, graphical user interfaces, and certain kinds of simulation.
-To the surprise and gradual disillusionment of many, it has proven
-difficult to demonstrate significant benefits of OO outside those areas.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/jeff-atwood.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Jeff Atwood&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://blog.codinghorror.com/&quot;&gt;&lt;strong&gt;Jeff Atwood&lt;/strong&gt;&lt;/a&gt; (2007)&lt;br/&gt;
-&lt;a href=&quot;https://blog.codinghorror.com/your-code-oop-or-poo/&quot;&gt;Your Code: OOP or POO?&lt;/a&gt;&lt;br/&gt;
-&amp;quot;OO seems to bring at least as many problems to the table as it solves.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/linus-torvalds.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Linus Torvalds&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Linus_Torvalds&quot;&gt;&lt;strong&gt;Linus Torvalds&lt;/strong&gt;&lt;/a&gt; (2007)&lt;br/&gt;
-&lt;a href=&quot;http://article.gmane.org/gmane.comp.version-control.git/57918/&quot;&gt;this email&lt;/a&gt;&lt;br/&gt;
-&amp;quot;C++ is a horrible language. ...
-C++ leads to really, really bad design choices. ...
-In other words, the only way to do good, efficient, and system-level and
-portable C++ ends up to limit yourself to all the things that are
-basically available in C. And limiting your project to C means that people
-don&amp;#39;t screw that up, and also means that you get a lot of programmers that
-do actually understand low-level issues and don&amp;#39;t screw things up with any
-idiotic &amp;#39;object model&amp;#39; crap.&amp;quot;&lt;/p&gt;
-
-&lt;!-- 2009 --&gt;
-
-&lt;!--
-[Rich Hickey](https://github.com/richhickey)
-at [Are We There Yet?](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey), JVM Languages Summit 2009 Keynote:
-&quot;...&quot;
---&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/oscar-nierstrasz.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Oscar Nierstrasz&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Oscar_Nierstrasz&quot;&gt;&lt;strong&gt;Oscar Nierstrasz&lt;/strong&gt;&lt;/a&gt; (2010)&lt;br/&gt;
-&lt;a href=&quot;http://blog.jot.fm/2010/08/26/ten-things-i-hate-about-object-oriented-programming&quot;&gt;Ten Things I Hate About Object-Oriented Programming&lt;/a&gt;&lt;br/&gt;
-&amp;quot;OOP is about taming complexity through modeling, but we have not
-mastered this yet, possibly because we have difficulty distinguishing
-real and accidental complexity.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/rich-hickey.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Rich Hickey&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://github.com/richhickey&quot;&gt;&lt;strong&gt;Rich Hickey&lt;/strong&gt;&lt;/a&gt; (2010)&lt;br/&gt;
-&lt;a href=&quot;http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/&quot;&gt;SE Radio, Episode 158&lt;/a&gt;&lt;br/&gt;
-&amp;quot;I think that large objected-oriented programs struggle
-with increasing complexity as you build this large object graph of
-mutable objects. You know, trying to understand and keep in your mind
-what will happen when you call a method and what will the side effects be.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/eric-allman.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Eric Allman&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Eric_Allman&quot;&gt;&lt;strong&gt;Eric Allman&lt;/strong&gt;&lt;/a&gt; (2011)&lt;br/&gt;
-&lt;a href=&quot;http://queue.acm.org/blogposting.cfm?id=34658&quot;&gt;Programming Isn&amp;#39;t Fun Any More&lt;/a&gt;&lt;br/&gt;
-&amp;quot;I used to be enamored of object-oriented programming. I&amp;#39;m now finding myself
-leaning toward believing that it is a plot designed to destroy joy. The
-methodology looks clean and elegant at first, but when you actually get
-into real programs they rapidly turn into horrid messes.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/joe-armstrong.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Joe Armstrong&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://joearms.github.io/&quot;&gt;&lt;strong&gt;Joe Armstrong&lt;/strong&gt;&lt;/a&gt; (2011)&lt;br/&gt;
-&lt;a href=&quot;http://harmful.cat-v.org/software/OO_programming/why_oo_sucks&quot;&gt;Why OO Sucks&lt;/a&gt;&lt;br/&gt;
-&amp;quot;Objects bind functions and data structures together in
-indivisible units. I think this is a fundamental error since functions and
-data structures belong in totally different worlds.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/rob-pike.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Rob Pike&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Rob_Pike&quot;&gt;&lt;strong&gt;Rob Pike&lt;/strong&gt;&lt;/a&gt; (2012)&lt;br/&gt;
-&lt;a href=&quot;https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb&quot;&gt;here&lt;/a&gt;&lt;br/&gt;
-&amp;quot;Object-oriented programming, whose essence is nothing more than
-programming using data with associated behaviors, is a powerful idea.
-It truly is. But it&amp;#39;s not always the best idea. ...
-Sometimes data is just data and functions are just functions.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/john-barker.jpg&quot; class=&quot;quote-author&quot; alt=&quot;John Barker&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.linkedin.com/in/johnebgood&quot;&gt;&lt;strong&gt;John Barker&lt;/strong&gt;&lt;/a&gt; (2013)&lt;br/&gt;
-&lt;a href=&quot;https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit&quot;&gt;All evidence points to OOP being bullshit&lt;/a&gt;&lt;br/&gt;
-&amp;quot;What OOP introduces are abstractions that attempt to improve code
-sharing and security. In many ways, it is still essentially procedural code.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/lawrence-krubner.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Lawrence Krubner&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.linkedin.com/in/krubner&quot;&gt;&lt;strong&gt;Lawrence Krubner&lt;/strong&gt;&lt;/a&gt; (2014)&lt;br/&gt;
-&lt;a href=&quot;http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end&quot;&gt;Object Oriented Programming is an expensive disaster which must end&lt;/a&gt;&lt;br/&gt;
-&amp;quot;We now know that OOP is an experiment that failed.
-It is time to move on. It is time that we, as a community, admit that
-this idea has failed us, and we must give up on it.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2016/08/asaf-shelly.jpg&quot; class=&quot;quote-author&quot; alt=&quot;Asaf Shelly&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.linkedin.com/in/asafshelly&quot;&gt;&lt;strong&gt;Asaf Shelly&lt;/strong&gt;&lt;/a&gt; (2015)&lt;br/&gt;
-&lt;a href=&quot;https://software.intel.com/en-us/blogs/2008/08/22/flaws-of-object-oriented-modeling/&quot;&gt;Flaws of Object Oriented Modeling&lt;/a&gt;&lt;br/&gt;
-&amp;quot;Reading an object oriented code you can&amp;#39;t see the big picture and
-it is often impossible to review all the small functions that
-call the one function that you modified.&amp;quot;&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;If you have something to add to this list, please post a comment below.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>Recently, I was trying to convince a few of my readers that
-a better understanding of an object
-in OOP would help us solve many problems in existing pseudo-object-oriented languages.
-Then, suddenly, the question came up: &amp;quot;What problems?&amp;quot;
-I was puzzled. I thought it was obvious that the vast majority of modern software
-written in modern OO languages is unmaintainable and simply a mess.
-So I Googled a bit, and this is what I found (in chronological order).</summary></entry></feed>
+to your project. This is the list of all of them I&amp;#39;m aware of at the moment.</summary></entry></feed>
