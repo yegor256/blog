@@ -130,6 +130,7 @@ How Do You Know When Your Product is Ready to be Shipped?;
 [BuildStuff 2016](http://www.buildstuff.lt/);
 Vilnius, Lithuania;
 18 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-know-when-your-product-is-ready-to-be-shipped),
 [video](https://www.youtube.com/watch?v=wd-SA1HVmLg).
 
 <div class="talk-event"/>
@@ -138,6 +139,7 @@ Seven Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 17 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
 
 <div class="talk-event"/>
@@ -146,6 +148,7 @@ Keep Your Servers In GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 16 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/keep-your-servers-in-github),
 [video](https://www.youtube.com/watch?v=mq4bsnKK0qs).
 
 <div class="talk-event"/>
