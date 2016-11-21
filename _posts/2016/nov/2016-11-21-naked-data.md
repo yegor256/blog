@@ -84,6 +84,8 @@ We don't allow anyone to retrieve `t` anymore. All they can do is
 convert temperature to text. If and when we decide to change `t` to Celsius,
 we will do it just once and in one place: in the class `Temperature`.
 
+{% quote Any data elements that escape objects are naked and lead to maintainability problems %}
+
 If we need other functions in the future, like math operations or conversion
 to Celsius, we add more methods to class `Temperature`. But we never
 let anyone touch or know about `t`.
