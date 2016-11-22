@@ -77,13 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
-**Who is a Software Architect?**<br/>
-[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
-Kiev, Ukraine<br/>
-21-22 November 2016
-
-<div class="talk-event"/>
 <img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
 **XDSD: Meetings-Free Software Development Methodology**<br/>
 [DevTernity 2016](http://devternity.com/#/11)<br/>
@@ -123,6 +116,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="/images/2016/buildstuff-ukraine.png" class="past-talk" alt="BuildStuff Ukraine 2016"/>
+Who is a Software Architect?;
+[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
+Kiev, Ukraine;
+21-22 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
+[video](https://www.youtube.com/watch?v=R1lA7pN60xg).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
@@ -757,5 +759,4 @@ Kyiv, Ukraine;
 San Francisco, USA;
 23 April 2015;
 [video](https://www.youtube.com/watch?v=3IXk5yEJMIs).
-
 
