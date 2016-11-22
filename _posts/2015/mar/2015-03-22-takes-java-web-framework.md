@@ -290,19 +290,19 @@ required by Java to start an app from the command line:
 
 {% highlight java %}
 import org.takes.http.Exit;
-import org.takes.http.FtCLI;
+import org.takes.http.FtCli;
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(), args).start(Exit.NEVER);
+    new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
 
 This class contains just a single `main()` static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates [`FtCLI`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCLI.html),
+instantiates [`FtCli`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html),
 giving it an instance of class `TkApp` and command
-line arguments. We'll create the `TkApp` class in a second. `FtCLI`
+line arguments. We'll create the `TkApp` class in a second. `FtCli`
 (translates to "front-end with command line interface") makes an instance
 of the same `FtBasic`, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, `--port=8080` will
@@ -587,7 +587,7 @@ a [BoneCP](http://www.jolbox.com/) connection pool):
 {% highlight java %}
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
+    new FtCli(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
   }
   private static Source postgres() {
     final BoneCPDataSource src = new BoneCPDataSource();

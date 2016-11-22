@@ -89,10 +89,10 @@ Let's start with a simple example:
 
 {% highlight java %}
 import org.takes.http.Exit;
-import org.takes.http.FtCLI;
+import org.takes.http.FtCli;
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(), args).start(Exit.NEVER);
+    new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
@@ -186,7 +186,7 @@ directives but with different meanings
 (they are all instances of an `XeSource` interface).
 Their names describe their
 intentions rather well.
-[`XeChain`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeChain.html)
+[`XeChain`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeChain.html)
 just chains everything that is
 delivered by encapsulated "directive sources."
 [`XeStylesheet`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeStylesheet.html)
