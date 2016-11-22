@@ -165,7 +165,7 @@ public class Foo {
 {% endhighlight %}
 
 That's it. The server is ready. Try to compile and run it. Point your browser
-to http://localhost:8080, and you will see `Hello, world!`:
+to `http://localhost:8080`, and you will see `Hello, world!`:
 
 {% highlight bash %}
 $ javac -cp commons-io.jar Foo.java
