@@ -163,7 +163,7 @@ balance:</p>
 
 <p>Right after the <code>request</code> comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have the <a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html"><code>TkAuth</code></a>
+reusable, we have the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/TkAuth.html"><code>TkAuth</code></a>
 decorator, which wraps an existing <em>take</em>,
 decodes an incoming cookie, and adds a new <code>TkAuth</code>
 header to the request with the user's identification information:</p>
@@ -172,21 +172,21 @@ header to the request with the user's identification information:</p>
 
 <p>Again, when <code>TkAuth</code> receives a request with an authenticating cookie inside,
 it asks <code>pass</code> to decode the cookie and return either a
-valid <a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Identity.html"><code>Identity</code></a>
+valid <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Identity.html"><code>Identity</code></a>
 or <code>Identity.ANONYMOUS</code>.</p>
 
 <p>Then, when the response goes back to the browser, <code>TkAuth</code> asks <code>pass</code>
 to encode the identity back into a string and adds <code>Set-Cookie</code> to the response.</p>
 
-<p><a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html"><code>PsCookie</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsCookie.html"><code>PsCookie</code></a>
 uses an instance of
-<a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html"><code>Codec</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/codecs/Codec.html"><code>Codec</code></a>
 in order to do these backward and forward encoding operations.</p>
 
 <p>When our <code>TkAccount</code> <em>take</em> wants to retrieve a currently authenticated
 user identity from the request, it can use
-<a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html"><code>RqAuth</code></a>,
-a utility decorator of <a href="http://www.takes.org/apidocs-0.15.1/org/takes/Request.html"><code>Request</code></a>:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html"><code>RqAuth</code></a>,
+a utility decorator of <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>:</p>
 
 
 
@@ -200,11 +200,11 @@ want to skip authentication during integration testing. Here is how:</p>
 
 
 
-<p><a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsChain.html"><code>PsChain</code></a>
-implements <a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Pass.html"><code>Pass</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html"><code>PsChain</code></a>
+implements <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html"><code>Pass</code></a>
 and attempts to authenticate the user by asking all encapsulated passes,
 one by one. The first one in the chain is
-<a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html"><code>PsFake</code></a>.
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsFake.html"><code>PsFake</code></a>.
 Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
 trigger, we can switch off the entire authentication mechanism in the app.</p>
@@ -217,12 +217,12 @@ trigger, we can switch off the entire authentication mechanism in the app.</p>
 where his or her identity is verified. Then, Facebook returns a <code>302</code> redirection
 response with a <code>Location</code> header set to the URL we provide in the login link.
 The link must include something like this: <code>?PsByFlag=PsFacebook</code>. This will
-tell <a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html"><code>PsByFlag</code></a>
+tell <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsByFlag.html"><code>PsByFlag</code></a>
 that this request authenticates a user.</p>
 
 <p><code>PsByFlag</code> will iterate through all encapsulated "pairs" and try to find the
 right one.
-<a href="http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html"><code>PsFacebook</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/social/PsFacebook.html"><code>PsFacebook</code></a>
 will be the first and the right one. It will connect to the Facebook API using the
 provided credentials and will retrieve all possible information about the user.</p>
 

@@ -148,7 +148,7 @@ for simplicity):</p>
 
 
 <p>That's it. The server is ready. Try to compile and run it. Point your browser
-to <a href="http://localhost:8080">http://localhost:8080</a>, and you will see <code>Hello, world!</code>:</p>
+to <code>http://localhost:8080</code>, and you will see <code>Hello, world!</code>:</p>
 
 
 
@@ -161,7 +161,7 @@ framework was built.</p>
 <p>Routing/dispatching is combined with response printing in Takes. All you
 need to do to create a working web application is to create a single
 class that implements
-<a href="http://www.takes.org/apidocs-0.9/org/takes/Take.html"><code>Take</code></a> interface:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html"><code>Take</code></a> interface:</p>
 
 
 
@@ -169,20 +169,20 @@ class that implements
 
 
 
-<p>This <a href="http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html"><code>FtBasic</code></a>
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code>FtBasic</code></a>
 class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
 connections through an instance of <code>TkFoo</code> that we are giving to its constructor.
 It does this dispatching in an endless cycle, checking every second whether
 it's time to stop with an instance of
-<a href="http://www.takes.org/apidocs-0.9/org/takes/http/Exit.html"><code>Exit</code></a>.
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html"><code>Exit</code></a>.
 Obviously, <code>Exit.NEVER</code> always responds with, "Don't stop, please".</p>
 
 <h2 id="http-request">HTTP Request</h2>
 
 <p>Now let's see what's inside the HTTP request arriving at <code>TkFoo</code> and what
 we can get out of it. This is how the
-<a href="http://www.takes.org/apidocs-0.9/org/takes/Request.html"><code>Request</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>
 interface is defined in <a href="http://www.takes.org">Takes</a>:</p>
 
 
@@ -213,7 +213,7 @@ this is the request:</p>
 this request parsing functionality to its decorators. This approach helps the
 framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in the <a href="http://www.takes.org/apidocs-0.27/org/takes/rq/package-summary.html"><code>org.takes.rq</code></a> package.
+are in the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html"><code>org.takes.rq</code></a> package.
 As you already probably understand, the <code>Rq</code> prefix stands for <code>Request</code>.</p>
 
 <h2 id="first-real-web-app">First Real Web App</h2>
@@ -226,9 +226,9 @@ required by Java to start an app from the command line:</p>
 
 <p>This class contains just a single <code>main()</code> static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates <a href="http://www.takes.org/apidocs-0.27/org/takes/http/FtCLI.html"><code>FtCLI</code></a>,
+instantiates <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html"><code>FtCli</code></a>,
 giving it an instance of class <code>TkApp</code> and command
-line arguments. We'll create the <code>TkApp</code> class in a second. <code>FtCLI</code>
+line arguments. We'll create the <code>TkApp</code> class in a second. <code>FtCli</code>
 (translates to "front-end with command line interface") makes an instance
 of the same <code>FtBasic</code>, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, <code>--port=8080</code> will
@@ -259,12 +259,12 @@ to Heroku. This is what <code>Procfile</code> should look like:</p>
 
 <h2 id="tkfork"><code>TkFork</code></h2>
 
-<p>This <a href="http://www.takes.org/apidocs-0.27/org/takes/facets/fork/TkFork.html"><code>TkFork</code></a>
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html"><code>TkFork</code></a>
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right <em>take</em>. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
 a collection of "forks", which are instances of the
-<a href="http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html"><code>Fork</code></a> interface:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html"><code>Fork</code></a> interface:</p>
 
 
 
@@ -272,7 +272,7 @@ a collection of "forks", which are instances of the
 with a single <code>Response</code>. <code>TkFork</code> goes through all forks, calling their
 <code>route()</code> methods until one of them returns a response. Once that happens,
 <code>TkFork</code> returns this response to the caller, which is
-<a href="http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html"><code>FtBasic</code></a>.</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code>FtBasic</code></a>.</p>
 
 <p>Let's create a simple fork ourselves now. For example, we want to show
 the status of the application when the <code>/status</code> URL is requested. Here is
@@ -305,12 +305,12 @@ fetch it from one that <code>FkParams</code> encapsulated. If the HTTP query is
 <h2 id="http-response">HTTP Response</h2>
 
 <p>Now let's discuss the structure of the HTTP response and its object-oriented
-abstraction, <a href="http://www.takes.org/apidocs-0.9/org/takes/Response.html"><code>Response</code></a>.
+abstraction, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html"><code>Response</code></a>.
 This is how the interface looks:</p>
 
 
 
-<p>Looks very similar to the <a href="http://www.takes.org/apidocs-0.9/org/takes/Request.html"><code>Request</code></a>,
+<p>Looks very similar to the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>,
 doesn't it? Well, it's identical, mostly because the structure of the HTTP request and
 response is almost identical. The only difference is the first line.</p>
 
@@ -343,7 +343,7 @@ works:</p>
 
 
 
-<p>The <a href="http://www.takes.org/apidocs-0.9/org/takes/rs/RsVelocity.html"><code>RsVelocity</code></a> constructor
+<p>The <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html"><code>RsVelocity</code></a> constructor
 accepts a single argument that has to be a Velocity template. Then, you call
 the <code>with()</code> method, injecting data into the Velocity context. When it's time
 to render the HTTP response, <code>RsVelocity</code> will "evaluate" the template
@@ -409,7 +409,7 @@ test HTTP server and test its behavior via a real TCP socket; for example
 
 
 
-<p><a href="http://www.takes.org/apidocs-0.9/org/takes/http/FtRemote.html"><code>FtRemote</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html"><code>FtRemote</code></a>
 starts a test web server at a random TCP port and calls the
 <code>exec()</code> method at the provided instance of <code>FtRemote.Script</code>. The first
 argument of this method is a URI of the just-started web server homepage.</p>
