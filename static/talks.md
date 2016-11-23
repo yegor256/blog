@@ -118,7 +118,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="/images/2016/buildstuff-ukraine.png" class="past-talk" alt="BuildStuff Ukraine 2016"/>
+<img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who is a Software Architect?;
 [BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
 Kiev, Ukraine;
