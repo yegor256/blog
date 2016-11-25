@@ -34,7 +34,7 @@ Nov 6, 2016:
 It's available [on Amazon](http://amzn.to/2eexQBl) for $40.96! Thanks
 to all reviewers who helped me fine tune it before publishing (in
 order of importance of their contribution):
-Wojciech Adam Koszek,
+[Wojciech Adam Koszek](http://www.koszek.com),
 Raul Estrada,
 Andriy Kryvtsun,
 Mariana Lutsiuk,
