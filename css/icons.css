@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot%3F1480084265");
-  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot?#iefix%3F1480084265") format("embedded-opentype"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.woff%3F1480084265") format("woff"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.ttf%3F1480084265") format("truetype"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1480084265") format("svg");
+  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot%3F1480162557");
+  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot?#iefix%3F1480162557") format("embedded-opentype"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.woff%3F1480162557") format("woff"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.ttf%3F1480162557") format("truetype"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1480162557") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1480084265") format("svg");
+    src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1480162557") format("svg");
   }
 }
 
@@ -42,6 +42,7 @@
 .icon-linkedin:before,
 .icon-mail:before,
 .icon-no:before,
+.icon-odnoklassniki:before,
 .icon-pdf:before,
 .icon-pinterest:before,
 .icon-podcast:before,
@@ -50,6 +51,7 @@
 .icon-stackoverflow:before,
 .icon-stumbleupon:before,
 .icon-twitter:before,
+.icon-vk:before,
 .icon-yes:before,
 .icon-youtube:before {
   display: inline-block;
@@ -85,13 +87,15 @@
 .icon-linkedin:before { content: "\f110"; }
 .icon-mail:before { content: "\f111"; }
 .icon-no:before { content: "\f112"; }
-.icon-pdf:before { content: "\f113"; }
-.icon-pinterest:before { content: "\f114"; }
-.icon-podcast:before { content: "\f115"; }
-.icon-reddit:before { content: "\f116"; }
-.icon-rss:before { content: "\f117"; }
-.icon-stackoverflow:before { content: "\f118"; }
-.icon-stumbleupon:before { content: "\f119"; }
-.icon-twitter:before { content: "\f11a"; }
-.icon-yes:before { content: "\f11b"; }
-.icon-youtube:before { content: "\f11c"; }
+.icon-odnoklassniki:before { content: "\f113"; }
+.icon-pdf:before { content: "\f114"; }
+.icon-pinterest:before { content: "\f115"; }
+.icon-podcast:before { content: "\f116"; }
+.icon-reddit:before { content: "\f117"; }
+.icon-rss:before { content: "\f118"; }
+.icon-stackoverflow:before { content: "\f119"; }
+.icon-stumbleupon:before { content: "\f11a"; }
+.icon-twitter:before { content: "\f11b"; }
+.icon-vk:before { content: "\f11c"; }
+.icon-yes:before { content: "\f11d"; }
+.icon-youtube:before { content: "\f11e"; }
