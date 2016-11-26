@@ -18,7 +18,8 @@ keywords:
 [Code reviews](http://en.wikipedia.org/wiki/Code_review)
 (a.k.a. peer reviews) must be a mandatory practice for every
 serious software development team. I hope there is no debate about this. Some
-do pre-merge code reviews, protecting their master/development branch from
+do pre-merge code reviews, [protecting]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
+their master/development branch from
 accidental mistakes. Others do post-merge
 [regular reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %})
 to discover bugs and inconsistencies after they are introduced by their
