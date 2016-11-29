@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-27T16:30:11+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Encapsulation Covers Up Naked Data</title><link href="http://www.yegor256.com/2016/11/21/naked-data.html" rel="alternate" type="text/html" title="Encapsulation Covers Up Naked Data" /><published>2016-11-21T00:00:00+00:00</published><updated>2016-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/21/naked-data</id><content type="html" xml:base="http://www.yegor256.com/2016/11/21/naked-data.html">&lt;p&gt;Encapsulation is the core principle of object-oriented programming
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-11-29T08:44:46+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>EO</title><link href="http://www.yegor256.com/2016/11/29/eolang.html" rel="alternate" type="text/html" title="EO" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/29/eolang</id><content type="html" xml:base="http://www.yegor256.com/2016/11/29/eolang.html">&lt;p&gt;It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+name is &lt;strong&gt;EO&lt;/strong&gt; (as in
+&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; or in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Esperanto&quot;&gt;Esperanto&lt;/a&gt;): &lt;a href=&quot;http://www.eolang.org&quot;&gt;eolang.org&lt;/a&gt;.
+It&amp;#39;s open source and community driven:
+&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo. It&amp;#39;s still in
+very early draft form, but the direction is more or less clear: It has to be
+truly object-oriented, with no compromises. You&amp;#39;re welcome to join us.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F11%2Fvicky-cristina-barcelona.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Vicky Cristina Barcelona (2008) by Woody Allen&#39;/&gt;&lt;figcaption&gt;Vicky Cristina Barcelona (2008) by Woody Allen&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Why yet another language? Because there are no object-oriented languages
+on the market that are really object-oriented, to my knowledge. Here are the
+things I think do not belong in a pure object-oriented language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;static methods&lt;/li&gt;
+&lt;li&gt;classes (only types and objects)&lt;/li&gt;
+&lt;li&gt;implementation inheritance&lt;/li&gt;
+&lt;li&gt;mutability&lt;/li&gt;
+&lt;li&gt;NULL&lt;/li&gt;
+&lt;li&gt;reflection&lt;/li&gt;
+&lt;li&gt;constants&lt;/li&gt;
+&lt;li&gt;type casting&lt;/li&gt;
+&lt;li&gt;annotations&lt;/li&gt;
+&lt;li&gt;flow control (&lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;if&lt;/code&gt;, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And many other minor mistakes that Java and C++ are full of.&lt;/p&gt;
+
+&lt;p&gt;At the moment, we think that EO will compile into Java. Not into byte-code,
+but into &lt;code&gt;.java&lt;/code&gt; files, later compilable to byte-code.&lt;/p&gt;
+
+&lt;p&gt;I really count on your contribution. Please submit your ideas as
+tickets and pull request to the
+&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+name is EO (as in
+Elegant Objects or in
+Esperanto): eolang.org.
+It&amp;#39;s open source and community driven:
+yegor256/eo GitHub repo. It&amp;#39;s still in
+very early draft form, but the direction is more or less clear: It has to be
+truly object-oriented, with no compromises. You&amp;#39;re welcome to join us.</summary></entry><entry><title>Encapsulation Covers Up Naked Data</title><link href="http://www.yegor256.com/2016/11/21/naked-data.html" rel="alternate" type="text/html" title="Encapsulation Covers Up Naked Data" /><published>2016-11-21T00:00:00+00:00</published><updated>2016-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/21/naked-data</id><content type="html" xml:base="http://www.yegor256.com/2016/11/21/naked-data.html">&lt;p&gt;Encapsulation is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it&amp;#39;s much more.
@@ -824,75 +868,4 @@ complexity is high, they are difficult to maintain and extend.
 Decomposition of responsibility is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
 refactoring operation: vertical and horizontal. And I believe
-the former is better than the latter.</summary></entry><entry><title>Eight Levels of Communication Maturity</title><link href="http://www.yegor256.com/2016/08/23/communication-maturity.html" rel="alternate" type="text/html" title="Eight Levels of Communication Maturity" /><published>2016-08-23T00:00:00+00:00</published><updated>2016-08-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/08/23/communication-maturity</id><content type="html" xml:base="http://www.yegor256.com/2016/08/23/communication-maturity.html">&lt;p&gt;Each software team organizes its communications in its own
-specific way. Some use Slack, Trello, or GitHub; others just sit together
-in the same room. There are many methods and tools. I believe
-it&amp;#39;s possible to rank them by the amount of &lt;strong&gt;damage&lt;/strong&gt; they cause
-to your project. This is the list of all of them I&amp;#39;m aware of at the moment.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F08%2Fschizopolis.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Schizopolis (1996) by Steven Soderbergh&#39;/&gt;&lt;figcaption&gt;Schizopolis (1996) by Steven Soderbergh&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The damage I&amp;#39;m talking about is caused mostly by the distance between these communication
-channels and project artifacts. The farther away people stay from documents,
-the bigger the risk of &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;losing information&lt;/a&gt;.
-And lost information is the first source of trouble in any project.&lt;/p&gt;
-
-&lt;p&gt;Here is the list; it starts with the most damaging communication means
-and goes down to the most &lt;strong&gt;mature&lt;/strong&gt; and professional ones, which cause the
-least amount of trouble:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Coffee Breaks&lt;/strong&gt;.
-This is the most dangerous thing&amp;mdash;you can never
-keep track of them, you won&amp;#39;t know what they were about, and there
-is no &amp;quot;search&amp;quot; button anywhere. Everything you say standing next
-to that coffee machine will be lost. Nothing will be converted
-to project artifacts.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Phone Calls&lt;/strong&gt;.
-A bit better than coffee breaks but still a big issue. Phone calls
-are completely untraceable. Information you
-exchange on those calls is gone forever. Well, you can record them,
-but searching through phone call records is a tough task that nobody will
-do, ever.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Meetings&lt;/strong&gt;.
-This is the next step after coffee breaks, because there is some structure
-and minutes. Meetings can be recorded (both on and offline), with their results filed somewhere
-and decisions documented. In reality, none of that will actually happen.
-Meetings will just kill your time and your sponsor&amp;#39;s money.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Emails&lt;/strong&gt;.
-If you can put some formality into emails and discipline all participants,
-your email history may be considered a project artifact in itself. How
-organized and easily browseable will that artifact be? That&amp;#39;s a good question.
-In most cases, it will just be a mess.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mailing Lists&lt;/strong&gt;.
-They are better than emails, because some software is archiving them and
-making them available and browseable. But it will be difficult to find where
-exactly what topic was discussed, where decisions were made and why,
-who suggested what, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Slack&lt;/strong&gt;.
-There are many similar alternatives that are basically online chats.
-The main problem with all of them is that it&amp;#39;s difficult to categorize
-such a chat, group messages together, or find something later. It&amp;#39;s merely a flow
-of information that becomes useless just a few days after. Of course,
-if you really want to find something there, it&amp;#39;s possible. But the quality
-of such a &amp;quot;document&amp;quot; is very low.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Trello&lt;/strong&gt;.
-By Trello I mean any task/ticket tracking system&amp;mdash;they are great instruments
-to immediately turn conversations and discussions into project artifacts.
-You don&amp;#39;t need to document anything; it&amp;#39;s already there. The problem is
-that they are still rather far away from the main project artifact:
-the source code with its commits, merge conflicts, build logs, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;.
-This is the best instrument you can use. It integrates communications
-with the product itself. The code you write and the discussions you
-have around it are literally in the same place.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Which one of these is your project using right now? I would strongly recommend
-you stay away from communication channels at the top of this list.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>Each software team organizes its communications in its own
-specific way. Some use Slack, Trello, or GitHub; others just sit together
-in the same room. There are many methods and tools. I believe
-it&amp;#39;s possible to rank them by the amount of damage they cause
-to your project. This is the list of all of them I&amp;#39;m aware of at the moment.</summary></entry></feed>
+the former is better than the latter.</summary></entry></feed>
