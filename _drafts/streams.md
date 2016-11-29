@@ -38,22 +38,22 @@ implemented it.
 <!--more-->
 
 The problem lambda expressions are solving in Java and all other OO languages
-is obvious&mdash;verbosity of code. Very often we need small objects to
+is obvious&mdash;verbosity of code. Very often we need small **one-method** objects to
 serve a single isolated and one-time purpose. We don't need them to exist
 or be visible for the entire application. Instead, we just need them
 right here and for once.
 
-For example, let's say we have a simple list of strings:
+For example, let's say we have a simple <del>collection</del> iterator of strings:
 
 {% highlight java %}
-Iterable<String> list = Arrays.asList(
+Iterator<String> list = Arrays.asList(
   "one", "two", "", "three", "four", ""
-);
+).iterator();
 {% endhighlight %}
 
-Now, we want to have another list that doesn't have empty strings.
+Now, we want to have another iterator that doesn't have empty strings.
 We want to exclude them. A good old procedural
-way to do that would be to create a new list and move acceptable
+way to do that would be to create a new iterator and move acceptable
 items into it using a `for` loop:
 
 {% highlight java %}
@@ -67,55 +67,48 @@ for (String item : list) {
 
 Needless to say that this approach is imperative and not object-oriented
 at all. It's difficult to reuse, test, and maintain. Moreover, it's not
-lazy at all: it goes through the entire list even if we don't really
+"lazy" at all: it goes through the entire iterator even if we don't really
 need all items to be filtered immediately.
 
-A better and a much more object-oriented way to do that would be a decorator that _encapsulates_
-the original list adding the filtering behavior to it. Here is how
-we would do it in Java&nbsp;7;
+A better and a much more object-oriented way to do that would
+be a decorator that _encapsulates_
+the original iterator adding the filtering behavior to it. Here is how
+we would do it in Java&nbsp;7 (I omit `remove()` for the sake of brevity);
 
 {% highlight java %}
-class CleanIterable implements Iterable<String> {
-  private final Iterable<String> origin;
-  CleanIterable(Iterable<String> list) {
+class CleanIterator implements Iterator<String> {
+  private final Iterator<String> origin;
+  private final Queue<String> buf;
+  CleanIterator(Iterator<String> list) {
     this.origin = list;
+    this.buf = new LinkedList<>();
   }
   @Override
-  public Iterator<String> iterator() {
-    final Iterator<String> iterator = this.origin.iterator();
-    return new Iterator<String>() {
-      private Queue<String> buf = new LinkedList<>();
-      @Override
-      public String next() {
-        if (!this.hasNext()) {
-          throw new NoSuchElementException();
-        }
-        return this.buf.poll();
+  public String next() {
+    if (!this.hasNext()) {
+      throw new NoSuchElementException();
+    }
+    return this.buf.poll();
+  }
+  @Override
+  public boolean hasNext() {
+    while (this.buf.isEmpty()
+      && this.origin.hasNext()) {
+      String item = iterator.next();
+      if (!item.isEmpty()) { // here!
+        this.buf.add(item);
       }
-      @Override
-      public boolean hasNext() {
-        while (this.buf.isEmpty() && iterator.hasNext()) {
-          String item = iterator.next();
-          if (!item.isEmpty()) { // here!
-            this.buf.add(item);
-          }
-        }
-        return !this.buf.isEmpty();
-      }
-      @Override
-      public void remove() {
-        throw new UnsupportedOperationException();
-      }
-    };
+    }
+    return !this.buf.isEmpty();
   }
 }
 {% endhighlight %}
 
-Now, to have a list that doesn't have empty strings we just decorate
-an original one with `CleanIterable`:
+Now, to have an iterator that doesn't have empty strings we just decorate
+an original one with `CleanIterator`:
 
 {% highlight java %}
-Iterable<String> list = new CleanIterable(list);
+Iterator<String> list = new CleanIterator(list);
 {% endhighlight %}
 
 Works great, but what will happen if we need another decorator, which
@@ -132,13 +125,14 @@ a few lines. Actually, just a single line will be different. This one:
 if (!item.isEmpty()) {
 {% endhighlight %}
 
-An obvious solution is a so called [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern):
+An obvious solution is a so called
+[Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern):
 we create a _general purpose_ decorator that encapsulates a "predicate" object. That
 predicate will have a single method accepting `String` and returning `boolean`:
 
 {% highlight java %}
 interface Predicate<T> {
-  boolean allow(T item);
+  boolean allowed(T item);
 }
 {% endhighlight %}
 
@@ -146,40 +140,33 @@ Then, our filtering decorator will look like this (pay attention,
 it's generic now):
 
 {% highlight java %}
-class CleanIterable<T> implements Iterable<T> {
-  private final Iterable<T> origin;
+class FilteringIterator<T> implements Iterator<T> {
+  private final Iterator<T> origin;
   private final Predicate<T> predicate;
-  CleanIterable(Iterable<T> list, Predicate<T> pred) {
+  private final Queue<T> buf;
+  FilteringIterator(Iterator<T> list,
+    Predicate<T> pred) {
     this.origin = list;
     this.predicate = pred;
+    this.buf = new LinkedList<>();
   }
   @Override
-  public Iterator<T> iterator() {
-    final Iterator<T> iterator = this.origin.iterator();
-    return new Iterator<T>() {
-      private Queue<T> buf = new LinkedList<>();
-      @Override
-      public T next() {
-        if (!this.hasNext()) {
-          throw new NoSuchElementException();
-        }
-        return this.buf.poll();
+  public T next() {
+    if (!this.hasNext()) {
+      throw new NoSuchElementException();
+    }
+    return this.buf.poll();
+  }
+  @Override
+  public boolean hasNext() {
+    while (this.buf.isEmpty()
+      && this.origin.hasNext()) {
+      T item = this.origin.next();
+      if (this.predicate.allowed(item)) {
+        this.buf.add(item);
       }
-      @Override
-      public boolean hasNext() {
-        while (this.buf.isEmpty() && iterator.hasNext()) {
-          String item = iterator.next();
-          if (CleanIterable.this.predicate.allow(item)) {
-            this.buf.add(item);
-          }
-        }
-        return !this.buf.isEmpty();
-      }
-      @Override
-      public void remove() {
-        throw new UnsupportedOperationException();
-      }
-    };
+    }
+    return !this.buf.isEmpty();
   }
 }
 {% endhighlight %}
@@ -187,27 +174,28 @@ class CleanIterable<T> implements Iterable<T> {
 Now, we can use it like this (with the help of an anonymous inner class):
 
 {% highlight java %}
-Iterable<String> list = new CleanIterable<String>(
+Iterator<String> list = new FilteringIterator<String>(
   list,
   new Predicate<String>() {
     @Override
-    public boolean allow(String item) {
+    public boolean allowed(String item) {
       return !item.isEmpty();
     }
   }
 );
 {% endhighlight %}
 
-This is how it worked in Java for years. You definitely know [Guava](https://github.com/google/guava),
+This is how it worked in Java for years.
+You definitely know [Guava](https://github.com/google/guava),
 a very popular Java library from Google, that implements exactly that
 design.
 
-Java&nbsp;8 simplified that syntax by allowing us making instances
-of that "predicates" (they are called "functional interfaces")
+Java&nbsp;8 simplified that syntax by allowing us to make instances
+of that "predicates", called "functional interfaces",
 in much less lines of code. Here is how our code will look in Java&nbsp;8:
 
 {% highlight java %}
-Iterable<String> list = new CleanIterable<String>(
+Iterator<String> list = new FilteringIterator<String>(
   list,
   item -> !item.isEmpty()
 );
@@ -233,13 +221,35 @@ This is very similar to the
 [configurable objects]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %})
 problem discussed earlier: injecting configurational parameters into
 objects seriously violate encapsulation principle. Here, with injectable
-functionality we make even a bigger mistake: the `CleanIterable` doesn't
+functionality we make even a bigger mistake: the `FilteringIterator` doesn't
 really know what exactly it is doing any more, either filtering empty
 strings or negative numbers. It is not an object, but a template of
 an object, a surrogate, a cripple.
 
+Yet another problem here is that we have to move data between two
+objects through method `allowed()`. The `item` is exactly the naked
+data, which we must try to avoid. With a simple `String` or `int` this
+may be not a big problem, but with bigger pieces of data we will
+have rather procedural code. The predicate will indeed be a procedure
+that is expecting data to arrive, processing them and returning back
+`boolean`. The predicate is not really a "functional interface",
+it's a "procedural interface."
+
 What is a better alternative? What would be the right object-oriented
-design? This is how I would do it, in a pseudo-language, similar to Java:
+design? The first option that comes to mind is an abstract class, with the
+same non-verbose syntax. How about this (this is pseudo-syntax, not Java)?:
 
+{% highlight java %}
+Iterator<String> list = new AbstractFilteringIterator<String>(list) {
+  allowed(item): item -> !item.isEmpty()
+}
+{% endhighlight %}
 
+Here `AbstractFilteringIterator` encapsulates the original iterator and
+lets us implement its abstract method `allowed()`. We are free to implement
+other methods here too. The object is more solid than the one with injected
+predicate before, but still `AbstractFilteringIterator` is a template, not
+a "proper" class. Moreover, we agreed already that implementation
+inheritance is a
+[bad idea]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
