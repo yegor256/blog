@@ -204,7 +204,7 @@ Malmö, Sweden;
 Practical Example of AOP with Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
-14-15 October 2016;
+14 October 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
 [photos](https://www.facebook.com/yegor256/posts/10210826984460614).
@@ -214,6 +214,22 @@ need to be improved: food and the amount of tracks. There too many tracks,
 I guess, for the amount of people attended. Would be better to lower the
 amount of speakers and focus the audience on best of them. And spend
 the available money on better food.
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Java vs OOP;
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+15 October 2016;
+[video](https://www.youtube.com/watch?v=cGcCcxx4xrg).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/Y-16C5yhKLo/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Trial by Combat for OOP Honor (in Russian);
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+15 October 2016;
+[video](https://www.youtube.com/watch?v=Y-16C5yhKLo).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/A-9FjaOIsw8/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>

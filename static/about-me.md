@@ -71,7 +71,7 @@ subscribers in my list).
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span class="note">1408+ Happy subscribers and counting...</span>
+  <span class="note">1783+ Happy subscribers and counting...</span>
 </fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).

@@ -80,7 +80,11 @@ emails.each do |line|
   else
     name, email = line.split(',')
     first, last = name.split(' ')
-    address = "#{name} <#{email}>"
+    if name.empty?
+      address = email
+    else
+      address = "#{name} <#{email}>"
+    end
   end
   email = email.strip.downcase
   markdown = template.render(
