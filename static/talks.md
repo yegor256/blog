@@ -77,13 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
-**XDSD: Meetings-Free Software Development Methodology**<br/>
-[DevTernity 2016](http://devternity.com/#/11)<br/>
-Riga, Latvia<br/>
-1 December 2016
-
-<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
@@ -116,6 +109,13 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2016
+
+<div class="talk-event"/>
+<img src="http://devternity.com/images/logo.png" class="past-talk" alt="DevTernity 2016"/>
+XDSD: Meetings-Free Software Development Methodology;
+[DevTernity 2016](http://devternity.com/#/11);
+Riga, Latvia;
+1 December 2016.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>

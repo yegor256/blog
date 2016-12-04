@@ -253,3 +253,48 @@ a "proper" class. Moreover, we agreed already that implementation
 inheritance is a
 [bad idea]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
+Let's stop for a second and think whether the code we're dealing with is
+actually object-oriented. I'm talking about the `Iterator` by itself. What is
+it? What kind of "object" is that? Isn't it just a data container with
+completely naked data of type `T`? Doesn't it expose the entire collection
+to the public making it impossible to encapsulate anything?
+
+I believe that `Iterator` is a purely procedural idea, inherited from
+old procedural languages, like
+[CLU](https://en.wikipedia.org/wiki/CLU_%28programming_language%29)
+(if [Wikipedia](https://en.wikipedia.org/wiki/Iterator) is not lying).
+It is just a container, where we are supposed to retrieve objects from,
+one by one. There could be even more complex iterators, like bi-directional
+and random-access ones. All of them are _not objects_.
+
+A much better design would be to let collections return objects with
+"iterational" behavior. Let's say, we have a list of strings:
+
+{% highlight java %}
+List<String> list = Arrays.asList(
+  "one", "two", "", "three", "four", ""
+);
+{% endhighlight %}
+
+Then, I want to iterate through them. First, I retrieve the first item:
+
+{% highlight java %}
+String item = list.first();
+{% endhighlight %}
+
+However, it's not just a `String` any more. It has a few more methods,
+since its type is not only `String`, but also `Iterated` (I'm making this
+up, Java doesn't have it):
+
+{% highlight java %}
+item.hasNext();
+item.next();
+item.remove();
+{% endhighlight %}
+
+Method names are the same as Java `Iterator` has, but they are implemented
+by the object itself. See the difference?
+
+Now, in order to build a
+
+
