@@ -20,6 +20,8 @@ These articles are re-published by [JavaCodeGeeks.com](http://www.javacodegeeks.
 It's a awesome resource for Java developers, I highly
 recommend to read me there :)
 
+{% badge https://www.javacodegeeks.com/wp-content/uploads/2012/12/JavaCodeGeeks-logo.png 128 http://www.javacodegeeks.com %}
+
 <a href="/rss-jcg.xml" title="RSS feed"><i class="icon icon-rss"></i></a>
 
 {{ site.categories['jcg'] | tagged_list }}
