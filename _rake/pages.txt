@@ -13,6 +13,7 @@ contents.html
 css/layout.css
 css/icons.css
 js/all.js
+rss/rss-jcg.xml
 txt/2015/award-2015.txt
 p/10/index.html
 pdf/2014/guard-article.pdf
