@@ -4,6 +4,7 @@ title: "Don't Use Java Assertions"
 date: 2016-06-17
 place: Los Angeles, CA
 tags: java
+category: jcg
 description: |
   Assertions are an outdated and flawed feature in Java
   (and some other languages) that I would not recommend you use.

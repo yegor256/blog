@@ -4,6 +4,7 @@ title: "Printers Instead of Getters"
 date: 2016-04-05
 place: Palo Alto, CA
 tags: java oop
+category: jcg
 description: |
   Since getters are an anti-pattern, how are we supposed
   to convert an object to, say, JSON or plain text?
