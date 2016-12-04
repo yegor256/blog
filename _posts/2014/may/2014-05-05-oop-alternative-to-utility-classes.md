@@ -60,7 +60,7 @@ However, in an object-oriented world, utility classes are considered a very bad
 There have been many discussions of this subject; to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,
 [Why helper, singletons and utility classes are mostly bad](http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/) by Simon Hart,
-[Avoiding Utility Classes](http://www.marshallward.org/avoiding-utility-classes.html) by Marshal Ward,
+[Avoiding Utility Classes](https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst) by Marshal Ward,
 [Kill That Util Class!](http://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal,
 [Helper Classes Are A Code Smell](http://www.robbagby.com/posts/helper-classes-are-a-code-smell/) by Rob Bagby.
 
