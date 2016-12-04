@@ -60,6 +60,8 @@ All other reasons are derived from the fact that a digital book will
 inevitably be stolen and posted on torrents or somewhere
 else, for free download. A digital book will become a _free_ book very quickly.
 
+{% quote Let's just agree that a digital book means a free book %}
+
 Let me tell you a funny story. I received an email a few months ago from a "Korean
 book publisher". The email said it was very interested in translating
 [Elegant Objects](/elegant-objects.html) into Korean and publishing in its
@@ -71,6 +73,8 @@ was just a scam, an attempt to get a digital copy of the book. Funny, huh?
 
 Thus, let's just agree that a digital book means a free book at the moment
 of writing, in this world. And here is why I don't want my books to be free:
+
+{% quote Not only because I'm greedy, but because I want you to take my books seriously %}
 
 **I want to earn**.
 Not only because I need to pay my bills, but mostly because I want
