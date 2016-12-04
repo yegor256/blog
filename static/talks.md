@@ -84,7 +84,8 @@ Manzanillo, Colima, Mexico<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
-[JBreak 2017](http://2017.jbreak.ru/)<br/>
+**Utility Classes Are Killing Us**<br/>
+[JBreak 2017](http://2017.jbreak.ru/talks/utility-classes-are-killing-us/)<br/>
 Novosibirsk, Russia<br/>
 4 April 2017
 
