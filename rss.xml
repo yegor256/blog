@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-04T09:25:43+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>EO</title><link href="http://www.yegor256.com/2016/11/29/eolang.html" rel="alternate" type="text/html" title="EO" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/29/eolang</id><content type="html" xml:base="http://www.yegor256.com/2016/11/29/eolang.html">&lt;p&gt;It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-04T13:17:05+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>EO</title><link href="http://www.yegor256.com/2016/11/29/eolang.html" rel="alternate" type="text/html" title="EO" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/29/eolang</id><content type="html" xml:base="http://www.yegor256.com/2016/11/29/eolang.html">&lt;p&gt;It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
 name is &lt;strong&gt;EO&lt;/strong&gt; (as in
 &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; or in
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Esperanto&quot;&gt;Esperanto&lt;/a&gt;): &lt;a href=&quot;http://www.eolang.org&quot;&gt;eolang.org&lt;/a&gt;.
@@ -241,6 +241,8 @@ the way I like it. Not the way it is.&lt;/p&gt;
 inevitably be stolen and posted on torrents or somewhere
 else, for free download. A digital book will become a &lt;em&gt;free&lt;/em&gt; book very quickly.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Let&amp;#39;s just agree that a digital book means a free book&lt;/aside&gt;
+
 &lt;p&gt;Let me tell you a funny story. I received an email a few months ago from a &amp;quot;Korean
 book publisher&amp;quot;. The email said it was very interested in translating
 &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; into Korean and publishing in its
@@ -252,6 +254,8 @@ was just a scam, an attempt to get a digital copy of the book. Funny, huh?&lt;/p
 
 &lt;p&gt;Thus, let&amp;#39;s just agree that a digital book means a free book at the moment
 of writing, in this world. And here is why I don&amp;#39;t want my books to be free:&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Not only because I&amp;#39;m greedy, but because I want you to take my books seriously&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;I want to earn&lt;/strong&gt;.
 Not only because I need to pay my bills, but mostly because I want
@@ -377,6 +381,8 @@ but rather thanks to a simple rule: Good slaves ate, and bad ones were beaten to
 A primitive form of command-and-control management was most
 effective at that time, both in civil and military arenas.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;The external strength of any army is ensured by its internal discipline&lt;/aside&gt;
+
 &lt;p&gt;Once slavery became illegal in the 19th century,
 the simple rule changed: Good workers were paid, while
 bad ones were fired. 150 years ago in most countries, losing a
@@ -421,6 +427,8 @@ and sticks is absolutely necessary, because we are still lazy and greedy,
 just like the guys who built the Colosseum. Likewise,
 we need motivation and punishment in order to produce
 something for someone.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;They still adhere to command and control but mask it as inspire and trust&lt;/aside&gt;
 
 &lt;p&gt;What about creativity and inspiration? Just like the architects of
 the Colosseum, we need people today to create iPads and Facebooks,
