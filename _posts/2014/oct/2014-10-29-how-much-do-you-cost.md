@@ -99,7 +99,8 @@ $15-20 in Karachi. The reason here is the cost of living&mdash;it is much higher
 {% quote We prefer to work with people whose expenses are lower %}
 
 However, this reason doesn't sound logical to me. If you're driving a more
-expensive car, we have to pay you a higher salary? The same with the
+expensive car, we have to pay you a
+[higher salary]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})? The same with the
 place to stay. You've chosen the country that
 you live in. You're using all the benefits of a well-developed country
 and you're paying for them. It's your choice. You decided to spend more money
