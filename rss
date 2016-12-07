@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-07T07:34:13+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-07T08:19:42+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -61,13 +61,22 @@ paychecks will look way less important compared to the multi-billion-dollar
 market the team is trying to dominate. They will sacrifice for a while.
 For quite a long time, this trick will work.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Stress them&lt;/strong&gt;.
+They must not feel relaxed, it&amp;#39;s not in your favor. Make sure they
+have tight deadlines, complex problems to solve, and enough guilt on
+their shoulders. They won&amp;#39;t ask for a raise, constantly feeling guilty
+for letting you down with project goals. Try to make them responsible
+for failures as much as possible.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Cushion chairs and tennis tables&lt;/strong&gt;.
 Spend just a little on all those funny office things, and they will
 pay you back big time, through the ability to underpay your programmers.
 A fancy and professional coffee machine will cost you $1,000 and make
 it possible to save $200 to $300 on each programmer monthly. Do the math.
 Make yourself a rule that instead of giving someone a raise, it&amp;#39;s always
-better to buy a new PlayStation for the office.&lt;/p&gt;
+better to buy a new PlayStation for the office. Also, let them bring
+their &lt;del&gt;spouses&lt;/del&gt; pets to the office&amp;mdash;they will &lt;del&gt;work&lt;/del&gt; stay
+longer for less money.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Give them sound titles&lt;/strong&gt;.
 Call them Vice Presidents, for example VP of Engineering, VP of Technology,
