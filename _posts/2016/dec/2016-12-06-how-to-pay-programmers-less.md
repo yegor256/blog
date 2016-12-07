@@ -55,6 +55,14 @@ that conferences are just a waste of time. It's better to organize events in the
 They always have to stay together, never free to meet programmers from other companies.
 The less they know, the safer you are.
 
+**No work from home**.
+The office must be their second home. Well, preferrably the first one. They
+must go there every day, have a desk there, a computer, a chair, and a stapler.
+They will be emotionally attached to the place and it will be very difficult
+to leave, no matter how underpaid they will be. Never allow them to work
+remotely&mdash;they may start thinking about a new home with a bigger
+salary.
+
 **Spy on them**.
 Make sure they all use your email server, computers, servers, and even mobile phones.
 Install software that tracks all their messages. Ideally, you should have
