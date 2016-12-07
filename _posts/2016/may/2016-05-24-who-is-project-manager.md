@@ -179,7 +179,7 @@ what the quality will be, and what the accuracy of that prediction is.
 
 A good PM doesn't personally give orders to the team and
 doesn't meet people to tell them what to do. Instead, he makes sure
-that all communication is happening through
+that [all communication]({% pst 2016/aug/2016-08-23-communication-maturity %}) is happening through
 a **project management information system** (PMIS). Moreover, in a perfectly
 organized project, a PM won't even need to give any orders to the team. Work
 orders will be created, approved, assigned and verified by the team itself.
@@ -192,6 +192,8 @@ risks identified and documented, concerns properly reported, stakeholders
 informed in time, etc. This may sound like utopia, but that's the
 true meaning of a "project manager" role.
 
+{% quote A charismatic project manager will inevitably ruin the project %}
+
 I believe it's already obvious that project management has very little to do
 with leadership. They are just two _orthogonal_ skill sets. I would say that
 a perfect PM won't even need any leadership skills, while a lousy PM will need
@@ -200,7 +202,9 @@ inner power (also known as "charisma") to make people do what you need. But that
 totally against what we just discussed. A project manager doesn't want people
 do what's needed because of his **charisma**. Instead, he wants people to be
 leaders of their own tasks. They have to move forward driven by their own
-motivation and selfish interests, according to the plans and rules defined
+motivation and [selfish interests]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}),
+according to the plans and
+[rules]({% pst 2015/oct/2015-10-13-competition-without-rules %}) defined
 by the PM. A charismatic project manager will inevitably replace the rules
 by his or her own personality and the entire idea of project management will
 be ruined.
