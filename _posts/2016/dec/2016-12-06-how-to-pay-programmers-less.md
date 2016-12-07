@@ -85,7 +85,9 @@ pay you back big time, through the ability to underpay your programmers.
 A fancy and professional coffee machine will cost you $1,000 and make
 it possible to save $200 to $300 on each programmer monthly. Do the math.
 Make yourself a rule that instead of giving someone a raise, it's always
-better to buy a new PlayStation for the office.
+better to buy a new PlayStation for the office. Also, let them bring
+their <del>spouses</del> pets to the office&mdash;they will <del>work</del> stay
+longer for less money.
 
 **Give them sound titles**.
 Call them Vice Presidents, for example VP of Engineering, VP of Technology,
