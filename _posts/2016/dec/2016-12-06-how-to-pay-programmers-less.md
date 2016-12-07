@@ -87,6 +87,13 @@ it possible to save $200 to $300 on each programmer monthly. Do the math.
 Make yourself a rule that instead of giving someone a raise, it's always
 better to buy a new PlayStation for the office.
 
+**Give them sound titles**.
+Call them Vice Presidents, for example VP of Engineering, VP of Technology,
+VP of Whatever. Not a big deal for you, but very important for them. The salary
+will be much less valuable than the title they can put on their LinkedIn
+profiles. If you're running out of Vice Presidents, try Senior Architect,
+Lead Technical Lead, Chief Scientist, etc.
+
 **Help them survive**.
 Most programmers are rather stupid when it comes to managing money. They simply don't
 know how to buy insurance, how to plan a retirement fund, or even how to
