@@ -91,7 +91,8 @@ better to buy a new PlayStation for the office.
 Call them Vice Presidents, for example VP of Engineering, VP of Technology,
 VP of Whatever. Not a big deal for you, but very important for them. The salary
 will be much less valuable than the title they can put on their LinkedIn
-profiles. If you're running out of Vice Presidents, try Senior Architect,
+profiles. If you're running out of Vice Presidents, try
+[Senior Architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 Lead Technical Lead, Chief Scientist, etc.
 
 **Help them survive**.
