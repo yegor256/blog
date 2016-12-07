@@ -56,7 +56,7 @@ They always have to stay together, never free to meet programmers from other com
 The less they know, the safer you are.
 
 **No work from home**.
-The office must be their second home. Well, preferrably the first one. They
+The office must be their second home. Well, preferably the first one. They
 must go there every day, have a desk there, a computer, a chair, and a stapler.
 They will be emotionally attached to the place and it will be very difficult
 to leave, no matter how underpaid they will be. Never allow them to work
