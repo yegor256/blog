@@ -87,6 +87,14 @@ paychecks will look way less important compared to the multi-billion-dollar
 market the team is trying to dominate. They will sacrifice for a while.
 For quite a long time, this trick will work.
 
+**Build a family**.
+Corporate parties, Friday beer, team builing events, bowling, birthdays,
+lunches and team nights&mdash;use these
+[tools]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+to create a feeling that your company is their family. Money is not really what good people talk
+about in a family, right? Asking for a raise will sound like a betrayal
+of family values&mdash;they will be afraid to do that.
+
 **Stress them**.
 They must not feel relaxed, it's not in your favor. Make sure they
 have tight deadlines, complex problems to solve, and enough guilt on
