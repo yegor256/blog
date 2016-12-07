@@ -79,6 +79,13 @@ paychecks will look way less important compared to the multi-billion-dollar
 market the team is trying to dominate. They will sacrifice for a while.
 For quite a long time, this trick will work.
 
+**Stress them**.
+They must not feel relaxed, it's not in your favor. Make sure they
+have tight deadlines, complex problems to solve, and enough guilt on
+their shoulders. They won't ask for a raise, constantly feeling guilty
+for letting you down with project goals. Try to make them responsible
+for failures as much as possible.
+
 **Cushion chairs and tennis tables**.
 Spend just a little on all those funny office things, and they will
 pay you back big time, through the ability to underpay your programmers.
