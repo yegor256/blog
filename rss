@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-07T20:29:17+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-07T23:02:44+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -37,6 +37,14 @@ that conferences are just a waste of time. It&amp;#39;s better to organize event
 They always have to stay together, never free to meet programmers from other companies.
 The less they know, the safer you are.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;No work from home&lt;/strong&gt;.
+The office must be their second home. Well, preferably the first one. They
+must go there every day, have a desk there, a computer, a chair, and a stapler.
+They will be emotionally attached to the place and it will be very difficult
+to leave, no matter how underpaid they will be. Never allow them to work
+remotely&amp;mdash;they may start thinking about a new home with a bigger
+salary.&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Spy on them&lt;/strong&gt;.
 Make sure they all use your email server, computers, servers, and even mobile phones.
 Install software that tracks all their messages. Ideally, you should have
@@ -60,6 +68,14 @@ mission is, and how important their contribution is. The numbers on their
 paychecks will look way less important compared to the multi-billion-dollar
 market the team is trying to dominate. They will sacrifice for a while.
 For quite a long time, this trick will work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Build a family&lt;/strong&gt;.
+Corporate parties, Friday beer, team building events, bowling, birthdays,
+lunches and team nights&amp;mdash;use these
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;tools&lt;/a&gt;
+to create a feeling that your company is their family. Money is not really what good people talk
+about in a family, right? Asking for a raise will sound like a betrayal
+of family values&amp;mdash;they will be afraid to do that.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Stress them&lt;/strong&gt;.
 They must not feel relaxed, it&amp;#39;s not in your favor. Make sure they
