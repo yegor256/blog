@@ -60,10 +60,10 @@ is that it's _finished_. We successfully transformed the world from state
 hear that the project was not a success. Indeed, it was not. It was a success
 only for you, one of its _stakeholders_. How about your roommate, the
 owner of that bag of coffee beans, who asked you yesterday not to use them
-because he is waiting for a date tonight? How much of a success was your project
+because he was waiting for a date tonight? How much of a success was your project
 to _him_?
 
-{% quote A project is either dead or alive, that's it %}
+{% quote A project is never a success or a failure; it is either dead or alive, that's it %}
 
 So, a project is never a "success" or a "failure." A project is either
 _dead_ or _alive_, that's it. Success is a subjective category and can only
