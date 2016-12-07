@@ -198,7 +198,8 @@ I believe it's already obvious that project management has very little to do
 with leadership. They are just two _orthogonal_ skill sets. I would say that
 a perfect PM won't even need any leadership skills, while a lousy PM will need
 a lot of them. As far as I understand, being a leader means having enough
-inner power (also known as "charisma") to make people do what you need. But that's
+inner power (also known as "[charisma](https://en.wikipedia.org/wiki/Charisma)")
+to make people do what you need. But that's
 totally against what we just discussed. A project manager doesn't want people
 do what's needed because of his **charisma**. Instead, he wants people to be
 leaders of their own tasks. They have to move forward driven by their own
