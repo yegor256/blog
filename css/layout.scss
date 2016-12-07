@@ -538,5 +538,8 @@ figure {
 }
 
 .politics {
-  color: $red !important;
+  background-color: $red;
+  color: $white !important;
+  margin: 0 .5em;
+  text-decoration: none;
 }
