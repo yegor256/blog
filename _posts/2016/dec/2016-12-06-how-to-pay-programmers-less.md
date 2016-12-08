@@ -14,6 +14,8 @@ keywords:
   - keep salary secret
   - keep salaries a secret
   - payroll secrecy
+translated:
+  - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
 ---
 
 To create software, you need programmers. Unfortunately. They are expensive,
