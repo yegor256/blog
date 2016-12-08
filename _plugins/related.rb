@@ -32,7 +32,7 @@ module Yegor
       end
       "<p><a href='#{page.url}'><strong>" +
         CGI::escapeHTML(page['title']) +
-        '</strong></a><br/>' +
+        '</strong></a> <br/>' +
         CGI::escapeHTML(page['description']) +
         '</p>'
     end
