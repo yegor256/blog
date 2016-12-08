@@ -14,6 +14,8 @@ keywords:
   - management skills
   - leadership skills
   - project management skills
+youtube:
+  - zaKTNK8g2-M
 ---
 
 A project manager is very often **confused** with a leader. However, they are two
