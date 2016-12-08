@@ -16,6 +16,11 @@ keywords:
   - payroll secrecy
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
+related:
+  - 2016/jan/2016-01-05-how-to-punish-employees
+  - 2015/oct/2015-10-06-how-to-be-good-office-slave
+  - 2014/oct/2014-10-29-how-much-do-you-cost
+  - 2015/mar/2015-03-02-team-morale-myths-and-reality
 ---
 
 To create software, you need programmers. Unfortunately. They are expensive,

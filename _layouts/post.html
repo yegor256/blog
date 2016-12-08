@@ -108,7 +108,15 @@ layout: default
     {% if page.youtube %}
       {{ page.youtube | youtube }}
     {% endif %}
-    <related-posts />
+    {% if page.related %}
+      <div class="unprintable">
+        <h2>Most Relevant Posts:</h2>
+        <p>If you like this article, you will definitely like these posts too:</p>
+        {% related_posts %}
+      </div>
+    {% else %}
+      <related-posts />
+    {% endif %}
   </div>
 
   <div class="disqus" role="complementary">
