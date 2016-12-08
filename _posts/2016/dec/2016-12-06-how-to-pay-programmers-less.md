@@ -62,8 +62,8 @@ The office must be their second home. Well, preferably the first one. They
 must go there every day, have a desk there, a computer, a chair, and a stapler.
 They will be emotionally attached to the place and it will be very difficult
 to leave, no matter how underpaid they will be. Never allow them to work
-remotely&mdash;they may start thinking about a new home with a bigger
-salary.
+[remotely]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})&mdash;they
+may start thinking about a new home with a bigger salary.
 
 **Spy on them**.
 Make sure they all use your email server, computers, servers, and even mobile phones.
