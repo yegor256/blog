@@ -93,6 +93,7 @@ if (typeof($) != 'undefined') {
           $('.share .icon-reddit').css('border', border);
         }
       });
+      /*
       // https://jsonp.afeld.me/
       $.ajax({
         dataType: 'jsonp',
@@ -113,6 +114,7 @@ if (typeof($) != 'undefined') {
           $('.share .icon-stumbleupon').css('border', border);
         }
       });
+      */
       $.ajax({
         dataType: 'json',
         async: true,
