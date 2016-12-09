@@ -105,9 +105,15 @@ layout: default
         {{ content }}
       </article>
     </main>
-    {% if page.youtube %}
+  </div>
+
+  {% if page.youtube %}
+    <div class="wrapper">
       {{ page.youtube | youtube }}
-    {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="wrapper">
     {% if page.related %}
       <div class="unprintable">
         <hr/>

@@ -135,7 +135,7 @@ task spell: [:build] do
     html.search('//header').remove
     html.search('//footer').remove
     tmp = Tempfile.new(['yegor256-', '.txt'])
-    text = html.xpath('//section//p|//section//h2|//section//h3').to_a.join(' ')
+    text = html.xpath('//article//p|//article//h2|//article//h3').to_a.join(' ')
       .gsub(/[\n\r\t ]+/, ' ')
       .gsub(/&[a-z]+;/, ' ')
       .gsub(/&#[0-9]+;/, ' ')
