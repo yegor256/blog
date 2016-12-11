@@ -18,6 +18,10 @@ keywords:
 youtube:
   - F6NwcQyEY18
   - ibT5oKToMoQ
+related:
+  - 2016/dec/2016-12-06-how-to-pay-programmers-less
+  - 2015/mar/2015-03-02-team-morale-myths-and-reality
+  - 2015/oct/2015-10-06-how-to-be-good-office-slave
 ---
 
 Punishment ... how do you prefer to do it? There are many ways to punish
