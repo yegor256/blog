@@ -108,6 +108,14 @@ their shoulders. They won't ask for a raise, constantly feeling guilty
 for letting you down with project goals. Try to make them responsible
 for failures as much as possible.
 
+**Make promises**.
+You don't need to keep them, but you have to make them: promise to
+raise their salaries soon, or by the time you
+raise investments, or by the time a big contract is signed, or when
+"the time is right." It is important
+to always make your promises dependable on events that are out of your
+control&mdash;your hands must always be clean.
+
 **Buy them cushion chairs and tennis tables**.
 Spend just a little on all those funny office things, and they will
 pay you back big time, through the ability to underpay your programmers.
