@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-12T20:31:23+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-13T10:34:26+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
+(MVC) is an architectural pattern we all are well aware of.
+It&amp;#39;s a de-facto standard for almost all UI and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
+and easy to use. It is simple and effective. It is a great concept ...
+for a procedural programmer. If your software is object-oriented, you
+should dislike MVC as much as I do. Here is why.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F12%2Fhot-shots.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Hot Shots! (1991) by Jim Abrahams&#39;/&gt;&lt;figcaption&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is how MVC architecture looks:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;/uml/45d05ab3bd9a93ad88ec209352b62f60.svg&#39; style=&quot;width:75%&quot;
+        alt=&#39;PlantUML SVG diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Controller is &lt;em&gt;in charge&lt;/em&gt;, taking care of the data received from Model
+and injecting it into View&amp;mdash;and this is exactly the problem. The data escapes
+the Model and becomes &amp;quot;naked&amp;quot;, which is a big problem, as we agreed earlier.
+OOP is all about encapsulation&amp;mdash;data hiding.&lt;/p&gt;
+
+&lt;p&gt;MVC architecture does exactly the opposite by &lt;em&gt;exposing&lt;/em&gt; the data and hiding
+behavior. The controller deals with the data directly, making decisions about
+its purpose and properties, while the objects, which are supposed to know
+everything about the data and hide it, remain &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;anemic&lt;/a&gt;.
+That is exactly the principle any procedural architecture is built upon; the
+code is in charge of the data. Take this C++ code, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// controller&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_from_engine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// model&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The speed is %d mph&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// view&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The function &lt;code&gt;print_speed()&lt;/code&gt; is the controller. It gets the data &lt;code&gt;s&lt;/code&gt; from
+the model &lt;code&gt;load_from_engine()&lt;/code&gt; and renders it via the view &lt;code&gt;printf()&lt;/code&gt;. Only
+the controller knows that the data is in miles per hour. The engine
+returns &lt;code&gt;int&lt;/code&gt; without any properties. The controller simply assumed that
+that data is in mph. If we want to create a similar controller somewhere
+else, we will have to make a similar assumption again and again. That&amp;#39;s what the
+&amp;quot;naked data&amp;quot; problem is about, and it leads to serious maintainability issues.&lt;/p&gt;
+
+&lt;p&gt;This is an object-oriented alternative to the code above (pseudo-C++):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrintedSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// view&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FormattedSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// controller&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SpeedFromEngine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// model&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, &lt;code&gt;SpeedFromEngine.speed()&lt;/code&gt;
+returns speed in mph, as an integer; &lt;code&gt;FormattedSpeed.speed()&lt;/code&gt; returns
+&lt;code&gt;&amp;quot;%d mph&amp;quot;&lt;/code&gt;; and finally, &lt;code&gt;PrintedSpeed.to_str()&lt;/code&gt; returns the full text of the
+message. We can call them &amp;quot;model, view, and controller&amp;quot;, but in reality they
+are just objects decorating each other. It&amp;#39;s still the same entity&amp;mdash;the speed.
+But it gets more complex and intelligent by being decorated.&lt;/p&gt;
+
+&lt;p&gt;We don&amp;#39;t tear the concept of speed apart. The speed is the speed, no matter
+who works with it and where it is presented. It just gets new behavior
+from decorators. It grows, but never falls apart.&lt;/p&gt;
+
+&lt;p&gt;To summarize, Controller is a pure &lt;em&gt;procedural&lt;/em&gt; component in the MVC trio,
+which turns Model into a passive data holder and View into
+a passive data renderer. The controll&lt;b&gt;er&lt;/b&gt;, the hold&lt;b&gt;er&lt;/b&gt;,
+the render&lt;b&gt;er&lt;/b&gt; ...
+Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>Model-View-Controller
+(MVC) is an architectural pattern we all are well aware of.
+It&amp;#39;s a de-facto standard for almost all UI and
+Web frameworks. It is convenient
+and easy to use. It is simple and effective. It is a great concept ...
+for a procedural programmer. If your software is object-oriented, you
+should dislike MVC as much as I do. Here is why.</summary></entry><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -767,139 +840,4 @@ I interviewed David West
 a few weeks ago, and he said that inheritance should not exist in
 object-oriented programming at all (full video).
 Maybe Dr. West is right and we should totally forget extends keyword in Java,
-for example.</summary></entry><entry><title>Gradients of Immutability</title><link href="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html" rel="alternate" type="text/html" title="Gradients of Immutability" /><published>2016-09-07T00:00:00+00:00</published><updated>2016-09-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/07/gradients-of-immutability</id><content type="html" xml:base="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html">&lt;p&gt;Good objects are immutable, but not necessarily constants.
-I tried to explain it &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;here&lt;/a&gt;,
-&lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;here&lt;/a&gt;, and
-&lt;a href=&quot;/2014/12/22/immutable-objects-not-dumb.html&quot;&gt;here&lt;/a&gt;,
-but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white&amp;mdash;there
-are a few more gradients; let&amp;#39;s take a look.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F09%2Ftwelve-monkeys.jpg&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Twelve Monkeys (1995) by Terry Gilliam&#39;/&gt;&lt;figcaption&gt;Twelve Monkeys (1995) by Terry Gilliam&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;As we agreed &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;here&lt;/a&gt;,
-an object is a &lt;strong&gt;representative&lt;/strong&gt; of someone else
-(some entity or entities, other object(s), data, memory, files, etc.).
-Let&amp;#39;s examine a number of objects that look exactly the same
-to us but &lt;strong&gt;represent&lt;/strong&gt; different things, then analyze how
-immutable they are and why.&lt;/p&gt;
-
-&lt;h2 id=&quot;constant&quot;&gt;Constant&lt;/h2&gt;
-
-&lt;p&gt;This is &lt;strong&gt;constant&lt;/strong&gt;; it doesn&amp;#39;t allow any modifications
-to the encapsulated entity and always returns the same text
-(I&amp;#39;ve skipped constructors for the sake of brevity):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is what we usually have in mind when talking about immutable
-objects. Such a class is very close to a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Pure_function&quot;&gt;pure function&lt;/a&gt;,
-which means that no matter how many times we instantiate it with
-the same initial values, the result of &lt;code&gt;title()&lt;/code&gt; will be the same.&lt;/p&gt;
-
-&lt;h2 id=&quot;not-a-constant&quot;&gt;Not a Constant&lt;/h2&gt;
-
-&lt;p&gt;Check out this one:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;%s (as of %tR)&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The object is still immutable, but it is not a pure
-function anymore because of the method &lt;code&gt;title()&lt;/code&gt;&amp;mdash;it returns different values if we call it
-multiple times with at least a one-minute interval. The object
-is immutable; it&amp;#39;s just not a constant anymore.&lt;/p&gt;
-
-&lt;h2 id=&quot;represented-mutability&quot;&gt;Represented Mutability&lt;/h2&gt;
-
-&lt;p&gt;How about this one:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;StandardOpenOption&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CREATE&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readAllBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This &lt;em&gt;immutable&lt;/em&gt; object keeps the book title in a file. It&amp;#39;s not a constant,
-because its method &lt;code&gt;title()&lt;/code&gt; may return different values on every
-second call. Moreover, the represented entity (the file) is not a constant.
-We can&amp;#39;t say whether it&amp;#39;s mutable or immutable, as we don&amp;#39;t know how &lt;code&gt;Files.write()&lt;/code&gt;
-is implemented. But we know for sure that it&amp;#39;s not a constant, because it
-accepts change requests.&lt;/p&gt;
-
-&lt;h2 id=&quot;encapsulated-mutability&quot;&gt;Encapsulated Mutability&lt;/h2&gt;
-
-&lt;p&gt;An immutable object may not only represent but even
-encapsulate a mutable one. Just like in the
-previous example, a mutable file was encapsulated. Even though it
-was represented by the immutable class &lt;code&gt;Path&lt;/code&gt;, the real file on disk
-was mutable. We can do the same, but in memory:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The object is still &lt;em&gt;immutable&lt;/em&gt;. Is it thread-safe? No. Is it a constant?
-No. Is it immutable? Yes. Confused? You bet.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;My point is that immutability is not &lt;em&gt;binary&lt;/em&gt;; there are many
-forms of it. The most simple one is, of course, a
-constant. Constants are almost the same as pure functions in functional
-programming. But object-oriented programming allows us to take
-a few steps forward and give immutable objects more permissions
-and flexibility. In OOP, we may have many more forms of immutability.&lt;/p&gt;
-
-&lt;p&gt;What is common among all these examples is that our objects are
-&lt;strong&gt;loyal&lt;/strong&gt; to the entities they encapsulate. There are no
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters&lt;/a&gt;
-that could change them. All encapsulated objects are &lt;code&gt;final&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is the only quality that differentiates mutable objects from
-immutable ones. The latter are always loyal to the entities they
-encapsulate and represent. For all the rest ... it depends.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>Good objects are immutable, but not necessarily constants.
-I tried to explain it here,
-here, and
-here,
-but now it&amp;#39;s time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white&amp;mdash;there
-are a few more gradients; let&amp;#39;s take a look.</summary></entry></feed>
+for example.</summary></entry></feed>
