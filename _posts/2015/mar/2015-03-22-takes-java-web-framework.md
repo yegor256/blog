@@ -562,7 +562,7 @@ and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-rest
 It is simple and powerful&mdash;Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
 representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller",
-in terms of [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).
 
 I'll write a separate article about templating with Xembly and XSL very soon.
 

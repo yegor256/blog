@@ -49,7 +49,8 @@ is as powerful as any other rendering engine, like JSP, JSF, Tiles, or what have
 Actually, it is much more powerful.
 
 Using this approach we literally remove the entire rendering layer
-("View" in the MVC paradigm) from the server and move it to the browser.
+("View" in the [MVC paradigm]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}))
+from the server and move it to the browser.
 
 If we can make it possible, the web server will expose just a RESTful API,
 and every response page will have an XSL stylesheet attached. What do

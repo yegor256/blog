@@ -82,7 +82,7 @@ performance problem in Java? Yes.
 [<span class='red'>Front Controller</span>](https://en.wikipedia.org/wiki/Front_controller).
 Terrible idea, as well as the entire
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
-It's very [procedural]({% pst 2015/mar/2015-03-09-objects-end-with-er %}), that's why.
+It's very [procedural]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}), that's why.
 
 [<span class='orange'>Interpreter</span>](https://en.wikipedia.org/wiki/Interpreter_pattern).
 It's OK, but I [don't like]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
