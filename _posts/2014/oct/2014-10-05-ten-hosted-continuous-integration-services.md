@@ -155,7 +155,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="https://codeship.com">CodeShip</a>&#x263A;</td>
+<tr><td><a href="https://codeship.com">Codeship</a>&#x263A;</td>
   <td class="x-right"><a href="https://codeship.com/pricing">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -324,7 +324,7 @@ that, their badge is not updated correctly in GitHub README.md&mdash;when the bu
 
 {% badge /images/2014/10/codeship.png 64 https://www.codeship.com %}
 
-[**CodeShip**](https://codeship.com) works fine, but their web UI
+[**Codeship**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
