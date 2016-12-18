@@ -128,7 +128,7 @@ solution is delivered.
 
 It can be a temporary solution. It can be a single line change in the
 project documentation. It can be a TODO marker in the code saying that
-"we are aware of the problem but won't fix it because we're lazy". Anything
+"we are aware of the problem but won't fix it because we're lazy." Anything
 would work, but not nothing.
 
 Look at it from a different perspective. When you started that ticket, you had
@@ -179,7 +179,7 @@ doesn't satisfy the
 [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), etc.
 
 Every bug report should follow the same simple formula: "This is what we *have*,
-this is what we *should have* instead, so fix it". Every ticket, be it a bug,
+this is what we *should have* instead, so fix it." Every ticket, be it a bug,
 a task, a question, or a suggestion, should be formatted in this way. By
 submitting it, you're asking the project to move from point A to point B. Something
 is not right at point A, and it will be much better for all of us to be

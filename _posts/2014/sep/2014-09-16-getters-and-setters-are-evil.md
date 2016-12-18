@@ -83,7 +83,7 @@ an article by Bozhidar Bozhanov:
 and setters are simple data holders.
 
 This misconception is the consequence of a huge misunderstanding!
-Objects are not "simple data holders". Objects are **not** data structures
+Objects are not "simple data holders." Objects are **not** data structures
 with attached methods. This "data holder" concept came to object-oriented programming
 from procedural languages, especially C and COBOL.
 I'll say it again: an object is **not** a set of data elements

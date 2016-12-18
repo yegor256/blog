@@ -65,7 +65,7 @@ This terrific rule is usually understood as an order for the entire team. The
 team has to frequently deliver, while programmers are free to deliver almost
 nothing and who knows when. I think the Manifesto here is emphasizing on
 both individual and group responsibilities to frequently deliver. I also think
-that this frequency should be way higher than just a "couple of weeks". Today, with
+that this frequency should be way higher than just a "couple of weeks." Today, with
 modern technologies and instruments, we can deliver way faster&mdash;several
 times a day.
 
@@ -125,7 +125,7 @@ or the amount of [bugs found]({% pst 2015/sep/2015-09-10-testing-exit-criteria %
 or the amounts of [dollars spent]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %}).
 There are many other metrics. We can use many of them. However, a typical
 mistake many Agile teams are doing is just ignoring them all. They say
-"we measure only the end result". That's not what the Manifesto
+"we measure only the end result." That's not what the Manifesto
 is suggesting to do though.
 
 **Principle #8**:

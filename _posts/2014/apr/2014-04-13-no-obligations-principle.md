@@ -52,7 +52,7 @@ our shoulders. When the
 [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 assigns a task to a programmer&mdash;he moves the monkey from his shoulders to the programmer's shoulders.
 
-The programmer usually presents the excuse "I don't know what to do". Now the
+The programmer usually presents the excuse "I don't know what to do." Now the
 monkey is back on the shoulders of the managers. The goal of the manager is to
 send the monkey back to make it the programmer's problem again.
 

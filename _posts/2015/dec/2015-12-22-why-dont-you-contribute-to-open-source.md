@@ -31,7 +31,7 @@ about that every week. Let me answer them all here.
 {% picture /images/2015/12/kung-fu-hustle.jpg 0 Kung Fu Hustle (2004) by Stephen Chow %}
 
 The gist of all those comments is this: "I don't contribute to open source,
-but I'm still very passionate about software development". Then, there is
+but I'm still very passionate about software development." Then, there is
 a list of **reasons** why the author of the comment doesn't contribute:
 
   * I spend my free time with my family.
@@ -46,7 +46,7 @@ Today, it's **not possible** at all to create software without using
 open-source components. I'm sure nobody will argue with this. Only something
 very basic and simple can be created without code reuse. Nah, I'm wrong. Even
 super small pieces of software can't be created without open-source
-"neighbors". You need at the very least an operating system and a programming language.
+"neighbors." You need at the very least an operating system and a programming language.
 In most cases, they are open source (Microsoft is an exception, and it must die).
 
 Thus, no matter what software you're creating, you're using modules

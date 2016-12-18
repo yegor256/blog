@@ -200,7 +200,7 @@ wants to
 us every morning. Actually, a bad manager is doing
 it during the day too. He is afraid that without well-known goals and rules,
 the team will do something wrong or won't do anything at all. That's why
-he has "to keep his hand on the pulse". In reality, he keeps his hand
+he has "to keep his hand on the pulse." In reality, he keeps his hand
 on the neck of the team.
 
 ## Motivation
@@ -234,7 +234,7 @@ because they don't want to offend anyone by their super performance.
 It is in our nature to try to look similar to everybody else while being
 in a group. When everybody reports, "_I still have nothing to show_", it would
 be strange to expect a good programmer to say, "_I finished all my tasks and
-want to get more_". Well, this may happen once, but after a few times, this
+want to get more_." Well, this may happen once, but after a few times, this
 A player will either stop working hard or will change the team. He will
 see that his performance is standing out and that this can't be appreciated by the group,
 no matter what the manager says.

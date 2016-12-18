@@ -18,7 +18,7 @@ keywords:
 
 There are thousands of books about object-oriented programming and
 hundreds of object-oriented languages, and I believe most (read "all") of them
-give us an incorrect definition of an "object". That's why the entire
+give us an incorrect definition of an "object." That's why the entire
 OOP world is so full of misconceptions and mistakes. Their
 definition of an object is limited by the hardware architecture they
 are working with and that's why is very primitive and mechanical.

@@ -77,7 +77,7 @@ stupid in front of the team. A weak manager does look stupid when he or she
 tries to hide mistakes that have been made.
 
 **Responsibility Is Always Personal**.
-The most demotivating word used in task descriptions is "together". Don't use it.
+The most demotivating word used in task descriptions is "together." Don't use it.
 Each task has to be personally and individually assigned (no matter what the
 [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) says).
 Everybody is responsible for his or her own success or failure. How their results

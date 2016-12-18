@@ -27,7 +27,7 @@ youtube:
 
 The first principle of eXtremely Distributed Software Development
 ([XDSD](http://www.xdsd.org)) states that
-"everyone gets paid for verified deliverables". This literally
+"everyone gets paid for verified deliverables." This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
 pass a code review and make sure the code is
@@ -70,7 +70,7 @@ any technical issues on Skype or by phone.
 So, how do we resolve problems and share information?
 
 We use task tracking systems for that. When a developer has a question,
-he submits it as a new "ticket". The project
+he submits it as a new "ticket." The project
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}) then picks it up
 and assigns it to another developer, who is able to answer it. Then, the
 answer goes back through the tracking system or directly into

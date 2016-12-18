@@ -67,7 +67,7 @@ It works as an HTTP server with a "first-in-first-out" queue for HTTP answers.
 We add answers, and the server returns them in response to HTTP requests.
 
 The server starts on `start()` call and stops on `stop()`. Its method `home()`
-returns a URL of its "home page". The server then binds itself to a randomly
+returns a URL of its "home page." The server then binds itself to a randomly
 allocated TCP port.
 
 The container finds the first available and unoccupied port.

@@ -24,7 +24,7 @@ some money in the budget. There is some time in the schedule. We start
 right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what's wrong. Eventually they stop and say
-"we're done". How do they know when to stop? When there is enough
+"we're done." How do they know when to stop? When there is enough
 testing? It's obvious&mdash;when there are **no more bugs left** and the
 product can be shipped! If you think like this, I have bad news for you.
 You're **fundamentally wrong**.

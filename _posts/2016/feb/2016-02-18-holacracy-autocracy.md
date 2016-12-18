@@ -48,7 +48,7 @@ of bureaucracy, special privileges, expensive furniture and private parties
 for top management. In a flat team, the distance between the CEO and
 a junior programmer is very small. They sit together in the same room,
 eat in the same cafe, and discuss team strategy like friends. There
-are no "bosses" on a flat team, only "**leaders**". They don't give orders, they
+are no "bosses" on a flat team, only "**leaders**." They don't give orders, they
 **inspire**. They don't punish, they celebrate success and mourn failure
 together with everybody. Well, that's the idea of a holacracy.
 And it actually works. I've seen it many times.
@@ -78,7 +78,7 @@ Since a project is a temporary endeavor, it doesn't give security to its
 participants. And it doesn't take away our freedom. The arrangement is
 different: A project gives us **money** and takes our **time**. The project
 basically says to all of us, its participants: "Let's get it done and go
-our own ways". Having this philosophy in mind and understanding the motivation
+our own ways." Having this philosophy in mind and understanding the motivation
 of everybody involved, the PM must use instruments that have nothing to do
 with what keeps the organization alive.
 

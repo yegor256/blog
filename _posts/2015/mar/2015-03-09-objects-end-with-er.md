@@ -25,7 +25,7 @@ Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
 This is the class names **hall of shame**. Have you seen them in your code?
 In [open source libraries]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 you're using? In pattern books? They are all wrong.
-What do they have in common? They all end in "-er". And what's wrong with that?
+What do they have in common? They all end in "-er." And what's wrong with that?
 They are not classes, and the objects they instantiate are not objects.
 Instead, they are collections of procedures pretending to be classes.
 
@@ -34,7 +34,7 @@ Instead, they are collections of procedures pretending to be classes.
 {% picture /images/2015/03/fight-club.jpg 0 Fight Club (1999) by David Fincher %}
 
 [Peter Coad](http://en.wikipedia.org/wiki/Peter_Coad)
-used to say: Challenge any class name that ends in "-er". There
+used to say: Challenge any class name that ends in "-er." There
 are a few good articles about this subject, including
 [Your Coding Conventions Are Hurting You](http://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html)
 by Carlo Pescio,
@@ -73,9 +73,9 @@ This is not what you would expect from a good business partner
 who can help you work with a bucket of apples.
 
 Instead, if I lived in the world of declarative programming, I would
-tell you: "_Consider them sorted; what do you want to do next?_". You, in turn,
+tell you: "_Consider them sorted; what do you want to do next?_." You, in turn,
 would tell me that you need the biggest apple now. And I would say,
-"_No problem; here it is_". In order to return the biggest one, I would not
+"_No problem; here it is_." In order to return the biggest one, I would not
 sort them all. I would just go through them all one by one and select the
 biggest. This operation is much faster than sorting first and then selecting
 the first in the list.

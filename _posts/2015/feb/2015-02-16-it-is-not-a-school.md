@@ -31,7 +31,7 @@ the programmers and the project.
 
 Disclaimer: I'm talking about software **projects** here, which PMBOK defines
 as "_temporary_ endeavors undertaken to create unique
-products, services, or results". If your team is engaged in
+products, services, or results." If your team is engaged in
 [continuous development]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 or maintenance of software, this concept may not be relevant.
 

@@ -54,7 +54,7 @@ By the way, don't confuse a Product Statement with a [Mission](https://en.wikipe
 which is a much broader declaration of an overall goal of your business. You
 may have a hundred products but only a single mission. For example,
 Disney [says](http://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
-that its mission is: "to make people happy". They've got
+that its mission is: "to make people happy." They've got
 hundreds of products that help them accomplish this mission. And each product
 has its own Product Statement.
 

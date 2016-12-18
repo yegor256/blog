@@ -37,7 +37,7 @@ includes something like this: "Parties shall deem all deliverables created by
 the developer as _works made for hire_ as is defined under the
 [Copyright Law of the United States](http://www.copyright.gov/title17/)".
 This is the shortest and easiest definition of "whatever you create
-for me is mine". Put this into the contract and the outsourcing company
+for me is mine." Put this into the contract and the outsourcing company
 won't be able to claim that the software it created belongs to it,
 which happens here and there.
 

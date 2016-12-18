@@ -54,7 +54,7 @@ desk it will end up on. Be ready to answer for every word you have on it.
 
 If you're saying that you're an "expert in JavaScript",
 be ready to explain what the key new features of
-ECMAScript version 6 are. If you can't, don't use the word "expert". The point
+ECMAScript version 6 are. If you can't, don't use the word "expert." The point
 is that you have to be ready to prove every word.
 
 ## Sexy Photo on the Top
@@ -75,7 +75,7 @@ relaxed and successful. You don't want to get hired; they want to hire you&mdash
 They know what you are, because they are reading your resume.
 
 Besides that, you're limiting yourself with that title. Maybe they are looking
-for a VP of engineering while your resume says "Software Architect". That's
+for a VP of engineering while your resume says "Software Architect." That's
 immediately a mismatch for them. It's a strike against you. Your **name** is the title
 of your resume. That's it.
 
@@ -85,13 +85,13 @@ This section of your resume actually tells them about your "tech focus".
 It must have a very short list of skills, definitely **under 12**. You simply
 can't be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
 If there are too many skills, it's a sign of a "jack of all trades" who is
-almost always a "master of none". Don't do that.
+almost always a "master of none." Don't do that.
 
 Find the most important skills in your profile and put them there.
 Just a few. And make sure the skills are all on the same level of abstraction.
 Java and AngularJS must not be present together. Java is a few levels higher
 than AngularJS. Thus, it's either "Java, SQL, and HTTP" or "AngularJS, Spring Framework,
-and Web Sockets". I would recommend you stay at the lowest level you can until
+and Web Sockets." I would recommend you stay at the lowest level you can until
 you become a serious market figure. For example, "Java" as a skill would look good
 in [Jon Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
 because he definitely knows the entire Java world, and the
@@ -165,7 +165,7 @@ your entire professional history and find well-known names or big numbers.
 For example, 10 years ago I was helping a startup create software that
 had IBM as a subscriber. They managed to get some tracking, and in
 two months, IBM decided not to use them anymore. It's a true (and sad) story, but I can
-put something like this into my resume: "wrote software for IBM". Am I lying? Not really.
+put something like this into my resume: "wrote software for IBM." Am I lying? Not really.
 If they ask me what exactly I did for IBM, I will explain. In most cases, they
 won't ask. They will just buy this big name and put my resume on top of
 others.
@@ -175,7 +175,7 @@ I was helping a company configure a continuous integration pipeline. It was not 
 deal, but the company was serving more than 5 million hits per day on its website.
 That's a big number. I had nothing to do with this substantial web traffic, but I was
 in that company for a few months. So I may say in my resume:
-"configured the delivery pipeline for a 5M-hits-per-day web store". If they
+"configured the delivery pipeline for a 5M-hits-per-day web store." If they
 ask me for details, I will be able to give them. I'm not lying.
 
 Use this technique carefully, and never lie. But do it. Don't be scared.
@@ -230,7 +230,7 @@ some of your ideas.
 The easiest subjects to start with are stories about your practical
 experience with some modern technologies and tools, something like
 "How Docker Helps Us Optimize Delivery" or
-"Five Apache Spark Installation Issues". Just describe what you've done
+"Five Apache Spark Installation Issues." Just describe what you've done
 on a recent project. It doesn't really matter what you talk about.
 What matters is that you're visible. If the market accepts you,
 the employer will trust you more. That's exactly what you need in order
@@ -285,7 +285,7 @@ document in a standard template, they will feel you didn't pay
 attention to it. You didn't even care to create that small but very
 important product nicely. How will you create their software? With the
 same attitude. Don't ruin the whole show with a careless design. That's the
-key word here&mdash;"careless". It doesn't need to be complex. It may be
+key word here&mdash;"careless." It doesn't need to be complex. It may be
 very simple. But it must be **yours**, made with care and love.
 
 <hr/>

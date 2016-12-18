@@ -131,7 +131,7 @@ A utility method, huh? Yes,
 
 The main issue with this design, even though it is way better than
 the previous one, is that it doesn't prevent code duplication between
-test "classes". If I need a similar test fixture of type `Folder` in
+test "classes." If I need a similar test fixture of type `Folder` in
 another test case, I will have to move this static method there. Or
 even worse, I will have to create a utility class.
 Yes, there is [nothing worse]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})

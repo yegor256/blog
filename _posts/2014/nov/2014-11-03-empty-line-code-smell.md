@@ -18,7 +18,7 @@ keywords:
 The subject may sound like a joke, but it is not. An empty line,
 used as a separator of instructions in an object method, is a
 [code smell](https://en.wikipedia.org/wiki/Code_smell).
-Why? In short, because a method should **not** contain "parts". A method
+Why? In short, because a method should **not** contain "parts." A method
 should always [do one thing](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 and its functional decomposition should be done by language constructs
 (for example, new methods), and **never** by empty lines.

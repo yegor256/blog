@@ -46,7 +46,7 @@ Requs syntax is explained [here](http://www.requs.org/syntax.html).
 
 The main and only goal of requirements engineering in any XDSD project is to
 create a complete and non-ambiguous SRS document. The person who performs this
-task is called the "system analyst". This article explains his or her main tasks
+task is called the "system analyst." This article explains his or her main tasks
 and discusses possible pitfalls.
 
 ## Tasks

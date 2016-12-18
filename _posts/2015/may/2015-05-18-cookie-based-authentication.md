@@ -30,7 +30,7 @@ Here is how [Takes](http://www.takes.org) makes it possible in a few lines of co
 
 First, let's see how it works. Moreover, let's see how I believe it should work.
 
-Step one: The user enters an email and password and clicks "submit". The server
+Step one: The user enters an email and password and clicks "submit." The server
 receives a POST request with this information inside:
 
 {% highlight text %}
@@ -201,7 +201,7 @@ to authenticate the user and create an `Identity` object.
 
 ## How Is It Composable?
 
-This mechanism is indeed very extensible and "composable". Let's say we
+This mechanism is indeed very extensible and "composable." Let's say we
 want to skip authentication during integration testing. Here is how:
 
 {% highlight java %}

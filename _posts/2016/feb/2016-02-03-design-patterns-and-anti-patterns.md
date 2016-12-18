@@ -132,7 +132,7 @@ Good one.
 [<span class='orange'>Observer</span>](https://en.wikipedia.org/wiki/Observer_pattern).
 The idea is good, but the name is bad, since it
 [ends with -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
-A much better one would be "Source" and "Target". The Source
+A much better one would be "Source" and "Target." The Source
 generates events and the Target listens to them.
 
 [<span class='red'>ORM</span>](https://en.wikipedia.org/wiki/Object-relational_mapping).

@@ -216,14 +216,18 @@ end
 desc 'Make sure there are no prohibited RegEx-es'
 task :regex do
   ptns = [
+    /",/,
+    /"\./,
+    /&quot;\./,
     /\s&mdash;/,
     /&mdash;\s/
   ]
   all_html().each do |f|
     html = File.read(f)
     ptns.each do |re|
-      fail "#{f}: #{re}" if re.match html
+      fail "#{f}: #{re} found and it's prohibited" if re.match html
     end
+    puts f
   end
   done 'Not prohibited regular expressions'
 end

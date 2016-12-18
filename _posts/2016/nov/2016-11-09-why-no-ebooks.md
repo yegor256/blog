@@ -48,7 +48,7 @@ Second, there is an emotional reason:
 
 **I don't like digital books**.
 Call me old school, but I don't like to read on screen. I like how
-books feel, how they smell, and how they become "friends". I like
+books feel, how they smell, and how they become "friends." I like
 to make notes, bookmarks, fold pages, etc. I believe what's very important is
 not just the content, but the way you "feel" it. With a digital book,
 this emotional aspect of reading is gone; all books are the same. You don't
@@ -63,7 +63,7 @@ else, for free download. A digital book will become a _free_ book very quickly.
 {% quote Let's just agree that a digital book means a free book %}
 
 Let me tell you a funny story. I received an email a few months ago from a "Korean
-book publisher". The email said it was very interested in translating
+book publisher." The email said it was very interested in translating
 [Elegant Objects](/elegant-objects.html) into Korean and publishing in its
 local market. To start the process, the email said, the company needed my book in PDF.
 I replied that I was ready to send a printed copy, which was

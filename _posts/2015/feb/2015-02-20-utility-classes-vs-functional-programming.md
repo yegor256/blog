@@ -153,7 +153,7 @@ can later be converted into a real product (declarative).
 
 Utility classes, like `Math` from JDK or `StringUtils` from Apache Commons,
 return products ready to be used immediately, while functions in Lisp
-and other functional languages return "vouchers". For example, if you
+and other functional languages return "vouchers." For example, if you
 call the `max` function in Lisp, the actual maximum between two numbers
 will only be calculated when you actually start using it:
 

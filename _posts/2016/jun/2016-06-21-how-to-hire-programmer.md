@@ -83,7 +83,7 @@ than those boring documents that nobody knows how to write.
 In order to create a great software product, he must be very **excited** about it.
 Make sure he is excited. If he is not excited, call him again. Motivate him.
 Talk to him. Explain to him your brilliant Google-killer business idea again
-and again. Until the moment he <del>screams</del> says "I'm excited". He must know what
+and again. Until the moment he <del>screams</del> says "I'm excited." He must know what
 a great value your product is producing for the entirety of civilization. And he
 must be excited. Do I have to say it one more time? Excited! Are
 you excited already? I'm excited.
@@ -100,7 +100,7 @@ commitment. That's why you have to pretend you're rich enough.
 
 **Delay Money Talks**.
 Don't mention money for as long as you can. Ideally, ask him to create
-a prototype first and "then we'll discuss your salary". A good programmer
+a prototype first and "then we'll discuss your salary." A good programmer
 doesn't work for money. He works for satisfaction. That's who you need.
 You should discuss value, excitement, features, market disruption, and
 anything else that's important, but not money. Programmers in general are not

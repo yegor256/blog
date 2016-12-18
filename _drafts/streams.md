@@ -230,7 +230,7 @@ Yet another problem here is that we have to move data between two
 objects through method `allowed()`. The `item` is exactly the naked
 data, which we must try to avoid. With a simple `String` or `int` this
 may be not a big problem, but with bigger pieces of data we will
-have rather procedural code. The predicate will indeed be a procedure
+have rather procedural code. The predicate will indeed be a _procedure_
 that is expecting data to arrive, processing them and returning back
 `boolean`. The predicate is not really a "functional interface",
 it's a "procedural interface."
