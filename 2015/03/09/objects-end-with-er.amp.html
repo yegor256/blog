@@ -66,7 +66,7 @@ Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
 This is the class names <strong>hall of shame</strong>. Have you seen them in your code?
 In <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source libraries</a>
 you're using? In pattern books? They are all wrong.
-What do they have in common? They all end in "-er". And what's wrong with that?
+What do they have in common? They all end in "-er." And what's wrong with that?
 They are not classes, and the objects they instantiate are not objects.
 Instead, they are collections of procedures pretending to be classes.</p>
 
@@ -75,7 +75,7 @@ Instead, they are collections of procedures pretending to be classes.</p>
 
 
 <p><a href="http://en.wikipedia.org/wiki/Peter_Coad">Peter Coad</a>
-used to say: Challenge any class name that ends in "-er". There
+used to say: Challenge any class name that ends in "-er." There
 are a few good articles about this subject, including
 <a href="http://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html">Your Coding Conventions Are Hurting You</a>
 by Carlo Pescio,
@@ -85,7 +85,7 @@ and <a href="http://www.benhallbenhall.com/2013/01/naming-objects-er-object-name
 by Ben Hall.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures
-and that the manager is the smart procedure doing the real work".</p>
+and that the manager is the smart procedure doing the real work."</p>
 
 <p>I totally agree but would like to add a few words to this.</p>
 
@@ -111,9 +111,9 @@ them sorted. I would be a sorter who doesn't really care about your real intenti
 who can help you work with a bucket of apples.</p>
 
 <p>Instead, if I lived in the world of declarative programming, I would
-tell you: "<em>Consider them sorted; what do you want to do next?</em>". You, in turn,
+tell you: "<em>Consider them sorted; what do you want to do next?</em>." You, in turn,
 would tell me that you need the biggest apple now. And I would say,
-"<em>No problem; here it is</em>". In order to return the biggest one, I would not
+"<em>No problem; here it is</em>." In order to return the biggest one, I would not
 sort them all. I would just go through them all one by one and select the
 biggest. This operation is much faster than sorting first and then selecting
 the first in the list.</p>

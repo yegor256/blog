@@ -257,7 +257,7 @@ some money in the budget. There is some time in the schedule. We start
 right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what&amp;#39;s wrong. Eventually they stop and say
-&amp;quot;we&amp;#39;re done&amp;quot;. How do they know when to stop? When there is enough
+&amp;quot;we&amp;#39;re done.&amp;quot; How do they know when to stop? When there is enough
 testing? It&amp;#39;s obvious&amp;mdash;when there are &lt;strong&gt;no more bugs left&lt;/strong&gt; and the
 product can be shipped! If you think like this, I have bad news for you.
 You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
@@ -861,7 +861,7 @@ I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
 
 &lt;p&gt;The first principle of eXtremely Distributed Software Development
 (&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) states that
-&amp;quot;everyone gets paid for verified deliverables&amp;quot;. This literally
+&amp;quot;everyone gets paid for verified deliverables.&amp;quot; This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
 pass a code review and make sure the code is
@@ -1111,7 +1111,7 @@ the best and highly recommended):&lt;/p&gt;
           <description>&lt;p&gt;While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
-&amp;quot;mocking is bad&amp;quot; and &amp;quot;mocking is evil&amp;quot;.&lt;/p&gt;
+&amp;quot;mocking is bad&amp;quot; and &amp;quot;mocking is evil.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;The root cause of this complexity is that our objects
 are too big. They have many methods and these methods

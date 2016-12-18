@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-17T17:30:01+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-18T08:59:20+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
@@ -437,7 +437,7 @@ I&amp;#39;m sure it&amp;#39;s possible, but I don&amp;#39;t know how.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;I don&amp;#39;t like digital books&lt;/strong&gt;.
 Call me old school, but I don&amp;#39;t like to read on screen. I like how
-books feel, how they smell, and how they become &amp;quot;friends&amp;quot;. I like
+books feel, how they smell, and how they become &amp;quot;friends.&amp;quot; I like
 to make notes, bookmarks, fold pages, etc. I believe what&amp;#39;s very important is
 not just the content, but the way you &amp;quot;feel&amp;quot; it. With a digital book,
 this emotional aspect of reading is gone; all books are the same. You don&amp;#39;t
@@ -452,7 +452,7 @@ else, for free download. A digital book will become a &lt;em&gt;free&lt;/em&gt; 
 &lt;aside class=&#39;quote&#39;&gt;Let&amp;#39;s just agree that a digital book means a free book&lt;/aside&gt;
 
 &lt;p&gt;Let me tell you a funny story. I received an email a few months ago from a &amp;quot;Korean
-book publisher&amp;quot;. The email said it was very interested in translating
+book publisher.&amp;quot; The email said it was very interested in translating
 &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; into Korean and publishing in its
 local market. To start the process, the email said, the company needed my book in PDF.
 I replied that I was ready to send a printed copy, which was
@@ -748,7 +748,7 @@ He was definitely right, but I believe it&amp;#39;s not the root cause of the pr
 &lt;p&gt;&amp;quot;Inherit&amp;quot;, as an English verb, has a number of meanings.
 &lt;a href=&quot;http://www.oxforddictionaries.com/us/definition/american_english/inherit&quot;&gt;This one&lt;/a&gt;
 is what inheritance inventors in &lt;a href=&quot;https://en.wikipedia.org/wiki/Simula&quot;&gt;Simula&lt;/a&gt; had in mind, I guess:
-&amp;quot;Derive (a quality, characteristic, or predisposition) genetically from one&amp;#39;s parents or ancestors&amp;quot;.&lt;/p&gt;
+&amp;quot;Derive (a quality, characteristic, or predisposition) genetically from one&amp;#39;s parents or ancestors.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;Deriving a characteristic from another object is a great idea, and it&amp;#39;s called
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Subtyping&quot;&gt;subtyping&lt;/a&gt;.
@@ -777,7 +777,7 @@ of the word &amp;quot;inherit&amp;quot; I quoted above.&lt;/p&gt;
 
 &lt;p&gt;Implementation inheritance is much closer to a different
 &lt;a href=&quot;http://www.oxforddictionaries.com/us/definition/american_english/inherit&quot;&gt;meaning&lt;/a&gt;:
-&amp;quot;Receive (money, property, or a title) as an heir at the death of the previous holder&amp;quot;.
+&amp;quot;Receive (money, property, or a title) as an heir at the death of the previous holder.&amp;quot;
 Who is dead, you ask? An object is dead if it allows other objects to
 &lt;em&gt;inherit&lt;/em&gt; its encapsulated code and data. This is implementation
 inheritance:&lt;/p&gt;
