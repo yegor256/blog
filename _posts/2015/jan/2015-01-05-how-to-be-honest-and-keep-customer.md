@@ -185,7 +185,7 @@ happened in our projects for many years, but it has happened before,
 when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 in our [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) pipeline.
 
-Another funny possibility is when the client shows the source code to a "friend",
+Another funny possibility is when the client shows the source code to a "friend,"
 and he gives a "professional" opinion, which sounds like, "They don't know what they
 are doing." Once such an opinion hits your client's ears, the project is at
 a significant risk of closure. It'll be very difficult, almost impossible,

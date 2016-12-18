@@ -209,8 +209,8 @@ runs the show, not the reviewer. Your
 [architect]({% pst 2016/jul/2016-07-21-convince-me %}) should decide what is right
 and what is wrong in the technical implementation of the product. But it's
 important to make him resolve all concerns raised by the reviewer. Very often
-you will get answers like these from him: "We don't care about it now", "we won't
-fix it until the next release", or "he is wrong; we're doing it better." These
+you will get answers like these from him: "We don't care about it now," "we won't
+fix it until the next release," or "he is wrong; we're doing it better." These
 answers are perfectly valid, but they have to be given
 (reviewers are people and they also make mistakes). The answers will help
 you, the founder, understand what your team is doing and how well they

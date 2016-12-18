@@ -2,7 +2,7 @@
 layout: post
 title: "How Much Do You Love Conflicts?"
 date: 2016-12-18
-place: Bucharest, Romania
+place: Kiev, Ukraine
 tags: management
 description: |
   Lose-Lose, Win-Lose, and Win-Win are three main exit

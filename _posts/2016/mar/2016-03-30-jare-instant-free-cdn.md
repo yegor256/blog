@@ -250,7 +250,7 @@ Browser -right-> [Edge]
 [Relay] -right-> [Origin]
 {% endplantuml %}
 
-Jare.io has a "relay", which acts as an origin server for CloudFront. All
+Jare.io has a "relay," which acts as an origin server for CloudFront. All
 requests that arrive to `cf.jare.io` are dispatched to the relay. The relay
 decides what to do with them. The decision is based on the information
 from the HTTP request URI. For example, the request from the browser

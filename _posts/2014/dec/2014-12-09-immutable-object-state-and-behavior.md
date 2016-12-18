@@ -264,7 +264,7 @@ it and we don't have any file or HTTP page behind the object?
 
 It represents *computer memory*.
 
-The title of immutable document #50, "How to grill a sandwich",
+The title of immutable document #50, "How to grill a sandwich,"
 is stored in the memory, taking up 23 bytes of space. The document
 should know where those bytes are stored, and it should be able to read them
 and replace them with something else. Those 23 bytes are the real-world

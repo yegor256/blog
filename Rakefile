@@ -216,9 +216,7 @@ end
 desc 'Make sure there are no prohibited RegEx-es'
 task :regex do
   ptns = [
-    /",/,
-    /"\./,
-    /&quot;\./,
+    /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
   ]
@@ -230,8 +228,10 @@ task :regex do
     html.search('//pre').remove
     text = html.xpath('//article//p').to_a.join(' ')
     ptns.each do |re|
-      puts "#{f}: #{re} found and it's prohibited" if re.match text
-      ++errors
+      if re.match text
+        puts "#{f}: #{re} found and it's prohibited"
+        ++errors
+      end
     end
   end
   raise "#{errors} violations of RegEx prohibition" unless errors == 0

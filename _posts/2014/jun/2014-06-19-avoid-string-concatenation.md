@@ -15,7 +15,7 @@ keywords:
   - replacement of string concatenation
 ---
 
-This is "string concatenation", and it is a bad practice:
+This is "string concatenation," and it is a bad practice:
 
 {% highlight java %}
 // bad practice, don't reuse!

@@ -43,7 +43,7 @@ in exchange for freedom. Democracy in a country, as well as in a team,
 guarantees **equality** to its members,
 which is the most important component of security.
 
-A holacracy, also known as a "flat organization", technically refers to the absence
+A holacracy, also known as a "flat organization," technically refers to the absence
 of bureaucracy, special privileges, expensive furniture and private parties
 for top management. In a flat team, the distance between the CEO and
 a junior programmer is very small. They sit together in the same room,
@@ -58,7 +58,7 @@ And it actually works. I've seen it many times.
 However, when we're talking about **project** management, this very same approach will
 have catastrophic consequences. A project is something very different
 than a team. A project is a "temporary endeavor
-undertaken to create a unique product, service, or result", according to
+undertaken to create a unique product, service, or result," according to
 [PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx).
 A project is something that starts and ends. The key objective of a project
 is to **end**, while an organization's objective is to **survive**. See the

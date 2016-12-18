@@ -146,7 +146,8 @@ by asking their colleagues sitting next to them in the
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). They say
 they simply don't need StackOverflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
-That's good for the team and bad for you. Why? You don't have a very important skill&mdash;finding an answer in a public Internet. In our projects we
+That's good for the team and bad for you. Why? You don't have a very important
+skill&mdash;finding an answer in a public Internet. In our projects we
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any horizontal [communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between programmers, and you won't be
@@ -155,7 +156,8 @@ because you are used to patronizing someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 StackOverflow is not just an indicator of how smart you are and how many
-upvotes you got for the ["best programming joke"](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke).
+upvotes you got for the
+["best programming joke."](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
 It is proof that you can find answers
 to your questions by communicating with people you don't know.
 It is a very important skill.

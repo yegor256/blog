@@ -191,7 +191,7 @@ A and B are. It is highly desirable if you can explain how to get there&mdash;ho
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient
 enough for you to find an answer there. This is what is broken. You should
-ask for a fix. So instead of reporting, "How should I use class X?", say
+ask for a fix. So instead of reporting, "How should I use class X?," say
 something like, "The current documentation is not complete; it doesn't explain
 how I should use class X. Please fix."
 

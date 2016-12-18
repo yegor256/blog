@@ -97,7 +97,7 @@ create a temporary file, fill it with data, run the method, and check the result
 To find out what's going on and where the bug is, I'll have to create a number
 of tests. To avoid code duplication, I'll also have to create some supplementary
 utilities to help me create that temporary file and fill it with data.
-That's a lot of work. Well, maybe not "a lot", but way more than a few minutes
+That's a lot of work. Well, maybe not "a lot," but way more than a few minutes
 of debugging.
 
 Thus, if you perceive debugging to be faster and easier, think about the quality

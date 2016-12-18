@@ -43,14 +43,15 @@ Hopefully you find them helpful.
 
 There are a few different fears a serious code reviewer should renounce.
 The first and most popular is the fear of offending an author of the code.
-"_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore my mistakes_"&mdash;This is the kind of attitude this fear produces. Needless to say, it's
+"_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore
+my mistakes_"&mdash;This is the kind of attitude this fear produces. Needless to say, it's
 counterproductive and degrades code quality and team morale. Here is my advice:
 be direct, honest, and straight-forward. If you don't like the code, you don't like it.
 You shouldn't care how your opinion will be taken by the author of the code.
 
 If you do have such feelings toward your colleagues, there is something
 wrong with the management model. You're afraid of being rejected by the
-team for "not being a team player", which is a label attached to you by
+team for "not being a team player," which is a label attached to you by
 the weakest members of the team, not by the project sponsor. The sponsor
 pays you to produce high-quality software. The sponsor doesn't care how much your
 intention to increase quality offends others, who care less. The sponsor
@@ -88,7 +89,7 @@ The project is not paying you to look good. You're getting your paychecks
 not because the team loves you but because you produce deliverables on
 a daily basis. Your professional responsibility is to do what's best
 for the project and ignore everyone's opinions, including the opinion of your
-boss. Similar to ["A Happy Boss Is a False Objective"]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
+boss. Similar to ["A Happy Boss Is a False Objective,"]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 I would say that the respect of the team is a false goal. Don't try to earn respect.
 Instead, create clean code and respect will come automatically.
 
@@ -123,7 +124,7 @@ over a piece of code:
  happen very often. You should be ready to admit your mistakes. You didn't like
  the code, but its author explained to you its benefits, and you accepted
  the logic&mdash;not because you want to stop fighting with him but because
- you really understood the logic and accepted it. Willingness to say, "I'm wrong",
+ you really understood the logic and accepted it. Willingness to say, "I'm wrong,"
  is the first sign of a mature and serious developer.
 
  * "_I will never accept this, period!_" Some code deserves that, and there

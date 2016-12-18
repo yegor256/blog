@@ -266,7 +266,7 @@ from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
 [investments](https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/).
-They also have an interesting concept of build "boxes", which
+They also have an interesting concept of build "boxes," which
 can be pre-configured similar to Docker containers.
 It works rather stable for the last few months, no complains so far.
 

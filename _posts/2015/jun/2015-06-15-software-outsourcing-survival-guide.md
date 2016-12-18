@@ -104,7 +104,7 @@ Don't wait for the final version. Ask your outsourcing team to release
 a new version
 [every week]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %}).
 No matter how intensive the development is and
-how many features are "in progress", it's always possible to package
+how many features are "in progress," it's always possible to package
 a new version and release it. If the development is really intensive,
 ask your team to use
 [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)

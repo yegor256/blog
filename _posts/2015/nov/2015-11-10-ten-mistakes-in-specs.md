@@ -67,7 +67,7 @@ are no two users with the same account number.
 What is the difference between UUID and account number? Is it the
 same thing? It seems so, right? Or maybe they are different ... it would
 be great to know what UUID stands for. Is it "unique user ID" or maybe
-"unified user identity descriptor"? I have no idea. I'm lost, and I want
+"unified user identity descriptor?" I have no idea. I'm lost, and I want
 to find the author of this text and do something bad to him ... or her.
 
 {% quote We're writing in order to be understood, not to impress the reader %}

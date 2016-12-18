@@ -166,7 +166,7 @@ because my risk was way higher.
 
 To make that math happen, we put a "valuation cap" into the convertible notes.
 There will be a clause that guarantees that no matter what will be that
-pre-money valuation at the moment of "equity financing", in my formula
+pre-money valuation at the moment of "equity financing," in my formula
 it will stay $500K.
 
 Obviously, for you as a founder, an ideal situation would be to have "no cap"
@@ -185,7 +185,7 @@ are giving to the investor who came way later than myself. Their risks
 are way lower. I want a discount!
 
 We can put a clause into convertible notes, which will say that the price
-for me will be same as for the investor at the moment of "equity financing",
+for me will be same as for the investor at the moment of "equity financing,"
 minus, say, a 50% **discount**.
 
 Again, as a founder, you should insist on "no discount" convertible notes. Will

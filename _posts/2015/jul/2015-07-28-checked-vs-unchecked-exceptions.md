@@ -221,7 +221,7 @@ App#run()
 
 We can start this chain again, but we don't go back after `throw`. In other
 words, we don't **do** anything in the `catch` block. We only report the problem
-and wrap up execution. We never "recover"!
+and wrap up execution. We never "recover!"
 
 <hr/>
 

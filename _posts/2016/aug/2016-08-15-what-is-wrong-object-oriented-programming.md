@@ -40,7 +40,7 @@ the top:
 
 <img src="/images/2016/08/edsger-dijkstra.jpg" class="quote-author" alt="Edsger W. Dijkstra"/><br/>
 [**Edsger W. Dijkstra**](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) (1989)<br/>
-"TUG LINES", Issue 32, August 1989<br/>
+"TUG LINES," Issue 32, August 1989<br/>
 "Object oriented programs are offered as alternatives to correct ones"
 and
 "Object-oriented programming is an exceptionally bad idea

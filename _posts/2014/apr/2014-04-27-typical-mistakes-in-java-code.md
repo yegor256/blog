@@ -37,7 +37,7 @@ and to Java in particular.
 ## Class Names
 
 Your class should be an abstraction of a real life entity
-with no "validators", "controllers", "managers", etc.
+with no "validators," "controllers," "managers," etc.
 If your class name ends with an "-er"&mdash;it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
 BTW, here are my [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of a good object.
@@ -228,7 +228,7 @@ try {
 }
 ```
 
-Seriously, what if that `IOException` says "disk is full"? Will you still assume
+Seriously, what if that `IOException` says "disk is full?" Will you still assume
 that the size of the file is zero and move on?
 
 ## Indentation

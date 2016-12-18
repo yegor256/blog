@@ -36,7 +36,7 @@ you by dictating what angle they held a bloody pencil at you dip. Please stop"&m
 
 "That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
-"... insightless nonsense"&mdash;[`@andreasdotorg`](https://twitter.com/andreasdotorg/status/756138631325061120)
+" ... insightless nonsense"&mdash;[`@andreasdotorg`](https://twitter.com/andreasdotorg/status/756138631325061120)
 
 "I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 

@@ -33,7 +33,7 @@ There are [tons of articles](https://www.google.com/search?q=micromanagement)
 about micromanagement. Most of them emphasize that the "micro" prefix prescribes
 the size of the tasks being managed, meaning a good manager doesn't care
 about the small stuff while a micromanager employs
-"excessive control or attention to details", as
+"excessive control or attention to details," as
 [Merriam-Webster](http://www.merriam-webster.com/dictionary/micromanage) says.
 
 {% quote A good manager declares what needs to be done, never telling me how I must achieve it %}

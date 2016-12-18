@@ -91,7 +91,7 @@ to Celsius, we add more methods to class `Temperature`. But we never
 let anyone touch or know about `t`.
 
 This idea is close to
-["printers instead of getters"]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
+["printers instead of getters,"]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 which we discussed earlier, though from a much wider perspective.
 Here I'm saying that any data elements that escape objects are _naked_
 and lead to maintainability problems.

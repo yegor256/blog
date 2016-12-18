@@ -399,7 +399,7 @@ This [`TkFork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fo
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right _take_. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
-a collection of "forks", which are instances of the
+a collection of "forks," which are instances of the
 [`Fork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html) interface:
 
 {% highlight java %}
@@ -561,7 +561,7 @@ in combination with Xembly. I explained this idea in a few previous posts:
 and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %}).
 It is simple and powerful&mdash;Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
-representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller",
+representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller,"
 in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).
 
 I'll write a separate article about templating with Xembly and XSL very soon.
@@ -622,7 +622,7 @@ table data and convert it into HTML. The point here is that the dependency
 must be injected into the application (instance of class `TkApp`) at the
 moment of its instantiation. This is a pure and clean dependency injection
 mechanism, which is absolutely container-free. Read more about it in
-["Dependency Injection Containers Are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
+["Dependency Injection Containers Are Code Polluters."]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 
 ## Unit Testing
 

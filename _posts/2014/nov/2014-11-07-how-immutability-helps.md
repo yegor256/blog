@@ -24,15 +24,15 @@ youtube:
 ---
 
 In a few recent posts, including
-["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
-["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), and
-["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}),
+["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+["Objects Should Be Immutable,"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
+["Dependency Injection Containers are Code Polluters,"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 I universally labeled all mutable objects with "setters" (object methods starting with `set`) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn't convincing enough for many of you&mdash;I received a few requests
 asking to provide more specific and practical examples.
 
-Thus, in order to illustrate my strongly negative attitude to "mutability via setters", I took
+Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing [commons-email](http://commons.apache.org/proper/commons-email/) Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
 I released my library as part of the [jcabi](http://www.jcabi.com) family&mdash;[jcabi-email](http://email.jcabi.com). Let's see what benefits
@@ -138,7 +138,7 @@ scenario of sending a full MIME message through SMTP. Obviously, if something
 gets changed in one of the methods, almost every test method will be
 affected. In other words, tests are very fragile, unreliable and over-complicated.
 
-I can go on and on with this "*because the class is so big*", but I think it is
+I can go on and on with this "*because the class is so big*," but I think it is
 obvious that a small, cohesive class is always better than a big one. It
 is obvious to me, to you, and to any object-oriented programmer. But why is it not
 so obvious to the developers of Apache Commons Email? I don't think they are

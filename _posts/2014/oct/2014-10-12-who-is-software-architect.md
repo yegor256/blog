@@ -58,7 +58,7 @@ is this:
 An **architect** is the one who takes the **blame** for the **quality**.
 
 You can replace "blame" with accountability or responsibility. Although,
-I prefer to use "blame", because it much better emphasizes the fact that
+I prefer to use "blame," because it much better emphasizes the fact that
 every quality issue in the product under development is a **personal**
 fault of the architect. Of course, together with the blame he also
 takes all the credit from happy customers, when the quality is good.

@@ -20,7 +20,7 @@ There are tons of articles about resume writing. Literally,
 [tons of them](https://www.google.com/search?q=how+to+write+resume).
 And here's yet another one? Well, maybe ... but I don't think so. I'll try to
 give you a few **practical** hints for how to make your resume look
-"sexier", and how to position yourself beyond the "good programmer" category and into
+"sexier," and how to position yourself beyond the "good programmer" category and into
 the superstar zone. It may take a few years to truly pimp up your CV, but
 when it's done, you will charge $100-plus per hour and face no hesitation
 from your clients in paying.
@@ -52,7 +52,7 @@ can tell half of the truth, you can hide some information, and you can rephrase
 the truth, but never lie. You don't know who is reading your CV and which
 desk it will end up on. Be ready to answer for every word you have on it.
 
-If you're saying that you're an "expert in JavaScript",
+If you're saying that you're an "expert in JavaScript,"
 be ready to explain what the key new features of
 ECMAScript version 6 are. If you can't, don't use the word "expert." The point
 is that you have to be ready to prove every word.
@@ -66,12 +66,13 @@ Just pay attention to the photo; it's very important.
 
 Do I have to say that you must smile on that photo? Well, yes, you must.
 And make it casual, with a T-shirt and funny background. You must look
-relaxed and successful. You don't want to get hired; they want to hire you&mdash;this is the message your photo should send, just like in online **dating**.
+relaxed and successful. You don't want to get hired; they want to hire
+you&mdash;this is the message your photo should send, just like in online **dating**.
 
 ## Skip "Objective" and "Title"
 
-"Senior Software Developer", "Seasoned Java Programmer",
-"Talented IT Professional", etc. It's boring and doesn't sell you at all.
+"Senior Software Developer," "Seasoned Java Programmer,"
+"Talented IT Professional," etc. It's boring and doesn't sell you at all.
 They know what you are, because they are reading your resume.
 
 Besides that, you're limiting yourself with that title. Maybe they are looking
@@ -96,7 +97,7 @@ you become a serious market figure. For example, "Java" as a skill would look go
 in [Jon Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
 because he definitely knows the entire Java world, and the
 market has recognized that. But if you're a programmer with just three years of experience,
-how can you "know Java"? You barely know a few hundred classes from it.
+how can you "know Java?" You barely know a few hundred classes from it.
 That's why it's better to state specifically which parts of Java you definitely know.
 Like I said, be as low-level and specific in your skills as possible.
 
@@ -134,7 +135,7 @@ Your presence in the open-source world is a **guarantee** for them. Someone has 
 seen your code, and someone has already given some kudos to your projects. Someone virtually
 vouches for you. As a result, they will feel more comfortable in hiring you.
 
-To be in the "elite", you don't have to spend all your time on open-source
+To be in the "elite," you don't have to spend all your time on open-source
 projects. Just contribute to the ones you're using already. You're using
 Sinatra at work? Check its source code. You will find a lot of places that
 need improvement. Offer them your help and simply submit small pull requests

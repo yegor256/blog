@@ -21,7 +21,7 @@ youtube:
 
 After a few recent posts about immutability, including
 ["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
-["How an Immutable Object Can Have State and Behavior?"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
+["How an Immutable Object Can Have State and Behavior?,"]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %})
 I was surprised by the number of comments saying that I badly misunderstood
 the idea. Most of those comments stated that an immutable object must always behave
 the same way&mdash;that is what immutability is about. What kind of immutability
