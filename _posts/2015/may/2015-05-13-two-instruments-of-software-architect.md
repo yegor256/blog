@@ -72,12 +72,12 @@ But these bugs don't report problems in the source code; instead, they
 complain about incomplete documentation. For example, say an architect
 doesn't know which database to use, MongoDB or Cassandra, and needs more
 information about their pros and cons. A bug will sound like "our design documentation
-doesn't have a detailed comparison of existing NoSQL databases; please fix it".
+doesn't have a detailed comparison of existing NoSQL databases; please fix it."
 Whoever is assigned to this ticket will perform the comparison
 and update the documentation.
 
 Bugs are a _proactive_ tool for an architect. Through reporting bugs,
-an architect influences the project and "dictates his will".
+an architect influences the project and "dictates his will."
 
 ## Reviews
 

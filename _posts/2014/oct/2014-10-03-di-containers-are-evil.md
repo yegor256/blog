@@ -68,7 +68,7 @@ public class Budget {
 }
 {% endhighlight %}
 
-The object `data` is called a "dependency".
+The object `data` is called a "dependency."
 
 A `Budget` doesn't know what kind of database it is working with. All it
 needs from the database is its ability to fetch a cell, using an

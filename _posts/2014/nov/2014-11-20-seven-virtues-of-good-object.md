@@ -361,7 +361,7 @@ A good object comes from either a final or abstract class. A `final` class is on
 can't be extended via [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 An `abstract` class is one that
 can't have children. Simply put, a class should either say, "You can never break
-me; I'm a black box for you" or "I'm broken already; fix me first and then use".
+me; I'm a black box for you" or "I'm broken already; fix me first and then use."
 
 There is nothing in between. A final class is a black box that you can't modify
 by any means. He works as he works, and you either use him or throw him away. You can't

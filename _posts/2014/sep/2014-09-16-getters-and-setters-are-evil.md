@@ -57,7 +57,7 @@ through them.
 **Tell, Don't Ask**
 Allen Holub says, "Don't ask for the information
 you need to do the work; ask the object that has the information
-to do the work for you".
+to do the work for you."
 
 **Violated Encapsulation Principle**
 An object can be teared apart by other objects, since they
@@ -177,7 +177,7 @@ We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,
 we're working with data, manipulating them, getting, setting,
 and deleting when necessary. We're in charge, and the data is just a passive component.
-The dog is nothing to us&mdash;it's just a "data holder".
+The dog is nothing to us&mdash;it's just a "data holder."
 It doesn't have its own life. We are free
 to get whatever is necessary from it and set any data into it.
 This is how C, COBOL, Pascal and many other procedural languages work(ed).

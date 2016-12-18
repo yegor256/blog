@@ -228,7 +228,7 @@ profile is an indicator of that healthy individualism we're looking for.
 
 The more technologies or programming languages you know, the less you cost.
 I'm not saying that it's not possible to be an expert in many things at the same time&mdash;that's entirely possible. But let me give you a pragmatic reason why you shouldn't&mdash;competition. There are thousands of "Java7 programmers" on the market&mdash;we can easily choose whoever we need. But there are not so many
-"Hadoop programmers" or "XSLT designers".
+"Hadoop programmers" or "XSLT designers."
 
 {% quote We end up paying more to narrow-skilled specialists because we have no choice %}
 

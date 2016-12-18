@@ -23,7 +23,7 @@ capable of fitting an entire application into a 64Kb
 that poor Intel 80386 were the icons of programming.
 
 That's because twenty years ago computers were expensive and programmers
-were cheap. That was the time of the "hacker mentality".
+were cheap. That was the time of the "hacker mentality."
 That time is over. That mentality is not appreciated any more,
 because the market situation is completely opposite.
 

@@ -226,7 +226,7 @@ connections through an instance of `TkFoo` that we are giving to its constructor
 It does this dispatching in an endless cycle, checking every second whether
 it's time to stop with an instance of
 [`Exit`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html).
-Obviously, `Exit.NEVER` always responds with, "Don't stop, please".
+Obviously, `Exit.NEVER` always responds with, "Don't stop, please."
 
 ## HTTP Request
 

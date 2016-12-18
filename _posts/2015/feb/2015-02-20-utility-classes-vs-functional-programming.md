@@ -228,7 +228,7 @@ a few very practical reasons (BTW, I am an OOP fundamentalist):
     resources even when it's not yet necessary. Instead of returning a promise
     to break down a string into chunks, `StringUtils.split()` breaks it down
     right now. And it breaks it down into all possible chunks, even if only
-    the first one is required by the "buyer".
+    the first one is required by the "buyer."
 
   * **Readability**.
     Utility classes tend to be huge (try to read the source code of `StringUtils`

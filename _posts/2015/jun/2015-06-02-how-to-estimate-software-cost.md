@@ -58,7 +58,7 @@ should be: "_All of your money, and it won't be enough._" Will you
 sign a contract and
 [outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 the project to me after that answer? No, you won't.
-That's why I have to lie and promise something like "three months and $40,000".
+That's why I have to lie and promise something like "three months and $40,000."
 Why would you trust me? If you're smart enough, you won't.
 
 My point is that no matter what I promise you, I will be wrong. Terribly wrong.

@@ -111,7 +111,7 @@ familiar with this feeling&mdash;most legacy applications look that way.
 They have huge multi-line "classes" (in reality, COBOL programs written in Java)
 that were inherited from a few generations of programmers before you. When
 you start, you're full of energy, but after a few minutes of scrolling
-such a "class" you say&mdash;"screw it, it's almost Saturday".
+such a "class" you say&mdash;"screw it, it's almost Saturday."
 
 *Because the class is so big*,
 there is no data hiding or encapsulation any more&mdash;33 variables are accessible by over 100 methods. What is hidden?
@@ -156,7 +156,7 @@ setters that inject configuration parameters into the class so that it
 can process them inside, isn't it?
 
 This is the root cause of the problem! The root cause is our ability to **insert**
-data into mutable objects via configuration methods, also known as "setters".
+data into mutable objects via configuration methods, also known as "setters."
 When an [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.

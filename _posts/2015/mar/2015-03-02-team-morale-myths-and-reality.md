@@ -186,7 +186,7 @@ let everybody know who is getting what, when, why, and why not. Everybody
 should know everybody's salaries, bonuses, benefits, and the rationale behind them.
 Each programmer should know what he or she should do in order to get
 a $5,000 raise to their annual salary. Also, he or she should know why a
-colleague is called "senior developer" while his or her title is still "junior".
+colleague is called "senior developer" while his or her title is still "junior."
 This information should be public and printed on the wall right behind
 your chair. Why don't most managers do this? Because they don't have any
 rationale behind their monetary decisions. Instead of managing the money,

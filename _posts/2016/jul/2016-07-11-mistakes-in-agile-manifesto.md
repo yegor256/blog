@@ -161,7 +161,7 @@ of Java code is excellent, which is ugly, etc. Additionally, the policy must say
 what happens to those who [violate]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %})
 the principles of excellence. However, most Agile
 teams understand "quality" as a great flag to hang on the wall, but
-get scared when I ask, "what happens if someone delivers low quality?".
+get scared when I ask, "what happens if someone delivers low quality?."
 
 **Principle #10**:
 "Simplicity&mdash;the art of maximizing the amount of work not done&mdash;is essential."

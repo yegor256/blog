@@ -27,7 +27,7 @@ which immediately received positive feedback on
 
 <!--more-->
 
-_Tacit_, according to Google, means "understood or implied without being stated".
+_Tacit_, according to Google, means "understood or implied without being stated."
 That's exactly the idea of the [framework](https://github.com/yegor256/tacit).
 It doesn't have a single
 CSS class and can be applied to any valid HTML5 document. For example, you

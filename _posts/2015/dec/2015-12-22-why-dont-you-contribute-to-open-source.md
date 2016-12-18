@@ -106,7 +106,7 @@ Because of your existence, they have an ability to not care.
 Tomorrow if they ask you to use stolen software, you may say
 you had no choice: "My boss asked me to do this. I did care about
 copyright and strongly believed that software authors must be paid, but
-I had to steal, because that's what my company asked me to do".
+I had to steal, because that's what my company asked me to do."
 Does it sound like a good excuse?
 
 The same story goes for open source. If you do care and you're passionate

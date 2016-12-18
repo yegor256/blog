@@ -72,7 +72,7 @@ the quality of the product he is creating.
 That's what [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
 recommends, and I second that&mdash;face-to-face communication is more
 valuable than documentation. Don't write any documentation, don't specify
-what exactly you need to develop, and don't think too much about your "user stories".
+what exactly you need to develop, and don't think too much about your "user stories."
 It's all in the past. Modern software engineers figure everything out
 by themselves. Just let him be creative and communicative. If something
 isn't clear, just call him. Remember, a Skype call is

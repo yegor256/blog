@@ -114,4 +114,4 @@ Chris but to fix a reported bug.
 To summarize, an architect must be an absolute technical **dictator**
 during the project and must not have to convince anyone. If that's not the case,
 the entire project faces big risks, simply because the responsibility
-will be "leaking".
+will be "leaking."

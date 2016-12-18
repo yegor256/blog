@@ -102,7 +102,7 @@ workarounds&mdash;they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
 to close the ticket, ask its reporter to close it. Explicitly ask for that;
-don't dance around with "looks like this solution may be accepted, if you don't mind".
+don't dance around with "looks like this solution may be accepted, if you don't mind."
 Be explicit in your intention to close the ticket and move on. Try this:
 "@jeff, please close the ticket if you don't have any further questions."
 
@@ -148,7 +148,7 @@ comments become communication **noise**. Remember, a ticket is a conversation
 between two people&mdash;one of them reported an issue and the other one is
 trying to fix it. Comments like, "How about we try another approach"
 or "I remember I had a similar issue some time ago" are very annoying
-and distracting. Let's be honest, nobody really needs or cares about "opinions".
+and distracting. Let's be honest, nobody really needs or cares about "opinions."
 All we need in a ticket is a solution(s).
 
 {% quote Don't pollute the air with generic opinions %}

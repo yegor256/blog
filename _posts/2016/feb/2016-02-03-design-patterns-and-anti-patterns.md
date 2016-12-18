@@ -90,7 +90,7 @@ the name. "Expression" would be a much better alternative.
 
 [<span class='red'>Iterator</span>](https://en.wikipedia.org/wiki/Iterator_pattern).
 Bad idea, since it is mutable. It would be much better
-to have [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) "cursors".
+to have [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) "cursors."
 
 [<span class='green'>Lazy Initialization</span>](https://en.wikipedia.org/wiki/Lazy_initialization).
 It's OK.

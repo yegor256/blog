@@ -24,7 +24,7 @@ youtube:
 While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
-"mocking is bad" and "mocking is evil".
+"mocking is bad" and "mocking is evil."
 
 The root cause of this complexity is that our objects
 are too big. They have many methods and these methods

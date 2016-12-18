@@ -34,7 +34,7 @@ A simple requirements document in Requs may look similar to:
 {% highlight text %}
 Department has employee-s.
 Employee has name and salary.
-UC1 where Employee gets raise: "TBD".
+UC1 where Employee gets raise: "TBD."
 {% endhighlight %}
 
 This Software Requirements Specification (SRS) defines two types (`Department`

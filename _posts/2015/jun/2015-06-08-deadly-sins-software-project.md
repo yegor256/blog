@@ -69,7 +69,7 @@ as rather bad coding approaches.
 
 My only practical suggestion here is to read and learn. Maybe
 [these books]({% pst 2015/apr/2015-04-22-favorite-software-books %}) will help you
-or my book "[Elegant Objects](/elegant-objects.html)".
+or my book "[Elegant Objects](/elegant-objects.html)."
 Always try to be skeptical about the quality of your software, and don't relax
 when it "just works." Like with cancer, the earlier you diagnose it, greater is
 the chance to survive.

@@ -99,7 +99,7 @@ object is actually a box for the data. With `engine`, it isn't
 really true because there is no data technically _inside_ the object. Instead, there is a
 _pointer_ to another object. If our object would only have an
 `engine` attribute, it would take just 8 bytes in memory, with none of them
-actually occupied by "data".
+actually occupied by "data."
 
 {% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
 

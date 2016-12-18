@@ -55,7 +55,7 @@ compile, unit test, integration test, quality analysis,
 [etc.]({% pst 2014/jun/2014-06-21-casperjs-with-maven %})
 
 The result is either "success" or "failure." If it is a success, we
-say that "the build is clean." If it is a failure, we say that "the build is broken".
+say that "the build is clean." If it is a failure, we say that "the build is broken."
 The build usually gets broken because someone breaks it by
 committing new code that turns previously passing unit tests
 into failing ones.

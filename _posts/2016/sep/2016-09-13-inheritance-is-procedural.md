@@ -48,7 +48,7 @@ He was definitely right, but I believe it's not the root cause of the problem.
 "Inherit", as an English verb, has a number of meanings.
 [This one](http://www.oxforddictionaries.com/us/definition/american_english/inherit)
 is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
-"Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors".
+"Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors."
 
 Deriving a characteristic from another object is a great idea, and it's called
 [subtyping](https://en.wikipedia.org/wiki/Subtyping).
@@ -79,7 +79,7 @@ of the word "inherit" I quoted above.
 
 Implementation inheritance is much closer to a different
 [meaning](http://www.oxforddictionaries.com/us/definition/american_english/inherit):
-"Receive (money, property, or a title) as an heir at the death of the previous holder".
+"Receive (money, property, or a title) as an heir at the death of the previous holder."
 Who is dead, you ask? An object is dead if it allows other objects to
 _inherit_ its encapsulated code and data. This is implementation
 inheritance:

@@ -71,7 +71,7 @@ What's wrong with this test? There is one serious issue:
 must be perfectly isolated from each other. This means that changing
 one test must not affect any others. In this example, that is not the case.
 When I want to change the `countsWords()` test, I have to change the internals
-of `before()`, which will affect the other method in the test "class".
+of `before()`, which will affect the other method in the test "class."
 
 With all due respect to JUnit, the idea of creating test fixtures in
 `@Before` and `@After` is wrong, mostly because it encourages

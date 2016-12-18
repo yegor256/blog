@@ -185,7 +185,7 @@ results and expressing your concerns. In our projects at
 in GitHub, review our releases frequently, and report any inconsistencies
 found as GitHub issues. We encourage project sponsors to be as **pessimistic**
 and **negative** about our quality from the beginning of the project. We realize
-this is how we can minimize the risk of a "piled-up frustration".
+this is how we can minimize the risk of a "piled-up frustration."
 
 Try to do the same in your project that is outsourced to an offshore developer.
 Don't be afraid to offend them. Iterative and incremental criticism is a much
@@ -219,7 +219,7 @@ In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
 you the **truth**, which is usually the same thing. Some call this
-"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)".
+"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
 

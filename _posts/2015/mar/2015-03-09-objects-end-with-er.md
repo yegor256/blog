@@ -44,7 +44,7 @@ and [Naming Objects – Don’t Use ER in Your Object Names](http://www.benhallb
 by Ben Hall.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures
-and that the manager is the smart procedure doing the real work".
+and that the manager is the smart procedure doing the real work."
 
 I totally agree but would like to add a few words to this.
 

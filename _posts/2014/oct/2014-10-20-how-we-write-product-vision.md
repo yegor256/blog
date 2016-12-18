@@ -82,7 +82,7 @@ stakeholders.
 
 Each stakeholder must have a list of needs. They have to be simple
 and straight forward, like "earn money", "increase profit", "share photos",
-or "host a website".
+or "host a website."
 
 I would recommend defining one or two needs for each stakeholder. If there
 are more than three, think again&mdash;do you really understand what your
@@ -151,7 +151,7 @@ Every line in this section
 is a message to product developers. They will read this document in
 order to understand what is most important to the sponsor of the
 project. For example, these quality requirements are useless: "user interface
-must be attractive", "web site must be fast" or "the system must be stable".
+must be attractive", "web site must be fast" or "the system must be stable."
 They are not measurable or
 testable. All they do is
 [distract]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) developers. If you can't make

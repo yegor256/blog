@@ -81,7 +81,7 @@ of your resume. That's it.
 
 ## A Dozen Skills
 
-This section of your resume actually tells them about your "tech focus".
+This section of your resume actually tells them about your "tech focus."
 It must have a very short list of skills, definitely **under 12**. You simply
 can't be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
 If there are too many skills, it's a sign of a "jack of all trades" who is
