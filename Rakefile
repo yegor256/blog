@@ -222,15 +222,22 @@ task :regex do
     /\s&mdash;/,
     /&mdash;\s/
   ]
+  errors = 0;
   all_html().each do |f|
-    html = File.read(f)
+    html = Nokogiri::HTML(File.read(f))
+    html.search('//code').remove
+    html.search('//script').remove
+    html.search('//pre').remove
+    text = html.xpath('//article//p').to_a.join(' ')
     ptns.each do |re|
-      fail "#{f}: #{re} found and it's prohibited" if re.match html
+      puts "#{f}: #{re} found and it's prohibited" if re.match text
+      ++errors
     end
-    puts f
   end
+  raise "#{errors} violations of RegEx prohibition" unless errors == 0
   done 'Not prohibited regular expressions'
 end
+
 desc 'Make sure all snippets are compact enough'
 task :snippets do
   all_html().each do |f|

@@ -185,7 +185,7 @@ My task will be closed and paid when the system analyst
 changes its state to "implemented" in the SRS. The system analyst is my only
 customer. I have to sell my solution to him. Project manager
 will close my task and pay me when system analyst changes
-the status of the functional requirement from "specified" to "implemented".
+the status of the functional requirement from "specified" to "implemented."
 
 The task sounds big, and I have only half an hour. Obviously,
 puzzle driven development should help me. I will create many tickets and

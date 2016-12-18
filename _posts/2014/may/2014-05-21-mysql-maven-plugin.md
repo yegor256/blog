@@ -209,7 +209,7 @@ hibernate.connection.password=root
 
 Maven will replace that `${mysql.port}` with the number of
 reserved TCP port, during resources copying. This operation
-is called "resources filtering", and you can read about it
+is called "resources filtering," and you can read about it
 [here](http://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html).
 
 That's pretty much it. I'm using [jcabi-mysql-maven-plugin](http://mysql.jcabi.com)

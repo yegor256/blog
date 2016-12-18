@@ -54,7 +54,7 @@ and discusses possible pitfalls.
 We modify SRS incrementally, and our increments are very small. For instance,
 say we have the sample document I mentioned above, and I'm a system analyst on
 the project. All my tasks will be similar to "there is a bug in SRS, let's fix
-it".
+it."
 
 Even if it is a suggestion, it will still start with a complaint about the
 incompleteness of the SRS. For example:
