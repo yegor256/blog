@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-18T08:59:20+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-18T13:31:00+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
@@ -17,7 +17,7 @@ should dislike MVC as much as I do. Here is why.&lt;/p&gt;
 
 &lt;p&gt;Controller is &lt;em&gt;in charge&lt;/em&gt;, taking care of the data received from Model
 and injecting it into View&amp;mdash;and this is exactly the problem. The data escapes
-the Model and becomes &amp;quot;naked&amp;quot;, which is a big problem, as we agreed earlier.
+the Model and becomes &amp;quot;naked,&amp;quot; which is a big problem, as we agreed earlier.
 OOP is all about encapsulation&amp;mdash;data hiding.&lt;/p&gt;
 
 &lt;p&gt;MVC architecture does exactly the opposite by &lt;em&gt;exposing&lt;/em&gt; the data and hiding
@@ -53,7 +53,7 @@ else, we will have to make a similar assumption again and again. That&amp;#39;s 
 &lt;p&gt;Here, &lt;code&gt;SpeedFromEngine.speed()&lt;/code&gt;
 returns speed in mph, as an integer; &lt;code&gt;FormattedSpeed.speed()&lt;/code&gt; returns
 &lt;code&gt;&amp;quot;%d mph&amp;quot;&lt;/code&gt;; and finally, &lt;code&gt;PrintedSpeed.to_str()&lt;/code&gt; returns the full text of the
-message. We can call them &amp;quot;model, view, and controller&amp;quot;, but in reality they
+message. We can call them &amp;quot;model, view, and controller,&amp;quot; but in reality they
 are just objects decorating each other. It&amp;#39;s still the same entity&amp;mdash;the speed.
 But it gets more complex and intelligent by being decorated.&lt;/p&gt;
 
@@ -319,7 +319,7 @@ to Celsius, we add more methods to class &lt;code&gt;Temperature&lt;/code&gt;. B
 let anyone touch or know about &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;This idea is close to
-&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;&amp;quot;printers instead of getters&amp;quot;&lt;/a&gt;,
+&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;&amp;quot;printers instead of getters,&amp;quot;&lt;/a&gt;
 which we discussed earlier, though from a much wider perspective.
 Here I&amp;#39;m saying that any data elements that escape objects are &lt;em&gt;naked&lt;/em&gt;
 and lead to maintainability problems.&lt;/p&gt;
@@ -745,7 +745,7 @@ for example.&lt;/p&gt;
 &lt;a href=&quot;http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html&quot;&gt;Why extends is evil&lt;/a&gt; article.
 He was definitely right, but I believe it&amp;#39;s not the root cause of the problem.&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;Inherit&amp;quot;, as an English verb, has a number of meanings.
+&lt;p&gt;&amp;quot;Inherit,&amp;quot; as an English verb, has a number of meanings.
 &lt;a href=&quot;http://www.oxforddictionaries.com/us/definition/american_english/inherit&quot;&gt;This one&lt;/a&gt;
 is what inheritance inventors in &lt;a href=&quot;https://en.wikipedia.org/wiki/Simula&quot;&gt;Simula&lt;/a&gt; had in mind, I guess:
 &amp;quot;Derive (a quality, characteristic, or predisposition) genetically from one&amp;#39;s parents or ancestors.&amp;quot;&lt;/p&gt;
@@ -771,7 +771,7 @@ notice anything, because type &lt;code&gt;Article&lt;/code&gt; is a subtype of t
 (&lt;a href=&quot;https://en.wikipedia.org/wiki/Liskov_substitution_principle&quot;&gt;Liskov substitution principle&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;But what does &lt;em&gt;copying&lt;/em&gt; methods and attributes from a parent class to a child
-one have to do with &amp;quot;deriving characteristics&amp;quot;? Implementation inheritance
+one have to do with &amp;quot;deriving characteristics?&amp;quot; Implementation inheritance
 is exactly that&amp;mdash;copying&amp;mdash;and it has nothing to do with the meaning
 of the word &amp;quot;inherit&amp;quot; I quoted above.&lt;/p&gt;
 

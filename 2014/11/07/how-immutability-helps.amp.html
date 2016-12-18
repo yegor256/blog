@@ -62,15 +62,15 @@ mutability causes scope creep and tight coupling.
       </p>
       <h1>How Immutability Helps</h1>
       <p>In a few recent posts, including
-<a href="/2014/09/16/getters-and-setters-are-evil.html">"Getters/Setters. Evil. Period."</a>,
-<a href="/2014/06/09/objects-should-be-immutable.html">"Objects Should Be Immutable"</a>, and
-<a href="/2014/10/03/di-containers-are-evil.html">"Dependency Injection Containers are Code Polluters"</a>,
+<a href="/2014/09/16/getters-and-setters-are-evil.html">"Getters/Setters. Evil. Period."</a>
+<a href="/2014/06/09/objects-should-be-immutable.html">"Objects Should Be Immutable,"</a> and
+<a href="/2014/10/03/di-containers-are-evil.html">"Dependency Injection Containers are Code Polluters,"</a>
 I universally labeled all mutable objects with "setters" (object methods starting with <code>set</code>) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn't convincing enough for many of you—I received a few requests
 asking to provide more specific and practical examples.</p>
 
-<p>Thus, in order to illustrate my strongly negative attitude to "mutability via setters", I took
+<p>Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing <a href="http://commons.apache.org/proper/commons-email/">commons-email</a> Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
 I released my library as part of the <a href="http://www.jcabi.com">jcabi</a> family—<a href="http://email.jcabi.com">jcabi-email</a>. Let's see what benefits
@@ -151,7 +151,7 @@ scenario of sending a full MIME message through SMTP. Obviously, if something
 gets changed in one of the methods, almost every test method will be
 affected. In other words, tests are very fragile, unreliable and over-complicated.</p>
 
-<p>I can go on and on with this "<em>because the class is so big</em>", but I think it is
+<p>I can go on and on with this "<em>because the class is so big</em>," but I think it is
 obvious that a small, cohesive class is always better than a big one. It
 is obvious to me, to you, and to any object-oriented programmer. But why is it not
 so obvious to the developers of Apache Commons Email? I don't think they are

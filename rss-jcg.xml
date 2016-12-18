@@ -784,15 +784,15 @@ startup. Below I summarize my experience with organizing such technical reviews.
         <title>How Immutability Helps</title>
         
           <description>&lt;p&gt;In a few recent posts, including
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;&amp;quot;Getters/Setters. Evil. Period.&amp;quot;&lt;/a&gt;,
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;&amp;quot;Objects Should Be Immutable&amp;quot;&lt;/a&gt;, and
-&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;&amp;quot;Dependency Injection Containers are Code Polluters&amp;quot;&lt;/a&gt;,
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;&amp;quot;Getters/Setters. Evil. Period.&amp;quot;&lt;/a&gt;
+&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;&amp;quot;Objects Should Be Immutable,&amp;quot;&lt;/a&gt; and
+&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;&amp;quot;Dependency Injection Containers are Code Polluters,&amp;quot;&lt;/a&gt;
 I universally labeled all mutable objects with &amp;quot;setters&amp;quot; (object methods starting with &lt;code&gt;set&lt;/code&gt;) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn&amp;#39;t convincing enough for many of you&amp;mdash;I received a few requests
 asking to provide more specific and practical examples.&lt;/p&gt;
 
-&lt;p&gt;Thus, in order to illustrate my strongly negative attitude to &amp;quot;mutability via setters&amp;quot;, I took
+&lt;p&gt;Thus, in order to illustrate my strongly negative attitude to &amp;quot;mutability via setters,&amp;quot; I took
 an existing &lt;a href=&quot;http://commons.apache.org/proper/commons-email/&quot;&gt;commons-email&lt;/a&gt; Java library from Apache
 and re-designed it my way, without setters and with &amp;quot;object thinking&amp;quot; in mind.
 I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family&amp;mdash;&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let&amp;#39;s see what benefits
