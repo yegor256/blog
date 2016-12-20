@@ -189,7 +189,8 @@ return us that information. But we always remember that the dog is
 an active component. She decides what will happen after our request.
 
 That's why, **it is conceptually incorrect to have any methods starting
-with `set` or `get` in an object**. And it's not about breaking encapsulation, like
+with `set` or `get` in an object**. And it's not about breaking
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}), like
 many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.
 

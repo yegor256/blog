@@ -35,7 +35,7 @@ its use. With all due respect, he was just wrong.
 
 The key idea of object-oriented programming is to hide data
 behind objects. This idea has a name:
-[encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29).
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 In OOP, data
 must not be visible. [Objects]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 must only have access to the data they

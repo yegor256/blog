@@ -118,7 +118,8 @@ there is no data hiding or encapsulation any more&mdash;33 variables are accessi
 This `Email.java` file in reality is a big, procedural 2000-line script, called
 a "class" by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
-all the data you may need. Why is this bad? Well, why do we need encapsulation
+all the data you may need. Why is this bad? Well, why do we need
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %})
 in the first place? In order to protect one programmer from another, aka
 [defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %}).
 While I'm busy changing the subject of the MIME message, I want to be

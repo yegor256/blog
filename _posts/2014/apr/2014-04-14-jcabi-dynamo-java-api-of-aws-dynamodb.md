@@ -106,7 +106,8 @@ Item item = table.put(
 );
 {% endhighlight %}
 
-My code is not only shorter, but it also employs encapsulation and separates
+My code is not only shorter, but it also employs
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}) and separates
 responsibilities of classes.
 [`Table`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html)
 class (actually it is an interface internally implemented by a class)
