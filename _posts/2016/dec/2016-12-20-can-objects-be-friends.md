@@ -91,7 +91,7 @@ class TempCelsius {
 
 Since this `trust` keyword is placed into the class that allows access,
 we won't have the "naked data" problem&mdash;we will always know exactly which
-objects posess knowledge about `t`. When we change
+objects posses knowledge about `t`. When we change
 something about `t`, we know exactly where to update the code.
 
 What do you think?
