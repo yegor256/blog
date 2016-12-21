@@ -116,7 +116,8 @@ why shouldn't we rate them, right? The best rate is
 XDSD: Meetings-Free Software Development Methodology;
 [DevTernity 2016](http://devternity.com/#/11);
 Riga, Latvia;
-1 December 2016.
+1 December 2016;
+[video](https://www.youtube.com/watch?v=7EytYc7K5JA).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
