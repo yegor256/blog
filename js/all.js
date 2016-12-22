@@ -1,4 +1,5 @@
 /*globals $:false, window:false, document:false */
+var VK = {};
 if (typeof($) != 'undefined') {
   $(function() {
     'use strict';
@@ -102,7 +103,6 @@ if (typeof($) != 'undefined') {
         });
       }
       if ($('.count-vk').length) {
-        var VK = {};
         VK.Share = {};
         VK.Share.count = function (index, count) {
           if (count > 0) {
