@@ -102,7 +102,7 @@ if (typeof($) != 'undefined') {
         });
       }
       if ($('.count-vk').length) {
-        VK = {};
+        var VK = {};
         VK.Share = {};
         VK.Share.count = function (index, count) {
           if (count > 0) {
