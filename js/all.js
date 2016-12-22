@@ -113,13 +113,7 @@ if (typeof($) != 'undefined') {
           dataType: 'jsonp',
           async: true,
           timeout: timeout,
-          url: 'https://vk.com/share.php?act=count&url=' + eurl,
-          success: function(json) {
-            // nothing to do here
-          },
-          error: function() {
-            $('.share .icon-vk').css('border', border);
-          }
+          url: 'https://vk.com/share.php?act=count&url=' + eurl
         });
       }
       /*
