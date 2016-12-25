@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-25T16:37:02+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2016-12-25T20:51:39+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
 proper encapsulation leads to a complete absence
 of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
@@ -203,6 +203,8 @@ you about abnormal or suspicious behavior (office cameras will help too). Any co
 companies should be considered suspicious. Employees must know you&amp;#39;re spying on them.
 Extra fear is always helpful.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Brainwash them regularly by communicating how great your company is&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;Make a deal with competitors&lt;/strong&gt;.
 Contact your major competitors in the region and agree to not head-hunt
 their programmers if they don&amp;#39;t touch yours. If they reject
@@ -242,6 +244,8 @@ raise investments, or by the time a big contract is signed, or when
 to always make your promises dependable on events that are out of your
 control&amp;mdash;your hands must always be clean.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Instead of giving someone a raise, it&amp;#39;s always better to buy a new PlayStation for the office&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;Buy them cushion chairs and tennis tables&lt;/strong&gt;.
 Spend just a little on all those funny office things, and they will
 pay you back big time, through the ability to underpay your programmers.
@@ -259,6 +263,8 @@ will be much less valuable than the title they can put on their LinkedIn
 profiles. If you&amp;#39;re running out of Vice Presidents, try
 &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;Senior Architect&lt;/a&gt;,
 Lead Technical Lead, Chief Scientist, etc.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;They will keep working for you for less money just because you&amp;#39;re good friends&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Help them survive&lt;/strong&gt;.
 Most programmers are rather stupid when it comes to managing money. They simply don&amp;#39;t
