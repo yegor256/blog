@@ -166,9 +166,9 @@ I'm generally [against]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %
 [<span class='green'>Strategy</span>](https://en.wikipedia.org/wiki/Strategy_pattern).
 A good one.
 
-[<span class='green'>Template Method</span>](https://en.wikipedia.org/wiki/Template_method_pattern).
-Seems fine, as long as you keep classes
-[final]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
+[<span class='red'>Template Method</span>](https://en.wikipedia.org/wiki/Template_method_pattern).
+is wrong, since implementation inheritance
+[is procedural]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
 [<span class='red'>Visitor</span>](https://en.wikipedia.org/wiki/Visitor_pattern).
 A rather [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
