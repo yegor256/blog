@@ -74,7 +74,7 @@ times a day.
 **Principle #4**:
 "Business people and developers must work together daily throughout the project."
 
-{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilites %}
+{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilities %}
 
 Working together doesn't mean working without clearly defined
 rules and processes. However, most teams understand this principle as

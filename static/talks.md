@@ -112,14 +112,20 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
-<img src="http://devternity.com/images/logo.png" class="past-talk" alt="DevTernity 2016"/>
+<aside class="venue-rate green">B</aside>
+<img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
 XDSD: Meetings-Free Software Development Methodology;
 [DevTernity 2016](http://devternity.com/#/11);
 Riga, Latvia;
 1 December 2016;
 [video](https://www.youtube.com/watch?v=7EytYc7K5JA).
+The size of the event was perfectly right, the audience was motivated,
+organizers were actively involved, I did like it. What I didn't like
+was food and lack "social glue" between presenters, attendees, and
+everybody involved. I'm sure next year they will do it better.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who is a Software Architect?;
 [BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
@@ -127,6 +133,10 @@ Kiev, Ukraine;
 21-22 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
 [video](https://www.youtube.com/watch?v=R1lA7pN60xg).
+It was probably too big to be managed right. The Lithuanian part was a bit
+better, while Ukrainian was not so great at all, maybe because I don't like
+that Olympiski sport center. Also, in Vilnius there were maybe 15 people
+at my presentation&mdash;this was just sad. What I did like was food.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
@@ -138,6 +148,7 @@ Vilnius, Lithuania;
 [video](https://www.youtube.com/watch?v=wd-SA1HVmLg).
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 Seven Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
@@ -145,6 +156,8 @@ Tallinn, Estonia;
 17 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
+The event was rather small (about 300 people), but well prepared. At my presentation
+the room was full.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/mq4bsnKK0qs/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
@@ -156,14 +169,18 @@ Tallinn, Estonia;
 [video](https://www.youtube.com/watch?v=mq4bsnKK0qs).
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 Practical Example of a One-Click Release;
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
 Moscow, Russia;
 15 November 2016;
 [video](https://www.youtube.com/watch?v=_61CuGhyv-o).
+The event was rather small and chaotic. I tried my best to make my speech
+interesting, but the audience wasn't really ready.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">B+</aside>
 <img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
 [XP Days Ukraine](http://xpdays.com.ua/);
@@ -171,6 +188,10 @@ Kiev, Ukraine;
 12 November 2016;
 [video](https://www.youtube.com/watch?v=tCr9dtGdi2c),
 [photos](https://www.facebook.com/yegor256/posts/10211115240946846).
+This event was organized by same people who did JEEConf. This time it was
+smaller, at a different place and with less attention to details, if you ask me.
+However, overall impression was very good, organizers definitely know what
+they are doing. Will try to attend it again next year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
