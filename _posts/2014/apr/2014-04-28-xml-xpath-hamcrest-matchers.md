@@ -87,7 +87,7 @@ but, still, it is requires extra code in every unit test.
 
 [jcabi-matchers](http://matchers.jcabi.com) simplifies namespace handling
 problems even further, as it pre-defines most popular namespaces, including
-`xtml`, `xs`, `xsl`, etc.
+`xhtml`, `xs`, `xsl`, etc.
 
 The following example works right out-of-the-box&mdash;without any extra configuration:
 
