@@ -171,36 +171,38 @@ layout: compress
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <script>var disqus_shortname = 'yegor256';</script>
     <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-1963507-32', 'auto');
-      ga('send', 'pageview');
-    </script>
     {% if page.script %}
       <script>
         {{ page.script }}
       </script>
     {% endif %}
-    <script language="javascript" type="text/javascript">
-      Cd=document;Cr="&"+Math.random();Cp="&s=1";
-      Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
-      Cp+="&t="+(new Date()).getTimezoneOffset();
-      if(self!=top)Cp+="&f=1";
-    </script>
-    <script language="javascript1.1" type="text/javascript">
-      if(navigator.javaEnabled())Cp+="&j=1";
-    </script>
-    <script language="javascript1.2" type="text/javascript">
-      if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
-      screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
-    </script>
-    <script language="javascript" type="text/javascript">
-      Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+
-      "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
-      "' border='0' wi"+"dth='1' he"+"ight='1'/>");
-    </script>
+    {% if jekyll.environment == "production" %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1963507-32', 'auto');
+        ga('send', 'pageview');
+      </script>
+      <script language="javascript" type="text/javascript">
+        Cd=document;Cr="&"+Math.random();Cp="&s=1";
+        Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+        Cp+="&t="+(new Date()).getTimezoneOffset();
+        if(self!=top)Cp+="&f=1";
+      </script>
+      <script language="javascript1.1" type="text/javascript">
+        if(navigator.javaEnabled())Cp+="&j=1";
+      </script>
+      <script language="javascript1.2" type="text/javascript">
+        if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+        screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+      </script>
+      <script language="javascript" type="text/javascript">
+        Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+
+        "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
+        "' border='0' wi"+"dth='1' he"+"ight='1'/>");
+      </script>
+    {% endif %}
   </body>
 </html>
