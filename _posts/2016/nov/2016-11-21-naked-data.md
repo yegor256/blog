@@ -98,4 +98,5 @@ and lead to maintainability problems.
 
 The question is how we can work entirely without naked data, right? Eventually
 we have to let objects exchange data, don't we? Yes, that's true. But not entirely.
-I'll explain that in my next post.
+I'll explain that in
+[my next post]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}).
