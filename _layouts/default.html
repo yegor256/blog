@@ -3,7 +3,7 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
-  itemscope="" itemtype="http://schema.org/WebPage">
+  itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <!-- errorception.com
     <script>
@@ -29,6 +29,7 @@ layout: compress
     {% if page.og_image %}
       <meta property="og:image:url" content="{{ site.url }}{{ page.og_image }}"/>
     {% endif %}
+    <meta itemprop="url" content="{{ site.url }}"/>
     <meta property="og:site_name" content="yegor256"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
@@ -102,9 +103,11 @@ layout: compress
           </ul>
         </nav>
         <div class="search">
-          <form method="get" action="https://www.google.com/search">
+          <form method="get" action="https://www.google.com/search"
+            itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+            <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
-            <input type="text" id="search-query" class="field field-text"
+            <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
               onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search" autocomplete="off"/>
             <input type="image" src="/images/google-search-icon.svg" class="google"
               title="search via Google" alt="search via Google"/>
