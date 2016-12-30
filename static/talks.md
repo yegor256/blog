@@ -77,20 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/buildstuff-ukraine.png" class="future-talk" alt="BuildStuff Ukraine 2016"/>
-**Who is a Software Architect?**<br/>
-[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/)<br/>
-Kiev, Ukraine<br/>
-21-22 November 2016
-
-<div class="talk-event"/>
-<img src="http://devternity.com/images/logo.png" class="future-talk" alt="DevTernity 2016"/>
-**XDSD: Meetings-Free Software Development Methodology**<br/>
-[DevTernity 2016](http://devternity.com/#/11)<br/>
-Riga, Latvia<br/>
-1 December 2016
-
-<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
@@ -98,7 +84,8 @@ Manzanillo, Colima, Mexico<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
-[JBreak 2017](http://2017.jbreak.ru/)<br/>
+**Utility Classes Are Killing Us**<br/>
+[JBreak 2017](http://2017.jbreak.ru/talks/utility-classes-are-killing-us/)<br/>
 Novosibirsk, Russia<br/>
 4 April 2017
 
@@ -125,20 +112,52 @@ why shouldn't we rate them, right? The best rate is
 ### 2016
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
+<img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
+XDSD: Meetings-Free Software Development Methodology;
+[DevTernity 2016](http://devternity.com/#/11);
+Riga, Latvia;
+1 December 2016;
+[video](https://www.youtube.com/watch?v=7EytYc7K5JA).
+The size of the event was perfectly right, the audience was motivated,
+organizers were actively involved, I did like it. What I didn't like
+was food and lack "social glue" between presenters, attendees, and
+everybody involved. I'm sure next year they will do it better.
+
+<div class="talk-event"/>
+<aside class="venue-rate orange">C+</aside>
+<img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
+Who is a Software Architect?;
+[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
+Kiev, Ukraine;
+21-22 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
+[video](https://www.youtube.com/watch?v=R1lA7pN60xg).
+It was probably too big to be managed right. The Lithuanian part was a bit
+better, while Ukrainian was not so great at all, maybe because I don't like
+that Olympiski sport center. Also, in Vilnius there were maybe 15 people
+at my presentation&mdash;this was just sad. What I did like was food.
+
+<div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
 How Do You Know When Your Product is Ready to be Shipped?;
 [BuildStuff 2016](http://www.buildstuff.lt/);
 Vilnius, Lithuania;
 18 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-know-when-your-product-is-ready-to-be-shipped),
 [video](https://www.youtube.com/watch?v=wd-SA1HVmLg).
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 Seven Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 17 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
+The event was rather small (about 300 people), but well prepared. At my presentation
+the room was full.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/mq4bsnKK0qs/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
@@ -146,17 +165,22 @@ Keep Your Servers In GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 16 November 2016;
+[slides](http://www.slideshare.net/YegorBugayenko/keep-your-servers-in-github),
 [video](https://www.youtube.com/watch?v=mq4bsnKK0qs).
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 Practical Example of a One-Click Release;
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
 Moscow, Russia;
 15 November 2016;
 [video](https://www.youtube.com/watch?v=_61CuGhyv-o).
+The event was rather small and chaotic. I tried my best to make my speech
+interesting, but the audience wasn't really ready.
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">B+</aside>
 <img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
 [XP Days Ukraine](http://xpdays.com.ua/);
@@ -164,6 +188,10 @@ Kiev, Ukraine;
 12 November 2016;
 [video](https://www.youtube.com/watch?v=tCr9dtGdi2c),
 [photos](https://www.facebook.com/yegor256/posts/10211115240946846).
+This event was organized by same people who did JEEConf. This time it was
+smaller, at a different place and with less attention to details, if you ask me.
+However, overall impression was very good, organizers definitely know what
+they are doing. Will try to attend it again next year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -199,7 +227,7 @@ Malmö, Sweden;
 Practical Example of AOP with Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
-14-15 October 2016;
+14 October 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
 [photos](https://www.facebook.com/yegor256/posts/10210826984460614).
@@ -209,6 +237,22 @@ need to be improved: food and the amount of tracks. There too many tracks,
 I guess, for the amount of people attended. Would be better to lower the
 amount of speakers and focus the audience on best of them. And spend
 the available money on better food.
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Java vs OOP;
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+15 October 2016;
+[video](https://www.youtube.com/watch?v=cGcCcxx4xrg).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/Y-16C5yhKLo/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+Trial by Combat for OOP Honor (in Russian);
+[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+Kyiv, Ukraine;
+15 October 2016;
+[video](https://www.youtube.com/watch?v=Y-16C5yhKLo).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/A-9FjaOIsw8/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
@@ -754,5 +798,4 @@ Kyiv, Ukraine;
 San Francisco, USA;
 23 April 2015;
 [video](https://www.youtube.com/watch?v=3IXk5yEJMIs).
-
 

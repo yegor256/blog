@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Encapsulation Covers Up Naked Data"
-date: 2016-11-14
+date: 2016-11-21
 tags: oop java
 place: Moscow, Russia
 description: |
@@ -23,6 +23,8 @@ to private attributes from outside an object? I think it's much more.
 Encapsulation leads to the absence of _naked_ data on all levels and in all forms.
 
 <!--more-->
+
+{% picture /images/2016/11/borat.jpg 0 Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles %}
 
 This is what naked data is (C code):
 
@@ -82,16 +84,19 @@ We don't allow anyone to retrieve `t` anymore. All they can do is
 convert temperature to text. If and when we decide to change `t` to Celsius,
 we will do it just once and in one place: in the class `Temperature`.
 
+{% quote Any data elements that escape objects are naked and lead to maintainability problems %}
+
 If we need other functions in the future, like math operations or conversion
 to Celsius, we add more methods to class `Temperature`. But we never
 let anyone touch or know about `t`.
 
 This idea is close to
-["printers instead of getters"]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
-which we discussed earlier, though from a much wider perspective. 
+["printers instead of getters,"]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+which we discussed earlier, though from a much wider perspective.
 Here I'm saying that any data elements that escape objects are _naked_
 and lead to maintainability problems.
 
 The question is how we can work entirely without naked data, right? Eventually
 we have to let objects exchange data, don't we? Yes, that's true. But not entirely.
-I'll explain that in my next post.
+I'll explain that in
+[my next post]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}).

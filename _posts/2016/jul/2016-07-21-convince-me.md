@@ -68,7 +68,7 @@ entire success or failure of the product, just like I
 {% quote A good architect must collect different opinions before making his own decision %}
 
 There is a simple reason for that. Any attempt to convince anyone
-causes a possibility of "responsibility leakage". What if I fail to convince?
+causes a possibility of "responsibility leakage." What if I fail to convince?
 I will have to change my plan and use Gradle, right? What if the product
 has problems because of that decision? I will try to blame Chris for that,
 right? I can't be **fully** responsible for the product anymore, because I was
@@ -114,4 +114,4 @@ Chris but to fix a reported bug.
 To summarize, an architect must be an absolute technical **dictator**
 during the project and must not have to convince anyone. If that's not the case,
 the entire project faces big risks, simply because the responsibility
-will be "leaking".
+will be "leaking."

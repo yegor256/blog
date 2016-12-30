@@ -71,7 +71,7 @@ It stays with the byte-code in the `.class` file after compilation.
 Again, it is important to understand that even though
 method `power()` is annotated and compiled, it doesn't
 send anything to slf4j so far. It just contains
-a marker saying "please, log my execution".
+a marker saying "please, log my execution."
 
 ## Aspect Oriented Programming (AOP)
 

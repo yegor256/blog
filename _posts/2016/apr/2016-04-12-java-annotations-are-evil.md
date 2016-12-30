@@ -39,7 +39,7 @@ Long story short, there is one big problem with annotations&mdash;they encourage
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 functionality **outside** of an object,
 which is against the very principle of
-[encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29).
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 The object is not solid any more, since its behavior is not defined entirely by its own
 methods&mdash;some of its functionality stays elsewhere. Why is it bad? Let's
 see in a few examples.

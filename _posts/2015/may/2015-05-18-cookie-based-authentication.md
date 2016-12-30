@@ -30,7 +30,7 @@ Here is how [Takes](http://www.takes.org) makes it possible in a few lines of co
 
 First, let's see how it works. Moreover, let's see how I believe it should work.
 
-Step one: The user enters an email and password and clicks "submit". The server
+Step one: The user enters an email and password and clicks "submit." The server
 receives a POST request with this information inside:
 
 {% highlight text %}
@@ -157,7 +157,7 @@ final class TkAccount implements Take {
 
 Right after the `request` comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have the [`TkAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/TkAuth.html)
+reusable, we have the [`TkAuth`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/TkAuth.html)
 decorator, which wraps an existing _take_,
 decodes an incoming cookie, and adds a new `TkAuth`
 header to the request with the user's identification information:
@@ -170,21 +170,21 @@ new TkAuth(new TkAccount(), pass);
 
 Again, when `TkAuth` receives a request with an authenticating cookie inside,
 it asks `pass` to decode the cookie and return either a
-valid [`Identity`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Identity.html)
+valid [`Identity`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Identity.html)
 or `Identity.ANONYMOUS`.
 
 Then, when the response goes back to the browser, `TkAuth` asks `pass`
 to encode the identity back into a string and adds `Set-Cookie` to the response.
 
-[`PsCookie`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsCookie.html)
+[`PsCookie`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsCookie.html)
 uses an instance of
-[`Codec`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/codecs/Codec.html)
+[`Codec`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/codecs/Codec.html)
 in order to do these backward and forward encoding operations.
 
 When our `TkAccount` _take_ wants to retrieve a currently authenticated
 user identity from the request, it can use
-[`RqAuth`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/RqAuth.html),
-a utility decorator of [`Request`](http://www.takes.org/apidocs-0.15.1/org/takes/Request.html):
+[`RqAuth`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html),
+a utility decorator of [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html):
 
 {% highlight java %}
 final class TkAccount implements Take {
@@ -201,7 +201,7 @@ to authenticate the user and create an `Identity` object.
 
 ## How Is It Composable?
 
-This mechanism is indeed very extensible and "composable". Let's say we
+This mechanism is indeed very extensible and "composable." Let's say we
 want to skip authentication during integration testing. Here is how:
 
 {% highlight java %}
@@ -216,11 +216,11 @@ new TkAuth(
 );
 {% endhighlight %}
 
-[`PsChain`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsChain.html)
-implements [`Pass`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/Pass.html)
+[`PsChain`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html)
+implements [`Pass`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html)
 and attempts to authenticate the user by asking all encapsulated passes,
 one by one. The first one in the chain is
-[`PsFake`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsFake.html).
+[`PsFake`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsFake.html).
 Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
 trigger, we can switch off the entire authentication mechanism in the app.
@@ -251,12 +251,12 @@ When a user clicks on the login link on your site, the browser goes to `facebook
 where his or her identity is verified. Then, Facebook returns a `302` redirection
 response with a `Location` header set to the URL we provide in the login link.
 The link must include something like this: `?PsByFlag=PsFacebook`. This will
-tell [`PsByFlag`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/PsByFlag.html)
+tell [`PsByFlag`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsByFlag.html)
 that this request authenticates a user.
 
 `PsByFlag` will iterate through all encapsulated "pairs" and try to find the
 right one.
-[`PsFacebook`](http://www.takes.org/apidocs-0.15.1/org/takes/facets/auth/social/PsFacebook.html)
+[`PsFacebook`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/social/PsFacebook.html)
 will be the first and the right one. It will connect to the Facebook API using the
 provided credentials and will retrieve all possible information about the user.
 

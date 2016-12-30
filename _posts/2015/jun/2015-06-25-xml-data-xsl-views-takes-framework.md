@@ -89,10 +89,10 @@ Let's start with a simple example:
 
 {% highlight java %}
 import org.takes.http.Exit;
-import org.takes.http.FtCLI;
+import org.takes.http.FtCli;
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(), args).start(Exit.NEVER);
+    new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
@@ -176,7 +176,7 @@ public Response act() {
 {% endhighlight %}
 
 The most important class here is
-[`RsXembly`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/RsXembly.html).
+[`RsXembly`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html).
 The idea is to let
 model classes expose their data through Xembly "directives," which
 will later be applied to a DOM structure by `RsXembly`.
@@ -186,14 +186,14 @@ directives but with different meanings
 (they are all instances of an `XeSource` interface).
 Their names describe their
 intentions rather well.
-[`XeChain`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeChain.html)
+[`XeChain`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeChain.html)
 just chains everything that is
 delivered by encapsulated "directive sources."
-[`XeStylesheet`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeStylesheet.html)
+[`XeStylesheet`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeStylesheet.html)
 returns directives that create a single XML processing instruction.
 [`XeAppend`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeAppend.html)
 creates an XML node and adds encapsulated directives to it.
-[`XeDirectives`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeDirectives.html)
+[`XeDirectives`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeDirectives.html)
 simply returns what's inside.
 
 In the end, this code will create exactly the same XML document

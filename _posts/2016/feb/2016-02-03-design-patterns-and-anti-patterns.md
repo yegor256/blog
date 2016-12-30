@@ -82,7 +82,7 @@ performance problem in Java? Yes.
 [<span class='red'>Front Controller</span>](https://en.wikipedia.org/wiki/Front_controller).
 Terrible idea, as well as the entire
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
-It's very [procedural]({% pst 2015/mar/2015-03-09-objects-end-with-er %}), that's why.
+It's very [procedural]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}), that's why.
 
 [<span class='orange'>Interpreter</span>](https://en.wikipedia.org/wiki/Interpreter_pattern).
 It's OK, but I [don't like]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
@@ -90,7 +90,7 @@ the name. "Expression" would be a much better alternative.
 
 [<span class='red'>Iterator</span>](https://en.wikipedia.org/wiki/Iterator_pattern).
 Bad idea, since it is mutable. It would be much better
-to have [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) "cursors".
+to have [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) "cursors."
 
 [<span class='green'>Lazy Initialization</span>](https://en.wikipedia.org/wiki/Lazy_initialization).
 It's OK.
@@ -132,7 +132,7 @@ Good one.
 [<span class='orange'>Observer</span>](https://en.wikipedia.org/wiki/Observer_pattern).
 The idea is good, but the name is bad, since it
 [ends with -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
-A much better one would be "Source" and "Target". The Source
+A much better one would be "Source" and "Target." The Source
 generates events and the Target listens to them.
 
 [<span class='red'>ORM</span>](https://en.wikipedia.org/wiki/Object-relational_mapping).
@@ -166,9 +166,9 @@ I'm generally [against]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %
 [<span class='green'>Strategy</span>](https://en.wikipedia.org/wiki/Strategy_pattern).
 A good one.
 
-[<span class='green'>Template Method</span>](https://en.wikipedia.org/wiki/Template_method_pattern).
-Seems fine, as long as you keep classes
-[final]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
+[<span class='red'>Template Method</span>](https://en.wikipedia.org/wiki/Template_method_pattern).
+is wrong, since implementation inheritance
+[is procedural]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
 [<span class='red'>Visitor</span>](https://en.wikipedia.org/wiki/Visitor_pattern).
 A rather [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})

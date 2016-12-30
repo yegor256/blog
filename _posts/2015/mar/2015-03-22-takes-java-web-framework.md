@@ -165,7 +165,7 @@ public class Foo {
 {% endhighlight %}
 
 That's it. The server is ready. Try to compile and run it. Point your browser
-to http://localhost:8080, and you will see `Hello, world!`:
+to `http://localhost:8080`, and you will see `Hello, world!`:
 
 {% highlight bash %}
 $ javac -cp commons-io.jar Foo.java
@@ -194,7 +194,7 @@ framework was built.
 Routing/dispatching is combined with response printing in Takes. All you
 need to do to create a working web application is to create a single
 class that implements
-[`Take`](http://www.takes.org/apidocs-0.9/org/takes/Take.html) interface:
+[`Take`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html) interface:
 
 {% highlight java %}
 import org.takes.Request;
@@ -219,20 +219,20 @@ public class Foo {
 }
 {% endhighlight %}
 
-This [`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html)
+This [`FtBasic`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html)
 class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
 connections through an instance of `TkFoo` that we are giving to its constructor.
 It does this dispatching in an endless cycle, checking every second whether
 it's time to stop with an instance of
-[`Exit`](http://www.takes.org/apidocs-0.9/org/takes/http/Exit.html).
-Obviously, `Exit.NEVER` always responds with, "Don't stop, please".
+[`Exit`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html).
+Obviously, `Exit.NEVER` always responds with, "Don't stop, please."
 
 ## HTTP Request
 
 Now let's see what's inside the HTTP request arriving at `TkFoo` and what
 we can get out of it. This is how the
-[`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html)
+[`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)
 interface is defined in [Takes](http://www.takes.org):
 
 {% highlight java %}
@@ -279,7 +279,7 @@ The idea here is to keep the `Request` interface simple and provide
 this request parsing functionality to its decorators. This approach helps the
 framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in the [`org.takes.rq`](http://www.takes.org/apidocs-0.27/org/takes/rq/package-summary.html) package.
+are in the [`org.takes.rq`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html) package.
 As you already probably understand, the `Rq` prefix stands for `Request`.
 
 ## First Real Web App
@@ -290,19 +290,19 @@ required by Java to start an app from the command line:
 
 {% highlight java %}
 import org.takes.http.Exit;
-import org.takes.http.FtCLI;
+import org.takes.http.FtCli;
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(), args).start(Exit.NEVER);
+    new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
 {% endhighlight %}
 
 This class contains just a single `main()` static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates [`FtCLI`](http://www.takes.org/apidocs-0.27/org/takes/http/FtCLI.html),
+instantiates [`FtCli`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html),
 giving it an instance of class `TkApp` and command
-line arguments. We'll create the `TkApp` class in a second. `FtCLI`
+line arguments. We'll create the `TkApp` class in a second. `FtCli`
 (translates to "front-end with command line interface") makes an instance
 of the same `FtBasic`, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, `--port=8080` will
@@ -395,12 +395,12 @@ web: java -Dfile.encoding=UTF-8 \
 
 ## `TkFork`
 
-This [`TkFork`](http://www.takes.org/apidocs-0.27/org/takes/facets/fork/TkFork.html)
+This [`TkFork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html)
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right _take_. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
-a collection of "forks", which are instances of the
-[`Fork`](http://www.takes.org/apidocs-0.9/org/takes/facets/fork/Fork.html) interface:
+a collection of "forks," which are instances of the
+[`Fork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html) interface:
 
 {% highlight java %}
 public interface Fork {
@@ -412,7 +412,7 @@ Its only `route()` method either returns an empty iterator or an iterator
 with a single `Response`. `TkFork` goes through all forks, calling their
 `route()` methods until one of them returns a response. Once that happens,
 `TkFork` returns this response to the caller, which is
-[`FtBasic`](http://www.takes.org/apidocs-0.9/org/takes/http/FtBasic.html).
+[`FtBasic`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html).
 
 Let's create a simple fork ourselves now. For example, we want to show
 the status of the application when the `/status` URL is requested. Here is
@@ -484,7 +484,7 @@ fetch it from one that `FkParams` encapsulated. If the HTTP query is
 ## HTTP Response
 
 Now let's discuss the structure of the HTTP response and its object-oriented
-abstraction, [`Response`](http://www.takes.org/apidocs-0.9/org/takes/Response.html).
+abstraction, [`Response`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html).
 This is how the interface looks:
 
 {% highlight java %}
@@ -494,7 +494,7 @@ public interface Response {
 }
 {% endhighlight %}
 
-Looks very similar to the [`Request`](http://www.takes.org/apidocs-0.9/org/takes/Request.html),
+Looks very similar to the [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html),
 doesn't it? Well, it's identical, mostly because the structure of the HTTP request and
 response is almost identical. The only difference is the first line.
 
@@ -548,7 +548,7 @@ final class TkIndex implements Take {
 }
 {% endhighlight %}
 
-The [`RsVelocity`](http://www.takes.org/apidocs-0.9/org/takes/rs/RsVelocity.html) constructor
+The [`RsVelocity`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html) constructor
 accepts a single argument that has to be a Velocity template. Then, you call
 the `with()` method, injecting data into the Velocity context. When it's time
 to render the HTTP response, `RsVelocity` will "evaluate" the template
@@ -561,8 +561,8 @@ in combination with Xembly. I explained this idea in a few previous posts:
 and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %}).
 It is simple and powerful&mdash;Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
-representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller",
-in terms of [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller,"
+in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).
 
 I'll write a separate article about templating with Xembly and XSL very soon.
 
@@ -587,7 +587,7 @@ a [BoneCP](http://www.jolbox.com/) connection pool):
 {% highlight java %}
 public final class Entry {
   public static void main(final String... args) throws Exception {
-    new FtCLI(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
+    new FtCli(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
   }
   private static Source postgres() {
     final BoneCPDataSource src = new BoneCPDataSource();
@@ -622,7 +622,7 @@ table data and convert it into HTML. The point here is that the dependency
 must be injected into the application (instance of class `TkApp`) at the
 moment of its instantiation. This is a pure and clean dependency injection
 mechanism, which is absolutely container-free. Read more about it in
-["Dependency Injection Containers Are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
+["Dependency Injection Containers Are Code Polluters."]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 
 ## Unit Testing
 
@@ -672,7 +672,7 @@ public final class TkIndexTest {
 }
 {% endhighlight %}
 
-[`FtRemote`](http://www.takes.org/apidocs-0.9/org/takes/http/FtRemote.html)
+[`FtRemote`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html)
 starts a test web server at a random TCP port and calls the
 `exec()` method at the provided instance of `FtRemote.Script`. The first
 argument of this method is a URI of the just-started web server homepage.

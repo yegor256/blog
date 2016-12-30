@@ -18,7 +18,7 @@ keywords:
 
 There are thousands of books about object-oriented programming and
 hundreds of object-oriented languages, and I believe most (read "all") of them
-give us an incorrect definition of an "object". That's why the entire
+give us an incorrect definition of an "object." That's why the entire
 OOP world is so full of misconceptions and mistakes. Their
 definition of an object is limited by the hardware architecture they
 are working with and that's why is very primitive and mechanical.
@@ -44,8 +44,8 @@ What is an object? I've done a little research, and this is what I've found:
 
   * "An object consists of some private memory and a set of operations"&mdash;[Smalltalk-80](http://amzn.to/1UhYinp), Goldberg and Robson, p. 6.
 
-What is common throughout all these definitions is the word "contains" (or "holds",
-"consists", "has", etc.). They all think that an object is a _box with data_.
+What is common throughout all these definitions is the word "contains" (or "holds,"
+"consists," "has," etc.). They all think that an object is a _box with data_.
 And this perspective is exactly what I'm strongly against.
 
 {% quote They all think that an object is a box with data -- this perspective is exactly what I'm strongly against %}
@@ -91,7 +91,7 @@ the x86 architecture. In C++, objects are just data structures with
 clearly defined allocation of data attributes.
 
 In that example, attributes `vin` and `engine` are not equal:
-`vin` is "data", while `engine` is a "pointer" to another object.
+`vin` is "data," while `engine` is a "pointer" to another object.
 I intentionally made it this way in order to demonstrate that calling
 an object a box with data is possible only with `vin`. Only when
 the data are located right "inside" the object can we say that the
@@ -99,7 +99,7 @@ object is actually a box for the data. With `engine`, it isn't
 really true because there is no data technically _inside_ the object. Instead, there is a
 _pointer_ to another object. If our object would only have an
 `engine` attribute, it would take just 8 bytes in memory, with none of them
-actually occupied by "data".
+actually occupied by "data."
 
 {% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
 

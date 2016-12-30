@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'Cambria';
-  font-weight: bold;
-  font-style: italic;
+  font-weight: normal;
+  font-style: normal;
   src: local('Cambria'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot?#iefix') format('embedded-opentype'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff2') format('woff2'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff') format('woff'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.ttf') format('truetype');
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot?#iefix') format('embedded-opentype'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff2') format('woff2'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff') format('woff'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Cambria';
@@ -25,17 +25,6 @@
 @font-face {
   font-family: 'Cambria';
   font-weight: normal;
-  font-style: normal;
-  src: local('Cambria'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot?#iefix') format('embedded-opentype'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff2') format('woff2'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff') format('woff'),
-    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Cambria';
-  font-weight: normal;
   font-style: italic;
   src: local('Cambria'),
     url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_3_0.eot'),
@@ -43,4 +32,15 @@
     url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_3_0.woff2') format('woff2'),
     url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_3_0.woff') format('woff'),
     url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_3_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cambria';
+  font-weight: bold;
+  font-style: italic;
+  src: local('Cambria'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot?#iefix') format('embedded-opentype'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff2') format('woff2'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff') format('woff'),
+    url('//cf.jare.io/?u=http://www.yegor256.com/fonts/cambria/2EAA54_0_0.ttf') format('truetype');
 }

@@ -3,8 +3,9 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
-  itemscope="" itemtype="http://schema.org/WebPage">
+  itemscope="" itemtype="http://schema.org/WebSite">
   <head>
+    <!-- errorception.com
     <script>
       (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
       c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
@@ -12,8 +13,8 @@ layout: compress
       _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
       (window,document,"script","57c3846b0929bf2b09000494");
     </script>
+    -->
     <meta charset="utf-8"/>
-    <meta itemprop="name" content="{{ page.title }}" />
     <meta itemprop="author" content="{{ site.author.name }}" />
     <meta itemprop="breadcrumb" content="{{ site.url }}" />
     <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
@@ -44,9 +45,9 @@ layout: compress
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="/css/icons.css?{{ site.data['hash'] }}"/>
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" itemprop="url" />
     <link rel="amphtml" href="{{ site.url }}{{ page.url | replace_first:'.html','.amp.html' }}" />
-    <title>{{ page.title }} - {{ site.author.name }}
+    <title itemprop='name'>{{ page.title }} - {{ site.author.name }}
       {% if paginator.page > 1 %}
         (page {{ paginator.page }})
       {% endif %}</title>
@@ -72,14 +73,14 @@ layout: compress
           <ul class="menu social notranslate">
             <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/yegor256" rel="nofollow" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/yegor256" rel="nofollow" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://instagram.com/yegor256" rel="nofollow" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/c/yegor256" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.pinterest.com/yegor256/" rel="nofollow" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://angel.co/yegor256" rel="nofollow" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="Podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="Podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li>
@@ -96,12 +97,15 @@ layout: compress
             <li><a href="/pets.html" title="pets">pets</a></li>
             <li><a href="/award.html" title="software quality award">award</a></li>
             <li><a href="/testimonials.html" title="what people say about me">testimonials</a></li>
+            <li><a href="http://ru.yegor256.com/" title="о политике" class="politics">о политике</a></li>
           </ul>
         </nav>
         <div class="search">
-          <form method="get" action="https://www.google.com/search">
+          <form method="get" action="https://www.google.com/search"
+            itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+            <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
-            <input type="text" id="search-query" class="field field-text"
+            <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
               onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search" autocomplete="off"/>
             <input type="image" src="/images/google-search-icon.svg" class="google"
               title="search via Google" alt="search via Google"/>
@@ -145,10 +149,10 @@ layout: compress
             </li>
             -->
             <li>
-              At <a href="/webinars.html">Webinar #19</a>
-              we'll discuss the role of a <strong>project manager</strong>
-              in a software project,
-              join us on <b>December 7</b>, at 11am PST.
+              At <a href="/webinars.html">Webinar #20</a>
+              we'll discuss what immutability really is in OOP,
+              by examples in Java and EO,
+              join us on <b>January 4</b>, at 11am PST.
             </li>
             <!--
             <li>
@@ -168,17 +172,37 @@ layout: compress
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
     <script>var disqus_shortname = 'yegor256';</script>
     <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-1963507-32', 'auto');
-      ga('send', 'pageview');
-    </script>
     {% if page.script %}
       <script>
         {{ page.script }}
+      </script>
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-1963507-32', 'auto');
+        ga('send', 'pageview');
+      </script>
+      <script language="javascript" type="text/javascript">
+        Cd=document;Cr="&"+Math.random();Cp="&s=1";
+        Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+        Cp+="&t="+(new Date()).getTimezoneOffset();
+        if(self!=top)Cp+="&f=1";
+      </script>
+      <script language="javascript1.1" type="text/javascript">
+        if(navigator.javaEnabled())Cp+="&j=1";
+      </script>
+      <script language="javascript1.2" type="text/javascript">
+        if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+        screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+      </script>
+      <script language="javascript" type="text/javascript">
+        Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+
+        "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
+        "' border='0' wi"+"dth='1' he"+"ight='1'/>");
       </script>
     {% endif %}
   </body>

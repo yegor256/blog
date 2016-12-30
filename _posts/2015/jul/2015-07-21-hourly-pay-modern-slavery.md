@@ -89,6 +89,6 @@ Is it more risky? Yes. Is it more stressful? Yes.
 But that's what freedom is about.
 
 This is my favorite quote from the book:
-"a good slave is loyal, hard-working and vigilant".
+"a good slave is loyal, hard-working and vigilant."
 
 Think about it.

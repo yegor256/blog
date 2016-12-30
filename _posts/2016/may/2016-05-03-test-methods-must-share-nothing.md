@@ -4,6 +4,7 @@ title: "Test Methods Must Share Nothing"
 date: 2016-05-03
 place: Palo Alto, CA
 tags: java oop
+category: jcg
 description: |
   When we use private static literals to get rid of value
   duplication, unnecessary coupling between test methods

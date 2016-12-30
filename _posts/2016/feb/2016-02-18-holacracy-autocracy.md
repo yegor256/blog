@@ -33,7 +33,7 @@ According to Wikipedia at the time of writing, a
 "authority and decision-making are distributed" while,
 on the other hand,
 [**autocracy**](https://en.wikipedia.org/wiki/Autocracy) exists when
-"supreme power is concentrated in the hands of one person".
+"supreme power is concentrated in the hands of one person."
 
 When I say organization, I mean a team, a startup, a company, that
 sort of thing. It's something with a brand, an office, a business entity
@@ -43,12 +43,12 @@ in exchange for freedom. Democracy in a country, as well as in a team,
 guarantees **equality** to its members,
 which is the most important component of security.
 
-A holacracy, also known as a "flat organization", technically refers to the absence
+A holacracy, also known as a "flat organization," technically refers to the absence
 of bureaucracy, special privileges, expensive furniture and private parties
 for top management. In a flat team, the distance between the CEO and
 a junior programmer is very small. They sit together in the same room,
 eat in the same cafe, and discuss team strategy like friends. There
-are no "bosses" on a flat team, only "**leaders**". They don't give orders, they
+are no "bosses" on a flat team, only "**leaders**." They don't give orders, they
 **inspire**. They don't punish, they celebrate success and mourn failure
 together with everybody. Well, that's the idea of a holacracy.
 And it actually works. I've seen it many times.
@@ -58,7 +58,7 @@ And it actually works. I've seen it many times.
 However, when we're talking about **project** management, this very same approach will
 have catastrophic consequences. A project is something very different
 than a team. A project is a "temporary endeavor
-undertaken to create a unique product, service, or result", according to
+undertaken to create a unique product, service, or result," according to
 [PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx).
 A project is something that starts and ends. The key objective of a project
 is to **end**, while an organization's objective is to **survive**. See the
@@ -78,7 +78,7 @@ Since a project is a temporary endeavor, it doesn't give security to its
 participants. And it doesn't take away our freedom. The arrangement is
 different: A project gives us **money** and takes our **time**. The project
 basically says to all of us, its participants: "Let's get it done and go
-our own ways". Having this philosophy in mind and understanding the motivation
+our own ways." Having this philosophy in mind and understanding the motivation
 of everybody involved, the PM must use instruments that have nothing to do
 with what keeps the organization alive.
 

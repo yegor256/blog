@@ -50,7 +50,7 @@ available unit and integration tests.
 This is called [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (aka "CI").
 
 Sometimes, some tests fail. When this happens, we say that our
-"build is broken". Such a failure is a positive
+"build is broken." Such a failure is a positive
 side effect of quality control because it raises a red
 flag immediately after an error gets into `master`.
 
@@ -104,7 +104,7 @@ fix our build later. And [it's only logical]({% pst 2014/oct/2014-10-08-continuo
   title="Prevent Conflicts in Distributed Agile PHP Projects"><i class="icon icon-pdf"></i></a>
 
 Four years ago, in 2010, I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
-called "Prevent Conflicts in Distributed Agile PHP Projects". In the article,
+called "Prevent Conflicts in Distributed Agile PHP Projects." In the article,
 a solution was proposed (full article in [PDF](/pdf/2014/guard-article.pdf))
 for Subversion and PHP.
 

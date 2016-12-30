@@ -102,7 +102,7 @@ workarounds&mdash;they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
 to close the ticket, ask its reporter to close it. Explicitly ask for that;
-don't dance around with "looks like this solution may be accepted, if you don't mind".
+don't dance around with "looks like this solution may be accepted, if you don't mind."
 Be explicit in your intention to close the ticket and move on. Try this:
 "@jeff, please close the ticket if you don't have any further questions."
 
@@ -128,7 +128,7 @@ solution is delivered.
 
 It can be a temporary solution. It can be a single line change in the
 project documentation. It can be a TODO marker in the code saying that
-"we are aware of the problem but won't fix it because we're lazy". Anything
+"we are aware of the problem but won't fix it because we're lazy." Anything
 would work, but not nothing.
 
 Look at it from a different perspective. When you started that ticket, you had
@@ -148,7 +148,7 @@ comments become communication **noise**. Remember, a ticket is a conversation
 between two people&mdash;one of them reported an issue and the other one is
 trying to fix it. Comments like, "How about we try another approach"
 or "I remember I had a similar issue some time ago" are very annoying
-and distracting. Let's be honest, nobody really needs or cares about "opinions".
+and distracting. Let's be honest, nobody really needs or cares about "opinions."
 All we need in a ticket is a solution(s).
 
 {% quote Don't pollute the air with generic opinions %}
@@ -179,7 +179,7 @@ doesn't satisfy the
 [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), etc.
 
 Every bug report should follow the same simple formula: "This is what we *have*,
-this is what we *should have* instead, so fix it". Every ticket, be it a bug,
+this is what we *should have* instead, so fix it." Every ticket, be it a bug,
 a task, a question, or a suggestion, should be formatted in this way. By
 submitting it, you're asking the project to move from point A to point B. Something
 is not right at point A, and it will be much better for all of us to be
@@ -191,7 +191,7 @@ A and B are. It is highly desirable if you can explain how to get there&mdash;ho
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient
 enough for you to find an answer there. This is what is broken. You should
-ask for a fix. So instead of reporting, "How should I use class X?", say
+ask for a fix. So instead of reporting, "How should I use class X?," say
 something like, "The current documentation is not complete; it doesn't explain
 how I should use class X. Please fix."
 

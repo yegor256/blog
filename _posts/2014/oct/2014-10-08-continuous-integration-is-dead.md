@@ -54,8 +54,8 @@ server (or service) attempts to build the entire product. "Build" means
 compile, unit test, integration test, quality analysis,
 [etc.]({% pst 2014/jun/2014-06-21-casperjs-with-maven %})
 
-The result is either "success" or "failure". If it is a success, we
-say that "the build is clean". If it is a failure, we say that "the build is broken".
+The result is either "success" or "failure." If it is a success, we
+say that "the build is clean." If it is a failure, we say that "the build is broken."
 The build usually gets broken because someone breaks it by
 committing new code that turns previously passing unit tests
 into failing ones.
@@ -69,7 +69,7 @@ continuous integration is easy. Technically.
 Let's see the organizational side.
 
 Continuous integration is not only a server that builds, but a
-management/organizational process that should "work". Being a process
+management/organizational process that should "work." Being a process
 that works means exactly what Jez Humble said in
 [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://amzn.to/2c7sR4V),
 on page 55:
@@ -140,7 +140,7 @@ but never committed to `master`, because of that fear factor.
 ## OK, What Is The Solution?
 
 I wrote about it before; it is called
-["read-only master branch"]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
+["read-only master branch."]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 
 It is simple&mdash;prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will

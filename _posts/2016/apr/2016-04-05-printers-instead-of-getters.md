@@ -4,6 +4,7 @@ title: "Printers Instead of Getters"
 date: 2016-04-05
 place: Palo Alto, CA
 tags: java oop
+category: jcg
 description: |
   Since getters are an anti-pattern, how are we supposed
   to convert an object to, say, JSON or plain text?
@@ -135,7 +136,7 @@ You may say that the object will be rather big if there will be many formats.
 That's true, but a big object is a bad design in the first place. I would
 say that if there is more than one printer&mdash;it's a problem.
 
-So, what to do if we need multiple formats? Use "media", where that printers
+So, what to do if we need multiple formats? Use "media," where that printers
 will be able to print to. Say, we have an object that represents a
 record in MySQL. We want it to be printable to XML, HTML, JSON, some binary
 format and God knows what else. We can add that many printers to it, but

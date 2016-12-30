@@ -185,7 +185,7 @@ My task will be closed and paid when the system analyst
 changes its state to "implemented" in the SRS. The system analyst is my only
 customer. I have to sell my solution to him. Project manager
 will close my task and pay me when system analyst changes
-the status of the functional requirement from "specified" to "implemented".
+the status of the functional requirement from "specified" to "implemented."
 
 The task sounds big, and I have only half an hour. Obviously,
 puzzle driven development should help me. I will create many tickets and
@@ -246,7 +246,7 @@ to find a certain amount of bugs at every stage of the project.
 
 {% picture /images/2014/04/fear-and-loathing-adrenochrome.png 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
 
-As as a tester, I receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it". The project manager
+As as a tester, I receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it." The project manager
 needs a certain number of bugs to be found in order to fix the project.
 From his point of view, the project is fixed when, say, 200 bugs have been found. That's why he asks me to find more.
 

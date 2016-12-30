@@ -1,13 +1,11 @@
 {% if related_posts != empty %}
   <div class="unprintable">
-    <h2>Related Posts</h2>
-    <p>You may also find these posts interesting:</p>
-    <ul>
+    <hr/>
+    <p>
+      You may also find these <strong>related</strong> posts interesting:
       {% for p in related_posts %}
-        <li>
-          <a href="{{ p.url }}" data-score="{{ p.score }}">{{ p.title }}</a>
-        </li>
+        <a href="{{ p.url }}" data-score="{{ p.score }}">{{ p.title }}</a>;
       {% endfor %}
-    </ul>
+    </p>
   </div>
 {% endif %}

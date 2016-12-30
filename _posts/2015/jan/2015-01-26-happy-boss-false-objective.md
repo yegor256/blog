@@ -58,7 +58,7 @@ I write code; the CFO writes checks. I eat at McDonald's; he drives
 a Jaguar. We have different needs, and we both agreed that the project
 would satisfy them. Otherwise we wouldn't be here, right?
 
-We're all parts of a mechanism called a "project", which works according
+We're all parts of a mechanism called a "project," which works according
 to the rules and principles of **project management** whether we are aware of
 them or not. Whether we have a project manager or not. Even if we violate
 all of them and manage ourselves in total chaos, we still have a scope,

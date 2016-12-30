@@ -57,7 +57,7 @@ through them.
 **Tell, Don't Ask**
 Allen Holub says, "Don't ask for the information
 you need to do the work; ask the object that has the information
-to do the work for you".
+to do the work for you."
 
 **Violated Encapsulation Principle**
 An object can be teared apart by other objects, since they
@@ -83,7 +83,7 @@ an article by Bozhidar Bozhanov:
 and setters are simple data holders.
 
 This misconception is the consequence of a huge misunderstanding!
-Objects are not "simple data holders". Objects are **not** data structures
+Objects are not "simple data holders." Objects are **not** data structures
 with attached methods. This "data holder" concept came to object-oriented programming
 from procedural languages, especially C and COBOL.
 I'll say it again: an object is **not** a set of data elements
@@ -177,7 +177,7 @@ We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,
 we're working with data, manipulating them, getting, setting,
 and deleting when necessary. We're in charge, and the data is just a passive component.
-The dog is nothing to us&mdash;it's just a "data holder".
+The dog is nothing to us&mdash;it's just a "data holder."
 It doesn't have its own life. We are free
 to get whatever is necessary from it and set any data into it.
 This is how C, COBOL, Pascal and many other procedural languages work(ed).
@@ -189,7 +189,8 @@ return us that information. But we always remember that the dog is
 an active component. She decides what will happen after our request.
 
 That's why, **it is conceptually incorrect to have any methods starting
-with `set` or `get` in an object**. And it's not about breaking encapsulation, like
+with `set` or `get` in an object**. And it's not about breaking
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}), like
 many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.
 

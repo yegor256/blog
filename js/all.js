@@ -1,4 +1,5 @@
 /*globals $:false, window:false, document:false */
+var VK = {};
 if (typeof($) != 'undefined') {
   $(function() {
     'use strict';
@@ -24,20 +25,22 @@ if (typeof($) != 'undefined') {
         eurl = encodeURIComponent(url),
         border = '1px solid #ffa094',
         timeout = 5000;
-      $.ajax({
-        dataType: 'json',
-        async: true,
-        timeout: timeout,
-        url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + eurl,
-        success: function (data) {
-          if (data.GooglePlusOne !== 0) {
-            $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
+      if ($('.count-googleplus').length) {
+        $.ajax({
+          dataType: 'json',
+          async: true,
+          timeout: timeout,
+          url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + eurl,
+          success: function (data) {
+            if (data.GooglePlusOne !== 0) {
+              $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
+            }
+          },
+          error: function() {
+            $('.share .icon-googleplus').css('border', border);
           }
-        },
-        error: function() {
-          $('.share .icon-googleplus').css('border', border);
-        }
-      });
+        });
+      }
       // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
       // $.getJSON(
       //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + eurl,
@@ -48,51 +51,72 @@ if (typeof($) != 'undefined') {
       //     }
       //   }
       // );
-      $.ajax({
-        dataType: 'jsonp',
-        async: true,
-        timeout: timeout,
-        url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
-        success: function(json) {
-          var count = json[url].share.share_count;
-          if (count > 0) {
-            $('.count-facebook').html(number(count)).fadeIn();
+      if ($('.count-facebook').length) {
+        $.ajax({
+          dataType: 'jsonp',
+          async: true,
+          timeout: timeout,
+          url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
+          success: function(json) {
+            var count = json[url].share.share_count;
+            if (count > 0) {
+              $('.count-facebook').html(number(count)).fadeIn();
+            }
+          },
+          error: function() {
+            $('.share .icon-facebook').css('border', border);
           }
-        },
-        error: function() {
-          $('.share .icon-facebook').css('border', border);
-        }
-      });
-      $.ajax({
-        dataType: 'json',
-        async: true,
-        timeout: timeout,
-        url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + eurl,
-        success: function(json) {
-          var count = json.count;
-          if (count > 0) {
-            $('.count-linkedin').html(number(count)).fadeIn();
+        });
+      }
+      if ($('.count-linkedin').length) {
+        $.ajax({
+          dataType: 'json',
+          async: true,
+          timeout: timeout,
+          url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + eurl,
+          success: function(json) {
+            var count = json.count;
+            if (count > 0) {
+              $('.count-linkedin').html(number(count)).fadeIn();
+            }
+          },
+          error: function() {
+            $('.share .icon-linkedin').css('border', border);
           }
-        },
-        error: function() {
-          $('.share .icon-linkedin').css('border', border);
-        }
-      });
-      $.ajax({
-        dataType: 'json',
-        async: true,
-        timeout: timeout,
-        url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
-        success: function(json) {
-          var count = json.data.children.length;
-          if (count > 0) {
-            $('.count-reddit').html(number(count)).fadeIn();
+        });
+      }
+      if ($('.count-reddit').length) {
+        $.ajax({
+          dataType: 'json',
+          async: true,
+          timeout: timeout,
+          url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
+          success: function(json) {
+            var count = json.data.children.length;
+            if (count > 0) {
+              $('.count-reddit').html(number(count)).fadeIn();
+            }
+          },
+          error: function() {
+            $('.share .icon-reddit').css('border', border);
           }
-        },
-        error: function() {
-          $('.share .icon-reddit').css('border', border);
-        }
-      });
+        });
+      }
+      if ($('.count-vk').length) {
+        VK.Share = {};
+        VK.Share.count = function (index, count) {
+          if (count > 0) {
+            $('.count-vk').html(number(count)).fadeIn();
+          }
+        };
+        $.ajax({
+          dataType: 'jsonp',
+          async: true,
+          timeout: timeout,
+          url: 'https://vk.com/share.php?act=count&url=' + eurl
+        });
+      }
+      /*
       // https://jsonp.afeld.me/
       $.ajax({
         dataType: 'jsonp',
@@ -113,23 +137,26 @@ if (typeof($) != 'undefined') {
           $('.share .icon-stumbleupon').css('border', border);
         }
       });
-      $.ajax({
-        dataType: 'json',
-        async: true,
-        timeout: timeout,
-        url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
-          + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
-          + '"',
-        success: function(json) {
-          var count = json.nbHits;
-          if (count > 0) {
-            $('.count-hackernews').html(number(count)).fadeIn();
+      */
+      if ($('.count-hackernews').length) {
+        $.ajax({
+          dataType: 'json',
+          async: true,
+          timeout: timeout,
+          url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
+            + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
+            + '"',
+          success: function(json) {
+            var count = json.nbHits;
+            if (count > 0) {
+              $('.count-hackernews').html(number(count)).fadeIn();
+            }
+          },
+          error: function() {
+            $('.share .icon-hackernews').css('border', border);
           }
-        },
-        error: function() {
-          $('.share .icon-hackernews').css('border', border);
-        }
-      });
+        });
+      }
     }
     $('h2').each(
       function (idx, element) {

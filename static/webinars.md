@@ -19,13 +19,20 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% badge /images/calendar-icon.png 96 http://www.google.com/calendar/event?action=TEMPLATE&dates=20161207T180000Z%2f20161207T190000Z&sprop=website:https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M&text=Who%20Is%20a%20Project%20Manager%20(webinar)&location=YouTube&details=Webinar%20%2319%20by%20Yegor%20Bugayenko%2C%20click%20here%20to%20join%3A%20https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaKTNK8g2-M %}
+{% webinar 04-01-2017 20 PVvLQGnyDrQ Gradients of Immutability %}
+
+{% youtube PVvLQGnyDrQ video-left %}
+January 4, 2017:
+**Gradients of Immutability**
+We'll discuss what immutability really is, with a few example in Java and [EO](http://www.eolang.org)
+(new language we're developing now). The discuss will be based on this blog post::
+[Gradients of Immutability]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
 
 {% youtube zaKTNK8g2-M video-left %}
 December 7, 2016:
 **Who Is a Project Manager?**
-We will discuss what is the role of a project manager in a software project and how it
-is different from other roles. The discussion will be based on this article:
+We discussed what was the role of a project manager in a software project and how it
+was different from other roles. The discussion was based on this article:
 [Who Is a Project Manager?]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 
 {% youtube _Q0cNykXB04 video-left %}

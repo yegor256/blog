@@ -23,12 +23,12 @@ capable of fitting an entire application into a 64Kb
 that poor Intel 80386 were the icons of programming.
 
 That's because twenty years ago computers were expensive and programmers
-were cheap. That was the time of the "hacker mentality".
+were cheap. That was the time of the "hacker mentality."
 That time is over. That mentality is not appreciated any more,
 because the market situation is completely opposite.
 
 Today, computers are cheap and programmers are expensive.
-This is the era of the "designer mentality", when the readability
+This is the era of the "designer mentality," when the readability
 of our code is much more important than its performance.
 
 <!--more-->
@@ -72,7 +72,7 @@ situation is exactly the opposite. It is now much cheaper to double the
 size of the server (especially if the server is a virtual cloud one)
 instead of paying salaries for optimizing the software.
 
-In 1994 the best engineers had that "hacker mentality", while in 2014 the
+In 1994 the best engineers had that "hacker mentality," while in 2014 the
 "designer mentality" is much more appreciated.
 
 ## Hacker Mentality

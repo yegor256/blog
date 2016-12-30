@@ -112,7 +112,7 @@ contracts with programmers?
 {% figure /images/2014/10/xdsd-invoice-example.svg 500 %}
 
 Yes, [it is]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %}).
-We call it "Incremental Billing".
+We call it "Incremental Billing."
 
 Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
 in less than an hour. Each completed task produces a new increment (aka a "release" or "version") of software.

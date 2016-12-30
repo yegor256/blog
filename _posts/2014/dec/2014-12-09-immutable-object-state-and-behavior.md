@@ -227,7 +227,7 @@ document stays the same. It doesn't stop being immutable, since it's
 state (`id`) is not changed. It is the same document, even though we
 change its title, because the title is not a state of the document. It
 is something in the real world, outside of the document. The document
-is just a proxy between us and that "something". Reading and writing
+is just a proxy between us and that "something." Reading and writing
 the title are behaviors of the document, not its state.
 
 ## Mutable Memory
@@ -264,7 +264,7 @@ it and we don't have any file or HTTP page behind the object?
 
 It represents *computer memory*.
 
-The title of immutable document #50, "How to grill a sandwich",
+The title of immutable document #50, "How to grill a sandwich,"
 is stored in the memory, taking up 23 bytes of space. The document
 should know where those bytes are stored, and it should be able to read them
 and replace them with something else. Those 23 bytes are the real-world

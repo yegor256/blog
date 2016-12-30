@@ -32,6 +32,16 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
+Nov 20, 2016:
+I've got over 50 emails from those who are interested in reviewing
+the second volume of the book. With the first volume, I believe, I made
+a mistake in selecting reviewers. Not all of them were as effective as
+I was expecting. This time I will make it different. I will put all
+all of them in a list and let you vote. The best 12, elected by you,
+will get the early draft of the second volume and will help me review it. To
+get into the list, please fill
+[this simple form](https://docs.google.com/forms/d/1RaAN3JoeDxcWU8HaBz4EI-WISt1rKf3FywQLFWn0unk).
+
 Aug 22, 2016:
 I will collect all reviews of the book written by its readers on their
 blogs, to help you better understand what the book is about, why it's

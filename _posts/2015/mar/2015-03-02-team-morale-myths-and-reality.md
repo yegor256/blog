@@ -15,6 +15,10 @@ keywords:
   - team morale event ideas
 youtube:
   - ibT5oKToMoQ
+related:
+  - 2016/sep/2016-09-27-command-control-innovate
+  - 2016/jun/2016-06-21-how-to-hire-programmer
+  - 2015/oct/2015-10-13-competition-without-rules
 ---
 
 There are plenty of books, articles, and blog posts about _team morale_. They
@@ -73,7 +77,7 @@ stupid in front of the team. A weak manager does look stupid when he or she
 tries to hide mistakes that have been made.
 
 **Responsibility Is Always Personal**.
-The most demotivating word used in task descriptions is "together". Don't use it.
+The most demotivating word used in task descriptions is "together." Don't use it.
 Each task has to be personally and individually assigned (no matter what the
 [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) says).
 Everybody is responsible for his or her own success or failure. How their results
@@ -102,7 +106,7 @@ Even though [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
 is a great attitude-changing and mind-shifting concept,
 it is absolutely inapplicable in practice, mostly because it is too
 abstract. When you're proclaiming in the office that we should value
-"working software over comprehensive documentation", it sounds like
+"working software over comprehensive documentation," it sounds like
 you don't know what you're doing. The team doesn't need such abstract
 slogans from you. It needs specific instructions and rules in order
 to follow them and produce results, money, and satisfaction. Agile is a set
@@ -182,7 +186,7 @@ let everybody know who is getting what, when, why, and why not. Everybody
 should know everybody's salaries, bonuses, benefits, and the rationale behind them.
 Each programmer should know what he or she should do in order to get
 a $5,000 raise to their annual salary. Also, he or she should know why a
-colleague is called "senior developer" while his or her title is still "junior".
+colleague is called "senior developer" while his or her title is still "junior."
 This information should be public and printed on the wall right behind
 your chair. Why don't most managers do this? Because they don't have any
 rationale behind their monetary decisions. Instead of managing the money,

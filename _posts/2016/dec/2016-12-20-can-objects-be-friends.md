@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Can Objects Be Friends?"
-date: 2016-11-14
+date: 2016-12-20
 tags: oop java
 place: Moscow, Russia
 description: |
@@ -16,14 +16,17 @@ keywords:
   - encapsulation violation
 ---
 
-As discussed before, proper encapsulation leads to a complete absence
-of naked data. However, the question remains: How can objects
+As [discussed before]({% pst 2016/nov/2016-11-21-naked-data %}),
+proper encapsulation leads to a complete absence
+of "naked data." However, the question remains: How can objects
 interact if they can't exchange data? Eventually we have to expose
 some data in order to let other objects use it, right? Yes, that's true.
 However, I guess I have a solution that keeps encapsulation in place
 while allowing objects to interact.
 
 <!--more-->
+
+{% picture /images/2016/12/raging-bull.jpg 0 Raging Bull (1980) by Martin Scorsese %}
 
 Say that this is our object:
 
@@ -38,13 +41,13 @@ class Temperature {
 
 It represents a temperature. The only behavior it exposes is printing
 the temperature in Celsius. We don't want to expose `t`, because
-that will lead to the "naked data" problem we discussed earlier. We want
-to keep `t` secret, and that's a good desire.
+that will lead to the ["naked data"]({% pst 2016/nov/2016-11-21-naked-data %})
+problem. We want to keep `t` secret, and that's a good desire.
 
 Now, we want to have the ability to print temperature in Fahrenheit. The most
 obvious approach would be to introduce another method, `toFahrenheitString()`,
 or add a Boolean flag to the object, which will change the behavior
-or method `toString()`, right? Either one of these solutions is better than adding
+of method `toString()`, right? Either one of these solutions is better than adding
 a method `getT()`, but neither one is perfect.
 
 What if we create this decorator:
@@ -69,12 +72,12 @@ Temperature t = new TempFahrenheit(
 {% endhighlight %}
 
 The only problem is that it won't compile in Java, because class
-`TempFahrenheit` is not allowed to access `t` in class `TempCelsius`. If
-we make `t` public, everybody will be able to read it directly, and we'll have
-that "naked data" problem &mdash; a severe violation of encapsulation.
+`TempFahrenheit` is not allowed to access private `t` in class `TempCelsius`.
+And if we make `t` public, everybody will be able to read it directly, and we'll have
+that "naked data" problem&mdash;a severe violation of encapsulation.
 
 However, if we allow that access _only_ to one class, everything will be fine.
-Something like this: (It won't work in Java; it's just a concept.)
+Something like this (won't work in Java; it's just a concept):
 
 {% highlight java %}
 class TempCelsius {
@@ -87,8 +90,8 @@ class TempCelsius {
 {% endhighlight %}
 
 Since this `trust` keyword is placed into the class that allows access,
-we won't have the "naked data" problem &mdash; we will always know exactly which
-objects posess knowledge about `t`. When we change
+we won't have the "naked data" problem&mdash;we will always know exactly which
+objects posses knowledge about `t`. When we change
 something about `t`, we know exactly where to update the code.
 
 What do you think?

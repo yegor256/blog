@@ -22,7 +22,7 @@ This is how my code blocks look in markdown pages:
 
 {% highlight text %}
 { % highlight requs %}
-User is a "human being".
+User is a "human being."
 { % endhighlight %}
 {% endhighlight %}
 

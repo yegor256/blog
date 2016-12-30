@@ -60,7 +60,7 @@ But you will get it.
 
 The concept of a [startup company](https://en.wikipedia.org/wiki/Startup_company)
 is completely different. A startup is a **wild bet** you're making on some
-crazy idea that makes "the world a better place". You're building
+crazy idea that makes "the world a better place." You're building
 a new Facebook, a Google killer, or a Snapchat replacement. Your goal
 is huge, while the investment is very small. Just a few years of work
 and you'll score hundreds of millions. This money will come not from

@@ -135,7 +135,7 @@ task spell: [:build] do
     html.search('//header').remove
     html.search('//footer').remove
     tmp = Tempfile.new(['yegor256-', '.txt'])
-    text = html.xpath('//section//p|//section//h2|//section//h3').to_a.join(' ')
+    text = html.xpath('//article//p|//article//h2|//article//h3').to_a.join(' ')
       .gsub(/[\n\r\t ]+/, ' ')
       .gsub(/&[a-z]+;/, ' ')
       .gsub(/&#[0-9]+;/, ' ')
@@ -216,17 +216,28 @@ end
 desc 'Make sure there are no prohibited RegEx-es'
 task :regex do
   ptns = [
+    /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
   ]
+  errors = 0;
   all_html().each do |f|
-    html = File.read(f)
+    html = Nokogiri::HTML(File.read(f))
+    html.search('//code').remove
+    html.search('//script').remove
+    html.search('//pre').remove
+    text = html.xpath('//article//p').to_a.join(' ')
     ptns.each do |re|
-      fail "#{f}: #{re}" if re.match html
+      if re.match text
+        puts "#{f}: #{re} found and it's prohibited"
+        ++errors
+      end
     end
   end
+  raise "#{errors} violations of RegEx prohibition" unless errors == 0
   done 'Not prohibited regular expressions'
 end
+
 desc 'Make sure all snippets are compact enough'
 task :snippets do
   all_html().each do |f|

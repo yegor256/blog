@@ -53,7 +53,7 @@ So why are glossaries not written? I see a few possible causes
 **We're Smarter Than This**.
 Some people think glossaries are for newbies. After all, why would I
 explain what a PDU is? Any serious network engineer should
-understand that it stands for "protocol data unit". If you don't understand it,
+understand that it stands for "protocol data unit." If you don't understand it,
 do your homework and then come back to work with us. Our team only works
 with well-educated engineers. You're supposed to understand what PDU,
 ADC, TxR, IPv6, DPI, FIFO, and USSR (joking!) stand for. Otherwise,
@@ -76,7 +76,7 @@ and all other team members.
 **We Prefer Working Software Over Comprehensive Documentation**.
 This is what the [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
 says, and it's true. But the key word here is
-"comprehensive". We don't need comprehensive documentation, but we need
+"comprehensive." We don't need comprehensive documentation, but we need
 a glossary. It's a key element in any project, and it simply can't
 be replaced by working software. No working software can help us
 understand what "header" and "data signal" are unless there

@@ -24,7 +24,7 @@ the quality is terrible, all your time and budget expectations
 are severely violated, and the level of **frustration** is skyrocketing. And the
 "best" part is that you can't get away or else all the money you've spent so far
 will go down the drain and you will have to start from scratch. You have to
-stay "married" to this team because you can't afford a "divorce". Is there
+stay "married" to this team because you can't afford a "divorce." Is there
 a way to do
 [software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) right?
 
@@ -104,7 +104,7 @@ second day.
 "ASAP" is not a deadline. Moreover, it's a very **de-motivating** substitute
 for a realistic milestone. When the team doesn't know when exactly you need
 the product, what exactly has to be ready by that date, and _why_,
-it starts to work against you. The emphasis here is on "why". For most
+it starts to work against you. The emphasis here is on "why." For most
 business owners, it's difficult to answer this question.
 
 Why do you need the product to be ready by the first of June?
@@ -185,7 +185,7 @@ results and expressing your concerns. In our projects at
 in GitHub, review our releases frequently, and report any inconsistencies
 found as GitHub issues. We encourage project sponsors to be as **pessimistic**
 and **negative** about our quality from the beginning of the project. We realize
-this is how we can minimize the risk of a "piled-up frustration".
+this is how we can minimize the risk of a "piled-up frustration."
 
 Try to do the same in your project that is outsourced to an offshore developer.
 Don't be afraid to offend them. Iterative and incremental criticism is a much
@@ -219,7 +219,7 @@ In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
 you the **truth**, which is usually the same thing. Some call this
-"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)".
+"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
 

@@ -49,7 +49,7 @@ It was a commercial project, so I can't disclose its name.
 The team was co-located in one
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 in Europe where everybody was working
-"from nine 'til five". We had meetings, lunches, desk-to-desk chats and lots of
+"from nine 'til five." We had meetings, lunches, desk-to-desk chats and lots of
 other [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
 All tasks were tracked in JIRA.
 

@@ -31,7 +31,7 @@ the programmers and the project.
 
 Disclaimer: I'm talking about software **projects** here, which PMBOK defines
 as "_temporary_ endeavors undertaken to create unique
-products, services, or results". If your team is engaged in
+products, services, or results." If your team is engaged in
 [continuous development]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 or maintenance of software, this concept may not be relevant.
 
@@ -151,7 +151,8 @@ new to the project and don't understand what would be the right design. You
 could ask for the project to provide training to explain how the code works
 and how it can be extended with features like this one. A project manager
 should tell you that you're not in school and are supposed to understand the
-software if the project is paying you a software developer salary. And he will
+software if the project is paying you a software developer
+[salary]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %}). And he will
 be right. But it's a bad scenario for both of you. Instead, blame the project
 for **incomplete** design documentation. Good software should properly document
 its architecture and design. Ask for the project to provide such documentation.

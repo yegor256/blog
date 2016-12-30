@@ -60,7 +60,7 @@ In the end, "one hour" will cost him $60 to $100. He ran away.
 What did I do wrong? I think I know what it was.
 I didn't explain to him that, under different management,
 programmers deliver very different results in the same
-60 minutes. By "very different", I mean **dramatically** different. Let
+60 minutes. By "very different," I mean **dramatically** different. Let
 me demonstrate the numbers (I actually did that already almost two
 years ago, in my [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-of-loc %})
 post, but will try again from a different perspective).

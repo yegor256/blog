@@ -45,10 +45,10 @@ It's not because we introduce unnecessary coupling, as Allen Holub said in his
 [Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
 He was definitely right, but I believe it's not the root cause of the problem.
 
-"Inherit", as an English verb, has a number of meanings.
+"Inherit," as an English verb, has a number of meanings.
 [This one](http://www.oxforddictionaries.com/us/definition/american_english/inherit)
 is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
-"Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors".
+"Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors."
 
 Deriving a characteristic from another object is a great idea, and it's called
 [subtyping](https://en.wikipedia.org/wiki/Subtyping).
@@ -73,13 +73,13 @@ notice anything, because type `Article` is a subtype of type `Manuscript`
 ([Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)).
 
 But what does _copying_ methods and attributes from a parent class to a child
-one have to do with "deriving characteristics"? Implementation inheritance
+one have to do with "deriving characteristics?" Implementation inheritance
 is exactly that&mdash;copying&mdash;and it has nothing to do with the meaning
 of the word "inherit" I quoted above.
 
 Implementation inheritance is much closer to a different
 [meaning](http://www.oxforddictionaries.com/us/definition/american_english/inherit):
-"Receive (money, property, or a title) as an heir at the death of the previous holder".
+"Receive (money, property, or a title) as an heir at the death of the previous holder."
 Who is dead, you ask? An object is dead if it allows other objects to
 _inherit_ its encapsulated code and data. This is implementation
 inheritance:

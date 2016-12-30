@@ -37,7 +37,7 @@ and to Java in particular.
 ## Class Names
 
 Your class should be an abstraction of a real life entity
-with no "validators", "controllers", "managers", etc.
+with no "validators," "controllers," "managers," etc.
 If your class name ends with an "-er"&mdash;it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
 BTW, here are my [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of a good object.
@@ -105,11 +105,11 @@ public void returnsItsContentInUnicode() throws Exception {
 
 It's important to start the first sentence of your JavaDoc with the name of the
 class you're testing followed by `can`. So, your first sentence should always be
-similar to "somebody _can_ do something".
+similar to "somebody _can_ do something."
 
 The method name will state exactly the same, but without the subject. If I add a
 subject at the beginning of the method name, I should get a complete English
-sentence, as in above example: "`HttpRequest` returns its content in Unicode".
+sentence, as in above example: "`HttpRequest` returns its content in Unicode."
 
 Pay attention that the test method doesn't start with `can`.Only JavaDoc
 comments start with 'can.'  Additionally, method names shouldn't start with a
@@ -228,7 +228,7 @@ try {
 }
 ```
 
-Seriously, what if that `IOException` says "disk is full"? Will you still assume
+Seriously, what if that `IOException` says "disk is full?" Will you still assume
 that the size of the file is zero and move on?
 
 ## Indentation

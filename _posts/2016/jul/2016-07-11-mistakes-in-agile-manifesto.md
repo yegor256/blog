@@ -33,7 +33,7 @@ interpretation of each principle.
 
 {% quote If the customer is not satisfied, we find another customer %}
 
-By focusing on "satisfy the customer", Agile adepts totally forget about
+By focusing on "satisfy the customer," Agile adepts totally forget about
 the "through" part. They think that a [happy customer]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 is their true objective, while "continuous delivery" is something that obviously
 helps, though not crucially. However, this is quite the opposite&mdash;the customer
@@ -41,12 +41,13 @@ will be satisfied **if** the software is perfectly created and delivered. If the
 customer is not satisfied, we find another customer&mdash;that's the
 true spirit a professional software team should adhere to. I believe that's what
  the Manifesto means. We make sure that our process is
-"early and continuous", which will result to customer satisfaction. We focus on improving
+"early and continuous," which will result to customer satisfaction. We focus on improving
 our process, not satisfying the customer. Satisfaction is the consequence, not
 the primary objective.
 
 **Principle #2**:
-"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage."
+"Welcome changing requirements, even late in development. Agile processes
+harness change for the customer's competitive advantage."
 
 Most Agile teams understand the word "welcome" here as a permission to forget
 about any [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
@@ -59,20 +60,21 @@ means! This principle means that our requirements management process is so
 achieve, if requirements are actually documented.
 
 **Principle #3**:
-"Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale."
+"Deliver working software frequently, from a couple of weeks to
+a couple of months, with a preference to the shorter timescale."
 
 This terrific rule is usually understood as an order for the entire team. The
 team has to frequently deliver, while programmers are free to deliver almost
 nothing and who knows when. I think the Manifesto here is emphasizing on
 both individual and group responsibilities to frequently deliver. I also think
-that this frequency should be way higher than just a "couple of weeks". Today, with
+that this frequency should be way higher than just a "couple of weeks." Today, with
 modern technologies and instruments, we can deliver way faster&mdash;several
 times a day.
 
 **Principle #4**:
 "Business people and developers must work together daily throughout the project."
 
-{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilites %}
+{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilities %}
 
 Working together doesn't mean working without clearly defined
 rules and processes. However, most teams understand this principle as
@@ -125,7 +127,7 @@ or the amount of [bugs found]({% pst 2015/sep/2015-09-10-testing-exit-criteria %
 or the amounts of [dollars spent]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %}).
 There are many other metrics. We can use many of them. However, a typical
 mistake many Agile teams are doing is just ignoring them all. They say
-"we measure only the end result". That's not what the Manifesto
+"we measure only the end result." That's not what the Manifesto
 is suggesting to do though.
 
 **Principle #8**:
@@ -151,7 +153,7 @@ is not what the Manifesto suggests, but that's exactly how many understand this 
 "Continuous attention to technical excellence and good design enhances agility."
 
 That's a perfect principle that says so much and doesn't say anything at
-the same time. What exactly is "attention"? I can explain. It means
+the same time. What exactly is "attention?" I can explain. It means
 [rules and policies]({% pst 2015/oct/2015-10-13-competition-without-rules %}).
 First of all, any policy means [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}) to those
 who violate rules. Thus, if an Agile team really means continuous
@@ -161,7 +163,7 @@ of Java code is excellent, which is ugly, etc. Additionally, the policy must say
 what happens to those who [violate]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %})
 the principles of excellence. However, most Agile
 teams understand "quality" as a great flag to hang on the wall, but
-get scared when I ask, "what happens if someone delivers low quality?".
+get scared when I ask, "what happens if someone delivers low quality?."
 
 **Principle #10**:
 "Simplicity&mdash;the art of maximizing the amount of work not done&mdash;is essential."

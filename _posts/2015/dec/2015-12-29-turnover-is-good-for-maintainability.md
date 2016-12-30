@@ -79,7 +79,7 @@ Then, having strong experts on the team inevitably leads to
 hero-driven development, where firefighting is very much appreciated.
 An expert doesn't want to lose his or her position, and always tries to demonstrate
 how valuable he or she is for the team. The best way to do this is to
-solve a problem that nobody else can solve. That's how one gets "job security".
+solve a problem that nobody else can solve. That's how one gets "job security."
 And that's how the team starts to degrade.
 This [blog post](http://highlevelbits.com/2014/08/hero-driven-development.html)
 by Fredrik Rubensson is right about this problem.

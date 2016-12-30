@@ -15,7 +15,7 @@ keywords:
   - replacement of string concatenation
 ---
 
-This is "string concatenation", and it is a bad practice:
+This is "string concatenation," and it is a bad practice:
 
 {% highlight java %}
 // bad practice, don't reuse!
@@ -39,7 +39,7 @@ Some say that concatenated strings are not localizable because in
 different languages text blocks in a phrase may be positioned
 in a different order. The example above can't be translated to,
 say, Russian, where we would want to put a name in front of
-"привет". We will need to localize the entire block of code,
+"привет." We will need to localize the entire block of code,
 instead of just translating a phrase.
 
 However, my point here is different. I strongly recommend

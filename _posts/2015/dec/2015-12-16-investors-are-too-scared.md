@@ -87,7 +87,7 @@ There is an almost identical situation with recruitment. You send your
 [resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
 to Facebook, they interview you, and you spend a few hours with them, answering
 their questions. In the end, they email you, saying "We decided not to proceed
-any further; good luck in your job search". They are afraid of telling you
+any further; good luck in your job search." They are afraid of telling you
 the **truth**.
 
 And it's disgusting.
@@ -104,7 +104,7 @@ Especially with regard to investments.
 ## They are Afraid of Losses
 
 It's a very infamous problem, mentioned everywhere there's a list
-of "top 10 reasons for startup failures". Investors simply turn you
+of "top 10 reasons for startup failures." Investors simply turn you
 into an **employee**. Before you get their money, you're on your own. You make
 your own decisions, you manage your business, you're in charge.
 
@@ -144,7 +144,7 @@ a month. Thus, any young startup without any friends or connections is
 **welcome**. Just bring your strategy, your existing results, and your passion, and
 we'll talk.
 
-Second, we don't say, "We will call you back". We give you our reasons right
+Second, we don't say, "We will call you back." We give you our reasons right
 away, and we always tell the truth. Moreover, we record our interview and
 publish it on **YouTube**. Yes, that's not a joke; we will publish all interviews
 online, and you can see how we talk about other startups. We are not afraid of

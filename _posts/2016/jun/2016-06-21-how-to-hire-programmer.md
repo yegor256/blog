@@ -25,7 +25,7 @@ are many of them, but the list below succinctly summarizes the most important on
 
 {% picture /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg 0 Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996) by Paris Barclay %}
 
-I'll be referring to "him", but these recommendations apply equally to both female and male
+I'll be referring to "him," but these recommendations apply equally to both female and male
 <del>slaves</del> software developers.
 
 **Ask a Friend**.
@@ -72,7 +72,7 @@ the quality of the product he is creating.
 That's what [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
 recommends, and I second that&mdash;face-to-face communication is more
 valuable than documentation. Don't write any documentation, don't specify
-what exactly you need to develop, and don't think too much about your "user stories".
+what exactly you need to develop, and don't think too much about your "user stories."
 It's all in the past. Modern software engineers figure everything out
 by themselves. Just let him be creative and communicative. If something
 isn't clear, just call him. Remember, a Skype call is
@@ -83,7 +83,7 @@ than those boring documents that nobody knows how to write.
 In order to create a great software product, he must be very **excited** about it.
 Make sure he is excited. If he is not excited, call him again. Motivate him.
 Talk to him. Explain to him your brilliant Google-killer business idea again
-and again. Until the moment he <del>screams</del> says "I'm excited". He must know what
+and again. Until the moment he <del>screams</del> says "I'm excited." He must know what
 a great value your product is producing for the entirety of civilization. And he
 must be excited. Do I have to say it one more time? Excited! Are
 you excited already? I'm excited.
@@ -100,7 +100,7 @@ commitment. That's why you have to pretend you're rich enough.
 
 **Delay Money Talks**.
 Don't mention money for as long as you can. Ideally, ask him to create
-a prototype first and "then we'll discuss your salary". A good programmer
+a prototype first and "then we'll discuss your salary." A good programmer
 doesn't work for money. He works for satisfaction. That's who you need.
 You should discuss value, excitement, features, market disruption, and
 anything else that's important, but not money. Programmers in general are not

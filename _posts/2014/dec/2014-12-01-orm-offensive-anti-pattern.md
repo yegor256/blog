@@ -189,7 +189,7 @@ this subject has already been published by very respected authors, including
 and many others.
 
 However, my argument is different than what they're saying. Even though their reasons are
-practical and valid, like "ORM is slow" or "database upgrades are hard",
+practical and valid, like "ORM is slow" or "database upgrades are hard,"
 they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
@@ -206,7 +206,8 @@ relational database. Look at this picture; it illustrates what ORM is doing.
 I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "ob-truncated" object returned to me. The behavior I'm interacting
 with is supposed to be provided through a single entry point, which is an object
-in OOP. In the case of ORM, I'm getting this behavior via **two** entry points&mdash;the ORM engine and the "thing", which we can't even call an object.
+in OOP. In the case of ORM, I'm getting this behavior via **two** entry points&mdash;the ORM
+engine and the "thing," which we can't even call an object.
 
 Because of this terrible and offensive violation of the object-oriented
 paradigm, we have a lot of practical issues already mentioned in
@@ -512,6 +513,6 @@ new Txn(dbase).call(
 This code will create a new post and post a comment to it. If one
 of the calls fail, the entire transaction will be rolled back.
 
-This approach looks object-oriented to me. I'm calling it "SQL-speaking objects",
+This approach looks object-oriented to me. I'm calling it "SQL-speaking objects,"
 because they know how to speak SQL with the database server. It's their
 skill, perfectly encapsulated inside their borders.

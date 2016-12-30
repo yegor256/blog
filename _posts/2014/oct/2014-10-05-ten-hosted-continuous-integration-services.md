@@ -155,7 +155,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="https://codeship.com">CodeShip</a>&#x263A;</td>
+<tr><td><a href="https://codeship.com">Codeship</a>&#x263A;</td>
   <td class="x-right"><a href="https://codeship.com/pricing">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -266,7 +266,7 @@ from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
 [investments](https://gigaom.com/2014/10/01/wercker-takes-in-2-4-million-to-help-developers-test-their-code-in-the-cloud/).
-They also have an interesting concept of build "boxes", which
+They also have an interesting concept of build "boxes," which
 can be pre-configured similar to Docker containers.
 It works rather stable for the last few months, no complains so far.
 
@@ -310,7 +310,7 @@ an open source continuous integration server. It looks a bit more
 complicated than others, giving you an ability to define "stages"
 and combine them into pipelines. I'm not sure yet how these mechanisms
 may help in small and medium size projects we're mostly working with,
-but they look "cool". There is also a very unfortunate limitation of
+but they look "cool." There is also a very unfortunate limitation of
 2Gb RAM per build&mdash;some of my Java projects fail because of that.
 Besides that, they don't give full access to the build server, for example
 we can't modify anything in `/etc`&mdash;it is a show-stopper for us.
@@ -324,7 +324,7 @@ that, their badge is not updated correctly in GitHub README.md&mdash;when the bu
 
 {% badge /images/2014/10/codeship.png 64 https://www.codeship.com %}
 
-[**CodeShip**](https://codeship.com) works fine, but their web UI
+[**Codeship**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.

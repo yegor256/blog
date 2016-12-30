@@ -74,7 +74,7 @@ as I expected.
 So where does this common understanding of the law come from? Why does
 [Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)
 call it a rule of "one dot" and say that
-"an object should avoid invoking methods of a member object returned by another method"?
+"an object should avoid invoking methods of a member object returned by another method?"
 This is absolutely to the contrary of what the original paper says!
 What's going on?
 

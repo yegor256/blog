@@ -61,7 +61,7 @@ Even though the previous step [guarantees]({% pst 2014/jul/2014-07-21-read-only-
 that `master` branch is always clean and stable, we're using Travis to
 continuously integrate it. Every commit made to `master` triggers
 a new build in Travis. The result of the build changes the status
-of the project in Travis: either "failing" or "passing".
+of the project in Travis: either "failing" or "passing."
 
 [`jcabi-aspects`](http://aspects.jcabi.com) is a collection of
 [AOP AspectJ aspects]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}).

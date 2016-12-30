@@ -4,6 +4,7 @@ title: "Why InputStream Design Is Wrong"
 date: 2016-04-26
 place: Washington, D.C.
 tags: java oop
+category: jcg
 description: |
   Class InputStream in Java has three methods read(),
   this is what I think is very wrong. Not only in

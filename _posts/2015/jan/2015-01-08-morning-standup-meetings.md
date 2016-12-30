@@ -26,7 +26,7 @@ youtube:
 
 A stand-up meeting (or simply "stand-up") is
 "a daily team-meeting held to provide a status update
-to the team members", according to [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting).
+to the team members," according to [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting).
 In the next few paragraphs, I attempt to explain why these meetings,
 despite being so popular in software development teams, are **pure evil**
 and should never be used by good
@@ -200,7 +200,7 @@ wants to
 us every morning. Actually, a bad manager is doing
 it during the day too. He is afraid that without well-known goals and rules,
 the team will do something wrong or won't do anything at all. That's why
-he has "to keep his hand on the pulse". In reality, he keeps his hand
+he has "to keep his hand on the pulse." In reality, he keeps his hand
 on the neck of the team.
 
 ## Motivation
@@ -232,9 +232,9 @@ There's more to this, too, as daily status updates in front of everybody motivat
 the best team players to backslide and become the same as the worst ones. Well, this is mostly
 because they don't want to offend anyone by their super performance.
 It is in our nature to try to look similar to everybody else while being
-in a group. When everybody reports, "_I still have nothing to show_", it would
+in a group. When everybody reports, "_I still have nothing to show_," it would
 be strange to expect a good programmer to say, "_I finished all my tasks and
-want to get more_". Well, this may happen once, but after a few times, this
+want to get more_." Well, this may happen once, but after a few times, this
 A player will either stop working hard or will change the team. He will
 see that his performance is standing out and that this can't be appreciated by the group,
 no matter what the manager says.

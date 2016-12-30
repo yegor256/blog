@@ -34,7 +34,7 @@ A simple requirements document in Requs may look similar to:
 {% highlight text %}
 Department has employee-s.
 Employee has name and salary.
-UC1 where Employee gets raise: "TBD".
+UC1 where Employee gets raise: "TBD."
 {% endhighlight %}
 
 This Software Requirements Specification (SRS) defines two types (`Department`
@@ -46,7 +46,7 @@ Requs syntax is explained [here](http://www.requs.org/syntax.html).
 
 The main and only goal of requirements engineering in any XDSD project is to
 create a complete and non-ambiguous SRS document. The person who performs this
-task is called the "system analyst". This article explains his or her main tasks
+task is called the "system analyst." This article explains his or her main tasks
 and discusses possible pitfalls.
 
 ## Tasks
@@ -54,7 +54,7 @@ and discusses possible pitfalls.
 We modify SRS incrementally, and our increments are very small. For instance,
 say we have the sample document I mentioned above, and I'm a system analyst on
 the project. All my tasks will be similar to "there is a bug in SRS, let's fix
-it".
+it."
 
 Even if it is a suggestion, it will still start with a complaint about the
 incompleteness of the SRS. For example:

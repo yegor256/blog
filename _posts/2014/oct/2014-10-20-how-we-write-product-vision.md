@@ -54,7 +54,7 @@ By the way, don't confuse a Product Statement with a [Mission](https://en.wikipe
 which is a much broader declaration of an overall goal of your business. You
 may have a hundred products but only a single mission. For example,
 Disney [says](http://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
-that its mission is: "to make people happy". They've got
+that its mission is: "to make people happy." They've got
 hundreds of products that help them accomplish this mission. And each product
 has its own Product Statement.
 
@@ -81,8 +81,8 @@ of oncologists jobless. My point is that any project has both positive and negat
 stakeholders.
 
 Each stakeholder must have a list of needs. They have to be simple
-and straight forward, like "earn money", "increase profit", "share photos",
-or "host a website".
+and straight forward, like "earn money," "increase profit," "share photos,"
+or "host a website."
 
 I would recommend defining one or two needs for each stakeholder. If there
 are more than three, think again&mdash;do you really understand what your
@@ -109,7 +109,8 @@ User can post tweets, read tweets of his friends,
   follow new friends and re-tweet their tweets.
 {% endhighlight %}
 
-Is it clear for a stranger what we're talking about here? Absolutely not&mdash;what is a "tweet", what does it mean to "follow" and what is a "re-tweet"?
+Is it clear for a stranger what we're talking about here? Absolutely not&mdash;what
+is a "tweet," what does it mean to "follow" and what is a "re-tweet?"
 These questions have no answers in the Product Vision document,
 but it's clear that a user will have four main features available. All other
 features will be similar to those.
@@ -121,7 +122,7 @@ product. However, we managed to explain its key features in just two
 lines of text. You should do the same with your product. If you can't fit
 all its features into just two-three lines, reconsider your understanding
 of the product you're going to develop. Also, read about
-["feature bloat dilemma"](http://hbswk.hbs.edu/archive/5325.html).
+["feature bloat dilemma."](http://hbswk.hbs.edu/archive/5325.html)
 
 Each actor must have at least three and at most six features. If
 there are more, you should group them somehow. If there are less, break
@@ -151,7 +152,7 @@ Every line in this section
 is a message to product developers. They will read this document in
 order to understand what is most important to the sponsor of the
 project. For example, these quality requirements are useless: "user interface
-must be attractive", "web site must be fast" or "the system must be stable".
+must be attractive," "web site must be fast" or "the system must be stable."
 They are not measurable or
 testable. All they do is
 [distract]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) developers. If you can't make

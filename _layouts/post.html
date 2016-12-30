@@ -3,6 +3,14 @@ layout: default
 ---
 
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+    <meta itemprop="author" content="@yegor256">
+    <meta itemprop="itemReviewed" content="{{ site.url }}{{ page.url }}">
+    <div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+      <meta itemprop="ratingValue" content="9"/>
+      <meta itemprop="bestRating" content="10"/>
+    </div>
+  </div>
   <div itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
     <meta itemprop="url" content="{{ site.url }}/images/yegor-bugayenko-192x192.png"/>
     <meta itemprop="height" content="192"/>
@@ -105,10 +113,25 @@ layout: default
         {{ content }}
       </article>
     </main>
-    {% if page.youtube %}
+  </div>
+
+  {% if page.youtube %}
+    <div class="wrapper">
       {{ page.youtube | youtube }}
+    </div>
+  {% endif %}
+
+  <div class="wrapper">
+    {% if page.related %}
+      <div class="unprintable">
+        <hr/>
+        <p>If you like this article, you will definitely like these
+        <strong>very relevant</strong> posts too:</p>
+        {% related_posts %}
+      </div>
+    {% else %}
+      <related-posts />
     {% endif %}
-    <related-posts />
   </div>
 
   <div class="disqus" role="complementary">

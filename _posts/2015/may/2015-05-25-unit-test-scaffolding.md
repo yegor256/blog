@@ -71,7 +71,7 @@ What's wrong with this test? There is one serious issue:
 must be perfectly isolated from each other. This means that changing
 one test must not affect any others. In this example, that is not the case.
 When I want to change the `countsWords()` test, I have to change the internals
-of `before()`, which will affect the other method in the test "class".
+of `before()`, which will affect the other method in the test "class."
 
 With all due respect to JUnit, the idea of creating test fixtures in
 `@Before` and `@After` is wrong, mostly because it encourages
@@ -131,7 +131,7 @@ A utility method, huh? Yes,
 
 The main issue with this design, even though it is way better than
 the previous one, is that it doesn't prevent code duplication between
-test "classes". If I need a similar test fixture of type `Folder` in
+test "classes." If I need a similar test fixture of type `Folder` in
 another test case, I will have to move this static method there. Or
 even worse, I will have to create a utility class.
 Yes, there is [nothing worse]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})

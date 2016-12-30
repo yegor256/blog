@@ -155,7 +155,7 @@ by the client himself, because he will realize they are pointless or too expensi
 a few of them will survive, since they will be reasonable enough. And they will
 help the project. So it is also a _win-win_ solution.
 
-For example, he says that "you should use MySQL because it's great". You tell
+For example, he says that "you should use MySQL because it's great." You tell
 him that the project requirements document doesn't limit you to choose whichever
 database you like. Should it? He says yes, of course! OK, let's try to
 document such a requirement. How will it sound? How about, "We should only
@@ -165,7 +165,7 @@ hard time figuring out how to write a requirement in a way that disallows
 PostgreSQL but allows MySQL. It is simply not possible in most cases.
 
 Sometimes, though, it will make sense; for example, "We should use a database server
-that understands our legacy data in MySQL format". This is a perfectly sane
+that understands our legacy data in MySQL format." This is a perfectly sane
 requirement, and the only way to satisfy it is to use MySQL.
 
 Thus, my recommendation is to never take a client's demands directly to execution,
@@ -185,7 +185,7 @@ happened in our projects for many years, but it has happened before,
 when we weren't using static analysis as a [mandatory step]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 in our [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) pipeline.
 
-Another funny possibility is when the client shows the source code to a "friend",
+Another funny possibility is when the client shows the source code to a "friend,"
 and he gives a "professional" opinion, which sounds like, "They don't know what they
 are doing." Once such an opinion hits your client's ears, the project is at
 a significant risk of closure. It'll be very difficult, almost impossible,

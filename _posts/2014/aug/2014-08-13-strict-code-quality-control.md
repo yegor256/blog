@@ -36,7 +36,7 @@ Seriously. There are
 [over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,
 [over 400 rules](http://pmd.sourceforge.net/pmd-5.1.2/rules/index.html) in PMD, and
 [over 400 bugs](http://findbugs.sourceforge.net/bugDescriptions.html) in FindBugs.
-All of them should say: "Yes, we like your code".
+All of them should say: "Yes, we like your code."
 Otherwise, your build shouldn't pass.
 
 What do you think? Would it be convenient for you&mdash;to have your

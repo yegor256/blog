@@ -41,7 +41,7 @@ I disagree. Moreover, I think that ActiveRecord is even worse than ORM.
 {% quote What's even worse in ActiveRecord is that it hides the fact that objects are data containers %}
 
 ORM consists of two parts: the session and
-[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities".
+[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities."
 The entities have no functionality; they are just primitive containers for the
 data transferred from and to the session. And that is what the problem is&mdash;objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
 against the object paradigm, you can read

@@ -14,6 +14,10 @@ keywords:
   - software developer hourly rate
 translated:
   - Japanese: http://postd.cc/how-much-do-you-cost/
+related:
+  - 2016/mar/2016-03-08-pimp-up-your-resume
+  - 2016/dec/2016-12-06-how-to-pay-programmers-less
+  - 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source
 ---
 
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
@@ -63,7 +67,7 @@ The second possible cause is that
 you work from nine till five, for food, **without passion**. Actually,
 nobody manifests it that way. Instead, I often hear something like
 "my company doesn't pay me for open source contribution and
-at home I want to spend time with my family". In modern software
+at home I want to spend time with my family." In modern software
 development, most of the code we're working with is open source&mdash;libraries, frameworks, tools, instruments, etc. Almost everything you're using
 in your commercial projects is open source. By paying your salary your
 employer does already invest in open source products,
@@ -99,7 +103,8 @@ $15-20 in Karachi. The reason here is the cost of living&mdash;it is much higher
 {% quote We prefer to work with people whose expenses are lower %}
 
 However, this reason doesn't sound logical to me. If you're driving a more
-expensive car, we have to pay you a higher salary? The same with the
+expensive car, we have to pay you a
+[higher salary]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})? The same with the
 place to stay. You've chosen the country that
 you live in. You're using all the benefits of a well-developed country
 and you're paying for them. It's your choice. You decided to spend more money
@@ -141,7 +146,8 @@ by asking their colleagues sitting next to them in the
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). They say
 they simply don't need StackOverflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
-That's good for the team and bad for you. Why? You don't have a very important skill&mdash;finding an answer in a public Internet. In our projects we
+That's good for the team and bad for you. Why? You don't have a very important
+skill&mdash;finding an answer in a public Internet. In our projects we
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 any horizontal [communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between programmers, and you won't be
@@ -150,7 +156,8 @@ because you are used to patronizing someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 StackOverflow is not just an indicator of how smart you are and how many
-upvotes you got for the ["best programming joke"](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke).
+upvotes you got for the
+["best programming joke."](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
 It is proof that you can find answers
 to your questions by communicating with people you don't know.
 It is a very important skill.
@@ -204,9 +211,9 @@ will need to be solved.
 
 Second, you **don't invest** in your profile. This most probably means that you don't
 want to change companies and prefer to find a peaceful office, where you
-can stay forever. I remember I once said to a friend of mine&mdash;"you will greatly improve your CV if you pass this certification". He
+can stay forever. I remember I once said to a friend of mine&mdash;"you will greatly improve your CV if you pass this certification." He
 answered with a smile&mdash;"I hope I won't need a CV any more, I like
-this company". This attitude is
+this company." This attitude is
 [very beneficial]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 for the company you're
 working for, but it definitely works
@@ -223,7 +230,7 @@ profile is an indicator of that healthy individualism we're looking for.
 
 The more technologies or programming languages you know, the less you cost.
 I'm not saying that it's not possible to be an expert in many things at the same time&mdash;that's entirely possible. But let me give you a pragmatic reason why you shouldn't&mdash;competition. There are thousands of "Java7 programmers" on the market&mdash;we can easily choose whoever we need. But there are not so many
-"Hadoop programmers" or "XSLT designers".
+"Hadoop programmers" or "XSLT designers."
 
 {% quote We end up paying more to narrow-skilled specialists because we have no choice %}
 

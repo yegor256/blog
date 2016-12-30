@@ -191,7 +191,7 @@ assert first.equals(second);
 Obviously utility classes, which have only static methods,
 can't instantiate good objects. More generally, utility classes
 don't have any of the merits mentioned in this article and can't
-even be called "classes". They are simply terrible abusers of an object paradigm
+even be called "classes." They are simply terrible abusers of an object paradigm
 and exist in modern object-oriented languages only because their
 inventors enabled static methods.
 
@@ -361,7 +361,7 @@ A good object comes from either a final or abstract class. A `final` class is on
 can't be extended via [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 An `abstract` class is one that
 can't have children. Simply put, a class should either say, "You can never break
-me; I'm a black box for you" or "I'm broken already; fix me first and then use".
+me; I'm a black box for you" or "I'm broken already; fix me first and then use."
 
 There is nothing in between. A final class is a black box that you can't modify
 by any means. He works as he works, and you either use him or throw him away. You can't
@@ -432,7 +432,7 @@ be able to extend the class and ... offend him :( So a class without `final`
 is a bad design.
 
 An abstract class is the exact opposite case&mdash;he tells us that
-he is incomplete and we can't use him "as is". We have to inject
+he is incomplete and we can't use him "as is." We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as `abstract` methods.
 For example, our `HTTPStatus` may look like this:

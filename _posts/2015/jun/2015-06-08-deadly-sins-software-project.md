@@ -69,9 +69,9 @@ as rather bad coding approaches.
 
 My only practical suggestion here is to read and learn. Maybe
 [these books]({% pst 2015/apr/2015-04-22-favorite-software-books %}) will help you
-or my book "[Elegant Objects](/elegant-objects.html)".
+or my book "[Elegant Objects](/elegant-objects.html)."
 Always try to be skeptical about the quality of your software, and don't relax
-when it "just works". Like with cancer, the earlier you diagnose it, greater is
+when it "just works." Like with cancer, the earlier you diagnose it, greater is
 the chance to survive.
 
 ## Untraceable Changes
@@ -104,7 +104,7 @@ Git allows us to do a "forced" push, which overwrites the entire branch that
 previously existed on the server. This is just one example of how
 you can destroy the history of development. Many times I've also seen
 people delete their comments in GitHub discussions to make tickets look
-more "clean". That's just wrong. Never delete anything; let your history
+more "clean." That's just wrong. Never delete anything; let your history
 stay with you, no matter how bad (or messy) it may look to you now.
 
 ## Ad Hoc Releases

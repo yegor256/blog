@@ -20,7 +20,7 @@ There are tons of articles about resume writing. Literally,
 [tons of them](https://www.google.com/search?q=how+to+write+resume).
 And here's yet another one? Well, maybe ... but I don't think so. I'll try to
 give you a few **practical** hints for how to make your resume look
-"sexier", and how to position yourself beyond the "good programmer" category and into
+"sexier," and how to position yourself beyond the "good programmer" category and into
 the superstar zone. It may take a few years to truly pimp up your CV, but
 when it's done, you will charge $100-plus per hour and face no hesitation
 from your clients in paying.
@@ -52,9 +52,9 @@ can tell half of the truth, you can hide some information, and you can rephrase
 the truth, but never lie. You don't know who is reading your CV and which
 desk it will end up on. Be ready to answer for every word you have on it.
 
-If you're saying that you're an "expert in JavaScript",
+If you're saying that you're an "expert in JavaScript,"
 be ready to explain what the key new features of
-ECMAScript version 6 are. If you can't, don't use the word "expert". The point
+ECMAScript version 6 are. If you can't, don't use the word "expert." The point
 is that you have to be ready to prove every word.
 
 ## Sexy Photo on the Top
@@ -66,37 +66,38 @@ Just pay attention to the photo; it's very important.
 
 Do I have to say that you must smile on that photo? Well, yes, you must.
 And make it casual, with a T-shirt and funny background. You must look
-relaxed and successful. You don't want to get hired; they want to hire you&mdash;this is the message your photo should send, just like in online **dating**.
+relaxed and successful. You don't want to get hired; they want to hire
+you&mdash;this is the message your photo should send, just like in online **dating**.
 
 ## Skip "Objective" and "Title"
 
-"Senior Software Developer", "Seasoned Java Programmer",
-"Talented IT Professional", etc. It's boring and doesn't sell you at all.
+"Senior Software Developer," "Seasoned Java Programmer,"
+"Talented IT Professional," etc. It's boring and doesn't sell you at all.
 They know what you are, because they are reading your resume.
 
 Besides that, you're limiting yourself with that title. Maybe they are looking
-for a VP of engineering while your resume says "Software Architect". That's
+for a VP of engineering while your resume says "Software Architect." That's
 immediately a mismatch for them. It's a strike against you. Your **name** is the title
 of your resume. That's it.
 
 ## A Dozen Skills
 
-This section of your resume actually tells them about your "tech focus".
+This section of your resume actually tells them about your "tech focus."
 It must have a very short list of skills, definitely **under 12**. You simply
 can't be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
 If there are too many skills, it's a sign of a "jack of all trades" who is
-almost always a "master of none". Don't do that.
+almost always a "master of none." Don't do that.
 
 Find the most important skills in your profile and put them there.
 Just a few. And make sure the skills are all on the same level of abstraction.
 Java and AngularJS must not be present together. Java is a few levels higher
 than AngularJS. Thus, it's either "Java, SQL, and HTTP" or "AngularJS, Spring Framework,
-and Web Sockets". I would recommend you stay at the lowest level you can until
+and Web Sockets." I would recommend you stay at the lowest level you can until
 you become a serious market figure. For example, "Java" as a skill would look good
 in [Jon Skeet](http://stackoverflow.com/users/22656/jon-skeet)'s resume,
 because he definitely knows the entire Java world, and the
 market has recognized that. But if you're a programmer with just three years of experience,
-how can you "know Java"? You barely know a few hundred classes from it.
+how can you "know Java?" You barely know a few hundred classes from it.
 That's why it's better to state specifically which parts of Java you definitely know.
 Like I said, be as low-level and specific in your skills as possible.
 
@@ -134,7 +135,7 @@ Your presence in the open-source world is a **guarantee** for them. Someone has 
 seen your code, and someone has already given some kudos to your projects. Someone virtually
 vouches for you. As a result, they will feel more comfortable in hiring you.
 
-To be in the "elite", you don't have to spend all your time on open-source
+To be in the "elite," you don't have to spend all your time on open-source
 projects. Just contribute to the ones you're using already. You're using
 Sinatra at work? Check its source code. You will find a lot of places that
 need improvement. Offer them your help and simply submit small pull requests
@@ -165,7 +166,7 @@ your entire professional history and find well-known names or big numbers.
 For example, 10 years ago I was helping a startup create software that
 had IBM as a subscriber. They managed to get some tracking, and in
 two months, IBM decided not to use them anymore. It's a true (and sad) story, but I can
-put something like this into my resume: "wrote software for IBM". Am I lying? Not really.
+put something like this into my resume: "wrote software for IBM." Am I lying? Not really.
 If they ask me what exactly I did for IBM, I will explain. In most cases, they
 won't ask. They will just buy this big name and put my resume on top of
 others.
@@ -175,7 +176,7 @@ I was helping a company configure a continuous integration pipeline. It was not 
 deal, but the company was serving more than 5 million hits per day on its website.
 That's a big number. I had nothing to do with this substantial web traffic, but I was
 in that company for a few months. So I may say in my resume:
-"configured the delivery pipeline for a 5M-hits-per-day web store". If they
+"configured the delivery pipeline for a 5M-hits-per-day web store." If they
 ask me for details, I will be able to give them. I'm not lying.
 
 Use this technique carefully, and never lie. But do it. Don't be scared.
@@ -230,7 +231,7 @@ some of your ideas.
 The easiest subjects to start with are stories about your practical
 experience with some modern technologies and tools, something like
 "How Docker Helps Us Optimize Delivery" or
-"Five Apache Spark Installation Issues". Just describe what you've done
+"Five Apache Spark Installation Issues." Just describe what you've done
 on a recent project. It doesn't really matter what you talk about.
 What matters is that you're visible. If the market accepts you,
 the employer will trust you more. That's exactly what you need in order
@@ -285,7 +286,7 @@ document in a standard template, they will feel you didn't pay
 attention to it. You didn't even care to create that small but very
 important product nicely. How will you create their software? With the
 same attitude. Don't ruin the whole show with a careless design. That's the
-key word here&mdash;"careless". It doesn't need to be complex. It may be
+key word here&mdash;"careless." It doesn't need to be complex. It may be
 very simple. But it must be **yours**, made with care and love.
 
 <hr/>

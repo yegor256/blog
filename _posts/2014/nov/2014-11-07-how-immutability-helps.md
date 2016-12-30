@@ -24,15 +24,15 @@ youtube:
 ---
 
 In a few recent posts, including
-["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
-["Objects Should Be Immutable"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), and
-["Dependency Injection Containers are Code Polluters"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}),
+["Getters/Setters. Evil. Period."]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+["Objects Should Be Immutable,"]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
+["Dependency Injection Containers are Code Polluters,"]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 I universally labeled all mutable objects with "setters" (object methods starting with `set`) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn't convincing enough for many of you&mdash;I received a few requests
 asking to provide more specific and practical examples.
 
-Thus, in order to illustrate my strongly negative attitude to "mutability via setters", I took
+Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing [commons-email](http://commons.apache.org/proper/commons-email/) Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
 I released my library as part of the [jcabi](http://www.jcabi.com) family&mdash;[jcabi-email](http://email.jcabi.com). Let's see what benefits
@@ -111,14 +111,15 @@ familiar with this feeling&mdash;most legacy applications look that way.
 They have huge multi-line "classes" (in reality, COBOL programs written in Java)
 that were inherited from a few generations of programmers before you. When
 you start, you're full of energy, but after a few minutes of scrolling
-such a "class" you say&mdash;"screw it, it's almost Saturday".
+such a "class" you say&mdash;"screw it, it's almost Saturday."
 
 *Because the class is so big*,
 there is no data hiding or encapsulation any more&mdash;33 variables are accessible by over 100 methods. What is hidden?
 This `Email.java` file in reality is a big, procedural 2000-line script, called
 a "class" by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
-all the data you may need. Why is this bad? Well, why do we need encapsulation
+all the data you may need. Why is this bad? Well, why do we need
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %})
 in the first place? In order to protect one programmer from another, aka
 [defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %}).
 While I'm busy changing the subject of the MIME message, I want to be
@@ -138,7 +139,7 @@ scenario of sending a full MIME message through SMTP. Obviously, if something
 gets changed in one of the methods, almost every test method will be
 affected. In other words, tests are very fragile, unreliable and over-complicated.
 
-I can go on and on with this "*because the class is so big*", but I think it is
+I can go on and on with this "*because the class is so big*," but I think it is
 obvious that a small, cohesive class is always better than a big one. It
 is obvious to me, to you, and to any object-oriented programmer. But why is it not
 so obvious to the developers of Apache Commons Email? I don't think they are
@@ -156,7 +157,7 @@ setters that inject configuration parameters into the class so that it
 can process them inside, isn't it?
 
 This is the root cause of the problem! The root cause is our ability to **insert**
-data into mutable objects via configuration methods, also known as "setters".
+data into mutable objects via configuration methods, also known as "setters."
 When an [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.

@@ -108,7 +108,7 @@ implement it? No, it won't.
 
 Also, I would recommend you put some explicit liability numbers into the
 agreement. For example, it may sound like
-"a minimum penalty for a proven breach of the non-compete clause is $50,000".
+"a minimum penalty for a proven breach of the non-compete clause is $50,000."
 In my experience, such explicit statements make contracts much more
 valuable and help prevent them from being violated.
 
@@ -119,7 +119,7 @@ pay us for it (by "us" I mean all of us, the society). Well, at least in
 the United States. In the United Kingdom, it's free, for example.
 
 In the U.S., you go to [copyright.gov](http://www.copyright.gov),
-click "register a copyright",
+click "register a copyright,"
 fill in an online form,
 post the description of your business idea in a plain text file,
 pay $35, and you're done.
