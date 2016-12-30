@@ -31,7 +31,7 @@ innovative, and very open-minded. You never know which method of
 punishment will work with whom. Some people respond to one method,
 while others may completely ignore it. The overarching goal, of course, is
 to make employees **scared** of **you**, their boss, so they will obey enthusiastically.
-Here is a list of the most effective methods :)
+Here is a list of the most effective methods.
 
 <!--more-->
 
