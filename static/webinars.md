@@ -25,7 +25,7 @@ development, object-oriented programming and project management.
 January 4, 2017:
 **Gradients of Immutability**
 We'll discuss what immutability really is, with a few example in Java and [EO](http://www.eolang.org)
-(new language we're developing now). The discuss will be based on this blog post::
+(new language we're developing now). The discuss will be based on this blog post:
 [Gradients of Immutability]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
 
 {% youtube zaKTNK8g2-M video-left %}
