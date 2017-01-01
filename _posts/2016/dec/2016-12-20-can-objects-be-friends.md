@@ -95,3 +95,8 @@ objects posses knowledge about `t`. When we change
 something about `t`, we know exactly where to update the code.
 
 What do you think?
+
+P.S. After discussing this idea below in comments I
+[started](http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632) to think
+that we don't need that `trust` keyword at all. Instead, we should just
+give all decorators access to all private attributes of an object.
