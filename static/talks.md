@@ -85,7 +85,7 @@ Manzanillo, Colima, Mexico<br/>
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
 **Utility Classes Are Killing Us**<br/>
-[JBreak 2017](http://2017.jbreak.ru/talks/utility-classes-are-killing-us/)<br/>
+[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/)<br/>
 Novosibirsk, Russia<br/>
 4 April 2017
 
@@ -275,7 +275,7 @@ Palo Alto, CA;
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/3dJP_LtUGgg/mqdefault.jpg" class="past-talk" alt="SLC DevOpsDays 2016"/>
 Eight Maturity Levels of Continuous Integration;
-[Salt Lake City DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/);
+Salt Lake City DevOpsDays;
 Salt Lake City, USA;
 15 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
@@ -323,7 +323,7 @@ again.
 <aside class="venue-rate orange">D</aside>
 <img src="https://i.ytimg.com/vi/vU_x6oK437I/mqdefault.jpg" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
-[NDC Oslo](http://ndcoslo.com/talk/talk-to-your-microservice-via-a-chat-bot-not-ui/);
+NDC Oslo;
 Oslo, Norway;
 8 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),

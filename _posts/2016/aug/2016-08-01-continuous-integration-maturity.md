@@ -18,7 +18,7 @@ keywords:
 
 There are a number of levels you have to go through before your
 continuous integration pipeline becomes perfect. I found eight of
-them and presented my findings at [DevOpsDays](http://slcdevopsdays.org/cr3ativconference/continuous-integration-may-have-negative-effects/)
+them and presented my findings at DevOpsDays
 in Salt Lake City a few weeks ago
 (watch the [video](https://www.youtube.com/watch?v=3dJP_LtUGgg)).
 Now it's time to write them down and ask
