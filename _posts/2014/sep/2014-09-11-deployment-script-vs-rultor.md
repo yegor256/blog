@@ -16,6 +16,9 @@ categories: jcg
 youtube:
   - NflR7DKwxDY
   - _61CuGhyv-o
+jb_picture:
+  src: /images/2014/09/charlie-and-chocolate-factory-father.png
+  caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
@@ -34,7 +37,7 @@ deployment script(s).
 
 <!--more-->
 
-{% picture /images/2014/09/charlie-and-chocolate-factory-father.png 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
+{% jb_picture_body %}%}
 
 Before we start with the arguments, let me emphasize that Rultor
 is a useful interface to your custom scripts. When you decide

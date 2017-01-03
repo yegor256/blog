@@ -15,6 +15,9 @@ keywords:
   - public static
   - public static literals
 book: elegant-objects 2.5
+jb_picture:
+  src: /images/2015/07/the-shining.jpg
+  caption: The Shining (1980) by Stanley Kubrick
 ---
 
 I have a `new String(array,"UTF-8")` in one place and exactly
@@ -30,7 +33,7 @@ These guys are setting a bad example! `public` `static`
 
 <!--more-->
 
-{% picture /images/2015/07/the-shining.jpg 0 The Shining (1980) by Stanley Kubrick %}
+{% jb_picture_body %}%}
 
 Here is what I'm talking about, specifically:
 

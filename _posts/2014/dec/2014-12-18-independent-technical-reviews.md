@@ -15,6 +15,9 @@ keywords:
   - how to monitor programmers
   - independent code review
   - independent review of source code
+jb_picture:
+  src: /images/2014/12/arizona-dream-car-shop.png
+  caption: Arizona Dream (1992) by Emir Kusturica
 ---
 
 Do you have a team of brilliant and enthusiastic programmers? Of course! You've carefully
@@ -39,7 +42,7 @@ startup. Below I summarize my experience with organizing such technical reviews.
 
 <!--more-->
 
-{% picture /images/2014/12/arizona-dream-car-shop.png 0 Arizona Dream (1992) by Emir Kusturica %}
+{% jb_picture_body %}%}
 
 An independent review is when you ask someone outside of your team
 to look at your source code and other technical resources

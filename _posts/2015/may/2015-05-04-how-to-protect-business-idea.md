@@ -13,6 +13,9 @@ keywords:
   - patent business idea
   - non-compete clause
   - non-disclosure agreement
+jb_picture:
+  src: /images/2015/05/there-will-be-blood.jpg
+  caption: There Will Be Blood (2007) by Paul Thomas Anderson
 ---
 
 When you hire a programmer or a team of programmers to implement your
@@ -25,7 +28,7 @@ been on both sides. Here is my experience and a few recommendations.
 
 <!--more-->
 
-{% picture /images/2015/05/there-will-be-blood.jpg 0 There Will Be Blood (2007) by Paul Thomas Anderson %}
+{% jb_picture_body %}%}
 
 There are basically a few levels of protection you can obtain, and they are
 listed below, from the simplest and least secure to the most expensive and

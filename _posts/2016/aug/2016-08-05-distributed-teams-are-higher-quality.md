@@ -14,6 +14,9 @@ keywords:
   - software quality control
   - remote programming
   - distributed programming
+jb_picture:
+  src: /images/2016/08/oceans-twelve.jpg
+  caption: Ocean's Twelve (2004) by Steven Soderbergh
 ---
 
 OK, the title is not exactly accurate. I've missed the "can" word. A distributed
@@ -27,7 +30,7 @@ remote mode, if done right, **guarantees** higher quality of code. Surprised?
 
 <!--more-->
 
-{% picture /images/2016/08/oceans-twelve.jpg 0 Ocean's Twelve (2004) by Steven Soderbergh %}
+{% jb_picture_body %}%}
 
 There are basically four simple ingredients to success ... you know what, there is
 actually _one_ main ingredient, and its name is **control**. If we want quality

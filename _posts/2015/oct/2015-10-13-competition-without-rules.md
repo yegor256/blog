@@ -14,6 +14,9 @@ keywords:
   - individual performance appraisals
   - performance appraisals for teams
   - individual and team performance appraisals
+jb_picture:
+  src: /images/2015/10/the-wrestler.jpg
+  caption: The Wrestler (2008) by Darren Aronofsky
 ---
 
 When your team has to choose which technical decision to make,
@@ -30,7 +33,7 @@ Is this how it should be?
 
 <!--more-->
 
-{% picture /images/2015/10/the-wrestler.jpg 0 The Wrestler (2008) by Darren Aronofsky %}
+{% jb_picture_body %}%}
 
 We are trying to **avoid explicitness** in these sensitive subjects. Indeed,
 how can we tell Jeff that his salary is lower than

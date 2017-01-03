@@ -13,6 +13,9 @@ keywords:
   - good programmers
   - bad programmers
   - zero-bug programmers
+jb_picture:
+  src: /images/2015/06/sabotage.jpg
+  caption: Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe
 ---
 
 Good programmers create fewer
@@ -31,7 +34,7 @@ that yes, indeed, good programmers create _fewer_ bugs.
 
 <!--more-->
 
-{% picture /images/2015/06/sabotage.jpg 0 Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe %}
+{% jb_picture_body %}%}
 
 I think this is all about how we define _quality_ and what a _bug_ is.
 

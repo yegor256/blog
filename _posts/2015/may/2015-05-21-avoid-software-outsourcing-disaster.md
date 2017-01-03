@@ -14,6 +14,9 @@ keywords:
   - software outsourcing companies
   - software outsourcing trends
   - software outsourcing definition
+jb_picture:
+  src: /images/2015/05/evil-cult.jpg
+  caption: The Evil Cult (1993) by Jing Wong
 ---
 
 Software outsourcing is a disaster waiting to happen; we all know that. First, you find
@@ -30,7 +33,7 @@ a way to do
 
 <!--more-->
 
-{% picture /images/2015/05/evil-cult.jpg 0 The Evil Cult (1993) by Jing Wong %}
+{% jb_picture_body %}%}
 
 Yes, it is possible to do it right and truly hassle-free, but you have
 to be ready to twist your management philosophy.

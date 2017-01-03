@@ -15,6 +15,9 @@ keywords:
   - rethrow exception c++
   - rethrow exception scala
   - rethrow exception with new message
+jb_picture:
+  src: /images/2015/12/four-rooms.jpg
+  caption: Four Rooms (1995) by Allison Anders et al.
 ---
 
 I keep repeating the same mistake again and again. So it's time to
@@ -29,7 +32,7 @@ Both are wrong.
 
 <!--more-->
 
-{% picture /images/2015/12/four-rooms.jpg 0 Four Rooms (1995) by Allison Anders et al. %}
+{% jb_picture_body %}%}
 
 This is how the code may look:
 

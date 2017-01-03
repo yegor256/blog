@@ -19,6 +19,9 @@ youtube:
   - pt9uHp35fwM
   - b6r2W3P9vgY
   - dE0_j4Kk6jo
+jb_picture:
+  src: /images/2015/12/commando.jpg
+  caption: Commando (1985) by Mark L. Lester
 ---
 
 This is what Wikipedia [says](https://en.wikipedia.org/wiki/Turnover_%28employment%29) about this:
@@ -30,7 +33,7 @@ be very harmful.
 
 <!--more-->
 
-{% picture /images/2015/12/commando.jpg 0 Commando (1985) by Mark L. Lester %}
+{% jb_picture_body %}%}
 
 I've found this
 [good article](http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)

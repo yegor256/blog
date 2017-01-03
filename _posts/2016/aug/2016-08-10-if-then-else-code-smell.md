@@ -14,6 +14,9 @@ keywords:
   - if then else oop
   - oop forking
   - if forking
+jb_picture:
+  src: /images/2016/08/fargo.jpg
+  caption: Fargo (1996) by Coen Brothers
 ---
 
 In most cases (maybe even in all of them), if-then-else can and must
@@ -24,7 +27,7 @@ illustrates the problem. So it's time to demonstrate it and explain.
 
 <!--more-->
 
-{% picture /images/2016/08/fargo.jpg 0 Fargo (1996) by Coen Brothers %}
+{% jb_picture_body %}%}
 
 Take a look at the class
 [`DyTalk`](https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java)

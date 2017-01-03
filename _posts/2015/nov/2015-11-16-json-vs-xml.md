@@ -14,6 +14,9 @@ keywords:
   - json or xml for android
   - json or xml for iOS
   - json or xml for java
+jb_picture:
+  src: /images/2015/11/the-man-who-stare-at-goats.jpg
+  caption: The Men Who Stare at Goats (2009) by Grant Heslov
 ---
 
 JSON or XML? Which one is better? Which one is faster? Which
@@ -27,7 +30,7 @@ They are very different things with their own areas of applicability.
 
 <!--more-->
 
-{% picture /images/2015/11/the-man-who-stare-at-goats.jpg 0 The Men Who Stare at Goats (2009) by Grant Heslov %}
+{% jb_picture_body %}%}
 
 Here is how a simple JSON piece of data may look
 (140 characters):

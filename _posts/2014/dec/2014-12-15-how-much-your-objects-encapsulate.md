@@ -16,6 +16,9 @@ keywords:
 book: elegant-objects 2.2
 youtube:
   - 9yjtsCK6Wdk
+jb_picture:
+  src: /images/2014/12/truman-show-universe.png
+  caption: The Truman Show (1998) by Peter Weir
 ---
 
 Which line do you like more, the first or the second:
@@ -33,7 +36,7 @@ this case I have to&mdash;it depends.
 
 <!--more-->
 
-{% picture /images/2014/12/truman-show-universe.png 0 The Truman Show (1998) by Peter Weir %}
+{% jb_picture_body %}%}
 
 As [we discussed before]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 a good object is a representative of a real-life entity. Such an entity

@@ -23,6 +23,9 @@ youtube:
   - aER4uwyFbqQ
   - 63tS3HNmhiE
   - 03PXmPc7Q3g
+jb_picture:
+  src: /images/2014/11/broken-object.png
+  caption: Vinni-Pukh (1969) by Fyodor Khitruk
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
@@ -36,7 +39,7 @@ manipulations on them. What is the alternative? **SQL-speaking objects**.
 
 <!--more-->
 
-{% picture /images/2014/11/broken-object.png 0 Vinni-Pukh (1969) by Fyodor Khitruk %}
+{% jb_picture_body %}%}
 
 ## How ORM Works
 

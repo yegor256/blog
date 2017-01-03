@@ -13,6 +13,9 @@ keywords:
   - task management online
   - task management software
   - task management system
+jb_picture:
+  src: /images/2014/11/monty-python-argument-sketch.png
+  caption: Monty Python Flying Circus, TV Series (1969-1974)
 ---
 
 A team working [remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %})
@@ -32,7 +35,7 @@ team, you may find them useful.
 
 <!--more-->
 
-{% picture /images/2014/11/monty-python-argument-sketch.png 0 Monty Python Flying Circus, TV Series (1969-1974) %}
+{% jb_picture_body %}%}
 
 ## 1. Keep It One-on-One
 

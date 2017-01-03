@@ -14,6 +14,9 @@ keywords:
   - order of control
   - holacracy
   - holacracy in management
+jb_picture:
+  src: /images/2016/02/apocalypse-now.jpg
+  caption: Apocalypse Now (1979) by Francis Ford Coppola
 ---
 
 I strongly believe that while it is very effective to structure
@@ -26,7 +29,7 @@ that are never doubted by subordinates and an explicitly defined hierarchy.
 
 <!--more-->
 
-{% picture /images/2016/02/apocalypse-now.jpg 0 Apocalypse Now (1979) by Francis Ford Coppola %}
+{% jb_picture_body %}%}
 
 According to Wikipedia at the time of writing, a
 [**holacracy**](https://en.wikipedia.org/wiki/Holacracy) exists when

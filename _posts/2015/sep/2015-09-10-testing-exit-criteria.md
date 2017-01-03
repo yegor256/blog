@@ -17,6 +17,9 @@ keywords:
   - test planning
 youtube:
   - wd-SA1HVmLg
+jb_picture:
+  src: /images/2015/09/la-fille-sur-le-pont.jpg
+  caption: La fille sur le pont (1999) by Patrice Leconte
 ---
 
 There is a software to be tested. There is a team of testers. There is
@@ -31,7 +34,7 @@ You're **fundamentally wrong**.
 
 <!--more-->
 
-{% picture /images/2015/09/la-fille-sur-le-pont.jpg 0 La fille sur le pont (1999) by Patrice Leconte %}
+{% jb_picture_body %}%}
 
 All this is perfectly explained by Glenford Myers in his [great book](http://amzn.to/1Y3qAbN)
 [The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).

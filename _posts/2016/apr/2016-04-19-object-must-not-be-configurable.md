@@ -15,6 +15,9 @@ keywords:
   - decorator pattern
   - decorator pattern java
   - object configuration
+jb_picture:
+  src: /images/2016/04/the-take.jpg
+  caption: The Take (2009) by David Drury
 ---
 
 Using object properties as configuration parameters is a very common
@@ -28,7 +31,7 @@ it from a practical perspective.
 
 <!--more-->
 
-{% picture /images/2016/04/the-take.jpg 0 The Take (2009) by David Drury %}
+{% jb_picture_body %}%}
 
 Let's say there is a class that is supposed to read a web page and
 return its content:

@@ -14,6 +14,9 @@ keywords:
   - singleton anti-pattern
   - singleton replacement
   - singleton is bad
+jb_picture:
+  src: /images/2016/06/perdita-durango.jpg
+  caption: Perdita Durango (1997) by Álex de la Iglesia
 ---
 
 I think it's too obvious to say that a singleton is an anti-pattern as
@@ -26,7 +29,7 @@ be "global"; but what do we do with them?
 
 <!--more-->
 
-{% picture /images/2016/06/perdita-durango.jpg 0 Perdita Durango (1997) by Álex de la Iglesia %}
+{% jb_picture_body %}%}
 
 I assume you already know what a singleton is and why it's an anti-pattern.
 If not, I recommend you read this StackOverflow thread:

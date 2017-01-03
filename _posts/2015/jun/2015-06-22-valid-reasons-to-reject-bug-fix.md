@@ -14,6 +14,9 @@ keywords:
   - review pull request
   - pull request rules
   - pull request code review
+jb_picture:
+  src: /images/2015/06/crimen-ferpecto.jpg
+  caption: El Crimen Perfecto (2004) by Álex de la Iglesia
 ---
 
 A bug exists when something doesn't work as expected. A _bug
@@ -27,7 +30,7 @@ valid reasons for such a rejection, according to my experience.
 
 <!--more-->
 
-{% picture /images/2015/06/crimen-ferpecto.jpg 0 El Crimen Perfecto (2004) by Álex de la Iglesia %}
+{% jb_picture_body %}%}
 
 ## It Degrades Code Coverage
 

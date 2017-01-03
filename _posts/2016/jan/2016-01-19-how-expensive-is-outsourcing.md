@@ -14,6 +14,9 @@ keywords:
   - outsourcing prices
   - outsourcing rates
   - rates of outsourcing
+jb_picture:
+  src: /images/2016/01/the-fan.jpg
+  caption: The Fan (1996) by Tony Scott
 ---
 
 Let me put it this way: $15 per hour for a senior Java developer&mdash;is that cheap or expensive? It's cheap, right? Right. What would you
@@ -26,7 +29,7 @@ or in-house teams.
 
 <!--more-->
 
-{% picture /images/2016/01/the-fan.jpg 0 The Fan (1996) by Tony Scott %}
+{% jb_picture_body %}%}
 
 I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his

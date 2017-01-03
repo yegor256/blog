@@ -14,6 +14,9 @@ keywords:
   - pay per hour jobs
   - payroll slavery
   - pay per hour slavery
+jb_picture:
+  src: /images/2015/07/gladiator.jpg
+  caption: Gladiator (2000) by Ridley Scott
 ---
 
 What is the difference between a slave and a free man? A slave
@@ -27,7 +30,7 @@ ancient slaves in our offices and in front of our monitors?
 
 <!--more-->
 
-{% picture /images/2015/07/gladiator.jpg 0 Gladiator (2000) by Ridley Scott %}
+{% jb_picture_body %}%}
 
 This post is partially provoked by a recently published semi-historical book
 [**How to Manage Your Slaves**](http://amzn.to/2crHiNG)

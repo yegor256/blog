@@ -14,6 +14,9 @@ keywords:
   - encapsulation trusted objects
   - encapsulation meaning
   - encapsulation violation
+jb_picture:
+  src: /images/2016/12/raging-bull.jpg
+  caption: Raging Bull (1980) by Martin Scorsese
 ---
 
 As [discussed before]({% pst 2016/nov/2016-11-21-naked-data %}),
@@ -26,7 +29,7 @@ while allowing objects to interact.
 
 <!--more-->
 
-{% picture /images/2016/12/raging-bull.jpg 0 Raging Bull (1980) by Martin Scorsese %}
+{% jb_picture_body %}%}
 
 Say that this is our object:
 

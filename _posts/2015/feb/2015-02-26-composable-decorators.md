@@ -16,6 +16,9 @@ keywords:
   - decorator pattern real life example
 youtube:
   - D0dqC_3Bch8
+jb_picture:
+  src: /images/2015/02/russina-matroshka.jpg
+  caption: Матрёшка
 ---
 
 The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
@@ -31,7 +34,7 @@ utility methods, which make our code procedural rather than object-oriented.
 
 <!--more-->
 
-{% picture /images/2015/02/russina-matroshka.jpg 0 Матрёшка %}
+{% jb_picture_body %}%}
 
 First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:

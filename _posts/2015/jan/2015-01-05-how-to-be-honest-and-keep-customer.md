@@ -14,6 +14,9 @@ keywords:
   - software development outsourcing
   - how to outsource software development
   - software development outsourcing
+jb_picture:
+  src: /images/2014/12/99-francs.png
+  caption: 99 francs (2007) by Jan Kounen
 ---
 
 Most of our
@@ -38,7 +41,7 @@ honestly show your clients all project internals and still keep them on board.
 
 <!--more-->
 
-{% picture /images/2014/12/99-francs.png 0 99 francs (2007) by Jan Kounen %}
+{% jb_picture_body %}%}
 
 ## He Is Breaking Our Process
 

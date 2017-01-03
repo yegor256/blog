@@ -17,6 +17,9 @@ keywords:
 book: elegant-objects 1.3
 youtube:
   - 9yjtsCK6Wdk
+jb_picture:
+  src: /images/2015/05/kill-bill.jpg
+  caption: Kill Bill: Vol. 2 (2004) by Quentin Tarantino
 ---
 
 How much work should be done within a constructor? It seems reasonable
@@ -28,7 +31,7 @@ un-extensible.
 
 <!--more-->
 
-{% picture /images/2015/05/kill-bill.jpg 0 Kill Bill: Vol. 2 (2004) by Quentin Tarantino %}
+{% jb_picture_body %}%}
 
 Let's say we're making an interface that would represent a name of a person:
 

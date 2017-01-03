@@ -17,6 +17,9 @@ keywords:
   - project responsibility
 youtube:
   - qRZYJGYdrwk
+jb_picture:
+  src: /images/2014/04/big-lebowski-her-life-is-in-your-hands.png
+  caption: The Big Lebowski (1998) by Joel Coen
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -79,7 +82,7 @@ responsibility **must be** on the shoulders of the team members. They should be
 responsible for their own tasks and report back to the project manager when they
 are finished with their jobs.
 
-{% picture /images/2014/04/big-lebowski-her-life-is-in-your-hands.png 0 The Big Lebowski (1998) by Joel Coen %}
+{% jb_picture_body %}%}
 
 Implementation problems should be solved by team members on their own. So, how
 do we accomplish this in [XDSD](http://www.xdsd.org)?

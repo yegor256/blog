@@ -16,6 +16,9 @@ keywords:
   - java web app framework
 youtube:
   - nheD2LNYrpk
+jb_picture:
+  src: /images/2015/03/godfather-shooting-scene.jpg
+  caption: Making of The Godfather (1972) by Francis Ford Coppola
 ---
 
 I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
@@ -36,7 +39,7 @@ Let's see what was created and how it works.
 
 <!--more-->
 
-{% picture /images/2015/03/godfather-shooting-scene.jpg 0 Making of The Godfather (1972) by Francis Ford Coppola %}
+{% jb_picture_body %}%}
 
 ## Java Web Architecture in a Nutshell
 

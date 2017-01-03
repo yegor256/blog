@@ -17,6 +17,9 @@ youtube:
   - KwP7Ay9Z-hc
   - EnhRgXrHCC4
   - p7m7_iiqaHI
+jb_picture:
+  src: /images/2014/12/usual-suspects-kobayashi.png
+  caption: The Usual Suspects (1995) by Bryan Singer
 ---
 
 After a few recent posts about immutability, including
@@ -45,7 +48,7 @@ represents a mutable real-world entity, a file on disk.
 
 <!--more-->
 
-{% picture /images/2014/12/usual-suspects-kobayashi.png 0 The Usual Suspects (1995) by Bryan Singer %}
+{% jb_picture_body %}%}
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
 

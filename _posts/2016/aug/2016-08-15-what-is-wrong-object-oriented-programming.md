@@ -21,6 +21,9 @@ style: |
   }
 youtube:
  - cGcCcxx4xrg
+jb_picture:
+  src: /images/2016/08/swingers.jpg
+  caption: Swingers (1996) by Doug Liman
 ---
 
 Recently, I was trying to convince a few of my readers that
@@ -33,7 +36,7 @@ So I Googled a bit, and this is what I found (in chronological order).
 
 <!--more-->
 
-{% picture /images/2016/08/swingers.jpg 0 Swingers (1996) by Doug Liman %}
+{% jb_picture_body %}%}
 
 The list of quotes is sorted in chronological order, with the oldest on
 the top:

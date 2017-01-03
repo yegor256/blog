@@ -14,6 +14,9 @@ keywords:
   - InterruptedException example
   - InterruptedException checked or unchecked
   - InterruptedException sleep
+jb_picture:
+  src: /images/2015/10/crouching-tiger-hidden-dragon.jpg
+  caption: Crouching Tiger, Hidden Dragon (2000) by Ang Lee
 ---
 
 [`InterruptedException`](http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html)
@@ -24,7 +27,7 @@ simplify it.
 
 <!--more-->
 
-{% picture /images/2015/10/crouching-tiger-hidden-dragon.jpg 0 Crouching Tiger, Hidden Dragon (2000) by Ang Lee %}
+{% jb_picture_body %}%}
 
 Let's start with this code:
 

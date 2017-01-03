@@ -14,6 +14,9 @@ keywords:
   - what is a software prototype
   - how to create a prototype
   - software prototyping steps
+jb_picture:
+  src: /images/2015/08/ying-xiong.jpg
+  caption: Ying xiong (2002) by Yimou Zhang
 ---
 
 [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
@@ -31,7 +34,7 @@ in the skeleton creation part; let me show you them one by one.
 
 <!--more-->
 
-{% picture /images/2015/08/ying-xiong.jpg 0 Ying xiong (2002) by Yimou Zhang %}
+{% jb_picture_body %}%}
 
 Let's use some examples to make this more illustrative. Let's say I'm a
 software architect and the project is a "Google killer." We're hired to

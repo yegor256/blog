@@ -14,6 +14,9 @@ keywords:
   - oop object
   - object definition in oop
   - what is object in oop
+jb_picture:
+  src: /images/2016/07/jackass-the-movie.jpg
+  caption: Jackass: The Movie (2002) by Jeff Tremaine
 ---
 
 There are thousands of books about object-oriented programming and
@@ -26,7 +29,7 @@ I'd like to introduce a better one.
 
 <!--more-->
 
-{% picture /images/2016/07/jackass-the-movie.jpg 0 Jackass: The Movie (2002) by Jeff Tremaine %}
+{% jb_picture_body %}%}
 
 What is an object? I've done a little research, and this is what I've found:
 

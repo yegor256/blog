@@ -17,6 +17,9 @@ keywords:
   - getters and setters java
 youtube:
   - _Q0cNykXB04
+jb_picture:
+  src: /images/2016/04/amelie.jpg
+  caption: Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet
 ---
 
 Getters and setters [are evil]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
@@ -27,7 +30,7 @@ the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
-{% picture /images/2016/04/amelie.jpg 0 Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet %}
+{% jb_picture_body %}%}
 
 I'm suggesting to use "printers" instead. Instead of exposing
 data via getters, an object will have a functionality of **printing**

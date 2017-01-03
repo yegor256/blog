@@ -14,6 +14,9 @@ keywords:
   - win-win
   - win-lose
   - lose-lose
+jb_picture:
+  src: /images/2017/01/being-flynn.jpg
+  caption: Being Flynn (2012) by Paul Weitz
 ---
 
 Conflict is what progress is made of. A professional and well-managed
@@ -23,7 +26,7 @@ in a consensus. Does that sound strange? It's not sarcasm. Read on.
 
 <!--more-->
 
-{% picture /images/2017/01/being-flynn.jpg 0 Being Flynn (2012) by Paul Weitz %}
+{% jb_picture_body %}%}
 
 Have you ever heard the term "win-win?" Do you know what it means? My guess is that
 most of my readers aren't exactly sure what this is about, even though

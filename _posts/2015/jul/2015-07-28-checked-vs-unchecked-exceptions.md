@@ -16,6 +16,9 @@ keywords:
   - checked vs unchecked exceptions c#
   - checked vs unchecked exceptions debate
 book: elegant-objects 4.2
+jb_picture:
+  src: /images/2015/07/true-romance.jpg
+  caption: True Romance (1993) by Tony Scott
 ---
 
 Do we need checked exceptions at all? The
@@ -28,7 +31,7 @@ multiple exception types are a bad idea too.
 
 <!--more-->
 
-{% picture /images/2015/07/true-romance.jpg 0 True Romance (1993) by Tony Scott %}
+{% jb_picture_body %}%}
 
 Let me first explain how I understand exceptions in object-oriented programming.
 Then I'll compare my understanding with a "traditional" approach, and

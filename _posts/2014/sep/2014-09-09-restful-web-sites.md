@@ -14,6 +14,9 @@ keywords:
   - how to build restful api
   - restful api
 categories: jcg
+jb_picture:
+  src: /images/2014/09/good_bad_weird.png
+  caption: The Good, the Bad, The Wierd (2008) by Kim Jee-woon
 ---
 
 Look at GitHub RESTful API, for example. To get information
@@ -37,7 +40,7 @@ the data?
 
 <!--more-->
 
-{% picture /images/2014/09/good_bad_weird.png 0 The Good, the Bad, The Wierd (2008) by Kim Jee-woon %}
+{% jb_picture_body %}%}
 
 [XSLT]({% pst 2015/feb/2015-02-02-xsl-transformations-in-java %})
 is the technology that can help us do this.

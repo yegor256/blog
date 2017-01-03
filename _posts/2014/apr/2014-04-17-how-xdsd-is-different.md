@@ -16,6 +16,9 @@ keywords:
 youtube:
   - qRZYJGYdrwk
   - tCr9dtGdi2c
+jb_picture:
+  src: /images/2014/04/revolver-avi-with-dollar.png
+  caption: Revolver (2005) by Guy Ritchie
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -54,7 +57,7 @@ You can view more details about this principle in the following articles:
 or
 [Definition of Done]({% pst 2014/apr/2014-04-15-definition-of-done %}).
 
-{% picture /images/2014/04/revolver-avi-with-dollar.png 0 Revolver (2005) by Guy Ritchie %}
+{% jb_picture_body %}%}
 
 As mentioned above, this is one of the most important differences between XDSD
 and other methods. Many people get confused when they see this principle in

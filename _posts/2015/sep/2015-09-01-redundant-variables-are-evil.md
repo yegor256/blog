@@ -13,6 +13,9 @@ keywords:
   - variables in oop
   - variables in java
   - java variables
+jb_picture:
+  src: /images/2015/09/y-tu-mama-tambien.jpg
+  caption: Y Tu Mamá También (2001) by Alfonso Cuarón
 ---
 
 A redundant variable is one that exists exclusively
@@ -25,7 +28,7 @@ once is redundant and must be replaced with a value.
 
 <!--more-->
 
-{% picture /images/2015/09/y-tu-mama-tambien.jpg 0 Y Tu Mamá También (2001) by Alfonso Cuarón %}
+{% jb_picture_body %}%}
 
 Here, variable `fileName` is redundant:
 

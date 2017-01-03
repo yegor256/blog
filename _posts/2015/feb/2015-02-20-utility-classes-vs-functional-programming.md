@@ -17,6 +17,9 @@ keywords:
 youtube:
   - D0dqC_3Bch8
   - psrp3TtaYYI
+jb_picture:
+  src: /images/2015/02/color-me-kubrick.png
+  caption: Color Me Kubrick (2005) by Brian W. Cook
 ---
 
 I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against
@@ -40,7 +43,7 @@ and where this misconception is coming from.
 
 <!--more-->
 
-{% picture /images/2015/02/color-me-kubrick.png 0 Color Me Kubrick (2005) by Brian W. Cook %}
+{% jb_picture_body %}%}
 
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:

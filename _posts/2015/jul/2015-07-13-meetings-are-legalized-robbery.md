@@ -20,6 +20,9 @@ youtube:
   - LB_YLWhGrco
   - dE0_j4Kk6jo
   - pt9uHp35fwM
+jb_picture:
+  src: /images/2015/07/heat.jpg
+  caption: Heat (1995) by Michael Mann
 ---
 
 Software development is all about creativity, right? It's an art,
@@ -35,7 +38,7 @@ software design discipline ... and it's very _sad_ to see it.
 
 <!--more-->
 
-{% picture /images/2015/07/heat.jpg 0 Heat (1995) by Michael Mann %}
+{% jb_picture_body %}%}
 
 A good [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), doesn't need

@@ -14,6 +14,9 @@ keywords:
   - quick investment
   - instant investment
   - silicon valley
+jb_picture:
+  src: /images/2015/12/the-game.jpg
+  caption: The Game (1997) by David Fincher
 ---
 
 We're starting a new thing, a seed fund. Its name is
@@ -26,7 +29,7 @@ amount is smaller&mdash;less than **$20K**, and decisions are faster.
 
 <!--more-->
 
-{% picture /images/2015/12/the-game.jpg 0 The Game (1997) by David Fincher %}
+{% jb_picture_body %}%}
 
 There are basically three problems we're trying to solve with this
 new idea: 1) Investors are **cowards**, 2) investors are **cowards**, and

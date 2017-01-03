@@ -14,6 +14,9 @@ keywords:
   - motivation
   - team morale
   - management in movies
+jb_picture:
+  src: /images/2015/10/cossacks-of-the-kuban.jpg
+  caption: Cossacks of the Kuban (1950) by Ivan Pyryev
 ---
 
 I saw [The Martian](http://www.imdb.com/title/tt3659388/)
@@ -28,7 +31,7 @@ should I expect, right? Not just that. I think the problem is bigger.
 
 <!--more-->
 
-{% picture /images/2015/10/cossacks-of-the-kuban.jpg 0 Cossacks of the Kuban (1950) by Ivan Pyryev %}
+{% jb_picture_body %}%}
 
 Have any of you seen this movie: [Cossacks of the Kuban](http://www.imdb.com/title/tt0041562/)?
 It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_Stalin)

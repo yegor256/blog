@@ -14,6 +14,9 @@ keywords:
   - software outsourcing companies
   - software outsourcing trends
   - software outsourcing definition
+jb_picture:
+  src: /images/2015/06/u-turn.jpg
+  caption: U Turn (1997) by Oliver Stone
 ---
 
 Software outsourcing is what you go for when you want to create
@@ -28,7 +31,7 @@ at the bottom). I wish someone would have given it to me 15 years ago.
 
 <!--more-->
 
-{% picture /images/2015/06/u-turn.jpg 0 U Turn (1997) by Oliver Stone %}
+{% jb_picture_body %}%}
 
 **Have a "Work for Hire" Agreement**.
 Make sure [the contract]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %})

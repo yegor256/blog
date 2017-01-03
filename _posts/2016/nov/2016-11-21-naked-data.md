@@ -14,6 +14,9 @@ keywords:
   - encapsulation trusted objects
   - encapsulation meaning
   - encapsulation violation
+jb_picture:
+  src: /images/2016/11/borat.jpg
+  caption: Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles
 ---
 
 Encapsulation is the core principle of object-oriented programming
@@ -24,7 +27,7 @@ Encapsulation leads to the absence of _naked_ data on all levels and in all form
 
 <!--more-->
 
-{% picture /images/2016/11/borat.jpg 0 Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles %}
+{% jb_picture_body %}%}
 
 This is what naked data is (C code):
 

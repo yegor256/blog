@@ -21,6 +21,9 @@ youtube:
   - pt9uHp35fwM
   - b6r2W3P9vgY
   - xbovkm0tTn0
+jb_picture:
+  src: /images/2014/10/barton-fink.png
+  caption: Barton Fink (1991) by Joel Coen
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -48,7 +51,7 @@ But that's not all.
 
 <!--more-->
 
-{% picture /images/2014/10/barton-fink.png 0 Barton Fink (1991) by Joel Coen %}
+{% jb_picture_body %}%}
 
 This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question

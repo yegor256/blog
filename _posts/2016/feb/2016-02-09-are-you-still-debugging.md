@@ -17,6 +17,9 @@ keywords:
   - stop debugging
 translated:
   - Russian: https://habrahabr.ru/company/piter/blog/278567/
+jb_picture:
+  src: /images/2016/02/the-revenant.jpg
+  caption: The Revenant (2015) by Alejandro G. Iñárritu
 ---
 
 [Debugging](https://en.wikipedia.org/wiki/Debugging)
@@ -30,7 +33,7 @@ If debugging is required, the **design is bad**.
 
 <!--more-->
 
-{% picture /images/2016/02/the-revenant.jpg 0 The Revenant (2015) by Alejandro G. Iñárritu %}
+{% jb_picture_body %}%}
 
 Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 imperative procedural programmer, and this is my Java code:

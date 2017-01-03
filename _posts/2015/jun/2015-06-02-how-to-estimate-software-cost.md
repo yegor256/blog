@@ -14,6 +14,9 @@ keywords:
   - software estimate template
   - software estimation techniques
   - software estimation tools
+jb_picture:
+  src: /images/2015/06/interstate-60.jpg
+  caption: Interstate 60: Episodes of the Road (2002) by Bob Gale
 ---
 
 "Here is the specification; how much will it cost to create this software?"
@@ -31,7 +34,7 @@ the cost?" I can, but I won't. Here is why.
 
 <!--more-->
 
-{% picture /images/2015/06/interstate-60.jpg 0 Interstate 60: Episodes of the Road (2002) by Bob Gale %}
+{% jb_picture_body %}%}
 
 Let me ask you something else: **Why do you need an estimate?**
 Yes, I mean it&mdash;why do you ask me how much it will cost

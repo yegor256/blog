@@ -14,6 +14,9 @@ keywords:
   - open source
   - why github rating is important
   - open source definition
+jb_picture:
+  src: /images/2015/12/kung-fu-hustle.jpg
+  caption: Kung Fu Hustle (2004) by Stephen Chow
 ---
 
 In my [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
@@ -28,7 +31,7 @@ about that every week. Let me answer them all here.
 
 <!--more-->
 
-{% picture /images/2015/12/kung-fu-hustle.jpg 0 Kung Fu Hustle (2004) by Stephen Chow %}
+{% jb_picture_body %}%}
 
 The gist of all those comments is this: "I don't contribute to open source,
 but I'm still very passionate about software development." Then, there is

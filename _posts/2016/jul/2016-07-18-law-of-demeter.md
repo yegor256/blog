@@ -14,6 +14,9 @@ keywords:
   - law of demeter violation
   - law of demeter example
   - law of demeter c#
+jb_picture:
+  src: /images/2016/07/spartacus.jpg
+  caption: Spartacus (1960) by Stanley Kubrick
 ---
 
 You've probably heard about that 30-year-old
@@ -30,7 +33,7 @@ perfect, but its common understanding in the OOP world is simply wrong
 
 <!--more-->
 
-{% picture /images/2016/07/spartacus.jpg 0 Spartacus (1960) by Stanley Kubrick %}
+{% jb_picture_body %}%}
 
 [Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.

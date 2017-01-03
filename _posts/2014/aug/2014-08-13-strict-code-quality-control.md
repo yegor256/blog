@@ -14,6 +14,9 @@ keywords:
   - java findbugs config
   - java strict quality
   - quality of java code
+jb_picture:
+  src: /images/2014/09/ratatouille.png
+  caption: Ratatouille (2007) by Brad Bird and Jan Pinkava
 ---
 
 There are many tools that control the quality of
@@ -96,7 +99,7 @@ be patient and try to get used to this new approach to quality.
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.
 
-{% picture /images/2014/09/ratatouille.png 0 Ratatouille (2007) by Brad Bird and Jan Pinkava %}
+{% jb_picture_body %}%}
 
 Why is it good? Read on.
 

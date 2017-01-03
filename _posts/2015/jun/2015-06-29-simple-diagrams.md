@@ -14,6 +14,9 @@ keywords:
   - make good diagrams
   - how to make good diagram
   - uml diagrams
+jb_picture:
+  src: /images/2015/06/a-beautiful-mind.jpg
+  caption: A Beautiful Mind (2001) by Ron Howard
 ---
 
 I don't even know where to start. Let's begin with this:
@@ -30,7 +33,7 @@ in line with their salaries&mdash;it's disgusting.
 
 <!--more-->
 
-{% picture /images/2015/06/a-beautiful-mind.jpg 0 A Beautiful Mind (2001) by Ron Howard %}
+{% jb_picture_body %}%}
 
 Why is this happening? Why are their diagrams complex and difficult to read?
 I'm sure you know what I'm talking about; you probably have your own examples

@@ -18,6 +18,9 @@ translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52317370
 youtube:
   - WpP4rIhh5e4
+jb_picture:
+  src: /images/2015/03/fight-club.jpg
+  caption: Fight Club (1999) by David Fincher
 ---
 
 Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.
@@ -31,7 +34,7 @@ Instead, they are collections of procedures pretending to be classes.
 
 <!--more-->
 
-{% picture /images/2015/03/fight-club.jpg 0 Fight Club (1999) by David Fincher %}
+{% jb_picture_body %}%}
 
 [Peter Coad](http://en.wikipedia.org/wiki/Peter_Coad)
 used to say: Challenge any class name that ends in "-er." There

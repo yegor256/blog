@@ -14,6 +14,9 @@ keywords:
   - ebook or printed
   - digital book
   - e-book
+jb_picture:
+  src: /images/2016/11/addams-family.jpg
+  caption: The Addams Family (1991) by Barry Sonnenfeld
 ---
 
 Very often readers of [my books](/books.html) ask me why
@@ -24,7 +27,7 @@ to go if you want to read my content.
 
 <!--more-->
 
-{% picture /images/2016/11/addams-family.jpg 0 The Addams Family (1991) by Barry Sonnenfeld %}
+{% jb_picture_body %}%}
 
 First of all, there is a simple technical reason:
 

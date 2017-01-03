@@ -13,6 +13,9 @@ keywords:
   - software specification review
   - software specification example
   - software specification in software engineering
+jb_picture:
+  src: /images/2015/11/reservoir-dogs.jpg
+  caption: Reservoir Dogs (1992) by Quentin Tarantino
 ---
 
 There is a great book called
@@ -28,7 +31,7 @@ from the point of view of a programmer reading a specification document.
 
 <!--more-->
 
-{% picture /images/2015/11/reservoir-dogs.jpg 0 Reservoir Dogs (1992) by Quentin Tarantino %}
+{% jb_picture_body %}%}
 
 Chapter 4.3 of a famous standard
 [IEEE 830-1998](https://standards.ieee.org/findstds/standard/830-1998.html)

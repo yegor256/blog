@@ -14,6 +14,9 @@ keywords:
   - command and control leadership examples
   - command and control leadership style definition
   - command and control work environment
+jb_picture:
+  src: /images/2016/09/andrei-rublev.jpg
+  caption: Andrei Rublev (1966) by Andrei Tarkovsky
 ---
 
 [Command and control](https://en.wikipedia.org/wiki/Command_and_control)
@@ -27,7 +30,7 @@ else is going on.
 
 <!--more-->
 
-{% picture /images/2016/09/andrei-rublev.jpg 0 Andrei Rublev (1966) by Andrei Tarkovsky %}
+{% jb_picture_body %}%}
 
 We are lazy and greedy animals. To work and produce something
 for someone, we need two things: motivation and punishment. The

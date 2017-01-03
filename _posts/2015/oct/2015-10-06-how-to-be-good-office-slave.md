@@ -18,6 +18,9 @@ related:
   - 2016/jan/2016-01-05-how-to-punish-employees
   - 2015/jul/2015-07-21-hourly-pay-modern-slavery
   - 2015/jan/2015-01-26-happy-boss-false-objective
+jb_picture:
+  src: /images/2015/10/the-office.jpg
+  caption: The Office (2001–2003)
 ---
 
 This is a short manual for you, my friend. I assume you are sitting in the
@@ -32,7 +35,7 @@ you will eventually find one. In the meantime, this manual is for you :)
 
 <!--more-->
 
-{% picture /images/2015/10/the-office.jpg 0 The Office (2001–2003) %}
+{% jb_picture_body %}%}
 
 **Help Others**.
 Find the stupidest newbies and help them. Regardless of what exactly

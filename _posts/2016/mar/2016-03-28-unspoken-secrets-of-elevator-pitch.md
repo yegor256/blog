@@ -14,6 +14,9 @@ keywords:
   - startup pitch examples
   - startup pitch idea
   - startup pitch presentation
+jb_picture:
+  src: /images/2016/03/huevos-de-oro.jpg
+  caption: Huevos de oro (1993) by Bigas Luna
 ---
 
 Your success depends on the quality of your **elevator pitch**. Basically, your
@@ -25,7 +28,7 @@ principles and become a expert. Here they are, the principles.
 
 <!--more-->
 
-{% picture /images/2016/03/huevos-de-oro.jpg 0 Huevos de oro (1993) by Bigas Luna %}
+{% jb_picture_body %}%}
 
 **Look**.
 Rule number 1: You must look right, like Mark Zuckerberg&mdash;the

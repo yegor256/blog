@@ -13,6 +13,9 @@ keywords:
   - working and learning together
   - education at work
   - bug tracking
+jb_picture:
+  src: /images/2015/02/gi-jane.png
+  caption: G.I. Jane (1997) by Ridley Scott
 ---
 
 At [teamed.io](http://www.teamed.io), we work in distributed teams and
@@ -37,7 +40,7 @@ or maintenance of software, this concept may not be relevant.
 
 <!--more-->
 
-{% picture /images/2015/02/gi-jane.png 0 G.I. Jane (1997) by Ridley Scott %}
+{% jb_picture_body %}%}
 
 No matter how unpleasant this could be, let's face the reality:
 each software project is a business, and we, the developers, are

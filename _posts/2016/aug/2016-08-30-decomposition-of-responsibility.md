@@ -14,6 +14,9 @@ keywords:
   - god object
   - single responsibility principle
   - SRP in OOP
+jb_picture:
+  src: /images/2016/08/once-upon-a-time-in-america.jpg
+  caption: Once Upon a Time in America (1984) by Sergio Leone
 ---
 
 Objects responsible for too many things are a problem. Because their
@@ -25,7 +28,7 @@ the former is better than the latter.
 
 <!--more-->
 
-{% picture /images/2016/08/once-upon-a-time-in-america.jpg 0 Once Upon a Time in America (1984) by Sergio Leone %}
+{% jb_picture_body %}%}
 
 Let's say this is our code (it is Ruby):
 

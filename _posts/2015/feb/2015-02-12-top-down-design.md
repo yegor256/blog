@@ -14,6 +14,9 @@ keywords:
   - incremental delivery
   - iterative and incremental
   - iterative programming
+jb_picture:
+  src: /images/2015/02/delicatessen.png
+  caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---
 
 First, no matter what the methodology is, we all write software for our
@@ -28,7 +31,7 @@ why you always work **top down**. Let's see what I mean through a practical exam
 
 <!--more-->
 
-{% picture /images/2015/02/delicatessen.png 0 Delicatessen (1991) by Jean-Pierre Jeunet %}
+{% jb_picture_body %}%}
 
 Say I'm contracted by a friend of mine to create a word-counting command line
 tool very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He

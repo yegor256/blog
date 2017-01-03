@@ -14,6 +14,9 @@ keywords:
   - project planning
   - project roles
   - distributed programming
+jb_picture:
+  src: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
+  caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -88,7 +91,7 @@ to fix the project. He has to use the sponsor's time and money in order
 to remove all bugs and inconsistencies and return the project back
 to a "fixed" state.
 
-{% picture /images/2014/04/pulp-fiction-mr-wolf-with-cup.png 0 Pulp Fiction (1994) by Quentin Tarantino %}
+{% jb_picture_body %}%}
 
 When I say "bugs," I mean more than just software errors but also:
 

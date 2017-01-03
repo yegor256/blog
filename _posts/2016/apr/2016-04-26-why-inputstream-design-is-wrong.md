@@ -16,6 +16,9 @@ keywords:
   - method overloading
   - method overloading java
 book: elegant-objects 2.9
+jb_picture:
+  src: /images/2016/04/a-serious-man.jpg
+  caption: A Serious Man (2009) by Coen Brothers
 ---
 
 It's not just about `InputSteam`, this class is a good
@@ -30,7 +33,7 @@ created supplementary "smart" classes.
 
 <!--more-->
 
-{% picture /images/2016/04/a-serious-man.jpg 0 A Serious Man (2009) by Coen Brothers %}
+{% jb_picture_body %}%}
 
 This is how it looks now:
 

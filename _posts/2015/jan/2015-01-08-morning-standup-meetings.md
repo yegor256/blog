@@ -22,6 +22,9 @@ youtube:
   - ibT5oKToMoQ
   - dE0_j4Kk6jo
   - pt9uHp35fwM
+jb_picture:
+  src: /images/2015/01/cool-hand-luke.png
+  caption: Cool Hand Luke (1967) by Stuart Rosenberg
 ---
 
 A stand-up meeting (or simply "stand-up") is
@@ -45,7 +48,7 @@ key management instrument.
 
 <!--more-->
 
-{% picture /images/2015/01/cool-hand-luke.png 0 Cool Hand Luke (1967) by Stuart Rosenberg %}
+{% jb_picture_body %}%}
 
 To explain what I mean, let's look at management from a few different
 angles and compare how good and bad managers would organize their

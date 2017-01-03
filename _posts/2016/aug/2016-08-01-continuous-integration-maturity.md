@@ -14,6 +14,9 @@ keywords:
   - continuous integration maturity
   - continuous integration definition
   - continuous integration example
+jb_picture:
+  src: /images/2016/08/twins.jpg
+  caption: Twins (1988) by Ivan Reitman
 ---
 
 There are a number of levels you have to go through before your
@@ -26,7 +29,7 @@ you&mdash;Which level are you at? Post your answer below.
 
 <!--more-->
 
-{% picture /images/2016/08/twins.jpg 0 Twins (1988) by Ivan Reitman %}
+{% jb_picture_body %}%}
 
 1. **Source Code**.
 Here you just write source code on your computers and maybe somewhere on
