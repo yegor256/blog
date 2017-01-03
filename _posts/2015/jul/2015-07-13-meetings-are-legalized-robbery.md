@@ -14,7 +14,6 @@ keywords:
   - why meetings suck
   - meetings in software team
   - how to organize meetings
-og_image: /images/2015/07/heat.jpg
 youtube:
   - ibT5oKToMoQ
   - LB_YLWhGrco

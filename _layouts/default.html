@@ -25,9 +25,7 @@ layout: compress
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {% if page.og_image %}
-      <meta property="og:image:url" content="{{ site.url }}{{ page.og_image }}"/>
-    {% endif %}
+    {{ page | jb_picture_head }}
     <meta property="og:site_name" content="yegor256"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
