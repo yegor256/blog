@@ -29,7 +29,7 @@ obvious that we indeed do not need classes.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is a prototype.
 

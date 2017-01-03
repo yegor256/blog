@@ -30,7 +30,7 @@ remote mode, if done right, **guarantees** higher quality of code. Surprised?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are basically four simple ingredients to success ... you know what, there is
 actually _one_ main ingredient, and its name is **control**. If we want quality

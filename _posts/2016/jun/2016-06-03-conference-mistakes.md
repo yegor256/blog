@@ -29,7 +29,7 @@ The most serious mistakes and pieces of advice are at the bottom.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Too formal**.
 Very often all I'm getting from event organizers is a formal email that

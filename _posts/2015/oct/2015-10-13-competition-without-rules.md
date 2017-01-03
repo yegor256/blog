@@ -33,7 +33,7 @@ Is this how it should be?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 We are trying to **avoid explicitness** in these sensitive subjects. Indeed,
 how can we tell Jeff that his salary is lower than

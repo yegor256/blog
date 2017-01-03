@@ -40,7 +40,7 @@ or maintenance of software, this concept may not be relevant.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 No matter how unpleasant this could be, let's face the reality:
 each software project is a business, and we, the developers, are

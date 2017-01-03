@@ -37,7 +37,7 @@ even when its title is changed frequently. Let me explain how.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## Identity, State, and Behavior
 

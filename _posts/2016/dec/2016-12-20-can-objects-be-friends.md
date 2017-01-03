@@ -29,7 +29,7 @@ while allowing objects to interact.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Say that this is our object:
 

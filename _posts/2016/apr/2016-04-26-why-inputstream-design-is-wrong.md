@@ -33,7 +33,7 @@ created supplementary "smart" classes.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 This is how it looks now:
 

@@ -34,7 +34,7 @@ I love or hate each one. Follow me, in alphabetic order.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.

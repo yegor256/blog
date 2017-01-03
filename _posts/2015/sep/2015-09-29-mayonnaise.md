@@ -35,7 +35,7 @@ everywhere else.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Seriously, look at **IT recruiters**, for example. To find a programmer, one has to pay
 about $30K (in Silicon Valley, if a programmer's salary is, say, $120K a year)

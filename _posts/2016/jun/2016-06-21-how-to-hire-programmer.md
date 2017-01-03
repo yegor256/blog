@@ -26,7 +26,7 @@ are many of them, but the list below succinctly summarizes the most important on
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I'll be referring to "him," but these recommendations apply equally to both female and male
 <del>slaves</del> software developers.

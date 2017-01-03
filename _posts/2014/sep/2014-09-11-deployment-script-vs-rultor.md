@@ -37,7 +37,7 @@ deployment script(s).
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Before we start with the arguments, let me emphasize that Rultor
 is a useful interface to your custom scripts. When you decide

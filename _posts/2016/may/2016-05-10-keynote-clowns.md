@@ -26,7 +26,7 @@ It doesn't look so difficult to become one. Here are my thoughts.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Be obvious!**
 Don't take a chance by suggesting something new. It's risky and

@@ -31,7 +31,7 @@ from the point of view of a programmer reading a specification document.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Chapter 4.3 of a famous standard
 [IEEE 830-1998](https://standards.ieee.org/findstds/standard/830-1998.html)

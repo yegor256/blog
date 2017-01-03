@@ -32,7 +32,7 @@ any software development to anyone. Is it just me? Not really.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 This preamble is just a joke, but it's not so far from
 [the truth]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}). Of course,

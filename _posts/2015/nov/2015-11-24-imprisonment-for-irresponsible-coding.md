@@ -28,7 +28,7 @@ against **irresponsible coding**?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Software is part of my life. It actually **is** my **life**, not just part of it. I stare
 at this MacBook for much more time every day than I drive, talk, or listen

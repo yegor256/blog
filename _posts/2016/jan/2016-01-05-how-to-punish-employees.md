@@ -38,7 +38,7 @@ Here is a list of the most effective methods.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Disclaimer: I'm using the pronoun "he" merely for simplicity of speech. The
 same exact rules apply to both males and females.

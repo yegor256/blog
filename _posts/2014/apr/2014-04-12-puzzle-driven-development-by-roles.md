@@ -91,7 +91,7 @@ to fix the project. He has to use the sponsor's time and money in order
 to remove all bugs and inconsistencies and return the project back
 to a "fixed" state.
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 When I say "bugs," I mean more than just software errors but also:
 

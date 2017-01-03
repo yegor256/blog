@@ -42,7 +42,7 @@ startup. Below I summarize my experience with organizing such technical reviews.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 An independent review is when you ask someone outside of your team
 to look at your source code and other technical resources

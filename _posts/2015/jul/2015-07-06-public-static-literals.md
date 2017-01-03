@@ -33,7 +33,7 @@ These guys are setting a bad example! `public` `static`
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is what I'm talking about, specifically:
 

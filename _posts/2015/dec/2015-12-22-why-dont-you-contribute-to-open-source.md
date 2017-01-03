@@ -31,7 +31,7 @@ about that every week. Let me answer them all here.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 The gist of all those comments is this: "I don't contribute to open source,
 but I'm still very passionate about software development." Then, there is

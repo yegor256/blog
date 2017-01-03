@@ -34,7 +34,7 @@ that yes, indeed, good programmers create _fewer_ bugs.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I think this is all about how we define _quality_ and what a _bug_ is.
 

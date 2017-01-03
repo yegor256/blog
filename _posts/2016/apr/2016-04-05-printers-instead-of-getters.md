@@ -30,7 +30,7 @@ the data out of an object, right? Nope. Wrong.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I'm suggesting to use "printers" instead. Instead of exposing
 data via getters, an object will have a functionality of **printing**

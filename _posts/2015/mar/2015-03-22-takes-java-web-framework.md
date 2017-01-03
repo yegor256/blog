@@ -39,7 +39,7 @@ Let's see what was created and how it works.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## Java Web Architecture in a Nutshell
 

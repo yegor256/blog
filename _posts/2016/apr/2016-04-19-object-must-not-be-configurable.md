@@ -31,7 +31,7 @@ it from a practical perspective.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's say there is a class that is supposed to read a web page and
 return its content:

@@ -31,7 +31,7 @@ why you always work **top down**. Let's see what I mean through a practical exam
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Say I'm contracted by a friend of mine to create a word-counting command line
 tool very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He

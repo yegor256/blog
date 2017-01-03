@@ -33,7 +33,7 @@ perfect, but its common understanding in the OOP world is simply wrong
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 [Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.

@@ -31,7 +31,7 @@ that it's not exactly how things should work. What's next?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 In our projects, a product owner (PO) is usually a representative of
 a project sponsor (the paying customer). Since all our projects are rather

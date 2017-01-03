@@ -27,7 +27,7 @@ Encapsulation leads to the absence of _naked_ data on all levels and in all form
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 This is what naked data is (C code):
 

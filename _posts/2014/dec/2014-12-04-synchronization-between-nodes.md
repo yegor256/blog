@@ -39,7 +39,7 @@ So I decided to create one&mdash;[stateful.co](http://www.stateful.co).
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is a practical example. I have a Java web app that is hosted
 at Heroku. There are three servers (a.k.a. "dynos") running the same `.war`

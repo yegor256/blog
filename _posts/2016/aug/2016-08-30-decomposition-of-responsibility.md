@@ -28,7 +28,7 @@ the former is better than the latter.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's say this is our code (it is Ruby):
 

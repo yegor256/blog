@@ -30,7 +30,7 @@ constructing mechanism.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is what I mean:
 

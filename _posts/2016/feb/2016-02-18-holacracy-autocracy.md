@@ -29,7 +29,7 @@ that are never doubted by subordinates and an explicitly defined hierarchy.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 According to Wikipedia at the time of writing, a
 [**holacracy**](https://en.wikipedia.org/wiki/Holacracy) exists when

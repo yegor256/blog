@@ -29,7 +29,7 @@ or in-house teams.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I actually decided to write this after a short sales meeting recently
 with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his

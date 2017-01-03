@@ -35,7 +35,7 @@ try {
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Pay attention: I don't have anything against this code:
 

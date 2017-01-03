@@ -29,7 +29,7 @@ for the project, not for the boss.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 We all work on **projects** as developers, designers, programmers,
 [managers]({% pst 2015/sep/2015-09-22-micromanagement %}),

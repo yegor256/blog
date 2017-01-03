@@ -33,7 +33,7 @@ in line with their salaries&mdash;it's disgusting.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Why is this happening? Why are their diagrams complex and difficult to read?
 I'm sure you know what I'm talking about; you probably have your own examples

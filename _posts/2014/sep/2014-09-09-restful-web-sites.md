@@ -40,7 +40,7 @@ the data?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 [XSLT]({% pst 2015/feb/2015-02-02-xsl-transformations-in-java %})
 is the technology that can help us do this.

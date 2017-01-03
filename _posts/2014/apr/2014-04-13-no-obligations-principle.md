@@ -82,7 +82,7 @@ responsibility **must be** on the shoulders of the team members. They should be
 responsible for their own tasks and report back to the project manager when they
 are finished with their jobs.
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Implementation problems should be solved by team members on their own. So, how
 do we accomplish this in [XDSD](http://www.xdsd.org)?

@@ -30,7 +30,7 @@ I don't think you're a good entrepreneur.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 So you want a good programmer to build your product. Or maybe a group
 of good programmers. And you are ready to give me some equity

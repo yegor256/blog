@@ -34,7 +34,7 @@ a glossary.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone

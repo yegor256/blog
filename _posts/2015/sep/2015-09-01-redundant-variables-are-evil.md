@@ -28,7 +28,7 @@ once is redundant and must be replaced with a value.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here, variable `fileName` is redundant:
 

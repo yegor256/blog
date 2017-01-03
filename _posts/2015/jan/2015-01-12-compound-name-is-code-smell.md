@@ -30,7 +30,7 @@ And a big, complex scope is an obvious code smell.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 The scope of a variable is the place where it is visible, like a method, for example. Look
 at this Ruby class:

@@ -28,7 +28,7 @@ is mostly for people who work with us, either as clients or freelancers.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are just a few roles:
 

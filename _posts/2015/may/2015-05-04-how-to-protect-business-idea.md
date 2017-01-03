@@ -28,7 +28,7 @@ been on both sides. Here is my experience and a few recommendations.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are basically a few levels of protection you can obtain, and they are
 listed below, from the simplest and least secure to the most expensive and

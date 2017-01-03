@@ -57,7 +57,7 @@ You can view more details about this principle in the following articles:
 or
 [Definition of Done]({% pst 2014/apr/2014-04-15-definition-of-done %}).
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 As mentioned above, this is one of the most important differences between XDSD
 and other methods. Many people get confused when they see this principle in

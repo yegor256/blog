@@ -38,7 +38,7 @@ software design discipline ... and it's very _sad_ to see it.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 A good [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), doesn't need

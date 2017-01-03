@@ -28,7 +28,7 @@ principles and become a expert. Here they are, the principles.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Look**.
 Rule number 1: You must look right, like Mark Zuckerberg&mdash;the

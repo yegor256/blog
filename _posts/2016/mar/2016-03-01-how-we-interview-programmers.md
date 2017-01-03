@@ -32,7 +32,7 @@ There are a few basic principles I would like to share.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## The Market Interviews You, Not Us
 

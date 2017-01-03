@@ -35,7 +35,7 @@ you will eventually find one. In the meantime, this manual is for you :)
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Help Others**.
 Find the stupidest newbies and help them. Regardless of what exactly

@@ -41,7 +41,7 @@ honestly show your clients all project internals and still keep them on board.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## He Is Breaking Our Process
 

@@ -40,7 +40,7 @@ Hopefully you find them helpful.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## No Fear
 

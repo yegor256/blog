@@ -34,7 +34,7 @@ Instead, they are collections of procedures pretending to be classes.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 [Peter Coad](http://en.wikipedia.org/wiki/Peter_Coad)
 used to say: Challenge any class name that ends in "-er." There

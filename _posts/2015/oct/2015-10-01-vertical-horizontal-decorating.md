@@ -32,7 +32,7 @@ some food for thought.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's say I have a list of numbers:
 

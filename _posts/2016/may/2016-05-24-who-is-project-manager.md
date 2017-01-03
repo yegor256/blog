@@ -29,7 +29,7 @@ leader is valuable at all...
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are **three things** I want to define: project, project
 management, and project manager. Once they are clear, my previous statement

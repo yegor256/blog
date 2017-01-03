@@ -27,7 +27,7 @@ to your project. This is the list of all of them I'm aware of at the moment.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 The damage I'm talking about is caused mostly by the distance between these communication
 channels and project artifacts. The farther away people stay from documents,

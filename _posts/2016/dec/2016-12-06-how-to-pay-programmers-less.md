@@ -35,7 +35,7 @@ share.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Keep salaries secret**.
 It's obvious: Don't let them discuss

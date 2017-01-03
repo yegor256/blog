@@ -29,7 +29,7 @@ growing revenue may kill it even faster.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I see this rather typical pattern in many startups we interview
 at [SeedRamp](http://www.seedramp.com). The idea is great, the prototype

@@ -32,7 +32,7 @@ each talk, a few people told me that what I'm suggesting is called
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Moreover, they claimed that ActiveRecord actually solves the problem
 I've found in ORM. They said I should explain in my talks that

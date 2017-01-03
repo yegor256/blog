@@ -29,7 +29,7 @@ amount is smaller&mdash;less than **$20K**, and decisions are faster.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are basically three problems we're trying to solve with this
 new idea: 1) Investors are **cowards**, 2) investors are **cowards**, and

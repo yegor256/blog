@@ -30,7 +30,7 @@ this idea in practice, an architect uses two instruments:
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 At [Teamed.io](http://www.teamed.io), we discourage any
 [communication]({% pst 2016/aug/2016-08-23-communication-maturity %})

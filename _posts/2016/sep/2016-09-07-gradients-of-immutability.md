@@ -29,7 +29,7 @@ are a few more gradients; let's take a look.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
 an object is a **representative** of someone else

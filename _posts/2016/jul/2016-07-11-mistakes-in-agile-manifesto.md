@@ -29,7 +29,7 @@ interpretation of each principle.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."

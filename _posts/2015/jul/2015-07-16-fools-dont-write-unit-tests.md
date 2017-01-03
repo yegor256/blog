@@ -32,7 +32,7 @@ the tool that makes your work faster? Let me show you how.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 TDD or not, a unit test is a unit test. Either you create it before
 the main piece of code or after it.

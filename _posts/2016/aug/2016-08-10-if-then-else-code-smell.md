@@ -27,7 +27,7 @@ illustrates the problem. So it's time to demonstrate it and explain.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Take a look at the class
 [`DyTalk`](https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java)

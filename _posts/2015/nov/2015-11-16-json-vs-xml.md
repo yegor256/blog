@@ -30,7 +30,7 @@ They are very different things with their own areas of applicability.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is how a simple JSON piece of data may look
 (140 characters):

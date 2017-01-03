@@ -27,7 +27,7 @@ simplify it.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's start with this code:
 

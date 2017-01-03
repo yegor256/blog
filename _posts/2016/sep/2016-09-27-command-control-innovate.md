@@ -30,7 +30,7 @@ else is going on.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 We are lazy and greedy animals. To work and produce something
 for someone, we need two things: motivation and punishment. The

@@ -31,7 +31,7 @@ should I expect, right? Not just that. I think the problem is bigger.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Have any of you seen this movie: [Cossacks of the Kuban](http://www.imdb.com/title/tt0041562/)?
 It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_Stalin)

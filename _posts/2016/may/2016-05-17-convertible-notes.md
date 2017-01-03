@@ -31,7 +31,7 @@ should pay attention to.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## Why Not Equity?
 

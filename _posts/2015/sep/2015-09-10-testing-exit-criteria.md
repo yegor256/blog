@@ -34,7 +34,7 @@ You're **fundamentally wrong**.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 All this is perfectly explained by Glenford Myers in his [great book](http://amzn.to/1Y3qAbN)
 [The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).

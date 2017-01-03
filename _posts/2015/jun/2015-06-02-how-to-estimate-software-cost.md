@@ -34,7 +34,7 @@ the cost?" I can, but I won't. Here is why.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let me ask you something else: **Why do you need an estimate?**
 Yes, I mean it&mdash;why do you ask me how much it will cost

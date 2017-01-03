@@ -29,7 +29,7 @@ I'd like to introduce a better one.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 What is an object? I've done a little research, and this is what I've found:
 

@@ -27,7 +27,7 @@ it is just wrong. There is no excuse for what he has done.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 By the way, his name, to my knowledge, was
 [Martin Fowler](http://martinfowler.com/bliki/LocalDTO.html). Maybe he

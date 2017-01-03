@@ -27,7 +27,7 @@ and **open** procedure, **visible** and **understood** by the entire team.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I mentioned this problem before in
 [my post]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) about team morale.

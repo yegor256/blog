@@ -34,7 +34,7 @@ in the skeleton creation part; let me show you them one by one.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's use some examples to make this more illustrative. Let's say I'm a
 software architect and the project is a "Google killer." We're hired to

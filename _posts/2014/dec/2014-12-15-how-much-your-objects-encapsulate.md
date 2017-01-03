@@ -36,7 +36,7 @@ this case I have to&mdash;it depends.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 As [we discussed before]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 a good object is a representative of a real-life entity. Such an entity

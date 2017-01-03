@@ -34,7 +34,7 @@ utility methods, which make our code procedural rather than object-oriented.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:

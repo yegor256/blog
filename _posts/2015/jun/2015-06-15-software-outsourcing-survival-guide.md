@@ -31,7 +31,7 @@ at the bottom). I wish someone would have given it to me 15 years ago.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Have a "Work for Hire" Agreement**.
 Make sure [the contract]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %})

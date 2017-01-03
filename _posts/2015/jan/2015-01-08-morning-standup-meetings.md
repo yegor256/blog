@@ -48,7 +48,7 @@ key management instrument.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 To explain what I mean, let's look at management from a few different
 angles and compare how good and bad managers would organize their

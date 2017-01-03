@@ -31,7 +31,7 @@ un-extensible.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's say we're making an interface that would represent a name of a person:
 

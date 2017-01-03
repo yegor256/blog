@@ -26,7 +26,7 @@ in a consensus. Does that sound strange? It's not sarcasm. Read on.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Have you ever heard the term "win-win?" Do you know what it means? My guess is that
 most of my readers aren't exactly sure what this is about, even though

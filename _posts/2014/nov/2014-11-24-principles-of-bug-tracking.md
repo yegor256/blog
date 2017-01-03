@@ -35,7 +35,7 @@ team, you may find them useful.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## 1. Keep It One-on-One
 

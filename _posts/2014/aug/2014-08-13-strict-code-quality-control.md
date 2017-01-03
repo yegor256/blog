@@ -99,7 +99,7 @@ be patient and try to get used to this new approach to quality.
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Why is it good? Read on.
 

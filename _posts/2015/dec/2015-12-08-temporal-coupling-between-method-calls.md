@@ -29,7 +29,7 @@ a look at this example.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is the code:
 

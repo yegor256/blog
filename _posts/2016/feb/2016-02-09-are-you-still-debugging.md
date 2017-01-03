@@ -33,7 +33,7 @@ If debugging is required, the **design is bad**.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 imperative procedural programmer, and this is my Java code:

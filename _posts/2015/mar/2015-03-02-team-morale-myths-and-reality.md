@@ -38,7 +38,7 @@ has a good [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 **Fire Fast**.
 The first and most important quality of a good manager is his or her

@@ -43,7 +43,7 @@ and where this misconception is coming from.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:

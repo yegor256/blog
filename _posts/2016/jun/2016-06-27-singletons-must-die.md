@@ -29,7 +29,7 @@ be "global"; but what do we do with them?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I assume you already know what a singleton is and why it's an anti-pattern.
 If not, I recommend you read this StackOverflow thread:

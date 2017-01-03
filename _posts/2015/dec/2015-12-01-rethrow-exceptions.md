@@ -32,7 +32,7 @@ Both are wrong.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 This is how the code may look:
 

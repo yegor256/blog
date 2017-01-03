@@ -30,7 +30,7 @@ ancient slaves in our offices and in front of our monitors?
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 This post is partially provoked by a recently published semi-historical book
 [**How to Manage Your Slaves**](http://amzn.to/2crHiNG)

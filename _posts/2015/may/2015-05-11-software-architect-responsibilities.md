@@ -34,7 +34,7 @@ if we succeed. Here is what I, as
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 In all projects we run at [Teamed.io](http://www.teamed.io), I expect
 regular reports from software architects a few times a week. Each report

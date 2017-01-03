@@ -158,7 +158,7 @@ Object thinking immediately eliminates
 [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:

@@ -40,7 +40,7 @@ for example.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 I think we should. And I think I know the reason why.
 

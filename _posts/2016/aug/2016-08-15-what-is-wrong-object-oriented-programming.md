@@ -36,7 +36,7 @@ So I Googled a bit, and this is what I found (in chronological order).
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 The list of quotes is sorted in chronological order, with the oldest on
 the top:

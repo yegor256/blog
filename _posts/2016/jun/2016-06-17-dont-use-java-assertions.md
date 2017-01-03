@@ -27,7 +27,7 @@ in all situations and assertions should never be used. Here's why.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's see what happens when an assertion is triggered. Say that this
 is our code:

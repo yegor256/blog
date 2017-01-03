@@ -39,7 +39,7 @@ manipulations on them. What is the alternative? **SQL-speaking objects**.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## How ORM Works
 

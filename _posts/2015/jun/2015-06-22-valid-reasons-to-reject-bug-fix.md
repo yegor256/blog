@@ -30,7 +30,7 @@ valid reasons for such a rejection, according to my experience.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 ## It Degrades Code Coverage
 

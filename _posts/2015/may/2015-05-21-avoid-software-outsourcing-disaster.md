@@ -33,7 +33,7 @@ a way to do
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Yes, it is possible to do it right and truly hassle-free, but you have
 to be ready to twist your management philosophy.

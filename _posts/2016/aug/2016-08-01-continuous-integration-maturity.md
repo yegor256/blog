@@ -29,7 +29,7 @@ you&mdash;Which level are you at? Post your answer below.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 1. **Source Code**.
 Here you just write source code on your computers and maybe somewhere on

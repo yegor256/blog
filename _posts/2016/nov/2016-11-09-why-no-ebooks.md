@@ -27,7 +27,7 @@ to go if you want to read my content.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 First of all, there is a simple technical reason:
 

@@ -32,7 +32,7 @@ alternative. Let me explain.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 JUnit officially suggests a
 [test fixture](http://junit.org/faq.html#atests_2):

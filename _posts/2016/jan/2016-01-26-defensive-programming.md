@@ -29,7 +29,7 @@ I'm suggesting you use **validating decorators** instead.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let's take a look at this rather typical Java example:
 

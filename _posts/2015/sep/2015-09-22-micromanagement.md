@@ -30,7 +30,7 @@ is something completely different.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 There are [tons of articles](https://www.google.com/search?q=micromanagement)
 about micromanagement. Most of them emphasize that the "micro" prefix prescribes

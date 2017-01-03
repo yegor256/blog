@@ -31,7 +31,7 @@ multiple exception types are a bad idea too.
 
 <!--more-->
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 Let me first explain how I understand exceptions in object-oriented programming.
 Then I'll compare my understanding with a "traditional" approach, and
