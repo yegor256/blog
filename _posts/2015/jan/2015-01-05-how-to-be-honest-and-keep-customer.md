@@ -217,7 +217,7 @@ decisions made internally.
 
 To conclude, I strongly believe it is important to be honest
 and open with each client, no matter how difficult it is. Try to
-learn from every [conflict]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %})
+learn from every [conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
 with each client, and improve your management
 process and your principles of work. Hiding source code is not
 professional and makes you look bad in the eyes of your clients and

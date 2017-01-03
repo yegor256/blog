@@ -76,7 +76,7 @@ and low quality of code? I don't think so. Moreover, my experience
 tells me the opposite. Our programmers at [teamed.io](http://www.teamed.io)
 are from more than 15 countries, and we've never had cultural issues get
 tangled up in any
-[work conflict]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %}), which we have a lot of.
+[work conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}), which we have a lot of.
 
 **Lack of Face-to-Face Talking**.
 "They are far away somewhere in Poland, so you rarely really talk to them.

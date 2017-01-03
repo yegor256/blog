@@ -41,7 +41,7 @@ with ignoring almost any violation. Let's not forget this.
 We're not discussing here the risk of losing a product. This also happens
 very often&mdash;your programmers start working for you, you pay them,
 they show you something, and then things go south. You find yourself in
-[conflict]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %})
+[conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
 with them, and they don't deliver you anything; they ask for extra money instead.
 You end up with nothing or something that is broken and can't be put on the market.
 This is yet another risk, which I'll try to describe in another article soon.
