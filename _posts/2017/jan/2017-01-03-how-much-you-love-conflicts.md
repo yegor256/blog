@@ -31,7 +31,7 @@ in a consensus. Does that sound strange? It's not sarcasm. Read on.
 Have you ever heard the term "win-win?" Do you know what it means? My guess is that
 most of my readers aren't exactly sure what this is about, even though
 it's used very often. Let me explain. In any conflict,
-there are three possible outcomes: win-lose, lose-lose, and win-win.
+there are three possible outcomes: lose-lose, win-lose, and win-win.
 The first one is the worst, and the last one is the best. Here is an example.
 
 Say your wife wants to watch a movie, and you want to watch a
