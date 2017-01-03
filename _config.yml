@@ -35,6 +35,7 @@ exclude:
 
 gems:
   - jekyll-feed
+  - jekyll-bits
   - jekyll-paginate
   - jekyll-plantuml
   - jekyll-sitemap
