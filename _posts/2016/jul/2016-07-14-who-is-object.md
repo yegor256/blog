@@ -16,7 +16,7 @@ keywords:
   - what is object in oop
 jb_picture:
   src: /images/2016/07/jackass-the-movie.jpg
-  caption: Jackass: The Movie (2002) by Jeff Tremaine
+  caption: "Jackass: The Movie (2002) by Jeff Tremaine"
 ---
 
 There are thousands of books about object-oriented programming and

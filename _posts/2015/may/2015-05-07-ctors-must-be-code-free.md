@@ -19,7 +19,7 @@ youtube:
   - 9yjtsCK6Wdk
 jb_picture:
   src: /images/2015/05/kill-bill.jpg
-  caption: Kill Bill: Vol. 2 (2004) by Quentin Tarantino
+  caption: "Kill Bill: Vol. 2 (2004) by Quentin Tarantino"
 ---
 
 How much work should be done within a constructor? It seems reasonable

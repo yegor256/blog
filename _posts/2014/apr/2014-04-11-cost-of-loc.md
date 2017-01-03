@@ -47,7 +47,7 @@ non-empty and non-comment lines of code, using
 
 It was a commercial project, so I can't disclose its name.
 
-{% jb_picture_body %}%}
+{% jb_picture_body %}
 
 The team was co-located in one
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})

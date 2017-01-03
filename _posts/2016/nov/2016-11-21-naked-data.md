@@ -16,7 +16,7 @@ keywords:
   - encapsulation violation
 jb_picture:
   src: /images/2016/11/borat.jpg
-  caption: Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles
+  caption: "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"
 ---
 
 Encapsulation is the core principle of object-oriented programming

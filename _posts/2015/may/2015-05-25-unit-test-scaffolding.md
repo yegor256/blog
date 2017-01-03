@@ -18,7 +18,7 @@ youtube:
   - l6MpCBzwDbg
 jb_picture:
   src: /images/2015/05/leon-the-professional.jpg
-  caption: Léon: The Professional by Luc Besson
+  caption: "Léon: The Professional by Luc Besson"
 ---
 
 When I start to repeat myself in unit test methods by creating

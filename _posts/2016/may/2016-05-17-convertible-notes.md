@@ -16,7 +16,7 @@ keywords:
   - convertible notes vs safe
 jb_picture:
   src: /images/2016/05/the-godfather-iii.jpg
-  caption: The Godfather: Part III (1990) by Francis Ford Coppola
+  caption: "The Godfather: Part III (1990) by Francis Ford Coppola"
 ---
 
 "[Convertible Notes](https://en.wikipedia.org/wiki/Convertible_bond)"
