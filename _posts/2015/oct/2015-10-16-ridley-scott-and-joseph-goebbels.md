@@ -74,7 +74,9 @@ It is a lie, very similar to the lie we heard in 1949.
 
 The truth is that you are not going to get anywhere if you follow
 the spirit of this movie. In reality, teamwork must look completely
-different. There are conflicts, fights, politics, betrayals, back-stabbing,
+different. There are
+[conflicts]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %}),
+fights, politics, betrayals, back-stabbing,
 leakage of information, and just primitive incompetence. To manage all
 this, one can't just be a **nice guy** with a big heart. I would even say
 that being a nice guy is a drawback for any management position in a modern

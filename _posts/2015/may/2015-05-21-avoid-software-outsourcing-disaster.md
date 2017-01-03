@@ -171,7 +171,8 @@ a new web development team. How does this sound? I bet it's familiar.
 {% quote We encourage project sponsors to be pessimistic and negative about our quality %}
 
 I believe the root cause of this dead-end situation is a **fear**
-of conflict. At early stages in the project, you try to do everything you can
+of [conflict]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %}).
+At early stages in the project, you try to do everything you can
 to keep a good relationship with the outsourcing company and not to offend anyone.
 You don't want to control anyone's work because they may take it as an insult.
 You don't want to express your quality concerns because they may

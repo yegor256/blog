@@ -90,7 +90,7 @@ answer at least these basic questions:
 
   * How my personal results are measured?
   * Who gives me tasks and who do I report to?
-  * How should I resolve conflicts between tasks?
+  * How should I resolve [conflicts]({% pst 2017/01/2017-01-03-how-much-you-love-conflicts %}) between tasks?
   * What are my personal deadlines for every task?
   * Do I have measurable quality expectations for my deliverables?
   * How do my mistakes affect my performance grade?

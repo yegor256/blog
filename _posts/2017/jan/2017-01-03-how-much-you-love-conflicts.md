@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Much Do You Love Conflict?"
-date: 2016-12-18
+date: 2017-01-03
 place: Kiev, Ukraine
 tags: management
 description: |
@@ -22,6 +22,8 @@ project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It's not sarcasm. Read on.
 
 <!--more-->
+
+{% picture /images/2017/01/being-flynn.jpg 0 Being Flynn (2012) by Paul Weitz %}
 
 Have you ever heard the term "win-win?" Do you know what it means? My guess is that
 most of my readers aren't exactly sure what this is about, even though
