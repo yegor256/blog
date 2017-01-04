@@ -50,7 +50,7 @@ related:
 # jekyll-feed
 feed:
   title: yegor256.com
-  subtitle: Programming Blog
+  subtitle: Blog About Computers
   path: rss.xml
 
 sass:
