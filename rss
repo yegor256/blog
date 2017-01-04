@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-03T11:44:15+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-04T07:30:22+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
@@ -152,7 +152,7 @@ but by provoking them, making different interests visible, and finding the
 most optimal solutions.&lt;/p&gt;
 
 &lt;p&gt;Be aware, though, that this is way more difficult than organizing
-&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>Conflict is what progress is made of. A professional and well-managed
+&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary>Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary></entry><entry><title>Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
@@ -230,7 +230,7 @@ something about &lt;code&gt;t&lt;/code&gt;, we know exactly where to update the 
 &lt;p&gt;P.S. After discussing this idea below in comments I
 &lt;a href=&quot;http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632&quot;&gt;started&lt;/a&gt; to think
 that we don&amp;#39;t need that &lt;code&gt;trust&lt;/code&gt; keyword at all. Instead, we should just
-give all decorators access to all private attributes of an object.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>As discussed before,
+give all decorators access to all private attributes of an object.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>As discussed before,
 proper encapsulation leads to a complete absence
 of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
@@ -304,7 +304,7 @@ from decorators. It grows, but never falls apart.&lt;/p&gt;
 which turns Model into a passive data holder and View into
 a passive data renderer. The controll&lt;b&gt;er&lt;/b&gt;, the hold&lt;b&gt;er&lt;/b&gt;,
 the render&lt;b&gt;er&lt;/b&gt; ...
-Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>Model-View-Controller
+Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>Model-View-Controller
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 Web frameworks. It is convenient
@@ -445,7 +445,7 @@ just because you&amp;#39;re good friends. How do you become friends? Well, meet 
 families, invite them over for dinner at your house, give them birthday
 gifts&amp;mdash;all those tricks. They will save you a lot of money.&lt;/p&gt;
 
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="mood" /><category term="sarcasm" /><summary>To create software, you need programmers. Unfortunately. They are expensive,
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary>To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -488,7 +488,7 @@ but into &lt;code&gt;.java&lt;/code&gt; files, later compilable to byte-code.&lt
 
 &lt;p&gt;I really count on your contribution. Please submit your ideas as
 tickets and pull request to the
-&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><summary>It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary>It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
 name is EO (as in
 Elegant Objects or in
 Esperanto): eolang.org.
@@ -572,7 +572,7 @@ and lead to maintainability problems.&lt;/p&gt;
 &lt;p&gt;The question is how we can work entirely without naked data, right? Eventually
 we have to let objects exchange data, don&amp;#39;t we? Yes, that&amp;#39;s true. But not entirely.
 I&amp;#39;ll explain that in
-&lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;my next post&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="oop" /><category term="java" /><summary>Encapsulation is the core principle of object-oriented programming
+&lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;my next post&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>Encapsulation is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it&amp;#39;s much more.
@@ -647,7 +647,7 @@ to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
   &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="conferences" /><summary>This is my list of software conferences that are worth attending,
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="conferences" /><summary>This is my list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
@@ -733,7 +733,7 @@ Their authors are afraid of refunds? Probably a combination of all that.
 I strongly believe that good products must cost good money. If it&amp;#39;s free,
 it&amp;#39;s bad (or there are some hidden costs or concealed promotion of something else).&lt;/p&gt;
 
-&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="mood" /><summary>Very often readers of my books ask me why
+&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary>Very often readers of my books ask me why
 I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
 EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
 to summarize them all and explain why dead trees are the only way
@@ -802,7 +802,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/JnRouvignac/AutoRefactor&quot;&gt;JnRouvignac/AutoRefactor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/javaslang/javaslang&quot;&gt;javaslang/javaslang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/HDouss/jeometry&quot;&gt;HDouss/jeometry&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="quality" /><summary>This is the third year of the
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary>This is the third year of the
 Software Quality Award. The prize
 is still the same&amp;mdash;$4,096.
 The rules are still the same. Read on.
@@ -902,7 +902,7 @@ need command and control, while at the same time doing
 A thousand years ago, masters physically damaged their slaves;
 today they damage us &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;mentally&lt;/a&gt;.
 Which one is worse? Where are we heading?
-I predict serious problems in the near future.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor@teamed.io</email></author><category term="management" /><summary>Command and control
+I predict serious problems in the near future.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary>Command and control
 has worked effectively in military units across the world
 for thousands of years. But apparently we&amp;#39;ve just discovered
 that the best companies are built on different verbs, which
