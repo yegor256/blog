@@ -4,6 +4,7 @@ title: "How to Pay Programmers Less"
 date: 2016-12-06
 tags: mood sarcasm
 place: Tallinn, Estonia
+categories: best
 description: |
   Programmers are expensive and difficult to control; here
   are a few tricks to keep them underpaid and happy, for
