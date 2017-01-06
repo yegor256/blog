@@ -45,7 +45,7 @@ Founded 2-Mar-2016.
 [s3auth.com](http://www.s3auth.com) is a lightweight Basic authentication
 gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
 a useful and simple functionality, that's why I created this small hosted
-service, which is actively used by hundreds buckets up to date.
+service, which is actively used by 1000+ buckets up to date.
 More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %})
 Founded 22-Aug-2012.
 
