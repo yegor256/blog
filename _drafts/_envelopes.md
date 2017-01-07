@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "Object Envelopes"
+title: "Decoratoring Envelopes"
 date: 2016-12-30
 place: Lviv, Ukraine
 tags: java oop
 description: |
-  ...
+  Composing a big object is a rather verbose
+  process in Java; would be great to have an
+  ability to do it shorter.
 keywords:
-  - object envelopes
+  - decorators
   - constructor in oop
   - primary constructor oop
   - oop constructor
@@ -19,14 +21,14 @@ interface by making an instance of another class. Sounds weird? Let me show
 an example. There are many classes of that kind in Takes Framework,
 they all are named like `*Wrap`. It's a convenient design concept, which
 unfortunately looks rather verbose in Java. Would be great to have something
-shorter, in [EO](http://www.eolang.org).
+shorter, for example, in [EO](http://www.eolang.org).
 
 <!--more-->
 
 Take a look at
 [`RsHtml`](https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java)
-from Takes Framework. Its design looks like this (a simplified version
-with only one primary constructor):
+from [Takes Framework](http://www.takes.org). Its design looks
+like this (a simplified version with only one primary constructor):
 
 {% highlight java %}
 class RsHtml extends RsWrap {
@@ -76,51 +78,46 @@ Response response = new RsWithType(
 );
 {% endhighlight %}
 
-Instead of doing it over and over again in many places you use `RsHtml`:
+Instead of doing this composition of decorators over and over
+again in many places you use `RsHtml`:
 
 {% highlight java %}
 String text = // you have it already
 Response response = new RsHtml(text);
 {% endhighlight %}
 
-We can go a bit further and introduce some extra functionality in
-`RsHtml`, on top of just decorating provided argument. For example,
-we can:
+It is very convenient, but that `RsWrap` is very verbose. Too many
+lines, which are not doing anything special, just forwarding all method
+calls to the encapsulated `Response`.
+
+How about we introduce a new concept&mdash;"decorators" with a new
+keyword `decorates`:
 
 {% highlight java %}
-class RsHtml extends RsWrap {
+class RsHtml decorates Response {
   RsHtml(final String text) {
-    super(RsHtml.make(text));
-  }
-  private static Response make(final String text) {
-    String type = // load it from disc
-    return new RsWithType(
-      new RsWithStatus(text, 200),
-      type
+    this(
+      new RsWithType(
+        new RsWithStatus(text, 200),
+        "text/html"
+      )
     )
   }
 }
 {% endhighlight %}
 
-The problem here is that this private static method `make()` will be
-called from constructor, which is a
-[bad idea]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) in general&mdash;to
-do anything in a constructor except initialization of object attributes.
-
-How about we introduce a new concept&mdash;"envelopes":
+Then, in order to create an object, we just call:
 
 {% highlight java %}
-envelope RsHtml implements Response {
-  RsHtml(final String text) {
-    String type = // load it from disc
-    return new RsWithType(
-      new RsWithStatus(text, 200),
-      type
-    )
-  }
-}
+Response response = new RsHtml(text);
 {% endhighlight %}
 
+We don't have any new methods in that decorators, just constructors.
+The only purpose of these guys is to create other objects and encapsulate
+them. They are not really full-purpose objects. They only help us
+create other objects.
+
+That's why I would call them "decorating envelopes."
 
 This idea may look very similar to the
 [Factory](https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29) design pattern,
