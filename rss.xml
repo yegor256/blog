@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-07T09:28:27+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-07T10:29:05+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/being-flynn.jpg&#39;/&gt;&lt;figcaption&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#929ab07e&#39;/&gt;&lt;figcaption id=&#39;929ab07e&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Have you ever heard the term &amp;quot;win-win?&amp;quot; Do you know what it means? My guess is that
 most of my readers aren&amp;#39;t exactly sure what this is about, even though
@@ -165,7 +165,7 @@ while allowing objects to interact.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/raging-bull.jpg&#39;/&gt;&lt;figcaption&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#52a9356c&#39;/&gt;&lt;figcaption id=&#39;52a9356c&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Say that this is our object:&lt;/p&gt;
 
@@ -246,7 +246,7 @@ should dislike MVC as much as I do. Here is why.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/hot-shots.jpg&#39;/&gt;&lt;figcaption&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#cdf5cce3&#39;/&gt;&lt;figcaption id=&#39;cdf5cce3&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is how MVC architecture looks:&lt;/p&gt;
 
@@ -320,7 +320,7 @@ share.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/ben-hur.jpg&#39;/&gt;&lt;figcaption&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/ben-hur.jpg&#39; longdesc=&#39;#cdad7b09&#39;/&gt;&lt;figcaption id=&#39;cdad7b09&#39;&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Keep salaries secret&lt;/strong&gt;.
 It&amp;#39;s obvious: Don&amp;#39;t let them discuss
@@ -462,7 +462,7 @@ truly object-oriented, with no compromises. You&amp;#39;re welcome to join us.&l
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/vicky-cristina-barcelona.jpg&#39;/&gt;&lt;figcaption&gt;Vicky Cristina Barcelona (2008) by Woody Allen&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/vicky-cristina-barcelona.jpg&#39; longdesc=&#39;#36492e39&#39;/&gt;&lt;figcaption id=&#39;36492e39&#39;&gt;Vicky Cristina Barcelona (2008) by Woody Allen&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Why yet another language? Because there are no object-oriented languages
 on the market that are really object-oriented, to my knowledge. Here are the
@@ -503,7 +503,7 @@ Encapsulation leads to the absence of &lt;em&gt;naked&lt;/em&gt; data on all lev
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/borat.jpg&#39;/&gt;&lt;figcaption&gt;Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/borat.jpg&#39; longdesc=&#39;#30fc8a97&#39;/&gt;&lt;figcaption id=&#39;30fc8a97&#39;&gt;Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is what naked data is (C code):&lt;/p&gt;
 
@@ -659,7 +659,7 @@ to go if you want to read my content.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/addams-family.jpg&#39;/&gt;&lt;figcaption&gt;The Addams Family (1991) by Barry Sonnenfeld&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/addams-family.jpg&#39; longdesc=&#39;#506d2874&#39;/&gt;&lt;figcaption id=&#39;506d2874&#39;&gt;The Addams Family (1991) by Barry Sonnenfeld&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First of all, there is a simple technical reason:&lt;/p&gt;
 
@@ -823,7 +823,7 @@ else is going on.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/09/andrei-rublev.jpg&#39;/&gt;&lt;figcaption&gt;Andrei Rublev (1966) by Andrei Tarkovsky&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/09/andrei-rublev.jpg&#39; longdesc=&#39;#853ad57c&#39;/&gt;&lt;figcaption id=&#39;853ad57c&#39;&gt;Andrei Rublev (1966) by Andrei Tarkovsky&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;We are lazy and greedy animals. To work and produce something
 for someone, we need two things: motivation and punishment. The
