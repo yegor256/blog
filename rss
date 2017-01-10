@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-09T17:14:06+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-10T12:10:55+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
+very often a customer &lt;del&gt;is an idiot&lt;/del&gt; doesn&amp;#39;t
+really know what he needs &amp;mdash; not only in terms of functionality, but also
+on a technical level. What makes the situation even worse is that the
+customer &lt;del&gt;very often&lt;/del&gt; always thinks he knows
+and understands enough. The question is how do you teach a customer? How
+do you train, educate, and help him? You don&amp;#39;t!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#fa67e914&#39;/&gt;&lt;figcaption id=&#39;fa67e914&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The temptation will be huge, though. You will think that the customer is your
+friend. You will want to help him. You will feel very motivated to
+make the product better. Moreover, you have the needed knowledge,
+so why not share it, right?&lt;/p&gt;
+
+&lt;p&gt;Wrong. Very wrong. On so many levels.&lt;/p&gt;
+
+&lt;p&gt;Most of all because the customer is not your friend. Not a partner, not a co-worker,
+not a colleague, and not a teammate. The customer is a project
+&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;stakeholder&lt;/a&gt;,
+just like you, but his needs are completely opposite of yours, and he is very aware
+of that.&lt;/p&gt;
+
+&lt;p&gt;He wants the project to finish as soon as possible and to take as little
+&lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;money&lt;/a&gt;
+out of his pocket as possible. You want exactly the opposite. You
+both work for the project, but from two very different angles.&lt;/p&gt;
+
+&lt;p&gt;Very soon, when the project fails (and it will fail, just like 94 percent of all
+software projects, according to
+&lt;a href=&quot;https://www.projectsmart.co.uk/white-papers/chaos-report.pdf&quot;&gt;Chaos Report&lt;/a&gt;),
+the customer will find someone to blame. Needless to say,
+he won&amp;#39;t blame himself; he will blame you.&lt;/p&gt;
+
+&lt;p&gt;According to the same report, only 7 percent of failures are caused by technical incompetence. Thus,
+most likely your project will fail because of an incorrect understanding of
+requirements, poor planning, misalignment of management objectives, etc. Do you really want to
+be blamed for the things you&amp;#39;re not an expert at? Let the customer
+fail; it&amp;#39;s his project, his life, and his money.&lt;/p&gt;
+
+&lt;p&gt;Do your technical job right and stay away from everything else. This
+is what true professionalism is about&amp;mdash;focus on the things you can do
+best of all and better than most others.&lt;/p&gt;
+
+&lt;p&gt;However, if you see that he is doing something wrong and definitely
+requires help, recommend that he hire a consultant. There are many people
+in the market who can help him with requirements, UX, business analysis,
+marketing planning, branding, etc. In most cases, customers just
+don&amp;#39;t know that these people exist, or they believe these services
+are just a waste of money.&lt;/p&gt;
+
+&lt;p&gt;Try to convince them that it&amp;#39;s not true, but don&amp;#39;t become an adviser
+in something you don&amp;#39;t understand. Your job is coding, so focus only on that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="outsourcing" /><summary>In outsourcing,
+very often a customer is an idiot doesn&amp;#39;t
+really know what he needs &amp;mdash; not only in terms of functionality, but also
+on a technical level. What makes the situation even worse is that the
+customer very often always thinks he knows
+and understands enough. The question is how do you teach a customer? How
+do you train, educate, and help him? You don&amp;#39;t!</summary></entry><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
@@ -812,101 +872,4 @@ Previous years are here:
 
 Registration is open! Fill
 this form
-to submit.</summary></entry><entry><title>Command, Control, and Innovate</title><link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html" rel="alternate" type="text/html" title="Command, Control, and Innovate" /><published>2016-09-27T00:00:00+00:00</published><updated>2016-09-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/09/27/command-control-innovate</id><content type="html" xml:base="http://www.yegor256.com/2016/09/27/command-control-innovate.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command_and_control&quot;&gt;Command and control&lt;/a&gt;
-has worked effectively in military units across the world
-for thousands of years. But apparently we&amp;#39;ve just discovered
-that the best companies are built on different verbs, which
-are inspire, delegate, trust, lead, innovate, etc. The question is
-whether we really uncovered something new that our
-predecessors failed to understand for ages or something
-else is going on.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/09/andrei-rublev.jpg&#39; longdesc=&#39;#853ad57c&#39;/&gt;&lt;figcaption id=&#39;853ad57c&#39;&gt;Andrei Rublev (1966) by Andrei Tarkovsky&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;We are lazy and greedy animals. To work and produce something
-for someone, we need two things: motivation and punishment. The
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Carrot_and_stick&quot;&gt;carrot and stick&lt;/a&gt;
-has been a dominating principle in management for thousands of years.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Colosseum&quot;&gt;The Colosseum&lt;/a&gt;
-was built not because people enjoyed building it
-but rather thanks to a simple rule: Good slaves ate, and bad ones were beaten to death.
-A primitive form of command-and-control management was most
-effective at that time, both in civil and military arenas.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;The external strength of any army is ensured by its internal discipline&lt;/aside&gt;
-
-&lt;p&gt;Once slavery became illegal in the 19th century,
-the simple rule changed: Good workers were paid, while
-bad ones were fired. 150 years ago in most countries, losing a
-job literally meant starvation and sometimes death, so it was not really
-far away from beating slaves to death.
-Because a hundred years ago there were nearly no mechanisms for
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Social_protection&quot;&gt;social protection&lt;/a&gt;,
-capitalists were allowed to do almost anything
-they wanted. A slightly more advanced but still rather primitive form
-of command and control was the best management paradigm.&lt;/p&gt;
-
-&lt;p&gt;Besides that, the armies of all time have always been built as hierarchies
-with very strict and deterministic definitions of responsibilities
-and authorities. Since the time of &lt;a href=&quot;https://en.wikipedia.org/wiki/Sun_Tzu&quot;&gt;Sun Tzu&lt;/a&gt;, the external
-strength of any army was ensured by its internal discipline, which
-was always about a clear and explicit chain of commands, rewards, and
-punishments.&lt;/p&gt;
-
-&lt;p&gt;The situation started to change only recently, in the 20th century.
-Three trends dramatically influenced the balance of power between
-employers and employees, masters and slaves, managers and managees:
-socialism, computers, and education.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;First of all, socialism is slowly taking over capitalism.
-Workers gradually obtain more rights and protections
-while employers lose them every year.
-Losing a job is not a tragedy for us anymore.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Second, the complexity of the tasks we perform at our workplaces
-is growing, mostly thanks to computers.
-We are not as easily replaceable as we were a few hundred years ago.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Third, we are getting smarter every year. Most of us know how to read
-and write. We learn more, faster, partially due to the Internet.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thanks to these three major trends, it&amp;#39;s almost impossible to apply
-the same primitive command-and-control management anymore: Modern workers
-are not the same as those who built the Colosseum in ancient Rome.
-We are very different, and our carrots and sticks must also be very
-different in order to be effective. Still, giving us carrots
-and sticks is absolutely necessary, because we are still lazy and greedy,
-just like the guys who built the Colosseum. Likewise,
-we need motivation and punishment in order to produce
-something for someone.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;They still adhere to command and control but mask it as inspire and trust&lt;/aside&gt;
-
-&lt;p&gt;What about creativity and inspiration? Just like the architects of
-the Colosseum, we need people today to create iPads and Facebooks,
-but management and coordination are what really make projects happen.
-And command and control is the only working mechanism for coordinating
-humans.&lt;/p&gt;
-
-&lt;p&gt;However, what management is doing now is absolutely evil and unethical.
-They still adhere to command and control but mask it as inspire and trust. They
-use carrots and sticks but redefine them as appreciation and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Peer_pressure&quot;&gt;peer pressure&lt;/a&gt;.
-They lie to us that we are not animals anymore and don&amp;#39;t
-need command and control, while at the same time doing
-&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;exactly that&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The primary victim of this slick approach is our mental health.
-A thousand years ago, masters physically damaged their slaves;
-today they damage us &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;mentally&lt;/a&gt;.
-Which one is worse? Where are we heading?
-I predict serious problems in the near future.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary>Command and control
-has worked effectively in military units across the world
-for thousands of years. But apparently we&amp;#39;ve just discovered
-that the best companies are built on different verbs, which
-are inspire, delegate, trust, lead, innovate, etc. The question is
-whether we really uncovered something new that our
-predecessors failed to understand for ages or something
-else is going on.</summary></entry></feed>
+to submit.</summary></entry></feed>
