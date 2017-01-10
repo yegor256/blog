@@ -19,7 +19,9 @@
 module Jekyll
   module Filters
     def movies(posts)
-      posts.map{ |p| movie(p) }.join() unless posts.nil?
+      posts
+        .select{ |p| p['jb_picture'] }
+        .map{ |p| movie(p) }.join() unless posts.nil?
     end
 
     def movie(post)
