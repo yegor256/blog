@@ -21,11 +21,11 @@ module Jekyll
     def movies(posts)
       posts
         .select{ |p| p['jb_picture'] }
-        .map{ |p| movie(p) }.join() unless posts.nil?
-    end
-
-    def movie(post)
-      "<p>#{post['jb_picture']['caption']}</p>"
+        .map{ |p| p['jb_picture']['caption'] }
+        .uniq
+        .sort
+        .map{ |c| "<p>#{c}</p>" }
+        .join() unless posts.nil?
     end
   end
 end

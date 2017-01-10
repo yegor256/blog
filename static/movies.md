@@ -22,3 +22,6 @@ recommend to watch them all:
 <div class="nospell">
 {{ site.posts | movies }}
 </div>
+
+If you know some other good movies, please
+[recommend](mailto:movie@yegor256.com).
