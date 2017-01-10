@@ -19,5 +19,6 @@ exclude_from_search: true
 These movies were mentioned in all posts at this blog, I would
 recommend to watch them all:
 
+<div class="nospell">
 {{ site.posts | movies }}
-
+</div>
