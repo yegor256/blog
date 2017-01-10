@@ -21,7 +21,7 @@ jb_picture:
 
 In [outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}),
 very often a customer <del>is an idiot</del> doesn't
-really know what he needs &mdash; not only in terms of functionality, but also
+really know what he needs&mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
 customer <del>very often</del> always thinks he knows
 and understands enough. The question is how do you teach a customer? How
