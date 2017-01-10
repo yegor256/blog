@@ -72,5 +72,5 @@ marketing planning, branding, etc. In most cases, customers just
 don't know that these people exist, or they believe these services
 are just a waste of money.
 
-Try to convince them that it's not true, but don't become an advisor
+Try to convince them that it's not true, but don't become an adviser
 in something you don't understand. Your job is coding, so focus only on that.
