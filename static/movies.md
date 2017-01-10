@@ -20,7 +20,7 @@ These movies were mentioned in all posts at this blog, I would
 recommend to watch them all:
 
 <div class="nospell">
-{{ site.posts | movies }}
+{{ site.posts | movies | join:'' }}
 </div>
 
 If you know some other good movies, please

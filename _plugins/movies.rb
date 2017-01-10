@@ -25,7 +25,6 @@ module Jekyll
         .uniq
         .sort
         .map{ |c| "<p>#{c}</p>" }
-        .join() unless posts.nil?
     end
   end
 end
