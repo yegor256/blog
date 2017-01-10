@@ -44,6 +44,8 @@ not a colleague, and not a teammate. The customer is a project
 just like you, but his needs are completely opposite of yours, and he is very aware
 of that.
 
+{% quote Very soon, when the project fails, the customer will find someone to blame %}
+
 He wants the project to finish as soon as possible and to take as little
 [money]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 out of his pocket as possible. You want exactly the opposite. You
