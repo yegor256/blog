@@ -110,11 +110,11 @@ Nevertheless, we should always aim for the best.</p>
 are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.</p>
 
+
+
 <p>If no object methods can modify its state, no matter how many
 of them and how often are being called parallel—they
 will work in their own memory space in stack.</p>
-
-
 
 <p>Goetz et al. explained the advantages of immutable objects
 in more details in their very famous book
@@ -250,13 +250,13 @@ in a broken state if it
 a runtime exception on overflow.
 Its <code>size</code> property will be incremented, while <code>items</code> won't get a new element.</p>
 
+
+
 <p>Immutability prevents this problem. An object will never be
 left in a broken state because its state is modified only in
 its constructor. The constructor will either fail, rejecting
 object instantiation, or succeed, making a valid solid object,
 which never changes its encapsulated state.</p>
-
-
 
 <p>For more on this subject, read
 <a href="http://amzn.to/2cs4aiR">Effective Java, 2nd Edition</a>
