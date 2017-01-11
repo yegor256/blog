@@ -19,13 +19,13 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 11-01-2017 20 PVvLQGnyDrQ Gradients of Immutability %}
+<!-- {% webinar 11-01-2017 20 PVvLQGnyDrQ Gradients of Immutability %} -->
 
 {% youtube PVvLQGnyDrQ video-left %}
 January 11, 2017:
 **Gradients of Immutability**
-We'll discuss what immutability really is, with a few example in Java and [EO](http://www.eolang.org)
-(new language we're developing now). The discuss will be based on this blog post:
+We discussed what immutability really wass, with a few example in Java and [EO](http://www.eolang.org)
+(new language we're developing now). The discussion was based on this blog post:
 [Gradients of Immutability]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
 
 {% youtube zaKTNK8g2-M video-left %}

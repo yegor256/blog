@@ -14,6 +14,8 @@ keywords:
   - immutable list
   - immutable object
   - immutable object java
+youtube:
+  - PVvLQGnyDrQ
 jb_picture:
   src: /images/2016/09/twelve-monkeys.jpg
   caption: Twelve Monkeys (1995) by Terry Gilliam
