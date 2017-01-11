@@ -68,11 +68,11 @@ The first and the most obvious argument is that immutable objects
 are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.
 
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2bQVqBr %}
+
 If no object methods can modify its state, no matter how many
 of them and how often are being called parallel&mdash;they
 will work in their own memory space in stack.
-
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2bQVqBr %}
 
 Goetz et al. explained the advantages of immutable objects
 in more details in their very famous book
@@ -274,13 +274,13 @@ in a broken state if it
 a runtime exception on overflow.
 Its `size` property will be incremented, while `items` won't get a new element.
 
+{% badge /images/2014/06/effective-java-second-edition.png 100 http://amzn.to/2cs4aiR %}
+
 Immutability prevents this problem. An object will never be
 left in a broken state because its state is modified only in
 its constructor. The constructor will either fail, rejecting
 object instantiation, or succeed, making a valid solid object,
 which never changes its encapsulated state.
-
-{% badge /images/2014/06/effective-java-second-edition.png 100 http://amzn.to/2cs4aiR %}
 
 For more on this subject, read
 [Effective Java, 2nd Edition](http://amzn.to/2cs4aiR)
