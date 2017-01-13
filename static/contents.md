@@ -17,20 +17,25 @@ keywords:
   - articles about programming
 exclude_from_search: true
 script: |
+  function count_comments() {
+    var total = 0;
+    $('.comment-count').each(
+      function() {
+        var m = /(\d+) .*/.exec($(this).html());
+        if (m) {
+          total += parseInt(m[1]);
+        }
+      }
+    );
+    $('#total_comments').html(
+      ' (' + total + ' comments total)'
+    );
+  }
   $(
     function() {
-      var total = 0;
       $('.comment-count:last-child').bind(
         'DOMSubtreeModified',
-        function() {
-          var m = /(\d+) .*/.exec($(this).html());
-          if (m) {
-            total += parseInt(m[1]);
-          }
-        }
-      );
-      $('#total_comments').html(
-        ' (' + total + ' comments total)'
+        count_comments
       );
     }
   );
