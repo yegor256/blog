@@ -30,6 +30,15 @@ ISBN: 1537688669.<br/>
 
 <!--more-->
 
+Jan 13, 2017:
+I will post here all technical and content changes I'm making to the blog,
+in order to include them later into the second edition of the book. I will describe
+them here just briefly, without any analysis. You may take a look at this
+page time to time, to get fresh ideas for your blog too. A few days ago
+I added [`og:image`](https://developers.facebook.com/docs/sharing/webmasters)
+meta to all blog posts and
+[`longdesc`](https://www.w3.org/TR/html-longdesc/) to all front images.
+
 Nov 6, 2016:
 It's available [on Amazon](http://amzn.to/2eexQBl) for $40.96! Thanks
 to all reviewers who helped me fine tune it before publishing (in
