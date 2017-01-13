@@ -19,7 +19,7 @@ exclude_from_search: true
 script: |
   function count_comments() {
     var total = 0;
-    $('.comment-count').each(
+    $('.comment_count').each(
       function() {
         var m = /(\d+) .*/.exec($(this).html());
         if (m) {
@@ -27,18 +27,13 @@ script: |
         }
       }
     );
-    $('#total_comments').html(
-      ' (' + total + ' comments total)'
-    );
-  }
-  $(
-    function() {
-      $('.comment-count:last-child').bind(
-        'DOMSubtreeModified',
-        count_comments
-      );
+    if (total == 0) {
+      setTimeout(count_comments, 1000);
+    } else {
+      $('#total_comments').html( ' (' + total + ' comments total)' );
     }
-  );
+  }
+  count_comments();
 ---
 
 All tags (alphabetic order):
