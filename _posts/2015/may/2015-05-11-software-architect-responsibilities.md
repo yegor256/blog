@@ -17,6 +17,9 @@ youtube:
   - 0fuEgmibJc4
   - PNSezrlemsY
   - AvVQ5NjS_Nk
+jb_picture:
+  src: /images/2015/05/dr-strangelove.jpg
+  caption: Dr. Strangelove (1964) by Stanley Kubrick
 ---
 
 A software architect is a key person in a software project, which I
@@ -31,7 +34,7 @@ if we succeed. Here is what I, as
 
 <!--more-->
 
-{% picture /images/2015/05/dr-strangelove.jpg 0 Dr. Strangelove (1964) by Stanley Kubrick %}
+{% jb_picture_body %}
 
 In all projects we run at [Teamed.io](http://www.teamed.io), I expect
 regular reports from software architects a few times a week. Each report

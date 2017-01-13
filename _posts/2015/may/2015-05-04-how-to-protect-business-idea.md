@@ -13,6 +13,9 @@ keywords:
   - patent business idea
   - non-compete clause
   - non-disclosure agreement
+jb_picture:
+  src: /images/2015/05/there-will-be-blood.jpg
+  caption: There Will Be Blood (2007) by Paul Thomas Anderson
 ---
 
 When you hire a programmer or a team of programmers to implement your
@@ -25,7 +28,7 @@ been on both sides. Here is my experience and a few recommendations.
 
 <!--more-->
 
-{% picture /images/2015/05/there-will-be-blood.jpg 0 There Will Be Blood (2007) by Paul Thomas Anderson %}
+{% jb_picture_body %}
 
 There are basically a few levels of protection you can obtain, and they are
 listed below, from the simplest and least secure to the most expensive and
@@ -40,7 +43,8 @@ with ignoring almost any violation. Let's not forget this.
 
 We're not discussing here the risk of losing a product. This also happens
 very often&mdash;your programmers start working for you, you pay them,
-they show you something, and then things go south. You find yourself in conflict
+they show you something, and then things go south. You find yourself in
+[conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
 with them, and they don't deliver you anything; they ask for extra money instead.
 You end up with nothing or something that is broken and can't be put on the market.
 This is yet another risk, which I'll try to describe in another article soon.

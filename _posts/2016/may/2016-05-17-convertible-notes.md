@@ -14,6 +14,9 @@ keywords:
   - convertible notes term sheet
   - convertible notes vs equity
   - convertible notes vs safe
+jb_picture:
+  src: /images/2016/05/the-godfather-iii.jpg
+  caption: "The Godfather: Part III (1990) by Francis Ford Coppola"
 ---
 
 "[Convertible Notes](https://en.wikipedia.org/wiki/Convertible_bond)"
@@ -28,7 +31,7 @@ should pay attention to.
 
 <!--more-->
 
-{% picture /images/2016/05/the-godfather-iii.jpg 0 The Godfather: Part III (1990) by Francis Ford Coppola %}
+{% jb_picture_body %}
 
 ## Why Not Equity?
 

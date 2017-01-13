@@ -14,6 +14,9 @@ keywords:
   - inheritance over composition
   - inheritance vs composition
   - composition over inheritance
+jb_picture:
+  src: /images/2016/09/death-at-a-funeral.jpg
+  caption: Death at a Funeral (2007) by Frank Oz
 ---
 
 We all know that
@@ -37,7 +40,7 @@ for example.
 
 <!--more-->
 
-{% picture /images/2016/09/death-at-a-funeral.jpg 0 Death at a Funeral (2007) by Frank Oz %}
+{% jb_picture_body %}
 
 I think we should. And I think I know the reason why.
 

@@ -13,6 +13,9 @@ keywords:
   - synchronization between computers
   - synchronization between processes
   - synchronization between two computers
+jb_picture:
+  src: /images/2014/12/van-damme-split.png
+  caption: No Retreat, No Surrender (1986) by Corey Yuen
 ---
 
 When two or more software modules are accessing the same
@@ -36,7 +39,7 @@ So I decided to create one&mdash;[stateful.co](http://www.stateful.co).
 
 <!--more-->
 
-{% picture /images/2014/12/van-damme-split.png 0 No Retreat, No Surrender (1986) by Corey Yuen %}
+{% jb_picture_body %}
 
 Here is a practical example. I have a Java web app that is hosted
 at Heroku. There are three servers (a.k.a. "dynos") running the same `.war`

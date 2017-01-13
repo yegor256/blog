@@ -18,6 +18,9 @@ keywords:
 book: elegant-objects 2.6
 youtube:
   - o3aNJX7AP3M
+jb_picture:
+  src: /images/2016/03/lock-stock-two-smoking-barrels.jpg
+  caption: Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie
 ---
 
 There is a very typical mistake in pre-Java7 "try/finally" scenario,
@@ -28,7 +31,7 @@ open and close them correctly, please.
 
 <!--more-->
 
-{% picture /images/2016/03/lock-stock-two-smoking-barrels.jpg 0 Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie %}
+{% jb_picture_body %}
 
 This is how it looks (assuming we are in Java 6):
 

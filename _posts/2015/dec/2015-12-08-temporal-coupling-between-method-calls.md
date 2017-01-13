@@ -16,6 +16,9 @@ keywords:
   - temporal coupling in oop
   - temporal coupling definition
 book: elegant-objects 2.6.3
+jb_picture:
+  src: /images/2015/12/blueberry.jpg
+  caption: Blueberry (2004) by Jan Kounen
 ---
 
 Temporal coupling happens between sequential method calls
@@ -26,7 +29,7 @@ a look at this example.
 
 <!--more-->
 
-{% picture /images/2015/12/blueberry.jpg 0 Blueberry (2004) by Jan Kounen %}
+{% jb_picture_body %}
 
 Here is the code:
 

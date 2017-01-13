@@ -19,6 +19,9 @@ youtube:
   - WSgP85kr6eU
   - WpP4rIhh5e4
   - DEqcn4-freM
+jb_picture:
+  src: /images/2016/02/the-shining.jpg
+  caption: The Shining (1980) by Stanley Kubrick
 ---
 
 [Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern) are ...
@@ -31,7 +34,7 @@ I love or hate each one. Follow me, in alphabetic order.
 
 <!--more-->
 
-{% picture /images/2016/02/the-shining.jpg 0 The Shining (1980) by Stanley Kubrick %}
+{% jb_picture_body %}
 
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.

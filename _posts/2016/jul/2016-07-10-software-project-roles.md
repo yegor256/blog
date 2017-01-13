@@ -14,6 +14,9 @@ keywords:
   - roles in software project
   - software project
   - roles in software
+jb_picture:
+  src: /images/2016/07/12-angry-men.jpg
+  caption: 12 Angry Men (1957) by Sidney Lumet
 ---
 
 I believe that several roles should be present in a majority of
@@ -25,7 +28,7 @@ is mostly for people who work with us, either as clients or freelancers.
 
 <!--more-->
 
-{% picture /images/2016/07/12-angry-men.jpg 0 12 Angry Men (1957) by Sidney Lumet %}
+{% jb_picture_body %}
 
 There are just a few roles:
 

@@ -14,6 +14,9 @@ keywords:
   - skype meetings
   - github
   - bitbucket
+jb_picture:
+  src: /images/2016/08/schizopolis.jpg
+  caption: Schizopolis (1996) by Steven Soderbergh
 ---
 
 Each software team organizes its communications in its own
@@ -24,7 +27,7 @@ to your project. This is the list of all of them I'm aware of at the moment.
 
 <!--more-->
 
-{% picture /images/2016/08/schizopolis.jpg 0 Schizopolis (1996) by Steven Soderbergh %}
+{% jb_picture_body %}
 
 The damage I'm talking about is caused mostly by the distance between these communication
 channels and project artifacts. The farther away people stay from documents,

@@ -16,6 +16,9 @@ keywords:
 book: elegant-objects 1.2
 translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52390622
+jb_picture:
+  src: /images/2015/05/the-matrix-agent-smith.jpg
+  caption: The Matrix (1999) by The Wachowski Brothers
 ---
 
 I suggest classifying class constructors in OOP as **primary**
@@ -27,7 +30,7 @@ constructing mechanism.
 
 <!--more-->
 
-{% picture /images/2015/05/the-matrix-agent-smith.jpg 0 The Matrix (1999) by The Wachowski Brothers %}
+{% jb_picture_body %}
 
 Here is what I mean:
 

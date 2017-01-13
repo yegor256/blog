@@ -15,6 +15,9 @@ keywords:
 youtube:
   - 0fuEgmibJc4
   - AvVQ5NjS_Nk
+jb_picture:
+  src: /images/2015/05/rear-window.jpg
+  caption: Rear Window (1954) by Alfred Hitchcock
 ---
 
 A [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
@@ -27,7 +30,7 @@ this idea in practice, an architect uses two instruments:
 
 <!--more-->
 
-{% picture /images/2015/05/rear-window.jpg 0 Rear Window (1954) by Alfred Hitchcock %}
+{% jb_picture_body %}
 
 At [Teamed.io](http://www.teamed.io), we discourage any
 [communication]({% pst 2016/aug/2016-08-23-communication-maturity %})

@@ -61,7 +61,9 @@ You can replace "blame" with accountability or responsibility. Although,
 I prefer to use "blame," because it much better emphasizes the fact that
 every quality issue in the product under development is a **personal**
 fault of the architect. Of course, together with the blame he also
-takes all the credit from happy customers, when the quality is good.
+takes all the credit from
+[happy customers]({% pst 2017/jan/2017-01-10-how-to-teach-customers %}),
+when the quality is good.
 
 This is what the team needs&mdash;someone personally responsible
 for the quality of the software being developed.

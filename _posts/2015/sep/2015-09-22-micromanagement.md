@@ -15,6 +15,9 @@ keywords:
   - micromanagement meaning
 youtube:
   - ZVn7ufg-tk0
+jb_picture:
+  src: /images/2015/09/office-space.jpg
+  caption: Office Space (1999) by Mike Judge
 ---
 
 [Micromanagement](https://en.wikipedia.org/wiki/Micromanagement),
@@ -27,7 +30,7 @@ is something completely different.
 
 <!--more-->
 
-{% picture /images/2015/09/office-space.jpg 0 Office Space (1999) by Mike Judge %}
+{% jb_picture_body %}
 
 There are [tons of articles](https://www.google.com/search?q=micromanagement)
 about micromanagement. Most of them emphasize that the "micro" prefix prescribes

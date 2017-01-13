@@ -16,6 +16,9 @@ keywords:
   - project management skills
 youtube:
   - zaKTNK8g2-M
+jb_picture:
+  src: /images/2016/05/schindlers-list.jpg
+  caption: Schindler's List (1993) by Steven Spielberg
 ---
 
 A project manager is very often **confused** with a leader. However, they are two
@@ -26,7 +29,7 @@ leader is valuable at all...
 
 <!--more-->
 
-{% picture /images/2016/05/schindlers-list.jpg 0 Schindler's List (1993) by Steven Spielberg %}
+{% jb_picture_body %}
 
 There are **three things** I want to define: project, project
 management, and project manager. Once they are clear, my previous statement

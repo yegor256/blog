@@ -14,6 +14,9 @@ keywords:
   - middlemen
   - sharing economy
   - outstaffing
+jb_picture:
+  src: /images/2015/09/what-just-happened.jpg
+  caption: What Just Happened (2008) by Barry Levinson
 ---
 
 That's what a character played by actor Bruce Willis said to Robert DeNiro's
@@ -32,7 +35,7 @@ everywhere else.
 
 <!--more-->
 
-{% picture /images/2015/09/what-just-happened.jpg 0 What Just Happened (2008) by Barry Levinson %}
+{% jb_picture_body %}
 
 Seriously, look at **IT recruiters**, for example. To find a programmer, one has to pay
 about $30K (in Silicon Valley, if a programmer's salary is, say, $120K a year)

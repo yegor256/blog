@@ -14,6 +14,9 @@ keywords:
   - cowboy coding vs agile
   - cowboy coding pros and cons
   - irresponsible coding
+jb_picture:
+  src: /images/2015/11/thursday.jpg
+  caption: Thursday (1998) by Skip Woods
 ---
 
 If I drive too fast and I get caught, I may get a ticket. If I drive
@@ -25,7 +28,7 @@ against **irresponsible coding**?
 
 <!--more-->
 
-{% picture /images/2015/11/thursday.jpg 0 Thursday (1998) by Skip Woods %}
+{% jb_picture_body %}
 
 Software is part of my life. It actually **is** my **life**, not just part of it. I stare
 at this MacBook for much more time every day than I drive, talk, or listen

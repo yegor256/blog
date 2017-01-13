@@ -16,6 +16,9 @@ keywords:
   - decorator java
   - encapsulation
 book: elegant-objects 3.2.6
+jb_picture:
+  src: /images/2015/10/the-apartment.jpg
+  caption: The Apartment (1960) by Billy Wilder
 ---
 
 A [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
@@ -29,7 +32,7 @@ some food for thought.
 
 <!--more-->
 
-{% picture /images/2015/10/the-apartment.jpg 0 The Apartment (1960) by Billy Wilder %}
+{% jb_picture_body %}
 
 Let's say I have a list of numbers:
 

@@ -15,6 +15,9 @@ keywords:
   - equity instead of salary
   - equity salary adjustment
   - equity salary
+jb_picture:
+  src: /images/2016/01/how-much-do-you-love-me.jpg
+  caption: Combien tu m'aimes? (2005) by Bertrand Blier
 ---
 
 "You're a good programmer. I'm a great entrepreneur. This is a
@@ -27,7 +30,7 @@ I don't think you're a good entrepreneur.
 
 <!--more-->
 
-{% picture /images/2016/01/how-much-do-you-love-me.jpg 0 Combien tu m'aimes? (2005) by Bertrand Blier %}
+{% jb_picture_body %}
 
 So you want a good programmer to build your product. Or maybe a group
 of good programmers. And you are ready to give me some equity

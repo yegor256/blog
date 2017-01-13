@@ -13,6 +13,9 @@ keywords:
   - code review checklist
   - code review process
   - code review best practices
+jb_picture:
+  src: /images/2015/02/kim-jong-un-doing-code-review.png
+  caption: Kim Jong-un with colleagues (2014)
 ---
 
 [Code reviews](http://en.wikipedia.org/wiki/Code_review)
@@ -37,7 +40,7 @@ Hopefully you find them helpful.
 
 <!--more-->
 
-{% picture /images/2015/02/kim-jong-un-doing-code-review.png 0 Kim Jong-un with colleagues (2014) %}
+{% jb_picture_body %}
 
 ## No Fear
 

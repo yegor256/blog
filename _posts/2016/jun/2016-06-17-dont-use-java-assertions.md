@@ -14,6 +14,9 @@ keywords:
   - exceptions over assertions
   - throw exception not assertion
   - assertions java
+jb_picture:
+  src: /images/2016/06/natural-born-killers.jpg
+  caption: Natural Born Killers (1994) by Oliver Stone
 ---
 
 There are basically two ways to validate a situation in Java and complain
@@ -24,7 +27,7 @@ in all situations and assertions should never be used. Here's why.
 
 <!--more-->
 
-{% picture /images/2016/06/natural-born-killers.jpg 0 Natural Born Killers (1994) by Oliver Stone %}
+{% jb_picture_body %}
 
 Let's see what happens when an assertion is triggered. Say that this
 is our code:

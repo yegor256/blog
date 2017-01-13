@@ -14,6 +14,9 @@ keywords:
   - when to catch exceptions
   - catch exception java
   - exceptions java
+jb_picture:
+  src: /images/2015/07/catch-me-if-you-can.jpg
+  caption: Catch Me If You Can (2002) by Steven Spielberg
 ---
 
 I don't know whether it's an anti-pattern or just a common and very popular
@@ -32,7 +35,7 @@ try {
 
 <!--more-->
 
-{% picture /images/2015/07/catch-me-if-you-can.jpg 0 Catch Me If You Can (2002) by Steven Spielberg %}
+{% jb_picture_body %}
 
 Pay attention: I don't have anything against this code:
 

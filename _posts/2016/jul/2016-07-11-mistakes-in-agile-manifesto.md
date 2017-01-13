@@ -13,6 +13,9 @@ keywords:
   - agile manifesto
   - why agile doesn't work
   - agile is evil
+jb_picture:
+  src: /images/2016/07/hail-caesar.jpg
+  caption: Hail, Caesar! (2016) by Coen Brothers
 ---
 
 Nowadays, [Agile Manifesto](http://www.agilemanifesto.org/) is a Bible of
@@ -26,7 +29,7 @@ interpretation of each principle.
 
 <!--more-->
 
-{% picture /images/2016/07/hail-caesar.jpg 0 Hail, Caesar! (2016) by Coen Brothers %}
+{% jb_picture_body %}
 
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."

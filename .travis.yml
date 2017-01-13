@@ -39,7 +39,6 @@ install:
   - travis_retry sudo _travis/install_sfnt2woff.sh
   - travis_retry sudo _travis/install_tidy.sh
   - travis_retry bundle install
-  - travis_retry gem install fontcustom -v 1.3.8
   - fontcustom --version
   - travis_retry gem install jgd -v 1.6.5
   - gnuplot --version

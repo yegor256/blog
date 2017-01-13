@@ -25,9 +25,7 @@ layout: compress
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
     <meta property="twitter:account_id" content="4503599630178231" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {% if page.og_image %}
-      <meta property="og:image:url" content="{{ site.url }}{{ page.og_image }}"/>
-    {% endif %}
+    {{ page | jb_picture_head }}
     <meta property="og:site_name" content="yegor256"/>
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:description" content="{{ page | description }}"/>
@@ -98,6 +96,7 @@ layout: compress
             <li><a href="/award.html" title="software quality award">award</a></li>
             <li><a href="/testimonials.html" title="what people say about me">testimonials</a></li>
             <li><a href="http://ru.yegor256.com/" title="о политике" class="politics">о политике</a></li>
+            <li><a href="/video-qa.html" title="video Q&amp;A">video Q&amp;A</a></li>
           </ul>
         </nav>
         <div class="search">
@@ -114,12 +113,10 @@ layout: compress
         <div class="hot">
           <ul>
             <li>
-              I need help. I want to find sponsors for my
-              <a href="/award.html">Software Quality Award</a>, but don't
-              have time and connections to do that. Would you be interested
-              to <strong>volunteer</strong> and help me? We need more money for the award,
-              to better motivate programmers.
-              Please, <a href="mailto:volunteer@yegor256.com">email</a>.
+              <a href="/video-qa.html">Video Q&amp;A</a> is a new experiment:
+              you video-call me and ask your practical management question,
+              I try to answer,
+              the entire dialog gets recorded and published on YouTube. Let's try!
             </li>
             <!--
             <li>
@@ -148,12 +145,14 @@ layout: compress
               and if you're a <strong>Ruby expert</strong>.
             </li>
             -->
+            <!--
             <li>
               At <a href="/webinars.html">Webinar #20</a>
               we'll discuss what immutability really is in OOP,
               by examples in Java and EO,
-              join us on <b>January 4</b>, at 11am PST.
+              join us on <b>January 11</b> (<strong>rescheduled!</strong>), at 11am PST.
             </li>
+            -->
             <!--
             <li>
               Meet me at

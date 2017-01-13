@@ -15,10 +15,13 @@ keywords:
   - the best films
 ---
 
-Sometime ago, I recommended a list of movies to a friend of mine after he told me was losing all interest in  "Hollywood."
+Sometime ago, I recommended a list of movies to a friend of
+mine after he told me was losing all interest in  "Hollywood."
 
-Level C titles are supposed to be impossible to understand unless you've seen
-(and understood) their prequels -- listed in sections A and B. So, start browsing the lists in sections A and post your comments if you have any. :)
+Level C titles are supposed to be impossible to understand
+unless you've seen (and understood) their prequels&mdash;listed
+in sections A and B. So, start browsing the lists in sections A
+and post your comments if you have any. :)
 
 Level A
 
@@ -70,3 +73,5 @@ Level C
  * [Before the Devil Knows You Are Dead (2007)](http://www.imdb.com/title/tt0292963/)
  * [No Country for Old Men (2007)](http://www.imdb.com/title/tt0477348/)
  * [A Serious Man (2009)](http://www.imdb.com/title/tt1019452/)
+
+Full list of movies mentioned in this blog is [here](/movies.html).

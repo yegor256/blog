@@ -132,6 +132,7 @@ task spell: [:build] do
     html.search('//code').remove
     html.search('//script').remove
     html.search('//pre').remove
+    html.search('//div[@class="nospell"]').remove
     html.search('//header').remove
     html.search('//footer').remove
     tmp = Tempfile.new(['yegor256-', '.txt'])

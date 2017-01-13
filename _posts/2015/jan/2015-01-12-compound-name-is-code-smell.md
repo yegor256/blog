@@ -15,6 +15,9 @@ keywords:
   - long variable name
 translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52349054
+jb_picture:
+  src: /images/2015/01/meaning-of-life-every-sperm.png
+  caption: The Meaning of Life (1983) by Terry Jones and Terry Gilliam
 ---
 
 Do you name variables like `textLength`, `table_name`, or `current-user-email`?
@@ -27,7 +30,7 @@ And a big, complex scope is an obvious code smell.
 
 <!--more-->
 
-{% picture /images/2015/01/meaning-of-life-every-sperm.png 0 The Meaning of Life (1983) by Terry Jones and Terry Gilliam %}
+{% jb_picture_body %}
 
 The scope of a variable is the place where it is visible, like a method, for example. Look
 at this Ruby class:

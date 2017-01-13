@@ -15,6 +15,9 @@ keywords:
   - unit testing tools
   - unit testing definition
   - unit testing cost benefit analysis
+jb_picture:
+  src: /images/2015/07/ex-machina.jpg
+  caption: Ex Machina (2015) by Alex Garland
 ---
 
 "We don't have time to write unit tests" or "We don't have the
@@ -29,7 +32,7 @@ the tool that makes your work faster? Let me show you how.
 
 <!--more-->
 
-{% picture /images/2015/07/ex-machina.jpg 0 Ex Machina (2015) by Alex Garland %}
+{% jb_picture_body %}
 
 TDD or not, a unit test is a unit test. Either you create it before
 the main piece of code or after it.

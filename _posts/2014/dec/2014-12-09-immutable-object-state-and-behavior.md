@@ -18,6 +18,9 @@ youtube:
   - KwP7Ay9Z-hc
   - EnhRgXrHCC4
   - p7m7_iiqaHI
+jb_picture:
+  src: /images/2014/12/once-upon-a-time-in-the-west.png
+  caption: Once Upon a Time in the West (1968) by Sergio Leone
 ---
 
 I often hear this argument against
@@ -34,7 +37,7 @@ even when its title is changed frequently. Let me explain how.
 
 <!--more-->
 
-{% picture /images/2014/12/once-upon-a-time-in-the-west.png 0 Once Upon a Time in the West (1968) by Sergio Leone %}
+{% jb_picture_body %}
 
 ## Identity, State, and Behavior
 
@@ -132,7 +135,9 @@ class Document {
   }
   @Override
   public String toString() {
-    return String.format("doc #%d about '%s'", this.id, this.text);
+    return String.format(
+      "doc #%d about '%s'", this.id, this.text
+    );
   }
 }
 {% endhighlight %}
@@ -228,7 +233,7 @@ state (`id`) is not changed. It is the same document, even though we
 change its title, because the title is not a state of the document. It
 is something in the real world, outside of the document. The document
 is just a proxy between us and that "something." Reading and writing
-the title are behaviors of the document, not its state.
+the title _are behaviors_ of the document, not its state.
 
 ## Mutable Memory
 

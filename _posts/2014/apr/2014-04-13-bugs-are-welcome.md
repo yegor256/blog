@@ -16,6 +16,9 @@ keywords:
   - test script
 youtube:
   - qRZYJGYdrwk
+jb_picture:
+  src: /images/2014/04/charlie-and-chocolate-factory-chewing-breakfast.png
+  caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---
 
 The traditional understanding of a software defect (aka "bug") is that it is
@@ -23,7 +26,7 @@ something negative and want to avoid in our projects. We want our projects to be
 "bug-free." Our customers are asking us to develop software that doesn't have
 bugs. And, we, as users, expect software to work without bugs.
 
-{% picture /images/2014/04/charlie-and-chocolate-factory-chewing-breakfast.png 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
+{% jb_picture_body %}
 
 But, let's take a look at bugs from a different angle. In [XDSD](http://www.xdsd.org), we say that
 "bugs are welcome." This means we encourage all interested parties to find bugs

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Copyright (c) 2014-2016 Yegor Bugayenko
+# Copyright (c) 2014-2017 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the 'Software'), to deal
@@ -31,9 +31,9 @@ Send newsletter to all blog subscribers
 
 Usage: send.rb [options]
   EOS
-  opt :sender, 'Sender', :type=>String, :default=>'Yegor Bugayenko <yegor@teamed.io>'
+  opt :sender, 'Sender', :type=>String, :default=>'Yegor Bugayenko <yegor256@gmail.com>'
   opt :domain, 'Sending domain', :type=>String, :default=>'yegor256.com'
-  opt :host, 'SMTP host/server', :type=>String, :default=>'email-smtp.us-east-1.amazonaws.com'
+  opt :host, 'SMTP host/server', :type=>String, :default=>'...'
   opt :port, 'SMTP port', :default=>587
   opt :user, 'SMTP user name', :type=>String, :default=>'AKIAIPMIS45U6UG2TZCQ'
   opt :password, 'SMTP password', :type=>String, :required=>true

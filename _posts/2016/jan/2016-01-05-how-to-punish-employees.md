@@ -4,7 +4,6 @@ title: "How Do You Punish Your Employees?"
 date: 2016-01-05
 place: Kiev, Ukraine
 tags: management sarcasm
-categories: best
 description: |
   A sarcastic overview of different types of abusive
   and manipulative behavior a bad manager may
@@ -22,6 +21,9 @@ related:
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
   - 2015/mar/2015-03-02-team-morale-myths-and-reality
   - 2015/oct/2015-10-06-how-to-be-good-office-slave
+jb_picture:
+  src: /images/2016/01/office-space.jpg
+  caption: Office Space (1999) by Mike Judge
 ---
 
 Punishment ... how do you prefer to do it? There are many ways to punish
@@ -31,11 +33,11 @@ innovative, and very open-minded. You never know which method of
 punishment will work with whom. Some people respond to one method,
 while others may completely ignore it. The overarching goal, of course, is
 to make employees **scared** of **you**, their boss, so they will obey enthusiastically.
-Here is a list of the most effective methods :)
+Here is a list of the most effective methods.
 
 <!--more-->
 
-{% picture /images/2016/01/office-space.jpg 0 Office Space (1999) by Mike Judge %}
+{% jb_picture_body %}
 
 Disclaimer: I'm using the pronoun "he" merely for simplicity of speech. The
 same exact rules apply to both males and females.

@@ -14,6 +14,9 @@ keywords:
   - motivation
   - team morale
   - management in movies
+jb_picture:
+  src: /images/2015/10/cossacks-of-the-kuban.jpg
+  caption: Cossacks of the Kuban (1950) by Ivan Pyryev
 ---
 
 I saw [The Martian](http://www.imdb.com/title/tt3659388/)
@@ -28,7 +31,7 @@ should I expect, right? Not just that. I think the problem is bigger.
 
 <!--more-->
 
-{% picture /images/2015/10/cossacks-of-the-kuban.jpg 0 Cossacks of the Kuban (1950) by Ivan Pyryev %}
+{% jb_picture_body %}
 
 Have any of you seen this movie: [Cossacks of the Kuban](http://www.imdb.com/title/tt0041562/)?
 It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_Stalin)
@@ -74,7 +77,9 @@ It is a lie, very similar to the lie we heard in 1949.
 
 The truth is that you are not going to get anywhere if you follow
 the spirit of this movie. In reality, teamwork must look completely
-different. There are conflicts, fights, politics, betrayals, back-stabbing,
+different. There are
+[conflicts]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}),
+fights, politics, betrayals, back-stabbing,
 leakage of information, and just primitive incompetence. To manage all
 this, one can't just be a **nice guy** with a big heart. I would even say
 that being a nice guy is a drawback for any management position in a modern

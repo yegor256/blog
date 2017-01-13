@@ -21,6 +21,9 @@ book: elegant-objects 3.5
 youtube:
   - WSgP85kr6eU
   - F4N25kZ2zQU
+jb_picture:
+  src: /images/2014/09/fish-called-wanda.png
+  caption: A Fish Called Wanda (1988) by Charles Crichton
 ---
 
 There is an old debate, started in 2003 by Allen Holub
@@ -155,7 +158,7 @@ Object thinking immediately eliminates
 [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
 
-{% picture /images/2014/09/fish-called-wanda.png 0 A Fish Called Wanda (1988) by Charles Crichton %}
+{% jb_picture_body %}
 
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:

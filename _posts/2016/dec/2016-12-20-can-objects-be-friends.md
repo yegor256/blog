@@ -14,6 +14,9 @@ keywords:
   - encapsulation trusted objects
   - encapsulation meaning
   - encapsulation violation
+jb_picture:
+  src: /images/2016/12/raging-bull.jpg
+  caption: Raging Bull (1980) by Martin Scorsese
 ---
 
 As [discussed before]({% pst 2016/nov/2016-11-21-naked-data %}),
@@ -26,7 +29,7 @@ while allowing objects to interact.
 
 <!--more-->
 
-{% picture /images/2016/12/raging-bull.jpg 0 Raging Bull (1980) by Martin Scorsese %}
+{% jb_picture_body %}
 
 Say that this is our object:
 
@@ -95,3 +98,8 @@ objects posses knowledge about `t`. When we change
 something about `t`, we know exactly where to update the code.
 
 What do you think?
+
+P.S. After discussing this idea below in comments I
+[started](http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632) to think
+that we don't need that `trust` keyword at all. Instead, we should just
+give all decorators access to all private attributes of an object.

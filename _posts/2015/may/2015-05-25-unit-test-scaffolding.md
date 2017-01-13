@@ -16,6 +16,9 @@ keywords:
   - unit testing of static
 youtube:
   - l6MpCBzwDbg
+jb_picture:
+  src: /images/2015/05/leon-the-professional.jpg
+  caption: "Léon: The Professional by Luc Besson"
 ---
 
 When I start to repeat myself in unit test methods by creating
@@ -29,7 +32,7 @@ alternative. Let me explain.
 
 <!--more-->
 
-{% picture /images/2015/05/leon-the-professional.jpg 0 Léon: The Professional by Luc Besson %}
+{% jb_picture_body %}
 
 JUnit officially suggests a
 [test fixture](http://junit.org/faq.html#atests_2):

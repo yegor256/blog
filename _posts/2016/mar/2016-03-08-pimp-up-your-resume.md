@@ -14,6 +14,9 @@ keywords:
   - software engineer resume
   - resume of programmer
   - resume of coder
+jb_picture:
+  src: /images/2016/03/delicatessen.jpg
+  caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---
 
 There are tons of articles about resume writing. Literally,
@@ -27,7 +30,7 @@ from your clients in paying.
 
 <!--more-->
 
-{% picture /images/2016/03/delicatessen.jpg 0 Delicatessen (1991) by Jean-Pierre Jeunet %}
+{% jb_picture_body %}
 
 ## One Page, No Exceptions
 

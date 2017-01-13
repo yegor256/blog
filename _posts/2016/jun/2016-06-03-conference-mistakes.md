@@ -14,6 +14,9 @@ keywords:
   - software conferences tips
   - software conferences organization tips
   - software conferences tricks
+jb_picture:
+  src: /images/2016/06/mi-gran-noche.jpg
+  caption: Mi gran noche (2015) by Álex de la Iglesia
 ---
 
 I was talking yesterday with a few friends who were software conference
@@ -26,7 +29,7 @@ The most serious mistakes and pieces of advice are at the bottom.
 
 <!--more-->
 
-{% picture /images/2016/06/mi-gran-noche.jpg 0 Mi gran noche (2015) by Álex de la Iglesia %}
+{% jb_picture_body %}
 
 **Too formal**.
 Very often all I'm getting from event organizers is a formal email that

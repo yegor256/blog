@@ -14,6 +14,9 @@ keywords:
   - interview programmer
   - programmer interview questions
   - developer interview
+jb_picture:
+  src: /images/2016/03/wall-street.jpg
+  caption: Wall Street (1987) by Oliver Stone
 ---
 
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
@@ -29,7 +32,7 @@ There are a few basic principles I would like to share.
 
 <!--more-->
 
-{% picture /images/2016/03/wall-street.jpg 0 Wall Street (1987) by Oliver Stone %}
+{% jb_picture_body %}
 
 ## The Market Interviews You, Not Us
 

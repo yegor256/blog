@@ -14,6 +14,9 @@ keywords:
   - software development outsourcing
   - how to outsource software development
   - software development outsourcing
+jb_picture:
+  src: /images/2014/12/99-francs.png
+  caption: 99 francs (2007) by Jan Kounen
 ---
 
 Most of our
@@ -38,7 +41,7 @@ honestly show your clients all project internals and still keep them on board.
 
 <!--more-->
 
-{% picture /images/2014/12/99-francs.png 0 99 francs (2007) by Jan Kounen %}
+{% jb_picture_body %}
 
 ## He Is Breaking Our Process
 
@@ -217,7 +220,8 @@ decisions made internally.
 
 To conclude, I strongly believe it is important to be honest
 and open with each client, no matter how difficult it is. Try to
-learn from every conflict with each client, and improve your management
+learn from every [conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
+with each client, and improve your management
 process and your principles of work. Hiding source code is not
 professional and makes you look bad in the eyes of your clients and
 the entire industry.

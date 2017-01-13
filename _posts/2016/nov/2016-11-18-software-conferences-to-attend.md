@@ -53,7 +53,7 @@ to make the right choice and never miss their CFP deadlines.
   <td>Kiev</td>
   <td>May</td>
   <td>Jan</td></tr>
-<tr><td><a href="https://agileee.org/">AgileEE</a></td>
+<tr><td><a href="http://kiev2017.agileee.org/">AgileEE</a></td>
   <td>Kiev</td>
   <td>Apr</td>
   <td>Jan</td></tr>

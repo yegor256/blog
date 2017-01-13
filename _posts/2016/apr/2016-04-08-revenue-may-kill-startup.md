@@ -14,6 +14,9 @@ keywords:
   - market capitalization
   - how to grow revenue
   - revenue growth
+jb_picture:
+  src: /images/2016/04/blow.jpg
+  caption: Blow (2001) by Ted Demme
 ---
 
 Revenue means **cash** that is coming into your bank account every month
@@ -26,7 +29,7 @@ growing revenue may kill it even faster.
 
 <!--more-->
 
-{% picture /images/2016/04/blow.jpg 0 Blow (2001) by Ted Demme %}
+{% jb_picture_body %}
 
 I see this rather typical pattern in many startups we interview
 at [SeedRamp](http://www.seedramp.com). The idea is great, the prototype

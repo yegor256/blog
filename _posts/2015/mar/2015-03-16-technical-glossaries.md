@@ -13,6 +13,9 @@ keywords:
   - technical vocabulary
   - glossary of technical terms
   - how to write good specification
+jb_picture:
+  src: /images/2015/03/pulp-fiction.jpg
+  caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
 
 I read a few technical
@@ -31,7 +34,7 @@ a glossary.
 
 <!--more-->
 
-{% picture /images/2015/03/pulp-fiction.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+{% jb_picture_body %}
 
 I'm trying to write something unique about this subject, but
 everything I can say is so obvious that I doubt anyone

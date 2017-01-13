@@ -16,6 +16,9 @@ keywords:
   - price per line of code
 youtube:
   - qRZYJGYdrwk
+jb_picture:
+  src: /images/2014/04/brazil-crowded-office.png
+  caption: Brazil (1985) by Terry Gilliam
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -44,7 +47,7 @@ non-empty and non-comment lines of code, using
 
 It was a commercial project, so I can't disclose its name.
 
-{% picture /images/2014/04/brazil-crowded-office.png 0 Brazil (1985) by Terry Gilliam %}
+{% jb_picture_body %}
 
 The team was co-located in one
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})

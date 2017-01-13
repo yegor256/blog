@@ -14,6 +14,9 @@ keywords:
   - where to hire a programmer
   - how to hire a developer
   - hire programmer remotely
+jb_picture:
+  src: /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg
+  caption: Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996) by Paris Barclay
 ---
 
 I get asked this question very often: Where and how do you find
@@ -23,7 +26,7 @@ are many of them, but the list below succinctly summarizes the most important on
 
 <!--more-->
 
-{% picture /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg 0 Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996) by Paris Barclay %}
+{% jb_picture_body %}
 
 I'll be referring to "him," but these recommendations apply equally to both female and male
 <del>slaves</del> software developers.

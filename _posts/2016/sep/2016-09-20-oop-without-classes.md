@@ -14,6 +14,9 @@ keywords:
   - object-oriented programming
   - role of class in oop
   - classes in oop
+jb_picture:
+  src: /images/2016/09/battleship-potemkin.jpg
+  caption: Battleship Potemkin (1925) by Sergei M. Eisenstein
 ---
 
 I [interviewed](https://www.youtube.com/watch?v=s-hdZZzMCac)
@@ -26,7 +29,7 @@ obvious that we indeed do not need classes.
 
 <!--more-->
 
-{% picture /images/2016/09/battleship-potemkin.jpg 0 Battleship Potemkin (1925) by Sergei M. Eisenstein %}
+{% jb_picture_body %}
 
 Here is a prototype.
 

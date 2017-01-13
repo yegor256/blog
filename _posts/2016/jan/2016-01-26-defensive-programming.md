@@ -15,6 +15,9 @@ keywords:
   - check for null
   - validate method arguments
   - startup failure stories
+jb_picture:
+  src: /images/2016/01/shi-mian-mai-fu.jpg
+  caption: Shi mian mai fu (2004) by Yimou Zhang
 ---
 
 Do you check the input parameters of your methods for validity?
@@ -26,7 +29,7 @@ I'm suggesting you use **validating decorators** instead.
 
 <!--more-->
 
-{% picture /images/2016/01/shi-mian-mai-fu.jpg 0 Shi mian mai fu (2004) by Yimou Zhang %}
+{% jb_picture_body %}
 
 Let's take a look at this rather typical Java example:
 

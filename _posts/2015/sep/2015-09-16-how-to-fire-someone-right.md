@@ -12,6 +12,9 @@ keywords:
   - how to fire someone nicely
   - how to fire someone you like
   - how to fire an employee
+jb_picture:
+  src: /images/2015/09/up-in-the-air.jpg
+  caption: Up in the Air (2009) by Jason Reitman
 ---
 
 A friend of mine asked me today, "How should I fire
@@ -24,7 +27,7 @@ and **open** procedure, **visible** and **understood** by the entire team.
 
 <!--more-->
 
-{% picture /images/2015/09/up-in-the-air.jpg 0 Up in the Air (2009) by Jason Reitman %}
+{% jb_picture_body %}
 
 I mentioned this problem before in
 [my post]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) about team morale.

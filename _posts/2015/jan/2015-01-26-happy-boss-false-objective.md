@@ -13,6 +13,9 @@ keywords:
   - software project objectives
   - project objectives example
   - project objectives definition
+jb_picture:
+  src: /images/2015/01/the-million-dollar-hotel.png
+  caption: The Million Dollar Hotel (2000) by Wim Wenders
 ---
 
 We all have bosses. We also have customers who pay us for running
@@ -26,7 +29,7 @@ for the project, not for the boss.
 
 <!--more-->
 
-{% picture /images/2015/01/the-million-dollar-hotel.png 0 The Million Dollar Hotel (2000) by Wim Wenders %}
+{% jb_picture_body %}
 
 We all work on **projects** as developers, designers, programmers,
 [managers]({% pst 2015/sep/2015-09-22-micromanagement %}),

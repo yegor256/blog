@@ -14,6 +14,11 @@ keywords:
   - immutable list
   - immutable object
   - immutable object java
+youtube:
+  - PVvLQGnyDrQ
+jb_picture:
+  src: /images/2016/09/twelve-monkeys.jpg
+  caption: Twelve Monkeys (1995) by Terry Gilliam
 ---
 
 Good objects are immutable, but not necessarily constants.
@@ -26,7 +31,7 @@ are a few more gradients; let's take a look.
 
 <!--more-->
 
-{% picture /images/2016/09/twelve-monkeys.jpg 0 Twelve Monkeys (1995) by Terry Gilliam %}
+{% jb_picture_body %}
 
 As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
 an object is a **representative** of someone else
