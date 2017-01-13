@@ -19,7 +19,7 @@ exclude_from_search: true
 script: |
   $(
     function() {
-      total = 0;
+      var total = 0;
       $('.comment-count:last-child').bind(
         'DOMSubtreeModified',
         function() {
@@ -28,7 +28,7 @@ script: |
             total += m[1];
           }
         }
-      )
+      );
       $('#total_comments').html(
         ' (' + total + ' comments total)'
       );
