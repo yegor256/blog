@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-13T14:14:48+00:00</updated><id>http://www.yegor256.com/</id><title>Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title>How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-13T15:25:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
 very often a customer &lt;del&gt;is an idiot&lt;/del&gt; doesn&amp;#39;t
 really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
@@ -54,13 +54,13 @@ don&amp;#39;t know that these people exist, or they believe these services
 are just a waste of money.&lt;/p&gt;
 
 &lt;p&gt;Try to convince them that it&amp;#39;s not true, but don&amp;#39;t become an adviser
-in something you don&amp;#39;t understand. Your job is coding, so focus only on that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="outsourcing" /><summary>In outsourcing,
+in something you don&amp;#39;t understand. Your job is coding, so focus only on that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="outsourcing" /><summary type="html">In outsourcing,
 very often a customer is an idiot doesn&amp;#39;t
 really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
 customer very often always thinks he knows
 and understands enough. The question is how do you teach a customer? How
-do you train, educate, and help him? You don&amp;#39;t!</summary></entry><entry><title>How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
+do you train, educate, and help him? You don&amp;#39;t!</summary></entry><entry><title type="html">How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
@@ -214,10 +214,10 @@ but by provoking them, making different interests visible, and finding the
 most optimal solutions.&lt;/p&gt;
 
 &lt;p&gt;Be aware, though, that this is way more difficult than organizing
-&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary>Conflict is what progress is made of. A professional and well-managed
+&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
-in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary></entry><entry><title>Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
+in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary></entry><entry><title type="html">Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
 proper encapsulation leads to a complete absence
 of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
@@ -292,13 +292,13 @@ something about &lt;code&gt;t&lt;/code&gt;, we know exactly where to update the 
 &lt;p&gt;P.S. After discussing this idea below in comments I
 &lt;a href=&quot;http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632&quot;&gt;started&lt;/a&gt; to think
 that we don&amp;#39;t need that &lt;code&gt;trust&lt;/code&gt; keyword at all. Instead, we should just
-give all decorators access to all private attributes of an object.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>As discussed before,
+give all decorators access to all private attributes of an object.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">As discussed before,
 proper encapsulation leads to a complete absence
 of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
 some data in order to let other objects use it, right? Yes, that&amp;#39;s true.
 However, I guess I have a solution that keeps encapsulation in place
-while allowing objects to interact.</summary></entry><entry><title>MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
+while allowing objects to interact.</summary></entry><entry><title type="html">MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
@@ -366,13 +366,13 @@ from decorators. It grows, but never falls apart.&lt;/p&gt;
 which turns Model into a passive data holder and View into
 a passive data renderer. The controll&lt;b&gt;er&lt;/b&gt;, the hold&lt;b&gt;er&lt;/b&gt;,
 the render&lt;b&gt;er&lt;/b&gt; ...
-Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>Model-View-Controller
+Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Model-View-Controller
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 Web frameworks. It is convenient
 and easy to use. It is simple and effective. It is a great concept ...
 for a procedural programmer. If your software is object-oriented, you
-should dislike MVC as much as I do. Here is why.</summary></entry><entry><title>How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
+should dislike MVC as much as I do. Here is why.</summary></entry><entry><title type="html">How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -507,13 +507,13 @@ just because you&amp;#39;re good friends. How do you become friends? Well, meet 
 families, invite them over for dinner at your house, give them birthday
 gifts&amp;mdash;all those tricks. They will save you a lot of money.&lt;/p&gt;
 
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary>To create software, you need programmers. Unfortunately. They are expensive,
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
 underpaid and quit. How do you prevent that? Unfortunately,
 we can&amp;#39;t use violence any more, but there are some other mechanisms. Let me
-share.</summary></entry><entry><title>EO</title><link href="http://www.yegor256.com/2016/11/29/eolang.html" rel="alternate" type="text/html" title="EO" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/29/eolang</id><content type="html" xml:base="http://www.yegor256.com/2016/11/29/eolang.html">&lt;p&gt;It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+share.</summary></entry><entry><title type="html">EO</title><link href="http://www.yegor256.com/2016/11/29/eolang.html" rel="alternate" type="text/html" title="EO" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/29/eolang</id><content type="html" xml:base="http://www.yegor256.com/2016/11/29/eolang.html">&lt;p&gt;It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
 name is &lt;strong&gt;EO&lt;/strong&gt; (as in
 &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; or in
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Esperanto&quot;&gt;Esperanto&lt;/a&gt;): &lt;a href=&quot;http://www.eolang.org&quot;&gt;eolang.org&lt;/a&gt;.
@@ -550,14 +550,14 @@ but into &lt;code&gt;.java&lt;/code&gt; files, later compilable to byte-code.&lt
 
 &lt;p&gt;I really count on your contribution. Please submit your ideas as
 tickets and pull request to the
-&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary>It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
+&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt; GitHub repo.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">It&amp;#39;s time to do it! We&amp;#39;ve started work on a new programming language. Its
 name is EO (as in
 Elegant Objects or in
 Esperanto): eolang.org.
 It&amp;#39;s open source and community driven:
 yegor256/eo GitHub repo. It&amp;#39;s still in
 very early draft form, but the direction is more or less clear: It has to be
-truly object-oriented, with no compromises. You&amp;#39;re welcome to join us.</summary></entry><entry><title>Encapsulation Covers Up Naked Data</title><link href="http://www.yegor256.com/2016/11/21/naked-data.html" rel="alternate" type="text/html" title="Encapsulation Covers Up Naked Data" /><published>2016-11-21T00:00:00+00:00</published><updated>2016-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/21/naked-data</id><content type="html" xml:base="http://www.yegor256.com/2016/11/21/naked-data.html">&lt;p&gt;Encapsulation is the core principle of object-oriented programming
+truly object-oriented, with no compromises. You&amp;#39;re welcome to join us.</summary></entry><entry><title type="html">Encapsulation Covers Up Naked Data</title><link href="http://www.yegor256.com/2016/11/21/naked-data.html" rel="alternate" type="text/html" title="Encapsulation Covers Up Naked Data" /><published>2016-11-21T00:00:00+00:00</published><updated>2016-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/21/naked-data</id><content type="html" xml:base="http://www.yegor256.com/2016/11/21/naked-data.html">&lt;p&gt;Encapsulation is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it&amp;#39;s much more.
@@ -634,11 +634,11 @@ and lead to maintainability problems.&lt;/p&gt;
 &lt;p&gt;The question is how we can work entirely without naked data, right? Eventually
 we have to let objects exchange data, don&amp;#39;t we? Yes, that&amp;#39;s true. But not entirely.
 I&amp;#39;ll explain that in
-&lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;my next post&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary>Encapsulation is the core principle of object-oriented programming
+&lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;my next post&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Encapsulation is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it&amp;#39;s much more.
-Encapsulation leads to the absence of naked data on all levels and in all forms.</summary></entry><entry><title>Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
+Encapsulation leads to the absence of naked data on all levels and in all forms.</summary></entry><entry><title type="html">Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
@@ -709,11 +709,11 @@ to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
   &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="conferences" /><summary>This is my list of software conferences that are worth attending,
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="conferences" /><summary type="html">This is my list of software conferences that are worth attending,
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
-to make the right choice and never miss their CFP deadlines.</summary></entry><entry><title>Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
+to make the right choice and never miss their CFP deadlines.</summary></entry><entry><title type="html">Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
 I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
 EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
 to summarize them all and explain why dead trees are the only way
@@ -795,11 +795,11 @@ Their authors are afraid of refunds? Probably a combination of all that.
 I strongly believe that good products must cost good money. If it&amp;#39;s free,
 it&amp;#39;s bad (or there are some hidden costs or concealed promotion of something else).&lt;/p&gt;
 
-&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary>Very often readers of my books ask me why
+&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Very often readers of my books ask me why
 I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
 EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
 to summarize them all and explain why dead trees are the only way
-to go if you want to read my content.</summary></entry><entry><title>Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
+to go if you want to read my content.</summary></entry><entry><title type="html">Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
 is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
 The rules are still the same. Read on.
@@ -864,7 +864,7 @@ your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/JnRouvignac/AutoRefactor&quot;&gt;JnRouvignac/AutoRefactor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/javaslang/javaslang&quot;&gt;javaslang/javaslang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/HDouss/jeometry&quot;&gt;HDouss/jeometry&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary>This is the third year of the
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary type="html">This is the third year of the
 Software Quality Award. The prize
 is still the same&amp;mdash;$4,096.
 The rules are still the same. Read on.
