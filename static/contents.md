@@ -23,9 +23,9 @@ script: |
       $('.comment-count:last-child').bind(
         'DOMSubtreeModified',
         function() {
-          var m = /(\d+ ).*/.exec($(this).html());
+          var m = /(\d+) .*/.exec($(this).html());
           if (m) {
-            total += m[1];
+            total += parseInt(m[1]);
           }
         }
       );
