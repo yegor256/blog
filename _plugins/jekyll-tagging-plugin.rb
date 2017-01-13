@@ -89,7 +89,7 @@ module Jekyll
           </li>
           <li class='tags'>#{tags(post)}</li>
           <li class='unprintable'>
-            <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='notranslate'>comments</a>
+            <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
           </li>
         </ul>
       </div>".gsub(/\n/, '')
