@@ -26,7 +26,7 @@ Intensity of writing ({% wordcount %} words in the entire blog):
 
 {% figure /stats.svg 700 %}
 
-This is a full list of {{ site.posts.size }} blogs published:
+This is a full list of {{ site.posts.size }} blog posts published:
 
 {{ site.posts | tagged_list }}
 
