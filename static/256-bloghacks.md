@@ -38,6 +38,8 @@ page time to time, to get fresh ideas for your blog too. A few days ago
 I added [`og:image`](https://developers.facebook.com/docs/sharing/webmasters)
 meta to all blog posts and
 [`longdesc`](https://www.w3.org/TR/html-longdesc/) to all front images.
+Also [added](https://raw.githubusercontent.com/yegor256/blog/1/static/contents.md)
+total Disqus comments counter to the full list of blog posts.
 
 Nov 6, 2016:
 It's available [on Amazon](http://amzn.to/2eexQBl) for $40.96! Thanks
