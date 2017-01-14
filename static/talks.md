@@ -97,7 +97,8 @@ Novosibirsk, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
-[JPoint 2017](http://jpoint.ru/en/)<br/>
+**Java Annotations Are a Big Mistake**<br/>
+[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
 Moscow, Russia<br/>
 7-8 April 2017
 
