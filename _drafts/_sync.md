@@ -5,20 +5,20 @@ date: 2016-12-30
 place: Dnipro, Ukraine
 tags: java oop
 description: |
-  Don't make your classes thread-safe, instead
-  create thread-safe decorators, to make
-  thread-safety configurable.
+  Don't make your classes thread-safe; instead,
+  create thread-safe decorators to make
+  thread safety configurable.
 keywords:
-  - thread-safety
+  - thread safety
   - synchronized java
   - synchronized in java
   - how to make class thread-safe
   - thread-safe java
 ---
 
-You know what thread-safety is, right? If not, there is a simple example
+You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
-have to thread-safe? Again wrong. I think that none of them have to
+have to be thread-safe? Wrong again. I think none of them have to
 be thread-safe, while all of them have to provide synchronized decorators.
 
 <!--more-->
@@ -38,28 +38,28 @@ class Position {
 }
 {% endhighlight %}
 
-What do you think&mdash;is it [thread-safe](https://en.wikipedia.org/wiki/Thread_safety)?
-This term means whether
-an object of this class will work without mistakes when being used by multiple
-threads at the same time. Let's say, we have two threads working with
-the same object `position` and calling its method `increment()` at
-exactly the same moment of time.
+What do you think &mdash; is it [thread-safe](https://en.wikipedia.org/wiki/Thread_safety)?
+This term refers to whether
+an object of this class will operate without mistakes when used by multiple
+threads at the same time. Let's say we have two threads working with
+the same object, `position`, and calling its method `increment()` at
+exactly the same moment in time.
 
-We expect that `number` integer to be equal to 2 when both threads
-finish up, since each of them will increment it once, right?
+We expect the `number` integer to be equal to 2 when both threads
+finish up, because each of them will increment it once, right?
 However, most likely this won't happen.
 
-Let's see what will happen. In both threads, when they start, `before`
-will be equal to `0`. Then `after` will be set to `1`. Then, both threads
-will do `this.number = 1` and we will end up with `1` in `number`, instead
+Let's see what will happen. In both threads, `before`
+will equal `0` when they start. Then `after` will be set to `1`. Then, both threads
+will do `this.number = 1` and we will end up with `1` in `number` instead
 of the expected `2`. See the problem? Classes with such a flaw in their
-design are called **not thread-safe**.
+design are **not thread-safe**.
 
-The most obvious and simple solution is to make our method
+The simplest and most obvious solution is to make our method
 [`synchronized`](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html).
-That will guarantee that no matter how many threads are calling it
-at the same time, they all will go sequentially, not parallel: one
-thread after another. Of course, it will take longer, but will prevent
+That will guarantee that no matter how many threads call it
+at the same time, they will all go sequentially, not in parallel: one
+thread after another. Of course, it will take longer, but it will prevent
 that mistake from happening:
 
 {% highlight java %}
@@ -74,18 +74,18 @@ class Position {
 }
 {% endhighlight %}
 
-A class that guarantees that it won't break no matter how many threads
+A class that guarantees it won't break no matter how many threads
 are working with it is called **thread-safe**.
 
-And now the question is: do we have to make all classes
-thread-safe or only some of them? It seems that it's better to have all
+Now the question is: Do we have to make all classes
+thread-safe or only some of them? It would seem to be better to have all
 classes error-free, right? Why would anyone want an object
 that may break at some point? Well, not exactly. Remember, there is
-a performance concern involved: very often we just don't have multiple
-threads and want out objects to be as fast as possible.
-Between-threads synchronization mechanism will definitely slow us down.
+a performance concern involved; we don't often have multiple
+threads, and we always want our objects to run as fast as possible.
+A between-threads synchronization mechanism will definitely slow us down.
 
-I think that the right approach is to two have two classes. The first one
+I think the right approach is to have two classes. The first one
 is not thread-safe, while the other one is a **synchronized decorator**,
 which would look like this:
 
@@ -111,13 +111,13 @@ Position position = new SyncPosition(
 );
 {% endhighlight %}
 
-When we need a plain simple position, without any thread-safety, we do:
+When we need a plain simple position, without any thread safety, we do this:
 
 {% highlight java %}
 Position position = new SimplePosition();
 {% endhighlight %}
 
-Making classes both functionality rich _and_ thread-safety is, in my opinion,
+Making class functionality both rich _and_ thread-safe is, in my opinion,
 a violation of that famous
 [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 

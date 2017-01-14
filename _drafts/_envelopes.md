@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Decoratoring Envelopes"
+title: "Decorating Envelopes"
 date: 2016-12-30
 place: Lviv, Ukraine
 tags: java oop
 description: |
-  Composing a big object is a rather verbose
-  process in Java; would be great to have an
-  ability to do it shorter.
+  Composing a large object is a rather verbose
+  process in Java; it would be great to have the
+  ability to do it more succinctly.
 keywords:
   - decorators
   - constructor in oop
@@ -17,11 +17,11 @@ keywords:
 ---
 
 <del>Sometimes</del> Very often I need a class that implements an
-interface by making an instance of another class. Sounds weird? Let me show
-an example. There are many classes of that kind in Takes Framework,
-they all are named like `*Wrap`. It's a convenient design concept, which
-unfortunately looks rather verbose in Java. Would be great to have something
-shorter, for example, in [EO](http://www.eolang.org).
+interface by making an instance of another class. Sound weird? Let me show
+you an example. There are many classes of that kind in the Takes Framework,
+and they all are named like `*Wrap`. It's a convenient design concept that,
+unfortunately, looks rather verbose in Java. It would be great to have something
+shorter, like in [EO](http://www.eolang.org) for example.
 
 <!--more-->
 
@@ -68,7 +68,7 @@ As you see, this "decorator" doesn't do anything except "just decorating".
 It encapsulates another `Response` and passes through all method calls.
 
 If it's not clear yet, I'll explain the purpose of `RsHtml`. Let's
-say you have a text and you want to create a `Response`:
+say you have text and you want to create a `Response`:
 
 {% highlight java %}
 String text = // you have it already
@@ -79,19 +79,19 @@ Response response = new RsWithType(
 {% endhighlight %}
 
 Instead of doing this composition of decorators over and over
-again in many places you use `RsHtml`:
+again in many places, you use `RsHtml`:
 
 {% highlight java %}
 String text = // you have it already
 Response response = new RsHtml(text);
 {% endhighlight %}
 
-It is very convenient, but that `RsWrap` is very verbose. Too many
-lines, which are not doing anything special, just forwarding all method
+It is very convenient, but that `RsWrap` is very verbose. There are too many
+lines that don't do anything special; they just forward all method
 calls to the encapsulated `Response`.
 
-How about we introduce a new concept&mdash;"decorators" with a new
-keyword `decorates`:
+How about we introduce a new concept, "decorators", with a new
+keyword, `decorates`:
 
 {% highlight java %}
 class RsHtml decorates Response {
@@ -112,8 +112,8 @@ Then, in order to create an object, we just call:
 Response response = new RsHtml(text);
 {% endhighlight %}
 
-We don't have any new methods in that decorators, just constructors.
-The only purpose of these guys is to create other objects and encapsulate
+We don't have any new methods in the decorators, just constructors.
+The only purpose for these guys is to create other objects and encapsulate
 them. They are not really full-purpose objects. They only help us
 create other objects.
 
