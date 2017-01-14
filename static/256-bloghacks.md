@@ -30,6 +30,8 @@ ISBN: 1537688669.<br/>
 
 <!--more-->
 
+<!-- Reviews for Google -->
+
 Jan 13, 2017:
 I will post here all technical and content changes I'm making to the blog,
 in order to include them later into the second edition of the book. I will describe

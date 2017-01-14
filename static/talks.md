@@ -77,6 +77,12 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
+[AgileDays 2017](http://agiledays.ru/)<br/>
+Moscow, Russia<br/>
+23-24 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
