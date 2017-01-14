@@ -152,7 +152,7 @@ skill&mdash;finding an answer in a public Internet. In our projects we
 any horizontal [communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between programmers, and you won't be
 able to get any help from anyone. You will be on your own and you will fail,
-because you are used to patronizing someone senior, in your
+because you are used to be patronized by someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 StackOverflow is not just an indicator of how smart you are and how many
