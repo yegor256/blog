@@ -39,7 +39,7 @@ gems:
   - jekyll-paginate
   - jekyll-plantuml
   - jekyll-sitemap
-  - jekyll-related-posts
+  # - jekyll-related-posts
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:

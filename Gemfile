@@ -13,7 +13,7 @@ gem 'jekyll-plantuml'
 gem 'jekyll-sass'
 gem 'jekyll-sass-converter'
 gem 'jekyll-sitemap'
-gem 'jekyll-related-posts'
+# gem 'jekyll-related-posts'
 
 gem 'rake', '10.4.2'
 gem 'sass', '3.4.22'
