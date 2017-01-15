@@ -19,7 +19,15 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-<!-- {% webinar 11-01-2017 20 PVvLQGnyDrQ Gradients of Immutability %} -->
+{% webinar 01-02-2017 21 GWLpAZqvqSc How to Deal With Conflicts in a Software Team %}
+
+{% youtube GWLpAZqvqSc video-left %}
+February 1, 2017:
+**How to Deal With Conflicts in a Software Team**
+We'll discuss what is the most effective attitude towards conflicts
+in a software team, which is aiming for higher quality. The discussion
+will be based on this blog post:
+[How Much Do You Love Conflict?]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
 
 {% youtube PVvLQGnyDrQ video-left %}
 January 11, 2017:
