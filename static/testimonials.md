@@ -20,6 +20,8 @@ This is what _some_ of my readers think about me. The list is
 sorted by my personal preference, the most interesting comments
 are at the top.
 
+<div class="nospell">
+
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."&mdash;anonymous (by email)
 
@@ -42,7 +44,7 @@ of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[No
 
 "That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
-" ... insightless nonsense"&mdash;[`@andreasdotorg`](https://twitter.com/andreasdotorg/status/756138631325061120)
+" ... insightless nonsense"&mdash;[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
 
 "I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 
@@ -59,10 +61,12 @@ you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor
 
 "Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
-"Probably the biggest pile of stinky cow shit I have ever read"&mdash;[`@migrrrr`](https://twitter.com/migrrrr/status/771689354913873920)
+"Probably the biggest pile of stinky cow shit I have ever read"&mdash;[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
 
 "You're a sociopath."&mdash;[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
 
 "I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
+
+</div>
 
 Ready to add something? :) Just [email](mailto:me@yegor256.com).
