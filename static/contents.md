@@ -27,10 +27,11 @@ script: |
         }
       }
     );
-    if (total == 0) {
+    var before = $('#total_comments');
+    var after = ' (' + total + ' comments total)';
+    $('#total_comments').html(after);
+    if (total == 0 || before != after) {
       setTimeout(count_comments, 1000);
-    } else {
-      $('#total_comments').html( ' (' + total + ' comments total)' );
     }
   }
   count_comments();
