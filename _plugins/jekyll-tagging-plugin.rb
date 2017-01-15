@@ -79,7 +79,7 @@ module Jekyll
     end
 
     def tagged(post)
-      "<div class='tagged'>
+      "<div class='tagged' data-length='#{post.content.split(/\s+/).length}'>
         <div><a href='#{post.url}'>#{post['title']}</a></div>
         <ul class='subline'>
           <li>

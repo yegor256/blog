@@ -59,6 +59,14 @@ script: |
     );
     $('#by_date').addClass('active');
   }
+  function sort_by_length() {
+    sort_by(
+      function(x) {
+        return ~~$(x).attr('data-length');
+      }
+    );
+    $('#by_length').addClass('active');
+  }
   function sort_by(f) {
     $('#all div.tagged').sort(
       function(a, b) {
@@ -92,6 +100,8 @@ Sort by:
 <span id="by_date" onclick="sort_by_date();" class="sorter active">date</span>
 |
 <span id="by_comments" onclick="sort_by_comments();" class="sorter">comments</span>
+|
+<span id="by_length" onclick="sort_by_length();" class="sorter">length</span>
 </div>
 
 <div id="all">
