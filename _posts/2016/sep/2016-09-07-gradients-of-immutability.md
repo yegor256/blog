@@ -16,6 +16,10 @@ keywords:
   - immutable object java
 youtube:
   - PVvLQGnyDrQ
+related:
+  - 2014/jun/2014-06-09-objects-should-be-immutable
+  - 2014/dec/2014-12-09-immutable-object-state-and-behavior
+  - 2014/dec/2014-12-22-immutable-objects-not-dumb
 jb_picture:
   src: /images/2016/09/twelve-monkeys.jpg
   caption: Twelve Monkeys (1995) by Terry Gilliam

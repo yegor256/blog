@@ -19,6 +19,10 @@ youtube:
   - EnhRgXrHCC4
   - p7m7_iiqaHI
   - PVvLQGnyDrQ
+related:
+  - 2014/jun/2014-06-09-objects-should-be-immutable
+  - 2016/sep/2016-09-07-gradients-of-immutability
+  - 2014/dec/2014-12-22-immutable-objects-not-dumb
 jb_picture:
   src: /images/2014/12/once-upon-a-time-in-the-west.png
   caption: Once Upon a Time in the West (1968) by Sergio Leone
