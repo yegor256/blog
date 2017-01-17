@@ -143,7 +143,8 @@ class Book {
 }
 {% endhighlight %}
 
-The object is still _immutable_. Is it thread-safe? No. Is it a constant?
+The object is still _immutable_. Is it
+[thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %})? No. Is it a constant?
 No. Is it immutable? Yes. Confused? You bet.
 
 <hr/>

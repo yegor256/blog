@@ -233,7 +233,7 @@ Why is immutability a virtue? This article explains in detail:
 In a nutshell, immutable objects are better because:
 
  * Immutable objects are simpler to construct, test, and use.
- * Truly immutable objects are always thread-safe.
+ * Truly immutable objects are always [thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %}).
  * They help avoid [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %}).
  * Their usage is side-effect free (no defensive copies).
  * They always have failure atomicity.

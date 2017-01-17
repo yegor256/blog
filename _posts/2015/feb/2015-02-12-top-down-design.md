@@ -105,6 +105,8 @@ Okay, let's release `Makefile` first and `wc.c` next. But what will my
 friend do with a couple of tests and no product in hand? This first
 release will be absolutely pointless, and I won't get my $100.
 
+{% quote Every new increment must add some value to the product as it is perceived by the customer, not by us programmers %}
+
 Now we're getting to the point of this article. What I'm trying to say
 is that every new increment must add some value to the product as it
 is perceived by the customer, not by us programmers. The `Makefile` is

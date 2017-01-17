@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Synchronized Decorators to Replace Thread-Safe Classes"
-date: 2016-12-30
-place: Dnipro, Ukraine
+date: 2017-01-17
+place: Odessa, Ukraine
 tags: java oop
 description: |
   Don't make your classes thread-safe; instead,
@@ -14,6 +14,9 @@ keywords:
   - synchronized in java
   - how to make class thread-safe
   - thread-safe java
+jb_picture:
+  src: /images/2017/01/aladdin.jpg
+  caption: Aladdin (1992) by Ron Clements and John Musker
 ---
 
 You know what thread safety is, right? If not, there is a simple example
@@ -22,6 +25,8 @@ have to be thread-safe? Wrong again. I think none of them have to
 be thread-safe, while all of them have to provide synchronized decorators.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 Let's start with an example (it's
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), by the way):
