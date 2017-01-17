@@ -173,7 +173,8 @@ provided encoding:</p>
 <code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That's true and this is by design. We don't want this
 duplicated HTTP roundtrip to happen. Let's introduce one more class,
-which will cache the page fetched (not thread-safe, but it's not important now):</p>
+which will cache the page fetched (
+<a href="/2017/01/17/synchronized-decorators.html">not thread-safe</a>, but it's not important now):</p>
 
 
 

@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-16T22:51:41+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-17T08:26:43+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
+below. All classes must be thread-safe, right? Not really. Some of them
+have to be thread-safe? Wrong again. I think none of them have to
+be thread-safe, while all of them have to provide synchronized decorators.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#f5aa3c20&#39;/&gt;&lt;figcaption id=&#39;f5aa3c20&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
+&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What do you think &amp;mdash; is it &lt;a href=&quot;https://en.wikipedia.org/wiki/Thread_safety&quot;&gt;thread-safe&lt;/a&gt;?
+This term refers to whether
+an object of this class will operate without mistakes when used by multiple
+threads at the same time. Let&amp;#39;s say we have two threads working with
+the same object, &lt;code&gt;position&lt;/code&gt;, and calling its method &lt;code&gt;increment()&lt;/code&gt; at
+exactly the same moment in time.&lt;/p&gt;
+
+&lt;p&gt;We expect the &lt;code&gt;number&lt;/code&gt; integer to be equal to 2 when both threads
+finish up, because each of them will increment it once, right?
+However, most likely this won&amp;#39;t happen.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s see what will happen. In both threads, &lt;code&gt;before&lt;/code&gt;
+will equal &lt;code&gt;0&lt;/code&gt; when they start. Then &lt;code&gt;after&lt;/code&gt; will be set to &lt;code&gt;1&lt;/code&gt;. Then, both threads
+will do &lt;code&gt;this.number = 1&lt;/code&gt; and we will end up with &lt;code&gt;1&lt;/code&gt; in &lt;code&gt;number&lt;/code&gt; instead
+of the expected &lt;code&gt;2&lt;/code&gt;. See the problem? Classes with such a flaw in their
+design are &lt;strong&gt;not thread-safe&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The simplest and most obvious solution is to make our method
+&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html&quot;&gt;&lt;code&gt;synchronized&lt;/code&gt;&lt;/a&gt;.
+That will guarantee that no matter how many threads call it
+at the same time, they will all go sequentially, not in parallel: one
+thread after another. Of course, it will take longer, but it will prevent
+that mistake from happening:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A class that guarantees it won&amp;#39;t break no matter how many threads
+are working with it is called &lt;strong&gt;thread-safe&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now the question is: Do we have to make all classes
+thread-safe or only some of them? It would seem to be better to have all
+classes error-free, right? Why would anyone want an object
+that may break at some point? Well, not exactly. Remember, there is
+a performance concern involved; we don&amp;#39;t often have multiple
+threads, and we always want our objects to run as fast as possible.
+A between-threads synchronization mechanism will definitely slow us down.&lt;/p&gt;
+
+&lt;p&gt;I think the right approach is to have two classes. The first one
+is not thread-safe, while the other one is a &lt;strong&gt;synchronized decorator&lt;/strong&gt;,
+which would look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SyncPosition&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;SyncPosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, when we need our &lt;code&gt;position&lt;/code&gt; object to be thread-safe, we decorate
+it with &lt;code&gt;SyncPosition&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SyncPosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SimplePosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;When we need a plain simple position, without any thread safety, we do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SimplePosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Making class functionality both rich &lt;em&gt;and&lt;/em&gt; thread-safe is, in my opinion,
+a violation of that famous
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;By the way, this problem is very close to the one of
+&lt;a href=&quot;/2016/01/26/defensive-programming.html&quot;&gt;defensive programming&lt;/a&gt;
+and validators.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">You know what thread safety is, right? If not, there is a simple example
+below. All classes must be thread-safe, right? Not really. Some of them
+have to be thread-safe? Wrong again. I think none of them have to
+be thread-safe, while all of them have to provide synchronized decorators.</summary></entry><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
 very often a customer &lt;del&gt;is an idiot&lt;/del&gt; doesn&amp;#39;t
 really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
@@ -799,79 +901,4 @@ it&amp;#39;s bad (or there are some hidden costs or concealed promotion of somet
 I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
 EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
 to summarize them all and explain why dead trees are the only way
-to go if you want to read my content.</summary></entry><entry><title type="html">Software Quality Award, 2017</title><link href="http://www.yegor256.com/2016/10/23/award-2017.html" rel="alternate" type="text/html" title="Software Quality Award, 2017" /><published>2016-10-23T00:00:00+00:00</published><updated>2016-10-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/10/23/award-2017</id><content type="html" xml:base="http://www.yegor256.com/2016/10/23/award-2017.html">&lt;p&gt;This is the third year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
-is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules are still the same. Read on.
-Previous years are here:
-&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
-&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Registration is open! Fill
-&lt;a href=&quot;https://docs.google.com/forms/d/1QCRWPAyqnuecBSWAexDcVklNhclI4R6ckhNY5CzE9x4&quot;&gt;this form&lt;/a&gt;
-to submit.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;One person can submit &lt;strong&gt;only one&lt;/strong&gt; project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Submissions are accepted until the &lt;strong&gt;September 1, 2017&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I will check the commit history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Results will be announced &lt;strong&gt;October 15, 2017&lt;/strong&gt; on this page and by email.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The best project will receive &lt;strong&gt;$4,096&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least 10,000 lines of code.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don&amp;#39;t care about
-popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
-your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;These projects submitted so far (in order of submission):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/SimonKagstrom/kcov&quot;&gt;SimonKagstrom/kcov&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/JnRouvignac/AutoRefactor&quot;&gt;JnRouvignac/AutoRefactor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/javaslang/javaslang&quot;&gt;javaslang/javaslang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/HDouss/jeometry&quot;&gt;HDouss/jeometry&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary type="html">This is the third year of the
-Software Quality Award. The prize
-is still the same&amp;mdash;$4,096.
-The rules are still the same. Read on.
-Previous years are here:
-2015,
-2016.
-
-Registration is open! Fill
-this form
-to submit.</summary></entry></feed>
+to go if you want to read my content.</summary></entry></feed>
