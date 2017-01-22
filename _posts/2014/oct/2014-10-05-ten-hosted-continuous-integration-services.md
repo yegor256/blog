@@ -378,6 +378,8 @@ a full scale mobile app to test it against.
 
 [buddy.works](https://buddy.works/): will review soon.
 
+[AWS CodeBuild](https://aws.amazon.com/codebuild/) and [AWS CodeDeploy](https://aws.amazon.com/codedeploy/): will review soon.
+
 **Ship.io** is dead (as of 20-Sep-2016).
 
 **ZeroCI.com** is dead (as of 28-Aug-2016).
