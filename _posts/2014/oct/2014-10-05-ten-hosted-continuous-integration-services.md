@@ -378,7 +378,7 @@ a full scale mobile app to test it against.
 
 [buddy.works](https://buddy.works/): will review soon.
 
-[AWS CodeBuild](https://aws.amazon.com/codebuild/) and [AWS CodeDeploy](https://aws.amazon.com/codedeploy/): will review soon.
+[AWS Code Build](https://aws.amazon.com/codebuild/) and [AWS Code Deploy](https://aws.amazon.com/codedeploy/): will review soon.
 
 **Ship.io** is dead (as of 20-Sep-2016).
 
