@@ -83,6 +83,12 @@ Moscow, Russia<br/>
 23-24 March 2017
 
 <div class="talk-event"/>
+<img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
+[DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
+Delft, The Netherlands<br/>
+30 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
