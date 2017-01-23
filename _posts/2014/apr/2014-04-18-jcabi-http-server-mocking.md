@@ -35,7 +35,7 @@ can help you in unit and integration testing of your HTTP clients.
 <!--more-->
 
 Let me show you an example first. In the example, I'm using
-[hamcrest](http://hamcrest.org/JavaHamcrest/) for assertions.
+[hamcrest](https://github.com/hamcrest) for assertions.
 
 {% highlight java %}
 MkContainer container = new MkGrizzlyContainer()

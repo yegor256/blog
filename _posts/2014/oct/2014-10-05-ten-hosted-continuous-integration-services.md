@@ -128,15 +128,6 @@ the best and highly recommended):
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.drone.io">Drone</a></td>
-  <td class="x-right"><a href="https://drone.io/pricing">$25/mo</a></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  </tr>
 <tr><td><a href="https://magnum-ci.com/pricing">Magnum-CI</a></td>
   <td class="x-right">?</td>
   <td class="center"><i class="icon-yes green"></i></td>
@@ -384,6 +375,8 @@ a full scale mobile app to test it against.
 
 **ZeroCI.com** is dead (as of 28-Aug-2016).
 
+**Drone.io** is not hosted any more, but is open source (as of 23-Jan-2017).
+
 <hr/>
 
 BTW, if you don't like the idea of keeping continuous integration
@@ -391,7 +384,7 @@ in cloud, consider these on-premise software packages (in order or preference):
 [Jenkins](http://jenkins-ci.org/),
 [TeamCity](http://www.jetbrains.com/teamcity/),
 [Go](http://www.thoughtworks.com/products/go-continuous-delivery),
-[Strider](http://stridercd.com/),
+[Strider](https://github.com/Strider-CD/strider),
 [BuildBot](http://buildbot.net/).
 
 Keep in mind that no matter how good and expensive your

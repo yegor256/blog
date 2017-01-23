@@ -60,7 +60,7 @@ There are two alternatives to the above that I'm aware of, which are do almost t
 [xml-matchers](https://code.google.com/p/xml-matchers/) by
 David Ehringer
 and
-[`hasXPath()`](http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html#hasXPath%28java.lang.String%29)
+[`hasXPath()`](https://github.com/hamcrest/JavaHamcrest/blob/hamcrest-java-1.3/hamcrest-library/src/main/java/org/hamcrest/xml/HasXPath.java)
 method in Hamcrest itself.
 
 I have tried them both, but faced a number of problems.
