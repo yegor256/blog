@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-23T17:02:25+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-24T10:04:58+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
+software developer or an architect? How do I grow from a junior just
+starting to write Java code to the leader of a software team that is
+driving a BMW and making $150K+ per year? What are the exact steps that
+won&amp;#39;t waste time and will get you there faster? Let me share what I think might
+be helpful.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#3c7b6134&#39;/&gt;&lt;figcaption id=&#39;3c7b6134&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Before writing this, I &lt;a href=&quot;https://www.google.com/webhp?q=career%20advice%20software%20developer&quot;&gt;Googled&lt;/a&gt;
+a bit and found a lot of interesting suggestions, like to
+be helpful, make friends, be language agnostic, code a lot,
+try to prove your bosses wrong, avoid conflicts, exercise, etc.
+Some of them are good, while others are very wrong, but most of them are just too far
+away from the main point.&lt;/p&gt;
+
+&lt;p&gt;I want to share what I believe will look more or less like explicit instructions
+of what to do tomorrow to become a $100-per-hour software architect
+in a few years. Well, they worked and keep working for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Be Loyal&lt;/strong&gt;.
+The company you are working for at the moment is just a training
+ground, nothing else. Don&amp;#39;t invest an &lt;del&gt;extra&lt;/del&gt; minute of your time into it.
+Be selfish; think only about yourself and your personal skills,
+knowledge, and experience. They pay you to be dedicated and loyal?
+Well, that&amp;#39;s their fault. Use them to learn new technologies, experiment
+with new ideas, train and educate yourself, get new certificates,
+meet new people, etc. They must work &lt;em&gt;for you&lt;/em&gt;, not the other way around.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Work&lt;/strong&gt;.
+Make sure programming is your &lt;em&gt;hobby&lt;/em&gt;, not your job. Everything else
+must be secondary, including your family, friends, and WoW.
+Software engineering is your family, your passion, your friend, and your life.
+Without that attitude, you will always be a slave to those who think like
+that. You must not work; you must have fun in front of the laptop. More
+fun than you&amp;#39;re having anywhere else. Never do anything that is not fun.
+If you notice you&amp;#39;re writing some code because you &amp;quot;have to&amp;quot; instead of
+because &amp;quot;you want to,&amp;quot; stop immediately. Something is going wrong and
+you&amp;#39;re shooting yourself in the foot; your career is in trouble.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Make Friends&lt;/strong&gt;.
+I&amp;#39;m talking about professional relationships in the office, within your projects,
+at the company you&amp;#39;re working for. Remember that 99 percent of people will not
+become experts. They will remain who they are&amp;mdash;regular
+programmers with no passion or ambition. What&amp;#39;s really bad for you is that they will
+want you to stay &lt;em&gt;with them&lt;/em&gt;. Nobody will enjoy seeing your growth, and your
+closest friends will become your enemies. Not explicitly, but subconsciously they
+will do everything they can to prevent you from getting better and leaving
+them. And you will have to leave them if you grow up. To avoid all that,
+stay professional and don&amp;#39;t make friends at work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Be Helpful&lt;/strong&gt;.
+There are more than 10 million programmers in the world. They all need help. Why
+do you need to help that dude sitting next to you in the office? You won&amp;#39;t
+save the world by helping people around you&amp;mdash;forget that religious
+nonsense. If you really want to do good for the software industry, focus
+on bigger things: make an open source product, write a book, or improve
+the documentation of the project you are working on. By
+&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;helping&lt;/a&gt;
+people around you and solving &lt;em&gt;their&lt;/em&gt; problems, you just cripple them,
+nothing else.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Ask for Help&lt;/strong&gt;.
+Expect the same attitude from programmers around you. Again, the same argument applies:
+There are &lt;a href=&quot;https://sostats.github.io/&quot;&gt;more than 6 million accounts&lt;/a&gt;
+registered on the StackExchange platform; if you need help, ask them. Don&amp;#39;t ask
+your friends or colleagues. Train yourself to get help from public sources
+or from your project documentation. By asking people around you, you&amp;#39;re making
+your life easier in the short term only. In the long run, you will lack that
+important skill of knowing how to find information. You will become
+a hostage to those friends who help you. Also, don&amp;#39;t learn from people around you;
+learn from books, StackOverflow, and open source software.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Waste Time&lt;/strong&gt;.
+This is probably the most important advice, which I have to give myself
+first of all&amp;mdash;unfortunately, I waste a lot of time. Any growth is always
+about saying &amp;quot;No.&amp;quot; You must be prepared to say it to your friends, your
+family, your habits, your wishes, your projects, colleagues, classes,
+methods, and lines of code. Stop the projects that are taking time and giving
+nothing back. Don&amp;#39;t call back those whom you don&amp;#39;t need. Yes, they need you,
+but you don&amp;#39;t need them. This may sound harsh and selfish, but that&amp;#39;s the
+only way to get where you want to be. Time is your main resource; be
+very greedy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Skimp on Growth&lt;/strong&gt;.
+You must invest into yourself. Fist of all, you have to buy books. Don&amp;#39;t steal
+them, even though
+&lt;a href=&quot;/2016/11/09/why-no-ebooks.html&quot;&gt;you can&lt;/a&gt;.
+Buy them, spending your &lt;em&gt;own&lt;/em&gt; money. You will take
+them way more serious. You will respect yourself for owning the library.
+You will feel that software engineering is forever with you; it&amp;#39;s not temporary,
+it&amp;#39;s not just a job, it&amp;#39;s your life. Two books per month is your
+absolute minimum. Second, pay for certificates for the
+same reasons. Third, purchase software; don&amp;#39;t steal it. Finally, don&amp;#39;t be
+cheap on your laptop. It is much more important than your car or a birthday
+gift for your spouse. Your laptop is your instrument; it must be
+&lt;del&gt;good and expensive&lt;/del&gt; made by Apple. You must go &amp;quot;all in&amp;quot; if you want
+to win.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Work Full-Time&lt;/strong&gt;.
+As much as possible, try to stay away from full-time, 9-to-5 jobs&amp;mdash;they
+pause your professional growth. Permanent or long-term employment gives you
+a stable income, a comfortable office environment, a predictable set of
+technical problems to solve, and the ability to become an expert over a small
+territory. At the same time, it takes away &lt;em&gt;fear&lt;/em&gt;. That&amp;#39;s right, fear. You
+are not afraid anymore, and that&amp;#39;s why you stop growing. To grow and grow fast,
+you must always be challenged by new tasks, new teams, new projects, and new job
+interviews. You must always prove that you are worth something. Ideally,
+you must work on two to three projects part-time and change them every 6 to 12 months.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Be Cheap&lt;/strong&gt;.
+Forget the stories that teach &amp;quot;money is not everything, and an interesting project
+is much more important&amp;quot;&amp;mdash;they are for losers. Money is everything. An
+interesting project will be &lt;em&gt;properly&lt;/em&gt; funded. If it&amp;#39;s not funded, the market
+doesn&amp;#39;t need it. What are you doing there then? The only answer is that you&amp;#39;re
+not as good as &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;others&lt;/a&gt;;
+that&amp;#39;s how they managed to buy you. My advice is to
+never pay attention to those cheap stories;
+&lt;a href=&quot;/2016/01/12/good-programmers-dont-work-for-equity.html&quot;&gt;demand cash&lt;/a&gt;, up front, as
+much as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Be Skeptical About Certifications&lt;/strong&gt;.
+Many programmers think certifications are not important now because
+they don&amp;#39;t really validate anything and are issued simply for money by
+big companies. Don&amp;#39;t think like that. Certifications help you formalize
+your knowledge, put borders around it, and remove gaps. And they demonstrate
+to most of your potential employers that you&amp;#39;re truly &lt;em&gt;serious&lt;/em&gt; about software
+engineering.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Ignore Management&lt;/strong&gt;.
+Being a good programmer is not the same as being a good architect or
+a team leader. To move higher in that hierarchy, you must understand
+&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project management&lt;/a&gt;.
+And it&amp;#39;s not just being nice to people and wearing
+a suit. It&amp;#39;s a science, with a lot of rules, principles, methods,
+and best practices. You must study them and become very good at them. Just
+as good as you are in Java or C++. Start with
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt; and earn your
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Professional&quot;&gt;PMP&lt;/a&gt; certification.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Underestimate English&lt;/strong&gt;.
+Most of my readers are not native English speakers, just like myself.
+I&amp;#39;m addressing this paragraph to you: You must improve your speaking and
+writing skills; it&amp;#39;s very important. You will never become an
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;expensive&lt;/a&gt;
+software architect if you can&amp;#39;t speak and write well. And it can&amp;#39;t be
+Russian in English words. It must be as the English people talk in San Francisco,
+not in Moscow. The best advice to learn it: Watch English movies with subtitles.
+You must speak like Matt Damon or Al Pacino, but not like
+&lt;a href=&quot;https://www.youtube.com/watch?v=_0uM_xh7WOg&amp;amp;t=29s&quot;&gt;Mutko&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Ignore Open Source&lt;/strong&gt;.
+You must be active in the open source community. It&amp;#39;s
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;a must&lt;/a&gt;. You either
+have your own open source project or you actively contribute to an existing
+one. Either way, it&amp;#39;s crucial. Working in a closed
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office environment&lt;/a&gt; is
+one thing, while writing code that is visible to the entire world is a totally
+different thing. Most programmers are simply afraid of that, and they make
+up many excuses for why they are not there. Don&amp;#39;t be one of them. Yes, it&amp;#39;s
+difficult, it&amp;#39;s stressful, it will consume a lot of your private time, and
+nobody will pay you for it. Do it anyway&amp;mdash;this is the fastest way
+to grow. Moreover, I would recommend you try to open as much source code
+as possible, even if you write it for private and commercial projects.
+Some companies won&amp;#39;t be against that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Be Invisible&lt;/strong&gt;.
+Make sure you have Facebook, Twitter, LinkedIn, and Instagram accounts, along
+with a blog. You must be present on the Internet. You&amp;#39;re a serious software
+architect? I should be able to Google your name and find a lot of professional
+links, not just your Tinder profile. And they will Google your name; don&amp;#39;t
+ever doubt that. My book &lt;a href=&quot;/256-bloghacks.html&quot;&gt;&amp;quot;256 Bloghacks&amp;quot;&lt;/a&gt; may
+help you understand how to do it right.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Stay Home&lt;/strong&gt;.
+Attend seminars, meetups, and software conferences. At least once a month,
+you must go somewhere where other programmers are hanging out. You don&amp;#39;t
+need to be super active and make a lot of friends&amp;mdash;just be
+there and watch. Eventually you will realize that it&amp;#39;s time to become
+a speaker. Remember that it doesn&amp;#39;t really matter how much your
+coworkers respect you. What matters is what the &lt;em&gt;market&lt;/em&gt; thinks about you.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;#39;t Forget to Relax&lt;/strong&gt;.
+Nobody likes those smelly dorks who only get one haircut per year. They will
+hire you and respect you as a coder, but they will never take you
+seriously as a candidate for a role with a lot of &lt;del&gt;money&lt;/del&gt; responsibility. You will
+always look like a mentally unstable person. Instead, you must look &amp;quot;like business,&amp;quot; even
+though you are a geek. That&amp;#39;s why it&amp;#39;s very important to pay attention to
+how you spend your free time&amp;mdash;how you relax. Playing GTA &amp;#39;til 3 a.m. is not
+what successful and happy software architects do. Instead, here is your
+short list of activities: sports, tourism, and night clubs.
+Be a normal person&amp;mdash;that&amp;#39;s the point.&lt;/p&gt;
+
+&lt;p&gt;Did I miss anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">I get questions like this all the time: How does one become a senior
+software developer or an architect? How do I grow from a junior just
+starting to write Java code to the leader of a software team that is
+driving a BMW and making $150K+ per year? What are the exact steps that
+won&amp;#39;t waste time and will get you there faster? Let me share what I think might
+be helpful.</summary></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
 have to be thread-safe? Wrong again. I think none of them have to
 be thread-safe, while all of them have to provide synchronized decorators.&lt;/p&gt;
@@ -815,90 +1015,4 @@ to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
 as a speaker and a listener; with a focus on Java and project management.
 I will try to update this list regularly, mostly not to forget where
 I have to submit my talks. Hopefully the list will help you too,
-to make the right choice and never miss their CFP deadlines.</summary></entry><entry><title type="html">Why I Don’t Publish E-Books</title><link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html" rel="alternate" type="text/html" title="Why I Don&#39;t Publish E-Books" /><published>2016-11-09T00:00:00+00:00</published><updated>2016-11-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/09/why-no-ebooks</id><content type="html" xml:base="http://www.yegor256.com/2016/11/09/why-no-ebooks.html">&lt;p&gt;Very often readers of &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; ask me why
-I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
-EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
-to summarize them all and explain why dead trees are the only way
-to go if you want to read my content.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/11/addams-family.jpg&#39; longdesc=&#39;#506d2874&#39;/&gt;&lt;figcaption id=&#39;506d2874&#39;&gt;The Addams Family (1991) by Barry Sonnenfeld&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, there is a simple technical reason:&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/2fBsTPn&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2016%2F11%2Fctan-lion.jpg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;I don&amp;#39;t know how to format them&lt;/strong&gt;.
-I type all my books in &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;.
-To my knowledge, it&amp;#39;s the best and
-most powerful typesetting software. If you don&amp;#39;t use it yet, you
-absolutely must read
-&lt;a href=&quot;http://amzn.to/2fBsTPn&quot;&gt;The TeX Book&lt;/a&gt; by Donald Knuth. Even if you&amp;#39;re not
-going to become a book writer or publisher, you must read the book.
-You will enjoy reading and will simply fall in love with TeX. The only
-problem with TeX is that it formats texts for a fixed page size, unlike
-HTML and many other digital formats. When I write my books, I know exactly
-the size of their pages, and everything is formatted to look perfect
-on paper. I simply don&amp;#39;t know how to do the same for all digital formats.
-I&amp;#39;m sure it&amp;#39;s possible, but I don&amp;#39;t know how.&lt;/p&gt;
-
-&lt;p&gt;Second, there is an emotional reason:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I don&amp;#39;t like digital books&lt;/strong&gt;.
-Call me old school, but I don&amp;#39;t like to read on screen. I like how
-books feel, how they smell, and how they become &amp;quot;friends.&amp;quot; I like
-to make notes, bookmarks, fold pages, etc. I believe what&amp;#39;s very important is
-not just the content, but the way you &amp;quot;feel&amp;quot; it. With a digital book,
-this emotional aspect of reading is gone; all books are the same. You don&amp;#39;t
-feel a book at all, because it&amp;#39;s just a Kindle in your hands. You may say
-that not everybody is like me. Well, yes, but I want the world to be
-the way I like it. Not the way it is.&lt;/p&gt;
-
-&lt;p&gt;All other reasons are derived from the fact that a digital book will
-inevitably be stolen and posted on torrents or somewhere
-else, for free download. A digital book will become a &lt;em&gt;free&lt;/em&gt; book very quickly.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Let&amp;#39;s just agree that a digital book means a free book&lt;/aside&gt;
-
-&lt;p&gt;Let me tell you a funny story. I received an email a few months ago from a &amp;quot;Korean
-book publisher.&amp;quot; The email said it was very interested in translating
-&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; into Korean and publishing in its
-local market. To start the process, the email said, the company needed my book in PDF.
-I replied that I was ready to send a printed copy, which was
-definitely enough for a translator to work on. The sender disappeared. I&amp;#39;ve checked
-its website and found no real evidence of previously published books. I guess it
-was just a scam, an attempt to get a digital copy of the book. Funny, huh?&lt;/p&gt;
-
-&lt;p&gt;Thus, let&amp;#39;s just agree that a digital book means a free book at the moment
-of writing, in this world. And here is why I don&amp;#39;t want my books to be free:&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Not only because I&amp;#39;m greedy, but because I want you to take my books seriously&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;I want to earn&lt;/strong&gt;.
-Not only because I need to pay my bills, but mostly because I want
-to stay motivated. I&amp;#39;ve made almost $12,000 by selling the first volume of
-&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; over the last 10 months. Do you
-think I&amp;#39;m motivated enough to write the second volume. Of course I am!
-Would I be as motivated as I am now if I would have made $500 instead? I don&amp;#39;t think
-so. Most probably, you would never see any more books from me.
-And it&amp;#39;s not just about dollars.
-It&amp;#39;s mostly about the appreciation I feel from you. Every payment
-I get from Amazon tells me that I definitely deliver something valuable.
-With a free book, I will get no appreciation and no cash.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I want you to pay&lt;/strong&gt;.
-Not only because I&amp;#39;m greedy, but mostly because I want you to take my
-books seriously. As a reader myself, I pay almost no attention to
-books that cost $1.99 or nothing. I understand that their authors themselves
-were not serious about them. Why are they cheap or free? They were so easy to write?
-Their authors don&amp;#39;t believe that anyone would pay any decent money for them?
-Their authors are afraid of refunds? Probably a combination of all that.
-I strongly believe that good products must cost good money. If it&amp;#39;s free,
-it&amp;#39;s bad (or there are some hidden costs or concealed promotion of something else).&lt;/p&gt;
-
-&lt;p&gt;Because of all that, you get no digital books. Only printed ones.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Very often readers of my books ask me why
-I don&amp;#39;t publish them in digital format as e-books for Amazon Kindle,
-EPUB, FB2, or simply PDF. There are a few reasons. It&amp;#39;s time
-to summarize them all and explain why dead trees are the only way
-to go if you want to read my content.</summary></entry></feed>
+to make the right choice and never miss their CFP deadlines.</summary></entry></feed>
