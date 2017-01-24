@@ -7,7 +7,7 @@ tags: career
 description: |
   I often hear the question of how to become
   a senior developer; this is my
-  story and my advice.
+  story and my advice; hope it helps you.
 keywords:
   - career hints
   - how to become senior developer
