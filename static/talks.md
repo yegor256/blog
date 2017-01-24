@@ -84,6 +84,7 @@ Moscow, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
+**Why Distributed Teams Suck?**<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
 Delft, The Netherlands<br/>
 30 March 2017
