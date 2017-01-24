@@ -50,6 +50,8 @@ Well, that's their fault. Use them to learn new technologies, experiment
 with new ideas, train and educate yourself, get new certificates,
 meet new people, etc. They must work _for you_, not the other way around.
 
+{% quote They pay you to be dedicated and loyal? Well, that's their fault. %}
+
 **Don't Work**.
 Make sure programming is your _hobby_, not your job. Everything else
 must be secondary, including your family, friends, and WoW.
@@ -72,6 +74,8 @@ will do everything they can to prevent you from getting better and leaving
 them. And you will have to leave them if you grow up. To avoid all that,
 stay professional and don't make friends at work.
 
+{% quote Nobody will enjoy seeing your growth, and your closest friends will become your enemies. %}
+
 **Don't Be Helpful**.
 There are more than 10 million programmers in the world. They all need help. Why
 do you need to help that dude sitting next to you in the office? You won't
@@ -93,6 +97,8 @@ your life easier in the short term only. In the long run, you will lack that
 important skill of knowing how to find information. You will become
 a hostage to those friends who help you. Also, don't learn from people around you;
 learn from books, StackOverflow, and open source software.
+
+{% quote You must be prepared to say it to your friends, your family, your habits, your wishes, your projects, colleagues, classes, methods, and lines of code. %}
 
 **Don't Waste Time**.
 This is probably the most important advice, which I have to give myself
@@ -187,6 +193,8 @@ to grow. Moreover, I would recommend you try to open as much source code
 as possible, even if you write it for private and commercial projects.
 Some companies won't be against that.
 
+{% quote I should be able to Google your name and find a lot of professional links, not just your Tinder profile. %}
+
 **Don't Be Invisible**.
 Make sure you have Facebook, Twitter, LinkedIn, and Instagram accounts, along
 with a blog. You must be present on the Internet. You're a serious software
@@ -202,6 +210,8 @@ need to be super active and make a lot of friends&mdash;just be
 there and watch. Eventually you will realize that it's time to become
 a speaker. Remember that it doesn't really matter how much your
 coworkers respect you. What matters is what the _market_ thinks about you.
+
+{% quote Playing GTA 'til 3 a.m. is not what successful and happy software architects do. %}
 
 **Don't Forget to Relax**.
 Nobody likes those smelly dorks who only get one haircut per year. They will
