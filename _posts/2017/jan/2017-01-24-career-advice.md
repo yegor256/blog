@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I get questions like this all the time: How does one become a senior
-software developer or an architect? How do I grow from a junior just
+software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
 won't waste time and will get you there faster? Let me share what I think might
