@@ -98,7 +98,7 @@ important skill of knowing how to find information. You will become
 a hostage to those friends who help you. Also, don't learn from people around you;
 learn from books, StackOverflow, and open source software.
 
-{% quote You must be prepared to say it to your friends, your family, your habits, your wishes, your projects, colleagues, classes, methods, and lines of code. %}
+{% quote You must be prepared to say "No" to your friends, your family, your habits, your wishes, your projects, colleagues, classes, methods, and lines of code. %}
 
 **Don't Waste Time**.
 This is probably the most important advice, which I have to give myself
