@@ -19,7 +19,7 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 01-02-2017 21 GWLpAZqvqSc How to Deal With Conflicts in a Software Team %}
+{% webinar 08-02-2017 21 GWLpAZqvqSc How to Deal With Conflicts in a Software Team %}
 
 {% youtube GWLpAZqvqSc video-left %}
 February 8, 2017:
