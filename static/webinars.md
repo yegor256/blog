@@ -22,7 +22,7 @@ development, object-oriented programming and project management.
 {% webinar 01-02-2017 21 GWLpAZqvqSc How to Deal With Conflicts in a Software Team %}
 
 {% youtube GWLpAZqvqSc video-left %}
-February 1, 2017:
+February 8, 2017:
 **How to Deal With Conflicts in a Software Team**
 We'll discuss what is the most effective attitude towards conflicts
 in a software team, which is aiming for higher quality. The discussion
