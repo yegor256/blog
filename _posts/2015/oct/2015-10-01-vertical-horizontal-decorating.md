@@ -16,8 +16,8 @@ keywords:
   - decorator java
   - encapsulation
 book: elegant-objects 3.2.6
+image: /images/2015/10/the-apartment.jpg
 jb_picture:
-  src: /images/2015/10/the-apartment.jpg
   caption: The Apartment (1960) by Billy Wilder
 ---
 

@@ -12,8 +12,8 @@ keywords:
   - how to fire someone nicely
   - how to fire someone you like
   - how to fire an employee
+image: /images/2015/09/up-in-the-air.jpg
 jb_picture:
-  src: /images/2015/09/up-in-the-air.jpg
   caption: Up in the Air (2009) by Jason Reitman
 ---
 

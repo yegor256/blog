@@ -13,8 +13,8 @@ keywords:
   - software project objectives
   - project objectives example
   - project objectives definition
+image: /images/2015/01/the-million-dollar-hotel.png
 jb_picture:
-  src: /images/2015/01/the-million-dollar-hotel.png
   caption: The Million Dollar Hotel (2000) by Wim Wenders
 ---
 

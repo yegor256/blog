@@ -14,8 +14,8 @@ keywords:
   - inheritance over composition
   - inheritance vs composition
   - composition over inheritance
+image: /images/2016/09/death-at-a-funeral.jpg
 jb_picture:
-  src: /images/2016/09/death-at-a-funeral.jpg
   caption: Death at a Funeral (2007) by Frank Oz
 ---
 

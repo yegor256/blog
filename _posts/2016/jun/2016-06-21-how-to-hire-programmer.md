@@ -14,8 +14,8 @@ keywords:
   - where to hire a programmer
   - how to hire a developer
   - hire programmer remotely
+image: /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg
 jb_picture:
-  src: /images/2016/06/dont-be-a-menace-to-south-central-while-drinking-your-juice-in-the-hood.jpg
   caption: Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996) by Paris Barclay
 ---
 

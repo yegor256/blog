@@ -14,8 +14,8 @@ keywords:
   - middlemen
   - sharing economy
   - outstaffing
+image: /images/2015/09/what-just-happened.jpg
 jb_picture:
-  src: /images/2015/09/what-just-happened.jpg
   caption: What Just Happened (2008) by Barry Levinson
 ---
 

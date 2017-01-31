@@ -14,8 +14,8 @@ keywords:
   - project planning
   - project roles
   - distributed programming
+image: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
 jb_picture:
-  src: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
   caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
 

@@ -22,8 +22,8 @@ youtube:
   - ibT5oKToMoQ
   - dE0_j4Kk6jo
   - pt9uHp35fwM
+image: /images/2015/01/cool-hand-luke.png
 jb_picture:
-  src: /images/2015/01/cool-hand-luke.png
   caption: Cool Hand Luke (1967) by Stuart Rosenberg
 ---
 

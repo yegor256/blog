@@ -14,8 +14,8 @@ keywords:
   - make good diagrams
   - how to make good diagram
   - uml diagrams
+image: /images/2015/06/a-beautiful-mind.jpg
 jb_picture:
-  src: /images/2015/06/a-beautiful-mind.jpg
   caption: A Beautiful Mind (2001) by Ron Howard
 ---
 

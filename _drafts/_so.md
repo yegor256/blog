@@ -14,8 +14,8 @@ keywords:
   - stackoverflow reputation
   - stackoverflow profile
   - how to grow on stackoverflow
+image: ...
 jb_picture:
-  src: ...
   caption: ...
 ---
 

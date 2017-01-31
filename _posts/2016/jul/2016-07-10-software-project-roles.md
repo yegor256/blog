@@ -14,8 +14,8 @@ keywords:
   - roles in software project
   - software project
   - roles in software
+image: /images/2016/07/12-angry-men.jpg
 jb_picture:
-  src: /images/2016/07/12-angry-men.jpg
   caption: 12 Angry Men (1957) by Sidney Lumet
 ---
 

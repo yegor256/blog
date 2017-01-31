@@ -19,8 +19,8 @@ youtube:
   - WSgP85kr6eU
   - WpP4rIhh5e4
   - DEqcn4-freM
+image: /images/2016/02/the-shining.jpg
 jb_picture:
-  src: /images/2016/02/the-shining.jpg
   caption: The Shining (1980) by Stanley Kubrick
 ---
 

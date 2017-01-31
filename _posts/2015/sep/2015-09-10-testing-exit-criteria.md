@@ -17,8 +17,8 @@ keywords:
   - test planning
 youtube:
   - wd-SA1HVmLg
+image: /images/2015/09/la-fille-sur-le-pont.jpg
 jb_picture:
-  src: /images/2015/09/la-fille-sur-le-pont.jpg
   caption: La fille sur le pont (1999) by Patrice Leconte
 ---
 

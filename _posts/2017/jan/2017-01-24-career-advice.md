@@ -14,8 +14,8 @@ keywords:
   - career advice software developer
   - career advice
   - meetings are evil
+image: /images/2017/01/the-grand-budapest-hotel.jpg
 jb_picture:
-  src: /images/2017/01/the-grand-budapest-hotel.jpg
   caption: The Grand Budapest Hotel (2014) by Wes Anderson
 ---
 

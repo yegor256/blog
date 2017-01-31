@@ -14,8 +14,8 @@ keywords:
   - software outsourcing companies
   - software outsourcing trends
   - software outsourcing definition
+image: /images/2015/06/u-turn.jpg
 jb_picture:
-  src: /images/2015/06/u-turn.jpg
   caption: U Turn (1997) by Oliver Stone
 ---
 

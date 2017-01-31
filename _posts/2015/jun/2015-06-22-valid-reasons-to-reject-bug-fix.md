@@ -14,8 +14,8 @@ keywords:
   - review pull request
   - pull request rules
   - pull request code review
+image: /images/2015/06/crimen-ferpecto.jpg
 jb_picture:
-  src: /images/2015/06/crimen-ferpecto.jpg
   caption: El Crimen Perfecto (2004) by Álex de la Iglesia
 ---
 

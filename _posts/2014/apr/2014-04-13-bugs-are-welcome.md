@@ -16,8 +16,8 @@ keywords:
   - test script
 youtube:
   - qRZYJGYdrwk
+image: /images/2014/04/charlie-and-chocolate-factory-chewing-breakfast.png
 jb_picture:
-  src: /images/2014/04/charlie-and-chocolate-factory-chewing-breakfast.png
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---
 

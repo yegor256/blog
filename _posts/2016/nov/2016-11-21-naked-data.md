@@ -14,8 +14,8 @@ keywords:
   - encapsulation trusted objects
   - encapsulation meaning
   - encapsulation violation
+image: /images/2016/11/borat.jpg
 jb_picture:
-  src: /images/2016/11/borat.jpg
   caption: "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"
 ---
 

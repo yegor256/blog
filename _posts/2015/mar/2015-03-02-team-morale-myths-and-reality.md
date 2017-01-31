@@ -19,8 +19,8 @@ related:
   - 2016/sep/2016-09-27-command-control-innovate
   - 2016/jun/2016-06-21-how-to-hire-programmer
   - 2015/oct/2015-10-13-competition-without-rules
+image: /images/2015/03/apocalypto.jpg
 jb_picture:
-  src: /images/2015/03/apocalypto.jpg
   caption: Apocalypto (2006) by Mel Gibson
 ---
 

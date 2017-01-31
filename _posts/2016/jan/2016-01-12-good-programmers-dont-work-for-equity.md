@@ -15,8 +15,8 @@ keywords:
   - equity instead of salary
   - equity salary adjustment
   - equity salary
+image: /images/2016/01/how-much-do-you-love-me.jpg
 jb_picture:
-  src: /images/2016/01/how-much-do-you-love-me.jpg
   caption: Combien tu m'aimes? (2005) by Bertrand Blier
 ---
 

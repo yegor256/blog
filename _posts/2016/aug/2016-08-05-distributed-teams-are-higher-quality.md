@@ -14,8 +14,8 @@ keywords:
   - software quality control
   - remote programming
   - distributed programming
+image: /images/2016/08/oceans-twelve.jpg
 jb_picture:
-  src: /images/2016/08/oceans-twelve.jpg
   caption: Ocean's Twelve (2004) by Steven Soderbergh
 ---
 

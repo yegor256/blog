@@ -14,8 +14,8 @@ keywords:
   - if then else oop
   - oop forking
   - if forking
+image: /images/2016/08/fargo.jpg
 jb_picture:
-  src: /images/2016/08/fargo.jpg
   caption: Fargo (1996) by Coen Brothers
 ---
 

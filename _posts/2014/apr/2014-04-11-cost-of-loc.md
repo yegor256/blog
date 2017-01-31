@@ -16,8 +16,8 @@ keywords:
   - price per line of code
 youtube:
   - qRZYJGYdrwk
+image: /images/2014/04/brazil-crowded-office.png
 jb_picture:
-  src: /images/2014/04/brazil-crowded-office.png
   caption: Brazil (1985) by Terry Gilliam
 ---
 

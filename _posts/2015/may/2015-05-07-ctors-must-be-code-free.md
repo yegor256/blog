@@ -17,8 +17,8 @@ keywords:
 book: elegant-objects 1.3
 youtube:
   - 9yjtsCK6Wdk
+image: /images/2015/05/kill-bill.jpg
 jb_picture:
-  src: /images/2015/05/kill-bill.jpg
   caption: "Kill Bill: Vol. 2 (2004) by Quentin Tarantino"
 ---
 

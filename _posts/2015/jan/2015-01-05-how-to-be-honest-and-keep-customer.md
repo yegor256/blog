@@ -14,8 +14,8 @@ keywords:
   - software development outsourcing
   - how to outsource software development
   - software development outsourcing
+image: /images/2014/12/99-francs.png
 jb_picture:
-  src: /images/2014/12/99-francs.png
   caption: 99 francs (2007) by Jan Kounen
 ---
 

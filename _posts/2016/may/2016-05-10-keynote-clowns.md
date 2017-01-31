@@ -14,8 +14,8 @@ keywords:
   - software clowns
   - clowns
   - fake
+image: /images/2016/05/bean.jpg
 jb_picture:
-  src: /images/2016/05/bean.jpg
   caption: Bean (1997) by Mel Smith
 ---
 

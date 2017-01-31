@@ -16,8 +16,8 @@ keywords:
   - java web app framework
 youtube:
   - nheD2LNYrpk
+image: /images/2015/03/godfather-shooting-scene.jpg
 jb_picture:
-  src: /images/2015/03/godfather-shooting-scene.jpg
   caption: Making of The Godfather (1972) by Francis Ford Coppola
 ---
 

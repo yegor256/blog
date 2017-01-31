@@ -17,8 +17,8 @@ keywords:
   - stop debugging
 translated:
   - Russian: https://habrahabr.ru/company/piter/blog/278567/
+image: /images/2016/02/the-revenant.jpg
 jb_picture:
-  src: /images/2016/02/the-revenant.jpg
   caption: The Revenant (2015) by Alejandro G. Iñárritu
 ---
 
