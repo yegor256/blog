@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-31T08:31:09+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-01-31T09:28:35+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
+&lt;a href=&quot;/2016/09/20/oop-without-classes.html&quot;&gt;class&lt;/a&gt; that implements an
+interface by making an instance of another class. Sound weird? Let me show
+you an example. There are many classes of that kind in the
+&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;,
+and they all are named like &lt;code&gt;*Wrap&lt;/code&gt;. It&amp;#39;s a convenient design concept that,
+unfortunately, looks rather verbose in Java. It would be great to have something
+shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; for example.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#1633d9e6&#39;/&gt;&lt;figcaption id=&#39;1633d9e6&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Take a look at
+&lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;. Its design looks
+like this (a simplified version with only one primary constructor):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsHtml&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RsWrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, let&amp;#39;s take a look at that
+&lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java&quot;&gt;&lt;code&gt;RsWrap&lt;/code&gt;&lt;/a&gt;
+it extends:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsWrap&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you see, this &amp;quot;decorator&amp;quot; doesn&amp;#39;t do anything except &amp;quot;just decorating.&amp;quot;
+It encapsulates another &lt;code&gt;Response&lt;/code&gt; and passes through all method calls.&lt;/p&gt;
+
+&lt;p&gt;If it&amp;#39;s not clear yet, I&amp;#39;ll explain the purpose of &lt;code&gt;RsHtml&lt;/code&gt;. Let&amp;#39;s
+say you have text and you want to create a &lt;code&gt;Response&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// you have it already&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpURLConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HTTP_OK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Instead of doing this
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composition of decorators&lt;/a&gt;
+over and over again in many places, you use &lt;code&gt;RsHtml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// you have it already&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is very convenient, but that &lt;code&gt;RsWrap&lt;/code&gt; is very verbose. There are too many
+lines that don&amp;#39;t do anything special; they just forward all method
+calls to the encapsulated &lt;code&gt;Response&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;How about we introduce a new concept, &amp;quot;decorators&amp;quot;, with a new
+keyword, &lt;code&gt;decorates&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsHtml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;decorates&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, in order to create an object, we just call:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We don&amp;#39;t have any new methods in the decorators, just constructors.
+The only purpose for these guys is to create other objects and encapsulate
+them. They are not really full-purpose objects. They only help us
+create other objects.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why I would call them &amp;quot;decorating envelopes.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;This idea may look very similar to the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29&quot;&gt;Factory&lt;/a&gt; design pattern,
+but it doesn&amp;#39;t have
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;static methods&lt;/a&gt;,
+which we are trying to avoid in
+&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">Sometimes Very often I need a
+class that implements an
+interface by making an instance of another class. Sound weird? Let me show
+you an example. There are many classes of that kind in the
+Takes Framework,
+and they all are named like *Wrap. It&amp;#39;s a convenient design concept that,
+unfortunately, looks rather verbose in Java. It would be great to have something
+shorter, like in EO for example.</summary></entry><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
 software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
@@ -950,79 +1058,4 @@ I&amp;#39;ll explain that in
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it&amp;#39;s much more.
-Encapsulation leads to the absence of naked data on all levels and in all forms.</summary></entry><entry><title type="html">Software Conferences to Attend</title><link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html" rel="alternate" type="text/html" title="Software Conferences to Attend" /><published>2016-11-18T00:00:00+00:00</published><updated>2016-11-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/11/18/software-conferences-to-attend</id><content type="html" xml:base="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html">&lt;p&gt;This is &lt;em&gt;my&lt;/em&gt; list of software conferences that are worth attending,
-as a speaker and a listener; with a focus on Java and project management.
-I will try to update this list regularly, mostly not to forget where
-I have to submit my talks. Hopefully the list will help you too,
-to make the right choice and never miss their CFP deadlines.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;table&gt;
-&lt;colgroup&gt;
-  &lt;col class=&quot;x-name&quot;/&gt;
-  &lt;col class=&quot;x-place&quot;/&gt;
-  &lt;col class=&quot;x-when&quot;/&gt;
-  &lt;col class=&quot;x-cfp&quot;/&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-  &lt;td&gt;Name&lt;/td&gt;
-  &lt;td&gt;Place&lt;/td&gt;
-  &lt;td&gt;When&lt;/td&gt;
-  &lt;td&gt;CFP&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td colspan=&quot;4&quot; class=&quot;x-hr&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://jeeconf.com/&quot;&gt;JEEConf&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Kiev&lt;/td&gt;
-  &lt;td&gt;May&lt;/td&gt;
-  &lt;td&gt;Jan&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://kiev2017.agileee.org/&quot;&gt;AgileEE&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Kiev&lt;/td&gt;
-  &lt;td&gt;Apr&lt;/td&gt;
-  &lt;td&gt;Jan&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://geekout.ee/&quot;&gt;GeekOUT&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Tallinn&lt;/td&gt;
-  &lt;td&gt;Jun&lt;/td&gt;
-  &lt;td&gt;Feb&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.oracle.com/javaone/index.html&quot;&gt;JavaOne&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;San Francisco&lt;/td&gt;
-  &lt;td&gt;Sep&lt;/td&gt;
-  &lt;td&gt;Mar&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.devoxx.com/&quot;&gt;Devoxx&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Antwerp&lt;/td&gt;
-  &lt;td&gt;Nov&lt;/td&gt;
-  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://javazone.no/&quot;&gt;JavaZone&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Oslo&lt;/td&gt;
-  &lt;td&gt;Sep&lt;/td&gt;
-  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.oredev.org/&quot;&gt;Øredev&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Malmö&lt;/td&gt;
-  &lt;td&gt;Nov&lt;/td&gt;
-  &lt;td&gt;Apr&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://qconsf.com/&quot;&gt;QCon&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;San Francisco&lt;/td&gt;
-  &lt;td&gt;Nov&lt;/td&gt;
-  &lt;td&gt;May&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.jfokus.se/&quot;&gt;JFokus&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Stockholm&lt;/td&gt;
-  &lt;td&gt;Feb&lt;/td&gt;
-  &lt;td&gt;Jun&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://jpoint.ru/en/&quot;&gt;JPoint&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Moscow&lt;/td&gt;
-  &lt;td&gt;Apr&lt;/td&gt;
-  &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://geecon.org/&quot;&gt;GeeCON&lt;/a&gt;&lt;/td&gt;
-  &lt;td&gt;Krakow&lt;/td&gt;
-  &lt;td&gt;May&lt;/td&gt;
-  &lt;td&gt;Dec&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="conferences" /><summary type="html">This is my list of software conferences that are worth attending,
-as a speaker and a listener; with a focus on Java and project management.
-I will try to update this list regularly, mostly not to forget where
-I have to submit my talks. Hopefully the list will help you too,
-to make the right choice and never miss their CFP deadlines.</summary></entry></feed>
+Encapsulation leads to the absence of naked data on all levels and in all forms.</summary></entry></feed>
