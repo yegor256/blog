@@ -112,6 +112,12 @@ Moscow, Russia<br/>
 7-8 April 2017
 
 <div class="talk-event"/>
+<img src="/images/2016/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
+[RigaDevDays 2017](http://rigadevdays.lv/)<br/>
+Riga, Latvia<br/>
+15-16 May 2017
+
+<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
