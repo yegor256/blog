@@ -1,0 +1,108 @@
+---
+layout: post
+title: "Each Private Static Method Is a Candidate for a New Class"
+date: 2017-02-03
+place: Kharkiv, Ukraine
+tags: oop java
+description: |
+  Private static methods is a perfect instrument to avoid
+  code duplication inside a class, but they introduce
+  duplication between classes and are not testable.
+keywords:
+  - private static method
+  - private method
+  - static method
+  - private static
+  - java private method
+image: /images/2017/02/...
+jb_picture:
+  caption: ...
+---
+
+Do you have that private static methods that help you break
+your algorithms down to smaller parts? I do. Every time I write
+a new method I realize that it can be a new class instead. Of course,
+I don't make classes out of all of them, but that has to be the
+goal. Private static methods are not reusable, while classes are&mdash;that
+is the main difference between them and it is crucial.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Here is an example of a simple class:
+
+{% highlight java %}
+class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + URLEncoder.encode(key, "UTF-8")
+      + "&secret="
+      + URLEncoder.encode(secret, "UTF-8");
+  }
+}
+{% endhighlight %}
+
+There is an obvious code duplication, right? The easiest way to resolve
+it is to introduce a private static method:
+
+{% highlight java %}
+class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + Token.encoded(key)
+      + "&secret="
+      + Token.encoded(secret);
+  }
+  private static String encoded(String text) {
+    return URLEncoder.encode(text, "UTF-8");
+  }
+}
+{% endhighlight %}
+
+Looks much better now. But what will happen if we have another class,
+which will need exactly the same functionality? We will have to copy-paste
+this private static method `encoded()` into it, right?
+
+A better alternative would be to introduce a new class, which will
+implement the functionality we want to share:
+
+{% highlight java %}
+class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + new Encoded(key)
+      + "&secret="
+      + new Encoded(secret);
+  }
+}
+{% endhighlight %}
+
+And then, class `Encoded`:
+
+{% highlight java %}
+class Encoded {
+  private final String raw;
+  @Override
+  public String toString() {
+    return URLEncoder.encode(this.raw, "UTF-8");
+  }
+}
+{% endhighlight %}
+
+Now this functionality is 1) reusable, and 2) testable. We can easily
+use this class `Encoded` in many other places and we can create a unit
+test for it. We were not able to do that with the private static method before.
+
+See the point? The rule of thumb I figured for myself already is that
+_each_ private static method is a perfect candidate for a new class. That's
+why we don't have them at all in [EO](http://www.eolang.org).
+
+By the way, public static methods is a different story. They are also evil,
+but for [different reasons]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
