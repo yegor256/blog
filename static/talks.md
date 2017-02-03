@@ -113,9 +113,10 @@ Moscow, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
-[RigaDevDays 2017](http://rigadevdays.lv/)<br/>
+**What's Wrong with Object-Oriented Programming?**<br/>
+[RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
 Riga, Latvia<br/>
-15-16 May 2017
+15 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
