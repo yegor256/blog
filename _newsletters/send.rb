@@ -33,7 +33,7 @@ Usage: send.rb [options]
   EOS
   opt :sender, 'Sender', :type=>String, :default=>'Yegor Bugayenko <yegor256@gmail.com>'
   opt :domain, 'Sending domain', :type=>String, :default=>'yegor256.com'
-  opt :host, 'SMTP host/server', :type=>String, :default=>'...'
+  opt :host, 'SMTP host/server', :type=>String, :default=>'email-smtp.us-east-1.amazonaws.com'
   opt :port, 'SMTP port', :default=>587
   opt :user, 'SMTP user name', :type=>String, :default=>'AKIAIPMIS45U6UG2TZCQ'
   opt :password, 'SMTP password', :type=>String, :required=>true
