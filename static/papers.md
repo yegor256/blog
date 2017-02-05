@@ -20,49 +20,63 @@ This is basically everything that was written
 and published by myself outside of this blog (in chronological
 order):
 
-[Method and Software of NetBout](https://www.google.com/patents/US20120117164),
-US patent application 12/943,022, November 2010
+[Method and Software of NetBout](https://www.google.com/patents/US20120117164)<br/>
+US patent application 12/943,022<br/>
+November 2010
 
-[How to Prevent SVN Conflicts in Distributed Agile PHP Projects](https://www.phparch.com/magazine/2010-2/august/),
-php|Architect, August 2010
+[How to Prevent SVN Conflicts in Distributed Agile PHP Projects](https://www.phparch.com/magazine/2010-2/august/)<br/>
+php|Architect<br/>
+August 2010
 
-[Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476),
-US patent application 12/840,306, July 2010
+[Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)<br/>
+US patent application 12/840,306<br/>
+July 2010
 
-[phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/),
-php|Architect, June 2010
+[phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/)<br/>
+php|Architect<br/>
+June 2010
 
-[FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/),
-php|Architect, February 2010
+[FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/)<br/>
+php|Architect<br/>
+February 2010
 
-[Project Management Robot Method and Software](https://www.google.com/patents/US20110196798),
-US patent application 12/703,202, February 2010
+[Project Management Robot Method and Software](https://www.google.com/patents/US20110196798)<br/>
+US patent application 12/703,202<br/>
+February 2010
 
-[Quality of Process Control in Software Projects](http://www.iwsm-mensura.org/2009),
-IWSM/Mensura, Amsterdam, November 2009
+[Quality of Process Control in Software Projects](http://www.iwsm-mensura.org/2009)<br/>
+IWSM/Mensura, Amsterdam<br/>
+November 2009<br/>
 [PDF](/pdf/2009/IWSM09-article.pdf)
 
-[Quality of Code Can be Planned and Controlled](http://www.iaria.org/conferences2009/ProgramVALID09.html),
-The First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009),
-Porto, Portugal, September 20-25, 2009
+[Quality of Code Can be Planned and Controlled](http://www.iaria.org/conferences2009/ProgramVALID09.html)<br/>
+The First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)<br/>
+Porto, Portugal<br/>
+September 2009<br/>
 [PDF](/pdf/2009/VALID09-article.pdf)
 
-[Competitive Risk Identification Method for Distributed Teams](http://seafood.ethz.ch/2009/Files/flyer09.pdf),
-3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development (SEAFOOD 2009),
-ETH Zurich, Switzerland, July 2-3, 2009
+[Competitive Risk Identification Method for Distributed Teams](http://seafood.ethz.ch/2009/Files/flyer09.pdf)<br/>
+3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development (SEAFOOD 2009)<br/>
+ETH Zurich, Switzerland<br/>
+July 2009<br/>
 [PDF](/pdf/2009/SEAFOOD09-article.pdf)
 
-[Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510),
-10th International Conference, PROFES 2009, Oulu, Finland, June 15-17, 2009
+[Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510)<br/>
+10th International Conference, PROFES 2009<br/>
+Oulu, Finland<br/>
+June 2009
 
-[Method and software for the measurement of quality of process](https://www.google.com/patents/US20100114638),
-US patent application 12/264,370, November 2008
+[Method and software for the measurement of quality of process](https://www.google.com/patents/US20100114638)<br/>
+US patent application 12/264,370<br/>
+November 2008
 
-[Method for software cost estimating using scope champions](https://www.google.com/patents/US20100042968),
-US patent application 12/193,010, August 2008
+[Method for software cost estimating using scope champions](https://www.google.com/patents/US20100042968)<br/>
+US patent application 12/193,010<br/>
+August 2008
 
-[The Interactive Databases Approach to the User Interface Modeling](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98),
-KRDB, Seattle, May 1998
+[The Interactive Databases Approach to the User Interface Modeling](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98)<br/>
+KRDB, Seattle<br/>
+May 1998<br/>
 [PDF](/pdf/1998/KRDB98-article.pdf)
 
 I published something even earlier, but can't
