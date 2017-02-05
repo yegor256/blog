@@ -4,8 +4,9 @@ title: "About Me"
 date: 2014-04-06
 permalink: about-me.html
 description: |
-  Yegor Bugayenko is a software architect, writer, blogger,
-  project manager, CTO, seed investor, and philanthropist.
+  Yegor Bugayenko is a programmer, software architect,
+  writer, blogger, project manager, CEO, seed investor,
+  and philanthropist.
 keywords:
   - java blog
   - blog about programming
@@ -19,7 +20,7 @@ exclude_from_search: true
 
 I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
-a programmer, a founder and an investor.
+a programmer, a founder, an investor, and a philanthropist.
 
 As a **programmer** I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP and JavaScript.
@@ -35,10 +36,11 @@ Besides that, I'm a proud holder of
 [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
 [OCUP](http://www.omg.org/uml-certification/).
 I also wrote a book about object-oriented programming,
-called [Elegant Objects](/elegant-objects.html).
+called [Elegant Objects](/elegant-objects.html) (and
+[a few other books](/books.html)).
 
-As a **founder** and CTO at [Teamed.io](http://www.teamed.io/),
-a software development company with an absolutely unique
+As a **founder** and CEO at [Zerocracy](http://www.zerocracy.com/),
+a software engineering and management platform with an absolutely unique
 methodology called [XDSD](http://www.xdsd.org),
 I'm an author of a few patent applications, including
 [Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)
@@ -53,7 +55,11 @@ Besides that, I'm a proud holder of
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
 As an **investor** at [SeedRamp.com](http://www.seedramp.com) I have
-no results yet :)
+made a few investments, but have got no results yet :)
+
+As a **philanthropist** I donate a few thousand dollars every year (started in 2015)
+to the best open source project, which I pick myself out of about a hundred in
+a more or less fair [competition](/award.html).
 
 Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
