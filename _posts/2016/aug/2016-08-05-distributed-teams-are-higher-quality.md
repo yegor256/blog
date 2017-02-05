@@ -79,7 +79,8 @@ we practice in our projects:
     We put a lot of quality checks right into the build to make the lives
     of programmers more difficult. Well, this is not our goal, but it
     happens. The code has to pass all static analysis
-    checks, a test coverage threshold, mutability threshold, and many others.
+    checks, a test coverage threshold,
+    [mutation coverage](https://en.wikipedia.org/wiki/Mutation_testing) threshold, and many others.
     This means that bad code won't reach the repo, ever.
 
   * **Micro Payments for Deliverables**. We pay only for closed tickets, and
