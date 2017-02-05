@@ -5,7 +5,7 @@ date: 2014-04-06
 permalink: about-me.html
 description: |
   Yegor Bugayenko is a programmer, software architect,
-  writer, blogger, project manager, CEO, seed investor,
+  writer, blogger, speaker, project manager, CEO, seed investor,
   and philanthropist.
 keywords:
   - java blog
@@ -65,7 +65,7 @@ Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who you are
 and why you're interested (I'm trying to avoid anonymous
-subscribers in my list).
+subscribers).
 
 <form class="unprintable" action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
   <input type="hidden" name="_next" value="http://www.yegor256.com/subscribed.html"/>
