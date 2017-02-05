@@ -63,8 +63,8 @@ a more or less fair [competition](/award.html).
 
 Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
-mailing list. Just give me your email address and briefly explain who are
-you and why you're interested (I'm trying to avoid anonymous
+mailing list. Just give me your email address and briefly explain who you are
+and why you're interested (I'm trying to avoid anonymous
 subscribers in my list).
 
 <form class="unprintable" action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
