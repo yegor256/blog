@@ -17,6 +17,29 @@ style: |
     clear: both;
     margin-top: 2em;
   }
+  #vol2-reviewers {
+    display: none;
+  }
+  .rv {
+    width: 30%;
+    display: inline-block;
+    padding: .5em;
+    vertical-align: top;
+  }
+  .rv img {
+    width: 75%;
+    display: block;
+    filter: grayscale(100%);
+  }
+  .rv .name {
+    display: block;
+    font-weight: bold;
+  }
+  .rv .text {
+    display: block;
+    font-size: .8em;
+    line-height: 1em;
+  }
 ---
 
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
@@ -32,9 +55,405 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
+Feb 7, 2017:
+This is the full list of everybody who submitted
+[this form](https://docs.google.com/forms/d/1RaAN3JoeDxcWU8HaBz4EI-WISt1rKf3FywQLFWn0unk)
+and expressed the desire to become a reviewer of the second volume of
+Elegant Objects. I have to select up to 12 people, please help me with your
+vote. What does it mean to be a reviewer? It's easy:
+
+  * I will mail you the draft of the book (paper copy, not PDF);
+  * You criticize it as much as you can;
+  * You scan it and send me back in PDF;
+  * I take your suggestions and corrections into account;
+  * Your name will be in the list of acknowledgements in the book;
+  * You get a free signed copy of the book.
+
+Pay attention, I need your negative comments, not positive ones. I don't
+really need you to say how much you like the content&mdash;it's pointless.
+I need you to tell me where it's missing, or unclear, or wrong.
+People in the list are sorted by the date I've got their applications.
+I excluded some really blank applications. If you feel I did that by mistake
+to your application, please [email me](mailto:blog@yegor256.com).
+
+<a href="#" id="show-link" onclick="
+  $('#show-link').hide();
+  $('#vol2-reviewers').show();
+  $('#vol2-reviewers a.vote').click(
+    function(a) {
+      $('#reviewer').val(
+        $(this).closest('.rv').find('.name').text()
+      );
+      return true;
+    }
+  );
+  return false;
+">Show the list</a>
+
+<div id="vol2-reviewers">
+  <form class="unprintable" action="http://formspree.io/vote@yegor256.com" method="POST"><fieldset id="vote-form">
+    <input type="hidden" name="_next" value="http://www.yegor256.com/elegant-objects.html"/>
+    <input type="hidden" name="_subject" value="vote for reviewer"/>
+    <input type="hidden" name="_format" value="text"/>
+    <label for="email">Your email</label>
+    <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
+    <label for="reviewer">Who do you vote for?</label>
+    <input id="reviewer" class="field field-text" name="reviewer" size="35" maxlength="255" type="text" required="required"/>
+    <label for="vote">&nbsp;</label>
+    <button id="vote" class="field">Vote</button>
+  </fieldset></form>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/mdbs99">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAIwAAAAJDA0ZjQ2OGE2LWU4NzUtNGQ4NS04OGE3LTNhZjI3NjViODcyNA.jpg"
+        alt="Marcos Douglas B. Santos"/>
+    </a>
+    <span class="name">Marcos Douglas B. Santos</span>
+    <span class="text">I try to make all my code object-oriented. I have a blog about
+    OOP and I have over 15 years of systems development experience.
+    I was a reviewer of Bloghacks too — last Yegor's book published.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/johnpage76">
+      <img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_400_400/p/8/000/1ea/1c7/3fc7e80.jpg"
+        alt="John Page"/>
+    </a>
+    <span class="name">John Page</span>
+    <span class="text">I have an annoying habit of finding even the tiniest mistakes
+    (typos, grammar, consistency etc.) in other people's work. ;)
+    English is my native language and I have read and reread most
+    of Yegor's OO publications and have some knowledge and strong
+    opinions in that area. (Though I certainly don't have all the answers
+    I'm irritatingly good at raising the questions.)</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/kkaratsetski">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAIFAAAAJDNhYzBiMDk4LTIxMWUtNDA3ZC1iYjRhLTg4ZDY4ODUwNWZhYg.jpg"
+        alt="Kiryl Karatsetski"/>
+    </a>
+    <span class="name">Kiryl Karatsetski</span>
+    <span class="text">I always look for the best solution of engineering tasks.
+    Software Engineer in Fitbit.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/bartoszbilicki">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANVAAAAJDQwYWM4YjJjLTg0MTItNDI5Mi05YjY5LTQyODY2YzJjYTk5YQ.jpg"
+        alt="Bartosz Bilicki"/>
+    </a>
+    <span class="name">Bartosz Bilicki</span>
+    <span class="text">Software developer with 13 years of expertise.
+      I adore best clean code, automation and devops practices,  but I am not object fanatic.
+      When there are simpler tools that do the job, I happily use them (Spring, Hibernate, Jackson, I am looking at you!).
+      Having read >60 IT books, I know how to distinguish useful
+      concepts from theorycrafting and marketing bull****.
+      You will receive honest and straight review.</span>
+      <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/silasreinagel">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkvAAAAJDRmYTYwZmM5LTM5MDgtNGMyNC05ODFkLTBjYmFhNjVkN2I2MQ.jpg"
+        alt="Silas Reinagel"/>
+    </a>
+    <span class="name">Silas Reinagel</span>
+    <span class="text">I am a passionate Object-Oriented Programmer, with excellent
+    writing/communication skills.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://in.linkedin.com/in/abhishekmanocha">
+      <img src="https://media.licdn.com/media/p/3/000/014/103/1ae9320.jpg"
+        alt="Abhishek Manocha"/>
+    </a>
+    <span class="name">Abhishek Manocha</span>
+    <span class="text">First time for me for reviewing. But two simple reasons, I am in
+    the OOPs for last 12 years, hold a Technical Architect position,
+    want to share my knowledge in tangible. Second, I resonate with
+    Yegor on many points. I am follower of his blog since long.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/miroslavgenov">
+      <img src="https://media.licdn.com/media/p/3/005/080/225/146c8dd.jpg"
+        alt="Miroslav Genov"/>
+    </a>
+    <span class="name">Miroslav Genov</span>
+    <span class="text">Java Developer for most then 10 years of experience
+    that values Good Design and clean codebases. </span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
+      <img src="http://www.teamed.io/images/team/carlosmiranda.png"
+        alt="Carlos Miranda"/>
+    </a>
+    <span class="name">Carlos Miranda</span>
+    <span class="text">I have been working for Teamed.io projects for two years.
+    Having worked with his projects, I am very familiar with Yegor's methods. </span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/quver">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAl0AAAAJDNjZGE4MTQ4LWIyMTgtNDZhNS05YTg1LTE4MTJkNDc5OGI4Mw.jpg"
+        alt="Yvgen Troshchiy"/>
+    </a>
+    <span class="name">Yvgen Troshchiy</span>
+    <span class="text">I am enthusiastic specialist with big experience
+    in different projects and companies.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://ie.linkedin.com/in/francesco-bianchi-4b49784">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/05f/304/1ddc17b.jpg"
+        alt="Francesco Bianchi"/>
+    </a>
+    <span class="name">Francesco Bianchi</span>
+    <span class="text">I already reviewed the Volume 1 of this book and was
+    (maybe?) the first one to encourage Yegor to write it after having
+    some interesting fights with him over his brilliant posts.
+    I've already reviewed 10+ technical books published by Manning
+    and currently collaborate with them as Senior Technical Development Editor.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://ca.linkedin.com/in/shawn-fuller-11b5267">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/1ca/19f/07308bb.jpg"
+        alt="Shawn Fuller"/>
+    </a>
+    <span class="name">Shawn Fuller</span>
+    <span class="text">Years ago I wrote multi-tier web and batch apps in
+    Perl, Java, etc.. (Currently a Business Analyst)
+    Recently I created a web donation and contact tracker in PHP (MAMP).
+    Reading your book, blog, and David West's book I realize I did
+    not understand OOP (except for using small class sizes). Like the
+    Mulla Nasrudin, who having taken a memory course said:
+    "I’m improving. Now I can sometimes remember that I have forgotten something."
+    So it is with my OOP abilities. I would bring a combination
+    enthusiasm and naïveté to reading your manuscript.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/bakkiaraj">
+      <img src="https://media.licdn.com/media/p/3/000/09a/16f/17b2481.jpg"
+        alt="Bakkiaraj"/>
+    </a>
+    <span class="name">Bakkiaraj</span>
+    <span class="text">I mostly write code in Perl with Moose Object Oriented
+    concepts. It might be crazy for you but it does really works.
+    I am long lover for OOPs programming, Making SW Build and Test
+    automation tools with Perl + Moose.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/oksana-semenkova-99622bab">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a7/326/2676cd2.jpg"
+        alt="Semenkova Oksana Nikolaevna"/>
+    </a>
+    <span class="name">Semenkova Oksana Nikolaevna</span>
+    <span class="text">I'm very passionate about software architecture and want
+    to help you do your book the best. The themes from it
+    are very interesting and useful for future development
+    and evolution of Java language and its infrastructure</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://github.com/DronMDF">
+      <img src="https://avatars3.githubusercontent.com/u/2982959?v=3&amp;s=460"
+        alt="Andrey Valyaev"/>
+    </a>
+    <span class="name">Andrey Valyaev</span>
+    <span class="text">I want to use right OOP. I want to learn other
+    for right OOP. I want to understand some moments in
+    right OOP and help to make you book better.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="www.linkedin.com/in/settyblue">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASIAAAAJDBlMTU0NzRiLTM2NTUtNDQ2Ni04N2NkLTBjNTEzMDUwZWY5OQ.jpg"
+        alt="Rakshith Kunchum"/>
+    </a>
+    <span class="name">Rakshith Kunchum</span>
+    <span class="text">I am a graduate student and I want master Java
+    in the way the book 'Elegant Objects' narrate and not
+    the way the academia teaches me.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://linkedin.com/in/0x13a">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjkAAAAJDliNzM0ZWYxLTMzZjMtNGQyOC1iMTlmLWU2NjhmZGYwNjc1OQ.jpg"
+        alt="Diego Mariani"/>
+    </a>
+    <span class="name">Diego Mariani</span>
+    <span class="text">Because I read all of your articles and I can't agree more.
+    I'm obsessed with true object oriented programming and software architecture </span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.facebook.com/polart.studio">
+      <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/10457828_483815805095641_9124450483338096797_n.jpg?oh=c27ecd3694383a2e73343de382bc286d&oe=590BFA0C"
+        alt="Victor Bugaenko"/>
+    </a>
+    <span class="name">Victor Bugaenko</span>
+    <span class="text">Because I really believe in EO conception and want
+    to make it popular in Russia. http://www.eolang.ru/</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/patrizio-colomba-03628170/">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAJPAAAAJDU3OWY1NjRmLWJhMDMtNDUzYi1iNmViLTAxYzAwMTcxN2EzNQ.jpg"
+        alt="Patrizio Colomba"/>
+    </a>
+    <span class="name">Patrizio Colomba</span>
+    <span class="text">OP Passionate and Coder!</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/raulestradaaparicio">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAQrAAAAJDZhNzUyMjc3LWU0ZWYtNDgxZS1iM2E2LTA2NjMyZTAzNDkzNA.jpg"
+        alt="Raul Estrada Aparicio"/>
+    </a>
+    <span class="name">Raul Estrada Aparicio</span>
+    <span class="text">I reviewed 256 Bloghacks. I'm the author of
+    books about S.M.A.C.K. stack with Apress and Packt Publishing.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/jonathanblakes">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAfWAAAAJDVkMzIzMWVlLWVmNGItNGIzNy04ZWFjLTRiNWYxZGM0MGNjMw.jpg"
+        alt="Jonathan Blakes"/>
+    </a>
+    <span class="name">Jonathan Blakes</span>
+    <span class="text">I have no fixed opinion about Yegor's approach to
+    OOP. I have read and re-read the first edition, blog posts, and your
+    comments, taking them all with a pinch of NaCl. My review will
+    be based on the attempted application of these ideas to a large
+    10+ year old Java (6+) and Jython/Python codebase for a scientific
+    data acquisition client-server application used by 100+ staff and 1000+ users 24/7.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/lrozenblyum">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/016/0f4/3caff31.jpg"
+        alt="Leonid Rozenblyum"/>
+    </a>
+    <span class="name">Leonid Rozenblyum</span>
+    <span class="text">interesting in reviewing and improving a cool book</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/vassilevsky/">
+      <img src="https://media.licdn.com/media/p/4/005/07e/10f/0fd738e.jpg"
+        alt="Ilya Vassilevsky"/>
+    </a>
+    <span class="name">Ilya Vassilevsky</span>
+    <span class="text">My superpower is spotting errors. I
+    reported 5 errors in (published) Volume 1.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/pchmielowski">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAYzAAAAJDg1NDVjYWVhLWUxNDAtNDNjOC1iYzVhLTRjNjk5NGRkZGUxOQ.jpg"
+        alt="Piotr Chmielowski"/>
+    </a>
+    <span class="name">Piotr Chmielowski</span>
+    <span class="text">IMO this is true also in case of code: “Beauty is the
+    first test; there is no permanent place in the world for ugly
+    mathematics.” (Godfrey Harold Hardy). Therefore we HAVE TO
+    learn how to write a beautiful code.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/richardfloodlfm?trk=hp-identity-name">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAaxAAAAJGNiOTFkZGRkLTA0MjktNGExNC1hM2I3LTllOTAyYWRiNzcwNQ.jpg"
+        alt="Richard Flood"/>
+    </a>
+    <span class="name">Richard Flood</span>
+    <span class="text">Like a lot of others I am a professional Software Developer.
+    I have been working professionally for about 5 years and the work
+    I produce has been heavily influenced by Yegor's teachings.
+    I would be honored to have the opportunity to help polish his material,
+    ready to be viewed by the public.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/nikem">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAABPAAAAJDQxNGFiMDI5LTVmNWItNGYwYS04YmEwLWE0MjNiNDAyZTQwOQ.jpg"
+        alt="Nikita Salnikov-Tarnovski"/>
+    </a>
+    <span class="name" class="name">Nikita Salnikov-Tarnovski</span>
+    <span class="text">I hope to raise many objections so you can polish your arguments</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://at.linkedin.com/in/paulroho">
+      <img src="https://media.licdn.com/media/p/2/000/065/1fa/3300160.jpg"
+        alt="Paul Rohorzka"/>
+    </a>
+    <span class="name">Paul Rohorzka</span>
+    <span class="text">I bought (at a horrendous price) and read Vol1 and
+    liked it for some thoughts and totally dismiss others. Want to
+    contribute a critical voice.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/sebastian-schwarz-27b72083">
+      <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAuqAAAAJGE5ZGUzMGY2LTIxYWEtNDQ4OC05N2YxLTVkYzJmMmFkNjU1YQ.jpg"
+        alt="Sebastian Schwarz"/>
+    </a>
+    <span class="name">Sebastian Schwarz</span>
+    <span class="text">I am Clean Code and EO addicted! My co-workers hate
+    me for only accepting immutable classes in code reviews!
+    Not to mention naming for void and non-void methods. What
+    people call "Grammar nazis" in Language, applies to me
+    for Elegant Objects. I am a young developer and grew up with
+    Clean Code, so for me, all these rules are basics and standard.
+    I would love to be part of the Vol2 review team, to contribute
+    my passion to the community, thanks for your vote!</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/akryvtsun">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13a/2e4/00bbf7e.jpg"
+        alt="Andriy Kryvtsun"/>
+    </a>
+    <span class="name">Andriy Kryvtsun</span>
+    <span class="text">I like to write efficient and elegant code</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/ricardojob">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAQqAAAAJGU3ZWI1YzMyLTIxYTQtNDUxOS1iYzQ0LTlhNWE4MDAwNTYxNg.jpg"
+        alt="Ricardo de Sousa Job"/>
+    </a>
+    <span class="name">Ricardo de Sousa Job</span>
+    <span class="text">I live in Brazil and I have  your first book. I work
+    with development about nine years, I'm enthusiast for OO. </span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/alayor3/">
+      <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAmKAAAAJGJmNjA1Y2FkLWM4NGMtNGM4Mi1iZTdlLWZkNDMyNTIwNmYwMg.jpg"
+        alt="Alonso Ayala Ortega"/>
+    </a>
+    <span class="name">Alonso Ayala Ortega</span>
+    <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/igor-dmitriev-3a29b15a">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkIAAAAJGE1ZmIzNjRmLTdhMTAtNDQ4Ni04OTRiLTI1OGE4YmNiYzE5OQ.jpg"
+        alt="Igor Dmitriev"/>
+    </a>
+    <span class="name">Igor Dmitriev</span>
+    <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+</div>
+
 Feb 6, 2017:
-Good news, the second volume is ready (202 pages). Now it's time to select the team
-of reviewers (12 people), ship the draft to them, collect their opinions
+Good news, the second volume is ready (208 pages). Now it's time to select
+the [team of reviewers](/eo-vol2-reviewers.html), ship the draft to them, collect their opinions
 and publish the book. Hopefully, it will be available on Amazon before
 March 10. Here is my offer to all new readers of this new book. If you write
 a decent review about the book (not necessarily positive,
