@@ -36,9 +36,10 @@ Feb 6, 2017:
 Good news, the second volume is ready (202 pages). Now it's time to select the team
 of reviewers (12 people), ship the draft to them, collect their opinions
 and publish the book. Hopefully, it will be available on Amazon before
-March 10. Here is my offer to all new readers of this new book. If you have
-a blog and you write a decent review about the book (not necessarily positive,
-but long enough for a detailed review), I will refund you **$32**.
+March 10. Here is my offer to all new readers of this new book. If you write
+a decent review about the book (not necessarily positive,
+but long enough for a detailed review) and post it on your blog, Amazon, and
+GoodReads I will refund you **$32**.
 
 Nov 20, 2016:
 I've got over 50 emails from those who are interested in reviewing
