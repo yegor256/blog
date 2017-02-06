@@ -42,13 +42,13 @@ I'm writing the second volume of [Elegant Objects](/elegant-objects.html).
 It will cover more object-oriented patterns and anti-patterns,
 including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
 dependency injection, reflection, and others.
-It is going to be published in February 2017.
+It is going to be published in March 2017.
 
 <div class="clear"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
 [Code Ahead](/code-ahead.html) will be the book about software engineering. I will
 propose a number of best practices for organizing software development
-process. To be published in February 2017.
+process. To be published in August 2017.
 
 <div class="clear"></div>
 To be continued...
