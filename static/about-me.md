@@ -84,3 +84,7 @@ You can always [unsubscribe](/unsubscribe.html).
 
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html) (be careful!).
+
+Ah, one more thing. I'm a big fan of good movies, here is
+[my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}),
+I  would recommend you to watch.
