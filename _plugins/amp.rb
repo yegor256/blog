@@ -33,14 +33,17 @@ module Jekyll
       xml = Nokogiri::HTML(html)
       xml.xpath('//comment()').remove
       xml.xpath('//@style').remove
-      xml.search('//body//iframe').remove
-      xml.search('//body//script').remove
-      xml.search('//body//form').remove
-      xml.search('//body//figure[@class!="highlight"]').remove
-      xml.search('//body//figcaption').remove
-      xml.search('//body//img').remove
-      xml.search('//body//svg').remove
-      xml.search('//body//aside').remove
+      xml.xpath('//body//iframe').remove
+      xml.xpath('//body//script').remove
+      xml.xpath('//body//form').remove
+      xml.xpath('//body//figure[@class="highlight"]').each do |f|
+        f.before('<pre>' + f.xpath('pre//text()').to_s + '</pre>')
+      end
+      xml.xpath('//body//figure').remove
+      xml.xpath('//body//figcaption').remove
+      xml.xpath('//body//img').remove
+      xml.xpath('//body//svg').remove
+      xml.xpath('//body//aside').remove
       @html = xml.to_html
         .gsub(/<meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">/, '')
       write(site.dest)
@@ -55,6 +58,7 @@ module Jekyll
   class AmpGenerator < Generator
     priority :low
     def generate(site)
+      start = Time.now
       total = 0
       site.posts.docs.each do |doc|
         page = AmpPage.new(site, doc)
@@ -70,7 +74,7 @@ module Jekyll
         )
         total += 1
       end
-      puts "#{total} AMP pages generated"
+      puts "#{total} AMP pages generated in #{(Time.now - start).round(2)}s"
     end
   end
 end
