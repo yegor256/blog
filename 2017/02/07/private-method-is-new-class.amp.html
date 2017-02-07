@@ -17,7 +17,7 @@
         "headline": "Each Private Static Method Is a Candidate for a New Class",
         "image": {
           "@type": "ImageObject",
-          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "url": "http://www.yegor256.com/images/face-1400x1400.jpg",
           "height": 1400,
           "width": 1400
         },
@@ -32,7 +32,7 @@
           "name": "yegor256.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "http://img.teamed.io/face-512x512.jpg",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
             "width": 512,
             "height": 512
           }
@@ -106,8 +106,18 @@ it is to introduce a private static method:</p>
 that needs the exact same functionality? We will have to copy and paste
 this private static method <code>encoded()</code> into it, right?</p>
 
-<p>A better alternative would be to introduce a new class that
+<p>A better alternative would be to introduce a new class <code>Encoded</code> that
 implements the functionality we want to share:</p>
+
+<pre>class Encoded {
+  private final String raw;
+  @Override
+  public String toString() {
+    return URLEncoder.encode(this.raw, "UTF-8");
+  }
+}</pre>
+
+<p>And then:</p>
 
 <pre>class Token {
   private String key;
@@ -120,16 +130,6 @@ implements the functionality we want to share:</p>
   }
 }</pre>
 
-<p>And then, class <code>Encoded</code>:</p>
-
-<pre>class Encoded {
-  private final String raw;
-  @Override
-  public String toString() {
-    return URLEncoder.encode(this.raw, "UTF-8");
-  }
-}</pre>
-
 <p>Now this functionality is 1) reusable, and 2) testable. We can easily
 use this class <code>Encoded</code> in many other places, and we can create a unit
 test for it. We were not able to do that with the private static method before.</p>
@@ -138,7 +138,7 @@ test for it. We were not able to do that with the private static method before.<
 <em>each</em> private static method is a perfect candidate for a new class. That's
 why we don't have them at all in <a href="http://www.eolang.org">EO</a>.</p>
 
-<p>By the way, public static methods are a different story. They are also evil,
+<p>By the way, <em>public</em> static methods are a different story. They are also evil,
 but for <a href="/2014/05/05/oop-alternative-to-utility-classes.html">different reasons</a>.</p>
 
     </article>
