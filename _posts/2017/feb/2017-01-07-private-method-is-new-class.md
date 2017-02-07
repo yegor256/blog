@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Each Private Static Method Is a Candidate for a New Class"
-date: 2017-02-03
+date: 2017-02-07
 place: Kharkiv, Ukraine
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - static method
   - private static
   - java private method
-image: /images/2017/02/...
+image: /images/2017/02/the-master.jpg
 jb_picture:
-  caption: ...
+  caption: The Master (2012) by Paul Thomas Anderson
 ---
 
 Do you have private static methods that help you break
