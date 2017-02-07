@@ -104,5 +104,5 @@ See the point? The rule of thumb I've already figured for myself is that
 _each_ private static method is a perfect candidate for a new class. That's
 why we don't have them at all in [EO](http://www.eolang.org).
 
-By the way, public static methods are a different story. They are also evil,
+By the way, _public_ static methods are a different story. They are also evil,
 but for [different reasons]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
