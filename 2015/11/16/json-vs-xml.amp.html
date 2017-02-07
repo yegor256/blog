@@ -77,12 +77,28 @@ They are very different things with their own areas of applicability.</p>
 <p>Here is how a simple JSON piece of data may look
 (140 characters):</p>
 
-
+<pre>{
+  "id": 123,
+  "title": "Object Thinking",
+  "author": "David West",
+  "published": {
+    "by": "Microsoft Press",
+    "year": 2004
+  }
+}</pre>
 
 <p>A similar document would look like this in XML
 (167 characters):</p>
 
-
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;book id="123"&gt;
+  &lt;title&gt;Object Thinking&lt;/title&gt;
+  &lt;author&gt;David West&lt;/author&gt;
+  &lt;published&gt;
+    &lt;by&gt;Microsoft Press&lt;/by&gt;
+    &lt;year&gt;2004&lt;/year&gt;
+  &lt;/published&gt;
+&lt;/book&gt;</pre>
 
 
 

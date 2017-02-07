@@ -64,7 +64,12 @@ object-oriented and convenient
       <p>An execution of a shell command via SSH can be done in
 Java, in just a few lines, using <a href="http://ssh.jcabi.com"><code>jcabi-ssh</code></a>:</p>
 
-
+<pre>String hello = new Shell.Plain(
+  new SSH(
+    "ssh.example.com", 22,
+    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  )
+).exec("echo 'Hello, world!'");</pre>
 
 <p><a href="http://ssh.jcabi.com"><code>jcabi-ssh</code></a> is
 a convenient wrapper of <a href="http://www.jcraft.com/jsch/"><code>JSch</code></a>,
@@ -75,12 +80,27 @@ a well-known pure Java implementation of SSH2.</p>
 <p>Here is a more complex scenario, where I upload a file via SSH
 and then read back its grepped content:</p>
 
-
+<pre>Shell shell = new SSH(
+  "ssh.example.com", 22,
+  "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+);
+File file = new File("/tmp/data.txt");
+new Shell.Safe(shell).exec(
+  "cat &gt; d.txt &amp;&amp; grep 'some text' d.txt",
+  new FileInputStream(file),
+  Logger.stream(Level.INFO, this),
+  Logger.stream(Level.WARNING, this)
+);</pre>
 
 <p>Class <code>SSH</code>, which implements interface <code>Shell</code>, has only one method, <code>exec</code>.
 This method accepts four arguments:</p>
 
-
+<pre>interface Shell {
+  int exec(
+    String cmd, InputStream stdin,
+    OutputStream stdout, OutputStream stderr
+  );
+}</pre>
 
 <p>I think it's obvious what these arguments are about.</p>
 
@@ -96,7 +116,12 @@ if the <code>exec</code> exit code is not equal to zero. This may be very useful
 you want to make sure that your command executed successfully, but don't
 want to duplicate <code>if/throw</code> in many places of your code.</p>
 
-
+<pre>Shell ssh = new Shell.Safe(
+  new SSH(
+    "ssh.example.com", 22,
+    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  )
+);</pre>
 
 <h2 id="shell-verbose">Shell.Verbose</h2>
 
@@ -105,7 +130,14 @@ want to duplicate <code>if/throw</code> in many places of your code.</p>
 <a href="http://log.jcabi.com"><code>jcabi-log</code></a>). Of course, you can combine
 decorators, for example:</p>
 
-
+<pre>Shell ssh = new Shell.Verbose(
+  new Shell.Safe(
+    new SSH(
+      "ssh.example.com", 22,
+      "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    )
+  )
+);</pre>
 
 <h2 id="shell-plain">Shell.Plain</h2>
 
@@ -115,7 +147,7 @@ exit code, but <code>stdout</code> instead. This should be very convenient when 
 to execute a simple command and just get its output
 (I'm combining it with <code>Shell.Safe</code> for safety):</p>
 
-
+<pre>String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");</pre>
 
 <h2 id="download">Download</h2>
 
@@ -124,7 +156,10 @@ to execute a simple command and just get its output
 in your Maven project
 (get its latest version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-ssh&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
 <p>The project is in <a href="https://github.com/jcabi/jcabi-ssh">GitHub</a>.
 If you have any problems, just submit an issue. I'll try to help.</p>

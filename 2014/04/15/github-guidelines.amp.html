@@ -99,12 +99,13 @@ main development stream against accidental damage.</p>
 <p>Once you have a forked our repository to your account, clone it to your
 computer, and then check out the <code>master</code> branch. For example:</p>
 
-
+<pre>git clone git@github.com:yegor256/jcabi.git
+git checkout master</pre>
 
 <p>Now, it's time to branch (<code>123</code> is the number of the GitHub issue you're going
 to work with, and the name of the branch):</p>
 
-
+<pre>git checkout -b 123</pre>
 
 <p>By convention, we use the same names for the branch and issue you're working
 with.</p>
@@ -141,7 +142,8 @@ bug, which must be reported.</p>
 commit changes as soon as you make them. Don't accumulate large numbers of
 changes too long before committing them.</p>
 
-
+<pre>git commit -am '#123: the description of the changes'
+git push origin 123</pre>
 
 <p>If you have questions about the scope of work, post them in the GitHub issue and
 <a href="/2016/03/15/wring-dispatcher-github-notifications.html">wait</a>

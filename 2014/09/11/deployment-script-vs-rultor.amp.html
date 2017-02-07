@@ -127,7 +127,12 @@ it may look like this:</p>
 
 <p>My deployment script looked like this before I started to use Rultor:</p>
 
-
+<pre>#!/bin/bash
+phing test
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/</pre>
 
 <p>Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
@@ -142,7 +147,22 @@ work again.</p>
 <p>So, here is a new script, which I'm using now.
 It is being executed inside a new Docker container, every time:</p>
 
-
+<pre>#!/bin/bash
+# First, we install all prerequisites
+sudo apt-get install -y php5 php5-mysql mysql
+sudo apt-get install php-pear
+sudo pear channel-discover pear.phpunit.de
+sudo pear install phpunit/PHPUnit
+sudo pear install PHP_CodeSniffer
+sudo pecl install xdebug
+sudo pear channel-discover pear.phing.info
+sudo pear install phing/phing
+# And now the same script I had before
+phing test
+git ftp push --user ".." \
+  --passwd ".." \
+  --syncroot php/src \
+  ftp://ftp.example.com/</pre>
 
 <p>Obviously, running this script on my MacBook (without virtualization) would
 cause a lot of trouble. Well, I don't even have <code>apt-get</code> here :)</p>
@@ -226,7 +246,11 @@ to use the scripts he/she has to be able to open files with credentials.</p>
 sensitive data, right before they are used by your deployment scripts. In
 the <code>.rultor.yml</code> configuration file you just say:</p>
 
-
+<pre>decrypt:
+  db.ini: "repo/db.ini.asc"
+deploy:
+  script:
+    ftp put db.ini production</pre>
 
 <p>Then, you encrypt your <code>db.ini</code> using a Rultor GPG key, and fearlessly
 commit <code>db.ini.asc</code> to the repository. Nobody will be able to open and read

@@ -75,7 +75,19 @@ them by their race, gender, and religion. Can this be a good practice?</p>
 <p>This is a very typical example of type casting (Google Guava is full
 of it, for example <a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111"><code>Iterables.size()</code></a>:</p>
 
-
+<pre>public final class Foo {
+  public int sizeOf(Iterable items) {
+    int size = 0;
+    if (items instanceof Collection) {
+      size = Collection.class.cast(items).size();
+    } else {
+      for (Object item : items) {
+        ++size;
+      }
+    }
+    return size;
+  }
+}</pre>
 
 <p>This <code>sizeOf()</code>  method calculates the size of an iterable. However, it
 is smart enough to understand that if <code>items</code> are also instances of <code>Collection</code>,
@@ -103,7 +115,18 @@ casting and forking based on that casting.</p>
 <p>What is the alternative? There are a few, but the most obvious
 is method overloading (not available in semi-OOP languages like Ruby or PHP):</p>
 
-
+<pre>public final class Foo {
+  public int sizeOf(Iterable items) {
+    int size = 0;
+    for (Object item : items) {
+      ++size;
+    }
+    return size;
+  }
+  public int sizeOf(Collection items) {
+    return items.size();
+  }
+}</pre>
 
 <p>Isn't that more elegant?</p>
 

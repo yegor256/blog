@@ -78,16 +78,41 @@ instead for marshalling Java objects into XML documents.</p>
 <p>This is how JAXB marshalling works. Say you have a <code>Book</code> class that needs to be
 marshalled into an XML document. You have to create getters and annotate them:</p>
 
-
+<pre>import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
+public class Book {
+  private final String isbn;
+  private final String title;
+  public Book(final String isbn, final String title) {
+    this.isbn = isbn;
+    this.title = title;
+  }
+  @XmlElement
+  public String getIsbn() {
+    return this.isbn;
+  }
+  @XmlElement
+  public String getTitle() {
+    return this.title;
+  }
+}</pre>
 
 <p>Then you create a marshaller and ask it to convert an instance of class
 <code>Book</code> into XML:</p>
 
-
+<pre>final Book book = new Book("0132350882", "Clean Code");
+final JAXBContext context = JAXBContext.newInstance(Book.class);
+final Marshaller marshaller = jaxbContext.createMarshaller();
+marshaller.marshal(book, System.out);</pre>
 
 <p>You should be expecting something like this in the output:</p>
 
-
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;book&gt;
+  &lt;isbn&gt;0132350882&lt;/isbn&gt;
+  &lt;title&gt;Clean Code&lt;/title&gt;
+&lt;/book&gt;</pre>
 
 <p>So what's wrong with it? Pretty much the same thing that's wrong with
 object-relational mapping, which is explained in
@@ -100,7 +125,17 @@ anymore but rather a passive bag of data.</p>
 
 <p>An ideal approach would be to redesign our class <code>Book</code> this way:</p>
 
-
+<pre>public class Book {
+  private final String isbn;
+  private final String title;
+  public Book(final String isbn, final String title) {
+    this.isbn = isbn;
+    this.title = title;
+  }
+  public String toXML() {
+    // create XML document and return
+  }
+}</pre>
 
 <p>However, there are a few problems with this approach. First of all, there's
 massive code duplication. Building an XML document is a rather verbose
@@ -117,12 +152,28 @@ in each object would definitely be a disaster.</p>
 an imperative language for XML constructions and manipulations. Here is
 how we can implement our <code>Book</code> object with the help of Xembly:</p>
 
-
+<pre>import org.xembly.Directive;
+public class Book {
+  private final String isbn;
+  private final String title;
+  public Book(final String isbn, final String title) {
+    this.isbn = isbn;
+    this.title = title;
+  }
+  public Iterable&lt;Directive&gt; toXembly() {
+    return new Directives()
+      .add("book")
+      .add("isbn").set(this.isbn).up()
+      .add("title").set(this.title).up()
+      .up();
+  }
+}</pre>
 
 <p>Now, in order to build an XML document, we should use this code
 outside the object:</p>
 
-
+<pre>final Book book = new Book("0132350882", "Clean Code");
+final String xml = new Xembler(book.toXembly()).xml();</pre>
 
 <p>This <a href="http://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html"><code>Xembler</code></a>
 class will convert Xembly directives into an XML document.</p>

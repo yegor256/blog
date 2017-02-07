@@ -103,7 +103,12 @@ An object of class <code>Article</code> inherits all characteristics of objects 
 and adds its own. For example, it <em>inherits</em> an ability to print itself
 and <em>adds</em> an ability to submit itself to a conference:</p>
 
-
+<pre>interface Manuscript {
+  void print(Console console);
+}
+interface Article extends Manuscript {
+  void submit(Conference cnf);
+}</pre>
 
 <p>This is <em>subtyping</em>, and it's a perfect technique; whenever a
 manuscript is required, we can provide an article and nobody will
@@ -122,7 +127,17 @@ Who is dead, you ask? An object is dead if it allows other objects to
 <em>inherit</em> its encapsulated code and data. This is implementation
 inheritance:</p>
 
-
+<pre>class Manuscript {
+  protected String body;
+  void print(Console console) {
+    System.out.println(this.body);
+  }
+}
+class Article extends Manuscript {
+  void submit(Conference cnf) {
+    cnf.send(this.body);
+  }
+}</pre>
 
 <p>Class <code>Article</code> <strong>copies</strong> method <code>print()</code> and attribute <code>body</code>
 from class <code>Manuscript</code>, as if it's not a

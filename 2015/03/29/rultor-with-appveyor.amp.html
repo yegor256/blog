@@ -87,24 +87,50 @@ of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I creat
 a text file <code>curl-appveyor.cfg</code> with this content (it's not my real token inside,
 just an example):</p>
 
-
+<pre>--silent
+--header "Authorization: Bearer 1hdmsfbs7xccb9x6g1y4"
+--header "Content-Type: application/json"
+--header "Accept: application/json"</pre>
 
 <p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code>rultor</code></a>
 command line tool:</p>
 
-
+<pre>$ rultor encrypt -p yegor256/takes curl-appveyor.cfg</pre>
 
 <p>The file I created was called
 <a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code>curl-appveyor.cfg.asc</code></a>.
 I committed and pushed into <a href="https://github.com/yegor256/takes">yegor256/takes</a>
 GitHub repository.</p>
 
-
+<pre>$ git add curl-appveyor.cfg.asc
+$ git commit -am 'CURL config for Appveyor'
+$ git push origin master</pre>
 
 <p>Then, I configured AppVeyor "pinging" from Docker script.
 This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code>.rultor.yml</code></a>:</p>
 
-
+<pre>decrypt:
+  curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
+merge:
+  script: |-
+    ver=$(curl -K ../curl-appveyor.cfg \
+      --data "{accountName: 'yegor256',
+        projectSlug: 'takes',
+        pullRequestId: '${pull_id}'}" \
+      https://ci.appveyor.com/api/builds | jq -r '.version')
+    while true; do
+      status=$(curl -K ../curl-appveyor.cfg \
+        https://ci.appveyor.com/api/projects/yegor256/takes/build/${ver} \
+        | jq -r '.build.status')
+      if [ "${status}" == "success" ]; then break; fi
+      if [ "${status}" == "failed" ]; then
+        echo "see https://ci.appveyor.com/project/yegor256/takes/build/${ver}"
+        exit 1
+      fi
+      echo "waiting for AppVeyor build ${ver}: ${status}"
+      sleep 5s
+    done
+    mvn clean install</pre>
 
 <p>There is no magic here, it's very simple. First, I start a new build
 using <code>/api/builds</code> end-point of

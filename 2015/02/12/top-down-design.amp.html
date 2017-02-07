@@ -86,16 +86,43 @@ going to pay me $100 after the first release and the rest after the second relea
 
 <p>The tool is very primitive, and it only took me a few minutes to write. Take a look at it:</p>
 
-
+<pre>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+int main() {
+  char ch;
+  int count = 0;
+  while (1) {
+    if (read(STDIN_FILENO, &amp;ch, 1) &lt;= 0) {
+      break;
+    }
+    if (ch == ' ') {
+      ++count;
+    }
+  }
+  if (count &gt; 0) {
+    ++count;
+  }
+  printf("%d\n", count);
+  return 0;
+}</pre>
 
 <p>But let's be professional and not forget about build automation and unit
 testing. Here is a simple <code>Makefile</code> that does them both:</p>
 
-
+<pre>all: wc test
+wc: wc.c
+  gcc -o wc wc.c
+test: wc
+  echo '' | ./wc | grep '0'
+  echo 'Hello, world! How are you?' | ./wc | grep '5'</pre>
 
 <p>Now I run <code>make</code> from a command line and get this output:</p>
 
-
+<pre>$ make
+echo '' | ./wc | grep '0'
+0
+echo 'Hello, world! How are you?' | ./wc | grep '5'
+5</pre>
 
 <p>All clean!</p>
 
@@ -125,7 +152,11 @@ He doesn't need it, but I need it.</p>
 <p>Here is what I'm going to do. I'll release a skeleton of the tool, backed
 by the tests but with an absolutely dummy implementation. Look at it:</p>
 
-
+<pre>#include &lt;stdio.h&gt;
+int main() {
+  printf("5\n");
+  return 0;
+}</pre>
 
 <p>And I will modify the <code>Makefile</code> accordingly. I will disable the first test
 to make sure the build passes.</p>

@@ -74,11 +74,22 @@ un-extensible.</p>
 
 <p>Let's say we're making an interface that would represent a name of a person:</p>
 
-
+<pre>interface Name {
+  String first();
+}</pre>
 
 <p>Pretty easy, right? Now, let's try to implement it:</p>
 
-
+<pre>public final class EnglishName implements Name {
+  private final String name;
+  public EnglishName(final CharSequence text) {
+    this.name = text.toString().split(" ", 2)[0];
+  }
+  @Override
+  public String first() {
+    return this.name;
+  }
+}</pre>
 
 <p>What's wrong with this? It's faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
@@ -86,7 +97,16 @@ call the <code>first()</code> method, it will return the same value and won't ne
 to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:</p>
 
-
+<pre>public final class EnglishName implements Name {
+  private final CharSequence text;
+  public EnglishName(final CharSequence txt) {
+    this.text = txt;
+  }
+  @Override
+  public String first() {
+    return this.text.toString().split("", 2)[0];
+  }
+}</pre>
 
 <p>This is the right design. I can see you smiling, so let me prove my point.</p>
 
@@ -105,7 +125,17 @@ as long as possible.</p>
 
 <p>Let's try to use our <code>EnglishName</code> class:</p>
 
-
+<pre>final Name name = new EnglishName(
+  new NameInPostgreSQL(/*...*/)
+);
+if (/* something goes wrong */) {
+  throw new IllegalStateException(
+    String.format(
+      "Hi, %s, we can't proceed with your application",
+      name.first()
+    )
+  );
+}</pre>
 
 <p>In the first line of this snippet, we are just making an instance of an object
 and labeling it <code>name</code>. We don't want to go to the database yet and fetch
@@ -128,21 +158,54 @@ end up with five calls to the <code>String.split()</code> method.</p>
 a <a href="/2015/02/26/composable-decorators.html">composable decorator</a>,
 which will help us solve this "re-use" problem:</p>
 
-
+<pre>public final class CachedName implements Name {
+  private final Name origin;
+  public CachedName(final Name name) {
+    this.origin = name;
+  }
+  @Override
+  @Cacheable(forever = true)
+  public String first() {
+    return this.origin.first();
+  }
+}</pre>
 
 <p>I'm using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>Cacheable</code></a>
 annotation from <a href="http://aspects.jcabi.com/">jcabi-aspects</a>, but you can use any other
 caching tools available in Java (or other languages), like
 <a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Cache</a>:</p>
 
-
+<pre>public final class CachedName implements Name {
+  private final Cache&lt;Long, String&gt; cache =
+    CacheBuilder.newBuilder().build();
+  private final Name origin;
+  public CachedName(final Name name) {
+    this.origin = name;
+  }
+  @Override
+  public String first() {
+    return this.cache.get(
+      1L,
+      new Callable&lt;String&gt;() {
+        @Override
+        public String call() {
+          return CachedName.this.origin.first();
+        }
+      }
+    );
+  }
+}</pre>
 
 <p>But please don't make <code>CachedName</code> mutable and lazily loaded—it's an anti-pattern, which I've discussed before in
 <a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a>.</p>
 
 <p>This is how our code will look now:</p>
 
-
+<pre>final Name name = new CachedName(
+  new EnglishName(
+    new NameInPostgreSQL(/*...*/)
+  )
+);</pre>
 
 <p>It's a very primitive example, but I hope you get the idea.</p>
 

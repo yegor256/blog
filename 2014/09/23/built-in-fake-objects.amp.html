@@ -83,12 +83,18 @@ almost impossible to maintain.</p>
 (this snippet and all others in this article are simplified, for the
 sake of brevity):</p>
 
-
+<pre>public interface Region {
+  Table table(String name);
+}</pre>
 
 <p>Its <code>table()</code> method returns an instance of the <code>Table</code> interface, which
 has its own methods:</p>
 
-
+<pre>public interface Table {
+  Frame frame();
+  Item put(Attributes attrs);
+  Region region();
+}</pre>
 
 <p>Interface <code>Frame</code>, returned by the <code>frame()</code> method, also has its
 own methods. And so on.
@@ -96,7 +102,15 @@ In order to create a properly mocked instance of interface <code>Region</code>,
 one would normally create a dozen other mock objects. With <a href="http://mockito.org">Mockito</a>
 it will look like this:</p>
 
-
+<pre>public void testMe() {
+  // many more lines here...
+  Frame frame = Mockito.mock(Frame.class);
+  Mockito.doReturn(...).when(frame).iterator();
+  Table table = Mockito.mock(Table.class);
+  Mockito.doReturn(frame).when(table).frame();
+  Region region = Mockito.mock(Region.class);
+  Mockito.doReturn(table).when(region).table(Mockito.anyString());
+}</pre>
 
 <p>And all of this is just a
 <a href="/2015/05/25/unit-test-scaffolding.html">scaffolding</a>
@@ -108,7 +122,26 @@ before the actual testing.</p>
 managing data in <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a>.
 Your class may look similar to this:</p>
 
-
+<pre>public class Employee {
+  private final String name;
+  private final Region region;
+  public Employee(String empl, Region dynamo) {
+    this.name = empl;
+    this.region = dynamo;
+  }
+  public Integer salary() {
+    return Integer.parseInt(
+      this.region
+        .table("employees")
+        .frame()
+        .where("name", this.name)
+        .iterator()
+        .next()
+        .get("salary")
+        .getN()
+    );
+  }
+}</pre>
 
 <p>You can imagine how difficult it will be to unit test this class,
 using Mockito, for example. First, we have
@@ -137,7 +170,23 @@ together with production code, in the same JAR package.</p>
 
 <p>This is what a test will look like, when a fake class <code>MkRegion</code> is used:</p>
 
-
+<pre>public class EmployeeTest {
+  public void canFetchSalaryFromDynamoDb() {
+    Region region = new MkRegion(
+      new H2Data().with(
+        "employees", new String[] {"name"},
+        new String[] {"salary"}
+      )
+    );
+    region.table("employees").put(
+      new Attributes()
+        .with("name", "Jeff")
+        .with("salary", new AttributeValue().withN(50000))
+    );
+    Employee emp = new Employee("Jeff", region);
+    assertThat(emp.salary(), equalTo(50000));
+  }
+}</pre>
 
 <p>This test looks obvious to me. First, we create a fake DynamoDB region,
 which works on top of <code>H2Data</code> storage (in-memory H2 database). The storage

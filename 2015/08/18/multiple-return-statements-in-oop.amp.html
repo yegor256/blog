@@ -74,18 +74,36 @@ or statements. Just <code>return</code>. All arguments in favor of multiple
 
 <p>This is a classical example:</p>
 
-
+<pre>public int max(int a, int b) {
+  if (a &gt; b) {
+    return a;
+  }
+  return b;
+}</pre>
 
 <p>The code above has two <code>return</code> statements, and it is shorter than this one
 with a single <code>return</code>:</p>
 
-
+<pre>public int max(int a, int b) {
+  int m;
+  if (a &gt; b) {
+    m = a;
+  } else {
+    m = b;
+  }
+  return m;
+}</pre>
 
 <p>More verbose, less readable, and slower, right? Right.</p>
 
 <p>This is the code in a <strong>pure</strong> object-oriented world:</p>
 
-
+<pre>public int max(int a, int b) {
+  return new If(
+    new GreaterThan(a, b),
+    a, b
+  );
+}</pre>
 
 <p>What do you think now? There are no statements or operators. No <code>if</code> and no <code>&gt;</code>.
 Instead, there are <strong>objects</strong> of class <code>If</code> and <code>GreaterThan</code>.</p>

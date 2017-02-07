@@ -102,7 +102,7 @@ should be involved—there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:</p>
 
-
+<pre>photo = File.new('/tmp/photo.png')</pre>
 
 <p>The object <code>photo</code> is constructed by the class <code>File</code> (<code>new</code> is an entry point to the class).
 Once constructed, the object is acting on its own. It shouldn't know who constructed it
@@ -129,7 +129,8 @@ real life, even when our software is turned off. To be more precise, an object i
 real-life creature in front of all other objects. Without
 such a creature, there is—obviously—no object.</p>
 
-
+<pre>photo = File.new('/tmp/photo.png')
+puts photo.width()</pre>
 
 <p>In this example, I'm asking <code>File</code> to construct a new object <code>photo</code>, which will
 be a representative of a real file on disk. You may say that a file
@@ -177,7 +178,9 @@ an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care a
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:</p>
 
-
+<pre>interface Binary {
+  byte[] read();
+}</pre>
 
 <p>Now, any object from any class (not just <code>DataFile</code>) can work for me.
 All he has to do, in order to be eligible, is to obey the contract—by implementing the interface <code>Binary</code>.</p>
@@ -199,12 +202,22 @@ to be unique. If there is nothing to encapsulate, an object may
 have identical clones, which I believe is bad. Here is an example
 of a bad object, which may have clones:</p>
 
-
+<pre>class HTTPStatus implements Status {
+  private URL page = new URL("http://www.google.com");
+  @Override
+  public int read() throws IOException {
+    return HttpURLConnection.class.cast(
+      this.page.openConnection()
+    ).getResponseCode();
+  }
+}</pre>
 
 <p>I can create a few instances of class <code>HTTPStatus</code>, and all of them will be
 equal to each other:</p>
 
-
+<pre>first = new HTTPStatus();
+second = new HTTPStatus();
+assert first.equals(second);</pre>
 
 <p>Obviously utility classes, which have only static methods,
 can't instantiate good objects. More generally, utility classes
@@ -225,7 +238,19 @@ never change owners. :)</p>
 Instead, a good immutable object is very dynamic.
 However, he never changes his internal state. For example:</p>
 
-
+<pre>@Immutable
+final class HTTPStatus implements Status {
+  private URL page;
+  public HTTPStatus(URL url) {
+    this.page = url;
+  }
+  @Override
+  public int read() throws IOException {
+    return HttpURLConnection.class.cast(
+      this.page.openConnection()
+    ).getResponseCode();
+  }
+}</pre>
 
 <p>Even though the method <code>read()</code> may return different values, the
 object is immutable. He points to a certain web page and will
@@ -260,7 +285,12 @@ explains: <a href="/2014/11/07/how-immutability-helps.html">How Immutability Hel
 <p>A static method implements a behavior of a class, not an object. Let's say
 we have class <code>File</code>, and his children have method <code>size()</code>:</p>
 
-
+<pre>final class File implements Measurable {
+  @Override
+  public int size() {
+    // calculate the size of the file and return
+  }
+}</pre>
 
 <p>So far, so good; the method <code>size()</code> is there because of the contract <code>Measurable</code>,
 and every object of class <code>File</code> will be able to measure his size. A terrible
@@ -269,7 +299,12 @@ mistake would be to design this class with a static method instead
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">a utility class</a>
 and is very popular in Java, Ruby, and almost every OOP language):</p>
 
-
+<pre>// TERRIBLE DESIGN, DON'T USE!
+class File {
+  public static int size(String file) {
+    // calculate the size of the file and return
+  }
+}</pre>
 
 <p>This design runs completely against the object-oriented paradigm. Why?
 Because static methods turn object-oriented programming into "class-oriented" programming.
@@ -367,7 +402,19 @@ an exception if HTTP status is over 400. I want
 his method, <code>read()</code>, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:</p>
 
-
+<pre>class OnlyValidStatus extends HTTPStatus {
+  public OnlyValidStatus(URL url) {
+    super(url);
+  }
+  @Override
+  public int read() throws IOException {
+    int code = super.read();
+    if (code &gt; 400) {
+      throw new RuntimException("unsuccessful HTTP code");
+    }
+    return code;
+  }
+}</pre>
 
 <p>Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
@@ -380,7 +427,20 @@ speaking, this is an offense.</p>
 and decorate him with your own implementation (a.k.a.
 <a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator Pattern</a>):</p>
 
-
+<pre>final class OnlyValidStatus implements Status {
+  private final Status origin;
+  public OnlyValidStatus(Status status) {
+    this.origin = status;
+  }
+  @Override
+  public int read() throws IOException {
+    int code = this.origin.read();
+    if (code &gt; 400) {
+      throw new RuntimException("unsuccessful HTTP code");
+    }
+    return code;
+  }
+}</pre>
 
 <p>Make sure that this class is implementing the same
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
@@ -400,7 +460,17 @@ our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as <code>abstract</code> methods.
 For example, our <code>HTTPStatus</code> may look like this:</p>
 
-
+<pre>abstract class ValidatedHTTPStatus implements Status {
+  @Override
+  public final int read() throws IOException {
+    int code = this.origin.read();
+    if (!this.isValid()) {
+      throw new RuntimException("unsuccessful HTTP code");
+    }
+    return code;
+  }
+  protected abstract boolean isValid();
+}</pre>
 
 <p>As you see, the class doesn't know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through

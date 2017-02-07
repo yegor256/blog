@@ -104,7 +104,10 @@ that an object is an in-memory box with data.</p>
 store object attributes in memory. Confused? Bear with me for a minute.
 Let's say that in that language we define an object:</p>
 
-
+<pre>c {
+  vin: v,
+  engine: e
+}</pre>
 
 <p>Here, <code>vin</code> and <code>engine</code> are attributes of object <code>c</code> (it's a car; let's
 forget about classes for now to focus strictly on objects). Thus, there is
@@ -113,7 +116,9 @@ second one is its engine. The VIN is an object <code>v</code>, while the engine 
 To make it easier to understand, this is how a similar object would
 look in Java:</p>
 
-
+<pre>char[] v = {'W','D','B','H',...'7','2','8','8'}; // 17 chars
+Engine e = new Engine();
+Car c = new Car(v, e);</pre>
 
 <p>I'm not entirely sure about JVM, but in C++ such an object will take
 exactly 25 bytes in memory (assuming it's 64-bit x86 architecture). The

@@ -97,7 +97,23 @@ This definition is not mine; it's taken from
 (by the way, I highly recommend you read it). Now look at this class
 (I'm using <a href="http://http.jcabi.com">jcabi-http</a> to read and write over HTTP):</p>
 
-
+<pre>@Immutable
+class Page {
+  private final URI uri;
+  Page(URI addr) {
+    this.uri = addr;
+  }
+  public String load() {
+    return new JdkRequest(this.uri)
+      .fetch().body();
+  }
+  public void save(String content) {
+    new JdkRequest(this.uri)
+      .method("PUT")
+      .body().set(content).back()
+      .fetch();
+  }
+}</pre>
 
 <p>What is the "state" in this class? That's right, <code>this.uri</code> is the state. It
 uniquely identifies every object of this class, and it is not modifiable. Thus,

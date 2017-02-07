@@ -73,7 +73,15 @@ be thread-safe, while all of them have to provide synchronized decorators.</p>
 <p>Let's start with an example (it's
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>, by the way):</p>
 
-
+<pre>class Position {
+  private int number = 0;
+  @Override
+  public void increment() {
+    int before = this.number;
+    int after = before + 1;
+    this.number = after;
+  }
+}</pre>
 
 <p>What do you think — is it <a href="https://en.wikipedia.org/wiki/Thread_safety">thread-safe</a>?
 This term refers to whether
@@ -99,7 +107,15 @@ at the same time, they will all go sequentially, not in parallel: one
 thread after another. Of course, it will take longer, but it will prevent
 that mistake from happening:</p>
 
-
+<pre>class Position {
+  private int number = 0;
+  @Override
+  public synchronized void increment() {
+    int before = this.number;
+    int after = before + 1;
+    this.number = after;
+  }
+}</pre>
 
 <p>A class that guarantees it won't break no matter how many threads
 are working with it is called <strong>thread-safe</strong>.</p>
@@ -116,16 +132,27 @@ A between-threads synchronization mechanism will definitely slow us down.</p>
 is not thread-safe, while the other one is a <strong>synchronized decorator</strong>,
 which would look like this:</p>
 
-
+<pre>class SyncPosition implements Position {
+  private final Position origin;
+  SyncPosition(Position pos) {
+    this.origin = pos;
+  }
+  @Override
+  public synchronized void increment() {
+    this.origin.increment();
+  }
+}</pre>
 
 <p>Now, when we need our <code>position</code> object to be thread-safe, we decorate
 it with <code>SyncPosition</code>:</p>
 
-
+<pre>Position position = new SyncPosition(
+  new SimplePosition()
+);</pre>
 
 <p>When we need a plain simple position, without any thread safety, we do this:</p>
 
-
+<pre>Position position = new SimplePosition();</pre>
 
 <p>Making class functionality both rich <em>and</em> thread-safe is, in my opinion,
 a violation of that famous

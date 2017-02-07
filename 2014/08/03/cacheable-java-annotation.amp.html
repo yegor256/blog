@@ -75,7 +75,13 @@ and many others.</p>
 based on AOP aspects and Java6
 <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>:</p>
 
-
+<pre>import com.jcabi.aspects.Cacheable;
+public class Page {
+  @Cacheable(lifetime = 5, unit = TimeUnit.MINUTES)
+  String load() {
+    return new URL("http://google.com").getContent().toString();
+  }
+}</pre>
 
 <p>The result of <code>load()</code> method will be cached in memory for five minutes.</p>
 
@@ -95,7 +101,8 @@ of the object, an owner of the method and a method name with parameter types.</p
 <p>In the example above, right after the method <code>load()</code>
 finishes, the map gets a new entry (simplified example, of course):</p>
 
-
+<pre>key: [page, "load()"]
+value: "&lt;html&gt;...&lt;/html&gt;"</pre>
 
 <p>Every consecutive call to <code>load()</code> will be intercepted by the aspect
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a> and resolved immediately
@@ -107,7 +114,17 @@ the end of its lifetime, which is five minutes in the example above.</p>
 <p>Sometimes it's necessary to have the ability to flush cache before
 the end of its lifetime. Here is a practical example:</p>
 
-
+<pre>import com.jcabi.aspects.Cacheable;
+public class Employees {
+  @Cacheable(lifetime = 1, unit = TimeUnit.HOURS)
+  int size() {
+    // calculate their amount in MySQL
+  }
+  @Cacheable.FlushBefore
+  void add(Employee employee) {
+    // add a new one to MySQL
+  }
+}</pre>
 
 <p>It's obvious that the number of employees in the database
 will be different after <code>add()</code> method execution and the

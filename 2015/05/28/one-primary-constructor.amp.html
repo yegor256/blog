@@ -74,7 +74,21 @@ constructing mechanism.</p>
 
 <p>Here is what I mean:</p>
 
-
+<pre>final class Cash {
+  private final int cents;
+  private final String currency;
+  public Cash() { // secondary
+    this(0);
+  }
+  public Cash(int cts) { // secondary
+    this(cts, "USD");
+  }
+  public Cash(int cts, String crn) { // primary
+    this.cents = cts;
+    this.currency = crn;
+  }
+  // methods here
+}</pre>
 
 <p>There are three constructors in the class—only one is
 <em>primary</em> and the other two are <em>secondary</em>. My definition of a
@@ -89,7 +103,23 @@ behind this rule: It helps eliminate code duplication.</p>
 
 <p>Without such a rule, we may have this design for our class:</p>
 
-
+<pre>final class Cash {
+  private final int cents;
+  private final String currency;
+  public Cash() { // primary
+    this.cents = 0;
+    this.currency = "USD";
+  }
+  public Cash(int cts) { // primary
+    this.cents = cts;
+    this.currency = "USD";
+  }
+  public Cash(int cts, String crn) { // primary
+    this.cents = cts;
+    this.currency = crn;
+  }
+  // methods here
+}</pre>
 
 <p>There's not a lot of code here, but the duplication is massive and ugly;
 I hope you see it for yourself.</p>

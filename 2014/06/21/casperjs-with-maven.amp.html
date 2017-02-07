@@ -76,7 +76,22 @@ to requests sent by a regular web browser.</p>
 of a running WAR application and asserts that the response has
 <code>200</code> HTTP status code:</p>
 
-
+<pre>casper.test.begin(
+  'home page can be rendered',
+  function (test) {
+    casper.start(
+      casper.cli.get('home'), // URL of home page
+      function () {
+        test.assertHttpStatus(200);
+      }
+    );
+    casper.run(
+      function () {
+        test.done();
+      }
+    );
+  }
+);</pre>
 
 <p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file.
 Let's see how CasperJS can be executed automatically on every Maven build.</p>
@@ -107,7 +122,20 @@ we have an off-the-shelf Maven plugin:
 that understands what the current platform is and downloads the appropriate
 binary automatically, placing it into the <code>target</code> directory.</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;com.github.klieber&lt;/groupId&gt;
+  &lt;artifactId&gt;phantomjs-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;install&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+  &lt;configuration&gt;
+    &lt;version&gt;1.9.2&lt;/version&gt;
+  &lt;/configuration&gt;
+&lt;/plugin&gt;</pre>
 
 <p>The exact name of the downloaded binary is stored in the
 <code>${phantomjs.binary}</code> Maven property.</p>
@@ -118,7 +146,28 @@ binary automatically, placing it into the <code>target</code> directory.</p>
 (at least I haven't found any as of yet). That's why I'm using plain
 old <code>git</code> (you should have it installed on your build machine).</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;casperjs-install&lt;/id&gt;
+      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;exec&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;executable&gt;git&lt;/executable&gt;
+        &lt;arguments&gt;
+          &lt;argument&gt;clone&lt;/argument&gt;
+          &lt;argument&gt;--depth=1&lt;/argument&gt;
+          &lt;argument&gt;https://github.com/n1k0/casperjs.git&lt;/argument&gt;
+          &lt;argument&gt;${project.build.directory}/casperjs&lt;/argument&gt;
+        &lt;/arguments&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <h2 id="3-reserve-tcp-port">3. Reserve TCP Port</h2>
 
@@ -130,7 +179,23 @@ to run multiple Maven builds in parallel, so that's why I get a random port on e
 like <code>5555</code> or something similar. This is a very bad practice.
 Always reserve a new random port when you need it.</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;tomcat-port&lt;/id&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;reserve-network-port&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;portNames&gt;
+          &lt;portName&gt;tomcat.port&lt;/portName&gt;
+        &lt;/portNames&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <p>The plugin reserves a port and sets it value to the <code>${tomcat.port}</code> Maven property.</p>
 
@@ -140,7 +205,26 @@ Always reserve a new random port when you need it.</p>
 I'm using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
 that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+  &lt;configuration&gt;
+    &lt;path&gt;/&lt;/path&gt;
+  &lt;/configuration&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;start-tomcat&lt;/id&gt;
+      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run-war-only&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;port&gt;${tomcat.port}&lt;/port&gt;
+        &lt;fork&gt;true&lt;/fork&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues
 to run when the plugin execution finishes. That's exactly what I need.</p>
@@ -152,7 +236,36 @@ plugins exist for this, I'm using plain old
 <a href="http://mojo.codehaus.org/exec-maven-plugin/">exec-maven-plugin</a>,
 mostly because it is more configurable.</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;casperjs-test&lt;/id&gt;
+      &lt;phase&gt;integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;exec&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;executable&gt;
+          ${project.build.directory}/casperjs/bin/casperjs
+        &lt;/executable&gt;
+        &lt;workingDirectory&gt;${basedir}&lt;/workingDirectory&gt;
+        &lt;arguments&gt;
+          &lt;argument&gt;test&lt;/argument&gt;
+          &lt;argument&gt;--verbose&lt;/argument&gt;
+          &lt;argument&gt;--no-colors&lt;/argument&gt;
+          &lt;argument&gt;--concise&lt;/argument&gt;
+          &lt;argument&gt;--home=http://localhost:${tomcat.port}&lt;/argument&gt;
+          &lt;argument&gt;${basedir}/src/test/casperjs&lt;/argument&gt;
+        &lt;/arguments&gt;
+        &lt;environmentVariables&gt;
+          &lt;PHANTOMJS_EXECUTABLE&gt;${phantomjs.binary}&lt;/PHANTOMJS_EXECUTABLE&gt;
+        &lt;/environmentVariables&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <p>The environment variable <code>PHANTOMJS_EXECUTABLE</code> is the undocumented
 feature that makes this whole scenario possible. It configures
@@ -162,7 +275,19 @@ the location of the PhantomJS executable, which was downloaded a few steps above
 
 <p>In the last step, I shut down the Tomcat server.</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;stop-tomcat&lt;/id&gt;
+      &lt;phase&gt;post-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;shutdown&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <h2 id="real-example">Real Example</h2>
 

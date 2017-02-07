@@ -87,12 +87,15 @@ and where this misconception is coming from.</p>
 <p>Here is a typical example of a utility class
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code>Math</code></a> from Java 1.0:</p>
 
-
+<pre>public class Math {
+  public static double abs(double a);
+  // a few dozens of other methods of the same style
+}</pre>
 
 <p>Here is how you would use it when you want to calculate an absolute
 value of a floating point number:</p>
 
-
+<pre>double x = Math.abs(3.1415926d);</pre>
 
 
 
@@ -115,14 +118,20 @@ of imperative programming above. Here is another (this is pure imperative/proced
 programming that has nothing to do with
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>):</p>
 
-
+<pre>public class MyMath {
+  public double f(double a, double b) {
+    double max = Math.max(a, b);
+    double x = Math.abs(max);
+    return x;
+  }
+}</pre>
 
 <p><a href="http://en.wikipedia.org/wiki/Declarative_programming">Declarative programming</a>
 focuses on <strong>what</strong> the program should accomplish without prescribing
 how to do it in terms of sequences of actions to be taken. This is how
 the same code would look in Lisp, a functional programming language:</p>
 
-
+<pre>(defun f (a b) (abs (max a b)))</pre>
 
 <p>What's the catch? Just a difference in syntax? Not really.</p>
 
@@ -132,7 +141,14 @@ give my own. There are basically three roles interacting in the scenario
 with this <code>f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result,
 and a <em>consumer</em> of the result. Let's say I call this function like this:</p>
 
-
+<pre>public void foo() {
+  double x = this.calc(5, -7);
+  System.out.println("max+abs equals to " + x);
+}
+private double calc(double a, double b) {
+  double x = Math.f(a, b);
+  return x;
+}</pre>
 
 <p>Here, method <code>calc()</code> is a buyer, method <code>Math.f()</code> is a packager of the result,
 and method <code>foo()</code> is a consumer. No matter which programming style is used,
@@ -173,7 +189,8 @@ and other functional languages return "vouchers." For example, if you
 call the <code>max</code> function in Lisp, the actual maximum between two numbers
 will only be calculated when you actually start using it:</p>
 
-
+<pre>(let (x (max 1 5))
+  (print "X equals to " x))</pre>
 
 <p>Until this <code>print</code> actually starts to output characters to the
 screen, the function <code>max</code> won't be called. This <code>x</code> is a "voucher" returned
@@ -183,7 +200,11 @@ to you when you attempted to "buy" a maximum between <code>1</code> and <code>5<
 make them declarative. The code is still imperative, because its execution
 delivers the result here and now:</p>
 
-
+<pre>public class MyMath {
+  public double f(double a, double b) {
+    return Math.abs(Math.max(a, b));
+  }
+}</pre>
 
 <p>"Okay," you may say, "I got it, but why is declarative style better than imperative?
 What's the big deal?" I'm getting to it. Let me first show the difference
@@ -193,11 +214,12 @@ classes and functional programming.</p>
 
 <p>In any functional programming language, you can do this:</p>
 
-
+<pre>(defun foo (x) (x 5))</pre>
 
 <p>Then, later, you can call that <code>x</code>:</p>
 
-
+<pre>(defun bar (x) (+ x 1)) // defining function bar
+(print (foo bar)) // passing bar as an argument to foo</pre>
 
 <p>Static methods in Java are not <em>functions</em> in terms of functional programming.
 You can't do anything like this with a static method. You can't pass a static

@@ -82,7 +82,15 @@ modifications of the XML document. It's a valid case, and it has to be
 validated, but the way it's implemented is simply wrong. This is
 how it works (an oversimplified example):</p>
 
-
+<pre>class DyTalk implements Talk {
+  void modify(Collection&lt;Directive&gt; dirs) {
+    if (!dirs.isEmpty()) {
+      // Apply the modification
+      // and save the new XML document
+      // to the DynamoDB table.
+    }
+  }
+}</pre>
 
 <p>What's wrong, you wonder? This if-then-else forking functionality doesn't really belong
 to this object—that's what's wrong. Modifying the XML document
@@ -91,7 +99,14 @@ not saving anything if the modification instructions set is empty is not
 (it's very similar to <a href="/2016/01/26/defensive-programming.html">defensive programming</a>).
 Instead, there should be a decorator, which would look like this:</p>
 
-
+<pre>class QuickTalk implements Talk {
+  private final Talk origin;
+  void modify(Collection&lt;Directive&gt; dirs) {
+    if (!dirs.isEmpty()) {
+      this.origin.modify(dirs);
+    }
+  }
+}</pre>
 
 <p>Now, if and when we need our talk to be more clever in situations where
 the list of directives is empty, we decorate it with <code>QuickTalk</code>.

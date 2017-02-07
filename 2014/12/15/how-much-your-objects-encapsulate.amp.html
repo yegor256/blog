@@ -63,7 +63,8 @@ level of abstraction it too high.
       <h1>How Much Your Objects Encapsulate?</h1>
       <p>Which line do you like more, the first or the second:</p>
 
-
+<pre>new HTTP("http://www.google.com").read();
+new HTTP().read("http://www.google.com");</pre>
 
 <p>What is the difference? The first class <code>HTTP</code> encapsulates a URL,
 while the second one expects it as an argument of method <code>read()</code>. Technically,
@@ -106,7 +107,15 @@ which are immutable and
 following class doesn't represent the Universe, even though it does have
 a no-arguments constructor:</p>
 
-
+<pre>class Time {
+  private final long msec;
+  public Time() {
+    this(System.currentTimeMillis());
+  }
+  public Time(long time) {
+    this.msec = time;
+  }
+}</pre>
 
 <p>This class has two constructors. One of them is the main one, and one is
 supplementary. We're interested in the main one, which implements
@@ -120,7 +129,14 @@ we give to the object.</p>
 <p>On the other hand, sometimes we have to have an object that represents
 the Universe. For example, we may have this:</p>
 
-
+<pre>class HTTP {
+  public String read(String url) {
+    // read via HTTP and return
+  }
+  public boolean online() {
+    // check whether we're online
+  }
+}</pre>
 
 <p>This is not an elegant design, but it demonstrates when it may be
 necessary to represent the entire Universe. An object of this <code>HTTP</code> class can read

@@ -63,7 +63,13 @@ this article tries to explain why you should give up this bad habit.
       <h1>Why NULL is Bad?</h1>
       <p>A simple example of <code>NULL</code> usage in Java:</p>
 
-
+<pre>public Employee getByName(String name) {
+  int id = database.find(name);
+  if (id == 0) {
+    return null;
+  }
+  return new Employee(id);
+}</pre>
 
 <p>What is wrong with this method?</p>
 
@@ -87,13 +93,25 @@ how <code>NULL</code> usage can be avoided and replaced with proper object-orien
 design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
 (the best way is to make it a constant):</p>
 
-
+<pre>public Employee getByName(String name) {
+  int id = database.find(name);
+  if (id == 0) {
+    return Employee.NOBODY;
+  }
+  return Employee(id);
+}</pre>
 
 <p>The second possible alternative is to <a href="/2015/08/25/fail-fast.html">fail fast</a>
 by throwing an <strong>Exception</strong> when you can't return an
 <a href="/2016/07/14/who-is-object.html">object</a>:</p>
 
-
+<pre>public Employee getByName(String name) {
+  int id = database.find(name);
+  if (id == 0) {
+    throw new EmployeeNotFoundException(name);
+  }
+  return Employee(id);
+}</pre>
 
 <p>Now, let's see the arguments against <code>NULL</code>.</p>
 
@@ -112,7 +130,14 @@ If you forget to check, a <a href="http://docs.oracle.com/javase/7/docs/api/java
 may break execution in runtime. Thus, your logic becomes
 polluted with multiple checks and if/then/else forks:</p>
 
-
+<pre>// this is a terrible design, don't reuse
+Employee employee = dept.getByName("Jeffrey");
+if (employee == null) {
+  System.out.println("can't find an employee");
+  System.exit(-1);
+} else {
+  employee.transferTo(dept2);
+}</pre>
 
 <p>This is how exceptional situations are supposed to be handled in
 <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> and
@@ -122,7 +147,7 @@ primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:</p>
 
-
+<pre>dept.getByName("Jeffrey").transferTo(dept2);</pre>
 
 <p>Consider <code>NULL</code> references an inheritance of procedural programming,
 and use 1) Null Objects or 2) Exceptions instead.</p>
@@ -144,13 +169,20 @@ for the sake of performance. For example, method <code>get()</code> of
 interface <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html"><code>Map</code></a>
 in Java returns <code>NULL</code> when there is no such item in the map:</p>
 
-
+<pre>Employee employee = employees.get("Jeffrey");
+if (employee == null) {
+  throw new EmployeeNotFoundException();
+}
+return employee;</pre>
 
 <p>This code searches the map only once due to the usage of <code>NULL</code> in <code>Map</code>.
 If we would refactor <code>Map</code> so that its method <code>get()</code> will throw
 an exception if nothing is found, our code will look like this:</p>
 
-
+<pre>if (!employees.containsKey("Jeffrey")) { // first search
+  throw new EmployeeNotFoundException();
+}
+return employees.get("Jeffrey"); // second search</pre>
 
 <p>Obviously, this is method is twice as slow as the first one. What to do?</p>
 
@@ -159,7 +191,11 @@ Its method <code>get()</code> should have been returning an
 <a href="/2015/04/30/iterating-adapter.html"><code>Iterator</code></a>
 so that our code would look like:</p>
 
-
+<pre>Iterator found = Map.search("Jeffrey");
+if (!found.hasNext()) {
+  throw new EmployeeNotFoundException();
+}
+return found.next();</pre>
 
 <p>BTW, that is exactly how C++ STL
 <a href="http://en.cppreference.com/w/cpp/container/map/find">map::find()</a> method is designed.</p>
@@ -173,7 +209,12 @@ that <code>NULL</code> is a pointer to nothing (<code>0x00000000</code>, in Inte
 <p>However, if you start thinking as an object, this statement
 makes much less sense. This is how our code looks from an object point of view:</p>
 
-
+<pre>- Hello, is it a software department?
+- Yes.
+- Let me talk to your employee "Jeffrey" please.
+- Hold the line please...
+- Hello.
+- Are you NULL?</pre>
 
 <p>The last question in this conversation sounds weird, doesn't it?</p>
 
@@ -206,7 +247,27 @@ doesn't fit with the main usage scenario of the method.</p>
 <p>Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:</p>
 
-
+<pre>public Employee getByName(String name) {
+  int id = database.find(name);
+  Employee employee;
+  if (id == 0) {
+    employee = new Employee() {
+      @Override
+      public String name() {
+        return "anonymous";
+      }
+      @Override
+      public void transferTo(Department dept) {
+        throw new AnonymousEmployeeException(
+          "I can't be transferred, I'm anonymous"
+        );
+      }
+    };
+  } else {
+    employee = Employee(id);
+  }
+  return employee;
+}</pre>
 
 <h2 id="mutable-and-incomplete-objects">Mutable and Incomplete Objects</h2>
 
@@ -219,7 +280,15 @@ changes its state during the entire life-cycle.</p>
 <p>Very often, <code>NULL</code> values are used in <a href="http://en.wikipedia.org/wiki/Lazy_loading">lazy loading</a>,
 to make objects incomplete and mutable. For example:</p>
 
-
+<pre>public class Department {
+  private Employee found = null;
+  public synchronized Employee manager() {
+    if (this.found == null) {
+      this.found = new Employee("Jeffrey");
+    }
+    return this.found;
+  }
+}</pre>
 
 <p>This technology, although widely used, is an anti-pattern in
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.
@@ -240,7 +309,13 @@ For example, <a href="http://aspects.jcabi.com">jcabi-aspects</a> has
 <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>@Cacheable</code></a>
 annotation that caches the value returned by a method:</p>
 
-
+<pre>import com.jcabi.aspects.Cacheable;
+public class Department {
+  @Cacheable(forever = true)
+  public Employee manager() {
+    return new Employee("Jacky Brown");
+  }
+}</pre>
 
 <p>I hope this analysis was convincing enough that you will
 stop <code>NULL</code>-ing your code :)</p>

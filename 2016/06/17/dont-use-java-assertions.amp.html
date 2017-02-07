@@ -73,20 +73,28 @@ in all situations and assertions should never be used. Here's why.</p>
 <p>Let's see what happens when an assertion is triggered. Say that this
 is our code:</p>
 
-
+<pre>public class Main {
+  public static void main(String... args) {
+    assert true == false : "There is a problem";
+    System.out.println("Hello, world!");
+  }
+}</pre>
 
 <p>Save this code to <code>Main.java</code> and compile:</p>
 
-
+<pre>$ javac Main.java</pre>
 
 <p>Then run it:</p>
 
-
+<pre>$ java Main
+Hello, world!</pre>
 
 <p>The assertion wasn't triggered. It was ignored. Now run it with an
 <code>-enableassertions</code> flag:</p>
 
-
+<pre>$ java -enableassertions Main
+Exception in thread "main" java.lang.AssertionError: There is a problem
+  at Main.main(Main.java:3)</pre>
 
 <p>This is the first difference between exceptions and assertions. Exceptions
 will always be thrown, while assertions are not enabled by default. They are

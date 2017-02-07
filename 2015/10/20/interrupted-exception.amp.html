@@ -73,7 +73,9 @@ simplify it.</p>
 
 <p>Let's start with this code:</p>
 
-
+<pre>while (true) {
+  // Nothing
+}</pre>
 
 <p>What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it?
 Not in Java. It will only stop when the entire JVM stops, when you hit
@@ -83,7 +85,17 @@ and everything else will just be obvious.</p>
 
 <p>Let's put this endless loop into a thread:</p>
 
-
+<pre>Thread loop = new Thread(
+  new Runnable() {
+    @Override
+    public void run() {
+      while (true) {
+      }
+    }
+  }
+);
+loop.start();
+// Now how do we stop it?</pre>
 
 <p>So, how do we stop a thread when we need it to stop?</p>
 
@@ -92,7 +104,21 @@ There is a flag in every thread that we can set from the outside. And
 the thread may check it occasionally and stop its execution. Voluntarily!
 Here is how:</p>
 
-
+<pre>Thread loop = new Thread(
+  new Runnable() {
+    @Override
+    public void run() {
+      while (true) {
+        if (Thread.interrupted()) {
+          break;
+        }
+        // Continue to do nothing
+      }
+    }
+  }
+);
+loop.start();
+loop.interrupt();</pre>
 
 <p>This is the only way to ask a thread to stop. There are two methods that
 are used in this example. When I call <code>loop.interrupt()</code>, a flag
@@ -121,7 +147,15 @@ if it is set. For example, this is how the method
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#sleep%28long%29"><code>Thread.sleep()</code></a>
 is designed (taking a very primitive approach):</p>
 
-
+<pre>public static void sleep(long millis)
+  throws InterruptedException {
+  while (/* You still need to wait */) {
+    if (Thread.interrupted()) {
+      throw new InterruptedException();
+    }
+    // Keep waiting
+  }
+}</pre>
 
 <p>Why is it done this way? Why can't it just wait and never check the flag?
 Well, I believe it's done for a good reason. And the reason is the following
@@ -139,7 +173,11 @@ exception. Its design
 tells you that if you want to pause for a few milliseconds, make your
 code interruption-ready. This is how it looks in practice:</p>
 
-
+<pre>try {
+  Thread.sleep(100);
+} catch (InterruptedException ex) {
+  // Stop immediately and go home
+}</pre>
 
 <p>Well, you could let it float up to a higher level, where they will be
 responsible for catching it. The point is that someone will have to
@@ -156,7 +194,14 @@ it takes to wrap up what you're doing and exit.</p>
 
 <p>Now, look again at the code of <code>Thread.sleep()</code>:</p>
 
-
+<pre>public static void sleep(long millis)
+  throws InterruptedException {
+  while (/* ... */) {
+    if (Thread.interrupted()) {
+      throw new InterruptedException();
+    }
+  }
+}</pre>
 
 <p>Remember, <code>Thread.interrupted()</code> not only returns the flag but also
 sets it to <code>false</code>. Thus, once <code>InterruptedException</code> is thrown, the
@@ -177,7 +222,11 @@ asking us to stop, and we just ignore it. That's a very bad idea.</p>
 
 <p>This is what most of us are doing with <code>InterruptedException</code>:</p>
 
-
+<pre>try {
+  Thread.sleep(100);
+} catch (InterruptedException ex) {
+  throw new RuntimeException(ex);
+}</pre>
 
 <p>It looks logical, but it doesn't guarantee that the higher level will
 actually stop everything and exit. They may just catch a runtime exception
@@ -192,7 +241,12 @@ We can't treat such a serious situation so loosely.</p>
 
 <p>This is what we have to do:</p>
 
-
+<pre>try {
+  Thread.sleep(100);
+} catch (InterruptedException ex) {
+  Thread.currentThread().interrupt(); // Here!
+  throw new RuntimeException(ex);
+}</pre>
 
 <p>We're setting the flag back to <code>true</code>!</p>
 

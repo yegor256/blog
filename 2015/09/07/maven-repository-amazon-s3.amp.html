@@ -89,7 +89,18 @@ if your project name is <code>teamed</code>.</p>
 
 <p>Add a new "inline policy" to the user:</p>
 
-
+<pre>{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::repo.teamed.io",
+        "arn:aws:s3:::repo.teamed.io/*"
+      ]
+    }
+  ]
+}</pre>
 
 <p>Here, <code>repo.teamed.io</code> is the name of the S3 bucket you
 created a minute ago.</p>
@@ -97,7 +108,8 @@ created a minute ago.</p>
 <p>Make sure you have an "access key" for this new user. It must look similar
 to this:</p>
 
-
+<pre>key: AKIAI9NNNJD5D7X4TUVA
+secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
 
 <p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
 
@@ -106,24 +118,63 @@ to this:</p>
 
 <p>Add this configuration to your <code>~/.m2/settings.xml</code> file:</p>
 
-
+<pre>&lt;settings&gt;
+  &lt;servers&gt;
+    &lt;server&gt;
+      &lt;id&gt;repo.teamed.io&lt;/id&gt;
+      &lt;username&gt;AKIAI9NNNJD5D7X4TUVA&lt;/username&gt;
+      &lt;password&gt;t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;/password&gt;
+    &lt;/server&gt;
+    [...]
+  &lt;/servers&gt;
+  [...]
+&lt;/settings&gt;</pre>
 
 <h2 id="configure-pom-xml">Configure <code>pom.xml</code>
 </h2>
 
 <p>Add this configuration to <code>pom.xml</code>:</p>
 
-
+<pre>&lt;project&gt;
+  &lt;distributionManagement&gt;
+    &lt;snapshotRepository&gt;
+      &lt;id&gt;repo.teamed.io&lt;/id&gt;
+      &lt;url&gt;s3://repo.teamed.io/snapshot&lt;/url&gt;
+    &lt;/snapshotRepository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;repo.teamed.io&lt;/id&gt;
+      &lt;url&gt;s3://repo.teamed.io/release&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/distributionManagement&gt;
+  &lt;repositories&gt;
+    &lt;repository&gt;
+      &lt;id&gt;repo.teamed.io&lt;/id&gt;
+      &lt;url&gt;s3://repo.teamed.io/release&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+  [...]
+&lt;/project&gt;</pre>
 
 <p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>,
 also in <code>pom.xml</code>:</p>
 
-
+<pre>&lt;project&gt;
+  &lt;build&gt;
+    &lt;extensions&gt;
+      &lt;extension&gt;
+        &lt;groupId&gt;org.kuali.maven.wagons&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+        &lt;version&gt;1.2.1&lt;/version&gt;
+      &lt;/extension&gt;
+    &lt;/extensions&gt;
+    [...]
+  &lt;/build&gt;
+&lt;/project&gt;</pre>
 
 <p>You're ready to go. You can deploy your artifacts just by running
 Maven from the command line:</p>
 
-
+<pre>$ mvn clean deploy</pre>
 
 <h2 id="configure-s3auth-com">Configure <code>s3auth.com</code>
 </h2>
@@ -143,7 +194,8 @@ artifacts to S3 automatically.</p>
 <p>First, encrypt your <code>settings.xml</code> with this
 <a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:</p>
 
-
+<pre>$ gem install rultor
+$ rultor encrypt -p me/test settings.xml</pre>
 
 <p>Instead of <code>me/test</code>, you should use the name of your GitHub project.</p>
 
@@ -155,13 +207,17 @@ but only the Rultor server can decrypt it.</p>
 (The Rultor <a href="http://doc.rultor.com/reference.html">reference page</a>
 explains this format in greater detail):</p>
 
-
+<pre>decrypt:
+  settings.xml: "repo/settings.xml.asc"
+deploy:
+  script: |
+    mvn clean deploy --settings ../settings.xml</pre>
 
 <p>Now it's time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-
+<pre>@rultor deploy</pre>
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 

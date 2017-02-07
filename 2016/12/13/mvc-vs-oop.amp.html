@@ -90,7 +90,10 @@ everything about the data and hide it, remain <a href="/2016/07/06/data-transfer
 That is exactly the principle any procedural architecture is built upon; the
 code is in charge of the data. Take this C++ code, for example:</p>
 
-
+<pre>void print_speed() { // controller
+  int s = load_from_engine(); // model
+  printf("The speed is %d mph", s); // view
+}</pre>
 
 <p>The function <code>print_speed()</code> is the controller. It gets the data <code>s</code> from
 the model <code>load_from_engine()</code> and renders it via the view <code>printf()</code>. Only
@@ -102,7 +105,13 @@ else, we will have to make a similar assumption again and again. That's what the
 
 <p>This is an object-oriented alternative to the code above (pseudo-C++):</p>
 
-
+<pre>printf(
+  new PrintedSpeed( // view
+    new FormattedSpeed( // controller
+      new SpeedFromEngine() // model
+    )
+  )
+);</pre>
 
 <p>Here, <code>SpeedFromEngine.speed()</code>
 returns speed in mph, as an integer; <code>FormattedSpeed.speed()</code> returns

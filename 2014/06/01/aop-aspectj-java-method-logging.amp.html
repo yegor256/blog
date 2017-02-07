@@ -70,11 +70,17 @@ This is how I'm doing it, with help of <a href="http://eclipse.org/aspectj/">Asp
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> and Java 6
 <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>:</p>
 
-
+<pre>public class Foo {
+  @Loggable
+  public int power(int x, int p) {
+    return Math.pow(x, p);
+  }
+}</pre>
 
 <p>This is what I see in log4j output:</p>
 
-
+<pre>[INFO] com.example.Foo #power(2, 10): 1024 in 12μs
+[INFO] com.example.Foo #power(3, 3): 27 in 4μs</pre>
 
 <p>Nice, isn't it? Now, let's see how it works.</p>
 
@@ -139,7 +145,22 @@ implements them using <a href="http://eclipse.org/aspectj/">AspectJ</a>
 (it's a simplified example, full code you can find in
 <a href="https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java"><code>MethodLogger.java</code></a>):</p>
 
-
+<pre>@Aspect
+public class MethodLogger {
+  @Around("execution(* *(..)) &amp;&amp; @annotation(Loggable)")
+  public Object around(ProceedingJoinPoint point) {
+    long start = System.currentTimeMillis();
+    Object result = point.proceed();
+    Logger.info(
+      "#%s(%s): %s in %[msec]s",
+      MethodSignature.class.cast(point.getSignature()).getMethod().getName(),
+      point.getArgs(),
+      result,
+      System.currentTimeMillis() - start
+    );
+    return result;
+  }
+}</pre>
 
 <p>This is an <strong>aspect</strong> with a single <strong>around advice</strong>
 <code>around()</code> inside. The aspect is annotated with <code>@Aspect</code>
@@ -192,7 +213,16 @@ Of course, it finds our method <code>power()</code>.</p>
 creates its own extra class. Our <code>Foo</code> class looks something
 like this after weaving:</p>
 
-
+<pre>public class Foo {
+  private final MethodLogger logger;
+  @Loggable
+  public int power(int x, int p) {
+    return this.logger.around(point);
+  }
+  private int power_aroundBody(int x, int p) {
+    return Math.pow(x, p);
+  }
+}</pre>
 
 <p>AspectJ weaver moves our original functionality to a new method,
 <code>power_aroundBody()</code>, and redirects all <code>power()</code> calls
@@ -223,7 +253,33 @@ your classpath and configure <a href="http://plugin.jcabi.com">jcabi-maven-plugi
 for aspect weaving
 (get their latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;project&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+      &lt;artifactId&gt;jcabi-aspects&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+      &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+        &lt;artifactId&gt;jcabi-maven-plugin&lt;/artifactId&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;ajc&lt;/goal&gt;
+            &lt;/goals&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;</pre>
 
 <p>Since this weaving procedure takes a lot of configuration effort,
 I created a convenient Maven plugin with an <code>ajc</code> goal, which does

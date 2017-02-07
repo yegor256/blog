@@ -86,15 +86,51 @@ slotted time allows. Additionally, there are a numerous unknowns:</p>
 <p>Let's keep all these unknowns in mind as we try to solve the problem on the
 highest level of abstraction. Of course, we start with a test:</p>
 
-
+<pre>import org.junit.*;
+import static org.mockito.Mockito.*;
+public class DBWriterTest {
+  @Test
+  void testSavesDataIntoDatabase() throws Exception {
+    DataBridge mapper = mock(DataBridge.class);
+    Writer writer = new DBWriter(mapper);
+    try {
+      writer.write("hello, world!");
+    } finally {
+      writer.close();
+    }
+    verify(mapper).insert("hello, world!");
+  }
+}</pre>
 
 <p>In the above test, we define the expected behavior of the class. The test fails to compile because there are two missing classes: <code>DataBridge</code> and <code>DBWriter</code>. Let's implement the bridge first:</p>
 
-
+<pre>import java.io.IOException;
+public interface DataBridge {
+  void insert(String text) throws IOException;
+}</pre>
 
 <p>Next, the writer itself:</p>
 
-
+<pre>import java.io.IOException;
+import java.io.Writer;
+import java.utils.Arrays;
+public class DBWriter implements Writer {
+  private DataBridge bridge;
+  public DBWriter(DataBridge brdg) {
+    this.bridge = brdg;
+  }
+  @Override
+  void flush() throws IOException {
+  }
+  @Override
+  void close() throws IOException {
+  }
+  @Override
+  void write(char[] cbuf, int off, int len) throws IOException {
+    String data = new String(Arrays.copyOfRange(cbuf, off, off + len));
+    this.bridge.insert(data);
+  }
+}</pre>
 
 <p>Using the above code, we solve the problem. In the example, we successfully
 designed, implemented and tested the required <code>DBWriter</code> class. Subsequently,
@@ -112,7 +148,16 @@ usable by other classes.</p>
 Every puzzle is a request for refinement. We want to ask someone else to help us
 refine and correct our assumptions. Here is the first puzzle we need to add:</p>
 
-
+<pre>public interface DataBridge {
+  /**
+   * @todo #123 I assumed that a simple insert() method will be
+   *  enough to insert data into the database. Maybe it's
+   *  not true, and some sort of transaction support may be
+   *  required. We should implement this interface and create
+   *  an integration test with a database.
+   */
+  void insert(String text) throws IOException;
+}</pre>
 
 <p>The puzzle has three elements: <code>@todo</code> tag, <code>#123</code> locator and a comment.
 Locator displays the following: "The puzzle was created while working with
@@ -120,7 +165,14 @@ ticket #123."</p>
 
 <p>Let’s add one more puzzle:</p>
 
-
+<pre>void write(char[] cbuf, int off, int len) throws IOException {
+  // @todo #123 I assumed that the data should be sent to the database
+  //  as its received by the writer. Maybe this assumption
+  //  is wrong and we should aggregate data into blocks/chunks
+  //  and then send them to the data bridge.
+  String data = new String(Arrays.copyOfRange(cbuf, off, off + len));
+  this.bridge.insert(data);
+}</pre>
 
 <p>This puzzle indicates one of our concerns because we are not sure that the
 architectural decision is right. Actually, the design is very primitive at the

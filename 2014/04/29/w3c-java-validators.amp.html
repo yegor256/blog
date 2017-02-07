@@ -77,7 +77,10 @@ to be a good time to write a few words about them.</p>
 <p>Below is an example that demonstrates how you can validate
 an HTML document against W3C compliance rules:</p>
 
-
+<pre>import com.jcabi.w3c.ValidatorBuilder;
+assert ValidatorBuilder.html()
+  .validate("&lt;html&gt;hello, world!&lt;/html&gt;")
+  .valid();</pre>
 
 
 
@@ -85,11 +88,15 @@ an HTML document against W3C compliance rules:</p>
 returns <code>false</code> when the document is not valid. Additionally,
 you can obtain more information through a list of "defects" returned by the W3C server:</p>
 
-
+<pre>Collection&lt;Defect&gt; defects = ValidatorBuilder.html()
+  .validate("&lt;html&gt;hello, world!&lt;/html&gt;")
+  .errors();</pre>
 
 <p>The same can be done with CSS:</p>
 
-
+<pre>Collection&lt;Defect&gt; defects = ValidatorBuilder.css()
+  .validate("body { font-family: Arial; }")
+  .errors();</pre>
 
 <p>Personally, I think it is a good practice to validate all
 of HTML pages produced by your application against W3C during
@@ -99,7 +106,22 @@ but rather of preventing bigger problems later.</p>
 <p>These dependencies are mandatory when using jcabi-w3c
 (get their latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-w3c&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
+  &lt;artifactId&gt;javax.json&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
+  &lt;artifactId&gt;jersey-client&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+  &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
     </article>
   </body>

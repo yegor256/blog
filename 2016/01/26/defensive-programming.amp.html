@@ -74,7 +74,21 @@ I'm suggesting you use <strong>validating decorators</strong> instead.</p>
 
 <p>Let's take a look at this rather typical Java example:</p>
 
-
+<pre>class Report {
+  void export(File file) {
+    if (file == null) {
+      throw new IllegalArgumentException(
+        "File is NULL; can't export."
+      );
+    }
+    if (file.exists()) {
+      throw new IllegalArgumentException(
+        "File already exists."
+      );
+    }
+    // Export the report to the file
+  }
+}</pre>
 
 <p>Pretty <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive</a>, right?
 If we remove these validations, the code
@@ -89,21 +103,47 @@ have nothing to do with its core functionality. Instead, we should
 use decorators to do the validation. Here is how. First,
 there must be an interface <code>Report</code>:</p>
 
-
+<pre>interface Report {
+  void export(File file);
+}</pre>
 
 <p>Then, a class that implements the core functionality:</p>
 
-
+<pre>class DefaultReport implements Report {
+  @Override
+  void export(File file) {
+    // Export the report to the file
+  }
+}</pre>
 
 <p>And, finally, a number of decorators that will protect us:</p>
 
-
+<pre>class NoWriteOverReport implements Report {
+  private final Report origin;
+  NoWriteOverReport(Report rep) {
+    this.origin = rep;
+  }
+  @Override
+  void export(File file) {
+    if (file.exists()) {
+      throw new IllegalArgumentException(
+        "File already exists."
+      );
+    }
+    this.origin.export(file);
+  }
+}</pre>
 
 <p>Now, the client has the flexibility of composing a complex object
 from decorators that perform their specific tasks. The core object
 will do the reporting, while the decorators will validate parameters:</p>
 
-
+<pre>Report report = new NoNullReport(
+  new NoWriteOverReport(
+    new DefaultReport()
+  )
+);
+report.export(file);</pre>
 
 <p>What do we achieve with this approach?
 First and foremost: smaller objects.

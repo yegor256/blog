@@ -94,17 +94,33 @@ can be no arguing about this principle—it is what
 a JSON document from some RESTful API and returns a DTO, which we can then
 store in the database:</p>
 
-
+<pre>Book book = api.loadBookById(123);
+database.saveNewBook(book);</pre>
 
 <p>I guess this is what will happen inside the <code>loadBookById()</code> method:</p>
 
-
+<pre>Book loadBookById(int id) {
+  JsonObject json = /* Load it from RESTful API */
+  Book book = new Book();
+  book.setISBN(json.getString("isbn"));
+  book.setTitle(json.getString("title"));
+  book.setAuthor(json.getString("author"));
+  return book;
+}</pre>
 
 <p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let's
 continue. This is what will most likely happen in the <code>saveNewBook()</code> method
 (I'm using pure JDBC):</p>
 
-
+<pre>void saveNewBook(Book book) {
+  Statement stmt = connection.prepareStatement(
+    "INSERT INTO book VALUES (?, ?, ?)"
+  );
+  stmt.setString(1, book.getISBN());
+  stmt.setString(2, book.getTitle());
+  stmt.setString(3, book.getAuthor());
+  stmt.execute();
+}</pre>
 
 <p>This <code>Book</code> is a classic example of a data transfer object design pattern.
 All it does is transfer
@@ -115,20 +131,38 @@ actually not an object at all but rather a passive and anemic data structure.</p
 <p>What is the right design? There are a few. For example, this one looks
 good to me:</p>
 
-
+<pre>Book book = api.bookById(123);
+book.save(database);</pre>
 
 <p>This is what happens in <code>bookById()</code>:</p>
 
-
+<pre>Book bookById(int id) {
+  return new JsonBook(
+    /* RESTful API access point */
+  );
+}</pre>
 
 <p>This is what happens in <code>Book.save()</code>:</p>
 
-
+<pre>void save(Database db) {
+  JsonObject json = /* Load it from RESTful API */
+  db.createBook(
+    json.getString("isbn"),
+    json.getString("title"),
+    json.getString("author")
+  );
+}</pre>
 
 <p>What happens if there are many more parameters of the book in JSON that won't
 fit nicely as parameters into a single <code>createBook()</code> method? How about this:</p>
 
-
+<pre>void save(Database db) {
+  db.create()
+    .withISBN(json.getString("isbn"))
+    .withTitle(json.getString("title"))
+    .withAuthor(json.getString("author"))
+    .deploy();
+}</pre>
 
 <p>There are many other options. But the main point is that the data
 <strong>never</strong> escapes the object <code>book</code>. Once the object is instantiated, the

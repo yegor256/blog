@@ -66,18 +66,43 @@ on which I'm using Jekyll for site rendering.</p>
 
 <p>This is how my code blocks look in markdown pages:</p>
 
-
+<pre>{ % highlight requs %}
+User is a "human being."
+{ % endhighlight %}</pre>
 
 <p>I created a custom <a href="http://pygments.org/docs/lexerdevelopment/">Pygments lexer</a>:</p>
 
 
 
-
+<pre>from pygments.lexer import RegexLexer
+from pygments.token import Punctuation, Text, Keyword, Name, String
+from pygments.util import shebang_matches
+class RequsLexer(RegexLexer):
+  name = 'requs'
+  aliases = ['requs']
+  tokens = {
+    'root': [
+      (r'"[^"]+"', String),
+      (r'""".+"""', Text),
+      (r'\b(needs|includes|requires|when|fail|is|a|the)\s*\b', Keyword),
+      (r'([A-Z][a-z]+)+', Name),
+      (r'[,;:]', Punctuation),
+    ],
+  }
+  def analyse_text(text):
+    return shebang_matches(text, r'requs')</pre>
 
 <p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code>easy_install</code></a>
 and installed locally:</p>
 
-
+<pre>$ easy_install src/requs_pygment
+Processing requs_pygment
+Running setup.py -q bdist_egg --dist-dir ...
+zip_safe flag not set; analyzing archive contents...
+Adding requs-pygment 0.1 to easy-install.pth file
+Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg
+Processing dependencies for requs-pygment==0.1
+Finished processing dependencies for requs-pygment==0.1</pre>
 
 <p>It's done. Now I run <code>jekyll build</code> and my syntax
 is highlighted according to the custom rules I specified in the lexer.</p>

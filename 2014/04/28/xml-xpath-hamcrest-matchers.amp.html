@@ -79,7 +79,21 @@ world!"</code></p>
 
 <p>This is how that code would look in a unit test:</p>
 
-
+<pre>import com.jcabi.matchers.XhtmlMatchers;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
+public class FooTest {
+  @Test
+  public void hasWelcomeMessage() {
+    MatcherAssert.assertThat(
+      new Foo().createXml(),
+      XhtmlMatchers.hasXPaths(
+        "/document[count(message)=1]",
+        "/document/message[.='hello, world!']"
+      )
+    );
+  }
+}</pre>
 
 
 
@@ -118,7 +132,10 @@ problems even further, as it pre-defines most popular namespaces, including
 
 <p>The following example works right out-of-the-box—without any extra configuration:</p>
 
-
+<pre>MatcherAssert.assertThat(
+  new URL("http://www.google.com").getContent(),
+  XhtmlMatchers.hasXPath("//xhtml:body")
+);</pre>
 
 <p>To summarize, my primary objective with the library was its simplicity of usage.</p>
 

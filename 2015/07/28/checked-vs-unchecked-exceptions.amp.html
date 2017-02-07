@@ -79,7 +79,10 @@ we'll discuss the differences. So, my understanding first.</p>
 
 <p>Say there is a method that saves some binary data to a file:</p>
 
-
+<pre>public void save(File file, byte[] data)
+  throws Exception {
+  // save data to the file
+}</pre>
 
 <p>When everything goes right, the method just saves the data and returns control.
 When something is wrong, it
@@ -87,7 +90,11 @@ When something is wrong, it
 <code>Exception</code> and we have to do something
 about it:</p>
 
-
+<pre>try {
+  save(file, data);
+} catch (Exception ex) {
+  System.out.println("Sorry, we can't save right now.");
+}</pre>
 
 <p>When a method says it <code>throws</code> an exception, I understand that the
 method is not <strong>safe</strong>. It may fail sometimes, and it's my responsibility to
@@ -225,7 +232,12 @@ to exception management in OOP.</p>
 says to "use checked exceptions for recoverable conditions and runtime exceptions
 for programming errors." He means something like this:</p>
 
-
+<pre>try {
+  save(file, data);
+} catch (Exception ex) {
+  // We can't save the file, but it's OK
+  // Let's move on and do something else
+}</pre>
 
 <p>How is that any different from a famous anti-pattern called
 <a href="http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl">Don't Use Exceptions for Flow Control</a>?
@@ -235,7 +247,10 @@ chain of calls from method to method is broken, and it's time to go up
 through the chain and stop somewhere. But we never go back again
 after the exception:</p>
 
-
+<pre>App#run()
+  Data#update()
+    Data#write()
+      File#save() &lt;-- Boom, there's a failure here, so we go up</pre>
 
 <p>We can start this chain again, but we don't go back after <code>throw</code>. In other
 words, we don't <strong>do</strong> anything in the <code>catch</code> block. We only report the problem

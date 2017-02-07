@@ -86,7 +86,15 @@ immutable they are and why.</p>
 to the encapsulated entity and always returns the same text
 (I've skipped constructors for the sake of brevity):</p>
 
-
+<pre>class Book {
+  private final String ttl;
+  Book rename(String title) {
+    return new Book(title);
+  }
+  String title() {
+    return this.ttl;
+  }
+}</pre>
 
 <p>This is what we usually have in mind when talking about immutable
 objects. Such a class is very close to a
@@ -98,7 +106,17 @@ the same initial values, the result of <code>title()</code> will be the same.</p
 
 <p>Check out this one:</p>
 
-
+<pre>class Book {
+  private final String ttl;
+  Book rename(String title) {
+    return new Book(title);
+  }
+  String title() {
+    return String.format(
+      "%s (as of %tR)", this.ttl, new Date()
+    );
+  }
+}</pre>
 
 <p>The object is still immutable, but it is not a pure
 function anymore because of the method <code>title()</code>—it returns different values if we call it
@@ -109,7 +127,22 @@ is immutable; it's just not a constant anymore.</p>
 
 <p>How about this one:</p>
 
-
+<pre>class Book {
+  private final Path path;
+  Book rename(String title) {
+    Files.write(
+      this.path,
+      title.getBytes(),
+      StandardOpenOption.CREATE
+    );
+    return this;
+  }
+  String title() {
+    return new String(
+      Files.readAllBytes(this.path)
+    );
+  }
+}</pre>
 
 <p>This <em>immutable</em> object keeps the book title in a file. It's not a constant,
 because its method <code>title()</code> may return different values on every
@@ -126,7 +159,17 @@ previous example, a mutable file was encapsulated. Even though it
 was represented by the immutable class <code>Path</code>, the real file on disk
 was mutable. We can do the same, but in memory:</p>
 
-
+<pre>class Book {
+  private final StringBuffer buffer;
+  Book rename(String title) {
+    this.buffer.setLength(0);
+    this.buffer.append(title);
+    return this;
+  }
+  String title() {
+    return this.buffer.toString();
+  }
+}</pre>
 
 <p>The object is still <em>immutable</em>. Is it
 <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a>? No. Is it a constant?

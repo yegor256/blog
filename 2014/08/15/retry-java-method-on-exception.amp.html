@@ -70,7 +70,14 @@ an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html">
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> can help.
 For example, if you're downloading the following web page:</p>
 
-
+<pre>@RetryOnFailure(
+  attempts = 3,
+  delay = 10,
+  unit = TimeUnit.SECONDS
+)
+public String load(URL url) {
+  return url.openConnection().getContent();
+}</pre>
 
 <p>This method call will throw an exception only after three
 failed executions with a ten seconds interval between them.</p>
@@ -85,7 +92,14 @@ your code.</p>
 <p>When method <code>load()</code> from the example above is called, this is what
 is happening behind the scene (pseudo-code):</p>
 
-
+<pre>while (attempts++ &lt; 3) {
+  try {
+    return original_load(url);
+  } catch (Throwable ex) {
+    log("we failed, will try again in 10 seconds");
+    sleep(10);
+  }
+}</pre>
 
 <p>This approach may be very useful in the following situations
 (based on my experience):</p>

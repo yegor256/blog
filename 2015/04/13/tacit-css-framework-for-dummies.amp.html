@@ -79,7 +79,22 @@ It doesn't have a single
 CSS class and can be applied to any valid HTML5 document. For example, you
 have an HTML document:</p>
 
-
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Subscribe&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;p&gt;Are you interested in learning more?&lt;/p&gt;
+      &lt;form&gt;
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input name="email"/&gt;
+        &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p>This is how it looks in Safari:</p>
 
@@ -87,7 +102,24 @@ have an HTML document:</p>
 
 <p>Now, I add <code>tacit.min.css</code> to it:</p>
 
-
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Subscribe&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css"
+      href="http://yegor256.github.io/tacit/tacit.min.css"/&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;p&gt;Are you interested in learning more?&lt;/p&gt;
+      &lt;form&gt;
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input name="email" type="text"/&gt;
+        &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p>This is how it looks in the same Safari browser:</p>
 

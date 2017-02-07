@@ -126,7 +126,11 @@ in more details in their very famous book
 <p>Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):</p>
 
-
+<pre>Request request = new Request("http://example.com");
+request.method("POST");
+String first = request.fetch();
+request.body("text=hello");
+String second = request.fetch();</pre>
 
 <p>This code works. However, you must remember that the first
 request should be configured before the second one may happen.
@@ -134,7 +138,11 @@ If we decide to remove the first request from the script, we will
 remove the second and the third line, and won't get any errors
 from the compiler:</p>
 
-
+<pre>Request request = new Request("http://example.com");
+// request.method("POST");
+// String first = request.fetch();
+request.body("text=hello");
+String second = request.fetch();</pre>
 
 <p>Now, the script is broken although it compiled without errors. This is
 what <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
@@ -149,14 +157,19 @@ together and be executed after the first one.</p>
 <p>If <code>Request</code> class were immutable, the first snippet wouldn't
 work in the first place, and would have been rewritten like:</p>
 
-
+<pre>final Request request = new Request("");
+String first = request.method("POST").fetch();
+String second = request.method("POST").body("text=hello").fetch();</pre>
 
 <p>Now, these two requests are not coupled. We can safely remove
 the first one, and the second one will still work correctly.
 You may point out that there is a code duplication. Yes, we
 should get rid of it and re-write the code:</p>
 
-
+<pre>final Request request = new Request("");
+final Request post = request.method("POST");
+String first = post.fetch();
+String second = post.body("text=hello").fetch();</pre>
 
 <p>See, refactoring didn't break anything and we still don't have
 temporal coupling. The first request can be removed safely
@@ -171,12 +184,18 @@ because it doesn't have
 
 <p>Let's try to use our <code>Request</code> class in a new method (now it is mutable):</p>
 
-
+<pre>public String post(Request request) {
+  request.method("POST");
+  return request.fetch();
+}</pre>
 
 <p>Let's try to make two requests—the first
 with GET method and the second with POST:</p>
 
-
+<pre>Request request = new Request("http://example.com");
+request.method("GET");
+String first = this.post(request);
+String second = request.fetch();</pre>
 
 <p>Method <code>post()</code> has a "side effect"—it makes changes
 to the mutable object <code>request</code>. These changes are not really
@@ -189,13 +208,17 @@ the request we're passing to it as an argument.</p>
 maintainability issues. It would be much better
 to work with an immutable <code>Request</code>:</p>
 
-
+<pre>public String post(Request request) {
+  return request.method("POST").fetch();
+}</pre>
 
 <p>In this case, we may not have any side effects.
 Nobody can modify our <code>request</code> object, no matter where
 it is used and how deep through the call stack it is passed by method calls:</p>
 
-
+<pre>Request request = new Request("http://example.com").method("GET");
+String first = this.post(request);
+String second = request.fetch();</pre>
 
 <p>This code is perfectly safe and side effect free.</p>
 
@@ -205,7 +228,9 @@ it is used and how deep through the call stack it is passed by method calls:</p>
 states are the same. <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code>Date</code></a>
 class is a good example:</p>
 
-
+<pre>Date first = new Date(1L);
+Date second = new Date(1L);
+assert first.equals(second); // true</pre>
 
 <p>There are two different objects; however, they are equal
 to each other because their encapsulated states are the same.
@@ -216,12 +241,19 @@ implementation of <code>equals()</code> and <code>hashCode()</code> methods.</p>
 with mutable objects is that every time we modify
 object's state it changes its identity:</p>
 
-
+<pre>Date first = new Date(1L);
+Date second = new Date(1L);
+first.setTime(2L);
+assert first.equals(second); // false</pre>
 
 <p>This may look natural, until you start using your
 mutable objects as keys in maps:</p>
 
-
+<pre>Map&lt;Date, String&gt; map = new HashMap&lt;&gt;();
+Date date = new Date();
+map.put(date, "hello, world!");
+date.setTime(12345L);
+assert map.containsKey(date); // false</pre>
 
 <p>When modifying the state of <code>date</code> object, we're not expecting
 it to change its identity. We're not expecting to lose an entry
@@ -242,7 +274,17 @@ side effects of mutable objects. Immutable objects avoid it completely.</p>
 
 <p>Here is a simple example:</p>
 
-
+<pre>public class Stack {
+  private int size;
+  private String[] items;
+  public void push(String item) {
+    size++;
+    if (size &gt; items.length) {
+      throw new RuntimeException("stack overflow");
+    }
+    items[size] = item;
+  }
+}</pre>
 
 <p>It is obvious that an object of class <code>Stack</code> will be left
 in a broken state if it

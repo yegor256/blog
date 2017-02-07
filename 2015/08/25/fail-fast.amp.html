@@ -78,7 +78,12 @@ philosophy, which is the opposite of
 Fail Safe. I believe you know the difference, but let me remind you anyway,
 by example. This is Fail Safe:</p>
 
-
+<pre>public int size(File file) {
+  if (!file.exists()) {
+    return 0;
+  }
+  return file.length();
+}</pre>
 
 <p>This method is supposed to calculate and return a file size. It first checks
 whether the file exists. If it doesn't exist, the method returns zero. Indeed,
@@ -88,7 +93,14 @@ We don't fail because we're trying to keep the app running. This is called Fail 
 
 <p>To the contrary, this is how Fail Fast looks:</p>
 
-
+<pre>public int size(File file) {
+  if (!file.exists()) {
+    throw new IllegalArgumentException(
+      "There is no such file; I can't get its length."
+    );
+  }
+  return file.length();
+}</pre>
 
 <p>We can't find a file? We don't hide this fact. We make this situation
 public and visible. We scream and cry. We

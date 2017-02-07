@@ -95,7 +95,17 @@ I'll try to show why I consider these containers a redundancy, at least.</p>
 <p>This is what dependency injection is (not really different
 from a plain old object <a href="/2015/02/26/composable-decorators.html">composition</a>):</p>
 
-
+<pre>public class Budget {
+  private final DB db;
+  public Budget(DB data) {
+    this.db = data;
+  }
+  public long total() {
+    return this.db.cell(
+      "SELECT SUM(cost) FROM ledger"
+    );
+  }
+}</pre>
 
 <p>The object <code>data</code> is called a "dependency."</p>
 
@@ -104,14 +114,25 @@ needs from the database is its ability to fetch a cell, using an
 arbitrary SQL query, via method <code>cell()</code>. We can instantiate a <code>Budget</code> with a PostgreSQL
 implementation of the <code>DB</code> interface, for example:</p>
 
-
+<pre>public class App {
+  public static void main(String... args) {
+    Budget budget = new Budget(
+      new Postgres("jdbc:postgresql:5740/main")
+    );
+    System.out.println("Total is: " + budget.total());
+  }
+}</pre>
 
 <p>In other words, we're "injecting" a dependency into a new object <code>budget</code>.</p>
 
 <p>An alternative to this "dependency injection" approach would be
 to let <code>Budget</code> decide what database it wants to work with:</p>
 
-
+<pre>public class Budget {
+  private final DB db =
+    new Postgres("jdbc:postgresql:5740/main");
+  // class methods
+}</pre>
 
 <p>This is very dirty and leads to 1) code duplication, 2) inability
 to reuse, and 3) inability to test, etc. No need to discuss
@@ -131,7 +152,15 @@ injection container. Here is how it works (let's use
 <a href="https://github.com/google/guice">Google Guice</a>
 as an example):</p>
 
-
+<pre>import javax.inject.Inject;
+public class Budget {
+  private final DB db;
+  @Inject
+  public Budget(DB data) {
+    this.db = data;
+  }
+  // same methods as above
+}</pre>
 
 <p>Pay attention: the constructor is annotated with
 <a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code>@Inject</code></a>.</p>
@@ -139,14 +168,29 @@ as an example):</p>
 <p>Then, we're supposed to configure a container
 somewhere, when the application starts:</p>
 
-
+<pre>Injector injector = Guice.createInjector(
+  new AbstractModule() {
+    @Override
+    public void configure() {
+      this.bind(DB.class).toInstance(
+        new Postgres("jdbc:postgresql:5740/main")
+      );
+    }
+  }
+);</pre>
 
 <p>Some frameworks even allow us to configure the injector in an XML file.</p>
 
 <p>From now on, we are not allowed to instantiate <code>Budget</code> through the <code>new</code> operator,
 like we did before. Instead, we should use the injector we just created:</p>
 
-
+<pre>public class App {
+  public static void main(String... args) {
+    Injection injector = // as we just did in the previous snippet
+    Budget budget = injector.getInstance(Budget.class);
+    System.out.println("Total is: " + budget.total());
+  }
+}</pre>
 
 <p>The injection automatically finds out that in order to instantiate
 a <code>Budget</code> it has to provide an argument for its constructor. It will

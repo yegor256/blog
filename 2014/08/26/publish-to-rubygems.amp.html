@@ -90,7 +90,7 @@ strongly recommend moving there.</p>
 
 <p>Create a <code>rubygems.yml</code> file (you may already have it as <code>~/.gem/credentials</code>):</p>
 
-
+<pre>:rubygems_api_key: d355d8940bb031bfe9acf03ed3da4c0d</pre>
 
 <p>You should get this API key from RubyGems.  To find your API key,
 click on your user name when logged in to RubyGems.org and then click
@@ -101,7 +101,8 @@ on "Edit Profile."</p>
 
 <p>Now, encrypt <code>rubygems.yml</code> with a <a href="https://github.com/yegor256/rultor-remote">rultor remote</a>:</p>
 
-
+<pre>$ gem install rultor
+$ rultor encrypt -p me/test rubygems.yml</pre>
 
 <p>Instead of <code>me/test</code> use the name of your GitHub project.</p>
 
@@ -114,7 +115,12 @@ but only the Rultor server can decrypt it.</p>
 
 <p>In your <code>gemspec</code> file, make sure you use <code>1.0.snapshot</code> as a version number:</p>
 
-
+<pre># coding: utf-8
+Gem::Specification.new do |s|
+  # ...
+  s.version = '1.0.snapshot'
+  # ...
+end</pre>
 
 <p>This version name will be replaced by Rultor during deployment.</p>
 
@@ -122,7 +128,15 @@ but only the Rultor server can decrypt it.</p>
 
 <p>Create a <code>.rultor.yml</code> file in the root directory of your project:</p>
 
-
+<pre>decrypt:
+  rubygems.yml: "repo/rubygems.yml.asc"
+release:
+  script: |
+    rm -rf *.gem
+    sed -i "s/1.0.snapshot/${tag}/g" foo.gemspec
+    gem build foo.gemspec
+    chmod 0600 /home/r/rubygems.yml
+    gem push *.gem --config-file /home/r/rubygems.yml</pre>
 
 <p>In this example, replace <code>foo</code> with the name of your gem.</p>
 
@@ -134,7 +148,7 @@ but only the Rultor server can decrypt it.</p>
 the GitHub issue tracker, and post something like that into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-
+<pre>@rultor release, tag is `0.1`</pre>
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 

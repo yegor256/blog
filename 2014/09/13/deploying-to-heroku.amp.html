@@ -100,7 +100,9 @@ your existing key (located at <code>~/.ssh/id_rsa.pub</code>) authenticated by H
 <p>Now, encrypt <code>id_rsa</code> and <code>id_rsa.pub</code> (they are in the <code>~/.ssh</code> directory)
 with a <a href="https://github.com/yegor256/rultor-remote">rultor remote</a>:</p>
 
-
+<pre>$ gem install rultor
+$ rultor encrypt -p me/test id_rsa
+$ rultor encrypt -p me/test id_rsa.pub</pre>
 
 <p>Instead of <code>me/test</code> use the name of your GitHub project.</p>
 
@@ -115,7 +117,22 @@ but only the Rultor server can decrypt them.</p>
 (<a href="http://doc.rultor.com/reference.html">reference page</a>
 explains this format in detail):</p>
 
-
+<pre>decrypt:
+  id_rsa: "repo/id_rsa.asc"
+  id_rsa.pub: "repo/id_rsa.pub.asc"
+release:
+  script: |
+    mvn versions:set "-DnewVersion=${tag}"
+    git commit -am "${tag}"
+    mvn clean install -Pqulice --errors
+    git remote add heroku git@heroku.com:aintshy.git
+    mkdir ~/.ssh
+    mv ../id_rsa ../id_rsa.pub ~/.ssh
+    chmod -R 600 ~/.ssh/*
+    echo -e \
+      "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" \
+      &gt; ~/.ssh/config
+    git push -f heroku $(git symbolic-ref --short HEAD):master</pre>
 
 <p>You can compare your file with live Rultor
 <a href="https://github.com/aintshy/hub/blob/master/.rultor.yml">configuration of aintshy/hub</a>.</p>
@@ -128,7 +145,7 @@ explains this format in detail):</p>
 GitHub issue tracker, and post something like this into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-
+<pre>@rultor release, tag is `0.1`</pre>
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 

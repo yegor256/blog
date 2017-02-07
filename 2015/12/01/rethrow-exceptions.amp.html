@@ -77,11 +77,19 @@ Both are wrong.</p>
 
 <p>This is how the code may look:</p>
 
-
+<pre>if (!file.exists()) {
+  throw new IllegalArgumentException(
+    "File doesn't exist"
+  );
+}</pre>
 
 <p>It may also look like this:</p>
 
-
+<pre>try {
+  Files.delete(file);
+} catch (IOException ex) {
+  throw new IllegalArgumentException(ex);
+}</pre>
 
 <p>Both examples demonstrate an inadequate style of handling situations that
 involve exceptions and reporting them. What's wrong here? The exception messages
@@ -90,11 +98,28 @@ from the place where they originated from.</p>
 
 <p>This is how they should look instead:</p>
 
-
+<pre>if (!file.exists()) {
+  throw new IllegalArgumentException(
+    String.format(
+      "User profile file %s doesn't exist",
+      file.getAbsolutePath()
+    )
+  );
+}</pre>
 
 <p>And the second example should look like this:</p>
 
-
+<pre>try {
+  Files.delete(file);
+} catch (IOException ex) {
+  throw new IllegalArgumentException(
+    String.format(
+      "Can't delete user profile data file %s",
+      file.getAbsolutePath()
+    ),
+    ex
+  );
+}</pre>
 
 <p>See the difference? This may look like redundant code, but it's not.
 Of course, when I'm writing all this, I don't really care about
@@ -121,7 +146,9 @@ Is it possible to do it differently? Etc.</p>
 
 <p>Such code is literally a sign of disrespect to the client:</p>
 
-
+<pre>throw new IllegalArgumentException(
+  "File doesn't exist"
+);</pre>
 
 <p>I have to be more verbose and give more details.</p>
 

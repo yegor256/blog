@@ -104,7 +104,8 @@ real commercial software projects.</p>
 
 <p>How about this:</p>
 
-
+<pre>UUID is set incrementally to make sure there
+are no two users with the same account number.</pre>
 
 <p>What is the difference between UUID and account number? Is it the
 same thing? It seems so, right? Or maybe they are different ... it would
@@ -127,7 +128,9 @@ if I don't understand you, it's your fault.</p>
 
 <p>Here is how that text would look after a proper re-writing:</p>
 
-
+<pre>UUID is user unique ID, a positive 4-bytes integer.
+UUID is set incrementally to make sure there
+are no two users with the same UUID.</pre>
 
 <p>Better now?</p>
 
@@ -138,7 +141,10 @@ use of terms and just words, without having them pre-defined in a glossary.</p>
 
 <p>I've seen this very recently in a product spec:</p>
 
-
+<pre>I believe that multiple versions of the API
+must be supported. What options do we have? I'd
+suggest we go with versioned URLs. Feel free to
+post your thoughts here.</pre>
 
 <p>Yes, this text exists verbatim in a requirements document. First, the
 author expresses his personal opinion about the subject. Then,
@@ -196,7 +202,8 @@ quietly implementing what the document says. But a messy document has
 nothing to do with creativity. If you want me to create, define
 the limits of that creativity and let me experiment within them; for example:</p>
 
-
+<pre>Multiple versions of the API must be supported. How exactly
+that is done doesn't really matter.</pre>
 
 <p>This is how you invite me to be creative. I realize that the user
 of the product doesn't really have any justifications or expectations
@@ -209,7 +216,8 @@ I can. Great, I'll do it my way.</p>
 
 <p>This is how it looks:</p>
 
-
+<pre>User must be able to scroll down through
+the list of images in the profile smoothly and fast.</pre>
 
 <p>It's a typical mistake in almost every spec I've seen. Here, we mix
 together a functional requirement ("to scroll images") and
@@ -235,7 +243,10 @@ requirements separately.</p>
 
 <p>This is similar to a previous problem and may look like this:</p>
 
-
+<pre>User can download a PDF report that includes a full
+list of transactions. Each transaction has ID,
+date, description, account, and full amount. The report
+also contains a summary and a link to the user account.</pre>
 
 <p>It's obvious there are two things described in this
 paragraph. First is that a user can download a PDF report. Second is
@@ -252,7 +263,10 @@ Try to move part of it to a supplementary document.</p>
 
 <p>This is what I'm talking about:</p>
 
-
+<pre>Credit card numbers must be encrypted.
+The app should launch in less than 2 seconds.
+Each web page must open in less than 500 milliseconds.
+User interface must be responsive.</pre>
 
 <p>I can find many more examples just by opening requirement specs in
 many projects I've seen over the past few years. They all look the same.
@@ -276,7 +290,9 @@ quality requirements are complete and without ambiguity.</p>
 
 <p>This example illustrates a very common pitfall:</p>
 
-
+<pre>User authenticates via Facebook login button
+and we store username, avatar, and email in the
+database.</pre>
 
 <p>This is
 <a href="/2015/09/22/micromanagement.html">micromanagement</a>, and
@@ -300,7 +316,8 @@ button will be placed, and what information will be stored in the database.</p>
 limitations—say so. But again, not as implementation instructions
 to us programmers, but rather as non-functional requirements like this:</p>
 
-
+<pre>Login page must look like this (screenshot attached).
+We must store user email locally for future needs.</pre>
 
 <p>The point is that I have nothing against requirements, but I'm
 strongly against implementation instructions.</p>
@@ -309,7 +326,9 @@ strongly against implementation instructions.</p>
 
 <p>The text may look like:</p>
 
-
+<pre>PDF report is generated when required. It is
+possible to download a report or save it
+in the account.</pre>
 
 <p>The problem here is that there is no "actor" involved. This functionality
 is more or less clear, but it's not clear who is doing all this. Where
@@ -331,7 +350,8 @@ is not a user story. It's possible for who?</p>
 
 <p>How about this:</p>
 
-
+<pre>Our primary concern is performance and an attractive
+user interface.</pre>
 
 <p>This is noise. As the reader of this document, I'm neither an investor
 nor a user. I'm a programmer. I don't care what your "primary concern" is
@@ -371,7 +391,9 @@ even starting to work on a product if there is a lot of noise in its specs.</p>
 
 <p>This is yet another very typical mistake:</p>
 
-
+<pre>The API will support JSON and XML. Both formats
+must fully support all data items. XML needs to
+be validated by XSD schema.</pre>
 
 <p>See how messy it sounds? There are three different points of view, and
 none of them are suitable for a specification document. A spec
@@ -379,7 +401,9 @@ must describe a product as if it already exists. A spec must
 sound like a manual, a tutorial, or a reference. This text must be
 re-written like this:</p>
 
-
+<pre>The API supports JSON and XML. Both formats
+fully support all data items. XML is validated
+by XSD schema.</pre>
 
 <p>See the difference? All the "must," "need," and "will" words are just
 adding doubt to the document. For a reader of this spec,

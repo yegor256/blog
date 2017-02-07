@@ -75,13 +75,17 @@ after it is started.</p>
 
 <p>First, this is how we start a new Docker container:</p>
 
-
+<pre>$ sudo docker run -i -t --rm -v "$(pwd):/main" yegor256/rultor /main/entry.sh</pre>
 
 <p>There are two files in the current directory: <code>entry.sh</code> and <code>script.sh</code>.
 <code>entry.sh</code> is the file being executed by Docker on start,
 and it contains the following:</p>
 
-
+<pre>#!/bin/bash
+adduser --disabled-password --gecos '' r
+adduser r sudo
+echo '%sudo ALL=(ALL) NOPASSWD:ALL' &gt;&gt; /etc/sudoers
+su -m r -c /home/r/script.sh</pre>
 
 <p><code>script.sh</code> will be executed as a user <code>r</code> inside the container. And this
 <code>r</code> user will have <code>sudo</code> permissions. This is exactly what all projects,

@@ -66,7 +66,10 @@ much less verbose
 <p>This is how you fetch text from a SQL table
 with <a href="http://jdbc.jcabi.com">jcabi-jdbc</a>:</p>
 
-
+<pre>String name = new JdbcSession(source)
+  .sql("SELECT name FROM employee WHERE id = ?")
+  .set(1234)
+  .select(new SingleOutcome&lt;String&gt;(String.class));</pre>
 
 <p>Simple and straight forward, isn't it? The library
 simplifies interaction with relational databases
@@ -89,7 +92,15 @@ You start it by instantiating the class with a single parameter—data source.</
 implementations of connection pools. I would recommend that you use
 <a href="http://www.jolbox.com/">BoneCP</a>. Below is an example of how you would connect to PostgreSQL:</p>
 
-
+<pre>@Cacheable(forever = true)
+private static DataSource source() {
+  BoneCPDataSource src = new BoneCPDataSource();
+  src.setDriverClass("org.postgresql.Driver");
+  src.setJdbcUrl("jdbc:postgresql://localhost/db_name");
+  src.setUser("jeff");
+  src.setPassword("secret");
+  return src;
+}</pre>
 
 <p>Be sure to pay attention to the <code>@Cacheable</code> annotation.
 <a href="/2014/08/03/cacheable-java-annotation.html">This post</a>
@@ -111,7 +122,17 @@ first select/update/insert operation. Simply put, it is designed
 to be used mainly for single atomic transactions. However, it is
 possible to leave the connection open and continue, for example:</p>
 
-
+<pre>new JdbcSession(source)
+  .autocommit(false)
+  .sql("START TRANSACTION")
+  .update()
+  .sql("DELETE FROM employee WHERE name = ?")
+  .set("Jeff Lebowski")
+  .update()
+  .sql("INSERT INTO employee VALUES (?)")
+  .set("Walter Sobchak")
+  .insert(Outcome.VOID)
+  .commit();</pre>
 
 <p>In this example we're executing three SQL statements one by one, leaving
 connection (and transaction) open until <code>commit()</code> is called.</p>

@@ -90,7 +90,22 @@ so I decided to create my own—<a href="https://github.com/jcabi/jcabi-dynamodb
 on <a href="http://dynamodb.jcabi.com">its website</a>. However, here is a simple example
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-dynamodb-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;start&lt;/goal&gt;
+        &lt;goal&gt;stop&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;port&gt;10500&lt;/port&gt;
+        &lt;dist&gt;${project.build.directory}/dynamodb-dist&lt;/dist&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <p>The above configuration will start DynamoDB Local
 right before running integration tests, and then stop it
@@ -101,7 +116,23 @@ to use a <a href="http://mojo.codehaus.org/build-helper-maven-plugin/reserve-net
 <p>When the DynamoDB Local server is up and running,
 we can create an integration test for it:</p>
 
-
+<pre>import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
+public class FooITCase {
+  @Test
+  public void worksWithAwsDynamoDb() {
+    AmazonDynamoDB aws = new AmazonDynamoDBClient(
+      new BasicAWSCredentials("", "")
+    );
+    aws.setEndpoint("http://localhost:10500");
+    ListTablesResult list = aws.listTables();
+    for (String name : list.getTableNames()) {
+      System.out.println("table found: " + name);
+    }
+  }
+}</pre>
 
 <p>Of course, there won't be any output because the server
 starts without any tables. Since the server is empty,
@@ -113,21 +144,76 @@ you should create tables before every integration test, using
 <a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin/issues/16">we introduced</a>
 a new goal <a href="http://dynamodb.jcabi.com/example-create-tables.html"><code>create-tables</code></a>:</p>
 
-
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-dynamodb-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;create-tables&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;tables&gt;
+          &lt;table&gt;${basedir}/src/test/dynamodb/foo.json&lt;/table&gt;
+        &lt;/tables&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre>
 
 <p>The <code>foo.json</code> file used above should contain a JSON request
 that is sent to DynamoDB Local right after it is up and running.
 The request should comply with the specification
 of <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html"><code>CreateTable</code></a> request. For example:</p>
 
-
+<pre>{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "id",
+      "AttributeType": "N"
+    }
+  ],
+  "KeySchema": [
+    {
+      "AttributeName": "id",
+      "KeyType": "HASH"
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": "1",
+    "WriteCapacityUnits": "1"
+  },
+  "TableName": "foo"
+}</pre>
 
 <p>The table will be created during the
 <code>pre-integration-test</code> phase and dropped at the
 <code>post-integration-test</code> phase. Now, we can make our
 integration test much more meaningful with the help of <a href="http://dynamo.jcabi.com">jcabi-dynamo</a>:</p>
 
-
+<pre>import com.jcabi.dynamo.Attributes;
+import com.jcabi.dynamo.Conditions;
+import com.jcabi.dynamo.Credentials;
+import com.jcabi.dynamo.Region;
+import com.jcabi.dynamo.Table;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+public class FooITCase {
+  @Test
+  public void worksWithAwsDynamoDb() {
+    Region region = new Region.Simple(new Credentials.Simple("", ""));
+    Table table = region.table("foo");
+    table.put(
+      new Attributes()
+        .with("id", 123)
+        .with("name", "Robert DeNiro")
+    );
+    MatcherAssert.assertThat(
+      table.frame().where("id", Conditions.equalTo(123)),
+      Matchers.notEmpty()
+    );
+  }
+}</pre>
 
 <p>The above test will put a new item into the table
 and then assert that the item is there.</p>

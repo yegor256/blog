@@ -62,7 +62,8 @@ this article explains why and how to avoid it to create cleaner code
       <h1>Avoid String Concatenation</h1>
       <p>This is "string concatenation," and it is a bad practice:</p>
 
-
+<pre>// bad practice, don't reuse!
+String text = "Hello, " + name + "!";</pre>
 
 <p>Why? Some may say that it is slow, mostly because parts of
 the resulting string are copied multiple times. Indeed, on every <code>+</code> operator,
@@ -106,22 +107,28 @@ and modify. It is a static utility method that mirrors
 <a href="http://www.cplusplus.com/reference/cstdio/sprintf/"><code>sprintf()</code></a> from C.
 It allows you to build a string using a pattern and substitutors:</p>
 
-
+<pre>String text = String.format("Hello, %s!", name);</pre>
 
 <p>When the text is longer, the advantages of the formatter become
 much more obvious. Look at this ugly code:</p>
 
-
+<pre>String msg = "Dear " + customer.name()
+  + ", your order #" + order.number()
+  + " has been shipped at " + shipment.date()
+  + "!";</pre>
 
 <p>This one looks much more beautiful doesn't it:</p>
 
-
+<pre>String msg = String.format(
+  "Dear %1$s, your order #%2$d has been shipped at %3$tR!",
+  customer.name(), order.number(), shipment.date()
+);</pre>
 
 <p>Please note that I'm using argument indexes in order to make
 the pattern even more localizable. Let's say, I want
 to translate it to Greek. This is how will it look:</p>
 
-
+<pre>Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!</pre>
 
 <p>I'm changing the order of substitutions in the pattern,
 but not in the actual list of methods arguments.</p>
@@ -134,13 +141,25 @@ I would recommend that you use the utility class
 <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html"><code>StringUtils</code></a>
 from Apache <a href="http://commons.apache.org/proper/commons-lang/">commons-lang3</a>:</p>
 
-
+<pre>import org.apache.commons.lang3.StringUtils;
+String xml = StringUtils.join(
+  "&lt;?xml version='1.0'?&gt;",
+  "&lt;html&gt;&lt;body&gt;",
+  "&lt;p&gt;This is a test XHTML document,",
+  " which would look ugly,",
+  " if we would use a single line,"
+  " or string concatenation or String format().&lt;/p&gt;"
+  "&lt;/body&gt;&lt;/html&gt;"
+);</pre>
 
 <p>The need to include an additional JAR dependency
 to your classpath may be considered a downside with this method
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+  &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
 <h2 id="guava-joiner">Guava Joiner</h2>
 
@@ -148,14 +167,24 @@ to your classpath may be considered a downside with this method
 <a href="http://google.github.io/guava/releases/16.0/api/docs/com/google/common/base/Joiner.html"><code>Joiner</code></a>
 from Google <a href="https://code.google.com/p/guava-libraries/">Guava</a>:</p>
 
-
+<pre>import com.google.common.base.Joiner;
+String text = Joiner.on('').join(
+  "WE HAVE BUNNY.\n",
+  "GATHER ONE MILLION DOLLARS IN UNMARKED ",
+  "NON-CONSECUTIVE TWENTIES.\n",
+  "AWAIT INSTRUCTIONS.\n",
+  "NO FUNNY STUFF"
+);</pre>
 
 <p>It is a bit less convenient than <code>StringUtils</code> since you always
 have to provide a joiner (character or a string placed between text blocks).</p>
 
 <p>Again, a dependency is required in this case:</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+  &lt;artifactId&gt;guava&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
 <p>Yes, in most cases, all of these methods work slower than
 a plain simple concatenation. However, I strongly believe

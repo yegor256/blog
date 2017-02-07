@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Each Private Static Method Is a Candidate for a New Class</title>
+    <link rel="canonical" href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2017/02/07/private-method-is-new-class.html"
+        },
+        "headline": "Each Private Static Method Is a Candidate for a New Class",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://img.teamed.io/face-1400x1400.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2017-02-07",
+        "dateModified": "2017-02-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://img.teamed.io/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Private static methods are perfect instruments to avoid
+code duplication inside a class, but they introduce
+duplication between classes and are not testable.
+",
+        "keywords": ["private static method", "private method", "static method", "private static", "java private method"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: .5em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version of the article,
+        its original content can be found
+        <a href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">here</a>.
+      </p>
+      <h1>Each Private Static Method Is a Candidate for a New Class</h1>
+      <p>Do you have private static methods that help you break
+your algorithms down into smaller parts? I do. Every time I write
+a new method, I realize that it can be a new class instead. Of course,
+I don't make classes out of all of them, but that has to be the
+goal. Private static methods are not reusable, while classes are—that
+is the main difference between them, and it is crucial.</p>
+
+
+
+
+
+<p>Here is an example of a simple class:</p>
+
+<pre>class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + URLEncoder.encode(key, "UTF-8")
+      + "&amp;secret="
+      + URLEncoder.encode(secret, "UTF-8");
+  }
+}</pre>
+
+<p>There is an obvious code duplication, right? The easiest way to resolve
+it is to introduce a private static method:</p>
+
+<pre>class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + Token.encoded(key)
+      + "&amp;secret="
+      + Token.encoded(secret);
+  }
+  private static String encoded(String text) {
+    return URLEncoder.encode(text, "UTF-8");
+  }
+}</pre>
+
+<p>Looks much better now. But what will happen if we have another class
+that needs the exact same functionality? We will have to copy and paste
+this private static method <code>encoded()</code> into it, right?</p>
+
+<p>A better alternative would be to introduce a new class that
+implements the functionality we want to share:</p>
+
+<pre>class Token {
+  private String key;
+  private String secret;
+  String encoded() {
+    return "key="
+      + new Encoded(key)
+      + "&amp;secret="
+      + new Encoded(secret);
+  }
+}</pre>
+
+<p>And then, class <code>Encoded</code>:</p>
+
+<pre>class Encoded {
+  private final String raw;
+  @Override
+  public String toString() {
+    return URLEncoder.encode(this.raw, "UTF-8");
+  }
+}</pre>
+
+<p>Now this functionality is 1) reusable, and 2) testable. We can easily
+use this class <code>Encoded</code> in many other places, and we can create a unit
+test for it. We were not able to do that with the private static method before.</p>
+
+<p>See the point? The rule of thumb I've already figured for myself is that
+<em>each</em> private static method is a perfect candidate for a new class. That's
+why we don't have them at all in <a href="http://www.eolang.org">EO</a>.</p>
+
+<p>By the way, public static methods are a different story. They are also evil,
+but for <a href="/2014/05/05/oop-alternative-to-utility-classes.html">different reasons</a>.</p>
+
+    </article>
+  </body>
+</html>

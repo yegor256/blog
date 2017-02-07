@@ -78,15 +78,21 @@ These guys are setting a bad example! <code>public</code> <code>static</code>
 
 <p>Here is what I'm talking about, specifically:</p>
 
-
+<pre>package org.apache.commons.lang3;
+public class CharEncoding {
+  public static final String UTF_8 = "UTF-8";
+  // some other methods and properties
+}</pre>
 
 <p>Now, when I need to create a <code>String</code> from a byte array, I use this:</p>
 
-
+<pre>import org.apache.commons.lang3.CharEncoding;
+String text = new String(array, CharEncoding.UTF_8);</pre>
 
 <p>Let's say I want to convert a <code>String</code> into a byte array:</p>
 
-
+<pre>import org.apache.commons.lang3.CharEncoding;
+byte[] array = text.getBytes(CharEncoding.UTF_8);</pre>
 
 <p>Looks convenient, right? This is what the designers of Apache Commons think
 (one of the most popular but simply <em>terrible</em> libraries
@@ -112,13 +118,13 @@ example, this may be true, but look at it from a more global perspective.</p>
 Here is what I'm suggesting instead to convert a byte array
 into a <code>String</code>:</p>
 
-
+<pre>String text = new UTF8String(array);</pre>
 
 <p>It's pseudo-code, since Java designers made class <code>String</code> final and we
 can't really extend it and create <code>UTF8String</code>, but you get the idea. In the real
 world, this would look like this:</p>
 
-
+<pre>String text = new UTF8String(array).toString();</pre>
 
 <p>As you see, we encapsulate the "UTF-8" constant somewhere inside the class
 <code>UTF8String</code>, and its users have no idea how exactly this "byte array to string"

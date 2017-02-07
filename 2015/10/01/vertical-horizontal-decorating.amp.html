@@ -76,16 +76,42 @@ some food for thought.</p>
 
 <p>Let's say I have a list of numbers:</p>
 
-
+<pre>interface Numbers {
+  Iterable&lt;Integer&gt; iterate();
+}</pre>
 
 <p>Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
 The first approach is <strong>vertical</strong> (I just made this name up):</p>
 
-
+<pre>Numbers numbers = new Sorted(
+  new Unique(
+    new Odds(
+      new Positive(
+        new ArrayNumbers(
+          new Integer[] {
+            -1, 78, 4, -34, 98, 4,
+          }
+        )
+      )
+    )
+  )
+);</pre>
 
 <p>The second approach is <strong>horizontal</strong> (again, a name I made up):</p>
 
-
+<pre>Numbers numbers = new Modified(
+  new ArrayNumbers(
+    new Integer[] {
+      -1, 78, 4, -34, 98, 4,
+    }
+  ),
+  new Diff[] {
+    new Positive(),
+    new Odds(),
+    new Unique(),
+    new Sorted(),
+  }
+);</pre>
 
 <p>See the difference? The first approach decorates <code>ArrayNumbers</code> "vertically,"
 adding functionality through the composable decorators <code>Positive</code>, <code>Odds</code>,
@@ -95,7 +121,9 @@ adding functionality through the composable decorators <code>Positive</code>, <c
 the core functionality of iterating numbers through instances of
 <code>Positive</code>, <code>Odds</code>, <code>Unique</code>, and <code>Sorted</code>:</p>
 
-
+<pre>interface Diff {
+  Iterable&lt;Integer&gt; apply(Iterable&lt;Integer&gt; origin);
+}</pre>
 
 <p>For the user of <code>numbers</code>, both approaches are the same. The difference is
 only in the design. Which one is better and when? It seems that

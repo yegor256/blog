@@ -87,7 +87,18 @@ XML so powerful.</p>
 an existing document that needs to be modified just slightly. For example, let's
 use the following:</p>
 
-
+<pre>&lt;accounts&gt;
+  [...]
+  &lt;acc id='34'&gt;
+    &lt;name&gt;Jeffrey&lt;/name&gt;
+    &lt;balance&gt;305&lt;/balance&gt;
+  &lt;/acc&gt;
+  &lt;acc id='35'&gt;
+    &lt;name&gt;Walter&lt;/name&gt;
+    &lt;balance&gt;50090&lt;/balance&gt;
+  &lt;/acc&gt;
+  [...]
+&lt;/accounts&gt;</pre>
 
 <p>The above code represents a list of accounts. Each account has its own <code>id</code> and several
 child elements. In our example, we need to find the account belonging to <code>Jeffrey</code>
@@ -114,7 +125,14 @@ in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions o
 <p>Let's create a simple example. Say, for instance, we want to add a new account number <code>36</code>
 to our list document. The code would look like:</p>
 
-
+<pre>XPATH '/accounts';
+ADD 'account';
+ATTR 'id', '36';
+ADD 'name';
+SET 'Donny';
+UP;
+ADD 'balance';
+SET '3400';</pre>
 
 <p>The above should be intuitively clear, but I'll explain just in case. First, the <code>XPATH</code> directive points us
 to the element found by the "/accounts" XPath query. This will be our root element. We assume here that
@@ -127,7 +145,8 @@ the new child element <code>name</code> and sets its text value to <code>"Donny"
 
 <p>Our balance changing task can be expressed in Xembly with the following code:</p>
 
-
+<pre>XPATH '/accounts/account[name="Jeffrey"]/balance';
+XSET '. + 500';</pre>
 
 <p>The <code>XSET</code> directive sets the element text value, similar to <code>SET</code>, but
 calculates it beforehand using the provided XPath expression <code>. + 500</code>.</p>
@@ -138,7 +157,13 @@ implemented inside any language that has a built-in DOM implementation.</p>
 <p>In the meantime, there is only one implementation of Xembly language—in Java. Here is how
 <a href="/2015/03/26/jaxb-vs-xembly.html">it works</a>:</p>
 
-
+<pre>Iterable&lt;Directive&gt; directives = new Directives()
+  .xpath("/accounts")
+  .add("account")
+  .attr("id", "36")
+  .add("name").set("Donny").up()
+  .add("balance").set("3400");
+new Xembler(directives).apply(document);</pre>
 
 <p>In this snippet, I'm using a supplementary script builder, <code>Directives</code>, which
 enables generation of directives in a fluent way. Then, I use <code>Xembler</code> class,
@@ -147,11 +172,22 @@ to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.<
 
 <p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
 
-
+<pre>System.out.println(
+  new Xembler(
+    new Directives().add("html")
+      .add("head")
+      .add("title")
+      .set("Hello, world!")
+  ).xml()
+);</pre>
 
 <p>The above snippet produces the following output:</p>
 
-
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</pre>
 
 <p>For me, this appears to be more simple and compact.</p>
 

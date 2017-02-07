@@ -73,7 +73,33 @@ and its functional decomposition should be done by language constructs
 
 <p>Look at this Java class (it does smell, doesn't it?):</p>
 
+<pre>final class TextFile {
+  private final File file;
+  TextFile(File src) {
+    this.file = src;
+  }
+  public int grep(Pattern regex) throws IOException {
+    Collection&lt;String&gt; lines = new LinkedList&lt;&gt;();
+    try (BufferedReader reader =
+      new BufferedReader(new FileReader(this.file))) {
+      while (true) {
+        String line = reader.readLine();
+        if (line == null) {
+          break;
+        }
+        lines.add(line);
+      }
+    }
 
+    int total = 0;
+    for (String line : lines) {
+      if (regex.matcher(line).matches()) {
+        ++total;
+      }
+    }
+    return total;
+  }
+}</pre>
 
 <p>This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
@@ -83,7 +109,38 @@ method <code>grep</code> smell? Because it does two things instead of one—it l
 will have to be refactored in order to preserve the "separation of concerns"
 introduced by that empty line:</p>
 
-
+<pre>final class TextFile {
+  private final File file;
+  TextFile(File src) {
+    this.file = src;
+  }
+  public int grep(Pattern regex) throws IOException {
+    return this.count(this.lines(), regex);
+  }
+  private int count(Iterable&lt;String&gt; lines, Pattern regex) {
+    int total = 0;
+    for (String line : lines) {
+      if (regex.matcher(line).matches()) {
+        ++total;
+      }
+    }
+    return total;
+  }
+  private Iterable&lt;String&gt; lines() throws IOException {
+    Collection&lt;String&gt; lines = new LinkedList&lt;&gt;();
+    try (BufferedReader reader =
+      new BufferedReader(new FileReader(this.file))) {
+      while (true) {
+        String line = reader.readLine();
+        if (line == null) {
+          break;
+        }
+        lines.add(line);
+      }
+      return lines;
+    }
+  }
+}</pre>
 
 <p>I believe it is obvious that this new class has methods that are
 much more cohesive and readable. Now every method is doing exactly
@@ -93,12 +150,27 @@ one thing, and it's easy to understand which thing it is.</p>
 not just Java/C++/Ruby, etc. For example, this CSS code is
 definitely begging for refactoring:</p>
 
+<pre>.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 
+  font-size: 2em;
+  font-weight: bold;
+}</pre>
 
 <p>The empty line here is telling us (screaming at us, actually) that this <code>.container</code>
 class is too complex and has to be decomposed into two classes:</p>
 
-
+<pre>.wide {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.important {
+  font-size: 2em;
+  font-weight: bold;
+}</pre>
 
 <p>Unfortunately, using empty lines to separate blocks of code is a very common habit.
 Moreover, very often I see empty blocks of two or even three lines, which are all

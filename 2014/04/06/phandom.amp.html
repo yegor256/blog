@@ -74,11 +74,18 @@ a user interface. WebKit is a C++ library that enables manipulation of
 HTML content, through DOM calls. For example, this is a simple JavaScript
 located code in <code>example.js</code>:</p>
 
-
+<pre>var page = require('webpage').create();
+page.open(
+  'http://google.com',
+  function() {
+    console.log('loaded!');
+    phantom.exit(0);
+  }
+);</pre>
 
 <p>We run <code>phantomjs</code> from the command line with the following code:</p>
 
-
+<pre>$ phantomjs example.js</pre>
 
 <p>PhantomJS creates a <code>page</code> object (provided by
 <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a> module
@@ -100,7 +107,23 @@ the page is ready, we'll ask <code>phantomjs</code> to show us how this HTML loo
 If we see the elements we need and desire,—we're good to go. Let's use
 the following example:</p>
 
-
+<pre>import com.rexsl.test.XhtmlMatchers;
+import org.hamcrest.MatcherAssert;
+import org.phandom.Phandom;
+public class DocumentTest {
+  @Test
+  public void rendersValidHtml() {
+    Document doc = new Document();
+    // This is the method we're testing. It is supposed
+    // to return a valid HTML without broken JavaScript
+    // and with all required HTML elements.
+    String html = doc.html();
+    MatcherAssert.assertThat(
+      XhtmlMatchers.xhtml(new Phandom(html).dom()),
+      XhtmlMatchers.hasXPath("//p[.='Hello, world!']")
+    );
+  }
+}</pre>
 
 <p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code>
 from <code>doc</code> object, and then pass it to
@@ -119,7 +142,13 @@ render it without problems, the test passes.</p>
 build machine. In order to avoid unit test failures when
 <code>phantomjs</code> is not available or present, I've created the following supplementary method:</p>
 
-
+<pre>public class DocumentTest {
+  @Test
+  public void rendersValidHtml() {
+    Assume.assumeTrue(Phandom.installed());
+    // the rest of the unit test method body...
+  }
+}</pre>
 
 <p>Enjoy and feel free to report any bugs or problems you encounter to:
 <a href="https://github.com/yegor256/phandom/issues">GitHub issues</a> :)</p>

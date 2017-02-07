@@ -93,7 +93,27 @@ as an argument of an object constructor and then in a few
 test methods to check how that object behaves. Let me simplify that
 code:</p>
 
-
+<pre>class FooTest {
+  private static final String MSG = "something";
+  @Before
+  public final void setUp() throws Exception {
+    this.foo = new Foo(FooTest.MSG);
+  }
+  @Test
+  public void simplyWorks() throws IOException {
+    assertThat(
+      foo.doSomething(),
+      containsString(FooTest.MSG)
+    );
+  }
+  @Test
+  public void simplyWorksAgain() throws IOException {
+    assertThat(
+      foo.doSomethingElse(),
+      containsString(FooTest.MSG)
+    );
+  }
+}</pre>
 
 <p>This is basically what is happening in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>
@@ -112,7 +132,22 @@ another test method. This is called coupling. And it's a bad thing.</p>
 <p>What do we do? Well, we can use that <code>"something"</code> string literal in
 both test methods:</p>
 
-
+<pre>class FooTest {
+  @Test
+  public void simplyWorks() throws IOException {
+    assertThat(
+      new Foo("something").doSomething(),
+      containsString("something")
+    );
+  }
+  @Test
+  public void simplyWorksAgain() throws IOException {
+    assertThat(
+      new Foo("something").doSomethingElse(),
+      containsString("something")
+    );
+  }
+}</pre>
 
 <p>As you see, I got rid of that <code>setUp()</code> method and the private static
 literal <code>MSG</code>. What do we have now? Code duplication. String <code>"something"</code>
@@ -130,7 +165,24 @@ approved the changes. So, three people made/approved that mistake, including mys
 <p>So what is the right approach that will avoid code duplication and
 at the same time won't introduce coupling? Here it is:</p>
 
-
+<pre>class FooTest {
+  @Test
+  public void simplyWorks() throws IOException {
+    final String msg = "something";
+    assertThat(
+      new Foo(msg).doSomething(),
+      containsString(msg)
+    );
+  }
+  @Test
+  public void simplyWorksAgain() throws IOException {
+    final String msg = "something else";
+    assertThat(
+      new Foo(msg).doSomethingElse(),
+      containsString(msg)
+    );
+  }
+}</pre>
 
 <p>These literals must be different. This is what any static analyzer is
 saying when it sees <code>"something"</code> in so many places. It questions us—why are they the same? Is it really so important to use <code>"something"</code> everywhere?

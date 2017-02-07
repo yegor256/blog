@@ -81,12 +81,31 @@ If not, I recommend you read this StackOverflow thread:
 have access to a database connection pool in many different places within the
 application? We simply need something like this:</p>
 
-
+<pre>class Database {
+  public static Database INSTANCE = new Database();
+  private Database() {
+    // create a connection pool
+  }
+  public java.sql.Connection connect() {
+    // Get new connection from the pool
+    // and return
+  }
+}</pre>
 
 <p>Later in at, say, the JAX-RS REST method, we need to retrieve something
 from the database:</p>
 
-
+<pre>@Path("/")
+class Index {
+  @GET
+  public String text() {
+    java.sql.Connection connection =
+      Database.INSTANCE.connect();
+    return new JdbcSession(connection)
+      .sql("SELECT text FROM table")
+      .fetch(new SingleOutcome(String.class))
+  }
+}</pre>
 
 <p>In case you're not familiar with JAX-RS, it's a simple
 <a href="/2016/12/13/mvc-vs-oop.html">MVC</a> architecture,

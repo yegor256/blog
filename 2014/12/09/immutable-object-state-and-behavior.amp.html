@@ -86,11 +86,35 @@ knows about itself (a.k.a. "encapsulated knowledge"), and
 <em>behavior</em> is what a document can do for us on request.
 For example, this is a mutable document:</p>
 
-
+<pre>class Document {
+  private int id;
+  private String title;
+  Document(int id) {
+    this.id = id;
+  }
+  public String getTitle() {
+    return this.title;
+  }
+  public String setTitle(String text) {
+    this.title = text;
+  }
+  @Override
+  public String toString() {
+    return String.format("doc #%d about '%s'", this.id, this.text);
+  }
+}</pre>
 
 <p>Let's try to use this mutable object:</p>
 
-
+<pre>Document first = new Document(50);
+first.setTitle("How to grill a sandwich");
+Document second = new Document(50);
+second.setTitle("How to grill a sandwich");
+if (first.equals(second)) { // FALSE
+  System.out.println(
+    String.format("%s is equal to %s", first, second)
+  );
+}</pre>
 
 <p>Here, we're creating two objects and then modifying their encapsulated
 states. Obviously, <code>first.equals(second)</code> will return <code>false</code> because
@@ -103,7 +127,7 @@ convert itself to a string.</p>
 <p>In order to modify a document's title, we just call its <code>setTitle()</code>
 once again:</p>
 
-
+<pre>first.setTitle("How to cook pasta");</pre>
 
 <p>Simply put, we can reuse the object many times, modifying its
 internal state. It is fast and convenient, isn't it? Fast, yes.
@@ -119,19 +143,52 @@ immutable and mutable objects is that
 an immutable one doesn't have an identity and its state never changes.
 Here is an immutable variant of the same document:</p>
 
-
+<pre>@Immutable
+class Document {
+  private final int id;
+  private final String title;
+  Document(int id, String text) {
+    this.id = id;
+    this.title = text;
+  }
+  public String title() {
+    return this.title;
+  }
+  public Document title(String text) {
+    return new Document(this.id, text);
+  }
+  @Override
+  public boolean equals(Object doc) {
+    return doc instanceof Document
+      &amp;&amp; Document.class.cast(doc).id == this.id
+      &amp;&amp; Document.class.cast(doc).title.equals(this.title);
+  }
+  @Override
+  public String toString() {
+    return String.format(
+      "doc #%d about '%s'", this.id, this.text
+    );
+  }
+}</pre>
 
 <p>This document is immutable, and its state (<code>id</code> ad <code>title</code>) is its identity. Let's
 see how we can use this immutable class
 (by the way, I'm using <a href="http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a> annotation
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a>):</p>
 
-
+<pre>Document first = new Document(50, "How to grill a sandwich");
+Document second = new Document(50, "How to grill a sandwich");
+if (first.equals(second)) { // TRUE
+  System.out.println(
+    String.format("%s is equal to %s", first, second)
+  );
+}</pre>
 
 <p>We can't modify a document any more. When we need to change the title,
 we have to create a new document:</p>
 
-
+<pre>Document first = new Document(50, "How to grill a sandwich");
+first = first.title("How to cook pasta");</pre>
 
 <p>Every time we want to modify its encapsulated state, we have to modify
 its identity too, because there is no identity. State is the identity.
@@ -150,7 +207,28 @@ string in one of them.</p>
 <p>The answer is simple. A document's title should not be part of its <strong>state</strong>.
 Instead, the title should be its <strong>behavior</strong>. For example, consider this:</p>
 
-
+<pre>@Immutable
+class Document {
+  private final int id;
+  Document(int id) {
+    this.id = id;
+  }
+  public String title() {
+    // read title from storage
+  }
+  public void title(String text) {
+    // save text to storage
+  }
+  @Override
+  public boolean equals(Object doc) {
+    return doc instanceof Document
+      &amp;&amp; Document.class.cast(doc).id == this.id;
+  }
+  @Override
+  public String toString() {
+    return String.format("doc #%d about '%s'", this.id, this.title());
+  }
+}</pre>
 
 <p>Conceptually speaking, this document is acting as a proxy of a real-life
 document that has a title stored somewhere—in a file, for example. This is
@@ -158,7 +236,11 @@ what a good object should do—be a proxy of a real-life entity.
 The document exposes two features: reading the title and saving the title. Here is
 how its <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a> would look like:</p>
 
-
+<pre>@Immutable
+interface Document {
+  String title();
+  void title(String text);
+}</pre>
 
 <p><code>title()</code> reads the title of the document and returns it as a <code>String</code>,
 and <code>title(String)</code> saves it back into the document. Imagine a real
@@ -220,7 +302,21 @@ to a file, HTTP page, or an Amazon S3 object.</p>
 access to computer memory. This is how we would design our class if such
 direct access was possible:</p>
 
-
+<pre>@Immutable
+class Document {
+  private final int id;
+  private final Memory memory;
+  Document(int id) {
+    this.id = id;
+    this.memory = new Memory();
+  }
+  public String title() {
+    return new String(this.memory.read());
+  }
+  public void title(String text) {
+    this.memory.write(text.getBytes());
+  }
+}</pre>
 
 <p>That <code>Memory</code> class would be implemented by JDK natively, and all other
 classes would be immutable. The class <code>Memory</code> would have direct access

@@ -151,7 +151,11 @@ this approach is good for the project and for them, as Java engineers.</p>
 code that Qulice would complain about
 (due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code>DesignForExtension</code></a> rule from Checkstyle):</p>
 
-
+<pre>public class Employee {
+  public String name() {
+    return "Jeff";
+  }
+}</pre>
 
 <p>What is wrong with this code? Method <code>name()</code> is not final and can be overridden
 by a class that extends <code>Employee</code>. Design-wise this is wrong, since a child
@@ -159,7 +163,11 @@ class is allowed to break a super class, overriding its method.</p>
 
 <p>What is the right design? This one:</p>
 
-
+<pre>public class Employee {
+  public final String name() {
+    return "Jeff";
+  }
+}</pre>
 
 <p>Now, the method is final and can't be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).</p>

@@ -72,7 +72,18 @@ for method/function calls.</p>
 <p>Here is how your code will look, if you follow
 this "Paired Brackets" notation:</p>
 
-
+<pre>new Foo( // ends the line
+  Math.max(10, 40), // open/close at the same line
+  String.format(
+    "hello, %s",
+    new Name(
+      Arrays.asList(
+        "Jeff",
+        "Lebowski"
+      )
+    )
+  ) // starts the line
+);</pre>
 
 
 

@@ -393,8 +393,9 @@ the same objects and preparing the data to run the test,
 I feel disappointed in my design. Long test methods with a lot of code
 duplication just don&amp;#39;t look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
-initialized through &lt;code&gt;@Before&lt;/code&gt; and &lt;code&gt;@BeforeClass&lt;/code&gt;, and 2) private static
-methods. They both look anti-OOP to me, and I think there is an
+initialized through &lt;code&gt;@Before&lt;/code&gt; and &lt;code&gt;@BeforeClass&lt;/code&gt;, and 2)
+&lt;a href=&quot;/2017/02/07/private-method-is-new-class.html&quot;&gt;private static methods&lt;/a&gt;.
+They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.&lt;/p&gt;
 </description>
         

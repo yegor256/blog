@@ -90,28 +90,73 @@ In Java, the ORM design is even standardized as <a href="https://en.wikipedia.or
 <p>First, let's see how ORM works, by example. Let's use Java, PostgreSQL, and Hibernate.
 Let's say we have a single table in the database, called <code>post</code>:</p>
 
-
+<pre>+-----+------------+--------------------------+
+| id  | date       | title                    |
++-----+------------+--------------------------+
+|   9 | 10/24/2014 | How to cook a sandwich   |
+|  13 | 11/03/2014 | My favorite movies       |
+|  27 | 11/17/2014 | How much I love my job   |
++-----+------------+--------------------------+</pre>
 
 <p>Now we want to CRUD-manipulate this table from our Java app (CRUD
 stands for create, read, update, and delete). First, we should create
 a <code>Post</code> class (I'm sorry it's so long, but that's the best I can do):</p>
 
-
+<pre>@Entity
+@Table(name = "post")
+public class Post {
+  private int id;
+  private Date date;
+  private String title;
+  @Id
+  @GeneratedValue
+  public int getId() {
+    return this.id;
+  }
+  @Temporal(TemporalType.TIMESTAMP)
+  public Date getDate() {
+    return this.date;
+  }
+  public Title getTitle() {
+    return this.title;
+  }
+  public void setDate(Date when) {
+    this.date = when;
+  }
+  public void setTitle(String txt) {
+    this.title = txt;
+  }
+}</pre>
 
 <p>Before any operation with Hibernate, we have to create a session factory:</p>
 
-
+<pre>SessionFactory factory = new AnnotationConfiguration()
+  .configure()
+  .addAnnotatedClass(Post.class)
+  .buildSessionFactory();</pre>
 
 <p>This factory will give us "sessions" every time we want to manipulate
 with <code>Post</code> objects. Every manipulation with the session should be wrapped
 in this code block:</p>
 
-
+<pre>Session session = factory.openSession();
+try {
+  Transaction txn = session.beginTransaction();
+  // your manipulations with the ORM, see below
+  txn.commit();
+} catch (HibernateException ex) {
+  txn.rollback();
+} finally {
+  session.close();
+}</pre>
 
 <p>When the session is ready, here is how we get a list of all posts
 from that database table:</p>
 
-
+<pre>List posts = session.createQuery("FROM Post").list();
+for (Post post : (List&lt;Post&gt;) posts){
+  System.out.println("Title: " + post.getTitle());
+}</pre>
 
 <p>I think it's clear what's going on here. Hibernate is a big, powerful
 engine that makes a connection to the database, executes necessary SQL
@@ -124,7 +169,10 @@ use getters to take them out, like we're using <code>getTitle()</code> above.</p
 database, we do all of the same but in reverse order. We make an instance
 of class <code>Post</code>, stuff it with the data, and ask Hibernate to save it:</p>
 
-
+<pre>Post post = new Post();
+post.setDate(new Date());
+post.setTitle("How to cook an omelette");
+session.save(post);</pre>
 
 <p>This is how almost every ORM works. The basic principle is always the same—ORM objects are
 <a href="/2016/07/06/data-transfer-object.html">anemic envelopes</a>
@@ -236,19 +284,30 @@ Of course, our objects will be
 <a href="/2014/12/22/immutable-objects-not-dumb.html">immutable</a>.
 Here is how <code>Posts</code> would look:</p>
 
-
+<pre>interface Posts {
+  Iterable&lt;Post&gt; iterate();
+  Post add(Date date, String title);
+}</pre>
 
 <p>This is how a single <code>Post</code> would look:</p>
 
-
+<pre>interface Post {
+  int id();
+  Date date();
+  String title();
+}</pre>
 
 <p>Here is how we will list all posts in the database table:</p>
 
-
+<pre>Posts posts = // we'll discuss this right now
+for (Post post : posts.iterate()){
+  System.out.println("Title: " + post.title());
+}</pre>
 
 <p>Here is how we will create a new post:</p>
 
-
+<pre>Posts posts = // we'll discuss this right now
+posts.add(new Date(), "How to cook an omelette");</pre>
 
 <p>As you see, we have true objects now. They are in charge of all operations,
 and they perfectly hide their implementation details. There are no transactions,
@@ -265,16 +324,75 @@ really matter. What matters is that your database interactions are hidden
 inside objects. Let's start with <code>Posts</code> and implement it in class
 <code>PgPosts</code> ("pg" stands for PostgreSQL):</p>
 
-
+<pre>final class PgPosts implements Posts {
+  private final Source dbase;
+  public PgPosts(DataSource data) {
+    this.dbase = data;
+  }
+  public Iterable&lt;Post&gt; iterate() {
+    return new JdbcSession(this.dbase)
+      .sql("SELECT id FROM post")
+      .select(
+        new ListOutcome&lt;Post&gt;(
+          new ListOutcome.Mapping&lt;Post&gt;() {
+            @Override
+            public Post map(final ResultSet rset) {
+              return new PgPost(
+                this.dbase,
+                rset.getInteger(1)
+              );
+            }
+          }
+        )
+      );
+  }
+  public Post add(Date date, String title) {
+    return new PgPost(
+      this.dbase,
+      new JdbcSession(this.dbase)
+        .sql("INSERT INTO post (date, title) VALUES (?, ?)")
+        .set(new Utc(date))
+        .set(title)
+        .insert(new SingleOutcome&lt;Integer&gt;(Integer.class))
+    );
+  }
+}</pre>
 
 <p>Next, let's implement the <code>Post</code> interface in class <code>PgPost</code>:</p>
 
-
+<pre>final class PgPost implements Post {
+  private final Source dbase;
+  private final int number;
+  public PgPost(DataSource data, int id) {
+    this.dbase = data;
+    this.number = id;
+  }
+  public int id() {
+    return this.number;
+  }
+  public Date date() {
+    return new JdbcSession(this.dbase)
+      .sql("SELECT date FROM post WHERE id = ?")
+      .set(this.number)
+      .select(new SingleOutcome&lt;Utc&gt;(Utc.class));
+  }
+  public String title() {
+    return new JdbcSession(this.dbase)
+      .sql("SELECT title FROM post WHERE id = ?")
+      .set(this.number)
+      .select(new SingleOutcome&lt;String&gt;(String.class));
+  }
+}</pre>
 
 <p>This is how a full database interaction scenario would look like
 using the classes we just created:</p>
 
-
+<pre>Posts posts = new PgPosts(dbase);
+for (Post post : posts.iterate()){
+  System.out.println("Title: " + post.title());
+}
+Post post = posts.add(new Date(), "How to cook an omelette");
+System.out.println("Just added post #" + post.id());</pre>
 
 <p>You can see a full practical example <a href="https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql">here</a>.
 It's an open source
@@ -293,7 +411,25 @@ put, too slow.</p>
 a decorator of <code>PgPost</code> that will accept all data in its constructor
 and cache it internally, forever:</p>
 
-
+<pre>final class ConstPost implements Post {
+  private final Post origin;
+  private final Date dte;
+  private final String ttl;
+  public ConstPost(Post post, Date date, String title) {
+    this.origin = post;
+    this.dte = date;
+    this.ttl = title;
+  }
+  public int id() {
+    return this.origin.id();
+  }
+  public Date date() {
+    return this.dte;
+  }
+  public String title() {
+    return this.ttl;
+  }
+}</pre>
 
 <p>Pay attention: This decorator doesn't know anything about PostgreSQL or
 JDBC. It just decorates an object of type <code>Post</code> and pre-caches the date
@@ -302,7 +438,30 @@ and title. As usual, this decorator is also immutable.</p>
 <p>Now let's create another implementation of <code>Posts</code> that will return
 the "constant" objects:</p>
 
-
+<pre>final class ConstPgPosts implements Posts {
+  // ...
+  public Iterable&lt;Post&gt; iterate() {
+    return new JdbcSession(this.dbase)
+      .sql("SELECT * FROM post")
+      .select(
+        new ListOutcome&lt;Post&gt;(
+          new ListOutcome.Mapping&lt;Post&gt;() {
+            @Override
+            public Post map(final ResultSet rset) {
+              return new ConstPost(
+                new PgPost(
+                  ConstPgPosts.this.dbase,
+                  rset.getInteger(1)
+                ),
+                Utc.getTimestamp(rset, 2),
+                rset.getString(3)
+              );
+            }
+          }
+        )
+      );
+  }
+}</pre>
 
 <p>Now all posts returned by <code>iterate()</code> of this new class are pre-equipped with dates and titles
 fetched in one round trip to the database.</p>
@@ -322,12 +481,36 @@ nested transactions, which is perfectly fine provided the database
 server supports them. If there is no such support, create a session-wide
 transaction object that will accept a "callable" class. For example:</p>
 
-
+<pre>final class Txn {
+  private final DataSource dbase;
+  public &lt;T&gt; T call(Callable&lt;T&gt; callable) {
+    JdbcSession session = new JdbcSession(this.dbase);
+    try {
+      session.sql("START TRANSACTION").exec();
+      T result = callable.call();
+      session.sql("COMMIT").exec();
+      return result;
+    } catch (Exception ex) {
+      session.sql("ROLLBACK").exec();
+      throw ex;
+    }
+  }
+}</pre>
 
 <p>Then, when you want to wrap a few object manipulations in one
 transaction, do it like this:</p>
 
-
+<pre>new Txn(dbase).call(
+  new Callable&lt;Integer&gt;() {
+    @Override
+    public Integer call() {
+      Posts posts = new PgPosts(dbase);
+      Post post = posts.add(new Date(), "How to cook an omelette");
+      posts.comments().post("This is my first comment!");
+      return post.id();
+    }
+  }
+);</pre>
 
 <p>This code will create a new post and post a comment to it. If one
 of the calls fail, the entire transaction will be rolled back.</p>

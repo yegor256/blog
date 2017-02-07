@@ -94,7 +94,12 @@ puts new items into it, deletes some items sometimes, and selects them. So far,
 so good, but conflicts are inevitable. Here is an example of a typical
 interaction scenario between the web app and DynamoDB (I'm using jcabi-dynamo):</p>
 
-
+<pre>Table table = region.table("posts");
+Item item = table.frame()
+  .where("name", "Jeff")
+  .iterator().next();
+String salary = item.get("salary");
+item.put("salary", this.recalculate(salary));</pre>
 
 <p>The logic is obvious here. First, I retrieve an item from the table <code>posts</code>,
 then read its <code>salary</code>, and then modify it according to my recalculation
@@ -111,7 +116,26 @@ how <a href="http://www.stateful.co">stateful.co</a> helps me. All I need to do 
 in the <a href="http://www.stateful.co">stateful.co</a> web panel,
 get my authentication keys, and modify my Java code:</p>
 
-
+<pre>Sttc sttc = new RtSttc(
+  new URN("urn:github:526301"), // my GitHub ID
+  "9FF3-4320-73FB-EEAC" // my secret key!
+);
+Locks locks = sttc.locks();
+Lock lock = locks.get("posts-table-lock");
+Table table = region.table("posts");
+Item item = table.frame()
+  .where("name", "Jeff")
+  .iterator().next();
+new Atomic(lock).call(
+  new Callable&lt;Void&gt;() {
+    @Override
+    public void call() {
+      String salary = item.get("salary");
+      item.put("salary", this.recalculate(salary));
+      return null;
+    }
+  }
+);</pre>
 
 <p>As you see, I wrap that critical transaction into <code>Callable</code>, which will
 be executed in isolation. This approach, obviously, doesn't
@@ -125,7 +149,10 @@ embedded software, etc.</p>
 
 <p>I should not forget to add this dependency to my <code>pom.xml</code>:</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;co.stateful&lt;/groupId&gt;
+  &lt;artifactId&gt;java-sdk&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
 <p>Of course, you can do the same; the service is absolutely free of charge.
 And you can use any other languages, not just Java. BTW, if interested,

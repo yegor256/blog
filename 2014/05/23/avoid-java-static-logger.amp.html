@@ -65,7 +65,17 @@ easily be eliminated by using jcabi-log
 (using <a href="http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code>LoggerFactory</code></a>
 from <a href="http://www.slf4j.org/">slf4j</a>):</p>
 
-
+<pre>import org.slf4j.LoggerFactory;
+public class Foo {
+  private static final Logger LOGGER =
+    LoggerFactory.getLogger(Foo.class);
+  public void save(String file) {
+    // save the file
+    if (Foo.LOGGER.isInfoEnabled()) {
+      Foo.LOGGER.info("file {} saved successfuly", file);
+    }
+  }
+}</pre>
 
 <p>What's wrong with it? Code duplication.</p>
 
@@ -82,7 +92,13 @@ ago, <a href="http://log.jcabi.com">jcabi-log</a>, which has a convenient
 utility class <a href="http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html"><code>Logger</code></a>
 (yes, I know that <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes are evil</a>).</p>
 
-
+<pre>import com.jcabi.log.Logger;
+public class Foo {
+  public void save(String file) {
+    // save the file
+    Logger.info(this, "file %s saved successfuly", file);
+  }
+}</pre>
 
 <p>This looks much cleaner to me and does exactly
 the same—sends a single log line to the SLF4J
@@ -98,7 +114,10 @@ implemented in the library.</p>
 <a href="http://repo1.maven.org/maven2/com/jcabi/jcabi-log">Maven Central</a>
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-log&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
     </article>
   </body>

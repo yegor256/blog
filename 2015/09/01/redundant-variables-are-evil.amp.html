@@ -74,11 +74,12 @@ once is redundant and must be replaced with a value.</p>
 
 <p>Here, variable <code>fileName</code> is redundant:</p>
 
-
+<pre>String fileName = "test.txt";
+print("Length is " + new File(fileName).length());</pre>
 
 <p>This code must look differently:</p>
 
-
+<pre>print("Length is " + new File("test.txt").length());</pre>
 
 <p>This example is very primitive, but I'm sure you've seen these
 redundant variables many times. We use them to "explain" the code—it's not just a string literal <code>"test.txt"</code> anymore but a <code>fileName</code>.

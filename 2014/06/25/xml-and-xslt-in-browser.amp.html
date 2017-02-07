@@ -104,7 +104,22 @@ Now check its sources (I assume you know how to do this).</p>
 <p>This is approximately what you will see
 (I assume you understand XML, if not, start learning it immediately):</p>
 
-
+<pre>&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;
+&lt;page date="2014-06-15T15:30:49.521Z" ip="10.168.29.135"&gt;
+  &lt;menu&gt;home&lt;/menu&gt;
+  &lt;documentation&gt;.. some text here ..&lt;/documentation&gt;
+  &lt;version&gt;
+    &lt;name&gt;1.4&lt;/name&gt;
+    &lt;revision&gt;5c7b5af&lt;/revision&gt;
+    &lt;date&gt;2014-05-29 07:58&lt;/date&gt;
+  &lt;/version&gt;
+  &lt;links&gt;
+    &lt;link href="..." rel="rexsl:google" type="text/xml"/&gt;
+    &lt;link href="..." rel="rexsl:github" type="text/xml"/&gt;
+    &lt;link href="..." rel="rexsl:facebook" type="text/xml"/&gt;
+  &lt;/links&gt;
+  &lt;millis&gt;70&lt;/millis&gt;
+&lt;/page&gt;</pre>
 
 <p>As you see, it is a proper XML document with attributes,
 elements and data. It contains absolutely no information about how
@@ -118,7 +133,7 @@ It's up to the requester on how to render the data or to not render it at all.</
 the document with the XSL stylesheet <code>/xsl/index.xsl</code> that
 is loaded by the browser separately:</p>
 
-
+<pre>&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</pre>
 
 <p>Open developer tools in Chrome and you will see that right
 after the page is loaded, the browser loads the XSL stylesheet
@@ -133,7 +148,20 @@ jQuery and an SVG logo:</p>
 it is much more complex, check <a href="https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl"><code>layout.xsl</code></a>.
 For example:</p>
 
-
+<pre>&lt;xsl:stylesheet version="2.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;xsl:template match="page"&gt;
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;p&gt;
+          Current version of the application is
+          &lt;xsl:value-of select="version/name"/&gt;
+        &lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</pre>
 
 <p>I think it's obvious how the HTML page will look like
 after applying this XSL stylesheet to our XML document.</p>

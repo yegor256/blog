@@ -93,7 +93,13 @@ Let's look at its most important advantages.</p>
 an individual issue is an object, its author is an author, etc.
 For example, to retrieve the name of the author we use:</p>
 
-
+<pre>GitHub github = new RtGitHub(/* credentials */);
+Repos repos = github.repos();
+Repo repo = repos.get(new Coordinates.Simple("jcabi/jcabi-github"));
+Issues issues = github.issues();
+Issue issue = issues.get(123);
+User author = new Issue.Smart(issue).author();
+System.out.println(author.name());</pre>
 
 <p>Needless to say, <code>GitHub</code>, <code>Repos</code>, <code>Repo</code>, <code>Issues</code>, <code>Issue</code>,
 and <code>User</code> are interfaces. Classes that implement them are not visible in the library.</p>
@@ -106,7 +112,20 @@ instrument for unit testing. For example, say that you're
 testing a method that is supposed to post a new issue to GitHub
 and add a message into it. Here is how the unit test would look:</p>
 
-
+<pre>public class FooTest {
+  @Test
+  public void createsIssueAndPostsMessage() {
+    GitHub github = new MkGitHub("jeff");
+    github.repos().create(
+      Json.createObjectBuilder().add("name", owner).build()
+    );
+    new Foo().doTheThing(github);
+    MatcherAssert.assertThat(
+      github.issues().get(1).comments().iterate(),
+      Matchers.not(Matchers.emptyIterable())
+    );
+  }
+}</pre>
 
 <p>This is much more convenient and compact than traditional
 mocking via <a href="https://code.google.com/p/mockito/">Mockito</a> or a similar framework.</p>
@@ -120,7 +139,11 @@ when some GitHub feature is not covered by the library (and there are many of th
 <p>For example, you want to get the value of <code>hireable</code> attribute of a <code>User</code>.
 Class <code>User.Smart</code> doesn't have a method for it. So, here is how you would get it:</p>
 
-
+<pre>User user = // get it somewhere
+// name() method exists in User.Smart, let's use it
+System.out.println(new User.Smart(user).name());
+// there is no hireable() method there
+System.out.println(user.json().getString("hireable"));</pre>
 
 <p>We're using method <code>json()</code> that returns an instance of
 <a href="http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html"><code>JsonObject</code></a>
@@ -133,7 +156,14 @@ returned by the GitHub server.</p>
 from GitHub that is not covered by the API. You get a <code>Request</code>
 object from <code>GitHub</code> interface and directly access the HTTP entry point of the server:</p>
 
-
+<pre>GitHub github = new RtGitHub(oauthKey);
+int found = github.entry()
+  .uri().path("/search/repositories").back()
+  .method(Request.GET)
+  .as(JsonResponse.class)
+  .getJsonObject()
+  .getNumber("total_count")
+  .intValue();</pre>
 
 <p><a href="http://http.jcabi.com">jcabi-http</a> HTTP client is used by <a href="http://github.jcabi.com">jcabi-github</a>.</p>
 
@@ -152,7 +182,10 @@ supposed to be very stable.
 The library ships as a JAR dependency in <a href="http://repo1.maven.org/maven2/com/jcabi/jcabi-github">Maven Central</a>
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
+  &lt;artifactId&gt;jcabi-github&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
 
     </article>
   </body>

@@ -67,7 +67,11 @@ about <strong>exception catching without
 <a href="/2015/12/01/rethrow-exceptions.html">re-throwing</a></strong>. I'm talking about something like
 this Java code:</p>
 
-
+<pre>try {
+  stream.write(data);
+} catch (IOException ex) {
+  ex.printStackTrace();
+}</pre>
 
 
 
@@ -75,7 +79,11 @@ this Java code:</p>
 
 <p>Pay attention: I don't have anything against this code:</p>
 
-
+<pre>try {
+  stream.write('X');
+} catch (IOException ex) {
+  throw new IllegalStateException(ex);
+}</pre>
 
 <p>This is called <a href="https://en.wikipedia.org/wiki/Exception_chaining"><em>exception chaining</em></a>
 and is a perfectly valid construct.</p>
@@ -85,11 +93,23 @@ look at the bigger picture first. We're talking about object-oriented
 programming—this means we're dealing with objects. Here is
 how an object (its class, to be exact) would look:</p>
 
-
+<pre>final class Wire {
+  private final OutputStream stream;
+  Wire(final OutputStream stm) {
+    this.stream = stm;
+  }
+  public void send(final int data) {
+    try {
+      this.stream.write(x);
+    } catch (IOException ex) {
+      ex.printStackTrace();
+    }
+  }
+}</pre>
 
 <p>Here is how I'm using this class:</p>
 
-
+<pre>new Wire(stream).send(1);</pre>
 
 <p>Looks nice, right? I don't need to worry about that <code>IOException</code> when I'm
 calling <code>send(1)</code>. It will be handled internally, and if it occurs, the stacktrace
@@ -145,7 +165,16 @@ are many other problems with exceptions in Java.</p>
 
 <p>P.S. Here is how the class should look:</p>
 
-
+<pre>final class Wire {
+  private final OutputStream stream;
+  Wire(final OutputStream stm) {
+    this.stream = stm;
+  }
+  public void send(final int data)
+    throws IOException {
+    this.stream.write(x);
+  }
+}</pre>
 
     </article>
   </body>

@@ -75,7 +75,12 @@ while allowing objects to interact.</p>
 
 <p>Say that this is our object:</p>
 
-
+<pre>class Temperature {
+  private int t;
+  public String toString() {
+    return String.format("%d C", this.t);
+  }
+}</pre>
 
 <p>It represents a temperature. The only behavior it exposes is printing
 the temperature in Celsius. We don't want to expose <code>t</code>, because
@@ -90,11 +95,20 @@ a method <code>getT()</code>, but neither one is perfect.</p>
 
 <p>What if we create this decorator:</p>
 
-
+<pre>class TempFahrenheit implements Temperature {
+  private TempCelsius origin;
+  public String toString() {
+    return String.format(
+      "%d F", this.origin.t * 1.8 + 32
+    );
+  }
+}</pre>
 
 <p>It should work just great:</p>
 
-
+<pre>Temperature t = new TempFahrenheit(
+  new TempCelsius(35)
+);</pre>
 
 <p>The only problem is that it won't compile in Java, because class
 <code>TempFahrenheit</code> is not allowed to access private <code>t</code> in class <code>TempCelsius</code>.
@@ -104,7 +118,13 @@ that "naked data" problem—a severe violation of encapsulation.</p>
 <p>However, if we allow that access <em>only</em> to one class, everything will be fine.
 Something like this (won't work in Java; it's just a concept):</p>
 
-
+<pre>class TempCelsius {
+  trust TempFahrenheit; // here!
+  private int t;
+  public String toString() {
+    return String.format("%d C", this.t);
+  }
+}</pre>
 
 <p>Since this <code>trust</code> keyword is placed into the class that allows access,
 we won't have the "naked data" problem—we will always know exactly which

@@ -80,7 +80,11 @@ Here is how it works: Let's say my website has to fetch the current exchange rat
 the euro from a database and show it on the home page. Here's how my <code>index.jsp</code>
 would look:</p>
 
-
+<pre>&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;EUR/USD: &lt;%= rates.get() %&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p>In order to create HTML, the JSP engine will have to call <code>get()</code> on object
 <code>rates</code> and render what's returned through <code>toString()</code>. It's a terrible
@@ -92,30 +96,75 @@ reasons ... more about them in one of the next articles.</p>
 <p>Let's see how this should be done right. First, we let our model generate
 the output in XML format, for example:</p>
 
-
+<pre>&lt;?xml version="1.1"?&gt;
+&lt;page&gt;
+  &lt;rate&gt;1.1324&lt;/rate&gt;
+&lt;/page&gt;</pre>
 
 <p>This is what the model will produce, having no knowledge of the view. Then,
 we create the view as an XSL stylesheet, which will transform XML into HTML:</p>
 
-
+<pre>&lt;xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;xsl:template match="page"&gt;
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;p&gt;
+          &lt;xsl:text&gt;EUR/USD: &lt;/xsl:text&gt;
+          &lt;xsl:value-of select="rate"/&gt;
+        &lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</pre>
 
 <p>As you see, the view doesn't know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
 by the model. Here is how you design it in the <a href="http://www.takes.org">Takes framework</a>.
 Let's start with a simple example:</p>
 
-
+<pre>import org.takes.http.Exit;
+import org.takes.http.FtCli;
+public final class Entry {
+  public static void main(final String... args) throws Exception {
+    new FtCli(new TkApp(), args).start(Exit.NEVER);
+  }
+}</pre>
 
 <p>It's a simple web application that starts a web server
 and never ends (it waits for connections in daemon mode). To make it work,
 we should create a simple "take" named <code>TkApp</code>:</p>
 
-
+<pre>import org.takes.Take;
+import org.takes.tk.TkWrap;
+final class TkApp extends TkWrap {
+  @Override
+  public Response act() {
+    return new RsWithType(
+      new RsText(
+        "&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"
+      ),
+      "application/xml"
+    );
+  }
+}</pre>
 
 <p>This "take" always returns the same XML response, but it doesn't
 do any XSL transformation yet. We need to add the <code>RsXSLT</code> class to the picture:</p>
 
-
+<pre>@Override
+public Response act() {
+  return new RsXSLT(
+    new RsWithType(
+      new RsText(
+        "&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;"
+        + "&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"
+      ),
+      "application/xml"
+    )
+  );
+}</pre>
 
 <p>Excuse me for using string concatenation, which is a
 <a href="/2014/06/19/avoid-string-concatenation.html">bad practice</a>;
@@ -135,7 +184,25 @@ XML documents. More about it here:
 
 <p>Here is how our <code>TkApp</code> would look:</p>
 
-
+<pre>@Override
+public Response act() {
+  return new RsXSLT(
+    new RsWithType(
+      new RsXembly(
+        new XeChain(
+          new XeStylesheet("/xsl/index.xsl"),
+          new XeAppend(
+            "page",
+            new XeDirectives(
+              new Directives().add("rate").set("1.1324")
+            )
+          )
+        )
+      ),
+      "application/xml"
+    )
+  );
+}</pre>
 
 <p>The most important class here is
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html"><code>RsXembly</code></a>.

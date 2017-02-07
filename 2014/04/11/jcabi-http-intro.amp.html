@@ -69,7 +69,14 @@ satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is
 how my <a href="http://http.jcabi.com/">jcabi-http</a> client interacts when you make an
 HTTP request and expect a successful HTML page in return:</p>
 
-
+<pre>String html = new JdkRequest("https://www.google.com")
+  .uri().path("/users").queryParam("id", 333).back()
+  .method(Request.GET)
+  .header("Accept", "text/html")
+  .fetch()
+  .as(RestResponse.class)
+  .assertStatus(HttpURLConnection.HTTP_OK)
+  .body();</pre>
 
 <p>I designed this new client with the following requirements in mind:</p>
 
@@ -82,7 +89,12 @@ easy to use. In most cases, I need only to make an HTTP request and parse the
 JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:</p>
 
-
+<pre>String rate = new JdkRequest("http://www.getexchangerates.com/api/latest.json")
+  .header("Accept", "application/json")
+  .fetch()
+  .as(JsonResponse.class)
+  .json().readArray().getJsonObject(0)
+  .getString("EUR");</pre>
 
 <p>I assume that the above is easy to understand and maintain.</p>
 
@@ -118,7 +130,10 @@ In the future, it will be possible to introduce new implementations without brea
 
 <p>Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:</p>
 
-
+<pre>String uri = "http://www.google.com";
+Response page;
+page = new JdkRequest(uri).fetch();
+page = new ApacheRequest(uri).fetch();</pre>
 
 <h2 id="xml-and-json-out-of-the-box">XML and JSON Out-of-the-Box</h2>
 
@@ -132,7 +147,11 @@ output to take care of formatting issues.</p>
 and it's possible to add more formats in the future as needed. For example, you
 can fetch XML and retrieve a string value from its element:</p>
 
-
+<pre>String name = new JdkRequest("http://my-api.example.com")
+  .header("Accept", "text/xml")
+  .fetch()
+  .as(XmlResponse.class)
+  .xml().xpath("/root/name/text()").get(0);</pre>
 
 <p>Basically, the response produced by <code>fetch()</code> is decorated by <code>XmlResponse</code>. This then exposes the <code>xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code>XML</code></a> interface.</p>
 
