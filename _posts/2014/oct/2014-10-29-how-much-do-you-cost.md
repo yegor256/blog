@@ -152,7 +152,7 @@ skill&mdash;finding an answer in a public Internet. In our projects we
 any horizontal [communications]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between programmers, and you won't be
 able to get any help from anyone. You will be on your own and you will fail,
-because you are used to patronizing someone senior, in your
+because you are used to be patronized by someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 StackOverflow is not just an indicator of how smart you are and how many
@@ -200,7 +200,8 @@ is a high probability of failure, which is also rather embarrassing.
 
 It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you've earned no certifications
-in your entire career, it is for one of the following reasons:
+in your entire
+[career]({% pst 2017/jan/2017-01-24-career-advice %}), it is for one of the following reasons:
 
 First, you're **afraid to lose**. A serious certification may cost a few hundred
 dollars (I paid over $700 for [SCEA](https://en.wikipedia.org/wiki/Oracle_Certification_Program))

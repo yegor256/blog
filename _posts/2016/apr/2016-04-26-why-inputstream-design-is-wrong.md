@@ -16,8 +16,8 @@ keywords:
   - method overloading
   - method overloading java
 book: elegant-objects 2.9
+image: /images/2016/04/a-serious-man.jpg
 jb_picture:
-  src: /images/2016/04/a-serious-man.jpg
   caption: A Serious Man (2009) by Coen Brothers
 ---
 

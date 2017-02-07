@@ -15,8 +15,8 @@ keywords:
   - check for null
   - validate method arguments
   - startup failure stories
+image: /images/2016/01/shi-mian-mai-fu.jpg
 jb_picture:
-  src: /images/2016/01/shi-mian-mai-fu.jpg
   caption: Shi mian mai fu (2004) by Yimou Zhang
 ---
 

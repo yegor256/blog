@@ -15,8 +15,8 @@ keywords:
 youtube:
   - 0fuEgmibJc4
   - AvVQ5NjS_Nk
+image: /images/2015/05/rear-window.jpg
 jb_picture:
-  src: /images/2015/05/rear-window.jpg
   caption: Rear Window (1954) by Alfred Hitchcock
 ---
 

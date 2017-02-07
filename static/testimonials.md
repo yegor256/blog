@@ -12,6 +12,7 @@ keywords:
   - programming blog
   - blog about software
 exclude_from_search: true
+nospell: true
 ---
 
 {% badge /images/angry-testimonials.png 220 %}
@@ -34,9 +35,15 @@ you by dictating what angle they held a bloody pencil at you dip. Please stop"&m
 
 "You are great at writing code that is painful to understand, use and explain."&mdash;[Ross W.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2401444164)
 
+"The author is the type of person that embodies everything that's
+wrong with this industry: hypocritical, holds people to
+a standard he doesn't meet, lacks basic empathy and
+the ability to put himself in another person's shoes&mdash;some kind
+of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[NoOne](http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html#comment-3099486424)
+
 "That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
-" ... insightless nonsense"&mdash;[`@andreasdotorg`](https://twitter.com/andreasdotorg/status/756138631325061120)
+" ... insightless nonsense"&mdash;[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
 
 "I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 
@@ -53,7 +60,7 @@ you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor
 
 "Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
-"Probably the biggest pile of stinky cow shit I have ever read"&mdash;[`@migrrrr`](https://twitter.com/migrrrr/status/771689354913873920)
+"Probably the biggest pile of stinky cow shit I have ever read"&mdash;[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
 
 "You're a sociopath."&mdash;[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
 

@@ -17,6 +17,10 @@ keywords:
   - java immutable value object
   - java mutable immutable object
 book: elegant-objects 2.6
+related:
+  - 2014/dec/2014-12-22-immutable-objects-not-dumb
+  - 2014/dec/2014-12-09-immutable-object-state-and-behavior
+  - 2016/sep/2016-09-07-gradients-of-immutability
 youtube:
   - KwP7Ay9Z-hc
   - EnhRgXrHCC4

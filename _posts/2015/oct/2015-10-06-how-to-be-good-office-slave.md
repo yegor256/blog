@@ -18,8 +18,8 @@ related:
   - 2016/jan/2016-01-05-how-to-punish-employees
   - 2015/jul/2015-07-21-hourly-pay-modern-slavery
   - 2015/jan/2015-01-26-happy-boss-false-objective
+image: /images/2015/10/the-office.jpg
 jb_picture:
-  src: /images/2015/10/the-office.jpg
   caption: The Office (2001–2003)
 ---
 

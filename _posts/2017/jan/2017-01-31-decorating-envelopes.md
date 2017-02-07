@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Decorating Envelopes"
-date: 2016-12-30
+date: 2017-01-31
 place: Lviv, Ukraine
 tags: java oop
 description: |
@@ -14,16 +14,23 @@ keywords:
   - primary constructor oop
   - oop constructor
   - object oriented programming
+image: /images/2017/01/north-by-northwest.jpg
+jb_picture:
+  caption: North by Northwest (1959) by Alfred Hitchcock
 ---
 
-<del>Sometimes</del> Very often I need a class that implements an
+<del>Sometimes</del> Very often I need a
+[class]({% pst 2016/sep/2016-09-20-oop-without-classes %}) that implements an
 interface by making an instance of another class. Sound weird? Let me show
-you an example. There are many classes of that kind in the Takes Framework,
+you an example. There are many classes of that kind in the
+[Takes Framework](http://www.takes.org),
 and they all are named like `*Wrap`. It's a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
 shorter, like in [EO](http://www.eolang.org) for example.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 Take a look at
 [`RsHtml`](https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java)
@@ -64,7 +71,7 @@ public class RsWrap implements Response {
 }
 {% endhighlight %}
 
-As you see, this "decorator" doesn't do anything except "just decorating".
+As you see, this "decorator" doesn't do anything except "just decorating."
 It encapsulates another `Response` and passes through all method calls.
 
 If it's not clear yet, I'll explain the purpose of `RsHtml`. Let's
@@ -78,8 +85,9 @@ Response response = new RsWithType(
 );
 {% endhighlight %}
 
-Instead of doing this composition of decorators over and over
-again in many places, you use `RsHtml`:
+Instead of doing this
+[composition of decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
+over and over again in many places, you use `RsHtml`:
 
 {% highlight java %}
 String text = // you have it already
@@ -121,5 +129,7 @@ That's why I would call them "decorating envelopes."
 
 This idea may look very similar to the
 [Factory](https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29) design pattern,
-but it doesn't have static methods, which we are trying to avoid
-in object-oriented programming.
+but it doesn't have
+[static methods]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+which we are trying to avoid in
+[object-oriented programming]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}).

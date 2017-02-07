@@ -15,8 +15,8 @@ keywords:
   - long variable name
 translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52349054
+image: /images/2015/01/meaning-of-life-every-sperm.png
 jb_picture:
-  src: /images/2015/01/meaning-of-life-every-sperm.png
   caption: The Meaning of Life (1983) by Terry Jones and Terry Gilliam
 ---
 

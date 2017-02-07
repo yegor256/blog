@@ -14,8 +14,8 @@ keywords:
   - how to build restful api
   - restful api
 categories: jcg
+image: /images/2014/09/good_bad_weird.png
 jb_picture:
-  src: /images/2014/09/good_bad_weird.png
   caption: The Good, the Bad, The Wierd (2008) by Kim Jee-woon
 ---
 

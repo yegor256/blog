@@ -19,8 +19,8 @@ youtube:
   - LB_YLWhGrco
   - dE0_j4Kk6jo
   - pt9uHp35fwM
+image: /images/2015/07/heat.jpg
 jb_picture:
-  src: /images/2015/07/heat.jpg
   caption: Heat (1995) by Michael Mann
 ---
 

@@ -17,8 +17,8 @@ youtube:
   - 0fuEgmibJc4
   - PNSezrlemsY
   - AvVQ5NjS_Nk
+image: /images/2015/05/dr-strangelove.jpg
 jb_picture:
-  src: /images/2015/05/dr-strangelove.jpg
   caption: Dr. Strangelove (1964) by Stanley Kubrick
 ---
 

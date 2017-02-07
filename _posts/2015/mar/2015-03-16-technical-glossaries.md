@@ -13,8 +13,8 @@ keywords:
   - technical vocabulary
   - glossary of technical terms
   - how to write good specification
+image: /images/2015/03/pulp-fiction.jpg
 jb_picture:
-  src: /images/2015/03/pulp-fiction.jpg
   caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
 
@@ -75,6 +75,8 @@ mature and "well-organized" teams burn hours of time on pointless discussions
 simply because of different understandings the same term.
 A glossary is not a formality; it's a key instrument of a software architect
 and all other team members.
+
+{% quote A good engineer always remembers that if the receiver doesn't understand a message, it's the sender's fault %}
 
 **We Prefer Working Software Over Comprehensive Documentation**.
 This is what the [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})

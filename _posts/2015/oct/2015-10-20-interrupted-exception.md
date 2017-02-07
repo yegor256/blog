@@ -14,8 +14,8 @@ keywords:
   - InterruptedException example
   - InterruptedException checked or unchecked
   - InterruptedException sleep
+image: /images/2015/10/crouching-tiger-hidden-dragon.jpg
 jb_picture:
-  src: /images/2015/10/crouching-tiger-hidden-dragon.jpg
   caption: Crouching Tiger, Hidden Dragon (2000) by Ang Lee
 ---
 

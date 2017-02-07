@@ -15,8 +15,8 @@ keywords:
   - decorator pattern
   - decorator pattern java
   - object configuration
+image: /images/2016/04/the-take.jpg
 jb_picture:
-  src: /images/2016/04/the-take.jpg
   caption: The Take (2009) by David Drury
 ---
 
@@ -321,7 +321,8 @@ You may say that `AlwaysTextPage` will make two calls to the encapsulated
 `origin`, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That's true and this is by design. We don't want this
 duplicated HTTP roundtrip to happen. Let's introduce one more class,
-which will cache the page fetched (not thread-safe, but it's not important now):
+which will cache the page fetched (
+[not thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %}), but it's not important now):
 
 {% highlight java %}
 class OncePage implements Page {

@@ -16,6 +16,13 @@ keywords:
   - articles about software development
   - articles about programming
 exclude_from_search: true
+style: |
+  .sorter {
+    cursor: pointer;
+  }
+  .active {
+    font-weight: bold;
+  }
 script: |
   function count_comments() {
     var total = 0;
@@ -27,13 +34,55 @@ script: |
         }
       }
     );
-    if (total == 0) {
+    var before = $('#total_comments');
+    var after = ' (' + total + ' comments total)';
+    $('#total_comments').html(after);
+    if (total == 0 || before != after) {
       setTimeout(count_comments, 1000);
-    } else {
-      $('#total_comments').html( ' (' + total + ' comments total)' );
     }
   }
   count_comments();
+  function sort_by_comments() {
+    sort_by(
+      function(x) {
+        var re = /[^\d]/g;
+        return ~~$(x).find('.comment_count').html().replace(re, '');
+      }
+    );
+    $('#by_comments').addClass('active');
+  }
+  function sort_by_date() {
+    sort_by(
+      function(x) {
+        return Date.parse($(x).find('time').attr('datetime'));
+      }
+    );
+    $('#by_date').addClass('active');
+  }
+  function sort_by_length() {
+    sort_by(
+      function(x) {
+        return ~~$(x).attr('data-length');
+      }
+    );
+    $('#by_length').addClass('active');
+  }
+  function sort_by(f) {
+    $('#all div.tagged').sort(
+      function(a, b) {
+        fa = f(a);
+        fb = f(b);
+        if (fa > fb) {
+          return -1;
+        }
+        if (fb > fa) {
+          return 1;
+        }
+        return 0;
+      }
+    ).detach().appendTo('#all');
+    $('#sorters .sorter').removeClass('active');
+  }
 ---
 
 All tags (alphabetic order):
@@ -46,5 +95,16 @@ Intensity of writing ({% wordcount %} words in the entire blog):
 
 This is a full list of {{ site.posts.size }} blog posts published<span id="total_comments"></span>:
 
+<div id='sorters'>
+Sort by:
+<span id="by_date" onclick="sort_by_date();" class="sorter active">date</span>
+|
+<span id="by_comments" onclick="sort_by_comments();" class="sorter">comments</span>
+|
+<span id="by_length" onclick="sort_by_length();" class="sorter">length</span>
+</div>
+
+<div id="all">
 {{ site.posts | tagged_list }}
+</div>
 

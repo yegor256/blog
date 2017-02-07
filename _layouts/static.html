@@ -9,7 +9,9 @@ layout: default
     </header>
     <main>
       <article class="main" itemprop="articleBody">
-        {{ content }}
+        <div {% if page.nospell %} class="nospell" {% endif %}>
+          {{ content }}
+        </div>
       </article>
     </main>
     <footer class="footer">

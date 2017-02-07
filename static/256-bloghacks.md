@@ -30,6 +30,14 @@ ISBN: 1537688669.<br/>
 
 <!--more-->
 
+<!-- Reviews for Google -->
+
+Jan 24, 2017:
+Added rich-snippet [review information](https://github.com/yegor256/blog/blob/1/_layouts/post.html#L6-L13)
+for Google search. I have no idea
+what this is for, but it makes my pages look nicer in Google search result
+page.
+
 Jan 13, 2017:
 I will post here all technical and content changes I'm making to the blog,
 in order to include them later into the second edition of the book. I will describe

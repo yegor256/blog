@@ -13,8 +13,8 @@ keywords:
   - good programmers
   - bad programmers
   - zero-bug programmers
+image: /images/2015/06/sabotage.jpg
 jb_picture:
-  src: /images/2015/06/sabotage.jpg
   caption: Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe
 ---
 

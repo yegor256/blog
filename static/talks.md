@@ -77,10 +77,25 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
+[AgileDays 2017](http://agiledays.ru/)<br/>
+Moscow, Russia<br/>
+23-24 March 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
+**Why Distributed Teams Suck?**<br/>
+[DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
+Delft, The Netherlands<br/>
+30 March 2017
+
+<!--
+<div class="talk-event"/>
 <img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
 [MagmaConf 2017](http://www.magmaconf.com/)<br/>
 Manzanillo, Colima, Mexico<br/>
 29-31 March 2017
+-->
 
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
@@ -91,9 +106,17 @@ Novosibirsk, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
-[JPoint 2017](http://jpoint.ru/en/)<br/>
+**Java Annotations Are a Big Mistake**<br/>
+[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
 Moscow, Russia<br/>
 7-8 April 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
+**What's Wrong with Object-Oriented Programming?**<br/>
+[RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
+Riga, Latvia<br/>
+15 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>

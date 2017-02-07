@@ -13,8 +13,8 @@ keywords:
   - software project objectives
   - project objectives example
   - project objectives definition
+image: /images/2015/01/the-million-dollar-hotel.png
 jb_picture:
-  src: /images/2015/01/the-million-dollar-hotel.png
   caption: The Million Dollar Hotel (2000) by Wim Wenders
 ---
 
@@ -62,8 +62,10 @@ a Jaguar. We have different needs, and we both agreed that the project
 would satisfy them. Otherwise we wouldn't be here, right?
 
 We're all parts of a mechanism called a "project," which works according
-to the rules and principles of **project management** whether we are aware of
-them or not. Whether we have a project manager or not. Even if we violate
+to the rules and principles of
+[**project management**]({% pst 2016/may/2016-05-24-who-is-project-manager %})
+whether we are aware of them or not. Whether we have a
+[project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}) or not. Even if we violate
 all of them and manage ourselves in total chaos, we still have a scope,
 [cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
 schedule, and all other attributes of project management.

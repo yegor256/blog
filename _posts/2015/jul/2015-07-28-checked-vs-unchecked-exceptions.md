@@ -16,8 +16,8 @@ keywords:
   - checked vs unchecked exceptions c#
   - checked vs unchecked exceptions debate
 book: elegant-objects 4.2
+image: /images/2015/07/true-romance.jpg
 jb_picture:
-  src: /images/2015/07/true-romance.jpg
   caption: True Romance (1993) by Tony Scott
 ---
 

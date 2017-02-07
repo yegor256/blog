@@ -21,8 +21,8 @@ style: |
   }
 youtube:
  - cGcCcxx4xrg
+image: /images/2016/08/swingers.jpg
 jb_picture:
-  src: /images/2016/08/swingers.jpg
   caption: Swingers (1996) by Doug Liman
 ---
 

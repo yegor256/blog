@@ -14,8 +14,8 @@ keywords:
   - oop object
   - object definition in oop
   - what is object in oop
+image: /images/2016/07/jackass-the-movie.jpg
 jb_picture:
-  src: /images/2016/07/jackass-the-movie.jpg
   caption: "Jackass: The Movie (2002) by Jeff Tremaine"
 ---
 

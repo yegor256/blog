@@ -19,8 +19,8 @@ youtube:
   - pt9uHp35fwM
   - b6r2W3P9vgY
   - dE0_j4Kk6jo
+image: /images/2015/12/commando.jpg
 jb_picture:
-  src: /images/2015/12/commando.jpg
   caption: Commando (1985) by Mark L. Lester
 ---
 

@@ -14,8 +14,8 @@ keywords:
   - what is a software prototype
   - how to create a prototype
   - software prototyping steps
+image: /images/2015/08/ying-xiong.jpg
 jb_picture:
-  src: /images/2015/08/ying-xiong.jpg
   caption: Ying xiong (2002) by Yimou Zhang
 ---
 

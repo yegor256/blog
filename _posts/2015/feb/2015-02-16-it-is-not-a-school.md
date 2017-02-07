@@ -13,8 +13,8 @@ keywords:
   - working and learning together
   - education at work
   - bug tracking
+image: /images/2015/02/gi-jane.png
 jb_picture:
-  src: /images/2015/02/gi-jane.png
   caption: G.I. Jane (1997) by Ridley Scott
 ---
 

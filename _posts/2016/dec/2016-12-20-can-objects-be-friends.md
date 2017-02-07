@@ -14,8 +14,8 @@ keywords:
   - encapsulation trusted objects
   - encapsulation meaning
   - encapsulation violation
+image: /images/2016/12/raging-bull.jpg
 jb_picture:
-  src: /images/2016/12/raging-bull.jpg
   caption: Raging Bull (1980) by Martin Scorsese
 ---
 

@@ -15,8 +15,8 @@ keywords:
   - rethrow exception c++
   - rethrow exception scala
   - rethrow exception with new message
+image: /images/2015/12/four-rooms.jpg
 jb_picture:
-  src: /images/2015/12/four-rooms.jpg
   caption: Four Rooms (1995) by Allison Anders et al.
 ---
 

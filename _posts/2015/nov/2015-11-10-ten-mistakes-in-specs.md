@@ -13,8 +13,8 @@ keywords:
   - software specification review
   - software specification example
   - software specification in software engineering
+image: /images/2015/11/reservoir-dogs.jpg
 jb_picture:
-  src: /images/2015/11/reservoir-dogs.jpg
   caption: Reservoir Dogs (1992) by Quentin Tarantino
 ---
 

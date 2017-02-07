@@ -14,8 +14,8 @@ keywords:
   - review pull request
   - pull request rules
   - pull request code review
+image: /images/2015/06/crimen-ferpecto.jpg
 jb_picture:
-  src: /images/2015/06/crimen-ferpecto.jpg
   caption: El Crimen Perfecto (2004) by Álex de la Iglesia
 ---
 
@@ -69,6 +69,8 @@ typo in one line of code. An obvious bug fix is to remove the typo, but
 that's not what a good project is expecting from us if we care about its
 quality. The problem is not the typo but rather the absence of unit tests
 that would catch the typo at the deployment phase.
+
+{% quote The problem is not the typo but rather the absence of unit tests that would catch the typo at the deployment phase %}
 
 The real problem is the lack of test code coverage in this particular
 section of the code. By removing the typo, we're not helping the project

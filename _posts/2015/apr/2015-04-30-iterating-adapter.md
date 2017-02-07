@@ -76,7 +76,8 @@ final class FluentData implements Iterator<Byte> {
 }
 {% endhighlight %}
 
-There is no way to make it thread-safe because the iterating process
+There is no way to make it
+[thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %}) because the iterating process
 is outside the scope of the iterator. Even if we declare our methods
 as `synchronized`, this won't guarantee that two threads won't conflict
 when they both call `hasNext()` and `next()`. So don't bother with it and

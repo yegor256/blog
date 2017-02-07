@@ -14,8 +14,8 @@ keywords:
   - json or xml for android
   - json or xml for iOS
   - json or xml for java
+image: /images/2015/11/the-man-who-stare-at-goats.jpg
 jb_picture:
-  src: /images/2015/11/the-man-who-stare-at-goats.jpg
   caption: The Men Who Stare at Goats (2009) by Grant Heslov
 ---
 

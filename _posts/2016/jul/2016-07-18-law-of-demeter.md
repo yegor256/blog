@@ -14,8 +14,8 @@ keywords:
   - law of demeter violation
   - law of demeter example
   - law of demeter c#
+image: /images/2016/07/spartacus.jpg
 jb_picture:
-  src: /images/2016/07/spartacus.jpg
   caption: Spartacus (1960) by Stanley Kubrick
 ---
 
@@ -35,11 +35,15 @@ perfect, but its common understanding in the OOP world is simply wrong
 
 {% jb_picture_body %}
 
-[Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
+[Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf),
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.
 
 This is where it was introduced. Let's see what it literally says (look for
-Section 3 in that PDF document). Say it's a Java class:
+Section 3 in that PDF document):
+
+> For all classes C, and for all methods M attached to C, all objects to which M sends a message must be instances of classes associated with the following classes: 1) the argument classes of M (including C), 2) the instance variable classes of C.
+
+Say it's a Java class:
 
 {% highlight java %}
 class C {
@@ -64,7 +68,7 @@ In this chain of method calls, we're not accessing any attributes. We're
 asking our objects to build new objects for us. What does the law say about
 that? Let me read it and quote:
 
-> Objects created by m(), or by functions or methods that m() calls, are considered as arguments of m()
+> Objects created by M, or by functions or methods that M calls, are considered as arguments of M
 
 In other words, the object `Pages` that method call `book.pages()` returns
 is a perfectly valid object that can be used. Then, we can call method

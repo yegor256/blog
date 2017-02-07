@@ -14,8 +14,8 @@ keywords:
   - object-oriented programming
   - role of class in oop
   - classes in oop
+image: /images/2016/09/battleship-potemkin.jpg
 jb_picture:
-  src: /images/2016/09/battleship-potemkin.jpg
   caption: Battleship Potemkin (1925) by Sergei M. Eisenstein
 ---
 

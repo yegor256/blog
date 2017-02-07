@@ -14,8 +14,8 @@ keywords:
   - pay per hour jobs
   - payroll slavery
   - pay per hour slavery
+image: /images/2015/07/gladiator.jpg
 jb_picture:
-  src: /images/2015/07/gladiator.jpg
   caption: Gladiator (2000) by Ridley Scott
 ---
 

@@ -14,8 +14,8 @@ keywords:
   - skype meetings
   - github
   - bitbucket
+image: /images/2016/08/schizopolis.jpg
 jb_picture:
-  src: /images/2016/08/schizopolis.jpg
   caption: Schizopolis (1996) by Steven Soderbergh
 ---
 

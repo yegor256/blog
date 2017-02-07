@@ -14,8 +14,8 @@ keywords:
   - win-win
   - win-lose
   - lose-lose
+image: /images/2017/01/being-flynn.jpg
 jb_picture:
-  src: /images/2017/01/being-flynn.jpg
   caption: Being Flynn (2012) by Paul Weitz
 ---
 

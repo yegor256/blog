@@ -14,8 +14,8 @@ keywords:
   - software estimate template
   - software estimation techniques
   - software estimation tools
+image: /images/2015/06/interstate-60.jpg
 jb_picture:
-  src: /images/2015/06/interstate-60.jpg
   caption: "Interstate 60: Episodes of the Road (2002) by Bob Gale"
 ---
 

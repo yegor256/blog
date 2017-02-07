@@ -16,8 +16,8 @@ keywords:
   - project management skills
 youtube:
   - zaKTNK8g2-M
+image: /images/2016/05/schindlers-list.jpg
 jb_picture:
-  src: /images/2016/05/schindlers-list.jpg
   caption: Schindler's List (1993) by Steven Spielberg
 ---
 

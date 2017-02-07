@@ -14,8 +14,8 @@ keywords:
   - software engineer resume
   - resume of programmer
   - resume of coder
+image: /images/2016/03/delicatessen.jpg
 jb_picture:
-  src: /images/2016/03/delicatessen.jpg
   caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---
 
@@ -25,7 +25,8 @@ And here's yet another one? Well, maybe ... but I don't think so. I'll try to
 give you a few **practical** hints for how to make your resume look
 "sexier," and how to position yourself beyond the "good programmer" category and into
 the superstar zone. It may take a few years to truly pimp up your CV, but
-when it's done, you will charge $100-plus per hour and face no hesitation
+when it's done, you will charge
+[$100-plus per hour]({% pst 2017/jan/2017-01-24-career-advice %}) and face no hesitation
 from your clients in paying.
 
 <!--more-->
