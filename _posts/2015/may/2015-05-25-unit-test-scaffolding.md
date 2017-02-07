@@ -26,8 +26,9 @@ the same objects and preparing the data to run the test,
 I feel disappointed in my design. Long test methods with a lot of code
 duplication just don't look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
-initialized through `@Before` and `@BeforeClass`, and 2) private static
-methods. They both look anti-OOP to me, and I think there is an
+initialized through `@Before` and `@BeforeClass`, and 2)
+[private static methods]({% pst 2017/feb/2017-01-07-private-method-is-new-class %}).
+They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.
 
 <!--more-->
