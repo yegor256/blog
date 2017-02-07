@@ -449,6 +449,33 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
     <a href="#vote-form" class="vote">vote</a>
   </div>
+  <div class="rv">
+    <a href="http://LinkedIn.com/in/pholser">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAirAAAAJDczMDM4NWEzLTVlZTMtNDhhNi04YzBmLWY1ZGM4NTM4MjJiMg.jpg"
+        alt="Paul Holser"/>
+    </a>
+    <span class="name">Paul Holser</span>
+    <span class="text">OO expertise, clean code, fastidious proofreading</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://pl.linkedin.com/in/mkordas">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/000/25e/1da/1db84c9.jpg"
+        alt="Michał Kordas"/>
+    </a>
+    <span class="name">Michał Kordas</span>
+    <span class="text">My speciality is code quality. On daily basis I need to challenge corporate, procedural "clean code" approach with real object oriented solutions.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/anton-rybochkin-93950b10a">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAfsAAAAJDRjOWU0NjYwLTcxYjgtNDUxYi1iNWZmLWUwN2Y3M2VkY2FiMA.jpg"
+        alt="Anton Rybochkin"/>
+    </a>
+    <span class="name">Anton Rybochkin</span>
+    <span class="text">I sleep with an editor</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
 </div>
 
 Feb 6, 2017:
