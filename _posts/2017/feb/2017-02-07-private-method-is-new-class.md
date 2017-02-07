@@ -68,8 +68,20 @@ Looks much better now. But what will happen if we have another class
 that needs the exact same functionality? We will have to copy and paste
 this private static method `encoded()` into it, right?
 
-A better alternative would be to introduce a new class that
+A better alternative would be to introduce a new class `Encoded` that
 implements the functionality we want to share:
+
+{% highlight java %}
+class Encoded {
+  private final String raw;
+  @Override
+  public String toString() {
+    return URLEncoder.encode(this.raw, "UTF-8");
+  }
+}
+{% endhighlight %}
+
+And then:
 
 {% highlight java %}
 class Token {
@@ -80,18 +92,6 @@ class Token {
       + new Encoded(key)
       + "&secret="
       + new Encoded(secret);
-  }
-}
-{% endhighlight %}
-
-And then, class `Encoded`:
-
-{% highlight java %}
-class Encoded {
-  private final String raw;
-  @Override
-  public String toString() {
-    return URLEncoder.encode(this.raw, "UTF-8");
   }
 }
 {% endhighlight %}
