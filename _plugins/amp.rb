@@ -36,7 +36,7 @@ module Jekyll
       xml.search('//body//iframe').remove
       xml.search('//body//script').remove
       xml.search('//body//form').remove
-      xml.search('//body//figure').remove
+      xml.search('//body//figure[@class!="highlight"]').remove
       xml.search('//body//figcaption').remove
       xml.search('//body//img').remove
       xml.search('//body//svg').remove
