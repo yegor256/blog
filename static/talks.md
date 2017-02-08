@@ -84,6 +84,7 @@ Dnipro, Ukraine<br/>
 11 February 2017
 
 <div class="talk-event"/>
+**OOP Java Puzzlers**<br/>
 JUG.ua<br/>
 Kiev, Ukraine<br/>
 28 February 2017
