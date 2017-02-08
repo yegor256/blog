@@ -77,6 +77,17 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+**Decorators, Decorators, Decorators**<br/>
+[JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/)<br/>
+Dnipro, Ukraine<br/>
+11 February 2017
+
+<div class="talk-event"/>
+JUG.ua<br/>
+Kiev, Ukraine<br/>
+28 February 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
 [AgileDays 2017](http://agiledays.ru/)<br/>
 Moscow, Russia<br/>
