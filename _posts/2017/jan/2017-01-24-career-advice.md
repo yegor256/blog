@@ -112,7 +112,7 @@ only way to get where you want to be. Time is your main resource; be
 very greedy.
 
 **Don't Skimp on Growth**.
-You must invest into yourself. Fist of all, you have to buy books. Don't steal
+You must invest into yourself. First of all, you have to buy books. Don't steal
 them, even though
 [you can]({% pst 2016/nov/2016-11-09-why-no-ebooks %}).
 Buy them, spending your _own_ money. You will take
