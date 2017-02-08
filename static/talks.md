@@ -77,6 +77,7 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2017/jug-dnipro.png" class="future-talk" alt="JUG Dnipro 2017"/>
 **Decorators, Decorators, Decorators**<br/>
 [JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/)<br/>
 Dnipro, Ukraine<br/>
