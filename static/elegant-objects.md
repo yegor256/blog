@@ -476,6 +476,15 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I sleep with an editor</span>
     <a href="#vote-form" class="vote">vote</a>
   </div>
+  <div class="rv">
+    <a href="https://br.linkedin.com/in/fabriciofx">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlDAAAAJDI3OTgwNDEzLTQ1ZmEtNGMwMS1iMGIwLTFmNDE5M2U0YTEwYw.jpg"
+        alt="Fabrício Barros Cabral"/>
+    </a>
+    <span class="name">Fabrício Barros Cabral</span>
+    <span class="text">I'm passionate for Object-Oriented Programming and details. I've 10 years experience as researcher and developer and as lecturer, I'm always looking for the best way to explain knowledge for all people.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
 </div>
 
 Feb 6, 2017:
