@@ -19,6 +19,7 @@
 require 'liquid'
 require 'redcarpet'
 require 'nokogiri'
+require 'fastimage'
 
 module Jekyll
   class AmpPage < Page
@@ -31,14 +32,20 @@ module Jekyll
       super(site, site.dest, '', path)
       @path = path
       xml = Nokogiri::HTML(html)
+      xml.xpath('//body//figure[@class="highlight"]').each do |f|
+        f.before('<pre>' + f.xpath('pre//text()').to_s + '</pre>')
+      end
+      xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
+        src = f.xpath('img/@src').to_s
+        alt = f.xpath('figcaption/text()').to_s
+        width, height = FastImage.size(File.join(Dir.pwd, src))
+        f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
+      end
       xml.xpath('//comment()').remove
       xml.xpath('//@style').remove
       xml.xpath('//body//iframe').remove
       xml.xpath('//body//script').remove
       xml.xpath('//body//form').remove
-      xml.xpath('//body//figure[@class="highlight"]').each do |f|
-        f.before('<pre>' + f.xpath('pre//text()').to_s + '</pre>')
-      end
       xml.xpath('//body//figure').remove
       xml.xpath('//body//figcaption').remove
       xml.xpath('//body//img').remove

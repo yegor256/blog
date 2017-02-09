@@ -77,7 +77,7 @@ used as a measurement of software development progress.
 
 <figure>
 <object data="/gnuplot/2014/11/hoc-vs-loc.svg" type="image/svg+xml"
-  style="width:600px"></object>
+  style="width:600px;max-width:100%;"></object>
 </figure>
 
 Look at this 18-month graph; it shows both metrics together. I used the

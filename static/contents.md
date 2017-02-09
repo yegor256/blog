@@ -93,7 +93,7 @@ Intensity of writing ({% wordcount %} words in the entire blog):
 
 <figure>
 <object data="/stats.svg" type="image/svg+xml"
-  style="width:600px"></object>
+  style="width:600px;max-width:100%;"></object>
 </figure>
 
 This is a full list of {{ site.posts.size }} blog posts published<span id="total_comments"></span>:
