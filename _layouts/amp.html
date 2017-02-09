@@ -16,9 +16,9 @@
         "headline": "{{ page.title }}",
         "image": {
           "@type": "ImageObject",
-          "url": "http://www.yegor256.com/images/face-1400x1400.jpg",
-          "height": 1400,
-          "width": 1400
+          "url": "{{ image_src }}",
+          "height": {{ image_height }},
+          "width": {{ image_width }}
         },
         "datePublished": "{{ page.date }}",
         "dateModified": "{{ page.date }}",

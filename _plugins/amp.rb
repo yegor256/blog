@@ -72,6 +72,14 @@ module Jekyll
         payload = site.site_payload
         payload['page'] = page
         payload['doc'] = doc
+        if page['image']
+          payload['image_width'], payload['image_height'] = FastImage.size(File.join(Dir.pwd, page['image']))
+          payload['image_src'] = page['image']
+        else
+          payload['image_width'] = 1400
+          payload['image_height'] = 1400
+          payload['image_src'] = 'http://www.yegor256.com/images/face-1400x1400.jpg'
+        end
         page.render(
           { 'post' => Layout.new(site, site.source, '_layouts/amp.html') },
           payload
