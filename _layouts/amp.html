@@ -60,6 +60,7 @@
         <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px"
           alt="{{ site.author.name }}"></amp-img>
       </p>
+      <p>By {{ site.author.name }} on {{ page.date | date: "%-d %B %Y" }}</p>
       <h1>{{ page.title }}</h1>
       {{ content }}
     </article>
