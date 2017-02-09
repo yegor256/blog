@@ -40,7 +40,8 @@ June 2010<br/>
 
 [FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/)<br/>
 php|Architect<br/>
-February 2010
+February 2010<br/>
+[PDF](/pdf/2010/phpArchitect-fazend-orm.pdf)
 
 [Project Management Robot Method and Software](https://www.google.com/patents/US20110196798)<br/>
 US patent application 12/703,202<br/>
