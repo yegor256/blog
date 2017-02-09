@@ -91,7 +91,10 @@ All tags (alphabetic order):
 
 Intensity of writing ({% wordcount %} words in the entire blog):
 
-{% figure /stats.svg 700 %}
+<figure>
+<object data="/stats.svg" type="image/svg+xml"
+  style="width:600px"></object>
+</figure>
 
 This is a full list of {{ site.posts.size }} blog posts published<span id="total_comments"></span>:
 
