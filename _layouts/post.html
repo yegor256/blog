@@ -49,7 +49,7 @@ layout: default
         {% endif %}
         {{ page | modified }}
         <li class="printable" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
-          <span itemprop="name">Yegor Bugayenko</span>
+          <span itemprop="name">{{ site.author.name }}</span>
         </li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -165,7 +165,7 @@ layout: default
       <p>
         &copy;
         <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
-          <span itemprop="name">Yegor Bugayenko</span>
+          <span itemprop="name">{{ site.author.name }}</span>
         </span>
         2014&ndash;<span itemprop="copyrightYear">2017</span>
       </p>

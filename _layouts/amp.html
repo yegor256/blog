@@ -45,6 +45,7 @@
       body { padding: .5em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
       .intro { color: red; font-size: .75em; }
+      pre { overflow-x:scroll; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
@@ -54,6 +55,10 @@
         This is a mobile version of the article,
         its original content can be found
         <a href="{{ doc.url | prepend: site.baseurl | prepend: site.url }}">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px"
+          alt="{{ site.author.name }}"></amp-img>
       </p>
       <h1>{{ page.title }}</h1>
       {{ content }}
