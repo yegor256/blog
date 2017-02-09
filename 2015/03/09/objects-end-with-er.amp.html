@@ -47,9 +47,11 @@ avoided.
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
-      body { padding: .5em; }
+      body { padding: .5em; font-size: 1.2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
       .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
@@ -60,6 +62,10 @@ avoided.
         its original content can be found
         <a href="http://www.yegor256.com/2015/03/09/objects-end-with-er.html">here</a>.
       </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 March 2015</p>
       <h1>Don't Create Objects That End With -ER</h1>
       <p>Manager. Controller. Helper. Handler. Writer. Reader. Converter. Validator.
 Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
@@ -72,7 +78,7 @@ Instead, they are collections of procedures pretending to be classes.</p>
 
 
 
-
+<amp-img src="/images/2015/03/fight-club.jpg" alt="Fight Club (1999) by David Fincher" height="531" width="1276" layout="responsive"></amp-img>
 
 <p><a href="http://en.wikipedia.org/wiki/Peter_Coad">Peter Coad</a>
 used to say: Challenge any class name that ends in "-er." There

@@ -46,9 +46,11 @@ mechanism, DI frameworks turn it into an anti-pattern.
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
-      body { padding: .5em; }
+      body { padding: .5em; font-size: 1.2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
       .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
@@ -59,6 +61,10 @@ mechanism, DI frameworks turn it into an anti-pattern.
         its original content can be found
         <a href="http://www.yegor256.com/2014/10/03/di-containers-are-evil.html">here</a>.
       </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>3 October 2014</p>
       <h1>Dependency Injection Containers are Code Polluters</h1>
       <p>While <a href="http://martinfowler.com/articles/injection.html">dependency injection</a> (aka, "DI")
 is a natural technique of composing objects in OOP

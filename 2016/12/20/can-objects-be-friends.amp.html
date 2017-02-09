@@ -47,9 +47,11 @@ They can be friends!
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
-      body { padding: .5em; }
+      body { padding: .5em; font-size: 1.2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
       .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
@@ -60,6 +62,10 @@ They can be friends!
         its original content can be found
         <a href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">here</a>.
       </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>20 December 2016</p>
       <h1>Can Objects Be Friends?</h1>
       <p>As <a href="/2016/11/21/naked-data.html">discussed before</a>,
 proper encapsulation leads to a complete absence
@@ -71,7 +77,7 @@ while allowing objects to interact.</p>
 
 
 
-
+<amp-img src="/images/2016/12/raging-bull.jpg" alt="Raging Bull (1980) by Martin Scorsese" height="688" width="1280" layout="responsive"></amp-img>
 
 <p>Say that this is our object:</p>
 

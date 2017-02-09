@@ -47,9 +47,11 @@ no right to exist in OOP.
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
-      body { padding: .5em; }
+      body { padding: .5em; font-size: 1.2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
       .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
@@ -60,6 +62,10 @@ no right to exist in OOP.
         its original content can be found
         <a href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html">here</a>.
       </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>10 August 2016</p>
       <h1>If-Then-Else Is a Code Smell</h1>
       <p>In most cases (maybe even in all of them), if-then-else can and must
 be replaced by a decorator or simply another object.
@@ -69,7 +75,7 @@ illustrates the problem. So it's time to demonstrate it and explain.</p>
 
 
 
-
+<amp-img src="/images/2016/08/fargo.jpg" alt="Fargo (1996) by Coen Brothers" height="650" width="1200" layout="responsive"></amp-img>
 
 <p>Take a look at the class
 <a href="https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java"><code>DyTalk</code></a>
