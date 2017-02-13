@@ -231,6 +231,16 @@ The event was rather small and chaotic. I tried my best to make my speech
 interesting, but the audience wasn't really ready.
 
 <div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/ADd00BotEbI/mqdefault.jpg" class="past-talk" alt="msk.jug.ru"/>
+Вредная архитектура MVC;
+[msk.jug.ru](https://jugmsk.timepad.ru/event/400420/);
+Moscow, Russia;
+14 November 2016;
+[video 1](https://www.youtube.com/watch?v=ADd00BotEbI),
+[video 2](https://www.youtube.com/watch?v=utGIIqRGbQc),
+[video 3](https://www.youtube.com/watch?v=03l8o2uu5K4).
+
+<div class="talk-event"/>
 <aside class="venue-rate orange">B+</aside>
 <img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
