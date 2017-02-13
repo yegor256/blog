@@ -77,13 +77,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jug-dnipro.png" class="future-talk" alt="JUG Dnipro 2017"/>
-**Decorators, Decorators, Decorators**<br/>
-[JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/)<br/>
-Dnipro, Ukraine<br/>
-11 February 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua 2017"/>
 **OOP Java Puzzlers**<br/>
 JUG.ua<br/>
@@ -103,14 +96,6 @@ Moscow, Russia<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
 Delft, The Netherlands<br/>
 30 March 2017
-
-<!--
-<div class="talk-event"/>
-<img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
-[MagmaConf 2017](http://www.magmaconf.com/)<br/>
-Manzanillo, Colima, Mexico<br/>
-29-31 March 2017
--->
 
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
@@ -135,6 +120,8 @@ Riga, Latvia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
+**Object-oriented flavor for JUnit tests**<br/>
+**How much do you cost?**<br/>
 [JEEConf 2017](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
@@ -146,6 +133,16 @@ which I attended recently, as a speaker. They rate us speakers,
 why shouldn't we rate them, right? The best rate is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.
+
+### 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/jug-dnipro.png" class="future-talk" alt="JUG Dnipro 2017"/>
+Decorators, Decorators, Decorators;
+[JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
+Dnipro, Ukraine;
+11 February 2017;
+[video](https://www.youtube.com/watch?v=LPLqLaSwSsI).
 
 ### 2016
 
