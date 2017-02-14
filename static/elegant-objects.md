@@ -486,6 +486,15 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I'm passionate for Object-Oriented Programming and details. I've 10 years experience as researcher and developer and as lecturer, I'm always looking for the best way to explain knowledge for all people.</span>
     <a href="#vote-form" class="vote">vote</a>
   </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/jameskirkux">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/05b/188/344cccb.jpg"
+        alt="James Kirk"/>
+    </a>
+    <span class="name">James Kirk</span>
+    <span class="text">I am a steadfast supporter of software engineering best practices (TDD, SOLID, DRY) and think that violations of them should be punishable by extended Nickelback listening sessions.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
 </div>
 
 Feb 6, 2017:
