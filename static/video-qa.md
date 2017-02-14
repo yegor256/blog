@@ -34,7 +34,7 @@ question about management.
 I will try to help you.
 Our conversation will take up to 10 minutes.
 It will be video recorded and published on my
-[YouTube channel](https://www.youtube.com/c/yegor256).
+[YouTube channel](https://www.youtube.com/playlist?list=PLaIsQH4uc08w6n3bGt6dJKhk2SCORdBKj).
 
 Interested? Please, [schedule](mailto:video-qa@yegor256.com).
 
