@@ -80,7 +80,7 @@ give them some feedback, at least here (see below).
 <div class="talk-event"/>
 <img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua 2017"/>
 **OOP Java Puzzlers**<br/>
-JUG.ua<br/>
+[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
 Kiev, Ukraine<br/>
 28 February 2017
 
