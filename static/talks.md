@@ -529,11 +529,12 @@ Bucharest, Romania;
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
+<img src="https://i.vimeocdn.com/video/584587968_590x332.webp" class="past-talk" alt="GeeCON 2016"/>
 Fail Fast. Into User's Face;
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
 Krakow, Poland;
 13 May 2016;
+[video](https://vimeo.com/177215750),
 [slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
 [photos](https://www.facebook.com/yegor256/posts/10209494716834756).
 Even though it's a big (over 1000 people) and popular European conference about Java, my
