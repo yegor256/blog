@@ -75,7 +75,8 @@ This is a very [offensive]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern
 way of treating the
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}). We're basically
 exposing everything that's inside to the public. It was a nice
-little self-sufficient solid object and we turned it into a bag of data,
+little self-sufficient solid object and we turned it into a
+[bag of data]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
 which anyone can access in many possible ways. We can access it for reading, of course.
 
 It is convenient to have these getters, you may say. We are all used to them.

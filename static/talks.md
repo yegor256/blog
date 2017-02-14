@@ -30,6 +30,7 @@ style: |
     margin-right: 1em;
     margin-bottom: 1em;
     max-width: 160px;
+    filter: grayscale(100%);
   }
   .venue-rate {
     float: right;
@@ -137,7 +138,7 @@ why shouldn't we rate them, right? The best rate is
 ### 2017
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="future-talk" alt="JUG Dnipro 2017"/>
+<img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
 Decorators, Decorators, Decorators;
 [JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
 Dnipro, Ukraine;
