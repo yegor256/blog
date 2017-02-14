@@ -39,7 +39,8 @@ and to Java in particular.
 Your class should be an abstraction of a real life entity
 with no "validators," "controllers," "managers," etc.
 If your class name ends with an "-er"&mdash;it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
-BTW, here are my [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+BTW, here are my
+[seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of a good object.
 Also, this post explains this idea in more details:
 [Don't Create Objects That End With -ER]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).

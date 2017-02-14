@@ -84,7 +84,8 @@ Your job is to reveal, not to hide. By being a hero and trying to fix everything
 in the scope of a single task, you're not doing the project a favor&mdash;you're concealing the problem(s).
 
 Edit: Another good example of a dependency may be a question raised
-at, for example, StackOverflow.com or a user list of a third-party library.
+at, for example, [StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
+or a user list of a third-party library.
 If you can't find a solution yourself and the problem is outside of the scope
 of your project&mdash;submit a question to SO and put its link to the
 source code (in JavaDoc block, for example).
