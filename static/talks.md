@@ -180,7 +180,7 @@ everybody involved. I'm sure next year they will do it better.
 <aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who is a Software Architect?;
-[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
+BuildStuff Ukraine 2016;
 Kiev, Ukraine;
 21-22 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),

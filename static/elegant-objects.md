@@ -451,7 +451,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <a href="#vote-form" class="vote">vote</a>
   </div>
   <div class="rv">
-    <a href="http://LinkedIn.com/in/pholser">
+    <a href="https://www.linkedin.com/in/pholser">
       <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAirAAAAJDczMDM4NWEzLTVlZTMtNDhhNi04YzBmLWY1ZGM4NTM4MjJiMg.jpg"
         alt="Paul Holser"/>
     </a>

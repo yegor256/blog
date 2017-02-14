@@ -69,7 +69,7 @@ The above configuration will start DynamoDB Local
 right before running integration tests, and then stop it
 immediately afterwards. The server will listen at TCP port 10500.
 While the number is used in the example, you're supposed
-to use a [randomly allocated port](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html) instead.
+to use a randomly allocated port instead.
 
 When the DynamoDB Local server is up and running,
 we can create an integration test for it:

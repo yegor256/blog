@@ -126,7 +126,7 @@ This is how you configure it in `pom.xml`
 There are two plugins configured above. Let's take a look
 at what each does.
 
-1. [**`build-helper-maven-plugin`**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
+1. **`build-helper-maven-plugin`**
 is reserving a temporary random TCP port, which will be used by MySQL server.
 We don't want to start a server on its default 3306 port,
 because there could be another server already running there.
@@ -149,7 +149,7 @@ that MySQL server starts correctly on every platform (Mac OS, Linux, Windows)
 and stops when it's not needed any more. All the rest is done by
 the MySQL distribution itself.
 
-4. [**`maven-failsafe-plugin`**](http://mojo.codehaus.org/build-helper-maven-plugin/reserve-network-port-mojo.html)
+4. **`maven-failsafe-plugin`**
 is running unit tests on `integration-test` phase. Its main difference from
 maven-surefire-plugin is that it doesn't fail a build when some tests fail.
 Instead, it saves all failures into supplementary files in `target`
