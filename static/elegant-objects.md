@@ -101,6 +101,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <input id="reviewer" class="field field-text" name="reviewer" size="35" maxlength="255" type="text" required="required"/>
     <label for="vote">&nbsp;</label>
     <button id="vote" class="field">Vote</button>
+    <span class="note">You will also be subscribed to my mailing list</span>
   </fieldset></form>
   <div class="rv">
     <a href="https://www.linkedin.com/in/mdbs99">
