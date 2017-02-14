@@ -115,5 +115,6 @@ will inevitably reach high levels.
 By the way, this is my [StackExchange profile](http://stackexchange.com/users/63162).
 I've earned the majority of my reputation a few years ago, so now I'm mostly getting up-votes
 for the answers and questions I've posted earlier. However, I keep using
-StackOverflow as I code, every day.
+StackOverflow as I code,
+[every day](http://stackexchange.com/users/63162/yegor256?tab=activity).
 
