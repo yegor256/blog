@@ -79,8 +79,13 @@ body {
 
 a,
 a:visited {
-  color: inherit;
+  color: $blue;
   text-decoration: underline;
+}
+
+body a,
+body a:visited {
+  color: $black;
 }
 
 del {
