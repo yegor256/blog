@@ -13,6 +13,17 @@ keywords:
   - ask about management
   - management questions
 exclude_from_search: true
+style: |
+  .vid {
+    width: 30%;
+    display: inline-block;
+    padding: .5em;
+    vertical-align: top;
+  }
+  .vid img {
+    width: 80%;
+    display: block;
+  }
 ---
 
 It's an experiment.
@@ -26,3 +37,12 @@ It will be video recorded and published on my
 [YouTube channel](https://www.youtube.com/c/yegor256).
 
 Interested? Please, [schedule](mailto:video-qa@yegor256.com).
+
+<div class="vid">
+  <a href="https://www.youtube.com/watch?v=vfTgEQJOBcI">
+    <img src="https://i.ytimg.com/vi/vfTgEQJOBcI/mqdefault.jpg"
+      alt="Q&amp;A with Yegor Bugayenko"/>
+  </a>
+  Q1: How to increase the accuracy of QA planning?
+</div>
+
