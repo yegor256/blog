@@ -27,7 +27,7 @@ a software developer. However, there were many complaints about this metric.
 Take, for example, the ones [here](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1704113248)
 and [here](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697910905).
 In a nutshell, so many of you
-disagreed and said that the number of StackOverlow up-votes was
+disagreed and said that the number of StackOverflow up-votes was
 nothing more than a measurement of the amount of time someone spent answering
 stupid questions asked by clueless programmers. Let me disagree and
 explain why your activity on this platform is so important to
@@ -60,7 +60,7 @@ how to explain your problem, how to formulate the question, how to label
 it and title it. Try it for the first time and you will see that it's not
 easy at all; your questions will sound immature, silly, and ambiguous, and they will
 end with "Best regards" (something you shouldn't do at SO). And, of course,
-they will get zero up-votes. Later, when you improve, you will be surpised
+they will get zero up-votes. Later, when you improve, you will be surprised
 to see that more and more of them get up-votes, and your reputation will
 grow. This will be the indicator that your "question asking" skill is growing up.
 For me, your potential employer, it's a very important skill.
@@ -85,7 +85,7 @@ out and screaming at the monitor. StackOverflow will help you a lot,
 both through questions you will ask and answers you will try to give. And
 you can't learn that in the office dealing with your friends only.
 
-**How to Deal With Smartasses**.
+**How to Deal With Smart-asses**.
 Some people there are very smart and knowledgeable, and they will not always
 be polite when your questions or mistakes using the platform border on being
 too annoying. Again, your office friends won't teach you how to
