@@ -719,7 +719,6 @@ presentation. It's not really a conference, but more like a meetup.
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F-</aside>
-<img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="past-talk" alt="CascadiaIT 2016"/>
 Microservices as Chat Bots;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
 Seattle, USA;
