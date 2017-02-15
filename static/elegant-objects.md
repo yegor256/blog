@@ -513,8 +513,7 @@ a mistake in selecting reviewers. Not all of them were as effective as
 I was expecting. This time I will make it different. I will put all
 all of them in a list and let you vote. The best 12, elected by you,
 will get the early draft of the second volume and will help me review it. To
-get into the list, please fill
-[this simple form](https://docs.google.com/forms/d/1RaAN3JoeDxcWU8HaBz4EI-WISt1rKf3FywQLFWn0unk).
+get into the list, please fill <del>this simple form</del>.
 
 Aug 22, 2016:
 I will collect all reviews of the book written by its readers on their
