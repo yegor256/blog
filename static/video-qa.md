@@ -41,8 +41,15 @@ Interested? Please, [schedule](mailto:video-qa@yegor256.com).
 <div class="vid">
   <a href="https://www.youtube.com/watch?v=vfTgEQJOBcI">
     <img src="https://i.ytimg.com/vi/vfTgEQJOBcI/mqdefault.jpg"
-      alt="Q&amp;A with Yegor Bugayenko"/>
+      alt="Vladislav Voinov vs. Yegor Bugayenko"/>
   </a>
   Q1: How to increase the accuracy of QA planning?
+</div>
+<div class="vid">
+  <a href="https://www.youtube.com/watch?v=3HvGVT5NDJA">
+    <img src="https://i.ytimg.com/vi/3HvGVT5NDJA/mqdefault.jpg"
+      alt="Kartikey Tanna vs. Yegor Bugayenko"/>
+  </a>
+  Q2: What to do if the client doesn't want to pay for quality?
 </div>
 
