@@ -52,4 +52,12 @@ Interested? Please, [schedule](mailto:video-qa@yegor256.com).
   </a>
   Q2: What to do if the client doesn't want to pay for quality?
 </div>
+<div class="vid">
+  <a href="https://www.youtube.com/watch?v=AEy_6DK6nLk">
+    <img src="https://i.ytimg.com/vi/AEy_6DK6nLk/mqdefault.jpg"
+      alt="Andriy Kryvtsun vs. Yegor Bugayenko"/>
+  </a>
+  Q3: How to enforce more formal communications in a team?
+</div>
+
 
