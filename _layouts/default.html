@@ -19,20 +19,15 @@ layout: compress
     <meta name="keywords" itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
-    <meta name="og:url" itemprop="breadcrumb" content="{{ site.url }}{{ page.url }}"/>
     <meta name="og:site_name" itemprop="author" content="{{ site.author.name }}"/>
-    <meta name="og:title" content="{{ page.title }}"/>
-    <meta name="og:description" content="{{ page | description }}"/>
     <meta name="og:type" content="article" />
     <meta name="og:locale" content="en_US" />
-    <meta name="fb:admins" content="10203747823006002"/>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:site" content="@yegor256"/>
-    <meta name="twitter:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" content="{{ page | description }}"/>
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
-    <meta name="article:author" content="https://www.facebook.com/yegor256"/>
+    <meta name="twitter:title" property="og:title" content="{{ page.title }}"/>
+    <meta name="twitter:description" property="og:description" content="{{ page | description }}"/>
+    <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
