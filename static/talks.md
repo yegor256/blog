@@ -87,7 +87,7 @@ Kiev, Ukraine<br/>
 <div class="talk-event"/>
 <img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
 **Семь врагов нашей мотивации**<br/>
-[AgileDays 2017](http://agiledays.ru/)<br/>
+[AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
 Moscow, Russia<br/>
 23-24 March 2017
 
