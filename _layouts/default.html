@@ -15,28 +15,22 @@ layout: compress
     </script>
     -->
     <meta charset="utf-8"/>
-    <meta itemprop="author" content="{{ site.author.name }}" />
-    <meta itemprop="breadcrumb" content="{{ site.url }}" />
-    <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
-    <meta itemprop="description" content="{{ page | description }}" />
-    <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
-    <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
+    <meta name="description" itemprop="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
+    <meta name="keywords" itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
-    <meta property="twitter:account_id" content="4503599630178231" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {{ page | jb_picture_head }}
-    <meta property="og:site_name" content="{{ site.author.name }}"/>
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:description" content="{{ page | description }}"/>
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="fb:admins" content="10203747823006002"/>
+    <meta name="og:url" itemprop="breadcrumb" content="{{ site.url }}{{ page.url }}"/>
+    <meta name="og:site_name" itemprop="author" content="{{ site.author.name }}"/>
+    <meta name="og:title" content="{{ page.title }}"/>
+    <meta name="og:description" content="{{ page | description }}"/>
+    <meta name="og:type" content="article" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="fb:admins" content="10203747823006002"/>
+    <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:site" content="www.yegor256.com"/>
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
-    <meta property="article:author" content="https://www.facebook.com/yegor256"/>
-    <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
+    <meta name="article:author" content="https://www.facebook.com/yegor256"/>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
@@ -54,6 +48,7 @@ layout: compress
         {{ page.style }}
       </style>
     {% endif %}
+    {{ page | jb_picture_head }}
   </head>
   <body>
     <div class="wrapper">
