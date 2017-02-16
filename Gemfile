@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll', '3.1.2'
 gem 'jekyll-feed'
-gem 'jekyll-bits', '0.7'
+gem 'jekyll-bits', '0.8'
 gem 'jekyll-gist'
 gem 'jekyll-paginate'
 gem 'jekyll-plantuml'
