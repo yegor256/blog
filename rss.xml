@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-17T16:51:07+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-17T20:48:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
 that your StackOverflow reputation is very important
 to &lt;a href=&quot;http://www.teamed.io&quot;&gt;us&lt;/a&gt; when we make a decision on
 how much we should pay
@@ -14,7 +14,7 @@ explain why your activity on this platform is so important to
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#d5e79bd0&#39;/&gt;&lt;figcaption id=&#39;d5e79bd0&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#9abf092d&#39;/&gt;&lt;figcaption id=&#39;9abf092d&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Basically, your StackOverflow profile demonstrates five skills you either
 have or don&amp;#39;t. They may not be as important to an office &lt;del&gt;slave&lt;/del&gt;
@@ -107,7 +107,7 @@ disagreed and said that the number of StackOverflow up-votes was
 nothing more than a measurement of the amount of time someone spent answering
 stupid questions asked by clueless programmers. Let me disagree and
 explain why your activity on this platform is so important to
-your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry><entry><title type="html">Each Private Static Method Is a Candidate for a New Class</title><link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html" rel="alternate" type="text/html" title="Each Private Static Method Is a Candidate for a New Class" /><published>2017-02-07T00:00:00+00:00</published><updated>2017-02-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/07/private-method-is-new-class</id><content type="html" xml:base="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">&lt;p&gt;Do you have private static methods that help you break
+your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry><entry><title type="html">Each Private Static Method Is a Candidate for a New Class</title><link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html" rel="alternate" type="text/html" title="Each Private Static Method Is a Candidate for a New Class" /><published>2017-02-07T00:00:00+00:00</published><updated>2017-02-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/07/private-method-is-new-class</id><content type="html" xml:base="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">&lt;p&gt;Do you have private static methods that help you break
 your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don&amp;#39;t make classes out of all of them, but that has to be the
@@ -116,7 +116,7 @@ is the main difference between them, and it is crucial.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#1c69d89d&#39;/&gt;&lt;figcaption id=&#39;1c69d89d&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#20e9d0f5&#39;/&gt;&lt;figcaption id=&#39;20e9d0f5&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is an example of a simple class:&lt;/p&gt;
 
@@ -190,7 +190,7 @@ your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don&amp;#39;t make classes out of all of them, but that has to be the
 goal. Private static methods are not reusable, while classes are&amp;mdash;that
-is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
+is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
 &lt;a href=&quot;/2016/09/20/oop-without-classes.html&quot;&gt;class&lt;/a&gt; that implements an
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the
@@ -201,7 +201,7 @@ shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; fo
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#8c9e7e44&#39;/&gt;&lt;figcaption id=&#39;8c9e7e44&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#4a1ca508&#39;/&gt;&lt;figcaption id=&#39;4a1ca508&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Take a look at
 &lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
@@ -298,7 +298,7 @@ you an example. There are many classes of that kind in the
 Takes Framework,
 and they all are named like *Wrap. It&amp;#39;s a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
-shorter, like in EO for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/north-by-northwest.jpg" /></entry><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
+shorter, like in EO for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg" /></entry><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
 software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
@@ -307,7 +307,7 @@ be helpful.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#9a063512&#39;/&gt;&lt;figcaption id=&#39;9a063512&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#ee978f59&#39;/&gt;&lt;figcaption id=&#39;ee978f59&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Before writing this, I &lt;a href=&quot;https://www.google.com/webhp?q=career%20advice%20software%20developer&quot;&gt;Googled&lt;/a&gt;
 a bit and found a lot of interesting suggestions, like to
@@ -508,14 +508,14 @@ software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
 won&amp;#39;t waste time and will get you there faster? Let me share what I think might
-be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
+be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
 have to be thread-safe? Wrong again. I think none of them have to
 be thread-safe, while all of them have to provide synchronized decorators.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#eb3ed317&#39;/&gt;&lt;figcaption id=&#39;eb3ed317&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#93c69d83&#39;/&gt;&lt;figcaption id=&#39;93c69d83&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
@@ -610,7 +610,7 @@ a violation of that famous
 and validators.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
 have to be thread-safe? Wrong again. I think none of them have to
-be thread-safe, while all of them have to provide synchronized decorators.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/aladdin.jpg" /></entry><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
+be thread-safe, while all of them have to provide synchronized decorators.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg" /></entry><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
 very often a customer &lt;del&gt;is an idiot&lt;/del&gt; doesn&amp;#39;t
 really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
@@ -620,7 +620,7 @@ do you train, educate, and help him? You don&amp;#39;t!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#45c436b6&#39;/&gt;&lt;figcaption id=&#39;45c436b6&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#f7dce987&#39;/&gt;&lt;figcaption id=&#39;f7dce987&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;The temptation will be huge, though. You will think that the customer is your
 friend. You will want to help him. You will feel very motivated to
@@ -672,14 +672,14 @@ really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
 customer very often always thinks he knows
 and understands enough. The question is how do you teach a customer? How
-do you train, educate, and help him? You don&amp;#39;t!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/the-firm.jpg" /></entry><entry><title type="html">How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
+do you train, educate, and help him? You don&amp;#39;t!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg" /></entry><entry><title type="html">How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
 in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#2aac68e3&#39;/&gt;&lt;figcaption id=&#39;2aac68e3&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#6c448ff1&#39;/&gt;&lt;figcaption id=&#39;6c448ff1&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Have you ever heard the term &amp;quot;win-win?&amp;quot; Do you know what it means? My guess is that
 most of my readers aren&amp;#39;t exactly sure what this is about, even though
@@ -829,7 +829,7 @@ most optimal solutions.&lt;/p&gt;
 &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
-in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/being-flynn.jpg" /></entry><entry><title type="html">Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
+in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg" /></entry><entry><title type="html">Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
 proper encapsulation leads to a complete absence
 of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
@@ -839,7 +839,7 @@ while allowing objects to interact.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#ddc74f24&#39;/&gt;&lt;figcaption id=&#39;ddc74f24&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#2e6ed65a&#39;/&gt;&lt;figcaption id=&#39;2e6ed65a&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Say that this is our object:&lt;/p&gt;
 
@@ -910,7 +910,7 @@ of &amp;quot;naked data.&amp;quot; However, the question remains: How can object
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
 some data in order to let other objects use it, right? Yes, that&amp;#39;s true.
 However, I guess I have a solution that keeps encapsulation in place
-while allowing objects to interact.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2016/12/raging-bull.jpg" /></entry><entry><title type="html">MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
+while allowing objects to interact.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg" /></entry><entry><title type="html">MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
 (MVC) is an architectural pattern we all are well aware of.
 It&amp;#39;s a de-facto standard for almost all UI and
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
@@ -920,7 +920,7 @@ should dislike MVC as much as I do. Here is why.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#6595b957&#39;/&gt;&lt;figcaption id=&#39;6595b957&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#8d612cfa&#39;/&gt;&lt;figcaption id=&#39;8d612cfa&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is how MVC architecture looks:&lt;/p&gt;
 
@@ -984,7 +984,7 @@ It&amp;#39;s a de-facto standard for almost all UI and
 Web frameworks. It is convenient
 and easy to use. It is simple and effective. It is a great concept ...
 for a procedural programmer. If your software is object-oriented, you
-should dislike MVC as much as I do. Here is why.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2016/12/hot-shots.jpg" /></entry><entry><title type="html">How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
+should dislike MVC as much as I do. Here is why.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/hot-shots.jpg" /></entry><entry><title type="html">How to Pay Programmers Less</title><link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html" rel="alternate" type="text/html" title="How to Pay Programmers Less" /><published>2016-12-06T00:00:00+00:00</published><updated>2016-12-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less</id><content type="html" xml:base="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html">&lt;p&gt;To create software, you need programmers. Unfortunately. They are expensive,
 lazy, and almost impossible to control. The software they create either works or doesn&amp;#39;t, but
 you still have to pay them, every month. Of course, it&amp;#39;s always better to pay less.
 However, sometimes they may figure out they are being
@@ -994,7 +994,7 @@ share.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/ben-hur.jpg&#39; longdesc=&#39;#5a9e8617&#39;/&gt;&lt;figcaption id=&#39;5a9e8617&#39;&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/ben-hur.jpg&#39; longdesc=&#39;#216177cc&#39;/&gt;&lt;figcaption id=&#39;216177cc&#39;&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Keep salaries secret&lt;/strong&gt;.
 It&amp;#39;s obvious: Don&amp;#39;t let them discuss
@@ -1125,4 +1125,4 @@ you still have to pay them, every month. Of course, it&amp;#39;s always better t
 However, sometimes they may figure out they are being
 underpaid and quit. How do you prevent that? Unfortunately,
 we can&amp;#39;t use violence any more, but there are some other mechanisms. Let me
-share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2016/12/ben-hur.jpg" /></entry></feed>
+share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/ben-hur.jpg" /></entry></feed>
