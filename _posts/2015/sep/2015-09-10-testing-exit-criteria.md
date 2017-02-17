@@ -17,7 +17,7 @@ keywords:
   - test planning
 youtube:
   - wd-SA1HVmLg
-image: /images/2015/09/la-fille-sur-le-pont.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/09/la-fille-sur-le-pont.jpg
 jb_picture:
   caption: La fille sur le pont (1999) by Patrice Leconte
 ---

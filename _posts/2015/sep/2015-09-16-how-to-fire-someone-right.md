@@ -12,7 +12,7 @@ keywords:
   - how to fire someone nicely
   - how to fire someone you like
   - how to fire an employee
-image: /images/2015/09/up-in-the-air.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/09/up-in-the-air.jpg
 jb_picture:
   caption: Up in the Air (2009) by Jason Reitman
 ---

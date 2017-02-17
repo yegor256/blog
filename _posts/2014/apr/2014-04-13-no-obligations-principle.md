@@ -17,7 +17,7 @@ keywords:
   - project responsibility
 youtube:
   - qRZYJGYdrwk
-image: /images/2014/04/big-lebowski-her-life-is-in-your-hands.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/big-lebowski-her-life-is-in-your-hands.png
 jb_picture:
   caption: The Big Lebowski (1998) by Joel Coen
 ---

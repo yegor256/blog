@@ -16,7 +16,7 @@ categories: jcg
 youtube:
   - NflR7DKwxDY
   - _61CuGhyv-o
-image: /images/2014/09/charlie-and-chocolate-factory-father.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/09/charlie-and-chocolate-factory-father.png
 jb_picture:
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---

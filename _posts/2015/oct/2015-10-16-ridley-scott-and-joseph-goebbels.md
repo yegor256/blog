@@ -14,7 +14,7 @@ keywords:
   - motivation
   - team morale
   - management in movies
-image: /images/2015/10/cossacks-of-the-kuban.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/cossacks-of-the-kuban.jpg
 jb_picture:
   caption: Cossacks of the Kuban (1950) by Ivan Pyryev
 ---

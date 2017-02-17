@@ -14,7 +14,7 @@ keywords:
   - synchronized in java
   - how to make class thread-safe
   - thread-safe java
-image: /images/2017/01/aladdin.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg
 jb_picture:
   caption: Aladdin (1992) by Ron Clements and John Musker
 ---

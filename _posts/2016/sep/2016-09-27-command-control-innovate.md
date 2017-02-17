@@ -14,7 +14,7 @@ keywords:
   - command and control leadership examples
   - command and control leadership style definition
   - command and control work environment
-image: /images/2016/09/andrei-rublev.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/09/andrei-rublev.jpg
 jb_picture:
   caption: Andrei Rublev (1966) by Andrei Tarkovsky
 ---

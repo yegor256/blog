@@ -14,7 +14,7 @@ keywords:
   - stackoverflow reputation
   - stackoverflow profile
   - how to grow on stackoverflow
-image: /images/2017/02/les-kidnappeurs.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg
 jb_picture:
   caption: Les kidnappeurs (1998) by Graham Guit
 ---

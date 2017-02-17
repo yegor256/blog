@@ -21,7 +21,7 @@ style: |
   }
 youtube:
  - cGcCcxx4xrg
-image: /images/2016/08/swingers.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/08/swingers.jpg
 jb_picture:
   caption: Swingers (1996) by Doug Liman
 ---

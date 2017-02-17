@@ -15,7 +15,7 @@ keywords:
   - decorator pattern
   - decorator pattern java
   - object configuration
-image: /images/2016/04/the-take.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/04/the-take.jpg
 jb_picture:
   caption: The Take (2009) by David Drury
 ---

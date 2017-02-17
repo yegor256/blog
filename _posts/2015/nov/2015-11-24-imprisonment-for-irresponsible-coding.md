@@ -14,7 +14,7 @@ keywords:
   - cowboy coding vs agile
   - cowboy coding pros and cons
   - irresponsible coding
-image: /images/2015/11/thursday.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/11/thursday.jpg
 jb_picture:
   caption: Thursday (1998) by Skip Woods
 ---

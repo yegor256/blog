@@ -13,7 +13,7 @@ keywords:
   - code review checklist
   - code review process
   - code review best practices
-image: /images/2015/02/kim-jong-un-doing-code-review.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/kim-jong-un-doing-code-review.png
 jb_picture:
   caption: Kim Jong-un with colleagues (2014)
 ---

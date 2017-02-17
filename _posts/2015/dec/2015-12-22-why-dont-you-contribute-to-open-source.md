@@ -14,7 +14,7 @@ keywords:
   - open source
   - why github rating is important
   - open source definition
-image: /images/2015/12/kung-fu-hustle.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/12/kung-fu-hustle.jpg
 jb_picture:
   caption: Kung Fu Hustle (2004) by Stephen Chow
 ---

@@ -14,7 +14,7 @@ keywords:
   - when to catch exceptions
   - catch exception java
   - exceptions java
-image: /images/2015/07/catch-me-if-you-can.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/07/catch-me-if-you-can.jpg
 jb_picture:
   caption: Catch Me If You Can (2002) by Steven Spielberg
 ---

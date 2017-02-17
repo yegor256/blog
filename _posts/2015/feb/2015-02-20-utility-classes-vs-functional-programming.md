@@ -17,7 +17,7 @@ keywords:
 youtube:
   - D0dqC_3Bch8
   - psrp3TtaYYI
-image: /images/2015/02/color-me-kubrick.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/color-me-kubrick.png
 jb_picture:
   caption: Color Me Kubrick (2005) by Brian W. Cook
 ---
