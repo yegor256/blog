@@ -85,6 +85,13 @@ Kiev, Ukraine<br/>
 28 February 2017
 
 <div class="talk-event"/>
+<img src="/images/2017/khpmday.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
+**Management Without Managers**<br/>
+[Kharkiv PMDay](http://kh.pmday.org/#pm-models)<br/>
+Kharkiv, Ukraine<br/>
+4 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
 **Семь врагов нашей мотивации**<br/>
 [AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
