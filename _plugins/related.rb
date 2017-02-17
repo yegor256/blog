@@ -20,8 +20,6 @@ module Yegor
   class RelatedBlock < Liquid::Tag
     def render(context)
       page = context.registers[:page]
-      p page.site
-      exit
       site = context.registers[:site]
       page['related'].map do |p|
         html(site, p)
