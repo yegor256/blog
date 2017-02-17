@@ -7,7 +7,7 @@
   <Url type="application/atom+xml" template="http://www.yegor256.com/?q={searchTerms}&amp;format=atom"/>
   <Url type="application/rss+xml" template="http://www.yegor256.com/?q={searchTerms}&amp;format=rss"/>
   <Url type="text/html" template="http://www.yegor256.com/?q={searchTerms}"/>
-  <LongName>Yegor Bugayenko About Programming</LongName>
+  <LongName>Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">http://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
   <Attribution>Copyright 2014-2017, Yegor Bugayenko, All Rights Reserved</Attribution>
