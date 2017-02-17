@@ -127,6 +127,12 @@ Riga, Latvia<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
 
+<div class="talk-event"/>
+<img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
+[ITEM 2017](http://item.com.ua/)<br/>
+Dnipro, Ukraine<br/>
+17-18 June 2017
+
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences,
