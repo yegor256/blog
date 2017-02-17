@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-16T13:51:09+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-17T09:21:44+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
 that your StackOverflow reputation is very important
 to &lt;a href=&quot;http://www.teamed.io&quot;&gt;us&lt;/a&gt; when we make a decision on
 how much we should pay
@@ -14,7 +14,7 @@ explain why your activity on this platform is so important to
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#87a94d52&#39;/&gt;&lt;figcaption id=&#39;87a94d52&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#d5e79bd0&#39;/&gt;&lt;figcaption id=&#39;d5e79bd0&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Basically, your StackOverflow profile demonstrates five skills you either
 have or don&amp;#39;t. They may not be as important to an office &lt;del&gt;slave&lt;/del&gt;
@@ -116,7 +116,7 @@ is the main difference between them, and it is crucial.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/02/the-master.jpg&#39; longdesc=&#39;#b894db33&#39;/&gt;&lt;figcaption id=&#39;b894db33&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#1c69d89d&#39;/&gt;&lt;figcaption id=&#39;1c69d89d&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is an example of a simple class:&lt;/p&gt;
 
@@ -201,7 +201,7 @@ shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; fo
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#1633d9e6&#39;/&gt;&lt;figcaption id=&#39;1633d9e6&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#8c9e7e44&#39;/&gt;&lt;figcaption id=&#39;8c9e7e44&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Take a look at
 &lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
@@ -307,7 +307,7 @@ be helpful.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#3c7b6134&#39;/&gt;&lt;figcaption id=&#39;3c7b6134&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#9a063512&#39;/&gt;&lt;figcaption id=&#39;9a063512&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Before writing this, I &lt;a href=&quot;https://www.google.com/webhp?q=career%20advice%20software%20developer&quot;&gt;Googled&lt;/a&gt;
 a bit and found a lot of interesting suggestions, like to
@@ -515,7 +515,7 @@ be thread-safe, while all of them have to provide synchronized decorators.&lt;/p
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#f5aa3c20&#39;/&gt;&lt;figcaption id=&#39;f5aa3c20&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#eb3ed317&#39;/&gt;&lt;figcaption id=&#39;eb3ed317&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
@@ -620,7 +620,7 @@ do you train, educate, and help him? You don&amp;#39;t!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#fa67e914&#39;/&gt;&lt;figcaption id=&#39;fa67e914&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#45c436b6&#39;/&gt;&lt;figcaption id=&#39;45c436b6&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;The temptation will be huge, though. You will think that the customer is your
 friend. You will want to help him. You will feel very motivated to
@@ -679,7 +679,7 @@ in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#929ab07e&#39;/&gt;&lt;figcaption id=&#39;929ab07e&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#2aac68e3&#39;/&gt;&lt;figcaption id=&#39;2aac68e3&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Have you ever heard the term &amp;quot;win-win?&amp;quot; Do you know what it means? My guess is that
 most of my readers aren&amp;#39;t exactly sure what this is about, even though
@@ -839,7 +839,7 @@ while allowing objects to interact.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#52a9356c&#39;/&gt;&lt;figcaption id=&#39;52a9356c&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#ddc74f24&#39;/&gt;&lt;figcaption id=&#39;ddc74f24&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Say that this is our object:&lt;/p&gt;
 
@@ -920,7 +920,7 @@ should dislike MVC as much as I do. Here is why.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#cdf5cce3&#39;/&gt;&lt;figcaption id=&#39;cdf5cce3&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#6595b957&#39;/&gt;&lt;figcaption id=&#39;6595b957&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is how MVC architecture looks:&lt;/p&gt;
 
@@ -994,7 +994,7 @@ share.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;/images/2016/12/ben-hur.jpg&#39; longdesc=&#39;#cdad7b09&#39;/&gt;&lt;figcaption id=&#39;cdad7b09&#39;&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;http://www.yegor256.com/images/2016/12/ben-hur.jpg&#39; longdesc=&#39;#5a9e8617&#39;/&gt;&lt;figcaption id=&#39;5a9e8617&#39;&gt;Ben-Hur (1959) by William Wyler&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Keep salaries secret&lt;/strong&gt;.
 It&amp;#39;s obvious: Don&amp;#39;t let them discuss
