@@ -10,7 +10,7 @@
   <LongName>Yegor Bugayenko About Programming</LongName>
   <Image height="128" width="128" type="image/png">http://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
-  <Attribution>Copyright 2014, Yegor Bugayenko, All Rights Reserved</Attribution>
+  <Attribution>Copyright 2014-2017, Yegor Bugayenko, All Rights Reserved</Attribution>
   <Query role="example" searchTerms="java"/>
   <SyndicationRight>open</SyndicationRight>
   <AdultContent>false</AdultContent>
