@@ -130,7 +130,7 @@ Riga, Latvia<br/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 **Object-oriented flavor for JUnit tests**<br/>
 **How much do you cost?**<br/>
-[JEEConf 2017](http://www.jeeconf.com/)<br/>
+[JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/)<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
 
