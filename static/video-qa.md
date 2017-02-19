@@ -26,8 +26,6 @@ style: |
   }
 ---
 
-It's an experiment.
-
 You [schedule](mailto:video-qa@yegor256.com)
 [Zoom](https://zoom.us/) video call with me and ask a practical
 question about management.
@@ -36,7 +34,7 @@ Our conversation will take up to 10 minutes.
 It will be video recorded and published on my
 [YouTube channel](https://www.youtube.com/playlist?list=PLaIsQH4uc08w6n3bGt6dJKhk2SCORdBKj).
 
-Interested? Please, [schedule](mailto:video-qa@yegor256.com).
+Interested? [Schedule](mailto:video-qa@yegor256.com) now.
 
 <div class="vid">
   <a href="https://www.youtube.com/watch?v=vfTgEQJOBcI">
@@ -67,4 +65,5 @@ Interested? Please, [schedule](mailto:video-qa@yegor256.com).
   Q4: How to make sure programmers write documentation?
 </div>
 
+More soon.
 
