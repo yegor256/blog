@@ -85,9 +85,9 @@ Kiev, Ukraine<br/>
 28 February 2017
 
 <div class="talk-event"/>
-<img src="/images/2017/khpmday.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
+<img src="/images/2017/khpmday-2017.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
 **Management Without Managers**<br/>
-[Kharkiv PMDay](http://kh.pmday.org/#pm-models)<br/>
+[Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/)<br/>
 Kharkiv, Ukraine<br/>
 4 March 2017
 
