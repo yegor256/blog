@@ -155,7 +155,8 @@ able to get any help from anyone. You will be on your own and you will fail,
 because you are used to be patronized by someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
-StackOverflow is not just an indicator of how smart you are and how many
+[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
+is not just an indicator of how smart you are and how many
 upvotes you got for the
 ["best programming joke."](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
 It is proof that you can find answers
@@ -201,7 +202,8 @@ is a high probability of failure, which is also rather embarrassing.
 It is a very good sign, if you managed to go through this. If you've done
 it a few times, even better. However, if you've earned no certifications
 in your entire
-[career]({% pst 2017/jan/2017-01-24-career-advice %}), it is for one of the following reasons:
+[career]({% pst 2017/jan/2017-01-24-career-advice %}),
+it is for one of the following reasons:
 
 First, you're **afraid to lose**. A serious certification may cost a few hundred
 dollars (I paid over $700 for [SCEA](https://en.wikipedia.org/wiki/Oracle_Certification_Program))

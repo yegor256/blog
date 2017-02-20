@@ -14,7 +14,7 @@ keywords:
   - order of control
   - holacracy
   - holacracy in management
-image: /images/2016/02/apocalypse-now.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/02/apocalypse-now.jpg
 jb_picture:
   caption: Apocalypse Now (1979) by Francis Ford Coppola
 ---

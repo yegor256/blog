@@ -32,6 +32,10 @@ ISBN: 1537688669.<br/>
 
 <!-- Reviews for Google -->
 
+Feb 16, 2017:
+Added [Twitter Cards](https://dev.twitter.com/cards/types/summary-large-image) to all pages,
+in `default.html`.
+
 Jan 24, 2017:
 Added rich-snippet [review information](https://github.com/yegor256/blog/blob/1/_layouts/post.html#L6-L13)
 for Google search. I have no idea

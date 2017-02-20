@@ -15,7 +15,7 @@ keywords:
   - unit testing tools
   - unit testing definition
   - unit testing cost benefit analysis
-image: /images/2015/07/ex-machina.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/07/ex-machina.jpg
 jb_picture:
   caption: Ex Machina (2015) by Alex Garland
 ---

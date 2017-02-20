@@ -14,7 +14,7 @@ keywords:
   - individual performance appraisals
   - performance appraisals for teams
   - individual and team performance appraisals
-image: /images/2015/10/the-wrestler.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/the-wrestler.jpg
 jb_picture:
   caption: The Wrestler (2008) by Darren Aronofsky
 ---

@@ -23,7 +23,7 @@ youtube:
   - aER4uwyFbqQ
   - 63tS3HNmhiE
   - 03PXmPc7Q3g
-image: /images/2014/11/broken-object.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/11/broken-object.png
 jb_picture:
   caption: Vinni-Pukh (1969) by Fyodor Khitruk
 ---

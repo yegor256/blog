@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Each Private Static Method Is a Candidate for a New Class"
-date: 2017-02-03
+date: 2017-02-07
 place: Kharkiv, Ukraine
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - static method
   - private static
   - java private method
-image: /images/2017/02/...
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg
 jb_picture:
-  caption: ...
+  caption: The Master (2012) by Paul Thomas Anderson
 ---
 
 Do you have private static methods that help you break
@@ -68,8 +68,20 @@ Looks much better now. But what will happen if we have another class
 that needs the exact same functionality? We will have to copy and paste
 this private static method `encoded()` into it, right?
 
-A better alternative would be to introduce a new class that
+A better alternative would be to introduce a new class `Encoded` that
 implements the functionality we want to share:
+
+{% highlight java %}
+class Encoded {
+  private final String raw;
+  @Override
+  public String toString() {
+    return URLEncoder.encode(this.raw, "UTF-8");
+  }
+}
+{% endhighlight %}
+
+And then:
 
 {% highlight java %}
 class Token {
@@ -84,18 +96,6 @@ class Token {
 }
 {% endhighlight %}
 
-And then, class `Encoded`:
-
-{% highlight java %}
-class Encoded {
-  private final String raw;
-  @Override
-  public String toString() {
-    return URLEncoder.encode(this.raw, "UTF-8");
-  }
-}
-{% endhighlight %}
-
 Now this functionality is 1) reusable, and 2) testable. We can easily
 use this class `Encoded` in many other places, and we can create a unit
 test for it. We were not able to do that with the private static method before.
@@ -104,5 +104,5 @@ See the point? The rule of thumb I've already figured for myself is that
 _each_ private static method is a perfect candidate for a new class. That's
 why we don't have them at all in [EO](http://www.eolang.org).
 
-By the way, public static methods are a different story. They are also evil,
+By the way, _public_ static methods are a different story. They are also evil,
 but for [different reasons]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).

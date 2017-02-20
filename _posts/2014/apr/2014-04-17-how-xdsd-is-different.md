@@ -16,7 +16,7 @@ keywords:
 youtube:
   - qRZYJGYdrwk
   - tCr9dtGdi2c
-image: /images/2014/04/revolver-avi-with-dollar.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/revolver-avi-with-dollar.png
 jb_picture:
   caption: Revolver (2005) by Guy Ritchie
 ---

@@ -16,7 +16,7 @@ keywords:
   - decorator pattern real life example
 youtube:
   - D0dqC_3Bch8
-image: /images/2015/02/russina-matroshka.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/russina-matroshka.jpg
 jb_picture:
   caption: Матрёшка
 ---

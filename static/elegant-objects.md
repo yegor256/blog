@@ -101,6 +101,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <input id="reviewer" class="field field-text" name="reviewer" size="35" maxlength="255" type="text" required="required"/>
     <label for="vote">&nbsp;</label>
     <button id="vote" class="field">Vote</button>
+    <span class="note">You will also be subscribed to my mailing list</span>
   </fieldset></form>
   <div class="rv">
     <a href="https://www.linkedin.com/in/mdbs99">
@@ -449,6 +450,51 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
     <a href="#vote-form" class="vote">vote</a>
   </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/pholser">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAirAAAAJDczMDM4NWEzLTVlZTMtNDhhNi04YzBmLWY1ZGM4NTM4MjJiMg.jpg"
+        alt="Paul Holser"/>
+    </a>
+    <span class="name">Paul Holser</span>
+    <span class="text">OO expertise, clean code, fastidious proofreading</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://pl.linkedin.com/in/mkordas">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/000/25e/1da/1db84c9.jpg"
+        alt="Michał Kordas"/>
+    </a>
+    <span class="name">Michał Kordas</span>
+    <span class="text">My speciality is code quality. On daily basis I need to challenge corporate, procedural "clean code" approach with real object oriented solutions.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/anton-rybochkin-93950b10a">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAfsAAAAJDRjOWU0NjYwLTcxYjgtNDUxYi1iNWZmLWUwN2Y3M2VkY2FiMA.jpg"
+        alt="Anton Rybochkin"/>
+    </a>
+    <span class="name">Anton Rybochkin</span>
+    <span class="text">I sleep with an editor</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://br.linkedin.com/in/fabriciofx">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlDAAAAJDI3OTgwNDEzLTQ1ZmEtNGMwMS1iMGIwLTFmNDE5M2U0YTEwYw.jpg"
+        alt="Fabrício Barros Cabral"/>
+    </a>
+    <span class="name">Fabrício Barros Cabral</span>
+    <span class="text">I'm passionate for Object-Oriented Programming and details. I've 10 years experience as researcher and developer and as lecturer, I'm always looking for the best way to explain knowledge for all people.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
+  <div class="rv">
+    <a href="https://www.linkedin.com/in/jameskirkux">
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/05b/188/344cccb.jpg"
+        alt="James Kirk"/>
+    </a>
+    <span class="name">James Kirk</span>
+    <span class="text">I am a steadfast supporter of software engineering best practices (TDD, SOLID, DRY) and think that violations of them should be punishable by extended Nickelback listening sessions.</span>
+    <a href="#vote-form" class="vote">vote</a>
+  </div>
 </div>
 
 Feb 6, 2017:
@@ -467,8 +513,7 @@ a mistake in selecting reviewers. Not all of them were as effective as
 I was expecting. This time I will make it different. I will put all
 all of them in a list and let you vote. The best 12, elected by you,
 will get the early draft of the second volume and will help me review it. To
-get into the list, please fill
-[this simple form](https://docs.google.com/forms/d/1RaAN3JoeDxcWU8HaBz4EI-WISt1rKf3FywQLFWn0unk).
+get into the list, please fill <del>this simple form</del>.
 
 Aug 22, 2016:
 I will collect all reviews of the book written by its readers on their

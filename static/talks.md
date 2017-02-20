@@ -30,6 +30,7 @@ style: |
     margin-right: 1em;
     margin-bottom: 1em;
     max-width: 160px;
+    filter: grayscale(100%);
   }
   .venue-rate {
     float: right;
@@ -77,8 +78,23 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
+<img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua 2017"/>
+**OOP Java Puzzlers**<br/>
+[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
+Kiev, Ukraine<br/>
+28 February 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/khpmday-2017.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
+**Management Without Managers**<br/>
+[Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/)<br/>
+Kharkiv, Ukraine<br/>
+4 March 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
-[AgileDays 2017](http://agiledays.ru/)<br/>
+**Семь врагов нашей мотивации**<br/>
+[AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
 Moscow, Russia<br/>
 23-24 March 2017
 
@@ -88,14 +104,6 @@ Moscow, Russia<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
 Delft, The Netherlands<br/>
 30 March 2017
-
-<!--
-<div class="talk-event"/>
-<img src="/images/2017/magmaconf.png" class="future-talk" alt="Magma Conf 2017"/>
-[MagmaConf 2017](http://www.magmaconf.com/)<br/>
-Manzanillo, Colima, Mexico<br/>
-29-31 March 2017
--->
 
 <div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
@@ -120,9 +128,17 @@ Riga, Latvia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
-[JEEConf 2017](http://www.jeeconf.com/)<br/>
+**Object-oriented flavor for JUnit tests**<br/>
+**How much do you cost?**<br/>
+[JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/)<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
+[ITEM 2017](http://item.com.ua/)<br/>
+Dnipro, Ukraine<br/>
+17-18 June 2017
 
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
@@ -132,7 +148,33 @@ why shouldn't we rate them, right? The best rate is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.
 
+### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
+Decorators, Decorators, Decorators;
+[JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
+Dnipro, Ukraine;
+11 February 2017;
+[video](https://www.youtube.com/watch?v=LPLqLaSwSsI).
+
 ### 2016
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/GQLFc-ttCX0/mqdefault.jpg" class="past-talk" alt="Morning@Lohika"/>
+Object-Oriented Java by Example;
+[Morning@Lohika 2016](https://dou.ua/calendar/13589/);
+Lviv, Ukraine;
+24 December 2016;
+[video](https://www.youtube.com/watch?v=GQLFc-ttCX0).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
+Make Your Java Object-Oriented, 64 Practical Steps;
+[UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
+Kiev, Ukraine;
+20 December 2016;
+[video](https://www.youtube.com/watch?v=qAxLtSYN0nw).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
@@ -151,7 +193,7 @@ everybody involved. I'm sure next year they will do it better.
 <aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who is a Software Architect?;
-[BuildStuff Ukraine 2016](http://www.buildstuff.com.ua/kiev/);
+BuildStuff Ukraine 2016;
 Kiev, Ukraine;
 21-22 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
@@ -201,6 +243,16 @@ Moscow, Russia;
 [video](https://www.youtube.com/watch?v=_61CuGhyv-o).
 The event was rather small and chaotic. I tried my best to make my speech
 interesting, but the audience wasn't really ready.
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/ADd00BotEbI/mqdefault.jpg" class="past-talk" alt="msk.jug.ru"/>
+Вредная архитектура MVC;
+[msk.jug.ru](https://jugmsk.timepad.ru/event/400420/);
+Moscow, Russia;
+14 November 2016;
+[video 1](https://www.youtube.com/watch?v=ADd00BotEbI),
+[video 2](https://www.youtube.com/watch?v=utGIIqRGbQc),
+[video 3](https://www.youtube.com/watch?v=03l8o2uu5K4).
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">B+</aside>
@@ -491,11 +543,12 @@ Bucharest, Romania;
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://scontent.fotp3-1.fna.fbcdn.net/t31.0-8/13198664_10209494568511048_9172210196595279797_o.jpg" class="past-talk" alt="GeeCON 2016"/>
+<img src="https://i.vimeocdn.com/video/584587968_590x332.webp" class="past-talk" alt="GeeCON 2016"/>
 Fail Fast. Into User's Face;
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
 Krakow, Poland;
 13 May 2016;
+[video](https://vimeo.com/177215750),
 [slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
 [photos](https://www.facebook.com/yegor256/posts/10209494716834756).
 Even though it's a big (over 1000 people) and popular European conference about Java, my
@@ -679,7 +732,6 @@ presentation. It's not really a conference, but more like a meetup.
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F-</aside>
-<img src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/1396948_10208900237293139_1172276511203692711_o.jpg" class="past-talk" alt="CascadiaIT 2016"/>
 Microservices as Chat Bots;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
 Seattle, USA;

@@ -173,7 +173,10 @@ if (typeof($) != 'undefined') {
     $('.main p a, .main ul a, .main ol a').each(
       function (idx, a) {
         if (a.hostname && a.hostname !== window.location.hostname) {
-          $(this).append('<i class="icon icon-exit foreign"></i>');
+          var $a = $(this);
+          if ($a.find('img').length == 0) {
+            $a.append('<i class="icon icon-exit foreign"></i>');
+          }
         }
       }
     );

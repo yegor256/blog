@@ -26,7 +26,8 @@ November 2010
 
 [How to Prevent SVN Conflicts in Distributed Agile PHP Projects](https://www.phparch.com/magazine/2010-2/august/)<br/>
 php|Architect<br/>
-August 2010
+August 2010<br/>
+[PDF](/pdf/2010/phpArchitect-conflicts.pdf)
 
 [Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)<br/>
 US patent application 12/840,306<br/>
@@ -34,11 +35,13 @@ July 2010
 
 [phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/)<br/>
 php|Architect<br/>
-June 2010
+June 2010<br/>
+[PDF](/pdf/2010/phpArchitect-phpRack.pdf)
 
 [FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/)<br/>
 php|Architect<br/>
-February 2010
+February 2010<br/>
+[PDF](/pdf/2010/phpArchitect-fazend-orm.pdf)
 
 [Project Management Robot Method and Software](https://www.google.com/patents/US20110196798)<br/>
 US patent application 12/703,202<br/>

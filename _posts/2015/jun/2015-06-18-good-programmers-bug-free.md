@@ -13,7 +13,7 @@ keywords:
   - good programmers
   - bad programmers
   - zero-bug programmers
-image: /images/2015/06/sabotage.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/06/sabotage.jpg
 jb_picture:
   caption: Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe
 ---

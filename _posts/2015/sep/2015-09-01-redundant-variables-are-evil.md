@@ -13,7 +13,7 @@ keywords:
   - variables in oop
   - variables in java
   - java variables
-image: /images/2015/09/y-tu-mama-tambien.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/09/y-tu-mama-tambien.jpg
 jb_picture:
   caption: Y Tu Mamá También (2001) by Alfonso Cuarón
 ---

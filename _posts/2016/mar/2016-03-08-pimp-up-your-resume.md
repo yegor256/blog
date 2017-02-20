@@ -14,7 +14,7 @@ keywords:
   - software engineer resume
   - resume of programmer
   - resume of coder
-image: /images/2016/03/delicatessen.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/03/delicatessen.jpg
 jb_picture:
   caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---
@@ -108,7 +108,7 @@ Like I said, be as low-level and specific in your skills as possible.
 ## StackOverflow Profile
 
 No matter what anyone [says]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
-[StackOverflow](http://www.stackoverflow.com)
+[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 is the de-facto standard platform for asking and answering technical questions.
 Your presence there and your high rating send a clear message to your
 potential employer that you're a superstar (or a rising one). No so many

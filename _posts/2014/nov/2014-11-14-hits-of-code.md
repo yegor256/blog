@@ -75,7 +75,10 @@ matter how big or small the absolute size of the your product. What matters is
 how much effort you put into it. That's why HoC is very intuitive and may be
 used as a measurement of software development progress.
 
-{% figure /gnuplot/2014/11/hoc-vs-loc.svg 700 %}
+<figure>
+<object data="/gnuplot/2014/11/hoc-vs-loc.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object>
+</figure>
 
 Look at this 18-month graph; it shows both metrics together. I used the
 same Java code base of [rultor](https://github.com/yegor256/rultor),

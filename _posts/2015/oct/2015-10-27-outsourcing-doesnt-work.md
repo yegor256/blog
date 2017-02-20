@@ -16,7 +16,7 @@ keywords:
   - software outsourcing
 youtube:
   - 9j5pq71BS5U
-image: /images/2015/10/the-godfather-ii.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/the-godfather-ii.jpg
 jb_picture:
   caption: "The Godfather: Part II (1974) by Francis Ford Coppola"
 ---

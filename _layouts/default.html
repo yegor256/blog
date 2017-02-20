@@ -15,28 +15,20 @@ layout: compress
     </script>
     -->
     <meta charset="utf-8"/>
-    <meta itemprop="author" content="{{ site.author.name }}" />
-    <meta itemprop="breadcrumb" content="{{ site.url }}" />
-    <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
-    <meta itemprop="description" content="{{ page | description }}" />
-    <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
-    <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
+    <meta name="description" itemprop="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
+    <meta name="keywords" itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
-    <meta property="twitter:account_id" content="4503599630178231" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {{ page | jb_picture_head }}
-    <meta property="og:site_name" content="{{ site.author.name }}"/>
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:description" content="{{ page | description }}"/>
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="fb:admins" content="10203747823006002"/>
-    <meta name="twitter:site" content="www.yegor256.com"/>
+    <meta name="og:site_name" itemprop="author" content="{{ site.author.name }}"/>
+    <meta name="og:type" content="article" />
+    <meta name="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:creator" content="@yegor256"/>
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
-    <meta property="article:author" content="https://www.facebook.com/yegor256"/>
-    <meta name="p:domain_verify" content="61f09f0ef5db665328827225a3fc11bd"/>
+    <meta name="twitter:site" content="@yegor256"/>
+    <meta name="twitter:title" property="og:title" content="{{ page.title }}"/>
+    <meta name="twitter:description" property="og:description" content="{{ page | description }}"/>
+    <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" />
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
@@ -54,6 +46,7 @@ layout: compress
         {{ page.style }}
       </style>
     {% endif %}
+    {{ page | jb_picture_head }}
   </head>
   <body>
     <div class="wrapper">
@@ -64,7 +57,7 @@ layout: compress
           <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
           <a href="/about-me.html">
             <img src="//cf.jare.io/?u={{ site.url }}/images/yegor-bugayenko-192x192.png" class="photo"
-              alt="photo of Yegor Bugayenko"/>
+              alt="{{ site.author.name }}"/>
           </a>
         </div>
         <nav>
@@ -112,12 +105,14 @@ layout: compress
         </div>
         <div class="hot">
           <ul>
+            <!--
             <li>
               <a href="/video-qa.html">Video Q&amp;A</a> is a new experiment:
               you video-call me and ask your practical management question,
               I try to answer,
               the entire dialog gets recorded and published on YouTube. Let's try!
             </li>
+            -->
             <!--
             <li>
               Don't forget to submit your open source project to the
@@ -146,20 +141,23 @@ layout: compress
             </li>
             -->
             <li>
-              At <a href="/webinars.html">Webinar #21</a>
-              we'll discuss how to plan and what to do with
-              conflicts in a software team that cares about quality,
-              join us on <b>February 8</b> (re-scheduled!), at 11am PST.
+              At <a href="/webinars.html">Webinar #22</a>
+              we'll discuss the problem of "naked" data in OOP and
+              possible options to neutralize their negative effect,
+              join us on <b>March 1</b>, at 11am PST.
             </li>
-            <!--
             <li>
               Meet me at
-              <a href="http://www.buildstuff.lt/">BuildStuff</a> (Vilnius/Nov-18),
-              <a href="http://devternity.com/#/11">DevTernity</a> (Riga/Dec-1),
+              <a href="https://events.epam.com/events/kyiv-jug-feb28">JUG.ua</a> (Kiev/Feb-28),
+              <a href="http://kh.pmday.org/yehor-buhayenko2017s/">PMDay</a> (Kharkiv/Mar-4),
+              <a href="http://agiledays.ru/">AgileDays</a> (Moscow/Mar-23),
+              <a href="http://www.devonsummit.com/speakers/">DevOn Summit</a> (Delft/Mar-30),
+              <a href="https://2017.jbreak.ru/speakers/yegor-bugayenko/">JBreak</a> (Novosibirsk/Apr-4),
+              <a href="https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/">JPoint</a> (Moscow/Apr-7),
+              <a href="http://rigadevdays.lv/speakers/46/">RigaDevDays</a> (Riga/May-15),
               and later
               <a href="/talks.html">somewhere else</a>.
             </li>
-            -->
           </ul>
         </div>
       </header>

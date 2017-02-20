@@ -306,15 +306,6 @@ but they look "cool." There is also a very unfortunate limitation of
 Besides that, they don't give full access to the build server, for example
 we can't modify anything in `/etc`&mdash;it is a show-stopper for us.
 
-{% badge /images/2014/10/drone.png 64 http://www.drone.io %}
-
-[**Drone.io**](http://www.drone.io) works fine, but their support
-didn't reply to me when I asked for a Maven version update
-(they have an old version pre-installed). Besides
-that, their badge is not updated correctly in GitHub README.md&mdash;when the build is broken, the badge stays green... very annoying.
-
-{% badge /images/2014/10/codeship.png 64 https://www.codeship.com %}
-
 [**Codeship**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply

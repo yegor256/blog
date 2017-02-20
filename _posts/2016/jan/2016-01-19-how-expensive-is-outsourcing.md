@@ -14,7 +14,7 @@ keywords:
   - outsourcing prices
   - outsourcing rates
   - rates of outsourcing
-image: /images/2016/01/the-fan.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/01/the-fan.jpg
 jb_picture:
   caption: The Fan (1996) by Tony Scott
 ---

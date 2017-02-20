@@ -13,7 +13,7 @@ keywords:
   - task management online
   - task management software
   - task management system
-image: /images/2014/11/monty-python-argument-sketch.png
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/11/monty-python-argument-sketch.png
 jb_picture:
   caption: Monty Python Flying Circus, TV Series (1969-1974)
 ---

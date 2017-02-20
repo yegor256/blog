@@ -148,7 +148,8 @@ interface Binary {
 {% endhighlight %}
 
 Now, any object from any class (not just `DataFile`) can work for me.
-All he has to do, in order to be eligible, is to obey the contract&mdash;by implementing the interface `Binary`.
+All he has to do, in order to be eligible, is to obey
+the contract&mdash;by implementing the interface `Binary`.
 
 The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has

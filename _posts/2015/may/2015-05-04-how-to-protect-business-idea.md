@@ -13,7 +13,7 @@ keywords:
   - patent business idea
   - non-compete clause
   - non-disclosure agreement
-image: /images/2015/05/there-will-be-blood.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/05/there-will-be-blood.jpg
 jb_picture:
   caption: There Will Be Blood (2007) by Paul Thomas Anderson
 ---

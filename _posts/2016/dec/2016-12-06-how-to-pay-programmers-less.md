@@ -17,11 +17,12 @@ keywords:
   - payroll secrecy
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
+  - Chinese: http://blog.csdn.net/qshn2sky/article/details/54977527
 related:
   - 2016/jan/2016-01-05-how-to-punish-employees
   - 2015/oct/2015-10-06-how-to-be-good-office-slave
   - 2015/mar/2015-03-02-team-morale-myths-and-reality
-image: /images/2016/12/ben-hur.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/ben-hur.jpg
 jb_picture:
   caption: Ben-Hur (1959) by William Wyler
 ---

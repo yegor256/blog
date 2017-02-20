@@ -14,7 +14,7 @@ keywords:
   - software conferences tips
   - software conferences organization tips
   - software conferences tricks
-image: /images/2016/06/mi-gran-noche.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/06/mi-gran-noche.jpg
 jb_picture:
   caption: Mi gran noche (2015) by Álex de la Iglesia
 ---

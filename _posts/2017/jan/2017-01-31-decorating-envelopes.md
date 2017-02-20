@@ -14,7 +14,7 @@ keywords:
   - primary constructor oop
   - oop constructor
   - object oriented programming
-image: /images/2017/01/north-by-northwest.jpg
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg
 jb_picture:
   caption: North by Northwest (1959) by Alfred Hitchcock
 ---
