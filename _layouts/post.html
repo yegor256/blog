@@ -67,6 +67,16 @@ layout: default
           <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
         </ul>
       {% endif %}
+      {% if page.social %}
+        <ul class="subline">
+          <li>The article was discussed at:</li>
+          {% for hash in page.social %}
+            {% for link in hash %}
+              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endif %}
       <p class="unprintable">{{ page | tags }}</p>
       <div class="buttons notranslate desktop-only">
         <nav class="share">
@@ -120,22 +130,6 @@ layout: default
   {% if page.youtube %}
     <div class="wrapper">
       {{ page.youtube | youtube }}
-    </div>
-  {% endif %}
-
-  {% if page.social %}
-    <div class="wrapper">
-      <div class="unprintable">
-        <hr/>
-        <ul class="subline">
-          <li>This article was also discussed at:</li>
-          {% for hash in page.social %}
-            {% for link in hash %}
-              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
-            {% endfor %}
-          {% endfor %}
-        </ul>
-      </div>
     </div>
   {% endif %}
 
