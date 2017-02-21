@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-21T15:13:16+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-21T16:35:32+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
 find me somehow, most likely through this blog, my
 &lt;a href=&quot;/books.html&quot;&gt;books&lt;/a&gt;, or my &lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub account&lt;/a&gt;.
@@ -73,18 +73,20 @@ expert,&amp;quot; we would never have gotten any further and would not have wast
 Clearly, I&amp;#39;m not an expert in algorithms. There is no point in giving
 me binary-tree-traversing questions; I don&amp;#39;t know those answers
 and will never be interested in learning them. I&amp;#39;m trying to be an expert
-in something else, like object-oriented design, for example.&lt;/p&gt;
+in something else, like &lt;a href=&quot;/2016/11/29/eolang.html&quot;&gt;object-oriented design&lt;/a&gt;,
+for example.&lt;/p&gt;
 
 &lt;aside class=&#39;quote&#39;&gt;There is no point in giving me binary-tree-traversing questions; I don&amp;#39;t know those answers and will never be interested in learning them.&lt;/aside&gt;
 
 &lt;p&gt;There was a clear mismatch between my profile and the expectations of
 the interviewers. I don&amp;#39;t blame them, and I don&amp;#39;t blame her. They
-all were just &lt;del&gt;slaves&lt;/del&gt; employees. I blame myself for not setting
+all were just &lt;del&gt;slaves&lt;/del&gt;
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;employees&lt;/a&gt;. I blame myself for not setting
 this all straight at the very beginning.&lt;/p&gt;
 
 &lt;p&gt;I should have told her that I didn&amp;#39;t want to be interviewed by &lt;em&gt;some&lt;/em&gt;
 programmers, because I would most certainly fail. There was no need to try. I wanted to be interviewed
-by the person who really needs me: my future boss. That person will
+by the person who really &lt;em&gt;needed&lt;/em&gt; me: my future boss. That person will
 understand my profile and won&amp;#39;t ask pointless questions about algorithms, simply because
 he or she will know what my duties will be and what kind of problems
 I will be capable of solving, if they hired me.&lt;/p&gt;
