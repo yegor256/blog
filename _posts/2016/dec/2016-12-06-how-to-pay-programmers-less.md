@@ -15,6 +15,9 @@ keywords:
   - keep salary secret
   - keep salaries a secret
   - payroll secrecy
+social:
+  - hackernews: https://news.ycombinator.com/item?id=13120114
+  - reddit: https://www.reddit.com/r/programming/comments/5gtd0k/how_to_pay_programmers_less/
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
   - Chinese: http://blog.csdn.net/qshn2sky/article/details/54977527

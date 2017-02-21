@@ -14,6 +14,8 @@ keywords:
   - json or xml for android
   - json or xml for iOS
   - json or xml for java
+social:
+  - hackernews: https://news.ycombinator.com/item?id=10835608
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/11/the-man-who-stare-at-goats.jpg
 jb_picture:
   caption: The Men Who Stare at Goats (2009) by Grant Heslov

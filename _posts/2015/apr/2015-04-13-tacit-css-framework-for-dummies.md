@@ -12,6 +12,9 @@ keywords:
   - css framework responsive
   - css framework for web apps
   - css framework vs custom
+social:
+  - hackernews: https://news.ycombinator.com/item?id=9345271
+  - reddit: https://www.reddit.com/r/programming/comments/32ianw/tacit_a_css_framework_without_classes/
 ---
 
 I've been using [Bootstrap](http://getbootstrap.com/)

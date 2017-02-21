@@ -21,6 +21,8 @@ youtube:
   - vOMqDcSXnT0
   - vU_x6oK437I
   - 7yTIWFZrXpg
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/3reqsj/a_chatbot_is_better_than_a_ui_for_a_microservice/
 ---
 
 A chatbot (or [chatterbot](https://en.wikipedia.org/wiki/Chatterbot), as Wikipedia says)

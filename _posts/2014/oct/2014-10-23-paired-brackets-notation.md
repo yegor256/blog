@@ -13,6 +13,8 @@ keywords:
   - indentation in php
   - indentation in ruby
   - indentation in c++
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/2k2wdo/paired_brackets_notation/
 ---
 
 Here is a notation rule I'm using in Java code:

@@ -16,6 +16,8 @@ keywords:
   - java send email html
   - java email api
   - java email send sdk
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/2llw2x/how_immutability_helps_in_object_design/
 book: elegant-objects 2.6
 youtube:
   - KwP7Ay9Z-hc

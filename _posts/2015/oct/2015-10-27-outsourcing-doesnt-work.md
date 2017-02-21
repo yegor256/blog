@@ -14,6 +14,9 @@ keywords:
   - why outsourcing is bad
   - why does outsourcing fail
   - software outsourcing
+social:
+  - hackernews: https://news.ycombinator.com/item?id=10463195
+  - reddit: https://www.reddit.com/r/programming/comments/3qgr7o/why_software_outsourcing_doesnt_work_anymore/
 youtube:
   - 9j5pq71BS5U
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/the-godfather-ii.jpg

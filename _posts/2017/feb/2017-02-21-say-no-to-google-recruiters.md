@@ -14,6 +14,9 @@ keywords:
   - IT jobs
   - find a job
   - how to find a job
+social:
+  - hackernews: https://news.ycombinator.com/item?id=13696004
+  - reddit: https://www.reddit.com/r/programming/comments/5vc1ul/why_i_dont_talk_to_google_recruiters/
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg
 jb_picture:
   caption: The Deer Hunter (1978) by Michael Cimino

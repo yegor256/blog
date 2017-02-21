@@ -17,6 +17,8 @@ keywords:
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
   - Spanish: https://ixmanuel.gitbooks.io/pensando-en-objectos/content/
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/2mw8mp/seven_virtues_of_a_good_object/
 book: elegant-objects 2.3
 youtube:
   - WSgP85kr6eU
