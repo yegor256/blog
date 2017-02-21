@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Don't Talk to Google Recruiters"
-date: 2017-01-10
+date: 2017-02-21
 place: Odessa, Ukraine
 tags: career mood
 description: |
