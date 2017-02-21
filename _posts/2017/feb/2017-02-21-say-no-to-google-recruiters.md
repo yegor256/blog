@@ -92,18 +92,20 @@ expert," we would never have gotten any further and would not have wasted our ti
 Clearly, I'm not an expert in algorithms. There is no point in giving
 me binary-tree-traversing questions; I don't know those answers
 and will never be interested in learning them. I'm trying to be an expert
-in something else, like object-oriented design, for example.
+in something else, like [object-oriented design]({% pst 2016/nov/2016-11-29-eolang %}),
+for example.
 
 {% quote There is no point in giving me binary-tree-traversing questions; I don't know those answers and will never be interested in learning them. %}
 
 There was a clear mismatch between my profile and the expectations of
 the interviewers. I don't blame them, and I don't blame her. They
-all were just <del>slaves</del> employees. I blame myself for not setting
+all were just <del>slaves</del>
+[employees]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). I blame myself for not setting
 this all straight at the very beginning.
 
 I should have told her that I didn't want to be interviewed by _some_
 programmers, because I would most certainly fail. There was no need to try. I wanted to be interviewed
-by the person who really needs me: my future boss. That person will
+by the person who really _needed_ me: my future boss. That person will
 understand my profile and won't ask pointless questions about algorithms, simply because
 he or she will know what my duties will be and what kind of problems
 I will be capable of solving, if they hired me.
