@@ -23,7 +23,8 @@ jb_picture:
 
 At [Teamed.io](http://www.teamed.io), we've been getting
 about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) every day from programmers who want to work
-with us. We don't do video or online coding interviews. We don't
+with us. We don't do video or online
+[coding interviews]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}). We don't
 ask you to solve any puzzles or demonstrate your
 algorithm-writing abilities. Moreover, when we decide not to
 hire you, we honestly and openly explain why. And we almost

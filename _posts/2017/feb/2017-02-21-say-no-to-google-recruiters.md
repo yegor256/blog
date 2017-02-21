@@ -7,21 +7,22 @@ tags: career mood
 description: |
   Thanks to a recruiting process that left a bad taste
   in my mouth, I refuse to accept any further interviews
-  from a certain large tech company unless they are on my terms.
+  from large tech companies unless they are on my terms.
 keywords:
   - recruiters
   - recruiting
   - IT jobs
   - find a job
   - how to find a job
-image: ...
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg
 jb_picture:
-  caption: ...
+  caption: The Deer Hunter (1978) by Michael Cimino
 ---
 
 This is a real story, and it's not only about Google. I'm getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
-find me somehow, most likely through this blog or my GitHub account.
+find me somehow, most likely through this blog, my
+[books](/books.html), or my [GitHub account](https://github.com/yegor256).
 They always start with "We're so impressed by your profile" and finish with
 "Let's schedule an interview." I always reply with the same text, and they
 always disappear, only to come back in a few months under a different name.
@@ -97,7 +98,7 @@ all were just <del>slaves</del> employees. I blame myself for not setting
 this all straight at the very beginning.
 
 I should have told her that I didn't want to be interviewed by _some_
-programmers, because I would most certainly fail. No need to try. I wanted to be interviewed
+programmers, because I would most certainly fail. There was no need to try. I wanted to be interviewed
 by the person who really needs me: my future boss. That person will
 understand my profile and won't ask pointless questions about algorithms, simply because
 he or she will know what my duties will be and what kind of problems
