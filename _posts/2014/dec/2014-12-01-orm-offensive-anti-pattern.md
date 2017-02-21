@@ -327,7 +327,7 @@ final class PgPosts implements Posts {
             public Post map(final ResultSet rset) {
               return new PgPost(
                 this.dbase,
-                rset.getInteger(1)
+                rset.getInt(1)
               );
             }
           }
@@ -447,7 +447,7 @@ final class ConstPgPosts implements Posts {
               return new ConstPost(
                 new PgPost(
                   ConstPgPosts.this.dbase,
-                  rset.getInteger(1)
+                  rset.getInt(1)
                 ),
                 Utc.getTimestamp(rset, 2),
                 rset.getString(3)
