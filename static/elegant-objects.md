@@ -499,7 +499,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
 
 Feb 6, 2017:
 Good news, the second volume is ready (208 pages). Now it's time to select
-the [team of reviewers](/eo-vol2-reviewers.html), ship the draft to them, collect their opinions
+the team of reviewers, ship the draft to them, collect their opinions
 and publish the book. Hopefully, it will be available on Amazon before
 March 10. Here is my offer to all new readers of this new book. If you write
 a decent review about the book (not necessarily positive,
