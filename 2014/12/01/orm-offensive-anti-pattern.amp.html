@@ -345,7 +345,7 @@ inside objects. Let's start with <code>Posts</code> and implement it in class
             public Post map(final ResultSet rset) {
               return new PgPost(
                 this.dbase,
-                rset.getInteger(1)
+                rset.getInt(1)
               );
             }
           }
@@ -457,7 +457,7 @@ the "constant" objects:</p>
               return new ConstPost(
                 new PgPost(
                   ConstPgPosts.this.dbase,
-                  rset.getInteger(1)
+                  rset.getInt(1)
                 ),
                 Utc.getTimestamp(rset, 2),
                 rset.getString(3)
