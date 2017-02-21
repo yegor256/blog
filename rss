@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-21T12:45:49+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-21T15:13:16+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
 find me somehow, most likely through this blog, my
 &lt;a href=&quot;/books.html&quot;&gt;books&lt;/a&gt;, or my &lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub account&lt;/a&gt;.
@@ -37,6 +37,8 @@ that said they were so impressed by my profile and couldn&amp;#39;t wait
 to start working with me. They needed me, nobody else. I was naive, and the
 message did flatter me.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;They paid for my ticket to fly there and a night in a 5-star hotel. I was impressed.&lt;/aside&gt;
+
 &lt;p&gt;We scheduled an interview in the head office in Seattle. They paid for my ticket to fly
 there and a night in a 5-star hotel. I was impressed. They definitely were
 interested. So was I.&lt;/p&gt;
@@ -72,6 +74,8 @@ Clearly, I&amp;#39;m not an expert in algorithms. There is no point in giving
 me binary-tree-traversing questions; I don&amp;#39;t know those answers
 and will never be interested in learning them. I&amp;#39;m trying to be an expert
 in something else, like object-oriented design, for example.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;There is no point in giving me binary-tree-traversing questions; I don&amp;#39;t know those answers and will never be interested in learning them.&lt;/aside&gt;
 
 &lt;p&gt;There was a clear mismatch between my profile and the expectations of
 the interviewers. I don&amp;#39;t blame them, and I don&amp;#39;t blame her. They
