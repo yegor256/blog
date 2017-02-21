@@ -56,6 +56,8 @@ that said they were so impressed by my profile and couldn't wait
 to start working with me. They needed me, nobody else. I was naive, and the
 message did flatter me.
 
+{% quote They paid for my ticket to fly there and a night in a 5-star hotel. I was impressed. %}
+
 We scheduled an interview in the head office in Seattle. They paid for my ticket to fly
 there and a night in a 5-star hotel. I was impressed. They definitely were
 interested. So was I.
@@ -91,6 +93,8 @@ Clearly, I'm not an expert in algorithms. There is no point in giving
 me binary-tree-traversing questions; I don't know those answers
 and will never be interested in learning them. I'm trying to be an expert
 in something else, like object-oriented design, for example.
+
+{% quote There is no point in giving me binary-tree-traversing questions; I don't know those answers and will never be interested in learning them. %}
 
 There was a clear mismatch between my profile and the expectations of
 the interviewers. I don't blame them, and I don't blame her. They
