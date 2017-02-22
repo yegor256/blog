@@ -38,7 +38,13 @@ module Jekyll
       xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
-        width, height = FastImage.size(File.join(Dir.pwd, src))
+        path = src
+        if !src.start_with?('http://') and !src.start_with?('https://')
+          path = File.join(Dir.pwd, path)
+        else
+        end
+        width, height = FastImage.size(path)
+        raise "Can't calculate size of #{path}" if !width
         f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
       end
       xml.xpath('//comment()').remove
