@@ -6,6 +6,7 @@ description: |
   future, this page will summarize my efforts; all
   books will be available on Amazon.
 permalink: books.html
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/elegant-objects/cover.png
 keywords:
   - books about object-oriented programming
   - books about oop
