@@ -38,12 +38,7 @@ module Jekyll
       xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
-        path = src
-        if !path.start_with?('http://') and !path.start_with?('https://')
-          path = File.join(Dir.pwd, path)
-        else
-        end
-        width, height = FastImage.size(path)
+        width, height = size(src)
         raise "Can't calculate size of #{path}" if !width
         f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
       end
@@ -67,6 +62,16 @@ module Jekyll
       File.write(target, @html)
       true
     end
+
+    private
+
+    def size(src)
+      path = src
+      if !path.start_with?('http://') and !path.start_with?('https://')
+        path = File.join(Dir.pwd, path)
+      end
+      FastImage.size(path)
+    end
   end
   class AmpGenerator < Generator
     priority :low
@@ -79,7 +84,7 @@ module Jekyll
         payload['page'] = page
         payload['doc'] = doc
         if page['image']
-          payload['image_width'], payload['image_height'] = FastImage.size(File.join(Dir.pwd, page['image']))
+          payload['image_width'], payload['image_height'] = size(page['image'])
           payload['image_src'] = page['image']
         else
           payload['image_width'] = 1400
