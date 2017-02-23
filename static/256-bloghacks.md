@@ -70,7 +70,7 @@ Raul Estrada,
 Andriy Kryvtsun,
 Mariana Lutsiuk,
 Marcos Douglas B. Santos,
-Matheus Gontijo,
+[Matheus Gontijo](https://twitter.com/mhgontijo),
 Alexey Semenyuk,
 Kevin Sahin,
 Danny Derakhshan. There are 214 pages, 46,441 words, and
