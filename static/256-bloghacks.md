@@ -33,6 +33,13 @@ ISBN: 1537688669.<br/>
 
 <!-- Reviews for Google -->
 
+Feb 23, 2017:
+I've got the first full-size review of the book from one of its
+main reviewers/contributors (Wojciech Adam Koszek). I will add more reviews
+to this list once they show up:
+
+  * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
+
 Feb 16, 2017:
 Added [Twitter Cards](https://dev.twitter.com/cards/types/summary-large-image) to all pages,
 in `default.html`.

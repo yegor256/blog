@@ -39,7 +39,7 @@ module Jekyll
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
         path = src
-        if !src.start_with?('http://') and !src.start_with?('https://')
+        if !path.start_with?('http://') and !path.start_with?('https://')
           path = File.join(Dir.pwd, path)
         else
         end
