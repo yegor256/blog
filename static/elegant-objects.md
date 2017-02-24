@@ -74,7 +74,7 @@ Feb 23, 2017:
 [Антон Архипов](https://twitter.com/antonarhipov),
 [Антон Черноусов](https://twitter.com/golodnyj),
 [Алексей Абашев](https://twitter.com/abashev) и
-[Виктор Гамов](https://twitter.com/gamussa)
+[Виктор Гамов](https://twitter.com/gamussa).
 Купить ее можно, написав письмо на [shop@yegor256.com](mailto:shop@yegor256.com).
 Повторого тиража на русском языке не будет! Тексты ревью всех пяти
 участников подкаста я выложу онлайн сразу после продажи последнего
