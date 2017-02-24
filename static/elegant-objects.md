@@ -65,7 +65,7 @@ Feb 24, 2017:
 Feb 23, 2017:
 Русская версия первого тома опубликована при поддержке подкаста
 ["Разбор Полетов"](http://razbor-poletov.com/)
-и ограниченным тиражем в 128 экземпляров. Это не книга
+и ограниченным тиражем в **128 экземпляров**. Это не книга
 на русском языке, а английский оригинальный текст, дополненный
 вступлениями на русском. Объем книги 330 страниц (оригинальный
 английский вариант содержит только 229 страниц). Также, это издание
@@ -84,7 +84,7 @@ Feb 23, 2017:
 
 Feb 7, 2017:
 This is the full list of everybody who expressed
-the desire to become a reviewer of the second volume of
+the desire to become a reviewer of the **2nd volume** of
 Elegant Objects. I have to select up to 12 people, please help me with your
 vote. What does it mean to be a reviewer? It's easy:
 
