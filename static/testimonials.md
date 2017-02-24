@@ -61,6 +61,8 @@ you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor
 
 "Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
 
+"You're everything that's wrong with tech."&mdash;[Robert P.](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3170487895)
+
 "Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
 "Probably the biggest pile of stinky cow shit I have ever read"&mdash;[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
