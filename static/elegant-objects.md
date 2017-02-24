@@ -41,6 +41,9 @@ style: |
     font-size: .8em;
     line-height: 1em;
   }
+  .rv .votes {
+    display: block;
+  }
 ---
 
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
@@ -56,10 +59,27 @@ ISBN: 1519166915.<br/>
 
 <!--more-->
 
+Feb 23, 2017:
+Русская версия первого тома опубликована при поддержке подкаста
+"Разбор Полетов" и ограниченным тиражем в 128 экземпляров. Это не книга
+на русском языке, а английский оригинальный текст, дополненный
+вступлениями на русском. Объем книги 330 страниц (оригинальный
+английский вариант содержит только 229 страниц). Также, это издание
+начинается с ревью, сделанного пятью участниками подкаста (в
+порядке получения ревью):
+[Барух Садогурский](https://twitter.com/jbaruch)
+[Антон Архипов](https://twitter.com/antonarhipov)
+[Антон Черноусов](https://twitter.com/golodnyj)
+[Алексей Абашев](https://twitter.com/abashev)
+[Виктор Гамов](https://twitter.com/gamussa)
+Купить ее можно, написав письмо на [shop@yegor256.com](mailto:shop@yegor256.com).
+Повторого тиража на русском языке не будет! Тексты ревью всех пяти
+участников подкаста я выложу онлайн сразу после продажи последнего
+экземпляра этого тиража. Цена та же: $35.
+
 Feb 7, 2017:
-This is the full list of everybody who submitted
-[this form](https://docs.google.com/forms/d/1RaAN3JoeDxcWU8HaBz4EI-WISt1rKf3FywQLFWn0unk)
-and expressed the desire to become a reviewer of the second volume of
+This is the full list of everybody who expressed
+the desire to become a reviewer of the second volume of
 Elegant Objects. I have to select up to 12 people, please help me with your
 vote. What does it mean to be a reviewer? It's easy:
 
@@ -92,18 +112,6 @@ to your application, please [email me](mailto:blog@yegor256.com).
 ">Show the list</a>
 
 <div id="vol2-reviewers">
-  <form class="unprintable" action="http://formspree.io/vote@yegor256.com" method="POST"><fieldset id="vote-form">
-    <input type="hidden" name="_next" value="http://www.yegor256.com/elegant-objects.html"/>
-    <input type="hidden" name="_subject" value="vote for reviewer"/>
-    <input type="hidden" name="_format" value="text"/>
-    <label for="email">Your email</label>
-    <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
-    <label for="reviewer">Who do you vote for?</label>
-    <input id="reviewer" class="field field-text" name="reviewer" size="35" maxlength="255" type="text" required="required"/>
-    <label for="vote">&nbsp;</label>
-    <button id="vote" class="field">Vote</button>
-    <span class="note">You will also be subscribed to my mailing list</span>
-  </fieldset></form>
   <div class="rv">
     <a href="https://www.linkedin.com/in/mdbs99">
       <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAIwAAAAJDA0ZjQ2OGE2LWU4NzUtNGQ4NS04OGE3LTNhZjI3NjViODcyNA.jpg"
@@ -113,7 +121,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I try to make all my code object-oriented. I have a blog about
     OOP and I have over 15 years of systems development experience.
     I was a reviewer of Bloghacks too — last Yegor's book published.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/johnpage76">
@@ -127,7 +135,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     of Yegor's OO publications and have some knowledge and strong
     opinions in that area. (Though I certainly don't have all the answers
     I'm irritatingly good at raising the questions.)</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/kkaratsetski">
@@ -137,7 +145,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Kiryl Karatsetski</span>
     <span class="text">I always look for the best solution of engineering tasks.
     Software Engineer in Fitbit.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/bartoszbilicki">
@@ -151,7 +159,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
       Having read >60 IT books, I know how to distinguish useful
       concepts from theorycrafting and marketing bull****.
       You will receive honest and straight review.</span>
-      <a href="#vote-form" class="vote">vote</a>
+      <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/silasreinagel">
@@ -161,7 +169,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Silas Reinagel</span>
     <span class="text">I am a passionate Object-Oriented Programmer, with excellent
     writing/communication skills.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://in.linkedin.com/in/abhishekmanocha">
@@ -173,7 +181,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     the OOPs for last 12 years, hold a Technical Architect position,
     want to share my knowledge in tangible. Second, I resonate with
     Yegor on many points. I am follower of his blog since long.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/miroslavgenov">
@@ -183,7 +191,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Miroslav Genov</span>
     <span class="text">Java Developer for most then 10 years of experience
     that values Good Design and clean codebases. </span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
@@ -193,7 +201,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Carlos Miranda</span>
     <span class="text">I have been working for Teamed.io projects for two years.
     Having worked with his projects, I am very familiar with Yegor's methods. </span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/quver">
@@ -203,7 +211,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Yvgen Troshchiy</span>
     <span class="text">I am enthusiastic specialist with big experience
     in different projects and companies.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://ie.linkedin.com/in/francesco-bianchi-4b49784">
@@ -216,7 +224,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     some interesting fights with him over his brilliant posts.
     I've already reviewed 10+ technical books published by Manning
     and currently collaborate with them as Senior Technical Development Editor.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://ca.linkedin.com/in/shawn-fuller-11b5267">
@@ -233,7 +241,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     "I’m improving. Now I can sometimes remember that I have forgotten something."
     So it is with my OOP abilities. I would bring a combination
     enthusiasm and naïveté to reading your manuscript.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/bakkiaraj">
@@ -245,7 +253,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     concepts. It might be crazy for you but it does really works.
     I am long lover for OOPs programming, Making SW Build and Test
     automation tools with Perl + Moose.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/oksana-semenkova-99622bab">
@@ -257,7 +265,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     to help you do your book the best. The themes from it
     are very interesting and useful for future development
     and evolution of Java language and its infrastructure</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://github.com/DronMDF">
@@ -268,7 +276,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I want to use right OOP. I want to learn other
     for right OOP. I want to understand some moments in
     right OOP and help to make you book better.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="www.linkedin.com/in/settyblue">
@@ -279,7 +287,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I am a graduate student and I want master Java
     in the way the book 'Elegant Objects' narrate and not
     the way the academia teaches me.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://linkedin.com/in/0x13a">
@@ -289,7 +297,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Diego Mariani</span>
     <span class="text">Because I read all of your articles and I can't agree more.
     I'm obsessed with true object oriented programming and software architecture </span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.facebook.com/polart.studio">
@@ -299,7 +307,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Victor Bugaenko</span>
     <span class="text">Because I really believe in EO conception and want
     to make it popular in Russia. http://www.eolang.ru/</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/patrizio-colomba-03628170/">
@@ -308,7 +316,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Patrizio Colomba</span>
     <span class="text">OP Passionate and Coder!</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/raulestradaaparicio">
@@ -318,7 +326,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Raul Estrada Aparicio</span>
     <span class="text">I reviewed 256 Bloghacks. I'm the author of
     books about S.M.A.C.K. stack with Apress and Packt Publishing.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/jonathanblakes">
@@ -332,7 +340,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     be based on the attempted application of these ideas to a large
     10+ year old Java (6+) and Jython/Python codebase for a scientific
     data acquisition client-server application used by 100+ staff and 1000+ users 24/7.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/lrozenblyum">
@@ -341,7 +349,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Leonid Rozenblyum</span>
     <span class="text">interesting in reviewing and improving a cool book</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/vassilevsky/">
@@ -351,7 +359,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Ilya Vassilevsky</span>
     <span class="text">My superpower is spotting errors. I
     reported 5 errors in (published) Volume 1.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/pchmielowski">
@@ -363,7 +371,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     first test; there is no permanent place in the world for ugly
     mathematics.” (Godfrey Harold Hardy). Therefore we HAVE TO
     learn how to write a beautiful code.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/richardfloodlfm?trk=hp-identity-name">
@@ -376,7 +384,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     I produce has been heavily influenced by Yegor's teachings.
     I would be honored to have the opportunity to help polish his material,
     ready to be viewed by the public.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/nikem">
@@ -385,7 +393,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name" class="name">Nikita Salnikov-Tarnovski</span>
     <span class="text">I hope to raise many objections so you can polish your arguments</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://at.linkedin.com/in/paulroho">
@@ -396,7 +404,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="text">I bought (at a horrendous price) and read Vol1 and
     liked it for some thoughts and totally dismiss others. Want to
     contribute a critical voice.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/sebastian-schwarz-27b72083">
@@ -412,7 +420,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     Clean Code, so for me, all these rules are basics and standard.
     I would love to be part of the Vol2 review team, to contribute
     my passion to the community, thanks for your vote!</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/akryvtsun">
@@ -421,7 +429,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Andriy Kryvtsun</span>
     <span class="text">I like to write efficient and elegant code</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/ricardojob">
@@ -431,7 +439,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Ricardo de Sousa Job</span>
     <span class="text">I live in Brazil and I have  your first book. I work
     with development about nine years, I'm enthusiast for OO. </span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/alayor3/">
@@ -440,7 +448,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Alonso Ayala Ortega</span>
     <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/igor-dmitriev-3a29b15a">
@@ -449,7 +457,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Igor Dmitriev</span>
     <span class="text">I pay attention to details. I'm an excellent reviewer.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/pholser">
@@ -458,7 +466,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Paul Holser</span>
     <span class="text">OO expertise, clean code, fastidious proofreading</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://pl.linkedin.com/in/mkordas">
@@ -467,7 +475,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Michał Kordas</span>
     <span class="text">My speciality is code quality. On daily basis I need to challenge corporate, procedural "clean code" approach with real object oriented solutions.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/anton-rybochkin-93950b10a">
@@ -476,7 +484,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Anton Rybochkin</span>
     <span class="text">I sleep with an editor</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://br.linkedin.com/in/fabriciofx">
@@ -485,7 +493,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Fabrício Barros Cabral</span>
     <span class="text">I'm passionate for Object-Oriented Programming and details. I've 10 years experience as researcher and developer and as lecturer, I'm always looking for the best way to explain knowledge for all people.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/jameskirkux">
@@ -494,7 +502,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">James Kirk</span>
     <span class="text">I am a steadfast supporter of software engineering best practices (TDD, SOLID, DRY) and think that violations of them should be punishable by extended Nickelback listening sessions.</span>
-    <a href="#vote-form" class="vote">vote</a>
+    <span class="votes">? votes</span>
   </div>
 </div>
 
