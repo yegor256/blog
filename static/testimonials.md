@@ -59,6 +59,8 @@ you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor
 
 "You are a moron that probably does not work in any real application ever, and I hope you won't"&mdash;[Peter V.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
 
+"Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
+
 "Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
 "Probably the biggest pile of stinky cow shit I have ever read"&mdash;[@migrrrr](https://twitter.com/migrrrr/status/771689354913873920)
