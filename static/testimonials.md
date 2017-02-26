@@ -55,6 +55,10 @@ bedroom and play with your dick."&mdash;[Martin L.](http://www.yegor256.com/2014
 "If I would be the one to decide what is irresponsible coding
 you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html#comment-2376244941)
 
+"Do not waste your money on the book; It will teach you nothing&mdash;or worse,
+it may teach you to hold on to absurd, opinionated, borderline superstitious
+programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-reviews/R6OIRSV3GP402/ref=cm_cr_arp_d_viewpnt?ie=UTF8&ASIN=1519166915#R6OIRSV3GP402)
+
 "You're a smug, pontificating prick."&mdash;anonymous
 
 "You are a moron that probably does not work in any real application ever, and I hope you won't"&mdash;[Peter V.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
