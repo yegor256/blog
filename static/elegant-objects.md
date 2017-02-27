@@ -83,6 +83,8 @@ If you see yourself in the list, please [email me](mailto:blog@yegor256.com)
 and we'll discuss practical
 details. I'm ready to mail you the manuscript in a few days.
 
+{% badge /images/books/elegant-objects/cover-razbor-poletov.png 125 %}
+
 Feb 23, 2017:
 Русская версия первого тома опубликована при поддержке подкаста
 ["Разбор Полетов"](http://razbor-poletov.com/)
