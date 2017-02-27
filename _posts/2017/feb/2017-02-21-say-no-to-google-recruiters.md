@@ -63,7 +63,7 @@ message did flatter me.
 {% quote They paid for my ticket to fly there and a night in a 5-star hotel. I was impressed. %}
 
 We scheduled an interview in the head office in Seattle. They paid for my ticket to fly
-there and a night in a 5-star hotel. I was impressed. They definitely were
+there (from San Francisco) and a night in a 5-star hotel. I was impressed. They definitely were
 interested. So was I.
 
 What happened at the interview was, most probably, very close to what
