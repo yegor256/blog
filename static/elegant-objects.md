@@ -103,7 +103,7 @@ Feb 23, 2017:
 Повторного тиража на русском языке не будет! Тексты ревью всех пяти
 участников подкаста я выложу онлайн сразу после продажи последнего
 экземпляра этого тиража. Цена: $40. Для участников конференций, где
-я выступаю: $20.
+я выступаю: $20 (бывают [еще скидки](/books.html)).
 
 Feb 7, 2017:
 This is the full list of everybody who expressed
@@ -514,7 +514,7 @@ and publish the book. Hopefully, it will be available on Amazon before
 March 10. Here is my offer to all new readers of this new book. If you write
 a decent review about the book (not necessarily positive,
 but long enough for a detailed review) and post it on your blog, Amazon, and
-GoodReads I will refund you **$32**.
+GoodReads I will refund you **$32** (read more about [available discounts](/books.html)).
 
 Nov 20, 2016:
 I've got over 50 emails from those who are interested in reviewing
