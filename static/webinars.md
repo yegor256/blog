@@ -19,7 +19,7 @@ style: |
     width: 192px;
     height: 108px;
     display: block;
-    margin-top: 2em;
+    margin-top: 4em;
     filter: grayscale(100%);
   }
 ---

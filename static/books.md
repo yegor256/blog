@@ -81,4 +81,5 @@ Pay attention that all books are sold at
 and
 [Amazon.jp](https://www.amazon.co.jp/Yegor-Bugayenko/e/B01AM1QMDK/).
 Choose the one that is the closest to you distance wise.
-
+Keep in mind that I sell [only]({% pst 2016/nov/2016-11-09-why-no-ebooks %})
+printed books, no digital ones.
