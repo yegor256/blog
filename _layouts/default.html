@@ -50,11 +50,11 @@ layout: compress
   </head>
   <body>
     <div class="wrapper">
-      <aside class="header-toggle unprintable" id="header-toggle" title="show head menu"
+      <aside class="header-toggle unprintable" id="header-toggle" title="Show head menu"
         onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
       <header class="header" id="header">
         <div class="face">
-          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
+          <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>subscribe</span></a>
           <a href="/about-me.html">
             <img src="//cf.jare.io/?u={{ site.url }}/images/yegor-bugayenko-192x192.png" class="photo"
               alt="{{ site.author.name }}"/>
@@ -62,34 +62,48 @@ layout: compress
         </div>
         <nav>
           <ul class="menu social notranslate">
-            <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="/rss.xml" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="my StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="my Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
-            <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow" title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="Podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="Podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow"
+              title="Follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="/rss.xml" re="nofollow"
+              title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow"
+              title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow"
+              title="My StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow"
+              title="Follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow"
+              title="Follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow"
+              title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow"
+              title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow"
+              title="My Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li>
+            <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow"
+              title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow"
+              title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://soundcloud.com/yegor256" rel="nofollow"
+              title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow"
+              title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:blog@yegor256.com" rel="nofollow"
+              title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
           </ul>
           <ul class="menu">
-            <li><a href="/" title="home page">home</a></li>
-            <li><a href="/best.html" title="best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;{{ site.posts.size }}</a></li>
-            <li><a href="/webinars.html" title="webinars">webinars</a></li>
-            <li><a href="/talks.html" title="talks">talks</a></li>
-            <li><a href="/books.html" title="books">books</a></li>
-            <li><a href="/papers.html" title="papers">papers</a></li>
-            <li><a href="/pets.html" title="pets">pets</a></li>
-            <li><a href="/award.html" title="software quality award">award</a></li>
-            <li><a href="/testimonials.html" title="what people say about me">testimonials</a></li>
-            <li><a href="http://ru.yegor256.com/" title="о политике" class="politics">о политике</a></li>
-            <li><a href="/video-qa.html" title="video Q&amp;A">video Q&amp;A</a></li>
+            <li><a href="/" title="Home page">home</a></li>
+            <li><a href="/best.html" title="Best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html" title="Blog contents">all&#160;{{ site.posts.size }}</a></li>
+            <li><a href="/webinars.html" title="Webinars">webinars</a></li>
+            <li><a href="/talks.html" title="Talks">talks</a></li>
+            <li><a href="/books.html" title="Books">books</a></li>
+            <li><a href="/papers.html" title="Papers">papers</a></li>
+            <li><a href="/pets.html" title="Pets">pets</a></li>
+            <li><a href="/award.html" title="Software quality award">award</a></li>
+            <li><a href="/testimonials.html" title="What people say about me">testimonials</a></li>
+            <li><a href="http://ru.yegor256.com/" title="О политике" class="politics">о политике</a></li>
+            <li><a href="/video-qa.html" title="Video Q&amp;A">video Q&amp;A</a></li>
           </ul>
         </nav>
         <div class="search">
@@ -98,9 +112,9 @@ layout: compress
             <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
-              onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search" autocomplete="off"/>
+              onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/>
             <input type="image" src="/images/google-search-icon.svg" class="google"
-              title="search via Google" alt="search via Google"/>
+              title="Search via Google" alt="Search via Google"/>
           </form>
         </div>
         <div class="hot">
