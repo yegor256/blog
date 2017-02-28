@@ -23,6 +23,9 @@ youtube:
   - aER4uwyFbqQ
   - 63tS3HNmhiE
   - 03PXmPc7Q3g
+social:
+  - hackernews: https://news.ycombinator.com/item?id=8686346
+  - reddit: https://www.reddit.com/r/programming/comments/2nx4vq/orm_is_an_offensive_antipattern/
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/11/broken-object.png
 jb_picture:
   caption: Vinni-Pukh (1969) by Fyodor Khitruk
@@ -327,7 +330,7 @@ final class PgPosts implements Posts {
             public Post map(final ResultSet rset) {
               return new PgPost(
                 this.dbase,
-                rset.getInteger(1)
+                rset.getInt(1)
               );
             }
           }
@@ -447,7 +450,7 @@ final class ConstPgPosts implements Posts {
               return new ConstPost(
                 new PgPost(
                   ConstPgPosts.this.dbase,
-                  rset.getInteger(1)
+                  rset.getInt(1)
                 ),
                 Utc.getTimestamp(rset, 2),
                 rset.getString(3)

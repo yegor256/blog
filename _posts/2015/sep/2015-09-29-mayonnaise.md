@@ -22,7 +22,9 @@ jb_picture:
 That's what a character played by actor Bruce Willis said to Robert DeNiro's
 movie producer character in Barry Levinson's brilliant film
 [What Just Happened](http://www.imdb.com/title/tt0486674/). I second that.
-Producers, recruiters, managers, real estate agents,
+Producers,
+[recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}),
+managers, real estate agents,
 sales agents, lawyers, and [outstaffers](http://english.stackexchange.com/questions/103448/is-outstaffing-a-real-word)&mdash;what do they all have in common?
 They are middlemen standing between money and the
 [proletariat](https://en.wikipedia.org/wiki/Proletariat), taking a huge percentage
@@ -37,12 +39,16 @@ everywhere else.
 
 {% jb_picture_body %}
 
-Seriously, look at **IT recruiters**, for example. To find a programmer, one has to pay
+Seriously, look at [**IT recruiters**]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}),
+for example. To find a programmer, one has to pay
 about $30K (in Silicon Valley, if a programmer's salary is, say, $120K a year)
 to a recruiter. $30,000! What will this money be spent on? Or let me put it this way:
 How much software will I get for this money? Let me put it even better:
 Why don't I give this money to the programmer directly as a bonus for
-switching companies? Why do **we** need this recruiter between us&mdash;me and the programmer I'm going to hire? Can't we use this $30,000 more effectively?
+switching companies? Why do **we** need this
+[recruiter]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
+between us&mdash;me and the programmer I'm going to hire?
+Can't we use this $30,000 more effectively?
 
 Because software systems are not powerful enough yet? Because I can't
 find a programmer with a few clicks and I have to delegate this
@@ -63,7 +69,9 @@ There are professional certifications that show how strong
 a candidate's skills are. And there are plenty of other avenues.
 
 On the other hand, these tools are not actively used by
-the majority of programmers and software companies&mdash;mostly because IT recruiters stay between us, **stealing** our money
+the majority of programmers and software companies&mdash;mostly because
+[IT recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
+stay between us, **stealing** our money
 and protecting that position for themselves.
 Just like taxi companies remain between passengers and drivers,
 or real estate agents get in between house owners and house buyers,

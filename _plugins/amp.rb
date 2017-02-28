@@ -38,7 +38,8 @@ module Jekyll
       xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
-        width, height = FastImage.size(File.join(Dir.pwd, src))
+        width, height = Jekyll.image_size(src)
+        raise "Can't calculate size of #{path}" if !width
         f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
       end
       xml.xpath('//comment()').remove
@@ -73,7 +74,7 @@ module Jekyll
         payload['page'] = page
         payload['doc'] = doc
         if page['image']
-          payload['image_width'], payload['image_height'] = FastImage.size(File.join(Dir.pwd, page['image']))
+          payload['image_width'], payload['image_height'] = Jekyll.image_size(page['image'])
           payload['image_src'] = page['image']
         else
           payload['image_width'] = 1400
@@ -91,5 +92,13 @@ module Jekyll
       end
       puts "#{total} AMP pages generated in #{(Time.now - start).round(2)}s"
     end
+  end
+
+  def self.image_size(src)
+    path = src
+    if !path.start_with?('http://') and !path.start_with?('https://')
+      path = File.join(Dir.pwd, path)
+    end
+    FastImage.size(path)
   end
 end

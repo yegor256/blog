@@ -6,6 +6,7 @@ description: |
   future, this page will summarize my efforts; all
   books will be available on Amazon.
 permalink: books.html
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/elegant-objects/cover.png
 keywords:
   - books about object-oriented programming
   - books about oop
@@ -58,3 +59,27 @@ To be published in August 2017.
 
 <div class="clear"></div>
 To be continued...
+
+## How to Get a Discount
+
+All books have the same price of $40.96 (plus shipment from Amazon).
+You have a few options if you want to get them cheaper than that:
+
+  * Attend a conference where I'm speaking. In most cases I have a few
+    books with me. If I don't, you just [email me](mailto:shop@yegor256.com) later and attach
+    a photo of your conference badge. The price in that case will be $20.00 plus
+    shipment, which in most cases is $7.00.
+
+  * You can buy a book for its full price on Amazon and then
+    write a blog post _and_ an Amazon review (both honest, not
+    necessarily positive). I will send you back $32.00 (via PayPal or check).
+
+Pay attention that all books are sold at
+[Amazon.com](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK/),
+[Amazon.co.uk](https://www.amazon.co.uk/Yegor-Bugayenko/e/B01AM1QMDK/),
+[Amazon.de](https://www.amazon.de/Yegor-Bugayenko/e/B01AM1QMDK/),
+and
+[Amazon.jp](https://www.amazon.co.jp/Yegor-Bugayenko/e/B01AM1QMDK/).
+Choose the one that is the closest to you distance wise.
+Keep in mind that I sell [only]({% pst 2016/nov/2016-11-09-why-no-ebooks %})
+printed books, no digital ones.

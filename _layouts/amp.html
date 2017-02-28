@@ -53,12 +53,11 @@
   <body>
     <article>
       <p class="intro">
-        This is a mobile version of the article,
-        its original content can be found
+        This is a mobile version, full one is
         <a href="{{ doc.url | prepend: site.baseurl | prepend: site.url }}">here</a>.
       </p>
       <p>
-        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80px" height="80px"
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80" height="80"
           alt="{{ site.author.name }}" class="photo"></amp-img>
       </p>
       <p>{{ site.author.name }}<br/>{{ page.date | date: "%-d %B %Y" }}</p>

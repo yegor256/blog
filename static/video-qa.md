@@ -17,7 +17,7 @@ style: |
   .vid {
     width: 30%;
     display: inline-block;
-    padding: .5em;
+    padding-right: 1em;
     vertical-align: top;
   }
   .vid img {

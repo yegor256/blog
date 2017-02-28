@@ -1,27 +1,32 @@
 ---
 layout: post
 title: "Why I Don't Talk to Google Recruiters"
-date: 2017-01-10
+date: 2017-02-21
 place: Odessa, Ukraine
 tags: career mood
 description: |
   Thanks to a recruiting process that left a bad taste
   in my mouth, I refuse to accept any further interviews
-  from a certain large tech company unless they are on my terms.
+  from large tech companies unless they are on my terms.
 keywords:
   - recruiters
   - recruiting
   - IT jobs
   - find a job
   - how to find a job
-image: ...
+social:
+  - hackernews: https://news.ycombinator.com/item?id=13696004
+  - reddit: https://www.reddit.com/r/programming/comments/5vc1ul/why_i_dont_talk_to_google_recruiters/
+  - 4chan: http://boards.4chan.org/g/thread/59079636/dumb-java-shitskin-gets-buttblasted-because-job
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg
 jb_picture:
-  caption: ...
+  caption: The Deer Hunter (1978) by Michael Cimino
 ---
 
 This is a real story, and it's not only about Google. I'm getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
-find me somehow, most likely through this blog or my GitHub account.
+find me somehow, most likely through this blog, my
+[books](/books.html), or my [GitHub account](https://github.com/yegor256).
 They always start with "We're so impressed by your profile" and finish with
 "Let's schedule an interview." I always reply with the same text, and they
 always disappear, only to come back in a few months under a different name.
@@ -55,8 +60,10 @@ that said they were so impressed by my profile and couldn't wait
 to start working with me. They needed me, nobody else. I was naive, and the
 message did flatter me.
 
+{% quote They paid for my ticket to fly there and a night in a 5-star hotel. I was impressed. %}
+
 We scheduled an interview in the head office in Seattle. They paid for my ticket to fly
-there and a night in a 5-star hotel. I was impressed. They definitely were
+there (from San Francisco) and a night in a 5-star hotel. I was impressed. They definitely were
 interested. So was I.
 
 What happened at the interview was, most probably, very close to what
@@ -89,16 +96,20 @@ expert," we would never have gotten any further and would not have wasted our ti
 Clearly, I'm not an expert in algorithms. There is no point in giving
 me binary-tree-traversing questions; I don't know those answers
 and will never be interested in learning them. I'm trying to be an expert
-in something else, like object-oriented design, for example.
+in something else, like [object-oriented design]({% pst 2016/nov/2016-11-29-eolang %}),
+for example.
+
+{% quote There is no point in giving me binary-tree-traversing questions; I don't know those answers and will never be interested in learning them. %}
 
 There was a clear mismatch between my profile and the expectations of
 the interviewers. I don't blame them, and I don't blame her. They
-all were just <del>slaves</del> employees. I blame myself for not setting
+all were just <del>slaves</del>
+[employees]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). I blame myself for not setting
 this all straight at the very beginning.
 
 I should have told her that I didn't want to be interviewed by _some_
-programmers, because I would most certainly fail. No need to try. I wanted to be interviewed
-by the person who really needs me: my future boss. That person will
+programmers, because I would most certainly fail. There was no need to try. I wanted to be interviewed
+by the person who really _needed_ me: my future boss. That person will
 understand my profile and won't ask pointless questions about algorithms, simply because
 he or she will know what my duties will be and what kind of problems
 I will be capable of solving, if they hired me.

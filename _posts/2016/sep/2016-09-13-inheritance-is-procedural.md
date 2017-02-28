@@ -91,7 +91,7 @@ inheritance:
 class Manuscript {
   protected String body;
   void print(Console console) {
-    System.out.println(this.body);
+    console.println(this.body);
   }
 }
 class Article extends Manuscript {

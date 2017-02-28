@@ -32,9 +32,9 @@ module Yegor
         '&text=' + URI.escape("#{@title} (webinar ##{@number})") +
         '&location=' + URI.escape('YouTube Live') +
         '&details=' + URI.escape("Webinar ##{@number} by Yegor Bugayenko, click here to join: https://www.youtube.com/watch?v=#{@id}")
-      "<figure class='badge'><a href='#{CGI.escapeHTML url}'>\
+      "<figure class='badge'><a href='#{CGI.escapeHTML url}' title='Click to add this even to Google Calendar'>\
         <img src='#{Img.new('/images/calendar-icon.png', context)}'\
-        style='width:96px;max-width:100%;' alt='badge'/>
+        style='width:96px;max-width:100%;' alt='Click to add this even to Google Calendar'/>
         </a></figure>"
     end
   end

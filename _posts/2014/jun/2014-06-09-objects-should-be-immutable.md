@@ -17,6 +17,8 @@ keywords:
   - java immutable value object
   - java mutable immutable object
 book: elegant-objects 2.6
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/2ld05q/proper_objects_should_be_immutable_dont_you_think/
 related:
   - 2014/dec/2014-12-22-immutable-objects-not-dumb
   - 2014/dec/2014-12-09-immutable-object-state-and-behavior

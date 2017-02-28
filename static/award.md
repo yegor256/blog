@@ -6,6 +6,7 @@ description: |
   and properly organized open source project;
   don't hesitate to submit your application now.
 permalink: award.html
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/about/yegor-speaking.jpg
 keywords:
   - best open source projects
   - open source donation

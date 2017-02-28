@@ -16,6 +16,8 @@ keywords:
   - continuous integration problems
   - continuous integration pitfalls
   - alternative to continuous integration
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/2j9vt0/continuous_integration_is_dead/
 youtube:
   - 3IXk5yEJMIs
   - gL4XwP-EBOg

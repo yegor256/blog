@@ -3,7 +3,7 @@ layout: post
 title: "How to Handle Too-Many-Classes Problem"
 date: 2017-01-10
 place: Odessa, Ukraine
-tags: oop
+tags: oop java
 description: |
   Very often I hear that too many classes in
   object-oriented design is a problem; let's investigate

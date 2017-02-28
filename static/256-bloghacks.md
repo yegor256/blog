@@ -6,6 +6,7 @@ description: |
   blogging and vlogging and reveals all secrets
   I've learned
 permalink: 256-bloghacks.html
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/256-bloghacks/cover.png
 keywords:
   - blog hacks
   - blogging hints
@@ -31,6 +32,13 @@ ISBN: 1537688669.<br/>
 <!--more-->
 
 <!-- Reviews for Google -->
+
+Feb 23, 2017:
+I've got the first full-size review of the book from one of its
+main reviewers/contributors (Wojciech Adam Koszek). I will add more reviews
+to this list once they show up:
+
+  * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
 
 Feb 16, 2017:
 Added [Twitter Cards](https://dev.twitter.com/cards/types/summary-large-image) to all pages,

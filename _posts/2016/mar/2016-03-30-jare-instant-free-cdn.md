@@ -14,6 +14,8 @@ keywords:
   - quick CDN
   - fast CDN
   - free CDN
+social:
+  - hackernews: https://news.ycombinator.com/item?id=11394981
 ---
 
 {% badge http://www.jare.io/images/logo.svg 92 http://www.jare.io %}

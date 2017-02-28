@@ -6,6 +6,7 @@ description: |
   best practices, which help development be
   future-oriented.
 permalink: code-ahead.html
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/code-ahead/cover.png
 keywords:
   - book about software development
   - book about programming
