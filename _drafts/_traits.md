@@ -26,7 +26,8 @@ needed a lobotomy, just like David West suggested in his
 The features have different names, while most common ones are
 [traits](https://en.wikipedia.org/wiki/Trait_%28computer_programming%29) and
 [mixins](https://en.wikipedia.org/wiki/Mixin). I seriously can't understand
-how we can still call programming object-oriented when it has these features.
+how we can still call programming object-oriented when it has
+[these features](http://stackoverflow.com/questions/925609/mixins-vs-traits).
 
 <!--more-->
 
@@ -142,12 +143,50 @@ class Book
 end
 {% endhighlight %}
 
-I'm sure you already understood that they both have access to
+I'm sure you already understand that they both have access to
 the private attribute `@title` of class `Book`. They actually have
-full access to everything in the class. They litterally are
-"pieces of code," which we can inject into the class to make it more powerful and complex.
-What's wrong with this approach?
+full access to _everything_ in the class. They litterally are
+"pieces of code," which we _inject_ into the class to make it more
+powerful and complex. What's wrong with this approach?
 
-Traits are a bit [different](http://stackoverflow.com/questions/925609/mixins-vs-traits)
-than mixins, but we must not really care. I believe we must just stay
-away from all of them, no matter what their names are.
+The same as with
+[annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
+[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+and [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})&mdash;they
+tear objects apart, placing pieces of functionality somewhere,
+where objects don't see them.
+
+In case of mixins the functionality is
+in that Ruby `modules`, which make assumptions about the internal structure
+of the `Book` and the `Book` assumes that they will understand it after
+the internal structure changes. Such assumptions completely violate
+the very idea of
+[encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
+
+Such a tight coupling between mixins and object private
+
+The very obvious alternative to mixins are
+[composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %}).
+Take a look at the example given in the
+[article]({% pst 2015/feb/2015-02-26-composable-decorators %}):
+
+{% highlight java %}
+final Text text = new AllCapsText(
+  new TrimmedText(
+    new PrintableText(
+      new TextInFile(new File("/tmp/a.txt"))
+    )
+  )
+);
+{% endhighlight %}
+
+Doesn't it look very similar to what we were doing above with Ruby mixins?
+
+However, unlike mixins decorators leave objects small and cohesive, layering
+extra functionality on top of them. Mixins do
+the opposite&mdash;they make object more complex and, thanks to that, less
+readable and maintainable.
+
+I honestly believe that they are just garbage. Whoever invented them
+was very far from understanding the philosophy of object-oriented design.
