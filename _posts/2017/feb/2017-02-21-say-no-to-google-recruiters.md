@@ -14,6 +14,8 @@ keywords:
   - IT jobs
   - find a job
   - how to find a job
+translated:
+  - Russian: https://habrahabr.ru/post/322602/
 social:
   - hackernews: https://news.ycombinator.com/item?id=13696004
   - reddit: https://www.reddit.com/r/programming/comments/5vc1ul/why_i_dont_talk_to_google_recruiters/
