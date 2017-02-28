@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Traits and Mixins, OOP Garbage"
+title: "Traits and Mixins: OOP Garbage"
 date: 2017-01-10
 place: Odessa, Ukraine
 tags: oop java
@@ -11,7 +11,7 @@ description: |
 keywords:
   - traits
   - oop traits
-  - mix-in oop
+  - mixin oop
   - OOP
   - trait in programming
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/...
@@ -19,11 +19,11 @@ jb_picture:
   caption:
 ---
 
-Let me say right off the bat that the features we will discuss now are
+Let me say right off the bat that the features we will discuss here are
 pure _garbage_ brought to object-oriented programming by those who desperately
 needed a lobotomy, just like David West suggested in his
 [Object Thinking](http://amzn.to/2ass77O) book.
-The features have different names, while most common ones are
+These features have different names, but the most common ones are
 [traits](https://en.wikipedia.org/wiki/Trait_%28computer_programming%29) and
 [mixins](https://en.wikipedia.org/wiki/Mixin). I seriously can't understand
 how we can still call programming object-oriented when it has
@@ -33,9 +33,9 @@ how we can still call programming object-oriented when it has
 
 {% jb_picture_body %}
 
-First, in a nutshell, how they work. Let's use
+First, here's how they work in a nutshell. Let's use
 [Ruby modules](http://phrogz.net/programmingruby/tut_modules.html)
-as a sample implementation. Say, we have a class `Book`:
+as a sample implementation. Say that we have a class `Book`:
 
 {% highlight ruby %}
 class Book
@@ -45,7 +45,7 @@ class Book
 end
 {% endhighlight %}
 
-Now, we want this class `Book` to use a static method (a procedure), which
+Now, we want class `Book` to use a static method (a procedure) that
 does something useful. We may either define it in a
 [utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 and let `Book` call it:
@@ -63,7 +63,7 @@ class Book
 end
 {% endhighlight %}
 
-Or we can make it even more "convenient," and `extend` our module
+Or we may make it even more "convenient" and `extend` our module
 in order to access its methods directly:
 
 {% highlight ruby %}
@@ -80,21 +80,21 @@ class Book
 end
 {% endhighlight %}
 
-Seems nice, but only if you don't understand the
+It seems nice&mdash;if you don't understand the
 [difference]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 between
 [object-oriented programming]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
 and static methods. Moreover, if we forget
 [OOP purity]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 for a minute, this approach actually looks less readable to me, even though it has
-less characters: It's difficult to understand where this method
-`caps()` is coming from, when it's called just like `{#caps(@title)}` instead
+fewer characters; it's difficult to understand where the method
+`caps()` is coming from when it's called just like `{#caps(@title)}` instead
 of `#{TextUtils.caps(@title)}`. Don't you think?
 
 Mixins start to play their role better when we `include` them. We can
 combine them to construct the behavior of the class we're looking for. Let's
-create two mixins. The first one called `PlainMixin` will print the title
-of the book the way it is and the second one called `CapsMixin` will
+create two mixins. The first one will be called `PlainMixin` and will print the title
+of the book the way it is, and the second one will be called `CapsMixin` and will
 capitalize what's already printed:
 
 {% highlight ruby %}
@@ -119,7 +119,7 @@ class Book
 end
 {% endhighlight %}
 
-Just `Book` without the included mixin will print its title the way
+Calling `Book` without the included mixin will print its title the way
 it is. Once we add the `include` statement, the behavior of `to_s` is
 overridden and method `print` produces a different result. We can
 combine mixins to produce the required functionality. For example,
@@ -146,27 +146,27 @@ end
 I'm sure you already understand that they both have access to
 the private attribute `@title` of class `Book`. They actually have
 full access to _everything_ in the class. They litterally are
-"pieces of code," which we _inject_ into the class to make it more
+"pieces of code" that we _inject_ into the class to make it more
 powerful and complex. What's wrong with this approach?
 
-The same as with
+It's the same issue as with
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
-[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 and [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})&mdash;they
-tear objects apart, placing pieces of functionality somewhere,
+tear objects apart and place pieces of functionality in places
 where objects don't see them.
 
-In case of mixins the functionality is
-in that Ruby `modules`, which make assumptions about the internal structure
-of the `Book` and the `Book` assumes that they will understand it after
+In the case of mixins, the functionality is
+in the Ruby `modules`, which make assumptions about the internal structure
+of `Book` and further assume that the programmer will still understand what's in `Book` after
 the internal structure changes. Such assumptions completely violate
 the very idea of
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 
 Such a tight coupling between mixins and object private
 
-The very obvious alternative to mixins are
+The very obvious alternatives to mixins are
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 Take a look at the example given in the
 [article]({% pst 2015/feb/2015-02-26-composable-decorators %}):
@@ -183,10 +183,10 @@ final Text text = new AllCapsText(
 
 Doesn't it look very similar to what we were doing above with Ruby mixins?
 
-However, unlike mixins decorators leave objects small and cohesive, layering
+However, unlike mixins, decorators leave objects small and cohesive, layering
 extra functionality on top of them. Mixins do
-the opposite&mdash;they make object more complex and, thanks to that, less
+the opposite&mdash;they make objects more complex and, thanks to that, less
 readable and maintainable.
 
-I honestly believe that they are just garbage. Whoever invented them
-was very far from understanding the philosophy of object-oriented design.
+I honestly believe they are just garbage. Whoever invented them
+was a long ways from understanding the philosophy of object-oriented design.
