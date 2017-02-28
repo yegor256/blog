@@ -175,7 +175,7 @@ if (typeof($) != 'undefined') {
         if (a.hostname && a.hostname !== window.location.hostname) {
           var $a = $(this);
           if ($a.find('img').length == 0) {
-            $a.append('<i class="icon icon-exit foreign"></i>');
+            $a.addClass('foreign');
           }
         }
       }
