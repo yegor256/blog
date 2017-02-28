@@ -1,4 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-28T13:50:24+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-02-28T16:08:42+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Handle the Problem of Too Many Classes</title><link href="http://www.yegor256.com/2017/02/28/too-many-classes.html" rel="alternate" type="text/html" title="How to Handle the Problem of Too Many Classes" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/28/too-many-classes</id><content type="html" xml:base="http://www.yegor256.com/2017/02/28/too-many-classes.html">&lt;p&gt;During nearly &lt;a href=&quot;/talks.html&quot;&gt;every presentation&lt;/a&gt; in which I explain
+&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;my view&lt;/a&gt;
+of &lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;,
+there is someone who shares a comment like this:
+&amp;quot;If we follow your advice, we will have so many small classes.&amp;quot;
+And my answer is always the same: &amp;quot;Of course we will, and that&amp;#39;s great!&amp;quot;
+I honestly believe that even if you can&amp;#39;t consider having &amp;quot;a lot of classes&amp;quot; a virtue,
+you can&amp;#39;t call it a drawback of any truly object-oriented code either. However,
+there may come a point when classes become a problem;
+let&amp;#39;s see when, how, and what to do about that.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg&#39; longdesc=&#39;#0b564d36&#39;/&gt;&lt;figcaption id=&#39;0b564d36&#39;&gt;El día de la bestia (1995) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There were a number of &amp;quot;rules&amp;quot; previously mentioned that, if applied,
+would obviously lead to a large number of classes, including:
+a) all public methods &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;must be&lt;/a&gt; declared in interfaces;
+b) objects must not have more than four attributes (Section 2.1 of &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt;);
+c) static methods are &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;not allowed&lt;/a&gt;;
+d) constructors &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;must be&lt;/a&gt; code-free;
+e) objects must expose fewer than five public methods (Section 3.1 of &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The biggest concern, of course, is maintainability: &amp;quot;If, instead of 50 longer classes,
+we had 300 shorter ones, then the code would be way less readable.&amp;quot;
+This will most certainly happen if you design them wrong.&lt;/p&gt;
+
+&lt;p&gt;Types (or classes) in OOP constitute your &lt;a href=&quot;https://en.wikipedia.org/wiki/Vocabulary&quot;&gt;&lt;em&gt;vocabulary&lt;/em&gt;&lt;/a&gt;,
+which explains the world around your code&amp;mdash;the world your code lives in.
+The richer the vocabulary, the more powerful your code.
+The more types you have, the better you can understand and explain the world.&lt;/p&gt;
+
+&lt;p&gt;If your vocabulary is big enough, you will say something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Read the book that is on the table.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With a much smaller vocabulary, the same phrase would sound like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Do it with the thing that is on that thing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Obviously, it&amp;#39;s easier to read and understand the first phrase. The same
+occurs with types in OOP: the more of them you have at your disposal,
+the more expressive, bright, and readable your code is.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, Java and many other languages are not designed with
+this concept in mind. Packages, modules, and namespaces don&amp;#39;t really help,
+and we usually end up with names like
+&lt;a href=&quot;https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/annotation/AbstractCookieValueMethodArgumentResolver.html&quot;&gt;&lt;code&gt;AbstractCookieValueMethodArgumentResolver&lt;/code&gt;&lt;/a&gt; (Spring)
+or
+&lt;a href=&quot;https://hadoop.apache.org/docs/r3.0.0-alpha1/api/org/apache/hadoop/mapreduce/lib/input/CombineFileRecordReaderWrapper.html&quot;&gt;&lt;code&gt;CombineFileRecordReaderWrapper&lt;/code&gt;&lt;/a&gt; (Hadoop).
+We&amp;#39;re trying to pack as many semantics into class names as possible so
+their users won&amp;#39;t doubt for a second. Then we&amp;#39;re trying to put as many
+methods into one class as possible to make life easier for users; they will
+use their IDE hints to find the right one.&lt;/p&gt;
+
+&lt;p&gt;This is anything but OOP.&lt;/p&gt;
+
+&lt;p&gt;If your code is object-oriented, your classes must be small, their
+names must be nouns, and their method names must be just one word. Here is
+what I do in my code to make that happen:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interfaces are nouns&lt;/strong&gt;.
+For example, &lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;http://static.javadoc.io/com.jcabi.incubator/xembly/0.22/org/xembly/Directive.html&quot;&gt;&lt;code&gt;Directive&lt;/code&gt;&lt;/a&gt;, or
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/model/Domain.java&quot;&gt;&lt;code&gt;Domain&lt;/code&gt;&lt;/a&gt;.
+There are no exceptions. Types (also known as
+&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/concepts/interface.html&quot;&gt;interfaces&lt;/a&gt; in Java)
+are the core part of my vocabulary; they have to be nouns.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Classes are prefixed&lt;/strong&gt;.
+My classes &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;always&lt;/a&gt;
+implement interfaces. Thanks to that, I can say they always &lt;em&gt;are&lt;/em&gt;
+requests, directives, or domains. And I always want their users to remember that.
+Prefixes help. For example,
+&lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqBuffered.html&quot;&gt;&lt;code&gt;RqBuffered&lt;/code&gt;&lt;/a&gt;
+is a buffered request,
+&lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqSimple.html&quot;&gt;&lt;code&gt;RqSimple&lt;/code&gt;&lt;/a&gt;
+is a simple request,
+&lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqLive.html&quot;&gt;&lt;code&gt;RqLive&lt;/code&gt;&lt;/a&gt;
+is a request that represents a &amp;quot;live&amp;quot; HTTP connection,
+and
+&lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithHeader.html&quot;&gt;&lt;code&gt;RqWithHeader&lt;/code&gt;&lt;/a&gt;
+is a request with an extra header.&lt;/p&gt;
+
+&lt;p&gt;An alternative approach is to use the type name as the central part of the
+class name and add a prefix that explains implementation details.
+For example,
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyDomain.java&quot;&gt;&lt;code&gt;DyDomain&lt;/code&gt;&lt;/a&gt;
+is a domain that persists its data in DynamoDB.
+Once you know what that &lt;code&gt;Dy&lt;/code&gt; prefix is for, you can easily understand what
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyUser.java&quot;&gt;&lt;code&gt;DyUser&lt;/code&gt;&lt;/a&gt;
+and
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyBase.java&quot;&gt;&lt;code&gt;DyBase&lt;/code&gt;&lt;/a&gt;
+are about.&lt;/p&gt;
+
+&lt;p&gt;In a medium-sized application or a library, there will be as many as 10 to 15
+prefixes you will have to remember, no more. For example, in the
+&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;, there are 24,000 lines of code,
+410 Java files, and 10 prefixes: &lt;code&gt;Bc&lt;/code&gt;, &lt;code&gt;Cc&lt;/code&gt;, &lt;code&gt;Tk&lt;/code&gt;, &lt;code&gt;Rq&lt;/code&gt;, &lt;code&gt;Rs&lt;/code&gt;, &lt;code&gt;Fb&lt;/code&gt;,
+&lt;code&gt;Fk&lt;/code&gt;, &lt;code&gt;Hm&lt;/code&gt;, &lt;code&gt;Ps&lt;/code&gt;, and &lt;code&gt;Xe&lt;/code&gt;. Not so difficult to remember what they mean, right?&lt;/p&gt;
+
+&lt;p&gt;Among all &lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/allclasses-frame.html&quot;&gt;240 classes&lt;/a&gt;,
+the longest name is
+&lt;a href=&quot;http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithDefaultHeader.html&quot;&gt;&lt;code&gt;RqWithDefaultHeader&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I find this approach to class naming rather convenient. I used it
+in these open source projects (in GitHub):
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; (10 prefixes),
+&lt;a href=&quot;https://github.com/yegor256/jare&quot;&gt;yegor256/jare&lt;/a&gt; (5 prefixes),
+&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;yegor256/rultor&lt;/a&gt; (6 prefixes), and
+&lt;a href=&quot;https://github.com/yegor256/wring&quot;&gt;yegor256/wring&lt;/a&gt; (5 prefixes).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">During nearly every presentation in which I explain
+my view
+of object-oriented programming,
+there is someone who shares a comment like this:
+&amp;quot;If we follow your advice, we will have so many small classes.&amp;quot;
+And my answer is always the same: &amp;quot;Of course we will, and that&amp;#39;s great!&amp;quot;
+I honestly believe that even if you can&amp;#39;t consider having &amp;quot;a lot of classes&amp;quot; a virtue,
+you can&amp;#39;t call it a drawback of any truly object-oriented code either. However,
+there may come a point when classes become a problem;
+let&amp;#39;s see when, how, and what to do about that.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg" /></entry><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
 find me somehow, most likely through this blog, my
 &lt;a href=&quot;/books.html&quot;&gt;books&lt;/a&gt;, or my &lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub account&lt;/a&gt;.
@@ -1016,78 +1139,4 @@ of &amp;quot;naked data.&amp;quot; However, the question remains: How can object
 interact if they can&amp;#39;t exchange data? Eventually we have to expose
 some data in order to let other objects use it, right? Yes, that&amp;#39;s true.
 However, I guess I have a solution that keeps encapsulation in place
-while allowing objects to interact.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg" /></entry><entry><title type="html">MVC vs. OOP</title><link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html" rel="alternate" type="text/html" title="MVC vs. OOP" /><published>2016-12-13T00:00:00+00:00</published><updated>2016-12-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/13/mvc-vs-oop</id><content type="html" xml:base="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model-View-Controller&lt;/a&gt;
-(MVC) is an architectural pattern we all are well aware of.
-It&amp;#39;s a de-facto standard for almost all UI and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_framework&quot;&gt;Web frameworks&lt;/a&gt;. It is convenient
-and easy to use. It is simple and effective. It is a great concept ...
-for a procedural programmer. If your software is object-oriented, you
-should dislike MVC as much as I do. Here is why.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/hot-shots.jpg&#39; longdesc=&#39;#8d612cfa&#39;/&gt;&lt;figcaption id=&#39;8d612cfa&#39;&gt;Hot Shots! (1991) by Jim Abrahams&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is how MVC architecture looks:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#39;/uml/45d05ab3bd9a93ad88ec209352b62f60.svg&#39; style=&quot;width:35%&quot;
-        alt=&#39;PlantUML SVG diagram&#39; class=&#39;plantuml&#39;/&gt;&lt;/p&gt;
-
-&lt;p&gt;Controller is &lt;em&gt;in charge&lt;/em&gt;, taking care of the data received from Model
-and injecting it into View&amp;mdash;and this is exactly the problem. The data escapes
-the Model and becomes &amp;quot;naked,&amp;quot; which is a big problem, as we
-&lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;agreed earlier&lt;/a&gt;.
-OOP is all about encapsulation&amp;mdash;data hiding.&lt;/p&gt;
-
-&lt;p&gt;MVC architecture does exactly the opposite by &lt;em&gt;exposing&lt;/em&gt; the data and hiding
-behavior. The controller deals with the data directly, making decisions about
-its purpose and properties, while the objects, which are supposed to know
-everything about the data and hide it, remain &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;anemic&lt;/a&gt;.
-That is exactly the principle any procedural architecture is built upon; the
-code is in charge of the data. Take this C++ code, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// controller&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_from_engine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// model&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The speed is %d mph&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// view&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The function &lt;code&gt;print_speed()&lt;/code&gt; is the controller. It gets the data &lt;code&gt;s&lt;/code&gt; from
-the model &lt;code&gt;load_from_engine()&lt;/code&gt; and renders it via the view &lt;code&gt;printf()&lt;/code&gt;. Only
-the controller knows that the data is in miles per hour. The engine
-returns &lt;code&gt;int&lt;/code&gt; without any properties. The controller simply assumed that
-that data is in mph. If we want to create a similar controller somewhere
-else, we will have to make a similar assumption again and again. That&amp;#39;s what the
-&amp;quot;naked data&amp;quot; problem is about, and it leads to serious maintainability issues.&lt;/p&gt;
-
-&lt;p&gt;This is an object-oriented alternative to the code above (pseudo-C++):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrintedSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// view&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FormattedSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// controller&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SpeedFromEngine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// model&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, &lt;code&gt;SpeedFromEngine.speed()&lt;/code&gt;
-returns speed in mph, as an integer; &lt;code&gt;FormattedSpeed.speed()&lt;/code&gt; returns
-&lt;code&gt;&amp;quot;%d mph&amp;quot;&lt;/code&gt;; and finally, &lt;code&gt;PrintedSpeed.to_str()&lt;/code&gt; returns the full text of the
-message. We can call them &amp;quot;model, view, and controller,&amp;quot; but in reality they
-are just objects decorating each other. It&amp;#39;s still the same entity&amp;mdash;the speed.
-But it gets more complex and intelligent by being decorated.&lt;/p&gt;
-
-&lt;p&gt;We don&amp;#39;t tear the concept of speed apart. The speed is the speed, no matter
-who works with it and where it is presented. It just gets new behavior
-from decorators. It grows, but never falls apart.&lt;/p&gt;
-
-&lt;p&gt;To summarize, Controller is a pure &lt;em&gt;procedural&lt;/em&gt; component in the MVC trio,
-which turns Model into a passive data holder and View into
-a passive data renderer. The controll&lt;b&gt;er&lt;/b&gt;, the hold&lt;b&gt;er&lt;/b&gt;,
-the render&lt;b&gt;er&lt;/b&gt; ...
-Is it &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;really OOP&lt;/a&gt;?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Model-View-Controller
-(MVC) is an architectural pattern we all are well aware of.
-It&amp;#39;s a de-facto standard for almost all UI and
-Web frameworks. It is convenient
-and easy to use. It is simple and effective. It is a great concept ...
-for a procedural programmer. If your software is object-oriented, you
-should dislike MVC as much as I do. Here is why.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/hot-shots.jpg" /></entry></feed>
+while allowing objects to interact.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg" /></entry></feed>
