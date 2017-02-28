@@ -178,7 +178,8 @@ world. The discussion was be based on this post:
 <a href="https://www.youtube.com/watch?v=WpP4rIhh5e4"><img src="https://i.ytimg.com/vi/WpP4rIhh5e4/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 5, 2015<br/>
 **Don't Create Objects That End With -ER**<br/>
-We talked about class naming principles and a very typical
+We talked about [class naming]({% pst 2017/feb/2017-02-28-too-many-classes %})
+principles and a very typical
 problem of misusing "-er" suffix for them, for example in
 Managers, Observers, Controllers, Filters, Helpers, etc. The
 discussion was based on this post:

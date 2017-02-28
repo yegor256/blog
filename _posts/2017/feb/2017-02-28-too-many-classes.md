@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Handle the Problem of Too Many Classes"
-date: 2017-01-10
+date: 2017-02-28
 place: Odessa, Ukraine
 tags: oop java
 description: |
@@ -27,7 +27,8 @@ there is someone who shares a comment like this:
 And my answer is always the same: "Of course we will, and that's great!"
 I honestly believe that even if you can't consider having "a lot of classes" a virtue,
 you can't call it a drawback of any truly object-oriented code either. However,
-there may come a point when classes become a problem; let's see when, how, and what to do about that.
+there may come a point when classes become a problem;
+let's see when, how, and what to do about that.
 
 <!--more-->
 
