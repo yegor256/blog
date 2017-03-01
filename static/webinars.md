@@ -28,9 +28,9 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 01-03-2017 22 Nm274dGikFc Naked Data in OOP %}
+{% webinar 15-03-2017 22 Nm274dGikFc Naked Data in OOP %}
 
-<a href="https://www.youtube.com/watch?v=Nm274dGikFc">March 1, 2017</a><br/>
+<a href="https://www.youtube.com/watch?v=Nm274dGikFc">March 15, 2017</a><br/>
 **Naked Data in OOP**<br/>
 We will discuss the problem of data presence in object-oriented
 code and how their negative effect can be neutralized.
