@@ -141,6 +141,12 @@ Kiev, Ukraine<br/>
 Dnipro, Ukraine<br/>
 17-18 June 2017
 
+<div class="talk-event"/>
+<img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
+[JavaDay 2017](http://javaday.org.ua/)<br/>
+Kiev, Ukraine<br/>
+4-5 November 2017
+
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences,

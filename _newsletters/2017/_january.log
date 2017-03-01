@@ -1,0 +1,36 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  1 MAR 2017 11:32
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**/Volumes/ssd2/code/blog/_newsletters/2017/_january.liquid
+(/Volumes/ssd2/code/blog/_newsletters/2017/_january.liquid
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 I
+      wrote a few new articles on my blog in January, three of them
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.1 I
+      wrote a few new articles on my blog in January, three of them
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 8 strings out of 493315
+ 400 string characters out of 6137904
+ 52158 words of memory out of 5000000
+ 3557 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 5i,0n,4p,123b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
