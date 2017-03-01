@@ -79,13 +79,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua 2017"/>
-**OOP Java Puzzlers**<br/>
-[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
-Kiev, Ukraine<br/>
-28 February 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/khpmday-2017.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
 **Management Without Managers**<br/>
 [Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/)<br/>
@@ -156,6 +149,14 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
+OOP Java Puzzlers;
+[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
+Kiev, Ukraine;
+28 February 2017;
+[video](https://www.youtube.com/watch?v=qqWC3_cQHAc).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
