@@ -129,7 +129,7 @@ del {
 
   .hot {
     @extend %unprintable;
-    font-family: $code-font;
+    font-family: sans-serif;
     font-size: 85%;
     line-height: $em;
     margin-bottom: 2 * $em;

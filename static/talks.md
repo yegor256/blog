@@ -156,7 +156,7 @@ OOP Java Puzzlers;
 [JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
 Kiev, Ukraine;
 28 February 2017;
-[video](https://www.youtube.com/watch?v=qqWC3_cQHAc).
+[видео](https://www.youtube.com/watch?v=qqWC3_cQHAc).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
@@ -164,7 +164,7 @@ Decorators, Decorators, Decorators;
 [JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
 Dnipro, Ukraine;
 11 February 2017;
-[video](https://www.youtube.com/watch?v=LPLqLaSwSsI).
+[видео](https://www.youtube.com/watch?v=LPLqLaSwSsI).
 
 ### 2016
 
@@ -174,7 +174,7 @@ Object-Oriented Java by Example;
 [Morning@Lohika 2016](https://dou.ua/calendar/13589/);
 Lviv, Ukraine;
 24 December 2016;
-[video](https://www.youtube.com/watch?v=GQLFc-ttCX0).
+[видео](https://www.youtube.com/watch?v=GQLFc-ttCX0).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
@@ -182,7 +182,7 @@ Make Your Java Object-Oriented, 64 Practical Steps;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
 Kiev, Ukraine;
 20 December 2016;
-[video](https://www.youtube.com/watch?v=qAxLtSYN0nw).
+[видео](https://www.youtube.com/watch?v=qAxLtSYN0nw).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
