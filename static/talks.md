@@ -13,8 +13,7 @@ keywords:
   - conferences about programming
   - software engineers conferences
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
-exclude_from_search: true
-style: |
+? votesstyle: |
   .talk-event {
     clear: both;
   }

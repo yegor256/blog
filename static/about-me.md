@@ -14,8 +14,7 @@ keywords:
   - yegor bugayenko
   - егор бугаенко
   - project management blog
-exclude_from_search: true
----
+? votes---
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
