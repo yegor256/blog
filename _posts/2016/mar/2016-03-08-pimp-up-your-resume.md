@@ -254,9 +254,17 @@ Other employers may think differently. Well, they most likely think differently.
 That's why you have to demonstrate with which offices you've spent 10 recent
 years of your life. I would recommend you keep this list short. Even if you've
 changed eight companies over the last two years, don't say that. Just three
-places is enough. That will show them you're a good slave&mdash;very loyal to previous masters. That's what they want to see, because they
+places is enough. That will show them you're a good slave&mdash;very
+loyal to previous masters. That's what they want to see, because they
 are planning to buy you and become your next master. Right? Sounds harsh?
 Isn't [it true]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})?
+
+Also, your experience section must mention your achievements, not your
+duties. Instead of
+"managing 300+ AWS nodes" or
+"building mobile apps" it's better to say
+"created 300+ AWS nodes infrastructure" or
+"built a few mobile apps".
 
 ## ACM, IEEE, JUG, and Other Memberships
 
