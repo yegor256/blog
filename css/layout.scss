@@ -97,6 +97,10 @@ del {
   display: inline-block;
   line-height: .8em;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .teamed-banner {
