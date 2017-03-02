@@ -1,1 +1,5 @@
 Sitemap: http://www.yegor256.com/sitemap.xml
+
+User-agent: *
+Disallow: /p/
+Disallow: /404.html
