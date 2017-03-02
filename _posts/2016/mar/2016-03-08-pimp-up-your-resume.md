@@ -207,6 +207,18 @@ systematic and regular writing will help you structure
 your thoughts, plans, and decisions. Well, that's what I'm getting
 from my blog.
 
+## Ambitions
+
+If you're young and your resume is not full of bright achievements yet,
+you can add "ambitions" section to it. There you say what you're planning
+to achieve, to impress your future employer. For example:
+"learn Go,"
+"create a new open source CSS framework,"
+"write a book,"
+or "earn Oracle Java certification next year". This will demonstrate
+that even though you're young, you do care about your career and
+professional growth.
+
 ## Education
 
 I would limit yourself to a few letters in this area. Just "MSc" or "BSc" is
