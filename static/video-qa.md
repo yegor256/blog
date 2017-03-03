@@ -12,7 +12,7 @@ keywords:
   - video about management
   - ask about management
   - management questions
-? votesstyle: |
+style: |
   .vid {
     width: 30%;
     display: inline-block;

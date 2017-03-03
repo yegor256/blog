@@ -13,7 +13,7 @@ keywords:
   - webinars about programming
   - software engineers webinars
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
-? votesstyle: |
+style: |
   .wnr {
     width: 192px;
     height: 108px;

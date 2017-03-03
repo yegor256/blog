@@ -16,7 +16,7 @@ keywords:
   - yegor256 blog contents
   - articles about software development
   - articles about programming
-? votesstyle: |
+style: |
   .sorter {
     cursor: pointer;
   }

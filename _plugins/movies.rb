@@ -20,11 +20,10 @@ module Jekyll
   module Filters
     def movies(posts)
       posts
-        .select{ |p| p['jb_picture'] }
-        .map{ |p| p['jb_picture']['caption'] }
-        .uniq
-        .sort
-        .map{ |c| "<p>#{c}</p>" }
+        .select{ |p| p['jb_picture'] && p['jb_picture']['caption'] }
+        .uniq{ |p| p['jb_picture']['caption'] }
+        .sort{ |a,b| a['jb_picture']['caption'] <=> b['jb_picture']['caption'] }
+        .map{ |p| "<p><a href='#{p.url}'>#{p['jb_picture']['caption']}</a></p>" }
     end
   end
 end

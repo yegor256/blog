@@ -14,7 +14,7 @@ keywords:
   - best yegor movies
   - yegor bugayenko movies
   - movies
-? votes---
+---
 
 These movies were mentioned in all posts at this blog, I would
 recommend to watch them all:

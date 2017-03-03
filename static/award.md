@@ -13,7 +13,7 @@ keywords:
   - get donation for open source
   - open source award
   - open source project award
-? votes---
+---
 
 Submission to 2017 is [open]({% pst 2016/oct/2016-10-23-award-2017 %}).
 

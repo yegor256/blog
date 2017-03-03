@@ -13,7 +13,7 @@ keywords:
   - yegor bugayenko blog
   - quality of software
   - software blog
-? votes---
+---
 
 These articles are re-published by [JavaCodeGeeks.com](http://www.javacodegeeks.com/author/yegor-bugayenko/).
 It's a awesome resource for Java developers, I highly
