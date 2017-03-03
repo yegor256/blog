@@ -16,7 +16,8 @@ keywords:
   - movies
 ---
 
-These movies were mentioned in all posts at this blog, I would
+These {{ site.posts | movies_count }}
+movies were mentioned in this blog, I would
 recommend to watch them all:
 
 <div class="nospell">
