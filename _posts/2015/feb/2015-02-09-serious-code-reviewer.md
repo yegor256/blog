@@ -14,8 +14,6 @@ keywords:
   - code review process
   - code review best practices
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/kim-jong-un-doing-code-review.png
-jb_picture:
-  caption: Kim Jong-un with colleagues (2014)
 ---
 
 [Code reviews](http://en.wikipedia.org/wiki/Code_review)
