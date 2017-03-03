@@ -93,14 +93,7 @@ del {
 }
 
 .foreign {
-  border-bottom: 1px dotted $black;
-  display: inline-block;
-  line-height: .8em;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
 }
 
 .teamed-banner {
