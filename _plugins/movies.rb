@@ -24,7 +24,7 @@ module Jekyll
 
     def movies(posts)
       with_movies(posts).map do |p|
-        |p| "<p><a href='#{p.url}'>#{p['jb_picture']['caption']}</a></p>"
+        "<p><a href='#{p.url}'>#{p['jb_picture']['caption']}</a></p>"
       end
     end
 
