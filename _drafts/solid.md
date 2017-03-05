@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SOLID is for Dummies"
+title: "SOLID is a shame, for Dummies"
 date: 2017-01-10
 place: Kharkiv, Ukraine
 tags: oop
@@ -131,4 +131,10 @@ is not understood even by the creators of this magic.
 
 Do you really want to be that dumb movie watcher?
 
+P.S. Some other relevant links on this very subject:
 
+  * [I don't love the single responsibility principle](http://sklivvz.com/posts/i-dont-love-the-single-responsibility-principle) by Marco Cecconi
+  * [Why I Don't Teach SOLID](http://qualityisspeed.blogspot.nl/2014/08/why-i-dont-teach-solid.html) by Brian Geihsler
+  * [Something is wrong with Single Reponsibility Principle](http://gusiev.com/2016/01/single-responsibility-principle-srp-criticism/)
+  * [Not-so-SOLID OO Principles](https://www.tonymarston.net/php-mysql/not-so-solid-oo-principles.html)
+  *
