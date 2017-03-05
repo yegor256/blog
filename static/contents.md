@@ -89,7 +89,7 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
-Intensity of writing ({% wordcount %} words in the entire blog):
+Intensity of writing ({% wordcount %}):
 
 <figure>
 <object data="/stats.svg" type="image/svg+xml"

@@ -126,8 +126,8 @@ del {
 
   .hot {
     @extend %unprintable;
-    font-family: monospace;
-    font-size: 85%;
+    font-family: 'Monaco', monospace;
+    font-size: 75%;
     line-height: $em;
     margin-bottom: 2 * $em;
     margin-top: 2 * $em;
