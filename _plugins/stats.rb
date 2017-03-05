@@ -37,7 +37,8 @@ module Jekyll
         words += Jekyll.all_words(doc.content)
       end
       puts "#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
-      "approx. #{decimal(words.length)} words in the entire blog, <a href='/words.txt'>#{decimal(words.uniq.length)}</a> unique ones"
+      "approx. #{decimal(words.length)} words in the entire blog, \
+      <a href='/words.txt'>#{decimal(words.uniq(&:downcase).length)}</a> unique ones"
     end
     def decimal(num)
       num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
@@ -62,7 +63,7 @@ module Jekyll
       end
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
-        words.sort.uniq.join("\n")
+        words.sort.uniq(&:downcase).join("\n")
       )
       open(dat, 'w') do |f|
         for m, c in months
@@ -86,15 +87,15 @@ module Jekyll
   end
 
   def self.all_words(text)
-    text.downcase
+    text
       .gsub(/\{% highlight .+ endhighlight %\}/m, ' ')
       .gsub(/\[([^\]]+)\]\([^\)]+\)/, ' \1 ')
       .gsub(/`[^`]+`/, ' ')
       .gsub(/\{% .+ %\}/, ' ')
       .gsub(/&mdash;/, ' ')
       .gsub(/<[^>]+>/, ' ')
-      .gsub(/[^a-z']/, ' ')
-      .gsub(/ [a-z] /, ' ')
+      .gsub(/[^A-Za-z']/, ' ')
+      .gsub(/ [a-zA-Z] /, ' ')
       .split(/\s+/)
   end
 end
