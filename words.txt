@@ -656,6 +656,7 @@ Extremely
 FB
 FFmpegMediaMetadataRetriever
 FIFO
+FORM
 FTP
 Facade
 Face
@@ -1854,6 +1855,7 @@ T
 TBD
 TCP
 TDD
+THIS
 TL
 TODO
 TUG
@@ -1921,7 +1923,6 @@ Think
 Thinking
 Third
 Thirty
-This
 Thomas
 Those
 Though
@@ -3863,7 +3864,6 @@ forgotten
 forked
 forking
 forks
-form
 formality
 formalize
 formally
