@@ -144,11 +144,12 @@ why shouldn't we rate them, right? The best rate is
 ### 2017
 
 <div class="talk-event"/>
-<img src="/images/2017/khpmday-2017.png" class="past-talk" alt="Kharkiv PMDay 2017"/>
+<img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
 Management Without Managers;
 [Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
 Kharkiv, Ukraine;
-4 March 2017.
+4 March 2017;
+[видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
