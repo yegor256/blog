@@ -86,7 +86,7 @@ Moscow, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
-**Why Distributed Teams Suck?**<br/>
+**Why Distributed Teams Suck?** (keynote)<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
 Delft, The Netherlands<br/>
 30 March 2017
@@ -107,6 +107,7 @@ Moscow, Russia<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
+**How Bright is Your Future?** (keynote)<br/>
 **What's Wrong with Object-Oriented Programming?**<br/>
 [RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
 Riga, Latvia<br/>
