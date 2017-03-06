@@ -67,12 +67,18 @@ You have a few options if you want to get them cheaper than that:
 
   * Attend a conference where I'm speaking. In most cases I have a few
     books with me. If I don't, you just [email me](mailto:shop@yegor256.com) later and attach
-    a photo of your conference badge. The price in that case will be $20.00 plus
+    a photo of your conference badge. The price in that case will be **$20.00** plus
     shipment, which in most cases is $7.00.
 
   * You can buy a book for its full price on Amazon and then
     write a blog post _and_ an Amazon review (both honest, not
     necessarily positive). I will send you back $32.00 (via PayPal or check).
+    Thus, the final cost of the book will be somewhere around **$12.00**.
+
+  * If you're a student, find seven other friends and you will
+    get a **student package** of 8 books for $64.00 plus shippment.
+    Thus, you will get each book for **$8.00**. I will need you to confirm
+    that all of you guys really are students though.
 
 Pay attention that all books are sold at
 [Amazon.com](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK/),
