@@ -320,3 +320,6 @@ Want free advice on your resume? Send it to
 what I think. I will reply to all emails, but be ready to hear
 mostly what's wrong. What's right you will know without me, when
 they pay you $200 per hour.
+
+Look at these samples (they are good):
+[`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf)
