@@ -149,6 +149,7 @@ Management Without Managers;
 [Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
 Kharkiv, Ukraine;
 4 March 2017;
+[slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
 [видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
 
 <div class="talk-event"/>
