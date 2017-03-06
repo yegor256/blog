@@ -5721,6 +5721,7 @@ sake
 salary
 sales
 sample
+samples
 sandwich
 sane
 sarcasm
