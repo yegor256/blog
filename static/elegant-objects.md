@@ -63,6 +63,8 @@ Mar 7, 2017:
 I started to write the third volume, which will consist entirely
 of "OOP puzzles." Just like in math or chess books there will be questions,
 which you will have to think about and answers at the end of the book.
+Want to be its reviewer? Please, fill
+[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o).
 
 Feb 24, 2017:
 The list of reviewers of the second volume is ready (alphabetic order). I'm very
