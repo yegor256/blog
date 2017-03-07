@@ -173,7 +173,7 @@ Take a look at the example given in the
 [article]({% pst 2015/feb/2015-02-26-composable-decorators %}):
 
 {% highlight java %}
-final Text text = new AllCapsText(
+Text text = new AllCapsText(
   new TrimmedText(
     new PrintableText(
       new TextInFile(new File("/tmp/a.txt"))
