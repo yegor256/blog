@@ -59,6 +59,11 @@ ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects
 
 <!--more-->
 
+Mar 7, 2017:
+I started to write the third volume, which will consist entirely
+of "OOP puzzles." Just like in math or chess books there will be questions,
+which you will have to think about and answers at the end of the book.
+
 Feb 24, 2017:
 The list of reviewers of the second volume is ready (alphabetic order). I'm very
 sorry if you're not in the list, but wanted to be. There will be
