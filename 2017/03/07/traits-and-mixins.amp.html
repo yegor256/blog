@@ -129,7 +129,7 @@ and static methods. Moreover, if we forget
 <a href="/2014/11/20/seven-virtues-of-good-object.html">OOP purity</a>
 for a minute, this approach actually looks less readable to me, even though it has
 fewer characters; it's difficult to understand where the method
-<code>caps()</code> is coming from when it's called just like <code>{#caps(@title)}</code> instead
+<code>caps()</code> is coming from when it's called just like <code>#{caps(@title)}</code> instead
 of <code>#{TextUtils.caps(@title)}</code>. Don't you think?</p>
 
 <p>Mixins start to play their role better when we <code>include</code> them. We can
@@ -209,7 +209,7 @@ leads to nothing by unmaintainable and difficult to understand code.</p>
 Take a look at the example given in the
 <a href="/2015/02/26/composable-decorators.html">article</a>:</p>
 
-<pre>final Text text = new AllCapsText(
+<pre>Text text = new AllCapsText(
   new TrimmedText(
     new PrintableText(
       new TextInFile(new File("/tmp/a.txt"))
