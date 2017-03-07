@@ -51,9 +51,10 @@ To be published in March 2017.
 
 <div class="clear"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
-[Code Ahead](/code-ahead.html) will be the book about software engineering. I will
+[Code Ahead](/code-ahead.html) will be a novel about software engineering. I will
 propose a number of best practices for organizing software development
-process.
+process. What will be interesting is that it will be fiction book, with
+characters, plot, jokes, dialogs, etc.
 <br/>
 To be published in August 2017.
 
