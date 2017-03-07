@@ -94,6 +94,10 @@ del {
 
 .foreign {
   text-decoration: underline;
+
+  &:hover {
+    color: $gray;
+  }
 }
 
 .teamed-banner {
