@@ -88,7 +88,7 @@ and static methods. Moreover, if we forget
 [OOP purity]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 for a minute, this approach actually looks less readable to me, even though it has
 fewer characters; it's difficult to understand where the method
-`caps()` is coming from when it's called just like `{#caps(@title)}` instead
+`caps()` is coming from when it's called just like `#{caps(@title)}` instead
 of `#{TextUtils.caps(@title)}`. Don't you think?
 
 Mixins start to play their role better when we `include` them. We can
