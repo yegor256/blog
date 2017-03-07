@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-06T14:28:45+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Handle the Problem of Too Many Classes</title><link href="http://www.yegor256.com/2017/02/28/too-many-classes.html" rel="alternate" type="text/html" title="How to Handle the Problem of Too Many Classes" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/28/too-many-classes</id><content type="html" xml:base="http://www.yegor256.com/2017/02/28/too-many-classes.html">&lt;p&gt;During nearly &lt;a href=&quot;/talks.html&quot;&gt;every presentation&lt;/a&gt; in which I explain
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-07T08:09:34+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Traits and Mixins Are Not OOP</title><link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html" rel="alternate" type="text/html" title="Traits and Mixins Are Not OOP" /><published>2017-03-07T00:00:00+00:00</published><updated>2017-03-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/07/traits-and-mixins</id><content type="html" xml:base="http://www.yegor256.com/2017/03/07/traits-and-mixins.html">&lt;p&gt;Let me say right off the bat that the features we will discuss here are
+pure &lt;em&gt;poison&lt;/em&gt; brought to object-oriented programming by those who desperately
+needed a lobotomy, just like David West suggested in his
+&lt;a href=&quot;http://amzn.to/2ass77O&quot;&gt;Object Thinking&lt;/a&gt; book.
+These features have different names, but the most common ones are
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Trait_%28computer_programming%29&quot;&gt;traits&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Mixin&quot;&gt;mixins&lt;/a&gt;. I seriously can&amp;#39;t understand
+how we can still call programming object-oriented when it has
+&lt;a href=&quot;http://stackoverflow.com/questions/925609/mixins-vs-traits&quot;&gt;these features&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png&#39; longdesc=&#39;#86dc12a1&#39;/&gt;&lt;figcaption id=&#39;86dc12a1&#39;&gt;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, here&amp;#39;s how they work in a nutshell. Let&amp;#39;s use
+&lt;a href=&quot;http://phrogz.net/programmingruby/tut_modules.html&quot;&gt;Ruby modules&lt;/a&gt;
+as a sample implementation. Say that we have a class &lt;code&gt;Book&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, we want class &lt;code&gt;Book&lt;/code&gt; to use a static method (a procedure) that
+does something useful. We may either define it in a
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility class&lt;/a&gt;
+and let &lt;code&gt;Book&lt;/code&gt; call it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextUtils&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;caps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:capitalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;My title is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TextUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Or we may make it even more &amp;quot;convenient&amp;quot; and &lt;code&gt;extend&lt;/code&gt; our module
+in order to access its methods directly:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;TextModule&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;caps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:capitalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;extend&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TextModule&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;My title is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It seems nice&amp;mdash;if you don&amp;#39;t understand the
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;difference&lt;/a&gt;
+between
+&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;
+and static methods. Moreover, if we forget
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;OOP purity&lt;/a&gt;
+for a minute, this approach actually looks less readable to me, even though it has
+fewer characters; it&amp;#39;s difficult to understand where the method
+&lt;code&gt;caps()&lt;/code&gt; is coming from when it&amp;#39;s called just like &lt;code&gt;{#caps(@title)}&lt;/code&gt; instead
+of &lt;code&gt;#{TextUtils.caps(@title)}&lt;/code&gt;. Don&amp;#39;t you think?&lt;/p&gt;
+
+&lt;p&gt;Mixins start to play their role better when we &lt;code&gt;include&lt;/code&gt; them. We can
+combine them to construct the behavior of the class we&amp;#39;re looking for. Let&amp;#39;s
+create two mixins. The first one will be called &lt;code&gt;PlainMixin&lt;/code&gt; and will print the title
+of the book the way it is, and the second one will be called &lt;code&gt;CapsMixin&lt;/code&gt; and will
+capitalize what&amp;#39;s already printed:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;CapsMixin&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:capitalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PlainMixin&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CapsMixin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PlainMixin&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;My title is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Calling &lt;code&gt;Book&lt;/code&gt; without the included mixin will print its title the way
+it is. Once we add the &lt;code&gt;include&lt;/code&gt; statement, the behavior of &lt;code&gt;to_s&lt;/code&gt; is
+overridden and method &lt;code&gt;print&lt;/code&gt; produces a different result. We can
+combine mixins to produce the required functionality. For example,
+we can add one more, which will
+&lt;a href=&quot;http://stackoverflow.com/a/25136035/187141&quot;&gt;abbreviate&lt;/a&gt; the title to 16 characters:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;AbbrMixin&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^(.{16,}?).*$/m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;\1...&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AbbrMixin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CapsMixin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PlainMixin&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;My title is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I&amp;#39;m sure you already understand that they both have access to
+the private attribute &lt;code&gt;@title&lt;/code&gt; of class &lt;code&gt;Book&lt;/code&gt;. They actually have
+full access to &lt;em&gt;everything&lt;/em&gt; in the class. They litterally are
+&amp;quot;pieces of code&amp;quot; that we &lt;em&gt;inject&lt;/em&gt; into the class to make it more
+powerful and complex. What&amp;#39;s wrong with this approach?&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s the same issue as with
+&lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;annotations&lt;/a&gt;,
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt;,
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt;,
+and &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility classes&lt;/a&gt;&amp;mdash;they
+tear objects apart and place pieces of functionality in places
+where objects don&amp;#39;t see them.&lt;/p&gt;
+
+&lt;p&gt;In the case of mixins, the functionality is
+in the Ruby &lt;code&gt;modules&lt;/code&gt;, which make assumptions about the internal structure
+of &lt;code&gt;Book&lt;/code&gt; and further assume that the programmer will still understand what&amp;#39;s in &lt;code&gt;Book&lt;/code&gt; after
+the internal structure changes. Such assumptions completely violate
+the very idea of
+&lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;encapsulation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Such a tight coupling between mixins and object private structure
+leads to nothing by unmaintainable and difficult to understand code.&lt;/p&gt;
+
+&lt;p&gt;The very obvious alternatives to mixins are
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;.
+Take a look at the example given in the
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;article&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AllCapsText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TrimmedText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PrintableText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TextInFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/a.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Doesn&amp;#39;t it look very similar to what we were doing above with Ruby mixins?&lt;/p&gt;
+
+&lt;p&gt;However, unlike mixins, decorators leave objects small and cohesive, layering
+extra functionality on top of them. Mixins do
+the opposite&amp;mdash;they make objects more complex and, thanks to that, less
+readable and maintainable.&lt;/p&gt;
+
+&lt;p&gt;I honestly believe they are just poison. Whoever invented them
+was a long ways from understanding the philosophy of object-oriented design.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Let me say right off the bat that the features we will discuss here are
+pure poison brought to object-oriented programming by those who desperately
+needed a lobotomy, just like David West suggested in his
+Object Thinking book.
+These features have different names, but the most common ones are
+traits and
+mixins. I seriously can&amp;#39;t understand
+how we can still call programming object-oriented when it has
+these features.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png" /></entry><entry><title type="html">How to Handle the Problem of Too Many Classes</title><link href="http://www.yegor256.com/2017/02/28/too-many-classes.html" rel="alternate" type="text/html" title="How to Handle the Problem of Too Many Classes" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/28/too-many-classes</id><content type="html" xml:base="http://www.yegor256.com/2017/02/28/too-many-classes.html">&lt;p&gt;During nearly &lt;a href=&quot;/talks.html&quot;&gt;every presentation&lt;/a&gt; in which I explain
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;my view&lt;/a&gt;
 of &lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;,
 there is someone who shares a comment like this:
@@ -11,7 +178,7 @@ let&amp;#39;s see when, how, and what to do about that.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg&#39; longdesc=&#39;#0b564d36&#39;/&gt;&lt;figcaption id=&#39;0b564d36&#39;&gt;El día de la bestia (1995) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;El día de la bestia (1995) by Álex de la Iglesia&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg&#39; longdesc=&#39;#0b564d36&#39;/&gt;&lt;figcaption id=&#39;0b564d36&#39;&gt;El día de la bestia (1995) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;There were a number of &amp;quot;rules&amp;quot; previously mentioned that, if applied,
 would obviously lead to a large number of classes, including:
@@ -133,7 +300,7 @@ this situation in the industry.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg&#39; longdesc=&#39;#08f89da0&#39;/&gt;&lt;figcaption id=&#39;08f89da0&#39;&gt;The Deer Hunter (1978) by Michael Cimino&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Deer Hunter (1978) by Michael Cimino&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg&#39; longdesc=&#39;#08f89da0&#39;/&gt;&lt;figcaption id=&#39;08f89da0&#39;&gt;The Deer Hunter (1978) by Michael Cimino&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Disclaimer: I do realize that these are multi-billion-dollar companies, the best
 in the industry, and I&amp;#39;m nothing compared to them.
@@ -243,7 +410,7 @@ explain why your activity on this platform is so important to
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#9abf092d&#39;/&gt;&lt;figcaption id=&#39;9abf092d&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Les kidnappeurs (1998) by Graham Guit&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#9abf092d&#39;/&gt;&lt;figcaption id=&#39;9abf092d&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Basically, your StackOverflow profile demonstrates five skills you either
 have or don&amp;#39;t. They may not be as important to an office &lt;del&gt;slave&lt;/del&gt;
@@ -345,7 +512,7 @@ is the main difference between them, and it is crucial.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#20e9d0f5&#39;/&gt;&lt;figcaption id=&#39;20e9d0f5&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Master (2012) by Paul Thomas Anderson&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#20e9d0f5&#39;/&gt;&lt;figcaption id=&#39;20e9d0f5&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is an example of a simple class:&lt;/p&gt;
 
@@ -430,7 +597,7 @@ shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; fo
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#4a1ca508&#39;/&gt;&lt;figcaption id=&#39;4a1ca508&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;North by Northwest (1959) by Alfred Hitchcock&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#4a1ca508&#39;/&gt;&lt;figcaption id=&#39;4a1ca508&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Take a look at
 &lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
@@ -536,7 +703,7 @@ be helpful.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#ee978f59&#39;/&gt;&lt;figcaption id=&#39;ee978f59&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Grand Budapest Hotel (2014) by Wes Anderson&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#ee978f59&#39;/&gt;&lt;figcaption id=&#39;ee978f59&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Before writing this, I &lt;a href=&quot;https://www.google.com/webhp?q=career%20advice%20software%20developer&quot;&gt;Googled&lt;/a&gt;
 a bit and found a lot of interesting suggestions, like to
@@ -745,7 +912,7 @@ be thread-safe, while all of them have to provide synchronized decorators.&lt;/p
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#93c69d83&#39;/&gt;&lt;figcaption id=&#39;93c69d83&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Aladdin (1992) by Ron Clements and John Musker&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#93c69d83&#39;/&gt;&lt;figcaption id=&#39;93c69d83&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
@@ -850,7 +1017,7 @@ do you train, educate, and help him? You don&amp;#39;t!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#f7dce987&#39;/&gt;&lt;figcaption id=&#39;f7dce987&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Firm (1993) by Sydney Pollack&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#f7dce987&#39;/&gt;&lt;figcaption id=&#39;f7dce987&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;The temptation will be huge, though. You will think that the customer is your
 friend. You will want to help him. You will feel very motivated to
@@ -909,7 +1076,7 @@ in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#6c448ff1&#39;/&gt;&lt;figcaption id=&#39;6c448ff1&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Being Flynn (2012) by Paul Weitz&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#6c448ff1&#39;/&gt;&lt;figcaption id=&#39;6c448ff1&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Have you ever heard the term &amp;quot;win-win?&amp;quot; Do you know what it means? My guess is that
 most of my readers aren&amp;#39;t exactly sure what this is about, even though
@@ -1059,85 +1226,4 @@ most optimal solutions.&lt;/p&gt;
 &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Conflict is what progress is made of. A professional and well-managed
 team loves conflicts and creates them on a daily basis. A professional
 project manager provokes conflicts and makes sure none of them end
-in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg" /></entry><entry><title type="html">Can Objects Be Friends?</title><link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html" rel="alternate" type="text/html" title="Can Objects Be Friends?" /><published>2016-12-20T00:00:00+00:00</published><updated>2016-12-20T00:00:00+00:00</updated><id>http://www.yegor256.com/2016/12/20/can-objects-be-friends</id><content type="html" xml:base="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html">&lt;p&gt;As &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
-proper encapsulation leads to a complete absence
-of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
-interact if they can&amp;#39;t exchange data? Eventually we have to expose
-some data in order to let other objects use it, right? Yes, that&amp;#39;s true.
-However, I guess I have a solution that keeps encapsulation in place
-while allowing objects to interact.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;front image&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg&#39; longdesc=&#39;#2e6ed65a&#39;/&gt;&lt;figcaption id=&#39;2e6ed65a&#39;&gt;Raging Bull (1980) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Say that this is our object:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d C&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It represents a temperature. The only behavior it exposes is printing
-the temperature in Celsius. We don&amp;#39;t want to expose &lt;code&gt;t&lt;/code&gt;, because
-that will lead to the &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;&amp;quot;naked data&amp;quot;&lt;/a&gt;
-problem. We want to keep &lt;code&gt;t&lt;/code&gt; secret, and that&amp;#39;s a good desire.&lt;/p&gt;
-
-&lt;p&gt;Now, we want to have the ability to print temperature in Fahrenheit. The most
-obvious approach would be to introduce another method, &lt;code&gt;toFahrenheitString()&lt;/code&gt;,
-or add a Boolean flag to the object, which will change the behavior
-of method &lt;code&gt;toString()&lt;/code&gt;, right? Either one of these solutions is better than adding
-a method &lt;code&gt;getT()&lt;/code&gt;, but neither one is perfect.&lt;/p&gt;
-
-&lt;p&gt;What if we create this decorator:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TempFahrenheit&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TempCelsius&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;%d F&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It should work just great:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TempFahrenheit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TempCelsius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The only problem is that it won&amp;#39;t compile in Java, because class
-&lt;code&gt;TempFahrenheit&lt;/code&gt; is not allowed to access private &lt;code&gt;t&lt;/code&gt; in class &lt;code&gt;TempCelsius&lt;/code&gt;.
-And if we make &lt;code&gt;t&lt;/code&gt; public, everybody will be able to read it directly, and we&amp;#39;ll have
-that &amp;quot;naked data&amp;quot; problem&amp;mdash;a severe violation of encapsulation.&lt;/p&gt;
-
-&lt;p&gt;However, if we allow that access &lt;em&gt;only&lt;/em&gt; to one class, everything will be fine.
-Something like this (won&amp;#39;t work in Java; it&amp;#39;s just a concept):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TempCelsius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;trust&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TempFahrenheit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// here!&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d C&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Since this &lt;code&gt;trust&lt;/code&gt; keyword is placed into the class that allows access,
-we won&amp;#39;t have the &amp;quot;naked data&amp;quot; problem&amp;mdash;we will always know exactly which
-objects posses knowledge about &lt;code&gt;t&lt;/code&gt;. When we change
-something about &lt;code&gt;t&lt;/code&gt;, we know exactly where to update the code.&lt;/p&gt;
-
-&lt;p&gt;What do you think?&lt;/p&gt;
-
-&lt;p&gt;P.S. After discussing this idea below in comments I
-&lt;a href=&quot;http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632&quot;&gt;started&lt;/a&gt; to think
-that we don&amp;#39;t need that &lt;code&gt;trust&lt;/code&gt; keyword at all. Instead, we should just
-give all decorators access to all private attributes of an object.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">As discussed before,
-proper encapsulation leads to a complete absence
-of &amp;quot;naked data.&amp;quot; However, the question remains: How can objects
-interact if they can&amp;#39;t exchange data? Eventually we have to expose
-some data in order to let other objects use it, right? Yes, that&amp;#39;s true.
-However, I guess I have a solution that keeps encapsulation in place
-while allowing objects to interact.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2016/12/raging-bull.jpg" /></entry></feed>
+in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg" /></entry></feed>
