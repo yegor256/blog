@@ -18,6 +18,7 @@ related:
   - 2016/mar/2016-03-08-pimp-up-your-resume
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
   - 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/11/rate-open-source-contribution.png
 ---
 
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
