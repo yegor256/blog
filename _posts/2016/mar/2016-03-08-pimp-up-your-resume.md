@@ -322,4 +322,6 @@ mostly what's wrong. What's right you will know without me, when
 they pay you $200 per hour.
 
 Look at these samples (they are good):
-[`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf)
+[`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf),
+[`@leventov`](/pdf/resumes/roman-leventov.pdf).
+
