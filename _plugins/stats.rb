@@ -98,7 +98,7 @@ module Jekyll
       .split(/\s+/)
       .select{ |w| w.length > 1 }
       .select{ |w| /[A-Za-z].*/ =~ w }
-      .map{ |w| if /[A-Z]{2}.*/ =~ w w else w.downcase end }
+      .map{ |w| if /[A-Z]{2}.*/ =~ w w else w.downcase }
   end
 end
 
