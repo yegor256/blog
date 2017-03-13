@@ -94,8 +94,7 @@ module Jekyll
       .gsub(/\{% .+ %\}/, ' ')
       .gsub(/&mdash;/, ' ')
       .gsub(/<[^>]+>/, ' ')
-      .gsub(/[^A-Za-z']/, ' ')
-      .gsub(/ [a-zA-Z] /, ' ')
+      .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
       .select{ |w| w.length > 1 }
   end
