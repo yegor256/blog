@@ -63,7 +63,7 @@ module Jekyll
       end
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
-        words.sort.uniq(&:downcase).join("\n")
+        words.sort{ |a,b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
       )
       open(dat, 'w') do |f|
         for m, c in months
@@ -97,6 +97,8 @@ module Jekyll
       .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
       .select{ |w| w.length > 1 }
+      .select{ |w| /[A-Za-z].*/ =~ w }
+      .map{ |w| if /[A-Z]{2}.*/ =~ w w else w.downcase end }
   end
 end
 
