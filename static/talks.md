@@ -133,6 +133,12 @@ Dnipro, Ukraine<br/>
 Kiev, Ukraine<br/>
 4-5 November 2017
 
+<div class="talk-event"/>
+<img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
+[DevTernity 2017](https://devternity.com/)<br/>
+Riga, Latvia<br/>
+1 December 2017
+
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences,
