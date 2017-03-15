@@ -27,10 +27,11 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 15-03-2017 22 Nm274dGikFc Naked Data in OOP %}
+<!-- {% webinar 15-03-2017 22 Nm274dGikFc Naked Data in OOP %} -->
 
-<a href="https://www.youtube.com/watch?v=Nm274dGikFc">March 15, 2017</a><br/>
-**Naked Data in OOP**<br/>
+<a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+March 15, 2017<br/>
+**Naked Data isn OOP**<br/>
 We will discuss the problem of data presence in object-oriented
 code and how their negative effect can be neutralized.
 The discussion will be based on this blog post:
