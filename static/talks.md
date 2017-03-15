@@ -130,6 +130,7 @@ Kiev, Ukraine<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
+**Мифы и реальность софтверных команд**<br/>
 [ITEM 2017](http://item.com.ua/)<br/>
 Dnipro, Ukraine<br/>
 17-18 June 2017
