@@ -137,6 +137,13 @@ Dnipro, Ukraine<br/>
 17-18 June 2017
 
 <div class="talk-event"/>
+<img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
+**We Pay for Bugs**<br/>
+[QAFest 2017](http://qafest.com/)<br/>
+Kiev, Ukraine<br/>
+22-23 September 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
 Kiev, Ukraine<br/>
