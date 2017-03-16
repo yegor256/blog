@@ -17,6 +17,8 @@ keywords:
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/11/borat.jpg
 jb_picture:
   caption: "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"
+youtube:
+  - Nm274dGikFc
 ---
 
 Encapsulation is the core principle of object-oriented programming
