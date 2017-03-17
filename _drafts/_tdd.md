@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The TDD That Works for Me"
-date: 2017-01-10
+date: 2017-03-17
 place: Frankfurt, Germany
 tags: testing
 description: |
@@ -182,9 +182,9 @@ where we start to learn fast and then slow down over time:
 {% figure /images/2017/03/cdbtf-graph.png 450 %}
 
 This perfectly illustrates what I just described above. I don't need tests
-in the beginning of the project and we create them later, when product
-users express the need for them by reporting bugs. This dynamics looks only
-logical to me.
+in the beginning of the project; I create them later, when
+my users express the need for them by reporting bugs.
+This dynamics looks only logical to me.
 
 You can also analyze your project using
 [my tool](https://github.com/yegor256/tdx) and see the graph. Would be
