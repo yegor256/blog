@@ -104,7 +104,7 @@ Novosibirsk, Russia<br/>
 **Java Annotations Are a Big Mistake**<br/>
 [JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
 Moscow, Russia<br/>
-7 April 2017
+8 April 2017
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
