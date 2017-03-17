@@ -14,9 +14,9 @@ keywords:
   - tdd doesn't work
   - tdd works
   - automated testing
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/...
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg
 jb_picture:
-  caption:
+  caption: La grande bellezza (2013) by Paolo Sorrentino
 ---
 
 [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) (a.k.a. TDD)
