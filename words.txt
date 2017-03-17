@@ -6406,7 +6406,6 @@ un-preventable
 un-testable
 unacceptable
 unambiguous
-unambitious
 unannounced
 unanswered
 unaware
