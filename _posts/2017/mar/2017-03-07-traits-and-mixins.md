@@ -165,7 +165,7 @@ the very idea of
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 
 Such a tight coupling between mixins and object private structure
-leads to nothing by unmaintainable and difficult to understand code.
+leads to nothing but unmaintainable and difficult to understand code.
 
 The very obvious alternatives to mixins are
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %}).
