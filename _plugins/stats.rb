@@ -97,7 +97,7 @@ module Jekyll
       .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
       .select{ |w| w.length > 1 }
-      .select{ |w| /[A-Za-z].*/ =~ w }
+      .select{ |w| /^[A-Za-z].*/ =~ w }
       .map do |w|
         if /[A-Z]{2}.*/ =~ w
           w
