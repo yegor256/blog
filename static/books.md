@@ -47,7 +47,7 @@ It will cover more object-oriented patterns and anti-patterns,
 including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
 dependency injection, reflection, and others.
 <br/>
-To be published in March 2017.
+To be published in <del>February</del> April 2017.
 
 <div class="clear"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
@@ -56,7 +56,7 @@ propose a number of best practices for organizing software development
 process. What will be interesting is that it will be fiction book, with
 characters, plot, jokes, dialogs, etc.
 <br/>
-To be published in August 2017.
+To be published in <del>February</del> August 2017.
 
 <div class="clear"></div>
 To be continued...
