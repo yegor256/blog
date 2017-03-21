@@ -42,6 +42,8 @@ c) static methods are [not allowed]({% pst 2014/may/2014-05-05-oop-alternative-t
 d) constructors [must be]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) code-free;
 e) objects must expose fewer than five public methods (Section 3.1 of [Elegant Objects](/elegant-objects.html)).
 
+{% quote Types in OOP constitute your vocabulary, which explains the world around your code. %}
+
 The biggest concern, of course, is maintainability: "If, instead of 50 longer classes,
 we had 300 shorter ones, then the code would be way less readable."
 This will most certainly happen if you design them wrong.

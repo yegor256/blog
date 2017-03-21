@@ -130,6 +130,13 @@ Kiev, Ukraine<br/>
 26-27 May 2017
 
 <div class="talk-event"/>
+<img src="/images/2016/kiof.png" class="future-talk" alt="Kyiv Outsourcing Forum 2017"/>
+**How to Avoid Outsourcing Disaster**<br/>
+[Kyiv Outsourcing Forum 2017](http://outsourceforum.org/)<br/>
+Kiev, Ukraine<br/>
+26-27 May 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
 **Мифы и реальность софтверных команд**<br/>
 [ITEM 2017](http://item.com.ua/)<br/>
