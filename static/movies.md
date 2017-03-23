@@ -14,10 +14,10 @@ keywords:
   - best yegor movies
   - yegor bugayenko movies
   - movies
-exclude_from_search: true
 ---
 
-These movies were mentioned in all posts at this blog, I would
+These {{ site.posts | movies_count }}
+movies were mentioned in this blog, I would
 recommend to watch them all:
 
 <div class="nospell">

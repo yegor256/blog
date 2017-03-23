@@ -20,12 +20,19 @@ keywords:
 "Code Ahead" will be my second book. It will be about software engineering. It
 will contain a number of best practices, which help software live longer.
 All of that principles I've learned from my practical experience. It will
-be published in February, 2017.
+be published in 2017.
 
 <!--more-->
 
+Mar 7, 2017:
+I wrote a two-page intro to the book. It will be a **novel**. A novel about
+programmers, testers, managers, executives, clients, and computers. The
+main character will try to fight his way through a very typical
+corporate culture. I've never done fiction writing before. Let's see
+how will it work out.
+
 Nov 20, 2016:
-I've got over 30 emails from those who are interested in reviewing
+I've got over 30 emails from those who are interested in **reviewing**
 this book. To make the process transparent let's make it simple. I will put
 applicants in a list and let you vote. The best 12, elected by you,
 will get the early draft of the book and will help me review it. To

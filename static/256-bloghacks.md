@@ -33,6 +33,10 @@ ISBN: 1537688669.<br/>
 
 <!-- Reviews for Google -->
 
+Mar 5, 2017:
+Added unique words counter [here](/contents.html). It seems that
+my vocabulary is 8,679 words. Not bad.
+
 Feb 23, 2017:
 I've got the first full-size review of the book from one of its
 main reviewers/contributors (Wojciech Adam Koszek). I will add more reviews
@@ -70,7 +74,7 @@ Raul Estrada,
 Andriy Kryvtsun,
 Mariana Lutsiuk,
 Marcos Douglas B. Santos,
-Matheus Gontijo,
+[Matheus Gontijo](https://twitter.com/mhgontijo),
 Alexey Semenyuk,
 Kevin Sahin,
 Danny Derakhshan. There are 214 pages, 46,441 words, and

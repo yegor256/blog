@@ -14,7 +14,6 @@ keywords:
   - yegor bugayenko
   - егор бугаенко
   - project management blog
-exclude_from_search: true
 ---
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
@@ -78,7 +77,7 @@ subscribers).
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span class="note">2153+ happy subscribers and counting...</span>
+  <span class="note">2450+ happy subscribers and counting...</span>
 </fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).

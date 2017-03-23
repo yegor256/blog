@@ -207,6 +207,18 @@ systematic and regular writing will help you structure
 your thoughts, plans, and decisions. Well, that's what I'm getting
 from my blog.
 
+## Ambitions
+
+If you're young and your resume is not full of bright achievements yet,
+you can add "ambitions" section to it. There you say what you're planning
+to achieve, to impress your future employer. For example:
+"learn Go,"
+"create a new open source CSS framework,"
+"write a book,"
+or "earn Oracle Java certification next year". This will demonstrate
+that even though you're young, you do care about your career and
+professional growth.
+
 ## Education
 
 I would limit yourself to a few letters in this area. Just "MSc" or "BSc" is
@@ -254,9 +266,17 @@ Other employers may think differently. Well, they most likely think differently.
 That's why you have to demonstrate with which offices you've spent 10 recent
 years of your life. I would recommend you keep this list short. Even if you've
 changed eight companies over the last two years, don't say that. Just three
-places is enough. That will show them you're a good slave&mdash;very loyal to previous masters. That's what they want to see, because they
+places is enough. That will show them you're a good slave&mdash;very
+loyal to previous masters. That's what they want to see, because they
 are planning to buy you and become your next master. Right? Sounds harsh?
 Isn't [it true]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})?
+
+Also, your experience section must mention your achievements, not your
+duties. Instead of
+"managing 300+ AWS nodes" or
+"building mobile apps" it's better to say
+"created 300+ AWS nodes infrastructure" or
+"built a few mobile apps".
 
 ## ACM, IEEE, JUG, and Other Memberships
 
@@ -300,3 +320,8 @@ Want free advice on your resume? Send it to
 what I think. I will reply to all emails, but be ready to hear
 mostly what's wrong. What's right you will know without me, when
 they pay you $200 per hour.
+
+Look at these samples (they are good):
+[`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf),
+[`@leventov`](/pdf/resumes/roman-leventov.pdf).
+

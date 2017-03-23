@@ -16,6 +16,8 @@ keywords:
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/gi-jane.png
 jb_picture:
   caption: G.I. Jane (1997) by Ridley Scott
+youtube:
+  - YBQoTZ-1X-o
 ---
 
 At [teamed.io](http://www.teamed.io), we work in distributed teams and

@@ -17,8 +17,6 @@ keywords:
 youtube:
   - D0dqC_3Bch8
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/russina-matroshka.jpg
-jb_picture:
-  caption: Матрёшка
 ---
 
 The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)

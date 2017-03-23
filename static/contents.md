@@ -16,7 +16,6 @@ keywords:
   - yegor256 blog contents
   - articles about software development
   - articles about programming
-exclude_from_search: true
 style: |
   .sorter {
     cursor: pointer;
@@ -90,7 +89,7 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
-Intensity of writing ({% wordcount %} words in the entire blog):
+Intensity of writing ({% wordcount %}):
 
 <figure>
 <object data="/stats.svg" type="image/svg+xml"

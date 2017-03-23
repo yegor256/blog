@@ -20,7 +20,8 @@ jb_picture:
 ---
 
 Software outsourcing is a disaster waiting to happen; we all know that. First, you find
-a company that promises you everything you could wish for in a product&mdash;on-time and in-budget delivery, highest quality, beautiful user interface,
+a company that promises you everything you could wish for in
+a product&mdash;on-time and in-budget delivery, highest quality, beautiful user interface,
 cutting-edge technologies, and hassle-free lifetime support. So you send the
 first payment and your journey starts. The team hardly understands your needs,
 the quality is terrible, all your time and budget expectations

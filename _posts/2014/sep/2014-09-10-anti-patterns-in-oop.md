@@ -41,6 +41,8 @@ Here they come:
 
  * [Class Casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
 
+ * [Traits and Mixins]({% pst 2017/mar/2017-03-07-traits-and-mixins %})
+
 <!--more-->
 
 Avoid them at all cost. Check

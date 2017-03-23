@@ -5,15 +5,6 @@ layout: compress
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
   itemscope="" itemtype="http://schema.org/WebSite">
   <head>
-    <!-- errorception.com
-    <script>
-      (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
-      c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
-      c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
-      _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
-      (window,document,"script","57c3846b0929bf2b09000494");
-    </script>
-    -->
     <meta charset="utf-8"/>
     <meta name="description" itemprop="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
@@ -22,7 +13,6 @@ layout: compress
     <meta name="og:site_name" itemprop="author" content="{{ site.author.name }}"/>
     <meta name="og:type" content="article" />
     <meta name="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:site" content="@yegor256"/>
@@ -63,19 +53,19 @@ layout: compress
         <nav>
           <ul class="menu social notranslate">
             <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow"
-              title="Follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
+              title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="/rss.xml" re="nofollow"
-              title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
+              title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow"
               title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow"
               title="My StackOverflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow"
-              title="Follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
+              title="Follow me on Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow"
-              title="Follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
+              title="Follow me on Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow"
-              title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+              title="My LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow"
               title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow"
@@ -83,27 +73,39 @@ layout: compress
             <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow"
               title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://gitter.im/yegor256/elegantobjects" rel="nofollow"
-              title="Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
+              title="Our OOP Gitter chat"><i class="icon icon-gitter notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://soundcloud.com/yegor256" rel="nofollow"
               title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li>
             <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow"
               title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li>
             <li><a href="mailto:blog@yegor256.com" rel="nofollow"
-              title="blog@yegor256.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+              title="Email me any time"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
           </ul>
           <ul class="menu">
-            <li><a href="/" title="Home page">home</a></li>
-            <li><a href="/best.html" title="Best articles to read">12&#160;best</a></li>
-            <li><a href="/contents.html" title="Blog contents">all&#160;{{ site.posts.size }}</a></li>
-            <li><a href="/webinars.html" title="Webinars">webinars</a></li>
-            <li><a href="/talks.html" title="Talks">talks</a></li>
-            <li><a href="/books.html" title="Books">books</a></li>
-            <li><a href="/papers.html" title="Papers">papers</a></li>
-            <li><a href="/pets.html" title="Pets">pets</a></li>
-            <li><a href="/award.html" title="Software quality award">award</a></li>
-            <li><a href="/testimonials.html" title="What people say about me">testimonials</a></li>
-            <li><a href="http://ru.yegor256.com/" title="О политике" class="politics">о политике</a></li>
-            <li><a href="/video-qa.html" title="Video Q&amp;A">video Q&amp;A</a></li>
+            <li><a href="/"
+              title="Home page">home</a></li>
+            <li><a href="/best.html"
+              title="Best articles to read">12&#160;best</a></li>
+            <li><a href="/contents.html"
+              title="The contents of the entire blog">all&#160;{{ site.posts.size }}</a></li>
+            <li><a href="/webinars.html"
+              title="My webinars">webinars</a></li>
+            <li><a href="/talks.html"
+              title="Future and past conference talks">talks</a></li>
+            <li><a href="/books.html"
+              title="The books I wrote">books</a></li>
+            <li><a href="/papers.html"
+              title="My academic papers and patents">papers</a></li>
+            <li><a href="/pets.html"
+              title="My loved pet projects">pets</a></li>
+            <li><a href="/award.html"
+              title="Software quality award">award</a></li>
+            <li><a href="/testimonials.html"
+              title="What some people say about me">testimonials</a></li>
+            <li><a href="http://ru.yegor256.com/"
+              title="О политике на русском языке" class="politics">о политике</a></li>
+            <li><a href="/video-qa.html"
+              title="Video questions and answers about management">video Q&amp;A</a></li>
           </ul>
         </nav>
         <div class="search">
@@ -121,7 +123,7 @@ layout: compress
           <ul>
             <li>
               Частично <strong>русифицированная</strong> версия <strong>Elegant Objects</strong>
-              <a href="/elegant-objects.html">вышла</a> ограниченным тиражем, при поддержке
+              <a href="/elegant-objects.html">вышла</a> ограниченным тиражом, при поддержке
               подкаста "Разбор Полетов". Всего 128 штук. Чтобы купить,
               <a href="mailto:shop@yegor256.com">напишите нам</a>.
             </li>
@@ -160,16 +162,16 @@ layout: compress
               and if you're a <strong>Ruby expert</strong>.
             </li>
             -->
+            <!--
             <li>
               At <a href="/webinars.html">Webinar #22</a>
               we'll discuss the problem of "naked" data in OOP and
               possible options to neutralize their negative effect,
-              join us on <b>March 1</b>, at 11am PST.
+              join us on <b>March 15</b> (re-scheduled!), at 11am PST.
             </li>
+            -->
             <li>
               Meet me at
-              <a href="https://events.epam.com/events/kyiv-jug-feb28">JUG.ua</a> (Kiev/Feb-28),
-              <a href="http://kh.pmday.org/yehor-buhayenko2017s/">PMDay</a> (Kharkiv/Mar-4),
               <a href="http://agiledays.ru/">AgileDays</a> (Moscow/Mar-23),
               <a href="http://www.devonsummit.com/speakers/">DevOn Summit</a> (Delft/Mar-30),
               <a href="https://2017.jbreak.ru/speakers/yegor-bugayenko/">JBreak</a> (Novosibirsk/Apr-4),

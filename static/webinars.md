@@ -13,7 +13,6 @@ keywords:
   - webinars about programming
   - software engineers webinars
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
-exclude_from_search: true
 style: |
   .wnr {
     width: 192px;
@@ -28,10 +27,11 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 01-03-2017 22 Nm274dGikFc Naked Data in OOP %}
+<!-- {% webinar 15-03-2017 22 Nm274dGikFc Naked Data in OOP %} -->
 
-<a href="https://www.youtube.com/watch?v=Nm274dGikFc">March 1, 2017</a><br/>
-**Naked Data in OOP**<br/>
+<a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+March 15, 2017<br/>
+**Naked Data isn OOP**<br/>
 We will discuss the problem of data presence in object-oriented
 code and how their negative effect can be neutralized.
 The discussion will be based on this blog post:
@@ -178,7 +178,8 @@ world. The discussion was be based on this post:
 <a href="https://www.youtube.com/watch?v=WpP4rIhh5e4"><img src="https://i.ytimg.com/vi/WpP4rIhh5e4/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 5, 2015<br/>
 **Don't Create Objects That End With -ER**<br/>
-We talked about class naming principles and a very typical
+We talked about [class naming]({% pst 2017/feb/2017-02-28-too-many-classes %})
+principles and a very typical
 problem of misusing "-er" suffix for them, for example in
 Managers, Observers, Controllers, Filters, Helpers, etc. The
 discussion was based on this post:

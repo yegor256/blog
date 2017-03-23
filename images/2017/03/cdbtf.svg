@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="703px" height="410px" viewBox="0 0 703 410" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval" stroke="#000000" fill="#F6A623" cx="56" cy="199" r="56"></circle>
+            <text id="Code" font-family="CMUTypewriter-Regular, CMU Typewriter Text" font-size="32" font-weight="normal" fill="#000000">
+                <tspan x="22.4" y="207">Code</tspan>
+            </text>
+            <circle id="Oval" stroke="#000000" fill="#F6A623" cx="308" cy="201" r="56"></circle>
+            <circle id="Oval" stroke="#000000" fill="#F6A623" cx="308" cy="201" r="56"></circle>
+            <text id="Deploy" font-family="CMUTypewriter-Regular, CMU Typewriter Text" font-size="32" font-weight="normal" fill="#000000">
+                <tspan x="258.1" y="209">Deploy</tspan>
+            </text>
+            <ellipse id="Oval" stroke="#000000" fill="#F6A623" cx="476" cy="56" rx="56" ry="56"></ellipse>
+            <text id="Break" font-family="CMUTypewriter-Regular, CMU Typewriter Text" font-size="32" font-weight="normal" fill="#000000">
+                <tspan x="434" y="64">Break</tspan>
+            </text>
+            <ellipse id="Oval" stroke="#000000" fill="#F6A623" cx="645" cy="202" rx="56" ry="56"></ellipse>
+            <ellipse id="Oval" stroke="#000000" fill="#F6A623" cx="645" cy="202" rx="56" ry="56"></ellipse>
+            <text id="Test" font-family="CMUTypewriter-Regular, CMU Typewriter Text" font-size="32" font-weight="normal" fill="#000000">
+                <tspan x="612.4" y="210">Test</tspan>
+            </text>
+            <ellipse id="Oval" stroke="#000000" fill="#F6A623" cx="476" cy="352" rx="56" ry="56"></ellipse>
+            <ellipse id="Oval" stroke="#000000" fill="#F6A623" cx="476" cy="352" rx="56" ry="56"></ellipse>
+            <text id="Fix" font-family="CMUTypewriter-Regular, CMU Typewriter Text" font-size="32" font-weight="normal" fill="#000000">
+                <tspan x="452.3" y="360">Fix</tspan>
+            </text>
+            <path d="M117.5,192.5 L240.5,192.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M240.5,192.5 L229.7,189.5 L229.7,195.5 L240.5,192.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path d="M352.5,146.5 L417.5,91.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M417.5,91.5 L407.317601,96.1860174 L411.193255,100.766335 L417.5,91.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path d="M532.5,90.5 L603.5,151.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M603.5,151.5 L597.263191,142.18645 L593.353166,146.737462 L603.5,151.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path d="M604.5,255.5 L527.5,310.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M527.5,310.5 L538.032036,306.663828 L534.544607,301.781427 L527.5,310.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path d="M419.5,311.5 L346.5,252.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M346.5,252.5 L353.013846,261.621941 L356.785356,256.955496 L346.5,252.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+        </g>
+    </g>
+</svg>

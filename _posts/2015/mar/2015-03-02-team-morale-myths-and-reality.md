@@ -60,7 +60,9 @@ you have no idea where the team is going is to tell them that the future
 is bright and cloudless. Everybody understands that's either a lie and you
 are trying to hide risks or you're stupid enough to not see them. In either
 case, the best people would attempt to quit before it's too late. Thus, to keep
-morale up, regularly inform your people about problems you're facing and
+morale up,
+[regularly inform]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %})
+your people about problems you're facing and
 risks you're trying to prevent. They will appreciate it and respect you.
 A strong, professional manager deals with risks instead of ignoring them.
 
@@ -72,9 +74,12 @@ it is first of all _your_ personal mistake. You hired that person,
 you trained him or her, you delegated the responsibility, and you
 controlled and monitored the job. Then he made a mistake, and the project
 lost money, disappointed a customer, or damaged the firm's reputation. Of course you need to
-take necessary disciplinary actions and maybe fire the troublemaker. But first of all,
-you have to admit in front of everyone that it was your personal mistake.
-You didn't control enough, you didn't plan well, or you didn't take preventive actions.
+take necessary disciplinary actions and maybe
+[fire]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) the troublemaker. But first of all,
+you have to admit in front of everyone that it was _your_ personal mistake.
+You didn't control enough, you didn't
+[plan]({% pst 2016/may/2016-05-24-who-is-project-manager %})
+well, or you didn't take preventive actions.
 This is what the team expects from you. Also, your people expect
 you to explain to them how you're going to learn from this mistake in order to prevent
 a similar one from happening in the future. A strong manager isn't afraid to look
@@ -86,8 +91,10 @@ The most demotivating word used in task descriptions is "together." Don't use it
 Each task has to be personally and individually assigned (no matter what the
 [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) says).
 Everybody is responsible for his or her own success or failure. How their results
-join together and lead to a mutual success or failure&mdash;that's _your_ business.
-Whether you succeed or fail, we all will see. Once you say we all have to succeed together,
+join together and lead to a mutual success or failure&mdash;that's _your_
+[business]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
+Whether you succeed or fail, we all will see. Once you say we all have to succeed
+[together]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}),
 the team understands that you're trying to shift responsibility from your own
 shoulders to theirs. It's a sign of weakness, and you lose respect. Make
 tasks and goals strictly personal, and be prepared to be responsible for
@@ -117,16 +124,19 @@ slogans from you. It needs specific instructions and rules in order
 to follow them and produce results, money, and satisfaction. Agile is a set
 of abstract principles that you should understand and digest. But then,
 after you chew them properly, convert them to specific and
-very unambitious rules of work. Don't talk about Agile; be agile.
+very unambiguous rules of work. Don't talk about Agile; be agile.
 
 {% quote Give everybody an assurance that none of them will be terminated behind a closed door %}
 
 **Don't Close the Door**.
-Responsibility is personal, money is personal, and results are personal. But
+Responsibility is personal,
+[money]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
+is personal, and results are personal. But
 their discussions should be open to everybody. Don't close the door to that
 meeting room when you're talking about problems or appraising someone's
 results. You want your team to work together? Give everybody an assurance
-that none of them will be terminated behind a closed door. These pompous
+that none of them will be
+[terminated]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) behind a closed door. These pompous
 speeches about "us working together" usually turn into mush once the team
 sees that someone gets fired after a private conversation with a manager.
 Are we together, or is it you against us? To keep team morale up, you, as a manager,
@@ -185,7 +195,7 @@ as a manager who predicted the situation and managed it professionally.
 **Put Money on the Table**.
 Discuss money openly and freely, right in the office, right in front
 of everybody. This advice is for true professionals. If you can't do what
-is said above, don't try this one. But if you consider yourself a real
+is said above, don't even try this one. But if you consider yourself a real
 pro in management and leadership, you should put money on the table and
 let everybody know who is getting what, when, why, and why not. Everybody
 should know everybody's salaries, bonuses, benefits, and the rationale behind them.
@@ -194,6 +204,7 @@ a $5,000 raise to their annual salary. Also, he or she should know why a
 colleague is called "senior developer" while his or her title is still "junior."
 This information should be public and printed on the wall right behind
 your chair. Why don't most managers do this? Because they don't have any
-rationale behind their monetary decisions. Instead of managing the money,
+[rationale]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
+behind their monetary decisions. Instead of managing the money,
 they let money manage them.
 

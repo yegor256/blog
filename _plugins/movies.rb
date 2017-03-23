@@ -18,13 +18,23 @@
 
 module Jekyll
   module Filters
-    def movies(posts)
-      posts
-        .select{ |p| p['jb_picture'] }
-        .map{ |p| p['jb_picture']['caption'] }
-        .uniq
-        .sort
-        .map{ |c| "<p>#{c}</p>" }
+    def movies_count(posts)
+      with_movies(posts).size
     end
+
+    def movies(posts)
+      with_movies(posts).map do |p|
+        "<p><a href='#{p.url}'>#{p['jb_picture']['caption']}</a></p>"
+      end
+    end
+
+    private
+
+    def with_movies(posts)
+      posts
+        .select{ |p| p['jb_picture'] && p['jb_picture']['caption'] }
+        .uniq{ |p| p['jb_picture']['caption'] }
+        .sort{ |a,b| a['jb_picture']['caption'] <=> b['jb_picture']['caption'] }
+      end
   end
 end

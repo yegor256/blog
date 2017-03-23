@@ -15,7 +15,6 @@ keywords:
   - yegor bugayenko blog
   - quality of software
   - software blog
-exclude_from_search: true
 ---
 
 These twelve articles are the most interesting to read.

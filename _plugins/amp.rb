@@ -39,7 +39,7 @@ module Jekyll
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
         width, height = Jekyll.image_size(src)
-        raise "Can't calculate size of #{path}" if !width
+        raise "Can't calculate size of #{src}" if !width
         f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
       end
       xml.xpath('//comment()').remove

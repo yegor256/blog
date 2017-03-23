@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Handle the Problem of Too Many Classes"
-date: 2017-01-10
+date: 2017-02-28
 place: Odessa, Ukraine
 tags: oop java
 description: |
@@ -27,7 +27,8 @@ there is someone who shares a comment like this:
 And my answer is always the same: "Of course we will, and that's great!"
 I honestly believe that even if you can't consider having "a lot of classes" a virtue,
 you can't call it a drawback of any truly object-oriented code either. However,
-there may come a point when classes become a problem; let's see when, how, and what to do about that.
+there may come a point when classes become a problem;
+let's see when, how, and what to do about that.
 
 <!--more-->
 
@@ -40,6 +41,8 @@ b) objects must not have more than four attributes (Section 2.1 of [Elegant Obje
 c) static methods are [not allowed]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %});
 d) constructors [must be]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) code-free;
 e) objects must expose fewer than five public methods (Section 3.1 of [Elegant Objects](/elegant-objects.html)).
+
+{% quote Types in OOP constitute your vocabulary, which explains the world around your code. %}
 
 The biggest concern, of course, is maintainability: "If, instead of 50 longer classes,
 we had 300 shorter ones, then the code would be way less readable."

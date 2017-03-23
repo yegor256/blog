@@ -32,13 +32,16 @@ module Jekyll
   end
   class WordCountBlock < Liquid::Tag
     def render(context)
-      words = 0
+      words = []
       context['site'].posts.each do |doc|
-        words += doc.content.split(/\s+/).length
+        words += Jekyll.all_words(doc.content)
       end
-      count = words.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
-      puts "#{count} words in the entire blog"
-      count
+      puts "#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
+      "approx. #{decimal(words.length)} words in the entire blog, \
+      <a href='/words.txt'>#{decimal(words.uniq(&:downcase).length)}</a> unique ones"
+    end
+    def decimal(num)
+      num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     end
   end
   class StatsGenerator < Generator
@@ -49,12 +52,19 @@ module Jekyll
       FileUtils.mkdir_p File.dirname(dat)
       months = {}
       min = Time.parse('2014-04-01')
+      words = []
       site.posts.docs.each do |doc|
         next if doc.date < min
         m = doc.date.strftime("%Y-%m")
         months[m] = 0 if !months.key?(m)
-        months[m] += doc.content.split(/\s+/).length
+        all = Jekyll.all_words(doc.content)
+        words += all
+        months[m] += all.length
       end
+      File.write(
+        File.join(site.config['source'], '_temp/stats/words.txt'),
+        words.sort{ |a,b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
+      )
       open(dat, 'w') do |f|
         for m, c in months
           f.puts "#{m}-01T00:00 #{c}"
@@ -72,7 +82,29 @@ module Jekyll
       ]
       raise 'failed to build gnuplot stats image' if !$?.exitstatus
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
+      site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
     end
+  end
+
+  def self.all_words(text)
+    text
+      .gsub(/\{% highlight .+ endhighlight %\}/m, ' ')
+      .gsub(/\[([^\]]+)\]\([^\)]+\)/, ' \1 ')
+      .gsub(/`[^`]+`/, ' ')
+      .gsub(/\{% .+ %\}/, ' ')
+      .gsub(/&mdash;/, ' ')
+      .gsub(/<[^>]+>/, ' ')
+      .gsub(/[^A-Za-z'-]/, ' ')
+      .split(/\s+/)
+      .select{ |w| w.length > 1 }
+      .select{ |w| /^[A-Za-z].*/ =~ w }
+      .map do |w|
+        if /[A-Z]{2}.*/ =~ w
+          w
+        else
+          w.downcase
+        end
+      end
   end
 end
 

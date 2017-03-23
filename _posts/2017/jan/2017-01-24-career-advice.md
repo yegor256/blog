@@ -139,8 +139,9 @@ you must work on two to three projects part-time and change them every 6 to 12 m
 
 **Don't Be Cheap**.
 Forget the stories that teach "money is not everything, and an interesting project
-is much more important"&mdash;they are for losers. Money is everything. An
-interesting project will be _properly_ funded. If it's not funded, the market
+is much more important"&mdash;they are for losers. Money
+[is everything]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}).
+An interesting project will be _properly_ funded. If it's not funded, the market
 doesn't need it. What are you doing there then? The only answer is that you're
 not as good as [others]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %});
 that's how they managed to buy you. My advice is to

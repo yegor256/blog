@@ -13,6 +13,7 @@ keywords:
   - vision statement examples
   - vision statement definition
   - vision statement software project
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/10/lifecycle-thinking.png
 ---
 
 {% badge /images/2014/10/lifecycle-thinking.png 250 %}

@@ -13,7 +13,6 @@ keywords:
   - conferences about programming
   - software engineers conferences
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
-exclude_from_search: true
 style: |
   .talk-event {
     clear: both;
@@ -79,29 +78,16 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua 2017"/>
-**OOP Java Puzzlers**<br/>
-[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
-Kiev, Ukraine<br/>
-28 February 2017
-
-<div class="talk-event"/>
-<img src="/images/2017/khpmday-2017.png" class="future-talk" alt="Kharkiv PMDay 2017"/>
-**Management Without Managers**<br/>
-[Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/)<br/>
-Kharkiv, Ukraine<br/>
-4 March 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
 **Семь врагов нашей мотивации**<br/>
+**Избавляйтесь от экспертов**<br/>
 [AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
 Moscow, Russia<br/>
-23-24 March 2017
+24 March 2017
 
 <div class="talk-event"/>
 <img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
-**Why Distributed Teams Suck?**<br/>
+**Why Distributed Teams Suck?** (keynote)<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
 Delft, The Netherlands<br/>
 30 March 2017
@@ -118,14 +104,22 @@ Novosibirsk, Russia<br/>
 **Java Annotations Are a Big Mistake**<br/>
 [JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
 Moscow, Russia<br/>
-7-8 April 2017
+8 April 2017
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
+**How Bright is Your Future?** (keynote)<br/>
 **What's Wrong with Object-Oriented Programming?**<br/>
 [RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
 Riga, Latvia<br/>
 15 May 2017
+
+<div class="talk-event"/>
+<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2017"/>
+**What this InterruptedException is about?**<br/>
+[GeeCON 2017](https://geecon.org/)<br/>
+Kraków, Poland<br/>
+17-19 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
@@ -136,10 +130,39 @@ Kiev, Ukraine<br/>
 26-27 May 2017
 
 <div class="talk-event"/>
+<img src="/images/2017/kiof.png" class="future-talk" alt="Kyiv Outsourcing Forum 2017"/>
+**How to Avoid Outsourcing Disaster**<br/>
+[Kyiv Outsourcing Forum 2017](http://outsourceforum.org/)<br/>
+Kiev, Ukraine<br/>
+26-27 May 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
+**Мифы и реальность софтверных команд**<br/>
 [ITEM 2017](http://item.com.ua/)<br/>
 Dnipro, Ukraine<br/>
 17-18 June 2017
+
+<!--
+<div class="talk-event"/>
+<img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
+**We Pay for Bugs**<br/>
+[QAFest 2017](http://qafest.com/)<br/>
+Kiev, Ukraine<br/>
+22-23 September 2017
+-->
+
+<div class="talk-event"/>
+<img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
+[JavaDay 2017](http://javaday.org.ua/)<br/>
+Kiev, Ukraine<br/>
+4-5 November 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
+[DevTernity 2017](https://devternity.com/)<br/>
+Riga, Latvia<br/>
+1 December 2017
 
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
@@ -152,12 +175,29 @@ why shouldn't we rate them, right? The best rate is
 ### 2017
 
 <div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
+Management Without Managers;
+[Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
+Kharkiv, Ukraine;
+4 March 2017;
+[slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
+[видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
+OOP Java Puzzlers;
+[JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
+Kiev, Ukraine;
+28 February 2017;
+[видео](https://www.youtube.com/watch?v=qqWC3_cQHAc).
+
+<div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
 Decorators, Decorators, Decorators;
 [JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
 Dnipro, Ukraine;
 11 February 2017;
-[video](https://www.youtube.com/watch?v=LPLqLaSwSsI).
+[видео](https://www.youtube.com/watch?v=LPLqLaSwSsI).
 
 ### 2016
 
@@ -167,7 +207,7 @@ Object-Oriented Java by Example;
 [Morning@Lohika 2016](https://dou.ua/calendar/13589/);
 Lviv, Ukraine;
 24 December 2016;
-[video](https://www.youtube.com/watch?v=GQLFc-ttCX0).
+[видео](https://www.youtube.com/watch?v=GQLFc-ttCX0).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
@@ -175,7 +215,7 @@ Make Your Java Object-Oriented, 64 Practical Steps;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
 Kiev, Ukraine;
 20 December 2016;
-[video](https://www.youtube.com/watch?v=qAxLtSYN0nw).
+[видео](https://www.youtube.com/watch?v=qAxLtSYN0nw).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>

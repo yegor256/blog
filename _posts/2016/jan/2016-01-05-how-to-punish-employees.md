@@ -171,13 +171,13 @@ That's what you need!
 
 <hr/>
 
+{% badge /images/2016/01/management-stripped-bare.jpg 96 http://amzn.to/2bNjruM %}
+
 This list is definitely not exhaustive. I'm sure there are many
 more [interesting](https://en.wikipedia.org/wiki/Psychopathy)
 methods and technologies. Don't hesitate to
 share them below in the comments. As I said above, I believe this is
 an art, not a science.
-
-{% badge /images/2016/01/management-stripped-bare.jpg 96 http://amzn.to/2bNjruM %}
 
 PS. If you like this article, you will certainly enjoy this
 [Management Stripped Bare: What They Don't Teach You at Business School](http://amzn.to/2bNjruM)

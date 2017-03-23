@@ -19,10 +19,12 @@ keywords:
 Software outsourcing is a territory full of risks, disappointment,
 fakes, fraud, and failures. Vast majority of projects simply fail. Almost
 everyone who tried to outsource a software project has a story that
-ends with "if I would only know" or "I picked the wrong team". Programmers
+ends with "if I would only know" or "I picked the wrong team." Programmers
 and their managers are terrible. It's all because of them! They fail,
-big time... But, you know what, I don't think so. I believe that the root cause of
-all failures in outsourcing is mistakes made by those with the money&mdash;the clients. They are guilty in failures, more than everybody else.
+big time. But, let's face it: the root cause of
+all failures in outsourcing is mistakes made by those with
+the money&mdash;the clients. They are guilty of failures,
+more than everybody else.
 
 <!--more-->
 

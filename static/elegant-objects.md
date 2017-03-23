@@ -54,10 +54,17 @@ point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
 more solid and architecture more visible. It is available for sale
 on [Amazon](http://goo.gl/W2WVMk) (please, don't forget to review it there!),
-ISBN: 1519166915.<br/>
+ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects).<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
+
+Mar 7, 2017:
+I started to write the third volume, which will consist entirely
+of "OOP puzzles." Just like in math or chess books there will be questions,
+which you will have to think about and answers at the end of the book.
+Want to be its reviewer? Please, fill
+[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o).
 
 Feb 24, 2017:
 The list of reviewers of the second volume is ready (alphabetic order). I'm very
@@ -88,7 +95,7 @@ details. I'm ready to mail you the manuscript in a few days.
 Feb 23, 2017:
 Русская версия первого тома опубликована при поддержке подкаста
 ["Разбор Полетов"](http://razbor-poletov.com/)
-и ограниченным тиражем в **128 экземпляров**. Это не книга
+и ограниченным тиражом в **128 экземпляров**. Это не книга
 на русском языке, а английский оригинальный текст, дополненный
 вступлениями на русском. Объем книги 330 страниц (оригинальный
 английский вариант содержит только 229 страниц). Также, это издание

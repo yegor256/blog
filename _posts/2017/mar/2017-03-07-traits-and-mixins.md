@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Traits and Mixins: OOP Garbage"
-date: 2017-01-10
+title: "Traits and Mixins Are Not OOP"
+date: 2017-03-07
 place: Odessa, Ukraine
 tags: oop java
 description: |
@@ -14,13 +14,13 @@ keywords:
   - mixin oop
   - OOP
   - trait in programming
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/...
+image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png
 jb_picture:
-  caption:
+  caption: Fear and Loathing in Las Vegas (1998) by Terry Gilliam
 ---
 
 Let me say right off the bat that the features we will discuss here are
-pure _garbage_ brought to object-oriented programming by those who desperately
+pure _poison_ brought to object-oriented programming by those who desperately
 needed a lobotomy, just like David West suggested in his
 [Object Thinking](http://amzn.to/2ass77O) book.
 These features have different names, but the most common ones are
@@ -88,7 +88,7 @@ and static methods. Moreover, if we forget
 [OOP purity]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 for a minute, this approach actually looks less readable to me, even though it has
 fewer characters; it's difficult to understand where the method
-`caps()` is coming from when it's called just like `{#caps(@title)}` instead
+`caps()` is coming from when it's called just like `#{caps(@title)}` instead
 of `#{TextUtils.caps(@title)}`. Don't you think?
 
 Mixins start to play their role better when we `include` them. We can
@@ -164,7 +164,8 @@ the internal structure changes. Such assumptions completely violate
 the very idea of
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 
-Such a tight coupling between mixins and object private
+Such a tight coupling between mixins and object private structure
+leads to nothing but unmaintainable and difficult to understand code.
 
 The very obvious alternatives to mixins are
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %}).
@@ -172,7 +173,7 @@ Take a look at the example given in the
 [article]({% pst 2015/feb/2015-02-26-composable-decorators %}):
 
 {% highlight java %}
-final Text text = new AllCapsText(
+Text text = new AllCapsText(
   new TrimmedText(
     new PrintableText(
       new TextInFile(new File("/tmp/a.txt"))
@@ -188,5 +189,5 @@ extra functionality on top of them. Mixins do
 the opposite&mdash;they make objects more complex and, thanks to that, less
 readable and maintainable.
 
-I honestly believe they are just garbage. Whoever invented them
+I honestly believe they are just poison. Whoever invented them
 was a long ways from understanding the philosophy of object-oriented design.

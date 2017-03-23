@@ -12,8 +12,7 @@ keywords:
   - programming blog
   - blog about software
 image: https://cf.jare.io/?u=http://www.yegor256.com/images/angry-testimonials.png
-exclude_from_search: true
-nospell: true
+? votesnospell: true
 ---
 
 {% badge /images/angry-testimonials.png 220 %}
