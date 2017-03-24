@@ -73,7 +73,8 @@ with Uncle Bob: Those who don't write tests must be put
 [in jail]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}),
 I just have my own interpretation of TDD. This is how it looks:
 
-{% figure /images/2017/03/cdbtf.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
   * First, I write **code** without any tests. A lot of code. I implement the
     functionality and create the design. Dozens of classes. Of course, the
