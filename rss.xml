@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-24T06:22:25+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-24T09:59:36+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
 was &lt;a href=&quot;https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development&quot;&gt;rediscovered&lt;/a&gt;
 by &lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;Kent Beck&lt;/a&gt; and explained in
 &lt;a href=&quot;http://amzn.to/2mTuxCs&quot;&gt;his famous book&lt;/a&gt; in 2002.
@@ -117,31 +117,33 @@ to prove my point. Take a look at these graphs:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; (Web framework, Java):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-takes.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-takes.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;yegor256/xembly&lt;/a&gt; (XML builder, Java):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xembly.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xembly.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (AOP library, Java):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-jcabi-aspects.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-jcabi-aspects.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;yegor256/s3auth&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-s3auth.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-s3auth.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-s3auth.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;First commercial project:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-layer.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xockets-layer.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;Second commercial project:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-hadoop-transport.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xockets-hadoop-transport.svg&quot; type=&quot;image/svg+xml&quot;
+  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;In each graph, there are two parts. The first one on the top demonstrates
 the dynamics of production
