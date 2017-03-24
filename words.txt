@@ -514,6 +514,7 @@ beautifully
 beauty
 became
 because
+beck
 beck's
 become
 becomes
@@ -1384,6 +1385,7 @@ creation
 creative
 creatively
 creativity
+creator
 creators
 creature
 creatures
@@ -1429,6 +1431,7 @@ current
 currently
 cursing
 cursors
+curve
 cushion
 cushioned
 custom
@@ -1849,6 +1852,7 @@ downside
 downtime
 downtimes
 dozen
+dozens
 DPI
 dr
 draft
@@ -2533,6 +2537,7 @@ gaps
 garbage
 gas
 gates
+gateway
 gave
 gb
 GeeCON
@@ -2627,6 +2632,7 @@ graph
 graphic
 graphical
 graphics
+graphs
 gray
 great
 greater
@@ -2688,6 +2694,7 @@ hall
 halloween
 hamcrest
 hand
+hand-washing
 handbook
 handle
 handler
@@ -2697,6 +2704,7 @@ hands
 hands-on
 hang
 hanging
+hansson
 happen
 happened
 happening
@@ -2714,6 +2722,7 @@ hardmen
 hardware
 harm
 harmful
+harms
 harness
 harold
 harsh
@@ -2752,6 +2761,7 @@ hears
 heart
 heavily
 heavyweight
+heinemeier
 held
 hell
 hello
@@ -3014,6 +3024,7 @@ individuals
 indivisible
 industry
 ineffective
+inefficient
 inevitable
 inevitably
 infamous
@@ -3130,6 +3141,7 @@ interviewers
 interviewing
 interviews
 into
+intolerable
 introduce
 introduced
 introduces
@@ -3309,6 +3321,7 @@ juniors
 JUnit
 just
 just-started
+justification
 justifications
 justified
 JVM
@@ -3462,6 +3475,7 @@ lieberherr
 lies
 lieu
 life
+lifecycle
 lifestyle
 lifetime
 light
@@ -3719,6 +3733,7 @@ meddling
 media
 mediator
 mediators
+medicine
 mediocre
 mediocrity
 medium
@@ -3872,6 +3887,7 @@ momentum
 monday
 monetary
 money
+money-driven
 money-saving
 money-wise
 MongoDB
@@ -4035,6 +4051,7 @@ nine
 nl
 no
 no-server
+no-tests-upfront
 nobody
 nodding
 node
@@ -4218,6 +4235,7 @@ optional
 options
 or
 oracle
+orange
 order
 ordering
 orders
@@ -4574,6 +4592,7 @@ population
 port
 portable
 portfolio
+portion
 POs
 position
 positioning
@@ -4707,6 +4726,7 @@ probabilities
 probability
 probably
 problem
+problem's
 problems
 procedural
 procedurally
@@ -4996,6 +5016,7 @@ redefine
 redesign
 redev
 redirect
+rediscovered
 reduce
 redundancy
 redundant
@@ -5245,6 +5266,7 @@ ridley
 riel
 right
 rights
+rigid
 ringelmann
 riot
 rise
@@ -5332,6 +5354,7 @@ sample
 samples
 samsung
 san
+sandbox
 sandler
 sandwich
 sane
@@ -5519,6 +5542,7 @@ shallow
 shame
 shamelessly
 shampoo
+shape
 share
 shared
 shares
@@ -5781,6 +5805,8 @@ SSH
 st
 stability
 stabilize
+stabilized
+stabilizes
 stable
 stack
 stackable
@@ -6119,7 +6145,9 @@ terrific
 territory
 tesla
 test
+test-and-fix-only-when-broken
 test-driven
+test-related
 testability
 testable
 testament
@@ -6388,6 +6416,7 @@ unbeatable
 unbiased
 uncertainty
 unchecked
+uncle
 uncle's
 unclear
 uncomfortable

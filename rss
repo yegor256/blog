@@ -1,4 +1,192 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-23T21:14:50+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Traits and Mixins Are Not OOP</title><link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html" rel="alternate" type="text/html" title="Traits and Mixins Are Not OOP" /><published>2017-03-07T00:00:00+00:00</published><updated>2017-03-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/07/traits-and-mixins</id><content type="html" xml:base="http://www.yegor256.com/2017/03/07/traits-and-mixins.html">&lt;p&gt;Let me say right off the bat that the features we will discuss here are
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-24T05:42:17+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
+was &lt;a href=&quot;https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development&quot;&gt;rediscovered&lt;/a&gt;
+by &lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;Kent Beck&lt;/a&gt; and explained in
+&lt;a href=&quot;http://amzn.to/2mTuxCs&quot;&gt;his famous book&lt;/a&gt; in 2002.
+In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
+said that TDD &lt;a href=&quot;http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html&quot;&gt;is dead&lt;/a&gt;
+and only &lt;a href=&quot;http://david.heinemeierhansson.com/2014/test-induced-design-damage.html&quot;&gt;harms architecture&lt;/a&gt;.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;
+(the inventor of the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID principles&lt;/a&gt;)
+&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html&quot;&gt;disagreed&lt;/a&gt;
+and
+&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html&quot;&gt;explained&lt;/a&gt;
+that TDD may not work only in certain cases.
+A few days later, he even
+&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/05/02/ProfessionalismAndTDD.html&quot;&gt;compared&lt;/a&gt; the importance of TDD
+with the importance of hand-washing for medicine, and added
+that &amp;quot;it would not surprise me if, one day, TDD had the force
+of law behind it.&amp;quot; Two years later, now just a few months ago,
+he wrote &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html&quot;&gt;more&lt;/a&gt;
+about it, and &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2017/03/06/TestingLikeTheTSA.html&quot;&gt;more&lt;/a&gt;,
+and &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2016/11/10/TDD-Doesnt-work.html&quot;&gt;more&lt;/a&gt;.
+This subject seems to be hot. Of course, I have my own take on it; let me share.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La grande bellezza (2013) by Paolo Sorrentino&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg&#39; longdesc=&#39;#ee620352&#39;/&gt;&lt;figcaption id=&#39;ee620352&#39;&gt;La grande bellezza (2013) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In theory, TDD means &amp;quot;writing tests first and code next.&amp;quot; In practice,
+according to &lt;a href=&quot;http://www.teamed.io&quot;&gt;my experience&lt;/a&gt; while working with
+more than 250 developers over the last four years, it means writing tests
+when we&amp;#39;re in a good mood and have nothing else to do. And this is only logical,
+if we understand TDD literally, by
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;the book&lt;/a&gt;.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;I have never done TDD by the book: tests first and code next.&lt;/aside&gt;
+
+&lt;p&gt;Writing a test for a class without having that class in front of you is
+&lt;em&gt;difficult&lt;/em&gt;. I would even say impossible, if we are talking about real code,
+not calculator examples. It&amp;#39;s also very &lt;em&gt;inefficient&lt;/em&gt;, because tests by definition
+are much more rigid than the code they validate&amp;mdash;creating them first will
+cause many re-do cycles until the design is stabilized.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve personally &lt;a href=&quot;https://github.com/yegor256&quot;&gt;written&lt;/a&gt; almost 300,000 lines of code in
+Java, Ruby, PHP, and JavaScript over the last four years, and I have never
+done TDD by the book: &amp;quot;write a test, make it run, make it right.&amp;quot; Ever.&lt;/p&gt;
+
+&lt;h2 id=&quot;code-deploy-break-test-fix&quot;&gt;Code, Deploy, Break, Test, Fix&lt;/h2&gt;
+
+&lt;p&gt;Even though I&amp;#39;m a huge fan of automated testing (unit or integration) and
+totally &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/05/02/ProfessionalismAndTDD.html&quot;&gt;agree&lt;/a&gt;
+with Uncle Bob: Those who don&amp;#39;t write tests must be put
+&lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;in jail&lt;/a&gt;,
+I just have my own interpretation of TDD. This is how it looks:&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First, I write &lt;strong&gt;code&lt;/strong&gt; without any tests. A lot of code. I implement the
+functionality and create the design. Dozens of classes. Of course, the
+build is automated, the deployment pipeline is configured, and I can
+test the product myself in a sandbox. I make sure
+&amp;quot;&lt;a href=&quot;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&quot;&gt;it works on my machine&lt;/a&gt;.&amp;quot;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Then, I &lt;strong&gt;deploy&lt;/strong&gt; it to production. Yes, it goes to my &amp;quot;users&amp;quot; without
+any tests because it works for me. They are either real users if it&amp;#39;s something
+open source or one of my &lt;a href=&quot;/pets.html&quot;&gt;pet projects&lt;/a&gt;, or manual testers if
+it&amp;#39;s a money project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Then, they &lt;strong&gt;break&lt;/strong&gt; it. They either test it or they use it; it doesn&amp;#39;t matter.
+They just find problems and report bugs. As many as they can.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Right after some bugs are reported, I pick the most critical of them
+and...voilà!...I create an automated &lt;strong&gt;test&lt;/strong&gt;. The bug is a message to me that
+my tests are weak; I have to fix them first. A new test will prove that
+the code is broken. Or maybe I fix an existing one. This is where I go
+&amp;quot;tests first.&amp;quot; I don&amp;#39;t touch the production code until I manage to break
+my build and prove the problem&amp;#39;s existence with a new test. Then, I do &lt;code&gt;git commit.&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Finally, it&amp;#39;s time to &lt;strong&gt;fix&lt;/strong&gt; the problem. I make changes to the production
+code in order to make sure the build is green again. Then, I do &lt;code&gt;git commit&lt;/code&gt; and
+&lt;code&gt;git push.&lt;/code&gt; And I go back to the &amp;quot;deploy&amp;quot; step; the updated product goes to my
+users.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once in a while, I have to make serious modifications to the product, like to
+introduce a new feature or perform a massive refactoring. In this case, I go
+back to the first step and do it without tests.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-reasoning-behind&quot;&gt;The Reasoning Behind&lt;/h2&gt;
+
+&lt;p&gt;The justification behind this no-tests-upfront approach is simple: We don&amp;#39;t
+need to test until it&amp;#39;s broken, mostly because we understand that it&amp;#39;s
+technically not possible to test everything or to fix all bugs. We have
+to fix only what&amp;#39;s visible and intolerable by the business. If the business
+doesn&amp;#39;t care or our users/testers don&amp;#39;t see our bugs&amp;mdash;we must not
+&lt;strong&gt;waste&lt;/strong&gt; project resources on fixing them.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, when the business or our users/testers are complaining,
+we have to be very strict with ourselves; our testing system is weak and
+must be fixed first. We can&amp;#39;t just fix the production code and deploy,
+because in this case, we may make this mistake again after some refactoring,
+and our tests won&amp;#39;t catch it. The user will find the bug again, and the
+business will pay us again to fix it. That will be the &lt;strong&gt;waste&lt;/strong&gt; of resources.&lt;/p&gt;
+
+&lt;p&gt;As you can see, it&amp;#39;s all money-driven. First, don&amp;#39;t fix anything if nobody pays for it.
+Second, fix it once and for all if they actually paid. It&amp;#39;s as simple as that.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-dynamics&quot;&gt;The Dynamics&lt;/h2&gt;
+
+&lt;p&gt;Thanks to this test-and-fix-only-when-broken approach, the balance between production
+code and test code is not the same over the entire project lifecycle. When the
+project starts, there are almost no tests. Then, the number of tests
+grows together with the number of bugs. Eventually, the situation stabilizes,
+and we can move the product from beta version to the first release.&lt;/p&gt;
+
+&lt;p&gt;I created a simple &lt;a href=&quot;https://github.com/yegor256/tdx&quot;&gt;command line tool&lt;/a&gt;
+in order to demonstrate the statistics from a few projects of mine,
+to prove my point. Take a look at these graphs:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; (Web framework, Java):&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-takes.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;yegor256/xembly&lt;/a&gt; (XML builder, Java):&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xembly.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (AOP library, Java):&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-jcabi-aspects.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-s3auth.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-s3auth.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;First commercial project:&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-layer.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Second commercial project:&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-hadoop-transport.svg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;In each graph, there are two parts. The first one on the top demonstrates
+the dynamics of production
+&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;Hits-of-Code&lt;/a&gt; (green line),
+test-related HoC (red line), and the number of issues reported to GitHub (orange line).&lt;/p&gt;
+
+&lt;p&gt;The bottom part shows how big the test-related HoC portion is
+relative to all project activity. In other words, it shows how much
+&lt;em&gt;effort&lt;/em&gt; the project invested into automated tests, compared with the
+total effort.&lt;/p&gt;
+
+&lt;p&gt;This is what I want you to pay attention to:
+The shape of the curve is almost the same in every project. It looks
+very similar to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Learning_curve&quot;&gt;learning curve&lt;/a&gt;,
+where we start to learn fast and then slow down over time:&lt;/p&gt;
+
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-graph.png&#39; itemprop=&#39;image&#39; style=&#39;width:450px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;This perfectly illustrates what I just described above. I don&amp;#39;t need tests
+at the beginning of the project; I create them later when
+my users express the need for them by reporting bugs.
+This dynamic looks only logical to me.&lt;/p&gt;
+
+&lt;p&gt;You can also analyze your project using
+&lt;a href=&quot;https://github.com/yegor256/tdx&quot;&gt;my tool&lt;/a&gt; and see the graph. It would be
+interesting to learn what kind of curve you will get.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">Test-driven development (a.k.a. TDD)
+was rediscovered
+by Kent Beck and explained in
+his famous book in 2002.
+In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
+said that TDD is dead
+and only harms architecture.
+Robert Martin
+(the inventor of the SOLID principles)
+disagreed
+and
+explained
+that TDD may not work only in certain cases.
+A few days later, he even
+compared the importance of TDD
+with the importance of hand-washing for medicine, and added
+that &amp;quot;it would not surprise me if, one day, TDD had the force
+of law behind it.&amp;quot; Two years later, now just a few months ago,
+he wrote more
+about it, and more,
+and more.
+This subject seems to be hot. Of course, I have my own take on it; let me share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg" /></entry><entry><title type="html">Traits and Mixins Are Not OOP</title><link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html" rel="alternate" type="text/html" title="Traits and Mixins Are Not OOP" /><published>2017-03-07T00:00:00+00:00</published><updated>2017-03-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/07/traits-and-mixins</id><content type="html" xml:base="http://www.yegor256.com/2017/03/07/traits-and-mixins.html">&lt;p&gt;Let me say right off the bat that the features we will discuss here are
 pure &lt;em&gt;poison&lt;/em&gt; brought to object-oriented programming by those who desperately
 needed a lobotomy, just like David West suggested in his
 &lt;a href=&quot;http://amzn.to/2ass77O&quot;&gt;Object Thinking&lt;/a&gt; book.
@@ -1071,161 +1259,4 @@ really know what he needs&amp;mdash;not only in terms of functionality, but also
 on a technical level. What makes the situation even worse is that the
 customer very often always thinks he knows
 and understands enough. The question is how do you teach a customer? How
-do you train, educate, and help him? You don&amp;#39;t!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg" /></entry><entry><title type="html">How Much Do You Love Conflict?</title><link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html" rel="alternate" type="text/html" title="How Much Do You Love Conflict?" /><published>2017-01-03T00:00:00+00:00</published><updated>2017-01-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts</id><content type="html" xml:base="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html">&lt;p&gt;Conflict is what progress is made of. A professional and well-managed
-team loves conflicts and creates them on a daily basis. A professional
-project manager provokes conflicts and makes sure none of them end
-in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Being Flynn (2012) by Paul Weitz&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg&#39; longdesc=&#39;#6c448ff1&#39;/&gt;&lt;figcaption id=&#39;6c448ff1&#39;&gt;Being Flynn (2012) by Paul Weitz&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Have you ever heard the term &amp;quot;win-win?&amp;quot; Do you know what it means? My guess is that
-most of my readers aren&amp;#39;t exactly sure what this is about, even though
-it&amp;#39;s used very often. Let me explain. In any conflict,
-there are three possible outcomes: lose-lose, win-lose, and win-win.
-The first one is the worst, and the last one is the best. Here is an example.&lt;/p&gt;
-
-&lt;p&gt;Say your wife wants to watch a movie, and you want to watch a
-baseball game. That&amp;#39;s a conflict. It starts with a confrontation of &lt;em&gt;positions&lt;/em&gt;.
-Your position is, &amp;quot;I want this game,&amp;quot; while her position is,
-&amp;quot;I want this movie.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;The easiest way is to hold to these positions no matter what, but very soon
-your conflict will turn into a fight and maybe eventually a divorce.&lt;/p&gt;
-
-&lt;p&gt;Project management offers a few
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Conflict_resolution&quot;&gt;conflict resolution techniques&lt;/a&gt;
-that can help you and your wife get out of this confrontation without asking the police for help.
-No matter which technique you use, the result will be either lose-lose,
-win-lose, or win-win.&lt;/p&gt;
-
-&lt;h2 id=&quot;lose-lose&quot;&gt;Lose-Lose&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Compromise&quot;&gt;Compromise&lt;/a&gt;
-is the worst outcome, and it&amp;#39;s known as lose-lose. For example,
-you both agree on watching the news&amp;mdash;that&amp;#39;s a compromise. Neither of you will
-get what you wanted, a movie or a baseball game. You both lose.
-Who gains in this case? You neighbors and the police, since there will be no
-fight. Will the problem really be solved? No. You both will hate
-each other even more, because neither of your desires were satisfied. The
-divorce is still coming closer.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If we resolve conflicts through compromises, everybody suffers except those management monkeys&lt;/aside&gt;
-
-&lt;p&gt;The same happens in software team conflicts&amp;mdash;if and when we resolve
-them through compromises, everybody suffers except those
-&lt;a href=&quot;/2015/09/29/mayonnaise.html&quot;&gt;management and HR monkeys&lt;/a&gt;
-who only care about a peaceful
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office&lt;/a&gt; environment. They don&amp;#39;t
-want to see us fighting over a piece of damn Java code. Moreover, they
-don&amp;#39;t really understand what the fight is about. They know nothing
-about that &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;Singleton&lt;/a&gt;
-design pattern and can&amp;#39;t understand why these guys
-are almost ready to kill each other just because one of them says
-it&amp;#39;s a pattern and the other one calls it an
-&lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;anti-pattern&lt;/a&gt;, insists
-that the project must not use it, and threatens everybody with an immediate
-discharge if they don&amp;#39;t listen.&lt;/p&gt;
-
-&lt;p&gt;Such a fight freaks everybody out. Everybody who sees positions and doesn&amp;#39;t
-see &lt;em&gt;interests&lt;/em&gt;, that is. Remember, the position is, &amp;quot;I want to see the movie&amp;quot; and
-&amp;quot;I want to use a singleton.&amp;quot; The only thing a confrontation of
-positions can produce is a fight, and the only solution is a compromise:
-&amp;quot;You guys need a good &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;team-building party&lt;/a&gt;
-so you become friends and lose &lt;del&gt;balls&lt;/del&gt; the desire to fight.&amp;quot; That&amp;#39;s what those
-monkeys build: teams. They believe that when the team is &amp;quot;strong,&amp;quot;
-there will be no fights, no conflicts, no arguments, no design patterns,
-no anti-patterns, and ... no senior developers. There will be just one
-permanent compromise over everything.&lt;/p&gt;
-
-&lt;p&gt;In a family, compromises lead to divorces. In a software team, the best talent
-just leaves. They simply don&amp;#39;t want to see their interests being disrespected
-all the time, just for the sake of &lt;em&gt;avoiding&lt;/em&gt; fights. Stay away from compromises;
-they are pure evil for both a family and a team.&lt;/p&gt;
-
-&lt;h2 id=&quot;win-lose&quot;&gt;Win-Lose&lt;/h2&gt;
-
-&lt;p&gt;The second option, which is a bit better than a compromise, is to use force:
-&amp;quot;I&amp;#39;m a man, so you do what I say; we will watch the game!&amp;quot; or
-&amp;quot;I feel sick; let me watch a movie.&amp;quot; In either case, one of you will
-get what he or she initially wanted. Even though this approach looks
-less &amp;quot;democratic,&amp;quot; it&amp;#39;s way more effective, mostly because
-it doesn&amp;#39;t involve any third parties: There is no interest of
-the police or neighbors involved, and the family resolves the conflict internally
-and naturally.&lt;/p&gt;
-
-&lt;p&gt;Both of you understand exactly why you&amp;#39;re watching that game now: because
-the male part of the family is physically stronger. Even though it may sound
-super annoying to you, my Californian readers, such a family would be way
-farther from a divorce than the one that used to make compromises, especially
-if the winning party is not always the same.&lt;/p&gt;
-
-&lt;p&gt;If your software team has a &lt;del&gt;moronic&lt;/del&gt; experienced
-&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;, you will
-most likely work in this conflict resolution model. He or she will make decisions,
-and you will have to go along. I wrote about such an architect
-&lt;a href=&quot;/2016/07/21/convince-me.html&quot;&gt;here&lt;/a&gt;
-and &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;here&lt;/a&gt;.
-I said there that an architect must be a dictator, making decisions and taking
-full responsibility for them.&lt;/p&gt;
-
-&lt;p&gt;If the architect is super smart, respected by everybody, and immortal, this
-force-based conflict resolution technique will work perfectly. The project
-will move forward fast, because everybody will work instead of think. There
-will be only one person who thinks&amp;mdash;the architect.&lt;/p&gt;
-
-&lt;p&gt;The main drawback of this win-lose approach is the &amp;quot;lose&amp;quot; part: Someone
-is always losing. And it&amp;#39;s not about an offense, even though that&amp;#39;s also important.
-It&amp;#39;s about us missing some valuable information. You will never know why
-your wife wanted to watch that movie or why that junior developer
-was suggesting you use NoSQL instead of SQL. You will just force them both
-to shut up and follow your will. While they did, you still &amp;quot;lost&amp;quot; something. So
-basically it&amp;#39;s the team that is losing something, not just your wife or that
-junior developer.&lt;/p&gt;
-
-&lt;h2 id=&quot;win-win&quot;&gt;Win-Win&lt;/h2&gt;
-
-&lt;p&gt;The most difficult and yet most effective way to resolve a conflict is to
-collaborate in order to discover the interests of all parties and find
-a solution that satisfies them all. You start by asking, &amp;quot;Why do you want to
-watch that movie?&amp;quot; to learn what exactly is behind that aggressive
-&amp;quot;I want the movie&amp;quot; position. Again, there is a huge difference between
-a position and an interest.&lt;/p&gt;
-
-&lt;p&gt;You may hear this back: &amp;quot;I&amp;#39;m just tired.&amp;quot; So the real interest is to &lt;em&gt;relax&lt;/em&gt;,
-not to watch the movie. The movie was just one of the options to get rest.
-Now, knowing her real interest, you may come up with, &amp;quot;How about I watch
-the game and give you a massage at the same time?&amp;quot; This way, the divorce may never happen.&lt;/p&gt;
-
-&lt;p&gt;Thus, the first important step is to help everybody abandon their &lt;em&gt;positions&lt;/em&gt;
-and honestly expose their &lt;em&gt;interests&lt;/em&gt;. When that&amp;#39;s done, we can all start to work
-not against each other but against the problem: With what solution will all our
-interests be satisfied at the same time?&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;A truly professional software team is full of conflicts&lt;/aside&gt;
-
-&lt;p&gt;We will ask that junior developer: &amp;quot;Why do you think we need NoSQL?&amp;quot; It&amp;#39;s
-very likely that we will hear something like, &amp;quot;I just want to learn this new
-concept.&amp;quot; This is his real interest&amp;mdash;to learn something new while
-working on this project. Maybe we can offer him some other technology to
-learn? Maybe we can move him to another project where NoSQL is used? There
-are many options. But the first step is to understand what he really
-wants. Not what position he took, but what was his real motivation for it.&lt;/p&gt;
-
-&lt;p&gt;A truly professional software team is full of conflicts, which are always
-being resolved by collaboration. The team is not afraid of conflicts. Instead,
-it &lt;em&gt;welcomes&lt;/em&gt; them, because they help reveal the real interests of all parties
-involved and make a lot of information visible and available.&lt;/p&gt;
-
-&lt;p&gt;Truly professional team players always try to &lt;em&gt;provoke&lt;/em&gt; conflicts in order to gain
-an opportunity to resolve them through collaboration, thereby exiting through the win-win door.
-That&amp;#39;s how the team grows&amp;mdash;not by hiding conflicts and making compromises,
-but by provoking them, making different interests visible, and finding the
-most optimal solutions.&lt;/p&gt;
-
-&lt;p&gt;Be aware, though, that this is way more difficult than organizing
-&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;team-building parties&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Conflict is what progress is made of. A professional and well-managed
-team loves conflicts and creates them on a daily basis. A professional
-project manager provokes conflicts and makes sure none of them end
-in a consensus. Does that sound strange? It&amp;#39;s not sarcasm. Read on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/being-flynn.jpg" /></entry></feed>
+do you train, educate, and help him? You don&amp;#39;t!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg" /></entry></feed>
