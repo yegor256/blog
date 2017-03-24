@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "Why "
+title: "Flexibility Means Lower Quality"
 date: 2016-06-20
 place: Palo Alto, CA
 tags: management
 description: |
-  ...
+  The more options a programmers has to implement
+  a feature in a programming language, the lower will
+  be the overall quality of the product.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - quality
+  - programming language quality
+  - syntactic sugar
+  - rubocop
+  - checkstyle
 ---
 
 There are two opposite mindsets: "If it works, it's good" vs.
@@ -54,7 +56,7 @@ And one more time:
 m = 'hello!' if a > b
 {% endhighlight %}
 
-And once more:
+And one more:
 
 {% highlight ruby %}
 m = a > b ? 'hello' : nil
@@ -87,34 +89,47 @@ _own_ it (hacker mentality) or
 _build_ it (designer mentality).
 
 If we're writing it and we love to think about ourselves as code owners&mdash;we
-definitely will need that arsenal of syntax weapons. We need them to prove ourselves
+definitely will need that arsenal of
+[syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) weapons. We need them to prove ourselves
 that we're smart and, of course, to show off in front of our friends and
 that soulless Ruby interpreter.
 
 On the other hand, if we're designers and happen to read the code that is
-full of syntax sugar, which "just works"&mdash;we'll be very annoyed and
+full of sugar, which "just works"&mdash;we'll be very annoyed and
 frustrated. Well, maybe I have to speak for myself, but I definitely will be.
 
 This overly-sugared Ruby syntax is a perfect example of "works vs. good"
-positioning. Ruby philosophy is this: No matter how you write it, just
-make sure it works. Java philosophy is different and much closer to:
-Make it right and it will work. Weak typing in Ruby vs. strong one
-in Java also prove my point.
+positioning. Ruby philosophy is this: No matter how you write it, as long
+as it works. Java philosophy is different and much closer to:
+Make it right and it will work.
+[Weak](https://en.wikipedia.org/wiki/Strong_and_weak_typing)
+and
+[dynamic](https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information)
+typing in Ruby vs. strong and
+[static](https://en.wikipedia.org/wiki/Type_system#Static_type_checking)
+one in Java also prove my point.
 
-I believe that the more flexible is the programming language, the
+In general, I believe that the more flexible the programming language is, the
 lower the _maintainability_ of the code&mdash;its key quality characteristic.
 Simply put, higher quality comes from simpler languages.
 
 The same is true for the entire software development: the more restrictions
 we put on programmers and the fewer options they have for their
 "syntax creativity," the higher the quality of the software they write.
+Static analyzers like
+[Checkstyle](http://checkstyle.sourceforge.net/) for Java or
+[Rubocop](https://github.com/bbatsov/rubocop) for Ruby are trying
+to solve that problem and prohibit us from using certain language features,
+but they are far behind. We are very "creative."
 
 Now, let's get back to the original OOP question:
 Why do we need to improve anything, if it works the way it is?
 Here is the answer: modern OOP (as in Java, Ruby, and C++)
-doesn't produce quality code because it has too many "features,"
-which dont
+doesn't produce quality code because it doesn't have a strong
+and properly restricted paradigm. It just has too many "features,"
+which were mostly introduced by C++ and remained there, for our
+mutual "convenience."
 
-
-
-
+They do work indeed, but the maintainability of the software we produce
+is very low. Well, it's way lower than it could be, if our "creativity"
+would be restricted.
