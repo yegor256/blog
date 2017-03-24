@@ -114,6 +114,8 @@ to fix only what's visible and intolerable by the business. If the business
 doesn't care or our users/testers don't see our bugs&mdash;we must not
 **waste** project resources on fixing them.
 
+{% quote I only create tests later when my users express the need for them by reporting bugs. %}
+
 On the other hand, when the business or our users/testers are complaining,
 we have to be very strict with ourselves; our testing system is weak and
 must be fixed first. We can't just fix the production code and deploy,
