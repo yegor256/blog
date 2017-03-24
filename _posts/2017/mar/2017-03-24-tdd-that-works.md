@@ -140,31 +140,33 @@ to prove my point. Take a look at these graphs:
 
 [yegor256/takes](https://github.com/yegor256/takes) (Web framework, Java):
 
-{% figure /images/2017/03/cdbtf-takes.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-takes.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
 [yegor256/xembly](https://github.com/yegor256/xembly) (XML builder, Java):
 
-{% figure /images/2017/03/cdbtf-xembly.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-xembly.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
 [jcabi/jcabi-aspects](https://github.com/jcabi/jcabi-aspects) (AOP library, Java):
 
-{% figure /images/2017/03/cdbtf-jcabi-aspects.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-jcabi-aspects.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
-[jcabi/jcabi-aspects](https://github.com/yegor256/s3auth) (S3 gateway, Java):
+[yegor256/s3auth](https://github.com/yegor256/s3auth) (S3 gateway, Java):
 
-{% figure /images/2017/03/cdbtf-s3auth.svg 600 %}
-
-[jcabi/jcabi-aspects](https://github.com/yegor256/s3auth) (S3 gateway, Java):
-
-{% figure /images/2017/03/cdbtf-s3auth.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-s3auth.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
 First commercial project:
 
-{% figure /images/2017/03/cdbtf-xockets-layer.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-xockets-layer.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
 Second commercial project:
 
-{% figure /images/2017/03/cdbtf-xockets-hadoop-transport.svg 600 %}
+<figure><object data="/images/2017/03/cdbtf-xockets-hadoop-transport.svg" type="image/svg+xml"
+  style="width:600px;max-width:100%;"></object></figure>
 
 In each graph, there are two parts. The first one on the top demonstrates
 the dynamics of production
