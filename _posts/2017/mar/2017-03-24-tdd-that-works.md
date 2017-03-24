@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The TDD That Works for Me"
-date: 2017-03-17
+date: 2017-03-24
 place: Frankfurt, Germany
 tags: testing
 description: |
