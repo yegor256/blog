@@ -20,8 +20,9 @@ jb_picture:
 ---
 
 You definitely know the [SOLID](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29)
-acronym. It stands for five principles
-of object-oriented programming that, if followed, are supposed to
+acronym. It stands for five principles of
+[object-oriented programming]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
+that, if followed, are supposed to
 make your code both [legible and extensible](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29).
 They were introduced almost 30 years ago, but have they
 really made us better programmers in the time since?
@@ -43,7 +44,7 @@ which, according to [Clean Code](http://amzn.to/2m7LmaA) by
 
 This statement sounds extremely vague to me, but the book explains it, stating that
 objects must be problem-centered and responsible for "one thing."
-It's up to us to decide what that one thing is, of course.
+It's up to us to decide what that _one thing_ is, of course.
 
 This is what we know as
 ["high cohesion"](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29)
@@ -72,7 +73,11 @@ The third letter is for the [Liskov Substitution Principle](https://en.wikipedia
 which was introduced by
 [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov) in 1987.
 This one is the most innocent part in the SOLID pentad. In simple words, it states
-that if your method expects a `Collection,` an `ArrayList` will work.
+that if your method expects a
+[`Collection,`](http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html)
+an
+[`ArrayList`](http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
+will work.
 
 It is also known as [subtyping](https://en.wikipedia.org/wiki/Subtyping) and is
 the foundational component of any object-oriented language. Why do we need to
@@ -102,7 +107,7 @@ However, how is all this different from the good old
 ["loose coupling"](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29)
 introduced together with cohesion by Constantine in 1974?
 Do we really need to simplify and blur in order to learn better?
-No, not to learn better, but to sell better. Here goes my point.
+No, not to learn better, but to _sell_ better. Here goes my point.
 
 ## My point is...
 
@@ -110,7 +115,8 @@ The point being these principles are nothing but an explanation of
 "cohesion and coupling" for dummies in a very primitive, ambiguous,
 and marketable way. Dummies will buy books, seminars, and trainings,
 but won't really be able to understand the logic behind them. Do they really
-need to? They are just <del>monkeys</del> coders, right?
+need to? They are just <del>monkeys</del>
+[coders]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}), right?
 
 "But an object must be responsible for one thing!" is what I often hear at
 conferences. People learn that mantra without even knowing
@@ -127,7 +133,7 @@ deliver primitive and easy-to-cry-at movies just to generate a profit. People
 are getting dumber by watching&mdash;but this is not of their concern.
 The same happens with magic OOP principles&mdash;programmers rely on
 them, thinking the truth is right there while the real truth
-is not understood even by the creators of this magic.
+is not understood even by the creators of this "magic."
 
 SOLID is a money-making instrument, not an instrument to make
 code better.

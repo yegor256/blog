@@ -15,6 +15,7 @@ keywords:
   - team morale event ideas
 youtube:
   - ibT5oKToMoQ
+  - biE86esgFAE
 related:
   - 2016/sep/2016-09-27-command-control-innovate
   - 2016/jun/2016-06-21-how-to-hire-programmer
