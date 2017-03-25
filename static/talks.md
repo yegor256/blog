@@ -78,14 +78,6 @@ give them some feedback, at least here (see below).
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
-**Семь врагов нашей мотивации**<br/>
-**Избавляйтесь от экспертов**<br/>
-[AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
-Moscow, Russia<br/>
-24 March 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
 **Why Distributed Teams Suck?** (keynote)<br/>
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
@@ -173,6 +165,22 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+Избавляйтесь от экспертов;
+[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+Moscow, Russia;
+24 March 2017;
+[видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+Семь врагов нашей мотивации;
+[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+Moscow, Russia;
+24 March 2017;
+[видео](https://www.youtube.com/watch?v=biE86esgFAE).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
