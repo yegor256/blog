@@ -101,7 +101,10 @@ or even `Iterable x.` I can't agree more. Let's see the next one.
 The [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 means that instead of `ArrayList x,` you must
 declare `List x` and let the provider of the object decide whether
-it is `ArrayList` or `LinkedList.` This one also sounds reasonable to me.
+it is
+[`ArrayList`](http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html) or
+[`LinkedList.`](http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+This one also sounds reasonable to me.
 
 However, how is all this different from the good old
 ["loose coupling"](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29)
@@ -124,7 +127,7 @@ what cohesion is nor understanding what this "one thing" they are
 praying for really is. There is no such thing as "one thing," guys! There are different
 levels of cohesion.
 
-Who is guilty? Robert Martin and Co.
+Who is guilty? Uncle Bob &amp; Co.
 
 They are no better than
 [Ridley Scott]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
