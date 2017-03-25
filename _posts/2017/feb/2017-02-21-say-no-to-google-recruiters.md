@@ -16,6 +16,7 @@ keywords:
   - how to find a job
 translated:
   - Russian: https://habrahabr.ru/post/322602/
+  - Polish: https://bulldogjob.pl/news/172-czemu-nie-gadam-z-rekruterami-z-google
 social:
   - hackernews: https://news.ycombinator.com/item?id=13696004
   - reddit: https://www.reddit.com/r/programming/comments/5vc1ul/why_i_dont_talk_to_google_recruiters/
