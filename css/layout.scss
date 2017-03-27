@@ -114,6 +114,7 @@ del {
 
 .header-toggle {
   cursor: pointer;
+  display: inline-block;
   font-size: 1.4 * $em;
   @media all and (min-width: $width) {
     display: none;

@@ -31,7 +31,7 @@ development, object-oriented programming and project management.
 
 <a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 March 15, 2017<br/>
-**Naked Data isn OOP**<br/>
+**Naked Data isn't OOP**<br/>
 We will discuss the problem of data presence in object-oriented
 code and how their negative effect can be neutralized.
 The discussion will be based on this blog post:
