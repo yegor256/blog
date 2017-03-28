@@ -14,7 +14,7 @@ keywords:
   - software outsourcing companies
   - software outsourcing trends
   - software outsourcing definition
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/05/evil-cult.jpg
+image: /images/2015/05/evil-cult.jpg
 jb_picture:
   caption: The Evil Cult (1993) by Jing Wong
 ---

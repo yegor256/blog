@@ -14,7 +14,7 @@ keywords:
   - test driven development
   - unit testing
   - automated testing
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/...
+image: /images/2017/02/...
 jb_picture:
   caption:
 ---

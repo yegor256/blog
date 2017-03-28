@@ -14,7 +14,7 @@ keywords:
   - java findbugs config
   - java strict quality
   - quality of java code
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/09/ratatouille.png
+image: /images/2014/09/ratatouille.png
 jb_picture:
   caption: Ratatouille (2007) by Brad Bird and Jan Pinkava
 ---

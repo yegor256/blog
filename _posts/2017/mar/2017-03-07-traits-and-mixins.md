@@ -14,7 +14,7 @@ keywords:
   - mixin oop
   - OOP
   - trait in programming
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png
+image: /images/2014/04/fear-and-loathing-adrenochrome.png
 jb_picture:
   caption: Fear and Loathing in Las Vegas (1998) by Terry Gilliam
 ---

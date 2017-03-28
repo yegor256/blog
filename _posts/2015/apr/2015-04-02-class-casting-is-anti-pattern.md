@@ -14,7 +14,7 @@ keywords:
   - type casting in java
   - class casting is evil
 book: elegant-objects 3.7
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/03/gadkiy-utenok.jpg
+image: /images/2015/03/gadkiy-utenok.jpg
 jb_picture:
   caption: Гадкий утенок (1956) by Владимир Дегтярёв
 ---

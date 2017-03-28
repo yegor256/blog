@@ -7,7 +7,7 @@ description: |
   Contents of the entire blog, in chronological order; the page
   is generated automatically and contains a complete list
   of all articles published in this blog
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+image: /images/yegor-is-presenting.png
 keywords:
   - blog
   - contents

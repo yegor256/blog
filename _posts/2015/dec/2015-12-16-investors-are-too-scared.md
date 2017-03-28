@@ -14,7 +14,7 @@ keywords:
   - quick investment
   - instant investment
   - silicon valley
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/12/the-game.jpg
+image: /images/2015/12/the-game.jpg
 jb_picture:
   caption: The Game (1997) by David Fincher
 ---

@@ -14,7 +14,7 @@ keywords:
   - convertible notes term sheet
   - convertible notes vs equity
   - convertible notes vs safe
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/05/the-godfather-iii.jpg
+image: /images/2016/05/the-godfather-iii.jpg
 jb_picture:
   caption: "The Godfather: Part III (1990) by Francis Ford Coppola"
 ---

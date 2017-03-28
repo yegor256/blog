@@ -14,7 +14,7 @@ keywords:
   - incremental delivery
   - iterative and incremental
   - iterative programming
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/02/delicatessen.png
+image: /images/2015/02/delicatessen.png
 jb_picture:
   caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---

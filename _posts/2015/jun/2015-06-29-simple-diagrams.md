@@ -16,7 +16,7 @@ keywords:
   - uml diagrams
 social:
   - reddit: https://www.reddit.com/r/programming/comments/3bjrfy/the_better_architect_you_are_the_simpler_your/
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/06/a-beautiful-mind.jpg
+image: /images/2015/06/a-beautiful-mind.jpg
 jb_picture:
   caption: A Beautiful Mind (2001) by Ron Howard
 ---

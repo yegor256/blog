@@ -14,7 +14,7 @@ keywords:
   - ebook or printed
   - digital book
   - e-book
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/11/addams-family.jpg
+image: /images/2016/11/addams-family.jpg
 jb_picture:
   caption: The Addams Family (1991) by Barry Sonnenfeld
 ---

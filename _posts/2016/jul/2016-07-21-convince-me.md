@@ -14,7 +14,7 @@ keywords:
   - responsibility of software architect
   - software project
   - roles in software
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/07/beasts-of-no-nation.jpg
+image: /images/2016/07/beasts-of-no-nation.jpg
 jb_picture:
   caption: Beasts of No Nation (2015) by Cary Joji Fukunaga
 ---

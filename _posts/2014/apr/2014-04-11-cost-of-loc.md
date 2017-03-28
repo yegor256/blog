@@ -16,7 +16,7 @@ keywords:
   - price per line of code
 youtube:
   - qRZYJGYdrwk
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/brazil-crowded-office.png
+image: /images/2014/04/brazil-crowded-office.png
 jb_picture:
   caption: Brazil (1985) by Terry Gilliam
 ---

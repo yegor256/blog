@@ -14,7 +14,7 @@ keywords:
   - singleton anti-pattern
   - singleton replacement
   - singleton is bad
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/06/perdita-durango.jpg
+image: /images/2016/06/perdita-durango.jpg
 jb_picture:
   caption: Perdita Durango (1997) by Álex de la Iglesia
 ---

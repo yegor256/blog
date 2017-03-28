@@ -14,7 +14,7 @@ keywords:
   - class names in OOP
   - naming classes in OOP
   - many classes
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg
+image: /images/2017/02/el-dia-de-la-bestia.jpg
 jb_picture:
   caption: El día de la bestia (1995) by Álex de la Iglesia
 ---

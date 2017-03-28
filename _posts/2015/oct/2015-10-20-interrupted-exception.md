@@ -14,7 +14,7 @@ keywords:
   - InterruptedException example
   - InterruptedException checked or unchecked
   - InterruptedException sleep
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/crouching-tiger-hidden-dragon.jpg
+image: /images/2015/10/crouching-tiger-hidden-dragon.jpg
 jb_picture:
   caption: Crouching Tiger, Hidden Dragon (2000) by Ang Lee
 ---

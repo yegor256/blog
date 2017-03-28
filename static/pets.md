@@ -12,7 +12,7 @@ keywords:
   - startup ideas
   - small startup
   - startup founders
-? votesimage: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+? votesimage: /images/yegor-is-presenting.png
 ---
 
 It's a full list of my pet projects (which are still alive). If interested

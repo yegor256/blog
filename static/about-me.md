@@ -7,7 +7,7 @@ description: |
   Yegor Bugayenko is a programmer, software architect,
   writer, blogger, speaker, project manager, CEO, seed investor,
   and philanthropist.
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/about/yegor-speaking.jpg
+image: /images/about/yegor-speaking.jpg
 keywords:
   - java blog
   - blog about programming

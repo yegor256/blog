@@ -20,7 +20,7 @@ related:
   - 2015/jan/2015-01-26-happy-boss-false-objective
 social:
   - reddit: https://www.reddit.com/r/programming/comments/3nq6pe/how_to_be_a_good_office_slave/
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/the-office.jpg
+image: /images/2015/10/the-office.jpg
 jb_picture:
   caption: The Office (2001–2003)
 ---

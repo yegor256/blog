@@ -14,7 +14,7 @@ keywords:
   - exceptions over assertions
   - throw exception not assertion
   - assertions java
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/06/natural-born-killers.jpg
+image: /images/2016/06/natural-born-killers.jpg
 jb_picture:
   caption: Natural Born Killers (1994) by Oliver Stone
 ---

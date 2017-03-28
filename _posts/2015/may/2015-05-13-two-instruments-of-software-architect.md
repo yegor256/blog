@@ -15,7 +15,7 @@ keywords:
 youtube:
   - 0fuEgmibJc4
   - AvVQ5NjS_Nk
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/05/rear-window.jpg
+image: /images/2015/05/rear-window.jpg
 jb_picture:
   caption: Rear Window (1954) by Alfred Hitchcock
 ---

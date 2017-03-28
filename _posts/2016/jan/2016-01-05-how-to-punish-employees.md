@@ -21,7 +21,7 @@ related:
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
   - 2015/mar/2015-03-02-team-morale-myths-and-reality
   - 2015/oct/2015-10-06-how-to-be-good-office-slave
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/01/office-space.jpg
+image: /images/2016/01/office-space.jpg
 jb_picture:
   caption: Office Space (1999) by Mike Judge
 ---

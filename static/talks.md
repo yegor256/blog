@@ -12,7 +12,7 @@ keywords:
   - workshops about software development
   - conferences about programming
   - software engineers conferences
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+image: /images/yegor-is-presenting.png
 style: |
   .talk-event {
     clear: both;

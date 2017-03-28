@@ -14,7 +14,7 @@ keywords:
   - continuous integration maturity
   - continuous integration definition
   - continuous integration example
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/08/twins.jpg
+image: /images/2016/08/twins.jpg
 jb_picture:
   caption: Twins (1988) by Ivan Reitman
 ---

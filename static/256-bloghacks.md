@@ -6,7 +6,7 @@ description: |
   blogging and vlogging and reveals all secrets
   I've learned
 permalink: 256-bloghacks.html
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/256-bloghacks/cover.png
+image: /images/books/256-bloghacks/cover.png
 keywords:
   - blog hacks
   - blogging hints

@@ -15,7 +15,7 @@ keywords:
   - zero-bug programmers
 social:
   - reddit: https://www.reddit.com/r/programming/comments/3aftim/good_programmers_write_bugfree_code_dont_they/
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/06/sabotage.jpg
+image: /images/2015/06/sabotage.jpg
 jb_picture:
   caption: Sabotage! (2000) by Esteban and Jose Miguel Ibarretxe
 ---

@@ -6,7 +6,7 @@ description: |
   not here on the blog, including conference proceedings,
   journal articles, patents, etc.
 permalink: papers.html
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+image: /images/yegor-is-presenting.png
 keywords:
   - publications
   - papers

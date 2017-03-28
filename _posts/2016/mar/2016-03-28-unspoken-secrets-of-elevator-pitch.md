@@ -14,7 +14,7 @@ keywords:
   - startup pitch examples
   - startup pitch idea
   - startup pitch presentation
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/03/huevos-de-oro.jpg
+image: /images/2016/03/huevos-de-oro.jpg
 jb_picture:
   caption: Huevos de oro (1993) by Bigas Luna
 ---

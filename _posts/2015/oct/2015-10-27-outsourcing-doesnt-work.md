@@ -19,7 +19,7 @@ social:
   - reddit: https://www.reddit.com/r/programming/comments/3qgr7o/why_software_outsourcing_doesnt_work_anymore/
 youtube:
   - 9j5pq71BS5U
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/10/the-godfather-ii.jpg
+image: /images/2015/10/the-godfather-ii.jpg
 jb_picture:
   caption: "The Godfather: Part II (1974) by Francis Ford Coppola"
 ---

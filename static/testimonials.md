@@ -11,7 +11,7 @@ keywords:
   - java blog
   - programming blog
   - blog about software
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/angry-testimonials.png
+image: /images/angry-testimonials.png
 ? votesnospell: true
 ---
 

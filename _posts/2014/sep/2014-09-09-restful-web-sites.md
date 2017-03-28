@@ -14,7 +14,7 @@ keywords:
   - how to build restful api
   - restful api
 categories: jcg
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/09/good_bad_weird.png
+image: /images/2014/09/good_bad_weird.png
 jb_picture:
   caption: The Good, the Bad, The Wierd (2008) by Kim Jee-woon
 ---

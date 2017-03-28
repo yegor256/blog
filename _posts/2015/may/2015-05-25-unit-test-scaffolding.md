@@ -16,7 +16,7 @@ keywords:
   - unit testing of static
 youtube:
   - l6MpCBzwDbg
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/05/leon-the-professional.jpg
+image: /images/2015/05/leon-the-professional.jpg
 jb_picture:
   caption: "Léon: The Professional by Luc Besson"
 ---

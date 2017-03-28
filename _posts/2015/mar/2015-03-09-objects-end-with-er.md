@@ -18,7 +18,7 @@ translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52317370
 youtube:
   - WpP4rIhh5e4
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/03/fight-club.jpg
+image: /images/2015/03/fight-club.jpg
 jb_picture:
   caption: Fight Club (1999) by David Fincher
 ---

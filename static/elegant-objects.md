@@ -6,7 +6,7 @@ description: |
   programming, from an idealistic and a bit futuristic
   point of view.
 permalink: elegant-objects.html
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/elegant-objects/cover.png
+image: /images/books/elegant-objects/cover.png
 keywords:
   - book about object-oriented programming
   - book about oop

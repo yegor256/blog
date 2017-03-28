@@ -14,7 +14,7 @@ keywords:
   - static method
   - private static
   - java private method
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg
+image: /images/2017/02/the-master.jpg
 jb_picture:
   caption: The Master (2012) by Paul Thomas Anderson
 ---
