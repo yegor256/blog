@@ -55,6 +55,7 @@ ACM
 acquire
 acquires
 acquisition
+acronym
 across
 act
 acting
@@ -198,6 +199,7 @@ AMG
 among
 amount
 amounts
+amp
 amsterdam
 an
 analysis
@@ -482,6 +484,7 @@ bank
 bankrupt
 banks
 bar
+barbara
 bare
 barely
 barker
@@ -553,6 +556,7 @@ benefit
 benefits
 berlin
 bernie
+bertrand
 besides
 best
 best-use
@@ -615,6 +619,7 @@ blogspot
 blood
 bloody
 bluff
+blur
 BMW
 board
 boards
@@ -1026,6 +1031,7 @@ codeship
 coding
 coen
 coffee
+cohesion
 cohesive
 coin
 collaborate
@@ -1226,6 +1232,7 @@ consistent
 consists
 console
 constant
+constantine
 constantly
 constants
 constitute
@@ -1887,6 +1894,8 @@ dude
 due
 dues
 dumb
+dumber
+dummies
 duplicate
 duplicates
 duplicating
@@ -1914,6 +1923,7 @@ easier
 easiest
 easily
 easy
+easy-to-cry-at
 easy-to-do
 easy-to-understand
 eat
@@ -2210,6 +2220,7 @@ expression
 expressions
 expressive
 extend
+extendable
 extended
 extends
 extensible
@@ -2457,6 +2468,7 @@ fortune
 forward
 found
 foundation
+foundational
 founded
 founder
 founders
@@ -2533,6 +2545,7 @@ games
 gangster
 gangsters
 gantt
+gap
 gaps
 garbage
 gas
@@ -3161,6 +3174,7 @@ inventing
 invention
 inventor
 inventors
+inversion
 invest
 invested
 investigate
@@ -3292,6 +3306,7 @@ joKX
 jon
 joseph
 joshua
+journal
 journey
 joy
 JPA
@@ -3396,6 +3411,7 @@ laptop
 laptops
 large
 larkin
+larry
 las
 last
 late
@@ -3447,6 +3463,7 @@ legal
 legalization
 legalized
 legally
+legible
 lending
 length
 lengthy
@@ -3503,6 +3520,7 @@ linus
 linux
 liquibase
 lisette
+liskov
 list
 listed
 listen
@@ -3650,6 +3668,7 @@ manipulations
 manner
 manners
 mansfield
+mantra
 manual
 manually
 manuals
@@ -3666,6 +3685,7 @@ marker
 markers
 market
 market-ready
+marketable
 marketers
 marketing
 married
@@ -3888,6 +3908,7 @@ monday
 monetary
 money
 money-driven
+money-making
 money-saving
 money-wise
 MongoDB
@@ -4429,6 +4450,7 @@ penalty
 penetrate
 pennies
 pens
+pentad
 people
 people's
 pepper
@@ -4624,6 +4646,7 @@ practices
 practitioners
 pragmatic
 pray
+praying
 pre-build
 pre-configuration
 pre-configured
@@ -4727,6 +4750,7 @@ probability
 probably
 problem
 problem's
+problem-centered
 problems
 procedural
 procedurally
@@ -4824,6 +4848,7 @@ proven
 proves
 provide
 provided
+provider
 providers
 provides
 providing
@@ -5451,6 +5476,7 @@ seen
 sees
 segregate
 segregating
+segregation
 select
 selected
 selection
@@ -5851,6 +5877,7 @@ statements
 states
 static
 statically
+stating
 station
 stationary
 statistics
@@ -5963,6 +5990,7 @@ subsequently
 subset
 substantial
 substitute
+substitution
 subtitles
 subtyping
 subversion
@@ -6308,6 +6336,7 @@ tragic
 train
 trained
 training
+trainings
 trainspotting
 traits
 transaction
@@ -6818,6 +6847,7 @@ www
 xdebug
 XDSD
 xembly
+xerox
 XForms
 XHTML
 xiong

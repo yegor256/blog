@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-27T15:50:18+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-03-28T08:05:42+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SOLID Is OOP for Dummies</title><link href="http://www.yegor256.com/2017/03/28/solid.html" rel="alternate" type="text/html" title="SOLID Is OOP for Dummies" /><published>2017-03-28T00:00:00+00:00</published><updated>2017-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/28/solid</id><content type="html" xml:base="http://www.yegor256.com/2017/03/28/solid.html">&lt;p&gt;You definitely know the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID&lt;/a&gt;
+acronym. It stands for five principles of
+&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;
+that, if followed, are supposed to
+make your code both &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;legible and extensible&lt;/a&gt;.
+They were introduced almost 30 years ago, but have they
+really made us better programmers in the time since?
+Do we really understand OOP better thanks to them? Do we write more
+&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Dumb &amp;amp; Dumber (1994) by Peter Farrelly&#39; src=&#39;/images/2017/03/dumb-and-dumber.jpg&#39; longdesc=&#39;#0ebdb718&#39;/&gt;&lt;figcaption id=&#39;0ebdb718&#39;&gt;Dumb &amp;amp; Dumber (1994) by Peter Farrelly&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s go one by one and see how they &amp;quot;help.&amp;quot;&lt;/p&gt;
+
+&lt;h2 id=&quot;s&quot;&gt;S&lt;/h2&gt;
+
+&lt;p&gt;The &amp;quot;S&amp;quot; refers to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;Single Responsibility Principle&lt;/a&gt;,
+which, according to &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;Clean Code&lt;/a&gt; by
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;, means that
+&amp;quot;a class should have only one reason to change.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;This statement sounds extremely vague to me, but the book explains it, stating that
+objects must be problem-centered and responsible for &amp;quot;one thing.&amp;quot;
+It&amp;#39;s up to us to decide what that &lt;em&gt;one thing&lt;/em&gt; is, of course.&lt;/p&gt;
+
+&lt;p&gt;This is what we know as
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;&amp;quot;high cohesion&amp;quot;&lt;/a&gt;
+since &lt;a href=&quot;https://en.wikipedia.org/wiki/Larry_Constantine&quot;&gt;Larry Constantine&lt;/a&gt;
+wrote about it in the IBM Systems Journal in 1974.
+Why was it necessary to create a new principle 15 years later with an ambiguous name and
+a very questionable definition?&lt;/p&gt;
+
+&lt;h2 id=&quot;o&quot;&gt;O&lt;/h2&gt;
+
+&lt;p&gt;This letter is about the &lt;a href=&quot;https://en.wikipedia.org/wiki/Open/closed_principle&quot;&gt;Open/Close Principle&lt;/a&gt;,
+which was introduced by Bertrand Meyer in
+&lt;a href=&quot;http://amzn.to/2lNxy44&quot;&gt;Object Oriented Software Construction&lt;/a&gt; in 1988.
+Simply put, it means that an object should not be modifiable. I can&amp;#39;t agree more
+with this.&lt;/p&gt;
+
+&lt;p&gt;But then it says it should be &lt;em&gt;extendable&lt;/em&gt;, literally through
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Inheritance_%28object-oriented_programming%29&quot;&gt;implementation inheritance&lt;/a&gt;, which is
+&lt;a href=&quot;/2016/09/13/inheritance-is-procedural.html&quot;&gt;known&lt;/a&gt; as an anti-OOP technology.
+Thus, this principle is not really applicable to objects and OOP.
+It may work with modules and services, but not with objects.&lt;/p&gt;
+
+&lt;h2 id=&quot;l&quot;&gt;L&lt;/h2&gt;
+
+&lt;p&gt;The third letter is for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Liskov_substitution_principle&quot;&gt;Liskov Substitution Principle&lt;/a&gt;,
+which was introduced by
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Barbara_Liskov&quot;&gt;Barbara Liskov&lt;/a&gt; in 1987.
+This one is the most innocent part in the SOLID pentad. In simple words, it states
+that if your method expects a
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html&quot;&gt;&lt;code&gt;Collection,&lt;/code&gt;&lt;/a&gt;
+an
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html&quot;&gt;&lt;code&gt;ArrayList&lt;/code&gt;&lt;/a&gt;
+will work.&lt;/p&gt;
+
+&lt;p&gt;It is also known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Subtyping&quot;&gt;subtyping&lt;/a&gt; and is
+the foundational component of any object-oriented language. Why do we need to
+call it a principle and &amp;quot;follow&amp;quot; it? Is it at all possible to create any
+object-oriented software without subtyping? If this one is a principle, let&amp;#39;s
+add &amp;quot;variables&amp;quot; and &amp;quot;method calling&amp;quot; here too.&lt;/p&gt;
+
+&lt;p&gt;Honestly, I suspect that this principle was added to SOLID mostly in order
+to somehow fill the gap between &amp;quot;SO&amp;quot; and &amp;quot;ID.&amp;quot;&lt;/p&gt;
+
+&lt;h2 id=&quot;i-and-d&quot;&gt;I and D&lt;/h2&gt;
+
+&lt;p&gt;I guess they both were introduced by
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt; while
+he was working at Xerox.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Interface_segregation_principle&quot;&gt;Interface Segregation Principle&lt;/a&gt;
+states that you must not declare &lt;code&gt;List x&lt;/code&gt; if you only need &lt;code&gt;Collection x&lt;/code&gt;
+or even &lt;code&gt;Iterable x.&lt;/code&gt; I can&amp;#39;t agree more. Let&amp;#39;s see the next one.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_inversion_principle&quot;&gt;Dependency Inversion Principle&lt;/a&gt;
+means that instead of &lt;code&gt;ArrayList x,&lt;/code&gt; you must
+declare &lt;code&gt;List x&lt;/code&gt; and let the provider of the object decide whether
+it is
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html&quot;&gt;&lt;code&gt;ArrayList&lt;/code&gt;&lt;/a&gt; or
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html&quot;&gt;&lt;code&gt;LinkedList.&lt;/code&gt;&lt;/a&gt;
+This one also sounds reasonable to me.&lt;/p&gt;
+
+&lt;p&gt;However, how is all this different from the good old
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29&quot;&gt;&amp;quot;loose coupling&amp;quot;&lt;/a&gt;
+introduced together with cohesion by Constantine in 1974?
+Do we really need to simplify and blur in order to learn better?
+No, not to learn better, but to &lt;em&gt;sell&lt;/em&gt; better. Here goes my point.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-point-is&quot;&gt;My point is...&lt;/h2&gt;
+
+&lt;p&gt;The point being these principles are nothing but an explanation of
+&amp;quot;cohesion and coupling&amp;quot; for dummies in a very primitive, ambiguous,
+and marketable way. Dummies will buy books, seminars, and trainings,
+but won&amp;#39;t really be able to understand the logic behind them. Do they really
+need to? They are just &lt;del&gt;monkeys&lt;/del&gt;
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;coders&lt;/a&gt;, right?&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;SOLID is a money-making instrument, not an instrument to make code better.&lt;/aside&gt;
+
+&lt;p&gt;&amp;quot;But an object must be responsible for one thing!&amp;quot; is what I often hear at
+conferences. People learn that mantra without even knowing
+what cohesion is nor understanding what this &amp;quot;one thing&amp;quot; they are
+praying for really is. There is no such thing as &amp;quot;one thing,&amp;quot; guys! There are different
+levels of cohesion.&lt;/p&gt;
+
+&lt;p&gt;Who is guilty? Uncle Bob &amp;amp; Co.&lt;/p&gt;
+
+&lt;p&gt;They are no better than
+&lt;a href=&quot;/2015/10/16/ridley-scott-and-joseph-goebbels.html&quot;&gt;Ridley Scott&lt;/a&gt;
+and other Hollywood money makers who
+deliver primitive and easy-to-cry-at movies just to generate a profit. People
+are getting dumber by watching&amp;mdash;but this is not of their concern.
+The same happens with magic OOP principles&amp;mdash;programmers rely on
+them, thinking the truth is right there while the real truth
+is not understood even by the creators of this &amp;quot;magic.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;SOLID is a money-making instrument, not an instrument to make
+code better.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You definitely know the SOLID
+acronym. It stands for five principles of
+object-oriented programming
+that, if followed, are supposed to
+make your code both legible and extensible.
+They were introduced almost 30 years ago, but have they
+really made us better programmers in the time since?
+Do we really understand OOP better thanks to them? Do we write more
+&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/dumb-and-dumber.jpg" /></entry><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
 was &lt;a href=&quot;https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development&quot;&gt;rediscovered&lt;/a&gt;
 by &lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;Kent Beck&lt;/a&gt; and explained in
 &lt;a href=&quot;http://amzn.to/2mTuxCs&quot;&gt;his famous book&lt;/a&gt; in 2002.
@@ -6,7 +136,7 @@ In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
 said that TDD &lt;a href=&quot;http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html&quot;&gt;is dead&lt;/a&gt;
 and only &lt;a href=&quot;http://david.heinemeierhansson.com/2014/test-induced-design-damage.html&quot;&gt;harms architecture&lt;/a&gt;.
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;
-(the inventor of the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID principles&lt;/a&gt;)
+(the inventor of the &lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID principles&lt;/a&gt;)
 &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html&quot;&gt;disagreed&lt;/a&gt;
 and
 &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html&quot;&gt;explained&lt;/a&gt;
@@ -23,7 +153,7 @@ This subject seems to be hot. Of course, I have my own take on it; let me share.
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La grande bellezza (2013) by Paolo Sorrentino&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg&#39; longdesc=&#39;#ee620352&#39;/&gt;&lt;figcaption id=&#39;ee620352&#39;&gt;La grande bellezza (2013) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La grande bellezza (2013) by Paolo Sorrentino&#39; src=&#39;/images/2017/03/la-grande-bellezza.jpg&#39; longdesc=&#39;#91c781a0&#39;/&gt;&lt;figcaption id=&#39;91c781a0&#39;&gt;La grande bellezza (2013) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;In theory, TDD means &amp;quot;writing tests first and code next.&amp;quot; In practice,
 according to &lt;a href=&quot;http://www.teamed.io&quot;&gt;my experience&lt;/a&gt; while working with
@@ -191,7 +321,7 @@ of law behind it.&amp;quot; Two years later, now just a few months ago,
 he wrote more
 about it, and more,
 and more.
-This subject seems to be hot. Of course, I have my own take on it; let me share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg" /></entry><entry><title type="html">Traits and Mixins Are Not OOP</title><link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html" rel="alternate" type="text/html" title="Traits and Mixins Are Not OOP" /><published>2017-03-07T00:00:00+00:00</published><updated>2017-03-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/07/traits-and-mixins</id><content type="html" xml:base="http://www.yegor256.com/2017/03/07/traits-and-mixins.html">&lt;p&gt;Let me say right off the bat that the features we will discuss here are
+This subject seems to be hot. Of course, I have my own take on it; let me share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg" /></entry><entry><title type="html">Traits and Mixins Are Not OOP</title><link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html" rel="alternate" type="text/html" title="Traits and Mixins Are Not OOP" /><published>2017-03-07T00:00:00+00:00</published><updated>2017-03-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/07/traits-and-mixins</id><content type="html" xml:base="http://www.yegor256.com/2017/03/07/traits-and-mixins.html">&lt;p&gt;Let me say right off the bat that the features we will discuss here are
 pure &lt;em&gt;poison&lt;/em&gt; brought to object-oriented programming by those who desperately
 needed a lobotomy, just like David West suggested in his
 &lt;a href=&quot;http://amzn.to/2ass77O&quot;&gt;Object Thinking&lt;/a&gt; book.
@@ -203,7 +333,7 @@ how we can still call programming object-oriented when it has
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png&#39; longdesc=&#39;#86dc12a1&#39;/&gt;&lt;figcaption id=&#39;86dc12a1&#39;&gt;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&#39; src=&#39;/images/2014/04/fear-and-loathing-adrenochrome.png&#39; longdesc=&#39;#8efe9524&#39;/&gt;&lt;figcaption id=&#39;8efe9524&#39;&gt;Fear and Loathing in Las Vegas (1998) by Terry Gilliam&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, here&amp;#39;s how they work in a nutshell. Let&amp;#39;s use
 &lt;a href=&quot;http://phrogz.net/programmingruby/tut_modules.html&quot;&gt;Ruby modules&lt;/a&gt;
@@ -358,7 +488,7 @@ These features have different names, but the most common ones are
 traits and
 mixins. I seriously can&amp;#39;t understand
 how we can still call programming object-oriented when it has
-these features.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png" /></entry><entry><title type="html">How to Handle the Problem of Too Many Classes</title><link href="http://www.yegor256.com/2017/02/28/too-many-classes.html" rel="alternate" type="text/html" title="How to Handle the Problem of Too Many Classes" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/28/too-many-classes</id><content type="html" xml:base="http://www.yegor256.com/2017/02/28/too-many-classes.html">&lt;p&gt;During nearly &lt;a href=&quot;/talks.html&quot;&gt;every presentation&lt;/a&gt; in which I explain
+these features.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png" /></entry><entry><title type="html">How to Handle the Problem of Too Many Classes</title><link href="http://www.yegor256.com/2017/02/28/too-many-classes.html" rel="alternate" type="text/html" title="How to Handle the Problem of Too Many Classes" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/28/too-many-classes</id><content type="html" xml:base="http://www.yegor256.com/2017/02/28/too-many-classes.html">&lt;p&gt;During nearly &lt;a href=&quot;/talks.html&quot;&gt;every presentation&lt;/a&gt; in which I explain
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;my view&lt;/a&gt;
 of &lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;,
 there is someone who shares a comment like this:
@@ -371,7 +501,7 @@ let&amp;#39;s see when, how, and what to do about that.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;El día de la bestia (1995) by Álex de la Iglesia&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg&#39; longdesc=&#39;#0b564d36&#39;/&gt;&lt;figcaption id=&#39;0b564d36&#39;&gt;El día de la bestia (1995) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;El día de la bestia (1995) by Álex de la Iglesia&#39; src=&#39;/images/2017/02/el-dia-de-la-bestia.jpg&#39; longdesc=&#39;#746b98ae&#39;/&gt;&lt;figcaption id=&#39;746b98ae&#39;&gt;El día de la bestia (1995) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;There were a number of &amp;quot;rules&amp;quot; previously mentioned that, if applied,
 would obviously lead to a large number of classes, including:
@@ -483,7 +613,7 @@ And my answer is always the same: &amp;quot;Of course we will, and that&amp;#39;
 I honestly believe that even if you can&amp;#39;t consider having &amp;quot;a lot of classes&amp;quot; a virtue,
 you can&amp;#39;t call it a drawback of any truly object-oriented code either. However,
 there may come a point when classes become a problem;
-let&amp;#39;s see when, how, and what to do about that.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg" /></entry><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
+let&amp;#39;s see when, how, and what to do about that.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg" /></entry><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
 at Amazon, Facebook, and smaller Silicon Valley startups. They
 find me somehow, most likely through this blog, my
 &lt;a href=&quot;/books.html&quot;&gt;books&lt;/a&gt;, or my &lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub account&lt;/a&gt;.
@@ -495,7 +625,7 @@ this situation in the industry.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Deer Hunter (1978) by Michael Cimino&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg&#39; longdesc=&#39;#08f89da0&#39;/&gt;&lt;figcaption id=&#39;08f89da0&#39;&gt;The Deer Hunter (1978) by Michael Cimino&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Deer Hunter (1978) by Michael Cimino&#39; src=&#39;/images/2017/02/the-deer-hunter.jpg&#39; longdesc=&#39;#ddecf58a&#39;/&gt;&lt;figcaption id=&#39;ddecf58a&#39;&gt;The Deer Hunter (1978) by Michael Cimino&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Disclaimer: I do realize that these are multi-billion-dollar companies, the best
 in the industry, and I&amp;#39;m nothing compared to them.
@@ -589,7 +719,7 @@ They always start with &amp;quot;We&amp;#39;re so impressed by your profile&amp;
 &amp;quot;Let&amp;#39;s schedule an interview.&amp;quot; I always reply with the same text, and they
 always disappear, only to come back in a few months under a different name.
 Let me explain my reasons; maybe you will do the same and we can change
-this situation in the industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg" /></entry><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
+this situation in the industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg" /></entry><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
 that your StackOverflow reputation is very important
 to &lt;a href=&quot;http://www.teamed.io&quot;&gt;us&lt;/a&gt; when we make a decision on
 how much we should pay
@@ -605,7 +735,7 @@ explain why your activity on this platform is so important to
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Les kidnappeurs (1998) by Graham Guit&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#9abf092d&#39;/&gt;&lt;figcaption id=&#39;9abf092d&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Les kidnappeurs (1998) by Graham Guit&#39; src=&#39;/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#87a94d52&#39;/&gt;&lt;figcaption id=&#39;87a94d52&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Basically, your StackOverflow profile demonstrates five skills you either
 have or don&amp;#39;t. They may not be as important to an office &lt;del&gt;slave&lt;/del&gt;
@@ -698,7 +828,7 @@ disagreed and said that the number of StackOverflow up-votes was
 nothing more than a measurement of the amount of time someone spent answering
 stupid questions asked by clueless programmers. Let me disagree and
 explain why your activity on this platform is so important to
-your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry><entry><title type="html">Each Private Static Method Is a Candidate for a New Class</title><link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html" rel="alternate" type="text/html" title="Each Private Static Method Is a Candidate for a New Class" /><published>2017-02-07T00:00:00+00:00</published><updated>2017-02-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/07/private-method-is-new-class</id><content type="html" xml:base="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">&lt;p&gt;Do you have private static methods that help you break
+your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry><entry><title type="html">Each Private Static Method Is a Candidate for a New Class</title><link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html" rel="alternate" type="text/html" title="Each Private Static Method Is a Candidate for a New Class" /><published>2017-02-07T00:00:00+00:00</published><updated>2017-02-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/07/private-method-is-new-class</id><content type="html" xml:base="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">&lt;p&gt;Do you have private static methods that help you break
 your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don&amp;#39;t make classes out of all of them, but that has to be the
@@ -707,7 +837,7 @@ is the main difference between them, and it is crucial.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Master (2012) by Paul Thomas Anderson&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg&#39; longdesc=&#39;#20e9d0f5&#39;/&gt;&lt;figcaption id=&#39;20e9d0f5&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Master (2012) by Paul Thomas Anderson&#39; src=&#39;/images/2017/02/the-master.jpg&#39; longdesc=&#39;#b894db33&#39;/&gt;&lt;figcaption id=&#39;b894db33&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is an example of a simple class:&lt;/p&gt;
 
@@ -781,7 +911,7 @@ your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don&amp;#39;t make classes out of all of them, but that has to be the
 goal. Private static methods are not reusable, while classes are&amp;mdash;that
-is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
+is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
 &lt;a href=&quot;/2016/09/20/oop-without-classes.html&quot;&gt;class&lt;/a&gt; that implements an
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the
@@ -792,7 +922,7 @@ shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; fo
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;North by Northwest (1959) by Alfred Hitchcock&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#4a1ca508&#39;/&gt;&lt;figcaption id=&#39;4a1ca508&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;North by Northwest (1959) by Alfred Hitchcock&#39; src=&#39;/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#1633d9e6&#39;/&gt;&lt;figcaption id=&#39;1633d9e6&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Take a look at
 &lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
@@ -889,7 +1019,7 @@ you an example. There are many classes of that kind in the
 Takes Framework,
 and they all are named like *Wrap. It&amp;#39;s a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
-shorter, like in EO for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/north-by-northwest.jpg" /></entry><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
+shorter, like in EO for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/north-by-northwest.jpg" /></entry><entry><title type="html">16 Don’ts of Career Growth</title><link href="http://www.yegor256.com/2017/01/24/career-advice.html" rel="alternate" type="text/html" title="16 Don&#39;ts of Career Growth" /><published>2017-01-24T00:00:00+00:00</published><updated>2017-01-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/24/career-advice</id><content type="html" xml:base="http://www.yegor256.com/2017/01/24/career-advice.html">&lt;p&gt;I get questions like this all the time: How does one become a senior
 software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
@@ -898,7 +1028,7 @@ be helpful.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Grand Budapest Hotel (2014) by Wes Anderson&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#ee978f59&#39;/&gt;&lt;figcaption id=&#39;ee978f59&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Grand Budapest Hotel (2014) by Wes Anderson&#39; src=&#39;/images/2017/01/the-grand-budapest-hotel.jpg&#39; longdesc=&#39;#3c7b6134&#39;/&gt;&lt;figcaption id=&#39;3c7b6134&#39;&gt;The Grand Budapest Hotel (2014) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Before writing this, I &lt;a href=&quot;https://www.google.com/webhp?q=career%20advice%20software%20developer&quot;&gt;Googled&lt;/a&gt;
 a bit and found a lot of interesting suggestions, like to
@@ -1100,14 +1230,14 @@ software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
 won&amp;#39;t waste time and will get you there faster? Let me share what I think might
-be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
+be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
 have to be thread-safe? Wrong again. I think none of them have to
 be thread-safe, while all of them have to provide synchronized decorators.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Aladdin (1992) by Ron Clements and John Musker&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#93c69d83&#39;/&gt;&lt;figcaption id=&#39;93c69d83&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Aladdin (1992) by Ron Clements and John Musker&#39; src=&#39;/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#f5aa3c20&#39;/&gt;&lt;figcaption id=&#39;f5aa3c20&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
@@ -1202,66 +1332,4 @@ a violation of that famous
 and validators.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">You know what thread safety is, right? If not, there is a simple example
 below. All classes must be thread-safe, right? Not really. Some of them
 have to be thread-safe? Wrong again. I think none of them have to
-be thread-safe, while all of them have to provide synchronized decorators.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/aladdin.jpg" /></entry><entry><title type="html">How to Teach a Customer</title><link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html" rel="alternate" type="text/html" title="How to Teach a Customer" /><published>2017-01-10T00:00:00+00:00</published><updated>2017-01-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/10/how-to-teach-customers</id><content type="html" xml:base="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html">&lt;p&gt;In &lt;a href=&quot;/2015/10/27/outsourcing-doesnt-work.html&quot;&gt;outsourcing&lt;/a&gt;,
-very often a customer &lt;del&gt;is an idiot&lt;/del&gt; doesn&amp;#39;t
-really know what he needs&amp;mdash;not only in terms of functionality, but also
-on a technical level. What makes the situation even worse is that the
-customer &lt;del&gt;very often&lt;/del&gt; always thinks he knows
-and understands enough. The question is how do you teach a customer? How
-do you train, educate, and help him? You don&amp;#39;t!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Firm (1993) by Sydney Pollack&#39; src=&#39;https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg&#39; longdesc=&#39;#f7dce987&#39;/&gt;&lt;figcaption id=&#39;f7dce987&#39;&gt;The Firm (1993) by Sydney Pollack&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The temptation will be huge, though. You will think that the customer is your
-friend. You will want to help him. You will feel very motivated to
-make the product better. Moreover, you have the needed knowledge,
-so why not share it, right?&lt;/p&gt;
-
-&lt;p&gt;Wrong. Very wrong. On so many levels.&lt;/p&gt;
-
-&lt;p&gt;Most of all because the customer is not your friend. Not a partner, not a co-worker,
-not a colleague, and not a teammate. The customer is a project
-&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;stakeholder&lt;/a&gt;,
-just like you, but his needs are completely opposite of yours, and he is very aware
-of that.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Very soon, when the project fails, the customer will find someone to blame&lt;/aside&gt;
-
-&lt;p&gt;He wants the project to finish as soon as possible and to take as little
-&lt;a href=&quot;/2015/06/02/how-to-estimate-software-cost.html&quot;&gt;money&lt;/a&gt;
-out of his pocket as possible. You want exactly the opposite. You
-both work for the project, but from two very different angles.&lt;/p&gt;
-
-&lt;p&gt;Very soon, when the project fails (and it will fail, just like 94 percent of all
-software projects, according to
-&lt;a href=&quot;https://www.projectsmart.co.uk/white-papers/chaos-report.pdf&quot;&gt;Chaos Report&lt;/a&gt;),
-the customer will find someone to blame. Needless to say,
-he won&amp;#39;t blame himself; he will blame you.&lt;/p&gt;
-
-&lt;p&gt;According to the same report, only 7 percent of failures are caused by technical incompetence. Thus,
-most likely your project will fail because of an incorrect understanding of
-requirements, poor planning, misalignment of management objectives, etc. Do you really want to
-be blamed for the things you&amp;#39;re not an expert at? Let the customer
-fail; it&amp;#39;s his project, his life, and his money.&lt;/p&gt;
-
-&lt;p&gt;Do your technical job right and stay away from everything else. This
-is what true professionalism is about&amp;mdash;focus on the things you can do
-best of all and better than most others.&lt;/p&gt;
-
-&lt;p&gt;However, if you see that he is doing something wrong and definitely
-requires help, recommend that he hire a consultant. There are many people
-in the market who can help him with requirements, UX, business analysis,
-marketing planning, branding, etc. In most cases, customers just
-don&amp;#39;t know that these people exist, or they believe these services
-are just a waste of money.&lt;/p&gt;
-
-&lt;p&gt;Try to convince them that it&amp;#39;s not true, but don&amp;#39;t become an adviser
-in something you don&amp;#39;t understand. Your job is coding, so focus only on that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="outsourcing" /><summary type="html">In outsourcing,
-very often a customer is an idiot doesn&amp;#39;t
-really know what he needs&amp;mdash;not only in terms of functionality, but also
-on a technical level. What makes the situation even worse is that the
-customer very often always thinks he knows
-and understands enough. The question is how do you teach a customer? How
-do you train, educate, and help him? You don&amp;#39;t!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg" /></entry></feed>
+be thread-safe, while all of them have to provide synchronized decorators.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/aladdin.jpg" /></entry></feed>
