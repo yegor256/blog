@@ -27,7 +27,7 @@ In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
 said that TDD [is dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
 and only [harms architecture](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html).
 [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)
-(the inventor of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29))
+(the inventor of the [SOLID principles]({% pst 2017/mar/2017-03-28-solid %}))
 [disagreed](https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html)
 and
 [explained](https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html)
