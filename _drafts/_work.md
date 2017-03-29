@@ -14,6 +14,9 @@ keywords:
   - syntactic sugar
   - rubocop
   - checkstyle
+image: /images/2015/03/?
+jb_picture:
+  caption: ?
 ---
 
 There are two opposite mindsets: "If it works, it's good" vs.
@@ -26,6 +29,8 @@ if the existing traditional semi-object semi-procedural not-so-perfect
 approach **just works**?
 
 <!--more-->
+
+{% jb_picture_body %}
 
 Let's try to think bigger. Not just about object-oriented programming, but
 in general about software development. There are many examples of

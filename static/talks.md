@@ -66,14 +66,33 @@ script: |
 
 {% badge /images/yegor-is-presenting.png 300 %}
 
-This is where I'll be talking soon.
+This is where I'll be speaking soon.
 I'm updating this list very often, but still,
-follow me [on Twitter](https://www.twitter.com/yegor256) and [on Lanyrd](http://lanyrd.com/profile/yegor256/)
+follow me [on Twitter](https://www.twitter.com/yegor256) and
+[on Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the most recent news.
-Below is a list of all venues I've been talking at with my short
-summary of their quality. Well, not just a summary, but an evaluation.
-Not every conference is as good as some others. That's why I decided to
-give them some feedback, at least here (see below).
+
+This is what I haven't spoken about yet but planning to, soon:
+
+  * [Puzzle-Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
+  * [TDD That Works for Me]({% pst 2017/mar/2017-03-24-tdd-that-works %})
+  * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
+  * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
+  * [Why I Don't Talk to Google Recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
+  * [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
+  * [Inheritance Is a Procedural Technique for Code Reuse]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
+  * [A Distributed Team Delivers Code of Higher Quality]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})
+
+<!--
+  * [How Much Do You Love Conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
+  * [16 Don'ts of Career Growth]({% pst 2017/jan/2017-01-24-career-advice %})
+-->
+
+If you are interested in seeing me speaking at **your event**,
+please [email](mailto:event@yegor256.com). It's free.
+You will just have to pay for business class tickets,
+a premium suite in a 5-stars hotel, and a limo.
+OK, I'm kidding about the limo.
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 

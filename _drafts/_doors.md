@@ -12,6 +12,9 @@ keywords:
   - agile
   - software team management
   - team management
+image: /images/2015/03/?
+jb_picture:
+  caption: ?
 ---
 
 It's not a secret that our salaries are a
@@ -25,6 +28,7 @@ that most of researchers are missing the main point.
 
 <!--more-->
 
+{% jb_picture_body %}
 
 
 secrecy hurts because:

@@ -45,6 +45,7 @@ to make the right choice and never miss their CFP deadlines.
   <td>Place</td>
   <td>When</td>
   <td>CFP</td>
+  <td><i class="icon icon-twitter"></i></td>
 </tr>
 </thead>
 <tbody>
@@ -60,7 +61,7 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="https://geekout.ee/">GeekOUT</a></td>
   <td>Tallinn</td>
   <td>Jun</td>
-  <td>Feb</td></tr>
+  <td>Nov</td></tr>
 <tr><td><a href="https://www.oracle.com/javaone/index.html">JavaOne</a></td>
   <td>San Francisco</td>
   <td>Sep</td>
@@ -76,7 +77,8 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="http://www.oredev.org/">Øredev</a></td>
   <td>Malmö</td>
   <td>Nov</td>
-  <td>Apr</td></tr>
+  <td>Mar</td>
+  <td><a href="https://twitter.com/oredev">@oredev</a></td></tr>
 <tr><td><a href="https://qconsf.com/">QCon</a></td>
   <td>San Francisco</td>
   <td>Nov</td>
@@ -92,7 +94,7 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="http://geecon.org/">GeeCON</a></td>
   <td>Krakow</td>
   <td>May</td>
-  <td>Dec</td></tr>
+  <td>Jan</td></tr>
 </tbody></table>
 
 Did I forget anything?
