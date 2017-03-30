@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
-**Why Distributed Teams Suck?**<br/>
-[DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
-Delft, The Netherlands<br/>
-30 March 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
 **Utility Classes Are Killing Us**<br/>
 [JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/)<br/>
@@ -184,6 +177,14 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
+A Few Best Practices of Time-Wasting in a Software Team;
+[DevOn Summit 2017](http://www.devonsummit.com/speakers/);
+Delft, The Netherlands;
+30 March 2017;
+[video](https://www.youtube.com/watch?v=MSBf2RftCKo).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
