@@ -123,7 +123,7 @@ Riga, Latvia<br/>
 **What this InterruptedException is about?**<br/>
 [GeeCON 2017](https://geecon.org/)<br/>
 Kraków, Poland<br/>
-17-19 May 2017
+18-19 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
