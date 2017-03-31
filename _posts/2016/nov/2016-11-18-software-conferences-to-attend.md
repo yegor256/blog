@@ -19,6 +19,7 @@ style: |-
   .x-place { width: 8em; }
   .x-when { width: 4em; }
   .x-cfp { width: 4em; }
+  .x-twitter { width: 7em; }
   .x-hr { border-top: 1px solid gray; }
 noindex: true
 ---
@@ -38,14 +39,15 @@ to make the right choice and never miss their CFP deadlines.
   <col class="x-place"/>
   <col class="x-when"/>
   <col class="x-cfp"/>
+  <col class="x-twitter"/>
 </colgroup>
 <thead>
 <tr>
-  <td>Name</td>
-  <td>Place</td>
-  <td>When</td>
-  <td>CFP</td>
-  <td><i class="icon icon-twitter"></i></td>
+  <th>Name</th>
+  <th>Place</th>
+  <th>When</th>
+  <th>CFP</th>
+  <th><i class="icon icon-twitter"></i></th>
 </tr>
 </thead>
 <tbody>
@@ -53,48 +55,69 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="http://jeeconf.com/">JEEConf</a></td>
   <td>Kiev</td>
   <td>May</td>
-  <td>Jan</td></tr>
+  <td>Jan</td>
+  <td><a href="https://twitter.com/jeeconf">@jeeconf</a></td>
+  </tr>
+<!--
 <tr><td><a href="http://kiev2017.agileee.org/">AgileEE</a></td>
   <td>Kiev</td>
   <td>Apr</td>
   <td>Jan</td></tr>
+-->
 <tr><td><a href="https://geekout.ee/">GeekOUT</a></td>
   <td>Tallinn</td>
   <td>Jun</td>
-  <td>Nov</td></tr>
+  <td>Nov</td>
+  <td><a href="https://twitter.com/geekoutee">@geekoutee</a></td>
+  </tr>
 <tr><td><a href="https://www.oracle.com/javaone/index.html">JavaOne</a></td>
   <td>San Francisco</td>
   <td>Sep</td>
-  <td>Mar</td></tr>
+  <td>Mar</td>
+  <td></td>
+  </tr>
 <tr><td><a href="https://www.devoxx.com/">Devoxx</a></td>
   <td>Antwerp</td>
   <td>Nov</td>
-  <td>Apr</td></tr>
+  <td>Apr</td>
+  <td></td>
+  </tr>
 <tr><td><a href="https://javazone.no/">JavaZone</a></td>
   <td>Oslo</td>
   <td>Sep</td>
-  <td>Apr</td></tr>
+  <td>Apr</td>
+  <td><a href="https://twitter.com/javazone">@javazone</a></td>
+  </tr>
 <tr><td><a href="http://www.oredev.org/">Øredev</a></td>
   <td>Malmö</td>
   <td>Nov</td>
   <td>Mar</td>
-  <td><a href="https://twitter.com/oredev">@oredev</a></td></tr>
+  <td><a href="https://twitter.com/oredev">@oredev</a></td>
+  </tr>
 <tr><td><a href="https://qconsf.com/">QCon</a></td>
   <td>San Francisco</td>
   <td>Nov</td>
-  <td>May</td></tr>
+  <td>May</td>
+  <td><a href="https://twitter.com/qcon">@qcon</a></td>
+  </tr>
 <tr><td><a href="http://www.jfokus.se/">JFokus</a></td>
   <td>Stockholm</td>
   <td>Feb</td>
-  <td>Jun</td></tr>
+  <td>Jun</td>
+  <td><a href="https://twitter.com/jfokus">@jfokus</a></td>
+  </tr>
 <tr><td><a href="http://jpoint.ru/en/">JPoint</a></td>
   <td>Moscow</td>
   <td>Apr</td>
-  <td>Dec</td></tr>
+  <td>Dec</td>
+  <td><a href="https://twitter.com/jugru">@jugru</a></td>
+  </tr>
 <tr><td><a href="http://geecon.org/">GeeCON</a></td>
   <td>Krakow</td>
   <td>May</td>
-  <td>Jan</td></tr>
+  <td>Jan</td>
+  <td><a href="https://twitter.com/geecon">@geecon</a></td>
+  <td></td></tr>
 </tbody></table>
 
 Did I forget anything?

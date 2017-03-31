@@ -27,7 +27,13 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-<!-- {% webinar 15-03-2017 22 Nm274dGikFc Naked Data in OOP %} -->
+{% webinar 06-04-2017 23 nsYGC2aUwfQ Puzzle Driven Development %}
+
+April 6, 2017<br/>
+**Puzzle Driven Development**<br/>
+We will discuss PDD, the methodology that we've been using in
+our projects since 2009, with a lot of success. More about it here:
+[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}).
 
 <a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 March 15, 2017<br/>
