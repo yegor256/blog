@@ -30,7 +30,7 @@ development, object-oriented programming and project management.
 {% webinar 06-04-2017 23 nsYGC2aUwfQ Puzzle Driven Development %}
 
 April 6, 2017<br/>
-**Puzzle Driven Development**<br/>
+[**Puzzle Driven Development**](https://www.youtube.com/watch?v=nsYGC2aUwfQ)<br/>
 We will discuss PDD, the methodology that we've been using in
 our projects since 2009, with a lot of success. More about it here:
 [Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}).
