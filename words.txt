@@ -2556,6 +2556,7 @@ gb
 GeeCON
 geek
 GeekOUT
+geekoutee
 gem
 gender
 general
@@ -3325,6 +3326,7 @@ judge
 judging
 judgment
 JUG
+jugru
 julian
 jump
 jumping
