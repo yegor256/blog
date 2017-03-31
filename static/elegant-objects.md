@@ -59,6 +59,15 @@ ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects
 
 <!--more-->
 
+Mar 31, 2017:
+Выкладываю в открытый доступ все пять ревью от резидентов подкаста
+"Разбор Полетов", с которых начинается руссифицированная версия первого тома:
+[Барух Садогурский](/pdf/2017/elegant-objects-jbaruch.pdf),
+[Антон Архипов](/pdf/2017/elegant-objects-antonarhipov.pdf),
+[Антон Черноусов](/pdf/2017/elegant-objects-golodnyj.pdf),
+[Алексей Абашев](/pdf/2017/elegant-objects-abashev.pdf) и
+[Виктор Гамов](/pdf/2017/elegant-objects-gamussa.pdf).
+
 Mar 7, 2017:
 I started to write the third volume, which will consist entirely
 of "OOP puzzles." Just like in math or chess books there will be questions,
