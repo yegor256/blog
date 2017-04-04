@@ -73,8 +73,7 @@ with Uncle Bob: Those who don't write tests must be put
 [in jail]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}),
 I just have my own interpretation of TDD. This is how it looks:
 
-<figure><object data="/images/2017/03/cdbtf.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf.svg 600 %}
 
   * First, I write **code** without any tests. A lot of code. I implement the
     functionality and create the design. Dozens of classes. Of course, the
@@ -141,33 +140,27 @@ to prove my point. Take a look at these graphs:
 
 [yegor256/takes](https://github.com/yegor256/takes) (Web framework, Java):
 
-<figure><object data="/images/2017/03/cdbtf-takes.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-takes.svg 600 %}
 
 [yegor256/xembly](https://github.com/yegor256/xembly) (XML builder, Java):
 
-<figure><object data="/images/2017/03/cdbtf-xembly.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-xembly.svg 600 %}
 
 [jcabi/jcabi-aspects](https://github.com/jcabi/jcabi-aspects) (AOP library, Java):
 
-<figure><object data="/images/2017/03/cdbtf-jcabi-aspects.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-jcabi-aspects.svg 600 %}
 
 [yegor256/s3auth](https://github.com/yegor256/s3auth) (S3 gateway, Java):
 
-<figure><object data="/images/2017/03/cdbtf-s3auth.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-s3auth.svg 600 %}
 
 First commercial project:
 
-<figure><object data="/images/2017/03/cdbtf-xockets-layer.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-xockets-layer.svg 600 %}
 
 Second commercial project:
 
-<figure><object data="/images/2017/03/cdbtf-xockets-hadoop-transport.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object></figure>
+{% figure /images/2017/03/cdbtf-xockets-hadoop-transport.svg 600 %}
 
 In each graph, there are two parts. The first one on the top demonstrates
 the dynamics of production

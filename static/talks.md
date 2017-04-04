@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
-**Utility Classes Are Killing Us**<br/>
-[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/)<br/>
-Novosibirsk, Russia<br/>
-4 April 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
 **Java Annotations Are a Big Mistake**<br/>
 [JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
@@ -179,6 +172,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
+Utility Classes Are Killing Us;
+[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
+Novosibirsk, Russia;
+4 April 2017;
+[видео](https://www.youtube.com/watch?v=85B3FV_sB60),
+[slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
