@@ -51,7 +51,7 @@ to make the right choice and never miss their CFP deadlines.
 </tr>
 </thead>
 <tbody>
-<tr><td colspan="4" class="x-hr"></td></tr>
+<tr><td colspan="5" class="x-hr"></td></tr>
 <tr><td><a href="http://jeeconf.com/">JEEConf</a></td>
   <td>Kiev</td>
   <td>May</td>
@@ -74,13 +74,13 @@ to make the right choice and never miss their CFP deadlines.
   <td>San Francisco</td>
   <td>Sep</td>
   <td>Mar</td>
-  <td></td>
+  <td><a href="https://twitter.com/javaoneconf">@javaoneconf</a></td>
   </tr>
-<tr><td><a href="https://www.devoxx.com/">Devoxx</a></td>
+<tr><td><a href="https://www.devoxx.be/">Devoxx</a></td>
   <td>Antwerp</td>
   <td>Nov</td>
   <td>Apr</td>
-  <td></td>
+  <td><a href="https://twitter.com/devoxx">@devoxx</a></td>
   </tr>
 <tr><td><a href="https://javazone.no/">JavaZone</a></td>
   <td>Oslo</td>
