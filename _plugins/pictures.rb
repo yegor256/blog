@@ -47,7 +47,7 @@ module Yegor
     end
 
     def render(context)
-      uri = Yegor::Img.new(@src, context)
+      uri = Yegor::Img.new(@src, context).to_s
       attrs = "itemprop='image' style='width:#{@width}px;max-width:100%;' alt='The figure'"
       html = if uri.end_with?('.svg')
         "<object data='#{uri}' type='image/svg+xml' #{attrs}></object>"
