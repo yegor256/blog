@@ -15,7 +15,7 @@ keywords:
   - how to monitor programmers
   - independent code review
   - independent review of source code
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/12/arizona-dream-car-shop.png
+image: /images/2014/12/arizona-dream-car-shop.png
 jb_picture:
   caption: Arizona Dream (1992) by Emir Kusturica
 ---

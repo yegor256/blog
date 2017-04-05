@@ -13,7 +13,7 @@ keywords:
   - technical vocabulary
   - glossary of technical terms
   - how to write good specification
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/03/pulp-fiction.jpg
+image: /images/2015/03/pulp-fiction.jpg
 jb_picture:
   caption: Pulp Fiction (1994) by Quentin Tarantino
 ---

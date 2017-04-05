@@ -16,7 +16,7 @@ keywords:
 book: elegant-objects 2.2
 youtube:
   - 9yjtsCK6Wdk
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/12/truman-show-universe.png
+image: /images/2014/12/truman-show-universe.png
 jb_picture:
   caption: The Truman Show (1998) by Peter Weir
 ---

@@ -14,7 +14,7 @@ keywords:
   - DTO design pattern
   - ORM DTO
   - DTO in java
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/07/before-the-devil-knows-you-are-dead.jpg
+image: /images/2016/07/before-the-devil-knows-you-are-dead.jpg
 jb_picture:
   caption: Before the Devil Knows You're Dead (2007) by Sidney Lumet
 ---

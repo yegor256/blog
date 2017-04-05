@@ -14,7 +14,7 @@ keywords:
   - customer education
   - teaching customers
   - how to teach a customer
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/01/the-firm.jpg
+image: /images/2017/01/the-firm.jpg
 jb_picture:
   caption: The Firm (1993) by Sydney Pollack
 ---

@@ -21,7 +21,7 @@ youtube:
   - pt9uHp35fwM
   - b6r2W3P9vgY
   - xbovkm0tTn0
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/10/barton-fink.png
+image: /images/2014/10/barton-fink.png
 jb_picture:
   caption: Barton Fink (1991) by Joel Coen
 ---

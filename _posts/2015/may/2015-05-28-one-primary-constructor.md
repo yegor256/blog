@@ -16,7 +16,7 @@ keywords:
 book: elegant-objects 1.2
 translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52390622
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/05/the-matrix-agent-smith.jpg
+image: /images/2015/05/the-matrix-agent-smith.jpg
 jb_picture:
   caption: The Matrix (1999) by The Wachowski Brothers
 ---

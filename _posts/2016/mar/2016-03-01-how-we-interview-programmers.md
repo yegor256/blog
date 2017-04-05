@@ -14,7 +14,7 @@ keywords:
   - interview programmer
   - programmer interview questions
   - developer interview
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/03/wall-street.jpg
+image: /images/2016/03/wall-street.jpg
 jb_picture:
   caption: Wall Street (1987) by Oliver Stone
 ---

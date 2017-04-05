@@ -15,13 +15,14 @@ keywords:
   - team morale event ideas
 youtube:
   - ibT5oKToMoQ
+  - biE86esgFAE
 related:
   - 2016/sep/2016-09-27-command-control-innovate
   - 2016/jun/2016-06-21-how-to-hire-programmer
   - 2015/oct/2015-10-13-competition-without-rules
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2xu0ly/team_morale_myths_and_reality/
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/03/apocalypto.jpg
+image: /images/2015/03/apocalypto.jpg
 jb_picture:
   caption: Apocalypto (2006) by Mel Gibson
 ---

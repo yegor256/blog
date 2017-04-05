@@ -14,7 +14,7 @@ keywords:
   - software engineer resume
   - resume of programmer
   - resume of coder
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/03/delicatessen.jpg
+image: /images/2016/03/delicatessen.jpg
 jb_picture:
   caption: Delicatessen (1991) by Jean-Pierre Jeunet
 ---

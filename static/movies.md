@@ -7,7 +7,7 @@ description: |
   Here is a full list of movies I would recommend to
   watch; all of them were mentioned in my blog posts,
   this is just a full summary.
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/12/99-francs.png
+image: /images/2014/12/99-francs.png
 keywords:
   - best movies
   - movies to watch

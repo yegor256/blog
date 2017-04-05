@@ -14,7 +14,7 @@ keywords:
   - god object
   - single responsibility principle
   - SRP in OOP
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/08/once-upon-a-time-in-america.jpg
+image: /images/2016/08/once-upon-a-time-in-america.jpg
 jb_picture:
   caption: Once Upon a Time in America (1984) by Sergio Leone
 ---

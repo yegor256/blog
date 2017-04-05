@@ -15,7 +15,7 @@ keywords:
   - public static
   - public static literals
 book: elegant-objects 2.5
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/07/the-shining.jpg
+image: /images/2015/07/the-shining.jpg
 jb_picture:
   caption: The Shining (1980) by Stanley Kubrick
 ---

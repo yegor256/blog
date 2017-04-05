@@ -16,7 +16,7 @@ keywords:
   - temporal coupling in oop
   - temporal coupling definition
 book: elegant-objects 2.6.3
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/12/blueberry.jpg
+image: /images/2015/12/blueberry.jpg
 jb_picture:
   caption: Blueberry (2004) by Jan Kounen
 ---

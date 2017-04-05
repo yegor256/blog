@@ -15,7 +15,7 @@ keywords:
   - micromanagement meaning
 youtube:
   - ZVn7ufg-tk0
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/09/office-space.jpg
+image: /images/2015/09/office-space.jpg
 jb_picture:
   caption: Office Space (1999) by Mike Judge
 ---

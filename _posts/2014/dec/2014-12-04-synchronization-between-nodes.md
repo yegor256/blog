@@ -13,7 +13,7 @@ keywords:
   - synchronization between computers
   - synchronization between processes
   - synchronization between two computers
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/12/van-damme-split.png
+image: /images/2014/12/van-damme-split.png
 jb_picture:
   caption: No Retreat, No Surrender (1986) by Corey Yuen
 ---

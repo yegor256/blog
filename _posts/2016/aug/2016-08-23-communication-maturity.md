@@ -14,7 +14,7 @@ keywords:
   - skype meetings
   - github
   - bitbucket
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/08/schizopolis.jpg
+image: /images/2016/08/schizopolis.jpg
 jb_picture:
   caption: Schizopolis (1996) by Steven Soderbergh
 ---

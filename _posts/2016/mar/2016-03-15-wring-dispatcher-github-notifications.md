@@ -3,7 +3,7 @@ layout: post
 title: "Wring.io, a Dispatcher of GitHub Notifications"
 date: 2016-03-15
 place: Frankfurt, Germany
-tags: github
+tags: github pets
 description: |
   Too many notifications from GitHub? Try wring.io,
   a free hosted dispatcher of incoming notification traffic.

@@ -19,7 +19,7 @@ youtube:
   - LB_YLWhGrco
   - dE0_j4Kk6jo
   - pt9uHp35fwM
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2015/07/heat.jpg
+image: /images/2015/07/heat.jpg
 jb_picture:
   caption: Heat (1995) by Michael Mann
 ---

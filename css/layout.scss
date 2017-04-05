@@ -114,6 +114,7 @@ del {
 
 .header-toggle {
   cursor: pointer;
+  display: inline-block;
   font-size: 1.4 * $em;
   @media all and (min-width: $width) {
     display: none;
@@ -546,9 +547,8 @@ figure {
   width: 1em;
 }
 
-.politics {
-  background-color: $red;
-  color: $white !important;
-  padding: 0 .5em;
-  text-decoration: none;
+table {
+  th {
+    text-align: left;
+  }
 }

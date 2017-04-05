@@ -6,7 +6,7 @@ description: |
   open source projects I'm working with in Teamed.io,
   my software development company
 permalink: best.html
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/about/yegor-speaking.jpg
+image: /images/about/yegor-speaking.jpg
 keywords:
   - java blog
   - java

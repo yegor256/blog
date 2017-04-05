@@ -14,7 +14,7 @@ keywords:
   - mixin oop
   - OOP
   - trait in programming
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/fear-and-loathing-adrenochrome.png
+image: /images/2014/04/fear-and-loathing-adrenochrome.png
 jb_picture:
   caption: Fear and Loathing in Las Vegas (1998) by Terry Gilliam
 ---
@@ -145,7 +145,7 @@ end
 
 I'm sure you already understand that they both have access to
 the private attribute `@title` of class `Book`. They actually have
-full access to _everything_ in the class. They litterally are
+full access to _everything_ in the class. They literally are
 "pieces of code" that we _inject_ into the class to make it more
 powerful and complex. What's wrong with this approach?
 

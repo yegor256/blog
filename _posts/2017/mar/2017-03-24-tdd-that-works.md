@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The TDD That Works for Me"
-date: 2017-03-17
+date: 2017-03-24
 place: Frankfurt, Germany
 tags: testing
 description: |
@@ -14,7 +14,7 @@ keywords:
   - tdd doesn't work
   - tdd works
   - automated testing
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg
+image: /images/2017/03/la-grande-bellezza.jpg
 jb_picture:
   caption: La grande bellezza (2013) by Paolo Sorrentino
 ---
@@ -27,7 +27,7 @@ In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
 said that TDD [is dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
 and only [harms architecture](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html).
 [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)
-(the inventor of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29))
+(the inventor of the [SOLID principles]({% pst 2017/mar/2017-03-28-solid %}))
 [disagreed](https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html)
 and
 [explained](https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html)
@@ -114,6 +114,8 @@ to fix only what's visible and intolerable by the business. If the business
 doesn't care or our users/testers don't see our bugs&mdash;we must not
 **waste** project resources on fixing them.
 
+{% quote I only create tests later when my users express the need for them by reporting bugs. %}
+
 On the other hand, when the business or our users/testers are complaining,
 we have to be very strict with ourselves; our testing system is weak and
 must be fixed first. We can't just fix the production code and deploy,
@@ -148,11 +150,7 @@ to prove my point. Take a look at these graphs:
 
 {% figure /images/2017/03/cdbtf-jcabi-aspects.svg 600 %}
 
-[jcabi/jcabi-aspects](https://github.com/yegor256/s3auth) (S3 gateway, Java):
-
-{% figure /images/2017/03/cdbtf-s3auth.svg 600 %}
-
-[jcabi/jcabi-aspects](https://github.com/yegor256/s3auth) (S3 gateway, Java):
+[yegor256/s3auth](https://github.com/yegor256/s3auth) (S3 gateway, Java):
 
 {% figure /images/2017/03/cdbtf-s3auth.svg 600 %}
 

@@ -7,7 +7,7 @@ description: |
   Contents of the entire blog, in chronological order; the page
   is generated automatically and contains a complete list
   of all articles published in this blog
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+image: /images/yegor-is-presenting.png
 keywords:
   - blog
   - contents
@@ -91,10 +91,7 @@ All tags (alphabetic order):
 
 Intensity of writing ({% wordcount %}):
 
-<figure>
-<object data="/stats.svg" type="image/svg+xml"
-  style="width:600px;max-width:100%;"></object>
-</figure>
+{% figure /stats.svg 600 %}
 
 This is a full list of {{ site.posts.size }} blog posts published<span id="total_comments"></span>:
 

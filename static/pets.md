@@ -12,7 +12,7 @@ keywords:
   - startup ideas
   - small startup
   - startup founders
-? votesimage: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+? votesimage: /images/yegor-is-presenting.png
 ---
 
 It's a full list of my pet projects (which are still alive). If interested
@@ -67,8 +67,11 @@ More about it in this article:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %}).
 Founded 8-Jan-2015.
 
-<!-- netbout -->
-<!-- thindeck -->
-<!-- wring -->
-<!-- h12 -->
-<!-- tacit, qulice,  -->
+Others (less stable or successful):
+[tacit](https://github.com/yegor256/tacit),
+[sixnines](http://www.sixnines.io),
+[qulice](https://github.com/teamed/qulice),
+[netbout](http://www.netbout.com),
+[thindeck](http://www.thindeck.com),
+[wring](http://www.wring.io),
+[h12](http://www.h12.co).

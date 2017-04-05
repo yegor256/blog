@@ -23,7 +23,7 @@ book: elegant-objects 3.5
 youtube:
   - WSgP85kr6eU
   - F4N25kZ2zQU
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/09/fish-called-wanda.png
+image: /images/2014/09/fish-called-wanda.png
 jb_picture:
   caption: A Fish Called Wanda (1988) by Charles Crichton
 ---

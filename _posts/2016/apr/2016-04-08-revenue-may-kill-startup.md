@@ -14,7 +14,7 @@ keywords:
   - market capitalization
   - how to grow revenue
   - revenue growth
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/04/blow.jpg
+image: /images/2016/04/blow.jpg
 jb_picture:
   caption: Blow (2001) by Ted Demme
 ---

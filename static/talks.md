@@ -12,7 +12,7 @@ keywords:
   - workshops about software development
   - conferences about programming
   - software engineers conferences
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/yegor-is-presenting.png
+image: /images/yegor-is-presenting.png
 style: |
   .talk-event {
     clear: both;
@@ -66,38 +66,35 @@ script: |
 
 {% badge /images/yegor-is-presenting.png 300 %}
 
-This is where I'll be talking soon.
+This is where I'll be speaking soon.
 I'm updating this list very often, but still,
-follow me [on Twitter](https://www.twitter.com/yegor256) and [on Lanyrd](http://lanyrd.com/profile/yegor256/)
+follow me [on Twitter](https://www.twitter.com/yegor256) and
+[on Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the most recent news.
-Below is a list of all venues I've been talking at with my short
-summary of their quality. Well, not just a summary, but an evaluation.
-Not every conference is as good as some others. That's why I decided to
-give them some feedback, at least here (see below).
+
+This is what I haven't spoken about yet but planning to, soon:
+
+  * [Puzzle-Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
+  * [TDD That Works for Me]({% pst 2017/mar/2017-03-24-tdd-that-works %})
+  * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
+  * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
+  * [Why I Don't Talk to Google Recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
+  * [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
+  * [Inheritance Is a Procedural Technique for Code Reuse]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
+  * [A Distributed Team Delivers Code of Higher Quality]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})
+
+<!--
+  * [How Much Do You Love Conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
+  * [16 Don'ts of Career Growth]({% pst 2017/jan/2017-01-24-career-advice %})
+-->
+
+If you are interested in seeing me speaking at **your event**,
+please [email](mailto:event@yegor256.com). It's free.
+You will just have to pay for business class tickets,
+a premium suite in a 5-stars hotel, and a limo.
+OK, I'm kidding about the limo.
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
-
-<div class="talk-event"/>
-<img src="/images/2017/agiledays.svg" class="future-talk" alt="AgileDays 2017"/>
-**Семь врагов нашей мотивации**<br/>
-**Избавляйтесь от экспертов**<br/>
-[AgileDays 2017](http://agiledays.ru/members/profile/89/)<br/>
-Moscow, Russia<br/>
-24 March 2017
-
-<div class="talk-event"/>
-<img src="/images/2017/devon-summit.png" class="future-talk" alt="DevOn Summit 2017"/>
-**Why Distributed Teams Suck?** (keynote)<br/>
-[DevOn Summit 2017](http://www.devonsummit.com/speakers/)<br/>
-Delft, The Netherlands<br/>
-30 March 2017
-
-<div class="talk-event"/>
-<img src="/images/2017/jbreak.png" class="future-talk" alt="JBreak 2017"/>
-**Utility Classes Are Killing Us**<br/>
-[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/)<br/>
-Novosibirsk, Russia<br/>
-4 April 2017
 
 <div class="talk-event"/>
 <img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
@@ -119,7 +116,7 @@ Riga, Latvia<br/>
 **What this InterruptedException is about?**<br/>
 [GeeCON 2017](https://geecon.org/)<br/>
 Kraków, Poland<br/>
-17-19 May 2017
+18-19 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
@@ -136,12 +133,14 @@ Kiev, Ukraine<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
 
+<!--
 <div class="talk-event"/>
 <img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
 **Мифы и реальность софтверных команд**<br/>
 [ITEM 2017](http://item.com.ua/)<br/>
 Dnipro, Ukraine<br/>
 17-18 June 2017
+-->
 
 <!--
 <div class="talk-event"/>
@@ -173,6 +172,39 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
+Utility Classes Are Killing Us;
+[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
+Novosibirsk, Russia;
+4 April 2017;
+[видео](https://www.youtube.com/watch?v=85B3FV_sB60),
+[slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
+A Few Best Practices of Time-Wasting in a Software Team;
+[DevOn Summit 2017](http://www.devonsummit.com/speakers/);
+Delft, The Netherlands;
+30 March 2017;
+[video](https://www.youtube.com/watch?v=MSBf2RftCKo).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+Избавляйтесь от экспертов;
+[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+Moscow, Russia;
+24 March 2017;
+[видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+Семь врагов нашей мотивации;
+[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+Moscow, Russia;
+24 March 2017;
+[видео](https://www.youtube.com/watch?v=biE86esgFAE).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>

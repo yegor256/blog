@@ -7,7 +7,7 @@ description: |
   Yegor Bugayenko is a programmer, software architect,
   writer, blogger, speaker, project manager, CEO, seed investor,
   and philanthropist.
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/about/yegor-speaking.jpg
+image: /images/about/yegor-speaking.jpg
 keywords:
   - java blog
   - blog about programming
@@ -77,7 +77,7 @@ subscribers).
   <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field">Subscribe</button>
-  <span class="note">2450+ happy subscribers and counting...</span>
+  <span class="note">2620+ happy subscribers and counting...</span>
 </fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).

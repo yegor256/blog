@@ -16,7 +16,7 @@ keywords:
   - software development outsourcing
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2rekrb/how_to_be_honest_and_keep_a_customer/
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/12/99-francs.png
+image: /images/2014/12/99-francs.png
 jb_picture:
   caption: 99 francs (2007) by Jan Kounen
 ---

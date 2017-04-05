@@ -47,10 +47,14 @@ module Yegor
     end
 
     def render(context)
-      html = "<figure class='unprintable'><img src='#{Yegor::Img.new(@src, context)}'" \
-        " itemprop='image'" \
-        " style='width:#{@width}px;max-width:100%;'" \
-        " alt='figure'/></figure>\n\n"
+      uri = Yegor::Img.new(@src, context).to_s
+      attrs = "itemprop='image' style='width:#{@width}px;max-width:100%;' alt='The figure'"
+      html = if uri.end_with?('.svg')
+        "<object data='#{uri}' type='image/svg+xml' #{attrs}></object>"
+      else
+        "<img src='#{uri}' #{attrs}/>"
+      end
+      "<figure class='unprintable'>#{html}</figure>"
     end
   end
 

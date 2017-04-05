@@ -2,7 +2,7 @@
 layout: post
 title: "Basic HTTP Auth for S3 Buckets"
 date: 2014-04-21
-tags: aws s3auth
+tags: aws pets
 description: |
   Since Amazon S3 doesn't allow you to secure access
   to buckets with HTTP Basic Authentication, I've created

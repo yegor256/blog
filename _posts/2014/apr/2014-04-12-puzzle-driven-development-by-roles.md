@@ -14,7 +14,7 @@ keywords:
   - project planning
   - project roles
   - distributed programming
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2014/04/pulp-fiction-mr-wolf-with-cup.png
+image: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
 jb_picture:
   caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
@@ -226,7 +226,8 @@ fix some functional bug. In most cases, I have only half an hour available.
 And, most tasks are bigger and require more time than that.
 
 Puzzle driven development helps me break my task into smaller sub-tasks.
-I always start with a unit test. In the unit test, I'm trying to
+I [always]({% pst 2017/mar/2017-03-24-tdd-that-works %})
+start with a unit test. In the unit test, I'm trying to
 reproduce a bug or model the feature. When my test fails, I commit
 it and determine the amount of time I have left. If I still have time to make it
 pass&mdash;I do it, commit the changes and report to the project manager.

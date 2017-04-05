@@ -6,7 +6,7 @@ description: |
   programming, from an idealistic and a bit futuristic
   point of view.
 permalink: elegant-objects.html
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/books/elegant-objects/cover.png
+image: /images/books/elegant-objects/cover.png
 keywords:
   - book about object-oriented programming
   - book about oop
@@ -58,6 +58,15 @@ ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
+
+Mar 31, 2017:
+Выкладываю в открытый доступ все пять ревью от резидентов подкаста
+"Разбор Полетов", с которых начинается руссифицированная версия первого тома:
+[Барух Садогурский](/pdf/2017/elegant-objects-jbaruch.pdf),
+[Антон Архипов](/pdf/2017/elegant-objects-antonarhipov.pdf),
+[Антон Черноусов](/pdf/2017/elegant-objects-golodnyj.pdf),
+[Алексей Абашев](/pdf/2017/elegant-objects-abashev.pdf) и
+[Виктор Гамов](/pdf/2017/elegant-objects-gamussa.pdf).
 
 Mar 7, 2017:
 I started to write the third volume, which will consist entirely

@@ -18,7 +18,7 @@ keywords:
 book: elegant-objects 2.6
 youtube:
   - o3aNJX7AP3M
-image: https://cf.jare.io/?u=http://www.yegor256.com/images/2016/03/lock-stock-two-smoking-barrels.jpg
+image: /images/2016/03/lock-stock-two-smoking-barrels.jpg
 jb_picture:
   caption: Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie
 ---
