@@ -462,3 +462,7 @@ attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.
 
 To summarize, your class should either be `final` or `abstract`&mdash;nothing in between.
+
+Update (April 2017): If you also agree that
+[implementation inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}) is evil,
+all your classes must be `final`.
