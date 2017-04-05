@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "PDD In Action"
+title: "PDD in Action"
 date: 2016-06-20
 place: Moscow, Russia
 tags: management
 description: |
-  0pdd.com is a hosted free service that helps
+  0pdd.com is a free hosted service that helps
   you automate puzzle-driven development in your
   GitHub projects.
 keywords:
@@ -22,11 +22,11 @@ jb_picture:
 {% badge https://avatars2.githubusercontent.com/u/24456188 64 http://www.0pdd.com %}
 
 [Puzzle-driven development]({% pst 2009/mar/2009-03-04-pdd %})
-(PDD) is a methodology we've been practicing in our teams
-for over seven years. Using PDD we delegate the responsibility of
-task decomposition to their performers, eliminiating
+(PDD) is a methodology we've been practicing on our teams
+for more than seven years. Using PDD, we delegate the responsibility of
+task decomposition to its performers, eliminating
 the role of a project manager. We've been using our proprietary software
-for that. A month ago we made it public, open source, and free.
+for that. A month ago, we made it public, open source, and free.
 It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
 
 <!--more-->
@@ -35,7 +35,7 @@ It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
 
 Here is how you configure it, in two steps. First, you grant
 read-only access to [@0pdd](https://github.com/0pdd) in GitHub
-(either private of public repository):
+(either private or public repository):
 
 ...
 
@@ -44,23 +44,23 @@ Second, you add a webhook to your GitHub repository:
 ...
 
 Now, your repository is being watched by [0pdd](http://www.0pdd.com). Every
-time you `git push` something new, it does `git pull` and retrieves your changes
+time you `git push` something new, it does a `git pull` and retrieves your changes
 from GitHub. Then it runs [pdd](http://github.com/yegor256/pdd), a command line tool
-that scans the entire code base and finds all occurences of `@todo`
+that scans the entire code base and finds all occurrences of `@todo`
 markers.
 
-For all newly found markers [0pdd](http://www.0pdd.com) will submit new
-issues to GitHub issue-tracking section of your repository.
+For all newly found markers, [0pdd](http://www.0pdd.com) will submit new
+issues to the GitHub issue-tracking section of your repository.
 
-Also, when you remove that markers from your code base,
+Also, when you remove markers from your code base,
 [0pdd](http://www.0pdd.com) will immediately close issues it created.
 
 Now, when an issue is assigned to a programmer, we allow him or her
 to [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
-and return incomplete code back to `master`. If and when the code is
-not complete we ask the programmer to leave `@todo` markers in the code, called
-"puzzles." Later, these puzzles will be assigned to other programmers
-and so on. Eventually, the problem will be fixed, when _most_ puzzles are
+and return incomplete code back to the `master.` If and when the code is
+not complete, we ask the programmer to leave `@todo` markers in the code, called
+"puzzles." Later, these puzzles will be assigned to other programmers,
+and so on. Eventually, the problem will be fixed when _most_ puzzles are
 resolved.
 
 [0pdd](http://www.0pdd.com) helps you automate this process and provides
@@ -69,13 +69,8 @@ code base. You can even add a nice badge to your GitHub repo:
 
 [![PDD status](http://www.0pdd.com/svg?name=yegor256/0pdd)](http://www.0pdd.com/p?name=yegor256/0pdd)
 
-If you click it, you will get to the full report of all puzzles
+If you click it, you will see the full report of all puzzles
 currently present and previously seen.
 
 This mechanism helps us in many projects. You can use it for free. It's
-an open source Ruby product, feel free to [contribute](https://github.com/yegor256/0pdd).
-
-
-
-
-
+an open-source Ruby product; feel free to [contribute](https://github.com/yegor256/0pdd).
