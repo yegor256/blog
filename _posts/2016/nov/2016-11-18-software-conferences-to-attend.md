@@ -73,7 +73,7 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="https://www.oracle.com/javaone/index.html">JavaOne</a></td>
   <td>San Francisco</td>
   <td>Sep</td>
-  <td>Mar</td>
+  <td>Apr</td>
   <td><a href="https://twitter.com/javaoneconf">@javaoneconf</a></td>
   </tr>
 <tr><td><a href="https://www.devoxx.be/">Devoxx</a></td>
