@@ -22,7 +22,7 @@ module Jekyll
     safe true
     def generate(site)
       site.posts.docs.each do |doc|
-        puts "No image in #{doc.url}" if !doc['image']
+        puts "WARN: No front image in #{doc.url}" if !doc['image']
       end
     end
   end
