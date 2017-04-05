@@ -12,7 +12,7 @@ keywords:
   - programming blog
   - blog about software
 image: /images/angry-testimonials.png
-? votesnospell: true
+nospell: true
 ---
 
 {% badge /images/angry-testimonials.png 220 %}

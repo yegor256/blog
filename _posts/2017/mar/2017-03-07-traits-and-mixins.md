@@ -145,7 +145,7 @@ end
 
 I'm sure you already understand that they both have access to
 the private attribute `@title` of class `Book`. They actually have
-full access to _everything_ in the class. They litterally are
+full access to _everything_ in the class. They literally are
 "pieces of code" that we _inject_ into the class to make it more
 powerful and complex. What's wrong with this approach?
 
