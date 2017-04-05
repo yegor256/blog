@@ -142,6 +142,13 @@ Dnipro, Ukraine<br/>
 17-18 June 2017
 -->
 
+<div class="talk-event"/>
+<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.IO 2017"/>
+**Java Annotations Are a Bad Idea**<br/>
+[JDK IO 2017](http://www.jdk.io/)<br/>
+Copenhagen, Denmark<br/>
+19-20 June 2017
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
