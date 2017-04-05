@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-04T12:33:11+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SOLID Is OOP for Dummies</title><link href="http://www.yegor256.com/2017/03/28/solid.html" rel="alternate" type="text/html" title="SOLID Is OOP for Dummies" /><published>2017-03-28T00:00:00+00:00</published><updated>2017-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/28/solid</id><content type="html" xml:base="http://www.yegor256.com/2017/03/28/solid.html">&lt;p&gt;You definitely know the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-05T16:52:26+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">PDD in Action</title><link href="http://www.yegor256.com/2017/04/05/pdd-in-action.html" rel="alternate" type="text/html" title="PDD in Action" /><published>2017-04-05T00:00:00+00:00</published><updated>2017-04-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/05/pdd-in-action</id><content type="html" xml:base="http://www.yegor256.com/2017/04/05/pdd-in-action.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.0pdd.com&#39;&gt;&lt;img src=&#39;https://avatars2.githubusercontent.com/u/24456188&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2009/03/04/pdd.html&quot;&gt;Puzzle-driven development&lt;/a&gt;
+(PDD) is a methodology we&amp;#39;ve been practicing on our teams
+for more than seven years. Using PDD, we delegate the responsibility of
+task decomposition to its performers, eliminating
+the role of a project manager. We&amp;#39;ve been using our proprietary software
+for that. A month ago, we made it public, open source, and free.
+It is available as &lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt;&amp;mdash;a GitHub-based chat bot.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;0pdd.com&#39; src=&#39;/images/2017/04/0pdd-screenshot.jpg&#39; longdesc=&#39;#21e37bf5&#39;/&gt;&lt;figcaption id=&#39;21e37bf5&#39;&gt;0pdd.com&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is how you configure it, in two steps. First, you
+&lt;a href=&quot;https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/&quot;&gt;grant&lt;/a&gt;
+read-only access to &lt;a href=&quot;https://github.com/0pdd&quot;&gt;@0pdd&lt;/a&gt; in GitHub
+(either private or public repository)&lt;/p&gt;
+
+&lt;p&gt;Second, you add a &lt;a href=&quot;https://help.github.com/articles/about-webhooks/&quot;&gt;webhook&lt;/a&gt;
+to your GitHub repository: &lt;code&gt;http://www.0pdd.com/hook/github&lt;/code&gt; (with just &lt;code&gt;push&lt;/code&gt; event).&lt;/p&gt;
+
+&lt;p&gt;Now, your repository is being watched by &lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt;. Every
+time you &lt;code&gt;git push&lt;/code&gt; something new, it does a &lt;code&gt;git pull&lt;/code&gt; and retrieves your changes
+from GitHub. Then it runs &lt;a href=&quot;http://github.com/yegor256/pdd&quot;&gt;pdd&lt;/a&gt;, a command line tool
+that scans the entire code base and finds all occurrences of &lt;code&gt;@todo&lt;/code&gt;
+markers.&lt;/p&gt;
+
+&lt;p&gt;For all newly found markers, &lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt; will submit new
+issues to the GitHub issue-tracking section of your repository.&lt;/p&gt;
+
+&lt;p&gt;Also, when you remove markers from your code base,
+&lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt; will immediately close issues it created.&lt;/p&gt;
+
+&lt;p&gt;Now, when an issue is assigned to a programmer, we allow him or her
+to &lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cut corners&lt;/a&gt;
+and return incomplete code back to the &lt;code&gt;master.&lt;/code&gt; If and when the code is
+not complete, we ask the programmer to leave &lt;code&gt;@todo&lt;/code&gt; markers in the code, called
+&amp;quot;puzzles.&amp;quot; Later, these puzzles will be assigned to other programmers,
+and so on. Eventually, the problem will be fixed when &lt;em&gt;most&lt;/em&gt; puzzles are
+resolved.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt; helps you automate this process and provides
+a summary report of the current situation with all puzzles in the entire
+code base. You can even add a nice badge to your GitHub repo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.0pdd.com/p?name=yegor256/0pdd&quot;&gt;&lt;img src=&quot;http://www.0pdd.com/svg?name=yegor256/0pdd&quot; alt=&quot;PDD status&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you click it, you will see the full report of all puzzles
+currently present and previously seen.&lt;/p&gt;
+
+&lt;p&gt;This mechanism helps us in many projects. You can use it for free. It&amp;#39;s
+an open-source Ruby product; feel free to &lt;a href=&quot;https://github.com/yegor256/0pdd&quot;&gt;contribute&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Puzzle-driven development
+(PDD) is a methodology we&amp;#39;ve been practicing on our teams
+for more than seven years. Using PDD, we delegate the responsibility of
+task decomposition to its performers, eliminating
+the role of a project manager. We&amp;#39;ve been using our proprietary software
+for that. A month ago, we made it public, open source, and free.
+It is available as 0pdd&amp;mdash;a GitHub-based chat bot.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/0pdd-screenshot.jpg" /></entry><entry><title type="html">SOLID Is OOP for Dummies</title><link href="http://www.yegor256.com/2017/03/28/solid.html" rel="alternate" type="text/html" title="SOLID Is OOP for Dummies" /><published>2017-03-28T00:00:00+00:00</published><updated>2017-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/28/solid</id><content type="html" xml:base="http://www.yegor256.com/2017/03/28/solid.html">&lt;p&gt;You definitely know the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID&lt;/a&gt;
 acronym. It stands for five principles of
 &lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;
 that, if followed, are supposed to
@@ -182,8 +240,7 @@ with Uncle Bob: Those who don&amp;#39;t write tests must be put
 &lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;in jail&lt;/a&gt;,
 I just have my own interpretation of TDD. This is how it looks:&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;First, I write &lt;strong&gt;code&lt;/strong&gt; without any tests. A lot of code. I implement the
@@ -248,33 +305,27 @@ to prove my point. Take a look at these graphs:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; (Web framework, Java):&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-takes.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-takes.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;yegor256/xembly&lt;/a&gt; (XML builder, Java):&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xembly.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xembly.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (AOP library, Java):&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-jcabi-aspects.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-jcabi-aspects.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;yegor256/s3auth&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-s3auth.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-s3auth.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;First commercial project:&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xockets-layer.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-layer.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;Second commercial project:&lt;/p&gt;
 
-&lt;figure&gt;&lt;object data=&quot;/images/2017/03/cdbtf-xockets-hadoop-transport.svg&quot; type=&quot;image/svg+xml&quot;
-  style=&quot;width:600px;max-width:100%;&quot;&gt;&lt;/object&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-xockets-hadoop-transport.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
 
 &lt;p&gt;In each graph, there are two parts. The first one on the top demonstrates
 the dynamics of production
@@ -291,7 +342,7 @@ The shape of the curve is almost the same in every project. It looks
 very similar to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Learning_curve&quot;&gt;learning curve&lt;/a&gt;,
 where we start to learn fast and then slow down over time:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-graph.png&#39; itemprop=&#39;image&#39; style=&#39;width:450px;max-width:100%;&#39; alt=&#39;figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2017%2F03%2Fcdbtf-graph.png&#39; itemprop=&#39;image&#39; style=&#39;width:450px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;This perfectly illustrates what I just described above. I don&amp;#39;t need tests
 at the beginning of the project; I create them later when
@@ -437,7 +488,7 @@ we can add one more, which will
 
 &lt;p&gt;I&amp;#39;m sure you already understand that they both have access to
 the private attribute &lt;code&gt;@title&lt;/code&gt; of class &lt;code&gt;Book&lt;/code&gt;. They actually have
-full access to &lt;em&gt;everything&lt;/em&gt; in the class. They litterally are
+full access to &lt;em&gt;everything&lt;/em&gt; in the class. They literally are
 &amp;quot;pieces of code&amp;quot; that we &lt;em&gt;inject&lt;/em&gt; into the class to make it more
 powerful and complex. What&amp;#39;s wrong with this approach?&lt;/p&gt;
 
@@ -1230,106 +1281,4 @@ software developer or an architect? How does one grow from a junior just
 starting to write Java code to the leader of a software team that is
 driving a BMW and making $150K+ per year? What are the exact steps that
 won&amp;#39;t waste time and will get you there faster? Let me share what I think might
-be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry><entry><title type="html">Synchronized Decorators to Replace Thread-Safe Classes</title><link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html" rel="alternate" type="text/html" title="Synchronized Decorators to Replace Thread-Safe Classes" /><published>2017-01-17T00:00:00+00:00</published><updated>2017-01-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/17/synchronized-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/01/17/synchronized-decorators.html">&lt;p&gt;You know what thread safety is, right? If not, there is a simple example
-below. All classes must be thread-safe, right? Not really. Some of them
-have to be thread-safe? Wrong again. I think none of them have to
-be thread-safe, while all of them have to provide synchronized decorators.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Aladdin (1992) by Ron Clements and John Musker&#39; src=&#39;/images/2017/01/aladdin.jpg&#39; longdesc=&#39;#f5aa3c20&#39;/&gt;&lt;figcaption id=&#39;f5aa3c20&#39;&gt;Aladdin (1992) by Ron Clements and John Musker&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let&amp;#39;s start with an example (it&amp;#39;s
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;, by the way):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What do you think &amp;mdash; is it &lt;a href=&quot;https://en.wikipedia.org/wiki/Thread_safety&quot;&gt;thread-safe&lt;/a&gt;?
-This term refers to whether
-an object of this class will operate without mistakes when used by multiple
-threads at the same time. Let&amp;#39;s say we have two threads working with
-the same object, &lt;code&gt;position&lt;/code&gt;, and calling its method &lt;code&gt;increment()&lt;/code&gt; at
-exactly the same moment in time.&lt;/p&gt;
-
-&lt;p&gt;We expect the &lt;code&gt;number&lt;/code&gt; integer to be equal to 2 when both threads
-finish up, because each of them will increment it once, right?
-However, most likely this won&amp;#39;t happen.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s see what will happen. In both threads, &lt;code&gt;before&lt;/code&gt;
-will equal &lt;code&gt;0&lt;/code&gt; when they start. Then &lt;code&gt;after&lt;/code&gt; will be set to &lt;code&gt;1&lt;/code&gt;. Then, both threads
-will do &lt;code&gt;this.number = 1&lt;/code&gt; and we will end up with &lt;code&gt;1&lt;/code&gt; in &lt;code&gt;number&lt;/code&gt; instead
-of the expected &lt;code&gt;2&lt;/code&gt;. See the problem? Classes with such a flaw in their
-design are &lt;strong&gt;not thread-safe&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;The simplest and most obvious solution is to make our method
-&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html&quot;&gt;&lt;code&gt;synchronized&lt;/code&gt;&lt;/a&gt;.
-That will guarantee that no matter how many threads call it
-at the same time, they will all go sequentially, not in parallel: one
-thread after another. Of course, it will take longer, but it will prevent
-that mistake from happening:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;A class that guarantees it won&amp;#39;t break no matter how many threads
-are working with it is called &lt;strong&gt;thread-safe&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now the question is: Do we have to make all classes
-thread-safe or only some of them? It would seem to be better to have all
-classes error-free, right? Why would anyone want an object
-that may break at some point? Well, not exactly. Remember, there is
-a performance concern involved; we don&amp;#39;t often have multiple
-threads, and we always want our objects to run as fast as possible.
-A between-threads synchronization mechanism will definitely slow us down.&lt;/p&gt;
-
-&lt;p&gt;I think the right approach is to have two classes. The first one
-is not thread-safe, while the other one is a &lt;strong&gt;synchronized decorator&lt;/strong&gt;,
-which would look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SyncPosition&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;SyncPosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, when we need our &lt;code&gt;position&lt;/code&gt; object to be thread-safe, we decorate
-it with &lt;code&gt;SyncPosition&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SyncPosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SimplePosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;When we need a plain simple position, without any thread safety, we do this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Position&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SimplePosition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Making class functionality both rich &lt;em&gt;and&lt;/em&gt; thread-safe is, in my opinion,
-a violation of that famous
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility principle&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;By the way, this problem is very close to the one of
-&lt;a href=&quot;/2016/01/26/defensive-programming.html&quot;&gt;defensive programming&lt;/a&gt;
-and validators.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">You know what thread safety is, right? If not, there is a simple example
-below. All classes must be thread-safe, right? Not really. Some of them
-have to be thread-safe? Wrong again. I think none of them have to
-be thread-safe, while all of them have to provide synchronized decorators.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/aladdin.jpg" /></entry></feed>
+be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/the-grand-budapest-hotel.jpg" /></entry></feed>

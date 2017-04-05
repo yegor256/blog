@@ -1970,6 +1970,7 @@ elevator
 eleven
 eleven-page
 eligible
+eliminating
 elimination
 elite
 elliotte
@@ -2587,6 +2588,7 @@ gist
 git
 gitflow
 github
+github-based
 gitter
 give
 given
@@ -3219,6 +3221,7 @@ isolated
 isolating
 isolation
 issue
+issue-tracking
 issued
 issues
 it
@@ -3247,6 +3250,7 @@ javabeans
 javadoc
 javalobby
 javaone
+javaoneconf
 javascript
 javazone
 javdoc
@@ -4057,6 +4061,7 @@ new
 newbie
 newbies
 newcomers
+newly
 newrelic
 news
 next
@@ -4169,6 +4174,7 @@ occasionally
 occupied
 occur
 occurred
+occurrences
 occurs
 oct
 oct-
@@ -4646,6 +4652,7 @@ PR
 practical
 practice
 practices
+practicing
 practitioners
 pragmatic
 pray
@@ -4830,6 +4837,7 @@ proportionally
 propose
 proposed
 proposing
+proprietary
 pros
 prospect
 prospects
@@ -4905,6 +4913,7 @@ put
 puts
 putting
 puzzle
+puzzle-driven
 puzzled
 puzzles
 pycharm
@@ -5411,6 +5420,7 @@ scalability
 scalable
 scale
 scam
+scans
 scare
 scared
 scary
@@ -6688,6 +6698,7 @@ wasteful
 wastes
 wasting
 watch
+watched
 watching
 water
 way
@@ -6709,6 +6720,7 @@ weather
 weaving
 web
 web-based
+webhook
 webkit
 webpage
 website
