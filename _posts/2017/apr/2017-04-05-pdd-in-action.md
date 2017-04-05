@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PDD in Action"
-date: 2016-06-20
+date: 2017-04-05
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - 0pdd
   - GitHub PDD
   - zerocracy pdd
-image: /images/2015/03/?
+image: /images/2017/04/0pdd-screenshot.jpg
 jb_picture:
-  caption: ?
+  caption: 0pdd.com
 ---
 
 {% badge https://avatars2.githubusercontent.com/u/24456188 64 http://www.0pdd.com %}
@@ -33,15 +33,13 @@ It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
 
 {% jb_picture_body %}
 
-Here is how you configure it, in two steps. First, you grant
+Here is how you configure it, in two steps. First, you
+[grant](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
 read-only access to [@0pdd](https://github.com/0pdd) in GitHub
-(either private or public repository):
+(either private or public repository)
 
-...
-
-Second, you add a webhook to your GitHub repository:
-
-...
+Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
+to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event).
 
 Now, your repository is being watched by [0pdd](http://www.0pdd.com). Every
 time you `git push` something new, it does a `git pull` and retrieves your changes
