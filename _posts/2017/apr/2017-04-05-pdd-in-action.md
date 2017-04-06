@@ -14,6 +14,8 @@ keywords:
   - 0pdd
   - GitHub PDD
   - zerocracy pdd
+youtube:
+  - nsYGC2aUwfQ
 image: /images/2017/04/0pdd-screenshot.jpg
 jb_picture:
   caption: 0pdd.com
