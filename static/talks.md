@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
-**Java Annotations Are a Big Mistake**<br/>
-[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
-Moscow, Russia<br/>
-8 April 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
 **How Bright is Your Future?** (keynote)<br/>
 **What's Wrong with Object-Oriented Programming?**<br/>
@@ -179,6 +172,15 @@ why shouldn't we rate them, right? The best rate is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/20QBvrHq6TA/mqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
+Java Annotations Are a Big Mistake;
+[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/);
+Moscow, Russia;
+8 April 2017;
+[видео](https://www.youtube.com/watch?v=20QBvrHq6TA),
+[slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-evil).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
