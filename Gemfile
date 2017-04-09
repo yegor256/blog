@@ -13,9 +13,7 @@ gem 'jekyll-plantuml', '1.3.2'
 gem 'jekyll-sass'
 gem 'jekyll-sass-converter'
 gem 'jekyll-sitemap'
-if ENV['JEKYLL_ENV'] == 'production'
-  gem 'jekyll-related-posts'
-end
+gem 'jekyll-related-posts'
 
 gem 'rake', '10.4.2'
 gem 'sass', '3.4.22'
