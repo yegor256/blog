@@ -230,4 +230,3 @@ Of course, I'm in favor of objects :) The webinar is basically
 motivated by this earlier post:
 [Composable Decorators vs. Imperative Utility Methods]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 It took a bit longer than an hour.
-
