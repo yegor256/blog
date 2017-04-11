@@ -336,7 +336,7 @@ methods have a few practical drawbacks:</p>
 <p>First, it's <strong>impossible to mock</strong> them
 (Well, you can use <a href="https://code.google.com/p/powermock/">PowerMock</a>,
 but this will then be the most terrible decision
-you could make in a Java project ... I made it once, a few years ago).</p>
+you could make in a Java project... I made it once, a few years ago).</p>
 
 <p>Second, they are <strong>not thread-safe</strong> by definition, because they always
 work with static variables, which are accessible from all threads. You can
@@ -457,7 +457,7 @@ In this design, we treat the original object as a black box and never
 touch his internal logic.</p>
 
 <p>If you don't use that <code>final</code> keyword, anyone (including yourself) will
-be able to extend the class and ... offend him :( So a class without <code>final</code>
+be able to extend the class and... offend him :( So a class without <code>final</code>
 is a bad design.</p>
 
 <p>An abstract class is the exact opposite case—he tells us that

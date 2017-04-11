@@ -236,6 +236,7 @@ announcement
 announcing
 annoy
 annoyance
+annoyed
 annoying
 annoys
 annual
@@ -339,6 +340,7 @@ arrives
 arrogant
 arrow
 arrows
+arsenal
 art
 article
 articles
@@ -3406,6 +3408,7 @@ labor
 lack
 lacks
 lady
+lag
 laissez-faire
 lake
 lambda
@@ -3846,6 +3849,7 @@ mind
 mind-shifting
 minds
 mindset
+mindsets
 mine
 minimize
 minimum
@@ -4115,6 +4119,7 @@ normal
 normally
 NoSQL
 not
+not-so-perfect
 not-yet-implemented
 notation
 notations
@@ -4252,6 +4257,7 @@ opinion
 opinions
 opponent
 opportunity
+opposing
 opposite
 optimal
 optimization
@@ -4331,6 +4337,7 @@ overload
 overloaded
 overloading
 overly
+overly-sugared
 overrate
 overridden
 overruns
@@ -4482,6 +4489,7 @@ performs
 perhaps
 period
 periods
+perl
 permanent
 permission
 permissions
@@ -5245,6 +5253,7 @@ rest
 restaurant
 RESTful
 restrict
+restricted
 restriction
 restrictions
 restroom
@@ -5512,6 +5521,8 @@ semantics
 semaphoreapp
 semi-automatically
 semi-historical
+semi-object
+semi-procedural
 seminars
 send
 sender
@@ -5772,6 +5783,7 @@ sort
 sorted
 sorter
 sorting
+soulless
 sound
 sounds
 source
@@ -6025,6 +6037,7 @@ suffers
 sufficient
 suffix
 suffixes
+sugar
 suggest
 suggested
 suggesting
@@ -6089,6 +6102,7 @@ synchronize
 synchronized
 synergy
 synonyms
+syntactic
 syntax
 system
 system-level
@@ -6434,6 +6448,7 @@ type
 types
 typesetting
 typical
+typing
 typo
 tzu
 uber
@@ -6714,6 +6729,7 @@ weakest
 weakness
 weaknesses
 wealthy
+weapons
 wear
 wearing
 weather
