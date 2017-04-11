@@ -40,7 +40,7 @@ Let's use some examples to make this more illustrative. Let's say I'm a
 software architect and the project is a "Google killer." We're hired to
 create a new search engine, and my job is to turn requirements into
 a prototype, a.k.a. a skeleton or a proof of concept. This is what I have
-as an input (let's say it's a piece of napkin ... what else would it be
+as an input (let's say it's a piece of napkin... what else would it be
 for a Google killer, right?):
 
 {% highlight text %}

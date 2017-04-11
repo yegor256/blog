@@ -118,7 +118,8 @@ Additionally, we encourage team members to make suggestions. In XDSD, we pay
 team members for every properly reported bug.
 
 XDSD makes payments for reported bugs because we believe that the more of them
-we can find, the higher the quality of the end product. Some new developers are
+we can find, the higher the
+[quality]({% pst 2017/apr/2017/04-11-flexibility-equates-lower-quality %}) of the end product. Some new developers are
 surprised when they receive tasks such as "you must find 10 bugs in class A."
 Often, the natural reaction is to ask "what if there are no bugs?" However, we
 believe that any software product may have an unlimited amount of bugs; it is

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Flexibility Equates to Lower Quality"
-date: 2016-06-20
-place: Palo Alto, CA
+date: 2017-04-11
+place: Moscow, Russia
 tags: management
 description: |
   The more options a programmer has to implement
@@ -14,9 +14,9 @@ keywords:
   - syntactic sugar
   - rubocop
   - checkstyle
-image: /images/2015/03/?
+image: /images/2017/04/scarface.jpg
 jb_picture:
-  caption: ?
+  caption: Scarface (1983) by Brian De Palma
 ---
 
 There are two opposing mindsets: "If it works, it's good" vs.
@@ -70,7 +70,7 @@ m = a > b ? 'Hello' : nil
 Which one is "right?" Are there any Perl developers? Can you suggest
 some other way to achieve the same result?
 
-Not surprisingly, in Java (the language I find better designed than Ruby),
+Not surprisingly, in Java (a stricter language than Ruby),
 there is only one way to do it:
 
 {% highlight ruby %}
@@ -79,7 +79,7 @@ if (a > b) {
 }
 {% endhighlight %}
 
-Well, I guess I'm wrong,; there are two, actually. Here is the second one:
+Well, I guess I'm wrong; there are two, actually. Here is the second one:
 
 {% highlight ruby %}
 if (a > b) m = "Hello!";
@@ -93,15 +93,17 @@ software we're creating; we either
 _own_ it (hacker mentality) or
 _build_ it (designer mentality).
 
-If we're writing it, and we love to think about ourselves as code owners, we
+If we're _writing_ it, and we love to think about ourselves as code owners, we
 definitely will need that arsenal of
 [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) weapons. We need them to prove to ourselves
 that we're smart and, of course, to show off in front of our friends and
 that soulless Ruby interpreter.
 
-On the other hand, if we're designers and happen to read the code that is
+On the other hand, if we're designers and happen to _read_ the code that is
 full of sugar, which "just works," we'll be very annoyed and
 frustrated. Well, maybe I have to speak for myself, but I definitely will be.
+
+{% quote Simply put, higher quality comes from simpler languages. %}
 
 This overly-sugared Ruby syntax is a perfect example of "works vs. good"
 positioning. Ruby philosophy is this: It doesn't matter how you write it, as long

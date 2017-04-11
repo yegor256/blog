@@ -50,7 +50,7 @@ of arguments its constructors accept. The first class accepts
 a single URL as an argument of its constructor. This tells us
 that the object of this class, after being constructed, will represent
 a web page. The second class accepts no arguments, which tells us
-that the object of it will represent ... the Universe.
+that the object of it will represent... the Universe.
 
 {% quote In order to understand what real-life entity an object represents, look at its constructor %}
 
