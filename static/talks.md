@@ -224,7 +224,7 @@ definitely recommend it next year.
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Избавляйтесь от экспертов;
-[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+AgileDays 2017;
 Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
@@ -238,7 +238,7 @@ I believe it's important to be there, since the event is rather big.
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Семь врагов нашей мотивации;
-[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+AgileDays 2017;
 Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=biE86esgFAE).
@@ -775,7 +775,7 @@ why my presentation was accepted there :)
 <aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/b6r2W3P9vgY/mqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
-[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
+NextBuild 2016<br/>
 Eindhoven, Netherlands;
 16 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
