@@ -30,7 +30,7 @@ the end of the project, when you choose to [work with us](mailto:hire@teamed.io)
 You will see below that our methods of
 software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from what many other teams are using. I personally pay a lot of attention to
-[quality]({% pst 2017/apr/2017/04-11-flexibility-equates-lower-quality %})
+[quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %})
 of code and quality of the internal processes that connect our team.
 
 <!--more-->

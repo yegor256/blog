@@ -66,7 +66,7 @@ takes all the credit from
 when the quality is good.
 
 This is what the team needs&mdash;someone personally responsible
-for the [quality]({% pst 2017/apr/2017/04-11-flexibility-equates-lower-quality %}) of the software being developed.
+for the [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of the software being developed.
 
 {% quote The job of the PM is to make sure that every technical decision the architect makes is not doubted by anyone %}
 

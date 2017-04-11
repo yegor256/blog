@@ -96,7 +96,7 @@ us and our projects.
 
 Having this experience in mind, I recommend that all new project members
 be patient and try to get used to this new approach to
-[quality]({% pst 2017/apr/2017/04-11-flexibility-equates-lower-quality %}).
+[quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}).
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.
 
