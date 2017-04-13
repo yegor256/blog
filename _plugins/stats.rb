@@ -44,9 +44,8 @@ module Jekyll
       num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     end
   end
-  class StatsGenerator < Generator
+  class AStatsGenerator < Generator
     priority :low
-    safe true
     def generate(site)
       dat = File.join(site.config['source'], '_temp/stats/stats.dat')
       FileUtils.mkdir_p File.dirname(dat)
@@ -83,6 +82,7 @@ module Jekyll
       raise 'failed to build gnuplot stats image' if !$?.exitstatus
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
+      puts "stats.svg generated"
     end
   end
 

@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/jpoint.png" class="future-talk" alt="JPoint 2017"/>
-**Java Annotations Are a Big Mistake**<br/>
-[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/)<br/>
-Moscow, Russia<br/>
-8 April 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
 **How Bright is Your Future?** (keynote)<br/>
 **What's Wrong with Object-Oriented Programming?**<br/>
@@ -142,6 +135,13 @@ Dnipro, Ukraine<br/>
 17-18 June 2017
 -->
 
+<div class="talk-event"/>
+<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.IO 2017"/>
+**Java Annotations Are a Bad Idea**<br/>
+[JDK IO 2017](http://www.jdk.io/)<br/>
+Copenhagen, Denmark<br/>
+19-20 June 2017
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
@@ -174,6 +174,23 @@ why shouldn't we rate them, right? The best rate is
 ### 2017
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A</aside>
+<img src="https://i.ytimg.com/vi/20QBvrHq6TA/mqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
+Java Annotations Are a Big Mistake;
+[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/);
+Moscow, Russia;
+8 April 2017;
+[видео](https://www.youtube.com/watch?v=20QBvrHq6TA),
+[slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-evil).
+JPoint is one of the best tech conferences I've been speaking at, so far. Their
+strong parts are social activities between speakers and the community,
+equipment and location, accomodation and help with travel. Their weak parts
+still are the content and a the focus on Russian-speaking community. Would be
+great if they can make their events more international and less "Russian-only."
+Aside from that, this is definitel the event I would try to attend again.
+
+<div class="talk-event"/>
+<aside class="venue-rate green">A</aside>
 <img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
 Utility Classes Are Killing Us;
 [JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
@@ -181,32 +198,53 @@ Novosibirsk, Russia;
 4 April 2017;
 [видео](https://www.youtube.com/watch?v=85B3FV_sB60),
 [slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
+Yet another great event by [JUG.ru](https://jug.ru/), in Siberia. This was
+my first time there, but I did enjoy almost everything: the location, the
+organization, travel planning, equipment, the audience. The only thing I didn't
+like was the quality of food. Aside from that, I would say that JBreak is
+even better event than JPoint. Maybe because I like smaller one-day events than
+bigger ones that take a few days.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
 A Few Best Practices of Time-Wasting in a Software Team;
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/);
 Delft, The Netherlands;
 30 March 2017;
 [video](https://www.youtube.com/watch?v=MSBf2RftCKo).
+Surprisingly the event was rather good, even through it was commercial
+and made by a private company (usually such events suck). This one was well
+organized, with interesting speakers, good equipment, and a lot of passion
+from the team. I've got a lot of negative comments from the audience about
+my subject, but that's how it has to be with the problem I'm discussing. Will
+definitely recommend it next year.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Избавляйтесь от экспертов;
-[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+AgileDays 2017;
 Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
+The event was rather big and the audience rather active, but I didn't feel
+like being quite "there." I haven't even met anybody from the organizers team
+while being there two days. I was by myself, sitting in the lobby, waiting
+for my slot&mdash;this is not what motivates a speaker. Aside from that
+everything was decent: the food, the equipment, the location, the travel, etc.
+I believe it's important to be there, since the event is rather big.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Семь врагов нашей мотивации;
-[AgileDays 2017](http://agiledays.ru/members/profile/89/);
+AgileDays 2017;
 Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=biE86esgFAE).
 
 <div class="talk-event"/>
+<aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
 Management Without Managers;
 [Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
@@ -214,6 +252,12 @@ Kharkiv, Ukraine;
 4 March 2017;
 [slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
 [видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
+Yet another event by [LemBS](http://lembs.com/), this time in Kharkiv.
+The organization was rather good, travel and accomodation, the food, the
+equipment. What was not really good is the content&mdash;they can do much
+better in such a big city with many outsourcing companies. Also, the promotion
+part was not as strong as it should be&mdash;most people in the room never
+heard anything about me, etc.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
@@ -731,7 +775,7 @@ why my presentation was accepted there :)
 <aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/b6r2W3P9vgY/mqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
-[NextBuild 2016](http://nextbuild.nl/speakers/yegor-bugayenko/)<br/>
+NextBuild 2016<br/>
 Eindhoven, Netherlands;
 16 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),

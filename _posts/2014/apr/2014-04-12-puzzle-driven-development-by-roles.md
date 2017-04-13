@@ -14,6 +14,8 @@ keywords:
   - project planning
   - project roles
   - distributed programming
+youtube:
+  - nsYGC2aUwfQ
 image: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
 jb_picture:
   caption: Pulp Fiction (1994) by Quentin Tarantino
@@ -63,8 +65,11 @@ a new version of the software, name it 0.0.2 and ship it to my friend. Again, I 
 This scenario repeats itself again and again until my friend stops
 calling me. In other words, until he stops breaking my project.
 
-It is obvious that the more my friend breaks my project, the higher the quality of the software delivered ultimately at the end. Version 0.0.1 was just a very preliminary version, although I considered it final at
-the time I released it. In a few months, after I learn of and fix hundreds of bugs, version 3.5.17 will be much more mature and stable.
+It is obvious that the more my friend breaks my project, the higher
+the [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of the software delivered ultimately at the end.
+Version 0.0.1 was just a very preliminary version, although I considered it final at
+the time I released it. In a few months, after I learn of and fix
+hundreds of bugs, version 3.5.17 will be much more mature and stable.
 
 This is the result of this "fix and break" approach.
 

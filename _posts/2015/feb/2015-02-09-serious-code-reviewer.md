@@ -46,7 +46,8 @@ There are a few different fears a serious code reviewer should renounce.
 The first and most popular is the fear of offending an author of the code.
 "_I'd better close my eyes and pretend I didn't see her bugs today so tomorrow she will ignore
 my mistakes_"&mdash;This is the kind of attitude this fear produces. Needless to say, it's
-counterproductive and degrades code quality and team morale. Here is my advice:
+counterproductive and degrades
+[code quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) and team morale. Here is my advice:
 be direct, honest, and straight-forward. If you don't like the code, you don't like it.
 You shouldn't care how your opinion will be taken by the author of the code.
 

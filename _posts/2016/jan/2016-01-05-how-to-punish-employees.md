@@ -45,18 +45,22 @@ same exact rules apply to both males and females.
 **Use Your Voice**.
 This, of course, is your best instrument of
 [punishment](https://en.wikipedia.org/wiki/Punishment). Make sure he is scared
-of you. He must know who he works for&mdash;you, his boss. The rule
+of you. He must know who he [works for]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})&mdash;you, his boss. The rule
 of thumb is that the one with the strongest voice is the boss. Thus, you
 must be heard, you must **rule** with your voice, and he must physically
-feel your presence in the room. Even if it's just a Skype call,
+feel your presence in the room. Even if it's just a Skype
+[call]({% pst 2016/aug/2016-08-23-communication-maturity %}),
 your voice must sound stronger than all others.
-Moreover, don't let him speak if he is trying to argue back.
-You're the boss! The alpha!
+Moreover, don't let him speak if he is trying to
+[argue back]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}).
+You're the boss! The
+[alpha](https://en.wikipedia.org/wiki/Alpha_%28ethology%29)!
 
 **Play Hard to Get**.
 Is he feeling [guilty](https://en.wikipedia.org/wiki/Guilt_%28emotion%29) for
 an error? Simply ignore him. Or, even better, schedule
-meetings and don't show up. Or reschedule many times. That will demonstrate
+[meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
+and don't show up. Or reschedule many times. That will demonstrate
 that you're not interested in him anymore. His frustration
 will grow. You'll still be in the office, having meetings with other employees,
 eating lunch, laughing, walking, and talking. You exist, but not for him.
@@ -121,7 +125,8 @@ This is a classic instrument of punishment: The worst desks go to
 those who forget who the boss is around here. Obviously, the best desk is the
 one at which nobody can see your monitor. Give those to good people who
 obey your orders and don't argue with you. They are your core team. They
-support you as a leader, and they help you rise to power. Others must
+support you as a
+[leader]({% pst 2016/may/2016-05-24-who-is-project-manager %}), and they help you rise to power. Others must
 sit closer to the door, and their monitors must be seen by everybody.
 As with all other techniques, [conceal](https://en.wikipedia.org/wiki/Psychological_manipulation)
 your intentions&mdash;you
@@ -132,7 +137,8 @@ but you must look like a
 
 **Easy Tasks Are Rewards**.
 You decide who does what, and you distribute tasks and projects&mdash;that's your
-instrument of power. Easy-to-do tasks are how you reward those who are loyal
+instrument of power. Easy-to-do tasks are how you reward those who are
+[loyal]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 and supportive. They complete such tasks, hardly expending any effort. Complex
 and risky projects, on the other hand, are assigned to the under-performing employee. He will most likely
 fail, and there won't be anyone to blame&mdash;it's just a project, like

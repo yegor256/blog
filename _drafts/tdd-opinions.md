@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 While I was working with the
-[previous article about TDD]({% pst ... %})
+[previous article about TDD]({% pst 2017/mar/2017-03-24-tdd-that-works %})
 I've read many blog posts and a few books on this very subject and found
 out that I either strongly agree with them or strongly disagree. There
 is nothing in the middle. Let me share the most interesting.
@@ -144,5 +144,8 @@ imagine a modern maintainable code base without tests. I would actually
 suggest to change that phrase to: "I get paid for code that is tested, not
 for just code."
 
+I will keep updating this post. If you know a "good" article about TDD,
+please send it [my way](mailto:tdd@yegor256.com); maybe I'll find
+something interesting to quote from it.
 
 

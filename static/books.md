@@ -77,7 +77,7 @@ You have a few options if you want to get them cheaper than that:
     Thus, the final cost of the book will be somewhere around **$12.00**.
 
   * If you're a student, find seven other friends and you will
-    get a **student package** of 8 books for $64.00 plus shippment.
+    get a **student package** of 8 books for $64.00 plus shipment.
     Thus, you will get each book for **$8.00**. I will need you to confirm
     that all of you guys really are students though.
 

@@ -45,6 +45,8 @@ of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[No
 
 " ... insightless nonsense"&mdash;[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
 
+"Self-opinionated intellectually-correct only-code-focusing high-ego moron"&mdash;[José](http://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3212271221)
+
 "I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 
 "A great intellectual masturbator of concepts that never gets his

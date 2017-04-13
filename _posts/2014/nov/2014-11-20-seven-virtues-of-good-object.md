@@ -306,7 +306,7 @@ methods have a few practical drawbacks:
 First, it's **impossible to mock** them
 (Well, you can use [PowerMock](https://code.google.com/p/powermock/),
 but this will then be the most terrible decision
-you could make in a Java project ... I made it once, a few years ago).
+you could make in a Java project... I made it once, a few years ago).
 
 Second, they are **not thread-safe** by definition, because they always
 work with static variables, which are accessible from all threads. You can
@@ -431,7 +431,7 @@ In this design, we treat the original object as a black box and never
 touch his internal logic.
 
 If you don't use that `final` keyword, anyone (including yourself) will
-be able to extend the class and ... offend him :( So a class without `final`
+be able to extend the class and... offend him :( So a class without `final`
 is a bad design.
 
 An abstract class is the exact opposite case&mdash;he tells us that

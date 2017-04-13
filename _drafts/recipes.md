@@ -16,7 +16,7 @@ keywords:
   - team management
 image: /images/2015/03/?
 jb_picture:
-  caption: ?
+  caption: xxx
 ---
 
 We live in the era of organic food, eco-friendly toilets, zero-emission cars,

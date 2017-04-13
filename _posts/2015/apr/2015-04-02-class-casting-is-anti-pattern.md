@@ -98,7 +98,7 @@ method signature. It implements the `Iterable` interface, which
 [is a contract]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 and it expects equal treatment with all other objects that come into
 the same method. But the method discriminates objects by their types.
-The method is basically asking the object about its ... race. Black
+The method is basically asking the object about its... race. Black
 objects go right while white objects go left. That's what this `instanceof`
 is doing, and that's what discrimination is all about.
 

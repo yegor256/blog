@@ -27,6 +27,7 @@ module Jekyll
       super(site, site.source, File.dirname(doc.relative_path), doc.basename)
     end
   end
+
   class AmpFile < StaticFile
     def initialize(site, path, html)
       super(site, site.dest, '', path)
@@ -63,9 +64,14 @@ module Jekyll
       true
     end
   end
+
   class AmpGenerator < Generator
     priority :low
     def generate(site)
+      if ENV['JEKYLL_ENV'] != 'production'
+        puts 'AMPs are not generated, since it is not production'
+        return
+      end
       start = Time.now
       total = 0
       site.posts.docs.each do |doc|

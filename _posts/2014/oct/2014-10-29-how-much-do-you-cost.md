@@ -55,7 +55,7 @@ First, you're **too shy to share** your code because **it's crap**.
 this is not a good sign. Not because your code could be bad, but because
 you're not brave enough to face this fact and improve. In our teams we
 [pay a lot of attention]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
-to the quality of code and most of our
+to the [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of code and most of our
 new team members get surprised by just how high our quality bar is. You will also
 be surprised. The question is whether you will be able to adapt and improve
 or if you will give up and quit. If you didn't share your code before
