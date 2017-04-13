@@ -2,9 +2,9 @@
 layout: static
 title: "Talks"
 description: |
-  Here is a full list of my talks, at conferences,
-  meetups, expos, workshops, etc. There are both
-  upcoming and already happened.
+  Here is a full list of my talks at conferences,
+  meetups, expos, workshops, etc. This includes both
+  upcoming and past talks.
 permalink: talks.html
 keywords:
   - talks about software development
@@ -66,13 +66,13 @@ script: |
 
 {% badge /images/yegor-is-presenting.png 300 %}
 
-This is where I'll be speaking soon.
-I'm updating this list very often, but still,
+Here is where I'll be speaking soon.
+I update this list very often, but 
 follow me [on Twitter](https://www.twitter.com/yegor256) and
-[on Lanyrd](http://lanyrd.com/profile/yegor256/)
-for the most recent news.
+[Lanyrd](http://lanyrd.com/profile/yegor256/)
+for the latest news.
 
-This is what I haven't spoken about yet but planning to, soon:
+Here are topics I haven't spoken about yet but am planning to soon:
 
   * [Puzzle-Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
   * [TDD That Works for Me]({% pst 2017/mar/2017-03-24-tdd-that-works %})
@@ -84,37 +84,37 @@ This is what I haven't spoken about yet but planning to, soon:
   * [A Distributed Team Delivers Code of Higher Quality]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})
 
 <!--
-  * [How Much Do You Love Conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
+  * [How Much Do You Love Conflict?]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
   * [16 Don'ts of Career Growth]({% pst 2017/jan/2017-01-24-career-advice %})
 -->
 
-If you are interested in seeing me speaking at **your event**,
+If you are interested in hearing me speak at **your event**,
 please [email](mailto:event@yegor256.com). It's free.
-You will just have to pay for business class tickets,
-a premium suite in a 5-stars hotel, and a limo.
+You will just have to pay for business-class airfare,
+a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
-**How Bright is Your Future?** (keynote)<br/>
-**What's Wrong with Object-Oriented Programming?**<br/>
+**How Bright Is Your Future?** (keynote)<br/>
+**What's Wrong With Object-Oriented Programming?**<br/>
 [RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
 Riga, Latvia<br/>
 15 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2017"/>
-**What this InterruptedException is about?**<br/>
+**What's This InterruptedException About?**<br/>
 [GeeCON 2017](https://geecon.org/)<br/>
 Kraków, Poland<br/>
 18-19 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
-**Object-oriented flavor for JUnit tests**<br/>
-**How much do you cost?**<br/>
+**Object-Oriented Flavor for JUnit Tests**<br/>
+**How Much Do You Cost?**<br/>
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/)<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
@@ -165,9 +165,9 @@ Riga, Latvia<br/>
 
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
-This is a very opinionated and subjective list of conferences,
-which I attended recently, as a speaker. They rate us speakers,
-why shouldn't we rate them, right? The best rate is
+This is a very opinionated and subjective list of conferences
+that I attended recently as a speaker. They rate us as speakers,
+so why shouldn't we rate them, right? The best grade is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.
 
@@ -182,12 +182,12 @@ Moscow, Russia;
 8 April 2017;
 [видео](https://www.youtube.com/watch?v=20QBvrHq6TA),
 [slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-evil).
-JPoint is one of the best tech conferences I've been speaking at, so far. Their
-strong parts are social activities between speakers and the community,
-equipment and location, accomodation and help with travel. Their weak parts
-still are the content and a the focus on Russian-speaking community. Would be
-great if they can make their events more international and less "Russian-only."
-Aside from that, this is definitel the event I would try to attend again.
+JPoint is one of the best tech conferences I've spoken at so far. Its
+strong points are the social activities between speakers, the community,
+equipment, location, accommodation, and help with travel. Its weak points
+still are the content and its focus on the Russian-speaking community. It would be
+great if they could make their events more international and less "Russian-only."
+Aside from that, this is definitely an event I would try to attend again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
@@ -198,26 +198,26 @@ Novosibirsk, Russia;
 4 April 2017;
 [видео](https://www.youtube.com/watch?v=85B3FV_sB60),
 [slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
-Yet another great event by [JUG.ru](https://jug.ru/), in Siberia. This was
-my first time there, but I did enjoy almost everything: the location, the
-organization, travel planning, equipment, the audience. The only thing I didn't
-like was the quality of food. Aside from that, I would say that JBreak is
-even better event than JPoint. Maybe because I like smaller one-day events than
+Yet another great event by [JUG.ru](https://jug.ru/) in Siberia. This was
+my first time there, and I enjoyed almost everything: the location, the
+organization, travel planning, equipment, and audience. The only thing I didn't
+like was the quality of food. Aside from that, I would say that JBreak is an
+even better event than JPoint. Maybe because I like smaller one-day events more than
 bigger ones that take a few days.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
-A Few Best Practices of Time-Wasting in a Software Team;
+A Few Best Practices for Time-Wasting on a Software Team;
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/);
 Delft, The Netherlands;
 30 March 2017;
 [video](https://www.youtube.com/watch?v=MSBf2RftCKo).
-Surprisingly the event was rather good, even through it was commercial
-and made by a private company (usually such events suck). This one was well
-organized, with interesting speakers, good equipment, and a lot of passion
-from the team. I've got a lot of negative comments from the audience about
-my subject, but that's how it has to be with the problem I'm discussing. Will
+Surprisingly, the event was rather good, even though it was commercial
+and put on by a private company (usually such events suck). This one was well-
+organized with interesting speakers, good equipment, and a lot of passion
+from the team. I received a lot of negative comments from the audience about
+my subject, but that's how it has to be with the problem I'm discussing. I'll
 definitely recommend it next year.
 
 <div class="talk-event"/>
@@ -228,12 +228,12 @@ AgileDays 2017;
 Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
-The event was rather big and the audience rather active, but I didn't feel
-like being quite "there." I haven't even met anybody from the organizers team
-while being there two days. I was by myself, sitting in the lobby, waiting
-for my slot&mdash;this is not what motivates a speaker. Aside from that
+The event was rather big, and the audience rather active, but I didn't really
+feel like I was "there." In the two days I was there, I didn't even meet anybody 
+from the team that organized it. I was by myself, sitting in the lobby, waiting
+for my slot&mdash;this is not what motivates a speaker. Aside from that,
 everything was decent: the food, the equipment, the location, the travel, etc.
-I believe it's important to be there, since the event is rather big.
+I believe it's important to be there, because the event is rather big.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
@@ -253,10 +253,10 @@ Kharkiv, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
 [видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
 Yet another event by [LemBS](http://lembs.com/), this time in Kharkiv.
-The organization was rather good, travel and accomodation, the food, the
-equipment. What was not really good is the content&mdash;they can do much
+The organization was rather good: the travel and accommodation, the food, the
+equipment. What was not really good was the content&mdash;they can do much
 better in such a big city with many outsourcing companies. Also, the promotion
-part was not as strong as it should be&mdash;most people in the room never
+part was not as strong as it should be&mdash;most people in the room had never
 heard anything about me, etc.
 
 <div class="talk-event"/>
@@ -301,28 +301,28 @@ XDSD: Meetings-Free Software Development Methodology;
 Riga, Latvia;
 1 December 2016;
 [video](https://www.youtube.com/watch?v=7EytYc7K5JA).
-The size of the event was perfectly right, the audience was motivated,
-organizers were actively involved, I did like it. What I didn't like
-was food and lack "social glue" between presenters, attendees, and
+The size of the event was perfect, the audience was motivated, and the
+organizers were actively involved, so I liked it. What I didn't like
+was the food and the lack of "social glue" between presenters, attendees, and
 everybody involved. I'm sure next year they will do it better.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
-Who is a Software Architect?;
+Who Is a Software Architect?;
 BuildStuff Ukraine 2016;
 Kiev, Ukraine;
 21-22 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
 [video](https://www.youtube.com/watch?v=R1lA7pN60xg).
 It was probably too big to be managed right. The Lithuanian part was a bit
-better, while Ukrainian was not so great at all, maybe because I don't like
+better, while the Ukrainian was not so great at all, maybe because I don't like
 that Olympiski sport center. Also, in Vilnius there were maybe 15 people
-at my presentation&mdash;this was just sad. What I did like was food.
+at my presentation&mdash;that was just sad. What I did like was the food.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
-How Do You Know When Your Product is Ready to be Shipped?;
+How Do You Know When Your Product Is Ready to be Shipped?;
 [BuildStuff 2016](http://www.buildstuff.lt/);
 Vilnius, Lithuania;
 18 November 2016;
@@ -332,18 +332,18 @@ Vilnius, Lithuania;
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
-Seven Sins of a Software Project;
+7 Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 17 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
-The event was rather small (about 300 people), but well prepared. At my presentation
+The event was rather small (about 300 people), but well-prepared. At my presentation,
 the room was full.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/mq4bsnKK0qs/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
-Keep Your Servers In GitHub;
+Keep Your Servers in GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
 16 November 2016;
@@ -353,7 +353,7 @@ Tallinn, Estonia;
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
-Practical Example of a One-Click Release;
+A Practical Example of a One-Click Release;
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
 Moscow, Russia;
 15 November 2016;
@@ -380,33 +380,33 @@ Kiev, Ukraine;
 12 November 2016;
 [video](https://www.youtube.com/watch?v=tCr9dtGdi2c),
 [photos](https://www.facebook.com/yegor256/posts/10211115240946846).
-This event was organized by same people who did JEEConf. This time it was
-smaller, at a different place and with less attention to details, if you ask me.
-However, overall impression was very good, organizers definitely know what
-they are doing. Will try to attend it again next year.
+This event was organized by the same people who did JEEConf. This time it was
+smaller, at a different place, and with less attention to detail, if you ask me.
+However, my overall impression was very good; the organizers definitely know what
+they are doing. I will try to attend again next year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/03PXmPc7Q3g/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
-ORM is an Offensive Anti-Pattern;
+ORM Is an Offensive Anti-Pattern;
 [Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
 9-10 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-an-offensive-antipattern),
 [video](https://www.youtube.com/watch?v=03PXmPc7Q3g),
 [photos](https://www.facebook.com/yegor256/posts/10211092077247768).
-The event was <del>pretty</del> too big. I would say about 800 attendees, about 60 speakers, 6 tracks, three
-full days plus workshops. For that size of a conference organizers would need
-to do way more "social" work for speakers and everybody. I didn't make almost
-any connections there and most people I've met had the same problem. It's a typical
-issue in big conferences&mdash;you simply get lost. At this one they had all
-chances to make a great event, but... Aside from that, the venue was great,
-food was good, travel and accomodation was perfect. I will definitely try
+The event was <del>pretty</del> too big; I would say about 800 attendees, 60 speakers, six tracks, and three
+full days plus workshops. For that size of a conference, organizers need
+to do way more "social" work for speakers and everybody else. I made almost
+no connections there, and most people I met had the same problem. It's a typical
+issue for big conferences&mdash;you simply get lost. At this one, they had every
+chance to make a great event, but... Aside from that, the venue was great,
+the food was good, and the travel and accommodation were perfect. I will definitely try
 to attend next year.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/EDKbYVEInMU/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
-Built-in Fake Objects;
+Built-In Fake Objects;
 [Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
 9-10 November 2016;
@@ -416,23 +416,23 @@ Malmö, Sweden;
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
-Practical Example of AOP with Aspect (in Russian);
+A Practical Example of AOP With Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
 14 October 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
 [photos](https://www.facebook.com/yegor256/posts/10210826984460614).
-The venue was great, the size average (about 500 ppl), organizers were
+The venue was great, the size average (about 500 people), and organizers were
 very friendly and motivated. I liked the event. A few things definitely
-need to be improved: food and the amount of tracks. There too many tracks,
-I guess, for the amount of people attended. Would be better to lower the
-amount of speakers and focus the audience on best of them. And spend
-the available money on better food.
+need to be improved, though: the food and the number of tracks. There were too many tracks,
+I guess, for the number of people who attended. It would be better to invite fewer
+speakers and focus the audience on the best of them. And spend
+the money they saved on better food.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
-Java vs OOP;
+Java vs. OOP;
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
 15 October 2016;
@@ -448,17 +448,17 @@ Kyiv, Ukraine;
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/A-9FjaOIsw8/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
-Why Static Methods Are Evil?;
+Why Static Methods Are Evil;
 [Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
-Stanford, Palo Alto, CA;
+Stanford, Palo Alto, CA, USA;
 9 August 2016;
 [video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/pynZF10U880/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
 How Anemic Objects Kill OOP;
-[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (meetup #1);
-Palo Alto, CA;
+[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (Meetup #1);
+Palo Alto, CA, USA;
 12 July 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/how-anemic-objects-kill-oop),
 [video](https://www.youtube.com/watch?v=pynZF10U880).
@@ -466,33 +466,33 @@ Palo Alto, CA;
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/3dJP_LtUGgg/mqdefault.jpg" class="past-talk" alt="SLC DevOpsDays 2016"/>
-Eight Maturity Levels of Continuous Integration;
+8 Maturity Levels of Continuous Integration;
 Salt Lake City DevOpsDays;
-Salt Lake City, USA;
+Salt Lake City, UT, USA;
 15 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
 [video](https://www.youtube.com/watch?v=3dJP_LtUGgg).
 There were about 250 people with just one track and a pretty good
 organization, even though the budget was rather low. I liked the event and
 the audience. However, the venue was not comfortable at all
-(it was literally a church).
+(It was literally a church).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/6hOBfjJ2bpw/mqdefault.jpg" class="past-talk" alt="JavaDay 2016"/>
-Java vs OOP;
+Java vs. OOP;
 [JavaDay 2016](http://javaday.by/);
 Minsk, Belarus;
 11 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
 [photos](https://www.facebook.com/javadayby/photos/?tab=album&amp;album_id=1060019404063727),
 [video](https://www.youtube.com/watch?v=6hOBfjJ2bpw).
-It was a surprisingly well organized one-day event with over 300 attendees,
-two tracks, and inexpensive entry ticket ($75). Even though their budget
-was rather low they paid for travel and hotel and invited speakers mostly
-from abroad. The audience was well prepared for my talk, I've got many questions
-right after the presenation and during the rest of the day. However, the
-venue was not really comfortable and the content was mostly outdated.
+It was a surprisingly well-organized one-day event with more than 300 attendees,
+two tracks, and an inexpensive entry ticket ($75). Even though the budget
+was rather low, they paid for travel and hotel, and invited speakers mostly
+from abroad. The audience was well-prepared for my talk, and I got many questions
+right after the presentation and throughout the rest of the day. However, the
+venue was not really comfortable, and the content was mostly outdated.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A+</aside>
@@ -504,11 +504,11 @@ Tallinn, Estonia;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
 [photos](https://www.facebook.com/yegor256/posts/10209692585621352),
 [video](https://www.youtube.com/watch?v=7yTIWFZrXpg).
-Almost everything was done perfectly at this event. There were over 500 attendees
+Almost everything was done perfectly at this event. There were more than 500 attendees
 and just two tracks (when I was speaking). The venue was very comfortable,
-modern and located in a walking distance from the center. All the logistics
+modern, and located within walking distance from the center. All the logistics
 were done perfectly, the food was of high quality, the team was personally
-there and in permanent contact with speakers. It's asolutely a must to be there
+there and in permanent contact with speakers. It's absolutely a must to be there
 again.
 
 <div class="talk-event"/>
@@ -520,33 +520,32 @@ Oslo, Norway;
 8 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
-It was a very big event with, I guess, about 1500 visitors and nine (!) tracks.
-What was good is that they paid for all travel expenses and the venue was
+It was a very big event with, I'd guess, 1,500 visitors and nine (!) tracks.
+What was good was they paid for all travel expenses, and the venue was
 really modern. Aside from that, everything else was not so good. There was
-no focus in content, the audience wasn't prepared at all, there were many
-sponsor boothes, but a total lack of attention to the content. Besides that,
-I haven't even met organizers.
+no focus on content, the audience wasn't prepared at all, and there were many
+sponsor booths. Besides that, I never even met the organizers.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/APCUGQlkO3U/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
-OOP is Dead? Not Yet!;
+OOP Is Dead? Not Yet!;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
 3 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
 [video](https://www.youtube.com/watch?v=APCUGQlkO3U).
-There were about 400 people, 2-3 tracks and a terrible venue. Seriously,
+There were about 400 people, two or three tracks, and a terrible venue. Seriously,
 the place was a total disaster, even though it's a newly built conference
 center. The sound, the location of rooms, the after-talk areas&mdash;everything
-was uncomfortable. Also, the content was not really well selected. They invited
-a few star speakers just because of their names, which usually is a mistake.
-The after-party was good though. It seemed that organizers tried to do this event
+was uncomfortable. Also, the content was not really well-selected. They invited
+a few star speakers just because of their names, which is usually a mistake.
+The after-party was good, though. It seemed that the organizers tried to do this event
 with love, but the venue and speakers, unfortunately, didn't play along.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/sZoJ3gO4PSo/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
-Your CEO or your programmer is the boss?;
+Is Your CEO or Your Programmer the Boss?;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
 2 June 2016;
@@ -555,7 +554,7 @@ Dnipro, Ukraine;
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/4DCrWRuwxos/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
-Don't be over excited about Amsterdam;
+Don't Be Overly Excited About Amsterdam;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
 2 June 2016;
@@ -570,17 +569,17 @@ Lviv, Ukraine;
 28 May 2016;
 [photos](https://www.facebook.com/rostyslav.chayka/posts/10208232510802147),
 [video](https://www.youtube.com/watch?v=ZVn7ufg-tk0).
-There were over 400 people, two days, and four tracks. The venue, the food,
-the transportation were rather good, taking into account ticket price. Besides
+There were more than 400 people, two days, and four tracks. The venue, the food, and
+the transportation were rather good, taking into account the ticket price. Besides
 that, the audience was very motivated and engaged. The only downside was a very
-short time slot for each talk (30 minutes), very short breaks (10 minutes) and
-the amount of speakers. It felt too crowded. Asided from that, I would definitely
-try to visit it again.
+short time slot for each talk (30 minutes), very short breaks (10 minutes), and
+the number of speakers. It felt too crowded. Aside from that, I would definitely
+try to visit again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/NflR7DKwxDY/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2016"/>
-Deployment Scripts Are Dead, Meet Rultor;
+Deployment Scripts Are Dead; Meet Rultor;
 [DevOps Pro](http://devopspro.lt/);
 Vilnius, Lithuania;
 26 May 2016;
@@ -589,23 +588,23 @@ Vilnius, Lithuania;
 The organization was very good. Not perfect, but very good. There were about
 300 people and four tracks (I think it's too many). The only problem was
 with the content. It looked like they paid too much attention to logistics
-and forgot about content. Aside from that, definitely a place to see again.
+and forgot about content. Aside from that, it's definitely a place to see again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
 <img src="https://i.ytimg.com/vi/63tS3HNmhiE/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
-ORM is an Offensive Anti-Pattern;
+ORM Is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
 21 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=63tS3HNmhiE).
-The venue, the logistics, the food, the organization, the size (over 1000 people),
-and the preliminary screening of my presentation... everything was very good. What I didn't like
-is the amount of tracks (too many) and the list of speakers, which, I believe,
-almost copied JPoint. Would be great to see new faces. Overall impression was
-very positive, definitely will try to attend it next year.
+The venue, the logistics, the food, the organization, the size (more than 1,000 people),
+and the preliminary screening of my presentation...everything was very good. What I didn't like
+was the number of tracks (too many) and the list of speakers, which I believe
+almost copied JPoint. It would be great to see new faces. My overall impression was
+very positive, and I definitely will try to attend it next year.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/EnhRgXrHCC4/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
@@ -628,10 +627,10 @@ Thessaloniki, Greece;
 [photos](https://www.facebook.com/yegor256/posts/10209535256568224),
 [video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
 Surprisingly, the conference was very good. Just two tracks for about 400
-attendees, motivated audience, good equipment, video recording, etc. What I
+attendees, a motivated audience, good equipment, video recording, etc. What I
 obviously didn't like was the venue (not really comfortable), the mess with
-the schedule (my talk was delayed for over 30 minutes), and an absense
-of focus on some specific subject. Aside from that, it was a positive experience.
+the schedule (my talk was delayed for more than 30 minutes), and an absence
+of focus on a specific subject. Aside from that, it was a positive experience.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
@@ -644,13 +643,13 @@ Bucharest, Romania;
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
 It was a rather small conference (around 150 people) without any specific
-focus. The venue (Radisson) was perfect, but the amount of tracks too big. There
-were less than 30 people in my room. Also, the organization was rather messy
-and my talk was delayed for over 20 minutes.
+focus. The venue (Radisson) was perfect, but the number of tracks was too many. There
+were fewer than 30 people in my room. Also, the organization was rather messy,
+and my talk was delayed for more than 20 minutes.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/p7m7_iiqaHI/mqdefault.jpg" class="past-talk" alt="Bucharest JUG"/>
-How Much Immutability is Enough?;
+How Much Immutability Is Enough?;
 [Bucharest JUG Meetup](http://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
 Bucharest, Romania;
 18 May 2016;
@@ -668,13 +667,13 @@ Krakow, Poland;
 [video](https://vimeo.com/177215750),
 [slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
 [photos](https://www.facebook.com/yegor256/posts/10209494716834756).
-Even though it's a big (over 1000 people) and popular European conference about Java, my
-overall impression is not really positive. The venue was not
-comfortable at all (it was a cinema), there were no tables for food and we
-were eating lunch in cinema chairs :) The amount of talks and tracks was
-too big, the audience was very disfocused. What seriously affected my
-impression is the way listeners were leaving the rooms during the talks,
-check this [tweet](https://twitter.com/yegor256/status/731113702691352576).
+Even though it's a big (more than 1,000 people) and popular European conference about Java, my
+overall impression was not really positive. The venue was not
+comfortable at all (it was a cinema), there were no tables for food, and we
+were eating lunch in cinema chairs :) The number of talks and tracks was
+too many, and the audience was very unfocused. What seriously affected my
+impression was the way listeners left the rooms during the talks;
+check out this [tweet](https://twitter.com/yegor256/status/731113702691352576).
 Besides that, the organization was rather formal and messy. There is a lot
 of room for improvement.
 
@@ -688,11 +687,11 @@ Tallinn, Estonia;
 [slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
 [photos](https://www.facebook.com/yegor256/posts/10209460572181161),
 [video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
-The conference was rather small (around 150 people), but well organized. What
-I didn't really like was the food and the venue (we even had some other
-conference going in the next room to us). Also, the audience was not really
-engaged and prepared, as it seemed to me. I believe, this event may improve
-and become better, the potential is definitely there.
+The conference was rather small (around 150 people), but well-organized. What
+I didn't really like was the food and the venue. (We even had some other
+conference going on in the room next to us.) Also, the audience was not really
+engaged nor prepared, as it seemed to me. I believe this event may improve
+and become better; the potential is definitely there.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -707,7 +706,7 @@ Gdynia, Poland;
 It was an interesting event, mostly because the audience was full
 of questions and really interested in project management. The location, the
 food, logistics, etc. were good enough. I didn't really like the content
-other speakers were delivering. I suspect that most of them were invited
+other speakers were delivering, though. I suspect that most of them were invited
 there because of their names.
 
 <div class="talk-event"/>
@@ -719,7 +718,8 @@ Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431),
 [video](https://www.youtube.com/watch?v=-Y4XS7ZtQ2g).
-There were about 250 people. The location was not good at all&mdash;it was a cinema. Also, the audience was so serious or so shy that it
+There were about 250 people present. The location was not good at all&mdash;it was a cinema. 
+Also, the audience was so serious or so shy that it
 was rather difficult to present. Not just for me. Also, I got an impression
 that speakers were invited just because of their names, not the content they
 deliver. Aside from that, the impression was positive.
@@ -727,18 +727,18 @@ deliver. Aside from that, the impression was positive.
 <div class="talk-event"/>
 <aside class="venue-rate green">A-</aside>
 <img src="https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg" class="past-talk" alt="JPoint 2016"/>
-ORM - это обидно (ORM is an Offensive Anti-Pattern);
+ORM - это обидно (ORM Is an Offensive Anti-Pattern);
 [JPoint 2016](http://javapoint.ru/en/);
 Moscow, Russia;
 22-24 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
-It was a very big (over 1200 people) and a very well organized
+It was a very big (more than 1,200 people) and a very well-organized
 Java conference. The food, the location, the logistics, everything. My
-presentation was carefully screened beforehand by the organizers and I received a few
+presentation was carefully screened beforehand by the organizers, and I received a few
 valuable corrections. The content, I would say, was not so perfect. I would
-recommend to look at new names in the industry and invite those who are less
+recommend looking at new names in the industry, and invite those who are less
 known but working on something hot and interesting. Besides that, the event
 was perfect.
 
@@ -752,10 +752,10 @@ Moscow, Russia;
 [slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=F4N25kZ2zQU).
-It was one of the best conferences I've attended so far. A very well organized,
-carefully planned, in a perfect and rather expensive location. Besides that,
-my speech was screened beforehand. I even had to make it over Skype and some
-corrections were received. What I would suggest to invite new speakers&mdash;it seems that there are almost the same faces every year.
+It was one of the best conferences I've attended so far, very well-organized and
+carefully planned in a perfect and rather expensive location. Besides that,
+my speech was screened beforehand. I even had to present it over Skype, and some
+corrections were received. I would suggest inviting new speakers&mdash;it seems there are almost the same faces every year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -766,9 +766,10 @@ Sophia, Bulgaria;
 20 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
 [video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
-It was a huge event with, I guess, over 1500 attendees. Even on my presentation
-there were over 150 people in the room. The location, the food, the logistics&mdash;everything was good. The only negative part is a total disfocus of the
-content. Speakers were talking just about everything. I didn't even understand
+It was a huge event with, I'd guess, more than 1,500 attendees. Even for my presentation,
+there were 150 people in the room. The location, the food, the logistics&mdash;everything was good. 
+The only negative part was a total lack of focus on the
+content. Speakers were talking about everything. I didn't even understand
 why my presentation was accepted there :)
 
 <div class="talk-event"/>
@@ -776,30 +777,30 @@ why my presentation was accepted there :)
 <img src="https://i.ytimg.com/vi/b6r2W3P9vgY/mqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
 NextBuild 2016<br/>
-Eindhoven, Netherlands;
+Eindhoven, The Netherlands;
 16 April 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
 [photos](https://www.facebook.com/yegor256/posts/10209283233547806),
 [video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
-The event was free-to-enter, but very well organized. The location was
-comfortable, the audience motivated enough and the organizers really
-cared about the event. The only bad thing was a total absence of speakers
-screening. Nobody checked my presentation before and I can only assume
+The event was free to attend but very well-organized. The location was
+comfortable, the audience was motivated enough, and the organizers really
+cared about the event. The only bad thing was a total absence of speaker
+screening. Nobody checked my presentation beforehand, and I can only assume
 that the same happened to other speakers.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/xbovkm0tTn0/mqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
-Meetings Are a Threat To Code Quality;
+Meetings Are a Threat to Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;
 9 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
 [photos](https://www.facebook.com/yegor256/posts/10209222357985955);
 [video](https://www.youtube.com/watch?v=xbovkm0tTn0).
-Organization, food, location, audience, welcoming and goodbying are very good, but
-the content is rather poor. Most talks were rather boring and poorly prepared.
-Aside from that, everything was good and I liked to be there.
+The organization, food, location, audience, welcoming, and departing were very good, but
+the content was rather poor. Most talks were rather boring and poorly prepared.
+Aside from that, everything else was good, and I liked being there.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
@@ -811,56 +812,56 @@ Minsk, Belarus;
 [slides](http://www.slideshare.net/YegorBugayenko/software-outsourcing-10-years-ahead),
 [photos](https://www.facebook.com/yegor256/posts/10209219903204587),
 [video](https://www.youtube.com/watch?v=9j5pq71BS5U).
-The conference was rather small, but well focused. The audience was actively
-engaged and asked a lot of questions. About a hundred people at my talk.
-The quality of the location was average and my expenses
+The conference was rather small but well-focused. The audience was actively
+engaged and asked a lot of questions. There were about a hundred people at my talk.
+The quality of the location was average, and my expenses
 were not reimbursed. Also, the content was not really well-prepared or monitored.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/dE0_j4Kk6jo/mqdefault.jpg" class="past-talk" alt="Agilia Conference 2016"/>
-Meetings Help Us And Kill Our Projects;
+Meetings Help Us and Kill Our Projects;
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
 Olomouc, Czech Republic;
 5 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
 [photos](https://www.facebook.com/yegor256/posts/10209204748545730),
 [video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
-There were over 250 people and just two main tracks&mdash;good setup.
-A comfortable location, careful organization, good food, expenses
+There were more than 250 people and just two main tracks&mdash;a good setup.
+It was a comfortable location, careful organization, good food, and expenses were
 paid. The only problem was the content. Most presentations
-were rather boring and not well prepared. Aside from that, I liked it.
+were rather boring and not well-prepared. Aside from that, I liked it.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/LB_YLWhGrco/mqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
-Meetings And Motivation, Friends Or Enemies?;
+Meetings and Motivation, Friends or Enemies?;
 [SEDC 2016](http://www.sedcconference.org/);
-Washington DC, USA;
+Washington, D.C., USA;
 31 March 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
 [photos](https://www.facebook.com/yegor256/posts/10209166064338649),
 [video](https://www.youtube.com/watch?v=LB_YLWhGrco).
 The place was good, the food was very good, the organization was not bad, but
 the audience was rather old and out-of-subject. Maybe system engineering is
-not really my thing, but most of these guys live somewhere in 1990. And there
-were less than a hundred people for four tracks. Just about twenty per
-presentation. It's not really a conference, but more like a meetup.
+not really my thing, but most of these guys live somewhere in the 1990s. And there
+were fewer than a hundred people for four tracks. Just about 20 per
+presentation. It's not really a conference but more like a meetup.
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F-</aside>
 Microservices as Chat Bots;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
-Seattle, USA;
+Seattle, WA, USA;
 12 March 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10208900274414067).
-It's a very small conference, with barely ten (!) people in the room. The
-talks were separated in six rooms, with no specific focus on subjects. Moreover,
-I don't think they did any prepareation of speakers or even selection of them.
-Clearly, the event was there only to make money. The only thing I enjoyed
+It was a very small conference, with barely 10 (!) people in the room. The
+talks were separated into six rooms, with no specific focus on subjects. Moreover,
+I don't think they did any preparation of speakers or even selection of them.
+Clearly, the event was there only to make money. The lone thing I enjoyed
 was the city, one of my favorites,&mdash;Seattle. Aside from that, it was
-a time wasting event for me.
+a time-wasting event for me.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
@@ -874,60 +875,60 @@ Kyiv, Ukraine;
 [video](https://www.youtube.com/watch?v=QMcDa2eyRBY).
 Looks like these DataRobot (the sponsor of the event) guys
 care about quality and do this with passion. There were about 180 people at
-my speech and the reaction of the audience was rather active. What this event can improve
-is to pay attention to the preparation of speakers and limiting their number
-to just four. They had too many (six) and most of the talks were rather boring, overloaded
-with text-rich slides. Also, the place should definitely be changed, NSC Olimpiyskiy
-is just a trash. To be honest, there previous event in Fedoriv Hub was much better
+my speech, and the reaction from the audience was rather active. What this event can improve
+on is to pay attention to the preparation of speakers and limit their number
+to just four. They had too many (six), and most of the talks were rather boring, overloaded
+with text-rich slides. Also, the place should definitely be changed; NSC Olimpiyskiy
+is just trash. To be honest, the previous event at Fedoriv Hub was much better
 (I would give it an "A").
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F</aside>
 <img src="https://i.ytimg.com/vi/mHCwlZSlZeU/mqdefault.jpg" class="past-talk" alt="DeveloperWeek 2015"/>
-Talk To Your Microservice Via a Chat Bot, not UI;
+Talk to Your Microservice Via a Chat Bot, Not UI;
 [DeveloperWeek 2016](http://www.developerweek.com/);
-San Francisco, USA;
+San Francisco, CA, USA;
 17 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-are-the-new-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
-This was a shame for the entire industry&mdash;money making event with
+This was a shame for the entire industry&mdash;a money-making event with
 zero attention to quality. Just random speakers, random attendees, random
-subjects&mdash;just anything that will help them make money on selling
+subjects&mdash;anything that helped them make money selling
 tickets.
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F+</aside>
 <img src="https://i.ytimg.com/vi/Xj226o2xI9Y/mqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
-Talk To Your Microservice Via a Chat Bot, not UI;
+Talk to Your Microservice Via a Chat Bot, Not UI;
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
-Atlanta, USA;
+Atlanta, GA, USA;
 16 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208707358871299),
 [video](https://www.youtube.com/watch?v=Xj226o2xI9Y).
-That was a huge event with, I would say, over 2000 participants and almost
-zero efforts from organizers to make it interesting. Talks were mostly
-from sponsors, promoting their own products, or from clowns making
-living by talking about "why writing clean code is important".
-Needless to say that they didn't
-compensate travel expenses of speakers, while making a lot of money
+This was a huge event with, I would say, more than 2,000 participants and almost
+no effort from organizers to make it interesting. Talks were mostly
+from sponsors promoting their own products or from clowns making a
+living by talking about "why writing clean code is important."
+Needless to say, they didn't
+compensate travel expenses for speakers, even while making a lot of money
 on tickets. It was a waste of time and money.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/qRZYJGYdrwk/mqdefault.jpg" class="past-talk" alt="TECClub 2016"/>
-XDSD : Meetings-Free Software Development Methodology;
+XDSD: Meetings-Free Software Development Methodology;
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
-Palo Alto, USA;
+Palo Alto, CA, USA;
 11 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings),
 [photos](https://www.facebook.com/yegor256/posts/10208653076874283),
 [video](https://www.youtube.com/watch?v=qRZYJGYdrwk).
 There were about 50 people in the room, most of whom were rather
 interested and engaged. The place was comfortable, equipment was of
-good quality, the focus was right on my talk, since I was the only presenter.
-I've got a number of leads from this event.
+good quality, and the focus was right on my talk, as I was the only presenter.
+I received a number of leads from this event.
 
 ### 2015
 
@@ -941,37 +942,37 @@ Warsaw, Poland;
 [slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead),
 [photos](https://www.facebook.com/yegor256/posts/10208114809057924),
 [video](https://www.youtube.com/watch?v=6SfIc5ff-8U).
-The event was rather big, over 300 people in the room. However, the audience
-was rather passive and presentations were mostly from sponsors. The event was there
-mostly to make money, which is always a downside. The location was rather
+The event was rather big, with more than 300 people in the room. However, the audience
+was rather passive, and presentations were mostly from sponsors. The event was there
+primarily to make money, which is always a downside. The location was rather
 bad&mdash;an old Soviet-time hotel.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>
 <img src="https://i.ytimg.com/vi/jUil-aTImgU/mqdefault.jpg" class="past-talk" alt="BuildStuff 2015"/>
-"How Do You Talk To Your Microservice?";
+"How Do You Talk to Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
 Kyiv, Ukraine;
 23 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208100666144360),
 [slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice),
 [video](https://www.youtube.com/watch?v=jUil-aTImgU).
-The place was a total trash (small rooms in NSC Olimpiyskiy) with bad light,
-bad sound and lack of proper ventilation. There was no preparation of talks
+The place was a total trash pit (small rooms in NSC Olimpiyskiy) with bad lighting,
+bad sound, and a lack of proper ventilation. There was no preparation of talks
 or any communication with speakers. These guys are just making money
-in a hype market. It's a shame.
+in a hyped market. It's a shame.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
 <img src="/images/2015/dat-flock-2015.jpg" class="past-talk" alt="DATFlock 2015"/>
-"What keeps us motivated and why we get lazy";
+"What Keeps Us Motivated and Why We Get Lazy";
 [Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
 Berlin, Germany;
 19-20 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208081948956442).
-There were less than a hundred people in total, separated by, I guess, four rooms.
-A rather small event, but participants were active. Agile is in general
-a very boring subject, maybe that's why the event was also rather slow, despite
+There were fewer than a hundred people in total, separated by, I would guess, four rooms.
+It was a rather small event, but participants were active. Agile is in general
+a very boring subject; maybe that's why the event was also rather slow, despite
 all the attempts of organizers to make it fun.
 
 <div class="talk-event"/>
@@ -985,9 +986,9 @@ Kyiv, Ukraine;
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/3IXk5yEJMIs/mqdefault.jpg" class="past-talk" alt="San Francisco DevOps 2015"/>
-"CI is DEAD. Or is it?!";
+"CI Is DEAD. Or Is It?!";
 [San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);
-San Francisco, USA;
+San Francisco, CA, USA;
 23 April 2015;
 [video](https://www.youtube.com/watch?v=3IXk5yEJMIs).
 
