@@ -126,6 +126,12 @@ Kiev, Ukraine<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
 
+<div class="talk-event"/>
+<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Minsk 2017"/>
+[JavaDay Minsk 2017](http://javaday.by/)<br/>
+Minsk, Belarus<br/>
+3 June 2017
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
