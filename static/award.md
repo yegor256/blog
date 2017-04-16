@@ -32,7 +32,7 @@ got a cash prize of **$2,048** each.
 <img src="http://www.yegor256.com/images/award/2015/winner.png"
   style="width:203px;height:45px;"/>
 
-[`@suseika`](https://github.com/suseika) is a winner in 2015
-with [`suseika/inflectible`](https://github.com/suseika/inflectible) Java
+[`@gvlasov`](https://github.com/gvlasov) is a winner in 2015
+with [`gvlasov/inflectible`](https://github.com/gvlasov/inflectible) Java
 project and a cash prize of **$4,096**.
 [More details]({% pst 2015/apr/2015-04-16-award %}).

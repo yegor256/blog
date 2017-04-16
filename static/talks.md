@@ -67,7 +67,7 @@ script: |
 {% badge /images/yegor-is-presenting.png 300 %}
 
 Here is where I'll be speaking soon.
-I update this list very often, but 
+I update this list very often, but
 follow me [on Twitter](https://www.twitter.com/yegor256) and
 [Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the latest news.
@@ -100,7 +100,7 @@ OK, I'm kidding about the limo.
 <img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
 **How Bright Is Your Future?** (keynote)<br/>
 **What's Wrong With Object-Oriented Programming?**<br/>
-[RigaDevDays 2017](http://rigadevdays.lv/speakers/46/)<br/>
+[RigaDevDays 2017](http://rigadevdays.lv/)<br/>
 Riga, Latvia<br/>
 15 May 2017
 
@@ -235,7 +235,7 @@ Moscow, Russia;
 24 March 2017;
 [видео](https://www.youtube.com/watch?v=TLM9eN0b6zo).
 The event was rather big, and the audience rather active, but I didn't really
-feel like I was "there." In the two days I was there, I didn't even meet anybody 
+feel like I was "there." In the two days I was there, I didn't even meet anybody
 from the team that organized it. I was by myself, sitting in the lobby, waiting
 for my slot&mdash;this is not what motivates a speaker. Aside from that,
 everything was decent: the food, the equipment, the location, the travel, etc.
@@ -724,7 +724,7 @@ Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431),
 [video](https://www.youtube.com/watch?v=-Y4XS7ZtQ2g).
-There were about 250 people present. The location was not good at all&mdash;it was a cinema. 
+There were about 250 people present. The location was not good at all&mdash;it was a cinema.
 Also, the audience was so serious or so shy that it
 was rather difficult to present. Not just for me. Also, I got an impression
 that speakers were invited just because of their names, not the content they
@@ -773,7 +773,7 @@ Sophia, Bulgaria;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
 [video](https://www.youtube.com/watch?v=gL4XwP-EBOg).
 It was a huge event with, I'd guess, more than 1,500 attendees. Even for my presentation,
-there were 150 people in the room. The location, the food, the logistics&mdash;everything was good. 
+there were 150 people in the room. The location, the food, the logistics&mdash;everything was good.
 The only negative part was a total lack of focus on the
 content. Speakers were talking about everything. I didn't even understand
 why my presentation was accepted there :)

@@ -173,15 +173,6 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.hosted-ci.com">Hosted-CI</a></td>
-  <td class="x-right"><a href="https://hosted-ci.com/#plans">$49/mo</a></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center">?</td>
-  <td class="center">?</td>
-  <td class="center">&mdash;</td>
-  </tr>
 <tr><td><a href="http://www.deploybot.com">DeployBot</a></td>
   <td class="x-right"><a href="https://signup.deploybot.com/signup/new">$15/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
@@ -367,6 +358,8 @@ a full scale mobile app to test it against.
 **ZeroCI.com** is dead (as of 28-Aug-2016).
 
 **Drone.io** is not hosted any more, but is open source (as of 23-Jan-2017).
+
+**Hosted-ci** doesn't look alive (as of 16-Apr-2017).
 
 <hr/>
 
