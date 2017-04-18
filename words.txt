@@ -616,6 +616,7 @@ block
 blocks
 blog
 blogger
+blogging
 bloghacks
 blogspot
 blood
@@ -5491,6 +5492,7 @@ see
 seed
 seedramp
 seeing
+seeks
 seem
 seemed
 seems
@@ -6170,6 +6172,7 @@ technique
 techniques
 technologies
 technology
+telegram
 tell
 telling
 tells

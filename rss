@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-17T17:36:21+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Flexibility Equates to Lower Quality</title><link href="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html" rel="alternate" type="text/html" title="Flexibility Equates to Lower Quality" /><published>2017-04-11T00:00:00+00:00</published><updated>2017-04-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality</id><content type="html" xml:base="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html">&lt;p&gt;There are two opposing mindsets: &amp;quot;If it works, it&amp;#39;s good&amp;quot; vs.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-18T08:42:25+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Won’t Help You Via Email</title><link href="http://www.yegor256.com/2017/04/18/no-help-via-email.html" rel="alternate" type="text/html" title="Why I Won&#39;t Help You Via Email" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/18/no-help-via-email</id><content type="html" xml:base="http://www.yegor256.com/2017/04/18/no-help-via-email.html">&lt;p&gt;I&amp;#39;ve been blogging and writing for almost three years now, and a few times a week
+I get emails or Facebook and Telegram messages from
+people I don&amp;#39;t really know. They ask questions about Java,
+management, object-oriented programming, and other things
+they believe I understand and can help them with. Well, my contact details are
+published right in the header on my blog&amp;mdash;what else would I expect, right?
+True, but even though I always reply to them, I never
+answer their questions.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Il Divo (2008) by Paolo Sorrentino&#39; src=&#39;/images/2017/04/il-divo.jpg&#39; longdesc=&#39;#3fea3eca&#39;/&gt;&lt;figcaption id=&#39;3fea3eca&#39;&gt;Il Divo (2008) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;Because it&amp;#39;s ineffective.&lt;/p&gt;
+
+&lt;p&gt;Honestly, I believe that the more people I help, the better. The bigger my contribution
+to the community is, the better&amp;mdash;for both the community and me personally.
+That&amp;#39;s why I try to answer every single comment on this blog,
+on my &lt;a href=&quot;https://www.youtube.com/c/yegor256?sub_confirmation=1&quot;&gt;YouTube channel&lt;/a&gt;, in
+our &lt;a href=&quot;https://gitter.im/yegor256/elegantobjects&quot;&gt;Gitter chat&lt;/a&gt;, and on
+&lt;a href=&quot;https://twitter.com/yegor256&quot;&gt;Twitter&lt;/a&gt;.
+I spend at least two hours a day on this activity.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why I&amp;#39;m asking everybody who seeks help from me personally to
+go to one of these public channels and ask there. Then, I will find their
+questions and answer them. Maybe even someone else will reply, because the community
+is pretty big now.&lt;/p&gt;
+
+&lt;p&gt;When the question is asked publicly, &lt;em&gt;everybody&lt;/em&gt; can see our conversation
+and learn something from it. This is the most effective use of my
+time and the time of those who are asking.&lt;/p&gt;
+
+&lt;p&gt;Thus, you can expect &lt;strong&gt;no help&lt;/strong&gt; provided privately, but all
+public questions will be answered.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="blogging" /><summary type="html">I&amp;#39;ve been blogging and writing for almost three years now, and a few times a week
+I get emails or Facebook and Telegram messages from
+people I don&amp;#39;t really know. They ask questions about Java,
+management, object-oriented programming, and other things
+they believe I understand and can help them with. Well, my contact details are
+published right in the header on my blog&amp;mdash;what else would I expect, right?
+True, but even though I always reply to them, I never
+answer their questions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/il-divo.jpg" /></entry><entry><title type="html">Flexibility Equates to Lower Quality</title><link href="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html" rel="alternate" type="text/html" title="Flexibility Equates to Lower Quality" /><published>2017-04-11T00:00:00+00:00</published><updated>2017-04-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality</id><content type="html" xml:base="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html">&lt;p&gt;There are two opposing mindsets: &amp;quot;If it works, it&amp;#39;s good&amp;quot; vs.
 &amp;quot;If it&amp;#39;s good, it works;&amp;quot; or &amp;quot;Make it work&amp;quot; vs. &amp;quot;Make it right.&amp;quot;
 I&amp;#39;m talking about the software source code. I&amp;#39;ve been hearing this
 almost every day in blog comments: Why do we need all those &lt;em&gt;new&lt;/em&gt; OOP
@@ -125,7 +167,7 @@ It is available as &lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd&lt;/a&gt;&
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;0pdd.com&#39; src=&#39;/images/2017/04/0pdd-screenshot.jpg&#39; longdesc=&#39;#21e37bf5&#39;/&gt;&lt;figcaption id=&#39;21e37bf5&#39;&gt;0pdd.com&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Main picture&#39; src=&#39;/images/2017/04/0pdd-screenshot.jpg&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is how you configure it, in two steps. First, you
 &lt;a href=&quot;https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/&quot;&gt;grant&lt;/a&gt;
@@ -1078,112 +1120,4 @@ your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don&amp;#39;t make classes out of all of them, but that has to be the
 goal. Private static methods are not reusable, while classes are&amp;mdash;that
-is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry><entry><title type="html">Decorating Envelopes</title><link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html" rel="alternate" type="text/html" title="Decorating Envelopes" /><published>2017-01-31T00:00:00+00:00</published><updated>2017-01-31T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/01/31/decorating-envelopes</id><content type="html" xml:base="http://www.yegor256.com/2017/01/31/decorating-envelopes.html">&lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Very often I need a
-&lt;a href=&quot;/2016/09/20/oop-without-classes.html&quot;&gt;class&lt;/a&gt; that implements an
-interface by making an instance of another class. Sound weird? Let me show
-you an example. There are many classes of that kind in the
-&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;,
-and they all are named like &lt;code&gt;*Wrap&lt;/code&gt;. It&amp;#39;s a convenient design concept that,
-unfortunately, looks rather verbose in Java. It would be great to have something
-shorter, like in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt; for example.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;North by Northwest (1959) by Alfred Hitchcock&#39; src=&#39;/images/2017/01/north-by-northwest.jpg&#39; longdesc=&#39;#1633d9e6&#39;/&gt;&lt;figcaption id=&#39;1633d9e6&#39;&gt;North by Northwest (1959) by Alfred Hitchcock&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Take a look at
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java&quot;&gt;&lt;code&gt;RsHtml&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;. Its design looks
-like this (a simplified version with only one primary constructor):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsHtml&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RsWrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, let&amp;#39;s take a look at that
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java&quot;&gt;&lt;code&gt;RsWrap&lt;/code&gt;&lt;/a&gt;
-it extends:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsWrap&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As you see, this &amp;quot;decorator&amp;quot; doesn&amp;#39;t do anything except &amp;quot;just decorating.&amp;quot;
-It encapsulates another &lt;code&gt;Response&lt;/code&gt; and passes through all method calls.&lt;/p&gt;
-
-&lt;p&gt;If it&amp;#39;s not clear yet, I&amp;#39;ll explain the purpose of &lt;code&gt;RsHtml&lt;/code&gt;. Let&amp;#39;s
-say you have text and you want to create a &lt;code&gt;Response&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// you have it already&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpURLConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HTTP_OK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Instead of doing this
-&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composition of decorators&lt;/a&gt;
-over and over again in many places, you use &lt;code&gt;RsHtml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// you have it already&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It is very convenient, but that &lt;code&gt;RsWrap&lt;/code&gt; is very verbose. There are too many
-lines that don&amp;#39;t do anything special; they just forward all method
-calls to the encapsulated &lt;code&gt;Response&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;How about we introduce a new concept, &amp;quot;decorators&amp;quot;, with a new
-keyword, &lt;code&gt;decorates&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RsHtml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;decorates&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsWithStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, in order to create an object, we just call:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RsHtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We don&amp;#39;t have any new methods in the decorators, just constructors.
-The only purpose for these guys is to create other objects and encapsulate
-them. They are not really full-purpose objects. They only help us
-create other objects.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s why I would call them &amp;quot;decorating envelopes.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;This idea may look very similar to the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29&quot;&gt;Factory&lt;/a&gt; design pattern,
-but it doesn&amp;#39;t have
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;static methods&lt;/a&gt;,
-which we are trying to avoid in
-&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">Sometimes Very often I need a
-class that implements an
-interface by making an instance of another class. Sound weird? Let me show
-you an example. There are many classes of that kind in the
-Takes Framework,
-and they all are named like *Wrap. It&amp;#39;s a convenient design concept that,
-unfortunately, looks rather verbose in Java. It would be great to have something
-shorter, like in EO for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/01/north-by-northwest.jpg" /></entry></feed>
+is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry></feed>
