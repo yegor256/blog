@@ -27,7 +27,8 @@ communications. At [teamed.io](http://www.teamed.io), we have developed software
 remotely for the last five years. We manage tasks strictly through
 ticketing systems (like GitHub, JIRA, Trac, Basecamp, etc.) and
 [discourage]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
-any informal communications, like Skype, HipChat, emails, or phone calls.
+any informal communications, like Skype, HipChat,
+[emails]({% pst 2017/apr/2017-04-18-no-help-via-email %}), or phone calls.
 Every ticket for us is an isolated task with its own life cycle,
 its own participants, and its own goal. Over these years, we've learned
 a few lessons that I want to share. If you also work remotely with your

@@ -17,8 +17,6 @@ keywords:
 youtube:
   - nsYGC2aUwfQ
 image: /images/2017/04/0pdd-screenshot.jpg
-jb_picture:
-  caption: 0pdd.com
 ---
 
 {% badge https://avatars2.githubusercontent.com/u/24456188 64 http://www.0pdd.com %}
