@@ -143,7 +143,8 @@ hence the office doesn't need you.
 
 Added 30-Jun-2016:<br/>
 **CC Your Boss**.
-Add your boss in a CC for as many emails as possible. The more emails
+Add your boss in a CC for as many emails as possible. The more
+[emails]({% pst 2017/apr/2017-04-18-no-help-via-email %})
 that come from you, the more valuable you are. Your boss
 must see that you're actively involved in many communications and that
 it's simply impossible to replace you. Besides that, CC-ing the boss
