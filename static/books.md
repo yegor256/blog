@@ -71,7 +71,8 @@ You have a few options if you want to get them cheaper than that:
   * Attend a conference where I'm speaking. In most cases I have a few
     books with me. If I don't, you just [email me](mailto:shop@yegor256.com) later and attach
     a photo of your conference badge. The price in that case will be **$20.00** plus
-    shipment, which in most cases is $7.00.
+    shipment, which in most cases is $7.00. This discount is effective
+    only during 14 days after the conference.
 
   * You can buy a book for its full price on Amazon and then
     write a blog post _and_ an Amazon review (both honest, not
