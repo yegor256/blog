@@ -59,6 +59,11 @@ ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects
 
 <!--more-->
 
+Apr 18, 2017:
+The second volume of the book is available
+[on Amazon](http://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
+one illustration and zero typos.
+
 Mar 31, 2017:
 Выкладываю в открытый доступ все пять ревью от резидентов подкаста
 "Разбор Полетов", с которых начинается руссифицированная версия первого тома:

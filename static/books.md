@@ -42,12 +42,14 @@ Published: 6 Nov 2016.
 
 <div class="clear"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
-I'm writing the second volume of [Elegant Objects](/elegant-objects.html).
-It will cover more object-oriented patterns and anti-patterns,
+The second volume of [Elegant Objects](/elegant-objects.html)
+covers more object-oriented patterns and anti-patterns,
 including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
 dependency injection, reflection, and others.
 <br/>
-To be published in <del>February</del> April 2017.
+Published: 18 Apr 2017.
+<br/>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <div class="clear"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
