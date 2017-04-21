@@ -40,7 +40,7 @@ it falls down. The generated availability metric is accessible via
 a nice SVG badge, a landing page and JSON/XML.
 Founded 10-Mar-2017.
 
-{% badge http://www.jare.io/image/logo.svg 70 http://www.jare.io %}
+{% badge http://www.jare.io/images/logo.svg 70 http://www.jare.io %}
 
 [jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
