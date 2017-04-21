@@ -32,8 +32,15 @@ articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automate
 and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %}).
 Founded 5-Jun-13.
 
-{% badge http://www.jare.io/images/logo.svg 70 http://www.jare.io %}
+{% badge http://www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
 
+[sixnines.io](http://www.sixnines.io) is website availability monitor
+that constantly HTTP requests your website to measure how often
+it falls down. The generated availability metric is accessible via
+a nice SVG badge, a landing page and JSON/XML.
+Founded 10-Mar-2017.
+
+{% badge http://img.s3auth.com/logo.png 140 http://www.s3auth.com %}
 [jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
 configuring it. More about it here:
