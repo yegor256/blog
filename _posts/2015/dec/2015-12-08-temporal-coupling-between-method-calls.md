@@ -15,7 +15,7 @@ keywords:
   - temporal coupling hidden
   - temporal coupling in oop
   - temporal coupling definition
-book: elegant-objects 2.6.3
+book: elegant-objects 5.6
 image: /images/2015/12/blueberry.jpg
 jb_picture:
   caption: Blueberry (2004) by Jan Kounen

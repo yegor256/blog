@@ -15,6 +15,7 @@ keywords:
   - decorator pattern
   - decorator pattern java
   - object configuration
+book: elegant-objects 5.5
 image: /images/2016/04/the-take.jpg
 jb_picture:
   caption: The Take (2009) by David Drury

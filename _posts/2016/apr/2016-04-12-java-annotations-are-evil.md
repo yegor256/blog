@@ -15,6 +15,7 @@ keywords:
   - java annotations runtime
   - java annotations tutorial
   - java annotations list
+book: elegant-objects 6.1
 youtube:
   - g1ctRcW214w
   - oV6Utb5Jows

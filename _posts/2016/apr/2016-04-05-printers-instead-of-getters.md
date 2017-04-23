@@ -17,6 +17,7 @@ keywords:
   - getters and setters java
 youtube:
   - _Q0cNykXB04
+book: elegant-objects 5.3
 image: /images/2016/04/amelie.jpg
 jb_picture:
   caption: Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet

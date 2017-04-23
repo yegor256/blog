@@ -14,6 +14,7 @@ keywords:
   - law of demeter violation
   - law of demeter example
   - law of demeter c#
+book: elegant-objects 5.9
 image: /images/2016/07/spartacus.jpg
 jb_picture:
   caption: Spartacus (1960) by Stanley Kubrick

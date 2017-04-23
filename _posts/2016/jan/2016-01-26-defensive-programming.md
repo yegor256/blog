@@ -15,6 +15,7 @@ keywords:
   - check for null
   - validate method arguments
   - startup failure stories
+book: elegant-objects 5.2
 image: /images/2016/01/shi-mian-mai-fu.jpg
 jb_picture:
   caption: Shi mian mai fu (2004) by Yimou Zhang
