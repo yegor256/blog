@@ -20,8 +20,6 @@ nospell: true
 
 Here they are, in chronological order:
 
-<!--more-->
-
 Niccolò Machiavelli, _Il Principe_, 1513.
 
 Donatien Alphonse François de Sade, _Histoire de Juliette_, 1801.
@@ -54,7 +52,7 @@ Erich Maria Remarque, _Drei Kameraden_, 1936.
 
 Jerome Salinger, _The Catcher in the Rye_, 1951.
 
-Ernest Miller Hemingway, The Old Man and the Sea, 1952.
+Ernest Miller Hemingway, _The Old Man and the Sea_, 1952.
 
 Anthony Burgess, _A Clockwork Orange_, 1962.
 
@@ -62,7 +60,7 @@ Ken Kesey, _One Flew Over the Cuckoo's Nest_, 1962.
 
 Philip Roth, _Portnoy’s Complaint_, 1969.
 
-Венедикт Ерофеев, Москва — Петушки, 1970.
+Венедикт Ерофеев, _Москва — Петушки_, 1970.
 
 Братья Стругацкие, _Град обреченный_, 1972.
 
@@ -84,7 +82,7 @@ Chuck Palahniuk, _Invisible Monsters_, 1999.
 
 Mario Puzo, _Omerta_, 2000.
 
-Frédéric Beigbeder, 99 francs, 2000.
+Frédéric Beigbeder, _99 francs_, 2000.
 
 Татьяна Толстая, _Кысь_, 2001.
 
