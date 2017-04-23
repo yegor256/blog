@@ -210,7 +210,6 @@ Actors and Features
 
 Quality Requirements
   Any page must open in less than 300ms.
-  User interface must be attractive and simple.
   Availability must be over 99.999%.
   Test coverage must be over 80%.
   Development pipeline must be fully automated.
