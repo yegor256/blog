@@ -15,6 +15,7 @@ keywords:
   - best books
   - best fiction books
   - books to read
+nospell: true
 ---
 
 Here they are, in chronological order:
