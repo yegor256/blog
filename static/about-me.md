@@ -87,4 +87,5 @@ and this blog: [testimonials](/testimonials.html) (be careful!).
 
 Ah, one more thing. I'm a big fan of good movies, so here's
 [my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}) of the ones
-I  would recommend you watch.
+I would recommend you watch. Also, here is my list of favorite
+[fiction books](/fiction.html).
