@@ -347,6 +347,8 @@ a full scale mobile app to test it against.
 
 <hr/>
 
+[gitlab-ci](https://about.gitlab.com/gitlab-ci/): will review soon
+
 [coverity.com](https://scan.coverity.com): will review it soon and add to the list.
 
 [buddy.works](https://buddy.works/): will review soon.
