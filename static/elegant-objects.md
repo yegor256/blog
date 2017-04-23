@@ -2,8 +2,8 @@
 layout: static
 title: "Elegant Objects"
 description: |
-  Elegant Objects is a book about object-oriented
-  programming, from an idealistic and a bit futuristic
+  'Elegant Objects' is a book about object-oriented
+  programming from an idealistic and a bit futuristic
   point of view.
 permalink: elegant-objects.html
 image: /images/books/elegant-objects/cover.png
@@ -49,12 +49,12 @@ style: |
 {% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is my first book. It is about object-oriented
-programming, from an idealistic and, maybe, a bit futuristic
+programming from an idealistic and, maybe, a bit of a futuristic
 point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
-more solid and architecture more visible. It is available for sale
-on [Amazon](http://goo.gl/W2WVMk) (please, don't forget to review it there!),
-ISBN: 1519166915. Changelog is [here](https://github.com/yegor256/elegantobjects).<br/>
+more solid, and architecture more visible. It is available for sale
+on [Amazon](http://goo.gl/W2WVMk) (Please don't forget to review it there!),
+ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobjects).<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <!--more-->
@@ -74,20 +74,20 @@ Mar 31, 2017:
 [Виктор Гамов](/pdf/2017/elegant-objects-gamussa.pdf).
 
 Mar 7, 2017:
-I started to write the third volume, which will consist entirely
-of "OOP puzzles." Just like in math or chess books there will be questions,
-which you will have to think about and answers at the end of the book.
-Want to be its reviewer? Please, fill
+I've started to write the third volume, which will consist entirely
+of "OOP puzzles." Just like in math or chess books, there will be questions
+that you will have to think about and answers at the end of the book.
+Want to become a reviewer? Please fill out
 [this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o).
 
 Feb 24, 2017:
-The list of reviewers of the second volume is ready (alphabetic order). I'm very
-sorry if you're not in the list, but wanted to be. There will be
-[more books](/books.html) in the future, you will still have a chance. Aside from that, you are always
+The list of reviewers for the second volume is ready (alphabetic order). I'm very
+sorry if you're not on the list but wanted to be. There will be
+[more books](/books.html) in the future, so you will still have a chance. Aside from that, you are always
 welcome to read the book and send me your
-corrections, they will get
-you to the "acknowledgment" list. See how others
-[do that](https://github.com/yegor256/elegantobjects). Here you are:
+corrections; they will get
+you on the "acknowledgment" list. See how others have
+[done that](https://github.com/yegor256/elegantobjects). Here you are:
 
   * [Andrey Valyaev](https://github.com/DronMDF)
   * [Fabrício Barros Cabral](https://br.linkedin.com/in/fabriciofx)
@@ -100,9 +100,9 @@ you to the "acknowledgment" list. See how others
   * [Piotr Chmielowski](https://www.linkedin.com/in/pchmielowski)
   * [Silas Reinagel](https://www.linkedin.com/in/silasreinagel)
 
-If you see yourself in the list, please [email me](mailto:blog@yegor256.com)
-and we'll discuss practical
-details. I'm ready to mail you the manuscript in a few days.
+If you see yourself on the list, please [email me](mailto:blog@yegor256.com)
+and we'll discuss the practical
+details. I'll be ready to mail you the manuscript in a few days.
 
 {% badge /images/books/elegant-objects/cover-razbor-poletov.png 125 %}
 
@@ -128,21 +128,21 @@ Feb 23, 2017:
 
 Feb 7, 2017:
 This is the full list of everybody who expressed
-the desire to become a reviewer of the **2nd volume** of
-Elegant Objects. I have to select up to 12 people, please help me with your
+a desire to become a reviewer of the **2nd volume** of
+"Elegant Objects." I have to select up to 12 people, so please help me with your
 vote. What does it mean to be a reviewer? It's easy:
 
-  * I will mail you the draft of the book (paper copy, not PDF);
+  * I will mail you the draft of the book (a paper copy, not PDF);
   * You criticize it as much as you can;
-  * You scan it and send me back in PDF;
-  * I take your suggestions and corrections into account;
-  * Your name will be in the list of acknowledgements in the book;
-  * You get a free signed copy of the book.
+  * You scan it and send it back to me as a PDF;
+  * I'll take your suggestions and corrections into account;
+  * Your name will be included in the list of acknowledgments in the book; and
+  * You'll get a free signed copy of the book.
 
-Pay attention, I need your negative comments, not positive ones. I don't
-really need you to say how much you like the content&mdash;it's pointless.
-I need you to tell me where it's missing, or unclear, or wrong.
-People in the list are sorted by the date I've got their applications.
+Pay attention: I need your negative comments, not your positive ones. I don't
+really need you to say how much you like the content&mdash;that's pointless.
+I need you to tell me where it's missing something, or unclear, or wrong.
+People on the list are sorted by the date I received their applications.
 I excluded some really blank applications. If you feel I did that by mistake
 to your application, please [email me](mailto:blog@yegor256.com).
 
@@ -168,8 +168,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Marcos Douglas B. Santos</span>
     <span class="text">I try to make all my code object-oriented. I have a blog about
-    OOP and I have over 15 years of systems development experience.
-    I was a reviewer of Bloghacks too — last Yegor's book published.</span>
+    OOP, and I have over 15 years of systems development experience.
+    I was a reviewer of Bloghacks too — Yegor's last published book.</span>
     <span class="votes">20 votes</span>
   </div>
   <div class="rv">
@@ -179,10 +179,10 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">John Page</span>
     <span class="text">I have an annoying habit of finding even the tiniest mistakes
-    (typos, grammar, consistency etc.) in other people's work. ;)
-    English is my native language and I have read and reread most
+    (typos, grammar, consistency, etc.) in other people's work. ;)
+    English is my native language, and I have read and re-read most
     of Yegor's OO publications and have some knowledge and strong
-    opinions in that area. (Though I certainly don't have all the answers
+    opinions in that area. (Though I certainly don't have all the answers,
     I'm irritatingly good at raising the questions.)</span>
     <span class="votes">1 vote</span>
   </div>
@@ -192,7 +192,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Kiryl Karatsetski"/>
     </a>
     <span class="name">Kiryl Karatsetski</span>
-    <span class="text">I always look for the best solution of engineering tasks.
+    <span class="text">I always look for the best solution to engineering tasks.
     Software Engineer in Fitbit.</span>
     <span class="votes">1 vote</span>
   </div>
@@ -203,11 +203,11 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Bartosz Bilicki</span>
     <span class="text">Software developer with 13 years of expertise.
-      I adore best clean code, automation and devops practices,  but I am not object fanatic.
+      I adore the best clean code, automation, and devops practices, but I am not an object fanatic.
       When there are simpler tools that do the job, I happily use them (Spring, Hibernate, Jackson, I am looking at you!).
       Having read >60 IT books, I know how to distinguish useful
       concepts from theorycrafting and marketing bull****.
-      You will receive honest and straight review.</span>
+      You will receive an honest and straight review.</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/silasreinagel">
@@ -215,7 +215,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Silas Reinagel"/>
     </a>
     <span class="name">Silas Reinagel</span>
-    <span class="text">I am a passionate Object-Oriented Programmer, with excellent
+    <span class="text">I am a passionate object-oriented programmer with excellent
     writing/communication skills.</span>
   </div>
   <div class="rv">
@@ -224,10 +224,10 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Abhishek Manocha"/>
     </a>
     <span class="name">Abhishek Manocha</span>
-    <span class="text">First time for me for reviewing. But two simple reasons, I am in
-    the OOPs for last 12 years, hold a Technical Architect position,
-    want to share my knowledge in tangible. Second, I resonate with
-    Yegor on many points. I am follower of his blog since long.</span>
+    <span class="text">This is the first time for me reviewing a book, but I have two simple reasons: I've worked in
+    the OOPs for the last 12 years, hold a technical architect position,
+    and want to share my knowledge in tangible ways. Second, I resonate with
+    Yegor on many points. I have long been a follower of his blog.</span>
     <span class="votes">3 votes</span>
   </div>
   <div class="rv">
@@ -236,8 +236,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Miroslav Genov"/>
     </a>
     <span class="name">Miroslav Genov</span>
-    <span class="text">Java Developer for most then 10 years of experience
-    that values Good Design and clean codebases. </span>
+    <span class="text">Java developer with more than 10 years of experience
+    who values good designs and clean codebases. </span>
   </div>
   <div class="rv">
     <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
@@ -254,7 +254,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Yvgen Troshchiy"/>
     </a>
     <span class="name">Yvgen Troshchiy</span>
-    <span class="text">I am enthusiastic specialist with big experience
+    <span class="text">I am an enthusiastic specialist with a lot of experience
     in different projects and companies.</span>
   </div>
   <div class="rv">
@@ -263,7 +263,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Francesco Bianchi"/>
     </a>
     <span class="name">Francesco Bianchi</span>
-    <span class="text">I already reviewed the Volume 1 of this book and was
+    <span class="text">I already reviewed volume 1 of this book and was
     (maybe?) the first one to encourage Yegor to write it after having
     some interesting fights with him over his brilliant posts.
     I've already reviewed 10+ technical books published by Manning
@@ -277,13 +277,13 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Shawn Fuller</span>
     <span class="text">Years ago I wrote multi-tier web and batch apps in
-    Perl, Java, etc.. (Currently a Business Analyst)
-    Recently I created a web donation and contact tracker in PHP (MAMP).
-    Reading your book, blog, and David West's book I realize I did
-    not understand OOP (except for using small class sizes). Like the
-    Mulla Nasrudin, who having taken a memory course said:
+    Perl, Java, etc. (I'm currently a business analyst.)
+    Recently, I created a web donation and contact tracker in PHP (MAMP).
+    Reading your book, blog, and David West's book, I realize I did
+    not understand OOP (except for using small class sizes). Like 
+    Mulla Nasrudin, who has taken a memory course, said:
     "I’m improving. Now I can sometimes remember that I have forgotten something."
-    So it is with my OOP abilities. I would bring a combination
+    So it is with my OOP abilities. I would bring a combination of
     enthusiasm and naïveté to reading your manuscript.</span>
   </div>
   <div class="rv">
@@ -293,8 +293,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Bakkiaraj</span>
     <span class="text">I mostly write code in Perl with Moose Object Oriented
-    concepts. It might be crazy for you but it does really works.
-    I am long lover for OOPs programming, Making SW Build and Test
+    concepts. It might be crazy for you, but it does really work.
+    I am a longtime lover of OOP programming, having made SW Build and Test
     automation tools with Perl + Moose.</span>
   </div>
   <div class="rv">
@@ -305,8 +305,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Semenkova Oksana Nikolaevna</span>
     <span class="text">I'm very passionate about software architecture and want
     to help you do your book the best. The themes from it
-    are very interesting and useful for future development
-    and evolution of Java language and its infrastructure</span>
+    are very interesting and useful for the future development
+    and evolution of the Java language and its infrastructure.</span>
     <span class="votes">1 vote</span>
   </div>
   <div class="rv">
@@ -315,9 +315,9 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Andrey Valyaev"/>
     </a>
     <span class="name">Andrey Valyaev</span>
-    <span class="text">I want to use right OOP. I want to learn other
-    for right OOP. I want to understand some moments in
-    right OOP and help to make you book better.</span>
+    <span class="text">I want to use OOP correctly. I want to learn from others
+    how to do OOP right. I want to understand some concepts in
+    correct OOP and help to make your book better.</span>
   </div>
   <div class="rv">
     <a href="www.linkedin.com/in/settyblue">
@@ -325,9 +325,9 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Rakshith Kunchum"/>
     </a>
     <span class="name">Rakshith Kunchum</span>
-    <span class="text">I am a graduate student and I want master Java
-    in the way the book 'Elegant Objects' narrate and not
-    the way the academia teaches me.</span>
+    <span class="text">I am a graduate student, and I want to master Java
+    in the way the book "Elegant Objects" instructs, not
+    the way academia teaches me.</span>
   </div>
   <div class="rv">
     <a href="https://linkedin.com/in/0x13a">
@@ -335,8 +335,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Diego Mariani"/>
     </a>
     <span class="name">Diego Mariani</span>
-    <span class="text">Because I read all of your articles and I can't agree more.
-    I'm obsessed with true object oriented programming and software architecture </span>
+    <span class="text">Because I've read all of your articles and I can't agree more.
+    I'm obsessed with true object-oriented programming and software architecture.</span>
   </div>
   <div class="rv">
     <a href="https://www.facebook.com/polart.studio">
@@ -353,7 +353,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Patrizio Colomba"/>
     </a>
     <span class="name">Patrizio Colomba</span>
-    <span class="text">OP Passionate and Coder!</span>
+    <span class="text">OP passionate coder!</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/raulestradaaparicio">
@@ -361,7 +361,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Raul Estrada Aparicio"/>
     </a>
     <span class="name">Raul Estrada Aparicio</span>
-    <span class="text">I reviewed 256 Bloghacks. I'm the author of
+    <span class="text">I've reviewed 256 Bloghacks. I'm the author of
     books about S.M.A.C.K. stack with Apress and Packt Publishing.</span>
   </div>
   <div class="rv">
@@ -374,8 +374,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
     OOP. I have read and re-read the first edition, blog posts, and your
     comments, taking them all with a pinch of NaCl. My review will
     be based on the attempted application of these ideas to a large
-    10+ year old Java (6+) and Jython/Python codebase for a scientific
-    data acquisition client-server application used by 100+ staff and 1000+ users 24/7.</span>
+    10+-year-old Java (6+) and Jython/Python codebase for a scientific
+    data acquisition client-server application used by 100+ staff and 1,000+ users 24/7.</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/lrozenblyum">
@@ -383,7 +383,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Leonid Rozenblyum"/>
     </a>
     <span class="name">Leonid Rozenblyum</span>
-    <span class="text">interesting in reviewing and improving a cool book</span>
+    <span class="text">I'm interested in reviewing and improving a cool book.</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/vassilevsky/">
@@ -400,10 +400,10 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Piotr Chmielowski"/>
     </a>
     <span class="name">Piotr Chmielowski</span>
-    <span class="text">IMO this is true also in case of code: “Beauty is the
+    <span class="text">IMO this is true also in the case of code: “Beauty is the
     first test; there is no permanent place in the world for ugly
-    mathematics.” (Godfrey Harold Hardy). Therefore we HAVE TO
-    learn how to write a beautiful code.</span>
+    mathematics” (Godfrey Harold Hardy). Therefore, we HAVE TO
+    learn how to write beautiful code.</span>
     <span class="votes">1 vote</span>
   </div>
   <div class="rv">
@@ -412,10 +412,10 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Richard Flood"/>
     </a>
     <span class="name">Richard Flood</span>
-    <span class="text">Like a lot of others I am a professional Software Developer.
-    I have been working professionally for about 5 years and the work
+    <span class="text">Like a lot of others, I am a professional software developer.
+    I have been working professionally for about five years, and the work
     I produce has been heavily influenced by Yegor's teachings.
-    I would be honored to have the opportunity to help polish his material,
+    I would be honored to have the opportunity to help polish his material so it's
     ready to be viewed by the public.</span>
   </div>
   <div class="rv">
@@ -424,7 +424,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Nikita Salnikov-Tarnovski"/>
     </a>
     <span class="name" class="name">Nikita Salnikov-Tarnovski</span>
-    <span class="text">I hope to raise many objections so you can polish your arguments</span>
+    <span class="text">I hope to raise many objections so you can polish your arguments.</span>
   </div>
   <div class="rv">
     <a href="https://at.linkedin.com/in/paulroho">
@@ -432,8 +432,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Paul Rohorzka"/>
     </a>
     <span class="name">Paul Rohorzka</span>
-    <span class="text">I bought (at a horrendous price) and read Vol1 and
-    liked it for some thoughts and totally dismiss others. Want to
+    <span class="text">I bought (at a horrendous price) and read volume 1, and I
+    liked it for some thoughts while totally dismissing others. I want to
     contribute a critical voice.</span>
   </div>
   <div class="rv">
@@ -442,14 +442,14 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Sebastian Schwarz"/>
     </a>
     <span class="name">Sebastian Schwarz</span>
-    <span class="text">I am Clean Code and EO addicted! My co-workers hate
+    <span class="text">I am clean code and EO addicted! My coworkers hate
     me for only accepting immutable classes in code reviews!
     Not to mention naming for void and non-void methods. What
-    people call "Grammar nazis" in Language, applies to me
-    for Elegant Objects. I am a young developer and grew up with
-    Clean Code, so for me, all these rules are basics and standard.
-    I would love to be part of the Vol2 review team, to contribute
-    my passion to the community, thanks for your vote!</span>
+    people call "grammar nazis" in language applies to me
+    for "Elegant Objects." I am a young developer who grew up with
+    clean code, so for me, all these rules are basics and standards.
+    I would love to be part of the volume 2 review team to contribute
+    my passion to the community. Thanks for your vote!</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/akryvtsun">
@@ -457,7 +457,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Andriy Kryvtsun"/>
     </a>
     <span class="name">Andriy Kryvtsun</span>
-    <span class="text">I like to write efficient and elegant code</span>
+    <span class="text">I like to write efficient and elegant code.</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/ricardojob">
@@ -465,8 +465,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Ricardo de Sousa Job"/>
     </a>
     <span class="name">Ricardo de Sousa Job</span>
-    <span class="text">I live in Brazil and I have  your first book. I work
-    with development about nine years, I'm enthusiast for OO. </span>
+    <span class="text">I live in Brazil, and I have your first book. I've worked
+    with development about nine years, and I'm an enthusiast for OO. </span>
     <span class="votes">2 votes</span>
   </div>
   <div class="rv">
@@ -491,7 +491,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Paul Holser"/>
     </a>
     <span class="name">Paul Holser</span>
-    <span class="text">OO expertise, clean code, fastidious proofreading</span>
+    <span class="text">OO expertise, clean code, fastidious proofreading.</span>
   </div>
   <div class="rv">
     <a href="https://pl.linkedin.com/in/mkordas">
@@ -499,7 +499,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Michał Kordas"/>
     </a>
     <span class="name">Michał Kordas</span>
-    <span class="text">My speciality is code quality. On daily basis I need to challenge corporate, procedural "clean code" approach with real object oriented solutions.</span>
+    <span class="text">My speciality is code quality. On a daily basis, I need to challenge a corporate, procedural "clean code" approach with real object-oriented solutions.</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/anton-rybochkin-93950b10a">
@@ -507,7 +507,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Anton Rybochkin"/>
     </a>
     <span class="name">Anton Rybochkin</span>
-    <span class="text">I sleep with an editor</span>
+    <span class="text">I sleep with an editor.</span>
   </div>
   <div class="rv">
     <a href="https://br.linkedin.com/in/fabriciofx">
@@ -515,7 +515,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
         alt="Fabrício Barros Cabral"/>
     </a>
     <span class="name">Fabrício Barros Cabral</span>
-    <span class="text">I'm passionate for Object-Oriented Programming and details. I've 10 years experience as researcher and developer and as lecturer, I'm always looking for the best way to explain knowledge for all people.</span>
+    <span class="text">I'm passionate for object-oriented programming and details. I have 10 years of experience as a researcher, developer, and lecturer. I'm always looking for the best way to explain knowledge to all people.</span>
     <span class="votes">81 votes</span>
   </div>
   <div class="rv">
@@ -529,27 +529,27 @@ to your application, please [email me](mailto:blog@yegor256.com).
 </div>
 
 Feb 6, 2017:
-Good news, the second volume is ready (208 pages). Now it's time to select
-the team of reviewers, ship the draft to them, collect their opinions
+Good news: The second volume is ready (208 pages). Now it's time to select
+the team of reviewers, ship the draft to them, collect their opinions,
 and publish the book. Hopefully, it will be available on Amazon before
-March 10. Here is my offer to all new readers of this new book. If you write
+March 10. Here is my offer to all new readers of this new book: If you write
 a decent review about the book (not necessarily positive,
 but long enough for a detailed review) and post it on your blog, Amazon, and
-GoodReads I will refund you **$32** (read more about [available discounts](/books.html)).
+GoodReads, I will refund your **$32** (read more about [available discounts](/books.html)).
 
 Nov 20, 2016:
-I've got over 50 emails from those who are interested in reviewing
+I've received more than 50 emails from those who are interested in reviewing
 the second volume of the book. With the first volume, I believe, I made
 a mistake in selecting reviewers. Not all of them were as effective as
-I was expecting. This time I will make it different. I will put all
-all of them in a list and let you vote. The best 12, elected by you,
-will get the early draft of the second volume and will help me review it. To
-get into the list, please fill <del>this simple form</del>.
+I was expecting. This time, I will make the process different. I will put all
+of them on a list and let you vote. The best 12, elected by you,
+will get the early draft of the second volume and help me review it. To
+get onto the list, please fill out <del>this simple form</del>.
 
 Aug 22, 2016:
-I will collect all reviews of the book written by its readers on their
-blogs, to help you better understand what the book is about, why it's
-good and how it could be better:
+I've collected all reviews of the book written by readers on their
+blogs to help you better understand what the book is about, why it's
+good, and how it could be better:
 
   * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
@@ -559,11 +559,11 @@ good and how it could be better:
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
 
 Jun 17, 2016:
-I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects),
+I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
 where we will discuss object-oriented
-programming and find out what would be appropriate to write about,
+programming and find out what would be appropriate to write about
 on this blog and in the next volume of the book. Join the chat and stay
-up to date.
+up-to-date.
 
 Apr 14, 2016:
 Книгу можно купить в России, Украине, и Беларуссии по цене $35 плюс
@@ -573,9 +573,9 @@ MasterCard. Пишите на [shop@yegor256.com](mailto:shop@yegor256.com).
 
 Apr 10, 2016:
 I'm starting to work on the **second volume** of this book. If you are
-interested to be a reviewer, please send me an [email](mailto:book@yegor256.com)
-with a short description of yourself and your LinkedIn profile. If you were
-reviewing the first volume, please don't bother. I want a new group of
+interested in being a reviewer, please send me an [email](mailto:book@yegor256.com)
+with a short description of yourself and your LinkedIn profile. If you
+reviewed the first volume, please don't bother. I want a new group of
 reviewers.
 
 <div class="book-event"/>
@@ -592,55 +592,55 @@ reviewers.
     <img src="/images/2016/jeeconf-logo.png" style="height:45px;" alt="JEEConf 2016"/></a>
 </div>
 Mar 17, 2016:
-The book just made it into the **top 100 Amazon Best Sellers** in
+The book just made it into the **Top 100 Amazon Best Sellers** in the
 [Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/W2WVMk)
-already. Many thanks to their authors! Would
-be great if you publish yours&mdash;this will greatly help
+already. Many thanks to their authors! It would
+be great if you published yours&mdash;this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
-book at the following conferences in the next few months:
+book at the following conferences over the next few months:
 [JPoint](http://javapoint.ru/en/) in Moscow, April 22;
 [JETConf](http://jetconf.by/#/yegor_bugayenko) in Minsk, April 25;
 [GeeCON](http://2016.geecon.org/) in Krakow, May 11;
-[DEVit](http://devitconf.org/) in Thessaloniki, May 20;
+[DEVit](http://devitconf.org/) in Thessaloniki, May 20; and
 [JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kiev, May 21.
-I will give away a few copies at each event, to those who
+I will give away a few copies at each event to those who
 ask the most interesting questions after my presentations. Don't miss your
 chance to say hello and get a free book.
 
 <div class="book-event"/>
 Feb 28, 2016:
-Over a 100 books sold already, in just one week! I'm glad to see
+More than 100 books have sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,
 but I'm sure there will be some. I would like to ask you to post your
 reviews, either negative or positive, directly to
 [Amazon](http://goo.gl/W2WVMk).
-I'm getting many requests about an **electronic version** of the book.
-I'm not planning to turn this into an e-book, at least until the end
-of 2018. Mostly [because]({% pst 2016/nov/2016-11-09-why-no-ebooks %})
+I'm getting many requests for an **electronic version** of the book, but
+I'm not planning to turn this into an e-book at least until the end
+of 2018. That's mostly [because]({% pst 2016/nov/2016-11-09-why-no-ebooks %})
 I'm greedy. I realize that the moment I publish
 a Kindle version, it will be available for a free download somewhere.
-Although, some of you are saying that the "dead tree" format is not
-convenient, since it takes too much space, etc. Here is the the offer.
-You buy a paper book now, read it, make a picture of it,
-and throw it away, so that it doesn't take space. When an e-book is available,
+However, some of you have said that the "dead tree" format is not
+convenient, because it takes up too much space, etc., so here is my offer:
+You buy a paper book now, read it, take a picture of it,
+and throw it away so it doesn't take up space. When an e-book is available,
 send me that picture and I will send you a Kindle/epub/PDF/whatever
-file **for free**. How does this sound?
+file **for free**. How does that sound?
 
 <div class="book-event"/>
 {% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/W2WVMk %}
 Feb 22, 2016:
-The book is published! It is for sale,
+The book is published! It is for sale
 [on Amazon](http://goo.gl/W2WVMk).
 The price is $40.96. The size is 229 pages. The paper is creamy.
-The cover is mate. I took into account recommendations and corrections
-of 9 reviewers. Two of them were missed, for technical reasons. I will
+The cover is mate. I took into account the recommendations and corrections
+of nine reviewers. Two of them were missed due to technical reasons. I will
 definitely include them in the next edition. If you decide to buy it,
 please leave your feedback
 [on Amazon](http://goo.gl/W2WVMk).
 It will help me attract more readers. After reading, please shoot me
-an email to [book@yegor256.com](mailto:book@yegor256.com).
-I'm very interested to know what you think. Thanks!
+an email at [book@yegor256.com](mailto:book@yegor256.com).
+I'm very interested in knowing what you think. Thanks!
 
 <div class="book-event"/>
 {% badge /images/books/elegant-objects/cactus.svg 125 %}
@@ -649,16 +649,16 @@ This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
 will be on the cover of the book. For a number of reasons. First,
 because it's elegant. Isn't it? Second, it's alive, just like
 all our objects in Java. Right? Third, it's pretty hard to offend by
-breaking its skin and treating it as a bag for other objects. And forth,
+breaking its skin and treating it as a bag for other objects. And fourth,
 I just like it.
 
 <div class="book-event"/>
 {% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
 Jan 19, 2016:
-Almost all reviewers have finished already. I'm waiting for the
-last two to send me their results and will start making
+Nearly all the reviewers have finished already. I'm waiting for the
+last two to send me their results, and then I will start making
 final changes. Fortunately, the overall feedback is **positive**
-so far. All reviewers said that the book was worth reading.
+so far. All reviewers said the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 <div class="book-event"/>
@@ -672,9 +672,9 @@ As promised, the book will be published on **Feb 22**.
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
-in the book&mdash;[**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
-covers the subject I haven't discussed on the blog yet.
-This is not exactly the text you will see in the book. This is the
+in the book: [**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
+covers a subject I haven't discussed on the blog yet.
+This is not exactly the text you will see in the book, though. This is the
 text my selected **11 reviewers** received this week from me by mail.
 By the way, their names are (in alphabetic order):
 [Andrei Istomin](http://www.linkedin.com/in/andrej-istomin-51ba7530),
@@ -688,15 +688,15 @@ By the way, their names are (in alphabetic order):
 [Simon Tsai](http://www.linkedin.com/in/simonjtsai),
 [Thanasis Papapanagiotou](http://nl.linkedin.com/in/thanpa),
 and [Xiasong Pan](http://www.linkedin.com/in/xipan).
-I hope to receive their reviews by the end of January. Then, will
-spend another 2-3 weeks to take their recommendations into account
+I hope to receive their reviews by the end of January. Then, I will
+spend another two to three weeks taking their recommendations into account,
 and the book will go out at the end of February.
 
 <div class="book-event"/>
 Dec 6, 2015:
-I've received **63 emails** so far and it's time to choose the best candidates.
-I will do it in the next few days and will email them. I will announce
-the names of selected reviewers here, soon. Thanks a lot to all of you,
+I've received **63 emails** so far, and it's time to choose the best candidates.
+I will do that in the next few days and email them. I will announce
+the names of selected reviewers here soon. Thanks a lot to all of you
 for your readiness to help!
 
 <div class="book-event"/>
@@ -705,26 +705,26 @@ Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
 I invite you to become its first reviewer. Send me
 an [email](mailto:book@yegor256.com) with a short description about yourself.
-I will select a few reviewers (8 is the number I have in mind now).
-Then, I will send you a book. It's free and I will
+I will select a few reviewers (eight is the number I have in mind now).
+Then, I will send you a book. It's free, and I will
 pay for shipping. You will read it (200 pages), and make your corrections
 right inside the book. Then, ship it back to me using
 UPS [collect on delivery](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html).
-Your name will be in the book, on the 9th page,
+Your name will be in the book, on the ninth page,
 in the list of **acknowledgments**!
 I'm interested in your negative feedback mostly.
-Tell me what is not clear, what is missing, what needs a more detailed
-explanation. But, please, **don't argue** with my ideas. I won't change
-them, based on your review. For example, if I'm saying that a
+Tell me what is not clear, what is missing, and what needs a more detailed
+explanation. But please **don't argue** with my ideas. I won't change
+them based on your review. For example, if I'm saying that a
 static method is a bad thing and you disagree, don't try to
-convince me, it won't help :) This is my opinion and this is what the
+convince me, as it won't help :) This is my opinion, and this is what the
 book is about. However, I'm sure that my **explanations** and **arguments**
 have many flaws. As an early reviewer, you will help me find them.
 Again, don't argue with **what** I'm preaching, but complain about **how** I do it.
 
 <div class="book-event"/>
 Sep 1, 2015:
-The manuscript is finished, in its first draft. Took about 200 hours. Most
+The manuscript is finished, in its first draft. It took about 200 hours. Most
 of the ideas were taken from the articles previously published on the blog.
 
 <div class="book-event"/>
