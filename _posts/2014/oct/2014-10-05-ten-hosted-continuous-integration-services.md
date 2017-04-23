@@ -86,7 +86,7 @@ the best and highly recommended):
     <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build"/></a></td>
   </tr>
 <tr><td><a href="http://www.travis-ci.org">Travis</a></td>
-  <td class="x-right"><a href="https://travis-ci.com/plans">$129/mo</a></td>
+  <td class="x-right"><a href="https://travis-ci.com/plans">$69/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
