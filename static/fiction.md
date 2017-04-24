@@ -36,6 +36,8 @@ Arthur Conan Doyle, _The Adventures of Sherlock Holmes_, 1892.
 
 George Bernard Shaw, _Pygmalion_, 1913.
 
+Hermann Hesse, _Siddhartha_, 1922.
+
 Илья Ильф и Евгений Петров, _Двенадцать стульев_, 1928.
 
 Milan Kundera, _Nesnesitelná lehkost bytí_, 1984.
@@ -49,6 +51,8 @@ Erich Maria Remarque, _Drei Kameraden_, 1936.
 Вениамин Каверин, _Два капитана_, 1944.
 
 Борис Полевой, _Повесть о настоящем человеке_, 1946.
+
+Albert Camus, _La Peste_, 1947.
 
 Jerome Salinger, _The Catcher in the Rye_, 1951.
 
