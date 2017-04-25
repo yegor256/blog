@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-24T10:17:14+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Won’t Help You Via Email</title><link href="http://www.yegor256.com/2017/04/18/no-help-via-email.html" rel="alternate" type="text/html" title="Why I Won&#39;t Help You Via Email" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/18/no-help-via-email</id><content type="html" xml:base="http://www.yegor256.com/2017/04/18/no-help-via-email.html">&lt;p&gt;I&amp;#39;ve been blogging and writing for almost three years now, and a few times a week
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-04-25T05:52:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SixNines.io, Your Website Availability Monitor</title><link href="http://www.yegor256.com/2017/04/25/sixnines.html" rel="alternate" type="text/html" title="SixNines.io, Your Website Availability Monitor" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/25/sixnines</id><content type="html" xml:base="http://www.yegor256.com/2017/04/25/sixnines.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.sixnines.io&#39;&gt;&lt;img src=&#39;http://www.sixnines.io/images/logo.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;Availability is a metric that demonstrates how often your website
+is available to its users. Technically, it&amp;#39;s a ratio between the number of successful
+attempts to open the website and the number of failed ones. If one out of a hundred
+attempts failed, we can say the availability is 99 percent. High-quality
+websites aim for so-called &amp;quot;six nines&amp;quot;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/High_availability&quot;&gt;high availability&lt;/a&gt;, so named by the
+number of 9s in the ratio: 99.9999 percent. We created a service that helps
+you measure this metric and demonstrate its value to your users:
+&lt;a href=&quot;http://www.sixnines.io&quot;&gt;SixNines&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Main picture&#39; src=&#39;/images/2017/04/sixnines.jpg&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;All you need to do is log in using your
+&lt;a href=&quot;https://www.github.com&quot;&gt;GitHub&lt;/a&gt; account and register
+your URI, which &lt;a href=&quot;http://www.sixnines.io&quot;&gt;SixNines&lt;/a&gt; will
+validate. This operation will cost you
+$4.95 (processed by &lt;a href=&quot;https://www.stripe.com&quot;&gt;Stripe&lt;/a&gt;).
+It&amp;#39;s a once-in-a-lifetime fee
+(if you don&amp;#39;t have any money, &lt;a href=&quot;mailto:free@sixnines.io&quot;&gt;email&lt;/a&gt; us and we&amp;#39;ll figure something out).
+As soon as your URI is in the system, we will monitor it
+&lt;a href=&quot;http://www.sixnines.io/terms&quot;&gt;forever&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The key problem with the availability metric is that it takes
+&lt;em&gt;a lot&lt;/em&gt; of time in order to really guarantee a figure of &amp;quot;six nines.&amp;quot;
+Indeed, look at the ratio: 99.9999 percent means that only one attempt
+out of a &lt;em&gt;million&lt;/em&gt; fails. In order to ping your website at least a million
+times, we would have to work for 694 days and ping every minute. This
+would take more than two years.&lt;/p&gt;
+
+&lt;p&gt;Only after those two years of 24-7 work would we be able to &lt;em&gt;prove&lt;/em&gt; that
+your website is of &amp;quot;high availability&amp;quot; and the value of the metric
+really is equal to 99.9999 percent (you would have all kinds of reasons to be proud of it).&lt;/p&gt;
+
+&lt;p&gt;You can see some big websites being checked by
+&lt;a href=&quot;http://www.sixnines.io&quot;&gt;SixNines&lt;/a&gt; already:&lt;/p&gt;
+
+&lt;p&gt;Google&lt;br/&gt;
+&lt;a href=&quot;http://www.sixnines.io/h/4739&quot;&gt;&lt;img src=&quot;http://www.sixnines.io/b/4739&quot; alt=&quot;Google at SixNines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Facebook&lt;br/&gt;
+&lt;a href=&quot;http://www.sixnines.io/h/e203&quot;&gt;&lt;img src=&quot;http://www.sixnines.io/b/e203&quot; alt=&quot;Facebook at SixNines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter&lt;br/&gt;
+&lt;a href=&quot;http://www.sixnines.io/h/cd52&quot;&gt;&lt;img src=&quot;http://www.sixnines.io/b/cd52&quot; alt=&quot;Twitter at SixNines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Yahoo&lt;br/&gt;
+&lt;a href=&quot;http://www.sixnines.io/h/63d1&quot;&gt;&lt;img src=&quot;http://www.sixnines.io/b/63d1&quot; alt=&quot;Yahoo at SixNines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And this is my blog&amp;#39;s availability (it&amp;#39;s hosted on GitHub Pages):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sixnines.io/h/3ba1652f&quot;&gt;&lt;img src=&quot;http://www.sixnines.io/b/3ba1652f&quot; alt=&quot;Yegor256 at SixNines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you see, their numbers are far from &amp;quot;six nines&amp;quot; because we just started
+to measure them. In two years, we will see what their real availability is.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sixnines.io&quot;&gt;SixNines&lt;/a&gt; is written in Ruby and is open source, hosted in
+&lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;GitHub&lt;/a&gt;. Don&amp;#39;t hesitate to contribute.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">Availability is a metric that demonstrates how often your website
+is available to its users. Technically, it&amp;#39;s a ratio between the number of successful
+attempts to open the website and the number of failed ones. If one out of a hundred
+attempts failed, we can say the availability is 99 percent. High-quality
+websites aim for so-called &amp;quot;six nines&amp;quot;
+high availability, so named by the
+number of 9s in the ratio: 99.9999 percent. We created a service that helps
+you measure this metric and demonstrate its value to your users:
+SixNines.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/sixnines.jpg" /></entry><entry><title type="html">Why I Won’t Help You Via Email</title><link href="http://www.yegor256.com/2017/04/18/no-help-via-email.html" rel="alternate" type="text/html" title="Why I Won&#39;t Help You Via Email" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/18/no-help-via-email</id><content type="html" xml:base="http://www.yegor256.com/2017/04/18/no-help-via-email.html">&lt;p&gt;I&amp;#39;ve been blogging and writing for almost three years now, and a few times a week
 I get emails or Facebook and Telegram messages from
 people I don&amp;#39;t really know. They ask questions about Java,
 management, object-oriented programming, and other things
@@ -1037,87 +1105,4 @@ disagreed and said that the number of StackOverflow up-votes was
 nothing more than a measurement of the amount of time someone spent answering
 stupid questions asked by clueless programmers. Let me disagree and
 explain why your activity on this platform is so important to
-your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry><entry><title type="html">Each Private Static Method Is a Candidate for a New Class</title><link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html" rel="alternate" type="text/html" title="Each Private Static Method Is a Candidate for a New Class" /><published>2017-02-07T00:00:00+00:00</published><updated>2017-02-07T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/07/private-method-is-new-class</id><content type="html" xml:base="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html">&lt;p&gt;Do you have private static methods that help you break
-your algorithms down into smaller parts? I do. Every time I write
-a new method, I realize that it can be a new class instead. Of course,
-I don&amp;#39;t make classes out of all of them, but that has to be the
-goal. Private static methods are not reusable, while classes are&amp;mdash;that
-is the main difference between them, and it is crucial.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Master (2012) by Paul Thomas Anderson&#39; src=&#39;/images/2017/02/the-master.jpg&#39; longdesc=&#39;#b894db33&#39;/&gt;&lt;figcaption id=&#39;b894db33&#39;&gt;The Master (2012) by Paul Thomas Anderson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is an example of a simple class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;key=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URLEncoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;secret=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URLEncoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There is an obvious code duplication, right? The easiest way to resolve
-it is to introduce a private static method:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;key=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Token&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;secret=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Token&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URLEncoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Looks much better now. But what will happen if we have another class
-that needs the exact same functionality? We will have to copy and paste
-this private static method &lt;code&gt;encoded()&lt;/code&gt; into it, right?&lt;/p&gt;
-
-&lt;p&gt;A better alternative would be to introduce a new class &lt;code&gt;Encoded&lt;/code&gt; that
-implements the functionality we want to share:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Encoded&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URLEncoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;raw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And then:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;key=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;secret=&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Encoded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now this functionality is 1) reusable, and 2) testable. We can easily
-use this class &lt;code&gt;Encoded&lt;/code&gt; in many other places, and we can create a unit
-test for it. We were not able to do that with the private static method before.&lt;/p&gt;
-
-&lt;p&gt;See the point? The rule of thumb I&amp;#39;ve already figured for myself is that
-&lt;em&gt;each&lt;/em&gt; private static method is a perfect candidate for a new class. That&amp;#39;s
-why we don&amp;#39;t have them at all in &lt;a href=&quot;http://www.eolang.org&quot;&gt;EO&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;By the way, &lt;em&gt;public&lt;/em&gt; static methods are a different story. They are also evil,
-but for &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;different reasons&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Do you have private static methods that help you break
-your algorithms down into smaller parts? I do. Every time I write
-a new method, I realize that it can be a new class instead. Of course,
-I don&amp;#39;t make classes out of all of them, but that has to be the
-goal. Private static methods are not reusable, while classes are&amp;mdash;that
-is the main difference between them, and it is crucial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-master.jpg" /></entry></feed>
+your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry></feed>

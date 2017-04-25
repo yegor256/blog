@@ -441,6 +441,7 @@ automatic
 automatically
 automating
 automation
+availability
 available
 avatar
 avenues
@@ -457,6 +458,7 @@ awesome
 aws
 axes
 axioms
+ba
 baby
 back
 back-end
@@ -615,6 +617,7 @@ bloch
 block
 blocks
 blog
+blog's
 blogger
 blogging
 bloghacks
@@ -845,6 +848,7 @@ causes
 causing
 CC
 CC-ing
+cd
 CDI
 CDN
 ceasing
@@ -4082,6 +4086,7 @@ nightmare
 nightmares
 nights
 nine
+nines
 nl
 no
 no-server
@@ -4223,6 +4228,7 @@ on-premise
 on-site
 on-time
 once
+once-in-a-lifetime
 oncologists
 one
 one's
@@ -4545,6 +4551,7 @@ pills
 pimp
 pin
 pinaf
+ping
 pinpoint
 pint
 pinterest
@@ -4779,6 +4786,7 @@ procedures
 proceed
 proceedings
 process
+processed
 processes
 processing
 processor
@@ -4980,6 +4988,7 @@ rate-setting
 rates
 rather
 rating
+ratio
 rationale
 raymond
 rbara
@@ -5688,6 +5697,7 @@ sitting
 situation
 situations
 six
+sixnines
 size
 skateboard
 skeet
@@ -5968,6 +5978,7 @@ strider
 strike
 string
 strings
+stripe
 stripped
 strolling
 strong
@@ -6744,6 +6755,7 @@ webhook
 webkit
 webpage
 website
+websites
 websockets
 wecodelikenooneelse
 wedding
@@ -6893,6 +6905,7 @@ XSD
 XSL
 XSL's
 XSLT
+yahoo
 YAML
 YC
 yeah
