@@ -34,10 +34,10 @@ Founded 5-Jun-13.
 
 {% badge http://www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
 
-[sixnines.io](http://www.sixnines.io) is website availability monitor
+[sixnines.io](http://www.sixnines.io) is a website availability monitor
 that constantly HTTP requests your website to measure how often
 it falls down. The generated availability metric is accessible via
-a nice SVG badge, a landing page and JSON/XML. More about it here:
+a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 [SixNines.io, Your Website Availability Monitor]({% pst 2017/apr/2017-04-25-sixnines %}).
 Founded 10-Mar-2017.
 
