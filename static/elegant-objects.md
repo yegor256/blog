@@ -59,6 +59,13 @@ ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobj
 
 <!--more-->
 
+{% badge /images/books/elegant-objects/cactus-stickers.png 150 %}
+
+Apr 27, 2017:
+I've got stickers for you. I will give them in exchange for an Amazon
+review. Please, write a review and email me. I will send you the stickers
+to your home address, free of charge.
+
 Apr 18, 2017:
 The second volume of the book is available
 [on Amazon](http://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
@@ -280,7 +287,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     Perl, Java, etc. (I'm currently a business analyst.)
     Recently, I created a web donation and contact tracker in PHP (MAMP).
     Reading your book, blog, and David West's book, I realize I did
-    not understand OOP (except for using small class sizes). Like 
+    not understand OOP (except for using small class sizes). Like
     Mulla Nasrudin, who has taken a memory course, said:
     "I’m improving. Now I can sometimes remember that I have forgotten something."
     So it is with my OOP abilities. I would bring a combination of
