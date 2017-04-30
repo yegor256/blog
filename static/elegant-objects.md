@@ -63,8 +63,8 @@ ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobj
 
 Apr 27, 2017:
 I've got stickers for you. I will give them in exchange for an Amazon
-review. Please, write a review and email me. I will send you the stickers
-to your home address, free of charge.
+review. Please, write an _honest_ five-star review and email me.
+I will send you the stickers to your home address, free of charge.
 
 Apr 18, 2017:
 The second volume of the book is available
