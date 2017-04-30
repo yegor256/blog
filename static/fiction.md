@@ -98,9 +98,9 @@ Frédéric Beigbeder, _99 francs_, 2000.
 
 Виктор Пелевин, _Числа_, 2003.
 
-Эдвард Радзинский, _Сталин_, 2007.
-
 Михаил Елизаров, _Библиотекарь_, 2007.
+
+Эдвард Радзинский, _Князь. Записки стукача_, 2014.
 
 If you know something that I missed and it's worth to be in the list,
 please [send it](mailto:fiction@yegor256.com) my way, I love to read.
