@@ -29,7 +29,7 @@ development, object-oriented programming and project management.
 
 {% webinar 03-05-2017 24 DjrA7_Uymok Inheritance vs. Subtyping %}
 
-May 3, 2017<br/>
+[May 3, 2017](https://www.youtube.com/watch?v=DjrA7_Uymok)<br/>
 24: **Inheritance vs. Subtyping**<br/>
 We will discuss subtyping in OOP and implementation inheritance, and compare
 how they are different and which one is good, which one is evil. The
