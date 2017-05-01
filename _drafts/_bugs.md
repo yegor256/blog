@@ -50,7 +50,7 @@ To prove this claim we just need to put two thoughts together:
     and a few dozen other NFRs.
 
 It is obvious that there are at least two variables in this equation that
-are not discrete: user expectations and maintainability. We can't be precise
+are ambiguous: user expectations and maintainability. We can't be precise
 about them and that's why the number of bugs they will produce has no limit.
 
 Of course, only a very limited subset of the entire set of bugs has any
