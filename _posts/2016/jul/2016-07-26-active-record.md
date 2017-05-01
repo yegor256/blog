@@ -14,6 +14,7 @@ keywords:
   - ActiveRecord design pattern
   - ActiveRecord java
   - ActiveRecord anti-pattern
+book: elegant-objects 6.5
 image: /images/2016/07/en-duva-satt-pa-engren.jpg
 jb_picture:
   caption: En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson
