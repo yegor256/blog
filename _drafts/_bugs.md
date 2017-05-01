@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Any Program Has An Unlimited Number of Bugs"
+title: "Any Program has an Unlimited Number of Bugs"
 date: 2017-05-02
 place: Odessa, Ukraine
 tags: testing
 description: |
   Since requirements and user expectations are vague
-  any piece of software may be improved literally
+  any piece of software may be improved a literally
   unlimited amount of times.
 keywords:
   - testing
@@ -20,9 +20,9 @@ jb_picture:
 ---
 
 This may sound strange, but I will prove it: no matter how big
-or stable is a piece of software, it has an _unlimited_ number
-of bugs not yet found. No matter how many of them we already managed
-to find and fix, there are still too many left to be counted.
+or stable a piece of software is, it has an _unlimited_ number
+of bugs not yet found. No matter how many of them we have already managed
+to find and fix, there are still too many left to count.
 
 <!--more-->
 
@@ -39,24 +39,24 @@ int sum(int a, int b) {
 
 This simple program has an _unlimited_ number of bugs.
 
-To prove this claim we just need two put two thoughts together:
+To prove this claim we just need to put two thoughts together:
 
   * First, a bug is something that compromises the quality of software,
     which, according to IEEE&nbsp;610.12-1990, is "the degree to which
-    a system meets specified requirements or _user expectations)."
+    a system meets specified requirements or _user expectations_."
 
   * Second, requirements and expectations may be functional and non-functional.
     The latter include performance, resilience, robustness, _maintainability_,
-    and a few dozens of other NFRs.
+    and a few dozen other NFRs.
 
 It is obvious that there are at least two variables in this equation that
-are not discreet: user expectations and maintainability. We can't be precise
-about them and that's why the number of bugs they will produce has no limits.
+are not discrete: user expectations and maintainability. We can't be precise
+about them and that's why the number of bugs they will produce has no limit.
 
 Of course, only a very limited subset of the entire set of bugs has any
-reasonable business value. Most of the bugs that exist in a program may
+real business impact. Most of the bugs that exist in a program may
 stay there even after it is shipped to its users&mdash;nobody will ever
-find them or the damage they will cause to the user experience will be
+find them or else the damage they cause to the user experience will be
 insignificant.
 
 Finally, take a look at the method `sum()` one more time. How about these bugs:
@@ -64,8 +64,8 @@ Finally, take a look at the method `sum()` one more time. How about these bugs:
   * It doesn't handle overflows
   * It doesn't have any user documentation
   * Its design is not object-oriented
-  * It doesn't summarize three or more numbers
-  * It doesn't summarize `double` numbers
+  * It doesn't sum three or more numbers
+  * It doesn't sum `double` numbers
   * It doesn't cast `long` to `int` automatically
   * It doesn't skip execution if one argument is zero
   * It doesn't cache results of previous calculations
