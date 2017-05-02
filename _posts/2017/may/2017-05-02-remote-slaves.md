@@ -84,7 +84,7 @@ posting emojis to Slack, and sending emails with multiple CCs.
 **It's Harder to Find Information**.
 In the office, you can always ask your question out loud for
 the most knowledgeable person to help you. Remotely, however, you will have
-to search wiki pages, Google Docs,
+to search Wiki pages, Google Docs,
 and, god forbid, Git logs. Be prepared for almost nobody
 to be interested in sharing knowledge or teaching you remotely&mdash;what
 is the point if nobody sees him doing it? You will be on your own
@@ -129,7 +129,7 @@ deliver, not the time they spend. They will simply stop showing up at the office
 but their results will keep coming to the project,
 without any web cameras or Slack channels.
 
-It's no surprise that many big companies have already decided to stop this telecommuning
+It's no surprise that many big companies have already decided to stop this telecommuting
 nonsense and put their slaves back behind closed doors; take
 [Google](http://www.tbray.org/ongoing/When/201x/2014/02/19/Leaving-Google),
 [Yahoo](http://money.cnn.com/2013/02/25/technology/yahoo-work-from-home/index.html?iid=EL), and
