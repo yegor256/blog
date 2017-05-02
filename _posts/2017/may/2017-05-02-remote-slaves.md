@@ -14,7 +14,7 @@ keywords:
   - slavery in programming
   - slavery
   - office slave
-image: /images/2015/05/happiness.jpg
+image: /images/2017/05/happiness.jpg
 jb_picture:
   caption: Happiness (1998) by Todd Solondz
 ---
