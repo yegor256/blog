@@ -28,7 +28,7 @@ I answered these questions (approximately):
 
  * How Teamed.io differs from other software companies (0:50)?
 
- * How do we control programmers remotely (1:59)?
+ * How do we control programmers [remotely]({% pst 2017/may/2017-05-02-remote-slaves %}) (1:59)?
 
  * Do we compare ourselves with [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) (3:52)?
 

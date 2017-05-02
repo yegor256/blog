@@ -31,7 +31,8 @@ any informal communications, like Skype, HipChat,
 [emails]({% pst 2017/apr/2017-04-18-no-help-via-email %}), or phone calls.
 Every ticket for us is an isolated task with its own life cycle,
 its own participants, and its own goal. Over these years, we've learned
-a few lessons that I want to share. If you also work remotely with your
+a few lessons that I want to share. If you also work
+[remotely]({% pst 2017/may/2017-05-02-remote-slaves %}) with your
 team, you may find them useful.
 
 <!--more-->

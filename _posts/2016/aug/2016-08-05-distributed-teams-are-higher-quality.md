@@ -26,7 +26,8 @@ Most of them can't even deliver code that works, let alone quality code.
 But if a team&mdash;a distributed one&mdash;is managed according to the principles
 I'll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I'm going to show you is that working in a
-remote mode, if done right, **guarantees** higher quality of code. Surprised?
+[remote mode]({% pst 2017/may/2017-05-02-remote-slaves %}),
+if done right, **guarantees** higher quality of code. Surprised?
 
 <!--more-->
 
