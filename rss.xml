@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-01T18:00:29+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SixNines.io, Your Website Availability Monitor</title><link href="http://www.yegor256.com/2017/04/25/sixnines.html" rel="alternate" type="text/html" title="SixNines.io, Your Website Availability Monitor" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/25/sixnines</id><content type="html" xml:base="http://www.yegor256.com/2017/04/25/sixnines.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.sixnines.io&#39;&gt;&lt;img src=&#39;http://www.sixnines.io/images/logo.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-02T09:31:47+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Remote Slave Is Still a Slave</title><link href="http://www.yegor256.com/2017/05/02/remote-slaves.html" rel="alternate" type="text/html" title="A Remote Slave Is Still a Slave" /><published>2017-05-02T00:00:00+00:00</published><updated>2017-05-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/02/remote-slaves</id><content type="html" xml:base="http://www.yegor256.com/2017/05/02/remote-slaves.html">&lt;p&gt;Working remotely is definitely a trend, according to the
+&lt;a href=&quot;https://www.bls.gov/opub/ted/2016/24-percent-of-employed-people-did-some-or-all-of-their-work-at-home-in-2015.htm&quot;&gt;BLS&lt;/a&gt;
+and my personal observations.
+&amp;quot;Let them work from home&amp;quot;
+seems to be the silver bullet for
+every second startup and even some big companies like
+&lt;a href=&quot;https://open.bufferapp.com/remote-team-connect/&quot;&gt;Buffer&lt;/a&gt;,
+&lt;a href=&quot;https://www.linkedin.com/pulse/billion-dollar-tech-company-offices-email-glenn-leibowitz&quot;&gt;Automattic&lt;/a&gt;,
+&lt;a href=&quot;https://www.groovehq.com/blog/remote-work-tips&quot;&gt;Groove&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.forbes.com/sites/laurashin/2017/01/31/work-from-home-in-2017-the-top-100-companies-offering-remote-jobs/&quot;&gt;many others&lt;/a&gt;.
+However, in most cases, the replacement of a brick-and-mortar office with a virtual one
+doesn&amp;#39;t help companies and their &lt;del&gt;slaves&lt;/del&gt; employees
+become more productive.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Happiness (1998) by Todd Solondz&#39; src=&#39;/images/2017/05/happiness.jpg&#39; longdesc=&#39;#3770a056&#39;/&gt;&lt;figcaption id=&#39;3770a056&#39;&gt;Happiness (1998) by Todd Solondz&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Working from home, also known as working from anywhere,
+working remotely, or simply telecommuting, usually leads to four
+radical changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First, we replace office security cameras on the ceiling with screen
+&lt;strong&gt;monitoring&lt;/strong&gt; software and/or web cameras that constantly watch us.
+&lt;a href=&quot;https://support.upwork.com/hc/en-us/articles/211064098-Log-Time-with-the-Upwork-Desktop-App-&quot;&gt;Upwork does&lt;/a&gt;
+it to its thousands of &lt;del&gt;monkeys&lt;/del&gt; freelancers,
+requiring them to install a background screen capture utility
+and make sure it is running during their entire working time.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Second, we replace meeting rooms with conference software
+like &lt;a href=&quot;https://zoom.us/&quot;&gt;Zoom&lt;/a&gt; or good old &lt;a href=&quot;https://www.skype.com/en/&quot;&gt;Skype&lt;/a&gt;,
+and &lt;a href=&quot;https://hbr.org/2015/03/how-to-run-a-great-virtual-meeting&quot;&gt;learn&lt;/a&gt;
+how to make &lt;strong&gt;virtual meetings&lt;/strong&gt; productive. The main principle is similar to
+the one we use for traditional meetings: Make it fun. Otherwise we will
+switch to Facebook or PokerStars while the manager is
+still &lt;del&gt;acting&lt;/del&gt; talking in her window.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Third, we replace Post-it stickies and Scrum boards with tickets and
+tasks in &lt;a href=&quot;https://trello.com/&quot;&gt;Trello&lt;/a&gt;
+or &lt;a href=&quot;https://www.quora.com/What-are-the-best-alternatives-to-Trello&quot;&gt;any other&lt;/a&gt;
+&lt;strong&gt;task tracker&lt;/strong&gt;.
+We keep everybody busy learning new tools and filling them with data.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fourth, and most importantly, we replace office chit-chats with
+&lt;a href=&quot;https://slack.com/&quot;&gt;&lt;strong&gt;Slack&lt;/strong&gt;&lt;/a&gt; channels or &lt;a href=&quot;https://www.hipchat.com/&quot;&gt;HipChat&lt;/a&gt; groups.
+Instead of being in the office at 9 a.m.,
+everybody will have the ability to demonstrate the level of their
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Presenteeism&quot;&gt;presenteeism&lt;/a&gt; using emojis.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Your life, as a developer, will be very different on a team that
+works remotely. It will be full of real freedom. However, there will be
+certain problems:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It&amp;#39;s Harder to Prove Innocence&lt;/strong&gt;.
+How does your manager know you&amp;#39;re actually working,
+not watching TV, playing with your kids, or grooming your favorite
+open-source pets? In the office, it&amp;#39;s easier; you just sit in front of the monitor
+and the boss is happy. At home or in a coffee shop, you are guilty by
+default until you prove the opposite by creating new tickets,
+posting emojis to Slack, and sending emails with multiple CCs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It&amp;#39;s Harder to Find Information&lt;/strong&gt;.
+In the office, you can always ask your question out loud for
+the most knowledgeable person to help you. Remotely, however, you will have
+to search Wiki pages, Google Docs,
+and, god forbid, Git logs. Be prepared for almost nobody
+to be interested in sharing knowledge or teaching you remotely&amp;mdash;what
+is the point if nobody sees him doing it? You will be on your own
+in front of that year-old documentation made by someone fired
+right after writing it up.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It&amp;#39;s Harder to Avoid Overtime&lt;/strong&gt;.
+In the office, you just walk away with everybody else when time is up. Remotely,
+you will have phone calls and Slack discussions in the middle of the night on Sunday,
+especially if the team is distributed across multiple time zones. Everybody
+will expect 24-7 availability because you&amp;#39;re working from home. And changing
+the status to &amp;quot;Do not disturb&amp;quot; in Skype will only offend them and seriously
+damage your reputation. In a work-from-home environment, good programmers are
+those who are always online.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It&amp;#39;s Harder to Defend Yourself&lt;/strong&gt;.
+You won&amp;#39;t know where to expect the next bout of trouble from. In the office,
+you can visually observe the territory, smell conflict in the air, see
+how people move, what they talk about, and who is the next victim. Remotely,
+you&amp;#39;re sitting in isolation, extracting pieces of information from Slack.
+You can easily become the next victim without even noticing it. Simply put,
+they will stab you in the back while you&amp;#39;re writing Java and thinking
+about a new unit test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It&amp;#39;s Harder Not to Waste Time&lt;/strong&gt;.
+It sounds counter-intuitive, but while sitting at home, you waste much more time
+than in the office. Meetings will be called more frequently, and they will
+be less effective, thanks to constant issues with scheduling, quality of
+connection, software failure, and of course a lack of online communication
+skills. The manager will call more meetings largely in order to convince
+himself that the team is actually working; hearing your voice many times a day is
+a perfect confirmation that you are busy and he is a good manager.&lt;/p&gt;
+
+&lt;p&gt;On a more serious note, I believe that working remotely
+only makes things &lt;em&gt;worse&lt;/em&gt; when the motivation of the team
+is still based on &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;hourly pay&lt;/a&gt;.
+A slave working remotely is still a slave. Moreover, this slave
+is harder to manage and control. First, we have to switch to a results-based
+payment model and then go remote. Actually, remote work will happen automatically
+as soon as everybody starts getting their paychecks for the results they
+deliver, not the time they spend. They will simply stop showing up at the office,
+but their results will keep coming to the project,
+without any web cameras or Slack channels.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s no surprise that many big companies have already decided to stop this telecommuting
+nonsense and put their slaves back behind closed doors; take
+&lt;a href=&quot;http://www.tbray.org/ongoing/When/201x/2014/02/19/Leaving-Google&quot;&gt;Google&lt;/a&gt;,
+&lt;a href=&quot;http://money.cnn.com/2013/02/25/technology/yahoo-work-from-home/index.html?iid=EL&quot;&gt;Yahoo&lt;/a&gt;, and
+&lt;a href=&quot;http://money.cnn.com/2013/03/05/technology/best-buy-work-from-home/index.html&quot;&gt;Best Buy&lt;/a&gt;
+for example.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">Working remotely is definitely a trend, according to the
+BLS
+and my personal observations.
+&amp;quot;Let them work from home&amp;quot;
+seems to be the silver bullet for
+every second startup and even some big companies like
+Buffer,
+Automattic,
+Groove,
+and
+many others.
+However, in most cases, the replacement of a brick-and-mortar office with a virtual one
+doesn&amp;#39;t help companies and their slaves employees
+become more productive.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/happiness.jpg" /></entry><entry><title type="html">SixNines.io, Your Website Availability Monitor</title><link href="http://www.yegor256.com/2017/04/25/sixnines.html" rel="alternate" type="text/html" title="SixNines.io, Your Website Availability Monitor" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/25/sixnines</id><content type="html" xml:base="http://www.yegor256.com/2017/04/25/sixnines.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.sixnines.io&#39;&gt;&lt;img src=&#39;http://www.sixnines.io/images/logo.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Availability is a metric that demonstrates how often your website
 is available to its users. Technically, it&amp;#39;s a ratio between the number of successful
@@ -1000,113 +1127,4 @@ They always start with &amp;quot;We&amp;#39;re so impressed by your profile&amp;
 &amp;quot;Let&amp;#39;s schedule an interview.&amp;quot; I always reply with the same text, and they
 always disappear, only to come back in a few months under a different name.
 Let me explain my reasons; maybe you will do the same and we can change
-this situation in the industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg" /></entry><entry><title type="html">StackOverflow Is Your Mandatory Tool</title><link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html" rel="alternate" type="text/html" title="StackOverflow Is Your Mandatory Tool" /><published>2017-02-14T00:00:00+00:00</published><updated>2017-02-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool</id><content type="html" xml:base="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html">&lt;p&gt;I&amp;#39;ve &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;said before&lt;/a&gt;
-that your StackOverflow reputation is very important
-to &lt;a href=&quot;http://www.teamed.io&quot;&gt;us&lt;/a&gt; when we make a decision on
-how much we should pay
-a software developer. However, there were many complaints about this metric.
-Take, for example, the ones &lt;a href=&quot;http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1704113248&quot;&gt;here&lt;/a&gt;
-and &lt;a href=&quot;http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697910905&quot;&gt;here&lt;/a&gt;.
-In a nutshell, so many of you
-disagreed and said that the number of StackOverflow up-votes was
-nothing more than a measurement of the amount of time someone spent answering
-stupid questions asked by clueless programmers. Let me disagree and
-explain why your activity on this platform is so important to
-&lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;your career&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Les kidnappeurs (1998) by Graham Guit&#39; src=&#39;/images/2017/02/les-kidnappeurs.jpg&#39; longdesc=&#39;#87a94d52&#39;/&gt;&lt;figcaption id=&#39;87a94d52&#39;&gt;Les kidnappeurs (1998) by Graham Guit&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Basically, your StackOverflow profile demonstrates five skills you either
-have or don&amp;#39;t. They may not be as important to an office &lt;del&gt;slave&lt;/del&gt;
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;worker&lt;/a&gt;, but if you&amp;#39;re going to work
-&lt;a href=&quot;/2016/08/05/distributed-teams-are-higher-quality.html&quot;&gt;remotely&lt;/a&gt;,
-they are crucial.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to Search&lt;/strong&gt;.
-The &lt;a href=&quot;http://www.stackexchange.com&quot;&gt;StackExchange&lt;/a&gt; knowledge base
-is huge and contains answers to almost any
-software question you may ask. You have to know how to search it,
-and not only via Google. You have to be familiar with the platform and
-its key features, and you can&amp;#39;t learn that without being an active user.
-When your reputation is high, it&amp;#39;s a clear indicator to me, your potential
-employer, that you&amp;#39;re aware of how to find the right information in this
-knowledge base.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to Ask&lt;/strong&gt;.
-Asking a friend near the coffee machine is one thing. Asking a community
-of 6+ million developers is a totally different thing. You have to learn
-how to explain your problem, how to formulate the question, how to label
-it and title it. Try it for the first time and you will see that it&amp;#39;s not
-easy at all; your questions will sound immature, silly, and ambiguous, and they will
-end with &amp;quot;Best regards&amp;quot; (something you shouldn&amp;#39;t do at SO). And, of course,
-they will get zero up-votes. Later, when you improve, you will be surprised
-to see that more and more of them get up-votes, and your reputation will
-grow. This will be the indicator that your &amp;quot;question asking&amp;quot; skill is growing up.
-For me, your potential employer, it&amp;#39;s a very important skill.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to Answer&lt;/strong&gt;.
-Initially, you will be afraid to answer. Then, most of your answers will
-be down-voted. Then, some of them will be accepted as best answers. Eventually,
-some of them will start getting up-votes. Until that happens, you will go
-through a lot of frustration and negative emotions. You will learn how to
-make your answers helpful&amp;mdash;not just to your friends, because they don&amp;#39;t want
-to offend you by saying that you have no idea what you&amp;#39;re talking about, but
-to strangers, who care more about the information you&amp;#39;re able to deliver than they
-care about you personally. That&amp;#39;s a skill you can&amp;#39;t buy; you have to earn it.
-And it&amp;#39;s crucial in a distributed team.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to Deal With Morons&lt;/strong&gt;.
-You know what to do with them in the office, but on the Internet, they are
-much more aggressive and offensive. And there are many of them. You need
-to learn and practice a lot before you become competent enough to fetch
-information out of that programming community without pulling your hair
-out and screaming at the monitor. StackOverflow will help you a lot,
-both through questions you will ask and answers you will try to give. And
-you can&amp;#39;t learn that in the office dealing with your friends only.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to Deal With Smart-asses&lt;/strong&gt;.
-Some people there are very smart and knowledgeable, and they will not always
-be polite when your questions or mistakes using the platform border on being
-too annoying. Again, your office friends won&amp;#39;t teach you how to
-deal with those gurus so you can tap their knowledge; you have
-to be actively involved in StackOverflow discussions. This skill is very
-important for distributed programming, where you have to solve most of the
-problems on your own.&lt;/p&gt;
-
-&lt;p&gt;To summarize, StackOverflow is a must-have &lt;em&gt;instrument&lt;/em&gt; for any modern
-software developer, no matter what your programming language, your age,
-your project, or your professional level are. It&amp;#39;s like an IDE and
-&lt;a href=&quot;/2016/02/09/are-you-still-debugging.html&quot;&gt;unit tests&lt;/a&gt;&amp;mdash;you
-just use them in order to develop faster. Some people are still using
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Vim_%28text_editor%29&quot;&gt;vim&lt;/a&gt; or
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Emacs&quot;&gt;emacs&lt;/a&gt;
-and writing no tests, but you don&amp;#39;t want to be like them.&lt;/p&gt;
-
-&lt;p&gt;StackOverflow is not just a website where you may have an account if you feel
-like it. It&amp;#39;s a &lt;em&gt;mandatory&lt;/em&gt; instrument you have to use if you want me, your
-potential employer, to value you as a serious engineer. And if you use
-this instrument on a daily basis, your
-&lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;reputation&lt;/a&gt;
-will inevitably reach high levels.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://stackexchange.com/users/63162&#39;&gt;&lt;img src=&#39;http://stackexchange.com/users/flair/63162.png&#39; style=&#39;width:208px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;By the way, this is my &lt;a href=&quot;http://stackexchange.com/users/63162&quot;&gt;StackExchange profile&lt;/a&gt;.
-I&amp;#39;ve earned the majority of my reputation a few years ago, so now I&amp;#39;m mostly getting up-votes
-for the answers and questions I&amp;#39;ve posted earlier. However, I keep using
-StackOverflow as I code,
-&lt;a href=&quot;http://stackexchange.com/users/63162/yegor256?tab=activity&quot;&gt;every day&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">I&amp;#39;ve said before
-that your StackOverflow reputation is very important
-to us when we make a decision on
-how much we should pay
-a software developer. However, there were many complaints about this metric.
-Take, for example, the ones here
-and here.
-In a nutshell, so many of you
-disagreed and said that the number of StackOverflow up-votes was
-nothing more than a measurement of the amount of time someone spent answering
-stupid questions asked by clueless programmers. Let me disagree and
-explain why your activity on this platform is so important to
-your career.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/les-kidnappeurs.jpg" /></entry></feed>
+this situation in the industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg" /></entry></feed>

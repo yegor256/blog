@@ -441,6 +441,7 @@ automatic
 automatically
 automating
 automation
+automattic
 availability
 available
 avatar
@@ -625,6 +626,7 @@ bloghacks
 blogspot
 blood
 bloody
+BLS
 bluff
 blur
 BMW
@@ -663,6 +665,7 @@ bottom
 bought
 bouncing
 boundaries
+bout
 bowling
 box
 boxes
@@ -690,6 +693,7 @@ breakthrough
 breathe
 brevity
 brian
+brick-and-mortar
 bridge
 brief
 briefly
@@ -723,6 +727,7 @@ budget
 budgeting
 budgets
 buffalo
+buffer
 buffered
 bug
 bug's
@@ -849,10 +854,12 @@ causes
 causing
 CC
 CC-ing
+CCs
 cd
 CDI
 CDN
 ceasing
+ceiling
 celebrate
 celebrating
 celebrations
@@ -934,6 +941,7 @@ child
 childhood
 children
 china
+chit-chats
 chocolate
 choice
 choices
@@ -1993,6 +2001,7 @@ embarrassing
 embarrassment
 emerge
 emoji
+emojis
 emotional
 emotionally
 emotions
@@ -2238,6 +2247,7 @@ extensive
 extent
 external
 extra
+extracting
 extreme
 extremely
 extrovert
@@ -2350,6 +2360,7 @@ files
 filing
 fill
 fille
+filling
 fills
 film
 filter
@@ -2483,6 +2494,7 @@ founder
 founders
 four
 four-page
+fourth
 fowler
 fragile
 fragility
@@ -2667,6 +2679,8 @@ greedy
 green
 GreenHouseCI
 griggs
+grooming
+groove
 ground
 group
 group's
@@ -3083,6 +3097,7 @@ injector
 injects
 inline
 inner
+innocence
 innocent
 innovate
 innovation
@@ -3426,6 +3441,7 @@ lanyrd
 laptop
 laptops
 large
+largely
 larkin
 larry
 las
@@ -3933,6 +3949,7 @@ monica
 monica's
 monitor
 monitored
+monitoring
 monitors
 monkey
 monkey-feeding
@@ -4136,6 +4153,7 @@ notes
 nothing
 notice
 noticed
+noticing
 notification
 notifications
 notify
@@ -4173,6 +4191,7 @@ obligations
 oblige
 obliged
 observation
+observations
 observe
 observed
 observer
@@ -4614,6 +4633,7 @@ pointless
 points
 poison
 poker
+pokerstars
 poland
 polemic
 police
@@ -4655,10 +4675,12 @@ possibility
 possible
 possibly
 post
+post-it
 post-merge
 post-money
 posted
 PostgreSQL
+posting
 posts
 potential
 powder
@@ -4724,6 +4746,7 @@ present
 presentation
 presentations
 presented
+presenteeism
 presenting
 presents
 presidents
@@ -4968,6 +4991,7 @@ quotes
 quoting
 race
 radiate
+radical
 radio
 RAII
 rails
@@ -5221,6 +5245,7 @@ required
 requirement
 requirements
 requires
+requiring
 requs
 reschedule
 reschke
@@ -5274,6 +5299,7 @@ result
 result-oriented
 resulted
 results
+results-based
 resume
 resumes
 retain
@@ -5668,6 +5694,7 @@ silent
 silently
 silicon
 silly
+silver
 similar
 simple
 simplecov
@@ -5868,6 +5895,7 @@ squeeze
 SRS
 SSH
 st
+stab
 stability
 stabilize
 stabilized
@@ -6108,6 +6136,7 @@ swear
 sweet
 swift
 swim
+switch
 switching
 sympathy
 symptom
@@ -6185,6 +6214,7 @@ technique
 techniques
 technologies
 technology
+telecommuting
 telegram
 tell
 telling
@@ -6693,6 +6723,7 @@ visible
 vision
 visitor
 visitors
+visually
 vocabulary
 voice
 void
@@ -6820,6 +6851,7 @@ wiegers
 wife
 wife's
 wifi
+wiki
 wikipedia
 wild
 wild-wild
@@ -6830,6 +6862,7 @@ willis's
 win
 win-lose
 win-win
+window
 windows
 winner
 winners
@@ -6853,6 +6886,7 @@ word-counting
 wordpress
 words
 work
+work-from-home
 workaholics
 workaround
 workarounds
@@ -6911,6 +6945,7 @@ YAML
 YC
 yeah
 year
+year-old
 years
 yegor
 yelling
@@ -6943,4 +6978,5 @@ zombies
 zone
 zones
 zoo
+zoom
 zuckerberg
