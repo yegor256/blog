@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Remote Slave Is Still a Slave"
-date: 2017-04-08
+date: 2017-05-02
 place: Moscow, Russia
 tags: management sarcasm
 description: |
@@ -14,9 +14,9 @@ keywords:
   - slavery in programming
   - slavery
   - office slave
-image: /images/2015/03/?
+image: /images/2015/05/happiness.jpg
 jb_picture:
-  caption: xxx
+  caption: Happiness (1998) by Todd Solondz
 ---
 
 Working remotely is definitely a trend, according to the

@@ -18,6 +18,9 @@ keywords:
 youtube:
   - b6r2W3P9vgY
   - YBQoTZ-1X-o
+image: /images/2015/01/regarding-henry.jpg
+jb_picture:
+  caption: Regarding Henry (1991) by Mike Nichols
 ---
 
 You have a task assigned to you, and you don't like it. You are simply
@@ -30,14 +33,16 @@ programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
 you miss the deadline and **everybody blames you**. Been there, done that?
 
+<!--more-->
+
+{% jb_picture_body %}
+
 There is, however, an alternative approach that provides a professional exit
 from this situation. Here are some tips I recommend to my peers who code with me
 in [teamed.io](http://www.teamed.io) projects.
 In a nutshell, I'm going to explain how you can **cut corners** and remain
 professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.
-
-<!--more-->
 
 Here is a list of options you have, in order of preference. I would
 recommend you start with the first one on the list and proceed down when you
