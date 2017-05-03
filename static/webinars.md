@@ -29,11 +29,12 @@ development, object-oriented programming and project management.
 
 {% webinar 03-05-2017 24 DjrA7_Uymok Inheritance vs. Subtyping %}
 
-[May 3, 2017](https://www.youtube.com/watch?v=DjrA7_Uymok)<br/>
+<a href="https://www.youtube.com/watch?v=DjrA7_Uymok"><img src="https://i.ytimg.com/vi/DjrA7_Uymok/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+May 3, 2017<br/>
 24: **Inheritance vs. Subtyping**<br/>
-We will discuss subtyping in OOP and implementation inheritance, and compare
+We discussed subtyping in OOP and implementation inheritance, and compared
 how they are different and which one is good, which one is evil. The
-discussion will be based on this article
+discussion was based on this article
 [Inheritance Is a Procedural Technique for Code Reuse]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
 <a href="https://www.youtube.com/watch?v=nsYGC2aUwfQ"><img src="https://i.ytimg.com/vi/nsYGC2aUwfQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
