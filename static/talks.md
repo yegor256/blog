@@ -132,14 +132,12 @@ Kiev, Ukraine<br/>
 Minsk, Belarus<br/>
 3 June 2017
 
-<!--
 <div class="talk-event"/>
-<img src="/images/2017/item-2017.png" class="future-talk" alt="ITEM 2017"/>
-**Мифы и реальность софтверных команд**<br/>
-[ITEM 2017](http://item.com.ua/)<br/>
-Dnipro, Ukraine<br/>
-17-18 June 2017
--->
+<img src="/images/2017/bdmsummit-2017.png" class="future-talk" alt="BDMSummit 2017 Summer"/>
+**Make Customers Trust You**<br/>
+[BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/)<br/>
+Kiev, Ukraine<br/>
+17 June 2017
 
 <div class="talk-event"/>
 <img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.IO 2017"/>
