@@ -2,7 +2,7 @@
 layout: post
 title: "How Cookie-Based Authentication Works in the Takes Framework"
 date: 2015-05-18
-tags: java takes
+tags: java pets
 description: |
   Cookie-based authentication is a simple and powerful mechanism
   to enable website user login in a RESTful and lightweight way;

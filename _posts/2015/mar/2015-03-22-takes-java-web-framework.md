@@ -2,7 +2,7 @@
 layout: post
 title: "Java Web App Architecture In Takes Framework"
 date: 2015-03-22
-tags: java takes
+tags: java pets
 categories: jcg
 description: |
   Takes is a pure object-oriented and immutable

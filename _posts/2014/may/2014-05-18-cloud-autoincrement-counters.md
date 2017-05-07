@@ -2,7 +2,7 @@
 layout: post
 title: "Atomic Counters at Stateful.co"
 date: 2014-05-18
-tags: stateful aws dynamodb
+tags: pets aws dynamodb
 description: |
   The article explains how stateful.co atomic counters
   implement auto-increment functionality that
