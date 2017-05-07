@@ -14,9 +14,9 @@ keywords:
   - hamcrest
   - junit design
   - testing design patterns
-image: /images/2015/03/?
+image: /images/2017/05/bullet.jpg
 jb_picture:
-  caption: xxx
+  caption: Bullet (1996) by Julien Temple
 ---
 
 There are tons of articles and books about unit testing patterns

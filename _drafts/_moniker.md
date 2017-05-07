@@ -14,7 +14,7 @@ keywords:
   - variables in oop
   - no variables
   - algorithms in oop
-image: /images/2015/05/oss-117.jpg
+image: /images/2017/05/oss-117.jpg
 jb_picture:
   caption: "OSS 117: Cairo, Nest of Spies (2006) by Michel Hazanavicius"
 ---
