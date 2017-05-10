@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Does Inversion of Control Really Work"
-date: 2017-04-08
+date: 2017-05-10
 place: Odessa, Ukraine
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - dependency injection
   - IoC OOP
   - dependency control
-image: /images/2015/03/?
+image: /images/2017/05/le-conseguenze-dellamore.jpg
 jb_picture:
-  caption: xxx
+  caption: Le conseguenze dell'amore (2004) by Paolo Sorrentino
 ---
 
 [IoC](https://en.wikipedia.org/wiki/Inversion_of_control)
@@ -41,7 +41,7 @@ It is very straight forward: we retrieve the title from the book and
 simply give it to the `print()` procedure, or whatever else it might be. _We_ are in charge,
 the _control_ is in our hands.
 
-In contast to this, here is the _inversion_:
+In contrast to this, here is the _inversion_:
 
 {% highlight java %}
 print(book);
