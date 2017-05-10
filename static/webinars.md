@@ -27,7 +27,13 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 03-05-2017 24 DjrA7_Uymok Inheritance vs. Subtyping %}
+{% webinar 07-06-2017 25 uhDmHkMAYnM uhDmHkMAYnM Micro-management vs. micro-tasking %}
+
+[June 7, 2017](https://www.youtube.com/watch?v=uhDmHkMAYnM)<br/>
+25: **Micro-management vs. micro-tasking**<br/>
+We will discuss how bad is micromanagement and how great is micro-tasking.
+Somehow our discussion will be based on this article:
+[Are You a Micromanager?]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <a href="https://www.youtube.com/watch?v=DjrA7_Uymok"><img src="https://i.ytimg.com/vi/DjrA7_Uymok/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 May 3, 2017<br/>
