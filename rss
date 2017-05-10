@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-09T19:32:15+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Remote Slave Is Still a Slave</title><link href="http://www.yegor256.com/2017/05/02/remote-slaves.html" rel="alternate" type="text/html" title="A Remote Slave Is Still a Slave" /><published>2017-05-02T00:00:00+00:00</published><updated>2017-05-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/02/remote-slaves</id><content type="html" xml:base="http://www.yegor256.com/2017/05/02/remote-slaves.html">&lt;p&gt;Working remotely is definitely a trend, according to the
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-10T07:57:02+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Does Inversion of Control Really Work</title><link href="http://www.yegor256.com/2017/05/10/inversion-of-control.html" rel="alternate" type="text/html" title="How Does Inversion of Control Really Work" /><published>2017-05-10T00:00:00+00:00</published><updated>2017-05-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/10/inversion-of-control</id><content type="html" xml:base="http://www.yegor256.com/2017/05/10/inversion-of-control.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;IoC&lt;/a&gt;
+seems to have become the cornerstone concept of many frameworks
+and object-oriented designs since it was described by
+&lt;a href=&quot;https://martinfowler.com/bliki/InversionOfControl.html&quot;&gt;Martin Fowler&lt;/a&gt;,
+&lt;a href=&quot;https://web.archive.org/web/20041221102842/http://www.objectmentor.com/resources/articles/dip.pdf&quot;&gt;Robert Martin&lt;/a&gt;
+and others ten years ago. Despite its popularity IoC is
+misunderstood and overcomplicated all too often.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Le conseguenze dell&amp;#39;amore (2004) by Paolo Sorrentino&#39; src=&#39;/images/2017/05/le-conseguenze-dellamore.jpg&#39; longdesc=&#39;#d072e2ac&#39;/&gt;&lt;figcaption id=&#39;d072e2ac&#39;&gt;Le conseguenze dell&amp;#39;amore (2004) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Look at this code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is very straight forward: we retrieve the title from the book and
+simply give it to the &lt;code&gt;print()&lt;/code&gt; procedure, or whatever else it might be. &lt;em&gt;We&lt;/em&gt; are in charge,
+the &lt;em&gt;control&lt;/em&gt; is in our hands.&lt;/p&gt;
+
+&lt;p&gt;In contrast to this, here is the &lt;em&gt;inversion&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We give the entire book to the procedure &lt;code&gt;print()&lt;/code&gt; and
+it calls &lt;code&gt;title()&lt;/code&gt; when it feels like it. That is, we &lt;em&gt;delegate&lt;/em&gt; control.&lt;/p&gt;
+
+&lt;p&gt;This is pretty much everything you need to know about IoC.&lt;/p&gt;
+
+&lt;p&gt;Does it have anything to do with
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_injection&quot;&gt;dependency injection&lt;/a&gt; containers?
+Well, of course, we &lt;em&gt;could&lt;/em&gt; put the book into a container, inject the entire
+container into &lt;code&gt;print()&lt;/code&gt;, let it retrieve the book from the container and
+then call &lt;code&gt;title()&lt;/code&gt;. But that&amp;#39;s not what IoC is really about&amp;mdash;it&amp;#39;s merely
+one of its
+&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;perverted&lt;/a&gt; usage scenarios.&lt;/p&gt;
+
+&lt;p&gt;The main point of IoC is exactly the same as I was proposing
+in my previous posts about &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;naked data&lt;/a&gt;
+and &lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;object friends&lt;/a&gt;:
+we must &lt;em&gt;not&lt;/em&gt; deal with &lt;em&gt;data&lt;/em&gt;, but instead only with
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Object_composition&quot;&gt;object composition&lt;/a&gt;. In the
+given example the design would be even better if we got rid of the
+&lt;code&gt;print()&lt;/code&gt; procedure altogether and replaced it with an object:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PrintedBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That would be pure &lt;a href=&quot;https://en.wikipedia.org/wiki/Object_composition&quot;&gt;object composition&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is not much more to say on this subject; I hope I have cleared it up for you&amp;mdash;it
+is just as simple as that.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">IoC
+seems to have become the cornerstone concept of many frameworks
+and object-oriented designs since it was described by
+Martin Fowler,
+Robert Martin
+and others ten years ago. Despite its popularity IoC is
+misunderstood and overcomplicated all too often.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/le-conseguenze-dellamore.jpg" /></entry><entry><title type="html">A Remote Slave Is Still a Slave</title><link href="http://www.yegor256.com/2017/05/02/remote-slaves.html" rel="alternate" type="text/html" title="A Remote Slave Is Still a Slave" /><published>2017-05-02T00:00:00+00:00</published><updated>2017-05-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/02/remote-slaves</id><content type="html" xml:base="http://www.yegor256.com/2017/05/02/remote-slaves.html">&lt;p&gt;Working remotely is definitely a trend, according to the
 &lt;a href=&quot;https://www.bls.gov/opub/ted/2016/24-percent-of-employed-people-did-some-or-all-of-their-work-at-home-in-2015.htm&quot;&gt;BLS&lt;/a&gt;
 and my personal observations.
 &amp;quot;Let them work from home&amp;quot;
@@ -1023,110 +1079,4 @@ And my answer is always the same: &amp;quot;Of course we will, and that&amp;#39;
 I honestly believe that even if you can&amp;#39;t consider having &amp;quot;a lot of classes&amp;quot; a virtue,
 you can&amp;#39;t call it a drawback of any truly object-oriented code either. However,
 there may come a point when classes become a problem;
-let&amp;#39;s see when, how, and what to do about that.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg" /></entry><entry><title type="html">Why I Don’t Talk to Google Recruiters</title><link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html" rel="alternate" type="text/html" title="Why I Don&#39;t Talk to Google Recruiters" /><published>2017-02-21T00:00:00+00:00</published><updated>2017-02-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters</id><content type="html" xml:base="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html">&lt;p&gt;This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
-at Amazon, Facebook, and smaller Silicon Valley startups. They
-find me somehow, most likely through this blog, my
-&lt;a href=&quot;/books.html&quot;&gt;books&lt;/a&gt;, or my &lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub account&lt;/a&gt;.
-They always start with &amp;quot;We&amp;#39;re so impressed by your profile&amp;quot; and finish with
-&amp;quot;Let&amp;#39;s schedule an interview.&amp;quot; I always reply with the same text, and they
-always disappear, only to come back in a few months under a different name.
-Let me explain my reasons; maybe you will do the same and we can change
-this situation in the industry.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Deer Hunter (1978) by Michael Cimino&#39; src=&#39;/images/2017/02/the-deer-hunter.jpg&#39; longdesc=&#39;#ddecf58a&#39;/&gt;&lt;figcaption id=&#39;ddecf58a&#39;&gt;The Deer Hunter (1978) by Michael Cimino&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Disclaimer: I do realize that these are multi-billion-dollar companies, the best
-in the industry, and I&amp;#39;m nothing compared to them.
-I do realize that their recruiters don&amp;#39;t care about my answers&amp;mdash;they
-simply click &amp;quot;delete&amp;quot; and move on. I also realize that they will never see
-this post, and this article probably won&amp;#39;t change anything. However,
-I have to write it.&lt;/p&gt;
-
-&lt;p&gt;This is what I&amp;#39;m sending back to them:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Thanks for your email. I&amp;#39;m very interested indeed. I have nothing against
-an interview. However, there is one condition: I have to be interviewed by the
-person I will be working for. By my future direct manager.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The recruiter who gets this reply never gets back to me.&lt;/p&gt;
-
-&lt;p&gt;Why do I send this?&lt;/p&gt;
-
-&lt;p&gt;Well, because I learned my lesson two years ago,
-when Amazon tried to recruit me. I got an email from the company
-that said they were so impressed by my profile and couldn&amp;#39;t wait
-to start working with me. They needed me, nobody else. I was naive, and the
-message did flatter me.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;They paid for my ticket to fly there and a night in a 5-star hotel. I was impressed.&lt;/aside&gt;
-
-&lt;p&gt;We scheduled an interview in the head office in Seattle. They paid for my ticket to fly
-there (from San Francisco) and a night in a 5-star hotel. I was impressed. They definitely were
-interested. So was I.&lt;/p&gt;
-
-&lt;p&gt;What happened at the interview was, most probably, very close to what
-Max Howell &lt;a href=&quot;https://twitter.com/mxcl/status/608682016205344768&quot;&gt;experienced&lt;/a&gt;
-&lt;a href=&quot;https://news.ycombinator.com/item?id=9695102&quot;&gt;with Google&lt;/a&gt;:
-some programmers who didn&amp;#39;t know a thing about my profile
-asked me to invent some algorithms on a white board for almost
-four hours. Did I manage? I don&amp;#39;t think so. Did they make me an offer? No.&lt;/p&gt;
-
-&lt;p&gt;What did I learn?&lt;/p&gt;
-
-&lt;p&gt;That it was a waste of time. For both sides.&lt;/p&gt;
-
-&lt;p&gt;Their bureaucratic machine is designed to process hundreds of candidates
-a month. In order to fish and attract them, there is an army of
-&lt;del&gt;monkeys&lt;/del&gt;
-&lt;a href=&quot;/2015/09/29/mayonnaise.html&quot;&gt;recruiters&lt;/a&gt;
-sending warm emails to people like me.
-They have to screen candidates somehow, and they are too lazy to make this
-process effective and creative. They just send them through random
-programmers who are supposed to ask as complex questions as possible.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m not saying that people who pass their tests are not good programmers.
-I&amp;#39;m also not saying that I&amp;#39;m a good programmer&amp;mdash;let&amp;#39;s face it,
-I didn&amp;#39;t pass the test. I do believe this filtering system is rather good.
-My point is that it contradicts the original email I got from the recruiter.&lt;/p&gt;
-
-&lt;p&gt;If she would have started her email with &amp;quot;We&amp;#39;re looking for an algorithm
-expert,&amp;quot; we would never have gotten any further and would not have wasted our time.
-Clearly, I&amp;#39;m not an expert in algorithms. There is no point in giving
-me binary-tree-traversing questions; I don&amp;#39;t know those answers
-and will never be interested in learning them. I&amp;#39;m trying to be an expert
-in something else, like &lt;a href=&quot;/2016/11/29/eolang.html&quot;&gt;object-oriented design&lt;/a&gt;,
-for example.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;There is no point in giving me binary-tree-traversing questions; I don&amp;#39;t know those answers and will never be interested in learning them.&lt;/aside&gt;
-
-&lt;p&gt;There was a clear mismatch between my profile and the expectations of
-the interviewers. I don&amp;#39;t blame them, and I don&amp;#39;t blame her. They
-all were just &lt;del&gt;slaves&lt;/del&gt;
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;employees&lt;/a&gt;. I blame myself for not setting
-this all straight at the very beginning.&lt;/p&gt;
-
-&lt;p&gt;I should have told her that I didn&amp;#39;t want to be interviewed by &lt;em&gt;some&lt;/em&gt;
-programmers, because I would most certainly fail. There was no need to try. I wanted to be interviewed
-by the person who really &lt;em&gt;needed&lt;/em&gt; me: my future boss. That person will
-understand my profile and won&amp;#39;t ask pointless questions about algorithms, simply because
-he or she will know what my duties will be and what kind of problems
-I will be capable of solving, if they hired me.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, as I keep observing from two years of bouncing
-such emails back to recruiters, they can&amp;#39;t change anything. They have
-to provide formal and standard screening for everybody, beginning with
-those same warm and flattering initial promises.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m sorry, recruiters, no more standard interviews for me.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><category term="mood" /><summary type="html">This is a real story, and it&amp;#39;s not only about Google. I&amp;#39;m getting emails from recruiters
-at Amazon, Facebook, and smaller Silicon Valley startups. They
-find me somehow, most likely through this blog, my
-books, or my GitHub account.
-They always start with &amp;quot;We&amp;#39;re so impressed by your profile&amp;quot; and finish with
-&amp;quot;Let&amp;#39;s schedule an interview.&amp;quot; I always reply with the same text, and they
-always disappear, only to come back in a few months under a different name.
-Let me explain my reasons; maybe you will do the same and we can change
-this situation in the industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/the-deer-hunter.jpg" /></entry></feed>
+let&amp;#39;s see when, how, and what to do about that.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/02/el-dia-de-la-bestia.jpg" /></entry></feed>
