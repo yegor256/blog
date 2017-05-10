@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-10T07:57:02+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Does Inversion of Control Really Work</title><link href="http://www.yegor256.com/2017/05/10/inversion-of-control.html" rel="alternate" type="text/html" title="How Does Inversion of Control Really Work" /><published>2017-05-10T00:00:00+00:00</published><updated>2017-05-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/10/inversion-of-control</id><content type="html" xml:base="http://www.yegor256.com/2017/05/10/inversion-of-control.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;IoC&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-10T08:37:06+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Does Inversion of Control Really Work</title><link href="http://www.yegor256.com/2017/05/10/inversion-of-control.html" rel="alternate" type="text/html" title="How Does Inversion of Control Really Work" /><published>2017-05-10T00:00:00+00:00</published><updated>2017-05-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/10/inversion-of-control</id><content type="html" xml:base="http://www.yegor256.com/2017/05/10/inversion-of-control.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;IoC&lt;/a&gt;
 seems to have become the cornerstone concept of many frameworks
 and object-oriented designs since it was described by
 &lt;a href=&quot;https://martinfowler.com/bliki/InversionOfControl.html&quot;&gt;Martin Fowler&lt;/a&gt;,
 &lt;a href=&quot;https://web.archive.org/web/20041221102842/http://www.objectmentor.com/resources/articles/dip.pdf&quot;&gt;Robert Martin&lt;/a&gt;
-and others ten years ago. Despite its popularity IoC is
+and
+&lt;a href=&quot;http://www.laputan.org/drc/drc.html&quot;&gt;others&lt;/a&gt;
+ten years ago. Despite its popularity IoC is
 misunderstood and overcomplicated all too often.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -53,7 +55,9 @@ seems to have become the cornerstone concept of many frameworks
 and object-oriented designs since it was described by
 Martin Fowler,
 Robert Martin
-and others ten years ago. Despite its popularity IoC is
+and
+others
+ten years ago. Despite its popularity IoC is
 misunderstood and overcomplicated all too often.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/le-conseguenze-dellamore.jpg" /></entry><entry><title type="html">A Remote Slave Is Still a Slave</title><link href="http://www.yegor256.com/2017/05/02/remote-slaves.html" rel="alternate" type="text/html" title="A Remote Slave Is Still a Slave" /><published>2017-05-02T00:00:00+00:00</published><updated>2017-05-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/02/remote-slaves</id><content type="html" xml:base="http://www.yegor256.com/2017/05/02/remote-slaves.html">&lt;p&gt;Working remotely is definitely a trend, according to the
 &lt;a href=&quot;https://www.bls.gov/opub/ted/2016/24-percent-of-employed-people-did-some-or-all-of-their-work-at-home-in-2015.htm&quot;&gt;BLS&lt;/a&gt;
 and my personal observations.
