@@ -49,6 +49,17 @@ configuring it. More about it here:
 [Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
 Founded 2-Mar-2016.
 
+{% badge https://avatars2.githubusercontent.com/u/24456188 70 http://www.0pdd.com %}
+
+[0pdd.com](http://www.0pdd.com) is a hosted puzzles collector for GitHub projects,
+which automates and streamlines
+[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}) in any public
+or private GitHub repository. This project is a member of
+[Zerocracy](http://www.zerocracy.com) family.
+More about it here:
+[PDD in Action]({% pst 2017/apr/2017-04-05-pdd-in-action %}).
+Founded 8-Dec-2016.
+
 {% badge http://img.s3auth.com/logo.png 140 http://www.s3auth.com %}
 
 [s3auth.com](http://www.s3auth.com) is a lightweight Basic authentication
