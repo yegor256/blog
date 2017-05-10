@@ -27,7 +27,7 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 07-06-2017 25 uhDmHkMAYnM uhDmHkMAYnM Micro-management vs. micro-tasking %}
+{% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %}
 
 [June 7, 2017](https://www.youtube.com/watch?v=uhDmHkMAYnM)<br/>
 25: **Micro-management vs. micro-tasking**<br/>
