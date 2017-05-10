@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Does Inversion of Control Really Work"
+title: "How Does Inversion of Control Really Work?"
 date: 2017-05-10
 place: Odessa, Ukraine
 tags: oop
