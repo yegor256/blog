@@ -215,7 +215,8 @@ is called "resources filtering," and you can read about it
 That's pretty much it. I'm using [jcabi-mysql-maven-plugin](http://mysql.jcabi.com)
 in a few projects, and it helps me to stay confident that my code works
 with a real MySQL server. I'm also using the
-[Liquibase]({% pst 2014/jul/2014-07-20-liquibase-in-maven %})
-Maven plugin in
+[Liquibase](http://www.liquibase.org/)
+Maven [plugin](http://www.liquibase.org/documentation/maven/) in
 order to populate an empty server with tables required for the application.
-Nevertheless, that is a story for the next post :)
+Nevertheless, that is a story for the
+[next post]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}) :)

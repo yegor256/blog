@@ -59,6 +59,10 @@ ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobj
 
 <!--more-->
 
+May 11, 2017:
+I created funny [Telegram stickers](https://t.me/addstickers/elegantobjects),
+about object-oriented programming. Feel free to use them.
+
 {% badge /images/books/elegant-objects/cactus-stickers.png 150 %}
 
 Apr 27, 2017:
