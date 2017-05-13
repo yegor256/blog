@@ -20,9 +20,9 @@ jb_picture:
 ---
 
 There are tons of articles and books about unit testing patterns
-and anti-patterns. I want to add one more recommendation, which, I believe,
-can help us make tests _and_ production code more _object-oriented_:
-a test method may contain nothing but a single `assert`.
+and anti-patterns. I want to add one more recommendation which, I believe,
+can help us make our tests, _and_ our production code, more _object-oriented_:
+a test method must contain nothing but a single `assert`.
 
 <!--more-->
 
@@ -80,7 +80,7 @@ private static class ArrayFromRandom {
 }
 {% endhighlight %}
 
-If Java would have "monikers", this code would look even more elegant:
+If Java had "monikers" this code would look even more elegant:
 
 {% highlight java %}
 @Test
@@ -94,11 +94,11 @@ public void testIntStream() {
 }
 {% endhighlight %}
 
-As you see, there is only one "statement" in this method: `assertEquals()`.
+As you can see, there is only one "statement" in this method: `assertEquals()`.
 
 [Hamcrest](http://hamcrest.org/) with its
 [`assertThat()`](http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/org/hamcrest/MatcherAssert.html)
-and a
+and its
 [collection](http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/allclasses-frame.html)
 of basic matchers is a perfect instrument to make our
 single-statement test methods even more cohesive and readable.
@@ -108,12 +108,12 @@ agree to follow it:
 
   * **Reusability**. The classes we will have to create for test
     assertions will be reusable in other test methods and test cases.
-    Just like in the example above the `ArrayFromRandom` can be used
-    somewhere else. Similar, Hamcrest matchers may and will constitute
+    Just as, in the example above, the `ArrayFromRandom` could be used
+    somewhere else. Similarly, Hamcrest matchers may and will constitute
     a library of reusable test components.
 
   * **Brevity**. Since it will be rather difficult to create a long
-    test method with just a single `assert`, you and your fellow programers
+    test method when it only has a single `assert`, you and your fellow programers
     will inevitably write shorter and more readable code.
 
   * **Readability**. With a single `assert` it will always be obvious
@@ -127,7 +127,7 @@ agree to follow it:
     [immutable objects]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
     to make them testable with a single `assert`.
 
-The biggest achievement we get if this principle is applied to our tests
+The biggest benefit we get when this principle is applied to our tests
 is that they become declarative and object-oriented, instead of being
 algorithmic, imperative, and procedural.
 
