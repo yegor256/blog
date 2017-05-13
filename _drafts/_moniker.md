@@ -29,7 +29,7 @@ and their _monikers_.
 
 {% jb_picture_body %}
 
-Here is the code from Section 5.10 _Algorithms_ of my book
+Here is the code from Section 5.10 (_Algorithms_) of my book
 [_Elegant Objects_](http://amzn.to/2pjciUY):
 
 {% highlight java %}
