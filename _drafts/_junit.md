@@ -19,10 +19,10 @@ jb_picture:
   caption: Bullet (1996) by Julien Temple
 ---
 
-There are tons of articles and books about unit testing patterns
+Many articles and books have already been written about unit testing patterns
 and anti-patterns. I want to add one more recommendation which, I believe,
-can help us make our tests, _and_ our production code, more _object-oriented_:
-a test method must contain nothing but a single `assert`.
+can help us make our tests, _and_ our production code, more _object-oriented_.
+Here it is: a test method must contain nothing but a single `assert`.
 
 <!--more-->
 
