@@ -108,7 +108,7 @@ agree to follow it:
 
   * **Reusability**. The classes we will have to create for test
     assertions will be reusable in other test methods and test cases.
-    Just as, in the example above, the `ArrayFromRandom` could be used
+    Just as, in the example above, `ArrayFromRandom` could be used
     somewhere else. Similarly, Hamcrest matchers may and will constitute
     a library of reusable test components.
 
