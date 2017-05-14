@@ -16,7 +16,7 @@ keywords:
   - java immutable object advantage
   - java immutable value object
   - java mutable immutable object
-book: elegant-objects 2.6
+book: elegant-objects-1 2.6
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2ld05q/proper_objects_should_be_immutable_dont_you_think/
 related:

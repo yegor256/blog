@@ -14,7 +14,7 @@ keywords:
   - public static java
   - public static
   - public static literals
-book: elegant-objects 2.5
+book: elegant-objects-1 2.5
 image: /images/2015/07/the-shining.jpg
 jb_picture:
   caption: The Shining (1980) by Stanley Kubrick

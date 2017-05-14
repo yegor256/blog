@@ -15,7 +15,7 @@ keywords:
   - java finally
   - java close stream in finally
   - java close stream try catch
-book: elegant-objects 2.6
+book: elegant-objects-1 2.6
 youtube:
   - o3aNJX7AP3M
 image: /images/2016/03/lock-stock-two-smoking-barrels.jpg

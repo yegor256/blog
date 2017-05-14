@@ -14,7 +14,7 @@ keywords:
   - oop constructors best practices
   - best practices java constructors
   - how much code to put into constructors
-book: elegant-objects 1.3
+book: elegant-objects-1 1.3
 youtube:
   - 9yjtsCK6Wdk
 image: /images/2015/05/kill-bill.jpg

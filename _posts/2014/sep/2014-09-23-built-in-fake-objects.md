@@ -15,7 +15,7 @@ keywords:
   - java mocking
   - java mock framework
 categories: jcg
-book: elegant-objects 2.8
+book: elegant-objects-1 2.8
 youtube:
   - l6MpCBzwDbg
   - EDKbYVEInMU

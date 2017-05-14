@@ -15,7 +15,7 @@ keywords:
   - setter injection
   - constructor injection
   - field injection
-book: elegant-objects 6.3
+book: elegant-objects-2 6.3
 youtube:
   - oV6Utb5Jows
 ---

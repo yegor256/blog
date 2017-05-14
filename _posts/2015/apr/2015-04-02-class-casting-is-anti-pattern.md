@@ -13,7 +13,7 @@ keywords:
   - instanceof
   - type casting in java
   - class casting is evil
-book: elegant-objects 3.7
+book: elegant-objects-1 3.7
 image: /images/2015/03/gadkiy-utenok.jpg
 jb_picture:
   caption: Гадкий утенок (1956) by Владимир Дегтярёв

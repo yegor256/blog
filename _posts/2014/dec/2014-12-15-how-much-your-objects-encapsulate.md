@@ -13,7 +13,7 @@ keywords:
   - encapsulation
   - object constructor
   - object method vs constructor
-book: elegant-objects 2.2
+book: elegant-objects-1 2.2
 youtube:
   - 9yjtsCK6Wdk
 image: /images/2014/12/truman-show-universe.png
