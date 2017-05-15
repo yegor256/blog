@@ -97,14 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/rigadevdays.png" class="future-talk" alt="RigaDevDays 2017"/>
-**How Bright Is Your Future?** (keynote)<br/>
-**What's Wrong With Object-Oriented Programming?**<br/>
-[RigaDevDays 2017](http://rigadevdays.lv/)<br/>
-Riga, Latvia<br/>
-15 May 2017
-
-<div class="talk-event"/>
 <img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2017"/>
 **What's This InterruptedException About?**<br/>
 [GeeCON 2017](https://geecon.org/)<br/>
@@ -183,6 +175,23 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/rigadevdays.png" class="past-talk" alt="RigaDevDays 2017"/>
+How Bright Is Your Future?** (keynote);
+[RigaDevDays 2017](http://rigadevdays.lv/);
+Riga, Latvia;
+15 May 2017;
+[slides](https://www.slideshare.net/YegorBugayenko/how-bright-is-our-future).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/K_QEOtYVQ7A/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
+What's Wrong With Object-Oriented Programming?;
+[RigaDevDays 2017](http://rigadevdays.lv/);
+Riga, Latvia;
+15 May 2017;
+[video](https://www.youtube.com/watch?v=K_QEOtYVQ7A),
+[slides](https://www.slideshare.net/YegorBugayenko/whats-wrong-with-objectoriented-programming).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
