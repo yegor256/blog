@@ -127,6 +127,13 @@ Kiev, Ukraine<br/>
 26-27 May 2017
 
 <div class="talk-event"/>
+<img src="/images/2016/jugua.png" class="future-talk" alt="JUG.ua Meetup 2017"/>
+**Object-oriented Mistakes in OpenJDK**<br/>
+[JUG.ua Meetup](http://jug.ua/)<br/>
+Kharkiv, Ukraine<br/>
+1 June 2017
+
+<div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Minsk 2017"/>
 [JavaDay Minsk 2017](http://javaday.by/)<br/>
 Minsk, Belarus<br/>
