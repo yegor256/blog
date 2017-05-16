@@ -112,12 +112,14 @@ to make the right choice and never miss their CFP deadlines.
   <td>Dec</td>
   <td><a href="https://twitter.com/jugru">@jugru</a></td>
   </tr>
+<!--
 <tr><td><a href="http://geecon.org/">GeeCON</a></td>
   <td>Krakow</td>
   <td>May</td>
   <td>Jan</td>
   <td><a href="https://twitter.com/geecon">@geecon</a></td>
   <td></td></tr>
+-->
 </tbody></table>
 
 Did I forget anything?
