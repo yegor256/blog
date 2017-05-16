@@ -3096,6 +3096,7 @@ injections
 injector
 injects
 inline
+inlined
 inner
 innocence
 innocent
@@ -3947,6 +3948,8 @@ money-wise
 MongoDB
 monica
 monica's
+moniker
+monikers
 monitor
 monitored
 monitoring
