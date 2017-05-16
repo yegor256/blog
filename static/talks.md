@@ -127,6 +127,7 @@ Kharkiv, Ukraine<br/>
 
 <div class="talk-event"/>
 <img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Minsk 2017"/>
+**Object Oriented JUnit Tests**<br/>
 [JavaDay Minsk 2017](http://javaday.by/)<br/>
 Minsk, Belarus<br/>
 3 June 2017
