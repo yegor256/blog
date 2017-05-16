@@ -14,6 +14,7 @@ keywords:
   - ask an expert
   - expert help by email
   - help me by email
+book: bloghacks 3.3
 image: /images/2017/04/il-divo.jpg
 jb_picture:
   caption: Il Divo (2008) by Paolo Sorrentino

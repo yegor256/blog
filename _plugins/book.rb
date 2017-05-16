@@ -20,14 +20,19 @@ module Yegor
   module Filters
     def book(book)
       opts = book.strip.split(/\s+/, 2)
-      link = if opts[0] == 'elegant-objects-1'
-        'http://amzn.to/2qFt4Tn'
+      if opts[0] == 'elegant-objects-1'
+        link = 'http://amzn.to/2qFt4Tn'
+        cover = '/images/books/elegant-objects/cover.png'
       elsif opts[0] == 'elegant-objects-2'
-        'http://amzn.to/2pyceWc'
+        link = 'http://amzn.to/2pyceWc'
+        cover = '/images/books/elegant-objects/cover.png'
+      elsif opts[0] == 'bloghacks'
+        link = 'http://amzn.to/2qopIm5'
+        cover = '/images/books/256-bloghacks/cover.png'
       end
       "<aside class='book'>" \
       "<a href='#{link}'>" \
-      "<img src='/images/books/elegant-objects/cover.png' class='book-cover'/>" \
+      "<img src='#{cover}' class='book-cover'/>" \
       "</a>" \
       "Read more about this subject in " \
       "<a href='#{link}'>Section&nbsp;#{opts[1]}</a><br/>" \
