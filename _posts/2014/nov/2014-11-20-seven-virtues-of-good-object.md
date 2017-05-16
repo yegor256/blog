@@ -298,7 +298,8 @@ is dedicated to my specific task. He is perfectly isolated from
 all other objects around the method. This object is a *local variable*
 in the scope of the method. A class, with his static methods, is always
 a *global variable* no matter where I use him. Because of that, I can't
-isolate my interaction with this variable from others.
+isolate my interaction with this
+[variable]({% pst 2017/may/2017-05-16-monikers %}) from others.
 
 Besides being conceptually against object-oriented principles, public static
 methods have a few practical drawbacks:
