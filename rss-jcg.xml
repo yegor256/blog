@@ -1211,7 +1211,7 @@ a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues/80&quot;&gt;GitHub issue #80&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://cf.jare.io/?u=http%3A%2F%2Fwww.yegor256.com%2Fimages%2F2014%2F08%2Fgithub-ticket-80.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2014/08/github-ticket-80.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you see, I gave a command to &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
 and it released a new version to Maven central. I didn&amp;#39;t do anything else.&lt;/p&gt;
