@@ -179,7 +179,7 @@ so why shouldn't we rate them, right? The best grade is
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="past-talk" alt="RigaDevDays 2017"/>
-How Bright Is Your Future?** (keynote);
+How Bright Is Your Future?;
 [RigaDevDays 2017](http://rigadevdays.lv/);
 Riga, Latvia;
 15 May 2017;
@@ -201,7 +201,7 @@ Java Annotations Are a Big Mistake;
 [JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/);
 Moscow, Russia;
 8 April 2017;
-[видео](https://www.youtube.com/watch?v=20QBvrHq6TA),
+[видео](https://www.youtube.com/watch?v=20QBvrHq6TA) (with English subtitles),
 [slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-evil).
 JPoint is one of the best tech conferences I've spoken at so far. Its
 strong points are the social activities between speakers, the community,
@@ -217,7 +217,7 @@ Utility Classes Are Killing Us;
 [JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
 Novosibirsk, Russia;
 4 April 2017;
-[видео](https://www.youtube.com/watch?v=85B3FV_sB60),
+[видео](https://www.youtube.com/watch?v=85B3FV_sB60) (with English subtitles),
 [slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
 Yet another great event by [JUG.ru](https://jug.ru/) in Siberia. This was
 my first time there, and I enjoyed almost everything: the location, the
@@ -272,7 +272,7 @@ Management Without Managers;
 Kharkiv, Ukraine;
 4 March 2017;
 [slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
-[видео](https://www.youtube.com/watch?v=lvoQZGsY56k).
+[видео](https://www.youtube.com/watch?v=lvoQZGsY56k) (with English subtitles).
 Yet another event by [LemBS](http://lembs.com/), this time in Kharkiv.
 The organization was rather good: the travel and accommodation, the food, the
 equipment. What was not really good was the content&mdash;they can do much
