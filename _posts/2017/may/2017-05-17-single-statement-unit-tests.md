@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Single Statement Unit Tests"
-date: 2017-05-13
+date: 2017-05-17
 place: Odessa, Ukraine
 tags: testing
 description: |

@@ -292,7 +292,8 @@ class Document {
 }
 ```
 
-Another typical mistake is to use constants in unit tests to avoid duplicate
+Another typical mistake is to use constants in
+[unit tests]({% pst 2017/may/2017-05-17-single-statement-unit-tests %}) to avoid duplicate
 string/numeric literals in test methods.
 [Don't do this]({% pst 2016/may/2016-05-03-test-methods-must-share-nothing %})!
 Every test method should work with its own set of input values.

@@ -103,6 +103,8 @@ code doesn't check the flag and never calls `Thread.interrupted()`, it
 accepts the fact that sooner or later it will be terminated cold turkey,
 by clicking `Ctrl-C`.
 
+{% quote The code should either be bullet-fast or interruption-ready, nothing in between. %}
+
 Sound logical so far? I hope so.
 
 Now, there are some methods in JDK that check the flag for us and throw
