@@ -288,7 +288,8 @@ the real world:</p>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTENSION</span> <span class="o">=</span> <span class="s">".doc"</span><span class="o">;</span> <span class="c1">// good practice</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>Another typical mistake is to use constants in unit tests to avoid duplicate
+<p>Another typical mistake is to use constants in
+<a href="/2017/05/17/single-statement-unit-tests.html">unit tests</a> to avoid duplicate
 string/numeric literals in test methods.
 <a href="/2016/05/03/test-methods-must-share-nothing.html">Don't do this</a>!
 Every test method should work with its own set of input values.</p>

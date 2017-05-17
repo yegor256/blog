@@ -2329,6 +2329,7 @@ feeling
 feelings
 feels
 fees
+fellow
 felt
 female
 females
@@ -3051,6 +3052,7 @@ incurred
 indeed
 indefinitely
 indentation
+indented
 independent
 independently
 indicates
@@ -4277,6 +4279,7 @@ open-source
 opened
 opener
 opening
+OpenJDK
 openly
 operate
 operating
@@ -5700,6 +5703,7 @@ silicon
 silly
 silver
 similar
+similarly
 simple
 simplecov
 simpler
@@ -5718,6 +5722,7 @@ since
 sincerely
 singer
 single
+single-statement
 single-word
 singleton
 singletons
