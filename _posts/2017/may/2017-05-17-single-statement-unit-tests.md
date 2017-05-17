@@ -113,7 +113,7 @@ agree to follow it:
     a library of reusable test components.
 
   * **Brevity**. Since it will be rather difficult to create a long
-    test method when it only has a single `assert`, you and your fellow programers
+    test method when it only has a single `assert`, you and your fellow programmers
     will inevitably write shorter and more readable code.
 
   * **Readability**. With a single `assert` it will always be obvious
