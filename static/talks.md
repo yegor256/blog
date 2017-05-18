@@ -163,6 +163,7 @@ Kiev, Ukraine<br/>
 
 <div class="talk-event"/>
 <img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
+**How Much Do You Cost?**<br/>
 [DevTernity 2017](https://devternity.com/)<br/>
 Riga, Latvia<br/>
 1 December 2017
