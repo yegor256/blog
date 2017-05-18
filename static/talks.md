@@ -524,7 +524,8 @@ Tallinn, Estonia;
 9 June 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
 [photos](https://www.facebook.com/yegor256/posts/10209692585621352),
-[video](https://www.youtube.com/watch?v=7yTIWFZrXpg).
+[video](https://www.youtube.com/watch?v=7yTIWFZrXpg),
+[official video](https://vimeo.com/album/3998953/video/170745388).
 Almost everything was done perfectly at this event. There were more than 500 attendees
 and just two tracks (when I was speaking). The venue was very comfortable,
 modern, and located within walking distance from the center. All the logistics

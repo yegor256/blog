@@ -3,7 +3,7 @@ layout: post
 title: "Single Statement Unit Tests"
 date: 2017-05-17
 place: Odessa, Ukraine
-tags: testing
+tags: testing java
 description: |
   Test methods are traditionally very procedural
   and algorithmic, which makes them difficult to read
