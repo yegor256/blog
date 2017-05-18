@@ -80,7 +80,8 @@ private static class ArrayFromRandom {
 }
 {% endhighlight %}
 
-If Java had "monikers" this code would look even more elegant:
+If Java had [monikers]({% pst 2017/may/2017-05-16-monikers %})
+this code would look even more elegant:
 
 {% highlight java %}
 @Test
