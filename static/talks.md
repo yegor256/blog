@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/geecon-2016.png" class="future-talk" alt="GeeCON 2017"/>
-**What's This InterruptedException About?**<br/>
-[GeeCON 2017](https://geecon.org/)<br/>
-Kraków, Poland<br/>
-18-19 May 2017
-
-<div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 **Object-Oriented Flavor for JUnit Tests**<br/>
 **How Much Do You Cost?**<br/>
@@ -177,6 +170,13 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2016/geecon-2016.png" class="past-talk" alt="GeeCON 2017"/>
+What's This InterruptedException About?;
+[GeeCON 2017](https://geecon.org/);
+Kraków, Poland;
+18-19 May 2017.
 
 <div class="talk-event"/>
 <img src="/images/2017/rigadevdays.png" class="past-talk" alt="RigaDevDays 2017"/>

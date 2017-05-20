@@ -50,9 +50,10 @@ try (Temp t = new Temp()) {
 }
 {% endhighlight %}
 
-The only problem is that does the file creating job inside
-the constructor, which is a code smell. Here is what I'm doing
-in order to avoid that:
+The only problem is that does the temporary file is being created inside
+the constructor, which is a
+[code smell]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
+Here is what I'm doing in order to avoid that:
 
 {% highlight java %}
 class Temp implements Closeable {
