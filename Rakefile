@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'rake'
+require 'fileutils'
 require 'tempfile'
 require 'rake/clean'
 require 'scss_lint/rake_task'
@@ -53,6 +54,7 @@ end
 
 desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
+  FileUtils.mkdir_p('_temp')
   f = File.open('_temp/layout.scss', 'w')
   f << File.open('css/layout.scss').drop(2).join("\n")
   f.flush
