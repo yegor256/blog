@@ -100,7 +100,7 @@ distinguish between <a href="http://c2.com/cgi/wiki?DontDistinguishBetweenClasse
 For example, all of these names are terribly wrong: <code>IRecord</code>, <code>IfaceEmployee</code>, or <code>RecordInterface</code>.
 Usually, interface name is the name of a real-life entity, while class name should explain its implementation details.
 If there is nothing specific to say about an implementation, name it <code>Default,</code> <code>Simple</code>, or something similar. For example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">SimpleUser</span> <span class="kd">implements</span> <span class="n">User</span> <span class="o">{};</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">class</span> <span class="nc">SimpleUser</span> <span class="kd">implements</span> <span class="n">User</span> <span class="o">{};</span>
 <span class="kd">class</span> <span class="nc">DefaultRecord</span> <span class="kd">implements</span> <span class="n">Record</span> <span class="o">{};</span>
 <span class="kd">class</span> <span class="nc">Suffixed</span> <span class="kd">implements</span> <span class="n">Name</span> <span class="o">{};</span>
 <span class="kd">class</span> <span class="nc">Validated</span> <span class="kd">implements</span> <span class="n">Content</span> <span class="o">{};</span>
@@ -110,12 +110,12 @@ If there is nothing specific to say about an implementation, name it <code>Defau
 <p>Methods can either return something or return <code>void</code>. If a method returns
 something, then its name should explain <em>what it returns</em>, for example (don't
 use the <code>get</code> prefix <a href="/2014/09/16/getters-and-setters-are-evil.html">ever</a>):</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
 <span class="n">String</span> <span class="nf">content</span><span class="o">();</span>
 <span class="kt">int</span> <span class="nf">ageOf</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">);</span>
 </code></pre></div>
 <p>If it returns <code>void,</code> then its name should explain <em>what it does</em>. For example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">);</span>
 <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Work</span> <span class="n">work</span><span class="o">);</span>
 <span class="kt">void</span> <span class="nf">append</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">,</span> <span class="n">String</span> <span class="n">line</span><span class="o">);</span>
 </code></pre></div>
@@ -128,7 +128,7 @@ There is only one exception to the rule just mentioned—test methods for JUnit.
 
 <p>Method names in JUnit tests should be created as English sentences without
 spaces. It's easier to explain by example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="cm">/**</span>
 <span class="cm"> * HttpRequest can return its content in Unicode.</span>
 <span class="cm"> * @throws Exception If test fails</span>
 <span class="cm"> */</span>
@@ -159,7 +159,7 @@ visibility, but not too long if possible. A name should be a noun in singular or
 plural form, or an appropriate abbreviation. More about it in
 this post: <a href="/2015/01/12/compound-name-is-code-smell.html">A Compound Name Is a Code Smell</a>.
 For example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span><span class="o">;</span>
 <span class="kt">void</span> <span class="nf">sendThroughProxy</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">,</span> <span class="n">Protocol</span> <span class="n">proto</span><span class="o">);</span>
 <span class="kd">private</span> <span class="n">File</span> <span class="n">content</span><span class="o">;</span>
 <span class="kd">public</span> <span class="n">HttpRequest</span> <span class="n">request</span><span class="o">;</span>
@@ -172,7 +172,7 @@ this case, I recommend to create abbreviations by removing vowels (see how
 <a href="http://pe.usps.gov/text/pub28/28apc_002.htm">USPS abbreviates street names</a>).</p>
 
 <p>Another example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Message</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Message</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="n">String</span> <span class="n">recipient</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">Message</span><span class="o">(</span><span class="n">String</span> <span class="n">rcpt</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">recipient</span> <span class="o">=</span> <span class="n">rcpt</span><span class="o">;</span>
@@ -181,14 +181,14 @@ this case, I recommend to create abbreviations by removing vowels (see how
 </code></pre></div>
 <p>In many cases, the best hint for a name of a variable can ascertained by reading
 its class name. Just write it with a small letter, and you should be good:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">File</span> <span class="n">file</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">File</span> <span class="n">file</span><span class="o">;</span>
 <span class="n">User</span> <span class="n">user</span><span class="o">;</span>
 <span class="n">Branch</span> <span class="n">branch</span><span class="o">;</span>
 </code></pre></div>
 <p>However, <em>never</em> do the same for primitive types, like <code>Integer number</code> or <code>String string</code>.</p>
 
 <p>You can also use an adjective, when there are multiple variables with different characteristics. For instance:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">String contact(String left, String right);
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>String contact(String left, String right);
 </code></pre></div>
 <h2 id="constructors">Constructors</h2>
 
@@ -197,7 +197,7 @@ its class name. Just write it with a small letter, and you should be good:</p>
 there should be only <em>one</em> constructor that stores data in
 object variables. All other constructors should call this one with different
 arguments. For example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Server</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Server</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="n">String</span> <span class="n">address</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">Server</span><span class="o">(</span><span class="n">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="n">uri</span><span class="o">;</span>
@@ -214,11 +214,11 @@ arguments. For example:</p>
 
 <p>Avoid one-time variables at all costs. By "one-time" I mean variables that are
 used only once. Like in this example:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"data.txt"</span><span class="o">;</span>
-<span class="k">return</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"data.txt"</span><span class="o">;</span>
+<span class="k">return</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
 </code></pre></div>
 <p>This above variable is used only once and the code should be refactored to:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">return</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"data.txt"</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">return</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"data.txt"</span><span class="o">);</span>
 </code></pre></div>
 <p>Sometimes, in very rare cases—mostly because of better formatting—one-time
 variables may be used. Nevertheless, try to avoid such situations at all costs.</p>
@@ -230,7 +230,7 @@ bubble up as high as possible. Private methods should always let checked
 exceptions go out.</p>
 
 <p>Never use exceptions for flow control. For example this code is wrong:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
 <span class="k">try</span> <span class="o">{</span>
   <span class="n">size</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">fileSize</span><span class="o">();</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
@@ -249,11 +249,11 @@ example, the following is not correct because the first bracket is not closed on
 the same line and there are symbols after it. The second bracket is also in
 trouble because there are symbols in front of it and it is not opened on the
 same line:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">final File file = new File(directory,
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>final File file = new File(directory,
   "file.txt");
 </code></pre></div>
 <p>Correct indentation should look like:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">StringUtils.join(
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>StringUtils.join(
   Arrays.asList(
     "first line",
     "second line",
@@ -265,7 +265,7 @@ same line:</p>
 );
 </code></pre></div>
 <p>The second important rule of indentation says that you should put as much as possible on one line - within the limit of 80 characters. The example above is not valid since it can be compacted:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">StringUtils.join(
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>StringUtils.join(
   Arrays.asList(
     "first line", "second line",
     StringUtils.join(Arrays.asList("a", "b"))
@@ -283,7 +283,7 @@ practice that leads to code pollution. Constants (as with any
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>)
 should have a meaning in a real world. What meaning do these constants have in
 the real world:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">D_LETTER</span> <span class="o">=</span> <span class="s">"D"</span><span class="o">;</span> <span class="c1">// bad practice</span>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTENSION</span> <span class="o">=</span> <span class="s">".doc"</span><span class="o">;</span> <span class="c1">// good practice</span>
 <span class="o">}</span>
@@ -300,7 +300,7 @@ why do they have to share the same input constants?</p>
 <h2 id="test-data-coupling">Test Data Coupling</h2>
 
 <p>This is an example of <a href="http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">data coupling</a> in a test method:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">User</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
 <span class="c1">// maybe some other code here</span>
 <span class="n">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">name</span><span class="o">(),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">equalTo</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">));</span>
 </code></pre></div>

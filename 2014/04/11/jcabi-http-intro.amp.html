@@ -94,7 +94,8 @@ easy to use. In most cases, I need only to make an HTTP request and parse the
 JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:</p>
 
-<pre>String rate = new JdkRequest("http://www.getexchangerates.com/api/latest.json")
+<pre>String uri = "http://www.getexchangerates.com/api/latest.json";
+String rate = new JdkRequest(uri)
   .header("Accept", "application/json")
   .fetch()
   .as(JsonResponse.class)

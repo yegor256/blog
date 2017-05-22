@@ -126,7 +126,8 @@ final String text = xsl.applyTo(xml);</pre>
 <p>That's it. Now let's see what's there in that <code>status.xsl</code> file
 (this is just a skeleton of it; the full version is <a href="https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl">here</a>):</p>
 
-<pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+<pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  version="2.0"&gt;
   &lt;xsl:output method="text"/&gt;
   &lt;xsl:template match="/talk"&gt;
     &lt;xsl:text&gt;Hi, here is your status report:&lt;/xsl:text&gt;

@@ -80,7 +80,8 @@ after it is started.</p>
 
 <p>First, this is how we start a new Docker container:</p>
 
-<pre>$ sudo docker run -i -t --rm -v "$(pwd):/main" yegor256/rultor /main/entry.sh</pre>
+<pre>$ sudo docker run -i -t --rm -v "$(pwd):/main" \
+  yegor256/rultor /main/entry.sh</pre>
 
 <p>There are two files in the current directory: <code>entry.sh</code> and <code>script.sh</code>.
 <code>entry.sh</code> is the file being executed by Docker on start,
