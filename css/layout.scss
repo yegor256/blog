@@ -159,7 +159,7 @@ del {
       display: inline;
       margin-right: .4 * $em;
 
-      &:after {
+      &::after {
         content: ' ';
       }
     }
@@ -397,7 +397,7 @@ blockquote {
   padding-left: .5 * $em !important;
   position: relative;
 
-  p:before {
+  p::before {
     @extend %gray;
     @extend %desktop-only;
     content: 'ˮ';
@@ -425,7 +425,7 @@ blockquote {
   padding-left: .75 * $em;
   width: 15 * $em;
 
-  &:before {
+  &::before {
     content: 'ˮ';
   }
 }
@@ -460,7 +460,7 @@ figure {
   }
 
   figcaption {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: lighter($light-gray, 40);
     bottom: 1em;
     color: lighten($black, 40);
     font-size: .8em;
@@ -470,7 +470,7 @@ figure {
     position: absolute;
   }
 
-  figcaption:before {
+  figcaption::before {
     content: '© ';
   }
 }

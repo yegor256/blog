@@ -53,7 +53,7 @@ end
 
 desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
-  f = Tempfile.new(['yegor256-', '.scss'])
+  f = File.open('_temp/layout.scss', 'w')
   f << File.open('css/layout.scss').drop(2).join("\n")
   f.flush
   f.close
