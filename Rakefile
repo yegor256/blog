@@ -233,12 +233,12 @@ task :regex do
     ptns.each do |re|
       if re.match text
         puts "#{f}: #{re} found and it's prohibited"
-        ++errors
+        errors += 1
       end
     end
   end
   raise "#{errors} violations of RegEx prohibition" unless errors == 0
-  done 'Not prohibited regular expressions'
+  done 'No prohibited regular expressions'
 end
 
 desc 'Make sure all snippets are compact enough'

@@ -69,7 +69,7 @@ $ git push origin master
 Then, I configured AppVeyor "pinging" from Docker script.
 This is what I did in [`.rultor.yml`](https://github.com/yegor256/takes/blob/master/.rultor.yml):
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
 merge:

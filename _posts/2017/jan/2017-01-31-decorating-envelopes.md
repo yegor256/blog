@@ -98,7 +98,7 @@ It is very convenient, but that `RsWrap` is very verbose. There are too many
 lines that don't do anything special; they just forward all method
 calls to the encapsulated `Response`.
 
-How about we introduce a new concept, "decorators", with a new
+How about we introduce a new concept, "decorators," with a new
 keyword, `decorates`:
 
 {% highlight java %}

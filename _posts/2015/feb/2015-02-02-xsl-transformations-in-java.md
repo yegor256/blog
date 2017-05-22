@@ -81,7 +81,8 @@ That's it. Now let's see what's there in that `status.xsl` file
 (this is just a skeleton of it; the full version is [here](https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl)):
 
 {% highlight xml %}
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  version="2.0">
   <xsl:output method="text"/>
   <xsl:template match="/talk">
     <xsl:text>Hi, here is your status report:</xsl:text>

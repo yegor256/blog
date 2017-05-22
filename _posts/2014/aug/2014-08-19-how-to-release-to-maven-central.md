@@ -267,7 +267,7 @@ Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
 explains this format in details):
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"

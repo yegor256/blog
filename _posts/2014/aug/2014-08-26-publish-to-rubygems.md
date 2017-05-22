@@ -45,7 +45,7 @@ Create an account in [RubyGems.org](http://www.rubygems.org).
 
 Create a `rubygems.yml` file (you may already have it as `~/.gem/credentials`):
 
-{% highlight yaml %}
+{% highlight text %}
 :rubygems_api_key: d355d8940bb031bfe9acf03ed3da4c0d
 {% endhighlight %}
 
@@ -88,7 +88,7 @@ This version name will be replaced by Rultor during deployment.
 
 Create a `.rultor.yml` file in the root directory of your project:
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   rubygems.yml: "repo/rubygems.yml.asc"
 release:

@@ -101,7 +101,7 @@ released to RubyGems and a new version to set is 1.5:
 Rultor executed a simple script, [pre-configured](http://doc.rultor.com/basics.html#release) in its
 [`.rultor.yml`](https://github.com/yegor256/jekyll-github-deploy/blob/master/.rultor.yml):
 
-{% highlight yaml %}
+{% highlight text %}
 release:
   script: |
     ./test.sh
@@ -179,7 +179,7 @@ that configures Rultor accordingly through its
 [`.rultor.yml`](https://github.com/yegor256/s3auth/blob/master/.rultor.yml)
 file (pay attention to the first few lines):
 
-{% highlight yaml %}
+{% highlight text %}
 assets:
   settings.xml: "yegor256/home#assets/s3auth/settings.xml"
   pubring.gpg: "yegor256/home#assets/pubring.gpg"

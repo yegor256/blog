@@ -47,7 +47,8 @@ JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:
 
 {% highlight java %}
-String rate = new JdkRequest("http://www.getexchangerates.com/api/latest.json")
+String uri = "http://www.getexchangerates.com/api/latest.json";
+String rate = new JdkRequest(uri)
   .header("Accept", "application/json")
   .fetch()
   .as(JsonResponse.class)

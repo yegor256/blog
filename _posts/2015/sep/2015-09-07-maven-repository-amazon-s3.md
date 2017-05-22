@@ -173,7 +173,7 @@ Create a `.rultor.yml` file in the root directory of your project
 (The Rultor [reference page](http://doc.rultor.com/reference.html)
 explains this format in greater detail):
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   settings.xml: "repo/settings.xml.asc"
 deploy:

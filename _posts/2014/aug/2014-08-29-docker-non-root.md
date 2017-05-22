@@ -30,7 +30,8 @@ after it is started.
 First, this is how we start a new Docker container:
 
 {% highlight bash %}
-$ sudo docker run -i -t --rm -v "$(pwd):/main" yegor256/rultor /main/entry.sh
+$ sudo docker run -i -t --rm -v "$(pwd):/main" \
+  yegor256/rultor /main/entry.sh
 {% endhighlight %}
 
 There are two files in the current directory: `entry.sh` and `script.sh`.

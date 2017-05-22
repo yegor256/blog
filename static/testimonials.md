@@ -76,7 +76,7 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're a sociopath."&mdash;[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
 
-"... absolute and utter crap"&mdash;[Rashid](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
+" ... absolute and utter crap"&mdash;[Rashid](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
 
 "I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
 

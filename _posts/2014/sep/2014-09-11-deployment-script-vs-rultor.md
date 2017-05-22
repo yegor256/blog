@@ -209,7 +209,7 @@ Rultor solves this problem by offering an on-the-fly GPG decryption of your
 sensitive data, right before they are used by your deployment scripts. In
 the `.rultor.yml` configuration file you just say:
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   db.ini: "repo/db.ini.asc"
 deploy:

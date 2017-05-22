@@ -215,7 +215,7 @@ to achieve, to impress your future employer. For example:
 "learn Go,"
 "create a new open source CSS framework,"
 "write a book,"
-or "earn Oracle Java certification next year". This will demonstrate
+or "earn Oracle Java certification next year." This will demonstrate
 that even though you're young, you do care about your career and
 professional growth.
 
@@ -276,7 +276,7 @@ duties. Instead of
 "managing 300+ AWS nodes" or
 "building mobile apps" it's better to say
 "created 300+ AWS nodes infrastructure" or
-"built a few mobile apps".
+"built a few mobile apps."
 
 ## ACM, IEEE, JUG, and Other Memberships
 

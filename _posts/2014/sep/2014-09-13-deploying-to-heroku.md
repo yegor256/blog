@@ -74,7 +74,7 @@ Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
 explains this format in detail):
 
-{% highlight yaml %}
+{% highlight text %}
 decrypt:
   id_rsa: "repo/id_rsa.asc"
   id_rsa.pub: "repo/id_rsa.pub.asc"
