@@ -49,7 +49,8 @@ To prove this claim we just need to put two thoughts together:
 
   * Second, requirements and expectations may be functional and non-functional.
     The latter include performance, resilience, robustness, _maintainability_,
-    and a few dozen other NFRs.
+    and a few dozen other
+    [NFRs](https://en.wikipedia.org/wiki/Non-functional_requirement).
 
 It is obvious that there are at least two variables in this equation that
 are ambiguous: user expectations and
