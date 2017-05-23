@@ -64,11 +64,11 @@ to make the right choice and never miss their CFP deadlines.
   <td>Apr</td>
   <td>Jan</td></tr>
 -->
-<tr><td><a href="https://geekout.ee/">GeekOUT</a></td>
-  <td>Tallinn</td>
-  <td>Jun</td>
+<tr><td><a href="http://www.oredev.org/">Øredev</a></td>
+  <td>Malmö</td>
   <td>Nov</td>
-  <td><a href="https://twitter.com/geekoutee">@geekoutee</a></td>
+  <td>Mar</td>
+  <td><a href="https://twitter.com/oredev">@oredev</a></td>
   </tr>
 <tr><td><a href="https://www.oracle.com/javaone/index.html">JavaOne</a></td>
   <td>San Francisco</td>
@@ -79,7 +79,7 @@ to make the right choice and never miss their CFP deadlines.
 <tr><td><a href="https://www.devoxx.be/">Devoxx</a></td>
   <td>Antwerp</td>
   <td>Nov</td>
-  <td>Apr</td>
+  <td>Jun</td>
   <td><a href="https://twitter.com/devoxx">@devoxx</a></td>
   </tr>
 <tr><td><a href="https://javazone.no/">JavaZone</a></td>
@@ -87,12 +87,6 @@ to make the right choice and never miss their CFP deadlines.
   <td>Sep</td>
   <td>Apr</td>
   <td><a href="https://twitter.com/javazone">@javazone</a></td>
-  </tr>
-<tr><td><a href="http://www.oredev.org/">Øredev</a></td>
-  <td>Malmö</td>
-  <td>Nov</td>
-  <td>Mar</td>
-  <td><a href="https://twitter.com/oredev">@oredev</a></td>
   </tr>
 <tr><td><a href="https://qconsf.com/">QCon</a></td>
   <td>San Francisco</td>
@@ -105,6 +99,12 @@ to make the right choice and never miss their CFP deadlines.
   <td>Feb</td>
   <td>Jun</td>
   <td><a href="https://twitter.com/jfokus">@jfokus</a></td>
+  </tr>
+<tr><td><a href="https://geekout.ee/">GeekOUT</a></td>
+  <td>Tallinn</td>
+  <td>Jun</td>
+  <td>Sep</td>
+  <td><a href="https://twitter.com/geekoutee">@geekoutee</a></td>
   </tr>
 <tr><td><a href="http://jpoint.ru/en/">JPoint</a></td>
   <td>Moscow</td>
