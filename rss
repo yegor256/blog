@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-22T21:47:47+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Single Statement Unit Tests</title><link href="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html" rel="alternate" type="text/html" title="Single Statement Unit Tests" /><published>2017-05-17T00:00:00+00:00</published><updated>2017-05-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/17/single-statement-unit-tests</id><content type="html" xml:base="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html">&lt;p&gt;Many articles and books have already been written about unit testing patterns
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-23T07:31:41+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Any Program Has an Unlimited Number of Bugs</title><link href="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html" rel="alternate" type="text/html" title="Any Program Has an Unlimited Number of Bugs" /><published>2017-05-23T00:00:00+00:00</published><updated>2017-05-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs</id><content type="html" xml:base="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html">&lt;p&gt;This may sound strange, but I will prove it: no matter how big
+or stable a piece of software is, it has an &lt;em&gt;unlimited&lt;/em&gt; number
+of bugs not yet found. No matter how many of them we have already managed
+to find and fix, there are still too many left to count.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;L&amp;#39;amico di famiglia (2006) by Paolo Sorrentino&#39; src=&#39;/images/2017/05/lamico-di-famiglia.jpg&#39; longdesc=&#39;#5232e494&#39;/&gt;&lt;figcaption id=&#39;5232e494&#39;&gt;L&amp;#39;amico di famiglia (2006) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s take this simple Java method that calculates a sum of two integers
+as an example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This simple program has an &lt;em&gt;unlimited&lt;/em&gt; number of bugs.&lt;/p&gt;
+
+&lt;p&gt;To prove this claim we just need to put two thoughts together:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First, a bug is something that compromises the quality of software,
+which, according to
+&lt;a href=&quot;https://standards.ieee.org/findstds/standard/610.12-1990.html&quot;&gt;IEEE&amp;nbsp;610.12-1990&lt;/a&gt;,
+is &amp;quot;the degree to which
+a system meets specified requirements or &lt;em&gt;user expectations&lt;/em&gt;.&amp;quot;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Second, requirements and expectations may be functional and non-functional.
+The latter include performance, resilience, robustness, &lt;em&gt;maintainability&lt;/em&gt;,
+and a few dozen other NFRs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is obvious that there are at least two variables in this equation that
+are ambiguous: user expectations and
+&lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;maintainability&lt;/a&gt;.
+We can&amp;#39;t be precise about them and that&amp;#39;s why the number of bugs
+they will produce has no limit.&lt;/p&gt;
+
+&lt;p&gt;Of course, only a very limited subset of the entire set of bugs has any
+real business impact. Most of the bugs that exist in a program may
+stay there even after it is shipped to its users&amp;mdash;nobody will ever
+find them or else the damage they cause to the user experience will be
+insignificant.&lt;/p&gt;
+
+&lt;p&gt;Finally, take a look at the method &lt;code&gt;sum()&lt;/code&gt; one more time. How about these bugs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It doesn&amp;#39;t handle overflows&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t have any user documentation&lt;/li&gt;
+&lt;li&gt;Its design is not object-oriented&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t sum three or more numbers&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t sum &lt;code&gt;double&lt;/code&gt; numbers&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t cast &lt;code&gt;long&lt;/code&gt; to &lt;code&gt;int&lt;/code&gt; automatically&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t skip execution if one argument is zero&lt;/li&gt;
+&lt;li&gt;It doesn&amp;#39;t cache results of previous calculations&lt;/li&gt;
+&lt;li&gt;There is no logging&lt;/li&gt;
+&lt;li&gt;Checkstyle would complain since arguments are not &lt;code&gt;final&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;#39;m sure you can find many more.&lt;/p&gt;
+
+&lt;p&gt;BTW, Glenford J. Myers said something very similar in his book
+&lt;a href=&quot;http://amzn.to/1Y3qAbN&quot;&gt;&amp;quot;The Art of Software Testing,&amp;quot;&lt;/a&gt; which I
+&lt;a href=&quot;/2014/08/22/art-of-software-testing.html&quot;&gt;reviewed&lt;/a&gt;
+earlier.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">This may sound strange, but I will prove it: no matter how big
+or stable a piece of software is, it has an unlimited number
+of bugs not yet found. No matter how many of them we have already managed
+to find and fix, there are still too many left to count.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/lamico-di-famiglia.jpg" /></entry><entry><title type="html">Single Statement Unit Tests</title><link href="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html" rel="alternate" type="text/html" title="Single Statement Unit Tests" /><published>2017-05-17T00:00:00+00:00</published><updated>2017-05-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/17/single-statement-unit-tests</id><content type="html" xml:base="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html">&lt;p&gt;Many articles and books have already been written about unit testing patterns
 and anti-patterns. I want to add one more recommendation which, I believe,
 can help us make our tests, &lt;em&gt;and&lt;/em&gt; our production code, more &lt;em&gt;object-oriented&lt;/em&gt;.
 Here it is: a test method must contain nothing but a single &lt;code&gt;assert&lt;/code&gt;.&lt;/p&gt;
@@ -780,190 +846,4 @@ make your code both legible and extensible.
 They were introduced almost 30 years ago, but have they
 really made us better programmers in the time since?
 Do we really understand OOP better thanks to them? Do we write more
-&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/dumb-and-dumber.jpg" /></entry><entry><title type="html">The TDD That Works for Me</title><link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html" rel="alternate" type="text/html" title="The TDD That Works for Me" /><published>2017-03-24T00:00:00+00:00</published><updated>2017-03-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/24/tdd-that-works</id><content type="html" xml:base="http://www.yegor256.com/2017/03/24/tdd-that-works.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;Test-driven development&lt;/a&gt; (a.k.a. TDD)
-was &lt;a href=&quot;https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development&quot;&gt;rediscovered&lt;/a&gt;
-by &lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;Kent Beck&lt;/a&gt; and explained in
-&lt;a href=&quot;http://amzn.to/2mTuxCs&quot;&gt;his famous book&lt;/a&gt; in 2002.
-In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
-said that TDD &lt;a href=&quot;http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html&quot;&gt;is dead&lt;/a&gt;
-and only &lt;a href=&quot;http://david.heinemeierhansson.com/2014/test-induced-design-damage.html&quot;&gt;harms architecture&lt;/a&gt;.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;
-(the inventor of the &lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID principles&lt;/a&gt;)
-&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html&quot;&gt;disagreed&lt;/a&gt;
-and
-&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html&quot;&gt;explained&lt;/a&gt;
-that TDD may not work only in certain cases.
-A few days later, he even
-&lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/05/02/ProfessionalismAndTDD.html&quot;&gt;compared&lt;/a&gt; the importance of TDD
-with the importance of hand-washing for medicine, and added
-that &amp;quot;it would not surprise me if, one day, TDD had the force
-of law behind it.&amp;quot; Two years later, now just a few months ago,
-he wrote &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html&quot;&gt;more&lt;/a&gt;
-about it, and &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2017/03/06/TestingLikeTheTSA.html&quot;&gt;more&lt;/a&gt;,
-and &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2016/11/10/TDD-Doesnt-work.html&quot;&gt;more&lt;/a&gt;.
-This subject seems to be hot. Of course, I have my own take on it; let me share.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La grande bellezza (2013) by Paolo Sorrentino&#39; src=&#39;/images/2017/03/la-grande-bellezza.jpg&#39; longdesc=&#39;#91c781a0&#39;/&gt;&lt;figcaption id=&#39;91c781a0&#39;&gt;La grande bellezza (2013) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;In theory, TDD means &amp;quot;writing tests first and code next.&amp;quot; In practice,
-according to &lt;a href=&quot;http://www.teamed.io&quot;&gt;my experience&lt;/a&gt; while working with
-more than 250 developers over the last four years, it means writing tests
-when we&amp;#39;re in a good mood and have nothing else to do. And this is only logical,
-if we understand TDD literally, by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Kent_Beck&quot;&gt;the book&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;I have never done TDD by the book: tests first and code next.&lt;/aside&gt;
-
-&lt;p&gt;Writing a test for a class without having that class in front of you is
-&lt;em&gt;difficult&lt;/em&gt;. I would even say impossible, if we are talking about real code,
-not calculator examples. It&amp;#39;s also very &lt;em&gt;inefficient&lt;/em&gt;, because tests by definition
-are much more rigid than the code they validate&amp;mdash;creating them first will
-cause many re-do cycles until the design is stabilized.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;ve personally &lt;a href=&quot;https://github.com/yegor256&quot;&gt;written&lt;/a&gt; almost 300,000 lines of code in
-Java, Ruby, PHP, and JavaScript over the last four years, and I have never
-done TDD by the book: &amp;quot;write a test, make it run, make it right.&amp;quot; Ever.&lt;/p&gt;
-
-&lt;h2 id=&quot;code-deploy-break-test-fix&quot;&gt;Code, Deploy, Break, Test, Fix&lt;/h2&gt;
-
-&lt;p&gt;Even though I&amp;#39;m a huge fan of automated testing (unit or integration) and
-totally &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/05/02/ProfessionalismAndTDD.html&quot;&gt;agree&lt;/a&gt;
-with Uncle Bob: Those who don&amp;#39;t write tests must be put
-&lt;a href=&quot;/2015/11/24/imprisonment-for-irresponsible-coding.html&quot;&gt;in jail&lt;/a&gt;,
-I just have my own interpretation of TDD. This is how it looks:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;First, I write &lt;strong&gt;code&lt;/strong&gt; without any tests. A lot of code. I implement the
-functionality and create the design. Dozens of classes. Of course, the
-build is automated, the deployment pipeline is configured, and I can
-test the product myself in a sandbox. I make sure
-&amp;quot;&lt;a href=&quot;https://blog.codinghorror.com/the-works-on-my-machine-certification-program/&quot;&gt;it works on my machine&lt;/a&gt;.&amp;quot;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Then, I &lt;strong&gt;deploy&lt;/strong&gt; it to production. Yes, it goes to my &amp;quot;users&amp;quot; without
-any tests because it works for me. They are either real users if it&amp;#39;s something
-open source or one of my &lt;a href=&quot;/pets.html&quot;&gt;pet projects&lt;/a&gt;, or manual testers if
-it&amp;#39;s a money project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Then, they &lt;strong&gt;break&lt;/strong&gt; it. They either test it or they use it; it doesn&amp;#39;t matter.
-They just find problems and report bugs. As many as they can.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Right after some bugs are reported, I pick the most critical of them
-and...voilà!...I create an automated &lt;strong&gt;test&lt;/strong&gt;. The bug is a message to me that
-my tests are weak; I have to fix them first. A new test will prove that
-the code is broken. Or maybe I fix an existing one. This is where I go
-&amp;quot;tests first.&amp;quot; I don&amp;#39;t touch the production code until I manage to break
-my build and prove the problem&amp;#39;s existence with a new test. Then, I do &lt;code&gt;git commit.&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Finally, it&amp;#39;s time to &lt;strong&gt;fix&lt;/strong&gt; the problem. I make changes to the production
-code in order to make sure the build is green again. Then, I do &lt;code&gt;git commit&lt;/code&gt; and
-&lt;code&gt;git push.&lt;/code&gt; And I go back to the &amp;quot;deploy&amp;quot; step; the updated product goes to my
-users.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once in a while, I have to make serious modifications to the product, like to
-introduce a new feature or perform a massive refactoring. In this case, I go
-back to the first step and do it without tests.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-reasoning-behind&quot;&gt;The Reasoning Behind&lt;/h2&gt;
-
-&lt;p&gt;The justification behind this no-tests-upfront approach is simple: We don&amp;#39;t
-need to test until it&amp;#39;s broken, mostly because we understand that it&amp;#39;s
-technically not possible to test everything or to fix all bugs. We have
-to fix only what&amp;#39;s visible and intolerable by the business. If the business
-doesn&amp;#39;t care or our users/testers don&amp;#39;t see our bugs&amp;mdash;we must not
-&lt;strong&gt;waste&lt;/strong&gt; project resources on fixing them.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;I only create tests later when my users express the need for them by reporting bugs.&lt;/aside&gt;
-
-&lt;p&gt;On the other hand, when the business or our users/testers are complaining,
-we have to be very strict with ourselves; our testing system is weak and
-must be fixed first. We can&amp;#39;t just fix the production code and deploy,
-because in this case, we may make this mistake again after some refactoring,
-and our tests won&amp;#39;t catch it. The user will find the bug again, and the
-business will pay us again to fix it. That will be the &lt;strong&gt;waste&lt;/strong&gt; of resources.&lt;/p&gt;
-
-&lt;p&gt;As you can see, it&amp;#39;s all money-driven. First, don&amp;#39;t fix anything if nobody pays for it.
-Second, fix it once and for all if they actually paid. It&amp;#39;s as simple as that.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-dynamics&quot;&gt;The Dynamics&lt;/h2&gt;
-
-&lt;p&gt;Thanks to this test-and-fix-only-when-broken approach, the balance between production
-code and test code is not the same over the entire project lifecycle. When the
-project starts, there are almost no tests. Then, the number of tests
-grows together with the number of bugs. Eventually, the situation stabilizes,
-and we can move the product from beta version to the first release.&lt;/p&gt;
-
-&lt;p&gt;I created a simple &lt;a href=&quot;https://github.com/yegor256/tdx&quot;&gt;command line tool&lt;/a&gt;
-in order to demonstrate the statistics from a few projects of mine,
-to prove my point. Take a look at these graphs:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; (Web framework, Java):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-takes.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;yegor256/xembly&lt;/a&gt; (XML builder, Java):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-xembly.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt; (AOP library, Java):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-jcabi-aspects.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/s3auth&quot;&gt;yegor256/s3auth&lt;/a&gt; (S3 gateway, Java):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-s3auth.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;First commercial project:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-xockets-layer.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;Second commercial project:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;object data=&#39;http://www.yegor256.com/images/2017/03/cdbtf-xockets-hadoop-transport.svg&#39; type=&#39;image/svg+xml&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;&gt;&lt;/object&gt;&lt;/figure&gt;
-
-&lt;p&gt;In each graph, there are two parts. The first one on the top demonstrates
-the dynamics of production
-&lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;Hits-of-Code&lt;/a&gt; (green line),
-test-related HoC (red line), and the number of issues reported to GitHub (orange line).&lt;/p&gt;
-
-&lt;p&gt;The bottom part shows how big the test-related HoC portion is
-relative to all project activity. In other words, it shows how much
-&lt;em&gt;effort&lt;/em&gt; the project invested into automated tests, compared with the
-total effort.&lt;/p&gt;
-
-&lt;p&gt;This is what I want you to pay attention to:
-The shape of the curve is almost the same in every project. It looks
-very similar to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Learning_curve&quot;&gt;learning curve&lt;/a&gt;,
-where we start to learn fast and then slow down over time:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2017/03/cdbtf-graph.png&#39; itemprop=&#39;image&#39; style=&#39;width:450px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This perfectly illustrates what I just described above. I don&amp;#39;t need tests
-at the beginning of the project; I create them later when
-my users express the need for them by reporting bugs.
-This dynamic looks only logical to me.&lt;/p&gt;
-
-&lt;p&gt;You can also analyze your project using
-&lt;a href=&quot;https://github.com/yegor256/tdx&quot;&gt;my tool&lt;/a&gt; and see the graph. It would be
-interesting to learn what kind of curve you will get.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">Test-driven development (a.k.a. TDD)
-was rediscovered
-by Kent Beck and explained in
-his famous book in 2002.
-In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
-said that TDD is dead
-and only harms architecture.
-Robert Martin
-(the inventor of the SOLID principles)
-disagreed
-and
-explained
-that TDD may not work only in certain cases.
-A few days later, he even
-compared the importance of TDD
-with the importance of hand-washing for medicine, and added
-that &amp;quot;it would not surprise me if, one day, TDD had the force
-of law behind it.&amp;quot; Two years later, now just a few months ago,
-he wrote more
-about it, and more,
-and more.
-This subject seems to be hot. Of course, I have my own take on it; let me share.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/la-grande-bellezza.jpg" /></entry></feed>
+&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/dumb-and-dumber.jpg" /></entry></feed>

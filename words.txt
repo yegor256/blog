@@ -779,6 +779,7 @@ cafe
 cake
 calculate
 calculated
+calculates
 calculation
 calculations
 calculator
@@ -835,6 +836,7 @@ cash
 cashback
 CasperJS
 cassandra
+cast
 casting
 casual
 cat
@@ -2100,6 +2102,7 @@ equal
 equality
 equally
 equates
+equation
 equipment
 equity
 equivalent
@@ -3112,6 +3115,7 @@ inputs
 insecure
 inside
 insides
+insignificant
 insist
 insists
 inspiration
@@ -3138,6 +3142,7 @@ instruments
 insult
 insurance
 integer
+integers
 integrate
 integrated
 integrates
@@ -3796,6 +3801,7 @@ medium-sized
 meet
 meeting
 meetings
+meets
 meetups
 member
 members
@@ -4098,6 +4104,7 @@ newly
 newrelic
 news
 next
+NFRs
 nice
 nicely
 nicely-looking
@@ -4367,6 +4374,7 @@ overcomplicated
 overdue
 overestimated
 overflow
+overflows
 overhead
 overload
 overloaded
@@ -5269,6 +5277,7 @@ reserved
 reservoir
 reset
 resignation
+resilience
 resist
 resists
 resolution
