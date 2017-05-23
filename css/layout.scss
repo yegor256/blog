@@ -460,7 +460,7 @@ figure {
   }
 
   figcaption {
-    background-color: lighter($light-gray, 10);
+    background-color: lighten($light-gray, 20);
     bottom: 1em;
     color: lighten($black, 40);
     font-size: .8em;
