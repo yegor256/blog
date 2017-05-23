@@ -114,7 +114,8 @@ every tester.
 ## Test Completion Criteria
 
 In Chapter 2, Dr. Myers also mentions that a program, no matter how simple,
-contains an unlimited number of errors. He says that "you cannot test
+contains an [unlimited]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})
+number of errors. He says that "you cannot test
 a program to guarantee that it is error free" (p.10) and that "it is
 impractical, often impossible, to find all the errors in a program" (p.8).
 

@@ -51,7 +51,9 @@ how it misunderstands the user, how it doesn't satisfy the requirements.
 This is why Dr. Myers is calling testing "a destructive, even sadistic, process"
 (page 6). This is what most testers don't understand.
 
-Second, any software has an **unlimited amount of bugs**. Dr. Myers says that
+Second, any software
+[has]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})
+an **unlimited amount of bugs**. Dr. Myers says that
 "you cannot test a program to guarantee that it is error free" (page 10)
 and that "it is impractical, often impossible, to find all the errors in
 a program" (page 8). This is also what most testers don't understand. They

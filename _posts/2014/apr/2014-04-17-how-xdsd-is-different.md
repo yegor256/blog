@@ -121,8 +121,9 @@ XDSD makes payments for reported bugs because we believe that the more of them
 we can find, the higher the
 [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of the end product. Some new developers are
 surprised when they receive tasks such as "you must find 10 bugs in class A."
-Often, the natural reaction is to ask "what if there are no bugs?" However, we
-believe that any software product may have an unlimited amount of bugs; it is
+Often, the natural reaction is to ask "what if there are no bugs?" However,
+[we believe]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})
+that any software product may have an unlimited amount of bugs; it is
 just a matter of expending the time and effort needed to discover them.
 
 ## Only Pull Request

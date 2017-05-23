@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Any Program has an Unlimited Number of Bugs"
-date: 2017-05-02
+title: "Any Program Has an Unlimited Number of Bugs"
+date: 2017-05-23
 place: Odessa, Ukraine
 tags: testing
 description: |
@@ -14,9 +14,9 @@ keywords:
   - number of bugs
   - bugs count
   - philosophy of testing
-image: /images/2015/03/?
+image: /images/2017/05/lamico-di-famiglia.jpg
 jb_picture:
-  caption: xxx
+  caption: L'amico di famiglia (2006) by Paolo Sorrentino
 ---
 
 This may sound strange, but I will prove it: no matter how big
@@ -42,7 +42,9 @@ This simple program has an _unlimited_ number of bugs.
 To prove this claim we just need to put two thoughts together:
 
   * First, a bug is something that compromises the quality of software,
-    which, according to IEEE&nbsp;610.12-1990, is "the degree to which
+    which, according to
+    [IEEE&nbsp;610.12-1990](https://standards.ieee.org/findstds/standard/610.12-1990.html),
+    is "the degree to which
     a system meets specified requirements or _user expectations_."
 
   * Second, requirements and expectations may be functional and non-functional.
@@ -50,8 +52,10 @@ To prove this claim we just need to put two thoughts together:
     and a few dozen other NFRs.
 
 It is obvious that there are at least two variables in this equation that
-are ambiguous: user expectations and maintainability. We can't be precise
-about them and that's why the number of bugs they will produce has no limit.
+are ambiguous: user expectations and
+[maintainability]({% pst 2015/jun/2015-06-11-wikipedia-bug-definition %}).
+We can't be precise about them and that's why the number of bugs
+they will produce has no limit.
 
 Of course, only a very limited subset of the entire set of bugs has any
 real business impact. Most of the bugs that exist in a program may
@@ -73,3 +77,8 @@ Finally, take a look at the method `sum()` one more time. How about these bugs:
   * Checkstyle would complain since arguments are not `final`
 
 I'm sure you can find many more.
+
+BTW, Glenford J. Myers said something very similar in his book
+["The Art of Software Testing"](http://amzn.to/1Y3qAbN), which I
+[reviewed]({% pst 2014/aug/2014-08-22-art-of-software-testing %})
+earlier.
