@@ -25,7 +25,7 @@ all project expenses and you will write software. We will be co-founders.
 
 {% badge http://doc.rultor.com/images/logo.svg 70 http://www.rultor.com %}
 
-[rultor.com](http://www.jare.io) is a chat bot that helps GitHub projects automate
+[rultor.com](http://www.rultor.com) is a chat bot that helps GitHub projects automate
 their basic DevOps procedures, including merging, deploying, and
 releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
