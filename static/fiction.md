@@ -62,6 +62,8 @@ Anthony Burgess, _A Clockwork Orange_, 1962.
 
 Ken Kesey, _One Flew Over the Cuckoo's Nest_, 1962.
 
+Eric Berne, _Games People Play: The Psychology of Human Relationships_, 1964.
+
 Philip Roth, _Portnoy’s Complaint_, 1969.
 
 Венедикт Ерофеев, _Москва — Петушки_, 1970.
