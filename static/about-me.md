@@ -85,6 +85,11 @@ You can always [unsubscribe](/unsubscribe.html).
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html) (be careful!).
 
+I'm also visible at
+[DZone](https://dzone.com/users/1023189/yegor256.html),
+[JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
+[Medium](https://medium.com/@yegor256).
+
 Ah, one more thing. I'm a big fan of good movies, so here's
 [my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}) of the ones
 I would recommend you watch. Also, here is my list of favorite
