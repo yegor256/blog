@@ -89,8 +89,10 @@ Founded 8-Jan-2015.
 
 Others (less stable or successful):
 [tacit](https://github.com/yegor256/tacit),
-[sixnines](http://www.sixnines.io),
 [qulice](https://github.com/teamed/qulice),
+[cactoos](https://github.com/yegor256/cactoos),
+[jcabi](https://github.com/jcabi),
+[xembly](https://github.com/yegor256/xembly),
 [netbout](http://www.netbout.com),
 [thindeck](http://www.thindeck.com),
 [wring](http://www.wring.io),
