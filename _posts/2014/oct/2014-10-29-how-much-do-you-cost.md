@@ -14,6 +14,8 @@ keywords:
   - software developer hourly rate
 translated:
   - Japanese: http://postd.cc/how-much-do-you-cost/
+youtube:
+  - GS45LzE3LPQ
 related:
   - 2016/mar/2016-03-08-pimp-up-your-resume
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
