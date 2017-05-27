@@ -125,7 +125,7 @@ you turn your subordinates into a family and then say:
 "I count on you as a friend".
 Who can refuse a friend? And not even a friend, but a mom. This is
 who they will associate you with when the guilt kicks in&mdash;with their
-mothers. The won't disobey, won't quit, and will never ask for more money.
+mothers. They won't disobey, won't quit, and will never ask for more money.
 
 **Be Responsible**.
 In the brick-and-mortar management era responsibility was
