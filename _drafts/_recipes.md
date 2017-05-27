@@ -22,7 +22,7 @@ jb_picture:
 We live in the era of organic food, eco-friendly toilets, zero-emission cars,
 and harassment-free offices. Our management practices have to keep up&mdash;they
 must be zero-stress, conflict-free, and idiot-friendly. If you're still
-stuck in the old carrot-and-stick mediocrity-intolerant primitive mentality,
+stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
 these recipes will open your eyes.
 
 <!--more-->
@@ -47,8 +47,8 @@ from the reality and its threats.
 How many [latinx](http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
 are in your team? What about gays and transsexuals?
 You're not sure? That's wrong. You have to count. You don't know how to
-segregate bi-sexuals from "normal" people and black females from white males?
-Well, do the research, there must be some "[mischling tests](https://en.wikipedia.org/wiki/Mischling_Test)."
+distinguish bi-sexuals from "normal" people and black females from white males?
+Well, do the research, there must be some "[mischling tests](https://en.wikipedia.org/wiki/Mischling_Test)" you could do.
 You have to learn how to count and pay attention to the numbers.
 [Uber](https://techcrunch.com/2017/03/28/uber-first-diversity-report/)
 and [others](https://techcrunch.com/2017/04/01/krablr-releases-first-diversity-report/)
@@ -101,7 +101,7 @@ Elon Musk and Peter Thiel biographies.
 
 **Be a Committer**.
 Not a [Git](https://git-scm.com/)
-committer, obviously,&mdash;that's for junior programmers. You
+committer, obviously&mdash;that's for junior programmers. You
 have to commit yourself to the project, just like Tim Cook
 [committed](https://techcrunch.com/2016/12/19/apples-tim-cook-assures-employees-that-it-is-committed-to-the-mac-and-that-great-desktops-are-coming/)
 to MacBooks. Technically, this means:
@@ -114,7 +114,7 @@ In other words, being a
 [good slave]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 and showing your team a good example.
 Don't worry about the future, when projects fail good committers
-just commit <del>suicide</del> themself to new projects.
+just commit <del>suicide</del> themselves to new projects.
 
 **Be a Friend**.
 Explicit and non-ambiguous work orders are not
@@ -122,7 +122,7 @@ popular any more&mdash;they create tension and destroy
 [team morale]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
 Guilt-driven management is much more subtle and elegant:
 you turn your subordinates into a family and then say:
-"I count on you as a friend."
+"I count on you as a friend".
 Who can refuse a friend? And not even a friend, but a mom. This is
 who they will associate you with when the guilt kicks in&mdash;with their
 mothers. The won't disobey, won't quit, and will never ask for more money.
@@ -132,7 +132,7 @@ In the brick-and-mortar management era responsibility was
 [measurable]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 by what you earn if you succeed and how you suffer if you fail.
 Luckily, the world has recently learned that this
-was a mistake we've been making for
+was a mistake we'd been making for
 [a hundreds years]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 We don't suffer any more.
 Being responsible now means something completely different.
