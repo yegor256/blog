@@ -50,7 +50,7 @@ your resume says so, and you're in the list of contributors&mdash;your
 hourly rate or your salary will
 [definitely]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) be higher.
 
-I would recommend, before becoming a contributor, you ask yourself: how will
+I would recommend, before becoming a contributor, you ask yourself a question: How will
 this affect my resume, my profile, and my reputation on the market? Will they
 put me into the list of contributors? Will they promote me in exchange
 for my pull requests? Will I be able to mention their name in my
@@ -71,7 +71,7 @@ I won't do anything else, simply because you didn't ask.
 
 However, if you ask me to put your name and a link to your blog
 in the list of contributors, I will do it without any hesitation.
-Morever, if you do that right inside the pull request you are submitting,
+Moreover, if you do that right inside the pull request you are submitting,
 I will merge it and your name will go right into the repo, into the very
 place you find the most suitable.
 
