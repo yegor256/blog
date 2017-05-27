@@ -164,7 +164,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
-<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
+<img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="pase-talk" alt="JEEConf 2017"/>
 How Much Do You Cost?;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
