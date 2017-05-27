@@ -99,15 +99,7 @@ OK, I'm kidding about the limo.
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
 **Object-Oriented Flavor for JUnit Tests**<br/>
-**How Much Do You Cost?**<br/>
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/)<br/>
-Kiev, Ukraine<br/>
-26-27 May 2017
-
-<div class="talk-event"/>
-<img src="/images/2017/kiof.png" class="future-talk" alt="Kyiv Outsourcing Forum 2017"/>
-**How to Avoid Outsourcing Disaster**<br/>
-[Kyiv Outsourcing Forum 2017](http://outsourceforum.org/)<br/>
 Kiev, Ukraine<br/>
 26-27 May 2017
 
@@ -170,6 +162,24 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2017"/>
+How Much Do You Cost?;
+[JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
+Kiev, Ukraine;
+26-27 May 2017;
+[video](https://www.youtube.com/watch?v=GS45LzE3LPQ),
+[slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
+How to Avoid Outsourcing Disaster;
+[Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
+Kiev, Ukraine;
+26-27 May 2017;
+[video](https://www.youtube.com/watch?v=DLk_5BmgTVk),
+[slides](https://www.slideshare.net/YegorBugayenko/how-to-avoid-outsourcing-disaster).
 
 <div class="talk-event"/>
 <img src="/images/2016/geecon-2016.png" class="past-talk" alt="GeeCON 2017"/>

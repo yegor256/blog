@@ -148,7 +148,7 @@ if they succeed and how much they will suffer if they fail. If you don't
 make this mechanism explicit, you will deal with an
 [implicit version]({% pst 2015/oct/2015-10-13-competition-without-rules %})
 of it where your chances of winning are very low. Most people assume the best
-and only motivation for a software team is to stay on the project. You're
+and the only motivation for a software team is to stay on the project. You're
 paying them and that's enough, right? Wrong. Management can't be effective
 when a monthly bank transfer is a reward and its absence is a
 [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
