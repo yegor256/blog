@@ -168,7 +168,7 @@ so why shouldn't we rate them, right? The best grade is
 How Much Do You Cost?;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
-26-27 May 2017;
+26 May 2017;
 [video](https://www.youtube.com/watch?v=GS45LzE3LPQ),
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
 
@@ -177,7 +177,7 @@ Kiev, Ukraine;
 How to Avoid Outsourcing Disaster;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
 Kiev, Ukraine;
-26-27 May 2017;
+26 May 2017;
 [video](https://www.youtube.com/watch?v=DLk_5BmgTVk),
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-avoid-outsourcing-disaster).
 
