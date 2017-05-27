@@ -101,7 +101,7 @@ OK, I'm kidding about the limo.
 **Object-Oriented Flavor for JUnit Tests**<br/>
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/)<br/>
 Kiev, Ukraine<br/>
-26-27 May 2017
+27 May 2017
 
 <div class="talk-event"/>
 <img src="/images/2017/jugua.png" class="future-talk" alt="JUG.ua Meetup 2017"/>
