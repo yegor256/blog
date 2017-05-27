@@ -56,7 +56,7 @@ already do. Diversity, equality, and tolerance: these metrics are
 [quickly replacing](https://www.youtube.com/watch?v=iKcWu0tsiZM)
 outdated performance and productivity appraisals.
 
-**Be Intrinsic**.
+**Be Reward-Focussed**.
 [Trotsky](https://en.wikipedia.org/wiki/Leon_Trotsky)
 [said](https://en.wikipedia.org/wiki/The_Revolution_Betrayed) in 1937
 that people would eventually work not out of greed or poverty, but because
@@ -69,8 +69,8 @@ for challenge, respect, curiosity, recognition, cooperation, and free beer
 on Fridays. As a modern eco-manager you must stop humiliating them
 with old-fashioned
 [dollar bills]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
-and start giving them these
-[intrinsic values]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
+and start inspiring them with these
+[intrinsic rewards]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
 You will save some money too.
 
 **Be Equal**.
