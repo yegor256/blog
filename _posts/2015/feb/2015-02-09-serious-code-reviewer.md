@@ -13,6 +13,8 @@ keywords:
   - code review checklist
   - code review process
   - code review best practices
+translated:
+  - Korean: https://emaren84.github.io/blog/archivers/four-nos-of-serious-code-reviewer-kor
 image: /images/2015/02/kim-jong-un-doing-code-review.png
 ---
 
