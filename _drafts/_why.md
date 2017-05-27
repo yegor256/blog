@@ -34,14 +34,14 @@ you're not allowed to make money.
 
 Of course, you will not earn any cash directly by fixing a bug in
 [docker/docker](https://github.com/docker/docker), but you _may_ earn
-some intangible values, which will be converted to cash later.
+some intangible value, which will be converted to cash later.
 
-Moreover, you _must_ earn them&mdash;this is my point. Otherwise, if you contribute
-out of a pure altruism, you will lose the motivation very soon. Not because
+Moreover, you _must_ earn it&mdash;this is my point. Otherwise, if you contribute
+out of pure altruism, you will lose the motivation very soon. Not because
 you're greedy and
 [only money]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 can motivate you, but because without
-money you won't feel your efforts being really appreciated.
+money you won't feel your efforts are being truly appreciated.
 
 The intangible value I'm talking about is, of course, your
 [resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}). If you
@@ -50,7 +50,7 @@ your resume says so, and you're in the list of contributors&mdash;your
 hourly rate or your salary will
 [definitely]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) be higher.
 
-I would recommend, before becoming a contributor, ask yourself: how will
+I would recommend, before becoming a contributor, you ask yourself: how will
 this affect my resume, my profile, and my reputation on the market? Will they
 put me into the list of contributors? Will they promote me in exchange
 for my pull requests? Will I be able to mention their name in my
@@ -70,12 +70,11 @@ just review it, merge and forget your name.
 I won't do anything else, simply because you didn't ask.
 
 However, if you ask me to put your name and a link to your blog
-to the list of contributors, I will do it without any hesitation.
+in the list of contributors, I will do it without any hesitation.
 Morever, if you do that right inside the pull request you are submitting,
 I will merge it and your name will go right into the repo, into the very
 place you find the most suitable.
 
-Over the last six year of my active participation in open source
+Over the last six years of my active participation in open source
 development I've never seen anyone asking me that. Why? I don't know. Maybe
 all programmers are just shy and modest? I doubt it.
-
