@@ -69,7 +69,7 @@ have over 200 stars
 [teamed/qulice](https://github.com/teamed/qulice)).
 If you submit a pull request to any of them, I will
 just review it, merge and forget your name.
-I won't do anything else, simply because you didn't ask.
+I won't do anything else, simply because _you_ didn't ask.
 
 However, if you ask me to put your name and a link to your blog
 in the list of contributors, I will do it without any hesitation.
