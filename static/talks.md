@@ -166,7 +166,7 @@ Kiev, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="pase-talk" alt="JEEConf 2017"/>
+<img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 How Much Do You Cost?;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
