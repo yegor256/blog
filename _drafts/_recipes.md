@@ -47,7 +47,7 @@ from the reality and its threats.
 How many [latinx](http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
 are in your team? What about gays and transsexuals?
 You're not sure? That's wrong. You have to count. You don't know how to
-distinguish bi-sexuals from "normal" people and black females from white males?
+segregate bi-sexuals from "normal" people and black females from white males?
 Well, do the research, there must be some "[mischling tests](https://en.wikipedia.org/wiki/Mischling_Test)" you could do.
 You have to learn how to count and pay attention to the numbers.
 [Uber](https://techcrunch.com/2017/03/28/uber-first-diversity-report/)
@@ -70,7 +70,8 @@ on Fridays. As a modern eco-manager you must stop humiliating them
 with old-fashioned
 [dollar bills]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 and start inspiring them with these
-[intrinsic rewards]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
+[intrinsic rewards]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+and free cookies.
 You will save some money too.
 
 **Be Equal**.
