@@ -162,7 +162,8 @@ Object-Oriented Flavor for JUnit Tests;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
 27 May 2017;
-[video](https://www.youtube.com/watch?v=CCr8hRE_TUs).
+[video](https://www.youtube.com/watch?v=CCr8hRE_TUs),
+[slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="pase-talk" alt="JEEConf 2017"/>
