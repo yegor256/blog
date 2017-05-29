@@ -568,6 +568,7 @@ good, and how it could be better:
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
+  * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
