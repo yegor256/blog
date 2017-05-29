@@ -37,7 +37,9 @@ Of course, you will not earn any cash directly by fixing a bug in
 some intangible value, which will be converted to cash later.
 
 Moreover, you _must_ earn it&mdash;this is my point. Otherwise, if you contribute
-out of pure altruism, you will lose the motivation very soon. Not because
+out of pure
+[altruism](https://en.wikipedia.org/wiki/Altruism),
+you will lose the motivation very soon. Not because
 you're greedy and
 [only money]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 can motivate you, but because without
