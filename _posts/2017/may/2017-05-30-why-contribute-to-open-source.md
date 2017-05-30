@@ -54,6 +54,8 @@ your resume says so, and you're in the list of contributors&mdash;your
 hourly rate or your salary will
 [definitely]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) be higher.
 
+{% quote If you contribute out of pure altruism, you will lose the motivation very soon. %}
+
 I would recommend, before becoming a contributor, you ask yourself a question: How will
 this affect my resume, my profile, and my reputation on the market? Will they
 put me into the list of contributors? Will they promote me in exchange
@@ -80,5 +82,4 @@ I will merge it and your name will go right into the repo, into the very
 place you find the most suitable.
 
 Over the last six years of my active participation in open source
-development I've never seen anyone asking me that. Why? I don't know. Maybe
-all programmers are just shy and modest? I doubt it.
+development I've never seen anyone asking me that. Why? I don't know.
