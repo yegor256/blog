@@ -128,15 +128,6 @@ the best and highly recommended):
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="https://magnum-ci.com/pricing">Magnum-CI</a></td>
-  <td class="x-right">?</td>
-  <td class="center"><i class="icon-yes green"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center"><i class="icon-no red"></i></td>
-  <td class="center">?</td>
-  <td class="center"><i class="icon-no red"></i></td>
-  </tr>
 <tr><td><a href="http://www.snap-ci.com">Snap-CI</a>&#x263A;</td>
   <td class="x-right"><a href="https://snap-ci.com/plans">$30/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
@@ -277,13 +268,6 @@ custom script that downloads and unpacks the latest Maven. Another downside is
 that they are not configurable through a file (like `.travis.yml`)&mdash;you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
-{% badge /images/2014/10/magnum.png 64 http://www.magnum-ci.com %}
-
-[**Magnum-CI**](https://magnum-ci.com/pricing) is a very lightweight
-and young system. It doesn't connect automatically to GitHub,
-so you should do some manual operations of adding a web hook.
-Besides that, works just fine.
-
 {% badge /images/2014/10/snap.png 64 http://www.snap-ci.com %}
 
 [**Snap-CI**](http://www.snap-ci.com) is a product of
@@ -362,6 +346,8 @@ a full scale mobile app to test it against.
 **Drone.io** is not hosted any more, but is open source (as of 23-Jan-2017).
 
 **Hosted-ci** doesn't look alive (as of 16-Apr-2017).
+
+**Magnum-CI.com** doesn't look alive (as of 30-May-2017).
 
 <hr/>
 

@@ -748,7 +748,7 @@ there because of their names.
 <aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/-Y4XS7ZtQ2g/mqdefault.jpg" class="past-talk" alt="JET Conference 2016"/>
 An Immutable Object-Oriented Web Framework;
-[JET Conference](http://jetconf.by/#/yegor_bugayenko);
+JET Conference;
 Minsk, Belarus;
 25 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209351820262431),
@@ -1001,7 +1001,7 @@ in a hyped market. It's a shame.
 <aside class="venue-rate orange">C</aside>
 <img src="/images/2015/dat-flock-2015.jpg" class="past-talk" alt="DATFlock 2015"/>
 "What Keeps Us Motivated and Why We Get Lazy";
-[Distributed Agile Teams, Flock 2015](http://distributed-agile-teams.org/workshops/);
+Distributed Agile Teams, Flock 2015;
 Berlin, Germany;
 19-20 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208081948956442).

@@ -23,7 +23,7 @@ when working in groups. We're basically more productive when
 we work individually to achieve personal goals rather than being
 teamed up. That was discovered by Prof. [Max Ringelmann](https://en.wikipedia.org/wiki/Max_Ringelmann) a hundred
 years ago in 1913. Today, during my workshop in Berlin at
-[DATFlock 2015](http://distributed-agile-teams.org/workshops/), we tried
+DATFlock 2015, we tried
 to reproduce that experiment. It seems the French professor was right.
 
 <!--more-->

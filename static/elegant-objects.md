@@ -594,8 +594,7 @@ reviewers.
 <div style="float:right;margin-left:1em">
   <a href="http://javapoint.ru/en/">
     <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/></a><br/>
-  <a href="http://jetconf.by/#/yegor_bugayenko">
-    <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/></a><br/>
+  <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/><br/>
   <a href="http://2016.geecon.org/">
     <img src="/images/2016/geecon-2016.png" style="height:45px;" alt="GeeCON 2016"/></a><br/>
   <a href="http://devitconf.org/">
@@ -612,7 +611,7 @@ be great if you published yours&mdash;this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
 book at the following conferences over the next few months:
 [JPoint](http://javapoint.ru/en/) in Moscow, April 22;
-[JETConf](http://jetconf.by/#/yegor_bugayenko) in Minsk, April 25;
+JETConf in Minsk, April 25;
 [GeeCON](http://2016.geecon.org/) in Krakow, May 11;
 [DEVit](http://devitconf.org/) in Thessaloniki, May 20; and
 [JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kiev, May 21.

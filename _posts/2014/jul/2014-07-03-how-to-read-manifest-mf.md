@@ -70,7 +70,7 @@ can help you (almost the same configuration for
 </plugin>
 {% endhighlight %}
 
-[`buildnumber-maven-plugin`](http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html)
+`buildnumber-maven-plugin`
 will help you to get `${buildNumber}` from Git, SVN or Mercurial:
 
 {% highlight xml %}

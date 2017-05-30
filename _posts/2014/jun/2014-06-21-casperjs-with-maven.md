@@ -202,7 +202,7 @@ to run when the plugin execution finishes. That's exactly what I need.
 
 Now, it's time to run CasperJS. Even though there are some
 plugins exist for this, I'm using plain old
-[exec-maven-plugin](http://mojo.codehaus.org/exec-maven-plugin/),
+`exec-maven-plugin`,
 mostly because it is more configurable.
 
 {% highlight xml %}
