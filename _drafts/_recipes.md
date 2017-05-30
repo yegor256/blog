@@ -56,7 +56,7 @@ already do. Diversity, equality, and tolerance: these metrics are
 [quickly replacing](https://www.youtube.com/watch?v=iKcWu0tsiZM)
 outdated performance and productivity appraisals.
 
-**Be Reward-Focussed**.
+**Be Reward-Focused**.
 [Trotsky](https://en.wikipedia.org/wiki/Leon_Trotsky)
 [said](https://en.wikipedia.org/wiki/The_Revolution_Betrayed) in 1937
 that people would eventually work not out of greed or poverty, but because
