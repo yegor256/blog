@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-29T21:30:54+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Any Program Has an Unlimited Number of Bugs</title><link href="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html" rel="alternate" type="text/html" title="Any Program Has an Unlimited Number of Bugs" /><published>2017-05-23T00:00:00+00:00</published><updated>2017-05-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs</id><content type="html" xml:base="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html">&lt;p&gt;This may sound strange, but I will prove it: no matter how big
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-30T08:27:17+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why Do You Contribute to Open Source?</title><link href="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html" rel="alternate" type="text/html" title="Why Do You Contribute to Open Source?" /><published>2017-05-30T00:00:00+00:00</published><updated>2017-05-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/30/why-contribute-to-open-source</id><content type="html" xml:base="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html">&lt;p&gt;You probably remember my half-a-year-old article:
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;Why Don&amp;#39;t You Contribute to Open Source?&lt;/a&gt;.
+I said there that if you don&amp;#39;t have your own OSS projects
+or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
+is wrong with you. Now I&amp;#39;m talking to those who actually &lt;em&gt;do&lt;/em&gt; contribute
+without demanding anything back&amp;mdash;guys, you&amp;#39;re doing it wrong!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Untouchables (1987) by Brian De Palma&#39; src=&#39;/images/2017/05/the-untouchables.jpg&#39; longdesc=&#39;#93469771&#39;/&gt;&lt;figcaption id=&#39;93469771&#39;&gt;The Untouchables (1987) by Brian De Palma&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Open source &lt;del&gt;almost&lt;/del&gt; always means &lt;em&gt;free&lt;/em&gt;, as in beer&amp;mdash;nobody will
+pay you anything for your pull requests. However, it doesn&amp;#39;t mean
+you&amp;#39;re not allowed to make money.&lt;/p&gt;
+
+&lt;p&gt;Of course, you will not earn any cash directly by fixing a bug in
+&lt;a href=&quot;https://github.com/docker/docker&quot;&gt;docker/docker&lt;/a&gt;, but you &lt;em&gt;may&lt;/em&gt; earn
+some intangible value, which will be converted to cash later.&lt;/p&gt;
+
+&lt;p&gt;Moreover, you &lt;em&gt;must&lt;/em&gt; earn it&amp;mdash;this is my point. Otherwise, if you contribute
+out of pure
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Altruism&quot;&gt;altruism&lt;/a&gt;,
+you will lose the motivation very soon. Not because
+you&amp;#39;re greedy and
+&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;only money&lt;/a&gt;
+can motivate you, but because without
+money you won&amp;#39;t feel your efforts are being truly appreciated.&lt;/p&gt;
+
+&lt;p&gt;The intangible value I&amp;#39;m talking about is, of course, your
+&lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resume&lt;/a&gt;. If you
+are an active contributor to &lt;a href=&quot;https://github.com/docker/docker&quot;&gt;docker/docker&lt;/a&gt;,
+your resume says so, and you&amp;#39;re in the list of contributors&amp;mdash;your
+hourly rate or your salary will
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;definitely&lt;/a&gt; be higher.&lt;/p&gt;
+
+&lt;p&gt;I would recommend, before becoming a contributor, you ask yourself a question: How will
+this affect my resume, my profile, and my reputation on the market? Will they
+put me into the list of contributors? Will they promote me in exchange
+for my pull requests? Will I be able to mention their name in my
+next job interview?&lt;/p&gt;
+
+&lt;p&gt;Most projects won&amp;#39;t do anything for you unless you &lt;em&gt;explicitly&lt;/em&gt; ask.
+I&amp;#39;m a maintainer of over 40 GitHub repositories and at least six of them
+have over 200 stars
+(&lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;yegor256/tacit&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;yegor256/rultor&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/teamed/qulice&quot;&gt;teamed/qulice&lt;/a&gt;).
+If you submit a pull request to any of them, I will
+just review it, merge and forget your name.
+I won&amp;#39;t do anything else, simply because &lt;em&gt;you&lt;/em&gt; didn&amp;#39;t ask.&lt;/p&gt;
+
+&lt;p&gt;However, if you ask me to put your name and a link to your blog
+in the list of contributors, I will do it without any hesitation.
+Moreover, if you do that right inside the pull request you are submitting,
+I will merge it and your name will go right into the repo, into the very
+place you find the most suitable.&lt;/p&gt;
+
+&lt;p&gt;Over the last six years of my active participation in open source
+development I&amp;#39;ve never seen anyone asking me that. Why? I don&amp;#39;t know. Maybe
+all programmers are just shy and modest? I doubt it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="programming" /><summary type="html">You probably remember my half-a-year-old article:
+Why Don&amp;#39;t You Contribute to Open Source?.
+I said there that if you don&amp;#39;t have your own OSS projects
+or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
+is wrong with you. Now I&amp;#39;m talking to those who actually do contribute
+without demanding anything back&amp;mdash;guys, you&amp;#39;re doing it wrong!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/the-untouchables.jpg" /></entry><entry><title type="html">Any Program Has an Unlimited Number of Bugs</title><link href="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html" rel="alternate" type="text/html" title="Any Program Has an Unlimited Number of Bugs" /><published>2017-05-23T00:00:00+00:00</published><updated>2017-05-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs</id><content type="html" xml:base="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html">&lt;p&gt;This may sound strange, but I will prove it: no matter how big
 or stable a piece of software is, it has an &lt;em&gt;unlimited&lt;/em&gt; number
 of bugs not yet found. No matter how many of them we have already managed
 to find and fix, there are still too many left to count.&lt;/p&gt;
@@ -717,134 +784,4 @@ for more than seven years. Using PDD, we delegate the responsibility of
 task decomposition to its performers, eliminating
 the role of a project manager. We&amp;#39;ve been using our proprietary software
 for that. A month ago, we made it public, open source, and free.
-It is available as 0pdd&amp;mdash;a GitHub-based chat bot.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/0pdd-screenshot.jpg" /></entry><entry><title type="html">SOLID Is OOP for Dummies</title><link href="http://www.yegor256.com/2017/03/28/solid.html" rel="alternate" type="text/html" title="SOLID Is OOP for Dummies" /><published>2017-03-28T00:00:00+00:00</published><updated>2017-03-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/03/28/solid</id><content type="html" xml:base="http://www.yegor256.com/2017/03/28/solid.html">&lt;p&gt;You definitely know the &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID&lt;/a&gt;
-acronym. It stands for five principles of
-&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented programming&lt;/a&gt;
-that, if followed, are supposed to
-make your code both &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;legible and extensible&lt;/a&gt;.
-They were introduced almost 30 years ago, but have they
-really made us better programmers in the time since?
-Do we really understand OOP better thanks to them? Do we write more
-&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Dumb &amp;amp; Dumber (1994) by Peter Farrelly&#39; src=&#39;/images/2017/03/dumb-and-dumber.jpg&#39; longdesc=&#39;#0ebdb718&#39;/&gt;&lt;figcaption id=&#39;0ebdb718&#39;&gt;Dumb &amp;amp; Dumber (1994) by Peter Farrelly&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let&amp;#39;s go one by one and see how they &amp;quot;help.&amp;quot;&lt;/p&gt;
-
-&lt;h2 id=&quot;s&quot;&gt;S&lt;/h2&gt;
-
-&lt;p&gt;The &amp;quot;S&amp;quot; refers to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;Single Responsibility Principle&lt;/a&gt;,
-which, according to &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;Clean Code&lt;/a&gt; by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;, means that
-&amp;quot;a class should have only one reason to change.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;This statement sounds extremely vague to me, but the book explains it, stating that
-objects must be problem-centered and responsible for &amp;quot;one thing.&amp;quot;
-It&amp;#39;s up to us to decide what that &lt;em&gt;one thing&lt;/em&gt; is, of course.&lt;/p&gt;
-
-&lt;p&gt;This is what we know as
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;&amp;quot;high cohesion&amp;quot;&lt;/a&gt;
-since &lt;a href=&quot;https://en.wikipedia.org/wiki/Larry_Constantine&quot;&gt;Larry Constantine&lt;/a&gt;
-wrote about it in the IBM Systems Journal in 1974.
-Why was it necessary to create a new principle 15 years later with an ambiguous name and
-a very questionable definition?&lt;/p&gt;
-
-&lt;h2 id=&quot;o&quot;&gt;O&lt;/h2&gt;
-
-&lt;p&gt;This letter is about the &lt;a href=&quot;https://en.wikipedia.org/wiki/Open/closed_principle&quot;&gt;Open/Close Principle&lt;/a&gt;,
-which was introduced by Bertrand Meyer in
-&lt;a href=&quot;http://amzn.to/2lNxy44&quot;&gt;Object Oriented Software Construction&lt;/a&gt; in 1988.
-Simply put, it means that an object should not be modifiable. I can&amp;#39;t agree more
-with this.&lt;/p&gt;
-
-&lt;p&gt;But then it says it should be &lt;em&gt;extendable&lt;/em&gt;, literally through
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Inheritance_%28object-oriented_programming%29&quot;&gt;implementation inheritance&lt;/a&gt;, which is
-&lt;a href=&quot;/2016/09/13/inheritance-is-procedural.html&quot;&gt;known&lt;/a&gt; as an anti-OOP technology.
-Thus, this principle is not really applicable to objects and OOP.
-It may work with modules and services, but not with objects.&lt;/p&gt;
-
-&lt;h2 id=&quot;l&quot;&gt;L&lt;/h2&gt;
-
-&lt;p&gt;The third letter is for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Liskov_substitution_principle&quot;&gt;Liskov Substitution Principle&lt;/a&gt;,
-which was introduced by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Barbara_Liskov&quot;&gt;Barbara Liskov&lt;/a&gt; in 1987.
-This one is the most innocent part in the SOLID pentad. In simple words, it states
-that if your method expects a
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html&quot;&gt;&lt;code&gt;Collection,&lt;/code&gt;&lt;/a&gt;
-an
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html&quot;&gt;&lt;code&gt;ArrayList&lt;/code&gt;&lt;/a&gt;
-will work.&lt;/p&gt;
-
-&lt;p&gt;It is also known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Subtyping&quot;&gt;subtyping&lt;/a&gt; and is
-the foundational component of any object-oriented language. Why do we need to
-call it a principle and &amp;quot;follow&amp;quot; it? Is it at all possible to create any
-object-oriented software without subtyping? If this one is a principle, let&amp;#39;s
-add &amp;quot;variables&amp;quot; and &amp;quot;method calling&amp;quot; here too.&lt;/p&gt;
-
-&lt;p&gt;Honestly, I suspect that this principle was added to SOLID mostly in order
-to somehow fill the gap between &amp;quot;SO&amp;quot; and &amp;quot;ID.&amp;quot;&lt;/p&gt;
-
-&lt;h2 id=&quot;i-and-d&quot;&gt;I and D&lt;/h2&gt;
-
-&lt;p&gt;I guess they both were introduced by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt; while
-he was working at Xerox.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Interface_segregation_principle&quot;&gt;Interface Segregation Principle&lt;/a&gt;
-states that you must not declare &lt;code&gt;List x&lt;/code&gt; if you only need &lt;code&gt;Collection x&lt;/code&gt;
-or even &lt;code&gt;Iterable x.&lt;/code&gt; I can&amp;#39;t agree more. Let&amp;#39;s see the next one.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_inversion_principle&quot;&gt;Dependency Inversion Principle&lt;/a&gt;
-means that instead of &lt;code&gt;ArrayList x,&lt;/code&gt; you must
-declare &lt;code&gt;List x&lt;/code&gt; and let the provider of the object decide whether
-it is
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html&quot;&gt;&lt;code&gt;ArrayList&lt;/code&gt;&lt;/a&gt; or
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html&quot;&gt;&lt;code&gt;LinkedList.&lt;/code&gt;&lt;/a&gt;
-This one also sounds reasonable to me.&lt;/p&gt;
-
-&lt;p&gt;However, how is all this different from the good old
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29&quot;&gt;&amp;quot;loose coupling&amp;quot;&lt;/a&gt;
-introduced together with cohesion by Constantine in 1974?
-Do we really need to simplify and blur in order to learn better?
-No, not to learn better, but to &lt;em&gt;sell&lt;/em&gt; better. Here goes my point.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-point-is&quot;&gt;My point is...&lt;/h2&gt;
-
-&lt;p&gt;The point being these principles are nothing but an explanation of
-&amp;quot;cohesion and coupling&amp;quot; for dummies in a very primitive, ambiguous,
-and marketable way. Dummies will buy books, seminars, and trainings,
-but won&amp;#39;t really be able to understand the logic behind them. Do they really
-need to? They are just &lt;del&gt;monkeys&lt;/del&gt;
-&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;coders&lt;/a&gt;, right?&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;SOLID is a money-making instrument, not an instrument to make code better.&lt;/aside&gt;
-
-&lt;p&gt;&amp;quot;But an object must be responsible for one thing!&amp;quot; is what I often hear at
-conferences. People learn that mantra without even knowing
-what cohesion is nor understanding what this &amp;quot;one thing&amp;quot; they are
-praying for really is. There is no such thing as &amp;quot;one thing,&amp;quot; guys! There are different
-levels of cohesion.&lt;/p&gt;
-
-&lt;p&gt;Who is guilty? Uncle Bob &amp;amp; Co.&lt;/p&gt;
-
-&lt;p&gt;They are no better than
-&lt;a href=&quot;/2015/10/16/ridley-scott-and-joseph-goebbels.html&quot;&gt;Ridley Scott&lt;/a&gt;
-and other Hollywood money makers who
-deliver primitive and easy-to-cry-at movies just to generate a profit. People
-are getting dumber by watching&amp;mdash;but this is not of their concern.
-The same happens with magic OOP principles&amp;mdash;programmers rely on
-them, thinking the truth is right there while the real truth
-is not understood even by the creators of this &amp;quot;magic.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;SOLID is a money-making instrument, not an instrument to make
-code better.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You definitely know the SOLID
-acronym. It stands for five principles of
-object-oriented programming
-that, if followed, are supposed to
-make your code both legible and extensible.
-They were introduced almost 30 years ago, but have they
-really made us better programmers in the time since?
-Do we really understand OOP better thanks to them? Do we write more
-&amp;quot;legible and extensible&amp;quot; code? I don&amp;#39;t think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/03/dumb-and-dumber.jpg" /></entry></feed>
+It is available as 0pdd&amp;mdash;a GitHub-based chat bot.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/0pdd-screenshot.jpg" /></entry></feed>
