@@ -1,20 +1,22 @@
 ---
 layout: post
 title: "Why Do You Contribute to Open Source?"
-date: 2017-05-17
+date: 2017-05-30
 place: Kiev, Ukraine
 tags: programming
 description: |
-  ...
+  Open source contribution is a very important
+  activity of a serious programmer, but he or she
+  must demand rewards for that.
 keywords:
   - open source contribution
   - github followers
   - open source
   - why github rating is important
   - open source definition
-image: /images/2015/03/?
+image: /images/2017/05/the-untouchables.jpg
 jb_picture:
-  caption: xxx
+  caption: The Untouchables (1987) by Brian De Palma
 ---
 
 You probably remember my half-a-year-old article:

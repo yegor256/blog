@@ -95,7 +95,8 @@ much more than a mistake made later.
 Thinking is the first and the most important phase.
 
 First, we give a name to the project and create a [GitHub](https://github.com) repository. We
-try to keep all our projects (both open source and commercial) in GitHub.
+try to keep all our projects (both
+[open source]({% pst 2017/may/2017-05-30-why-contribute-to-open-source %}) and commercial) in GitHub.
 Mostly because the platform is very popular, very powerful, and really cheap
 ([$7/mo](https://github.com/pricing) for a set of 5 private projects).
 We also keep [all]({% pst 2016/aug/2016-08-23-communication-maturity %})
