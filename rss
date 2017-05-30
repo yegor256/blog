@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-30T08:27:17+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why Do You Contribute to Open Source?</title><link href="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html" rel="alternate" type="text/html" title="Why Do You Contribute to Open Source?" /><published>2017-05-30T00:00:00+00:00</published><updated>2017-05-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/30/why-contribute-to-open-source</id><content type="html" xml:base="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html">&lt;p&gt;You probably remember my half-a-year-old article:
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-05-30T09:10:25+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why Do You Contribute to Open Source?</title><link href="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html" rel="alternate" type="text/html" title="Why Do You Contribute to Open Source?" /><published>2017-05-30T00:00:00+00:00</published><updated>2017-05-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/30/why-contribute-to-open-source</id><content type="html" xml:base="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html">&lt;p&gt;You probably remember my half-a-year-old article:
 &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;Why Don&amp;#39;t You Contribute to Open Source?&lt;/a&gt;.
 I said there that if you don&amp;#39;t have your own OSS projects
 or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
@@ -33,6 +33,8 @@ your resume says so, and you&amp;#39;re in the list of contributors&amp;mdash;yo
 hourly rate or your salary will
 &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;definitely&lt;/a&gt; be higher.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;If you contribute out of pure altruism, you will lose the motivation very soon.&lt;/aside&gt;
+
 &lt;p&gt;I would recommend, before becoming a contributor, you ask yourself a question: How will
 this affect my resume, my profile, and my reputation on the market? Will they
 put me into the list of contributors? Will they promote me in exchange
@@ -59,8 +61,7 @@ I will merge it and your name will go right into the repo, into the very
 place you find the most suitable.&lt;/p&gt;
 
 &lt;p&gt;Over the last six years of my active participation in open source
-development I&amp;#39;ve never seen anyone asking me that. Why? I don&amp;#39;t know. Maybe
-all programmers are just shy and modest? I doubt it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="programming" /><summary type="html">You probably remember my half-a-year-old article:
+development I&amp;#39;ve never seen anyone asking me that. Why? I don&amp;#39;t know.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="programming" /><summary type="html">You probably remember my half-a-year-old article:
 Why Don&amp;#39;t You Contribute to Open Source?.
 I said there that if you don&amp;#39;t have your own OSS projects
 or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
