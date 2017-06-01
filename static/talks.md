@@ -146,6 +146,12 @@ Kiev, Ukraine<br/>
 Riga, Latvia<br/>
 1 December 2017
 
+<div class="talk-event"/>
+<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2018"/>
+[JEEConf 2018](http://www.jeeconf.com/)<br/>
+Kiev, Ukraine<br/>
+25-26 May 2018
+
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
 This is a very opinionated and subjective list of conferences
