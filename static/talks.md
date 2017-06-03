@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/javaday-2016.png" class="future-talk" alt="JavaDay Minsk 2017"/>
-**Object Oriented JUnit Tests**<br/>
-[JavaDay Minsk 2017](http://javaday.by/)<br/>
-Minsk, Belarus<br/>
-3 June 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/bdmsummit-2017.png" class="future-talk" alt="BDMSummit 2017 Summer"/>
 **Make Customers Trust You**<br/>
 [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/)<br/>
@@ -154,6 +147,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
+Object Oriented JUnit Tests;
+[JavaDay Minsk 2017](http://javaday.by/);
+Minsk, Belarus;
+3 June 2017;
+[video](https://www.youtube.com/watch?v=1bAixLaOCSA).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/BgLqFTY1Rwk/mqdefault.jpg" class="past-talk" alt="JUG.ua Meetup 2017"/>
