@@ -14,6 +14,9 @@ keywords:
   - hamcrest
   - junit design
   - testing design patterns
+youtube:
+  - 1bAixLaOCSA
+  - CCr8hRE_TUs
 image: /images/2017/05/bullet.jpg
 jb_picture:
   caption: Bullet (1996) by Julien Temple

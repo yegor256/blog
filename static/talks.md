@@ -154,7 +154,8 @@ Object Oriented JUnit Tests;
 [JavaDay Minsk 2017](http://javaday.by/);
 Minsk, Belarus;
 3 June 2017;
-[video](https://www.youtube.com/watch?v=1bAixLaOCSA).
+[video](https://www.youtube.com/watch?v=1bAixLaOCSA),
+[slides](https://www.slideshare.net/YegorBugayenko/objectoriented-junit-tests).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/BgLqFTY1Rwk/mqdefault.jpg" class="past-talk" alt="JUG.ua Meetup 2017"/>
