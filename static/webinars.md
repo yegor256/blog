@@ -31,7 +31,7 @@ Preliminary schedule for the future (feel free
 [to suggest]() a topic):
 
   * Jul-6: Unit Testing vs. Debugging
-  * Aug-2: TBD
+  * Aug-2: How Distributed Teams Fail
   * Sep-6: TBD
 
 {% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %}
