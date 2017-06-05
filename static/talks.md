@@ -110,6 +110,13 @@ Kiev, Ukraine<br/>
 Copenhagen, Denmark<br/>
 19-20 June 2017
 
+<div class="talk-event"/>
+<img src="/images/2017/pgday.png" class="future-talk" alt="PgDay 2017"/>
+**PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests**<br/>
+[PgDay 2017](https://pgday.ru/ru/2017/speakers/136)<br/>
+St.Peterburg, Russia<br/>
+5-7 July 2017
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
