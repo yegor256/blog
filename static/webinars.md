@@ -27,6 +27,13 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
+Preliminary schedule for the future (feel free
+[to suggest]() a topic):
+
+  * Jul-6: Unit Testing vs. Debugging
+  * Aug-2: TBD
+  * Sep-6: TBD
+
 {% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %}
 
 [June 7, 2017](https://www.youtube.com/watch?v=uhDmHkMAYnM)<br/>
