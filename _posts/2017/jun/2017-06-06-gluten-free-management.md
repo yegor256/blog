@@ -78,7 +78,7 @@ You will save some money too.
 [Holacracy]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 is quickly replacing military-style management hierarchies, which
 proved to be depressing and hurtful to human feelings. Modern managers
-don't even like to be called "managers". Instead, they
+don't even like to be called "managers." Instead, they
 [demand](https://www.forbes.com/sites/joshlinkner/2014/12/04/the-21-most-creative-job-titles/#2b863a112933)
 we call them ambassadors, curators, cheerleaders, and catalysts.
 You must be very creative in hiding your actual
@@ -123,7 +123,7 @@ popular any more&mdash;they create tension and destroy
 [team morale]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
 Guilt-driven management is much more subtle and elegant:
 you turn your subordinates into a family and then say:
-"I count on you as a friend".
+"I count on you as a friend."
 Who can refuse a friend? And not even a friend, but a mom. This is
 who they will associate you with when the guilt kicks in&mdash;with their
 mothers. They won't disobey, won't quit, and will never ask for more money.
@@ -142,8 +142,8 @@ we fall in love with "extremely talented people,"
 we participate, engage, celebrate, and champion excellence.
 And, of course, now it is
 [always]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}) "We" instead of "I":
-"We are responsible", "It is our project",
-"We can", "Our goal is to do it together"!
+"We are responsible," "It is our project,"
+"We can," "Our goal is to do it together"!
 Of course, when the project fails you find a new one, with a
 [bigger salary]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and a new group of extremely talented people,
