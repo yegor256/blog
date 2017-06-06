@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gluten-Free Management Recipes"
-date: 2016-06-06
+date: 2017-06-06
 place: Moscow, Russia
 tags: management sarcasm
 description: |
