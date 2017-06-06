@@ -85,7 +85,8 @@ focus on closing it as soon as possible
 ([Always Be Closing](https://www.youtube.com/watch?v=wVQPY4LlbJ4), remember?).
 
 Also, keep in mind that the sooner you close the ticket, the better job
-you will do for the project. Long-living tickets are a management **nightmare**.
+you will do for the project. Long-living tickets are a
+[management]({% pst 2017/jun/2017-06-06-gluten-free-management %}) **nightmare**.
 It is difficult to track them and control them. It's difficult to understand
 what's going on. Have you seen those two-year-old tickets in
 [open source projects]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})

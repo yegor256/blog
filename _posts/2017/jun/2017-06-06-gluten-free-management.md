@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gluten-Free Management Recipes"
-date: 2016-06-20
+date: 2016-06-06
 place: Moscow, Russia
 tags: management sarcasm
 description: |
@@ -14,9 +14,9 @@ keywords:
   - management
   - project manager
   - team management
-image: /images/2015/03/?
+image: /images/2017/06/dogville.jpg
 jb_picture:
-  caption: xxx
+  caption: Dogville (2003) by Lars von Trier
 ---
 
 We live in the era of organic food, eco-friendly toilets, zero-emission cars,
