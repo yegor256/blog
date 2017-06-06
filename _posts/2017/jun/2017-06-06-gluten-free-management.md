@@ -143,7 +143,7 @@ we participate, engage, celebrate, and champion excellence.
 And, of course, now it is
 [always]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}) "We" instead of "I":
 "We are responsible," "It is our project,"
-"We can," "Our goal is to do it together"!
+"We can," "Our goal is to do it together!"
 Of course, when the project fails you find a new one, with a
 [bigger salary]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and a new group of extremely talented people,
