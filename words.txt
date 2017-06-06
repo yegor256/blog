@@ -190,6 +190,7 @@ always
 am
 amateur
 amazon
+ambassadors
 ambiguity
 ambiguous
 ambition
@@ -579,6 +580,7 @@ betterembsw
 between
 beware
 beyond
+bi-sexuals
 bible
 bibrarian
 bicycle
@@ -599,6 +601,7 @@ binary-tree-traversing
 bind
 bing
 bintray
+biographies
 birth
 birthday
 birthdays
@@ -644,6 +647,7 @@ book
 book's
 bookmarks
 books
+bookshelf
 boost
 boosted
 booster
@@ -682,6 +686,7 @@ brainwash
 branch
 branches
 brand
+branded
 branding
 brave
 brazil
@@ -751,6 +756,7 @@ bunch
 bureaucracy
 bureaucratic
 burn
+burndown
 burning
 burns
 business
@@ -830,7 +836,9 @@ cares
 carlo
 carried
 carrot
+carrot-and-stick
 carrots
+cars
 case
 cases
 cash
@@ -841,6 +849,7 @@ cast
 casting
 casual
 cat
+catalysts
 catastrophic
 catch
 catcher
@@ -852,6 +861,7 @@ cats
 cattivi
 caught
 cause
+cause-and-effect
 caused
 causes
 causing
@@ -893,6 +903,7 @@ chairs
 challenge
 challenged
 challenges
+champion
 champions
 chance
 chances
@@ -936,6 +947,8 @@ checks
 checkstyle
 cheer
 cheering
+cheerleader
+cheerleaders
 chef
 chew
 chicken
@@ -1097,6 +1110,8 @@ commit
 commitment
 commits
 committed
+committer
+committers
 committing
 common
 commonly
@@ -1223,6 +1238,7 @@ confirm
 confirmation
 confirming
 conflict
+conflict-free
 conflicts
 confrontation
 confuse
@@ -1281,6 +1297,7 @@ content
 contest
 context
 continents
+contingency
 continue
 continues
 continuous
@@ -1335,6 +1352,7 @@ cookies
 cooking
 cooks
 cool
+cooperation
 coordinates
 coordinating
 coordination
@@ -1451,6 +1469,8 @@ cumbersome
 cumulative
 cunning
 cup
+curators
+curiosity
 curious
 curled
 current
@@ -1480,6 +1500,7 @@ damaging
 damn
 damon
 dance
+dancing
 dangerous
 DAO
 dark
@@ -1636,6 +1657,7 @@ deploying
 deployment
 deploys
 depressed
+depressing
 depression
 derive
 derived
@@ -1791,6 +1813,7 @@ disillusionment
 disk
 dislike
 disney
+disobey
 disorder
 dispatcher
 dispatchers
@@ -1950,6 +1973,9 @@ eating
 EC
 eckel
 ECMAScript
+eco-friendly
+eco-manager
+eco-titles
 ed
 eden
 edge
@@ -1966,6 +1992,7 @@ EE
 effect
 effective
 effectively
+effectiveness
 effects
 efficiency
 efficient
@@ -2389,6 +2416,7 @@ finds
 fine
 fine-grained
 finger
+finger-pointing
 fingers
 finish
 finished
@@ -2521,6 +2549,7 @@ frequency
 frequently
 fresh
 friday
+fridays
 friend
 friend's
 friend-making
@@ -2536,6 +2565,7 @@ frustrating
 frustration
 FTP
 full
+full-hearted
 full-purpose
 full-time
 fully
@@ -2578,6 +2608,7 @@ gas
 gates
 gateway
 gave
+gays
 gb
 GeeCON
 geek
@@ -2675,11 +2706,13 @@ graphic
 graphical
 graphics
 graphs
+grave
 gray
 great
 greater
 greatest
 greatly
+greed
 greedy
 green
 GreenHouseCI
@@ -2711,6 +2744,7 @@ guidance
 guide
 guided
 guilt
+guilt-driven
 guilty
 gunslingers
 gurus
@@ -2757,6 +2791,7 @@ happens
 happier
 happiness
 happy
+harassment-free
 hard
 hard-coded
 hard-to-understand
@@ -2929,7 +2964,9 @@ hundreds
 hungry
 hunt
 hurt
+hurtful
 hurting
+hurts
 i'd
 i'll
 i'm
@@ -2951,6 +2988,7 @@ identifies
 identify
 identity
 idiot
+idiot-friendly
 idiotic
 idiots
 IE
@@ -3122,6 +3160,7 @@ insist
 insists
 inspiration
 inspire
+inspiring
 instability
 instagram
 instagrams
@@ -3193,6 +3232,7 @@ interviewing
 interviews
 into
 intolerable
+intrinsic
 introduce
 introduced
 introduces
@@ -3381,6 +3421,7 @@ justification
 justifications
 justified
 JVM
+kanban
 karachi
 karl
 katakuris
@@ -3398,6 +3439,7 @@ keynote
 keyword
 khRFR
 kick
+kicks
 kidding
 kids
 kiev
@@ -3440,6 +3482,7 @@ labeled
 labor
 lack
 lacks
+ladder
 lady
 lag
 laissez-faire
@@ -3462,6 +3505,7 @@ late-night
 later
 latest
 latex
+latinx
 latter
 laugh
 laughing
@@ -3649,6 +3693,7 @@ loyal
 loyalty
 lucene
 luck
+luckily
 lucky
 lunch
 lunches
@@ -3659,6 +3704,7 @@ m'aimes
 m-hits-per-day
 mac
 macbook
+macbooks
 machine
 machines
 MacOS
@@ -3799,6 +3845,7 @@ mediators
 medicine
 mediocre
 mediocrity
+mediocrity-intolerant
 medium
 medium-sized
 meet
@@ -3877,6 +3924,7 @@ mile
 milestone
 milestones
 military
+military-style
 million
 millions
 milliseconds
@@ -3899,6 +3947,7 @@ mirror
 mirrors
 misaligned
 misalignment
+mischling
 misconception
 misconceptions
 miserable
@@ -3946,6 +3995,7 @@ modifying
 modular
 module
 modules
+mom
 moment
 momentary
 momentum
@@ -3986,6 +4036,7 @@ moscow
 most
 mostly
 mother
+mothers
 motionless
 motivate
 motivated
@@ -4254,6 +4305,7 @@ oil
 OK
 okay
 old
+old-fashioned
 old-school
 oldest
 olive
@@ -4478,6 +4530,7 @@ patents
 path
 patience
 patient
+patriot
 patronized
 pattern
 patterns
@@ -4702,6 +4755,7 @@ PostgreSQL
 posting
 posts
 potential
+poverty
 powder
 power
 powerful
@@ -4893,6 +4947,7 @@ proper
 properly
 properties
 property
+prophesy
 prophet
 proportionally
 propose
@@ -5090,7 +5145,9 @@ receiving
 recent
 recently
 recipe
+recipes
 reckon
+recognition
 recognized
 recommend
 recommendation
@@ -5139,6 +5196,7 @@ refresh
 refrigerator
 refund
 refunds
+refuse
 regard
 regarding
 regardless
@@ -5278,6 +5336,7 @@ resembles
 resent
 reserve
 reserved
+reserves
 reservoir
 reset
 resignation
@@ -5356,6 +5415,7 @@ revoke
 revolution
 revolver
 reward
+reward-focused
 rewarded
 rewarding
 rewards
@@ -5432,6 +5492,7 @@ running
 runs
 runtime
 runtime-retained
+RUP
 rush
 russian
 rusty
@@ -5663,6 +5724,7 @@ sheets
 shelf
 shell
 shelly
+shielding
 shift
 shifting
 shifts
@@ -5906,6 +5968,7 @@ spouse
 spouses
 spread
 spring
+sprints
 spy
 spying
 SQL
@@ -5946,6 +6009,7 @@ standardized
 standards
 standing
 stands
+standups
 stanford
 stapler
 stare
@@ -5989,6 +6053,7 @@ steve
 steven
 stick
 sticker
+stickers
 stickies
 sticking
 sticks
@@ -6082,6 +6147,7 @@ substantial
 substitute
 substitution
 subtitles
+subtle
 subtyping
 subversion
 succeed
@@ -6109,6 +6175,7 @@ suggesting
 suggestion
 suggestions
 suggests
+suicide
 suit
 suitable
 suits
@@ -6254,6 +6321,7 @@ ten
 tend
 tends
 tennis
+tension
 term
 terminate
 terminated
@@ -6306,6 +6374,7 @@ these
 they
 they're
 they've
+thiel
 thing
 things
 think
@@ -6353,6 +6422,7 @@ tight
 til
 tiles
 till
+tim
 time
 time-and-material
 time-consuming
@@ -6375,6 +6445,7 @@ to
 today
 TODO
 together
+toilets
 token
 told
 tolerance
@@ -6451,6 +6522,7 @@ translating
 translation
 translator
 transparent
+transsexuals
 trash
 travel
 traversing
@@ -6475,6 +6547,7 @@ triggers
 trimmed
 trio
 tripled
+trotsky
 trouble
 troublemaker
 troubling
@@ -6992,6 +7065,8 @@ youtube
 ypshenychka
 zend
 zero
+zero-emission
+zero-stress
 ZeroCI
 zi
 zillow
