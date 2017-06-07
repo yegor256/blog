@@ -28,15 +28,16 @@ a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
 Preliminary schedule for the future (feel free
-[to suggest]() a topic):
+[to suggest](mailto:webinar@yegor256.com) a topic):
 
   * Jul-6: Unit Testing vs. Debugging
-  * Aug-2: How Distributed Teams Fail
+  * Aug-2: TBD
   * Sep-6: TBD
 
-{% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %}
+<!-- {% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %} -->
 
-[June 7, 2017](https://www.youtube.com/watch?v=uhDmHkMAYnM)<br/>
+<a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+June 7, 2017<br/>
 25: **Micro-management vs. micro-tasking**<br/>
 We will discuss how bad is micromanagement and how great is micro-tasking.
 Somehow our discussion will be based on this article:
