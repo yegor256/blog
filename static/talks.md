@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/pmcon.png" class="future-talk" alt="PMCon 2017"/>
-**How to Be Honest and Keep a Client**<br/>
-[PMCon Kharkiv 2017](http://pmcon.dev-pro.net/)<br/>
-Kharkiv, Ukraine<br/>
-11 June 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/bdmsummit-2017.png" class="future-talk" alt="BDMSummit 2017 Summer"/>
 **Make Customers Trust You**<br/>
 [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/)<br/>
@@ -161,6 +154,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
+How to Be Honest and Keep a Client;
+[PMCon Kharkiv 2017](http://pmcon.dev-pro.net/);
+Kharkiv, Ukraine;
+11 June 2017;
+[video](https://youtu.be/Rip_04Bv3Jk),
+[slides](https://www.slideshare.net/YegorBugayenko/how-to-be-honest-and-keep-a-client).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
