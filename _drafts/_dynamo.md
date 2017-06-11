@@ -23,7 +23,7 @@ In
 [SixNines.io]({% pst 2017/apr/2017-04-25-sixnines %}),
 one of my Ruby pet web apps, I'm using
 [DynamoDB](https://aws.amazon.com/dynamodb/), a NoSQL cloud database
-by [AWS](https://aws.amazon.com/). Works like a charm, but the problem
+by [AWS](https://aws.amazon.com/). It works like a charm, but the problem
 is that it's not so easy to create an integration test, to make sure
 my code works together with the "real" DynamoDB server and tables. Let me
 show you how it was solved. The code is open source and you can see it
@@ -33,7 +33,7 @@ in the [yegor256/sixnines](https://github.com/yegor256/sixnines) GitHub repo.
 
 {% jb_picture_body %}
 
-## How to boostrap DynamoDB Local
+## How to bootstrap DynamoDB Local
 
 First, you need to use
 [DynamoDB Local](https://aws.amazon.com/blogs/aws/dynamodb-local-for-desktop-development/),
@@ -74,7 +74,7 @@ Then, I'm starting `mvn install`, using `Process.spawn`, as a background
 process with `pid` as its process ID (this won't work in Windows, only Linux/Mac).
 Then I immediately register an
 [`at_exit`](https://ruby-doc.org/core-2.2.3/Kernel.html#method-i-at_exit)
-Ruby hook, which will be executed when/if Ruby dies for any reason. I'm sure
+Ruby hook, which will be executed if Ruby dies for any reason. I'm sure
 it's obvious why I have to do that&mdash;in order to avoid garbage running
 in the background after Rake is finished or terminated.
 
