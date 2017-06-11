@@ -14,6 +14,7 @@ keywords:
   - effective project management
   - xdsd
 youtube:
+  - 7EytYc7K5JA
   - qRZYJGYdrwk
   - tCr9dtGdi2c
 image: /images/2014/04/revolver-avi-with-dollar.png
