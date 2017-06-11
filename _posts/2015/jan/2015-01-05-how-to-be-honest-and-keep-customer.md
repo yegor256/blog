@@ -14,6 +14,8 @@ keywords:
   - software development outsourcing
   - how to outsource software development
   - software development outsourcing
+youtube:
+  - Rip_04Bv3Jk
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2rekrb/how_to_be_honest_and_keep_a_customer/
 image: /images/2014/12/99-francs.png
