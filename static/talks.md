@@ -217,11 +217,12 @@ Kraków, Poland;
 18-19 May 2017.
 
 <div class="talk-event"/>
-<img src="/images/2017/rigadevdays.png" class="past-talk" alt="RigaDevDays 2017"/>
+<img src="https://i.ytimg.com/vi/IGbteQpTNCA/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
 How Bright Is Your Future?;
 [RigaDevDays 2017](http://rigadevdays.lv/);
 Riga, Latvia;
 15 May 2017;
+[video](https://www.youtube.com/watch?v=IGbteQpTNCA),
 [slides](https://www.slideshare.net/YegorBugayenko/how-bright-is-our-future).
 
 <div class="talk-event"/>
