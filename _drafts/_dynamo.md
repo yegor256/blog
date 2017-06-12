@@ -158,7 +158,7 @@ In a nutshell:
     which depends on [`test`](https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L36);
   * Rake attempts to run `test`, which depends on
     [`dynamo`](https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50);
-  * Rake, inside `test` tasks, runs `mvn install` in the background
+  * Rake, inside `test` task, runs `mvn install` in the background
     with this [`pom.xml`](https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml);
   * Maven [unpacks](https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L38-L60)
     DynamoDB Local installation package;
