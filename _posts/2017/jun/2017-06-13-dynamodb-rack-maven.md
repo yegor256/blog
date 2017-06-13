@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DynamoDB + Rake + Maven + Rack::Test"
-date: 2017-05-25
+date: 2017-06-13
 place: Odessa, Ukraine
 tags: testing ruby
 description: |
@@ -14,9 +14,6 @@ keywords:
   - rake dynamodb
   - rack::test dynamodb
   - testing dynamodb ruby
-image: /images/2017/05/?
-jb_picture:
-  caption: xxx
 ---
 
 In
