@@ -1,4 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-12T19:45:11+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Gluten-Free Management Recipes</title><link href="http://www.yegor256.com/2017/06/06/gluten-free-management.html" rel="alternate" type="text/html" title="Gluten-Free Management Recipes" /><published>2017-06-06T00:00:00+00:00</published><updated>2017-06-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/06/gluten-free-management</id><content type="html" xml:base="http://www.yegor256.com/2017/06/06/gluten-free-management.html">&lt;p&gt;We live in the era of organic food, eco-friendly toilets, zero-emission cars,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-13T05:22:18+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">DynamoDB + Rake + Maven + Rack::Test</title><link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html" rel="alternate" type="text/html" title="DynamoDB + Rake + Maven + Rack::Test" /><published>2017-06-13T00:00:00+00:00</published><updated>2017-06-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/13/dynamodb-rack-maven</id><content type="html" xml:base="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html">&lt;p&gt;In
+&lt;a href=&quot;/2017/04/25/sixnines.html&quot;&gt;SixNines.io&lt;/a&gt;,
+one of my Ruby pet web apps, I&amp;#39;m using
+&lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;DynamoDB&lt;/a&gt;, a NoSQL cloud database
+by &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;AWS&lt;/a&gt;. It works like a charm, but the problem
+is that it&amp;#39;s not so easy to create an integration test, to make sure
+my code works together with the &amp;quot;real&amp;quot; DynamoDB server and tables. Let me
+show you how it was solved. The code is open source and you can see it
+in the &lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;yegor256/sixnines&lt;/a&gt; GitHub repo.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;how-to-bootstrap-dynamodb-local&quot;&gt;How to bootstrap DynamoDB Local&lt;/h2&gt;
+
+&lt;p&gt;First, you need to use
+&lt;a href=&quot;https://aws.amazon.com/blogs/aws/dynamodb-local-for-desktop-development/&quot;&gt;DynamoDB Local&lt;/a&gt;,
+a command line tool created by AWS exactly for the
+purposes of testing. You need to start it before your integration
+tests and stop it afterwards.&lt;/p&gt;
+
+&lt;p&gt;To make things simpler
+I suggest you use &lt;a href=&quot;http://dynamodb.jcabi.com/&quot;&gt;&lt;code&gt;jcabi-dynamodb-maven-plugin&lt;/code&gt;&lt;/a&gt;,
+a &lt;a href=&quot;https://maven.apache.org/&quot;&gt;Maven&lt;/a&gt; plugin that I
+&lt;a href=&quot;/2014/05/01/dynamodb-local-maven-plugin.html&quot;&gt;made&lt;/a&gt; a few years ago.
+You will need to add
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt; to your
+repository and start/stop Maven from a
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile&quot;&gt;&lt;code&gt;Rakefile&lt;/code&gt;&lt;/a&gt;,
+just like I&amp;#39;m doing &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50-L67&quot;&gt;here&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:dynamo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;FileUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rm_rf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dynamodb-local/target&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mvn&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;install&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;chdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dynamodb-local&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;at_exit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;sb&quot;&gt;`kill -TERM &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Dynamo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;describe_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;table_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sn-endpoints&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;retry&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, I&amp;#39;m removing &lt;code&gt;dynamodb-local/target&lt;/code&gt;, the directory where Maven keeps
+its temporary files, to make sure we always start from scratch.&lt;/p&gt;
+
+&lt;p&gt;Then, I&amp;#39;m starting &lt;code&gt;mvn install&lt;/code&gt;, using &lt;code&gt;Process.spawn&lt;/code&gt;, as a background
+process with &lt;code&gt;pid&lt;/code&gt; as its process ID (this won&amp;#39;t work in Windows, only Linux/Mac).
+Then I immediately register an
+&lt;a href=&quot;https://ruby-doc.org/core-2.2.3/Kernel.html#method-i-at_exit&quot;&gt;&lt;code&gt;at_exit&lt;/code&gt;&lt;/a&gt;
+Ruby hook, which will be executed if Ruby dies for any reason. I&amp;#39;m sure
+it&amp;#39;s obvious why I have to do that&amp;mdash;in order to avoid garbage running
+in the background after Rake is finished or terminated.&lt;/p&gt;
+
+&lt;p&gt;Pay attention, I&amp;#39;m using &lt;code&gt;kill -TERM&lt;/code&gt; instead of &lt;code&gt;kill -KILL&lt;/code&gt;, in order to
+give Maven a chance to wrap everything up, terminate DynamoDB Local correctly,
+close its TCP port and exit.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-check-that-its-running&quot;&gt;How to check that it&amp;#39;s running&lt;/h2&gt;
+
+&lt;p&gt;Next I&amp;#39;m checking the status of &lt;code&gt;sn-endpoints&lt;/code&gt;, one of the tables in the
+DynamoDB Local. It has to be there if the server is up and running. It will
+be created by &lt;code&gt;jcabi-dynamodb-maven-plugin&lt;/code&gt; according to
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/tables/sn-endpoints.json&quot;&gt;&lt;code&gt;sn-endpoints.json&lt;/code&gt;&lt;/a&gt;,
+its JSON configuration.&lt;/p&gt;
+
+&lt;p&gt;Most probably the table won&amp;#39;t be ready immediately though, since it takes time to
+bootstrap Maven, start the server, and create tables there. That&amp;#39;s why, if the
+exception is thrown, I catch it, wait for 5 seconds and try again.
+I keep trying many times, until the server is ready. Eventually it will be.
+It takes about 12-15 seconds on my MacBook, which means 2-3 attempts/exceptions.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-connect-to-dynamodb-local&quot;&gt;How to connect to DynamoDB Local&lt;/h2&gt;
+
+&lt;p&gt;My classes need to know how to connect to the server during integration tests.
+In production they need to connect to AWS, in testing they have to
+know about the DynamoDB Local instance I just started. This is what I have in my class
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb&quot;&gt;&lt;code&gt;Dynamo&lt;/code&gt;&lt;/a&gt;,
+which is responsible for the very connection with DynamoDB. Its decision
+on where to connect is based on the environment variable &lt;code&gt;RACK_ENV&lt;/code&gt;, which
+is set to &lt;code&gt;&amp;quot;test&amp;quot;&lt;/code&gt; in
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25&quot;&gt;&lt;code&gt;test__helper.rb&lt;/code&gt;&lt;/a&gt;,
+which is included by
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L39&quot;&gt;&lt;code&gt;rake/testtask&lt;/code&gt;&lt;/a&gt;
+in front of all other tests, thanks to the double underscore in its name.&lt;/p&gt;
+
+&lt;p&gt;If the environment variable is set to &lt;code&gt;&amp;quot;test&amp;quot;&lt;/code&gt;,
+&lt;code&gt;Dynamo&lt;/code&gt; takes the connectivity parameters from the YAML file
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb#L37&quot;&gt;&lt;code&gt;dynamodb-local/target/dynamo.yml&lt;/code&gt;&lt;/a&gt;
+created by
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L79-L100&quot;&gt;&lt;code&gt;maven-resources-plugin:copy-resources&lt;/code&gt;&lt;/a&gt;.
+The TCP port of the DynamoDB Local database will be
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/config/dynamo.yml&quot;&gt;there&lt;/a&gt;,
+as well as the DynamoDB authentication key and secret.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-run-the-integration-tests&quot;&gt;How to run the integration tests&lt;/h2&gt;
+
+&lt;p&gt;This is the easiest part. I just use my objects the way they are supposed
+to be used in production and they connect to DynamoDB Local instead of AWS.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m using Rack::Test in order to test the entire application, via a set
+of HTTP calls. For example,
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/test/test_sixnines.rb#L143-L147&quot;&gt;here&lt;/a&gt;
+I&amp;#39;m trying to render Jeff&amp;#39;s user account page.
+Its HTTP response code is supposed to be 200:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestCase&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Methods&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Application&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_user_account&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sixnines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jeff&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you can run the entire test from the command line. You can see how
+&lt;a href=&quot;/2014/09/11/deployment-script-vs-rultor.html&quot;&gt;Rultor&lt;/a&gt;
+runs it while releasing a new version: &lt;a href=&quot;http://www.rultor.com/t/11705-302080694&quot;&gt;full log&lt;/a&gt;.
+Also, see how it works &lt;a href=&quot;https://travis-ci.org/yegor256/sixnines&quot;&gt;in Travis&lt;/a&gt;.
+In a nutshell:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You call &lt;code&gt;rake&lt;/code&gt; in the command line and Rake starts;&lt;/li&gt;
+&lt;li&gt;Rake attempts to run the &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L32&quot;&gt;&lt;code&gt;default&lt;/code&gt;&lt;/a&gt; task,
+which depends on &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L36&quot;&gt;&lt;code&gt;test&lt;/code&gt;&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Rake attempts to run &lt;code&gt;test&lt;/code&gt;, which depends on
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50&quot;&gt;&lt;code&gt;dynamo&lt;/code&gt;&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Rake, inside &lt;code&gt;test&lt;/code&gt; task, runs &lt;code&gt;mvn install&lt;/code&gt; in the background
+with this &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Maven &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L38-L60&quot;&gt;unpacks&lt;/a&gt;
+DynamoDB Local installation package;&lt;/li&gt;
+&lt;li&gt;Maven &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L61-L78&quot;&gt;reserves&lt;/a&gt;
+a random TCP port and stores its value into &lt;code&gt;${dynamo.port}&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Maven &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L79-L100&quot;&gt;saves&lt;/a&gt;
+&lt;code&gt;${dynamo.port}&lt;/code&gt; and key/secret pair info;&lt;/li&gt;
+&lt;li&gt;Maven &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L101-L128&quot;&gt;starts&lt;/a&gt;
+DynamoDB Local, binding it to the reserved TCP port;&lt;/li&gt;
+&lt;li&gt;Rake &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L57-L65&quot;&gt;waits&lt;/a&gt;
+for DynamoDB Local availability on the reserved port;&lt;/li&gt;
+&lt;li&gt;Rake &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L38-L39&quot;&gt;imports&lt;/a&gt;
+all &lt;a href=&quot;https://github.com/yegor256/sixnines/tree/0.17/test&quot;&gt;test classes&lt;/a&gt; starting from
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb&quot;&gt;test__helper.rb&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Environment variable &lt;code&gt;RACK_ENV&lt;/code&gt; is &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25&quot;&gt;set&lt;/a&gt;
+to &lt;code&gt;&amp;quot;test&amp;quot;&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Rack::Test &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/test/test_sixnines.rb#L145&quot;&gt;attempts&lt;/a&gt;
+to dispatch a web page;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb&quot;&gt;&lt;code&gt;Dynamo&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb#L37-L39&quot;&gt;loads&lt;/a&gt; YAML config from
+&lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/config/dynamo.yml&quot;&gt;&lt;code&gt;dynamo.yml&lt;/code&gt;&lt;/a&gt;
+and connects to DynamoDB Local;&lt;/li&gt;
+&lt;li&gt;Rake stops;&lt;/li&gt;
+&lt;li&gt;Ruby &lt;a href=&quot;https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L53-L56&quot;&gt;terminates&lt;/a&gt;
+Maven and it stops DynamoDB Local.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;#39;s it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="ruby" /><summary type="html">In
+SixNines.io,
+one of my Ruby pet web apps, I&amp;#39;m using
+DynamoDB, a NoSQL cloud database
+by AWS. It works like a charm, but the problem
+is that it&amp;#39;s not so easy to create an integration test, to make sure
+my code works together with the &amp;quot;real&amp;quot; DynamoDB server and tables. Let me
+show you how it was solved. The code is open source and you can see it
+in the yegor256/sixnines GitHub repo.</summary></entry><entry><title type="html">Gluten-Free Management Recipes</title><link href="http://www.yegor256.com/2017/06/06/gluten-free-management.html" rel="alternate" type="text/html" title="Gluten-Free Management Recipes" /><published>2017-06-06T00:00:00+00:00</published><updated>2017-06-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/06/gluten-free-management</id><content type="html" xml:base="http://www.yegor256.com/2017/06/06/gluten-free-management.html">&lt;p&gt;We live in the era of organic food, eco-friendly toilets, zero-emission cars,
 and harassment-free offices. Our management practices have to keep up&amp;mdash;they
 must be zero-stress, conflict-free, and idiot-friendly. If you&amp;#39;re still
 stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
@@ -744,119 +912,4 @@ management, object-oriented programming, and other things
 they believe I understand and can help them with. Well, my contact details are
 published right in the header on my blog&amp;mdash;what else would I expect, right?
 True, but even though I always reply to them, I never
-answer their questions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/il-divo.jpg" /></entry><entry><title type="html">Flexibility Equates to Lower Quality</title><link href="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html" rel="alternate" type="text/html" title="Flexibility Equates to Lower Quality" /><published>2017-04-11T00:00:00+00:00</published><updated>2017-04-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality</id><content type="html" xml:base="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html">&lt;p&gt;There are two opposing mindsets: &amp;quot;If it works, it&amp;#39;s good&amp;quot; vs.
-&amp;quot;If it&amp;#39;s good, it works;&amp;quot; or &amp;quot;Make it work&amp;quot; vs. &amp;quot;Make it right.&amp;quot;
-I&amp;#39;m talking about the software source code. I&amp;#39;ve been hearing this
-almost every day in blog comments: Why do we need all those &lt;em&gt;new&lt;/em&gt; OOP
-principles if our code works just fine without them? What is the
-point of introducing a new way, which is supposed to be &amp;quot;better,&amp;quot;
-if the existing, traditional, semi-object, semi-procedural, not-so-perfect
-approach &lt;strong&gt;just works&lt;/strong&gt;?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Scarface (1983) by Brian De Palma&#39; src=&#39;/images/2017/04/scarface.jpg&#39; longdesc=&#39;#efc1df03&#39;/&gt;&lt;figcaption id=&#39;efc1df03&#39;&gt;Scarface (1983) by Brian De Palma&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let&amp;#39;s try to think bigger. And not just about object-oriented programming, but
-in general about software development. There are many examples of the
-&amp;quot;just works&amp;quot; mentality.&lt;/p&gt;
-
-&lt;p&gt;Take Perl, a programming language famous
-for its ability to do anything in three different ways. This means that
-there is no one &amp;quot;right&amp;quot; way. I&amp;#39;m not a Perl expert; that&amp;#39;s why I&amp;#39;ll have you
-look at this Ruby code instead:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello!&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We can rewrite it like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-  &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello!&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Or this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello!&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And one more:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Which one is &amp;quot;right?&amp;quot; Are there any Perl developers? Can you suggest
-some other way to achieve the same result?&lt;/p&gt;
-
-&lt;p&gt;Not surprisingly, in Java (a stricter language than Ruby),
-there is only one way to do it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Well, I guess I&amp;#39;m wrong; there are two, actually. Here is the second one:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What does this variety of options give us, as programmers? I guess the answer
-seriously depends on what we, the programmers, are doing with the code:
-writing or reading it. Also, it depends on our
-&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;attitude&lt;/a&gt; toward the
-software we&amp;#39;re creating; we either
-&lt;em&gt;own&lt;/em&gt; it (hacker mentality) or
-&lt;em&gt;build&lt;/em&gt; it (designer mentality).&lt;/p&gt;
-
-&lt;p&gt;If we&amp;#39;re &lt;em&gt;writing&lt;/em&gt; it, and we love to think about ourselves as code owners, we
-definitely will need that arsenal of
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Syntactic_sugar&quot;&gt;syntactic sugar&lt;/a&gt; weapons. We need them to prove to ourselves
-that we&amp;#39;re smart and, of course, to show off in front of our friends and
-that soulless Ruby interpreter.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, if we&amp;#39;re designers and happen to &lt;em&gt;read&lt;/em&gt; the code that is
-full of sugar, which &amp;quot;just works,&amp;quot; we&amp;#39;ll be very annoyed and
-frustrated. Well, maybe I have to speak for myself, but I definitely will be.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Simply put, higher quality comes from simpler languages.&lt;/aside&gt;
-
-&lt;p&gt;This overly-sugared Ruby syntax is a perfect example of &amp;quot;works vs. good&amp;quot;
-positioning. Ruby philosophy is this: It doesn&amp;#39;t matter how you write it, as long
-as it works. Java philosophy is different; it&amp;#39;s much closer to:
-Make it right and it will work.
-The &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;weak&lt;/a&gt;
-and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information&quot;&gt;dynamic&lt;/a&gt;
-typing in Ruby vs. the strong and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Static_type_checking&quot;&gt;static&lt;/a&gt;
-one in Java also prove my point.&lt;/p&gt;
-
-&lt;p&gt;In general, I believe that the more flexible the programming language is, the
-lower the &lt;em&gt;maintainability&lt;/em&gt;&amp;mdash;the key quality characteristic&amp;mdash;of the code it produces.
-Simply put, higher quality comes from simpler languages.&lt;/p&gt;
-
-&lt;p&gt;The same is true for the entire software development: The more restrictions
-we put on programmers and the fewer options they have for their
-&amp;quot;syntax creativity,&amp;quot; the higher the quality of the software they write.
-Static analyzers like
-&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt; for Java or
-&lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;Rubocop&lt;/a&gt; for Ruby attempt
-to solve that problem and prohibit us from using certain language features,
-but they lag far behind. We are very &amp;quot;creative.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Now, let&amp;#39;s get back to the original OOP question:
-Why do we need to improve anything if it works the way it is?
-Here is the answer: Modern OOP (as in Java, Ruby, and C++)
-doesn&amp;#39;t produce quality code because it doesn&amp;#39;t have a strong
-and properly restricted paradigm. It just has too many &amp;quot;features,&amp;quot;
-which were mostly introduced by C++ and remained there for our
-mutual &amp;quot;convenience.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;They indeed work, but the maintainability of the software we produce
-is very low. Well, it&amp;#39;s way lower than it could be, if our &amp;quot;creativity&amp;quot;
-would be restricted.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are two opposing mindsets: &amp;quot;If it works, it&amp;#39;s good&amp;quot; vs.
-&amp;quot;If it&amp;#39;s good, it works;&amp;quot; or &amp;quot;Make it work&amp;quot; vs. &amp;quot;Make it right.&amp;quot;
-I&amp;#39;m talking about the software source code. I&amp;#39;ve been hearing this
-almost every day in blog comments: Why do we need all those new OOP
-principles if our code works just fine without them? What is the
-point of introducing a new way, which is supposed to be &amp;quot;better,&amp;quot;
-if the existing, traditional, semi-object, semi-procedural, not-so-perfect
-approach just works?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/scarface.jpg" /></entry></feed>
+answer their questions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/04/il-divo.jpg" /></entry></feed>

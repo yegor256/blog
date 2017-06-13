@@ -599,6 +599,7 @@ bin
 binary
 binary-tree-traversing
 bind
+binding
 bing
 bintray
 biographies
@@ -926,6 +927,7 @@ charge
 charges
 charisma
 charismatic
+charm
 chars
 charts
 chat
@@ -1227,6 +1229,7 @@ conferences
 conferencing
 confidence
 confident
+config
 configurable
 configuration
 configurations
@@ -1815,6 +1818,7 @@ dislike
 disney
 disobey
 disorder
+dispatch
 dispatcher
 dispatchers
 display
@@ -3040,6 +3044,7 @@ importance
 important
 importantly
 importers
+imports
 impossible
 impractical
 impress
@@ -3116,6 +3121,7 @@ infinity
 influence
 influenced
 influences
+info
 inform
 informal
 information
@@ -5064,6 +5070,7 @@ quote
 quotes
 quoting
 race
+rack
 radiate
 radical
 radio
@@ -5072,6 +5079,7 @@ rails
 raise
 raised
 raises
+rake
 RAM
 ran
 random
@@ -5090,6 +5098,7 @@ rating
 ratio
 rationale
 raymond
+rb
 rbara
 rd
 RDF
@@ -6325,6 +6334,7 @@ tension
 term
 terminate
 terminated
+terminates
 terminating
 termination
 terminology
