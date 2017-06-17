@@ -5,7 +5,9 @@ date: 2017-06-10
 place: Dnipro, Ukraine
 tags: java oop
 description: |
-  ...
+  Instead of calling static procedures we may want
+  to use objects, the way they are supposed to be used;
+  that's why Cactoos.
 keywords:
   - IO java
   - read/write java
