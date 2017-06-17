@@ -20,7 +20,9 @@ keywords:
 
 Shift-M is a weekly podcast about project management. I'm recording
 every Monday at 11am PST. If you want to be a guest, please email to
-[podcast@yegor256.com](mailto:podcast@yegor256.com).
+[podcast@yegor256.com](mailto:podcast@yegor256.com). If you just
+want to join and say a few words, come into this
+[Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
 Previous episodes:
 

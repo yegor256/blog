@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2017/bdmsummit-2017.png" class="future-talk" alt="BDMSummit 2017 Summer"/>
-**Make Customers Trust You**<br/>
-[BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/)<br/>
-Kiev, Ukraine<br/>
-17 June 2017
-
-<div class="talk-event"/>
 <img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.IO 2017"/>
 **Java Annotations Are a Bad Idea**<br/>
 [JDK IO 2017](http://www.jdk.io/)<br/>
@@ -126,11 +119,13 @@ Kiev, Ukraine<br/>
 22-23 September 2017
 -->
 
+<!--
 <div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
 Kiev, Ukraine<br/>
 4-5 November 2017
+-->
 
 <div class="talk-event"/>
 <img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
@@ -139,11 +134,13 @@ Kiev, Ukraine<br/>
 Riga, Latvia<br/>
 1 December 2017
 
+<!--
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2018"/>
 [JEEConf 2018](http://www.jeeconf.com/)<br/>
 Kiev, Ukraine<br/>
 25-26 May 2018
+-->
 
 ## <span id='past-talks-total'>&#20;</span> Past Events
 
@@ -154,6 +151,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
+Make Customers Trust You;
+[BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/);
+Kiev, Ukraine;
+17 June 2017;
+[video](https://youtu.be/oiNI2jF46h0),
+[slides](https://www.slideshare.net/YegorBugayenko/make-customers-trust-you).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
