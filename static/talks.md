@@ -156,7 +156,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/hqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
+<img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
 How to Be Honest and Keep a Client;
 [PMCon Kharkiv 2017](http://pmcon.dev-pro.net/);
 Kharkiv, Ukraine;
@@ -165,7 +165,7 @@ Kharkiv, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-be-honest-and-keep-a-client).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/1bAixLaOCSA/hqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
+<img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
 Object Oriented JUnit Tests;
 [JavaDay Minsk 2017](http://javaday.by/);
 Minsk, Belarus;
@@ -174,7 +174,7 @@ Minsk, Belarus;
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-junit-tests).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/BgLqFTY1Rwk/hqdefault.jpg" class="past-talk" alt="JUG.ua Meetup 2017"/>
+<img src="https://i.ytimg.com/vi/BgLqFTY1Rwk/mqdefault.jpg" class="past-talk" alt="JUG.ua Meetup 2017"/>
 Object-oriented Mistakes in OpenJDK;
 [JUG.ua Meetup](http://jug.ua/);
 Kharkiv, Ukraine;
@@ -183,7 +183,7 @@ Kharkiv, Ukraine;
 [video](https://www.youtube.com/watch?v=IWroBKW8_QI) (part 2).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/CCr8hRE_TUs/hqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
+<img src="https://i.ytimg.com/vi/CCr8hRE_TUs/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 Object-Oriented Flavor for JUnit Tests;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
@@ -192,7 +192,7 @@ Kiev, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/GS45LzE3LPQ/hqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
+<img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 How Much Do You Cost?;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
 Kiev, Ukraine;
@@ -201,7 +201,7 @@ Kiev, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/DLk_5BmgTVk/hqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
+<img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
 How to Avoid Outsourcing Disaster;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
 Kiev, Ukraine;
@@ -217,7 +217,7 @@ Kraków, Poland;
 18-19 May 2017.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/IGbteQpTNCA/hqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
+<img src="https://i.ytimg.com/vi/IGbteQpTNCA/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
 How Bright Is Your Future?;
 [RigaDevDays 2017](http://rigadevdays.lv/);
 Riga, Latvia;
@@ -226,7 +226,7 @@ Riga, Latvia;
 [slides](https://www.slideshare.net/YegorBugayenko/how-bright-is-our-future).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/K_QEOtYVQ7A/hqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
+<img src="https://i.ytimg.com/vi/K_QEOtYVQ7A/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
 What's Wrong With Object-Oriented Programming?;
 [RigaDevDays 2017](http://rigadevdays.lv/);
 Riga, Latvia;
@@ -236,7 +236,7 @@ Riga, Latvia;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/20QBvrHq6TA/hqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
+<img src="https://i.ytimg.com/vi/20QBvrHq6TA/mqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
 Java Annotations Are a Big Mistake;
 [JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/);
 Moscow, Russia;
@@ -252,7 +252,7 @@ Aside from that, this is definitely an event I would try to attend again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/85B3FV_sB60/hqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
+<img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
 Utility Classes Are Killing Us;
 [JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
 Novosibirsk, Russia;
@@ -268,7 +268,7 @@ bigger ones that take a few days.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/MSBf2RftCKo/hqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
+<img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
 A Few Best Practices for Time-Wasting on a Software Team;
 [DevOn Summit 2017](http://www.devonsummit.com/speakers/);
 Delft, The Netherlands;
@@ -283,7 +283,7 @@ definitely recommend it next year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/TLM9eN0b6zo/hqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+<img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Избавляйтесь от экспертов;
 AgileDays 2017;
 Moscow, Russia;
@@ -297,7 +297,7 @@ everything was decent: the food, the equipment, the location, the travel, etc.
 I believe it's important to be there, because the event is rather big.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/biE86esgFAE/hqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
+<img src="https://i.ytimg.com/vi/biE86esgFAE/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 Семь врагов нашей мотивации;
 AgileDays 2017;
 Moscow, Russia;
@@ -306,7 +306,7 @@ Moscow, Russia;
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://i.ytimg.com/vi/lvoQZGsY56k/hqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
+<img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
 Management Without Managers;
 [Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
 Kharkiv, Ukraine;
@@ -321,7 +321,7 @@ part was not as strong as it should be&mdash;most people in the room had never
 heard anything about me, etc.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/qqWC3_cQHAc/hqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
+<img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
 OOP Java Puzzlers;
 [JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
 Kiev, Ukraine;
@@ -329,7 +329,7 @@ Kiev, Ukraine;
 [видео](https://www.youtube.com/watch?v=qqWC3_cQHAc).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/LPLqLaSwSsI/hqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
+<img src="https://i.ytimg.com/vi/LPLqLaSwSsI/mqdefault.jpg" class="past-talk" alt="JUG Dnipro 2017"/>
 Decorators, Decorators, Decorators;
 [JUG Dnipro](http://dataart.ua/events/dp/java-user-group-dnipro-dekoratory-dekoratory-dekoratory/);
 Dnipro, Ukraine;
@@ -339,7 +339,7 @@ Dnipro, Ukraine;
 ### 2016
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/GQLFc-ttCX0/hqdefault.jpg" class="past-talk" alt="Morning@Lohika"/>
+<img src="https://i.ytimg.com/vi/GQLFc-ttCX0/mqdefault.jpg" class="past-talk" alt="Morning@Lohika"/>
 Object-Oriented Java by Example;
 [Morning@Lohika 2016](https://dou.ua/calendar/13589/);
 Lviv, Ukraine;
@@ -347,7 +347,7 @@ Lviv, Ukraine;
 [видео](https://www.youtube.com/watch?v=GQLFc-ttCX0).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/qAxLtSYN0nw/hqdefault.jpg" class="past-talk" alt="UADevClub"/>
+<img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
 Make Your Java Object-Oriented, 64 Practical Steps;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
 Kiev, Ukraine;
@@ -356,7 +356,7 @@ Kiev, Ukraine;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="https://i.ytimg.com/vi/7EytYc7K5JA/hqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
+<img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
 XDSD: Meetings-Free Software Development Methodology;
 [DevTernity 2016](http://devternity.com/#/11);
 Riga, Latvia;
@@ -369,7 +369,7 @@ everybody involved. I'm sure next year they will do it better.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
-<img src="https://i.ytimg.com/vi/R1lA7pN60xg/hqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
+<img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who Is a Software Architect?;
 BuildStuff Ukraine 2016;
 Kiev, Ukraine;
@@ -382,7 +382,7 @@ that Olympiski sport center. Also, in Vilnius there were maybe 15 people
 at my presentation&mdash;that was just sad. What I did like was the food.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/wd-SA1HVmLg/hqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
+<img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
 How Do You Know When Your Product Is Ready to be Shipped?;
 [BuildStuff 2016](http://www.buildstuff.lt/);
 Vilnius, Lithuania;
@@ -392,7 +392,7 @@ Vilnius, Lithuania;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/hqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
+<img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 7 Sins of a Software Project;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
@@ -403,7 +403,7 @@ The event was rather small (about 300 people), but well-prepared. At my presenta
 the room was full.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/mq4bsnKK0qs/hqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
+<img src="https://i.ytimg.com/vi/mq4bsnKK0qs/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 Keep Your Servers in GitHub;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
@@ -413,7 +413,7 @@ Tallinn, Estonia;
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://i.ytimg.com/vi/_61CuGhyv-o/hqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
+<img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 A Practical Example of a One-Click Release;
 [DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
 Moscow, Russia;
@@ -423,7 +423,7 @@ The event was rather small and chaotic. I tried my best to make my speech
 interesting, but the audience wasn't really ready.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/ADd00BotEbI/hqdefault.jpg" class="past-talk" alt="msk.jug.ru"/>
+<img src="https://i.ytimg.com/vi/ADd00BotEbI/mqdefault.jpg" class="past-talk" alt="msk.jug.ru"/>
 Вредная архитектура MVC;
 [msk.jug.ru](https://jugmsk.timepad.ru/event/400420/);
 Moscow, Russia;
@@ -434,7 +434,7 @@ Moscow, Russia;
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">B+</aside>
-<img src="https://i.ytimg.com/vi/tCr9dtGdi2c/hqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
+<img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
 [XP Days Ukraine](http://xpdays.com.ua/);
 Kiev, Ukraine;
@@ -448,7 +448,7 @@ they are doing. I will try to attend again next year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/03PXmPc7Q3g/hqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
+<img src="https://i.ytimg.com/vi/03PXmPc7Q3g/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
 ORM Is an Offensive Anti-Pattern;
 [Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
@@ -466,7 +466,7 @@ the food was good, and the travel and accommodation were perfect. I will definit
 to attend next year.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/EDKbYVEInMU/hqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
+<img src="https://i.ytimg.com/vi/EDKbYVEInMU/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
 Built-In Fake Objects;
 [Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
@@ -476,7 +476,7 @@ Malmö, Sweden;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/hqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+<img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 A Practical Example of AOP With Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
@@ -492,7 +492,7 @@ speakers and focus the audience on the best of them. And spend
 the money they saved on better food.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/cGcCcxx4xrg/hqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+<img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 Java vs. OOP;
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
@@ -500,7 +500,7 @@ Kyiv, Ukraine;
 [video](https://www.youtube.com/watch?v=cGcCcxx4xrg).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/Y-16C5yhKLo/hqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
+<img src="https://i.ytimg.com/vi/Y-16C5yhKLo/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 Trial by Combat for OOP Honor (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 Kyiv, Ukraine;
@@ -508,7 +508,7 @@ Kyiv, Ukraine;
 [video](https://www.youtube.com/watch?v=Y-16C5yhKLo).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/A-9FjaOIsw8/hqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
+<img src="https://i.ytimg.com/vi/A-9FjaOIsw8/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #2"/>
 Why Static Methods Are Evil;
 [Object Thinking Meetup](https://www.meetup.com/Object-Thinking/events/232602670/);
 Stanford, Palo Alto, CA, USA;
@@ -516,7 +516,7 @@ Stanford, Palo Alto, CA, USA;
 [video](https://www.youtube.com/watch?v=A-9FjaOIsw8).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/pynZF10U880/hqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
+<img src="https://i.ytimg.com/vi/pynZF10U880/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
 How Anemic Objects Kill OOP;
 [Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (Meetup #1);
 Palo Alto, CA, USA;
@@ -526,7 +526,7 @@ Palo Alto, CA, USA;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/3dJP_LtUGgg/hqdefault.jpg" class="past-talk" alt="SLC DevOpsDays 2016"/>
+<img src="https://i.ytimg.com/vi/3dJP_LtUGgg/mqdefault.jpg" class="past-talk" alt="SLC DevOpsDays 2016"/>
 8 Maturity Levels of Continuous Integration;
 Salt Lake City DevOpsDays;
 Salt Lake City, UT, USA;
@@ -540,7 +540,7 @@ the audience. However, the venue was not comfortable at all
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="https://i.ytimg.com/vi/6hOBfjJ2bpw/hqdefault.jpg" class="past-talk" alt="JavaDay 2016"/>
+<img src="https://i.ytimg.com/vi/6hOBfjJ2bpw/mqdefault.jpg" class="past-talk" alt="JavaDay 2016"/>
 Java vs. OOP;
 [JavaDay 2016](http://javaday.by/);
 Minsk, Belarus;
@@ -557,7 +557,7 @@ venue was not really comfortable, and the content was mostly outdated.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A+</aside>
-<img src="https://i.ytimg.com/vi/7yTIWFZrXpg/hqdefault.jpg" class="past-talk" alt="GeekOUT 2016"/>
+<img src="https://i.ytimg.com/vi/7yTIWFZrXpg/mqdefault.jpg" class="past-talk" alt="GeekOUT 2016"/>
 Chat Bots Architecture;
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
 Tallinn, Estonia;
@@ -575,7 +575,7 @@ again.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>
-<img src="https://i.ytimg.com/vi/vU_x6oK437I/hqdefault.jpg" class="past-talk" alt="NDC Oslo 2016"/>
+<img src="https://i.ytimg.com/vi/vU_x6oK437I/mqdefault.jpg" class="past-talk" alt="NDC Oslo 2016"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 NDC Oslo;
 Oslo, Norway;
@@ -590,7 +590,7 @@ sponsor booths. Besides that, I never even met the organizers.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
-<img src="https://i.ytimg.com/vi/APCUGQlkO3U/hqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
+<img src="https://i.ytimg.com/vi/APCUGQlkO3U/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 OOP Is Dead? Not Yet!;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
@@ -606,7 +606,7 @@ The after-party was good, though. It seemed that the organizers tried to do this
 with love, but the venue and speakers, unfortunately, didn't play along.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/sZoJ3gO4PSo/hqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
+<img src="https://i.ytimg.com/vi/sZoJ3gO4PSo/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 Is Your CEO or Your Programmer the Boss?;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
@@ -615,7 +615,7 @@ Dnipro, Ukraine;
 [video](https://www.youtube.com/watch?v=sZoJ3gO4PSo).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/4DCrWRuwxos/hqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
+<img src="https://i.ytimg.com/vi/4DCrWRuwxos/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 Don't Be Overly Excited About Amsterdam;
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 Dnipro, Ukraine;
@@ -624,7 +624,7 @@ Dnipro, Ukraine;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/ZVn7ufg-tk0/hqdefault.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
+<img src="https://i.ytimg.com/vi/ZVn7ufg-tk0/mqdefault.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
 Micromanagement;
 [PMDay Lviv](http://pmday.com.ua/);
 Lviv, Ukraine;
@@ -640,7 +640,7 @@ try to visit again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/NflR7DKwxDY/hqdefault.jpg" class="past-talk" alt="DevOpsPro 2016"/>
+<img src="https://i.ytimg.com/vi/NflR7DKwxDY/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2016"/>
 Deployment Scripts Are Dead; Meet Rultor;
 [DevOps Pro](http://devopspro.lt/);
 Vilnius, Lithuania;
@@ -654,7 +654,7 @@ and forgot about content. Aside from that, it's definitely a place to see again.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/63tS3HNmhiE/hqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
+<img src="https://i.ytimg.com/vi/63tS3HNmhiE/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
 ORM Is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
@@ -669,7 +669,7 @@ almost copied JPoint. It would be great to see new faces. My overall impression 
 very positive, and I definitely will try to attend it next year.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/EnhRgXrHCC4/hqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
+<img src="https://i.ytimg.com/vi/EnhRgXrHCC4/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
 How Immutability Helps in OOP;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 Kiev, Ukraine;
@@ -680,7 +680,7 @@ Kiev, Ukraine;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="https://i.ytimg.com/vi/nCGBgI1MNwE/hqdefault.jpg" class="past-talk" alt="DEVit 2016"/>
+<img src="https://i.ytimg.com/vi/nCGBgI1MNwE/mqdefault.jpg" class="past-talk" alt="DEVit 2016"/>
 Need It Robust? Make It Fragile;
 [DEVit 2016](http://devitconf.org/);
 Thessaloniki, Greece;
@@ -696,7 +696,7 @@ of focus on a specific subject. Aside from that, it was a positive experience.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://i.ytimg.com/vi/vOMqDcSXnT0/hqdefault.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
+<img src="https://i.ytimg.com/vi/vOMqDcSXnT0/mqdefault.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
 Microservices as Chat Bots;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
 Bucharest, Romania;
@@ -710,7 +710,7 @@ were fewer than 30 people in my room. Also, the organization was rather messy,
 and my talk was delayed for more than 20 minutes.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/p7m7_iiqaHI/hqdefault.jpg" class="past-talk" alt="Bucharest JUG"/>
+<img src="https://i.ytimg.com/vi/p7m7_iiqaHI/mqdefault.jpg" class="past-talk" alt="Bucharest JUG"/>
 How Much Immutability Is Enough?;
 [Bucharest JUG Meetup](http://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
 Bucharest, Romania;
@@ -741,7 +741,7 @@ of room for improvement.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
-<img src="https://i.ytimg.com/vi/Ht0JI41kA4I/hqdefault.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
+<img src="https://i.ytimg.com/vi/Ht0JI41kA4I/mqdefault.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
 Continuous Integration May Have Negative Effects;
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
 Tallinn, Estonia;
@@ -757,7 +757,7 @@ and become better; the potential is definitely there.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/pt9uHp35fwM/hqdefault.jpg" class="past-talk" alt="NTPM 2016"/>
+<img src="https://i.ytimg.com/vi/pt9uHp35fwM/mqdefault.jpg" class="past-talk" alt="NTPM 2016"/>
 Meetings or Discipline;
 [New Trends in Project Management](http://ntpm.pl/);
 Gdynia, Poland;
@@ -773,7 +773,7 @@ there because of their names.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/-Y4XS7ZtQ2g/hqdefault.jpg" class="past-talk" alt="JET Conference 2016"/>
+<img src="https://i.ytimg.com/vi/-Y4XS7ZtQ2g/mqdefault.jpg" class="past-talk" alt="JET Conference 2016"/>
 An Immutable Object-Oriented Web Framework;
 JET Conference;
 Minsk, Belarus;
@@ -788,7 +788,7 @@ deliver. Aside from that, the impression was positive.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A-</aside>
-<img src="https://i.ytimg.com/vi/aER4uwyFbqQ/hqdefault.jpg" class="past-talk" alt="JPoint 2016"/>
+<img src="https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg" class="past-talk" alt="JPoint 2016"/>
 ORM - это обидно (ORM Is an Offensive Anti-Pattern);
 [JPoint 2016](http://javapoint.ru/en/);
 Moscow, Russia;
@@ -806,7 +806,7 @@ was perfect.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/F4N25kZ2zQU/hqdefault.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
+<img src="https://i.ytimg.com/vi/F4N25kZ2zQU/mqdefault.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
 Объектно-Ориентированное Вранье (Object-Oriented Lies);
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)
 Moscow, Russia;
@@ -821,7 +821,7 @@ corrections were received. I would suggest inviting new speakers&mdash;it seems 
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/gL4XwP-EBOg/hqdefault.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
+<img src="https://i.ytimg.com/vi/gL4XwP-EBOg/mqdefault.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 Continuous Integration May Have Negative Effects;
 [WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
 Sophia, Bulgaria;
@@ -836,7 +836,7 @@ why my presentation was accepted there :)
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B</aside>
-<img src="https://i.ytimg.com/vi/b6r2W3P9vgY/hqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
+<img src="https://i.ytimg.com/vi/b6r2W3P9vgY/mqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
 Blame the Project;
 NextBuild 2016<br/>
 Eindhoven, The Netherlands;
@@ -852,7 +852,7 @@ that the same happened to other speakers.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/xbovkm0tTn0/hqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
+<img src="https://i.ytimg.com/vi/xbovkm0tTn0/mqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat to Code Quality;
 [AgileEE 2016](http://kiev2016.agileee.org/);
 Kiev, Ukraine;
@@ -866,7 +866,7 @@ Aside from that, everything else was good, and I liked being there.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
-<img src="https://i.ytimg.com/vi/9j5pq71BS5U/hqdefault.jpg" class="past-talk" alt="Outsource People 2016"/>
+<img src="https://i.ytimg.com/vi/9j5pq71BS5U/mqdefault.jpg" class="past-talk" alt="Outsource People 2016"/>
 Software Outsourcing, 10 Years Ahead Prediction;
 [Outsource People 2016](http://outsource-people.com/en);
 Minsk, Belarus;
@@ -881,7 +881,7 @@ were not reimbursed. Also, the content was not really well-prepared or monitored
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/dE0_j4Kk6jo/hqdefault.jpg" class="past-talk" alt="Agilia Conference 2016"/>
+<img src="https://i.ytimg.com/vi/dE0_j4Kk6jo/mqdefault.jpg" class="past-talk" alt="Agilia Conference 2016"/>
 Meetings Help Us and Kill Our Projects;
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
 Olomouc, Czech Republic;
@@ -896,7 +896,7 @@ were rather boring and not well-prepared. Aside from that, I liked it.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C</aside>
-<img src="https://i.ytimg.com/vi/LB_YLWhGrco/hqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
+<img src="https://i.ytimg.com/vi/LB_YLWhGrco/mqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
 Meetings and Motivation, Friends or Enemies?;
 [SEDC 2016](http://www.sedcconference.org/);
 Washington, D.C., USA;
@@ -927,7 +927,7 @@ a time-wasting event for me.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/QMcDa2eyRBY/hqdefault.jpg" class="past-talk" alt="Kyiv DevOps Day"/>
+<img src="https://i.ytimg.com/vi/QMcDa2eyRBY/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps Day"/>
 Need Robust Software? Make It Fragile;
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
 Kyiv, Ukraine;
@@ -946,7 +946,7 @@ is just trash. To be honest, the previous event at Fedoriv Hub was much better
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F</aside>
-<img src="https://i.ytimg.com/vi/mHCwlZSlZeU/hqdefault.jpg" class="past-talk" alt="DeveloperWeek 2015"/>
+<img src="https://i.ytimg.com/vi/mHCwlZSlZeU/mqdefault.jpg" class="past-talk" alt="DeveloperWeek 2015"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [DeveloperWeek 2016](http://www.developerweek.com/);
 San Francisco, CA, USA;
@@ -961,7 +961,7 @@ tickets.
 
 <div class="talk-event"/>
 <aside class="venue-rate red">F+</aside>
-<img src="https://i.ytimg.com/vi/Xj226o2xI9Y/hqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
+<img src="https://i.ytimg.com/vi/Xj226o2xI9Y/mqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
 Talk to Your Microservice Via a Chat Bot, Not UI;
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
 Atlanta, GA, USA;
@@ -979,7 +979,7 @@ on tickets. It was a waste of time and money.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/qRZYJGYdrwk/hqdefault.jpg" class="past-talk" alt="TECClub 2016"/>
+<img src="https://i.ytimg.com/vi/qRZYJGYdrwk/mqdefault.jpg" class="past-talk" alt="TECClub 2016"/>
 XDSD: Meetings-Free Software Development Methodology;
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
 Palo Alto, CA, USA;
@@ -996,7 +996,7 @@ I received a number of leads from this event.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">C+</aside>
-<img src="https://i.ytimg.com/vi/6SfIc5ff-8U/hqdefault.jpg" class="past-talk" alt="DevOpsDays Warsaw 2015"/>
+<img src="https://i.ytimg.com/vi/6SfIc5ff-8U/mqdefault.jpg" class="past-talk" alt="DevOpsDays Warsaw 2015"/>
 "Continuous Integration May Have Negative Effects";
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
 Warsaw, Poland;
@@ -1011,7 +1011,7 @@ bad&mdash;an old Soviet-time hotel.
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">D</aside>
-<img src="https://i.ytimg.com/vi/jUil-aTImgU/hqdefault.jpg" class="past-talk" alt="BuildStuff 2015"/>
+<img src="https://i.ytimg.com/vi/jUil-aTImgU/mqdefault.jpg" class="past-talk" alt="BuildStuff 2015"/>
 "How Do You Talk to Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
 Kyiv, Ukraine;
@@ -1038,7 +1038,7 @@ a very boring subject; maybe that's why the event was also rather slow, despite
 all the attempts of organizers to make it fun.
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/2a2nWELIk-Y/hqdefault.jpg" class="past-talk" alt="Kyiv DevOps 2015"/>
+<img src="https://i.ytimg.com/vi/2a2nWELIk-Y/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps 2015"/>
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
 Kyiv, Ukraine;
@@ -1047,7 +1047,7 @@ Kyiv, Ukraine;
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y).
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/3IXk5yEJMIs/hqdefault.jpg" class="past-talk" alt="San Francisco DevOps 2015"/>
+<img src="https://i.ytimg.com/vi/3IXk5yEJMIs/mqdefault.jpg" class="past-talk" alt="San Francisco DevOps 2015"/>
 "CI Is DEAD. Or Is It?!";
 [San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);
 San Francisco, CA, USA;
