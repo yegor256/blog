@@ -93,11 +93,17 @@ Output input = new FileAsInput(
 
 Now, we want to copy the input to the output. There is no "copy" operation
 in `pure` OOP. Moreover, there must be no operations at all. Just objects. We
-have a class named `TeeInput`, which is an `Input` that copies everything
-you read from it to the `Output` encapsulated, similar to what
+have a class named
+[`TeeInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/TeeInput.html),
+which is an `Input` that copies everything
+you read from it to the
+[`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html)
+encapsulated, similar to what
 [`TeeInputStream`](https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html)
-from Apache Commons is doing. So, we don't copy, we create an `Input`
-that will copy if you touch it:
+from [Apache Commons](https://commons.apache.org/)
+is doing. So, we don't copy, we create an
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
+that will copy if you _touch_ it:
 
 {% highlight java %}
 Input tee = new TeeInput(input, output);
@@ -107,14 +113,17 @@ Now, we have to "touch" it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just `read()` the first
 byte, only one byte will be copies to the file. The best way to touch them
 all is to calculate the size of the `tee` object, going byte by byte. We
-have an object for it, called `LengthOfInput`. It encapsulates an `Input`
+have an object for it, called
+[`LengthOfInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html).
+It encapsulates an
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
 and behaves like its length in bytes:
 
 {% highlight java %}
 Scalar<Long> length = new LengthOfInput(tee);
 {% endhighlight %}
 
-Then, we take the value out of it and the file writing takes place:
+Then, we take the value out of it and the file writing operation takes place:
 
 {% highlight java %}
 long len = length.asValue();
@@ -137,7 +146,7 @@ new LengthOfInput(
       new File("/tmp/hello.txt")
     )
   )
-).asValue();
+).asValue(); // happens here
 {% endhighlight %}
 
 This is its procedural alternative from
@@ -150,12 +159,13 @@ Files.write(
 );
 {% endhighlight %}
 
-Why object-oriented is better, even though it's longer, I can hear you asking?
-
+"Why object-oriented is better, even though it's longer," I can hear you asking?
 Because it perfectly **decouples** concepts, while the procedural one keeps
-them together. Let's say, you are designing a class that is supposed
+them together.
+
+Let's say, you are designing a class that is supposed
 to encrypt a text and save it to a file. Here is how you would
-design it, the procedural way (not a real encryption, of course):
+design it the procedural way (not a real encryption, of course):
 
 {% highlight java %}
 class Encoder {
@@ -172,11 +182,13 @@ class Encoder {
 }
 {% endhighlight %}
 
-Works fine, but what will happen when you decide to make it work with
-an `OutputStream`? How will you modify this class? How ugly will it look?
+Works fine, but what will happen when you decide to extend it to also write to
+an [`OutputStream`](https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html)?
+How will you modify this class? How ugly will it look after that?
+That's because the design is not object-oriented.
 
-That's because the design is not object-oriented. This is how you would
-design it with Cactoos:
+This is how you would do the same design, in an object-oriented way,
+with [Cactoos](http://www.cactoos.org):
 
 {% highlight java %}
 class Encoder {
@@ -204,8 +216,10 @@ class Encoder {
 }
 {% endhighlight %}
 
-What do we do with this design if we want `OutputStream` to be accepted? We
-just add one secondary ctor:
+What do we do with this design if we want
+[`OutputStream`](https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html)
+to be accepted? We just add one
+[secondary]({% pst 2015/may/2015-05-28-one-primary-constructor %}) constructor:
 
 {% highlight java %}
 class Encoder {
@@ -215,12 +229,20 @@ class Encoder {
 }
 {% endhighlight %}
 
-Done.
+Done. That's how easy and elegant it is.
 
-That's because concepts are perfectly separated and encapsulated. In the
-procedural example the behavior of the object is located outside of it,
-in method `encode()`. The file doesn't know how to write, some outside
-procedure `Files.write()` knows that.
+That's because concepts are perfectly separated and functionality
+is encapsulated. In the procedural example the behavior of the object is
+located outside of it, in the method `encode()`. The file doesn't know
+how to write, some outside procedure
+[`Files.write()`](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte[],%20java.nio.file.OpenOption...%29)
+knows that instead.
 
-In the object-oriented design the `FileAsOutput` knows how to write, nobody else.
-It e
+To the contrary, in the object-oriented design the
+[`FileAsOutput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/FileAsOutput.html)
+knows how to write, nobody else does.
+The file writing functionality is encapsulated and this makes it
+possible to decorate the objects in any possible way, creating
+re-usable and re-placeable composite objects.
+
+Do you see the beauty of OOP now?
