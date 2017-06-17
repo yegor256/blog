@@ -238,7 +238,7 @@ Riga, Latvia;
 <aside class="venue-rate green">A</aside>
 <img src="https://i.ytimg.com/vi/20QBvrHq6TA/mqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
 Java Annotations Are a Big Mistake;
-[JPoint 2017](https://jpoint.ru/en/talks/java-annotations-are-a-big-mistake/);
+JPoint 2017;
 Moscow, Russia;
 8 April 2017;
 [видео](https://www.youtube.com/watch?v=20QBvrHq6TA) (with English subtitles),

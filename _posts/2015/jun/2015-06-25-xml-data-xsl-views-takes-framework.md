@@ -191,7 +191,7 @@ just chains everything that is
 delivered by encapsulated "directive sources."
 [`XeStylesheet`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeStylesheet.html)
 returns directives that create a single XML processing instruction.
-[`XeAppend`](http://www.takes.org/apidocs-0.16.9/org/takes/rs/xe/XeAppend.html)
+[`XeAppend`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeAppend.html)
 creates an XML node and adds encapsulated directives to it.
 [`XeDirectives`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeDirectives.html)
 simply returns what's inside.
