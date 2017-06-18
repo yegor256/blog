@@ -43,6 +43,8 @@ making them happy. You must be a permanent source of good news, funny
 stories, and smiles, shielding your <del>slaves</del> people
 from the reality and its threats.
 
+{% quote Truth hurts and modern management is not about hurting people, it's about making them happy. %}
+
 **Be Politically Correct**.
 How many [latinx](http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
 are in your team? What about gays and transsexuals?
@@ -72,7 +74,7 @@ with old-fashioned
 and start inspiring them with these
 [intrinsic rewards]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
 and free cookies.
-You will save some money too.
+You will [save some money]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %}) too.
 
 **Be Equal**.
 [Holacracy]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
@@ -86,6 +88,8 @@ career ladder position, in order not to irritate and hurt your team.
 Of course, you will still use fear and guilt to keep your
 [slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) under control,
 but new eco-titles will help you keep them less aware of what's going on.
+
+{% quote You still use fear and guilt to keep your slaves under control, but new eco-titles help you keep them less aware of what's going on. %}
 
 **Be a Leader**.
 Traditional [project management]({% pst 2016/may/2016-05-24-who-is-project-manager %})
@@ -127,6 +131,8 @@ you turn your subordinates into a family and then say:
 Who can refuse a friend? And not even a friend, but a mom. This is
 who they will associate you with when the guilt kicks in&mdash;with their
 mothers. They won't disobey, won't quit, and will never ask for more money.
+
+{% quote Don't worry about the future, when projects fail good committers just commit themselves to new projects. %}
 
 **Be Responsible**.
 In the brick-and-mortar management era responsibility was
