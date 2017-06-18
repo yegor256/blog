@@ -30,11 +30,16 @@ development, object-oriented programming and project management.
 Preliminary schedule for the future (feel free
 [to suggest](mailto:webinar@yegor256.com) a topic):
 
-  * Jul-6: Unit Testing vs. Debugging
-  * Aug-2: TBD
+  * Aug-2: How Cactoos was designed
   * Sep-6: TBD
 
-<!-- {% webinar 07-06-2017 25 uhDmHkMAYnM Micro-management vs. micro-tasking %} -->
+{% webinar 12-07-2017 26 01OZ3SAM3s4 Unit Testing vs Debugging %}
+
+[June 7, 2017](https://www.youtube.com/watch?v=01OZ3SAM3s4)<br/>
+26: **Unit Testing vs Debugging**<br/>
+We'll discuss why debugging is a bad practice in general and how unit testing
+can replace it in all places. The discussion will be based on this article previously published:
+[Are You Still Debugging?]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}).
 
 <a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 June 7, 2017<br/>
