@@ -24,6 +24,8 @@ every Monday at 11am PST. If you want to be a guest, please email to
 want to join and say a few words, come into this
 [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
+This is our [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
+
 Previous episodes:
 
 [no.2: What's Wrong With Project Management Conferences?](/podcast/2017/2.html) (49 min).
