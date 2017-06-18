@@ -434,9 +434,9 @@ interesting, but the audience wasn't really ready.
 [msk.jug.ru](https://jugmsk.timepad.ru/event/400420/);
 Moscow, Russia;
 14 November 2016;
-[video 1](https://www.youtube.com/watch?v=ADd00BotEbI),
-[video 2](https://www.youtube.com/watch?v=utGIIqRGbQc),
-[video 3](https://www.youtube.com/watch?v=03l8o2uu5K4).
+[видео 1](https://www.youtube.com/watch?v=ADd00BotEbI),
+[видео 2](https://www.youtube.com/watch?v=utGIIqRGbQc),
+[видео 3](https://www.youtube.com/watch?v=03l8o2uu5K4).
 
 <div class="talk-event"/>
 <aside class="venue-rate orange">B+</aside>
