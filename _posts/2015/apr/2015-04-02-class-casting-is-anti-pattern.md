@@ -31,7 +31,8 @@ them by their race, gender, and religion. Can this be a good practice?
 {% jb_picture_body %}
 
 This is a very typical example of type casting (Google Guava is full
-of it, for example [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111):
+of it, for example
+[`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111)):
 
 {% highlight java %}
 public final class Foo {

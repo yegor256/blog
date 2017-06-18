@@ -40,6 +40,10 @@ This is not how well-known immutable classes behave. Take, for example, `String`
 of an immutable object as a representative of a mutable real-world entity. How
 could an immutable object represent a mutable entity? Huh?
 
+<!--more-->
+
+{% jb_picture_body %}
+
 I'm very surprised. This post is going to clarify the definition of an immutable
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}).
 First, here is a quick answer. How can an immutable object represent a mutable entity?
@@ -49,10 +53,6 @@ and its methods, for example `length()` and `delete()`. The class is immutable, 
 to Oracle documentation, and its methods may return different values each time
 we call them. An object of class `File`, being perfectly immutable,
 represents a mutable real-world entity, a file on disk.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
 

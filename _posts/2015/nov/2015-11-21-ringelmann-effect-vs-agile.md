@@ -14,6 +14,9 @@ keywords:
   - responsibility in agile teams
   - motivation in agile
   - motivation in agile teams
+image: /images/2015/11/the-business.jpg
+jb_picture:
+  caption: The Business (2005) by Nick Love
 ---
 
 The [Ringelmann Effect](https://en.wikipedia.org/wiki/Ringelmann_effect)
@@ -28,12 +31,12 @@ to reproduce that experiment. It seems the French professor was right.
 
 <!--more-->
 
-{% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg 72 https://en.wikipedia.org/wiki/Max_Ringelmann %}
-
 Here is what we did. We created two groups with four people in each of them,
 all non-native English speakers. Then, both groups received the same
 task&mdash;to create as many words as possible using the letters in a single given word.
 It's a pretty simple task that just requires some time and creativity.
+
+{% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg 72 https://en.wikipedia.org/wiki/Max_Ringelmann %}
 
 The first group worked as a team. They had just one piece of paper
 and one pen to write down the words they found. We called them a
