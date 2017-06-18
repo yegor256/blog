@@ -44,8 +44,8 @@ can replace it in all places. The discussion will be based on this article previ
 <a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 June 7, 2017<br/>
 25: **Micro-management vs. micro-tasking**<br/>
-We will discuss how bad is micromanagement and how great is micro-tasking.
-Somehow our discussion will be based on this article:
+We discussed how bad was micromanagement and how great was micro-tasking.
+Somehow our discussion was based on this article:
 [Are You a Micromanager?]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <a href="https://www.youtube.com/watch?v=DjrA7_Uymok"><img src="https://i.ytimg.com/vi/DjrA7_Uymok/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
