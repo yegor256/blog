@@ -801,23 +801,13 @@ we get from a &amp;quot;pure&amp;quot; object-oriented and immutable approach, w
       <item>
         <title>What Does a Software Architect Do?</title>
         
-          <description>&lt;p&gt;Do you have a software architect in your project? Do you need one?&lt;/p&gt;
-
-&lt;p&gt;Well, most &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;agile teams&lt;/a&gt;
+          <description>&lt;p&gt;Do you have a software architect in your project? Do you need one?
+Well, most &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;agile teams&lt;/a&gt;
 do not define such a role explicitly and
 work in a &lt;strong&gt;democratic&lt;/strong&gt; mode. Every important technical decision
 is discussed with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a &amp;quot;software architect&amp;quot; badge
 on someone&amp;#39;s t-shirt, the most &lt;strong&gt;reputable&lt;/strong&gt; programmer gets it.&lt;/p&gt;
-
-&lt;p&gt;The badge rarely changes his responsibilities, though. After all,
-the team stays the same and enjoys having technical discussions together,
-involving everyone. In the end, a software architect is more of
-a &lt;strong&gt;status&lt;/strong&gt; than a role with explicitly defined responsibilities. It is
-a sign of respect, paid by other team players to the oldest and the
-most authoritative one among them. Right?&lt;/p&gt;
-
-&lt;p&gt;Absolutely wrong!&lt;/p&gt;
 </description>
         
         <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>

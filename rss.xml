@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-17T21:03:29+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">DynamoDB + Rake + Maven + Rack::Test</title><link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html" rel="alternate" type="text/html" title="DynamoDB + Rake + Maven + Rack::Test" /><published>2017-06-13T00:00:00+00:00</published><updated>2017-06-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/13/dynamodb-rack-maven</id><content type="html" xml:base="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html">&lt;p&gt;In
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-18T08:50:25+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">DynamoDB + Rake + Maven + Rack::Test</title><link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html" rel="alternate" type="text/html" title="DynamoDB + Rake + Maven + Rack::Test" /><published>2017-06-13T00:00:00+00:00</published><updated>2017-06-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/13/dynamodb-rack-maven</id><content type="html" xml:base="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html">&lt;p&gt;In
 &lt;a href=&quot;/2017/04/25/sixnines.html&quot;&gt;SixNines.io&lt;/a&gt;,
 one of my Ruby pet web apps, I&amp;#39;m using
 &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;DynamoDB&lt;/a&gt;, a NoSQL cloud database
@@ -190,6 +190,8 @@ making them happy. You must be a permanent source of good news, funny
 stories, and smiles, shielding your &lt;del&gt;slaves&lt;/del&gt; people
 from the reality and its threats.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Truth hurts and modern management is not about hurting people, it&amp;#39;s about making them happy.&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;Be Politically Correct&lt;/strong&gt;.
 How many &lt;a href=&quot;http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159&quot;&gt;latinx&lt;/a&gt;
 are in your team? What about gays and transsexuals?
@@ -219,7 +221,7 @@ with old-fashioned
 and start inspiring them with these
 &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;intrinsic rewards&lt;/a&gt;
 and free cookies.
-You will save some money too.&lt;/p&gt;
+You will &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;save some money&lt;/a&gt; too.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Be Equal&lt;/strong&gt;.
 &lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;Holacracy&lt;/a&gt;
@@ -233,6 +235,8 @@ career ladder position, in order not to irritate and hurt your team.
 Of course, you will still use fear and guilt to keep your
 &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slaves&lt;/a&gt; under control,
 but new eco-titles will help you keep them less aware of what&amp;#39;s going on.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;You still use fear and guilt to keep your slaves under control, but new eco-titles help you keep them less aware of what&amp;#39;s going on.&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Be a Leader&lt;/strong&gt;.
 Traditional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project management&lt;/a&gt;
@@ -274,6 +278,8 @@ you turn your subordinates into a family and then say:
 Who can refuse a friend? And not even a friend, but a mom. This is
 who they will associate you with when the guilt kicks in&amp;mdash;with their
 mothers. They won&amp;#39;t disobey, won&amp;#39;t quit, and will never ask for more money.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Don&amp;#39;t worry about the future, when projects fail good committers just commit themselves to new projects.&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Be Responsible&lt;/strong&gt;.
 In the brick-and-mortar management era responsibility was
