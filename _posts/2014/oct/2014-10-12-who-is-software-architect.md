@@ -20,16 +20,22 @@ youtube:
   - 0fuEgmibJc4
   - PNSezrlemsY
   - AvVQ5NjS_Nk
+image: /images/2014/10/jackie-brown.jpg
+jb_picture:
+  caption: Jackie Brown (1997) by Quentin Tarantino
 ---
 
 Do you have a software architect in your project? Do you need one?
-
 Well, most [agile teams]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
 do not define such a role explicitly and
 work in a **democratic** mode. Every important technical decision
 is discussed with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a "software architect" badge
 on someone's t-shirt, the most **reputable** programmer gets it.
+
+<!--more-->
+
+{% jb_picture_body %}
 
 The badge rarely changes his responsibilities, though. After all,
 the team stays the same and enjoys having technical discussions together,
@@ -39,8 +45,6 @@ a sign of respect, paid by other team players to the oldest and the
 most authoritative one among them. Right?
 
 Absolutely wrong!
-
-<!--more-->
 
 Obviously, an architect is usually someone who
 has the most knowledge, skills, experience, and authority. Of course,
