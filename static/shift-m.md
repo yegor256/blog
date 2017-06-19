@@ -32,6 +32,9 @@ Subscribe on
 
 Previous episodes:
 
+[no.3: How to Handle Underperformers on a Team](/podcast/2017/3.html) (45 min).
+Recorded on 19 June 2017.
+
 [no.2: What's Wrong With Project Management Conferences?](/podcast/2017/2.html) (49 min).
 Recorded on 12 June 2017.
 
