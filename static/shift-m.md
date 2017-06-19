@@ -33,7 +33,7 @@ Subscribe on
 Previous episodes:
 
 [no.2: What's Wrong With Project Management Conferences?](/podcast/2017/2.html) (49 min).
-Recorded on 5 June 2017.
+Recorded on 12 June 2017.
 
 [no.1: Why Distributed Teams Fail?](/podcast/2017/1.html) (53 min).
 Recorded on 5 June 2017.
