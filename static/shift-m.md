@@ -25,6 +25,10 @@ want to join and say a few words, come into this
 [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 
 This is our [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
+Subscribe on
+[SoundCloud](https://soundcloud.com/yegor256),
+[iTunes](https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721),
+[Android](http://subscribeonandroid.com/feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
 
 Previous episodes:
 
