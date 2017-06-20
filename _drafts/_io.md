@@ -88,7 +88,7 @@ Input input = new BytesAsInput(
 Then you need the `Output`:
 
 {% highlight java %}
-Output input = new FileAsInput(
+Output output = new FileAsOutput(
   new File("/tmp/hello.txt")
 );
 {% endhighlight %}
