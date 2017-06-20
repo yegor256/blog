@@ -143,7 +143,7 @@ new LengthOfInput(
         )
       )
     ),
-    new FileAsInput(
+    new FileAsOutput(
       new File("/tmp/hello.txt")
     )
   )
