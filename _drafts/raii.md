@@ -24,20 +24,20 @@ idea introduced in C++.
 
 {% jb_picture_body %}
 
-Works like this:
+Here is how we can implement it in Java for a "resource," which
+is a temporary file, using [Cactoos](http://www.cactoos.org):
 
 {% highlight java %}
 class Temp implements Closeable {
-  private final Path p;
-  public Temp() {
-    this.p = Files.createTempFile("", "");
-  }
+  private final Scalar<Path> pth = new StickyScalar<>(
+    () -> Files.createTempFile("", "")
+  );
   @Override
   public void close() {
-    Files.delete(this.f);
+    Files.delete(this.path());
   }
   public Path path() {
-    return this.f;
+    return this.pth.asValue();
   }
 }
 {% endhighlight %}
@@ -45,39 +45,9 @@ class Temp implements Closeable {
 Now we use it like this:
 
 {% highlight java %}
-try (Temp t = new Temp()) {
+try (Temp temp = new Temp()) {
   Files.write(t.path(), "Hello!".getBytes());
 }
 {% endhighlight %}
 
-The only problem is that does the temporary file is being created inside
-the constructor, which is a
-[code smell]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
-Here is what I'm doing in order to avoid that:
-
-{% highlight java %}
-class Temp implements Closeable {
-  private final AtomicReference<Path> p =
-    new AtomicReference<>;
-  @Override
-  public void close() {
-    Path path = this.p.get();
-    if (path != null) {
-      Files.delete(path);
-    }
-  }
-  public Path init() {
-    if (this.p.get() == null) {
-      this.p.set(Files.createTempFile("", ""));
-    }
-    return this.p.get();
-  }
-}
-{% endhighlight %}
-
-And then:
-{% highlight java %}
-try (Temp t = new Temp().open()) {
-  Files.write(t.path(), "Hello!".getBytes());
-}
-{% endhighlight %}
+That's it.
