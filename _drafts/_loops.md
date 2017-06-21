@@ -27,7 +27,7 @@ it happens.
 
 {% jb_picture_body %}
 
-This is a traditional
+This is a traditional way
 
 {% highlight java %}
 byte[] content = Files.readAllBytes(
