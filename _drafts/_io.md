@@ -23,10 +23,10 @@ jb_picture:
 Java primitives
 [we](https://github.com/yegor256/cactoos#contributors)
 started to work on just a few weeks ago. The intent was to
-propose a more declarative and clean alternative to
+propose a clean and more declarative alternative to
 JDK, Guava, Apache Commons, and others. Instead of calling static
-procedures we may want to use objects, the way they are supposed to
-be used. Let's see how input/output works, in a _pure_
+procedures we want to use objects, the way they are supposed to
+be used. Let's see how input/output works in a _pure_
 object-oriented fashion.
 
 <!--more-->
@@ -68,12 +68,12 @@ out of it we call its method `asBytes()`:
 bytes[] content = source.asBytes();
 {% endhighlight %}
 
-This is moment when the file system is touched. This approach, as you
+This is the moment when the file system is touched. This approach, as you
 can see, is absolutely declarative and thanks to that possesses all the
 benefits of object orientation.
 
-Here is another example. Say, you want to write a text into a file. Here
-is how you do it in Cactoos. First, you need the `Input`:
+Here is another example. Say you want to write some text into a file. Here
+is how you do it in Cactoos. First you need the `Input`:
 
 {% highlight java %}
 Input input = new BytesAsInput(
@@ -85,25 +85,24 @@ Input input = new BytesAsInput(
 );
 {% endhighlight %}
 
-Then, you need the `Output`:
+Then you need the `Output`:
 
 {% highlight java %}
-Output input = new FileAsInput(
+Output output = new FileAsOutput(
   new File("/tmp/hello.txt")
 );
 {% endhighlight %}
 
 Now, we want to copy the input to the output. There is no "copy" operation
-in `pure` OOP. Moreover, there must be no operations at all. Just objects. We
+in _pure_ OOP. Moreover, there must be no operations at all. Just objects. We
 have a class named
 [`TeeInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/TeeInput.html),
 which is an `Input` that copies everything
 you read from it to the
-[`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html)
-encapsulated, similar to what
+[`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html),
+similar to what
 [`TeeInputStream`](https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html)
-from [Apache Commons](https://commons.apache.org/)
-is doing. So, we don't copy, we create an
+from [Apache Commons](https://commons.apache.org/) does, but encapsuated. So we don't copy, we create an
 [`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
 that will copy if you _touch_ it:
 
@@ -125,7 +124,7 @@ and behaves like its length in bytes:
 Scalar<Long> length = new LengthOfInput(tee);
 {% endhighlight %}
 
-Then, we take the value out of it and the file writing operation takes place:
+Then we take the value out of it and the file writing operation takes place:
 
 {% highlight java %}
 long len = length.asValue();
@@ -144,7 +143,7 @@ new LengthOfInput(
         )
       )
     ),
-    new FileAsInput(
+    new FileAsOutput(
       new File("/tmp/hello.txt")
     )
   )
@@ -161,12 +160,12 @@ Files.write(
 );
 {% endhighlight %}
 
-"Why object-oriented is better, even though it's longer," I can hear you asking?
+"Why is object-oriented better, even though it's longer?" I hear you ask.
 Because it perfectly **decouples** concepts, while the procedural one keeps
 them together.
 
 Let's say, you are designing a class that is supposed
-to encrypt a text and save it to a file. Here is how you would
+to encrypt some text and save it to a file. Here is how you would
 design it the procedural way (not a real encryption, of course):
 
 {% highlight java %}
@@ -235,14 +234,14 @@ Done. That's how easy and elegant it is.
 
 That's because concepts are perfectly separated and functionality
 is encapsulated. In the procedural example the behavior of the object is
-located outside of it, in the method `encode()`. The file doesn't know
+located outside of it, in the method `encode()`. The file itself doesn't know
 how to write, some outside procedure
 [`Files.write()`](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte[],%20java.nio.file.OpenOption...%29)
 knows that instead.
 
 To the contrary, in the object-oriented design the
 [`FileAsOutput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/FileAsOutput.html)
-knows how to write, nobody else does.
+knows how to write, and nobody else does.
 The file writing functionality is encapsulated and this makes it
 possible to decorate the objects in any possible way, creating
 re-usable and re-placeable composite objects.
