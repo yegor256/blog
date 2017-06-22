@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-22T05:46:17+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-22T07:49:13+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a library of object-oriented
 Java primitives
@@ -6,9 +6,11 @@ Java primitives
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
 JDK, Guava, Apache Commons, and others. Instead of calling static
-procedures we want to use objects, the way they are supposed to
-be used. Let&amp;#39;s see how input/output works in a &lt;em&gt;pure&lt;/em&gt;
-object-oriented fashion.&lt;/p&gt;
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;procedures&lt;/a&gt;
+we want to use &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;objects&lt;/a&gt;,
+the way they are supposed to be used. Let&amp;#39;s see how input/output works in a &lt;em&gt;pure&lt;/em&gt;
+&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented&lt;/a&gt;
+fashion.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -205,9 +207,11 @@ we
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
 JDK, Guava, Apache Commons, and others. Instead of calling static
-procedures we want to use objects, the way they are supposed to
-be used. Let&amp;#39;s see how input/output works in a pure
-object-oriented fashion.</summary></entry><entry><title type="html">DynamoDB + Rake + Maven + Rack::Test</title><link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html" rel="alternate" type="text/html" title="DynamoDB + Rake + Maven + Rack::Test" /><published>2017-06-13T00:00:00+00:00</published><updated>2017-06-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/13/dynamodb-rack-maven</id><content type="html" xml:base="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html">&lt;p&gt;In
+procedures
+we want to use objects,
+the way they are supposed to be used. Let&amp;#39;s see how input/output works in a pure
+object-oriented
+fashion.</summary></entry><entry><title type="html">DynamoDB + Rake + Maven + Rack::Test</title><link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html" rel="alternate" type="text/html" title="DynamoDB + Rake + Maven + Rack::Test" /><published>2017-06-13T00:00:00+00:00</published><updated>2017-06-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/13/dynamodb-rack-maven</id><content type="html" xml:base="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html">&lt;p&gt;In
 &lt;a href=&quot;/2017/04/25/sixnines.html&quot;&gt;SixNines.io&lt;/a&gt;,
 one of my Ruby pet web apps, I&amp;#39;m using
 &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;DynamoDB&lt;/a&gt;, a NoSQL cloud database
