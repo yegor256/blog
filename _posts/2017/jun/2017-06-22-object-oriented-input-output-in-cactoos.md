@@ -24,9 +24,11 @@ Java primitives
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
 JDK, Guava, Apache Commons, and others. Instead of calling static
-procedures we want to use objects, the way they are supposed to
-be used. Let's see how input/output works in a _pure_
-object-oriented fashion.
+[procedures]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
+we want to use [objects]({% pst 2016/jul/2016-07-14-who-is-object %}),
+the way they are supposed to be used. Let's see how input/output works in a _pure_
+[object-oriented]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
+fashion.
 
 <!--more-->
 
