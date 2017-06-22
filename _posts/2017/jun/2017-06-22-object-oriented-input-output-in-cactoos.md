@@ -101,7 +101,7 @@ you read from it to the
 [`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html),
 similar to what
 [`TeeInputStream`](https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html)
-from [Apache Commons](https://commons.apache.org/) does, but encapsuated. So we don't copy, we create an
+from [Apache Commons](https://commons.apache.org/) does, but encapsulated. So we don't copy, we create an
 [`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
 that will copy if you _touch_ it:
 
@@ -243,6 +243,6 @@ To the contrary, in the object-oriented design the
 knows how to write, and nobody else does.
 The file writing functionality is encapsulated and this makes it
 possible to decorate the objects in any possible way, creating
-re-usable and re-placeable composite objects.
+reusable and replaceable composite objects.
 
 Do you see the beauty of OOP now?
