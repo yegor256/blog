@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-22T09:58:13+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-22T19:09:14+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a library of object-oriented
 Java primitives
 &lt;a href=&quot;https://github.com/yegor256/cactoos#contributors&quot;&gt;we&lt;/a&gt;
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
-JDK, Guava, Apache Commons, and others. Instead of calling static
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_Development_Kit&quot;&gt;JDK&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/google/guava&quot;&gt;Guava&lt;/a&gt;,
+&lt;a href=&quot;https://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;,
+and others. Instead of calling static
 &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;procedures&lt;/a&gt;
 we want to use &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;objects&lt;/a&gt;,
 the way they are supposed to be used. Let&amp;#39;s see how input/output works in a &lt;em&gt;pure&lt;/em&gt;
@@ -36,7 +39,7 @@ placing it into the array.&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Pay attention&amp;mdash;there are no method calls yet. Just three constructors
-or three classes that compose a bigger object. The object &lt;code&gt;source&lt;/code&gt; is of type
+of three classes that compose a bigger object. The object &lt;code&gt;source&lt;/code&gt; is of type
 &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html&quot;&gt;&lt;code&gt;Bytes&lt;/code&gt;&lt;/a&gt;
 and represents the content of the file. To get that content
 out of it we call its method &lt;code&gt;asBytes()&lt;/code&gt;:&lt;/p&gt;
@@ -48,7 +51,8 @@ can see, is absolutely declarative and thanks to that possesses all the
 benefits of object orientation.&lt;/p&gt;
 
 &lt;p&gt;Here is another example. Say you want to write some text into a file. Here
-is how you do it in Cactoos. First you need the &lt;code&gt;Input&lt;/code&gt;:&lt;/p&gt;
+is how you do it in Cactoos. First you need the
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BytesAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
@@ -58,7 +62,7 @@ is how you do it in Cactoos. First you need the &lt;code&gt;Input&lt;/code&gt;:&
   &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Then you need the &lt;code&gt;Output&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Then you need the &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -81,7 +85,7 @@ that will copy if you &lt;em&gt;touch&lt;/em&gt; it:&lt;/p&gt;
 
 &lt;p&gt;Now, we have to &amp;quot;touch&amp;quot; it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just &lt;code&gt;read()&lt;/code&gt; the first
-byte, only one byte will be copies to the file. The best way to touch them
+byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the &lt;code&gt;tee&lt;/code&gt; object, going byte by byte. We
 have an object for it, called
 &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html&quot;&gt;&lt;code&gt;LengthOfInput&lt;/code&gt;&lt;/a&gt;.
@@ -206,7 +210,10 @@ Java primitives
 we
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
-JDK, Guava, Apache Commons, and others. Instead of calling static
+JDK,
+Guava,
+Apache Commons,
+and others. Instead of calling static
 procedures
 we want to use objects,
 the way they are supposed to be used. Let&amp;#39;s see how input/output works in a pure

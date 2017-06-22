@@ -73,7 +73,10 @@ Java primitives
 <a href="https://github.com/yegor256/cactoos#contributors">we</a>
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
-JDK, Guava, Apache Commons, and others. Instead of calling static
+<a href="https://en.wikipedia.org/wiki/Java_Development_Kit">JDK</a>,
+<a href="https://github.com/google/guava">Guava</a>,
+<a href="https://commons.apache.org/">Apache Commons</a>,
+and others. Instead of calling static
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">procedures</a>
 we want to use <a href="/2016/07/14/who-is-object.html">objects</a>,
 the way they are supposed to be used. Let's see how input/output works in a <em>pure</em>
@@ -104,7 +107,7 @@ placing it into the array.</p>
 );</pre>
 
 <p>Pay attention—there are no method calls yet. Just three constructors
-or three classes that compose a bigger object. The object <code>source</code> is of type
+of three classes that compose a bigger object. The object <code>source</code> is of type
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html"><code>Bytes</code></a>
 and represents the content of the file. To get that content
 out of it we call its method <code>asBytes()</code>:</p>
@@ -116,7 +119,8 @@ can see, is absolutely declarative and thanks to that possesses all the
 benefits of object orientation.</p>
 
 <p>Here is another example. Say you want to write some text into a file. Here
-is how you do it in Cactoos. First you need the <code>Input</code>:</p>
+is how you do it in Cactoos. First you need the
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html"><code>Input</code></a>:</p>
 
 <pre>Input input = new BytesAsInput(
   new TextAsBytes(
@@ -126,7 +130,7 @@ is how you do it in Cactoos. First you need the <code>Input</code>:</p>
   )
 );</pre>
 
-<p>Then you need the <code>Output</code>:</p>
+<p>Then you need the <a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html"><code>Output</code></a>:</p>
 
 <pre>Output output = new FileAsOutput(
   new File("/tmp/hello.txt")
@@ -149,7 +153,7 @@ that will copy if you <em>touch</em> it:</p>
 
 <p>Now, we have to "touch" it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just <code>read()</code> the first
-byte, only one byte will be copies to the file. The best way to touch them
+byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the <code>tee</code> object, going byte by byte. We
 have an object for it, called
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html"><code>LengthOfInput</code></a>.
