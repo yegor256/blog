@@ -783,6 +783,7 @@ bytes
 cache
 cached
 caching
+cactoos
 cafe
 cake
 calculate
@@ -2329,6 +2330,7 @@ fantastically
 far
 farley
 farther
+fashion
 fast
 faster
 fastest
