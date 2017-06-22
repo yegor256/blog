@@ -63,7 +63,7 @@ Bytes source = new InputAsBytes(
 {% endhighlight %}
 
 Pay attention&mdash;there are no method calls yet. Just three constructors
-or three classes that compose a bigger object. The object `source` is of type
+of three classes that compose a bigger object. The object `source` is of type
 [`Bytes`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html)
 and represents the content of the file. To get that content
 out of it we call its method `asBytes()`:
