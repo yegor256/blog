@@ -77,7 +77,8 @@ can see, is absolutely declarative and thanks to that possesses all the
 benefits of object orientation.
 
 Here is another example. Say you want to write some text into a file. Here
-is how you do it in Cactoos. First you need the `Input`:
+is how you do it in Cactoos. First you need the
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html):
 
 {% highlight java %}
 Input input = new BytesAsInput(
@@ -89,7 +90,7 @@ Input input = new BytesAsInput(
 );
 {% endhighlight %}
 
-Then you need the `Output`:
+Then you need the [`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html):
 
 {% highlight java %}
 Output output = new FileAsOutput(
@@ -116,7 +117,7 @@ Input tee = new TeeInput(input, output);
 
 Now, we have to "touch" it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just `read()` the first
-byte, only one byte will be copies to the file. The best way to touch them
+byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the `tee` object, going byte by byte. We
 have an object for it, called
 [`LengthOfInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html).
