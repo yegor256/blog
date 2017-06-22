@@ -97,13 +97,6 @@ OK, I'm kidding about the limo.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="/images/2016/jdkio.png" class="future-talk" alt="JDK.IO 2017"/>
-**Java Annotations Are a Bad Idea**<br/>
-[JDK IO 2017](http://www.jdk.io/)<br/>
-Copenhagen, Denmark<br/>
-19-20 June 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/pgday.png" class="future-talk" alt="PgDay 2017"/>
 **PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests**<br/>
 [PgDay 2017](https://pgday.ru/ru/2017/speakers/136)<br/>
@@ -151,6 +144,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/cv23Z6xpwDw/mqdefault.jpg" class="past-talk" alt="JDK.IO 2017"/>
+Java Annotations Are a Bad Idea;
+[JDK IO 2017](http://www.jdk.io/);
+Copenhagen, Denmark;
+19-20 June 2017;
+[video](https://youtu.be/cv23Z6xpwDw),
+[slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-a-bad-idea).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
