@@ -23,7 +23,10 @@ Java primitives
 [we](https://github.com/yegor256/cactoos#contributors)
 started to work on just a few weeks ago. The intent was to
 propose a clean and more declarative alternative to
-JDK, Guava, Apache Commons, and others. Instead of calling static
+[JDK](https://en.wikipedia.org/wiki/Java_Development_Kit),
+[Guava](https://github.com/google/guava),
+[Apache Commons](https://commons.apache.org/),
+and others. Instead of calling static
 [procedures]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 we want to use [objects]({% pst 2016/jul/2016-07-14-who-is-object %}),
 the way they are supposed to be used. Let's see how input/output works in a _pure_
