@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object-Oriented Declarative Input/Output in Cactoos"
-date: 2017-06-10
+date: 2017-06-22
 place: Dnipro, Ukraine
 tags: java oop
 description: |
@@ -14,10 +14,9 @@ keywords:
   - object-oriented input/output
   - cactoos
   - input/output cactoos
-image: /images/2017/06/?
-jb_picture:
-  caption: xxx
 ---
+
+{% badge /images/books/elegant-objects/cactus.svg 64 http://www.cactoos.org %}
 
 [Cactoos](http://www.cactoos.org) is a library of object-oriented
 Java primitives
