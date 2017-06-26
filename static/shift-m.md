@@ -32,7 +32,6 @@ Subscribe on
 
 Future episodes (not a concrete schedule, just my plans):
 
-  * 6/26: with [Yakov Fain](https://yakovfain.com/).
   * 7/3: with [Ahmad Fahmy](http://www.ahmadfahmy.com/)
   * 7/10: with [Hugo Messer](http://www.hugomesser.com/)
   * 7/17: empty slot
@@ -42,6 +41,9 @@ Future episodes (not a concrete schedule, just my plans):
 If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
 Previous episodes:
+
+&#35;3: [Yakov Fein about his management philosophy](/podcast/2017/4.html)<br/>
+26 June 2017; 45 min.
 
 &#35;3: [How to Handle Underperformers on a Team](/podcast/2017/3.html)<br/>
 19 June 2017; 45 min.
