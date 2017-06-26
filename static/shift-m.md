@@ -30,13 +30,24 @@ Subscribe on
 [iTunes](https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721),
 [Android](http://subscribeonandroid.com/feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
 
+Future episodes (not a concrete schedule, just my plans):
+
+  * 6/26: with [Yakov Fain](https://yakovfain.com/).
+  * 7/3: with [Ahmad Fahmy](http://www.ahmadfahmy.com/)
+  * 7/10: with [Hugo Messer](http://www.hugomesser.com/)
+  * 7/17: empty slot
+  * 7/24: with [Susanne Madsen](http://www.susannemadsen.com/)
+  * 7/31: empty slot
+
+If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
+
 Previous episodes:
 
-[#3: How to Handle Underperformers on a Team](/podcast/2017/3.html) (45 min).
-Recorded on 19 June 2017.
+&#35;3: [How to Handle Underperformers on a Team](/podcast/2017/3.html);
+45 min; 19 June 2017.
 
-[#2: What's Wrong With Project Management Conferences?](/podcast/2017/2.html) (49 min).
-Recorded on 12 June 2017.
+&#35;2: [What's Wrong With Project Management Conferences?](/podcast/2017/2.html);
+49 min; 12 June 2017.
 
-[#1: Why Distributed Teams Fail?](/podcast/2017/1.html) (53 min).
-Recorded on 5 June 2017.
+&#35;1: [Why Distributed Teams Fail?](/podcast/2017/1.html);
+53 min; 5 June 2017.
