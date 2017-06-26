@@ -44,10 +44,10 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 Previous episodes:
 
 &#35;3: [How to Handle Underperformers on a Team](/podcast/2017/3.html)<br/>
-45 min; 19 June 2017.
+19 June 2017; 45 min.
 
 &#35;2: [What's Wrong With Project Management Conferences?](/podcast/2017/2.html)<br/>
-49 min; 12 June 2017.
+12 June 2017; 49 min.
 
 &#35;1: [Why Distributed Teams Fail?](/podcast/2017/1.html)<br/>
-53 min; 5 June 2017.
+5 June 2017; 53 min.
