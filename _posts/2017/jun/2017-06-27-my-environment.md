@@ -68,7 +68,7 @@ for cross-browser compatibility, that's all.
 [iTerm2](https://www.iterm2.com/) (free)
 for the command line. It's a replacement of
 [Terminal](https://en.wikipedia.org/wiki/Terminal_%28macOS%29), with
-some nice features, which I'm not actually aware about.
+some nice features, which I'm not actually aware of.
 
 <img src="/images/2017/06/env-homebrew.jpg" class="env-ico"/><br/>
 [Homebrew](https://brew.sh/) (free)
