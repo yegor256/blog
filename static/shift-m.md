@@ -14,6 +14,7 @@ keywords:
   - management podcast
   - podcast software management
   - podcast programming
+nospell: true
 ---
 
 {% badge /images/shift-m-logo.svg 92 %}

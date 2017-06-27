@@ -14,9 +14,6 @@ keywords:
   - software tools
   - macbook
   - Intellij IDEA
-image: /images/2015/03/?
-jb_picture:
-  caption: xxx
 ---
 
 I was asked in my [Telegram Group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A)
@@ -28,8 +25,12 @@ for someone.
 
 {% jb_picture_body %}
 
+{% picture /images/2017/06/env-macbook.jpg 128 %}
+
 [MacBook Pro](https://www.apple.com/macbook-pro/)
 Retina, 15-inch, Late 2013 ($2,900) with MacOS Sierra.
+
+{% picture /images/2017/06/env-intellij-idea.jpg 128 %}
 
 [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (<del>$499</del> free)
 for Java projects. I've got a free open source
@@ -37,6 +38,8 @@ license from [JetBrains](https://www.jetbrains.com/),
 because I'm an active contributor and
 an author of [Takes Framework](http://www.takes.org). You may do
 the same, I believe, just [email them](mailto:opensource@jetbrains.com) and ask.
+
+{% picture /images/2017/06/env-sublime-text.jpg 128 %}
 
 [Sublime Text](https://www.sublimetext.com/) ($70)
 for all texts I edit, including Ruby, JavaScript, and PHP code.
