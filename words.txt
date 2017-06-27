@@ -97,6 +97,7 @@ administrative
 administrators
 admiration
 admit
+adobe
 adopt
 adorable
 adore
@@ -358,6 +359,7 @@ ask
 asked
 asking
 asks
+asleep
 aspect
 aspectj
 aspects
@@ -511,6 +513,7 @@ basis
 bat
 batchelder
 bathroom
+bay
 bcba
 be
 beans
@@ -1085,6 +1088,7 @@ collective
 collectors
 collects
 collisions
+colloquy
 colors
 colosseum
 column
@@ -1455,6 +1459,7 @@ criticized
 critiques
 CRMs
 cross
+cross-browser
 crossed-out
 crucial
 crucially
@@ -2130,6 +2135,7 @@ environments
 EO
 eolang
 episode
+episodes
 EPUB
 equal
 equality
@@ -2317,6 +2323,7 @@ fake
 fall
 fallacy
 fallback
+falling
 falls
 false
 familiar
@@ -2361,6 +2368,7 @@ fee
 feed
 feedback
 feedback-free
+feeds
 feel
 feeling
 feelings
@@ -2641,6 +2649,7 @@ gets
 getter
 getters
 getting
+GIF
 gift
 gifts
 gig
@@ -2914,6 +2923,7 @@ holland
 hollywood
 holub
 home
+homebrew
 homepage
 homework
 honest
@@ -2980,6 +2990,7 @@ i've
 IAM
 ian
 IBM
+icloud
 icons
 ID
 IDE
@@ -3317,6 +3328,7 @@ iterating
 iterative
 iterator
 iterators
+iterm
 its
 itself
 jack
@@ -3398,6 +3410,7 @@ journal
 journey
 joy
 JPA
+JPEG
 JPoint
 jq
 jquery
@@ -3716,11 +3729,13 @@ macbooks
 machine
 machines
 MacOS
+macports
 made
 magic
 Magnum-CI
 mailing
 main
+mainly
 mainstream
 maintain
 maintainability
@@ -3891,6 +3906,7 @@ message
 messages
 messaging
 messed
+messenger
 messes
 messiness
 messy
@@ -4351,6 +4367,7 @@ opener
 opening
 OpenJDK
 openly
+opera
 operate
 operating
 operation
@@ -4529,7 +4546,9 @@ passing
 passion
 passionate
 passive
+passport
 password
+passwords
 past
 patch
 patches
@@ -4660,8 +4679,11 @@ pipe
 pipeline
 pipelines
 pipes
+piracy
+pirate
 pitch
 pitfalls
+pixelmator
 pizza
 place
 placed
@@ -4703,6 +4725,7 @@ PMIS
 PMO
 PMP
 PMs
+PNG
 PO
 pocket
 poems
@@ -4758,6 +4781,7 @@ post
 post-it
 post-merge
 post-money
+post-processing
 posted
 PostgreSQL
 posting
@@ -4917,6 +4941,7 @@ professor
 professors
 profile
 profiles
+profiling
 profit
 profitable
 program
@@ -5092,6 +5117,7 @@ ranked
 rapidly
 rare
 rarely
+rasterized
 rate
 rate-setting
 rates
@@ -5143,6 +5169,7 @@ realized
 realizes
 really
 realy
+reaper
 reappearing
 reason
 reasonable
@@ -5394,6 +5421,7 @@ resume
 resumes
 retain
 rethink
+retina
 retired
 retirement
 retires
@@ -5483,6 +5511,7 @@ round
 route
 router
 routine
+RSS
 rubensson
 rubocop
 ruby
@@ -5508,6 +5537,7 @@ rush
 russian
 rusty
 ruthless
+rutracker
 s-class
 sacrifice
 sacrificed
@@ -5737,6 +5767,7 @@ shell
 shelly
 shielding
 shift
+shift-m
 shifting
 shifts
 shine
@@ -5774,6 +5805,7 @@ sick
 side
 side-effect
 sides
+sierra
 sigh
 sign
 signal
@@ -5826,6 +5858,7 @@ skateboard
 skeet
 skeleton
 skeptical
+sketch
 skiing
 skill
 skilled
@@ -5864,6 +5897,7 @@ smart
 smart-asses
 smarter
 smartest
+smartphone
 smell
 smells
 smelly
@@ -5978,6 +6012,7 @@ spot
 spouse
 spouses
 spread
+spreadsheets
 spring
 sprints
 spy
@@ -6237,6 +6272,7 @@ sweet
 swift
 swim
 switch
+switched
 switching
 sympathy
 symptom
@@ -6334,6 +6370,7 @@ tends
 tennis
 tension
 term
+terminal
 terminate
 terminated
 terminates
@@ -6361,6 +6398,7 @@ testing
 tests
 tex
 text
+textmate
 texts
 th
 than
@@ -6476,6 +6514,7 @@ top
 top-down
 topic
 tops
+torrent
 torrents
 torvalds
 total
@@ -6488,6 +6527,7 @@ tough
 tourism
 toward
 towards
+tower
 toxic
 trac
 trace
@@ -6533,6 +6573,7 @@ translates
 translating
 translation
 translator
+transmit
 transparent
 transsexuals
 trash
@@ -6589,6 +6630,7 @@ tutorial
 tuytschaevers
 TV
 tweet
+tweeted
 twelve
 twenty
 twice
@@ -6609,6 +6651,7 @@ ubuntu
 ugly
 UI
 ukraine
+ultimate
 ultimately
 UML
 un-asked
@@ -6789,6 +6832,7 @@ verifiable
 verification
 verified
 verifiers
+verify
 version
 versionalize
 versionalizes
@@ -6800,11 +6844,13 @@ vertically
 very
 vexor
 via
+viber
 vice
 victim
 video
 video-recorded
 videos
+vienna
 view
 viewed
 views
@@ -6830,7 +6876,9 @@ visible
 vision
 visitor
 visitors
+visual
 visually
+VLC
 vocabulary
 voice
 void
@@ -6928,6 +6976,7 @@ western
 what
 what's
 whatever
+whatsapp
 wheat
 when
 whenever
@@ -7071,6 +7120,7 @@ you've
 young
 younger
 your
+yourkit
 yours
 yourself
 youtube
