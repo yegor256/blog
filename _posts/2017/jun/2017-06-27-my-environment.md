@@ -88,7 +88,7 @@ when I have to use YourKit, I know that I'm doing something very wrong
 in my code.
 
 <img src="/images/2017/06/env-httpclient.jpg" class="env-ico"/><br/>
-[HTTP Client](http://www.thevrway.com/httpclient) ($2)
+[HTTP Client](https://itunes.apple.com/us/app/http-client/id418138339?mt=12) ($2)
 for HTTP requests/responses debugging, when
 [`curl`](https://curl.haxx.se/) is not enough.
 
