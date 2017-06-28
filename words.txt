@@ -2649,6 +2649,7 @@ gets
 getter
 getters
 getting
+GHz
 GIF
 gift
 gifts
