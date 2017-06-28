@@ -132,7 +132,7 @@ Scalar<Long> length = new LengthOfInput(tee);
 Then we take the value out of it and the file writing operation takes place:
 
 {% highlight java %}
-long len = length.asValue();
+long len = length.value();
 {% endhighlight %}
 
 Thus, the entire operation of writing the string to the file will
@@ -152,7 +152,7 @@ new LengthOfInput(
       new File("/tmp/hello.txt")
     )
   )
-).asValue(); // happens here
+).value(); // happens here
 {% endhighlight %}
 
 This is its procedural alternative from
@@ -217,7 +217,7 @@ class Encoder {
         ),
         this.target
       )
-    ).asValue();
+    ).value();
   }
 }
 {% endhighlight %}
