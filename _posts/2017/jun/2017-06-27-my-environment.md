@@ -21,7 +21,7 @@ style: |-
 
 I was asked in my [Telegram Group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A)
 which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe will be helpful
+what I have and even how much I paid for them. Maybe it will be helpful
 for someone.
 
 <!--more-->
@@ -69,7 +69,7 @@ for cross-browser compatibility, that's all.
 [iTerm2](https://www.iterm2.com/) (free)
 for the command line. It's a replacement of
 [Terminal](https://en.wikipedia.org/wiki/Terminal_%28macOS%29), with
-some nice features, which I'm not actually aware about.
+some nice features, which I'm not actually aware of.
 
 <img src="/images/2017/06/env-homebrew.jpg" class="env-ico"/><br/>
 [Homebrew](https://brew.sh/) (free)
@@ -101,7 +101,7 @@ converting SVG into PNG.
 [Pixelmator](http://www.pixelmator.com/) ($30)
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
-Pixelmator. It is perfect alternative to
+Pixelmator. It is a perfect alternative to
 [Adobe Photoshop](http://www.adobe.com/products/photoshop.html), if you
 are a programmer, not a graphic designer.
 
