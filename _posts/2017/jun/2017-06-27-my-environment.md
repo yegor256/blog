@@ -30,7 +30,8 @@ for someone.
 
 <img src="/images/2017/06/env-macbook.jpg" class="env-ico"/><br/>
 [MacBook Pro](https://www.apple.com/macbook-pro/)
-Retina, 15-inch, Late 2013 ($2,900) with MacOS Sierra. I bought it over
+Retina, 15-inch, [Late 2013](https://support.apple.com/kb/sp690?locale=en_US),
+2.3GHz/16Gb/512Gb ($2,900) with MacOS Sierra. I bought it over
 three years ago and don't want to replace with a new one, simply
 because [rumors are](https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de)
 its quality is very low. My smartphone is iPhone&nbsp;6s.
