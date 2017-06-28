@@ -101,7 +101,7 @@ converting SVG into PNG.
 [Pixelmator](http://www.pixelmator.com/) ($30)
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
-Pixelmator. It is perfect alternative to
+Pixelmator. It is a perfect alternative to
 [Adobe Photoshop](http://www.adobe.com/products/photoshop.html), if you
 are a programmer, not a graphic designer.
 
