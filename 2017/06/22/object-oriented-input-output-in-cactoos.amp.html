@@ -165,7 +165,7 @@ and behaves like its length in bytes:</p>
 
 <p>Then we take the value out of it and the file writing operation takes place:</p>
 
-<pre>long len = length.asValue();</pre>
+<pre>long len = length.value();</pre>
 
 <p>Thus, the entire operation of writing the string to the file will
 look like this:</p>
@@ -183,7 +183,7 @@ look like this:</p>
       new File("/tmp/hello.txt")
     )
   )
-).asValue(); // happens here</pre>
+).value(); // happens here</pre>
 
 <p>This is its procedural alternative from
 <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29">JDK7</a>:</p>
@@ -242,7 +242,7 @@ with <a href="http://www.cactoos.org">Cactoos</a>:</p>
         ),
         this.target
       )
-    ).asValue();
+    ).value();
   }
 }</pre>
 

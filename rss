@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-28T06:02:18+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Work Environment</title><link href="http://www.yegor256.com/2017/06/27/my-environment.html" rel="alternate" type="text/html" title="My Work Environment" /><published>2017-06-27T00:00:00+00:00</published><updated>2017-06-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/27/my-environment</id><content type="html" xml:base="http://www.yegor256.com/2017/06/27/my-environment.html">&lt;p&gt;I was asked in my &lt;a href=&quot;https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A&quot;&gt;Telegram Group&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-06-28T08:35:51+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Work Environment</title><link href="http://www.yegor256.com/2017/06/27/my-environment.html" rel="alternate" type="text/html" title="My Work Environment" /><published>2017-06-27T00:00:00+00:00</published><updated>2017-06-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/27/my-environment</id><content type="html" xml:base="http://www.yegor256.com/2017/06/27/my-environment.html">&lt;p&gt;I was asked in my &lt;a href=&quot;https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A&quot;&gt;Telegram Group&lt;/a&gt;
 which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe will be helpful
+what I have and even how much I paid for them. Maybe it will be helpful
 for someone.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -46,7 +46,7 @@ for cross-browser compatibility, that&amp;#39;s all.&lt;/p&gt;
 &lt;a href=&quot;https://www.iterm2.com/&quot;&gt;iTerm2&lt;/a&gt; (free)
 for the command line. It&amp;#39;s a replacement of
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Terminal_%28macOS%29&quot;&gt;Terminal&lt;/a&gt;, with
-some nice features, which I&amp;#39;m not actually aware about.&lt;/p&gt;
+some nice features, which I&amp;#39;m not actually aware of.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/2017/06/env-homebrew.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; (free)
@@ -78,7 +78,7 @@ converting SVG into PNG.&lt;/p&gt;
 &lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt; ($30)
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
-Pixelmator. It is perfect alternative to
+Pixelmator. It is a perfect alternative to
 &lt;a href=&quot;http://www.adobe.com/products/photoshop.html&quot;&gt;Adobe Photoshop&lt;/a&gt;, if you
 are a programmer, not a graphic designer.&lt;/p&gt;
 
@@ -167,7 +167,7 @@ for P2P messaging.
 &lt;a href=&quot;https://www.pokerstars.com/&quot;&gt;PokerStars&lt;/a&gt; (not free at all)
 for playing poker before falling asleep.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tools" /><summary type="html">I was asked in my Telegram Group
 which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe will be helpful
+what I have and even how much I paid for them. Maybe it will be helpful
 for someone.</summary></entry><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a library of object-oriented
@@ -267,7 +267,7 @@ and behaves like its length in bytes:&lt;/p&gt;
 
 &lt;p&gt;Then we take the value out of it and the file writing operation takes place:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thus, the entire operation of writing the string to the file will
 look like this:&lt;/p&gt;
@@ -285,7 +285,7 @@ look like this:&lt;/p&gt;
       &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// happens here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// happens here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is its procedural alternative from
 &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29&quot;&gt;JDK7&lt;/a&gt;:&lt;/p&gt;
@@ -344,7 +344,7 @@ with &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt;:&lt;/p&g
         &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
