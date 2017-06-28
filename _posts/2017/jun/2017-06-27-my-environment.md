@@ -21,7 +21,7 @@ style: |-
 
 I was asked in my [Telegram Group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A)
 which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe will be helpful
+what I have and even how much I paid for them. Maybe it will be helpful
 for someone.
 
 <!--more-->
