@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't Create Objects That End With -ER"
+title: "Don't Create Objects That&nbsp;End&nbsp;With&nbsp;-ER"
 date: 2015-03-09
 tags: oop
 description: |
