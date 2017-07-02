@@ -13,6 +13,7 @@ gem 'jekyll-plantuml', '1.3.2'
 gem 'jekyll-sass', '1.2.2'
 gem 'jekyll-sass-converter', '1.5.0'
 gem 'jekyll-sitemap', '0.11.0'
+gem 'jekyll-redirect-from', '0.11.0'
 gem 'jekyll-related-posts', '0.1.2'
 
 gem 'rake', '12.0.0'
