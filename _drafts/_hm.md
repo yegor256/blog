@@ -41,7 +41,7 @@ I believe that men and women are different: physically, intellectually, and emot
 <del>God</del> The Nature designed us to do different things in our lives.
 If we want to be happy we must celebrate our differences,
 they are making us attractive to each other,
-sometimes they trigger _love_.
+sometimes they even trigger _love_.
 
 I believe that logic is the masculine skill of a human brain, while
 emotion is the feminine one. In other words, men are designed to think and
