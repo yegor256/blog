@@ -68,8 +68,8 @@ and protect: women. And no matter what extreme feminists say, I will
 remain the same. I do believe in inequality between men and women. I want
 to see us as gentlemen and ladies. Not just gender-less people.
 
-Thanks to that inequality we find women attractive, we fall in love with them,
-we marry them and make kids. Thanks to that inequality many years ago my dad asked
+Thanks to that inequality men find women attractive, fall in love with them,
+marry them and make kids. Thanks to that inequality many years ago my dad asked
 my mon out, kissed her, proposed, and helped me meet this world.
 
 Now back to the main problem: women in tech. I'm a programmer myself,
@@ -80,14 +80,15 @@ it's rather boring, and it's a constant war against machines and other
 programmers, who produce unmaintainable and unreadable code.
 
 I don't feel good about sending women, who I was raised to protect and respect,
-to that war. I also don't like the idea of women being police officers,
-soldiers, surgeons, or firefighters. That jobs are stressful and dangerous, both
-physically and emotionally. There are plenty of gentlemen who can do that
+to that war. I also personally don't like the idea of women being police officers,
+soldiers, surgeons, or firefighters, even though it's not up to me to decide
+what they do for a living. That jobs are stressful and dangerous, both
+physically and emotionally. Not that I believe that women can't take this
+stress, I just don't want them to suffer. There are plenty of gentlemen who can do that
 instead.
 
-Do I respect women who write code for a living? Yes, a lot. Because I understand
+Do I respect women who write code on a daily basis? Yes, a lot. Because I understand
 how much stress they have to go through. Would I recommend my girlfriend to do
 the same. I don't think so.
 
 Am I a sexist? Maybe so. But that's how I was raised, that's who I am.
-
