@@ -46,7 +46,7 @@ we played wars. They wore pink and white skirts and blouses, we wore
 shorts and t-shirts. They cried when someone was offending them and
 we were supposed to be stronger, never to cry, and to protect them. It was always
 obvious that we were the troublemakers, but also the protectors that
-little creatures eventually one day will entrust their lives to.
+little creatures eventually one day would entrust their lives to.
 
 Now it seems that I was raised as a sexist. But do I feel ashamed? Not at all.
 
