@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 Recently I said a few words in my Telegram group about "women in tech,"
-which lead to some negative reaction on Twitter. I believe I owe my readers
+which led to some negative reaction on Twitter. I believe I owe my readers
 an explanation. Some of them already got confused and came to me with
 the question: "If you're so much against slavery, where is this male
 chauvinism coming from?" Let me explain what's going on. Indeed
