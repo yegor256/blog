@@ -187,5 +187,5 @@ for P2P messaging.
 [Colloquy](http://colloquy.info/) for IRC messaging when I need it.
 
 <img src="/images/2017/06/env-pokerstars.jpg" class="env-ico"/><br/>
-[PokerStars](https://www.pokerstars.com/) (not free at all)
+[PokerStars](http://www.pokerstars.com/poker/download/?source=13953351) (not free at all)
 for playing poker before falling asleep.
