@@ -23,7 +23,7 @@ Recently I said a few words in my Telegram group about "women in tech,"
 which lead to some negative reaction on Twitter. I believe I owe my readers
 an explanation. Some of them already got confused and came to me with
 the question: "If you're so much against slavery, where is this male
-chauvinism coming from?" Let me explain what's going on. Indeed,
+chauvinism coming from?" Let me explain what's going on. Indeed
 I am a big fan of freedom, but recent hysteria around gender equality
 is not helping us to become more free. Instead it is causing quite
 the opposite effect.
@@ -39,7 +39,7 @@ and emotionally.
 
 I had to open the door for them, I was not allowed to fight with them
 as I did with my male friends, I was punished for cursing in
-front of them, and many other things. I did all that not only because
+front of them, and many other things. I did all this not only because
 of what I was taught, but also because I saw that they indeed were weaker. They were
 physically and emotionally different from us boys. They played dolls,
 we played wars. They wore pink and white skirts and blouses, we wore
@@ -48,16 +48,16 @@ we were supposed to be stronger, never to cry, and to protect them. It was alway
 obvious that we were the troublemakers, but also the protectors that
 little creatures eventually one day will entrust their lives to.
 
-Now it seems that I was raised as a sexist. Do I feel ashamed? Not at all.
+Now it seems that I was raised as a sexist. But do I feel ashamed? Not at all.
 
 Do I believe that gender equality is about making men and women
 fully equal in all aspects of life? Not at all.
 
 We must _not_ be equal, because we are different.
 
-And there are many other categories of people in modern societies who
+There are many other categories of people in modern societies who
 possess special rights or are not allowed to do certain things. Simply put,
-they experience discrimination _but for their good_. For example, kids are not allowed to
+they experience discrimination, _but for their good_. For example, kids are not allowed to
 buy alcohol and watch porn. Senior citizens receive pensions
 even though they don't work any more. People with disabilities
 sit in a bus where everybody else is not allowed to. Such _inequalities_ are only
