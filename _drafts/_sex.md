@@ -63,7 +63,7 @@ even though they don't work anymore. People with disabilities
 sit in a bus where everybody else is not allowed to. Such _inequalities_ are only
 making us humans. We need them.
 
-The same is true for that special category of people I was taught to respect
+The same is true for that "special category of people" I was taught to respect
 and protect: women. And no matter what extreme feminists say, I will
 remain the same. I do believe in inequality between men and women. I want
 to see us as gentlemen and ladies. Not just gender-less people.
