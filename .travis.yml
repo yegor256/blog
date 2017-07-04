@@ -11,6 +11,7 @@ cache:
     - vendor/bundle
     - tidy-html5
     - sfnt2woff
+    - cmake-3.5.1
 env:
   global:
     secure: qR4hHnevbFEXIUt4NNOvW5NXyck+F7PQWbp1RW8jyufR6CJFeCRvc4ZtaiIf4N2g7zQK6M98BM/IuUu9qBhL4k9lUV9XMuOX3mx4GXFqGla3JPvi9lLHJf3zd0QHp0Ekxh9ewRqKCEGbSvlXflEGkRN+dkBII0eUMBoQxr8DLzk=
