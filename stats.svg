@@ -129,88 +129,100 @@
 	</g>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M54.0,230.0 L54.0,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M53.9,230.0 L53.9,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M54.0,230.0 L54.0,222.5 M54.0,14.1 L54.0,21.6 '></path>
-	<g transform="translate(54.0,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M53.9,230.0 L53.9,222.5 M53.9,14.1 L53.9,21.6 '></path>
+	<g transform="translate(53.9,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jan/14</text>
 	</g>
-	<path  d='M68.9,230.0 L68.9,226.3 M68.9,14.1 L68.9,17.8 M83.8,230.0 L83.8,226.3 M83.8,14.1 L83.8,17.8 
-		M98.7,230.0 L98.7,226.3 M98.7,14.1 L98.7,17.8 M113.6,230.0 L113.6,226.3 M113.6,14.1 L113.6,17.8 
-		M128.4,230.0 L128.4,226.3 M128.4,14.1 L128.4,17.8 '></path>
+	<path  d='M66.9,230.0 L66.9,226.3 M66.9,14.1 L66.9,17.8 M80.0,230.0 L80.0,226.3 M80.0,14.1 L80.0,17.8 
+		M93.0,230.0 L93.0,226.3 M93.0,14.1 L93.0,17.8 M106.0,230.0 L106.0,226.3 M106.0,14.1 L106.0,17.8 
+		M119.0,230.0 L119.0,226.3 M119.0,14.1 L119.0,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M142.4,230.0 L142.4,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M131.2,230.0 L131.2,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M142.4,230.0 L142.4,222.5 M142.4,14.1 L142.4,21.6 '></path>
-	<g transform="translate(142.4,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M131.2,230.0 L131.2,222.5 M131.2,14.1 L131.2,21.6 '></path>
+	<g transform="translate(131.2,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jul/14</text>
 	</g>
-	<path  d='M157.2,230.0 L157.2,226.3 M157.2,14.1 L157.2,17.8 M172.1,230.0 L172.1,226.3 M172.1,14.1 L172.1,17.8 
-		M187.0,230.0 L187.0,226.3 M187.0,14.1 L187.0,17.8 M201.9,230.0 L201.9,226.3 M201.9,14.1 L201.9,17.8 
-		M216.8,230.0 L216.8,226.3 M216.8,14.1 L216.8,17.8 '></path>
+	<path  d='M144.2,230.0 L144.2,226.3 M144.2,14.1 L144.2,17.8 M157.2,230.0 L157.2,226.3 M157.2,14.1 L157.2,17.8 
+		M170.2,230.0 L170.2,226.3 M170.2,14.1 L170.2,17.8 M183.3,230.0 L183.3,226.3 M183.3,14.1 L183.3,17.8 
+		M196.3,230.0 L196.3,226.3 M196.3,14.1 L196.3,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M232.7,230.0 L232.7,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M210.2,230.0 L210.2,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M232.7,230.0 L232.7,222.5 M232.7,14.1 L232.7,21.6 '></path>
-	<g transform="translate(232.7,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M210.2,230.0 L210.2,222.5 M210.2,14.1 L210.2,21.6 '></path>
+	<g transform="translate(210.2,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jan/15</text>
 	</g>
-	<path  d='M247.6,230.0 L247.6,226.3 M247.6,14.1 L247.6,17.8 M262.5,230.0 L262.5,226.3 M262.5,14.1 L262.5,17.8 
-		M277.3,230.0 L277.3,226.3 M277.3,14.1 L277.3,17.8 M292.2,230.0 L292.2,226.3 M292.2,14.1 L292.2,17.8 
-		M307.1,230.0 L307.1,226.3 M307.1,14.1 L307.1,17.8 '></path>
+	<path  d='M223.2,230.0 L223.2,226.3 M223.2,14.1 L223.2,17.8 M236.2,230.0 L236.2,226.3 M236.2,14.1 L236.2,17.8 
+		M249.2,230.0 L249.2,226.3 M249.2,14.1 L249.2,17.8 M262.3,230.0 L262.3,226.3 M262.3,14.1 L262.3,17.8 
+		M275.3,230.0 L275.3,226.3 M275.3,14.1 L275.3,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M321.0,230.0 L321.0,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M287.4,230.0 L287.4,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M321.0,230.0 L321.0,222.5 M321.0,14.1 L321.0,21.6 '></path>
-	<g transform="translate(321.0,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M287.4,230.0 L287.4,222.5 M287.4,14.1 L287.4,21.6 '></path>
+	<g transform="translate(287.4,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jul/15</text>
 	</g>
-	<path  d='M335.9,230.0 L335.9,226.3 M335.9,14.1 L335.9,17.8 M350.8,230.0 L350.8,226.3 M350.8,14.1 L350.8,17.8 
-		M365.7,230.0 L365.7,226.3 M365.7,14.1 L365.7,17.8 M380.6,230.0 L380.6,226.3 M380.6,14.1 L380.6,17.8 
-		M395.5,230.0 L395.5,226.3 M395.5,14.1 L395.5,17.8 '></path>
+	<path  d='M300.4,230.0 L300.4,226.3 M300.4,14.1 L300.4,17.8 M313.5,230.0 L313.5,226.3 M313.5,14.1 L313.5,17.8 
+		M326.5,230.0 L326.5,226.3 M326.5,14.1 L326.5,17.8 M339.5,230.0 L339.5,226.3 M339.5,14.1 L339.5,17.8 
+		M352.5,230.0 L352.5,226.3 M352.5,14.1 L352.5,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M410.9,230.0 L410.9,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M366.0,230.0 L366.0,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M410.9,230.0 L410.9,222.5 M410.9,14.1 L410.9,21.6 '></path>
-	<g transform="translate(410.9,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M366.0,230.0 L366.0,222.5 M366.0,14.1 L366.0,21.6 '></path>
+	<g transform="translate(366.0,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jan/16</text>
 	</g>
-	<path  d='M425.8,230.0 L425.8,226.3 M425.8,14.1 L425.8,17.8 M440.7,230.0 L440.7,226.3 M440.7,14.1 L440.7,17.8 
-		M455.5,230.0 L455.5,226.3 M455.5,14.1 L455.5,17.8 M470.4,230.0 L470.4,226.3 M470.4,14.1 L470.4,17.8 
-		M485.3,230.0 L485.3,226.3 M485.3,14.1 L485.3,17.8 '></path>
+	<path  d='M379.0,230.0 L379.0,226.3 M379.0,14.1 L379.0,17.8 M392.0,230.0 L392.0,226.3 M392.0,14.1 L392.0,17.8 
+		M405.0,230.0 L405.0,226.3 M405.0,14.1 L405.0,17.8 M418.1,230.0 L418.1,226.3 M418.1,14.1 L418.1,17.8 
+		M431.1,230.0 L431.1,226.3 M431.1,14.1 L431.1,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M500.2,230.0 L500.2,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M444.1,230.0 L444.1,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M500.2,230.0 L500.2,222.5 M500.2,14.1 L500.2,21.6 '></path>
-	<g transform="translate(500.2,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M444.1,230.0 L444.1,222.5 M444.1,14.1 L444.1,21.6 '></path>
+	<g transform="translate(444.1,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jul/16</text>
 	</g>
-	<path  d='M515.1,230.0 L515.1,226.3 M515.1,14.1 L515.1,17.8 M530.0,230.0 L530.0,226.3 M530.0,14.1 L530.0,17.8 
-		M544.9,230.0 L544.9,226.3 M544.9,14.1 L544.9,17.8 M559.8,230.0 L559.8,226.3 M559.8,14.1 L559.8,17.8 
-		M574.7,230.0 L574.7,226.3 M574.7,14.1 L574.7,17.8 '></path>
+	<path  d='M457.1,230.0 L457.1,226.3 M457.1,14.1 L457.1,17.8 M470.1,230.0 L470.1,226.3 M470.1,14.1 L470.1,17.8 
+		M483.2,230.0 L483.2,226.3 M483.2,14.1 L483.2,17.8 M496.2,230.0 L496.2,226.3 M496.2,14.1 L496.2,17.8 
+		M509.2,230.0 L509.2,226.3 M509.2,14.1 L509.2,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path stroke='rgb(190, 190, 190)'  d='M590.0,230.0 L590.0,14.1 '></path>
+	<path stroke='rgb(190, 190, 190)'  d='M522.7,230.0 L522.7,14.1 '></path>
 </g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
-	<path  d='M590.0,230.0 L590.0,222.5 M590.0,14.1 L590.0,21.6 '></path>
-	<g transform="translate(590.0,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+	<path  d='M522.7,230.0 L522.7,222.5 M522.7,14.1 L522.7,21.6 '></path>
+	<g transform="translate(522.7,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
 		<text>Jan/17</text>
 	</g>
-	<path  d='M604.9,230.0 L604.9,226.3 M604.9,14.1 L604.9,17.8 M619.8,230.0 L619.8,226.3 M619.8,14.1 L619.8,17.8 
-		M634.7,230.0 L634.7,226.3 M634.7,14.1 L634.7,17.8 M649.6,230.0 L649.6,226.3 M649.6,14.1 L649.6,17.8 
-		M664.5,230.0 L664.5,226.3 M664.5,14.1 L664.5,17.8 '></path>
+	<path  d='M535.7,230.0 L535.7,226.3 M535.7,14.1 L535.7,17.8 M548.7,230.0 L548.7,226.3 M548.7,14.1 L548.7,17.8 
+		M561.7,230.0 L561.7,226.3 M561.7,14.1 L561.7,17.8 M574.7,230.0 L574.7,226.3 M574.7,14.1 L574.7,17.8 
+		M587.7,230.0 L587.7,226.3 M587.7,14.1 L587.7,17.8 '></path>
+</g>
+<g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='rgb(190, 190, 190)'  d='M600.4,230.0 L600.4,14.1 '></path>
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path  d='M600.4,230.0 L600.4,222.5 M600.4,14.1 L600.4,21.6 '></path>
+	<g transform="translate(600.4,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
+		<text>Jul/17</text>
+	</g>
+	<path  d='M613.4,230.0 L613.4,226.3 M613.4,14.1 L613.4,17.8 M626.4,230.0 L626.4,226.3 M626.4,14.1 L626.4,17.8 
+		M639.4,230.0 L639.4,226.3 M639.4,14.1 L639.4,17.8 M652.4,230.0 L652.4,226.3 M652.4,14.1 L652.4,17.8 
+		M665.4,230.0 L665.4,226.3 M665.4,14.1 L665.4,17.8 '></path>
 </g>
 <g style="fill:none; color:gray; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<path stroke='rgb(190, 190, 190)'  d='M678.9,230.0 L678.9,14.1 '></path>
@@ -218,7 +230,7 @@
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<path  d='M678.9,230.0 L678.9,222.5 M678.9,14.1 L678.9,21.6 '></path>
 	<g transform="translate(678.9,248.7)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:8.00pt; text-anchor:middle">
-		<text>Jul/17</text>
+		<text>Jan/18</text>
 	</g>
 	<path  d='M53.5,14.1 L53.5,230.0 L678.9,230.0 L678.9,14.1 L53.5,14.1 Z '></path>
 	<g transform="translate(14.7,122.1) rotate(270)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:10.00pt; text-anchor:middle">
@@ -228,161 +240,165 @@
 	<a xlink:title="Plot #1">
 <g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '92.3,230.0 103.4,230.0 103.4,39.5 92.3,39.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '87.4,230.0 97.1,230.0 97.1,39.5 87.4,39.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M92.3,230.0 L92.3,39.6 L103.3,39.6 L103.3,230.0 L92.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M87.4,230.0 L87.4,39.6 L97.0,39.6 L97.0,230.0 L87.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '106.9,230.0 118.2,230.0 118.2,206.5 106.9,206.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '100.2,230.0 110.1,230.0 110.1,206.5 100.2,206.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M106.9,230.0 L106.9,206.6 L118.1,206.6 L118.1,230.0 L106.9,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M100.2,230.0 L100.2,206.6 L110.0,206.6 L110.0,230.0 L100.2,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '121.9,230.0 133.2,230.0 133.2,183.8 121.9,183.8 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '113.3,230.0 123.2,230.0 123.2,183.8 113.3,183.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M121.9,230.0 L121.9,183.9 L133.1,183.9 L133.1,230.0 L121.9,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M113.3,230.0 L113.3,183.9 L123.1,183.9 L123.1,230.0 L113.3,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '136.8,230.0 148.1,230.0 148.1,183.3 136.8,183.3 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '126.3,230.0 136.2,230.0 136.2,183.3 126.3,183.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M136.8,230.0 L136.8,183.4 L148.0,183.4 L148.0,230.0 L136.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M126.3,230.0 L126.3,183.4 L136.1,183.4 L136.1,230.0 L126.3,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '151.8,230.0 163.2,230.0 163.2,165.7 151.8,165.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '139.4,230.0 149.5,230.0 149.5,165.7 139.4,165.7 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M151.8,230.0 L151.8,165.8 L163.1,165.8 L163.1,230.0 L151.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M139.4,230.0 L139.4,165.8 L149.4,165.8 L149.4,230.0 L139.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '166.9,230.0 178.2,230.0 178.2,150.9 166.9,150.9 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '152.7,230.0 162.6,230.0 162.6,150.9 152.7,150.9 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M166.9,230.0 L166.9,151.0 L178.1,151.0 L178.1,230.0 L166.9,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M152.7,230.0 L152.7,151.0 L162.5,151.0 L162.5,230.0 L152.7,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '181.8,230.0 193.1,230.0 193.1,24.3 181.8,24.3 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '165.7,230.0 175.6,230.0 175.6,24.3 165.7,24.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M181.8,230.0 L181.8,24.4 L193.0,24.4 L193.0,230.0 L181.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M165.7,230.0 L165.7,24.4 L175.5,24.4 L175.5,230.0 L165.7,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '196.8,230.0 208.1,230.0 208.1,156.0 196.8,156.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '178.8,230.0 188.7,230.0 188.7,156.0 178.8,156.0 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M196.8,230.0 L196.8,156.1 L208.0,156.1 L208.0,230.0 L196.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M178.8,230.0 L178.8,156.1 L188.6,156.1 L188.6,230.0 L178.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '211.6,230.0 222.9,230.0 222.9,148.1 211.6,148.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '191.8,230.0 201.7,230.0 201.7,148.1 191.8,148.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M211.6,230.0 L211.6,148.2 L222.8,148.2 L222.8,230.0 L211.6,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M191.8,230.0 L191.8,148.2 L201.6,148.2 L201.6,230.0 L191.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '226.6,230.0 238.1,230.0 238.1,77.3 226.6,77.3 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '204.9,230.0 214.9,230.0 214.9,77.3 204.9,77.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M226.6,230.0 L226.6,77.4 L238.0,77.4 L238.0,230.0 L226.6,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M204.9,230.0 L204.9,77.4 L214.8,77.4 L214.8,230.0 L204.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '241.8,230.0 252.7,230.0 252.7,122.2 241.8,122.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '218.1,230.0 227.7,230.0 227.7,122.2 218.1,122.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M241.8,230.0 L241.8,122.3 L252.6,122.3 L252.6,230.0 L241.8,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M218.1,230.0 L218.1,122.3 L227.6,122.3 L227.6,230.0 L218.1,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '256.0,230.0 267.0,230.0 267.0,156.5 256.0,156.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '230.6,230.0 240.2,230.0 240.2,156.5 230.6,156.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M256.0,230.0 L256.0,156.6 L266.9,156.6 L266.9,230.0 L256.0,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M230.6,230.0 L230.6,156.6 L240.1,156.6 L240.1,230.0 L230.6,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '270.7,230.0 281.9,230.0 281.9,155.0 270.7,155.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '243.4,230.0 253.3,230.0 253.3,155.0 243.4,155.0 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M270.7,230.0 L270.7,155.1 L281.8,155.1 L281.8,230.0 L270.7,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M243.4,230.0 L243.4,155.1 L253.2,155.1 L253.2,230.0 L243.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '285.5,230.0 296.8,230.0 296.8,125.8 285.5,125.8 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '256.4,230.0 266.3,230.0 266.3,125.8 256.4,125.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M285.5,230.0 L285.5,125.9 L296.7,125.9 L296.7,230.0 L285.5,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M256.4,230.0 L256.4,125.9 L266.2,125.9 L266.2,230.0 L256.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '300.5,230.0 311.8,230.0 311.8,93.4 300.5,93.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '269.5,230.0 279.4,230.0 279.4,93.4 269.5,93.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M300.5,230.0 L300.5,93.5 L311.7,93.5 L311.7,230.0 L300.5,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M269.5,230.0 L269.5,93.5 L279.3,93.5 L279.3,230.0 L269.5,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '315.4,230.0 326.6,230.0 326.6,165.7 315.4,165.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '282.5,230.0 292.3,230.0 292.3,165.7 282.5,165.7 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M315.4,230.0 L315.4,165.8 L326.5,165.8 L326.5,230.0 L315.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M282.5,230.0 L282.5,165.8 L292.2,165.8 L292.2,230.0 L282.5,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '330.3,230.0 341.8,230.0 341.8,195.3 330.3,195.3 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '295.6,230.0 305.6,230.0 305.6,195.3 295.6,195.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M330.3,230.0 L330.3,195.4 L341.7,195.4 L341.7,230.0 L330.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M295.6,230.0 L295.6,195.4 L305.5,195.4 L305.5,230.0 L295.6,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '345.5,230.0 356.8,230.0 356.8,160.1 345.5,160.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '308.8,230.0 318.7,230.0 318.7,160.1 308.8,160.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M345.5,230.0 L345.5,160.2 L356.7,160.2 L356.7,230.0 L345.5,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M308.8,230.0 L308.8,160.2 L318.6,160.2 L318.6,230.0 L308.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '360.4,230.0 371.7,230.0 371.7,120.7 360.4,120.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '321.8,230.0 331.7,230.0 331.7,120.7 321.8,120.7 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M360.4,230.0 L360.4,120.8 L371.6,120.8 L371.6,230.0 L360.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M321.8,230.0 L321.8,120.8 L331.6,120.8 L331.6,230.0 L321.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '375.3,230.0 386.6,230.0 386.6,149.2 375.3,149.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '334.9,230.0 344.8,230.0 344.8,149.2 334.9,149.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M375.3,230.0 L375.3,149.3 L386.5,149.3 L386.5,230.0 L375.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M334.9,230.0 L334.9,149.3 L344.7,149.3 L344.7,230.0 L334.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '390.2,230.0 401.5,230.0 401.5,166.1 390.2,166.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '347.9,230.0 357.8,230.0 357.8,166.1 347.9,166.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M390.2,230.0 L390.2,166.2 L401.4,166.2 L401.4,230.0 L390.2,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M347.9,230.0 L347.9,166.2 L357.7,166.2 L357.7,230.0 L347.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '405.2,230.0 416.7,230.0 416.7,175.1 405.2,175.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '361.0,230.0 371.1,230.0 371.1,175.1 361.0,175.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M405.2,230.0 L405.2,175.2 L416.6,175.2 L416.6,230.0 L405.2,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M361.0,230.0 L361.0,175.2 L371.0,175.2 L371.0,230.0 L361.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '420.3,230.0 431.5,230.0 431.5,199.9 420.3,199.9 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '374.3,230.0 384.0,230.0 384.0,199.9 374.3,199.9 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M420.3,230.0 L420.3,200.0 L431.4,200.0 L431.4,230.0 L420.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M374.3,230.0 L374.3,200.0 L383.9,200.0 L383.9,230.0 L374.3,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '434.9,230.0 446.0,230.0 446.0,119.9 434.9,119.9 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '387.0,230.0 396.7,230.0 396.7,119.9 387.0,119.9 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M434.9,230.0 L434.9,120.0 L445.9,120.0 L445.9,230.0 L434.9,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M387.0,230.0 L387.0,120.0 L396.6,120.0 L396.6,230.0 L387.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '449.7,230.0 461.0,230.0 461.0,198.0 449.7,198.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '399.9,230.0 409.8,230.0 409.8,198.0 399.9,198.0 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M449.7,230.0 L449.7,198.1 L460.9,198.1 L460.9,230.0 L449.7,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M399.9,230.0 L399.9,198.1 L409.7,198.1 L409.7,230.0 L399.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '464.6,230.0 475.9,230.0 475.9,131.0 464.6,131.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '412.9,230.0 422.8,230.0 422.8,131.0 412.9,131.0 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M464.6,230.0 L464.6,131.1 L475.8,131.1 L475.8,230.0 L464.6,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M412.9,230.0 L412.9,131.1 L422.7,131.1 L422.7,230.0 L412.9,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '479.5,230.0 490.8,230.0 490.8,170.5 479.5,170.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '426.0,230.0 435.9,230.0 435.9,170.5 426.0,170.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M479.5,230.0 L479.5,170.6 L490.7,170.6 L490.7,230.0 L479.5,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M426.0,230.0 L426.0,170.6 L435.8,170.6 L435.8,230.0 L426.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '494.4,230.0 505.7,230.0 505.7,133.1 494.4,133.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '439.0,230.0 448.9,230.0 448.9,133.1 439.0,133.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M494.4,230.0 L494.4,133.2 L505.6,133.2 L505.6,230.0 L494.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M439.0,230.0 L439.0,133.2 L448.8,133.2 L448.8,230.0 L439.0,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '509.4,230.0 520.9,230.0 520.9,166.9 509.4,166.9 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '452.1,230.0 462.2,230.0 462.2,166.9 452.1,166.9 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M509.4,230.0 L509.4,167.0 L520.8,167.0 L520.8,230.0 L509.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M452.1,230.0 L452.1,167.0 L462.1,167.0 L462.1,230.0 L452.1,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '524.6,230.0 535.8,230.0 535.8,199.4 524.6,199.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '465.4,230.0 475.3,230.0 475.3,199.4 465.4,199.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M524.6,230.0 L524.6,199.5 L535.7,199.5 L535.7,230.0 L524.6,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M465.4,230.0 L465.4,199.5 L475.2,199.5 L475.2,230.0 L465.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '539.4,230.0 550.7,230.0 550.7,224.2 539.4,224.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '478.4,230.0 488.3,230.0 488.3,224.2 478.4,224.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M539.4,230.0 L539.4,224.3 L550.6,224.3 L550.6,230.0 L539.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M478.4,230.0 L478.4,224.3 L488.2,224.3 L488.2,230.0 L478.4,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '554.4,230.0 565.7,230.0 565.7,204.7 554.4,204.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '491.5,230.0 501.4,230.0 501.4,204.7 491.5,204.7 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M554.4,230.0 L554.4,204.8 L565.6,204.8 L565.6,230.0 L554.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M491.5,230.0 L491.5,204.8 L501.3,204.8 L501.3,230.0 L491.5,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '569.3,230.0 580.5,230.0 580.5,197.8 569.3,197.8 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '504.5,230.0 514.4,230.0 514.4,197.8 504.5,197.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M569.3,230.0 L569.3,197.9 L580.4,197.9 L580.4,230.0 L569.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M504.5,230.0 L504.5,197.9 L514.3,197.9 L514.3,230.0 L504.5,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '584.2,230.0 595.7,230.0 595.7,151.2 584.2,151.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '517.6,230.0 527.6,230.0 527.6,151.2 517.6,151.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M584.2,230.0 L584.2,151.3 L595.6,151.3 L595.6,230.0 L584.2,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M517.6,230.0 L517.6,151.3 L527.5,151.3 L527.5,230.0 L517.6,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '599.4,230.0 610.3,230.0 610.3,180.6 599.4,180.6 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '530.8,230.0 540.4,230.0 540.4,180.6 530.8,180.6 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M599.4,230.0 L599.4,180.7 L610.2,180.7 L610.2,230.0 L599.4,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M530.8,230.0 L530.8,180.7 L540.3,180.7 L540.3,230.0 L530.8,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '613.7,230.0 624.6,230.0 624.6,189.5 613.7,189.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '543.3,230.0 552.9,230.0 552.9,189.5 543.3,189.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M613.7,230.0 L613.7,189.6 L624.5,189.6 L624.5,230.0 L613.7,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M543.3,230.0 L543.3,189.6 L552.8,189.6 L552.8,230.0 L543.3,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '628.3,230.0 639.6,230.0 639.6,198.4 628.3,198.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '556.1,230.0 566.0,230.0 566.0,198.4 556.1,198.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M628.3,230.0 L628.3,198.5 L639.5,198.5 L639.5,230.0 L628.3,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M556.1,230.0 L556.1,198.5 L565.9,198.5 L565.9,230.0 L556.1,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '643.1,230.0 654.4,230.0 654.4,187.2 643.1,187.2 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '569.1,230.0 579.0,230.0 579.0,187.2 569.1,187.2 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M643.1,230.0 L643.1,187.3 L654.3,187.3 L654.3,230.0 L643.1,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M569.1,230.0 L569.1,187.3 L578.9,187.3 L578.9,230.0 L569.1,230.0 Z '></path>
 	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '658.1,230.0 669.6,230.0 669.6,190.0 658.1,190.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '582.2,230.0 592.1,230.0 592.1,190.0 582.2,190.0 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M658.1,230.0 L658.1,190.1 L669.5,190.1 L669.5,230.0 L658.1,230.0 Z '></path>
+	<path stroke='rgb(129, 179,  65)'  d='M582.2,230.0 L582.2,190.1 L592.0,190.1 L592.0,230.0 L582.2,230.0 Z '></path>
+	<g style = 'stroke:none; shape-rendering:crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '595.2,230.0 604.9,230.0 604.9,215.9 595.2,215.9 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M595.2,230.0 L595.2,216.0 L604.8,216.0 L604.8,230.0 L595.2,230.0 Z '></path>
 </g>
 	</a>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
