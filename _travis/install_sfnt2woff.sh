@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ -e sfnt2woff ]; then
+if [ -e sfnt2woff/sfnt2woff ]; then
   cd sfnt2woff
 else
   wget http://img.teamed.io/woff-code-latest.zip

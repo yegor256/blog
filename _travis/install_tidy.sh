@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ -e tidy-html5 ]; then
+if [ -e tidy-html5/build/cmake ]; then
   cd tidy-html5/build/cmake
 else
   git clone https://github.com/htacg/tidy-html5.git
