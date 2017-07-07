@@ -47,6 +47,6 @@ install:
   - gnuplot --version
 script:
   - set -e
-  # - rake
+  - rake
   - export JEKYLL_ENV=production
   - jgd -u git@github.com:yegor256/blog.git
