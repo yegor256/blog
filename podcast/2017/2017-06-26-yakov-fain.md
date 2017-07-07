@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Shift-M/4"
-date: 2017-06-26
+date: 2017-06-26 12:00:00
 place: Odessa, Ukraine
-permalink: podcast/2017/4.html
+permalink: /podcast/2017/4.html
 description: |
   How to manage people remotely; how to deal with
   underperforming programmers; how to work with your

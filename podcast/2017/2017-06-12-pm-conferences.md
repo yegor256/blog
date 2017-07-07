@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Shift-M/2"
-date: 2017-06-12
+date: 2017-06-12 12:00:00
 place: Dnipro, Ukraine
-permalink: podcast/2017/2.html
+permalink: /podcast/2017/2.html
 description: |
   Project management conferences discussed and the
   problems with their focus; they must teach us

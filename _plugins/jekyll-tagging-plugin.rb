@@ -96,6 +96,7 @@ module Jekyll
     end
 
     def tags(obj)
+      return '' unless obj['tags'].kind_of?(Array)
       tags = obj['tags'].dup.sort
       tags.map! { |t| t.first } if tags.first.is_a?(Array)
       tags.map { |t| tag_link(t) if t.is_a?(String) }

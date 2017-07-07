@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Shift-M/1"
-date: 2017-06-05
+date: 2017-06-05 12:00:00
 place: Dnipro, Ukraine
-permalink: podcast/2017/1.html
+permalink: /podcast/2017/1.html
 description: |
   Most distributed teams don't know how to manage
   themselves and simply do traditional micro-management
