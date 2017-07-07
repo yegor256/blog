@@ -44,7 +44,7 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
-&#35;3: [Yakov Fain about his management philosophy](/podcast/2017/4.html)<br/>
+&#35;4: [Yakov Fain about his management philosophy](/podcast/2017/4.html)<br/>
 26 June 2017; 53 min.
 
 &#35;3: [How to Handle Underperformers on a Team](/podcast/2017/3.html)<br/>
