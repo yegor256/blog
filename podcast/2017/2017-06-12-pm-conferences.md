@@ -2,8 +2,6 @@
 layout: post
 title: "Shift-M/2"
 date: 2017-06-12
-tags:
-  - podcast
 place: Dnipro, Ukraine
 permalink: podcast/2017/2.html
 description: |

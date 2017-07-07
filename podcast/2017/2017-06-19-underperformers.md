@@ -2,8 +2,6 @@
 layout: post
 title: "Shift-M/3"
 date: 2017-06-19
-tags:
-  - podcast
 place: Copenhagen, Denmark
 permalink: podcast/2017/3.html
 description: |

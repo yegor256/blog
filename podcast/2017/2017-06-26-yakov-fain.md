@@ -2,8 +2,6 @@
 layout: post
 title: "Shift-M/4"
 date: 2017-06-26
-tags:
-  - podcast
 place: Odessa, Ukraine
 permalink: podcast/2017/4.html
 description: |

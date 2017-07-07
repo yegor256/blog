@@ -152,7 +152,7 @@ Let's create a simple changeset, which adds a new column to an existing table:
 </databaseChangeLog>
 {% endhighlight %}
 
-We save this file we in `src/main/liquibase/2014/002-add-user-address.xml`.
+We save this file in `src/main/liquibase/2014/002-add-user-address.xml`.
 In big projects, you can name your files by the names of the tickets
 they are produced in. For example, `045-3432.xml`, which means changeset
 number 45 coming from ticket #3432.
