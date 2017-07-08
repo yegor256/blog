@@ -24,7 +24,7 @@ task default: [
   :spell,
   :regex,
   :excerpts,
-    # :snippets,
+  :snippets,
     # :orphans,
     # :ping,
   # :jslint,
