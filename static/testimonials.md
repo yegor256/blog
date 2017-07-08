@@ -70,6 +70,8 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're everything that's wrong with tech."&mdash;[Robert P.](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3170487895)
 
+"Author is a fucking moron."&mdash;[James](http://www.yegor256.com/2017/07/04/sexism.html#comment-3404682410)
+
 "Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
 "You're a sociopath."&mdash;[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
