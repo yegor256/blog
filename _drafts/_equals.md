@@ -112,9 +112,9 @@ interface Digitizable {
 }
 {% endhighlight %}
 
-Next, we introduce a new object, which does the comparison of
+Next, we introduce a new class `Comparison`, which _is_ the comparison of
 two streams of bytes (I'm not sure the code is perfect, I tested it
-[here](),
+[here](https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals),
 feel free to improve and contribute with a pull request):
 
 {% highlight java %}
@@ -163,7 +163,8 @@ class Weight implements Digitizable {
   }
   @Override
   public byte[] digits() {
-    return ByteBuffer.allocate(4).putInt(this.kilos).array();
+    return ByteBuffer.allocate(4)
+      .putInt(this.kilos).array();
   }
 }
 {% endhighlight %}
@@ -172,8 +173,7 @@ Finally, this is how we compare them:
 
 {% highlight java %}
 int v = new Comparison<Weight>(
-  new Weight(400),
-  new Weight(500)
+  new Weight(400), new Weight(500)
 ).value();
 {% endhighlight %}
 
@@ -182,4 +182,7 @@ because `500` is bigger than `400`.
 
 No more violation of encapsulation, no more type casting, no more
 ugly code inside that `equals()` and `compareTo()` methods.
+The class `Comparison` will work with all possible types. All our objects
+need to do in order to become comparable is to implement `Digitizable` and
+"provide" their bytes for inspection/comparison.
 
