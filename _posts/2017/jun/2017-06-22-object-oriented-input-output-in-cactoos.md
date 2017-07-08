@@ -37,6 +37,10 @@ fashion.
 
 {% jb_picture_body %}
 
+**Disclaimer**: The version I'm using at the time of writing is
+[0.9](https://github.com/yegor256/cactoos/releases/tag/0.9). Later versions
+may have different names of classes and a totally different design.
+
 Let's say you want to read a file. This is how you would do it with the static method
 [`readAllBytes()`](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#readAllBytes%28java.nio.file.Path%29) from the
 [utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
@@ -64,7 +68,7 @@ Bytes source = new InputAsBytes(
 
 Pay attention&mdash;there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object `source` is of type
-[`Bytes`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html)
+[`Bytes`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Bytes.html)
 and represents the content of the file. To get that content
 out of it we call its method `asBytes()`:
 
@@ -78,7 +82,7 @@ benefits of object orientation.
 
 Here is another example. Say you want to write some text into a file. Here
 is how you do it in Cactoos. First you need the
-[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html):
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html):
 
 {% highlight java %}
 Input input = new BytesAsInput(
@@ -90,7 +94,7 @@ Input input = new BytesAsInput(
 );
 {% endhighlight %}
 
-Then you need the [`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html):
+Then you need the [`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html):
 
 {% highlight java %}
 Output output = new FileAsOutput(
@@ -101,14 +105,14 @@ Output output = new FileAsOutput(
 Now, we want to copy the input to the output. There is no "copy" operation
 in _pure_ OOP. Moreover, there must be no operations at all. Just objects. We
 have a class named
-[`TeeInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/TeeInput.html),
+[`TeeInput`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/TeeInput.html),
 which is an `Input` that copies everything
 you read from it to the
-[`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html),
+[`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html),
 similar to what
 [`TeeInputStream`](https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html)
 from [Apache Commons](https://commons.apache.org/) does, but encapsulated. So we don't copy, we create an
-[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html)
 that will copy if you _touch_ it:
 
 {% highlight java %}
@@ -120,9 +124,9 @@ in order to make sure they all are copied. If we just `read()` the first
 byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the `tee` object, going byte by byte. We
 have an object for it, called
-[`LengthOfInput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html).
+[`LengthOfInput`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/LengthOfInput.html).
 It encapsulates an
-[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html)
+[`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html)
 and behaves like its length in bytes:
 
 {% highlight java %}
@@ -245,7 +249,7 @@ how to write, some outside procedure
 knows that instead.
 
 To the contrary, in the object-oriented design the
-[`FileAsOutput`](http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/FileAsOutput.html)
+[`FileAsOutput`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/FileAsOutput.html)
 knows how to write, and nobody else does.
 The file writing functionality is encapsulated and this makes it
 possible to decorate the objects in any possible way, creating
