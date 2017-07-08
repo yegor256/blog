@@ -85,6 +85,10 @@ fashion.</p>
 
 
 
+<p><strong>Disclaimer</strong>: The version I'm using at the time of writing is
+<a href="https://github.com/yegor256/cactoos/releases/tag/0.9">0.9</a>. Later versions
+may have different names of classes and a totally different design.</p>
+
 <p>Let's say you want to read a file. This is how you would do it with the static method
 <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#readAllBytes%28java.nio.file.Path%29"><code>readAllBytes()</code></a> from the
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>
@@ -108,7 +112,7 @@ placing it into the array.</p>
 
 <p>Pay attention—there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object <code>source</code> is of type
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html"><code>Bytes</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Bytes.html"><code>Bytes</code></a>
 and represents the content of the file. To get that content
 out of it we call its method <code>asBytes()</code>:</p>
 
@@ -120,7 +124,7 @@ benefits of object orientation.</p>
 
 <p>Here is another example. Say you want to write some text into a file. Here
 is how you do it in Cactoos. First you need the
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html"><code>Input</code></a>:</p>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code>Input</code></a>:</p>
 
 <pre>Input input = new BytesAsInput(
   new TextAsBytes(
@@ -130,7 +134,7 @@ is how you do it in Cactoos. First you need the
   )
 );</pre>
 
-<p>Then you need the <a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html"><code>Output</code></a>:</p>
+<p>Then you need the <a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html"><code>Output</code></a>:</p>
 
 <pre>Output output = new FileAsOutput(
   new File("/tmp/hello.txt")
@@ -139,14 +143,14 @@ is how you do it in Cactoos. First you need the
 <p>Now, we want to copy the input to the output. There is no "copy" operation
 in <em>pure</em> OOP. Moreover, there must be no operations at all. Just objects. We
 have a class named
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/TeeInput.html"><code>TeeInput</code></a>,
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/TeeInput.html"><code>TeeInput</code></a>,
 which is an <code>Input</code> that copies everything
 you read from it to the
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html"><code>Output</code></a>,
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html"><code>Output</code></a>,
 similar to what
 <a href="https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html"><code>TeeInputStream</code></a>
 from <a href="https://commons.apache.org/">Apache Commons</a> does, but encapsulated. So we don't copy, we create an
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html"><code>Input</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code>Input</code></a>
 that will copy if you <em>touch</em> it:</p>
 
 <pre>Input tee = new TeeInput(input, output);</pre>
@@ -156,9 +160,9 @@ in order to make sure they all are copied. If we just <code>read()</code> the fi
 byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the <code>tee</code> object, going byte by byte. We
 have an object for it, called
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html"><code>LengthOfInput</code></a>.
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/LengthOfInput.html"><code>LengthOfInput</code></a>.
 It encapsulates an
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html"><code>Input</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code>Input</code></a>
 and behaves like its length in bytes:</p>
 
 <pre>Scalar&lt;Long&gt; length = new LengthOfInput(tee);</pre>
@@ -267,7 +271,7 @@ how to write, some outside procedure
 knows that instead.</p>
 
 <p>To the contrary, in the object-oriented design the
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/FileAsOutput.html"><code>FileAsOutput</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/FileAsOutput.html"><code>FileAsOutput</code></a>
 knows how to write, and nobody else does.
 The file writing functionality is encapsulated and this makes it
 possible to decorate the objects in any possible way, creating

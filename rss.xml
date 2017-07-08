@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-08T10:38:52+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Am I a Sexist?</title><link href="http://www.yegor256.com/2017/07/04/sexism.html" rel="alternate" type="text/html" title="Am I a Sexist?" /><published>2017-07-04T00:00:00+00:00</published><updated>2017-07-04T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/04/sexism</id><content type="html" xml:base="http://www.yegor256.com/2017/07/04/sexism.html">&lt;p&gt;Recently I said a few words in my
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-08T11:36:54+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Am I a Sexist?</title><link href="http://www.yegor256.com/2017/07/04/sexism.html" rel="alternate" type="text/html" title="Am I a Sexist?" /><published>2017-07-04T00:00:00+00:00</published><updated>2017-07-04T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/04/sexism</id><content type="html" xml:base="http://www.yegor256.com/2017/07/04/sexism.html">&lt;p&gt;Recently I said a few words in my
 &lt;a href=&quot;https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A&quot;&gt;Telegram group&lt;/a&gt; about &amp;quot;women in tech,&amp;quot;
 which led to some negative
 &lt;a href=&quot;https://twitter.com/delawen/status/880517810400759808&quot;&gt;reaction&lt;/a&gt; on Twitter. I believe I owe my readers
@@ -280,6 +280,10 @@ fashion.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: The version I&amp;#39;m using at the time of writing is
+&lt;a href=&quot;https://github.com/yegor256/cactoos/releases/tag/0.9&quot;&gt;0.9&lt;/a&gt;. Later versions
+may have different names of classes and a totally different design.&lt;/p&gt;
+
 &lt;p&gt;Let&amp;#39;s say you want to read a file. This is how you would do it with the static method
 &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#readAllBytes%28java.nio.file.Path%29&quot;&gt;&lt;code&gt;readAllBytes()&lt;/code&gt;&lt;/a&gt; from the
 &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility class&lt;/a&gt;
@@ -303,7 +307,7 @@ placing it into the array.&lt;/p&gt;
 
 &lt;p&gt;Pay attention&amp;mdash;there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object &lt;code&gt;source&lt;/code&gt; is of type
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Bytes.html&quot;&gt;&lt;code&gt;Bytes&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Bytes.html&quot;&gt;&lt;code&gt;Bytes&lt;/code&gt;&lt;/a&gt;
 and represents the content of the file. To get that content
 out of it we call its method &lt;code&gt;asBytes()&lt;/code&gt;:&lt;/p&gt;
 
@@ -315,7 +319,7 @@ benefits of object orientation.&lt;/p&gt;
 
 &lt;p&gt;Here is another example. Say you want to write some text into a file. Here
 is how you do it in Cactoos. First you need the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BytesAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
@@ -325,7 +329,7 @@ is how you do it in Cactoos. First you need the
   &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Then you need the &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Then you need the &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -334,14 +338,14 @@ is how you do it in Cactoos. First you need the
 &lt;p&gt;Now, we want to copy the input to the output. There is no &amp;quot;copy&amp;quot; operation
 in &lt;em&gt;pure&lt;/em&gt; OOP. Moreover, there must be no operations at all. Just objects. We
 have a class named
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/TeeInput.html&quot;&gt;&lt;code&gt;TeeInput&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/TeeInput.html&quot;&gt;&lt;code&gt;TeeInput&lt;/code&gt;&lt;/a&gt;,
 which is an &lt;code&gt;Input&lt;/code&gt; that copies everything
 you read from it to the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;,
 similar to what
 &lt;a href=&quot;https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html&quot;&gt;&lt;code&gt;TeeInputStream&lt;/code&gt;&lt;/a&gt;
 from &lt;a href=&quot;https://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt; does, but encapsulated. So we don&amp;#39;t copy, we create an
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
 that will copy if you &lt;em&gt;touch&lt;/em&gt; it:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeeInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -351,9 +355,9 @@ in order to make sure they all are copied. If we just &lt;code&gt;read()&lt;/cod
 byte, only one byte will be copied to the file. The best way to touch them
 all is to calculate the size of the &lt;code&gt;tee&lt;/code&gt; object, going byte by byte. We
 have an object for it, called
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/LengthOfInput.html&quot;&gt;&lt;code&gt;LengthOfInput&lt;/code&gt;&lt;/a&gt;.
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/LengthOfInput.html&quot;&gt;&lt;code&gt;LengthOfInput&lt;/code&gt;&lt;/a&gt;.
 It encapsulates an
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
 and behaves like its length in bytes:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LengthOfInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -462,13 +466,13 @@ how to write, some outside procedure
 knows that instead.&lt;/p&gt;
 
 &lt;p&gt;To the contrary, in the object-oriented design the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.2/org/cactoos/io/FileAsOutput.html&quot;&gt;&lt;code&gt;FileAsOutput&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/FileAsOutput.html&quot;&gt;&lt;code&gt;FileAsOutput&lt;/code&gt;&lt;/a&gt;
 knows how to write, and nobody else does.
 The file writing functionality is encapsulated and this makes it
 possible to decorate the objects in any possible way, creating
 reusable and replaceable composite objects.&lt;/p&gt;
 
-&lt;p&gt;Do you see the beauty of OOP now?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">Cactoos is a library of object-oriented
+&lt;p&gt;Do you see the beauty of OOP now?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><category term="pets" /><summary type="html">Cactoos is a library of object-oriented
 Java primitives
 we
 started to work on just a few weeks ago. The intent was to
