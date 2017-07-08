@@ -96,13 +96,6 @@ OK, I'm kidding about the limo.
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
-<div class="talk-event"/>
-<img src="/images/2017/pgday.png" class="future-talk" alt="PgDay 2017"/>
-**PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests**<br/>
-[PgDay 2017](https://pgday.ru/ru/2017/speakers/136)<br/>
-St.Peterburg, Russia<br/>
-5-7 July 2017
-
 <!--
 <div class="talk-event"/>
 <img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
@@ -144,6 +137,13 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/pgday.png" class="past-talk" alt="PgDay 2017"/>
+PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests;
+[PgDay 2017](https://pgday.ru/ru/2017/speakers/136);
+St.Peterburg, Russia;
+5-7 July 2017.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/cv23Z6xpwDw/mqdefault.jpg" class="past-talk" alt="JDK.IO 2017"/>
