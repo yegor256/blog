@@ -3,7 +3,7 @@ layout: post
 title: "Object-Oriented Declarative Input/Output in Cactoos"
 date: 2017-06-22
 place: Dnipro, Ukraine
-tags: java oop
+tags: java oop pets
 description: |
   Instead of calling static procedures we may want
   to use objects, the way they are supposed to be used;

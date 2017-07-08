@@ -55,7 +55,7 @@ doing something very similar):
 
 What's wrong with this message? One thing. It is a _threat_.
 
-Even though this message doesn't say it explicitly, it actually implies
+Even though this message doesn't say it explicitly, it actually _implies_
 that "you either go along and we go out or you won't be hired." Of course,
 "no hire" may not hurt as much as a knife or a fist in the face, but it
 does hurt. Especially, if you are a member of a minority group.
@@ -86,10 +86,10 @@ attracted to a woman, no matter who she is: your boss, your employee, your
 schoolmate, or the founder of the business you're investing into. Moreover,
 there is nothing wrong in making advances, falling in love, having sex
 and marrying them (or the other way around). What's wrong is threatening them
-to get what you want.
+in order to get what you want.
 
 How I would re-phrase that message to Sarah if I would be Dave and felt
-in love with her at the first sight? I would say something like this:
+in love with her at the first sight? I would probably say something like this:
 
 > I was getting confused, figuring out how to isolate my hiring process
 from the desire to hit on you. How about we have a dinner? I promise,
@@ -101,7 +101,7 @@ in case she says she doesn't like him or simply has a partner. However,
 this would sound like a respectful attempt to put the weapon aside.
 
 It is difficult to not threat a woman if you're holding a gun in your hand
-and asking her out. Money and power is the gun. Let's be careful with them.
+while asking her out. Money and power is the gun. Let's be careful with them.
 But let's not forget how to seduce women and fall in love with them.
 We have to stay men, even though some of us are beeing weak abusers
 deserving no respect.
