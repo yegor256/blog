@@ -139,13 +139,20 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B-</aside>
 <img src="/images/2017/pgday.png" class="past-talk" alt="PgDay 2017"/>
 PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests;
 [PgDay 2017](https://pgday.ru/ru/2017/speakers/136);
 St.Peterburg, Russia;
 5-7 July 2017.
+The conference was well organized, but rather small for five tracks. There
+were no more than 30 people at my talk. The venue was far away from the
+city center which made it difficult to see the historic center of
+Saint Peterburg. The equipment was not of a high quality. The food was great,
+the audience was well prepared, the organizers friendly.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/cv23Z6xpwDw/mqdefault.jpg" class="past-talk" alt="JDK.IO 2017"/>
 Java Annotations Are a Bad Idea;
 [JDK IO 2017](http://www.jdk.io/);
@@ -153,8 +160,14 @@ Copenhagen, Denmark;
 19-20 June 2017;
 [video](https://youtu.be/cv23Z6xpwDw),
 [slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-a-bad-idea).
+The food, the accomodation, the audience, the equipment was good. The location
+was rather far away from the hotel. Aside from that, the conference was
+surprisingly good, even though I was told that in 2016 there were not enough
+attendees. This year there were just two tracks, about 80 people at my talk.
+Will be glad to visit again.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">C+</aside>
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
 Make Customers Trust You;
 [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/);
@@ -162,8 +175,12 @@ Kiev, Ukraine;
 17 June 2017;
 [video](https://youtu.be/oiNI2jF46h0),
 [slides](https://www.slideshare.net/YegorBugayenko/make-customers-trust-you).
+The event was much smaller than it was announced. I hardly had 40 people
+in the room, even though my talk was one of the first. The venue was
+average, the organization was good, the food was tasty.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
 How to Be Honest and Keep a Client;
 [PMCon Kharkiv 2017](http://pmcon.dev-pro.net/);
@@ -171,8 +188,14 @@ Kharkiv, Ukraine;
 11 June 2017;
 [video](https://youtu.be/Rip_04Bv3Jk),
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-be-honest-and-keep-a-client).
+There were some technical problems in my talk (you can see them in the video),
+but aside from that the event was interesting and well-organized. The team
+definitely did it with passion and invested a lot of effort in it. Maybe
+a better warming up social procedures would be helpful next year. Would be
+glad to attend again, if they invite.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A-</aside>
 <img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
 Object Oriented JUnit Tests;
 [JavaDay Minsk 2017](http://javaday.by/);
@@ -180,6 +203,9 @@ Minsk, Belarus;
 3 June 2017;
 [video](https://www.youtube.com/watch?v=1bAixLaOCSA),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-junit-tests).
+This was my second year and it did work even better than in 2016. The location
+was better, the accomodation was perfect, the team was very dedicated, the
+audience was interested. Will definitely try to attend next year.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/BgLqFTY1Rwk/mqdefault.jpg" class="past-talk" alt="JUG.ua Meetup 2017"/>
@@ -191,6 +217,7 @@ Kharkiv, Ukraine;
 [video](https://www.youtube.com/watch?v=IWroBKW8_QI) (part 2).
 
 <div class="talk-event"/>
+<aside class="venue-rate green">A-</aside>
 <img src="https://i.ytimg.com/vi/CCr8hRE_TUs/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 Object-Oriented Flavor for JUnit Tests;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
@@ -198,6 +225,12 @@ Kiev, Ukraine;
 27 May 2017;
 [video](https://www.youtube.com/watch?v=CCr8hRE_TUs),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
+As usual, this conference was very good, but this year something was missing.
+The venue was perfect, the accomodation, the team, the audience, the
+equipment at the highest level. I guess the content could be better with
+the budget these guys have available. More cutting-edge talks, more panel
+discussions, more provocation, more scandals. It was rather quiet and routine.
+Will try to attend next year.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
@@ -209,6 +242,7 @@ Kiev, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
 
 <div class="talk-event"/>
+<aside class="venue-rate green">C-</aside>
 <img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
 How to Avoid Outsourcing Disaster;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
@@ -216,15 +250,24 @@ Kiev, Ukraine;
 26 May 2017;
 [video](https://www.youtube.com/watch?v=DLk_5BmgTVk),
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-avoid-outsourcing-disaster).
+The event was smaller than I expected, the location was of a rather
+low quality, and the audience was pretty much random. Maybe that's because
+of the subject, or the time of the year.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">C</aside>
 <img src="/images/2016/geecon-2016.png" class="past-talk" alt="GeeCON 2017"/>
 What's This InterruptedException About?;
 [GeeCON 2017](https://geecon.org/);
 Kraków, Poland;
 18-19 May 2017.
+The event was very big, but many things were not as good as I would expect.
+It was in the cinema, as in 2016&mdash;not the best location, if you ask me.
+The food was average, the accomodation too. The key issue was the lack
+of social connection between speakers and attendees.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B</aside>
 <img src="https://i.ytimg.com/vi/IGbteQpTNCA/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
 How Bright Is Your Future?;
 [RigaDevDays 2017](http://rigadevdays.lv/);
@@ -232,6 +275,10 @@ Riga, Latvia;
 15 May 2017;
 [video](https://www.youtube.com/watch?v=IGbteQpTNCA),
 [slides](https://www.slideshare.net/YegorBugayenko/how-bright-is-our-future).
+The event was rather good, even though the location was not great (the cinema),
+the food was average and the equipment was not perfect. There were enough
+people for my talks, they were interested and I've got many interesting
+responses.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/K_QEOtYVQ7A/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
