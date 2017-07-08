@@ -13,6 +13,8 @@ require 'English'
 require 'net/http'
 require 'html-proofer'
 
+VERBOSE = false
+
 task default: [
   # :clean,
   :build,
@@ -78,7 +80,7 @@ task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
     fail "Page #{file} is not found" unless File.exist? file
-    puts "#{file}: OK"
+    puts "#{file}: OK" if VERBOSE
   end
   done 'All files are in place'
 end
@@ -88,7 +90,7 @@ task garbage: [:build] do
   File.open('_rake/garbage.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
     fail "Page #{file} is still there" if File.exist? file
-    puts "#{file}: absent, OK"
+    puts "#{file}: absent, OK" if VERBOSE
   end
   done 'There is no garbage'
 end
@@ -110,7 +112,7 @@ task w3c: [:build] do
       end
       fail "Page #{file} is not W3C compliant"
     end
-    puts "#{p}: OK"
+    puts "#{p}: OK" if VERBOSE
   end
   done 'HTML is W3C compliant'
 end
@@ -154,7 +156,7 @@ task spell: [:build] do
       | aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws \
       | grep ^\\&`
     if stdout.empty?
-      puts "#{f}: OK (#{text.split(' ').size} words)"
+      puts "#{f}: OK (#{text.split(' ').size} words)" if VERBOSE
     else
       puts "Typos in #{f}:"
       puts stdout
@@ -257,7 +259,7 @@ task :snippets do
       .split("\n")
     long = lines.reject{ |s| s.length < 81 }
     fail "Too wide snippet in #{f}: #{long}" unless long.empty?
-    puts "#{f}: OK (#{lines.size} lines)"
+    puts "#{f}: OK (#{lines.size} lines)" if VERBOSE
   end
   done 'All snippets are compact enough'
 end
