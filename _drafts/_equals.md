@@ -66,7 +66,9 @@ class Weight {
 }
 {% endhighlight %}
 
-The ugly part here is, first of all, the type casting with `instanceof`. The second problem
+The ugly part here is, first of all, the
+[type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
+with `instanceof`. The second problem
 is that we touch the internals of the incoming object. This design makes
 polymorphic behavior of the `Weight` impossible. We simply can't pass
 anything else to the `equals()` method, besides an instance of the
@@ -79,7 +81,7 @@ interface Weight {
 }
 {% endhighlight %}
 
-This code will stop to work:
+This code will not work:
 
 {% highlight java %}
 class DefaultWeight {
@@ -129,26 +131,22 @@ class Comparison<T extends Digitizable> {
     final byte[] left = this.lt.digits();
     final byte[] right = this.rt.digits();
     int result = 0;
-    int idx = 0;
-    for (; idx < left.length; ++idx) {
+    int max = Math.max(left.length, right.length);
+    for (int idx = 0; idx < max; ++idx) {
+      if (idx >= left.length) {
+        result = -1;
+        break;
+      }
       if (idx >= right.length) {
-        result = -1;
-        break;
-      }
-      if (left[idx] < right[idx]) {
-        result = -1;
-        break;
-      }
-      if (left[idx] > right[idx]) {
         result = 1;
         break;
       }
+      result = left[idx] - right[idx];
+      if (result != 0) {
+        break;
+      }
     }
-    if (result < 1 && idx == left.length
-      && idx < right.length) {
-      result = 1;
-    }
-    return result;
+    return (int) Math.signum(result);
   }
 }
 {% endhighlight %}
@@ -177,8 +175,8 @@ int v = new Comparison<Weight>(
 ).value();
 {% endhighlight %}
 
-This `v` will either be `-1`, `0`, or `1`. In this particular case it will `1`,
-because `500` is bigger than `400`.
+This `v` will either be `-1`, `0`, or `1`. In this particular case it will be `-1`,
+because `400` is less than `400`.
 
 No more violation of encapsulation, no more type casting, no more
 ugly code inside that `equals()` and `compareTo()` methods.

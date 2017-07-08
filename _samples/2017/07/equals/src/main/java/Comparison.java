@@ -28,25 +28,21 @@ class Comparison<T extends Digitizable> {
     final byte[] left = this.lt.digits();
     final byte[] right = this.rt.digits();
     int result = 0;
-    int idx = 0;
-    for (; idx < left.length; ++idx) {
+    int max = Math.max(left.length, right.length);
+    for (int idx = 0; idx < max; ++idx) {
+      if (idx >= left.length) {
+        result = -1;
+        break;
+      }
       if (idx >= right.length) {
-        result = -1;
-        break;
-      }
-      if (left[idx] < right[idx]) {
-        result = -1;
-        break;
-      }
-      if (left[idx] > right[idx]) {
         result = 1;
         break;
       }
+      result = left[idx] - right[idx];
+      if (result != 0) {
+        break;
+      }
     }
-    if (result < 1 && idx == left.length
-      && idx < right.length) {
-      result = 1;
-    }
-    return result;
+    return (int) Math.signum(result);
   }
 }

@@ -18,16 +18,42 @@
  * SOFTWARE.
  */
 class Main {
-  public static void main(String... args) {
-    claim(new Comparison<Weight>(new Weight(1), new Weight(1)).value() == 0);
-    claim(new Comparison<Weight>(new Weight(586774), new Weight(586773)).value() == 1);
-    claim(new Comparison<Text>(new Text("friend"), new Text("friend")).value() == 0);
-    claim(new Comparison<Text>(new Text(""), new Text("oops")).value() == 1);
-    claim(new Comparison<Text>(new Text("hey, boy"), new Text("hey, girl")).value() == -1);
-  }
-  private static void claim(boolean stmt) {
-    if (!stmt) {
-      throw new AssertionError("failed");
+    public static void main(String... args) {
+        texts("", "");
+        texts("hello, world!", "");
+        texts("hello, друг!", "hello, враг!");
+        texts("hello, dude", "hello, world!");
+        texts("", "hello, world!");
+        weights(0, 0);
+        weights(Integer.MAX_VALUE, 0);
+        weights(14, Integer.MAX_VALUE);
     }
-  }
+
+    private static void compare(Object left, Object right,
+        int expected, int actual) {
+        if (Math.signum(expected) != Math.signum(actual)) {
+            throw new AssertionError(
+                String.format(
+                    "'%s' vs '%s' = %d (%d expected)",
+                    left, right, actual, expected
+                )
+            );
+        }
+    }
+
+    private static void texts(String left, String right) {
+        compare(
+            left, right,
+            new Comparison<Text>(new Text(left), new Text(right)).value(),
+            left.compareTo(right)
+        );
+    }
+
+    private static void weights(Integer left, Integer right) {
+        compare(
+            left, right,
+            new Comparison<Weight>(new Weight(left), new Weight(right)).value(),
+            left.compareTo(right)
+        );
+    }
 }
