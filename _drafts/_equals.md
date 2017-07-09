@@ -184,3 +184,7 @@ The class `Comparison` will work with all possible types. All our objects
 need to do in order to become comparable is to implement `Digitizable` and
 "provide" their bytes for inspection/comparison.
 
+This approach is actually very close to
+[printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+I described earlier.
+
