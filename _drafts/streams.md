@@ -295,6 +295,6 @@ item.remove();
 Method names are the same as Java `Iterator` has, but they are implemented
 by the object itself. See the difference?
 
-Now, in order to build a
+To be continued...
 
 
