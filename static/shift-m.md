@@ -34,9 +34,8 @@ Subscribe at
 
 Future episodes (not a concrete schedule, just my plans):
 
-  * 7/3: with [Ahmad Fahmy](http://www.ahmadfahmy.com/)
   * 7/10: with [Hugo Messer](http://www.hugomesser.com/)
-  * 7/17: empty slot
+  * 7/17: with [Ahmad Fahmy](http://www.ahmadfahmy.com/) (maybe?)
   * 7/24: with [Susanne Madsen](http://www.susannemadsen.com/)
   * 7/31: empty slot
 
