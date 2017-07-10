@@ -79,7 +79,7 @@ This fear is destroying us.
 Thanks to this fear our _masculine_ characteristics become a victim of this dangerous game
 that society is playing right now, with a noble intent to protect women against
 verbal and psychological abuse. We men are losing our self-confidence,
-our self-esteem, our <del>balls</del> charisma.
+our self-esteem, our <del>balls</del> courage.
 
 This fear mentally castrates us.
 
