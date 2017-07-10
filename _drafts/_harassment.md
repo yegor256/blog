@@ -111,4 +111,4 @@ while asking her out. Money and power is the gun.
 
 Guys, let's be very careful. However, let's not forget how to seduce women
 and fall in love with them. We have to stay men, especially when
-some of us are weak abusers deserving no respect.
+some of those among us are weak abusers deserving no respect.
