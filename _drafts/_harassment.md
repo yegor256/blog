@@ -51,7 +51,7 @@ doing something very similar):
 
 > I was getting confused figuring out whether to hire you or hit on you.
 
-Obviously he was flirting. But what's wrong with that? Can't we flirt any more?
+Obviously he was flirting. And what's wrong with that? Can't we flirt any more?
 Is it a crime all of a sudden? One thing is wrong though. It was a _threat_.
 
 Even though this message didn't say it explicitly, it actually _implied_
@@ -85,7 +85,7 @@ This fear mentally castrates us.
 
 We must be absolutely clear that those harassers are guilty not because
 they "made advances" towards women who work with them or for them, but because
-they were _threating_ those ladies. There is nothing wrong in being
+they were _threatening_ those ladies. There is nothing wrong in being
 attracted to a woman, no matter who she is: your boss, your employee, your
 schoolmate, or the founder of the business you're investing in. Moreover,
 there is nothing wrong in making advances, falling in love, having sex
@@ -102,7 +102,7 @@ from my desire to hit on you. How about dinner? I promise,
 no matter how it ends, it will not affect our hiring decision at all.
 
 I realize that it's not perfect, since she wouldn't be completely
-comfortable, and might still expect Dave's feelings to affect his hiring decision
+comfortable, and still might expect Dave's feelings to affect his hiring decision
 if it turns out she doesn't like him or simply already has a partner. However,
 this would seem like a respectful attempt to put the weapon down.
 
