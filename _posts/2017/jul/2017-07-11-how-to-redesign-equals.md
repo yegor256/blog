@@ -86,7 +86,7 @@ interface Weight {
 This code will not work:
 
 {% highlight java %}
-class DefaultWeight {
+class DefaultWeight implements Weight {
   // attribute and ctor skipped
   public boolean equals(Object obj) {
     if (!(obj instanceof Weight)) {
