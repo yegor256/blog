@@ -176,7 +176,7 @@ int v = new Comparison<Weight>(
 {% endhighlight %}
 
 This `v` will either be `-1`, `0`, or `1`. In this particular case it will be `-1`,
-because `400` is less than `400`.
+because `400` is less than `500`.
 
 No more violation of encapsulation, no more type casting, no more
 ugly code inside those `equals()` and `compareTo()` methods.
