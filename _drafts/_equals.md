@@ -17,12 +17,12 @@ jb_picture:
   caption: xxx
 ---
 
-I want to rant a bit about Java design, in particular about methods
+I want to rant a bit about Java design, in particular about the methods
 [`Object.equals()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29)
 and
 [`Comparable.compareTo()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29).
-I've been hating them for years, because, no matter how hard
-I tried, the code inside them look ugly. Now I know what exactly
+I've hated them for years, because, no matter how hard
+I try to like them, the code inside looks ugly. Now I know what exactly
 is wrong and how I would design this "object-to-object comparing" mechanism
 _better_.
 
@@ -30,8 +30,8 @@ _better_.
 
 {% jb_picture_body %}
 
-Say, we have a <del>simple</del> primitive class `Weight`, objects of which
-represent weight of something, in kilos:
+Say we have a <del>simple</del> primitive class `Weight`, objects of which
+represent the weight of something in kilos:
 
 {% highlight java %}
 class Weight {
@@ -97,14 +97,14 @@ class DefaultWeight {
 {% endhighlight %}
 
 The problem is that one object decides for the other whether they are
-equal. This inevitably leads to a necessity to touch private attributes,
+equal. This inevitably leads to a necessity to touch private attributes in order
 to do the actual comparison.
 
 What is the solution?
 
 This is what I'm offering. Any comparison, no matter what types we
 are talking about, is about comparing two digital values. Either we
-compare a weight with a weight, a text with a text, or a user with a user&mdash;our
+compare a weight with a weight, text with text, or a user with a user&mdash;our
 CPUs can only compare numbers. Thus, we introduce a new interface
 `Digitizable`:
 
@@ -179,12 +179,12 @@ This `v` will either be `-1`, `0`, or `1`. In this particular case it will be `-
 because `400` is less than `400`.
 
 No more violation of encapsulation, no more type casting, no more
-ugly code inside that `equals()` and `compareTo()` methods.
+ugly code inside those `equals()` and `compareTo()` methods.
 The class `Comparison` will work with all possible types. All our objects
 need to do in order to become comparable is to implement `Digitizable` and
 "provide" their bytes for inspection/comparison.
 
-This approach is actually very close to
+This approach is actually very close to the
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 I described earlier.
 
