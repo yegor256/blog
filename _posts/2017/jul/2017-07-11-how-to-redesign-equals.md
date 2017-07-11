@@ -39,7 +39,7 @@ represent the weight of something in kilos:
 class Weight {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
 }
 {% endhighlight %}
