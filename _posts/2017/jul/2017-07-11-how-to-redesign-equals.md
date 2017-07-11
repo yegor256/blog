@@ -1,20 +1,22 @@
 ---
 layout: post
 title: "How I Would Re-design equals()"
-date: 2017-06-10
+date: 2017-07-11
 place: Copenhagen, Denmark
 tags: java oop
 description: |
-  ...
+  The design of equals() and compareTo() in Java
+  is far from perfect; this is how I would improve
+  it and make more object-oriented.
 keywords:
-  - IO java
-  - read/write java
-  - object-oriented input/output
-  - cactoos
-  - input/output cactoos
-image: /images/2017/06/?
+  - design of equals()
+  - design of compareTo()
+  - object-oriented compare objects
+  - oop object comparison
+  - how to compare objects
+image: /images/2017/07/lultimo-capodanno.jpg
 jb_picture:
-  caption: xxx
+  caption: L'ultimo capodanno (1998) by Marco Risi
 ---
 
 I want to rant a bit about Java design, in particular about the methods
@@ -176,7 +178,7 @@ int v = new Comparison<Weight>(
 {% endhighlight %}
 
 This `v` will either be `-1`, `0`, or `1`. In this particular case it will be `-1`,
-because `400` is less than `400`.
+because `400` is less than `500`.
 
 No more violation of encapsulation, no more type casting, no more
 ugly code inside those `equals()` and `compareTo()` methods.

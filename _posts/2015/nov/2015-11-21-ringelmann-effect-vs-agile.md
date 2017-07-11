@@ -31,6 +31,8 @@ to reproduce that experiment. It seems the French professor was right.
 
 <!--more-->
 
+{% jb_picture_body %}
+
 Here is what we did. We created two groups with four people in each of them,
 all non-native English speakers. Then, both groups received the same
 task&mdash;to create as many words as possible using the letters in a single given word.
