@@ -85,7 +85,7 @@ represent the weight of something in kilos:</p>
 <pre>class Weight {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
 }</pre>
 
@@ -98,7 +98,7 @@ represent the weight of something in kilos:</p>
 <pre>class Weight {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
   public boolean equals(Object obj) {
     if (!(obj instanceof Weight)) {
@@ -124,7 +124,7 @@ multiple implementations of it:</p>
 
 <p>This code will not work:</p>
 
-<pre>class DefaultWeight {
+<pre>class DefaultWeight implements Weight {
   // attribute and ctor skipped
   public boolean equals(Object obj) {
     if (!(obj instanceof Weight)) {
@@ -191,7 +191,7 @@ feel free to improve and contribute with a pull request):</p>
 <pre>class Weight implements Digitizable {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
   @Override
   public byte[] digits() {
