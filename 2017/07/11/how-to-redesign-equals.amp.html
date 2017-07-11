@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How I Would Re-design equals()</title>
+    <link rel="canonical" href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html"
+        },
+        "headline": "How I Would Re-design equals()",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/07/lultimo-capodanno.jpg",
+          "height": 542,
+          "width": 1280
+        },
+        "datePublished": "2017-07-11",
+        "dateModified": "2017-07-11",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The design of equals() and compareTo() in Java
+is far from perfect; this is how I would improve
+it and make more object-oriented.
+",
+        "keywords": ["design of equals()", "design of compareTo()", "object-oriented compare objects", "oop object comparison", "how to compare objects"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>11 July 2017</p>
+      <h1>How I Would Re-design equals()</h1>
+      <p>I want to rant a bit about Java design, in particular about the methods
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code>Object.equals()</code></a>
+and
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code>Comparable.compareTo()</code></a>.
+I've hated them for years, because, no matter how hard
+I try to like them, the code inside looks ugly. Now I know what exactly
+is wrong and how I would design this "object-to-object comparing" mechanism
+<em>better</em>.</p>
+
+
+
+<amp-img src="/images/2017/07/lultimo-capodanno.jpg" alt="L'ultimo capodanno (1998) by Marco Risi" height="542" width="1280" layout="responsive"></amp-img>
+
+<p>Say we have a <del>simple</del> primitive class <code>Weight</code>, objects of which
+represent the weight of something in kilos:</p>
+
+<pre>class Weight {
+  private int kilos;
+  Weight(int k) {
+    this.k = kilos;
+  }
+}</pre>
+
+<p>Next, we want two objects of the same weight to be equal to each other:</p>
+
+<pre>new Weight(15).equals(new Weight(15));</pre>
+
+<p>Here is how such a method may look:</p>
+
+<pre>class Weight {
+  private int kilos;
+  Weight(int k) {
+    this.k = kilos;
+  }
+  public boolean equals(Object obj) {
+    if (!(obj instanceof Weight)) {
+      return false;
+    }
+    Weight weight = Weight.class.cast(obj);
+    return weight.kilos == this.kilos;
+  }
+}</pre>
+
+<p>The ugly part here is, first of all, the
+<a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>
+with <code>instanceof</code>. The second problem
+is that we touch the internals of the incoming object. This design makes
+polymorphic behavior of the <code>Weight</code> impossible. We simply can't pass
+anything else to the <code>equals()</code> method, besides an instance of the
+class <code>Weight</code>. We can't turn it into an interface and introduce
+multiple implementations of it:</p>
+
+<pre>interface Weight {
+  boolean equals(Object obj);
+}</pre>
+
+<p>This code will not work:</p>
+
+<pre>class DefaultWeight {
+  // attribute and ctor skipped
+  public boolean equals(Object obj) {
+    if (!(obj instanceof Weight)) {
+      return false;
+    }
+    Weight weight = Weight.class.cast(obj);
+    return weight.kilos == this.kilos; // error here!
+  }
+}</pre>
+
+<p>The problem is that one object decides for the other whether they are
+equal. This inevitably leads to a necessity to touch private attributes in order
+to do the actual comparison.</p>
+
+<p>What is the solution?</p>
+
+<p>This is what I'm offering. Any comparison, no matter what types we
+are talking about, is about comparing two digital values. Either we
+compare a weight with a weight, text with text, or a user with a user—our
+CPUs can only compare numbers. Thus, we introduce a new interface
+<code>Digitizable</code>:</p>
+
+<pre>interface Digitizable {
+  byte[] digits();
+}</pre>
+
+<p>Next, we introduce a new class <code>Comparison</code>, which <em>is</em> the comparison of
+two streams of bytes (I'm not sure the code is perfect, I tested it
+<a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>,
+feel free to improve and contribute with a pull request):</p>
+
+<pre>class Comparison&lt;T extends Digitizable&gt; {
+  private T lt;
+  private T rt;
+  Comparison(T left, T right) {
+    this.lt = left;
+    this.rt = right;
+  }
+  int value() {
+    final byte[] left = this.lt.digits();
+    final byte[] right = this.rt.digits();
+    int result = 0;
+    int max = Math.max(left.length, right.length);
+    for (int idx = 0; idx &lt; max; ++idx) {
+      if (idx &gt;= left.length) {
+        result = -1;
+        break;
+      }
+      if (idx &gt;= right.length) {
+        result = 1;
+        break;
+      }
+      result = left[idx] - right[idx];
+      if (result != 0) {
+        break;
+      }
+    }
+    return (int) Math.signum(result);
+  }
+}</pre>
+
+<p>Now, we need <code>Weight</code> to implement <code>Digitizable</code>:</p>
+
+<pre>class Weight implements Digitizable {
+  private int kilos;
+  Weight(int k) {
+    this.k = kilos;
+  }
+  @Override
+  public byte[] digits() {
+    return ByteBuffer.allocate(4)
+      .putInt(this.kilos).array();
+  }
+}</pre>
+
+<p>Finally, this is how we compare them:</p>
+
+<pre>int v = new Comparison&lt;Weight&gt;(
+  new Weight(400), new Weight(500)
+).value();</pre>
+
+<p>This <code>v</code> will either be <code>-1</code>, <code>0</code>, or <code>1</code>. In this particular case it will be <code>-1</code>,
+because <code>400</code> is less than <code>500</code>.</p>
+
+<p>No more violation of encapsulation, no more type casting, no more
+ugly code inside those <code>equals()</code> and <code>compareTo()</code> methods.
+The class <code>Comparison</code> will work with all possible types. All our objects
+need to do in order to become comparable is to implement <code>Digitizable</code> and
+"provide" their bytes for inspection/comparison.</p>
+
+<p>This approach is actually very close to the
+<a href="/2016/04/05/printers-instead-of-getters.html">printers</a>
+I described earlier.</p>
+
+    </article>
+  </body>
+</html>

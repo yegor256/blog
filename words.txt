@@ -3198,6 +3198,7 @@ insides
 insignificant
 insist
 insists
+inspection
 inspiration
 inspire
 inspiring
@@ -3491,6 +3492,7 @@ killer
 killers
 killing
 kilograms
+kilos
 kimmel
 kind
 kindle
@@ -4295,6 +4297,7 @@ object
 object's
 object-oriented
 object-relational
+object-to-object
 objected-oriented
 objective
 objective-c
@@ -5143,6 +5146,7 @@ randomly
 range
 rank
 ranked
+rant
 rapidly
 rare
 rarely
