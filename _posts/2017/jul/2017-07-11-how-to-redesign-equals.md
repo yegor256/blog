@@ -159,7 +159,7 @@ Now, we need `Weight` to implement `Digitizable`:
 class Weight implements Digitizable {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
   @Override
   public byte[] digits() {
