@@ -56,7 +56,7 @@ Here is how such a method may look:
 class Weight {
   private int kilos;
   Weight(int k) {
-    this.k = kilos;
+    this.kilos = k;
   }
   public boolean equals(Object obj) {
     if (!(obj instanceof Weight)) {
