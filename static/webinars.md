@@ -33,12 +33,12 @@ Preliminary schedule for the future (feel free
   * Aug-2: How Cactoos was designed
   * Sep-6: TBD
 
-{% webinar 12-07-2017 26 Mj1gA5mEk68 Unit Testing vs Debugging %}
+<!-- {% webinar 12-07-2017 26 Mj1gA5mEk68 Unit Testing vs Debugging %} -->
 
 [July 12, 2017](https://www.youtube.com/watch?v=Mj1gA5mEk68)<br/>
 26: **Unit Testing vs Debugging**<br/>
-We'll discuss why debugging is a bad practice in general and how unit testing
-can replace it in all places. The discussion will be based on this article previously published:
+We discussed why debugging was a bad practice in general and how unit testing
+could replace it in all places. The discussion was based on this article previously published:
 [Are You Still Debugging?]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}).
 
 <a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
