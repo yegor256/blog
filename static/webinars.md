@@ -36,7 +36,7 @@ Preliminary schedule for the future (feel free
 <!-- {% webinar 12-07-2017 26 Mj1gA5mEk68 Unit Testing vs Debugging %} -->
 
 <a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
-[July 12, 2017](https://www.youtube.com/watch?v=Mj1gA5mEk68)<br/>
+July 12, 2017<br/>
 26: **Unit Testing vs Debugging**<br/>
 We discussed why debugging was a bad practice in general and how unit testing
 could replace it in all places. The discussion was based on this article previously published:
