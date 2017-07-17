@@ -168,16 +168,16 @@ feel free to improve and contribute with a pull request):</p>
     final byte[] right = this.rt.digits();
     int result = 0;
     int max = Math.max(left.length, right.length);
-    for (int idx = 0; idx &lt; max; ++idx) {
-      if (idx &gt;= left.length) {
-        result = -1;
-        break;
+    for (int idx = max; idx &gt; 0; --idx) {
+      byte lft = 0;
+      if (idx &lt;= left.length) {
+        lft = left[max - idx];
       }
-      if (idx &gt;= right.length) {
-        result = 1;
-        break;
+      byte rht = 0;
+      if (idx &lt;= right.length) {
+        rht = right[max - idx];
       }
-      result = left[idx] - right[idx];
+      result = lft - rht;
       if (result != 0) {
         break;
       }
