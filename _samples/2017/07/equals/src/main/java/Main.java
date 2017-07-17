@@ -28,6 +28,7 @@ class Main {
         texts("hello, друг!", "hello, враг!");
         texts("hello, dude", "hello, world!");
         texts("", "hello, world!");
+        texts("abc", "bc");
         weights(0, 0);
         weights(Integer.MAX_VALUE, 0);
         weights(14, Integer.MAX_VALUE);
@@ -61,7 +62,7 @@ class Main {
         compare(
             left, right,
             new Text(left), new Text(right),
-            new Comparison<Text>(new Text(left), new Text(right)).value(),
+            new AbcComparison<Text>(new Text(left), new Text(right)).value(),
             left.compareTo(right)
         );
     }

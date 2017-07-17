@@ -17,6 +17,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-interface Digitizable {
-    byte[] digits();
+final class Array implements Digitizable {
+    private final byte[] data;
+    Array(byte[] array) {
+        this.data = array;
+    }
+    public byte[] digits() {
+        return this.data;
+    }
 }
