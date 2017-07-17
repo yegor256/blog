@@ -134,16 +134,16 @@ class Comparison<T extends Digitizable> {
     final byte[] right = this.rt.digits();
     int result = 0;
     int max = Math.max(left.length, right.length);
-    for (int idx = 0; idx < max; ++idx) {
-      if (idx >= left.length) {
-        result = -1;
-        break;
+    for (int idx = max; idx > 0; --idx) {
+      byte lft = 0;
+      if (idx <= left.length) {
+        lft = left[max - idx];
       }
-      if (idx >= right.length) {
-        result = 1;
-        break;
+      byte rht = 0;
+      if (idx <= right.length) {
+        rht = right[max - idx];
       }
-      result = left[idx] - right[idx];
+      result = lft - rht;
       if (result != 0) {
         break;
       }
