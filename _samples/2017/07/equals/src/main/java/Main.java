@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /**
  * Copyright (c) 2017 Yegor Bugayenko
  *
@@ -27,6 +29,10 @@ class Main {
         weights(0, 0);
         weights(Integer.MAX_VALUE, 0);
         weights(14, Integer.MAX_VALUE);
+        bigNumbers(BigInteger.ONE, BigInteger.ONE);
+        bigNumbers(BigInteger.TEN, BigInteger.TEN);
+        bigNumbers(BigInteger.valueOf(500L), BigInteger.valueOf(600L));
+        bigNumbers(BigInteger.valueOf(5000000L), BigInteger.valueOf(-9000600L));
     }
 
     private static void compare(Object left, Object right,
@@ -39,6 +45,10 @@ class Main {
                 )
             );
         }
+        System.out.printf(
+            "'%s' vs '%s' = %d\n",
+            left, right, actual, expected
+        );
     }
 
     private static void texts(String left, String right) {
@@ -53,6 +63,16 @@ class Main {
         compare(
             left, right,
             new Comparison<Weight>(new Weight(left), new Weight(right)).value(),
+            left.compareTo(right)
+        );
+    }
+
+    private static void bigNumbers(BigInteger left, BigInteger right) {
+        compare(
+            left, right,
+            new Comparison<BigNumber>(
+                new BigNumber(left), new BigNumber(right)
+            ).value(),
             left.compareTo(right)
         );
     }
