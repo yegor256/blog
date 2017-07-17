@@ -3,7 +3,7 @@ layout: post
 title: "The Bigger Victim of Sexual Harassment"
 date: 2017-07-14
 place: Saint Petersburg, Russia
-tags: mood sexism
+tags: mood genders
 description: |
   Sexual harassment has been a hot topic in Silicon Valley
   in the last few months; what exactly is happening and
@@ -14,9 +14,9 @@ keywords:
   - harassment
   - sexual abuse
   - dave mcclure
-image: /images/2017/06/?
+image: /images/2017/07/twentynine-palms.jpg
 jb_picture:
-  caption: xxx
+  caption: Twentynine Palms (2003) by Bruno Dumont
 ---
 
 You most probably are aware of the recent sexual harassment
