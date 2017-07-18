@@ -78,7 +78,7 @@ layout: default
         </ul>
       {% endif %}
       <p class="unprintable">{{ page | tags }}</p>
-      <p class="buttons notranslate desktop-only">
+      <div class="buttons notranslate desktop-only">
         <nav class="share">
           <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
             title="Share on Facebook" class="button" rel="nofollow">
@@ -116,7 +116,7 @@ layout: default
             <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
           </a>
         </nav>
-      </p>
+      </div>
     </header>
     <main>
       <article class="main" itemprop="articleBody">
