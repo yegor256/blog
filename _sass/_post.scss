@@ -26,49 +26,48 @@
 
 .buttons {
   @extend %unprintable;
+  margin-bottom: .5em;
 
-  .share {
-    a,
-    a:visited {
-      text-decoration: none;
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a {
+    position: relative;
+
+    .count {
+      background-color: $white;
+      border: 1px solid $gray;
+      color: $gray;
+      display: none;
+      font-family: $code-font;
+      font-size: .6 * $em;
+      line-height: .7 * $em;
+      padding: 0 .2 * $em;
+      position: absolute;
+      right: .3 * $em;
+      top: -.7 * $em;
     }
 
-    a {
-      position: relative;
+    .icon {
+      $size: 1.2;
+      border: 1px solid $gray;
+      border-radius: 50%;
+      color: $gray;
+      display: inline-block;
+      height: $size * $em;
+      line-height: $size * $em;
+      margin-bottom: .2 * $em;
+      margin-right: .2 * $em;
+      padding: .4 * $size * $em;
+      text-align: center;
+      vertical-align: middle;
+      width: $size * $em;
 
-      .count {
-        background-color: $white;
-        border: 1px solid $gray;
-        color: $gray;
-        display: none;
-        font-family: $code-font;
-        font-size: .6 * $em;
-        line-height: .7 * $em;
-        padding: 0 .2 * $em;
-        position: absolute;
-        right: .3 * $em;
-        top: -.7 * $em;
-      }
-
-      .icon {
-        $size: 1.2;
-        border: 1px solid $gray;
-        border-radius: 50%;
-        color: $gray;
-        display: inline-block;
-        height: $size * $em;
-        line-height: $size * $em;
-        margin-bottom: .2 * $em;
-        margin-right: .2 * $em;
-        padding: .4 * $size * $em;
-        text-align: center;
-        vertical-align: middle;
-        width: $size * $em;
-
-        &:hover {
-          background-color: $gray;
-          color: $white;
-        }
+      &:hover {
+        background-color: $gray;
+        color: $white;
       }
     }
   }
