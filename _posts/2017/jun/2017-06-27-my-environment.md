@@ -151,6 +151,10 @@ for watching those stolen movies.
 [Vienna](http://www.vienna-rss.com/) (free)
 for reading RSS feeds, rarely.
 
+<img src="/images/2017/06/env-istat.jpg" class="env-ico"/><br/>
+[iStat Menus](https://bjango.com/mac/istatmenus/) ($18)
+for OSX monitoring.
+
 <img src="/images/2017/06/env-keynote.jpg" class="env-ico"/>
 <img src="/images/2017/06/env-pages.jpg" class="env-ico"/>
 <img src="/images/2017/06/env-numbers.jpg" class="env-ico"/><br/>
