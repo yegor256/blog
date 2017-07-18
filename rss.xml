@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-17T19:31:29+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How I Would Re-design equals()</title><link href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html" rel="alternate" type="text/html" title="How I Would Re-design equals()" /><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/11/how-to-redesign-equals</id><content type="html" xml:base="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">&lt;p&gt;I want to rant a bit about Java design, in particular about the methods
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-18T06:40:13+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Bigger Victim of Sexual Harassment</title><link href="http://www.yegor256.com/2017/07/18/sexual-harassment.html" rel="alternate" type="text/html" title="The Bigger Victim of Sexual Harassment" /><published>2017-07-18T00:00:00+00:00</published><updated>2017-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/18/sexual-harassment</id><content type="html" xml:base="http://www.yegor256.com/2017/07/18/sexual-harassment.html">&lt;p&gt;You most probably are aware of the recent sexual harassment
+&lt;a href=&quot;https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html?_r=0&quot;&gt;scandals&lt;/a&gt;
+in Silicon Valley, which led to serious career problems for
+&lt;a href=&quot;https://500hats.com/im-a-creep-i-m-sorry-d2c13e996ea0&quot;&gt;Dave McClure&lt;/a&gt; (former CEO of &lt;a href=&quot;https://500.co/&quot;&gt;500 Startups&lt;/a&gt;),
+&lt;a href=&quot;https://www.nytimes.com/2017/02/19/business/uber-sexual-harassment-investigation.html&quot;&gt;Travis Kalanick&lt;/a&gt; (former CEO of &lt;a href=&quot;http://www.uber.com&quot;&gt;Uber&lt;/a&gt;),
+&lt;a href=&quot;https://medium.com/@sacca/i-have-more-work-to-do-c775c5d56ca1&quot;&gt;Chris Sacca&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.usatoday.com/story/tech/news/2017/06/30/venture-capital-sexual-harassment-scandal/103336512/&quot;&gt;a few others&lt;/a&gt;.
+Let&amp;#39;s try to put emotions aside and analyze what&amp;#39;s happening
+and what long-term consequences this panic may have for our
+male-dominated engineering environment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Twentynine Palms (2003) by Bruno Dumont&#39; src=&#39;/images/2017/07/twentynine-palms.jpg&#39; longdesc=&#39;#c014ddd9&#39;/&gt;&lt;figcaption id=&#39;c014ddd9&#39;&gt;Twentynine Palms (2003) by Bruno Dumont&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;We will never know what really happened between those male investors and
+female entrepreneurs behind closed doors, but the gist of the accusation
+is that the former were &lt;em&gt;making advances&lt;/em&gt; towards the latter,
+where it was clearly &lt;em&gt;inappropriate&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;What does that mean exactly? What, for example, did Dave McClure do in order
+to be kicked out of the company he founded?&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s see. According to Katie Benner from The New York Times,
+he sent &lt;a href=&quot;https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html&quot;&gt;this message&lt;/a&gt;
+to &lt;a href=&quot;https://twitter.com/sarahkunst&quot;&gt;Sarah Kunst&lt;/a&gt;,
+who was an applicant at his incubator in 2014 (other &amp;quot;harassers&amp;quot; were accused of
+doing something very similar):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I was getting confused figuring out whether to hire you or hit on you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Obviously he was flirting. And what&amp;#39;s wrong with that? Can&amp;#39;t we flirt any more?
+Is it a crime all of a sudden? One thing is wrong though. It was a &lt;em&gt;threat&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Even though this message didn&amp;#39;t say it explicitly, it actually &lt;em&gt;implied&lt;/em&gt;
+that &amp;quot;you either go along and we go out, or you won&amp;#39;t be hired.&amp;quot; Of course,
+&amp;quot;no hire&amp;quot; may not hurt as much as a knife or a fist in the face, but it
+does hurt. Especially if you are a woman, a member of a minority group.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m a &lt;del&gt;sexist&lt;/del&gt; &lt;a href=&quot;/2017/07/04/sexism.html&quot;&gt;gentleman&lt;/a&gt;,
+I feel bad when I see women being threatened. I want to protect them
+and I expect our system of justice to help me, just
+like it helps when we deal with physical violence.
+These threats or attempts to threaten must be punished.&lt;/p&gt;
+
+&lt;p&gt;However!&lt;/p&gt;
+
+&lt;p&gt;There is nothing wrong with the game between the sexes by itself. Just
+like we don&amp;#39;t prohibit sex because we are afraid of rapists, we must not
+stop asking women out because of our fear of a possible harassment accusation.
+However, it seems that this is what is happening now: men are becoming &lt;em&gt;afraid&lt;/em&gt; of women.
+Especially powerful men with money and status. They realize
+that a small incautious step may help them become the next Dave or Travis.&lt;/p&gt;
+
+&lt;p&gt;This fear is destroying us.&lt;/p&gt;
+
+&lt;p&gt;Thanks to this fear our &lt;em&gt;masculine&lt;/em&gt; characteristics become a victim of this dangerous game
+that society is playing right now, with a noble intent to protect women against
+verbal and psychological abuse. We men are losing our self-confidence,
+our self-esteem, our &lt;del&gt;balls&lt;/del&gt; courage.&lt;/p&gt;
+
+&lt;p&gt;This fear mentally castrates us.&lt;/p&gt;
+
+&lt;p&gt;We must be absolutely clear that those harassers are guilty not because
+they &amp;quot;made advances&amp;quot; towards women who work with them or for them, but because
+they were &lt;em&gt;threatening&lt;/em&gt; those ladies. There is nothing wrong in being
+attracted to a woman, no matter who she is: your boss, your employee, your
+schoolmate, or the founder of the business you&amp;#39;re investing in. Moreover,
+there is nothing wrong in making advances, falling in love, having sex
+and marrying them. Threatening them in order to get all that is very wrong.&lt;/p&gt;
+
+&lt;p&gt;Not every flirtation is harassment. Not every man with a sexual
+instinct is a rapist.&lt;/p&gt;
+
+&lt;p&gt;How would I re-phrase that message to Sarah if I had been Dave and had fallen
+in love with her at first sight? I would probably say:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I was getting confused, figuring out how to isolate my hiring process
+from my desire to hit on you. How about dinner? I promise,
+no matter how it ends, it will not affect our hiring decision at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I realize that it&amp;#39;s not perfect, since she wouldn&amp;#39;t be completely
+comfortable, and still might expect Dave&amp;#39;s feelings to affect his hiring decision
+if it turns out she doesn&amp;#39;t like him or simply already has a partner. However,
+this would seem like a respectful attempt to put the weapon down.&lt;/p&gt;
+
+&lt;p&gt;It is difficult to not threaten a woman if you&amp;#39;re holding a gun in your hand
+while asking her out. Money and power is the gun.&lt;/p&gt;
+
+&lt;p&gt;Guys, let&amp;#39;s be very careful. However, let&amp;#39;s not forget how to seduce women
+and fall in love with them. We have to stay men, especially when
+some of those among us are weak abusers deserving no respect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="genders" /><summary type="html">You most probably are aware of the recent sexual harassment
+scandals
+in Silicon Valley, which led to serious career problems for
+Dave McClure (former CEO of 500 Startups),
+Travis Kalanick (former CEO of Uber),
+Chris Sacca,
+and
+a few others.
+Let&amp;#39;s try to put emotions aside and analyze what&amp;#39;s happening
+and what long-term consequences this panic may have for our
+male-dominated engineering environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/twentynine-palms.jpg" /></entry><entry><title type="html">How I Would Re-design equals()</title><link href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html" rel="alternate" type="text/html" title="How I Would Re-design equals()" /><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/11/how-to-redesign-equals</id><content type="html" xml:base="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">&lt;p&gt;I want to rant a bit about Java design, in particular about the methods
 &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29&quot;&gt;&lt;code&gt;Object.equals()&lt;/code&gt;&lt;/a&gt;
 and
 &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29&quot;&gt;&lt;code&gt;Comparable.compareTo()&lt;/code&gt;&lt;/a&gt;.
@@ -216,7 +322,9 @@ to see us as gentlemen and ladies. Not just genderless people.&lt;/p&gt;
 
 &lt;p&gt;Thanks to this inequality men find women attractive, fall in love with them,
 marry them and make kids. Thanks to this inequality many years ago my dad asked
-my mom out, kissed her, proposed, and brought me into this world.&lt;/p&gt;
+my mom out,
+&lt;a href=&quot;/2017/07/18/sexual-harassment.html&quot;&gt;kissed her&lt;/a&gt;,
+proposed, and brought me into this world.&lt;/p&gt;
 
 &lt;p&gt;Now back to the main problem: women in tech. I&amp;#39;m a programmer myself.
 I write and debug code every day. I also manage programmers and projects.
@@ -1192,71 +1300,4 @@ is that they become declarative and object-oriented, instead of being
 algorithmic, imperative, and procedural.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html">Many articles and books have already been written about unit testing patterns
 and anti-patterns. I want to add one more recommendation which, I believe,
 can help us make our tests, and our production code, more object-oriented.
-Here it is: a test method must contain nothing but a single assert.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/bullet.jpg" /></entry><entry><title type="html">Monikers Instead of Variables</title><link href="http://www.yegor256.com/2017/05/16/monikers.html" rel="alternate" type="text/html" title="Monikers Instead of Variables" /><published>2017-05-16T00:00:00+00:00</published><updated>2017-05-16T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/16/monikers</id><content type="html" xml:base="http://www.yegor256.com/2017/05/16/monikers.html">&lt;p&gt;If we agree that all local variables &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/48413&quot;&gt;must be&lt;/a&gt;
-&lt;code&gt;final&lt;/code&gt;, multiple &lt;code&gt;return&lt;/code&gt;s must be avoided, and
-temporal coupling between statements is evil&amp;mdash;we can get
-rid of variables entirely and replace them with &lt;em&gt;inline values&lt;/em&gt;
-and their &lt;em&gt;monikers&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;OSS 117: Cairo, Nest of Spies (2006) by Michel Hazanavicius&#39; src=&#39;/images/2017/05/oss-117.jpg&#39; longdesc=&#39;#fde99754&#39;/&gt;&lt;figcaption id=&#39;fde99754&#39;&gt;OSS 117: Cairo, Nest of Spies (2006) by Michel Hazanavicius&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is the code from Section 5.10 (&lt;em&gt;Algorithms&lt;/em&gt;) of my book
-&lt;a href=&quot;http://amzn.to/2pjciUY&quot;&gt;&lt;em&gt;Elegant Objects&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Secret&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Farewell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Attempts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VerboseDiff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Guess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;say&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention to the variable &lt;code&gt;secret&lt;/code&gt;. It exists here because we
-need its value twice: first, as a constructor argument for the &lt;code&gt;Diff&lt;/code&gt;, second
-as a constructor argument for the &lt;code&gt;Farewell&lt;/code&gt;. We can&amp;#39;t &lt;em&gt;inline&lt;/em&gt; the value by
-creating two separate instances of class &lt;code&gt;Secret&lt;/code&gt;, because it really has
-to be the same object&amp;mdash;it encapsulates the number that we hide
-from the user in a number-guessing game.&lt;/p&gt;
-
-&lt;p&gt;There could be many other situations where a &lt;em&gt;value&lt;/em&gt; needs to be used multiple
-times while remaining unmodifiable. Why do we still call these values &lt;em&gt;variables&lt;/em&gt; if
-technically they are constants?&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m suggesting we introduce &amp;quot;monikers&amp;quot; for these values, assigning them
-through the &lt;code&gt;as&lt;/code&gt; keyword. For example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Farewell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Attempts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VerboseDiff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Guess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;say&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here &lt;code&gt;new Secret()&lt;/code&gt; is the inlined value and &lt;code&gt;secret&lt;/code&gt; is its &lt;em&gt;moniker&lt;/em&gt;, which
-we use a few lines later.&lt;/p&gt;
-
-&lt;p&gt;It would be great to have this feature in Java, right?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">If we agree that all local variables must be
-final, multiple returns must be avoided, and
-temporal coupling between statements is evil&amp;mdash;we can get
-rid of variables entirely and replace them with inline values
-and their monikers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/oss-117.jpg" /></entry></feed>
+Here it is: a test method must contain nothing but a single assert.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/bullet.jpg" /></entry></feed>
