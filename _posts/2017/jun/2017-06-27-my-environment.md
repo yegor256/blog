@@ -64,7 +64,12 @@ for web browsing. I also have
 [Safari](https://www.apple.com/lae/safari/),
 [FireFox](https://www.mozilla.org/en-US/firefox/new/),
 and [Opera](http://www.opera.com/) but only to verify my websites
-for cross-browser compatibility, that's all.
+for cross-browser compatibility, that's all. I'm using these
+plugins:
+[AdBlock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom),
+[Block site](https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en),
+[Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en),
+[Rapportive](https://chrome.google.com/webstore/detail/rapportive/hihakjfhbmlmjdnnhegiciffjplmdhin?hl=en).
 
 <img src="/images/2017/06/env-iterm2.jpg" class="env-ico"/><br/>
 [iTerm2](https://www.iterm2.com/) (free)
