@@ -26,7 +26,7 @@ As a **programmer**, I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP, and JavaScript.
 I'm the founder and lead architect of
 [takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com), and I use
-IntelliJ products (my [settings.jar](http://img.teamed.io/settings.jar) for Java).
+IntelliJ products (my [settings.jar](/bin/settings.jar) for Java).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering.
 I'm an Oracle Certified Master and Java EE 6 Enterprise Architect

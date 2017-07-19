@@ -45,6 +45,7 @@ an author of [Takes Framework](http://www.takes.org).
 If you contribute to open source (and
 [you must]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})), you may do
 the same, I believe, just [email them](mailto:opensource@jetbrains.com) and ask.
+These are my [settings.jar](/bin/settings.jar).
 
 <img src="/images/2017/06/env-sublime-text.jpg" class="env-ico"/><br/>
 [Sublime Text](https://www.sublimetext.com/) ($70)
