@@ -79,6 +79,7 @@ adam
 adapt
 adapter
 adapters
+adblock
 ADC
 add
 added
@@ -2749,6 +2750,7 @@ gradually
 graduated
 graduation
 graham
+grammarly
 grant
 graph
 graphic
@@ -5190,6 +5192,7 @@ rant
 rapidly
 rapist
 rapists
+rapportive
 rare
 rarely
 rasterized
