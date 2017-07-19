@@ -25,10 +25,10 @@ a programmer, founder, investor, and philanthropist.
 As a **programmer**, I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP, and JavaScript.
 I'm the founder and lead architect of
-[takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com), and I use
-IntelliJ products (my [settings.jar](/bin/settings.jar) for Java).
+[takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
-about software engineering.
+about software engineering, and a detailed description of
+[my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
 I'm an Oracle Certified Master and Java EE 6 Enterprise Architect
 ([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
 Besides that, I'm a proud holder of
