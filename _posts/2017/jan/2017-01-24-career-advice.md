@@ -123,8 +123,9 @@ absolute minimum. Second, pay for certificates for the
 same reasons. Third, purchase software; don't steal it. Finally, don't be
 cheap on your laptop. It is much more important than your car or a birthday
 gift for your spouse. Your laptop is your instrument; it must be
-<del>good and expensive</del> made by Apple. You must go "all in" if you want
-to win.
+<del>good and expensive</del>
+[made by Apple]({% pst 2017/jun/2017-06-27-my-environment %}).
+You must go "all in" if you want to win.
 
 **Don't Work Full-Time**.
 As much as possible, try to stay away from full-time, 9-to-5 jobs&mdash;they

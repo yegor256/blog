@@ -34,7 +34,11 @@ Retina, 15-inch, [Late 2013](https://support.apple.com/kb/sp690?locale=en_US),
 2.3GHz/16Gb/512Gb ($2,900) with MacOS Sierra. I bought it over
 three years ago and don't want to replace with a new one, simply
 because [rumors are](https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de)
-its quality is very low. My smartphone is iPhone&nbsp;6s.
+its quality is very low. My smartphone is
+[iPhone&nbsp;6s](https://www.apple.com/shop/buy-iphone/iphone6s).
+For podcast recording I'm using [Zoom&nbsp;H6](http://amzn.to/2tjPebw)
+together with
+[Movo LV4-O2](http://amzn.to/2tkdA4G) microphone.
 
 <img src="/images/2017/06/env-intellij-idea.jpg" class="env-ico"/><br/>
 [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (<del>$499</del> free)
