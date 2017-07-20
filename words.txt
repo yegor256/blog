@@ -3778,6 +3778,7 @@ lucky
 lunch
 lunches
 luxury
+LV
 lying
 lyrics
 m'aimes
@@ -3998,6 +3999,7 @@ micro-tasks
 micromanagement
 micromanager
 micromanages
+microphone
 microphones
 microscope
 microservice
@@ -4144,6 +4146,7 @@ moves
 movie
 movies
 moving
+movo
 mph
 MS
 MS-DOS
@@ -4800,6 +4803,7 @@ PMs
 PNG
 PO
 pocket
+podcast
 poems
 point
 pointer
