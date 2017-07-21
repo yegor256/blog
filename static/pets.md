@@ -87,10 +87,18 @@ More about it in this article:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %}).
 Founded 8-Jan-2015.
 
+{% badge http://www.takes.org/logo.png 70 http://www.takes.org %}
+
+[cactoos.org](http://www.cactoos.org) is an open source Java library,
+of object-oriented primitives, which are the alternatives to
+Guava, Apache Commons, and JDK.
+More about it in this article:
+[Object-Oriented Declarative Input/Output in Cactoos]({% pst 2017/jun/2017-06-22-object-oriented-input-output-in-cactoos %}).
+Founded 23-May-2017.
+
 Others (less stable or successful):
 [tacit](https://github.com/yegor256/tacit),
 [qulice](https://github.com/teamed/qulice),
-[cactoos](https://github.com/yegor256/cactoos),
 [jcabi](https://github.com/jcabi),
 [xembly](https://github.com/yegor256/xembly),
 [netbout](http://www.netbout.com),
