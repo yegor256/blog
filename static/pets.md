@@ -30,6 +30,7 @@ their basic DevOps procedures, including merging, deploying, and
 releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %}).
+<br/>
 Founded 5-Jun-13.
 
 {% badge http://www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
@@ -39,6 +40,7 @@ that constantly HTTP requests your website to measure how often
 it falls down. The generated availability metric is accessible via
 a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 [SixNines.io, Your Website Availability Monitor]({% pst 2017/apr/2017-04-25-sixnines %}).
+<br/>
 Founded 10-Mar-2017.
 
 {% badge http://www.jare.io/images/logo.svg 70 http://www.jare.io %}
@@ -47,6 +49,7 @@ Founded 10-Mar-2017.
 helps webmasters to eliminate the necessity to pay for CDN and spend time
 configuring it. More about it here:
 [Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
+<br/>
 Founded 2-Mar-2016.
 
 {% badge https://avatars2.githubusercontent.com/u/24456188 70 http://www.0pdd.com %}
@@ -58,6 +61,7 @@ or private GitHub repository. This project is a member of
 [Zerocracy](http://www.zerocracy.com) family.
 More about it here:
 [PDD in Action]({% pst 2017/apr/2017-04-05-pdd-in-action %}).
+<br/>
 Founded 8-Dec-2016.
 
 {% badge http://img.s3auth.com/logo.png 140 http://www.s3auth.com %}
@@ -67,6 +71,7 @@ gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
 a useful and simple functionality, that's why I created this small hosted
 service, which is actively used by 1000+ buckets up to date.
 More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %})
+<br/>
 Founded 22-Aug-2012.
 
 {% badge http://img.stateful.co/pomegranate.svg 70 http://www.stateful.co %}
@@ -76,6 +81,7 @@ that help achieve statefulness in a multi-server/node environments. In other
 words, it provides persistent simple things accessible over the network.
 Still not clear? Check this out:
 [Synchronization Between Nodes]({% pst 2014/dec/2014-12-04-synchronization-between-nodes %}).
+<br/>
 Founded 7-May-2014.
 
 {% badge http://www.takes.org/logo.png 70 http://www.takes.org %}
@@ -85,15 +91,17 @@ which adheres to almost all principles of object-oriented programming
 explained in my [Elegant Objects](/elegant-objects.html) book.
 More about it in this article:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %}).
+<br/>
 Founded 8-Jan-2015.
 
 {% badge /images/books/elegant-objects/cactus.svg 70 http://www.cactoos.org %}
 
-[cactoos.org](http://www.cactoos.org) is an open source Java library,
+[cactoos.org](http://www.cactoos.org) is an open source Java library
 of object-oriented primitives, which are the alternatives to
 Guava, Apache Commons, and JDK.
 More about it in this article:
 [Object-Oriented Declarative Input/Output in Cactoos]({% pst 2017/jun/2017-06-22-object-oriented-input-output-in-cactoos %}).
+<br/>
 Founded 23-May-2017.
 
 Others (less stable or successful):
