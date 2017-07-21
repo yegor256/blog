@@ -144,6 +144,10 @@ to go through the history and find out where exactly I broke something.
 [Transmit](https://panic.com/transmit/) ($34)
 for FTP and AWS S3 file management.
 
+<img src="/images/2017/06/env-obs.jpg" class="env-ico"/><br/>
+[OBS Studio](https://obsproject.com/) (free)
+for webinars and video recording.
+
 <img src="/images/2017/06/env-mtorrent.jpg" class="env-ico"/><br/>
 [µTorrent](http://www.utorrent.com/) (free)
 for stealing movies. I find them mostly at

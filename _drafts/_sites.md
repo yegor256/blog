@@ -39,15 +39,21 @@ share documents with friends sometimes.
 
 <img src="/images/2017/07/sites-github.jpg" class="env-ico"/><br/>
 [GitHub](https://github.com/yegor256)
-is where we keep our source code repositories.
+is where we keep our source code repositories. I was also using
+[Bitbucket](https://bitbucket.com)
+a few years ago, but didn't really like it. GitHub is the the best, no
+doubts.
 
 <img src="/images/2017/07/sites-stackoverflow.jpg" class="env-ico"/><br/>
-[StackOverflow](https://stackoverflow.com)
-is where I learn new technologies.
+[StackOverflow](http://stackoverflow.com/users/187141/yegor256)
+is where I learn new technologies, ask questions, answer them sometimes
+and really enjoy working with the community. When I have some free time,
+I just search by "design" or "oop" keywords in order to find relevant questions
+and answer them.
 
 <img src="/images/2017/07/sites-godaddy.jpg" class="env-ico"/><br/>
 [Godaddy](http://www.godaddy.com) is where I register all domain
-names. It has got the most ugly interface I've ever met, but its
+names. They've got the ugliest interface I've ever seen, but their
 prices are the lowest. So, I'm with them for at least eight years already.
 
 <img src="/images/2017/07/sites-google-analytics.jpg" class="env-ico"/>
@@ -72,7 +78,8 @@ seem to be the best sources of news for me. I open them a few times a week.
 and [Twitter](http://www.twitter.com)
 are the social networks I'm spamming regularly. They are far from being
 perfect, but they totally dominate the market.
-These guys are dead: LinkedIn, Google+.
+I was using these guys, but they seem to be dead now:
+LinkedIn, Google+.
 
 <img src="/images/2017/07/sites-amazon.jpg" class="env-ico"/><br/>
 [Amazon](http://amzn.to/2ufwBbw)
@@ -94,7 +101,10 @@ and the service is pretty decent. I'm with them for at least five years.
 
 <img src="/images/2017/07/sites-papertrail.jpg" class="env-ico"/><br/>
 [Papertrail](https://papertrailapp.com/?thank=9e5dc6)
-is where all my logs are being aggregated.
+is where all my logs are being aggregated. I tried a few other
+systems, but these guys seem to be the best. I even paid them something
+some time ago, but stopped&mdash;their free package seem to be sufficient
+enough for my volumes.
 
 <img src="/images/2017/07/sites-sentry.jpg" class="env-ico"/><br/>
 [Sentry](https://www.sentry.io)
@@ -102,16 +112,18 @@ is where all my errors are being sent from production systems.
 
 <img src="/images/2017/07/sites-buffer.jpg" class="env-ico"/><br/>
 [Buffer](https://www.buffer.com)
-is helping me to spam at Twitter and Facebook more effectively.
+is helping me to spam at Twitter and Facebook more effectively. I pay
+them for the premium package and have no regrets. The service really
+helps me deliver content to the social networks seamlessly.
 
 <img src="/images/2017/07/sites-youtube.jpg" class="env-ico"/><br/>
 [YouTube](http://www.youtube.com)
-is where keep my video content.
+is where I keep my video content. I also stream my webinar there.
 
 <img src="/images/2017/07/sites-soundcloud.jpg" class="env-ico"/><br/>
 [SoundCloud](http://www.soundcloud.com)
-is where I'm listening to music and keep my own channel with Shift-M
-podcast and other audio content.
+is where I'm listening to music and keep my own channel with
+[Shift-M](/shift-m.html) podcast and other audio content.
 
 <img src="/images/2017/07/sites-quickbooks.jpg" class="env-ico"/><br/>
 [QuickBooks](https://qdc.qbo.intuit.com/qbo30/login)
