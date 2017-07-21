@@ -87,7 +87,7 @@ More about it in this article:
 [Java Web App Architecture In Takes Framework]({% pst 2015/mar/2015-03-22-takes-java-web-framework %}).
 Founded 8-Jan-2015.
 
-{% badge http://www.takes.org/logo.png 70 http://www.takes.org %}
+{% badge /images/books/elegant-objects/cactus.svg 70 http://www.cactoos.org %}
 
 [cactoos.org](http://www.cactoos.org) is an open source Java library,
 of object-oriented primitives, which are the alternatives to
