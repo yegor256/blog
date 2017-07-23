@@ -161,10 +161,10 @@ del {
 
       &.hot {
         a {
-          text-decoration: none;
-          background-color: red;
-          color: white;
+          background-color: $red;
+          color: $white;
           padding: 0 .3em;
+          text-decoration: none;
         }
       }
 
