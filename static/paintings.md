@@ -17,10 +17,12 @@ style: |
 ---
 
 This is the full list of my paintings, which are for sale. You can buy
-anyone, paying via PayPal. Shipment via FedEx is on me. Every dollar
-you pay will be turned into prize money in my annual
+anyone, paying via PayPal (you will also have to pay for shipment,
+via FedEx). What is important is that
+every dollar you pay will be turned into prize money in my annual
 [Software Quality Award](/award.html). Thus, you will get a piece
 of art _and_ will help the software industry to become better.
+[Email me](mailto:paintings@yegor256.com) if interested.
 
 You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256).
 
