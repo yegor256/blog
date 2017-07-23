@@ -159,7 +159,7 @@ del {
       display: inline;
       margin-right: .4 * $em;
 
-      &.red {
+      &.highlighted {
         a {
           background-color: $red;
           color: $white;
