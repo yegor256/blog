@@ -21,6 +21,6 @@ nospell: true
 
 [Susanne Madsen](http://susannemadsen.com/) was a special guest.
 
-Her [Twitter](https://twitter.com/SusanneMadsen),
+Check Susanne's [Twitter](https://twitter.com/SusanneMadsen),
 [LinkedIn](https://www.linkedin.com/in/susanne-madsen-1134312)
-and [blog](http://susannemadsen.com/).
+and the [blog](http://susannemadsen.com/) (definitely worse reading).
