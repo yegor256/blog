@@ -32,13 +32,6 @@ Subscribe at
 [Android](http://subscribeonandroid.com/feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss),
 [Overcast](https://overcast.fm/itunes1150826721/yegor256-podcast).
 
-<!-- * 7/10: with [Hugo Messer](http://www.hugomesser.com/) -->
-<!-- * 7/17: with [Ahmad Fahmy](http://www.ahmadfahmy.com/) (maybe?) -->
-
-<!-- Future episodes (not a concrete schedule, just my plans): -->
-
-  <!-- * 7/31: empty slot -->
-
 If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
 Previous episodes:
