@@ -35,14 +35,16 @@ Subscribe at
 <!-- * 7/10: with [Hugo Messer](http://www.hugomesser.com/) -->
 <!-- * 7/17: with [Ahmad Fahmy](http://www.ahmadfahmy.com/) (maybe?) -->
 
-Future episodes (not a concrete schedule, just my plans):
+<!-- Future episodes (not a concrete schedule, just my plans): -->
 
-  * 7/24: with [Susanne Madsen](http://www.susannemadsen.com/)
-  * 7/31: empty slot
+  <!-- * 7/31: empty slot -->
 
 If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
 Previous episodes:
+
+&#35;6: [Susanne Madsen about leadership](/shift-m/2017/6.html)<br/>
+24 July 2017; 49 min.
 
 &#35;5: [Inclusive Management and Diversity](/shift-m/2017/5.html)<br/>
 17 July 2017; 61 min.
