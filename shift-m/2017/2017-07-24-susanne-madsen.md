@@ -3,7 +3,7 @@ layout: post
 title: "Shift-M/6"
 date: 2017-07-24 12:00:00
 place: Odessa, Ukraine
-permalink: /podcast/2017/6.html
+permalink: /shift-m/2017/6.html
 description: |
   Leadership and traditional project management, how do they
   overlap or help each other? Susanne helped us
