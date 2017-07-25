@@ -31,7 +31,7 @@ daily job: write code and manage projects.
 <img src="/images/2017/07/sites-gmail.jpg" class="env-ico"/><br/>
 [Gmail](https://www.gmail.com)
 is the best email system. It aggregates all my accounts
-in one place: all emails are coming to the @gmail.com address
+in one place: all emails are coming to the `@gmail.com` address
 and I have a few aliases for sending responses.
 [Google Calendar](https://calendar.google.com) helps me keep my plans in sync,
 and [Google Drive](https://drive.google.com/drive/my-drive) helps me
@@ -41,19 +41,21 @@ share documents with friends sometimes.
 [GitHub](https://github.com/yegor256)
 is where we keep our source code repositories. I was also using
 [Bitbucket](https://bitbucket.com)
-a few years ago, but didn't really like it. GitHub is the the best, no
-doubts.
+a few years ago, but didn't really like it.
+GitHub is the the best, no doubts.
 
 <img src="/images/2017/07/sites-stackoverflow.jpg" class="env-ico"/><br/>
 [StackOverflow](http://stackoverflow.com/users/187141/yegor256)
 is where I learn new technologies, ask questions, answer them sometimes
-and really enjoy working with the community. When I have some free time,
-I just search by "design" or "oop" keywords in order to find relevant questions
-and answer them.
+and really enjoy working with the community. When I have some free time
+I just search by
+["design-patterns"](https://stackoverflow.com/questions/tagged/design-patterns) or
+["oop"](https://stackoverflow.com/questions/tagged/oop)
+tags in order to find relevant questions and answer them if I can.
 
 <img src="/images/2017/07/sites-godaddy.jpg" class="env-ico"/><br/>
 [Godaddy](http://www.godaddy.com) is where I register all domain
-names. They've got the ugliest interface I've ever seen, but their
+names. Their user interface is terrible, but their
 prices are the lowest. So, I'm with them for at least eight years already.
 
 <img src="/images/2017/07/sites-google-analytics.jpg" class="env-ico"/>
@@ -102,23 +104,24 @@ and the service is pretty decent. I'm with them for at least five years.
 <img src="/images/2017/07/sites-papertrail.jpg" class="env-ico"/><br/>
 [Papertrail](https://papertrailapp.com/?thank=9e5dc6)
 is where all my logs are being aggregated. I tried a few other
-systems, but these guys seem to be the best. I even paid them something
-some time ago, but stopped&mdash;their free package seem to be sufficient
+systems, but these guys seem to be the best. I even was paying them something
+some time ago, but stopped&mdash;their free package seems to be sufficient
 enough for my volumes.
 
 <img src="/images/2017/07/sites-sentry.jpg" class="env-ico"/><br/>
 [Sentry](https://www.sentry.io)
-is where all my errors are being sent from production systems.
+is where all my errors are being sent to, from production systems.
 
 <img src="/images/2017/07/sites-buffer.jpg" class="env-ico"/><br/>
 [Buffer](https://www.buffer.com)
-is helping me to spam at Twitter and Facebook more effectively. I pay
+is helping me to spam Twitter and Facebook more effectively. I pay
 them for the premium package and have no regrets. The service really
-helps me deliver content to the social networks seamlessly.
+helps me deliver content to the social networks on schedule.
 
 <img src="/images/2017/07/sites-youtube.jpg" class="env-ico"/><br/>
 [YouTube](http://www.youtube.com)
-is where I keep my video content. I also stream my webinar there.
+is where I keep my video content. I also stream
+[my webinars](/webinars.html) there.
 
 <img src="/images/2017/07/sites-soundcloud.jpg" class="env-ico"/><br/>
 [SoundCloud](http://www.soundcloud.com)
