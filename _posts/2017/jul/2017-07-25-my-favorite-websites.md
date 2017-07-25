@@ -28,7 +28,9 @@ daily job: write code and manage projects.
 
 {% jb_picture_body %}
 
-<img src="/images/2017/07/sites-gmail.jpg" class="env-ico"/><br/>
+<img src="/images/2017/07/sites-gmail.jpg" class="env-ico"/>
+<img src="/images/2017/07/sites-google-calendar.jpg" class="env-ico"/>
+<img src="/images/2017/07/sites-google-drive.jpg" class="env-ico"/><br/>
 [Gmail](https://www.gmail.com)
 is the best email system. It aggregates all my accounts
 in one place: all emails are coming to the `@gmail.com` address
