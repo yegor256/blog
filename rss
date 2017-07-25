@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-24T21:29:21+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Bigger Victim of Sexual Harassment</title><link href="http://www.yegor256.com/2017/07/18/sexual-harassment.html" rel="alternate" type="text/html" title="The Bigger Victim of Sexual Harassment" /><published>2017-07-18T00:00:00+00:00</published><updated>2017-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/18/sexual-harassment</id><content type="html" xml:base="http://www.yegor256.com/2017/07/18/sexual-harassment.html">&lt;p&gt;You most probably are aware of the recent sexual harassment
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-25T04:54:58+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Favorite Websites</title><link href="http://www.yegor256.com/2017/07/25/my-favorite-websites.html" rel="alternate" type="text/html" title="My Favorite Websites" /><published>2017-07-25T00:00:00+00:00</published><updated>2017-07-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/25/my-favorite-websites</id><content type="html" xml:base="http://www.yegor256.com/2017/07/25/my-favorite-websites.html">&lt;p&gt;I recently &lt;a href=&quot;/2017/06/27/my-environment.html&quot;&gt;published&lt;/a&gt;
+a summary of the software and hardware I&amp;#39;m using every day. Now I&amp;#39;ll
+list my most favorite websites and online services, which help me do my
+daily job: write code and manage projects.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-gmail.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://www.gmail.com&quot;&gt;Gmail&lt;/a&gt;
+is the best email system. It aggregates all my accounts
+in one place: all emails are coming to the &lt;code&gt;@gmail.com&lt;/code&gt; address
+and I have a few aliases for sending responses.
+&lt;a href=&quot;https://calendar.google.com&quot;&gt;Google Calendar&lt;/a&gt; helps me keep my plans in sync,
+and &lt;a href=&quot;https://drive.google.com/drive/my-drive&quot;&gt;Google Drive&lt;/a&gt; helps me
+share documents with friends sometimes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-github.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://github.com/yegor256&quot;&gt;GitHub&lt;/a&gt;
+is where we keep our source code repositories. I was also using
+&lt;a href=&quot;https://bitbucket.com&quot;&gt;Bitbucket&lt;/a&gt;
+a few years ago, but didn&amp;#39;t really like it.
+GitHub is the the best, no doubts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-stackoverflow.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://stackoverflow.com/users/187141/yegor256&quot;&gt;StackOverflow&lt;/a&gt;
+is where I learn new technologies, ask questions, answer them sometimes
+and really enjoy working with the community. When I have some free time
+I just search by
+&lt;a href=&quot;https://stackoverflow.com/questions/tagged/design-patterns&quot;&gt;&amp;quot;design-patterns&amp;quot;&lt;/a&gt; or
+&lt;a href=&quot;https://stackoverflow.com/questions/tagged/oop&quot;&gt;&amp;quot;oop&amp;quot;&lt;/a&gt;
+tags in order to find relevant questions and answer them if I can.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-godaddy.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.godaddy.com&quot;&gt;Godaddy&lt;/a&gt; is where I register all domain
+names. Their user interface is terrible, but their
+prices are the lowest. So, I&amp;#39;m with them for at least eight years already.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-google-analytics.jpg&quot; class=&quot;env-ico&quot;/&gt;
+&lt;img src=&quot;/images/2017/07/sites-google-webmasters.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://analytics.google.com&quot;&gt;Google Analytics&lt;/a&gt;
+and &lt;a href=&quot;https://www.google.com/webmasters/tools/home&quot;&gt;Google Webmasters&lt;/a&gt;
+are two systems where I track
+my entire web traffic of all my websites. Both systems are terrible, performance
+and interface wise. But since it&amp;#39;s Google, we have to stay with them,
+to see how they understand web statistics. I&amp;#39;m also using
+&lt;a href=&quot;https://hit.ua&quot;&gt;hit.ua&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-hacker-news.jpg&quot; class=&quot;env-ico&quot;/&gt;
+&lt;img src=&quot;/images/2017/07/sites-reddit.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;
+and &lt;a href=&quot;https://www.reddit.com/r/programming/&quot;&gt;/r/programming&lt;/a&gt; at Reddit
+seem to be the best sources of news for me. I open them a few times a week.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-facebook.jpg&quot; class=&quot;env-ico&quot;/&gt;
+&lt;img src=&quot;/images/2017/07/sites-twitter.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.facebook.com&quot;&gt;Facebook&lt;/a&gt;
+and &lt;a href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;
+are the social networks I&amp;#39;m spamming regularly. They are far from being
+perfect, but they totally dominate the market.
+I was using these guys, but they seem to be dead now:
+LinkedIn, Google+.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-amazon.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://amzn.to/2ufwBbw&quot;&gt;Amazon&lt;/a&gt;
+is where I buy everything that is not food or clothes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-aws.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://aws.amazon.com/&quot;&gt;AWS&lt;/a&gt;
+is where I keep all
+&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;my data&lt;/a&gt;,
+&lt;a href=&quot;https://aws.amazon.com/route53/&quot;&gt;my DNS&lt;/a&gt;,
+&lt;a href=&quot;https://aws.amazon.com/ec2/&quot;&gt;my servers&lt;/a&gt;,
+and some other things. I&amp;#39;m with them since they
+launched S3 (in 2006).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-contabo.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://contabo.com/&quot;&gt;Contabo&lt;/a&gt;
+is where I host servers, which I need 24x7. Their prices are great
+and the service is pretty decent. I&amp;#39;m with them for at least five years.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-papertrail.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://papertrailapp.com/?thank=9e5dc6&quot;&gt;Papertrail&lt;/a&gt;
+is where all my logs are being aggregated. I tried a few other
+systems, but these guys seem to be the best. I even was paying them something
+some time ago, but stopped&amp;mdash;their free package seems to be sufficient
+enough for my volumes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-sentry.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://www.sentry.io&quot;&gt;Sentry&lt;/a&gt;
+is where all my errors are being sent to, from production systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-buffer.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://www.buffer.com&quot;&gt;Buffer&lt;/a&gt;
+is helping me to spam Twitter and Facebook more effectively. I pay
+them for the premium package and have no regrets. The service really
+helps me deliver content to the social networks on schedule.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-youtube.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.youtube.com&quot;&gt;YouTube&lt;/a&gt;
+is where I keep my video content. I also stream
+&lt;a href=&quot;/webinars.html&quot;&gt;my webinars&lt;/a&gt; there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-soundcloud.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.soundcloud.com&quot;&gt;SoundCloud&lt;/a&gt;
+is where I&amp;#39;m listening to music and keep my own channel with
+&lt;a href=&quot;/shift-m.html&quot;&gt;Shift-M&lt;/a&gt; podcast and other audio content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-quickbooks.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://qdc.qbo.intuit.com/qbo30/login&quot;&gt;QuickBooks&lt;/a&gt;
+is where I keep all my bookkeeping accounts, for all my companies.&lt;/p&gt;
+
+&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tools" /><summary type="html">I recently published
+a summary of the software and hardware I&amp;#39;m using every day. Now I&amp;#39;ll
+list my most favorite websites and online services, which help me do my
+daily job: write code and manage projects.</summary></entry><entry><title type="html">The Bigger Victim of Sexual Harassment</title><link href="http://www.yegor256.com/2017/07/18/sexual-harassment.html" rel="alternate" type="text/html" title="The Bigger Victim of Sexual Harassment" /><published>2017-07-18T00:00:00+00:00</published><updated>2017-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/18/sexual-harassment</id><content type="html" xml:base="http://www.yegor256.com/2017/07/18/sexual-harassment.html">&lt;p&gt;You most probably are aware of the recent sexual harassment
 &lt;a href=&quot;https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html?_r=0&quot;&gt;scandals&lt;/a&gt;
 in Silicon Valley, which led to serious career problems for
 &lt;a href=&quot;https://500hats.com/im-a-creep-i-m-sorry-d2c13e996ea0&quot;&gt;Dave McClure&lt;/a&gt; (former CEO of &lt;a href=&quot;https://500.co/&quot;&gt;500 Startups&lt;/a&gt;),
@@ -1212,111 +1326,4 @@ insignificant.&lt;/p&gt;
 earlier.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">This may sound strange, but I will prove it: no matter how big
 or stable a piece of software is, it has an unlimited number
 of bugs not yet found. No matter how many of them we have already managed
-to find and fix, there are still too many left to count.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/lamico-di-famiglia.jpg" /></entry><entry><title type="html">Single Statement Unit Tests</title><link href="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html" rel="alternate" type="text/html" title="Single Statement Unit Tests" /><published>2017-05-17T00:00:00+00:00</published><updated>2017-05-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/17/single-statement-unit-tests</id><content type="html" xml:base="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html">&lt;p&gt;Many articles and books have already been written about unit testing patterns
-and anti-patterns. I want to add one more recommendation which, I believe,
-can help us make our tests, &lt;em&gt;and&lt;/em&gt; our production code, more &lt;em&gt;object-oriented&lt;/em&gt;.
-Here it is: a test method must contain nothing but a single &lt;code&gt;assert&lt;/code&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Bullet (1996) by Julien Temple&#39; src=&#39;/images/2017/05/bullet.jpg&#39; longdesc=&#39;#80ac9633&#39;/&gt;&lt;figcaption id=&#39;80ac9633&#39;&gt;Bullet (1996) by Julien Temple&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Look at this test method from &lt;code&gt;RandomStreamTest&lt;/code&gt; from OpenJDK&amp;nbsp;8,
-created by Brian Goetz:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testIntStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ints&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are two parts in this method: the algorithm and the assertion. The
-algorithm prepares two arrays of integers and the assertion compares them
-and throws &lt;code&gt;AssertionError&lt;/code&gt; if they are not equal.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m saying that the first part, the algorithm, is the one we should try
-to avoid. The only thing we must have is the assertion. Here is
-how I would re-design this test method:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testIntStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayFromRandom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ints&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayFromRandom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ArrayFromRandom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;random&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If Java had &lt;a href=&quot;/2017/05/16/monikers.html&quot;&gt;monikers&lt;/a&gt;
-this code would look even more elegant:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testIntStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayFromRandom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ints&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As you can see, there is only one &amp;quot;statement&amp;quot; in this method: &lt;code&gt;assertEquals()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://hamcrest.org/&quot;&gt;Hamcrest&lt;/a&gt; with its
-&lt;a href=&quot;http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/org/hamcrest/MatcherAssert.html&quot;&gt;&lt;code&gt;assertThat()&lt;/code&gt;&lt;/a&gt;
-and its
-&lt;a href=&quot;http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/allclasses-frame.html&quot;&gt;collection&lt;/a&gt;
-of basic matchers is a perfect instrument to make our
-single-statement test methods even more cohesive and readable.&lt;/p&gt;
-
-&lt;p&gt;There are a number of practical benefits of this principle, if we
-agree to follow it:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Reusability&lt;/strong&gt;. The classes we will have to create for test
-assertions will be reusable in other test methods and test cases.
-Just as, in the example above, &lt;code&gt;ArrayFromRandom&lt;/code&gt; could be used
-somewhere else. Similarly, Hamcrest matchers may and will constitute
-a library of reusable test components.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Brevity&lt;/strong&gt;. Since it will be rather difficult to create a long
-test method when it only has a single &lt;code&gt;assert&lt;/code&gt;, you and your fellow programmers
-will inevitably write shorter and more readable code.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Readability&lt;/strong&gt;. With a single &lt;code&gt;assert&lt;/code&gt; it will always be obvious
-what the intent of the test method is. It will start with the intent
-declaration while all other lower level details will be indented.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Immutability&lt;/strong&gt;. It will be almost impossible to have
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters&lt;/a&gt; in the
-production code if test methods have no place for algorithmic code. You
-inevitably will create
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable objects&lt;/a&gt;
-to make them testable with a single &lt;code&gt;assert&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The biggest benefit we get when this principle is applied to our tests
-is that they become declarative and object-oriented, instead of being
-algorithmic, imperative, and procedural.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html">Many articles and books have already been written about unit testing patterns
-and anti-patterns. I want to add one more recommendation which, I believe,
-can help us make our tests, and our production code, more object-oriented.
-Here it is: a test method must contain nothing but a single assert.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/bullet.jpg" /></entry></feed>
+to find and fix, there are still too many left to count.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/lamico-di-famiglia.jpg" /></entry></feed>
