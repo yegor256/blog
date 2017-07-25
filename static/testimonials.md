@@ -66,6 +66,11 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're nothing more then a code monkey and I'd never hire you"&mdash;[h3_t3ch](http://www.yegor256.com/2017/03/28/solid.html#comment-3260179760)
 
+"I bought your first book and read it for 10 mins.
+Then realized it was a copy paste from your website and
+threw it to the trash can. I regret it tho, because I now own a dog and sometimes
+I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/elegantobjects?at=59769444714ea96f781c131f)
+
 "Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
 
 "You're everything that's wrong with tech."&mdash;[Robert P.](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3170487895)
