@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-25T05:23:02+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Favorite Websites</title><link href="http://www.yegor256.com/2017/07/25/my-favorite-websites.html" rel="alternate" type="text/html" title="My Favorite Websites" /><published>2017-07-25T00:00:00+00:00</published><updated>2017-07-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/25/my-favorite-websites</id><content type="html" xml:base="http://www.yegor256.com/2017/07/25/my-favorite-websites.html">&lt;p&gt;I recently &lt;a href=&quot;/2017/06/27/my-environment.html&quot;&gt;published&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-07-25T06:04:24+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Favorite Websites</title><link href="http://www.yegor256.com/2017/07/25/my-favorite-websites.html" rel="alternate" type="text/html" title="My Favorite Websites" /><published>2017-07-25T00:00:00+00:00</published><updated>2017-07-25T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/25/my-favorite-websites</id><content type="html" xml:base="http://www.yegor256.com/2017/07/25/my-favorite-websites.html">&lt;p&gt;I recently &lt;a href=&quot;/2017/06/27/my-environment.html&quot;&gt;published&lt;/a&gt;
 a summary of the software and hardware I&amp;#39;m using every day. Now I&amp;#39;ll
 list my most favorite websites and online services, which help me do my
 daily job: write code and manage projects.&lt;/p&gt;
@@ -36,6 +36,22 @@ tags in order to find relevant questions and answer them if I can.&lt;/p&gt;
 &lt;a href=&quot;http://www.wring.io&quot;&gt;Wring&lt;/a&gt; aggregates my GitHub notifications
 and helps me stay on top of all events that are happening there.
 It&amp;#39;s my own project and I use it every day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-rultor.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; is helping me
+&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;merge&lt;/a&gt; pull requests,
+&lt;a href=&quot;/2014/09/11/deployment-script-vs-rultor.html&quot;&gt;deploy&lt;/a&gt; my projects to production and
+&lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;release&lt;/a&gt;
+their new versions. It&amp;#39;s one of my
+&lt;a href=&quot;/pets.html&quot;&gt;pet projects&lt;/a&gt; and I&amp;#39;m using it every day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-travis-ci.jpg&quot; class=&quot;env-ico&quot;/&gt;
+&lt;img src=&quot;/images/2017/07/sites-shippable.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
+&lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis&lt;/a&gt; for open source and
+&lt;a href=&quot;https://shippable.com&quot;&gt;Shippable&lt;/a&gt; for commercial projects, as
+continuous integration platforms. There are
+&lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;many alternatives&lt;/a&gt;,
+but I like these guys.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/2017/07/sites-godaddy.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
 &lt;a href=&quot;http://www.godaddy.com&quot;&gt;Godaddy&lt;/a&gt; is where I register all domain
