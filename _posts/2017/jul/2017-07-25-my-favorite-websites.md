@@ -60,6 +60,22 @@ tags in order to find relevant questions and answer them if I can.
 and helps me stay on top of all events that are happening there.
 It's my own project and I use it every day.
 
+<img src="/images/2017/07/sites-rultor.jpg" class="env-ico"/><br/>
+[Rultor](http://www.rultor.com) is helping me
+[merge]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}) pull requests,
+[deploy]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %}) my projects to production and
+[release]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})
+their new versions. It's one of my
+[pet projects](/pets.html) and I'm using it every day.
+
+<img src="/images/2017/07/sites-travis-ci.jpg" class="env-ico"/>
+<img src="/images/2017/07/sites-shippable.jpg" class="env-ico"/><br/>
+[Travis](https://travis-ci.org) for open source and
+[Shippable](https://shippable.com) for commercial projects, as
+continuous integration platforms. There are
+[many alternatives]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}),
+but I like these guys.
+
 <img src="/images/2017/07/sites-godaddy.jpg" class="env-ico"/><br/>
 [Godaddy](http://www.godaddy.com) is where I register all domain
 names. Their user interface is terrible, but their
