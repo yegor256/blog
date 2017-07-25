@@ -44,7 +44,7 @@ share documents with friends sometimes.
 is where we keep our source code repositories. I was also using
 [Bitbucket](https://bitbucket.com)
 a few years ago, but didn't really like it.
-GitHub is the the best, no doubts.
+GitHub is simply the best, no doubts.
 
 <img src="/images/2017/07/sites-stackoverflow.jpg" class="env-ico"/><br/>
 [StackOverflow](http://stackoverflow.com/users/187141/yegor256)
