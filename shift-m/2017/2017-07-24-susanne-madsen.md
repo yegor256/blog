@@ -23,4 +23,4 @@ nospell: true
 
 Check Susanne's [Twitter](https://twitter.com/SusanneMadsen),
 [LinkedIn](https://www.linkedin.com/in/susanne-madsen-1134312)
-and the [blog](http://susannemadsen.com/) (definitely worse reading).
+and the [blog](http://susannemadsen.com/) (definitely worth reading).
