@@ -573,6 +573,7 @@ good, and how it could be better:
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
   * [Enrique Pablo Molinari](http://www.copypasteisforword.com/notes/elegant-objects)
+  * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
