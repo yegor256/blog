@@ -14,6 +14,8 @@ keywords:
   - career advice software developer
   - career advice
   - meetings are evil
+translated:
+  - Polish: https://bulldogjob.pl/news/239-czego-nie-robic-aby-stac-sie-najlepszym-programista
 image: /images/2017/01/the-grand-budapest-hotel.jpg
 jb_picture:
   caption: The Grand Budapest Hotel (2014) by Wes Anderson
