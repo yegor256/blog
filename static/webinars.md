@@ -35,6 +35,8 @@ Preliminary schedule for the future (feel free
 
 <!-- {% webinar 12-07-2017 26 Mj1gA5mEk68 Unit Testing vs Debugging %} -->
 
+## 2017
+
 <a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 July 12, 2017<br/>
 26: **Unit Testing vs Debugging**<br/>
@@ -86,6 +88,8 @@ January 11, 2017<br/>
 We discussed what immutability really was, with a few example in Java and [EO](http://www.eolang.org)
 (new language we're developing now). The discussion was based on this blog post:
 [Gradients of Immutability]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
+
+## 2016
 
 <a href="https://www.youtube.com/watch?v=zaKTNK8g2-M"><img src="https://i.ytimg.com/vi/zaKTNK8g2-M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 December 7, 2016<br/>
@@ -174,6 +178,8 @@ an anti-pattern and its usage must be replaced with
 SQL-speaking objects. The discussion was based on
 this blog post:
 [ORM Is an Offensive Anti-Pattern]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}).
+
+## 2015
 
 <a href="https://www.youtube.com/watch?v=oV6Utb5Jows"><img src="https://i.ytimg.com/vi/oV6Utb5Jows/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 December 1, 2015<br/>
