@@ -13,7 +13,7 @@ keywords:
   - modern paintings to sell
   - for sale paintings
 style: |
-  .break { clear: both; }
+  .break { margin-top: 2em; clear: both; }
 ---
 
 This is the full list of my paintings, which are for sale. You can buy
