@@ -38,3 +38,14 @@ Ukraine;
 $2,048.
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors. Now it's time to start looking for a new one."
+
+{% badge /images/paintings/2017/objectification.jpg 200 https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view %}
+
+_Objectification_;
+July 2017;
+27.6 x 27.6 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+$4,096.
+"We had a long discussion about sexual objectification problem in the
+modern world and then one of the discussants agreed to be a model for me."
