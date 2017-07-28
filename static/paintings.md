@@ -29,7 +29,7 @@ You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256).
 <div class="break"/>
 {% badge /images/paintings/2017/love-look.jpg 200 https://www.saatchiart.com/art/Painting-Love-look/1006898/3715703/view %}
 
-_Love look_;
+_Love look_<br/>
 July 2017;
 25.6 x 25.6 x 0.8 in;
 Acrylic on canvas;
@@ -41,7 +41,7 @@ my sadness, and my colors. Now it's time to start looking for a new one."
 <div class="break"/>
 {% badge /images/paintings/2017/objectification.jpg 200 https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view %}
 
-_Objectification_;
+_Objectification_<br/>
 July 2017;
 27.6 x 27.6 x 0.8 in;
 Acrylic on canvas;
