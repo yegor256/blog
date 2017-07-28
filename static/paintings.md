@@ -27,7 +27,6 @@ of art _and_ will help the software industry to become better.
 You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256).
 
 <div class="break"/>
-
 {% badge /images/paintings/2017/love-look.jpg 200 https://www.saatchiart.com/art/Painting-Love-look/1006898/3715703/view %}
 
 _Love look_;
@@ -39,6 +38,7 @@ $2,048.
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors. Now it's time to start looking for a new one."
 
+<div class="break"/>
 {% badge /images/paintings/2017/objectification.jpg 200 https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view %}
 
 _Objectification_;
