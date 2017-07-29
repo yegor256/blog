@@ -13,7 +13,7 @@ keywords:
   - modern paintings to sell
   - for sale paintings
 style: |
-  .badge { margin-top: 2em; }
+  figure { margin-top: 4em; }
 ---
 
 This is the full list of my paintings, which are for sale. You can buy
@@ -26,7 +26,18 @@ of art _and_ will help the software industry to become better.
 
 You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256).
 
-{% picture /images/paintings/2017/love-look.jpg 200 %}
+{% picture /images/paintings/2017/objectification.jpg 350 %}
+
+_Objectification_<br/>
+July 2017;
+27.6 x 27.6 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+[$4,096](https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view).
+"We had a long discussion about sexual objectification problem in the
+modern world and then one of the discussants agreed to be a model for me."
+
+{% picture /images/paintings/2017/love-look.jpg 350 %}
 
 _Love look_<br/>
 July 2017;
@@ -37,13 +48,3 @@ Ukraine;
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors. Now it's time to start looking for a new one."
 
-{% picture /images/paintings/2017/objectification.jpg 200 %}
-
-_Objectification_<br/>
-July 2017;
-27.6 x 27.6 x 0.8 in;
-Acrylic on canvas;
-Ukraine;
-[$4,096](https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view).
-"We had a long discussion about sexual objectification problem in the
-modern world and then one of the discussants agreed to be a model for me."
