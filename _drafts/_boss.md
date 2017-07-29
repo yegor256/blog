@@ -2,19 +2,21 @@
 layout: post
 title: "How to Manage a Manager?"
 date: 2017-06-10
-place: ...
+place: Odessa, Ukraine
 tags: management
 description: |
-  ...
+  Good managers help projects to go forward, bad managers
+  annoy everybody and force us to waste our time on
+  project affairs; they must be neutralized.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
-image: /images/2017/06/?
+  - manager
+  - stupid manager
+  - annoying manager
+  - how to manage a manager
+  - manager is an idiot
+image: /images/2017/07/intouchables.jpg
 jb_picture:
-  caption: xxx
+  caption: Intouchables (2011) by  Olivier Nakache
 ---
 
 No secret, <del>we</del> you all have managers. Some of them are
@@ -96,14 +98,30 @@ coming to me for the analysis and asking that junior guys directly.
 
 **Emails**.
 Long email threads are very annoying, especially in big teams. I never read
-them. You should not read them either, if you value your time.
+them. You should not read them either, if you value your time. However,
+you can't just ignore them, everybody will feel that you are either
+lazy or a sociopath. None of that is in your favor. What I'm always doing
+is picking up any message from the thread and replying to it, with a question.
+It's called _trolling_. You provoke others to keep the conversation going,
+while you're not interested in it at all. A few emails like that a day and
+people will think that you're on top of everything in the team.
 
 **Coaching**.
-He was asking me time to time to train new programmers and help them.
+My manager was asking me time to time to train new programmers and help them. This was
+very risky, since that new guys usually decided that I was their friend and
+were talking to me about everything, consuming my time. To prevent that
+from happening I was always trying to introduce them to somebody else&mdash;their
+new friends. Everybody, who doesn't understand the consequences,
+likes to talk to junior programmers and patronize them. I just had to forward
+them immediately to the right person.
 
-**Peer Programming**. He
+**Personal meetings**.
+This was the most annoying part: face-to-face meetings with the manager. He
+was asking how happy I was in the team, what were my plans, what problems
+did I see, etc. I was not able to say that "I'm happy that you guys are
+still paying me and my biggest problem is that you annoy me time to time."
+I had to invent my plans, ideas, problems, and things I'm not happy about.
+I was always keeping a list of such things ready, in case a manager calls
+me for a meeting.
 
-personal meetings
-
-emails
-
+That was my strategy. How do you manage your managers?
