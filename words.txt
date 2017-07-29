@@ -5996,6 +5996,7 @@ slick
 slide
 slides
 slightly
+slik
 slippage
 SLoC
 slogans
@@ -6132,6 +6133,7 @@ spouses
 spread
 spreadsheets
 spring
+sprint
 sprints
 spy
 spying
@@ -6725,6 +6727,7 @@ triggers
 trimmed
 trio
 tripled
+tripod
 trotsky
 trouble
 troublemaker
