@@ -24,7 +24,8 @@ every dollar you pay will be turned into prize money in my annual
 of art _and_ will help the software industry to become better.
 [Email me](mailto:paintings@yegor256.com) if interested.
 
-You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256).
+You can also buy via [Saatchi Art](https://www.saatchiart.com/yegor256),
+[ArtFido](http://www.artfido.com/yegor256).
 
 {% picture /images/paintings/2017/objectification.jpg 350 %}
 
