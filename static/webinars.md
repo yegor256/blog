@@ -27,15 +27,15 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-Preliminary schedule for the future (feel free
-[to suggest](mailto:webinar@yegor256.com) a topic):
-
-  * Aug-2: How Cactoos was designed
-  * Sep-6: TBD
-
-<!-- {% webinar 12-07-2017 26 Mj1gA5mEk68 Unit Testing vs Debugging %} -->
+{% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %}
 
 ## 2017
+
+<a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+August 2, 2017<br/>
+27: **Releasing Cactoos 0.12**<br/>
+We will go through the entire Cactoos library,
+polish its code and release version 0.12 to Maven Central.
 
 <a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 July 12, 2017<br/>
