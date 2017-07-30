@@ -27,9 +27,9 @@ On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming and project management.
 
-{% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %}
-
 ## 2017
+
+{% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %}
 
 <a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 2, 2017<br/>
