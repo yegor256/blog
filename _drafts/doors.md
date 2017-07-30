@@ -24,7 +24,7 @@ Moreover, <del>most</del> some of them put restrictive
 [pay gag clauses](https://www.recruiter.com/i/gag-clause/) into
 employment contracts or NDA-s. Recent studies demonstrate that such
 a policy may be counter-productive and hurt performance. However, it seems
-that most of researchers are missing the main point.
+that most researchers are missing the main point.
 
 <!--more-->
 
