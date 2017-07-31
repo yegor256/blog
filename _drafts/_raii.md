@@ -32,7 +32,7 @@ but we can implement something similar, using
 
 {% jb_picture_body %}
 
-The problem RAII is solving is obvious; check this code
+The problem RAII is solving is obvious; have a look at this code
 (I'm sure you know what
 [`Semaphore`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html)
 is and how it works in Java):
@@ -52,15 +52,15 @@ class Foo {
 {% endhighlight %}
 
 The code is rather primitive and doesn't do anything useful, but you
-most probably got the idea: the method `print()` if being called from
-multiple parallel threads will allow only five of them to print
-parallel. Sometimes it will not allow some of them to print and will
-throw exception if `x` is bigger than `1000`.
+most probably get the idea: the method `print()`, if being called from
+multiple parallel threads, will allow only five of them to print
+in parallel. Sometimes it will not allow some of them to print and will
+throw an exception if `x` is bigger than `1000`.
 
 The problem with this code is&mdash;[resource leakage](https://en.wikipedia.org/wiki/Resource_leak).
 Each `print()` call
 with `x` larger than `1000` will take one permit from the semaphore and
-won't return it back. In five calls with exceptions
+won't return it. In five calls with exceptions
 the semaphore will be empty and all other threads won't print anything.
 
 What is the solution? Here it is:
@@ -82,11 +82,11 @@ class Foo {
 
 We must release the permit before we throw the exception.
 
-However, there is another problem shows up: code duplication. We release
-the permit in two places. If we add more `throw` instructions, we will
-have to add more `sem.release()` calls.
+However, there is another problem that shows up: code duplication. We release
+the permit in two places. If we add more `throw` instructions we will
+also have to add more `sem.release()` calls.
 
-A very elegant solution was introduced in C++ and called RAII. This
+A very elegant solution was introduced in C++ and is called RAII. This
 is how it would look in Java:
 
 {% highlight java %}
@@ -115,20 +115,20 @@ class Foo {
 
 See how beautiful is the code inside method `Foo.print()`. We just create
 an instance of class `Permit` and it immediately acquires a new permit
-at the semaphore. Then, we exit the method `print()`, either by exception
-or normally, and the method `Permit.finalize()` releases the permit.
+at the semaphore. Then we exit the method `print()`, either by exception
+or in the normal way, and the method `Permit.finalize()` releases the permit.
 
 Elegant, isn't it? Yes, it is, but it won't work in Java.
 
-It won't work because unlike C++, Java doesn't destroy objects when
-their scope of visility is closed. The object of class `Permit` won't
+It won't work because, unlike C++, Java doesn't destroy objects when
+their scope of visibility is closed. The object of class `Permit` won't
 be destroyed when we exit the method `print()`. It will be destroyed
-_eventually_, but we don't know when exactly. Most likely it will be
+_eventually_ but we don't know when exactly. Most likely it will be
 destroyed way after all permits in the semaphore got acquired and we
 get blocked.
 
 There is a solution in Java too. It is not as elegant as the one from
-C++, but it works. Here it is:
+C++, but it does work. Here it is:
 
 {% highlight java %}
 class Permit implements Closeable {
@@ -158,16 +158,15 @@ class Foo {
 }
 {% endhighlight %}
 
-Pay attention to the `try/finally` block and the [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface
-that the class `Permit` implements now. The object `p` will be "closed"
+Pay attention to the `try/finally` block and to the [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface
+that the class `Permit` now implements. The object `p` will be "closed"
 when the `try/finally` block exits. It may exit either at the end, or
 by the `return` or `throw` statements. In either case `Permit.close()`
 will be called: this is how
 [try/finally](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html)
 works in Java.
 
-I introduced method `acquire()` and moved `sem.acquire()` from the `Permit` constructor
-to it because I
+I introduced method `acquire()` and moved `sem.acquire()` out of the `Permit` constructor because I
 [believe]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
 that constructors must be code-free.
 
