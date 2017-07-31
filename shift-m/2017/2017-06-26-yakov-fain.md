@@ -101,7 +101,7 @@ I get it right?
 
 **Yakov**: At some point, any programmer, if he doesn't change places and he
 assumes that he knows everything about the software and actually he becomes
-comfortable with the software and if he becomes, I wouldn't use the word "lazy",
+comfortable with the software and if he becomes, I wouldn't use the word "lazy,"
 but there is not too much motivation of improvement.  I see that specifically in
 larger companies, in larger enterprises.  They think that they are there for
 life and they don't grow that much as software developers.  So, when the
