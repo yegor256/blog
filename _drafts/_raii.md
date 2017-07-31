@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "RAII"
-date: 2017-05-02
+title: "RAII in Java"
+date: 2017-08-01
 place: Riga, Latvia
 tags: oop
 description: |
-  ...
+  Resource Acquisition Is Initialization (RAII)
+  is a design idea introduced in C++; it is applicable
+  to Java as well.
 keywords:
   - RAII
   - resource acquisition is initialization
@@ -26,7 +28,7 @@ for exception-safe resource management.
 Thanks to garbage collection Java
 [doesn't have](https://stackoverflow.com/questions/477399) this feature,
 but we can implement something similar, using
-[try/finally](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html).
+[try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html).
 
 <!--more-->
 
@@ -158,12 +160,13 @@ class Foo {
 }
 {% endhighlight %}
 
-Pay attention to the `try/finally` block and to the [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface
+Pay attention to the `try` block and to the
+[`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface
 that the class `Permit` now implements. The object `p` will be "closed"
-when the `try/finally` block exits. It may exit either at the end, or
+when the `try` block exits. It may exit either at the end, or
 by the `return` or `throw` statements. In either case `Permit.close()`
 will be called: this is how
-[try/finally](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html)
+[try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)
 works in Java.
 
 I introduced method `acquire()` and moved `sem.acquire()` out of the `Permit` constructor because I
@@ -173,6 +176,6 @@ that constructors must be code-free.
 To summarize, RAII is a perfect design <del>pattern</del> approach when you
 deal with resources that may [leak](https://en.wikipedia.org/wiki/Resource_leak).
 Even though Java doesn't have it out of the box we can implement it
-via [try/finally](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html) and
+via [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) and
 [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html).
 
