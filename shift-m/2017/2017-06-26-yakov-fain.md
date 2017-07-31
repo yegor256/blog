@@ -78,7 +78,7 @@ it helps in understanding of developers but it's not a requirement.  In my
 opinion, a manager doesn't have to be a former software developer.
 
 **Yegor**: Yeah, I've heard you were saying that in your presentation
-"My Manager Sucks". But you were saying that the manager should not be a programmer
+"My Manager Sucks." But you were saying that the manager should not be a programmer
 and it's a good thing if he or she is not a programmer, right?
 
 **Yakov**: I didn't say it's a good thing.  I said it's not a
