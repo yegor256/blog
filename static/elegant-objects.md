@@ -59,7 +59,7 @@ ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobj
 
 <!--more-->
 
-<a name="stickers"/>
+<a name="stickers"></a>
 May 11, 2017:
 I created funny [Telegram stickers](https://t.me/addstickers/elegantobjects),
 about object-oriented programming. Feel free to use them.
@@ -76,7 +76,7 @@ The second volume of the book is available
 [on Amazon](http://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
 one illustration and zero typos.
 
-<a name="razbor2"/>
+<a name="razbor2"></a>
 Mar 31, 2017:
 Выкладываю в открытый доступ все пять ревью от резидентов подкаста
 "Разбор Полетов," с которых начинается руссифицированная версия первого тома:
@@ -119,7 +119,7 @@ details. I'll be ready to mail you the manuscript in a few days.
 
 {% badge /images/books/elegant-objects/cover-razbor-poletov.png 125 %}
 
-<a name="razbor"/>
+<a name="razbor"></a>
 Feb 23, 2017:
 Русская версия первого тома опубликована при поддержке подкаста
 ["Разбор Полетов"](http://razbor-poletov.com/)
@@ -560,7 +560,7 @@ of them on a list and let you vote. The best 12, elected by you,
 will get the early draft of the second volume and help me review it. To
 get onto the list, please fill out <del>this simple form</del>.
 
-<a name="reviews"/>
+<a name="reviews"></a>
 Aug 22, 2016:
 I've collected all reviews of the book written by readers on their
 blogs to help you better understand what the book is about, why it's
