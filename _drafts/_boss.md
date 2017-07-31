@@ -16,14 +16,14 @@ keywords:
   - manager is an idiot
 image: /images/2017/07/intouchables.jpg
 jb_picture:
-  caption: Intouchables (2011) by  Olivier Nakache
+  caption: The Intouchables (2011) by  Olivier Nakache
 ---
 
 No secret, <del>we</del> you all have managers. Some of them are
 great, while many are simply idiots. What do you do if you happen
 to have a boss that fits perfectly into this dominating category?
 Quit and try to find a better place? This may sound like good
-advice, but you know better than me that a new boss most likely won't
+advice, but you know as well as I do that a new boss most likely won't
 be any better. Don't quit. Stay. Manage the manager. Most of them are
 manageable.
 
@@ -35,7 +35,7 @@ First of all, remember your goal: do _nothing_ and _get paid_. It's hardly
 achievable to its full extent, but you can get very close.
 Doing something useful two hours a week and collecting a paycheck
 for forty hours is what a professional engineer must aim for. The other
-38 hours you will spend for your own projects, your open source
+38 hours you will spend on your own projects, your open source
 ideas, your education, your dreams.
 
 The biggest problem on the road to this success is the manager, who
@@ -117,7 +117,7 @@ those juniors immediately to the right person.
 
 **Personal meetings**.
 This was the most annoying part of all: face-to-face meetings with the manager. He
-asked how happy I was in the team, what my plans were, what problems
+asked me how happy I was in the team, what my plans were, what problems
 I saw, etc. I was not able to say "Well, I'm happy that you guys are
 still paying me and my biggest problem is that you annoy me far too often."
 Instead I had to invent plans, ideas, problems, and things that I wasn't happy about.
