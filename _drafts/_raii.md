@@ -39,7 +39,7 @@ is and how it works in Java):
 
 {% highlight java %}
 class Foo {
-  Semaphore sem = new Semaphore(5);
+  private Semaphore sem = new Semaphore(5);
   void print(int x) throws Exception {
     this.sem.acquire();
     if (x > 1000) {
@@ -113,7 +113,7 @@ class Foo {
 }
 {% endhighlight %}
 
-See how beautiful is the code inside method `Foo.print()`. We just create
+See how beautiful the code is inside method `Foo.print()`. We just create
 an instance of class `Permit` and it immediately acquires a new permit
 at the semaphore. Then we exit the method `print()`, either by exception
 or in the normal way, and the method `Permit.finalize()` releases the permit.
@@ -172,7 +172,7 @@ that constructors must be code-free.
 
 To summarize, RAII is a perfect design <del>pattern</del> approach when you
 deal with resources that may [leak](https://en.wikipedia.org/wiki/Resource_leak).
-Even though Java doesn't have it out of the box, we can implement it
+Even though Java doesn't have it out of the box we can implement it
 via [try/finally](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html) and
 [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html).
 
