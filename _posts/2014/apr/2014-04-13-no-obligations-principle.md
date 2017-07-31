@@ -70,6 +70,8 @@ Personally, I find this management style extremely annoying and destructive for
 the project. The project environment becomes very unhealthy and good people
 usually end up leaving.
 
+{% quote To keep the project on track and meet all milestones, responsibility must be on the shoulders of the team members. %}
+
 Another traditional management method is
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}). This results when the
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})

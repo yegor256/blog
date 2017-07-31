@@ -60,7 +60,9 @@ a program" (page 8). This is also what most testers don't understand. They
 believe that there is a
 [limited number]({% pst 2015/jun/2015-06-18-good-programmers-bug-free %})
 of bugs, which they have to find
-and call it a day. There literally no limit! The amount of bugs is unlimited,
+and call it a day. There literally
+[no limit]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})!
+The amount of bugs is unlimited,
 in any software product. No matter how small or big, complex or simple,
 new or old is the product.
 

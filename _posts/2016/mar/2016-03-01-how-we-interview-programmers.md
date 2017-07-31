@@ -75,7 +75,9 @@ In this way, we filter out a lot of people who pay attention to
 minor implementation tricks but miss the bigger design issues.
 
 The quiz is [here](https://github.com/teamed/quiz).
-You can see how many pull requests there are already&mdash;all of them are from our candidates.
+You can see how many
+[pull requests](https://github.com/teamed/quiz/pulls)
+there are already&mdash;all of them are from our candidates.
 
 ## No Phone or Video Calls
 
