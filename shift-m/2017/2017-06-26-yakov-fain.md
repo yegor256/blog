@@ -33,8 +33,8 @@ management in software projects.  So, Yakov, say a few words about yourself.
 
 **Yakov**: Hello, how are you?  My name is Yakov Fain.  I live in New York and
 I am a co-founder of two companies actually.  One of them is consulting called
-Farata Systems and the other one is a company called
-SuranceBay.  The first one is, as I said, consulting and in the second one we
+[Farata Systems](http://faratasystems.com/) and the other one is a company called
+[SuranceBay](https://www.surancebay.com/).  The first one is, as I said, consulting and in the second one we
 create a product for insurance industry.  The first one was created in 2006 and
 the second one in 2009.  I wrote a bunch of books.  I don't know
 if it's relevant in this podcast.
