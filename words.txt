@@ -60,6 +60,7 @@ acquisition
 acronym
 across
 act
+acted
 acting
 action
 actions
@@ -681,6 +682,7 @@ bosses
 bot
 both
 bother
+bothered
 bothers
 bottleneck
 bottom
@@ -1266,6 +1268,7 @@ confirmation
 confirming
 conflict
 conflict-free
+conflict-provoking
 conflicts
 confrontation
 confuse
@@ -1622,6 +1625,7 @@ defects
 defend
 defended
 defender
+defense
 defensive
 deficiencies
 define
@@ -1957,6 +1961,7 @@ drawing
 drawn
 dream
 dreaming
+dreams
 drink
 drive
 driven
@@ -2111,6 +2116,7 @@ end-user
 end-users
 endeavor
 endeavors
+endpoints
 ends
 enemies
 energetic
@@ -2569,7 +2575,9 @@ formulate
 forth
 fortran
 fortune
+forty
 forward
+forwarded
 found
 foundation
 foundational
@@ -2882,6 +2890,7 @@ have
 haven't
 having
 HDD
+HDFS
 hdous
 he
 he's
@@ -2998,6 +3007,7 @@ hour-and-a-half
 hour-long
 hourly
 hours
+hours-long
 house
 hovering
 how
@@ -3076,6 +3086,7 @@ illustrate
 illustrates
 illustrations
 illustrative
+image
 images
 imaginary
 imagine
@@ -4642,6 +4653,7 @@ path
 patience
 patient
 patriot
+patronize
 patronized
 pattern
 patterns
@@ -4949,6 +4961,7 @@ press
 pressman
 pressure
 pretend
+pretended
 pretending
 pretends
 pretty
@@ -5290,6 +5303,7 @@ recommendations
 recommended
 recommends
 reconciliation
+reconfig
 reconsider
 record
 recorded
@@ -5620,6 +5634,7 @@ rubymine
 rude
 ruin
 ruined
+ruining
 ruins
 rule
 rules
@@ -5892,6 +5907,7 @@ shoots
 shop
 short
 short-term
+shortage
 shorten
 shorter
 shortest
@@ -6031,6 +6047,7 @@ socialism
 societies
 society
 sociocratic
+sociopath
 socket
 sockets
 software
@@ -6381,6 +6398,7 @@ surrogate
 survival
 survive
 suspect
+suspicions
 suspicious
 sustainable
 sutherland
@@ -6728,6 +6746,7 @@ trimmed
 trio
 tripled
 tripod
+trolling
 trotsky
 trouble
 troublemaker
