@@ -60,7 +60,8 @@ monkey is back on the shoulders of the managers. The goal of the manager is to
 send the monkey back to make it the programmer's problem again.
 
 One of traditional way of transferring responsibility back to team members is to
-become an aggressive manager. For instance the manager may say, "You have a
+become an aggressive manager. For instance the
+[manager]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %}) may say, "You have a
 birthday tomorrow? I don't care, you still have to meet your deadline" or "You
 don't know how to fix the unit test? Not my problem, it should be fixed by
 tomorrow," etc.

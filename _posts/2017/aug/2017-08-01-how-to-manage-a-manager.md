@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Manage a Manager?"
-date: 2017-06-10
+date: 2017-08-01
 place: Odessa, Ukraine
 tags: management
 description: |
