@@ -29,6 +29,18 @@ You can also buy via
 [ArtFido](http://www.artfido.com/yegor256),
 [Vango](https://www.vangoart.co/yegor256).
 
+{% picture /images/paintings/2017/seven-and-one.jpg 350 %}
+
+_Seven and One_<br/>
+August 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+[$4,096](https://www.saatchiart.com/art/Painting-Seven-and-One/1006898/3733086/view).
+"It was a long discussion about modern world fears; how they transform us, how they affect
+our lives, and what we can really do with them; the conclusion
+was that there is very little or nothing and it's very sad."
+
 {% picture /images/paintings/2017/objectification.jpg 350 %}
 
 _Objectification_<br/>
@@ -42,7 +54,7 @@ modern world and then one of the discussants agreed to be a model for me."
 
 {% picture /images/paintings/2017/love-look.jpg 350 %}
 
-_Love look_<br/>
+_Love Look_<br/>
 July 2017;
 25.6 x 25.6 x 0.8 in;
 Acrylic on canvas;
