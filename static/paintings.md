@@ -61,5 +61,5 @@ Acrylic on canvas;
 Ukraine;
 [$2,048](https://www.saatchiart.com/art/Painting-Love-look/1006898/3715703/view).
 "She betrayed me, after a year of love, leaving me with my feelings,
-my sadness, and my colors. Now it's time to start looking for a new one."
+my sadness, and my colors; now it's time to start looking for a new one."
 
