@@ -27,7 +27,9 @@ of art _and_ will help the software industry to become better.
 You can also buy via
 [Saatchi Art](https://www.saatchiart.com/yegor256),
 [ArtFido](http://www.artfido.com/yegor256),
-[Vango](https://www.vangoart.co/yegor256).
+[Vango](https://www.vangoart.co/yegor256)
+and
+[Amazon](https://www.amazon.com/handmade/yegor256).
 
 {% picture /images/paintings/2017/lost-time.jpg 350 %}
 
@@ -36,7 +38,7 @@ August 2017;
 29.5 x 29.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$2,048](https://www.saatchiart.com/art/Painting-Lost-Time/1006898/3736939/view).
+[$2,048](https://www.amazon.com/dp/B074KH6ZQ3).
 "Losing time is a very traumatic experience; the past looks bright
 and full of missed opportunities, while the future is dark and short;
 although the reality is quite the opposite, with the bright
@@ -49,7 +51,7 @@ August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$4,096](https://www.saatchiart.com/art/Painting-Seven-and-One/1006898/3733086/view).
+[$4,096](https://www.amazon.com/dp/B074KK1264).
 "It was a long discussion about modern world fears; how they transform us, how they affect
 our lives, and what we can really do with them; the conclusion
 was that there is very little or nothing and it's very sad."
@@ -61,7 +63,7 @@ July 2017;
 27.6 x 27.6 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$4,096](https://www.saatchiart.com/art/Painting-Objectification/1006898/3724741/view).
+[$4,096](https://www.amazon.com/dp/B074KK32MW).
 "We had a long discussion about sexual objectification problem in the
 modern world and then one of the discussants agreed to be a model for me."
 
@@ -72,7 +74,7 @@ July 2017;
 25.6 x 25.6 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$2,048](https://www.saatchiart.com/art/Painting-Love-look/1006898/3715703/view).
+[$2,048](https://www.amazon.com/dp/B074KKQXV6).
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors; now it's time to start looking for a new one."
 
