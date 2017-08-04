@@ -29,6 +29,19 @@ You can also buy via
 [ArtFido](http://www.artfido.com/yegor256),
 [Vango](https://www.vangoart.co/yegor256).
 
+{% picture /images/paintings/2017/lost-time.jpg 350 %}
+
+_Lost Time_<br/>
+August 2017;
+25.6 x 25.6 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+[$2,048](https://www.saatchiart.com/art/Painting-Lost-Time/1006898/3736939/view).
+"Losing time is a very traumatic experience; the past looks bright
+and full of missed opportunities, while the future is dark and short;
+although the reality is quite the opposite, with the bright
+side in front of us and the darker one behind."
+
 {% picture /images/paintings/2017/seven-and-one.jpg 350 %}
 
 _Seven and One_<br/>
