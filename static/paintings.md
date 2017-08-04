@@ -33,7 +33,7 @@ You can also buy via
 
 _Lost Time_<br/>
 August 2017;
-25.6 x 25.6 x 0.8 in;
+29.5 x 29.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
 [$2,048](https://www.saatchiart.com/art/Painting-Lost-Time/1006898/3736939/view).
