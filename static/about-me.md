@@ -85,9 +85,12 @@ You can always [unsubscribe](/unsubscribe.html).
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html) (be careful!).
 
-I'm also visible at
+I'm also visible sometimes at
 [DZone](https://dzone.com/users/1023189/yegor256.html),
 [JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
+[Hacker News](https://news.ycombinator.com/user?id=yegor256a),
+[Reddit](https://www.reddit.com/user/yegor256),
+and
 [Medium](https://medium.com/@yegor256).
 
 Ah, one more thing. I'm a big fan of good movies, so here's
