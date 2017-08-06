@@ -75,6 +75,7 @@ Apr 18, 2017:
 The second volume of the book is available
 [on Amazon](http://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
 one illustration and zero typos.
+Table of contents is [here](/images/books/elegant-objects/contents-2.pdf).
 
 <a name="razbor2"></a>
 Mar 31, 2017:
