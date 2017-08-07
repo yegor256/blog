@@ -29,7 +29,7 @@ development, object-oriented programming and project management.
 
 ## 2017
 
-{% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %}
+<!-- {% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %} -->
 
 <a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 2, 2017<br/>
