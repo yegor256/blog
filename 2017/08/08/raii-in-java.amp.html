@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>RAII in Java</title>
+    <link rel="canonical" href="http://www.yegor256.com/2017/08/08/raii-in-java.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2017/08/08/raii-in-java.html"
+        },
+        "headline": "RAII in Java",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/08/at-sachem-farm.jpg",
+          "height": 674,
+          "width": 1280
+        },
+        "datePublished": "2017-08-08",
+        "dateModified": "2017-08-08",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Resource Acquisition Is Initialization (RAII)
+is a design idea introduced in C++; it is applicable
+to Java as well.
+",
+        "keywords": ["RAII", "resource acquisition is initialization", "RAII in OOP", "RAII in Java", "RAII in C++"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="http://www.yegor256.com/2017/08/08/raii-in-java.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>8 August 2017</p>
+      <h1>RAII in Java</h1>
+      <p>Resource Acquisition Is Initialization
+(<a href="https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization">RAII</a>)
+is a design idea introduced in C++ by
+<a href="http://amzn.to/2uMlANB">Bjarne Stroustrup</a>
+for exception-safe resource management.
+Thanks to garbage collection Java
+<a href="https://stackoverflow.com/questions/477399">doesn't have</a> this feature,
+but we can implement something similar, using
+<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>.</p>
+
+
+
+<amp-img src="/images/2017/08/at-sachem-farm.jpg" alt="At Sachem Farm (1998) by John Huddles" height="674" width="1280" layout="responsive"></amp-img>
+
+<p>The problem RAII is solving is obvious; have a look at this code
+(I'm sure you know what
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code>Semaphore</code></a>
+is and how it works in Java):</p>
+
+<pre>class Foo {
+  private Semaphore sem = new Semaphore(5);
+  void print(int x) throws Exception {
+    this.sem.acquire();
+    if (x &gt; 1000) {
+      throw new Exception("Too large!");
+    }
+    System.out.printf("x = %d", x);
+    this.sem.release();
+  }
+}</pre>
+
+<p>The code is rather primitive and doesn't do anything useful, but you
+most probably get the idea: the method <code>print()</code>, if being called from
+multiple parallel threads, will allow only five of them to print
+in parallel. Sometimes it will not allow some of them to print and will
+throw an exception if <code>x</code> is bigger than <code>1000</code>.</p>
+
+<p>The problem with this code is—<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>.
+Each <code>print()</code> call
+with <code>x</code> larger than <code>1000</code> will take one permit from the semaphore and
+won't return it. In five calls with exceptions
+the semaphore will be empty and all other threads won't print anything.</p>
+
+<p>What is the solution? Here it is:</p>
+
+<pre>class Foo {
+  private Semaphore sem = new Semaphore(5);
+  void print(int x) throws Exception {
+    this.sem.acquire();
+    if (x &gt; 1000) {
+      this.sem.release();
+      throw new Exception("Too large!");
+    }
+    System.out.printf("x = %d", x);
+    this.sem.release();
+  }
+}</pre>
+
+<p>We must release the permit before we throw the exception.</p>
+
+<p>However, there is another problem that shows up: code duplication. We release
+the permit in two places. If we add more <code>throw</code> instructions we will
+also have to add more <code>sem.release()</code> calls.</p>
+
+<p>A very elegant solution was introduced in C++ and is called RAII. This
+is how it would look in Java:</p>
+
+<pre>class Permit {
+  private Semaphore sem;
+  Permit(Semaphore s) {
+    this.sem = s;
+    this.sem.acquire();
+  }
+  @Override
+  public void finalize() {
+    this.sem.release();
+  }
+}
+class Foo {
+  private Semaphore sem = new Semaphore(5);
+  void print(int x) throws Exception {
+    new Permit(this.sem);
+    if (x &gt; 1000) {
+      throw new Exception("Too large!");
+    }
+    System.out.printf("x = %d", x);
+  }
+}</pre>
+
+<p>See how beautiful the code is inside method <code>Foo.print()</code>. We just create
+an instance of class <code>Permit</code> and it immediately acquires a new permit
+at the semaphore. Then we exit the method <code>print()</code>, either by exception
+or in the normal way, and the method <code>Permit.finalize()</code> releases the permit.</p>
+
+<p>Elegant, isn't it? Yes, it is, but it won't work in Java.</p>
+
+<p>It won't work because, unlike C++, Java doesn't destroy objects when
+their scope of visibility is closed. The object of class <code>Permit</code> won't
+be destroyed when we exit the method <code>print()</code>. It will be destroyed
+<em>eventually</em> but we don't know when exactly. Most likely it will be
+destroyed way after all permits in the semaphore got acquired and we
+get blocked.</p>
+
+<p>There is a solution in Java too. It is not as elegant as the one from
+C++, but it does work. Here it is:</p>
+
+<pre>class Permit implements Closeable {
+  private Semaphore sem;
+  Permit(Semaphore s) {
+    this.sem = s;
+  }
+  @Override
+  public void close() {
+    this.sem.release();
+  }
+  public Permit acquire() {
+    this.sem.acquire();
+    return this;
+  }
+}
+class Foo {
+  private Semaphore sem = new Semaphore(5);
+  void print(int x) throws Exception {
+    try (Permit p = new Permit(this.sem).acquire()) {
+      if (x &gt; 1000) {
+        throw new Exception("Too large!");
+      }
+      System.out.printf("x = %d", x);
+    }
+  }
+}</pre>
+
+<p>Pay attention to the <code>try</code> block and to the
+<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code>Closeable</code></a> interface
+that the class <code>Permit</code> now implements. The object <code>p</code> will be "closed"
+when the <code>try</code> block exits. It may exit either at the end, or
+by the <code>return</code> or <code>throw</code> statements. In either case <code>Permit.close()</code>
+will be called: this is how
+<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>
+works in Java.</p>
+
+<p>I introduced method <code>acquire()</code> and moved <code>sem.acquire()</code> out of the <code>Permit</code> constructor because I
+<a href="/2015/05/07/ctors-must-be-code-free.html">believe</a>
+that constructors must be code-free.</p>
+
+<p>To summarize, RAII is a perfect design <del>pattern</del> approach when you
+deal with resources that may <a href="https://en.wikipedia.org/wiki/Resource_leak">leak</a>.
+Even though Java doesn't have it out of the box we can implement it
+via <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> and
+<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code>Closeable</code></a>.</p>
+
+    </article>
+  </body>
+</html>

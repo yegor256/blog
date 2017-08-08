@@ -2242,6 +2242,7 @@ excellence
 excellent
 except
 exception
+exception-safe
 exceptional
 exceptionally
 exceptions
@@ -3629,6 +3630,7 @@ leader
 leaders
 leadership
 leads
+leak
 leakage
 leaking
 lean
@@ -6762,6 +6764,7 @@ trustworthy
 truth
 truthfully
 try
+try-with-resources
 trying
 tu
 TUG

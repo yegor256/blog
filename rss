@@ -1,4 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-07T19:51:22+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Manage a Manager?</title><link href="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html" rel="alternate" type="text/html" title="How to Manage a Manager?" /><published>2017-08-01T00:00:00+00:00</published><updated>2017-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/01/how-to-manage-a-manager</id><content type="html" xml:base="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html">&lt;p&gt;No secret, &lt;del&gt;we&lt;/del&gt; you all have managers. Some of them are
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-08T06:14:50+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">RAII in Java</title><link href="http://www.yegor256.com/2017/08/08/raii-in-java.html" rel="alternate" type="text/html" title="RAII in Java" /><published>2017-08-08T00:00:00+00:00</published><updated>2017-08-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/08/raii-in-java</id><content type="html" xml:base="http://www.yegor256.com/2017/08/08/raii-in-java.html">&lt;p&gt;Resource Acquisition Is Initialization
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization&quot;&gt;RAII&lt;/a&gt;)
+is a design idea introduced in C++ by
+&lt;a href=&quot;http://amzn.to/2uMlANB&quot;&gt;Bjarne Stroustrup&lt;/a&gt;
+for exception-safe resource management.
+Thanks to garbage collection Java
+&lt;a href=&quot;https://stackoverflow.com/questions/477399&quot;&gt;doesn&amp;#39;t have&lt;/a&gt; this feature,
+but we can implement something similar, using
+&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html&quot;&gt;try-with-resources&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;At Sachem Farm (1998) by John Huddles&#39; src=&#39;/images/2017/08/at-sachem-farm.jpg&#39; longdesc=&#39;#7aef3b5b&#39;/&gt;&lt;figcaption id=&#39;7aef3b5b&#39;&gt;At Sachem Farm (1998) by John Huddles&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The problem RAII is solving is obvious; have a look at this code
+(I&amp;#39;m sure you know what
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html&quot;&gt;&lt;code&gt;Semaphore&lt;/code&gt;&lt;/a&gt;
+is and how it works in Java):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Too large!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The code is rather primitive and doesn&amp;#39;t do anything useful, but you
+most probably get the idea: the method &lt;code&gt;print()&lt;/code&gt;, if being called from
+multiple parallel threads, will allow only five of them to print
+in parallel. Sometimes it will not allow some of them to print and will
+throw an exception if &lt;code&gt;x&lt;/code&gt; is bigger than &lt;code&gt;1000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The problem with this code is&amp;mdash;&lt;a href=&quot;https://en.wikipedia.org/wiki/Resource_leak&quot;&gt;resource leakage&lt;/a&gt;.
+Each &lt;code&gt;print()&lt;/code&gt; call
+with &lt;code&gt;x&lt;/code&gt; larger than &lt;code&gt;1000&lt;/code&gt; will take one permit from the semaphore and
+won&amp;#39;t return it. In five calls with exceptions
+the semaphore will be empty and all other threads won&amp;#39;t print anything.&lt;/p&gt;
+
+&lt;p&gt;What is the solution? Here it is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Too large!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We must release the permit before we throw the exception.&lt;/p&gt;
+
+&lt;p&gt;However, there is another problem that shows up: code duplication. We release
+the permit in two places. If we add more &lt;code&gt;throw&lt;/code&gt; instructions we will
+also have to add more &lt;code&gt;sem.release()&lt;/code&gt; calls.&lt;/p&gt;
+
+&lt;p&gt;A very elegant solution was introduced in C++ and is called RAII. This
+is how it would look in Java:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Permit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;finalize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Too large!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;See how beautiful the code is inside method &lt;code&gt;Foo.print()&lt;/code&gt;. We just create
+an instance of class &lt;code&gt;Permit&lt;/code&gt; and it immediately acquires a new permit
+at the semaphore. Then we exit the method &lt;code&gt;print()&lt;/code&gt;, either by exception
+or in the normal way, and the method &lt;code&gt;Permit.finalize()&lt;/code&gt; releases the permit.&lt;/p&gt;
+
+&lt;p&gt;Elegant, isn&amp;#39;t it? Yes, it is, but it won&amp;#39;t work in Java.&lt;/p&gt;
+
+&lt;p&gt;It won&amp;#39;t work because, unlike C++, Java doesn&amp;#39;t destroy objects when
+their scope of visibility is closed. The object of class &lt;code&gt;Permit&lt;/code&gt; won&amp;#39;t
+be destroyed when we exit the method &lt;code&gt;print()&lt;/code&gt;. It will be destroyed
+&lt;em&gt;eventually&lt;/em&gt; but we don&amp;#39;t know when exactly. Most likely it will be
+destroyed way after all permits in the semaphore got acquired and we
+get blocked.&lt;/p&gt;
+
+&lt;p&gt;There is a solution in Java too. It is not as elegant as the one from
+C++, but it does work. Here it is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Permit&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Closeable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Semaphore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Permit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;acquire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Too large!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pay attention to the &lt;code&gt;try&lt;/code&gt; block and to the
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html&quot;&gt;&lt;code&gt;Closeable&lt;/code&gt;&lt;/a&gt; interface
+that the class &lt;code&gt;Permit&lt;/code&gt; now implements. The object &lt;code&gt;p&lt;/code&gt; will be &amp;quot;closed&amp;quot;
+when the &lt;code&gt;try&lt;/code&gt; block exits. It may exit either at the end, or
+by the &lt;code&gt;return&lt;/code&gt; or &lt;code&gt;throw&lt;/code&gt; statements. In either case &lt;code&gt;Permit.close()&lt;/code&gt;
+will be called: this is how
+&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html&quot;&gt;try-with-resources&lt;/a&gt;
+works in Java.&lt;/p&gt;
+
+&lt;p&gt;I introduced method &lt;code&gt;acquire()&lt;/code&gt; and moved &lt;code&gt;sem.acquire()&lt;/code&gt; out of the &lt;code&gt;Permit&lt;/code&gt; constructor because I
+&lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;believe&lt;/a&gt;
+that constructors must be code-free.&lt;/p&gt;
+
+&lt;p&gt;To summarize, RAII is a perfect design &lt;del&gt;pattern&lt;/del&gt; approach when you
+deal with resources that may &lt;a href=&quot;https://en.wikipedia.org/wiki/Resource_leak&quot;&gt;leak&lt;/a&gt;.
+Even though Java doesn&amp;#39;t have it out of the box we can implement it
+via &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html&quot;&gt;try-with-resources&lt;/a&gt; and
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html&quot;&gt;&lt;code&gt;Closeable&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Resource Acquisition Is Initialization
+(RAII)
+is a design idea introduced in C++ by
+Bjarne Stroustrup
+for exception-safe resource management.
+Thanks to garbage collection Java
+doesn&amp;#39;t have this feature,
+but we can implement something similar, using
+try-with-resources.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/at-sachem-farm.jpg" /></entry><entry><title type="html">How to Manage a Manager?</title><link href="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html" rel="alternate" type="text/html" title="How to Manage a Manager?" /><published>2017-08-01T00:00:00+00:00</published><updated>2017-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/01/how-to-manage-a-manager</id><content type="html" xml:base="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html">&lt;p&gt;No secret, &lt;del&gt;we&lt;/del&gt; you all have managers. Some of them are
 great, while many are simply idiots. What do you do if you happen
 to have a boss that fits perfectly into this dominating category?
 Quit and try to find a better place? This may sound like good
@@ -1326,72 +1483,4 @@ and become very responsible again. Nice, huh?&lt;/p&gt;</content><author><name>Y
 and harassment-free offices. Our management practices have to keep up&amp;mdash;they
 must be zero-stress, conflict-free, and idiot-friendly. If you&amp;#39;re still
 stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
-these recipes will open your eyes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/06/dogville.jpg" /></entry><entry><title type="html">Why Do You Contribute to Open Source?</title><link href="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html" rel="alternate" type="text/html" title="Why Do You Contribute to Open Source?" /><published>2017-05-30T00:00:00+00:00</published><updated>2017-05-30T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/05/30/why-contribute-to-open-source</id><content type="html" xml:base="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html">&lt;p&gt;You probably remember my half-a-year-old article:
-&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;Why Don&amp;#39;t You Contribute to Open Source?&lt;/a&gt;.
-I said there that if you don&amp;#39;t have your own OSS projects
-or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
-is wrong with you. Now I&amp;#39;m talking to those who actually &lt;em&gt;do&lt;/em&gt; contribute
-without demanding anything back&amp;mdash;guys, you&amp;#39;re doing it wrong!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Untouchables (1987) by Brian De Palma&#39; src=&#39;/images/2017/05/the-untouchables.jpg&#39; longdesc=&#39;#93469771&#39;/&gt;&lt;figcaption id=&#39;93469771&#39;&gt;The Untouchables (1987) by Brian De Palma&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Open source &lt;del&gt;almost&lt;/del&gt; always means &lt;em&gt;free&lt;/em&gt;, as in beer&amp;mdash;nobody will
-pay you anything for your pull requests. However, it doesn&amp;#39;t mean
-you&amp;#39;re not allowed to make money.&lt;/p&gt;
-
-&lt;p&gt;Of course, you will not earn any cash directly by fixing a bug in
-&lt;a href=&quot;https://github.com/docker/docker&quot;&gt;docker/docker&lt;/a&gt;, but you &lt;em&gt;may&lt;/em&gt; earn
-some intangible value, which will be converted to cash later.&lt;/p&gt;
-
-&lt;p&gt;Moreover, you &lt;em&gt;must&lt;/em&gt; earn it&amp;mdash;this is my point. Otherwise, if you contribute
-out of pure
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Altruism&quot;&gt;altruism&lt;/a&gt;,
-you will lose the motivation very soon. Not because
-you&amp;#39;re greedy and
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;only money&lt;/a&gt;
-can motivate you, but because without
-money you won&amp;#39;t feel your efforts are being truly appreciated.&lt;/p&gt;
-
-&lt;p&gt;The intangible value I&amp;#39;m talking about is, of course, your
-&lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resume&lt;/a&gt;. If you
-are an active contributor to &lt;a href=&quot;https://github.com/docker/docker&quot;&gt;docker/docker&lt;/a&gt;,
-your resume says so, and you&amp;#39;re in the list of contributors&amp;mdash;your
-hourly rate or your salary will
-&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;definitely&lt;/a&gt; be higher.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If you contribute out of pure altruism, you will lose the motivation very soon.&lt;/aside&gt;
-
-&lt;p&gt;I would recommend, before becoming a contributor, you ask yourself a question: How will
-this affect my resume, my profile, and my reputation on the market? Will they
-put me into the list of contributors? Will they promote me in exchange
-for my pull requests? Will I be able to mention their name in my
-next job interview?&lt;/p&gt;
-
-&lt;p&gt;Most projects won&amp;#39;t do anything for you unless you &lt;em&gt;explicitly&lt;/em&gt; ask.
-I&amp;#39;m a maintainer of over 40 GitHub repositories and at least six of them
-have over 200 stars
-(&lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;yegor256/tacit&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;yegor256/rultor&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/yegor256/eo&quot;&gt;yegor256/eo&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi/jcabi-aspects&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/teamed/qulice&quot;&gt;teamed/qulice&lt;/a&gt;).
-If you submit a pull request to any of them, I will
-just review it, merge and forget your name.
-I won&amp;#39;t do anything else, simply because &lt;em&gt;you&lt;/em&gt; didn&amp;#39;t ask.&lt;/p&gt;
-
-&lt;p&gt;However, if you ask me to put your name and a link to your blog
-in the list of contributors, I will do it without any hesitation.
-Moreover, if you do that right inside the pull request you are submitting,
-I will merge it and your name will go right into the repo, into the very
-place you find the most suitable.&lt;/p&gt;
-
-&lt;p&gt;Over the last six years of my active participation in open source
-development I&amp;#39;ve never seen anyone asking me that. Why? I don&amp;#39;t know.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="programming" /><summary type="html">You probably remember my half-a-year-old article:
-Why Don&amp;#39;t You Contribute to Open Source?.
-I said there that if you don&amp;#39;t have your own OSS projects
-or don&amp;#39;t give anything back to those you&amp;#39;re using&amp;mdash;something
-is wrong with you. Now I&amp;#39;m talking to those who actually do contribute
-without demanding anything back&amp;mdash;guys, you&amp;#39;re doing it wrong!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/05/the-untouchables.jpg" /></entry></feed>
+these recipes will open your eyes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/06/dogville.jpg" /></entry></feed>
