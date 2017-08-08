@@ -149,7 +149,8 @@ Good idea, but what does it have to do with OOP?
 Good one.
 
 [<span class='green'>RAII</span>](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization).
-This is a really good one, and I highly recommend you use it.
+This is a really good one, and I
+[highly recommend]({% pst 2017/aug/2017-08-08-raii-in-java %}) you use it.
 
 [<span class='red'>Servant</span>](https://en.wikipedia.org/wiki/Design_pattern_Servant).
 A very bad idea, because it's highly

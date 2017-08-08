@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "RAII in Java"
-date: 2017-08-01
+date: 2017-08-08
 place: Riga, Latvia
-tags: oop
+tags: oop java
 description: |
   Resource Acquisition Is Initialization (RAII)
   is a design idea introduced in C++; it is applicable
