@@ -15,7 +15,7 @@ keywords:
   - RAII in Java
   - RAII in C++
 book: elegant-objects-1 4.4
-image: /images/2015/03/at-sachem-farm.jpg
+image: /images/2017/08/at-sachem-farm.jpg
 jb_picture:
   caption: At Sachem Farm (1998) by John Huddles
 ---
