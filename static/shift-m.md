@@ -36,6 +36,9 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
+&#35;7: [Hugo Messer about distributed management](/shift-m/2017/7.html)<br/>
+10 August 2017; 49 min.
+
 &#35;6: [Susanne Madsen about leadership](/shift-m/2017/6.html)<br/>
 24 July 2017; 49 min.
 
