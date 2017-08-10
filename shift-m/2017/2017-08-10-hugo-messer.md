@@ -3,7 +3,7 @@ layout: post
 title: "Shift-M/7"
 date: 2017-08-10 12:00:00
 place: Odessa, Ukraine
-permalink: /podcast/2017/7.html
+permalink: /shift-m/2017/7.html
 description: |
   How to manage people remotely; how to live in Bali;
   why big companies are not ready to work with remote
