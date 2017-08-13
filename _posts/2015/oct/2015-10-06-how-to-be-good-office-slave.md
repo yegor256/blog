@@ -176,6 +176,15 @@ enough work to wear you out completely? That means he is a bad manager. Instead,
 you should even joke that "our boss knows how to keep us busy." That flattery
 will definitely please even a smart person.
 
+Added 13-Aug-2017:<br/>
+**Have No Hobbies**.
+It's very annoying to see you enjoying something else aside from the job
+in the office. Your happiness and your heart must be here, at the work desk. Not
+somewhere else, at a snow slope or a tennis court. Sport, dancing, singing,
+gaming, painting, even open sourcing&mdash;are the activities you must
+hide. You are betraying your boss and your company if anything aside from
+the project is making you happy.
+
 <hr/>
 
 If you follow all these rules, you won't be fired, ever. Well, until
