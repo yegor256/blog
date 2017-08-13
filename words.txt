@@ -2658,6 +2658,7 @@ gamblers
 game
 game-changing
 games
+gaming
 gangster
 gangsters
 gantt
@@ -4592,6 +4593,7 @@ paid
 pain
 painful
 painstaking
+painting
 pair
 paired
 pakistan
@@ -5969,6 +5971,7 @@ sinatra
 since
 sincerely
 singer
+singing
 single
 single-statement
 single-word
@@ -6018,6 +6021,7 @@ slik
 slippage
 SLoC
 slogans
+slope
 slow
 slower
 slowly
@@ -6041,6 +6045,7 @@ Snap-CI
 snapchat
 snapshot
 snippet
+snow
 snowboarding
 so
 so-called
@@ -6094,6 +6099,7 @@ soundcloud
 sounds
 source
 sources
+sourcing
 south
 soviet
 SP
@@ -6145,6 +6151,7 @@ sponsored
 sponsors
 sporadically
 sporchi
+sport
 sports
 spot
 spouse
