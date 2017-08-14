@@ -87,8 +87,8 @@ just like shares of stocks, bonds, options, gold, and Bitcoin, must be
 regulated by the people we're paying our taxes to&mdash;the police.
 
 You may say that Coinbase is not issuing those Bitcoins and only trading
-them&mdash; and that's why it's not a pyramid. Not true. In my YegorBase shop
-I won't need to issue my YegorCoins for very long either. As soon as the total volume
+them&mdash;and that's why it's not a pyramid. Not true. In my YegorBase shop
+I won't need to issue my YegorCoins for very long. As soon as the total volume
 of YegorCoins is big enough, the situation will control itself
 and the price will jump and fall somehow. I will make profit on the trading
 commission and the owners of YegorCoin will hope that they can manage
