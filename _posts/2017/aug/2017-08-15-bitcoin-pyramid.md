@@ -14,9 +14,9 @@ keywords:
   - ponzi scheme
   - bitcoin is ponzi scheme
   - cryptocurrency fraud
-image: /images/2017/08/?
+image: /images/2017/08/two-and-a-half-men.jpg
 jb_picture:
-  caption: ?
+  caption: Two and a Half Men (2011) by Chuck Lorre
 ---
 
 In September 2016 I paid [Coinbase](http://www.coinbase.com)
@@ -37,6 +37,8 @@ Will it go up? Or down? What would you do?
 Where did that profit come from?
 How can Coinbase pay me eight times more now than I paid them less than a year ago?
 Where did they get that cash?
+
+{% badge /images/2017/08/coinbase-1.jpg 200 %}
 
 Obviously you know what a [Ponzi scheme](https://en.wikipedia.org/wiki/Ponzi_scheme) is, right?
 If you don't, watch
