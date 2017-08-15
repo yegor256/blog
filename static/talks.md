@@ -144,7 +144,8 @@ so why shouldn't we rate them, right? The best grade is
 PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests;
 [PgDay 2017](https://pgday.ru/ru/2017/speakers/136);
 St.Peterburg, Russia;
-5-7 July 2017.
+5-7 July 2017;
+[video](https://www.youtube.com/watch?v=nVmRY4Ri4CA).
 The conference was well organized, but rather small for five tracks. There
 were no more than 30 people at my talk. The venue was far away from the
 city center which made it difficult to see the historic center of
