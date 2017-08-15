@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-14T17:30:50+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">RAII in Java</title><link href="http://www.yegor256.com/2017/08/08/raii-in-java.html" rel="alternate" type="text/html" title="RAII in Java" /><published>2017-08-08T00:00:00+00:00</published><updated>2017-08-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/08/raii-in-java</id><content type="html" xml:base="http://www.yegor256.com/2017/08/08/raii-in-java.html">&lt;p&gt;Resource Acquisition Is Initialization
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-15T10:26:51+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Bitcoin Is Not a Pyramid. Coinbase Is.</title><link href="http://www.yegor256.com/2017/08/15/bitcoin-pyramid.html" rel="alternate" type="text/html" title="Bitcoin Is Not a Pyramid. Coinbase Is." /><published>2017-08-15T00:00:00+00:00</published><updated>2017-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/15/bitcoin-pyramid</id><content type="html" xml:base="http://www.yegor256.com/2017/08/15/bitcoin-pyramid.html">&lt;p&gt;In September 2016 I paid &lt;a href=&quot;http://www.coinbase.com&quot;&gt;Coinbase&lt;/a&gt;
+$1,222 for two BTCs, $611 each. Seven months later, in April 2017,
+they paid me back $2,490, which was $1,245 for each BTC. My profit before
+tax was $1,268, over 100% of the investment, in just seven months.
+Moreover, if I had waited until today, I would have made
+$6,800 profit instead. Actually, I still have a few BTCs in my Coinbase account
+and I can make that 750% profit, if I sell now. Should I? The
+BTC price is
+&lt;a href=&quot;https://www.cnbc.com/2017/08/12/bitcoin-vaults-to-new-record-above-4k-boosted-by-japan-and-multiplying-its-value-fourfold.html&quot;&gt;over $4,000&lt;/a&gt;.
+Will it go up? Or down? What would you do?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Two and a Half Men (2011) by Chuck Lorre&#39; src=&#39;/images/2017/08/two-and-a-half-men.jpg&#39; longdesc=&#39;#e9d79173&#39;/&gt;&lt;figcaption id=&#39;e9d79173&#39;&gt;Two and a Half Men (2011) by Chuck Lorre&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Where did that profit come from?
+How can Coinbase pay me eight times more now than I paid them less than a year ago?
+Where did they get that cash?&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2017/08/coinbase-1.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;Obviously you know what a &lt;a href=&quot;https://en.wikipedia.org/wiki/Ponzi_scheme&quot;&gt;Ponzi scheme&lt;/a&gt; is, right?
+If you don&amp;#39;t, watch
+&lt;a href=&quot;http://www.imdb.com/title/tt1811261/&quot;&gt;Episode 16&lt;/a&gt;
+of the 8th Season of
+&lt;a href=&quot;http://www.imdb.com/title/tt0369179/&quot;&gt;Two and a Half Men&lt;/a&gt;.
+In a nutshell, I&amp;#39;m getting my investment and my profit from other people, who are
+paying Coinbase for my BTCs. If there were no demand,
+my entire investment would disappear and I would only have the BTC bits
+and bytes in my virtual wallet. I would lose my $1,222.&lt;/p&gt;
+
+&lt;p&gt;Some recent articles call &lt;a href=&quot;https://en.wikipedia.org/wiki/Bitcoin&quot;&gt;Bitcoin&lt;/a&gt; and other
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cryptocurrency&quot;&gt;altcoins&lt;/a&gt;,
+like
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Ethereum&quot;&gt;Etherium&lt;/a&gt; or
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Litecoin&quot;&gt;Litecoin&lt;/a&gt;, Ponzi schemes,
+for example,
+&lt;a href=&quot;https://www.theatlantic.com/technology/archive/2017/05/cryptocurrency-ponzi-schemes/528624/&quot;&gt;&lt;em&gt;The Rise of Cryptocurrency Ponzi Schemes&lt;/em&gt;&lt;/a&gt;
+in The Atlantic
+and
+&lt;a href=&quot;https://www.ft.com/content/b5d66ed8-d1b3-11e6-b06b-680c49b4b4c0&quot;&gt;&lt;em&gt;Bitcoin passes $1,000 but only number that matters is zero&lt;/em&gt;&lt;/a&gt;
+in the Financial Times.&lt;/p&gt;
+
+&lt;p&gt;Indeed, the key attribute of a pyramid scheme is right there:
+the product being sold has no value aside from the demand-generated one,
+just like &lt;a href=&quot;https://www.google.com/finance?q=TWTR&quot;&gt;Twitter stocks&lt;/a&gt;.
+Should we blame Bitcoin for that? I don&amp;#39;t think so.&lt;/p&gt;
+
+&lt;p&gt;I think that what Coinbase (and similar traders like
+&lt;a href=&quot;http://www.coinmama.com&quot;&gt;CoinMama&lt;/a&gt; or &lt;a href=&quot;http://www.cex.io&quot;&gt;CEX.io&lt;/a&gt;) are doing is definitely
+a pyramid and must be stopped by the government, sooner rather than later.&lt;/p&gt;
+
+&lt;p&gt;Imagine, I start a company tomorrow. I call it YegorBase.
+It will buy and sell YegorCoins, which I will also create.
+The price will be $100 a piece. Some of you
+may buy that, especially because it will be possible to sell them the next day,
+when the price will be $101. Initially I will create some fuss to promote
+the product and the trading will begin. I will make my commission.&lt;/p&gt;
+
+&lt;p&gt;Will this be legal? I seriously doubt that &lt;a href=&quot;http://www.stripe.com&quot;&gt;Stripe&lt;/a&gt;,
+for example, would approve my account if I told them my business plan.&lt;/p&gt;
+
+&lt;p&gt;And the problem is not the YegorCoin itself&amp;mdash;there is nothing wrong in
+creating your own crypto-electronic-whatever-product. The problem is that I&amp;#39;ll
+be trading something that has a very questionable value, being completely
+unregulated by the government. The trading of my YegorCoin,
+just like shares of stocks, bonds, options, gold, and Bitcoin, must be
+regulated by the people we&amp;#39;re paying our taxes to&amp;mdash;the police.&lt;/p&gt;
+
+&lt;p&gt;You may say that Coinbase is not issuing those Bitcoins and only trading
+them&amp;mdash;and that&amp;#39;s why it&amp;#39;s not a pyramid. Not true. In my YegorBase shop
+I won&amp;#39;t need to issue my YegorCoins for very long. As soon as the total volume
+of YegorCoins is big enough, the situation will control itself
+and the price will jump and fall somehow. I will make profit on the trading
+commission and the owners of YegorCoin will hope that they can manage
+to sell everything before my shop gets busted.&lt;/p&gt;
+
+&lt;p&gt;Why the police are still closing their eyes to what Coinbase is doing,
+I simply can&amp;#39;t understand. Maybe because NYSE and A16Z are among their
+&lt;a href=&quot;https://www.crunchbase.com/organization/coinbase/investors&quot;&gt;long list&lt;/a&gt;
+of investors?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="economics" /><summary type="html">In September 2016 I paid Coinbase
+$1,222 for two BTCs, $611 each. Seven months later, in April 2017,
+they paid me back $2,490, which was $1,245 for each BTC. My profit before
+tax was $1,268, over 100% of the investment, in just seven months.
+Moreover, if I had waited until today, I would have made
+$6,800 profit instead. Actually, I still have a few BTCs in my Coinbase account
+and I can make that 750% profit, if I sell now. Should I? The
+BTC price is
+over $4,000.
+Will it go up? Or down? What would you do?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/two-and-a-half-men.jpg" /></entry><entry><title type="html">RAII in Java</title><link href="http://www.yegor256.com/2017/08/08/raii-in-java.html" rel="alternate" type="text/html" title="RAII in Java" /><published>2017-08-08T00:00:00+00:00</published><updated>2017-08-08T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/08/raii-in-java</id><content type="html" xml:base="http://www.yegor256.com/2017/08/08/raii-in-java.html">&lt;p&gt;Resource Acquisition Is Initialization
 (&lt;a href=&quot;https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization&quot;&gt;RAII&lt;/a&gt;)
 is a design idea introduced in C++ by
 &lt;a href=&quot;http://amzn.to/2uMlANB&quot;&gt;Bjarne Stroustrup&lt;/a&gt;
@@ -1344,143 +1433,4 @@ by AWS. It works like a charm, but the problem
 is that it&amp;#39;s not so easy to create an integration test, to make sure
 my code works together with the &amp;quot;real&amp;quot; DynamoDB server and tables. Let me
 show you how it was solved. The code is open source and you can see it
-in the yegor256/sixnines GitHub repo.</summary></entry><entry><title type="html">Gluten-Free Management Recipes</title><link href="http://www.yegor256.com/2017/06/06/gluten-free-management.html" rel="alternate" type="text/html" title="Gluten-Free Management Recipes" /><published>2017-06-06T00:00:00+00:00</published><updated>2017-06-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/06/gluten-free-management</id><content type="html" xml:base="http://www.yegor256.com/2017/06/06/gluten-free-management.html">&lt;p&gt;We live in the era of organic food, eco-friendly toilets, zero-emission cars,
-and harassment-free offices. Our management practices have to keep up&amp;mdash;they
-must be zero-stress, conflict-free, and idiot-friendly. If you&amp;#39;re still
-stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
-these recipes will open your eyes.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Dogville (2003) by Lars von Trier&#39; src=&#39;/images/2017/06/dogville.jpg&#39; longdesc=&#39;#bc4a6c10&#39;/&gt;&lt;figcaption id=&#39;bc4a6c10&#39;&gt;Dogville (2003) by Lars von Trier&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Positive&lt;/strong&gt;.
-You must remember that keeping people happy
-is more important than their results, effectiveness and productivity.
-As an organic manager you must never offend your team with any
-negativity, finger-pointing, or
-&lt;a href=&quot;/2015/01/05/how-to-be-honest-and-keep-customer.html&quot;&gt;honesty&lt;/a&gt;.
-You must think positively and always find a balance somewhere between
-&amp;quot;you guys are good&amp;quot; and &amp;quot;you&amp;#39;re just fantastic.&amp;quot;
-You must be their full-hearted &lt;del&gt;clown&lt;/del&gt; cheerleader!
-Truth hurts and modern management is not about hurting people, it&amp;#39;s about
-making them happy. You must be a permanent source of good news, funny
-stories, and smiles, shielding your &lt;del&gt;slaves&lt;/del&gt; people
-from the reality and its threats.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Truth hurts and modern management is not about hurting people, it&amp;#39;s about making them happy.&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Politically Correct&lt;/strong&gt;.
-How many &lt;a href=&quot;http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159&quot;&gt;latinx&lt;/a&gt;
-are in your team? What about gays and transsexuals?
-You&amp;#39;re not sure? That&amp;#39;s wrong. You have to count. You don&amp;#39;t know how to
-segregate bi-sexuals from &amp;quot;normal&amp;quot; people and black females from white males?
-Well, do the research, there must be some &amp;quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mischling_Test&quot;&gt;mischling tests&lt;/a&gt;&amp;quot; you could do.
-You have to learn how to count and pay attention to the numbers.
-&lt;a href=&quot;https://techcrunch.com/2017/03/28/uber-first-diversity-report/&quot;&gt;Uber&lt;/a&gt;
-and &lt;a href=&quot;https://techcrunch.com/2017/04/01/krablr-releases-first-diversity-report/&quot;&gt;others&lt;/a&gt;
-already do. Diversity, equality, and tolerance: these metrics are
-&lt;a href=&quot;https://www.youtube.com/watch?v=iKcWu0tsiZM&quot;&gt;quickly replacing&lt;/a&gt;
-outdated performance and productivity appraisals.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Reward-Focused&lt;/strong&gt;.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Leon_Trotsky&quot;&gt;Trotsky&lt;/a&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/The_Revolution_Betrayed&quot;&gt;said&lt;/a&gt; in 1937
-that people would eventually work not out of greed or poverty, but because
-they just enjoy it. He would be happy to see
-that his prophesy finally
-&lt;a href=&quot;https://techbeacon.com/13-ways-motivate-software-engineers&quot;&gt;came true&lt;/a&gt;:
-programmers don&amp;#39;t work for money any more.
-They &lt;a href=&quot;https://www.verywell.com/what-is-intrinsic-motivation-2795385&quot;&gt;work&lt;/a&gt;
-for challenge, respect, curiosity, recognition, cooperation, and free beer
-on Fridays. As a modern eco-manager you must stop humiliating them
-with old-fashioned
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;dollar bills&lt;/a&gt;
-and start inspiring them with these
-&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;intrinsic rewards&lt;/a&gt;
-and free cookies.
-You will &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;save some money&lt;/a&gt; too.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Equal&lt;/strong&gt;.
-&lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;Holacracy&lt;/a&gt;
-is quickly replacing military-style management hierarchies, which
-proved to be depressing and hurtful to human feelings. Modern managers
-don&amp;#39;t even like to be called &amp;quot;managers.&amp;quot; Instead, they
-&lt;a href=&quot;https://www.forbes.com/sites/joshlinkner/2014/12/04/the-21-most-creative-job-titles/#2b863a112933&quot;&gt;demand&lt;/a&gt;
-we call them ambassadors, curators, cheerleaders, and catalysts.
-You must be very creative in hiding your actual
-career ladder position, in order not to irritate and hurt your team.
-Of course, you will still use fear and guilt to keep your
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slaves&lt;/a&gt; under control,
-but new eco-titles will help you keep them less aware of what&amp;#39;s going on.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;You still use fear and guilt to keep your slaves under control, but new eco-titles help you keep them less aware of what&amp;#39;s going on.&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Be a Leader&lt;/strong&gt;.
-Traditional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project management&lt;/a&gt;
-with its critical path method,
-contingency reserves, cause-and-effect diagrams,
-work breakdown structures, policies, procedures, and plans, is dead.
-&lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;Agile&lt;/a&gt;,
-Scrum, Kanban, and others, are dancing on its grave, with
-motivational speeches, burndown rates, sprints,
-&lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;standups&lt;/a&gt;, and smoothies.
-The world doesn&amp;#39;t need managers anymore, it needs leaders. And you must be one.
-PMBOK and RUP on your bookshelf must be replaced with
-Elon Musk and Peter Thiel biographies.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Be a Committer&lt;/strong&gt;.
-Not a &lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;
-committer, obviously&amp;mdash;that&amp;#39;s for junior programmers. You
-have to commit yourself to the project, just like Tim Cook
-&lt;a href=&quot;https://techcrunch.com/2016/12/19/apples-tim-cook-assures-employees-that-it-is-committed-to-the-mac-and-that-great-desktops-are-coming/&quot;&gt;committed&lt;/a&gt;
-to MacBooks. Technically, this means:
-staying in the office till late,
-taking no vacations,
-wearing a branded t-shirt,
-never discussing a salary or any money at all, and
-being a proud patriot, no matter how ugly the product is.
-In other words, being a
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;good slave&lt;/a&gt;
-and showing your team a good example.
-Don&amp;#39;t worry about the future, when projects fail good committers
-just commit &lt;del&gt;suicide&lt;/del&gt; themselves to new projects.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Be a Friend&lt;/strong&gt;.
-Explicit and non-ambiguous work orders are not
-popular any more&amp;mdash;they create tension and destroy
-&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;team morale&lt;/a&gt;.
-Guilt-driven management is much more subtle and elegant:
-you turn your subordinates into a family and then say:
-&amp;quot;I count on you as a friend.&amp;quot;
-Who can refuse a friend? And not even a friend, but a mom. This is
-who they will associate you with when the guilt kicks in&amp;mdash;with their
-mothers. They won&amp;#39;t disobey, won&amp;#39;t quit, and will never ask for
-&lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;more money&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Don&amp;#39;t worry about the future, when projects fail good committers just commit themselves to new projects.&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Be Responsible&lt;/strong&gt;.
-In the brick-and-mortar management era responsibility was
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;measurable&lt;/a&gt;
-by what you earn if you succeed and how you suffer if you fail.
-Luckily, the world has recently learned that this
-was a mistake we&amp;#39;d been making for
-&lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;a hundreds years&lt;/a&gt;.
-We don&amp;#39;t suffer any more.
-Being responsible now means something completely different.
-We wear stickers on our MacBooks,
-we fall in love with &amp;quot;extremely talented people,&amp;quot;
-we participate, engage, celebrate, and champion excellence.
-And, of course, now it is
-&lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;always&lt;/a&gt; &amp;quot;We&amp;quot; instead of &amp;quot;I&amp;quot;:
-&amp;quot;We are responsible,&amp;quot; &amp;quot;It is our project,&amp;quot;
-&amp;quot;We can,&amp;quot; &amp;quot;Our goal is to do it together!&amp;quot;
-Of course, when the project fails you find a new one, with a
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;bigger salary&lt;/a&gt;
-and a new group of extremely talented people,
-and become very responsible again. Nice, huh?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">We live in the era of organic food, eco-friendly toilets, zero-emission cars,
-and harassment-free offices. Our management practices have to keep up&amp;mdash;they
-must be zero-stress, conflict-free, and idiot-friendly. If you&amp;#39;re still
-stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
-these recipes will open your eyes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/06/dogville.jpg" /></entry></feed>
+in the yegor256/sixnines GitHub repo.</summary></entry></feed>

@@ -188,6 +188,7 @@ alpha
 alphabetic
 already
 also
+altcoins
 alter
 alternative
 alternatively
@@ -404,6 +405,7 @@ assurance
 assure
 at
 ate
+atlantic
 atom
 atomic
 atomicity
@@ -623,6 +625,8 @@ birthday
 birthdays
 bit
 bitbucket
+bitcoin
+bitcoins
 bits
 bjarne
 black
@@ -658,6 +662,7 @@ boat
 bob
 bodies
 body
+bonds
 bonus
 bonuses
 book
@@ -743,6 +748,8 @@ browsing
 bruce
 brutti
 BSc
+BTC
+BTCs
 BTW
 bubble
 bucket
@@ -784,6 +791,7 @@ business
 business-making
 businesses
 businessmen
+busted
 busy
 but
 butt
@@ -915,6 +923,7 @@ certificates
 certification
 certifications
 certified
+CEX
 CFO
 CFP
 chain
@@ -1093,6 +1102,8 @@ coffee
 cohesion
 cohesive
 coin
+coinbase
+coinmama
 collaborate
 collaboration
 collaborationsuperpowers
@@ -1134,6 +1145,7 @@ commas
 comment
 comments
 commercial
+commission
 commit
 commitment
 commits
@@ -1493,6 +1505,8 @@ cruel
 cruisecontrol
 cry
 cryptic
+crypto-electronic-whatever-product
+cryptocurrency
 CSS
 CTO
 CTO's
@@ -1662,6 +1676,7 @@ delivering
 delivers
 delivery
 demand
+demand-generated
 demanding
 demands
 demeter
@@ -2208,6 +2223,7 @@ estimations
 et
 etc
 ethan
+etherium
 euro
 europe
 european
@@ -3387,6 +3403,7 @@ issue
 issue-tracking
 issued
 issues
+issuing
 istat
 it
 it'll
@@ -3717,6 +3734,7 @@ listeners
 listening
 listens
 lists
+litecoin
 literal
 literally
 literals
@@ -4356,6 +4374,7 @@ numbers
 numeric
 numerous
 nutshell
+NYSE
 OAuth
 obey
 obeyed
@@ -4857,6 +4876,7 @@ polymorphism
 POM
 pompous
 pont
+ponzi
 POO
 pool
 poor
@@ -5175,6 +5195,7 @@ puzzled
 puzzles
 pycharm
 pylint
+pyramid
 python
 QA
 QCon
@@ -5366,6 +5387,7 @@ regrets
 regular
 regularly
 regulate
+regulated
 rehearse
 reich
 reiterate
@@ -5756,6 +5778,7 @@ seamless
 search
 searches
 searching
+season
 seasoned
 seattle
 SEBOK
@@ -6253,6 +6276,7 @@ sticky
 still
 stock
 stockholm
+stocks
 stole
 stolen
 stop
@@ -6697,6 +6721,7 @@ tracks
 traction
 trade
 trade-offs
+traders
 trades
 trading
 traditional
@@ -6892,6 +6917,7 @@ unpredictable
 unprofessional
 unreadable
 unrealistic
+unregulated
 unrelated
 unreliability
 unreliable
@@ -7054,12 +7080,14 @@ VPs
 vs
 wages
 wait
+waited
 waiting
 waitress
 waits
 walk
 walking
 wall
+wallet
 walls
 want
 wanted
@@ -7273,6 +7301,9 @@ year
 year-old
 years
 yegor
+yegorbase
+yegorcoin
+yegorcoins
 yelling
 yelp
 yes
