@@ -31,6 +31,18 @@ You can also buy via
 and
 [Amazon](https://www.amazon.com/handmade/yegor256).
 
+{% picture /images/paintings/2017/a-woman-on-the-beach.jpg 350 %}
+
+_A Woman on the Beach_<br/>
+August 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+[$4,096]().
+"There are so many things that make a woman attractive;
+it's difficult to say which one catches you when you see her;
+why not lips, if it's a beach, you're alone, and she is beautiful?"
+
 {% picture /images/paintings/2017/lost-time.jpg 350 %}
 
 _Lost Time_<br/>
