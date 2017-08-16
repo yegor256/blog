@@ -38,7 +38,7 @@ August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$4,096]().
+[$4,096](https://www.amazon.com/dp/B074V9WHHK).
 "There are so many things that make a woman attractive;
 it's difficult to say which one catches you when you see her;
 why not lips, if it's a beach, you're alone, and she is beautiful?"
