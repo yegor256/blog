@@ -578,6 +578,7 @@ good, and how it could be better:
   * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
   * [Quinn Gil](https://quinngil.com/2017/08/06/book-review-elegant-objects-vol-1/)
   * [Javin Paul](http://javarevisited.blogspot.com/2017/04/top-5-books-to-learn-object-oriented-programming.html)
+  * [Andrey Panasyuk](https://andreypanasyuk.wordpress.com/2017/08/17/elegant-objects/)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
