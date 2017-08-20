@@ -31,6 +31,18 @@ You can also buy via
 and
 [Amazon](https://www.amazon.com/handmade/yegor256).
 
+{% picture /images/paintings/2017/doubts.jpg 350 %}
+
+_Doubts_<br/>
+August 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine;
+[$4,096](https://www.amazon.com/dp/B074V9WHHK).
+"Making an important decision is always a tough task;
+each option has its pros and cons, each opportunity has its risks and threats;
+no matter how much reasoning we put into it, there are always doubts."
+
 {% picture /images/paintings/2017/a-woman-on-the-beach.jpg 350 %}
 
 _A Woman on the Beach_<br/>
