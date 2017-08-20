@@ -38,7 +38,7 @@ August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine;
-[$4,096](https://www.amazon.com/dp/B074V9WHHK).
+[$4,096](https://www.amazon.com/dp/B074YHHTTM).
 "Making an important decision is always a tough task;
 each option has its pros and cons, each opportunity has its risks and threats;
 no matter how much reasoning we put into it, there are always doubts."
