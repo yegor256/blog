@@ -5,7 +5,7 @@ date: 2017-08-20
 place: Odessa, Ukraine
 tags: management
 description: |
-  Is it safe for a business person to be nice? It is
+  Is it safe for a business person to be nice? Is it
   possible to do business and be soft-hearted at the same
   time? I doubt it, but I have a solution.
 keywords:
@@ -19,10 +19,11 @@ jb_picture:
   caption: ?
 ---
 
-I stumbled upon this [_Why It's Safe for Founders to Be Nice_](http://www.paulgraham.com/safe.html)
-two years old article by [Paul Graham](https://twitter.com/paulg)
+I stumbled upon this two-year-old article
+[_Why It's Safe for Founders to Be Nice_](http://www.paulgraham.com/safe.html),
+written by [Paul Graham](https://twitter.com/paulg)
 (a co-founder or [Y Combinator](http://www.ycombinator.com/)), whom I honestly respect,
-and decided to explain why I disagree. Not that I think we shouldn't
+and I decided to explain why I disagree. Not that I think we shouldn't
 be nice. Not at all. But I do think that "being nice" is not a solution for organizational,
 management, marketing, sales, or business development problems. Moreover,
 in most cases it is actually _not safe_ for founders to be nice.
@@ -31,13 +32,13 @@ in most cases it is actually _not safe_ for founders to be nice.
 
 {% jb_picture_body %}
 
-Graham in his article quotes a founder, who explains
+Graham in his article quotes a founder who explains
 his worries about being "fundamentally soft-hearted and tending to give
 away too much for free." Then he suggests the founder should not worry too
 much, because "as long as you build something good enough to spread by word of mouth,
 you'll have a hyperlinear growth curve." In other words, don't worry about
-your _softness_ and focus on building a great product&mdash;your efforts
-will be appreciated. Will this really work in the modern world?
+your _softness_ and instead focus on building a great product&mdash;your efforts
+will be appreciated. But will this really work in the modern world?
 
 It will, provided you're a talented mathematician, or a composer, or
 maybe a writer, where your success doesn't really depend on people close to you, like
@@ -52,7 +53,7 @@ if we fail to take it under control. In a nutshell,
 we are either soft-hearted or successful.
 This "weakness" is affecting more people every year, since the entire
 world, especially its [male part](http://www.telegraph.co.uk/men/thinking-man/millennial-men-have-gone-soft--but-its-not-our-fault/),
-tends to soften, mostly thanks to the rapidly growing quality of life.
+is tending to soften up, mostly thanks to the rapidly growing quality of life.
 
 For some of us, who, like that founder, are "fundamentally soft-hearted,"
 doing business and generating profit is a very stressful activity.
@@ -78,10 +79,10 @@ guilty when:
 Any successful business person, including Paul Graham, who deals with hundreds
 of startups every year, would tell you that in order to achieve something
 you have to take many steps that will make many people around you _unhappy_.
-You have to fire, to say "No," to punish, to never return phone calls, and
-rarely trust. But we're "fundamentally soft-hearted" and simply
+You have to fire people, say "No" to them, punish them, never return their phone calls, and
+rarely trust anyone. But we're "fundamentally soft-hearted" and simply
 can't do that every day&mdash;it's too stressful for us. However, we also
-want to be business successfull! We don't want to be mathematicians, or
+want to be successfull in business! We don't want to be mathematicians, or
 composers, or just Java programmers. We want to move up in business.
 What do we do?
 
@@ -97,16 +98,16 @@ But I believe it's unfixable. Those who were traumatized by guilt in their child
 will never be able to offend somebody and walk away without any negative
 feelings. They are scarred forever.
 
-The only possible way to get rid of guilt is to replace it with more guilt.
+The only possible way to get rid of guilt is to replace it with a greater guilt.
 For example, you just bought two icecream cups and a friend asks you to give him one.
 You can't say "No" because you would feel guilty for making him unhappy.
 But you remember that your mom told you to buy two cups and
 bring both of them home. You would feel even more guilt if you made your mom
-unhappy. So you say "No" to your friend and run home. Of course, you can't
-eat the icecream, even though you want it&mdash;you are afraid to make
+unhappy. So you say "No" to your friend and run home. Of course, you also can't
+eat the icecream yourself, even though you want it&mdash;you are afraid to make
 your mother unhappy.
 
-The same principle may be applied to business. But instead of a controlling
+The same principle may be applied to business. But instead of having a controlling
 parent you can define your own "rules of doing business." Those rules will
 be stronger than any particular situation you're facing at any particular moment.
 For example, you can decide when and why you answer your emails and phone calls,
@@ -115,7 +116,7 @@ for your employee to be discharged, how exactly you
 [punish]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
 your employees, how your relationship with partners are
 [structured]({% pst 2016/may/2016-05-17-convertible-notes %}), etc.
-This document or a set of documents will be more important for you than
+This document, or set of documents, will be more important for you than
 any particular person or situation. You will feel much more guilt for
 disobeying the rules than for making someone unhappy.
 
@@ -123,9 +124,9 @@ At least this is what works for me. Call it self-discipline or a systematic
 approach to doing business, but in reality it's just a countermeasure against
 guilt.
 
-To summarize, answering the question whether it is safe for a business person
-to be nice, I would answer that it is very unsafe. But not being nice is not
-a solution either, because it's not possible to be not nice for someone who
-is asking that question. Thus, the only solution I managed to find is a personal
+To summarize, and to answer the question whether it is safe for a business person
+to be nice, I would say that it is very unsafe. But _not_ being nice is obviously not
+a solution either, because anyone asking this question clearly wants to be nice.
+Thus, the only solution I managed to find is a personal
 code of conduct, which helps me be effective and not stressed at the same time.
 
