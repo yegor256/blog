@@ -117,6 +117,7 @@ adwords
 affairs
 affect
 affected
+affecting
 affects
 afford
 afraid
@@ -1128,6 +1129,7 @@ columns
 com
 combien
 combination
+combinator
 combine
 combined
 combines
@@ -1217,6 +1219,8 @@ components
 componentstyle
 composable
 compose
+composer
+composers
 composing
 composite
 composition
@@ -1434,6 +1438,7 @@ counter-argument
 counter-effectiveness
 counter-intuitive
 counter-productive
+countermeasure
 counterproductive
 counters
 counting
@@ -1465,6 +1470,7 @@ crashed
 crashes
 crazy
 crazyontap
+cream
 create
 created
 creates
@@ -1517,6 +1523,7 @@ cumbersome
 cumulative
 cunning
 cup
+cups
 curators
 curiosity
 curious
@@ -1832,6 +1839,7 @@ disappeared
 disappoint
 disappointed
 disappointing
+disarms
 disaster
 disasters
 disbelief
@@ -1864,6 +1872,7 @@ discusses
 discussing
 discussion
 discussions
+disease
 disgusting
 dish
 disillusionment
@@ -1871,6 +1880,7 @@ disk
 dislike
 disney
 disobey
+disobeying
 disorder
 dispatch
 dispatcher
@@ -2224,6 +2234,7 @@ et
 etc
 ethan
 etherium
+ethical
 euro
 europe
 european
@@ -2812,6 +2823,7 @@ grouping
 groups
 grow
 growing
+grown-ups
 grows
 growth
 GTA
@@ -2919,6 +2931,7 @@ heading
 headless
 headline
 heads
+heal
 health
 healthier
 healthy
@@ -2928,6 +2941,7 @@ heard
 hearing
 hears
 heart
+hearted
 heavily
 heavyweight
 heinemeier
@@ -3058,6 +3072,7 @@ hurt
 hurtful
 hurting
 hurts
+hyperlinear
 hysteria
 i'd
 i'll
@@ -3066,6 +3081,7 @@ i've
 IAM
 ian
 IBM
+ice
 icloud
 icons
 ID
@@ -3925,6 +3941,8 @@ matching
 material
 mates
 math
+mathematician
+mathematicians
 MathML
 matrix
 matt
@@ -4128,6 +4146,7 @@ modular
 module
 modules
 mom
+mom's
 moment
 momentary
 momentum
@@ -5735,6 +5754,7 @@ scandals
 scans
 scare
 scared
+scarred
 scary
 SCEA
 scenario
@@ -5813,6 +5833,7 @@ selects
 self
 self-confidence
 self-descriptive
+self-discipline
 self-documented
 self-esteem
 self-improvement
@@ -6080,6 +6101,11 @@ sociocratic
 sociopath
 socket
 sockets
+soft
+soft-hearted
+soft-heartedness
+soften
+softness
 software
 solanolabs
 sold
@@ -6301,6 +6327,7 @@ stream
 streets
 strength
 stress
+stressed
 stressful
 strict
 stricter
@@ -6448,6 +6475,7 @@ switched
 switching
 sympathy
 symptom
+symptoms
 sync
 synchronization
 synchronize
@@ -6541,6 +6569,7 @@ temptation
 tempted
 ten
 tend
+tending
 tends
 tennis
 tension
@@ -6756,6 +6785,7 @@ transmit
 transparent
 transsexuals
 trash
+traumatized
 travel
 traversing
 travis
@@ -6879,10 +6909,12 @@ unethical
 unexpected
 unfair
 unfinished
+unfixable
 unfocused
 unforgivable
 unfortunate
 unfortunately
+unhappy
 unhealthy
 uniform
 uniformity
@@ -6922,6 +6954,7 @@ unrelated
 unreliability
 unreliable
 unresolved
+unsafe
 unstable
 unsuccessful
 until
@@ -7078,6 +7111,7 @@ vouches
 VP
 VPs
 vs
+vulnerable
 wages
 wait
 waited
