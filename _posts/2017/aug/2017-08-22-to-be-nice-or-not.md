@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "To Be Nice or Not to Be Nice?"
-date: 2017-08-20
+date: 2017-08-22
 place: Odessa, Ukraine
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - soft-hearted
   - guilt-driven behavior
   - guilt
-image: /images/2015/03/?
+image: /images/2017/08/scarecrow.jpg
 jb_picture:
-  caption: ?
+  caption: Scarecrow (1973) by Jerry Schatzberg
 ---
 
 I stumbled upon this two-year-old article
