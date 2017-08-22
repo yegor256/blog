@@ -47,6 +47,8 @@ a different story, where success mostly depends on your ability to
 generate _profit_, which, by definition, is "taking more and returning less."
 What kind of a soft heart will be happy to do that?
 
+{% quote In a nutshell, we are either soft-hearted or successful. %}
+
 [_7 Soft Hearted Mistakes Startup Founders Make_](http://foolishnessfile.com/soft-hearted-mistakes/)
 perfectly summarizes how softness may become a weakness,
 if we fail to take it under control. In a nutshell,
@@ -87,6 +89,8 @@ composers, or just Java programmers. We want to move up in business.
 What do we do?
 
 Let me share the recipe I found for myself.
+
+{% quote The only possible way to get rid of guilt is to replace it with a greater guilt. %}
 
 Obviously, we develop soft-heartedness when we grow up, mostly
 under the influence of our parents. As kids we quickly learn that in
