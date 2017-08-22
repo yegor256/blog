@@ -82,7 +82,7 @@ you have to take many steps that will make many people around you _unhappy_.
 You have to fire people, say "No" to them, punish them, never return their phone calls, and
 rarely trust anyone. But we're "fundamentally soft-hearted" and simply
 can't do that every day&mdash;it's too stressful for us. However, we also
-want to be successfull in business! We don't want to be mathematicians, or
+want to be successful in business! We don't want to be mathematicians, or
 composers, or just Java programmers. We want to move up in business.
 What do we do?
 
@@ -92,19 +92,19 @@ Obviously, we develop soft-heartedness when we grow up, mostly
 under the influence of our parents. As kids we quickly learn that in
 order to survive and have something to eat we must make those grown-ups
 happy, or at least not disappoint them. Later on we call this
-[guilt-driven behaviour](https://www.forbes.com/sites/stevenberglas/2012/06/07/6-signs-you-are-suffering-from-guilt-and-probably-dont-know-it/#2920e0b67a24)
+[guilt-driven behavior](https://www.forbes.com/sites/stevenberglas/2012/06/07/6-signs-you-are-suffering-from-guilt-and-probably-dont-know-it/#2920e0b67a24)
 "soft-heartedness" and become [proud of it](http://www.lifehack.org/articles/communication/8-problems-you-face-when-you-have-soft-heart.html).
 But I believe it's unfixable. Those who were traumatized by guilt in their childhood
 will never be able to offend somebody and walk away without any negative
 feelings. They are scarred forever.
 
 The only possible way to get rid of guilt is to replace it with a greater guilt.
-For example, you just bought two icecream cups and a friend asks you to give him one.
+For example, you just bought two ice cream cups and a friend asks you to give him one.
 You can't say "No" because you would feel guilty for making him unhappy.
 But you remember that your mom told you to buy two cups and
 bring both of them home. You would feel even more guilt if you made your mom
 unhappy. So you say "No" to your friend and run home. Of course, you also can't
-eat the icecream yourself, even though you want it&mdash;you are afraid to make
+eat the ice cream yourself, even though you want it&mdash;you are afraid to make
 your mother unhappy.
 
 The same principle may be applied to business. But instead of having a controlling
