@@ -26,6 +26,7 @@ of art _and_ will help the software industry to become better.
 
 You can also buy via
 [Saatchi Art](https://www.saatchiart.com/yegor256),
+[Artfinder](https://www.artfinder.com/yegor256#/),
 [ArtFido](http://www.artfido.com/yegor256),
 [Vango](https://www.vangoart.co/yegor256)
 and
