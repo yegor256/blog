@@ -68,6 +68,10 @@ It's my own project and I use it every day.
 their new versions. It's one of my
 [pet projects](/pets.html) and I'm using it every day.
 
+<img src="/images/2017/07/sites-heroku.jpg" class="env-ico"/><br/>
+[Heroku](https://www.heroku.com) is where I host almost all my
+Java and Ruby projects.
+
 <img src="/images/2017/07/sites-travis-ci.jpg" class="env-ico"/>
 <img src="/images/2017/07/sites-shippable.jpg" class="env-ico"/><br/>
 [Travis](https://travis-ci.org) for open source and
