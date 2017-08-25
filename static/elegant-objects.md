@@ -573,6 +573,7 @@ good, and how it could be better:
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
+  * [Koray Tugay](http://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
   * [Enrique Pablo Molinari](http://www.copypasteisforword.com/notes/elegant-objects)
   * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
