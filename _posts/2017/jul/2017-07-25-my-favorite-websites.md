@@ -135,6 +135,12 @@ systems, but these guys seem to be the best. I even was paying them something
 some time ago, but stopped&mdash;their free package seems to be sufficient
 enough for my volumes.
 
+<img src="/images/2017/07/sites-statuscake.jpg" class="env-ico"/><br/>
+[StatusCake](https://www.statuscake.com/)
+is a website monitoring system that keeps an eye on all my web
+sites and web apps and notifies me by email and through
+[Pushover](https://pushover.net/) ($5).
+
 <img src="/images/2017/07/sites-sentry.jpg" class="env-ico"/><br/>
 [Sentry](https://www.sentry.io)
 is where all my errors are being sent to, from production systems.
