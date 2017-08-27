@@ -30,6 +30,18 @@ You can buy via
 or
 [Amazon](https://www.amazon.com/handmade/yegor256).
 
+{% picture /images/paintings/2017/expectations.jpg 350 %}
+
+_Expectations_<br/>
+August 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"We all expect ourselves to be better than we are;
+we expect our value and our uniqueness to be higher than they are;
+I had a discussion with a friend of mine about her inability to be happy because of her high expectations on herself;
+this painting demonstrates how easily we can imprison our growth in a jail of expectations."
+
 {% picture /images/paintings/2017/doubts.jpg 350 %}
 
 _Doubts_<br/>
