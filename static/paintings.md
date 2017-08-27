@@ -64,18 +64,6 @@ Ukraine.
 it's difficult to say which one catches you when you see her;
 why not lips, if it's a beach, you're alone, and she is beautiful?"
 
-{% picture /images/paintings/2017/lost-time.jpg 350 %}
-
-_Lost Time_<br/>
-August 2017;
-29.5 x 29.5 x 0.8 in;
-Acrylic on canvas;
-Ukraine.
-"Losing time is a very traumatic experience; the past looks bright
-and full of missed opportunities, while the future is dark and short;
-although the reality is quite the opposite, with the bright
-side in front of us and the darker one behind."
-
 {% picture /images/paintings/2017/seven-and-one.jpg 350 %}
 
 _Seven and One_<br/>
