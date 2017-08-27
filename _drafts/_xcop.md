@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "xcop &mdash; XML Style Checker"
+title: "XCOP &mdash; XML Style Checker"
 date: 2017-08-29
 place: Odessa, Ukraine
 tags: xml
@@ -16,34 +16,39 @@ keywords:
   - style check xml document
 ---
 
-One of the biggest advantages of XML versus many other data formats is that
+One of the biggest advantages of XML versus
+[many other]({% pst 2015/nov/2015-11-16-json-vs-xml %}) data formats is that
 it is human-readable. Well, to some extend, you may say. Indeed, a badly
 formatted XML document may be rather difficult to digest. I'm not talking about
-XML validity now, but about its formatting style. Just like we format our
-Java/Ruby/Python nicely and then check with static analyzers for "prettiness,"
-we can validate our XML documents. Six years ago I asked StackOverflow community
+XML [validity](https://en.wikipedia.org/wiki/Well-formed_document)
+now, but about its formatting style. Just like we format our
+Java/Ruby/Python nicely and then check their "prettiness" with static analyzers,
+we can check our XML documents. Six years ago I asked StackOverflow community
 for such a tool, but
-[my question](https://stackoverflow.com/questions/6091873/) was down-voted and closed
+[my question](https://stackoverflow.com/questions/6091873/)
+unfortunately was down-voted and closed
 (you will need 10K+ reputation to see it).
 Last week I finally decided to create such a tool and called it
 [xcop](https://github.com/yegor256/xcop).
 
 <!--more-->
 
-It's a very simple command line Ruby gem. First, you install it:
+It's a very simple command line
+[Ruby gem](https://rubygems.org/gems/xcop).
+First, you install it:
 
 {% highlight bash %}
 $ gem install xcop
 {% endhighlight %}
 
-And then you just ask it to validate your XML file, say `pom.xml`:
+And then you ask it to check your XML file, say `pom.xml`:
 
 {% highlight bash %}
 $ xcop pom.xml
 {% endhighlight %}
 
-If the file is not pretty, it will complain and show what's wrong. You can
-ask `xcop` to fix the file:
+If the file is not "pretty," `xcop` will complain and
+show what's wrong. You can ask `xcop` to fix the file:
 
 {% highlight bash %}
 $ xcop --fix pom.xml
@@ -65,3 +70,4 @@ analyzers, to ensure that your XML files always look pretty.
 [Rake](https://github.com/ruby/rake),
 [Maven](https://maven.apache.org/), and other builders.
 I will appreciate if you contribute your own integrations.
+
