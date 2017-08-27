@@ -14,6 +14,9 @@ keywords:
   - http webhook reliability
   - webhook repeater
   - repeat webhook
+image: /images/2017/08/...
+jb_picture:
+  caption: ...
 ---
 
 {% badge http://www.rehttp.net/images/logo.svg 92 http://www.rehttp.net %}

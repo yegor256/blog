@@ -14,6 +14,9 @@ keywords:
   - oop object names
   - object-oriented programming naming
   - how to name a class
+image: /images/2017/08/...
+jb_picture:
+  caption: ...
 ---
 
 Some time ago we [were talking]({% pst 2015/mar/2015-03-09-objects-end-with-er %})

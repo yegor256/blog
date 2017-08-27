@@ -14,6 +14,9 @@ keywords:
   - check style of xml
   - validate xml formatting
   - style check xml document
+image: /images/2017/08/...
+jb_picture:
+  caption: ...
 ---
 
 One of the biggest advantages of XML versus
