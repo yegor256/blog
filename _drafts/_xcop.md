@@ -65,7 +65,7 @@ point `xcop` to the file with the license:
 $ xcop --license=LICENSE.txt pom.xml
 {% endhighlight %}
 
-I believe it's a good practice to use `xcop` together with
+I believe it's good practice to use `xcop` together with
 Checkstyle (for Java files), Rubocop (for Ruby files), and other static
 analyzers, to ensure that your XML files always look pretty.
 
