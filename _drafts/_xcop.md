@@ -6,8 +6,8 @@ place: Odessa, Ukraine
 tags: xml
 description: |
   When XML documents are consistently formatted it's easier
-  to read them and maintain; xcop is a command line static
-  analizer that will ensure exactly that.
+  to read and maintain them; xcop is a command line static
+  analyzer that will ensure exactly that.
 keywords:
   - xml formatting
   - xml style check
@@ -21,17 +21,17 @@ jb_picture:
 
 One of the biggest advantages of XML versus
 [many other]({% pst 2015/nov/2015-11-16-json-vs-xml %}) data formats is that
-it is human-readable. Well, to some extend, you may say. Indeed, a badly
+it is human-readable. Well, to some extent, you may say. Indeed, a badly
 formatted XML document may be rather difficult to digest. I'm not talking about
 XML [validity](https://en.wikipedia.org/wiki/Well-formed_document)
 now, but about its formatting style. Just like we format our
 Java/Ruby/Python nicely and then check their "prettiness" with static analyzers,
-we can check our XML documents. Six years ago I asked StackOverflow community
-for such a tool, but
+we can also check our XML documents. Six years ago I asked the StackOverflow community
+for such a tool, but unfortunately
 [my question](https://stackoverflow.com/questions/6091873/)
-unfortunately was down-voted and closed
+was down-voted and closed
 (you will need 10K+ reputation to see it).
-Last week I finally decided to create such a tool and called it
+Last week I finally decided to create a tool myself and I called it
 [xcop](https://github.com/yegor256/xcop).
 
 <!--more-->
@@ -72,5 +72,5 @@ analyzers, to ensure that your XML files always look pretty.
 [Read](https://github.com/yegor256/xcop) how you can integrate `xcop` with
 [Rake](https://github.com/ruby/rake),
 [Maven](https://maven.apache.org/), and other builders.
-I will appreciate if you contribute your own integrations.
+I will appreciate it if you contribute your own integrations too.
 
