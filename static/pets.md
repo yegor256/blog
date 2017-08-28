@@ -104,11 +104,22 @@ More about it in this article:
 <br/>
 Founded 23-May-2017.
 
+{% badge http://www.rehttp.net/images/logo.svg 70 http://www.rehttp.net %}
+
+[rehttp.net](http://www.rehttp.net) is an HTTP repeater, which stays as
+an extra layer between web apps and accumulates HTTP requests they send
+to each other. When requests can't be delivered it repeats them multiple times.
+More about it in this article:
+[...](...).
+<br/>
+Founded 21-Aug-2017.
+
 Others (less stable or successful):
 [tacit](https://github.com/yegor256/tacit),
 [qulice](https://github.com/teamed/qulice),
 [jcabi](https://github.com/jcabi),
 [xembly](https://github.com/yegor256/xembly),
+[xcop](https://github.com/yegor256/xcop),
 [netbout](http://www.netbout.com),
 [thindeck](http://www.thindeck.com),
 [wring](http://www.wring.io),

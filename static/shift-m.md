@@ -36,6 +36,9 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
+&#35;8: [How to pay programmers less?](/shift-m/2017/8.html)<br/>
+28 August 2017; 63 min.
+
 &#35;7: [Hugo Messer about distributed management](/shift-m/2017/7.html)<br/>
 10 August 2017; 49 min.
 
