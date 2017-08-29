@@ -771,6 +771,7 @@ bugs
 build
 buildbot
 builder
+builders
 building
 builds
 built
@@ -3058,6 +3059,7 @@ huge
 huh
 human
 human-like
+human-readable
 humans
 humble
 humbly
@@ -3308,6 +3310,7 @@ integrate
 integrated
 integrates
 integration
+integrations
 intel
 intellectual
 intelligent
@@ -5008,6 +5011,7 @@ pretend
 pretended
 pretending
 pretends
+prettiness
 pretty
 prevent
 preventing
@@ -7316,6 +7320,7 @@ wrote
 WSDL
 WWII
 www
+xcop
 xdebug
 XDSD
 xembly

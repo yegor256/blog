@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-28T20:44:20+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">To Be Nice or Not to Be Nice?</title><link href="http://www.yegor256.com/2017/08/22/to-be-nice-or-not.html" rel="alternate" type="text/html" title="To Be Nice or Not to Be Nice?" /><published>2017-08-22T00:00:00+00:00</published><updated>2017-08-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/22/to-be-nice-or-not</id><content type="html" xml:base="http://www.yegor256.com/2017/08/22/to-be-nice-or-not.html">&lt;p&gt;I stumbled upon this two-year-old article
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-08-29T11:55:42+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">XCOP — XML Style Checker</title><link href="http://www.yegor256.com/2017/08/29/xcop.html" rel="alternate" type="text/html" title="XCOP &amp;mdash; XML Style Checker" /><published>2017-08-29T00:00:00+00:00</published><updated>2017-08-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/29/xcop</id><content type="html" xml:base="http://www.yegor256.com/2017/08/29/xcop.html">&lt;p&gt;One of the biggest advantages of XML versus
+&lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;many other&lt;/a&gt; data formats is that
+it is human-readable. Well, to some extent, you may say. Indeed, a badly
+formatted XML document may be rather difficult to digest. I&amp;#39;m not talking about
+XML &lt;a href=&quot;https://en.wikipedia.org/wiki/Well-formed_document&quot;&gt;validity&lt;/a&gt;
+now, but about its formatting style. Just like we format our
+Java/Ruby/Python nicely and then check their &amp;quot;prettiness&amp;quot; with static analyzers,
+we can also check our XML documents. Six years ago I asked the StackOverflow community
+for such a tool, but unfortunately
+&lt;a href=&quot;https://stackoverflow.com/questions/6091873/&quot;&gt;my question&lt;/a&gt;
+was down-voted and closed
+(you will need 10K+ reputation to see it).
+Last week I finally decided to create a tool myself and I called it
+&lt;a href=&quot;https://github.com/yegor256/xcop&quot;&gt;xcop&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;It&amp;#39;s a very simple command line
+&lt;a href=&quot;https://rubygems.org/gems/xcop&quot;&gt;Ruby gem&lt;/a&gt;.
+First, you install it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ gem install xcop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And then you ask it to check your XML file, say &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ xcop pom.xml&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If the file is not &amp;quot;pretty,&amp;quot; &lt;code&gt;xcop&lt;/code&gt; will complain and
+show what&amp;#39;s wrong. You can ask &lt;code&gt;xcop&lt;/code&gt; to fix the file:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ xcop --fix pom.xml&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Moreover, in most cases you may need your XML files to include a license
+in their headers, especially if it&amp;#39;s open source. To enforce that, just
+point &lt;code&gt;xcop&lt;/code&gt; to the file with the license:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;$ xcop --license&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;LICENSE.txt pom.xml&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I believe it&amp;#39;s good practice to use &lt;code&gt;xcop&lt;/code&gt; together with
+Checkstyle (for Java files), Rubocop (for Ruby files), and other static
+analyzers, to ensure that your XML files always look pretty.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/xcop&quot;&gt;Read&lt;/a&gt; how you can integrate &lt;code&gt;xcop&lt;/code&gt; with
+&lt;a href=&quot;https://github.com/ruby/rake&quot;&gt;Rake&lt;/a&gt;,
+&lt;a href=&quot;https://maven.apache.org/&quot;&gt;Maven&lt;/a&gt;, and other builders.
+I will appreciate it if you contribute your own integrations too.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="xml" /><summary type="html">One of the biggest advantages of XML versus
+many other data formats is that
+it is human-readable. Well, to some extent, you may say. Indeed, a badly
+formatted XML document may be rather difficult to digest. I&amp;#39;m not talking about
+XML validity
+now, but about its formatting style. Just like we format our
+Java/Ruby/Python nicely and then check their &amp;quot;prettiness&amp;quot; with static analyzers,
+we can also check our XML documents. Six years ago I asked the StackOverflow community
+for such a tool, but unfortunately
+my question
+was down-voted and closed
+(you will need 10K+ reputation to see it).
+Last week I finally decided to create a tool myself and I called it
+xcop.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/lappartement.jpg" /></entry><entry><title type="html">To Be Nice or Not to Be Nice?</title><link href="http://www.yegor256.com/2017/08/22/to-be-nice-or-not.html" rel="alternate" type="text/html" title="To Be Nice or Not to Be Nice?" /><published>2017-08-22T00:00:00+00:00</published><updated>2017-08-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/22/to-be-nice-or-not</id><content type="html" xml:base="http://www.yegor256.com/2017/08/22/to-be-nice-or-not.html">&lt;p&gt;I stumbled upon this two-year-old article
 &lt;a href=&quot;http://www.paulgraham.com/safe.html&quot;&gt;&lt;em&gt;Why It&amp;#39;s Safe for Founders to Be Nice&lt;/em&gt;&lt;/a&gt;,
 written by &lt;a href=&quot;https://twitter.com/paulg&quot;&gt;Paul Graham&lt;/a&gt;
 (a co-founder or &lt;a href=&quot;http://www.ycombinator.com/&quot;&gt;Y Combinator&lt;/a&gt;), whom I honestly respect,
@@ -1173,228 +1231,4 @@ for P2P messaging.
 for playing poker before falling asleep.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tools" /><summary type="html">I was asked in my Telegram Group
 which tools and hardware I use in my daily work. Here is the full list of
 what I have and even how much I paid for them. Maybe it will be helpful
-for someone.</summary></entry><entry><title type="html">Object-Oriented Declarative Input/Output in Cactoos</title><link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html" rel="alternate" type="text/html" title="Object-Oriented Declarative Input/Output in Cactoos" /><published>2017-06-22T00:00:00+00:00</published><updated>2017-06-22T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.cactoos.org&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/books/elegant-objects/cactus.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a library of object-oriented
-Java primitives
-&lt;a href=&quot;https://github.com/yegor256/cactoos#contributors&quot;&gt;we&lt;/a&gt;
-started to work on just a few weeks ago. The intent was to
-propose a clean and more declarative alternative to
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_Development_Kit&quot;&gt;JDK&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/google/guava&quot;&gt;Guava&lt;/a&gt;,
-&lt;a href=&quot;https://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;,
-and others. Instead of calling static
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;procedures&lt;/a&gt;
-we want to use &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;objects&lt;/a&gt;,
-the way they are supposed to be used. Let&amp;#39;s see how input/output works in a &lt;em&gt;pure&lt;/em&gt;
-&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;object-oriented&lt;/a&gt;
-fashion.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: The version I&amp;#39;m using at the time of writing is
-&lt;a href=&quot;https://github.com/yegor256/cactoos/releases/tag/0.9&quot;&gt;0.9&lt;/a&gt;. Later versions
-may have different names of classes and a totally different design.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say you want to read a file. This is how you would do it with the static method
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#readAllBytes%28java.nio.file.Path%29&quot;&gt;&lt;code&gt;readAllBytes()&lt;/code&gt;&lt;/a&gt; from the
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility class&lt;/a&gt;
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html&quot;&gt;&lt;code&gt;Files&lt;/code&gt;&lt;/a&gt;
-in JDK7:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readAllBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/photo.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This code is very imperative&amp;mdash;it reads the file content right here and now,
-placing it into the array.&lt;/p&gt;
-
-&lt;p&gt;This is how you do it with &lt;a href=&quot;https://github.com/yegor256/cactoos&quot;&gt;Cactoos&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bytes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/photo.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention&amp;mdash;there are no method calls yet. Just three constructors
-of three classes that compose a bigger object. The object &lt;code&gt;source&lt;/code&gt; is of type
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Bytes.html&quot;&gt;&lt;code&gt;Bytes&lt;/code&gt;&lt;/a&gt;
-and represents the content of the file. To get that content
-out of it we call its method &lt;code&gt;asBytes()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the moment when the file system is touched. This approach, as you
-can see, is absolutely declarative and thanks to that possesses all the
-benefits of object orientation.&lt;/p&gt;
-
-&lt;p&gt;Here is another example. Say you want to write some text into a file. Here
-is how you do it in Cactoos. First you need the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BytesAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringAsText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then you need the &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we want to copy the input to the output. There is no &amp;quot;copy&amp;quot; operation
-in &lt;em&gt;pure&lt;/em&gt; OOP. Moreover, there must be no operations at all. Just objects. We
-have a class named
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/TeeInput.html&quot;&gt;&lt;code&gt;TeeInput&lt;/code&gt;&lt;/a&gt;,
-which is an &lt;code&gt;Input&lt;/code&gt; that copies everything
-you read from it to the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html&quot;&gt;&lt;code&gt;Output&lt;/code&gt;&lt;/a&gt;,
-similar to what
-&lt;a href=&quot;https://commons.apache.org/proper/commons-io/javadocs/api-1.4/org/apache/commons/io/input/TeeInputStream.html&quot;&gt;&lt;code&gt;TeeInputStream&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt; does, but encapsulated. So we don&amp;#39;t copy, we create an
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
-that will copy if you &lt;em&gt;touch&lt;/em&gt; it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeeInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we have to &amp;quot;touch&amp;quot; it. And we have to touch every single byte of it,
-in order to make sure they all are copied. If we just &lt;code&gt;read()&lt;/code&gt; the first
-byte, only one byte will be copied to the file. The best way to touch them
-all is to calculate the size of the &lt;code&gt;tee&lt;/code&gt; object, going byte by byte. We
-have an object for it, called
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/LengthOfInput.html&quot;&gt;&lt;code&gt;LengthOfInput&lt;/code&gt;&lt;/a&gt;.
-It encapsulates an
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html&quot;&gt;&lt;code&gt;Input&lt;/code&gt;&lt;/a&gt;
-and behaves like its length in bytes:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LengthOfInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then we take the value out of it and the file writing operation takes place:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Thus, the entire operation of writing the string to the file will
-look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LengthOfInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeeInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BytesAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringAsText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// happens here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is its procedural alternative from
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29&quot;&gt;JDK7&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/tmp/hello.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&amp;quot;Why is object-oriented better, even though it&amp;#39;s longer?&amp;quot; I hear you ask.
-Because it perfectly &lt;strong&gt;decouples&lt;/strong&gt; concepts, while the procedural one keeps
-them together.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s say, you are designing a class that is supposed
-to encrypt some text and save it to a file. Here is how you would
-design it the procedural way (not a real encryption, of course):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Encoder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Encoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replaceAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;[a-z]&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Works fine, but what will happen when you decide to extend it to also write to
-an &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html&quot;&gt;&lt;code&gt;OutputStream&lt;/code&gt;&lt;/a&gt;?
-How will you modify this class? How ugly will it look after that?
-That&amp;#39;s because the design is not object-oriented.&lt;/p&gt;
-
-&lt;p&gt;This is how you would do the same design, in an object-oriented way,
-with &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Encoder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Encoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Encoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LengthOfInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeeInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BytesAsInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextAsBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringAsText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-              &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replaceAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;[a-z]&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What do we do with this design if we want
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html&quot;&gt;&lt;code&gt;OutputStream&lt;/code&gt;&lt;/a&gt;
-to be accepted? We just add one
-&lt;a href=&quot;/2015/05/28/one-primary-constructor.html&quot;&gt;secondary&lt;/a&gt; constructor:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Encoder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Encoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStreamAsOutput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Done. That&amp;#39;s how easy and elegant it is.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s because concepts are perfectly separated and functionality
-is encapsulated. In the procedural example the behavior of the object is
-located outside of it, in the method &lt;code&gt;encode()&lt;/code&gt;. The file itself doesn&amp;#39;t know
-how to write, some outside procedure
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29&quot;&gt;&lt;code&gt;Files.write()&lt;/code&gt;&lt;/a&gt;
-knows that instead.&lt;/p&gt;
-
-&lt;p&gt;To the contrary, in the object-oriented design the
-&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/io/FileAsOutput.html&quot;&gt;&lt;code&gt;FileAsOutput&lt;/code&gt;&lt;/a&gt;
-knows how to write, and nobody else does.
-The file writing functionality is encapsulated and this makes it
-possible to decorate the objects in any possible way, creating
-reusable and replaceable composite objects.&lt;/p&gt;
-
-&lt;p&gt;Do you see the beauty of OOP now?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><category term="pets" /><summary type="html">Cactoos is a library of object-oriented
-Java primitives
-we
-started to work on just a few weeks ago. The intent was to
-propose a clean and more declarative alternative to
-JDK,
-Guava,
-Apache Commons,
-and others. Instead of calling static
-procedures
-we want to use objects,
-the way they are supposed to be used. Let&amp;#39;s see how input/output works in a pure
-object-oriented
-fashion.</summary></entry></feed>
+for someone.</summary></entry></feed>
