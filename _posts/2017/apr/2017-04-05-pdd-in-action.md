@@ -40,7 +40,7 @@ read-only access to [@0pdd](https://github.com/0pdd) in GitHub
 
 Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
 to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event
-and content type as `application/json`).
+and any content type).
 
 Now, your repository is being watched by [0pdd](http://www.0pdd.com). Every
 time you `git push` something new, it does a `git pull` and retrieves your changes
