@@ -88,6 +88,7 @@ Pay attention that all books are sold at
 [Amazon.com](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK/),
 [Amazon.ca](https://www.amazon.ca/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Yegor+Bugayenko&search-alias=books-ca),
 [Amazon.co.uk](https://www.amazon.co.uk/Yegor-Bugayenko/e/B01AM1QMDK/),
+[Amazon.fr](https://www.amazon.fr/Yegor-Bugayenko/e/B01AM1QMDK),
 [Amazon.de](https://www.amazon.de/Yegor-Bugayenko/e/B01AM1QMDK/),
 [Amazon.jp](https://www.amazon.co.jp/Yegor-Bugayenko/e/B01AM1QMDK/),
 [Amazon.in](http://www.amazon.in/Yegor-Bugayenko/e/B01AM1QMDK),
