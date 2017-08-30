@@ -58,7 +58,7 @@ propose a number of best practices for organizing software development
 process. What will be interesting is that it will be fiction book, with
 characters, plot, jokes, dialogs, etc.
 <br/>
-To be published in <del>February</del> August 2017.
+To be published in <del>February</del> November 2017.
 
 <div class="clear"></div>
 To be continued...
