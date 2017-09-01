@@ -29,22 +29,29 @@ development, object-oriented programming and project management.
 
 ## 2017
 
-<!-- {% webinar 02-08-2017 27 rEK3Rk2lX3M Releasing Cactoos 0.12 %} -->
+{% webinar 06-09-2017 28 KYd24FN58wg Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com %}
 
-<a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=KYd24FN58wg"><img src="https://i.ytimg.com/vi/KYd24FN58wg/mqdefault.jpg" class="wnr" alt="Webinar no.28 by Yegor Bugayenko"/></a>
+September 6, 2017<br/>
+&#35;28: Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com<br/>
+We will create a fully functional web app in Java, with the best principles of
+object-oriented programming in mind, in just one hour. The application will
+be ThreeCopies.com, an online backup solution for server-side data.
+
+<a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar no.27 by Yegor Bugayenko"/></a>
 August 2, 2017<br/>
 &#35;27: **Releasing Cactoos 0.12**<br/>
 We will go through the entire Cactoos library,
 polish its code and release version 0.12 to Maven Central.
 
-<a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar no.26 by Yegor Bugayenko"/></a>
 July 12, 2017<br/>
 &#35;26: **Unit Testing vs Debugging**<br/>
 We discussed why debugging was a bad practice in general and how unit testing
 could replace it in all places. The discussion was based on this article previously published:
 [Are You Still Debugging?]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}).
 
-<a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar no.25 by Yegor Bugayenko"/></a>
 June 7, 2017<br/>
 &#35;25: **Micro-management vs. micro-tasking**<br/>
 We discussed how bad was micromanagement and how great was micro-tasking.
