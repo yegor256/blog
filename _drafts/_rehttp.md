@@ -5,7 +5,7 @@ date: 2017-08-29
 place: Odessa, Ukraine
 tags: pet
 description: |
-  Some HTTP requests that are ariving to my web apps
+  Some HTTP requests that arrive at my web apps
   can't be processed for technical reasons and I need
   them to be re-submitted; rehttp.net does exactly that.
 keywords:
@@ -21,22 +21,22 @@ jb_picture:
 
 {% badge http://www.rehttp.net/images/logo.svg 92 http://www.rehttp.net %}
 
-I faced this problem a few weeks ago in
+I faced a problem a few weeks ago with
 [0pdd.com](http://www.0pdd.com), one of my web apps that is
-supposed to receive HTTP requests from GitHub known as
-[webhooks](https://developer.github.com/webhooks/):
+supposed to receive HTTP requests (known as
+[webhooks](https://developer.github.com/webhooks/)) from GitHub:
 sometimes the app is down, GitHub gets an HTTP error, and never
 sends the request again. The request simply gets lost. There is absolutely
-no way to receive it again when the app is up. I realized that I needed
+no way to receive it again once the app is back up. I realized that I needed
 a [service mesh](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/)
 between GitHub and my web app, to accept HTTP
 requests and repeat them later if they can't be delivered immediately.
 
 <!--more-->
 
-I created [rehttp.net](http://www.rehttp.net) which is doing exactly that.
+I created [rehttp.net](http://www.rehttp.net) to do exactly that.
 
-See, the URL I'm giving to GitHub is this one:
+See, the URL I've been giving to GitHub is this one:
 
 {% highlight text %}
 http://www.0pdd.com/hook/github
@@ -54,7 +54,7 @@ them in a temporary database (I'm using AWS DynamoDB).
 
 ReHTTP attempts to deliver them immediately. If something goes wrong and
 the server HTTP response code is not in the 200-299 range, the next attempt is made
-in about an hour. Then, it retries every hour for about a day. If all
+in about an hour. Then it retries every hour for about a day. If all
 attempts fail, it abandons the request and that's it.
 
 What is interesting is that now I can see a summary of my API
@@ -72,7 +72,7 @@ http://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub
 
 I gave this URL to [StatusCake](https://www.statuscake.com/) to
 ping it every five minutes. If and when
-something will go wrong, StatusCake will email me and drop me a message
+something goes wrong, StatusCake will email me and drop me a message
 on the phone.
 
 ReHTTP is absolutely free. It is written in Java and the code is open.
