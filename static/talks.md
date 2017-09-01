@@ -105,13 +105,11 @@ Kiev, Ukraine<br/>
 22-23 September 2017
 -->
 
-<!--
 <div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
 Kiev, Ukraine<br/>
 4-5 November 2017
--->
 
 <div class="talk-event"/>
 <img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
