@@ -33,27 +33,27 @@ development, object-oriented programming and project management.
 
 <a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 2, 2017<br/>
-27: **Releasing Cactoos 0.12**<br/>
+&#35;27: **Releasing Cactoos 0.12**<br/>
 We will go through the entire Cactoos library,
 polish its code and release version 0.12 to Maven Central.
 
 <a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 July 12, 2017<br/>
-26: **Unit Testing vs Debugging**<br/>
+&#35;26: **Unit Testing vs Debugging**<br/>
 We discussed why debugging was a bad practice in general and how unit testing
 could replace it in all places. The discussion was based on this article previously published:
 [Are You Still Debugging?]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}).
 
 <a href="https://www.youtube.com/watch?v=uhDmHkMAYnM"><img src="https://i.ytimg.com/vi/uhDmHkMAYnM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 June 7, 2017<br/>
-25: **Micro-management vs. micro-tasking**<br/>
+&#35;25: **Micro-management vs. micro-tasking**<br/>
 We discussed how bad was micromanagement and how great was micro-tasking.
 Somehow our discussion was based on this article:
 [Are You a Micromanager?]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <a href="https://www.youtube.com/watch?v=DjrA7_Uymok"><img src="https://i.ytimg.com/vi/DjrA7_Uymok/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 May 3, 2017<br/>
-24: **Inheritance vs. Subtyping**<br/>
+&#35;24: **Inheritance vs. Subtyping**<br/>
 We discussed subtyping in OOP and implementation inheritance, and compared
 how they are different and which one is good, which one is evil. The
 discussion was based on this article
@@ -61,14 +61,14 @@ discussion was based on this article
 
 <a href="https://www.youtube.com/watch?v=nsYGC2aUwfQ"><img src="https://i.ytimg.com/vi/nsYGC2aUwfQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 April 6, 2017<br/>
-23: **Puzzle Driven Development**<br/>
+&#35;23: **Puzzle Driven Development**<br/>
 We discussed Puzzle Driven Development, the methodology that we've been using in
 our projects since 2009, with a lot of success. More about it here:
 [Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}).
 
 <a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 March 15, 2017<br/>
-22: **Naked Data isn't OOP**<br/>
+&#35;22: **Naked Data isn't OOP**<br/>
 We will discuss the problem of data presence in object-oriented
 code and how their negative effect can be neutralized.
 The discussion will be based on this blog post:
@@ -76,7 +76,7 @@ The discussion will be based on this blog post:
 
 <a href="https://www.youtube.com/watch?v=GWLpAZqvqSc"><img src="https://i.ytimg.com/vi/GWLpAZqvqSc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 February 8, 2017<br/>
-21: **How to Deal With Conflicts in a Software Team**<br/>
+&#35;21: **How to Deal With Conflicts in a Software Team**<br/>
 We discussed what was the most effective attitude towards conflicts
 in a software team, which was aiming for higher quality. The discussion
 was based on this blog post:
@@ -84,7 +84,7 @@ was based on this blog post:
 
 <a href="https://www.youtube.com/watch?v=PVvLQGnyDrQ"><img src="https://i.ytimg.com/vi/PVvLQGnyDrQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 January 11, 2017<br/>
-20: **Gradients of Immutability**<br/>
+&#35;20: **Gradients of Immutability**<br/>
 We discussed what immutability really was, with a few example in Java and [EO](http://www.eolang.org)
 (new language we're developing now). The discussion was based on this blog post:
 [Gradients of Immutability]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
@@ -93,21 +93,21 @@ We discussed what immutability really was, with a few example in Java and [EO](h
 
 <a href="https://www.youtube.com/watch?v=zaKTNK8g2-M"><img src="https://i.ytimg.com/vi/zaKTNK8g2-M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 December 7, 2016<br/>
-19: **Who Is a Project Manager?**<br/>
+&#35;19: **Who Is a Project Manager?**<br/>
 We discussed what was the role of a project manager in a software project and how it
 was different from other roles. The discussion was based on this article:
 [Who Is a Project Manager?]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 
 <a href="https://www.youtube.com/watch?v=_Q0cNykXB04"><img src="https://i.ytimg.com/vi/_Q0cNykXB04/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 September 7, 2016<br/>
-18: **Printers Instead of Getters in OOP**<br/>
+&#35;18: **Printers Instead of Getters in OOP**<br/>
 Getters are evil in OOP, but what is the alternative?
 Printers is the way to go. The discussion was based on this article:
 [Printers Instead of Getters]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).
 
 <a href="https://www.youtube.com/watch?v=7DYr8GYzJ6Q"><img src="https://i.ytimg.com/vi/7DYr8GYzJ6Q/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 3, 2016<br/>
-17: **The Philosophy of Bugs**<br/>
+&#35;17: **The Philosophy of Bugs**<br/>
 We discussed what bugs were for, how they must be understood by the management,
 how many of them we should expect to find and
 what is in general the right philosophy of bug tracking.
@@ -116,7 +116,7 @@ This article were mentioned:
 
 <a href="https://www.youtube.com/watch?v=Xk9tIqwca3k"><img src="https://i.ytimg.com/vi/Xk9tIqwca3k/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 July 7, 2016<br/>
-16: **Smart Classes and Functionality-Poor Interfaces**<br/>
+&#35;16: **Smart Classes and Functionality-Poor Interfaces**<br/>
 We discussed why `java.io.InputStream` design was wrong,
 what Smart-Classes are for and why interfaces must be functionality poor.
 The discussion was based on this blog post:
@@ -124,7 +124,7 @@ The discussion was based on this blog post:
 
 <a href="https://www.youtube.com/watch?v=YBQoTZ-1X-o"><img src="https://i.ytimg.com/vi/YBQoTZ-1X-o/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 June 1, 2016<br/>
-15: **How to Cut Corners and Stay Cool**<br/>
+&#35;15: **How to Cut Corners and Stay Cool**<br/>
 we'll discuss how to cut corners and stay cool and how
 to turn chaos into discipline. The discussion will be based
 on these articles:
@@ -134,7 +134,7 @@ and
 
 <a href="https://www.youtube.com/watch?v=g1ctRcW214w"><img src="https://i.ytimg.com/vi/g1ctRcW214w/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 May 4, 2016<br/>
-14: **Java Annotations Are a Big Mistake**<br/>
+&#35;14: **Java Annotations Are a Big Mistake**<br/>
 We discussed why Java annotations were actually a mistake
 in object-oriented programming and how they motivated us to
 break object's consistency and turn it into a data bag. The
@@ -143,7 +143,7 @@ discussion was based on this article:
 
 <a href="https://www.youtube.com/watch?v=AvVQ5NjS_Nk"><img src="https://i.ytimg.com/vi/AvVQ5NjS_Nk/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 April 13, 2016<br/>
-13: **Who is Software Architect?**<br/>
+&#35;13: **Who is Software Architect?**<br/>
 Software architect is responsible for failures and is
 powerful enough to make and overrule any decision. But that
 is not it. We also talked about delegation of responsibility and
@@ -154,7 +154,7 @@ and
 
 <a href="https://www.youtube.com/watch?v=nheD2LNYrpk"><img src="https://i.ytimg.com/vi/nheD2LNYrpk/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 March 2, 2016<br/>
-12: **Takes, Java Web Framework, Intro**<br/>
+&#35;12: **Takes, Java Web Framework, Intro**<br/>
 This was be a very practical Java coding webinar. We created
 [jare.io](http://www.jare.io), a web system, using Takes Framework, immutable objects
 and the best practices of pure fanatical object-oriented programming.
@@ -163,7 +163,7 @@ We used this blog post as a guidance:
 
 <a href="https://www.youtube.com/watch?v=ibT5oKToMoQ"><img src="https://i.ytimg.com/vi/ibT5oKToMoQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 February 3, 2016<br/>
-11: **Daily Stand-Up Meetings Are Evil**<br/>
+&#35;11: **Daily Stand-Up Meetings Are Evil**<br/>
 We talked about famous daily meetings and why they were
 actually a bad idea in a properly managed
 and disciplined software project. The discussion was
@@ -172,7 +172,7 @@ based on this post:
 
 <a href="https://www.youtube.com/watch?v=DEqcn4-freM"><img src="https://i.ytimg.com/vi/DEqcn4-freM/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 January 6, 2016<br/>
-10: **Why ORM is an Anti-Pattern?**<br/>
+&#35;10: **Why ORM is an Anti-Pattern?**<br/>
 We discussed why Object-Relational Mapping (ORM) was actually
 an anti-pattern and its usage must be replaced with
 SQL-speaking objects. The discussion was based on
@@ -183,7 +183,7 @@ this blog post:
 
 <a href="https://www.youtube.com/watch?v=oV6Utb5Jows"><img src="https://i.ytimg.com/vi/oV6Utb5Jows/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 December 1, 2015<br/>
-9: **Dependency Injection Container is a Bad Idea**<br/>
+&#35;9: **Dependency Injection Container is a Bad Idea**<br/>
 We discussed why Dependency Injection (DI) containers were not
 a good idea in object-oriented programming and what they
 should be replaced with. The discussion was mostly be based
@@ -192,7 +192,7 @@ on
 
 <a href="https://www.youtube.com/watch?v=l6MpCBzwDbg"><img src="https://i.ytimg.com/vi/l6MpCBzwDbg/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 November 4, 2015<br/>
-8: **What Fake Objects Are For?**<br/>
+&#35;8: **What Fake Objects Are For?**<br/>
 We discussed the role of fake objects and the importance
 of their existence in every object-oriented library. The discussion
 was based on this post:
@@ -200,7 +200,7 @@ was based on this post:
 
 <a href="https://www.youtube.com/watch?v=9yjtsCK6Wdk"><img src="https://i.ytimg.com/vi/9yjtsCK6Wdk/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 October 7, 2015<br/>
-7: **A Few Thoughts About Constructors in OOP**<br/>
+&#35;7: **A Few Thoughts About Constructors in OOP**<br/>
 We discussed the role of constructors in OOP and a few
 best practices for their design, including primary vs secondary
 and code-free design. The discussion was based on these articles:
@@ -210,7 +210,7 @@ and
 
 <a href="https://www.youtube.com/watch?v=psrp3TtaYYI"><img src="https://i.ytimg.com/vi/psrp3TtaYYI/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 September 2, 2015<br/>
-6: **What's Wrong About Utility Classes?**<br/>
+&#35;6: **What's Wrong About Utility Classes?**<br/>
 We discussed a very common design pattern known as "Utility Class"
 and its negative effects on the quality of design in object-oriented
 world. The discussion was be based on this post:
@@ -218,7 +218,7 @@ world. The discussion was be based on this post:
 
 <a href="https://www.youtube.com/watch?v=WpP4rIhh5e4"><img src="https://i.ytimg.com/vi/WpP4rIhh5e4/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 August 5, 2015<br/>
-5: **Don't Create Objects That End With -ER**<br/>
+&#35;5: **Don't Create Objects That End With -ER**<br/>
 We talked about [class naming]({% pst 2017/feb/2017-02-28-too-many-classes %})
 principles and a very typical
 problem of misusing "-er" suffix for them, for example in
@@ -228,7 +228,7 @@ discussion was based on this post:
 
 <a href="https://www.youtube.com/watch?v=WSgP85kr6eU"><img src="https://i.ytimg.com/vi/WSgP85kr6eU/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 July 1, 2015<br/>
-4: **Why Getters-and-Setters Is An Anti-Pattern?**<br/>
+&#35;4: **Why Getters-and-Setters Is An Anti-Pattern?**<br/>
 We discussed why Getters-and-Setters, a very popular design
 pattern in object oriented languages, is instead an anti-pattern
 and must be avoided. The discussion was be based on this blog post:
@@ -236,7 +236,7 @@ and must be avoided. The discussion was be based on this blog post:
 
 <a href="https://www.youtube.com/watch?v=o3aNJX7AP3M"><img src="https://i.ytimg.com/vi/o3aNJX7AP3M/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 June 3, 2015<br/>
-3: **What's wrong about NULL in OOP?**<br/>
+&#35;3: **What's wrong about NULL in OOP?**<br/>
 This webinar was about NULL references/pointers in object-oriented
 programming and their negative effect on the entire design
 of your application.
@@ -247,7 +247,7 @@ for an OOP "radicalism" there.
 
 <a href="https://www.youtube.com/watch?v=KwP7Ay9Z-hc"><img src="https://i.ytimg.com/vi/KwP7Ay9Z-hc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 May 6, 2015<br/>
-2: **Immutable Objects vs Common Sense**<br/>
+&#35;2: **Immutable Objects vs Common Sense**<br/>
 The second webinar, about immutable objects and their pros and cons
 in an object-oriented programming.
 The webinar was based on this post:
@@ -257,7 +257,7 @@ There were some interesting questions asked too.
 
 <a href="https://www.youtube.com/watch?v=D0dqC_3Bch8"><img src="https://i.ytimg.com/vi/D0dqC_3Bch8/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 Apr 8, 2015<br/>
-1: **Objects vs Static Methods**<br/>
+&#35;1: **Objects vs Static Methods**<br/>
 The first webinar, where we discussed the
 difference between static methods and objects in object-oriented languages, like Java.
 Of course, I'm in favor of objects :) The webinar is basically
