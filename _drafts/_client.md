@@ -6,7 +6,7 @@ place: Odessa, Ukraine
 tags: oop
 description: |
   It is a very popular design idea to create a client for
-  a server and expose the entire functionality out; this
+  a server and expose the entire functionality; this
   leads to procedural code and must be avoided.
 keywords:
   - object naming
@@ -20,16 +20,16 @@ jb_picture:
 ---
 
 Some time ago we [were talking]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
-about "-ER" suffices in objects/classes
-names. We agreed that they were evil and must be avoided, if we want
-our code to be truly object-oriented and objects be objects instead
+about "-ER" suffices in object and class
+names. We agreed that they were evil and must be avoided if we want
+our code to be truly object-oriented and objects to be objects instead
 of collections of procedures. Now I'm ready to introduce a new evil suffix:
 `Client`.
 
 <!--more-->
 
 Let me give an example first. This is what an object with such a suffix may look like
-(it's a pseudo-coded version of the
+(it's a pseudo-code version of the
 [`AmazonS3Client`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html)
 from [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)):
 
@@ -49,30 +49,29 @@ All "clients" look similar: they encapsulate the destination URL
 with some access credentials and expose a number of methods, which
 transport the data to/from the "server." Even though this design
 looks like a [proper object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
-it doesn't really have a true spirit of object-orientation.
-That's why it is not as maintainable as it should be, for two reasons:
+it doesn't really follow the true spirit of object-orientation.
+That's why it's not as maintainable as it should be, for two reasons:
 
   * **Its scope is too broad**.
   Since the client is an abstraction of a server, it inevitably has to
-  represent the _entire_ functionality of it. When the functionality
-  is rather limited, there is no issue, take
+  represent the server's _entire_ functionality. When the functionality
+  is rather limited there is no issue. Take
   [`HttpClient`](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html)
   from [Apache HttpComponents](https://hc.apache.org/) as an example.
   However, when the server is more complex, the size of the client also
-  grows. There are over 160 (!) methods in `AmazonS3Client` now, while
-  they started with only a few dozens just a few <del>years</del> hundred versions ago.
+  grows. There are over 160 (!) methods in `AmazonS3Client` at the time of writing, while
+  it started with only a few dozen just a few <del>years</del> hundred versions ago.
 
   * **It is data focused**.
   The very idea of a client-server relationship is about transferring
-  data between them. Take HTTP RESTful API of the AWS S3 service as
-  an example. There are entities on that side: buckets, objects, versions,
-  access control policies, etc. The server on the AWS side turns them into JSON/XML
-  data. Then, the data arrives to us and the client on our side deals
-  with JSON or XML. They inevitably remain _data_ for us and never really become
+  data. Take the HTTP RESTful API of the AWS S3 service as
+  an example. There are entities on the AWS side: buckets, objects, versions,
+  access control policies, etc., and the server turns them into JSON/XML
+  data. Then the data comes to us and the client on our side deals
+  with JSON or XML. It inevitably remains _data_ for us and never really becomes
   buckets, objects, or versions.
 
-The consequences depend on the situation, but these are the most probable
-of them:
+The consequences depend on the situation, but these are the most probable:
 
   * **Procedural code**.
   Since the client returns the data, the code that works with that
@@ -91,12 +90,12 @@ of them:
   inside.
 
   * **Duplicated code**.
-  If we actually decide to stay object-oriented, we will have to
-  turn the data the client returns us into
+  If we actually decide to stay object-oriented we will have to
+  turn the data the client returns to us into
   [objects]({% pst 2016/jul/2016-07-14-who-is-object %}). Most likely this
   will lead to code duplication in multiple projects. I had that too,
-  when started to work with S3 SDK. Very soon I realized that in order
-  to avoid duplication I better create a library that does the job
+  when I started to work with S3 SDK. Very soon I realized that in order
+  to avoid duplication I'd better create a library that does the job
   of converting S3 SDK data into objects: [jcabi-s3](https://github.com/jcabi/jcabi-s3).
 
   * **Difficulties with testing**.
@@ -109,12 +108,12 @@ of them:
   [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
   which are well known for being
   [anti-OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}). The issues we have
-  with utility classes are almost the same to what we have with "client" classes.
+  with utility classes are almost the same as those we have with "client" classes.
 
   * **Extendability issues**.
-  Needless to say that it's almost impossible to
+  Needless to say, it's almost impossible to
   [decorate]({% pst 2015/feb/2015-02-26-composable-decorators %}) a client
-  object when it has 160+ methods, and it keeps growing. The only possible
+  object when it has 160+ methods and keeps on growing. The only possible
   way to add new functionality to it is by creating new methods. Eventually
   we get a monster class that can't be re-used anyhow without modification.
 
@@ -127,19 +126,19 @@ exposes the functionality of real buckets, objects and versions, which the AWS S
 can expose.
 
 Of course, we will need a high-level object that somehow represents the
-entire API/server, but it needs to be small. For example, in the S3 SDK example
+entire API/server, but it should be small. For example, in the S3 SDK example
 it could be called `Region`, which means the entire S3 region with buckets.
-Then, we retrieve a bucket from it and don't need a region anymore. Then,
-to list objects in the bucket we ask the bucket to do that. No need to communicate
+Then we could retrieve a bucket from it and won't need a region anymore. Then,
+to list objects in the bucket we ask the bucket to do it for us. No need to communicate
 with the entire server object every time, even though technically such a communication
 happens, of course.
 
 To summarize, the trouble is not in the name suffix, but in the very idea
-to represent the entire server on the client side, not its entities. Such
+of representing the entire server on the client side rather than its entities. Such
 an abstraction is 1) too big and 2) very data driven.
 
-BTW, check some of the [JCabi libraries](http://www.jcabi.com) (Java),
-they are object-oriented clients without "client" objects:
+BTW, check out some of the [JCabi libraries](http://www.jcabi.com) (Java) for examples
+of object-oriented clients without "client" objects:
 [jcabi-github](http://github.jcabi.com),
 [jcabi-dynamo](http://dynamo.jcabi.com),
 [jcabi-s3](http://s3.jcabi.com),
