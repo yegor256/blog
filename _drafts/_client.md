@@ -20,9 +20,9 @@ jb_picture:
 ---
 
 Some time ago we [were talking]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
-about "-ER" suffices in object and class
+about "-ER" suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
-our code to be truly object-oriented and objects to be objects instead
+our code to be truly object-oriented and our objects to be objects instead
 of collections of procedures. Now I'm ready to introduce a new evil suffix:
 `Client`.
 
@@ -84,7 +84,7 @@ The consequences depend on the situation, but these are the most probable:
   [`ObjectMetadata`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html),
   [`BucketPolicy`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html),
   [`PutObjectResult`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html), etc.
-  They all are [Data Transfer Objects]({% pst 2016/jul/2016-07-06-data-transfer-object %})
+  They are all [Data Transfer Objects]({% pst 2016/jul/2016-07-06-data-transfer-object %})
   with only
   [getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
   inside.
