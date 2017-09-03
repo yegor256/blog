@@ -30,6 +30,17 @@ You can buy via
 or
 [Amazon](https://www.amazon.com/handmade/yegor256).
 
+{% picture /images/paintings/2017/guilt.jpg 350 %}
+
+_Guilt_<br/>
+August 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"One of the strongest manipulations we all experience in the childhood is guilt;
+later, when we grow up, it stays with us and controls our decisions;
+can we really get rid of it and become free?"
+
 {% picture /images/paintings/2017/expectations.jpg 350 %}
 
 _Expectations_<br/>
