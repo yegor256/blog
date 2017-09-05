@@ -115,7 +115,7 @@ Kiev, Ukraine<br/>
 <div class="talk-event"/>
 <img src="/images/2017/dotnext.png" class="future-talk" alt="DotNext 2017"/>
 **TDD Upside Down**<br/>
-[DotNext 2017](https://dotnext-moscow.ru/)<br/>
+[DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/)<br/>
 Moscow, Russia<br/>
 12-13 November 2017
 
