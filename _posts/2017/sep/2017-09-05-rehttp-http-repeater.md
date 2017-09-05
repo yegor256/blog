@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "HTTP Repeater"
-date: 2017-08-29
+title: "ReHTTP.net&mdash;HTTP Repeater"
+date: 2017-09-05
 place: Odessa, Ukraine
 tags: pet
 description: |
@@ -14,9 +14,6 @@ keywords:
   - http webhook reliability
   - webhook repeater
   - repeat webhook
-image: /images/2017/08/...
-jb_picture:
-  caption: ...
 ---
 
 {% badge http://www.rehttp.net/images/logo.svg 92 http://www.rehttp.net %}
