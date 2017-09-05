@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-04T11:35:11+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">XCOP — XML Style Checker</title><link href="http://www.yegor256.com/2017/08/29/xcop.html" rel="alternate" type="text/html" title="XCOP &amp;mdash; XML Style Checker" /><published>2017-08-29T00:00:00+00:00</published><updated>2017-08-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/29/xcop</id><content type="html" xml:base="http://www.yegor256.com/2017/08/29/xcop.html">&lt;p&gt;One of the biggest advantages of XML versus
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-05T08:35:55+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">ReHTTP.net—HTTP Repeater</title><link href="http://www.yegor256.com/2017/09/05/rehttp-http-repeater.html" rel="alternate" type="text/html" title="ReHTTP.net&amp;mdash;HTTP Repeater" /><published>2017-09-05T00:00:00+00:00</published><updated>2017-09-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/05/rehttp-http-repeater</id><content type="html" xml:base="http://www.yegor256.com/2017/09/05/rehttp-http-repeater.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.rehttp.net&#39;&gt;&lt;img src=&#39;http://www.rehttp.net/images/logo.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;I faced a problem a few weeks ago with
+&lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd.com&lt;/a&gt;, one of my web apps that is
+supposed to receive HTTP requests (known as
+&lt;a href=&quot;https://developer.github.com/webhooks/&quot;&gt;webhooks&lt;/a&gt;) from GitHub:
+sometimes the app is down, GitHub gets an HTTP error, and never
+sends the request again. The request simply gets lost. There is absolutely
+no way to receive it again once the app is back up. I realized that I needed
+a &lt;a href=&quot;https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/&quot;&gt;service mesh&lt;/a&gt;
+between GitHub and my web app, to accept HTTP
+requests and repeat them later if they can&amp;#39;t be delivered immediately.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I created &lt;a href=&quot;http://www.rehttp.net&quot;&gt;rehttp.net&lt;/a&gt; to do exactly that.&lt;/p&gt;
+
+&lt;p&gt;See, the URL I&amp;#39;ve been giving to GitHub is this one:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://www.0pdd.com/hook/github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;From now on a new URL has to be used:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://p.rehttp.net/http://www.0pdd.com/hook/github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It looks very similar, but starts with &lt;code&gt;http://p.rehttp.net&lt;/code&gt;. GitHub sends
+all webhook PUT/POST requests to the ReHTTP server, which stores
+them in a temporary database (I&amp;#39;m using AWS DynamoDB).&lt;/p&gt;
+
+&lt;p&gt;ReHTTP attempts to deliver them immediately. If something goes wrong and
+the server HTTP response code is not in the 200-299 range, the next attempt is made
+in about an hour. Then it retries every hour for about a day. If all
+attempts fail, it abandons the request and that&amp;#39;s it.&lt;/p&gt;
+
+&lt;p&gt;What is interesting is that now I can see a summary of my API
+&lt;a href=&quot;http://www.rehttp.net/i?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&quot;&gt;here&lt;/a&gt;.
+I see how many requests were processed successfully over the last 24 hours
+and how many of them failed. Also, I have this cute button:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;And I have a URL for checking the status of the entire API:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I gave this URL to &lt;a href=&quot;https://www.statuscake.com/&quot;&gt;StatusCake&lt;/a&gt; to
+ping it every five minutes. If and when
+something goes wrong, StatusCake will email me and drop me a message
+on the phone.&lt;/p&gt;
+
+&lt;p&gt;ReHTTP is absolutely free. It is written in Java and the code is open.
+See its &lt;a href=&quot;https://github.com/yegor256/rehttp&quot;&gt;GitHub repository&lt;/a&gt;
+and contribute if you find any bugs or just want to add a feature.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pet" /><summary type="html">I faced a problem a few weeks ago with
+0pdd.com, one of my web apps that is
+supposed to receive HTTP requests (known as
+webhooks) from GitHub:
+sometimes the app is down, GitHub gets an HTTP error, and never
+sends the request again. The request simply gets lost. There is absolutely
+no way to receive it again once the app is back up. I realized that I needed
+a service mesh
+between GitHub and my web app, to accept HTTP
+requests and repeat them later if they can&amp;#39;t be delivered immediately.</summary></entry><entry><title type="html">XCOP — XML Style Checker</title><link href="http://www.yegor256.com/2017/08/29/xcop.html" rel="alternate" type="text/html" title="XCOP &amp;mdash; XML Style Checker" /><published>2017-08-29T00:00:00+00:00</published><updated>2017-08-29T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/29/xcop</id><content type="html" xml:base="http://www.yegor256.com/2017/08/29/xcop.html">&lt;p&gt;One of the biggest advantages of XML versus
 &lt;a href=&quot;/2015/11/16/json-vs-xml.html&quot;&gt;many other&lt;/a&gt; data formats is that
 it is human-readable. Well, to some extent, you may say. Indeed, a badly
 formatted XML document may be rather difficult to digest. I&amp;#39;m not talking about
@@ -1044,193 +1105,4 @@ I am a big fan of freedom,
 but recent hysteria
 around gender equality
 is not helping us to become more free. Instead it is causing quite
-the opposite effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/conversations-with-other-women.jpg" /></entry><entry><title type="html">My Work Environment</title><link href="http://www.yegor256.com/2017/06/27/my-environment.html" rel="alternate" type="text/html" title="My Work Environment" /><published>2017-06-27T00:00:00+00:00</published><updated>2017-06-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/06/27/my-environment</id><content type="html" xml:base="http://www.yegor256.com/2017/06/27/my-environment.html">&lt;p&gt;I was asked in my &lt;a href=&quot;https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A&quot;&gt;Telegram Group&lt;/a&gt;
-which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe it will be helpful
-for someone.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-macbook.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.apple.com/macbook-pro/&quot;&gt;MacBook Pro&lt;/a&gt;
-Retina, 15-inch, &lt;a href=&quot;https://support.apple.com/kb/sp690?locale=en_US&quot;&gt;Late 2013&lt;/a&gt;,
-2.3GHz/16Gb/512Gb ($2,900) with MacOS Sierra. I bought it over
-three years ago and don&amp;#39;t want to replace with a new one, simply
-because &lt;a href=&quot;https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de&quot;&gt;rumors are&lt;/a&gt;
-its quality is very low. My smartphone is
-&lt;a href=&quot;https://www.apple.com/shop/buy-iphone/iphone6s&quot;&gt;iPhone&amp;nbsp;6s&lt;/a&gt;.
-For video and podcast recording I&amp;#39;m using &lt;a href=&quot;http://amzn.to/2tjPebw&quot;&gt;Zoom&amp;nbsp;H6&lt;/a&gt;
-together with
-&lt;a href=&quot;http://amzn.to/2tkdA4G&quot;&gt;Movo LV4-O2&lt;/a&gt; microphone and
-&lt;a href=&quot;http://amzn.to/2v6YJyD&quot;&gt;Slik Sprint 150&lt;/a&gt; tripod.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-intellij-idea.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ IDEA Ultimate&lt;/a&gt; (&lt;del&gt;$499&lt;/del&gt; free)
-for Java projects. I&amp;#39;ve got a free open source
-license from &lt;a href=&quot;https://www.jetbrains.com/&quot;&gt;JetBrains&lt;/a&gt;,
-because I&amp;#39;m an active contributor and
-an author of &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;.
-If you contribute to open source (and
-&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;you must&lt;/a&gt;), you may do
-the same, I believe, just &lt;a href=&quot;mailto:opensource@jetbrains.com&quot;&gt;email them&lt;/a&gt; and ask.
-These are my &lt;a href=&quot;/bin/settings.jar&quot;&gt;settings.jar&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-sublime-text.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; ($70)
-for all texts I edit, including Ruby, JavaScript, and PHP code.
-Also, for writing this blog
-&lt;a href=&quot;https://github.com/yegor256/blog&quot;&gt;in Markdown&lt;/a&gt; and &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt; in
-&lt;a href=&quot;https://en.wikipedia.org/wiki/LaTeX&quot;&gt;LaTeX&lt;/a&gt; Sublime is the
-editor I use. I was using
-&lt;a href=&quot;https://macromates.com/&quot;&gt;TextMate&lt;/a&gt; ($52) a few years ago, but switched
-to Sublime because it&amp;#39;s just better. I also tried
-&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; (free) and didn&amp;#39;t really like it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-chrome.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.google.com/chrome/index.html&quot;&gt;Chrome&lt;/a&gt; (free)
-for web browsing. I also have
-&lt;a href=&quot;https://www.apple.com/lae/safari/&quot;&gt;Safari&lt;/a&gt;,
-&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/new/&quot;&gt;FireFox&lt;/a&gt;,
-and &lt;a href=&quot;http://www.opera.com/&quot;&gt;Opera&lt;/a&gt; but only to verify my websites
-for cross-browser compatibility, that&amp;#39;s all. I&amp;#39;m using these
-plugins:
-&lt;a href=&quot;https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom&quot;&gt;AdBlock&lt;/a&gt;,
-&lt;a href=&quot;https://chrome.google.com/webstore/detail/block-site/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en&quot;&gt;Block site&lt;/a&gt;,
-&lt;a href=&quot;https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en&quot;&gt;Grammarly&lt;/a&gt;,
-&lt;a href=&quot;https://chrome.google.com/webstore/detail/rapportive/hihakjfhbmlmjdnnhegiciffjplmdhin?hl=en&quot;&gt;Rapportive&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-iterm2.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.iterm2.com/&quot;&gt;iTerm2&lt;/a&gt; (free)
-for the command line. It&amp;#39;s a replacement of
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Terminal_%28macOS%29&quot;&gt;Terminal&lt;/a&gt;, with
-some nice features, which I&amp;#39;m not actually aware of.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-homebrew.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; (free)
-for package managing. Difficult to imagine Mac OSX without
-Homebrew. I was using &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt;
-in my previous MacBook, but switched to Homebrew and have no regrets.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-yourkit.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.yourkit.com/&quot;&gt;YourKit&lt;/a&gt; (&lt;del&gt;$499&lt;/del&gt; free)
-for Java profiling. I&amp;#39;ve got a free license from them, again because
-I&amp;#39;m a contributor to a few open source projects.
-&lt;a href=&quot;mailto:sales@yourkit.com&quot;&gt;Email them&lt;/a&gt;
-if you want to get the same. As I
-&lt;a href=&quot;https://twitter.com/yegor256/status/875444908726730752&quot;&gt;tweeted&lt;/a&gt; recently,
-when I have to use YourKit, I know that I&amp;#39;m doing something very wrong
-in my code.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-httpclient.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://itunes.apple.com/us/app/http-client/id418138339?mt=12&quot;&gt;HTTP Client&lt;/a&gt; ($2)
-for HTTP requests/responses debugging, when
-&lt;a href=&quot;https://curl.haxx.se/&quot;&gt;&lt;code&gt;curl&lt;/code&gt;&lt;/a&gt; is not enough.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-sketch.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.sketchapp.com/&quot;&gt;Sketch&lt;/a&gt; ($99)
-for editing vector graphics, mainly SVG. Also, it&amp;#39;s good for
-converting SVG into PNG.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-pixelmator.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt; ($30)
-for editing rasterized images, like PNG, GIF, JPEG, etc.
-The icons you see at this page were created with the help of
-Pixelmator. It is a perfect alternative to
-&lt;a href=&quot;http://www.adobe.com/products/photoshop.html&quot;&gt;Adobe Photoshop&lt;/a&gt;, if you
-are a programmer, not a graphic designer.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-1password.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://1password.com/&quot;&gt;1Password&lt;/a&gt; ($40)
-for keeping all my passwords in one place. I don&amp;#39;t know what I would
-do without this tool. All my passwords, bank accounts, credit cards,
-and passport scans are there.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-zoom.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://zoom.us/&quot;&gt;Zoom&lt;/a&gt; ($150/year)
-for conference calling and &lt;a href=&quot;/shift-m.html&quot;&gt;Shift-M&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-reaper.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://reaper.fm/&quot;&gt;Reaper&lt;/a&gt; ($60)
-for post-processing of &lt;a href=&quot;/shift-m.html&quot;&gt;Shift-M&lt;/a&gt; episodes.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-things.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://culturedcode.com/things/&quot;&gt;Things&lt;/a&gt; ($50)
-for long-term planning. I put my long-term plans there and open
-them once a month. I definitely should use this software more frequently.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-tower.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.git-tower.com/&quot;&gt;Tower&lt;/a&gt; ($79)
-for visual &lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt; manipulations. Even though I&amp;#39;m using Git
-from the command line only, this tool helps me time to time when I need
-to go through the history and find out where exactly I broke something.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-transmit.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt; ($34)
-for FTP and AWS S3 file management.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-obs.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://obsproject.com/&quot;&gt;OBS Studio&lt;/a&gt; (free)
-for webinars and video recording.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-mtorrent.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.utorrent.com/&quot;&gt;µTorrent&lt;/a&gt; (free)
-for stealing movies. I find them mostly at
-&lt;a href=&quot;http://rutracker.org/forum/index.php&quot;&gt;rutracker.org&lt;/a&gt; or
-&lt;a href=&quot;https://piratebay.to/&quot;&gt;The Pirate Bay&lt;/a&gt;.
-I do realize that stealing is a bad thing and I&amp;#39;m actually strongly
-against piracy, but most movies are either too expensive or not
-available for purchase.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-vlc.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.videolan.org/vlc/index.html&quot;&gt;VLC&lt;/a&gt; (free)
-for watching those stolen movies.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-vienna.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.vienna-rss.com/&quot;&gt;Vienna&lt;/a&gt; (free)
-for reading RSS feeds, rarely.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-istat.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://bjango.com/mac/istatmenus/&quot;&gt;iStat Menus&lt;/a&gt; ($18)
-for OSX monitoring.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-keynote.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-pages.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-numbers.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.apple.com/lae/keynote/&quot;&gt;Keynote&lt;/a&gt; for presentations,
-&lt;a href=&quot;https://www.apple.com/lae/pages/&quot;&gt;Pages&lt;/a&gt; for documents sometimes,
-and &lt;a href=&quot;https://www.apple.com/lae/numbers/&quot;&gt;Numbers&lt;/a&gt; for spreadsheets.
-I don&amp;#39;t remember me paying for them, but maybe I just forgot.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-dropbox.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-icloud.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-google-drive.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-s3.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://www.dropbox.com/personal&quot;&gt;Dropbox&lt;/a&gt; (free),
-&lt;a href=&quot;https://www.icloud.com/&quot;&gt;iCloud&lt;/a&gt; ($1/mo),
-and &lt;a href=&quot;https://www.google.com/drive/&quot;&gt;Google Drive&lt;/a&gt; for storage.
-I try to keep as little as possible on my laptop and upload
-everything that is already &amp;quot;history&amp;quot; to my personal
-&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;AWS S3&lt;/a&gt; bucket.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-telegram.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-viber.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-whatsapp.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-messenger.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-skype.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-slack.jpg&quot; class=&quot;env-ico&quot;/&gt;
-&lt;img src=&quot;/images/2017/06/env-colloquy.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt;,
-&lt;a href=&quot;https://www.viber.com/en/&quot;&gt;Viber&lt;/a&gt;,
-&lt;a href=&quot;https://www.whatsapp.com/&quot;&gt;WhatsApp&lt;/a&gt;,
-&lt;a href=&quot;https://www.messenger.com/&quot;&gt;Messenger&lt;/a&gt;, and
-&lt;a href=&quot;https://www.skype.com/en/&quot;&gt;Skype&lt;/a&gt; (all free, in order of preference)
-for P2P messaging.
-&lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; for business messaging sometimes.
-&lt;a href=&quot;http://colloquy.info/&quot;&gt;Colloquy&lt;/a&gt; for IRC messaging when I need it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2017/06/env-pokerstars.jpg&quot; class=&quot;env-ico&quot;/&gt;&lt;br/&gt;
-&lt;a href=&quot;http://www.pokerstars.com/poker/download/?source=13953351&quot;&gt;PokerStars&lt;/a&gt; (not free at all)
-for playing poker before falling asleep.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tools" /><summary type="html">I was asked in my Telegram Group
-which tools and hardware I use in my daily work. Here is the full list of
-what I have and even how much I paid for them. Maybe it will be helpful
-for someone.</summary></entry></feed>
+the opposite effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/conversations-with-other-women.jpg" /></entry></feed>
