@@ -29,10 +29,10 @@ development, object-oriented programming and project management.
 
 ## 2017
 
-{% webinar 06-09-2017 28 KYd24FN58wg Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com %}
+{% webinar 13-09-2017 28 KYd24FN58wg Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com %}
 
 <a href="https://www.youtube.com/watch?v=KYd24FN58wg"><img src="https://i.ytimg.com/vi/KYd24FN58wg/mqdefault.jpg" class="wnr" alt="Webinar no.28 by Yegor Bugayenko"/></a>
-September 6, 2017<br/>
+September 13, 2017<br/>
 &#35;28: **Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com**<br/>
 We will create a fully functional web app in Java, with the best principles of
 object-oriented programming in mind, in just one hour. The application will
