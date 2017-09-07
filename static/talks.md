@@ -106,6 +106,12 @@ Kiev, Ukraine<br/>
 -->
 
 <div class="talk-event"/>
+**Личность менеджера**<br/>
+[Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)<br/>
+Dnepr, Ukraine<br/>
+13 September 2017
+
+<div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 **16 Don'ts of Career Growth**<br/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
