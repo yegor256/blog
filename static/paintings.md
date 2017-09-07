@@ -14,6 +14,17 @@ keywords:
   - for sale paintings
 style: |
   figure { margin-top: 4em; }
+  .art-logo {
+    width: 26%;
+    min-width: 120px;
+    display: inline-block;
+    margin-bottom: 2em;
+    padding: 1em;
+  }
+  .art-logo img {
+    width: 100%;
+    max-width: 100%;
+  }
 ---
 
 This is the full list of my paintings, which are for sale. You can buy
@@ -24,11 +35,19 @@ every dollar you pay will be turned into prize money in my annual
 of art _and_ will help the software industry to become better.
 [Email me](mailto:paintings@yegor256.com) if interested.
 
-You can buy via
-[Saatchi Art](https://www.saatchiart.com/yegor256),
-[Artfinder](https://www.artfinder.com/yegor256#/),
-or
-[Amazon](https://www.amazon.com/handmade/yegor256).
+You can buy via:
+
+<div class="art-logo">
+  <a href="https://www.saatchiart.com/yegor256">
+    <img src="/images/paintings/saatchiart.png"/></a></div>
+<div class="art-logo">
+  <a href="https://www.artfinder.com/yegor256#/">
+    <img src="/images/paintings/artfinder.png"/></a></div>
+<div class="art-logo">
+  <a href="https://www.amazon.com/handmade/yegor256">
+    <img src="/images/paintings/amazon-handmade.png"/></a></div>
+
+In order of creation:
 
 {% picture /images/paintings/2017/guilt.jpg 350 %}
 
