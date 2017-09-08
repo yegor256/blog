@@ -50,6 +50,11 @@ You can buy via:
   <a href="https://www.vangoart.co/yegor256">
     <img src="/images/paintings/vangoart.png"/></a></div>
 
+<!--
+ugallery.com - applied
+newbloodart.com - applied
+-->
+
 In order of creation:
 
 {% picture /images/paintings/2017/guilt.jpg 350 %}
