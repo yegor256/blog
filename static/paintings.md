@@ -18,7 +18,7 @@ style: |
     width: 26%;
     min-width: 120px;
     display: inline-block;
-    padding: 1em;
+    padding: 0 1em 1em 0;
   }
   .art-logo img {
     width: 100%;
