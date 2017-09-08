@@ -46,6 +46,9 @@ You can buy via:
 <div class="art-logo">
   <a href="https://www.amazon.com/handmade/yegor256">
     <img src="/images/paintings/amazon-handmade.png"/></a></div>
+<div class="art-logo">
+  <a href="https://www.vangoart.co/yegor256">
+    <img src="/images/paintings/vangoart.png"/></a></div>
 
 In order of creation:
 
