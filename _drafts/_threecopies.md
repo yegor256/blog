@@ -13,6 +13,7 @@ keywords:
   - server data backup
   - server-side backup service
   - threecopies
+image: /images/2017/09/threecopies.jpg
 ---
 
 {% badge http://www.threecopies.com/images/logo.png 64 http://www.threecopies.com %}
