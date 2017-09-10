@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I wrote a number of [sarcastic articles](tag/sarcasm.html)
-about management and motivation, where traditional and very popular
+about management and motivation, where some traditional and very popular
 practices were criticized. Now I've decided to think it all over
 and summarize what actually motivates _me_ as a programmer when I'm
 working for someone else. Let's say you hire me tomorrow as a Java coder
@@ -49,9 +49,9 @@ Simply put, what should I do in order for a task to be considered as
 completed?
 
 **Responsibility borders**.
-I hate to be afraid, especially if I don't really know what I have to be
+I hate to be afraid, especially if I don't really know what I'm supposed to be
 afraid of. I want to know what my possible punishments are and when they will
-occur. I need to know the rules of the game. Say, I commit a bug into
+occur. I need to know the rules of the game. Say I commit a bug into
 the code and we lose $100,000. What will happen to me? Or say I don't finish a
 task by the deadline. Or I don't answer an email. Or I miss a bug during
 a code review. Or I break the `master` branch. What are the consequences?
@@ -114,7 +114,7 @@ our future is bright doesn't really motivate me, at all. That's why I would
 expect you to tell me honestly why a meeting with investors took three hours
 instead of one and why the door was so tightly closed. Also, I would want
 to know why our CTO quit a few weeks ago and now works for our
-competitors. I'd like to know our honest situation on the market
+competitors. I'd like to know our honest situation in the market
 and why the web traffic stats are going down. In other words,
 I'm either a [slave]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 kept in the dark, or I know
