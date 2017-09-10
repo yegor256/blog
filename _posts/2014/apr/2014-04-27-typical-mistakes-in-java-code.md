@@ -104,17 +104,16 @@ public void returnsItsContentInUnicode() throws Exception {
 }
 ```
 
-It's important to start the first sentence of your JavaDoc with the name of the
-class you're testing followed by `can`. So, your first sentence should always be
+It's important to start the first sentence of your Javadoc with the name of the
+class you're testing followed by `can` (or `cannot`). So, your first sentence should always be
 similar to "somebody _can_ do something."
 
 The method name will state exactly the same, but without the subject. If I add a
 subject at the beginning of the method name, I should get a complete English
 sentence, as in above example: "`HttpRequest` returns its content in Unicode."
 
-Pay attention that the test method doesn't start with `can`.Only JavaDoc
-comments start with 'can.'  Additionally, method names shouldn't start with a
-verb.
+Pay attention that the test method doesn't start with `can`. Only Javadoc
+comments use 'can.'
 
 It's a good practice to always declare test methods as throwing `Exception`.
 
