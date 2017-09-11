@@ -144,17 +144,16 @@ spaces. It's easier to explain by example:</p>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">returnsItsContentInUnicode</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>It's important to start the first sentence of your JavaDoc with the name of the
-class you're testing followed by <code>can</code>. So, your first sentence should always be
+<p>It's important to start the first sentence of your Javadoc with the name of the
+class you're testing followed by <code>can</code> (or <code>cannot</code>). So, your first sentence should always be
 similar to "somebody <em>can</em> do something."</p>
 
 <p>The method name will state exactly the same, but without the subject. If I add a
 subject at the beginning of the method name, I should get a complete English
 sentence, as in above example: "<code>HttpRequest</code> returns its content in Unicode."</p>
 
-<p>Pay attention that the test method doesn't start with <code>can</code>.Only JavaDoc
-comments start with 'can.'  Additionally, method names shouldn't start with a
-verb.</p>
+<p>Pay attention that the test method doesn't start with <code>can</code>. Only Javadoc
+comments use 'can.'</p>
 
 <p>It's a good practice to always declare test methods as throwing <code>Exception</code>.</p>
 
