@@ -734,6 +734,7 @@ brilliant
 bring
 bringing
 brings
+broad
 broader
 brochure
 brochures
@@ -1047,6 +1048,7 @@ click
 clicks
 client
 client's
+client-server
 client-side
 clients
 clipper
@@ -1804,6 +1806,7 @@ differentiating
 differently
 differs
 difficult
+difficulties
 difficulty
 dig
 digest
@@ -1955,6 +1958,7 @@ doors
 dorks
 dot
 double
+doubles
 doubling
 doubt
 doubted
@@ -2010,6 +2014,7 @@ dumb
 dumber
 dummies
 duplicate
+duplicated
 duplicates
 duplicating
 duplication
@@ -2345,6 +2350,7 @@ expression
 expressions
 expressive
 extend
+extendability
 extendable
 extended
 extends
@@ -2385,6 +2391,7 @@ failure-resilient
 failures
 fair
 fake
+fakes
 fall
 fallacy
 fallback
@@ -3051,6 +3058,7 @@ hr
 HTML
 HTTP
 HTTP-native
+httpcomponents
 httprequest
 https
 hub
@@ -3472,6 +3480,8 @@ jcabi-matchers
 jcabi-maven-plugin
 jcabi-mysql-maven-plugin
 jcabi-parent
+jcabi-s
+jcabi-simpledb
 jcabi-w
 jcabi-xml
 JCS
@@ -4406,6 +4416,7 @@ obeyed
 obeys
 object
 object's
+object-orientation
 object-oriented
 object-relational
 object-to-object
@@ -5056,6 +5067,7 @@ pro-data
 proactive
 probabilities
 probability
+probable
 probably
 problem
 problem's
@@ -5303,6 +5315,7 @@ re-read
 re-throw
 re-throwing
 re-tweeted
+re-used
 re-write
 re-written
 reach
@@ -6793,6 +6806,7 @@ translation
 translator
 transmit
 transparent
+transport
 transsexuals
 trash
 traumatized
