@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Yet Another Evil Suffix For Object Names: Client"
-date: 2017-08-29
+date: 2017-09-12
 place: Odessa, Ukraine
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - oop object names
   - object-oriented programming naming
   - how to name a class
-image: /images/2017/08/...
+image: /images/2017/09/dont-tempt-me.jpg
 jb_picture:
-  caption: ...
+  caption: Sin noticias de Dios (2001) by Agustín Díaz Yanes
 ---
 
 Some time ago we [were talking]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
@@ -122,19 +122,23 @@ What is the alternative?
 The right design would be to replace "clients" with client-side objects
 that represent _entities_ of the server side, not the entire server. For example, with the S3 SDK,
 that could be `Bucket`, `Object`, `Version`, `Policy`, etc. Each of them
-exposes the functionality of real buckets, objects and versions, which the AWS S3
-can expose.
+exposes the functionality of real
+[buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html),
+[objects](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) and
+[versions](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html),
+which the AWS S3 can expose.
 
 Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example
-it could be called `Region`, which means the entire S3 region with buckets.
+it could be called `Region`, which means the entire
+[AWS region](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) with buckets.
 Then we could retrieve a bucket from it and won't need a region anymore. Then,
 to list objects in the bucket we ask the bucket to do it for us. No need to communicate
-with the entire server object every time, even though technically such a communication
+with the entire "server object" every time, even though technically such a communication
 happens, of course.
 
 To summarize, the trouble is not in the name suffix, but in the very idea
-of representing the entire server on the client side rather than its entities. Such
+of representing the entire server on the client side rather than its _entities_. Such
 an abstraction is 1) too big and 2) very data driven.
 
 BTW, check out some of the [JCabi libraries](http://www.jcabi.com) (Java) for examples

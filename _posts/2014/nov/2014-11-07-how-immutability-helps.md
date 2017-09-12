@@ -353,7 +353,8 @@ arguments through a constructor.
 
 Without immutability, I wouldn't have had that motivator and I would
 have done what Apache developers did with commons-email&mdash;bloat the
-class and turn it into an unmaintainable monster.
+class and turn it into an unmaintainable
+[monster]({% pst 2017/sep/2017-09-12-evil-object-name-suffix-client %}).
 
 That's [jcabi-email](http://email.jcabi.com). I hope
 this example was illustrative enough and that you will start writing

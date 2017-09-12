@@ -52,6 +52,7 @@ You can buy via:
 <!--
 ugallery.com - applied
 newbloodart.com - applied
+shairart.com - form doesn't work
 -->
 
 In order of creation:
