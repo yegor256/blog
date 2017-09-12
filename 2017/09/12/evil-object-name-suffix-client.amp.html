@@ -83,6 +83,8 @@ of collections of procedures. Now I'm ready to introduce a new evil suffix:
 
 
 
+<amp-img src="/images/2017/09/dont-tempt-me.jpg" alt="Sin noticias de Dios (2001) by Agustín Díaz Yanes" height="720" width="1280" layout="responsive"></amp-img>
+
 <p>Let me give an example first. This is what an object with such a suffix may look like
 (it's a pseudo-code version of the
 <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html"><code>AmazonS3Client</code></a>
@@ -120,7 +122,8 @@ The very idea of a client-server relationship is about transferring
 data. Take the HTTP RESTful API of the AWS S3 service as
 an example. There are entities on the AWS side: buckets, objects, versions,
 access control policies, etc., and the server turns them into JSON/XML
-data. Then the data comes to us and the client on our side deals
+data. Then the <a href="/2016/11/21/naked-data.html">data</a>
+comes to us and the client on our side deals
 with JSON or XML. It inevitably remains <em>data</em> for us and never really becomes
 buckets, objects, or versions.</p></li>
 </ul>
@@ -166,7 +169,8 @@ Needless to say, it's almost impossible to
 <a href="/2015/02/26/composable-decorators.html">decorate</a> a client
 object when it has 160+ methods and keeps on growing. The only possible
 way to add new functionality to it is by creating new methods. Eventually
-we get a monster class that can't be re-used anyhow without modification.</p></li>
+we get a <a href="https://en.wikipedia.org/wiki/God_object">monster class</a>
+that can't be re-used anyhow without modification.</p></li>
 </ul>
 
 <p>What is the alternative?</p>
@@ -180,6 +184,8 @@ exposes the functionality of real
 <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html">versions</a>,
 which the AWS S3 can expose.</p>
 
+
+
 <p>Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example
 it could be called <code>Region</code>, which means the entire
@@ -189,7 +195,7 @@ to list objects in the bucket we ask the bucket to do it for us. No need to comm
 with the entire "server object" every time, even though technically such a communication
 happens, of course.</p>
 
-<p>To summarize, the trouble is not in the name suffix, but in the very idea
+<p>To summarize, the trouble is not exactly in the name suffix, but in the very idea
 of representing the entire server on the client side rather than its <em>entities</em>. Such
 an abstraction is 1) too big and 2) very data driven.</p>
 

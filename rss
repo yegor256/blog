@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-12T11:48:19+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-12T12:31:37+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
 about &amp;quot;-ER&amp;quot; suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
@@ -6,6 +6,8 @@ of collections of procedures. Now I&amp;#39;m ready to introduce a new evil suff
 &lt;code&gt;Client&lt;/code&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Sin noticias de Dios (2001) by Agustín Díaz Yanes&#39; src=&#39;/images/2017/09/dont-tempt-me.jpg&#39; longdesc=&#39;#467f4c9d&#39;/&gt;&lt;figcaption id=&#39;467f4c9d&#39;&gt;Sin noticias de Dios (2001) by Agustín Díaz Yanes&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let me give an example first. This is what an object with such a suffix may look like
 (it&amp;#39;s a pseudo-code version of the
@@ -44,7 +46,8 @@ The very idea of a client-server relationship is about transferring
 data. Take the HTTP RESTful API of the AWS S3 service as
 an example. There are entities on the AWS side: buckets, objects, versions,
 access control policies, etc., and the server turns them into JSON/XML
-data. Then the data comes to us and the client on our side deals
+data. Then the &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;data&lt;/a&gt;
+comes to us and the client on our side deals
 with JSON or XML. It inevitably remains &lt;em&gt;data&lt;/em&gt; for us and never really becomes
 buckets, objects, or versions.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -90,7 +93,8 @@ Needless to say, it&amp;#39;s almost impossible to
 &lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;decorate&lt;/a&gt; a client
 object when it has 160+ methods and keeps on growing. The only possible
 way to add new functionality to it is by creating new methods. Eventually
-we get a monster class that can&amp;#39;t be re-used anyhow without modification.&lt;/p&gt;&lt;/li&gt;
+we get a &lt;a href=&quot;https://en.wikipedia.org/wiki/God_object&quot;&gt;monster class&lt;/a&gt;
+that can&amp;#39;t be re-used anyhow without modification.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;What is the alternative?&lt;/p&gt;
@@ -104,6 +108,8 @@ exposes the functionality of real
 &lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html&quot;&gt;versions&lt;/a&gt;,
 which the AWS S3 can expose.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;The right design would be to replace clients with client-side objects that represent entities of the server side.&lt;/aside&gt;
+
 &lt;p&gt;Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example
 it could be called &lt;code&gt;Region&lt;/code&gt;, which means the entire
@@ -113,7 +119,7 @@ to list objects in the bucket we ask the bucket to do it for us. No need to comm
 with the entire &amp;quot;server object&amp;quot; every time, even though technically such a communication
 happens, of course.&lt;/p&gt;
 
-&lt;p&gt;To summarize, the trouble is not in the name suffix, but in the very idea
+&lt;p&gt;To summarize, the trouble is not exactly in the name suffix, but in the very idea
 of representing the entire server on the client side rather than its &lt;em&gt;entities&lt;/em&gt;. Such
 an abstraction is 1) too big and 2) very data driven.&lt;/p&gt;
 
