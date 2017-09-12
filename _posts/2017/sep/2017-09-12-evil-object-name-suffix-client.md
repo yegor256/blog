@@ -28,6 +28,8 @@ of collections of procedures. Now I'm ready to introduce a new evil suffix:
 
 <!--more-->
 
+{% jb_picture_body %}
+
 Let me give an example first. This is what an object with such a suffix may look like
 (it's a pseudo-code version of the
 [`AmazonS3Client`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html)
