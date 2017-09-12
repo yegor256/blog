@@ -69,7 +69,8 @@ That's why it's not as maintainable as it should be, for two reasons:
   data. Take the HTTP RESTful API of the AWS S3 service as
   an example. There are entities on the AWS side: buckets, objects, versions,
   access control policies, etc., and the server turns them into JSON/XML
-  data. Then the data comes to us and the client on our side deals
+  data. Then the [data]({% pst 2016/nov/2016-11-21-naked-data %})
+  comes to us and the client on our side deals
   with JSON or XML. It inevitably remains _data_ for us and never really becomes
   buckets, objects, or versions.
 
@@ -117,7 +118,8 @@ The consequences depend on the situation, but these are the most probable:
   [decorate]({% pst 2015/feb/2015-02-26-composable-decorators %}) a client
   object when it has 160+ methods and keeps on growing. The only possible
   way to add new functionality to it is by creating new methods. Eventually
-  we get a monster class that can't be re-used anyhow without modification.
+  we get a [monster class](https://en.wikipedia.org/wiki/God_object)
+  that can't be re-used anyhow without modification.
 
 What is the alternative?
 
@@ -130,6 +132,8 @@ exposes the functionality of real
 [versions](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html),
 which the AWS S3 can expose.
 
+{% quote The right design would be to replace clients with client-side objects that represent entities of the server side. %}
+
 Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example
 it could be called `Region`, which means the entire
@@ -139,7 +143,7 @@ to list objects in the bucket we ask the bucket to do it for us. No need to comm
 with the entire "server object" every time, even though technically such a communication
 happens, of course.
 
-To summarize, the trouble is not in the name suffix, but in the very idea
+To summarize, the trouble is not exactly in the name suffix, but in the very idea
 of representing the entire server on the client side rather than its _entities_. Such
 an abstraction is 1) too big and 2) very data driven.
 
