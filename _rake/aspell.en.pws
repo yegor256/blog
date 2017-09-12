@@ -743,3 +743,5 @@ xcop
 integrations
 ThreeCopies
 webhooks
+simpledb
+HttpComponents
