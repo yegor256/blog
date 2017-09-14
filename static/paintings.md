@@ -52,6 +52,7 @@ You can buy via:
 <!--
 ugallery.com - applied
 newbloodart.com - applied
+riseart.com - submitted three picsπ
 shairart.com - form doesn't work
 -->
 
