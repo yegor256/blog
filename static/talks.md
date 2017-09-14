@@ -106,12 +106,6 @@ Kiev, Ukraine<br/>
 -->
 
 <div class="talk-event"/>
-**Личность менеджера**<br/>
-[Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)<br/>
-Dnepr, Ukraine<br/>
-13 September 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 **16 Don'ts of Career Growth**<br/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
@@ -149,6 +143,13 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+**Four factors of success**<br/>
+[Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)<br/>
+Dnepr, Ukraine;
+13 September 2017;
+[video](https://www.youtube.com/watch?v=VQtdNQd7wIU).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
