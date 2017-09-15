@@ -83,7 +83,7 @@ subscribers).
 You can always [unsubscribe](/unsubscribe.html).
 
 By the way, this is what some people think about me
-and this blog: [testimonials](/testimonials.html) (be careful!).
+and this blog: [testimonials](/testimonials.html) (18+, be careful!).
 
 I'm also visible sometimes at
 [DZone](https://dzone.com/users/1023189/yegor256.html),
@@ -97,5 +97,8 @@ Ah, one more thing. I'm a big fan of good movies, so here's
 [my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}) of the ones
 I would recommend you watch. Also, here is my list of favorite
 [fiction books](/fiction.html).
+
+By the way, I'm also an amateur artist,
+<del>check</del> buy [my paintings](/paintings.html).
 
 Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
