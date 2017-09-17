@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-17T08:06:36+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-17T20:17:24+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
 about &amp;quot;-ER&amp;quot; suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
@@ -657,6 +657,8 @@ soon he gave up this idea and stopped giving me anything. I basically
 created an image of a very skilled engineer who didn&amp;#39;t write code. No matter
 how much you asked.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Guilt is a very powerful management instrument.&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;Meetings&lt;/strong&gt;.
 At the beginning he was calling me to all possible meetings,
 because he thought that I was very smart. I was even smarter than he thought:
@@ -666,7 +668,7 @@ calling me to those hours-long meetings because I was simply ruining them,
 making strong points, and never &amp;quot;being nice.&amp;quot; Then, when he stopped
 calling, I pretended to be offended, as if I really wanted to
 contribute and yet they were all ignoring me. Guilt is a very powerful management
-instrument you know.&lt;/p&gt;
+instrument, you know.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Reports&lt;/strong&gt;.
 From time to time he was interested to know what was going on, mostly
