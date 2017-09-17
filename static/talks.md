@@ -145,7 +145,8 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
-**Four factors of success**<br/>
+<img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
+Four factors of success;
 [Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)<br/>
 Dnepr, Ukraine;
 13 September 2017;
@@ -153,7 +154,7 @@ Dnepr, Ukraine;
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
-<img src="/images/2017/pgday.png" class="past-talk" alt="PgDay 2017"/>
+<img src="https://i.ytimg.com/vi/nVmRY4Ri4CA/mqdefault.jpg" class="past-talk" alt="PgDay 2017"/>
 PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests;
 [PgDay 2017](https://pgday.ru/ru/2017/speakers/136);
 St.Peterburg, Russia;

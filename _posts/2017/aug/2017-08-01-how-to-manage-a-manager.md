@@ -54,6 +54,8 @@ soon he gave up this idea and stopped giving me anything. I basically
 created an image of a very skilled engineer who didn't write code. No matter
 how much you asked.
 
+{% quote Guilt is a very powerful management instrument. %}
+
 **Meetings**.
 At the beginning he was calling me to all possible meetings,
 because he thought that I was very smart. I was even smarter than he thought:
@@ -63,7 +65,7 @@ calling me to those hours-long meetings because I was simply ruining them,
 making strong points, and never "being nice." Then, when he stopped
 calling, I pretended to be offended, as if I really wanted to
 contribute and yet they were all ignoring me. Guilt is a very powerful management
-instrument you know.
+instrument, you know.
 
 **Reports**.
 From time to time he was interested to know what was going on, mostly

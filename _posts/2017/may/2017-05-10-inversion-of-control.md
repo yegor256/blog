@@ -54,6 +54,8 @@ it calls `title()` when it feels like it. That is, we _delegate_ control.
 
 This is pretty much everything you need to know about IoC.
 
+{% quote The main point of IoC: we must not deal with data, but instead only with object composition. %}
+
 Does it have anything to do with
 [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) containers?
 Well, of course, we _could_ put the book into a container, inject the entire
