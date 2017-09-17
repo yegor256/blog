@@ -20,7 +20,7 @@ image: /images/2017/09/threecopies.jpg
 
 I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,
-and a MySQL database hosted at the same place, I also have
+and a MySQL database hosted at the same place. I also have
 a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
 Heroku, and also... Well, there are many of them. How to backup them was always a
 question for me.
@@ -29,7 +29,7 @@ question for me.
 
 {% jb_picture_body %}
 
-The most straight-forward way is to rent a cheap $15/mo server
+The most straightforward way is to rent a cheap $15/mo server
 (or use an existing one) and configure Cron to run a custom bash
 script, which will pull the data from the MySQL database, package it,
 and upload it to some place where it will be safe, such as Amazon S3
@@ -51,19 +51,19 @@ for years. "Well, I can," was the answer just a few weeks ago, and
 I created [ThreeCopies](http://www.threecopies.com).
 
 It's a very simple hosted executor of bash scripts, which you edit
-through a web interface. Then, one of our servers starts a Docker
+through a web interface. Then one of our servers starts a Docker
 container ([yegor256/threecopies](https://hub.docker.com/r/yegor256/threecopies/) is the image, here is the
 [`Dockerfile`](https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile))
 and runs your script inside.
 
 The script starts every hour, every day and every week.
 Hence the name: "three copies." It's good practice for data backup
-to create separate copies with different regularities. Also, you might put
+to create separate copies with different regularities. Also, you might want to put
 different data into different copies. To help your script understand which
 copy is running at any particular time we pass the `$period` environment variable into it, with
 the value of either `hour`, `day`, or `week`.
 
-How your script pulls the data, packages it, and archives&mdash;depends on the
+How your script pulls the data, packages it, and archives it, depends on the
 data. I created a short cheat sheet for most common scenarios. This is how
 I backup the MySQL database for [thePMP](http://www.thepmp.com), for example:
 
@@ -88,7 +88,7 @@ s3cmd --no-progress put "${tgz}" "s3://backup.yegor256.com/${tgz}"
 {% endhighlight %}
 
 The output of the script is available through the web interface and this
-is yet another benefit of this solution. It's easy to monitor what was
+is yet another benefit of this solution. It's easy to monitor what went
 wrong and restart the script. All logs are available through the browser. No
 SSH, no terminals.
 
@@ -99,8 +99,8 @@ I'm charging $0.01 per script execution hour. And I actually charge
 per second, while AWS always charges for a full hour. For $5.00 you get
 500 hours. For example, the script you see above takes about 5 minutes
 to complete (the database is not huge). If you skip the hourly executions, like I did above, you
-will consume 150 minutes of the server time every month, which will cost you
-**$0.30 per year**! This is much cheaper than a server and
+will consume 170 minutes of server time every month, which will cost you about
+**$0.34 per year**! This is much cheaper than a server and
 its monitoring, I believe.
 
 One more thing before you go. ThreeCopies is written in Java&nbsp;8 and is open source,
