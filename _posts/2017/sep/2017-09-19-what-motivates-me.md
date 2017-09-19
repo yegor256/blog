@@ -179,7 +179,7 @@ swimming with the current. Working under such a manager is a huge
 frustration and a waste of time. I will be demotivated and no amount of money
 will keep me interested.
 
-These things don't matter at all, I won't even about about them:
+These things don't matter at all, I won't even ask about them:
 
   * Mission and vision of the company
   * Business domain
