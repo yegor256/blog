@@ -2,7 +2,7 @@
 layout: static
 title: "My favorite fiction books"
 date: 2017-04-23
-permalink: fiction.html
+permalink: /fiction.html
 place: Odessa, Ukraine
 tags: books
 description: |
