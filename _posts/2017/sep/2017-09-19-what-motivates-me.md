@@ -168,6 +168,8 @@ to become a CTO. So it's your job to make that career growth obvious for me.
 If it will never be possible for me to become the CTO, make that obvious too.
 The truth is better anyway.
 
+{% quote A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions. %}
+
 **A strong boss**.
 This is probably the most important requirement I would have. I can't work
 under a [weak manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
