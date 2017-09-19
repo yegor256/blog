@@ -29,6 +29,8 @@ that you will be most productive?" This would be my wish list.
 
 <!--more-->
 
+{% jb_picture_body %}
+
 The list is in no particular order.
 
 **Remote work**.
