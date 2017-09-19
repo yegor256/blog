@@ -68,7 +68,7 @@ about object-oriented programming. Feel free to use them.
 
 Apr 27, 2017:
 I've got stickers for you. I will give them in exchange for an Amazon
-review. Please, write an _honest_ five-star review and email me.
+review. Please, write an _honest_ five-star review (it's a joke, any review will work, as long as it's honest) and email me.
 I will send you the stickers to your home address, free of charge.
 
 Apr 18, 2017:
