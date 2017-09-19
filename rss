@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-19T06:54:00+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What Motivates Me as a Programmer</title><link href="http://www.yegor256.com/2017/09/19/what-motivates-me.html" rel="alternate" type="text/html" title="What Motivates Me as a Programmer" /><published>2017-09-19T00:00:00+00:00</published><updated>2017-09-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/19/what-motivates-me</id><content type="html" xml:base="http://www.yegor256.com/2017/09/19/what-motivates-me.html">&lt;p&gt;I wrote a number of &lt;a href=&quot;/tag/sarcasm.html&quot;&gt;sarcastic articles&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-19T07:38:24+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What Motivates Me as a Programmer</title><link href="http://www.yegor256.com/2017/09/19/what-motivates-me.html" rel="alternate" type="text/html" title="What Motivates Me as a Programmer" /><published>2017-09-19T00:00:00+00:00</published><updated>2017-09-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/19/what-motivates-me</id><content type="html" xml:base="http://www.yegor256.com/2017/09/19/what-motivates-me.html">&lt;p&gt;I wrote a number of &lt;a href=&quot;/tag/sarcasm.html&quot;&gt;sarcastic articles&lt;/a&gt;
 about management and motivation, where some traditional and very popular
 practices were criticized. Now I&amp;#39;ve decided to think it all over
 and summarize what actually motivates &lt;em&gt;me&lt;/em&gt; as a programmer when I&amp;#39;m
@@ -147,6 +147,8 @@ to become a CTO. So it&amp;#39;s your job to make that career growth obvious for
 If it will never be possible for me to become the CTO, make that obvious too.
 The truth is better anyway.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions.&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;A strong boss&lt;/strong&gt;.
 This is probably the most important requirement I would have. I can&amp;#39;t work
 under a &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;weak manager&lt;/a&gt;,
@@ -166,7 +168,7 @@ will keep me interested.&lt;/p&gt;
 &lt;li&gt;Tech stack&lt;/li&gt;
 &lt;li&gt;Location&lt;/li&gt;
 &lt;li&gt;Company size or structure&lt;/li&gt;
-&lt;li&gt;Race, gender, sexual orientation, religion or political beliefs of people in the team&lt;/li&gt;
+&lt;li&gt;Race, gender, sexual orientation, religious or political beliefs of people in the team&lt;/li&gt;
 &lt;li&gt;Financial status of the company&lt;/li&gt;
 &lt;/ul&gt;
 
