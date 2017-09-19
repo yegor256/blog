@@ -186,7 +186,7 @@ These things don't matter at all, I won't even ask about them:
   * Tech stack
   * Location
   * Company size or structure
-  * Race, gender, sexual orientation, religion or political beliefs of people in the team
+  * Race, gender, sexual orientation, religious or political beliefs of people in the team
   * Financial status of the company
 
 Of course, I don't think that this list is applicable for everybody. Other programmers
