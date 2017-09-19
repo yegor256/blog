@@ -255,7 +255,8 @@ he doesn't know how. That's why he needs daily stand-ups, where everybody
 reports almost the same, and it's easy to compare their results to each other.
 Also, it's easier to blame or to cheer up those who don't report similar to
 others. In other words, a bad manager uses daily stand-ups as an instrument
-of equality, which in this case only ruins the entire team's motivation.
+of equality, which in this case only ruins the entire team's
+[motivation]({% pst 2017/sep/2017-09-19-what-motivates-me %}).
 
 <hr/>
 

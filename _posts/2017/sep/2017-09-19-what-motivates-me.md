@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Motivates Me as a Programmer"
-date: 2017-08-29
+date: 2017-09-19
 place: Odessa, Ukraine
 tags: management
 description: |
@@ -14,12 +14,12 @@ keywords:
   - demotivation
   - what motivates us
   - motivation of programmers
-image: /images/2017/08/...
+image: /images/2017/09/300.jpg
 jb_picture:
-  caption: ...
+  caption: 300 (2006) by Zack Snyder
 ---
 
-I wrote a number of [sarcastic articles](tag/sarcasm.html)
+I wrote a number of [sarcastic articles](/tag/sarcasm.html)
 about management and motivation, where some traditional and very popular
 practices were criticized. Now I've decided to think it all over
 and summarize what actually motivates _me_ as a programmer when I'm
@@ -32,33 +32,45 @@ that you will be most productive?" This would be my wish list.
 The list is in no particular order.
 
 **Remote work**.
-I like to be in the office, but I hate it when I have to be there from 9 till 5.
+I like to be
+[in the office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
+but I hate it when I have to be there from 9 till 5.
 It's very important for me to have the ability to work from wherever
-I want. Most companies declare that, but in reality I will have to "inform" you
+I want. Most companies
+[declare that]({% pst 2017/may/2017-05-02-remote-slaves %}),
+but in reality I will have to "inform" you
 every time I decide to stay home. Instead, I want to inform
 you when I decide to visit the office. In other words, my default state
 should be "not in the office."
 
 **Isolation of tasks**.
-I hate being responsible for someone else's mistakes and I'm not really a good team player.
+I hate being responsible for someone else's mistakes and I'm not really a good
+[team player]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}).
 I want to solve problems on my own and be responsible for my own
 successes and failures. That's why clearly defined and isolated tasks motivate
 me and help me stay focused and interested. I want to see them in writing
-(as tickets) and I want to know exactly what the definition of done is.
+(as tickets) and I want to know exactly what the
+[definition of done]({% pst 2014/apr/2014-04-15-definition-of-done %}) is.
 Simply put, what should I do in order for a task to be considered as
 completed?
 
+{% quote I hate to be afraid, especially if I don't really know what I'm supposed to be afraid of. %}
+
 **Responsibility borders**.
 I hate to be afraid, especially if I don't really know what I'm supposed to be
-afraid of. I want to know what my possible punishments are and when they will
-occur. I need to know the rules of the game. Say I commit a bug into
+afraid of. I want to know what my possible
+[punishments]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}) are and when they will
+occur. I need to know the
+[rules of the game]({% pst 2015/oct/2015-10-13-competition-without-rules %}).
+Say I commit a bug into
 the code and we lose $100,000. What will happen to me? Or say I don't finish a
 task by the deadline. Or I don't answer an email. Or I miss a bug during
 a code review. Or I break the `master` branch. What are the consequences?
 Their clear explanation will seriously boost my motivation.
 
 **Open source**.
-I'm a big fan of open source. If you are not, I most probably won't like
+I'm a big fan of [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}).
+If you are not, I most probably won't like
 working for you. If your company makes some code open and I am part of
 that process, that will seriously affect my motivation, because I will achieve
 two goals at the same time: make money and become more popular in the
@@ -83,7 +95,7 @@ other modern ideas. I hate them all. I believe that any management is based
 on
 [power and force]({% pst 2016/sep/2016-09-27-command-control-innovate %}),
 and the best way to avoid negative aspects of these
-rather violent concepts is to organize them. Without a clear and well defined
+rather violent concepts is to organize and structure them. Without a clear and well defined
 hierarchy of roles a team very quickly turns into a
 [snake pit]({% pst 2015/oct/2015-10-13-competition-without-rules %}), with
 politics, backstabbing and behind-the-scenes games. So, if you can't tell me
@@ -97,19 +109,26 @@ else here?
 
 **Payment structure**.
 I hate to guess about money, I prefer to know the numbers and the logic
-behind them. I want to know exactly how much I'm going to get and when.
+behind them. I want to know
+[exactly]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
+how much I'm going to get and when.
 I want to know when the numbers will go up and how I can affect that. Also,
 I'd like to know the payment policy of the company and, ideally, salaries
 or rates of the people around me. Jealousy, which arises with the
 surprising information that someone is getting more than I do, doesn't
-motivate at all, even if my pay is decent. It would be much easier for me
+motivate at all, even if my pay is
+[decent]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
+It would be much easier for me
 if I knew everything from the first day.
+
+{% quote I hate working for big ideas, if they are not mine. %}
 
 **Business transparency**.
 I hate working for big ideas, if they are not mine. Mostly because I know
 that almost all of them
 [fail]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %}).
-Working for a failure and being told that
+Working for a failure and
+[being told]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) that
 our future is bright doesn't really motivate me, at all. That's why I would
 expect you to tell me honestly why a meeting with investors took three hours
 instead of one and why the door was so tightly closed. Also, I would want
@@ -130,7 +149,8 @@ invent a payment structure where my paychecks will correspond to my results.
 I do realize that this may require you to change the entire management
 system, so I don't absolutely insist. But you have to remember that as long as
 you pay me only for my time I will try to do my best to <del>steal from you</del> use
-it for my own benefit.
+it for my
+[own benefit]({% pst 2017/jan/2017-01-24-career-advice %}).
 
 **Career path**.
 I have no problem starting as a junior developer, but I have to know exactly
@@ -148,13 +168,24 @@ The truth is better anyway.
 
 **A strong boss**.
 This is probably the most important requirement I would have. I can't work
-under a weak manager, it will seriously demotivate me from the first day.
+under a [weak manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
+it will seriously demotivate me from the first day.
 I will probably write another blog post about what a "strong manager" is,
 but in a nutshell it's someone who is ready to fight for his or her
 own ideas, rights, thoughts, decisions, etc. A weak manager is one who is
 swimming with the current. Working under such a manager is a huge
 frustration and a waste of time. I will be demotivated and no amount of money
 will keep me interested.
+
+These things don't matter at all, I won't even about about them:
+
+  * Mission and vision of the company
+  * Business domain
+  * Tech stack
+  * Location
+  * Company size or structure
+  * Race, gender, sexual orientation, religion, or political views of people in the team
+  * Financial status of the company
 
 Of course, I don't think that this list is applicable for everybody. Other programmers
 may have some other points or may disagree with mine.
