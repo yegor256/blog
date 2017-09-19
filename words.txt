@@ -206,6 +206,7 @@ ambiguity
 ambiguous
 ambition
 ambitions
+ambitious
 amend
 american
 AMG
@@ -342,6 +343,7 @@ arguing
 argument
 argumentation
 arguments
+arises
 arizona
 armies
 armstrong
@@ -487,6 +489,7 @@ backed
 background
 backlog
 backslide
+backstabbing
 backups
 bad
 bad-mouthing
@@ -563,6 +566,7 @@ behaves
 behavior
 behaviors
 behind
+behind-the-scenes
 beijing
 being
 beliefs
@@ -1427,6 +1431,7 @@ corrections
 correctly
 correctness
 correlated
+correspond
 corrupted
 corruption
 cosmetic
@@ -2098,6 +2103,7 @@ elite
 elliotte
 elon
 else
+else's
 elsewhere
 emacs
 email
@@ -2342,6 +2348,7 @@ expose
 exposed
 exposes
 exposing
+exposure
 express
 expressed
 expresses
@@ -3489,6 +3496,7 @@ JDBC
 JDK
 JDK-native
 jealous
+jealousy
 JEEConf
 jeff
 jeff's
@@ -4560,6 +4568,7 @@ organized
 organizers
 organizes
 organizing
+orientation
 oriented
 original
 originate
@@ -4839,6 +4848,7 @@ pipelines
 pipes
 piracy
 pirate
+pit
 pitch
 pitfalls
 pixelmator
@@ -5859,6 +5869,7 @@ self-discipline
 self-documented
 self-esteem
 self-improvement
+self-managing
 self-motivated
 self-motivation
 self-organized
@@ -6107,6 +6118,7 @@ smile
 smiles
 smiling
 smoothies
+snake
 Snap-CI
 snapchat
 snapshot
@@ -6297,6 +6309,7 @@ stating
 station
 stationary
 statistics
+stats
 status
 statuscake
 statuses
@@ -6419,6 +6432,7 @@ subversion
 succeed
 succeeds
 success
+successes
 successful
 successfully
 succinctly
@@ -6476,6 +6490,7 @@ surpasses
 surprise
 surprised
 surprises
+surprising
 surprisingly
 surrogate
 survival
@@ -6493,6 +6508,7 @@ swear
 sweet
 swift
 swim
+swimming
 switch
 switched
 switching
@@ -6699,6 +6715,7 @@ ticket
 ticketing
 tickets
 tight
+tightly
 til
 tiles
 till
@@ -6805,6 +6822,7 @@ translating
 translation
 translator
 transmit
+transparency
 transparent
 transport
 transsexuals
@@ -7107,6 +7125,7 @@ violated
 violates
 violation
 violence
+violent
 viral
 virgin
 virtual
@@ -7117,6 +7136,7 @@ virtues
 visibility
 visible
 vision
+visit
 visitor
 visitors
 visual

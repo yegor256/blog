@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-19T05:50:41+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-19T06:20:18+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What Motivates Me as a Programmer</title><link href="http://www.yegor256.com/2017/09/19/what-motivates-me.html" rel="alternate" type="text/html" title="What Motivates Me as a Programmer" /><published>2017-09-19T00:00:00+00:00</published><updated>2017-09-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/19/what-motivates-me</id><content type="html" xml:base="http://www.yegor256.com/2017/09/19/what-motivates-me.html">&lt;p&gt;I wrote a number of &lt;a href=&quot;/tag/sarcasm.html&quot;&gt;sarcastic articles&lt;/a&gt;
+about management and motivation, where some traditional and very popular
+practices were criticized. Now I&amp;#39;ve decided to think it all over
+and summarize what actually motivates &lt;em&gt;me&lt;/em&gt; as a programmer when I&amp;#39;m
+working for someone else. Let&amp;#39;s say you hire me tomorrow as a Java coder
+and ask &amp;quot;What do you want us to do for you so
+that you will be most productive?&amp;quot; This would be my wish list.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The list is in no particular order.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remote work&lt;/strong&gt;.
+I like to be
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;in the office&lt;/a&gt;,
+but I hate it when I have to be there from 9 till 5.
+It&amp;#39;s very important for me to have the ability to work from wherever
+I want. Most companies
+&lt;a href=&quot;/2017/05/02/remote-slaves.html&quot;&gt;declare that&lt;/a&gt;,
+but in reality I will have to &amp;quot;inform&amp;quot; you
+every time I decide to stay home. Instead, I want to inform
+you when I decide to visit the office. In other words, my default state
+should be &amp;quot;not in the office.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Isolation of tasks&lt;/strong&gt;.
+I hate being responsible for someone else&amp;#39;s mistakes and I&amp;#39;m not really a good
+&lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;team player&lt;/a&gt;.
+I want to solve problems on my own and be responsible for my own
+successes and failures. That&amp;#39;s why clearly defined and isolated tasks motivate
+me and help me stay focused and interested. I want to see them in writing
+(as tickets) and I want to know exactly what the
+&lt;a href=&quot;/2014/04/15/definition-of-done.html&quot;&gt;definition of done&lt;/a&gt; is.
+Simply put, what should I do in order for a task to be considered as
+completed?&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;I hate to be afraid, especially if I don&amp;#39;t really know what I&amp;#39;m supposed to be afraid of.&lt;/aside&gt;
+
+&lt;p&gt;&lt;strong&gt;Responsibility borders&lt;/strong&gt;.
+I hate to be afraid, especially if I don&amp;#39;t really know what I&amp;#39;m supposed to be
+afraid of. I want to know what my possible
+&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punishments&lt;/a&gt; are and when they will
+occur. I need to know the
+&lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;rules of the game&lt;/a&gt;.
+Say I commit a bug into
+the code and we lose $100,000. What will happen to me? Or say I don&amp;#39;t finish a
+task by the deadline. Or I don&amp;#39;t answer an email. Or I miss a bug during
+a code review. Or I break the &lt;code&gt;master&lt;/code&gt; branch. What are the consequences?
+Their clear explanation will seriously boost my motivation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open source&lt;/strong&gt;.
+I&amp;#39;m a big fan of &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;open source&lt;/a&gt;.
+If you are not, I most probably won&amp;#39;t like
+working for you. If your company makes some code open and I am part of
+that process, that will seriously affect my motivation, because I will achieve
+two goals at the same time: make money and become more popular in the
+open source world. Working in purely closed software projects is a demotivating
+factor for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Project visibility&lt;/strong&gt;.
+I&amp;#39;d love to see my name close to a project that is visible to the world.
+And it doesn&amp;#39;t necessarily have to be Google or Facebook. Actually, in those companies
+regular programmers are way less visible than in smaller startups. So, unless
+you make me VP of Engineering, I won&amp;#39;t consider a position
+in a big company interesting in that respect. The most interesting project
+would be a small startup with an ambitious goal and high exposure in the media.
+Being there even as a regular programmer will motivate me a lot.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Clear hierarchy&lt;/strong&gt;.
+Yes, I&amp;#39;ve heard about
+&lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;holacracy&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Flat_organization&quot;&gt;flat&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Flat_organization#Self-managing_teams&quot;&gt;self-managing&lt;/a&gt; teams, and
+other modern ideas. I hate them all. I believe that any management is based
+on
+&lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;power and force&lt;/a&gt;,
+and the best way to avoid negative aspects of these
+rather violent concepts is to organize and structure them. Without a clear and well defined
+hierarchy of roles a team very quickly turns into a
+&lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;snake pit&lt;/a&gt;, with
+politics, backstabbing and behind-the-scenes games. So, if you can&amp;#39;t tell me
+exactly who is my boss and what the chain of command is in the group, I
+simply won&amp;#39;t consider this place seriously and won&amp;#39;t be motivated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No Agile/Scrum, please&lt;/strong&gt;.
+Do I need to say
+&lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;anything&lt;/a&gt;
+else here?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Payment structure&lt;/strong&gt;.
+I hate to guess about money, I prefer to know the numbers and the logic
+behind them. I want to know
+&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;exactly&lt;/a&gt;
+how much I&amp;#39;m going to get and when.
+I want to know when the numbers will go up and how I can affect that. Also,
+I&amp;#39;d like to know the payment policy of the company and, ideally, salaries
+or rates of the people around me. Jealousy, which arises with the
+surprising information that someone is getting more than I do, doesn&amp;#39;t
+motivate at all, even if my pay is
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;decent&lt;/a&gt;.
+It would be much easier for me
+if I knew everything from the first day.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;I hate working for big ideas, if they are not mine.&lt;/aside&gt;
+
+&lt;p&gt;&lt;strong&gt;Business transparency&lt;/strong&gt;.
+I hate working for big ideas, if they are not mine. Mostly because I know
+that almost all of them
+&lt;a href=&quot;/2016/01/12/good-programmers-dont-work-for-equity.html&quot;&gt;fail&lt;/a&gt;.
+Working for a failure and
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;being told&lt;/a&gt; that
+our future is bright doesn&amp;#39;t really motivate me, at all. That&amp;#39;s why I would
+expect you to tell me honestly why a meeting with investors took three hours
+instead of one and why the door was so tightly closed. Also, I would want
+to know why our CTO quit a few weeks ago and now works for our
+competitors. I&amp;#39;d like to know our honest situation in the market
+and why the web traffic stats are going down. In other words,
+I&amp;#39;m either a &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slave&lt;/a&gt;
+kept in the dark, or I know
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;the truth&lt;/a&gt; and I&amp;#39;m motivated
+(no matter how ugly the truth is).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Payments per results&lt;/strong&gt;.
+I haven&amp;#39;t seen this anywhere, except with my own projects, but I believe it&amp;#39;s how
+good teams should be structured: everybody must be paid
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;for results&lt;/a&gt;,
+not per hour/week/month/year. If you want me to be truly motivated you have to
+invent a payment structure where my paychecks will correspond to my results.
+I do realize that this may require you to change the entire management
+system, so I don&amp;#39;t absolutely insist. But you have to remember that as long as
+you pay me only for my time I will try to do my best to &lt;del&gt;steal from you&lt;/del&gt; use
+it for my
+&lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;own benefit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Career path&lt;/strong&gt;.
+I have no problem starting as a junior developer, but I have to know exactly
+what my future is and when it will happen. I want to become a CTO, no matter
+what. And it&amp;#39;s not about the title. It&amp;#39;s about the amount of technical
+&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;authority&lt;/a&gt; and
+&lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;responsibility&lt;/a&gt;
+I will have. I want it all. If I don&amp;#39;t see a clear path to
+achieve that, I will be very demotivated and will treat my job as
+temporary. I will always be looking for a &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;better place&lt;/a&gt;,
+where it&amp;#39;s easier
+to become a CTO. So it&amp;#39;s your job to make that career growth obvious for me.
+If it will never be possible for me to become the CTO, make that obvious too.
+The truth is better anyway.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A strong boss&lt;/strong&gt;.
+This is probably the most important requirement I would have. I can&amp;#39;t work
+under a &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;weak manager&lt;/a&gt;,
+it will seriously demotivate me from the first day.
+I will probably write another blog post about what a &amp;quot;strong manager&amp;quot; is,
+but in a nutshell it&amp;#39;s someone who is ready to fight for his or her
+own ideas, rights, thoughts, decisions, etc. A weak manager is one who is
+swimming with the current. Working under such a manager is a huge
+frustration and a waste of time. I will be demotivated and no amount of money
+will keep me interested.&lt;/p&gt;
+
+&lt;p&gt;These things don&amp;#39;t matter at all, I won&amp;#39;t even about about them:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mission and vision of the company&lt;/li&gt;
+&lt;li&gt;Business domain&lt;/li&gt;
+&lt;li&gt;Tech stack&lt;/li&gt;
+&lt;li&gt;Location&lt;/li&gt;
+&lt;li&gt;Company size or structure&lt;/li&gt;
+&lt;li&gt;Race, gender, sexual orientation, religion, or political views of people in the team&lt;/li&gt;
+&lt;li&gt;Financial status of the company&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, I don&amp;#39;t think that this list is applicable for everybody. Other programmers
+may have some other points or may disagree with mine.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I wrote a number of sarcastic articles
+about management and motivation, where some traditional and very popular
+practices were criticized. Now I&amp;#39;ve decided to think it all over
+and summarize what actually motivates me as a programmer when I&amp;#39;m
+working for someone else. Let&amp;#39;s say you hire me tomorrow as a Java coder
+and ask &amp;quot;What do you want us to do for you so
+that you will be most productive?&amp;quot; This would be my wish list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/300.jpg" /></entry><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
 about &amp;quot;-ER&amp;quot; suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
@@ -988,162 +1165,4 @@ and
 a few others.
 Let&amp;#39;s try to put emotions aside and analyze what&amp;#39;s happening
 and what long-term consequences this panic may have for our
-male-dominated engineering environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/twentynine-palms.jpg" /></entry><entry><title type="html">How I Would Re-design equals()</title><link href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html" rel="alternate" type="text/html" title="How I Would Re-design equals()" /><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/11/how-to-redesign-equals</id><content type="html" xml:base="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">&lt;p&gt;I want to rant a bit about Java design, in particular about the methods
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29&quot;&gt;&lt;code&gt;Object.equals()&lt;/code&gt;&lt;/a&gt;
-and
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29&quot;&gt;&lt;code&gt;Comparable.compareTo()&lt;/code&gt;&lt;/a&gt;.
-I&amp;#39;ve hated them for years, because, no matter how hard
-I try to like them, the code inside looks ugly. Now I know what exactly
-is wrong and how I would design this &amp;quot;object-to-object comparing&amp;quot; mechanism
-&lt;em&gt;better&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;L&amp;#39;ultimo capodanno (1998) by Marco Risi&#39; src=&#39;/images/2017/07/lultimo-capodanno.jpg&#39; longdesc=&#39;#4900028f&#39;/&gt;&lt;figcaption id=&#39;4900028f&#39;&gt;L&amp;#39;ultimo capodanno (1998) by Marco Risi&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Say we have a &lt;del&gt;simple&lt;/del&gt; primitive class &lt;code&gt;Weight&lt;/code&gt;, objects of which
-represent the weight of something in kilos:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Next, we want two objects of the same weight to be equal to each other:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is how such a method may look:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The ugly part here is, first of all, the
-&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;type casting&lt;/a&gt;
-with &lt;code&gt;instanceof&lt;/code&gt;. The second problem
-is that we touch the internals of the incoming object. This design makes
-polymorphic behavior of the &lt;code&gt;Weight&lt;/code&gt; impossible. We simply can&amp;#39;t pass
-anything else to the &lt;code&gt;equals()&lt;/code&gt; method, besides an instance of the
-class &lt;code&gt;Weight&lt;/code&gt;. We can&amp;#39;t turn it into an interface and introduce
-multiple implementations of it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This code will not work:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DefaultWeight&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// attribute and ctor skipped&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// error here!&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The problem is that one object decides for the other whether they are
-equal. This inevitably leads to a necessity to touch private attributes in order
-to do the actual comparison.&lt;/p&gt;
-
-&lt;p&gt;What is the solution?&lt;/p&gt;
-
-&lt;p&gt;This is what I&amp;#39;m offering. Any comparison, no matter what types we
-are talking about, is about comparing two digital values. Either we
-compare a weight with a weight, text with text, or a user with a user&amp;mdash;our
-CPUs can only compare numbers. Thus, we introduce a new interface
-&lt;code&gt;Digitizable&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Digitizable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Next, we introduce a new class &lt;code&gt;Comparison&lt;/code&gt;, which &lt;em&gt;is&lt;/em&gt; the comparison of
-two streams of bytes (I&amp;#39;m not sure the code is perfect, I tested it
-&lt;a href=&quot;https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals&quot;&gt;here&lt;/a&gt;,
-feel free to improve and contribute with a pull request):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Digitizable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;lft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rht&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;rht&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rht&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we need &lt;code&gt;Weight&lt;/code&gt; to implement &lt;code&gt;Digitizable&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Weight&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Digitizable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;digits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ByteBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;allocate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kilos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Finally, this is how we compare them:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Comparison&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This &lt;code&gt;v&lt;/code&gt; will either be &lt;code&gt;-1&lt;/code&gt;, &lt;code&gt;0&lt;/code&gt;, or &lt;code&gt;1&lt;/code&gt;. In this particular case it will be &lt;code&gt;-1&lt;/code&gt;,
-because &lt;code&gt;400&lt;/code&gt; is less than &lt;code&gt;500&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;No more violation of encapsulation, no more type casting, no more
-ugly code inside those &lt;code&gt;equals()&lt;/code&gt; and &lt;code&gt;compareTo()&lt;/code&gt; methods.
-The class &lt;code&gt;Comparison&lt;/code&gt; will work with all possible types. All our objects
-need to do in order to become comparable is to implement &lt;code&gt;Digitizable&lt;/code&gt; and
-&amp;quot;provide&amp;quot; their bytes for inspection/comparison.&lt;/p&gt;
-
-&lt;p&gt;This approach is actually very close to the
-&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;printers&lt;/a&gt;
-I described earlier.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">I want to rant a bit about Java design, in particular about the methods
-Object.equals()
-and
-Comparable.compareTo().
-I&amp;#39;ve hated them for years, because, no matter how hard
-I try to like them, the code inside looks ugly. Now I know what exactly
-is wrong and how I would design this &amp;quot;object-to-object comparing&amp;quot; mechanism
-better.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/lultimo-capodanno.jpg" /></entry></feed>
+male-dominated engineering environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/twentynine-palms.jpg" /></entry></feed>
