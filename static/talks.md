@@ -147,10 +147,12 @@ so why shouldn't we rate them, right? The best grade is
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
 Four factors of success;
-[Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)<br/>
+[Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)
+(Днепропетровский Государственный Университет,
+факультет "Международные Отношения", кафедра "Международная Экономика")<br/>
 Dnepr, Ukraine;
 13 September 2017;
-[video](https://www.youtube.com/watch?v=VQtdNQd7wIU).
+[видео](https://www.youtube.com/watch?v=VQtdNQd7wIU).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B-</aside>
