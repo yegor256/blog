@@ -36,9 +36,12 @@ script: |
     );
     var before = $('#total_comments');
     var after = ' (' + total + ' comments total)';
+    $('#total_comments').css('color', 'gray');
     $('#total_comments').html(after);
     if (total == 0 || before != after) {
       setTimeout(count_comments, 1000);
+    } else {
+      $('#total_comments').css('color', 'green');
     }
   }
   count_comments();
