@@ -34,14 +34,14 @@ script: |
         }
       }
     );
-    var before = $('#total_comments');
+    var before = $('#total_comments').html();
     var after = ' (' + total + ' comments total)';
     $('#total_comments').css('color', 'gray');
     $('#total_comments').html(after);
     if (total == 0 || before != after) {
       setTimeout(count_comments, 1000);
     } else {
-      $('#total_comments').css('color', 'green');
+      $('#total_comments').css('color', 'inherit');
     }
   }
   count_comments();
