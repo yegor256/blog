@@ -193,3 +193,4 @@ These things don't matter at all, I won't even ask about them:
 
 Of course, I don't think that this list is applicable for everybody. Other programmers
 may have some other points or may disagree with mine.
+
