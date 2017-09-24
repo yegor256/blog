@@ -2697,6 +2697,7 @@ gains
 gallon
 gallons
 gamblers
+gambling
 game
 game-changing
 games
