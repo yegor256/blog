@@ -50,13 +50,24 @@ You can buy via:
     <img src="/images/paintings/vangoart.png"/></a></div>
 
 <!--
-ugallery.com - applied
-newbloodart.com - applied
-riseart.com - submitted three picsπ
+ugallery.com - applied/rejected
+newbloodart.com - applied/rejected
+riseart.com - submitted three pics
 shairart.com - form doesn't work
 -->
 
 In order of creation:
+
+{% picture /images/paintings/2017/shame.jpg 350 %}
+
+_Shame_<br/>
+September 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"There is so much dark in each of us, which we're ashamed of;
+we're trying to hide it, patching ourselves here and there;
+patches don't help but make our sins even more visible and obvious."
 
 {% picture /images/paintings/2017/guilt.jpg 350 %}
 
