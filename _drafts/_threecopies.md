@@ -5,7 +5,7 @@ date: 2017-09-25
 place: Odessa, Ukraine
 tags: pets
 description: |
-  How do you backup your server data? I created this
+  How do you back up your server data? I created this
   web service to get rid of backup servers entirely.
 keywords:
   - data pipeline
@@ -22,7 +22,7 @@ I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,
 and a MySQL database hosted at the same place. I also have
 a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
-Heroku, and also... Well, there are many of them. How to backup them was always a
+Heroku, and also... Well, there are many of them. How to back them up was always a
 question for me.
 
 <!--more-->
@@ -41,12 +41,12 @@ of this solution were always the same:
 
   * I needed to pay for the server.
   * I needed to make sure the server was always up and running (Linux is far from reliable).
-  * I needed to backup my scripts too.
-  * I needed to SSH to the server every time I wanted to change a script, remember where they are, how they start, etc.
+  * I needed to back up my scripts too.
+  * I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.
 
 The biggest issue is that every single owner of a data source faces
 exactly the same set of problems. "Why can't I create a hosted solution for
-these scripts, to help everybody to backup their data," I was asking myself
+these scripts, to help everybody to back up their data," I was asking myself
 for years. "Well, I can," was the answer just a few weeks ago, and
 I created [ThreeCopies](http://www.threecopies.com).
 
@@ -68,7 +68,7 @@ data. I created a short cheat sheet for most common scenarios. This is how
 I backup the MySQL database for [thePMP](http://www.thepmp.com), for example:
 
 {% highlight bash %}
-# I don't want to backup every hour
+# I don't want to back up every hour
 if [ "${period}" == "hour" ]; then exit 0; fi
 
 # I dump the entire database into the file
