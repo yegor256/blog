@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-26T06:19:29+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What Motivates Me as a Programmer</title><link href="http://www.yegor256.com/2017/09/19/what-motivates-me.html" rel="alternate" type="text/html" title="What Motivates Me as a Programmer" /><published>2017-09-19T00:00:00+00:00</published><updated>2017-09-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/19/what-motivates-me</id><content type="html" xml:base="http://www.yegor256.com/2017/09/19/what-motivates-me.html">&lt;p&gt;I wrote a number of &lt;a href=&quot;/tag/sarcasm.html&quot;&gt;sarcastic articles&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-09-26T08:57:52+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">ThreeCopies.com—Server-Side Data Backup Service</title><link href="http://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html" rel="alternate" type="text/html" title="ThreeCopies.com&amp;mdash;Server-Side Data Backup Service" /><published>2017-09-26T00:00:00+00:00</published><updated>2017-09-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/26/threecopies-server-data-backup</id><content type="html" xml:base="http://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.threecopies.com&#39;&gt;&lt;img src=&#39;http://www.threecopies.com/images/logo.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;I have a number of data resources which exist in one place only and which
+I don&amp;#39;t really want to lose. For example, I have a hosted PHP website,
+and a MySQL database hosted at the same place. I also have
+a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
+Heroku, and also... Well, there are many of them. How to back them up was always a
+question for me.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Main picture&#39; src=&#39;/images/2017/09/threecopies.jpg&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;The most straightforward way is to rent a cheap $15/mo server
+(or use an existing one) and configure Cron to run a custom bash
+script, which will pull the data from the MySQL database, package it,
+and upload it to some place where it will be safe, such as Amazon S3
+bucket. Then, I would need another script for the PostgreSQL database, and another one
+for the FTP file archive, etc.&lt;/p&gt;
+
+&lt;p&gt;This is actually how I was doing it for years. The drawbacks
+of this solution were always the same:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I needed to pay for the server.&lt;/li&gt;
+&lt;li&gt;I needed to make sure the server was always up and running (Linux is far from reliable).&lt;/li&gt;
+&lt;li&gt;I needed to back up my scripts too.&lt;/li&gt;
+&lt;li&gt;I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The biggest issue is that every single owner of a data source faces
+exactly the same set of problems. &amp;quot;Why can&amp;#39;t I create a hosted solution for
+these scripts, to help everybody to back up their data,&amp;quot; I was asking myself
+for years. &amp;quot;Well, I can,&amp;quot; was the answer just a few weeks ago, and
+I created &lt;a href=&quot;http://www.threecopies.com&quot;&gt;ThreeCopies&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s a very simple hosted executor of bash scripts, which you edit
+through a web interface. Then one of our servers starts a Docker
+container (&lt;a href=&quot;https://hub.docker.com/r/yegor256/threecopies/&quot;&gt;yegor256/threecopies&lt;/a&gt; is the image, here is the
+&lt;a href=&quot;https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile&quot;&gt;&lt;code&gt;Dockerfile&lt;/code&gt;&lt;/a&gt;)
+and runs your script inside.&lt;/p&gt;
+
+&lt;p&gt;The script starts every hour, every day and every week.
+Hence the name: &amp;quot;three copies.&amp;quot; It&amp;#39;s good practice for data backup
+to create separate copies with different regularities. Also, you might want to put
+different data into different copies. To help your script understand which
+copy is running at any particular time we pass the &lt;code&gt;$period&lt;/code&gt; environment variable into it, with
+the value of either &lt;code&gt;hour&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, or &lt;code&gt;week&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;How your script pulls the data, packages it, and archives it, depends on the
+data. I created a short cheat sheet for most common scenarios. This is how
+I backup the MySQL database for &lt;a href=&quot;http://www.thepmp.com&quot;&gt;thePMP&lt;/a&gt;, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# I don&amp;#39;t want to back up every hour&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;hour&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# I dump the entire database into the file&lt;/span&gt;
+mysqldump --lock-tables&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; --host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;db.thepmp.com &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;thepmp --password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;********* &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  --databases thepmp &amp;gt; thepmp.sql
+
+&lt;span class=&quot;c1&quot;&gt;# I compress the file&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date &lt;span class=&quot;s2&quot;&gt;&amp;quot;+%Y-%m-%d-%H-%M&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.tgz&amp;quot;&lt;/span&gt;
+tar czf &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; thepmp.sql
+
+&lt;span class=&quot;c1&quot;&gt;# I upload it to Amazon S3 bucket&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[default]&amp;quot;&lt;/span&gt; &amp;gt; ~/.s3cfg
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;access_key=AKIAICJKH*****CVLAFA&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.s3cfg
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.s3cfg
+s3cmd --no-progress put &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;s3://backup.yegor256.com/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The output of the script is available through the web interface and this
+is yet another benefit of this solution. It&amp;#39;s easy to monitor what went
+wrong and restart the script. All logs are available through the browser. No
+SSH, no terminals.&lt;/p&gt;
+
+&lt;p&gt;I would say that it&amp;#39;s a light version of
+&lt;a href=&quot;https://aws.amazon.com/datapipeline/&quot;&gt;AWS Data Pipeline&lt;/a&gt;. &lt;a href=&quot;http://www.threecopies.com&quot;&gt;ThreeCopies&lt;/a&gt;
+does exactly the same, but it&amp;#39;s easier to configure, and it&amp;#39;s cheaper.
+I&amp;#39;m charging $0.01 per script execution hour. And I actually charge
+per second, while AWS always charges for a full hour. For $5.00 you get
+500 hours. For example, the script you see above takes about 5 minutes
+to complete (the database is not huge). If you skip the hourly executions, like I did above, you
+will consume 170 minutes of server time every month, which will cost you about
+&lt;strong&gt;$0.34 per year&lt;/strong&gt;! This is much cheaper than a server and
+its monitoring, I believe.&lt;/p&gt;
+
+&lt;p&gt;One more thing before you go. ThreeCopies is written in Java&amp;nbsp;8 and is open source,
+find it &lt;a href=&quot;https://github.com/yegor256/threecopies&quot;&gt;in GitHub&lt;/a&gt;. Feel free to
+inspect the code, find bugs, and contribute with fixes or improvements.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">I have a number of data resources which exist in one place only and which
+I don&amp;#39;t really want to lose. For example, I have a hosted PHP website,
+and a MySQL database hosted at the same place. I also have
+a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
+Heroku, and also... Well, there are many of them. How to back them up was always a
+question for me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/threecopies.jpg" /></entry><entry><title type="html">What Motivates Me as a Programmer</title><link href="http://www.yegor256.com/2017/09/19/what-motivates-me.html" rel="alternate" type="text/html" title="What Motivates Me as a Programmer" /><published>2017-09-19T00:00:00+00:00</published><updated>2017-09-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/19/what-motivates-me</id><content type="html" xml:base="http://www.yegor256.com/2017/09/19/what-motivates-me.html">&lt;p&gt;I wrote a number of &lt;a href=&quot;/tag/sarcasm.html&quot;&gt;sarcastic articles&lt;/a&gt;
 about management and motivation, where some traditional and very popular
 practices were criticized. Now I&amp;#39;ve decided to think it all over
 and summarize what actually motivates &lt;em&gt;me&lt;/em&gt; as a programmer when I&amp;#39;m
@@ -1066,110 +1160,4 @@ is where I keep all my bookkeeping accounts, for all my companies.&lt;/p&gt;
 &lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tools" /><summary type="html">I recently published
 a summary of the software and hardware I&amp;#39;m using every day. Now I&amp;#39;ll
 list my most favorite websites and online services, which help me do my
-daily job: write code and manage projects.</summary></entry><entry><title type="html">The Bigger Victim of Sexual Harassment</title><link href="http://www.yegor256.com/2017/07/18/sexual-harassment.html" rel="alternate" type="text/html" title="The Bigger Victim of Sexual Harassment" /><published>2017-07-18T00:00:00+00:00</published><updated>2017-07-18T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/07/18/sexual-harassment</id><content type="html" xml:base="http://www.yegor256.com/2017/07/18/sexual-harassment.html">&lt;p&gt;You most probably are aware of the recent sexual harassment
-&lt;a href=&quot;https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html?_r=0&quot;&gt;scandals&lt;/a&gt;
-in Silicon Valley, which led to serious career problems for
-&lt;a href=&quot;https://500hats.com/im-a-creep-i-m-sorry-d2c13e996ea0&quot;&gt;Dave McClure&lt;/a&gt; (former CEO of &lt;a href=&quot;https://500.co/&quot;&gt;500 Startups&lt;/a&gt;),
-&lt;a href=&quot;https://www.nytimes.com/2017/02/19/business/uber-sexual-harassment-investigation.html&quot;&gt;Travis Kalanick&lt;/a&gt; (former CEO of &lt;a href=&quot;http://www.uber.com&quot;&gt;Uber&lt;/a&gt;),
-&lt;a href=&quot;https://medium.com/@sacca/i-have-more-work-to-do-c775c5d56ca1&quot;&gt;Chris Sacca&lt;/a&gt;,
-and
-&lt;a href=&quot;https://www.usatoday.com/story/tech/news/2017/06/30/venture-capital-sexual-harassment-scandal/103336512/&quot;&gt;a few others&lt;/a&gt;.
-Let&amp;#39;s try to put emotions aside and analyze what&amp;#39;s happening
-and what long-term consequences this panic may have for our
-male-dominated engineering environment.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Twentynine Palms (2003) by Bruno Dumont&#39; src=&#39;/images/2017/07/twentynine-palms.jpg&#39; longdesc=&#39;#c014ddd9&#39;/&gt;&lt;figcaption id=&#39;c014ddd9&#39;&gt;Twentynine Palms (2003) by Bruno Dumont&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;We will never know what really happened between those male investors and
-female entrepreneurs behind closed doors, but the gist of the accusation
-is that the former were &lt;em&gt;making advances&lt;/em&gt; towards the latter,
-where it was clearly &lt;em&gt;inappropriate&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;What does that mean exactly? What, for example, did Dave McClure do in order
-to be kicked out of the company he founded?&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s see. According to Katie Benner from The New York Times,
-he sent &lt;a href=&quot;https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html&quot;&gt;this message&lt;/a&gt;
-to &lt;a href=&quot;https://twitter.com/sarahkunst&quot;&gt;Sarah Kunst&lt;/a&gt;,
-who was an applicant at his incubator in 2014 (other &amp;quot;harassers&amp;quot; were accused of
-doing something very similar):&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I was getting confused figuring out whether to hire you or hit on you.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Obviously he was flirting. And what&amp;#39;s wrong with that? Can&amp;#39;t we flirt any more?
-Is it a crime all of a sudden? One thing is wrong though. It was a &lt;em&gt;threat&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Even though this message didn&amp;#39;t say it explicitly, it actually &lt;em&gt;implied&lt;/em&gt;
-that &amp;quot;you either go along and we go out, or you won&amp;#39;t be hired.&amp;quot; Of course,
-&amp;quot;no hire&amp;quot; may not hurt as much as a knife or a fist in the face, but it
-does hurt. Especially if you are a woman, a member of a minority group.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m a &lt;del&gt;sexist&lt;/del&gt; &lt;a href=&quot;/2017/07/04/sexism.html&quot;&gt;gentleman&lt;/a&gt;,
-I feel bad when I see women being threatened. I want to protect them
-and I expect our system of justice to help me, just
-like it helps when we deal with physical violence.
-These threats or attempts to threaten must be punished.&lt;/p&gt;
-
-&lt;p&gt;However!&lt;/p&gt;
-
-&lt;p&gt;There is nothing wrong with the game between the sexes by itself. Just
-like we don&amp;#39;t prohibit sex because we are afraid of rapists, we must not
-stop asking women out because of our fear of a possible harassment accusation.
-However, it seems that this is what is happening now: men are becoming &lt;em&gt;afraid&lt;/em&gt; of women.
-Especially powerful men with money and status. They realize
-that a small incautious step may help them become the next Dave or Travis.&lt;/p&gt;
-
-&lt;p&gt;This fear is destroying us.&lt;/p&gt;
-
-&lt;p&gt;Thanks to this fear our &lt;em&gt;masculine&lt;/em&gt; characteristics become a victim of this dangerous game
-that society is playing right now, with a noble intent to protect women against
-verbal and psychological abuse. We men are losing our self-confidence,
-our self-esteem, our &lt;del&gt;balls&lt;/del&gt; courage.&lt;/p&gt;
-
-&lt;p&gt;This fear mentally castrates us.&lt;/p&gt;
-
-&lt;p&gt;We must be absolutely clear that those harassers are guilty not because
-they &amp;quot;made advances&amp;quot; towards women who work with them or for them, but because
-they were &lt;em&gt;threatening&lt;/em&gt; those ladies. There is nothing wrong in being
-attracted to a woman, no matter who she is: your boss, your employee, your
-schoolmate, or the founder of the business you&amp;#39;re investing in. Moreover,
-there is nothing wrong in making advances, falling in love, having sex
-and marrying them. Threatening them in order to get all that is very wrong.&lt;/p&gt;
-
-&lt;p&gt;Not every flirtation is harassment. Not every man with a sexual
-instinct is a rapist.&lt;/p&gt;
-
-&lt;p&gt;How would I re-phrase that message to Sarah if I had been Dave and had fallen
-in love with her at first sight? I would probably say:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I was getting confused, figuring out how to isolate my hiring process
-from my desire to hit on you. How about dinner? I promise,
-no matter how it ends, it will not affect our hiring decision at all.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I realize that it&amp;#39;s not perfect, since she wouldn&amp;#39;t be completely
-comfortable, and still might expect Dave&amp;#39;s feelings to affect his hiring decision
-if it turns out she doesn&amp;#39;t like him or simply already has a partner. However,
-this would seem like a respectful attempt to put the weapon down.&lt;/p&gt;
-
-&lt;p&gt;It is difficult to not threaten a woman if you&amp;#39;re holding a gun in your hand
-while asking her out. Money and power is the gun.&lt;/p&gt;
-
-&lt;p&gt;Guys, let&amp;#39;s be very careful. However, let&amp;#39;s not forget how to seduce women
-and fall in love with them. We have to stay men, especially when
-some of those among us are weak abusers deserving no respect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="genders" /><summary type="html">You most probably are aware of the recent sexual harassment
-scandals
-in Silicon Valley, which led to serious career problems for
-Dave McClure (former CEO of 500 Startups),
-Travis Kalanick (former CEO of Uber),
-Chris Sacca,
-and
-a few others.
-Let&amp;#39;s try to put emotions aside and analyze what&amp;#39;s happening
-and what long-term consequences this panic may have for our
-male-dominated engineering environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/twentynine-palms.jpg" /></entry></feed>
+daily job: write code and manage projects.</summary></entry></feed>

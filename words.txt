@@ -329,6 +329,8 @@ architectural
 architecturally
 architecture
 architectures
+archive
+archives
 archiving
 are
 area
@@ -490,6 +492,7 @@ background
 backlog
 backslide
 backstabbing
+backup
 backups
 bad
 bad-mouthing
@@ -522,6 +525,7 @@ basecamp
 based
 baselined
 bases
+bash
 basic
 basically
 basics
@@ -963,6 +967,7 @@ characteristics
 characters
 charge
 charges
+charging
 charisma
 charismatic
 charm
@@ -1509,6 +1514,7 @@ criticize
 criticized
 critiques
 CRMs
+cron
 cross
 cross-browser
 crossed-out
@@ -2300,6 +2306,7 @@ executed
 executes
 executing
 execution
+executions
 executive
 executor
 exercise
@@ -3293,6 +3300,7 @@ insides
 insignificant
 insist
 insists
+inspect
 inspection
 inspiration
 inspire
@@ -5215,6 +5223,7 @@ publisher
 publishing
 pull
 pulling
+pulls
 pulp
 pulse
 punish
@@ -5436,6 +5445,7 @@ registration
 regret
 regrets
 regular
+regularities
 regularly
 regulate
 regulated
@@ -5595,6 +5605,7 @@ responsibility
 responsible
 responsiveness
 rest
+restart
 restaurant
 RESTful
 restrict
@@ -6615,6 +6626,7 @@ tennis
 tension
 term
 terminal
+terminals
 terminate
 terminated
 terminates
@@ -6659,6 +6671,7 @@ themselves
 then
 theoretical
 theory
+thePMP
 there
 there's
 thereby
@@ -6698,6 +6711,7 @@ threatens
 threats
 three
 three-month
+threecopies
 threshold
 threw
 throttling
@@ -7242,6 +7256,7 @@ well-managed
 well-organized
 well-paid
 well-prepared
+went
 wercker
 were
 weren't
