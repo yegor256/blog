@@ -121,7 +121,7 @@ to backup your server-side data. You create a bash script and one of our
 servers regularly runs it in a Docker container, collect logs and lets you see them.
 It's similar to Cron, but hosted.
 More about it in this article:
-[ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017/sep/2017-09-25-threecopies-server-data-backup %}).
+[ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017/sep/2017-09-26-threecopies-server-data-backup %}).
 <br/>
 Founded 25-Jun-2017.
 
