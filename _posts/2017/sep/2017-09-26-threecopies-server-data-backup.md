@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ThreeCopies.com&mdash;Server-Side Data Backup Service"
-date: 2017-09-25
+date: 2017-09-26
 place: Odessa, Ukraine
 tags: pets
 description: |

@@ -110,9 +110,20 @@ Founded 23-May-2017.
 an extra layer between web apps and accumulates HTTP requests they send
 to each other. When requests can't be delivered it repeats them multiple times.
 More about it in this article:
-[...](...).
+[ReHTTP.net&mdash;HTTP Repeater]({% pst 2017-09-05-rehttp-http-repeater %}).
 <br/>
 Founded 21-Aug-2017.
+
+{% badge http://www.threecopies.com/images/logo.png 70 http://www.threecopies.com %}
+
+[threecopies.com](http://www.threecopies.com) is a hosted service
+to backup your server-side data. You create a bash script and one of our
+servers regularly runs it in a Docker container, collect logs and lets you see them.
+It's similar to Cron, but hosted.
+More about it in this article:
+[ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017-09-25-threecopies-server-data-backup %}).
+<br/>
+Founded 25-Jun-2017.
 
 Others (less stable or successful):
 [tacit](https://github.com/yegor256/tacit),
