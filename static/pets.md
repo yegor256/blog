@@ -110,7 +110,7 @@ Founded 23-May-2017.
 an extra layer between web apps and accumulates HTTP requests they send
 to each other. When requests can't be delivered it repeats them multiple times.
 More about it in this article:
-[ReHTTP.net&mdash;HTTP Repeater]({% pst 2017-09-05-rehttp-http-repeater %}).
+[ReHTTP.net&mdash;HTTP Repeater]({% pst 2017/sep/2017-09-05-rehttp-http-repeater %}).
 <br/>
 Founded 21-Aug-2017.
 
@@ -121,7 +121,7 @@ to backup your server-side data. You create a bash script and one of our
 servers regularly runs it in a Docker container, collect logs and lets you see them.
 It's similar to Cron, but hosted.
 More about it in this article:
-[ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017-09-25-threecopies-server-data-backup %}).
+[ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017/sep/2017-09-25-threecopies-server-data-backup %}).
 <br/>
 Founded 25-Jun-2017.
 
