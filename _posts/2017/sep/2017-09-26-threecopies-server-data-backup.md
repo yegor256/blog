@@ -106,4 +106,3 @@ its monitoring, I believe.
 One more thing before you go. ThreeCopies is written in Java&nbsp;8 and is open source,
 find it [in GitHub](https://github.com/yegor256/threecopies). Feel free to
 inspect the code, find bugs, and contribute with fixes or improvements.
-
