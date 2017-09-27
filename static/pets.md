@@ -125,6 +125,16 @@ More about it in this article:
 <br/>
 Founded 25-Jun-2017.
 
+{% badge http://www.wring.io/images/logo.svg 70 http://www.wring.io %}
+
+[wring.io](http://www.wring.io) is a smart inbox for GitHub (and other, in the future)
+notifications we can't parse in our email inbox, because there are too many of them.
+I use this system every day to filter hundreds of notifications GitHub is sending me.
+More about it in this article:
+[Wring.io, a Dispatcher of GitHub Notifications]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %}).
+<br/>
+Founded 21-Feb-2016.
+
 Others (less stable or successful):
 [tacit](https://github.com/yegor256/tacit),
 [qulice](https://github.com/teamed/qulice),
@@ -133,5 +143,4 @@ Others (less stable or successful):
 [xcop](https://github.com/yegor256/xcop),
 [netbout](http://www.netbout.com),
 [thindeck](http://www.thindeck.com),
-[wring](http://www.wring.io),
 [h12](http://www.h12.co).
