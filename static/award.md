@@ -15,7 +15,7 @@ keywords:
   - open source project award
 ---
 
-Submission to 2017 is [open]({% pst 2016/oct/2016-10-23-award-2017 %}).
+Submission to 2017 is [closed]({% pst 2016/oct/2016-10-23-award-2017 %}).
 
 <img src="http://www.yegor256.com/images/award/2016/winner-pholser.png"
   style="width:203px;height:45px;"/>
