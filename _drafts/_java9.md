@@ -25,7 +25,7 @@ a few weeks ago. Check the
 they include many interesting features. However, I think that
 not everything is as good as Oracle and Java adepts
 [seem to picture it](https://www.reddit.com/r/programming/comments/71ls99/java_9_released/).
-I see three trends in the Java world, which are good, bad, and ugly
+I see three trends in the Java world, which are good, bad, and ugly,
 respectively. Let's start with the good one.
 
 <!--more-->
@@ -37,7 +37,7 @@ respectively. Let's start with the good one.
 The first trend is an obvious improvement of the platform that compiles Java,
 packages JARs, and runs the bytecode. It definitely becomes better with every
 new Java release. Here is a list of improvements Java&nbsp;9 made, which are
-very useful without any doubts:
+very useful, without doubt:
 
   * [JSR 376](http://openjdk.java.net/projects/jigsaw/spec/): Module System a.k.a. [Jigsaw](http://openjdk.java.net/projects/jigsaw/)
 
@@ -49,17 +49,17 @@ very useful without any doubts:
 
   * [JEP 158](http://openjdk.java.net/jeps/158): Unified logging
 
-The platform obviously is becoming more mature. This is a **good** trend.
+The platform is obviously becoming more mature. This is a **good** trend.
 
 ## The JDK
 
-The second trend, which I observe since
+The second trend, which I've observed since
 [Java&nbsp;6](http://www.oracle.com/technetwork/java/javase/features-141434.html),
-shows that the JDK, which essentially is a collection of
+shows that the JDK, which is essentially a collection of
 classes and interfaces designed, developed, and maintained by
 [Oracle](https://www.oracle.com/java/index.html),
 gets bigger with every new release. In Java&nbsp;9 they added and extended,
-besides others:
+besides others, the following:
 
   * JEP [221](http://openjdk.java.net/jeps/221),
     [224](http://openjdk.java.net/jeps/224)
@@ -76,16 +76,16 @@ besides others:
 
   * [JEP 236](http://openjdk.java.net/jeps/236): Parser for Nashorn (extended)
 
-Of course, some features must be implemented in the JDK itself, like
+Of course some features must be implemented in the JDK itself, like
 Unicode support ([JEP 267](http://openjdk.java.net/jeps/267)),
 platform-specific Desktop features ([JEP 272](http://openjdk.java.net/jeps/272)),
 Spin-Wait Hints ([JEP 285](http://openjdk.java.net/jeps/285)),
 compact strings ([JEP 254](http://openjdk.java.net/jeps/254)),
-or the process API ([JEP 102](http://openjdk.java.net/jeps/102)).
+and the process API ([JEP 102](http://openjdk.java.net/jeps/102)).
 Their implementation depends on the underlying platform and has
 to be provided together with the JVM.
 
-But what HTTP 2.0 client is doing in the JDK, together with
+But what is HTTP 2.0 client doing in the JDK, together with
 [JAX-RS](https://jcp.org/en/jsr/detail?id=311),
 [JPA](https://www.jcp.org/en/jsr/detail?id=338),
 [JAX-WS](https://jcp.org/en/jsr/detail?id=224),
@@ -98,9 +98,9 @@ Aggregating them under one monster umbrella brand is a mistake, I believe.
 
 I think that big corporations are only killing the software market,
 instead of making it better, because of the financial and political motives
-they expose to it. That's exactly what is happening with JDK. Thanks to
-Oracle monopoly it lacks flexibility and dynamicity in growth. In other
-words, we're stuck to what Oracle and its big friends
+they expose it to. That's exactly what is happening with JDK. Thanks to
+the Oracle monopoly it lacks flexibility and dynamicity in growth. In other
+words, we're stuck with what Oracle and its big friends
 [think is right](https://news.ycombinator.com/item?id=14301531).
 
 Thus, making JDK bigger is a **bad** trend. Instead, I believe,
@@ -118,7 +118,7 @@ was developed by
 in 1995 as an object-oriented language. There were
 [many concerns]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
 about this claim about it's object-orientation and I'm also not sure that Java
-is more OO than procedural. However, it is officially object-oriented.
+is more OO than it is procedural. However it is officially object-oriented.
 
 There were many procedural features inherited by Java from C/C++, since
 its first version, including
@@ -126,9 +126,9 @@ its first version, including
 [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}),
 [implementation inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}),
 etc. It was not a perfect object-oriented language and it was not going
-to be one, as I understand. The key idea was to create something that could
+to be one, as I understand it. The key idea was to create something that could
 be [written once and ran anywhere](https://en.wikipedia.org/wiki/Write_once,_run_anywhere).
-However, the language was a big deal, not just the JVM. It was simple and sexy.
+However the language was a big deal also, not just the JVM. It was simple and sexy.
 
 Java&nbsp;5 made a serious step forward in 2004 and improved the language by
 adding
@@ -145,7 +145,7 @@ in 2011, which was a good move, in line with the OOP paradigm.
 Java&nbsp;8 added [lambda expressions](http://openjdk.java.net/projects/lambda/) in 2014,
 which was a great feature, but absolutely irrelevant to OOP. Lambda and
 [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
-turned Java into a mix of object, procedural, and functional
+turned Java into a mix of the object, procedural, and functional
 paradigms. [Default methods](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
 were also added to interfaces, which turned types into libraries of code. Types into libraries!
 It's even worse than
@@ -156,7 +156,7 @@ Now Java&nbsp;9 made the next "improvement" to interfaces, allowing them to have
 private methods. Private static methods in types! Can you believe it? What will
 be the next step? Attributes, in Java&nbsp;10, I guess.
 
-Also, let's take a look at what was done to some core classes in JDK,
+Also, let's take a look at what was done to some core classes in the JDK,
 to understand where the language is heading. Just two examples.
 
 **Factory methods for collections**
@@ -167,20 +167,20 @@ Instead of introducing new constructors and allowing us to do this:
 List<Integer> list = new ArrayList<>(1, 2, 3);
 {% endhighlight %}
 
-In Java&nbsp;9 they created more static methods and made us do this instead:
+...in Java&nbsp;9 they created more static methods and made us do this instead:
 
 {% highlight java %}
 List<Integer> list = List.of(1, 2, 3);
 {% endhighlight %}
 
-"Less constructors, more static methods!" seems to be the philosophy of those who
+"Fewer constructors, more static methods!" seems to be the philosophy of those who
 introduced this JEP. Needless to say that this is completely against the
 very spirit of object-oriented programming. Objects must be created by
 constructors, not static methods, no matter what Joshua Bloch
 [says](http://amzn.to/2crH5tW). Static methods make the moment of operator
-`new` usage invisible for us and that's why the code way less
+`new` usage invisible for us and that's why the code is way less
 maintainable&mdash;we simply don't know exactly what class is instantiated and
-what are the real arguments of its ctor.
+what the real arguments of its ctor are.
 
 By the way, with [Cactoos](http://www.cactoos.org) you can do it the right way:
 
@@ -191,26 +191,26 @@ List<Integer> list = new ListOf(1, 2, 3);
 This is OOP.
 
 **New methods in `InputStream`**.
-Three new methods were added to
+Three new methods were added to the
 already [over bloated]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) class
 [`InputStream`](http://download.java.net/java/jdk9/docs/api/java/io/InputStream.html):
 `transferTo()`, `readNBytes()`, and `readAllBytes()`.
-Now, we are supposed to do this, when we want input stream to
+Now we are supposed to do this, when we want input stream to
 copy to an output stream:
 
 {% highlight java %}
 input.transferTo(output);
 {% endhighlight %}
 
-It's one of the most typical mistake young OOP programmers are doing: they
-make their interfaces big. Just because they need more functionality. I guess
+It's one of the most typical mistakes young OOP programmers are making: they
+make their interfaces big. Just because they need more functionality. I guess the
 [interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)
 is part of the famous [SOLID]({% pst 2017/mar/2017-03-28-solid %})
 and is many years old. What's wrong with you, Oracle?
-What will be the next step? In Java&nbsp;10 we will also have
+What will the next step be? In Java&nbsp;10 we will also have
 `saveToFile()` and `printToConsole()`? How about `emailToAFriend()`?
 
-This is how you would do the same with
+This is how you would do the same with the
 [`IOUtils`](https://commons.apache.org/proper/commons-io/javadocs/api-2.4/org/apache/commons/io/IOUtils.html)
 utility class from
 [commons-io](https://commons.apache.org/proper/commons-io/):
@@ -233,6 +233,6 @@ This is OOP.
 <hr/>
 
 In my opinion, Java is getting **uglier**, and this is a trend. Does it mean
-that it's time to quit? No! No matter how ugly you are, we will always love you,
+that it's time to quit? No! No matter how ugly you are, we will always love you
 Java!
 
