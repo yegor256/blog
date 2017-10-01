@@ -82,9 +82,43 @@ let us obtain directly. Then, we will use stream API and do the job:
 StreamSupport.stream(probes.spliterator(), false)
   .filter(p -> p == 0.0d || p == 1.0d)
   .limit(10L)
-  .forEach()
+  .forEach(
+    probe -> System.out.printf(
+      "Probe #%d: %f", 0, probe * 100.0d
+    )
+  );
 {% endhighlight %}
 
+This will work, but will say `Probe #0` for all probes, because `forEach()`
+doesn't work with indexes. There is no such thing as `forEachWithIndex()`
+in the [`Stream`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+interface as of Java&nbsp;8 (and Java&nbsp;9
+[too](http://download.java.net/java/jdk9/docs/api/java/util/stream/Stream.html)).
+Here is a [workaround](https://stackoverflow.com/a/18552071/187141) with
+an atomic counter:
 
+{% highlight java %}
+AtomicInteger index = new AtomicInteger();
+StreamSupport.stream(probes.spliterator(), false)
+  .filter(p -> p == 0.0d || p == 1.0d)
+  .limit(10L)
+  .forEach(
+    probe -> System.out.printf(
+      "Probe #%d: %f",
+      index.getAndIncrement(),
+      probe * 100.0d
+    )
+  );
+{% endhighlight %}
 
+What's wrong with this, you may ask? First, see how easily we got into
+trouble when we didn't find the right method in the `Stream` interface. We
+immediately fell off the "streaming" paradigm and got back to the
+good old procedural global variable (the counter). Second, we don't
+really see what's going on inside those `filter()`, `limit()`, and `forEach()`
+methods. How exactly do they work? The documentation says that this
+approach is "declarative" and each method in the `Stream` interface returns
+an instance of some class. What classes are they? We have no idea by
+just looking at this code.
 
+The third problem is that
