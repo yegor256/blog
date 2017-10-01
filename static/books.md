@@ -15,6 +15,11 @@ keywords:
   - books about management
 ---
 
+If you already purchased and read my books, please review them on Amazon and/or GoodReads.
+Those reviews really make a difference and new readers are paying attention to them. You will
+help me a lot if you post them. Please, make them honest and as detailed
+as you can.
+
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 [Elegant Objects](/elegant-objects.html) (Volume 1)
 is my first book. It is about object-oriented
