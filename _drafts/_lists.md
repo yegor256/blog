@@ -5,7 +5,9 @@ date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
 description: |
-  ...
+  Streams from Java 8 help manipulate with collections,
+  but they ruin the idea of objects; decorators, on the
+  other hand, do the same in an object-oriented way.
 keywords:
   - streams API
   - decorators vs streams
@@ -68,7 +70,9 @@ algorithm and apply to another use case. We can't really modify it easily,
 for example to take numbers from two sources instead of one, etc.
 It is procedural, enough said. Don't do it this way.
 
-Now, Java&nbsp;8 gives us Streams API, which is supposed to offer a
+Now, Java&nbsp;8 gives us
+[Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html),
+which is supposed to offer a
 functional way to do the same. Let's try to use it.
 
 First, we need to create an instance of
@@ -100,7 +104,7 @@ an atomic counter:
 {% highlight java %}
 AtomicInteger index = new AtomicInteger();
 StreamSupport.stream(probes.spliterator(), false)
-  .filter(p -> p == 0.0d || p == 1.0d)
+  .filter(probe -> probe == 0.0d || probe == 1.0d)
   .limit(10L)
   .forEach(
     probe -> System.out.printf(
@@ -121,4 +125,112 @@ approach is "declarative" and each method in the `Stream` interface returns
 an instance of some class. What classes are they? We have no idea by
 just looking at this code.
 
-The third problem is that
+These two problems are connected. The biggest issue with this streaming API
+is the very interface `Stream`&mdash;it's huge. At the time of writing
+there are 43 methods. Fourty three, in a single interface! This is against
+each and every
+[principle]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+of object-oriented programming, starting with
+[SOLID]({% pst 2017/mar/2017-03-28-solid %}) and then up to more serious
+ones.
+
+What is the object-oriented way to implement the same algorithm? Here
+is how I would do it with [Cactoos](http://www.cactoos.org), which is just a collection of
+<del>primitive</del> simple Java classes:
+
+{% highlight java %}
+new And(
+  new Mapped<Double, Scalar<Boolean>>(
+    new Limited<Double>(
+      new Filtered<Double>(
+        probes,
+        probe -> probe == 0.0d || probe == 1.0d
+      ),
+      10
+    ),
+    probe -> () -> {
+      System.out.printf(
+        "Probe #%d: %f", 0, probe * 100.0d
+      );
+      return true;
+    }
+  ),
+).value();
+{% endhighlight %}
+
+Let's see what's going on here. First,
+[`Filtered`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html)
+decorates our iterable `probes` to take certain items out of it.
+Pay attention that `Filtered` implements `Iterable`. Then,
+[`Limited`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html),
+also being an `Iterable`, takes only first ten items out. Then,
+[`Mapped`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html)
+converts each probe into an instance of
+[`Scalar<Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html),
+which does the line printing.
+
+Finally, the instance of `And` goes through the list of "scalars" and ask
+each of them to return `boolean`. They print the line and return `true`. Since
+it's `true`, `And` makes the next attempt with the next scalar. Finally,
+its method `value()` returns `true`.
+
+But wait, there are no indexes. Let's add them. In order to do that we
+just use another class, called `AndWithIndex`:
+
+{% highlight java %}
+new AndWithIndex(
+  new Mapped<Double, Func<Integer, Boolean>>(
+    new Limited<Double>(
+      new Filtered<Double>(
+        probes,
+        probe -> probe == 0.0d || probe == 1.0d
+      ),
+      10
+    ),
+    probe -> index -> {
+      System.out.printf(
+        "Probe #%d: %f", index, probe * 100.0d
+      );
+      return true;
+    }
+  ),
+).value();
+{% endhighlight %}
+
+Instead of `Scalar<Boolean>` we now map our probes to
+[`Func<Integer, Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html)
+to let them accept the index.
+
+The beauty of this approach is that all classes and interfaces are small
+and that's why very composable. To make an iterable of probes limited
+we decorate it with `Limited`; to make it filtered we decorate it with
+`Filtered`; to do something else we create a new decorator and use it. We're
+not stick to one single interface like `Stream`.
+
+The bottom line is that decorators is an object-oriented instrument to
+modify the behavior of collections, while streams is something else, which
+I can't even find the name for.
+
+P.S. By the way, this is how the same algorithm can be implemented
+with the help of Guava's
+[`Iterables`](https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html):
+
+{% highlight java %}
+Iterable<Double> ready = Iterables.limit(
+  Iterables.filter(
+    probes,
+    probe -> probe == 0.0d || probe == 1.0d
+  ),
+  10
+);
+int pos = 0;
+for (Double probe : probes) {
+  System.out.printf(
+    "Probe #%d: %f", pos++, probe * 100.0d
+  );
+}
+{% endhighlight %}
+
+This is some weird combination of object-oriented and functional styles.
+
+
