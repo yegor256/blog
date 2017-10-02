@@ -107,7 +107,7 @@ Thus, making JDK bigger is a **bad** trend. Instead, I believe,
 Oracle would only benefit from making it smaller,
 delegating everything that is not platform-specific to the open
 source community, supporting programmers somehow and promoting open and effective
-standartization processes on the market.
+standardization processes on the market.
 
 ## The Language
 
@@ -117,7 +117,7 @@ was developed by
 [Sun Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems)
 in 1995 as an object-oriented language. There were
 [many concerns]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
-about this claim about it's object-orientation and I'm also not sure that Java
+about this claim of object-orientation and I'm also not sure that Java
 is more OO than it is procedural. However it is officially object-oriented.
 
 There were many procedural features inherited by Java from C/C++, since
@@ -167,7 +167,7 @@ Instead of introducing new constructors and allowing us to do this:
 List<Integer> list = new ArrayList<>(1, 2, 3);
 {% endhighlight %}
 
-...in Java&nbsp;9 they created more static methods and made us do this instead:
+...in Java&nbsp;9 they created more static methods and made us do this:
 
 {% highlight java %}
 List<Integer> list = List.of(1, 2, 3);
