@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java 9: The Good, The Bad, and The Ugly"
+title: "The Good, The Bad, and Java&nbsp;9"
 date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
