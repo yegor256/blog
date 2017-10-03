@@ -60,7 +60,7 @@ In order of creation:
 
 {% picture /images/paintings/2017/in-love.jpg 350 %}
 
-_Shame_<br/>
+_In love_<br/>
 October 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
