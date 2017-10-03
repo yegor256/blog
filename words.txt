@@ -5414,6 +5414,7 @@ recommendation
 recommendations
 recommended
 recommends
+recomment
 reconciliation
 reconfig
 reconsider
@@ -5477,7 +5478,7 @@ regularly
 regulate
 regulated
 rehearse
-rehttp
+ReHTTP
 reich
 reiterate
 reiterates
