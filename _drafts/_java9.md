@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Good, The Bad, and Java&nbsp;9"
+title: "Java 9: The Good, The Bad, and Private Interface Methods"
 date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
@@ -14,9 +14,9 @@ keywords:
   - java 9 features
   - analysis of java 9
   - features of java 9
-image: /images/2017/02/...
+image: /images/2017/10/birdman.jpg
 jb_picture:
-  caption:
+  caption: Birdman (2014) by Alejandro G. Iñárritu
 ---
 
 Java 9 [was released](https://blogs.oracle.com/java/java-9-release-now-available)
