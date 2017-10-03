@@ -134,6 +134,7 @@ agents
 ages
 aggregated
 aggregates
+aggregating
 aggressive
 aggressively
 agile
@@ -818,6 +819,7 @@ by
 bypassed
 byte
 byte-code
+bytecode
 bytes
 cache
 cached
@@ -891,6 +893,7 @@ casting
 castrates
 casual
 cat
+catalogs
 catalysts
 catastrophic
 catch
@@ -1207,6 +1210,7 @@ compile
 compile-time
 compiled
 compiler
+compiles
 complain
 complaining
 complains
@@ -1429,6 +1433,7 @@ cornerstone
 corporal
 corporate
 corporation
+corporations
 correct
 corrected
 correcting
@@ -1925,6 +1930,7 @@ distributed
 disturb
 disturbing
 diversity
+divert
 dividends
 divorce
 divorces
@@ -2035,6 +2041,7 @@ during
 duties
 dw
 dynamic
+dynamicity
 dynamics
 DynamoDB
 dynos
@@ -2207,6 +2214,7 @@ entrepreneurs
 entries
 entropy
 entry
+enumerations
 envelopes
 environment
 environmental
@@ -2591,6 +2599,7 @@ fooled
 foot
 footer
 for
+for-each
 forbid
 force
 force-based
@@ -2738,6 +2747,7 @@ generating-ssh-keys
 generation
 generators
 generic
+generics
 generous
 genetically
 gentleman
@@ -2803,6 +2813,7 @@ goodreads
 google
 google-killer
 googled
+gosling
 got
 gotten
 gov
@@ -3171,6 +3182,7 @@ implements
 implicit
 implied
 implies
+import
 importance
 important
 importantly
@@ -3432,6 +3444,7 @@ iphone
 IPO
 IPv
 IRC
+irrelevant
 irresponsible
 irreversible
 irritate
@@ -3464,12 +3477,14 @@ itself
 jack
 jaguar
 jail
+james
 jamon
 jan
 january
 JAR
 jare
 jargon
+JARs
 java
 javabeans
 javadoc
@@ -3480,6 +3495,7 @@ javascript
 javazone
 javdoc
 JAX-RS
+JAX-WS
 JAXB
 jcabi
 jcabi-aspects
@@ -3513,12 +3529,14 @@ jeffbarr
 jekyll
 jenkins
 jeopardize
+JEP
 jerry
 jersey
 jetbrains
 jez
 JFokus
 jgd
+jigsaw
 jimmy
 JIRA
 jive
@@ -3829,6 +3847,7 @@ looked
 looking
 looks
 loompaland
+loop
 looping
 loose
 loosely
@@ -3886,6 +3905,7 @@ mainstream
 maintain
 maintainability
 maintainable
+maintained
 maintainer
 maintaining
 maintains
@@ -4094,6 +4114,7 @@ microscope
 microservice
 microservices
 microsoft
+microsystems
 middle
 middleman
 middlemen
@@ -4200,6 +4221,7 @@ monitors
 monkey
 monkey-feeding
 monkeys
+monopoly
 monster
 monsters
 month
@@ -4227,6 +4249,7 @@ motivating
 motivation
 motivational
 motivator
+motives
 mount
 mourn
 mouth
@@ -4247,6 +4270,8 @@ multi-billion-dollar
 multi-million-dollar
 multi-national
 multi-page
+multi-release
+multi-resolution
 multi-threading
 multi-tier
 multiple
@@ -4284,6 +4309,7 @@ naming
 napkin
 narrow-skilled
 NASA
+nashorn
 nat
 national
 nationality
@@ -4875,6 +4901,7 @@ planning
 plans
 planting
 platform
+platform-specific
 platforms
 play
 played
@@ -5595,6 +5622,7 @@ respectable
 respected
 respectful
 respective
+respectively
 respond
 responded
 responds
@@ -6237,6 +6265,7 @@ spend
 spending
 spends
 spent
+spin-wait
 spirit
 split
 splitting
@@ -6372,6 +6401,7 @@ strangers
 strategies
 strategy
 stream
+streams
 streets
 strength
 stress
@@ -6491,6 +6521,7 @@ suppliers
 supply
 support
 supported
+supporting
 supportive
 supports
 supposed
@@ -6729,6 +6760,7 @@ thus
 ticket
 ticketing
 tickets
+TIFF
 tight
 tightly
 til
@@ -6883,6 +6915,7 @@ trustworthy
 truth
 truthfully
 try
+try-with-resource
 try-with-resources
 trying
 tu
@@ -6920,11 +6953,13 @@ tzu
 ua
 uber
 ubuntu
+uglier
 ugly
 UI
 ukraine
 ultimate
 ultimately
+umbrella
 UML
 un-asked
 un-extensible
@@ -6974,6 +7009,8 @@ unfortunate
 unfortunately
 unhappy
 unhealthy
+unicode
+unified
 uniform
 uniformity
 unintended
@@ -7086,6 +7123,7 @@ valuable
 valuation
 value
 values
+varargs
 variable
 variables
 variant
