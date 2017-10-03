@@ -58,6 +58,17 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2017/in-love.jpg 350 %}
+
+_Shame_<br/>
+October 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"When she is in love, it's difficult to say what exactly is on her mind;
+it's even more difficult to say what she expects and wants,
+and she doesn't want; the trick is to figure out which color is the right one."
+
 {% picture /images/paintings/2017/shame.jpg 350 %}
 
 _Shame_<br/>
