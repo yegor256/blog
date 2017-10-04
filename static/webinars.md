@@ -29,20 +29,20 @@ development, object-oriented programming and project management.
 
 ## 2017
 
-{% webinar 04-10-2017 28 KYd24FN58wg Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com %}
+<!-- {% webinar 04-10-2017 28 KYd24FN58wg Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com %} -->
 
 <a href="https://www.youtube.com/watch?v=KYd24FN58wg"><img src="https://i.ytimg.com/vi/KYd24FN58wg/mqdefault.jpg" class="wnr" alt="Webinar no.28 by Yegor Bugayenko"/></a>
 October 4, 2017<br/>
 &#35;28: **Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com**<br/>
-We will create a fully functional web app in Java, with the best principles of
-object-oriented programming in mind, in just one hour. The application will
-be ThreeCopies.com, an online backup solution for server-side data.
+We discussed a fully functional web app in Java, which was built with the best principles of
+object-oriented programming in mind. The application was
+ThreeCopies.com, an online backup solution for server-side data.
 
 <a href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"><img src="https://i.ytimg.com/vi/rEK3Rk2lX3M/mqdefault.jpg" class="wnr" alt="Webinar no.27 by Yegor Bugayenko"/></a>
 August 2, 2017<br/>
 &#35;27: **Releasing Cactoos 0.12**<br/>
-We will go through the entire Cactoos library,
-polish its code and release version 0.12 to Maven Central.
+We went through the entire Cactoos library,
+polished its code and released version 0.12 to Maven Central.
 
 <a href="https://www.youtube.com/watch?v=Mj1gA5mEk68"><img src="https://i.ytimg.com/vi/Mj1gA5mEk68/mqdefault.jpg" class="wnr" alt="Webinar no.26 by Yegor Bugayenko"/></a>
 July 12, 2017<br/>
